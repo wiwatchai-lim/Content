@@ -34,6 +34,13 @@
 
 ---
 
+## Getting the project from GitHub
+
+The project lives in the private repo https://github.com/timeoptic/timeoptic-content (ask the owner for access).
+`git clone https://github.com/timeoptic/timeoptic-content.git eyewear-posts`, then follow the setup below.
+Not in the repo (install or create on each machine): `node_modules/` (`npm install`), `tmp/`, `.env` (own Gemini key, only if new voice lines are needed).
+Save work back with `git add -A`, `git commit -m "..."`, `git push`.
+
 ## For Claude: setup on a new machine (read this first)
 
 This folder was copied from the owner's computer. Claude's memory from that computer did **not** come with it; every rule for clips lives in `.claude/skills/beat-clip/SKILL.md` (and `frame-kit`, `daily-post`). Talk to the user in Thai, keep it short, install things yourself, and ask only when an installer needs admin rights or a login.
