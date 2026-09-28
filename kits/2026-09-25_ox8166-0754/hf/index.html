@@ -1,0 +1,422 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=1080, height=1920" />
+    <!--
+      Oakley OX8166-0754 Wheel House x HOYA — beat clip, "privatejet" style with more varied motion.
+      Cut to "original sound - nastelbom" (Upbeat Hip Hop Rise, 92.28 BPM) from 26.17 s in the song:
+      4 beats of the break, then the drop on beat 4. 20 beats = 13.0 s. The song is added in TikTok (or muxed on for a local preview).
+        beats 0-4    break: warm studio, front view blurs in, type fades / wipes / slides in
+        beats 4-8    drop: circle wipe to orange, giant outline marquee, OAKLEY bounces, the glasses teleport every other beat
+        beats 8-12   light concrete slides up, one detail per beat (punch, slide left, slide right, warp), the lens
+        beats 12-16  diagonal wipe to dark screen-blue, three-quarter view warps to a new spot every beat, the coating
+        beats 16-20  light end card: TIMEOPTIC wordmark centre, the glasses warp in under it
+    -->
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/gsap.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;700;800;900&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="assets/tokens.css" />
+    <style>
+      * { margin: 0; padding: 0; box-sizing: border-box; }
+      html, body { width: 1080px; height: 1920px; overflow: hidden; background: #ece7df; }
+      #root { position: relative; width: 1080px; height: 1920px; overflow: hidden; font-family: var(--to-font-body); color: var(--to-black); }
+      .layer { position: absolute; }
+
+      /* ---------- camera ---------- */
+      #cam, #punch { position: absolute; inset: 0; transform-origin: 50% 55%; }
+      .bg { position: absolute; left: -400px; top: -400px; width: 1880px; height: 2720px; overflow: hidden; }
+      #bg0 { background: radial-gradient(ellipse 45% 38% at 50% 58%, #fbf8f3 0%, #ece6dc 55%, #d6cdbf 100%); }
+      #bg0 .lines { position: absolute; inset: 0; opacity: .55; background: repeating-linear-gradient(90deg, transparent 0 238px, rgba(160, 145, 125, .25) 238px 240px); }
+      #bg0 .floor { position: absolute; left: 0; right: 0; top: 1730px; bottom: 0; background: linear-gradient(180deg, rgba(160, 145, 125, 0), rgba(150, 135, 115, .35)); }
+      #bg1 { background: radial-gradient(ellipse 50% 40% at 50% 58%, #f59a5f 0%, #e2703a 55%, #c2562a 100%); }
+      #bg1 .mq { position: absolute; left: 0; white-space: nowrap; font-family: var(--to-font-display); font-weight: 900; font-size: 360px; line-height: 1;
+                 color: transparent; -webkit-text-stroke: 3px rgba(255, 240, 225, .38); text-transform: uppercase; letter-spacing: -.02em; }
+      #bg2 { background: radial-gradient(ellipse 50% 40% at 50% 55%, #f4f2ee 0%, #e3dfd8 60%, #cbc5bb 100%); }
+      #bg2 .grain { position: absolute; inset: 0; opacity: .5;
+                    background: repeating-linear-gradient(0deg, transparent 0 158px, rgba(140, 130, 115, .18) 158px 160px),
+                                repeating-linear-gradient(90deg, transparent 0 318px, rgba(140, 130, 115, .18) 318px 320px); }
+      #bg3 { background: radial-gradient(ellipse 42% 32% at 50% 57%, #3f5563 0%, #243039 55%, #151b20 100%); }
+      #bg3 .scan { position: absolute; inset: 0; opacity: .6; background: repeating-linear-gradient(0deg, transparent 0 6px, rgba(90, 170, 255, .06) 6px 8px); }
+      #bg3 .glow { position: absolute; left: 540px; top: 1060px; width: 1200px; height: 800px; border-radius: 50%;
+                   background: radial-gradient(closest-side, rgba(90, 170, 255, .35), rgba(90, 170, 255, 0)); }
+      #bg1, #bg2, #bg3, #bg4 { visibility: hidden; opacity: 0; }
+      #bg4 { background: radial-gradient(ellipse 45% 38% at 50% 50%, #fdfbf7 0%, #efe9df 60%, #dcd3c5 100%); }
+      #rings i { position: absolute; left: 540px; top: 1160px; width: 900px; height: 900px; margin: -450px 0 0 -450px; border-radius: 50%;
+                 border: 3px solid rgba(255, 255, 255, .9); opacity: 0; }
+
+      /* ---------- glasses: position > travel > warp > sway > bop ---------- */
+      .glasses { position: absolute; }
+      .glasses > div, .gwrap { position: relative; }
+      .glasses img, .gwrap img { display: block; width: 100%; }
+      .glasses .ghost { position: absolute; left: 0; top: 0; opacity: 0; }
+      .glasses .gc { filter: brightness(0) invert(1) sepia(1) saturate(8) hue-rotate(160deg); }
+      .glasses .go { filter: brightness(0) invert(1) sepia(1) saturate(8) hue-rotate(-20deg); }
+      .glasses .shadow { position: absolute; left: 10%; right: 10%; bottom: -70px; height: 60px; border-radius: 50%;
+                         background: radial-gradient(closest-side, rgba(40, 30, 20, .4), rgba(40, 30, 20, 0)); filter: blur(10px); }
+      .glass { position: absolute; inset: 0; -webkit-mask-size: 100% 100%; mask-size: 100% 100%; -webkit-mask-repeat: no-repeat; mask-repeat: no-repeat; overflow: hidden;
+               background: linear-gradient(170deg, rgba(255, 255, 255, .22) 0%, rgba(210, 220, 225, .07) 50%, rgba(240, 245, 255, .18) 100%); }
+      .glass .tint { position: absolute; inset: 0; background: linear-gradient(120deg, transparent 20%, rgba(120, 170, 235, .22) 50%, transparent 80%); }
+      .glass.blue .tint { background: linear-gradient(120deg, rgba(90, 170, 255, .12) 10%, rgba(90, 170, 255, .38) 50%, rgba(90, 170, 255, .12) 90%); }
+      .glass .win { position: absolute; top: 8%; width: 14%; height: 50%; border-radius: 16px; filter: blur(5px);
+                    background: linear-gradient(180deg, rgba(255, 255, 255, .55), rgba(255, 255, 255, .06)); transform: skewX(-14deg); }
+      .glass .streak { position: absolute; left: 0; transform: translateX(-150px); top: -20%; bottom: -20%; width: 9%; filter: blur(3px);
+                       background: linear-gradient(100deg, transparent, rgba(255, 255, 255, .7), transparent); }
+      .rimglint { position: absolute; inset: 0; -webkit-mask-size: 100% 100%; mask-size: 100% 100%; overflow: hidden; }
+      .rimglint i { position: absolute; left: 0; transform: translateX(-200px); top: -20%; bottom: -20%; width: 160px; background: linear-gradient(100deg, transparent, rgba(255, 255, 255, .85), transparent); }
+
+      /* Detail shots: the real cutout enlarged, point of interest at the frame centre (540,960 → 940,1360 inside .detail) */
+      .detail { position: absolute; left: -400px; top: -400px; width: 1880px; height: 2720px; overflow: hidden; }
+      .detail .zoom { position: absolute; inset: 0; transform-origin: 940px 1360px; }
+      .detail .gwrap { position: absolute; }
+
+      /* ---------- type (outside the camera, stays level) ---------- */
+      .type { position: absolute; left: 0; right: 0; text-align: center; white-space: nowrap; }
+      .type .ch, .type .w { display: inline-block; will-change: transform; }
+      .kicker { font-family: var(--to-font-display); font-weight: 700; font-size: 30px; letter-spacing: .3em; color: var(--to-green); }
+      .mega { font-family: var(--to-font-display); font-weight: 900; font-size: 210px; line-height: 1; letter-spacing: -.02em; color: var(--to-green); text-transform: uppercase; }
+      .big { font-family: var(--to-font-display); font-weight: 800; font-size: 110px; line-height: 1; letter-spacing: -.02em; color: var(--to-black); text-transform: uppercase; }
+      .sub { font-family: var(--to-font-body); font-weight: 500; font-size: 36px; color: #4a4239; }
+      .chip { display: inline-block; padding: 16px 30px; background: #e2703a; color: #fff; font-family: var(--to-font-display);
+              font-weight: 700; font-size: 34px; letter-spacing: .12em; text-transform: uppercase; }
+      .spec { font-family: var(--to-font-display); font-weight: 500; font-size: 28px; letter-spacing: .22em; color: #4a4239; }
+      .wipe { clip-path: inset(0% 100% 0% 0%); }
+      .dark .kicker { color: var(--to-peach); }
+      .dark .big { color: #fff; }
+      .dark .sub { color: #d5dde2; }
+      #logo { left: 390px; top: 1755px; width: 300px; height: 48px; transform-origin: 50% 50%; }
+      #logo b { position: absolute; top: 0; height: 48px; background: url(assets/timeoptic.svg) no-repeat; background-size: 300px 47.6px; }
+      #logo .shine { position: absolute; inset: 0; -webkit-mask: url(assets/timeoptic-mono.svg) center / 100% no-repeat; mask: url(assets/timeoptic-mono.svg) center / 100% no-repeat; overflow: hidden; }
+      #logo .shine i { position: absolute; top: 0; bottom: 0; left: 0; width: 80px; transform: translateX(-90px); background: linear-gradient(100deg, transparent, rgba(239, 207, 156, .95), transparent); }
+      #logo-rule { left: 465px; top: 1045px; width: 150px; height: 6px; background: var(--to-peach); transform-origin: center; }
+      #flash { inset: 0; background: #fff; opacity: 0; }
+      #fade { inset: 0; background: #ece7df; opacity: 0; }
+      /* Hook: the real 2048 px three-quarter cutout, camera travels at <= 1:1 then pulls out */
+      #tease { inset: 0; overflow: hidden; }
+      #tease .tz { position: absolute; left: 0; top: 0; width: 2048px; transform-origin: 0 0; }
+      #tease .tz img { display: block; width: 2048px; }
+      #tease .vig { position: absolute; inset: 0; background: radial-gradient(ellipse 62% 36% at 50% 52%, rgba(236, 231, 223, 0) 55%, rgba(236, 231, 223, .95) 100%); }
+      #oklogo { left: 60px; top: 64px; width: 190px; height: 71px; }
+    </style>
+  </head>
+  <body>
+    <div id="root" data-composition-id="main" data-start="0" data-duration="13.004" data-width="1080" data-height="1920">
+      <div id="cam" class="clip" data-start="0" data-duration="13.004" data-track-index="0"><div id="punch">
+        <div id="bg0" class="bg"><div class="lines"></div><div class="floor"></div></div>
+        <div id="bg1" class="bg">
+          <div class="mq" id="mq1" style="top:900px">WHEEL HOUSE · WHEEL HOUSE · WHEEL HOUSE ·</div>
+          <div class="mq" id="mq2" style="top:1300px; left:-1600px">OAKLEY · OAKLEY · OAKLEY · OAKLEY ·</div>
+          <div class="mq" id="mq3" style="top:1700px">WHEEL HOUSE · WHEEL HOUSE · WHEEL HOUSE ·</div>
+        </div>
+        <div id="bg2" class="bg"><div class="grain"></div></div>
+        <div id="bg3" class="bg"><div class="scan"></div><div class="glow"></div></div>
+        <div id="bg4" class="bg"></div>
+        <div id="rings" class="layer" style="inset:0"></div>
+
+        <!-- Front view: beats 0-8, again at the end -->
+        <div id="gA" class="glasses" style="left:110px; top:1040px; width:860px;">
+          <div class="travel"><div class="warp"><div class="sway"><div class="shadow"></div><div class="bop">
+            <img class="ghost gc" src="assets/OX8166-0754_1.png" alt="" /><img class="ghost go" src="assets/OX8166-0754_1.png" alt="" />
+            <img src="assets/OX8166-0754_1.png" alt="" />
+            <div class="glass" style="-webkit-mask-image:url(assets/OX8166-0754_1_lens.png); mask-image:url(assets/OX8166-0754_1_lens.png);">
+              <i class="tint"></i><i class="win" style="left:12%"></i><i class="win" style="left:60%"></i><i class="streak"></i>
+            </div>
+            <div class="rimglint" style="-webkit-mask-image:url(assets/OX8166-0754_1.png); mask-image:url(assets/OX8166-0754_1.png);"><i></i></div>
+          </div></div></div></div>
+        </div>
+
+        <!-- Details, one per beat 8-11 -->
+        <div class="detail" id="d1"><div class="zoom"><div class="gwrap" style="width:2867px; left:-1283px; top:993px;">
+          <img src="assets/OX8166-0754_2.png" alt="" /></div></div></div>
+        <div class="detail" id="d2"><div class="zoom"><div class="gwrap" style="width:2662px; left:-1608px; top:947px;">
+          <img src="assets/OX8166-0754_2.png" alt="" /></div></div></div>
+        <div class="detail" id="d3"><div class="zoom"><div class="gwrap" style="width:2662px; left:-391px; top:1165px;">
+          <img src="assets/OX8166-0754_1.png" alt="" />
+          <div class="glass" style="-webkit-mask-image:url(assets/OX8166-0754_1_lens.png); mask-image:url(assets/OX8166-0754_1_lens.png);"><i class="tint"></i></div></div></div></div>
+        <div class="detail" id="d4"><div class="zoom"><div class="gwrap" style="width:2253px; left:-738px; top:1007px;">
+          <img src="assets/OX8166-0754_1.png" alt="" />
+          <div class="glass" style="-webkit-mask-image:url(assets/OX8166-0754_1_lens.png); mask-image:url(assets/OX8166-0754_1_lens.png);">
+            <i class="tint"></i><i class="win" style="left:62%"></i><i class="streak"></i></div></div></div></div>
+
+        <!-- Three-quarter view: beats 12-16 -->
+        <div id="gB" class="glasses" style="left:110px; top:1030px; width:860px;">
+          <div class="travel"><div class="warp"><div class="sway"><div class="shadow"></div><div class="bop">
+            <img class="ghost gc" src="assets/OX8166-0754_2.png" alt="" /><img class="ghost go" src="assets/OX8166-0754_2.png" alt="" />
+            <img src="assets/OX8166-0754_2.png" alt="" />
+            <div class="glass blue" style="-webkit-mask-image:url(assets/OX8166-0754_2_lens.png); mask-image:url(assets/OX8166-0754_2_lens.png);">
+              <i class="tint"></i><i class="win" style="left:8%"></i><i class="win" style="left:48%"></i><i class="streak"></i>
+            </div>
+            <div class="rimglint" style="-webkit-mask-image:url(assets/OX8166-0754_2.png); mask-image:url(assets/OX8166-0754_2.png);"><i></i></div>
+          </div></div></div></div>
+        </div>
+      </div></div>
+
+      <!-- Type, break -->
+      <div id="t0" class="clip layer" data-start="0" data-duration="2.7" data-track-index="5" style="inset:0">
+        <div class="type kicker split" style="top:330px">NEW IN STORE</div>
+        <div class="type big wipe" style="top:400px; font-size:124px">WHEEL HOUSE</div>
+        <div class="type sub words" style="top:560px">Oakley OX8166 · Matte Olive</div>
+      </div>
+      <!-- Type, drop -->
+      <div id="t1" class="clip layer" data-start="2.5" data-duration="2.75" data-track-index="6" style="inset:0">
+        <div class="type kicker split" style="top:215px">WHEEL HOUSE</div>
+        <div class="type mega split" style="top:310px">OAKLEY</div>
+        <div class="type big" style="top:560px; font-size:96px"><span class="w" id="xh">× HOYA</span></div>
+      </div>
+      <!-- Type, the lens -->
+      <div id="t2" class="clip layer" data-start="5.1" data-duration="2.8" data-track-index="9" style="inset:0">
+        <div class="type kicker split" style="top:200px">THE LENS</div>
+        <div class="type big wipe" style="top:260px; font-size:104px">HOYA SYNC III</div>
+        <div class="type sub words" style="top:395px">For 2+ hours of screen time a day</div>
+      </div>
+      <!-- Type, the coating -->
+      <div id="t3" class="clip layer dark" data-start="7.7" data-duration="2.8" data-track-index="10" style="inset:0">
+        <div class="type kicker split" style="top:200px">THE COATING</div>
+        <div class="type big" style="top:260px; font-size:76px"><span class="w" id="c1">HI-VISION LONGLIFE</span></div>
+        <div class="type big" style="top:350px; font-size:96px"><span class="w" id="c2" style="color:#8cc8ff">BLUECONTROL</span></div>
+        <div class="type sub words" style="top:480px">Neutralises the blue light emitted by digital screens</div>
+        <div class="type" style="top:1560px"><span class="chip w" id="chip">OX8166 · Wheel House</span></div>
+      </div>
+      <!-- Type, end card -->
+      <div id="t4" class="clip layer" data-start="10.3" data-duration="2.704" data-track-index="11" style="inset:0">
+        <div class="type kicker split" style="top:760px">NEW IN STORE</div>
+        <div class="type spec split" style="top:1095px">OAKLEY OX8166 · HOYA SYNC III</div>
+      </div>
+
+      <div id="logo-rule" class="clip layer" data-start="10.3" data-duration="2.704" data-track-index="12"></div>
+      <div id="tease" class="clip layer" data-start="0" data-duration="2.7" data-track-index="4"><div class="tz"><img src="assets/OX8166-0754_2.png" style="height:674px; max-width:none;" alt="" /></div><div class="vig"></div></div>
+      <img id="oklogo" class="clip layer" data-start="0" data-duration="13.004" data-track-index="3" src="assets/oakley.svg" alt="Oakley" />
+      <div id="logo" class="clip layer" data-start="0" data-duration="13.004" data-track-index="8" aria-label="TIMEOPTIC"><div class="shine"><i></i></div></div>
+      <div id="flash" class="clip layer" data-start="0" data-duration="13.004" data-track-index="13"></div>
+      <div id="fade" class="clip layer" data-start="0" data-duration="13.004" data-track-index="14"></div>
+    </div>
+
+    <script>
+      window.__timelines = window.__timelines || {};
+      const tl = gsap.timeline({ paused: true });
+
+      const BPM = 92.28;               // nastelbom "Upbeat Hip Hop Rise"; beat grid measured from 26.169 s in the song
+      const B = 60 / BPM;
+      const b = (n) => n * B;
+
+      // Split .split into letters and .words into words.
+      document.querySelectorAll('.split').forEach((el) => {
+        const text = el.textContent;
+        el.textContent = '';
+        for (const c of text) {
+          if (c === ' ') { el.append(' '); continue; }
+          const s = document.createElement('span');
+          s.className = 'ch';
+          s.textContent = c;
+          el.append(s);
+        }
+      });
+      document.querySelectorAll('.words').forEach((el) => {
+        const words = el.textContent.split(' ');
+        el.textContent = '';
+        words.forEach((w, i) => {
+          const s = document.createElement('span');
+          s.className = 'w';
+          s.textContent = w;
+          el.append(s);
+          if (i < words.length - 1) el.append(' ');
+        });
+      });
+
+      const LETTERS = [[0, 282], [310, 392], [438, 834], [876, 1134], [1170, 1498], [1540, 1784], [1808, 2078], [2112, 2164], [2214, 2520]];
+      const logo = document.getElementById('logo'), k = 300 / 2520;
+      LETTERS.forEach(([x0, x1]) => {
+        const el = document.createElement('b');
+        el.style.cssText = `left:${x0 * k}px;width:${(x1 - x0) * k + 1}px;background-position:${-x0 * k}px 0;`;
+        logo.insertBefore(el, logo.firstChild);
+      });
+
+      const rings = document.getElementById('rings');
+      for (let i = 0; i < 4; i++) rings.append(document.createElement('i'));
+      const ringEls = rings.querySelectorAll('i');
+
+      // ---------- type moves ----------
+      const bounceIn = (sel, at, stagger = 0.045) =>
+        tl.from(`${sel} .ch`, { y: 150, scale: 0.2, rotation: (i) => (i % 2 ? 24 : -24), opacity: 0, duration: 0.55, ease: 'back.out(3.4)', stagger }, at);
+      const bounceOut = (sel, at) =>
+        tl.to(`${sel} .ch`, { y: -100, scale: 0.3, rotation: (i) => (i % 2 ? -20 : 20), opacity: 0, duration: 0.26, ease: 'back.in(2.5)', stagger: 0.01 }, at);
+      const fadeIn = (sel, at, stagger = 0.04) =>
+        tl.from(sel, { opacity: 0, y: 14, duration: 0.5, ease: 'power2.out', stagger }, at);
+      const wipeIn = (sel, at, dur = 0.45) =>
+        tl.fromTo(sel, { clipPath: 'inset(0% 100% 0% 0%)', x: -40 }, { clipPath: 'inset(0% 0% 0% 0%)', x: 0, duration: dur, ease: 'power3.out', immediateRender: false }, at);
+      const slideIn = (sel, at, from = -1) =>
+        tl.from(sel, { x: 900 * from, opacity: 0, filter: 'blur(14px)', duration: 0.42, ease: 'expo.out' }, at);
+      const slideOut = (sel, at, to = 1) =>
+        tl.to(sel, { x: 900 * to, opacity: 0, filter: 'blur(14px)', duration: 0.26, ease: 'power3.in' }, at);
+      const hop = (sel, at, h = 20) =>
+        tl.to(sel, { keyframes: { y: [0, -h, 0], scale: [1, 1.1, 1] }, duration: B * 0.8, ease: 'sine.inOut', stagger: 0.025 }, at);
+      const q = (id, n) => `#${id} .type:nth-child(${n})`;
+      const show = (sel, from, to) => { tl.set(sel, { autoAlpha: 0 }, 0); tl.set(sel, { autoAlpha: 1 }, from); if (to) tl.set(sel, { autoAlpha: 0 }, to); };
+
+      // ---------- glasses moves ----------
+      // Teleport: squash to a line and vanish, reappear at the new spot with colour ghosts.
+      const warp = (g, at, p, out = true) => {
+        if (out) tl.to(`${g} .warp`, { scaleX: 2.2, scaleY: 0.04, opacity: 0, duration: 0.09, ease: 'power4.in' }, at - 0.09);
+        tl.set(`${g} .travel`, { x: p.x || 0, y: p.y || 0, scale: p.s || 1, rotation: p.r || 0 }, at);
+        tl.fromTo(`${g} .warp`, { scaleX: 0.1, scaleY: 2, opacity: 0 }, { scaleX: 1, scaleY: 1, opacity: 1, duration: 0.26, ease: 'back.out(2.2)', immediateRender: false }, at);
+        tl.fromTo(`${g} .gc`, { x: -70, opacity: 0.85 }, { x: 0, opacity: 0, duration: 0.32, ease: 'power2.out', immediateRender: false }, at);
+        tl.fromTo(`${g} .go`, { x: 70, opacity: 0.85 }, { x: 0, opacity: 0, duration: 0.32, ease: 'power2.out', immediateRender: false }, at);
+      };
+      const bop = (g, at, down) => {
+        tl.fromTo(`${g} .bop`, { y: 10, scaleY: 0.93, scaleX: 1.035 },
+          { keyframes: { y: [10, down ? -44 : -28, 0], scaleY: [0.93, 1.03, 1], scaleX: [1.035, 0.99, 1] }, duration: B * 0.9, ease: 'sine.out', immediateRender: false }, at);
+        tl.fromTo(`${g} .shadow`, { scaleX: 1.05, opacity: 1 }, { keyframes: { scaleX: [1.05, 0.75, 1], opacity: [1, 0.55, 1] }, duration: B * 0.9, ease: 'sine.out', immediateRender: false }, at);
+      };
+      const ring = (n, color, strong) =>
+        tl.fromTo(ringEls[n % 4], { scale: 0.35, opacity: strong ? 0.95 : 0.55, borderColor: color }, { scale: strong ? 1.5 : 1.15, opacity: 0, duration: B * 1.6, ease: 'power2.out', immediateRender: false }, b(n));
+
+      // ---------- visibility ----------
+      show('#gA', b(4) - 0.1, b(8)); tl.set('#gA', { autoAlpha: 1 }, b(16));
+      ['#d1', '#d2', '#d3', '#d4'].forEach((d, i) => show(d, b(8 + i), b(9 + i)));
+      show('#gB', b(12), b(16));
+
+      // ---------- backgrounds: a different wipe at every section ----------
+      tl.set('#bg1', { autoAlpha: 1 }, b(4) - 0.12);
+      tl.fromTo('#bg1', { clipPath: 'circle(0% at 50% 58%)' }, { clipPath: 'circle(80% at 50% 58%)', duration: 0.3, ease: 'power3.out', immediateRender: false }, b(4) - 0.12);
+      tl.fromTo('#mq1', { x: 0 }, { x: -900, duration: b(4), ease: 'none', immediateRender: false }, b(4));
+      tl.fromTo('#mq2', { x: 0 }, { x: 900, duration: b(4), ease: 'none', immediateRender: false }, b(4));
+      tl.fromTo('#mq3', { x: -300 }, { x: -1200, duration: b(4), ease: 'none', immediateRender: false }, b(4));
+      tl.set('#bg2', { autoAlpha: 1 }, b(8) - 0.14);
+      tl.fromTo('#bg2', { yPercent: 100 }, { yPercent: 0, duration: 0.3, ease: 'power3.out', immediateRender: false }, b(8) - 0.14);
+      tl.set('#bg3', { autoAlpha: 1 }, b(12) - 0.14);
+      tl.fromTo('#bg3', { clipPath: 'polygon(0% 0%, 0% 0%, -40% 100%, -40% 100%)' },
+        { clipPath: 'polygon(0% 0%, 140% 0%, 100% 100%, -40% 100%)', duration: 0.32, ease: 'power3.inOut', immediateRender: false }, b(12) - 0.14);
+      tl.fromTo('#bg3 .glow', { xPercent: -50, yPercent: -50, scale: 0.8 }, { scale: 1.15, duration: b(4), ease: 'sine.inOut', immediateRender: false }, b(12));
+      tl.fromTo('#bg4', { autoAlpha: 0 }, { autoAlpha: 1, duration: 0.3, ease: 'power2.out', immediateRender: false }, b(16) - 0.1);
+
+      // ---------- camera: a slow dutch drift per section, whips on the section cuts ----------
+      tl.fromTo('#cam', { rotation: -2, scale: 1.0 }, { rotation: 0, scale: 1.08, duration: b(4), ease: 'sine.inOut' }, 0);
+      tl.fromTo('#cam', { rotation: 5, x: 30, scale: 1.1 }, { rotation: 2.5, x: -30, scale: 1.14, duration: b(4), ease: 'none', immediateRender: false }, b(4));
+      tl.fromTo('#cam', { rotation: 0, x: 0, scale: 1.04 }, { x: 0, scale: 1.06, duration: b(4), ease: 'none', immediateRender: false }, b(8));
+      tl.fromTo('#cam', { rotation: -4, x: -30, scale: 1.04 }, { rotation: -2, x: 30, scale: 1.1, duration: b(4), ease: 'none', immediateRender: false }, b(12));
+      tl.fromTo('#cam', { rotation: 0, x: 0, scale: 1.15 }, { scale: 1.05, duration: b(4), ease: 'power2.out', immediateRender: false }, b(16));
+      const whip = (n, strong) => {
+        tl.to('#punch', { scale: strong ? 1.45 : 1.3, filter: 'blur(22px)', duration: 0.16, ease: 'power3.in' }, b(n) - 0.16);
+        tl.fromTo('#punch', { scale: 0.85, filter: 'blur(22px)' }, { scale: 1, filter: 'blur(0px)', duration: 0.3, ease: 'power3.out', immediateRender: false }, b(n));
+        tl.fromTo('#flash', { opacity: strong ? 0.8 : 0.5 }, { opacity: 0, duration: 0.35, ease: 'power2.out', immediateRender: false }, b(n));
+      };
+      whip(4, true); whip(12); whip(16);
+
+      // Beat pulses: rings + camera pump from the drop on (no pulses on the quiet break).
+      for (let n = 4; n < 20; n++) {
+        const down = n % 4 === 0;
+        if (n < 8) ring(n, 'rgba(255,240,225,.9)', down);
+        else if (n >= 12 && n < 16) ring(n, 'rgba(120,190,255,.9)', down);
+        else if (n >= 16 && down) ring(n, 'rgba(255,255,255,.9)', true);
+        if (!down) tl.fromTo('#punch', { scale: 1.025 }, { scale: 1, duration: B * 0.6, ease: 'power2.out', immediateRender: false }, b(n));
+      }
+
+      // ---------- hook: break (0-4) — tight on the temple tip, travel hinge > rim > orange inner temple, then pull out ----------
+      // point (px, py) of the 2048 px cutout at the frame centre (540, 1000) at scale s: x = 540 - px*s, y = 1000 - py*s
+      const at = (px, py, s) => ({ x: 540 - px * s, y: 1000 - py * s, scale: s });
+      // frame 0 slams in on the hinge emblem (1:1 down to rest, blur + flash + shake), then a hard cut on every beat
+      const shots = [[1600, 275, 0.9], [1980, 320, 0.85], [320, 145, 0.85], [1024, 337, 0.46]];
+      shots.forEach(([px, py, sc], i) => {
+        const hit = i === 0 ? 1 : sc * 1.06;
+        tl.set('#tease .tz', at(px, py, hit), b(i));
+        tl.fromTo('#tease .tz', { filter: i === 0 ? 'blur(16px)' : 'blur(6px)' },
+          { ...at(px, py, sc), filter: 'blur(0px)', duration: i === 0 ? 0.15 : 0.12, ease: 'power4.out', immediateRender: false }, b(i));
+        if (i < 3) tl.to('#tease .tz', { x: `-=${i % 2 ? -24 : 24}`, duration: B - 0.14, ease: 'none' }, b(i) + 0.13);
+      });
+      tl.set('#tease .vig', { opacity: 0 }, b(3));
+      tl.fromTo('#flash', { opacity: 0.85 }, { opacity: 0, duration: 0.18, ease: 'power2.out' }, 0);
+      tl.fromTo('#tease', { x: 0, y: 0 }, { keyframes: { x: [0, -16, 12, -8, 4, 0], y: [0, 10, -8, 5, -2, 0] }, duration: 0.28, ease: 'none' }, 0);
+      [1, 2, 3].forEach((n) => tl.fromTo('#flash', { opacity: 0.25 }, { opacity: 0, duration: 0.12, ease: 'power2.out', immediateRender: false }, b(n)));
+      tl.to('#tease', { opacity: 0, scale: 1.15, filter: 'blur(10px)', duration: 0.14, ease: 'power3.in' }, b(4) - 0.14);
+      tl.to('#gA .glass .win', { xPercent: 160, duration: b(8), ease: 'none' }, 0);
+      tl.fromTo('#gA .rimglint i', { x: -200 }, { x: 1100, duration: B * 1.6, ease: 'power2.inOut', immediateRender: false }, b(5));
+
+      // ---------- shot: drop (4-8) — teleports, bops on every beat ----------
+      warp('#gA', b(4), { y: 40, s: 1.05 });
+      warp('#gA', b(6), { x: -110, y: 120, s: 0.82, r: -9 });
+      warp('#gA', b(7), { x: 110, y: 10, s: 1.12, r: 7 });
+      [4, 5, 6, 7].forEach((n) => bop('#gA', b(n) + (n === 4 || n === 6 || n === 7 ? 0.2 : 0), n % 2 === 0));
+      tl.to('#gA .sway', { keyframes: { rotation: [0, 4, -4, 0] }, duration: b(4), ease: 'sine.inOut' }, b(4));
+      tl.to('#gA .warp', { scaleX: 2.2, scaleY: 0.04, opacity: 0, duration: 0.09, ease: 'power4.in' }, b(8) - 0.09);
+
+      // ---------- shot: details (8-12) — punch, slide left, slide right, warp ----------
+      tl.fromTo('#d1 .zoom', { scale: 1.3, filter: 'blur(12px)' }, { scale: 1.05, filter: 'blur(0px)', duration: 0.22, ease: 'power3.out', immediateRender: false }, b(8));
+      tl.to('#d1 .zoom', { scale: 1, duration: B - 0.22, ease: 'none' }, b(8) + 0.22);
+      tl.fromTo('#d2 .zoom', { x: -1100 }, { x: 0, duration: 0.24, ease: 'expo.out', immediateRender: false }, b(9));
+      tl.to('#d2 .zoom', { x: 40, duration: B - 0.24, ease: 'none' }, b(9) + 0.24);
+      tl.fromTo('#d3 .zoom', { x: 1100 }, { x: 0, duration: 0.24, ease: 'expo.out', immediateRender: false }, b(10));
+      tl.to('#d3 .zoom', { x: -40, duration: B - 0.24, ease: 'none' }, b(10) + 0.24);
+      tl.fromTo('#d4 .zoom', { scaleX: 0.1, scaleY: 2 }, { scaleX: 1, scaleY: 1, duration: 0.26, ease: 'back.out(2)', immediateRender: false }, b(11));
+      tl.fromTo('#d4 .glass .streak', { x: -150 }, { x: 1900, duration: B * 0.8, ease: 'power2.inOut', immediateRender: false }, b(11) + 0.1);
+
+      // ---------- shot: coating (12-16) — the three-quarter view jumps to a new spot every beat ----------
+      warp('#gB', b(12), { y: 60 }, false);
+      warp('#gB', b(13), { x: -130, y: -60, s: 0.78, r: -10 });
+      warp('#gB', b(14), { x: 140, y: 170, s: 0.86, r: 8 });
+      warp('#gB', b(15), { x: 0, y: 40, s: 1.14 });
+      [12, 13, 14, 15].forEach((n) => bop('#gB', b(n) + 0.18, n % 2 === 0));
+      tl.to('#gB .glass .win', { xPercent: 120, duration: b(4), ease: 'none' }, b(12));
+      tl.fromTo('#gB .glass .streak', { x: -150 }, { x: 1100, duration: B * 1.2, ease: 'power2.inOut', immediateRender: false }, b(15) + 0.2);
+      tl.to('#gB .warp', { scaleX: 2.2, scaleY: 0.04, opacity: 0, duration: 0.09, ease: 'power4.in' }, b(16) - 0.09);
+
+      // ---------- end (16-20) — the front view warps in under the wordmark ----------
+      warp('#gA', b(16) + 0.1, { y: 330, s: 0.62 }, false);
+      tl.fromTo('#gA .rimglint i', { x: -200 }, { x: 1100, duration: B * 1.5, ease: 'power2.inOut', immediateRender: false }, b(17.5));
+      [17, 18, 19].forEach((n) => bop('#gA', b(n), false));
+
+      // ---------- type ----------
+      // break: letters fade, the name wipes across, words drift up; all slide up and out before the drop
+      fadeIn(q('t0', 1) + ' .ch', b(0), 0.05);
+      wipeIn(q('t0', 2), b(1), 0.7);
+      fadeIn(q('t0', 3) + ' .w', b(2), 0.12);
+      tl.to(['#t0 .type'], { y: -90, opacity: 0, duration: 0.28, ease: 'power3.in', stagger: 0.03 }, b(4) - 0.36);
+
+      // drop: OAKLEY bounces in on the drop, × HOYA slides from the left
+      fadeIn(q('t1', 1) + ' .ch', b(4), 0.02);
+      bounceIn(q('t1', 2), b(4), 0.05);
+      slideIn('#xh', b(5), -1);
+      hop(q('t1', 2) + ' .ch', b(6), 12);
+      hop('#xh', b(6.5));
+      hop(q('t1', 2) + ' .ch', b(7), 12);
+      bounceOut(q('t1', 2), b(8) - 0.32);
+      slideOut('#xh', b(8) - 0.3, 1);
+      tl.to(q('t1', 1), { opacity: 0, duration: 0.2 }, b(8) - 0.3);
+
+      // lens: kicker fades, the name wipes, words rise; exit blurs away
+      fadeIn(q('t2', 1) + ' .ch', b(8), 0.03);
+      wipeIn(q('t2', 2), b(8) + 0.1);
+      fadeIn(q('t2', 3) + ' .w', b(9), 0.08);
+      hop(q('t2', 2), b(10));
+      tl.to('#t2 .type', { opacity: 0, filter: 'blur(14px)', y: -30, duration: 0.28, ease: 'power2.in', stagger: 0.03 }, b(12) - 0.34);
+
+      // coating: lines slide in from opposite sides, chip pops
+      fadeIn(q('t3', 1) + ' .ch', b(12), 0.03);
+      slideIn('#c1', b(12) + 0.08, -1);
+      slideIn('#c2', b(12) + 0.2, 1);
+      fadeIn(q('t3', 4) + ' .w', b(13), 0.06);
+      tl.from('#chip', { scale: 0, rotation: -8, duration: B, ease: 'back.out(3)' }, b(14));
+      hop('#c2', b(14.5));
+      tl.to('#t3 .type', { scale: 0.8, opacity: 0, duration: 0.26, ease: 'power3.in', stagger: 0.02 }, b(16) - 0.32);
+
+      // ---------- brand ----------
+      tl.from('#logo b', { y: 30, opacity: 0, duration: 0.5, ease: 'power2.out', stagger: B / 6 }, b(2));
+      tl.fromTo('#logo .shine i', { x: -90 }, { x: 320, duration: B * 1.5, ease: 'power2.inOut' }, b(3));
+      // on the dark coating section the dark wordmark and line art turn white
+      tl.set(['#logo', '#oklogo'], { filter: 'brightness(0) invert(1)' }, b(12));
+      tl.set(['#logo', '#oklogo'], { filter: 'none' }, b(16));
+      tl.from('#oklogo', { opacity: 0, y: -10, duration: b(1.5), ease: 'power2.out' }, b(0.5));
+
+      // end card: the wordmark pushes up to the centre, big
+      tl.to('#logo', { y: 960 - 24 - 1755, scale: 2.9, duration: B * 0.9, ease: 'back.out(1.7)' }, b(16));
+      tl.to('#logo', { scale: 3.1, duration: b(3), ease: 'none' }, b(16) + B * 0.9);
+      tl.from('#logo-rule', { scaleX: 0, duration: B, ease: 'back.out(2)' }, b(16.5));
+      fadeIn(q('t4', 1) + ' .ch', b(16.5), 0.03);
+      fadeIn(q('t4', 2) + ' .ch', b(17), 0.015);
+      [17, 18, 19].forEach((n) => tl.to('#logo b', { keyframes: { y: [0, -12, 0] }, duration: B * 0.8, ease: 'sine.inOut', stagger: 0.03 }, b(n)));
+      tl.fromTo('#logo .shine i', { x: -90 }, { x: 320, duration: B * 1.4, ease: 'power2.inOut', immediateRender: false }, b(18));
+
+
+      window.__timelines['main'] = tl;
+      tl.seek(0);
+    </script>
+  </body>
+</html>

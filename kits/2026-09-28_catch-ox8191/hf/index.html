@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=1080, height=1920" />
+    <!--
+      "Can you catch the glasses?" — Oakley Enigma Mass OX8191-0355, a 1.4-second loop (sped up for the user, 2026-09-28) after the Levi's "Can you catch the jorts?" idea.
+      A white outline of the glasses hangs in the sky over a festival crowd; the glasses are thrown up from the crowd,
+      tumble, land exactly in the outline (~1.25 s), and keep flying past the camera without stopping: the viewer has to pause on the one frame where they fit.
+        0-0.4      handheld sky + outline + question, nothing moving but the camera
+        0.4-1.25   the throw: small and blurred at the crowd, grows and spins up into the outline
+        1.25-1.45  the catch: fits the outline, outline pulses
+        1.45-2.0   flies at the camera and off the bottom
+      Background: 1.45 s of the user's Google Flow clip (bg/crowd_flow.mp4), sky darkened a little so the white outline and type read. Oakley logo top-left corner, small white TIMEOPTIC wordmark top right.
+    -->
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/gsap.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;700;800;900&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="assets/tokens.css" />
+    <style>
+      * { margin: 0; padding: 0; box-sizing: border-box; }
+      html, body { width: 1080px; height: 1920px; overflow: hidden; background: #8c939a; }
+      #root { position: relative; width: 1080px; height: 1920px; overflow: hidden; font-family: var(--to-font-display); }
+      .layer { position: absolute; }
+      #cam { inset: 0; }
+      #bg { position: absolute; left: 0; top: 0; width: 1080px; height: 1920px; object-fit: cover; }
+      #skyshade { position: absolute; inset: 0; background: linear-gradient(to bottom, rgba(38, 48, 58, .34) 0%, rgba(38, 48, 58, .26) 45%, rgba(38, 48, 58, 0) 70%); }
+      #outline { left: 220px; top: 447px; width: 640px; height: 227px; transform: rotate(-12deg); opacity: .95;
+                 filter: drop-shadow(0 0 6px rgba(255, 255, 255, .35)); }
+      #g { left: 220px; top: 447px; width: 640px; height: 227px; perspective: 1400px; }
+      #g .spin { position: absolute; inset: 0; transform-style: preserve-3d; }
+      #g img { position: absolute; inset: 0; width: 640px; height: 227px; }
+      #g .shade { position: absolute; left: 10%; right: 10%; top: 80%; height: 40px; border-radius: 50%;
+                  background: radial-gradient(closest-side, rgba(0, 0, 0, .28), rgba(0, 0, 0, 0)); filter: blur(10px); }
+      .glass { position: absolute; inset: 0; -webkit-mask-size: 100% 100%; mask-size: 100% 100%; overflow: hidden;
+               background: linear-gradient(165deg, rgba(255, 255, 255, .30), rgba(200, 212, 222, .10) 55%, rgba(255, 255, 255, .22)); }
+      .glass i { position: absolute; top: -20%; bottom: -20%; left: 0; width: 10%; filter: blur(3px); transform: translateX(-120px);
+                 background: linear-gradient(100deg, transparent, rgba(255, 255, 255, .8), transparent); }
+      #q { left: 60px; right: 60px; top: 900px; text-align: center; color: #fff; font-family: var(--to-font-display); font-weight: 800;
+           font-size: 50px; line-height: 1.12; letter-spacing: .06em; text-shadow: 0 2px 4px rgba(0, 0, 0, .55), 0 0 26px rgba(0, 0, 0, .45); }
+      #qshade { left: 0; top: 820px; width: 1080px; height: 300px; background: radial-gradient(ellipse 42% 45% at 50% 50%, rgba(20, 26, 34, .42), rgba(20, 26, 34, 0)); }
+      #oakley { left: 64px; top: 64px; width: 200px; height: 75px; }
+      #to { left: 736px; top: 88px; width: 280px; height: 43px; opacity: .92; }
+      #flash { inset: 0; background: #fff; opacity: 0; }
+    </style>
+  </head>
+  <body>
+    <div id="root" data-composition-id="main" data-start="0" data-duration="1.4" data-width="1080" data-height="1920">
+      <video id="bg" class="clip layer" data-start="0" data-duration="1.4" data-track-index="8" src="assets/crowd.mp4" muted playsinline></video>
+      <div id="cam" class="clip layer" data-start="0" data-duration="1.4" data-track-index="0">
+        <div id="skyshade"></div>
+      </div>
+      <img id="outline" class="clip layer" data-start="0" data-duration="1.4" data-track-index="1" src="assets/outline.png" alt="" />
+      <div id="qshade" class="clip layer" data-start="0" data-duration="1.4" data-track-index="7"></div>
+      <div id="q" class="clip layer" data-start="0" data-duration="1.4" data-track-index="2">CAN YOU CATCH<br>THE GLASSES?</div>
+      <div id="g" class="clip layer" data-start="0.2" data-duration="1.2" data-track-index="3">
+        <div class="spin">
+          <div class="shade"></div>
+          <img src="assets/OX8191-0355_1.png" alt="" />
+          <div class="glass" style="-webkit-mask-image:url(assets/OX8191-0355_1_lens.png); mask-image:url(assets/OX8191-0355_1_lens.png);"><i></i></div>
+        </div>
+      </div>
+      <img id="oakley" class="clip layer" data-start="0" data-duration="1.4" data-track-index="4" src="assets/oakley.svg" alt="Oakley" />
+      <img id="to" class="clip layer" data-start="0" data-duration="1.4" data-track-index="5" src="assets/timeoptic-white-spaced.svg" alt="TIMEOPTIC" />
+      <div id="flash" class="clip layer" data-start="0" data-duration="1.4" data-track-index="6"></div>
+    </div>
+
+    <script>
+      window.__timelines = window.__timelines || {};
+      const tl = gsap.timeline({ paused: true });
+      // The glasses never stop: they fly up from the crowd, spin through the outline and on past the camera.
+      // They fit the outline on exactly one frame (CATCH = frame 24 at 30 fps) — the viewer has to pause to "catch" them.
+      const THROW = 0.2, CATCH = 0.8, END = 1.4;
+
+      // background: Google Flow footage (the user's clip, 4.5-5.95 s), real handheld camera and moving crowd
+      tl.set('#g .shade', { opacity: 0 }, 0);
+
+      // linear motion on both sides of CATCH, so the speed never drops to zero at the outline
+      const IN = CATCH - THROW, AFTER = END - CATCH;
+      tl.fromTo('#g', { x: -170, y: 1080, rotation: -520 }, { x: 0, y: 0, rotation: -12, duration: IN, ease: 'none', immediateRender: false }, THROW);
+      tl.fromTo('#g', { scale: 0.12 }, { scale: 1, duration: IN, ease: 'sine.in', immediateRender: false }, THROW);
+      tl.fromTo('#g', { filter: 'blur(3px)' }, { keyframes: { filter: ['blur(3px)', 'blur(1.5px)', 'blur(0px)'] }, duration: IN, ease: 'none', immediateRender: false }, THROW);
+      tl.fromTo('#g .spin', { rotationY: 540, rotationX: 50 }, { rotationY: 0, rotationX: 0, duration: IN, ease: 'none', immediateRender: false }, THROW);
+
+      tl.to('#g', { x: 200, y: -700, rotation: 480, duration: AFTER, ease: 'none' }, CATCH);
+      tl.to('#g', { scale: 5.5, duration: AFTER, ease: 'power2.in' }, CATCH);
+      tl.to('#g', { keyframes: { filter: ['blur(0px)', 'blur(1.5px)', 'blur(6px)'] }, duration: AFTER, ease: 'none' }, CATCH);
+      tl.to('#g .spin', { rotationY: -540, rotationX: -40, duration: AFTER, ease: 'none' }, CATCH);
+
+      window.__timelines['main'] = tl;
+      tl.seek(0);
+    </script>
+  </body>
+</html>

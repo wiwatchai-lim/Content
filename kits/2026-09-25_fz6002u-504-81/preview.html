@@ -1,0 +1,33 @@
+<!doctype html>
+<!-- Cutout check sheet: every angle on white, dark and a checkerboard.
+     Copy into the kit folder, list the layer files in ANGLES, set data-height = 40 + rows * 420,
+     then `npm run render -- kits/<folder>` writes export/preview.png. -->
+<html>
+<head>
+<meta charset="utf-8">
+<style>
+  html, body { margin: 0; background: transparent; }
+  .tile { position: absolute; width: 520px; height: 400px; display: flex; align-items: center; justify-content: center; }
+  .tile img { max-width: 480px; max-height: 360px; }
+  .white { background: #fff; }
+  .dark { background: #5a5a5a; }
+  .check { background: repeating-conic-gradient(#ccc 0 25%, #fff 0 50%) 0 0 / 24px 24px; }
+</style>
+</head>
+<body data-width="1620" data-height="880">
+<script>
+  const ANGLES = ['layers/FZ6002U-504-81_1.png', 'layers/FZ6002U-504-81_2.png'];
+  ANGLES.forEach((src, row) => {
+    ['white', 'dark', 'check'].forEach((bg, col) => {
+      const tile = document.createElement('div');
+      tile.className = `tile ${bg}`;
+      tile.dataset.layer = `${src.split('/').pop()} on ${bg}`;
+      tile.style.left = `${20 + col * 530}px`;
+      tile.style.top = `${20 + row * 420}px`;
+      tile.innerHTML = `<img src="${src}">`;
+      document.body.append(tile);
+    });
+  });
+</script>
+</body>
+</html>

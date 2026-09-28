@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>R1C1 carousel — 1 hook</title>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@700;800&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../brand/tokens.css">
+<link rel="stylesheet" href="slides.css">
+<style>
+  /* Hook: photo on top (free Pexels photo 5201993), green panel with the hook below. */
+  .photo { object-position: 50% 30%; }
+  .eyebrow { top: 672px; color: var(--to-peach); }
+  .headline { top: 716px; font-size: 64px; }
+</style>
+</head>
+<body data-width="1080" data-height="1080">
+  <img class="photo" data-layer="photo" src="layers/pexels-5201993.jpg" alt="">
+  <div class="panel" data-layer="panel"></div>
+  <img class="store on-photo" data-layer="store" src="../../brand/store-lineart.png" alt="">
+  <div class="eyebrow" data-layer="eyebrow">Frame guide · 3 steps</div>
+  <h1 class="headline on-dark" data-layer="headline">The frame you keep avoiding might suit you best.</h1>
+  <img class="logo" data-layer="logo" src="../../brand/logo/timeoptic-white.svg" alt="">
+  <div class="page on-dark" data-layer="page">Swipe →</div>
+</body>
+</html>

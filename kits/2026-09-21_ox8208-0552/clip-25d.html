@@ -1,0 +1,127 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Oakley OX8208 clip 2.5D</title>
+<!--
+  Free 2.5D version of the cinematic clip: gen/C1–C3 + their depth maps (python tools/depth.py gen/Cn.png),
+  one virtual camera move per shot, dissolves between shots, type and logo on top.
+  Render: npm run video -- kits/<folder>/clip-25d.html  ->  export/clip-25d.mp4
+  Everything is drawn from the clip time in window.__seek.
+-->
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;700;800&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../brand/tokens.css">
+<style>
+  html, body { margin: 0; background: #000; }
+  body { position: relative; width: 1080px; height: 1920px; overflow: hidden; font-family: var(--to-font-body); color: var(--to-snow); }
+  body > * { position: absolute; }
+  canvas { inset: 0; width: 1080px; height: 1920px; }
+  .dust { inset: 0; mix-blend-mode: screen; }
+  .dust i { position: absolute; border-radius: 50%; background: rgba(200, 225, 255, .8); filter: blur(1px); }
+  .shade { inset: 0; background: linear-gradient(to bottom, rgba(0, 0, 0, .5) 0%, transparent 30%, transparent 80%, rgba(0, 0, 0, .5) 100%); }
+  .title { left: 0; right: 0; top: 190px; text-align: center; opacity: 0; }
+  .title h1 { margin: 0; font-family: var(--to-font-display); font-weight: 800; font-size: 80px;
+              letter-spacing: var(--to-track-display); line-height: 1; text-shadow: 0 4px 30px rgba(0, 0, 0, .5); }
+  .title h1 span { font-weight: 500; font-size: 48px; margin: 0 18px; vertical-align: 12px; opacity: .85; }
+  .title .rule { width: 320px; height: 1px; margin: 28px auto 22px; background: rgba(250, 250, 250, .5); }
+  .title p { margin: 0; font-size: 28px; line-height: 1.5; color: rgba(250, 250, 250, .9); }
+  .logo { left: 50%; bottom: 150px; width: 240px; margin-left: -120px; opacity: 0; }
+  .fade { inset: 0; background: #000; }
+</style>
+</head>
+<body data-width="1080" data-height="1920" data-duration="10" data-fps="30">
+  <canvas id="gl" width="1080" height="1920"></canvas>
+  <div class="dust" id="dust"></div>
+  <div class="shade"></div>
+  <div class="title" id="title">
+    <h1>Oakley<span>×</span>Essilor</h1>
+    <div class="rule"></div>
+    <p>Eyezen+ · Crizal Prevencia<br>Oakley OX8208 HSTN SQ</p>
+  </div>
+  <img class="logo" id="logo" src="../../brand/logo/timeoptic-white.svg" alt="">
+  <div class="fade" id="fade"></div>
+
+<script>
+const TOTAL = 10, XFADE = 0.6;
+// focus = depth of the glasses in that shot (they stay put, the rest slides past).
+// cam0/cam1 = parallax offset at the start/end of the shot, zoom0/zoom1 = push-in.
+const SHOTS = [
+  { img: 'gen/C1.png', dep: 'gen/C1_depth.png', start: 0,   len: 3.9, focus: 0.40, cam0: [-0.05, 0.02], cam1: [0.03, -0.01], zoom0: 1.03, zoom1: 1.13 },
+  { img: 'gen/C2.png', dep: 'gen/C2_depth.png', start: 3.3, len: 3.6, focus: 0.72, cam0: [0.07, 0.0],   cam1: [-0.07, 0.0],  zoom0: 1.10, zoom1: 1.16 },
+  { img: 'gen/C3.png', dep: 'gen/C3_depth.png', start: 6.3, len: 3.7, focus: 0.34, cam0: [0.04, -0.02], cam1: [-0.02, 0.01], zoom0: 1.09, zoom1: 1.03 },
+];
+
+let seed = 11; const rnd = () => (seed = (seed * 16807) % 2147483647) / 2147483647;
+const dust = document.getElementById('dust');
+const motes = Array.from({ length: 50 }, () => {
+  const s = 2 + rnd() * 4, el = document.createElement('i');
+  el.style.cssText = `width:${s}px;height:${s}px;opacity:${.2 + rnd() * .5}`;
+  dust.appendChild(el);
+  return { el, x: rnd() * 1080, y: 300 + rnd() * 1600, dx: (rnd() - .5) * 90, dy: -60 - rnd() * 120 };
+});
+
+const gl = document.getElementById('gl').getContext('webgl', { preserveDrawingBuffer: true, premultipliedAlpha: false });
+const vs = `attribute vec2 p; varying vec2 uv; void main(){ uv = p * .5 + .5; uv.y = 1. - uv.y; gl_Position = vec4(p, 0, 1); }`;
+const fs = `precision highp float; varying vec2 uv; uniform sampler2D img, dep; uniform vec2 cam; uniform float zoom, focus, alpha;
+  void main(){
+    vec2 c = (uv - .5) / zoom + .5, q = c;
+    for (int i = 0; i < 8; i++) q = c - cam * (texture2D(dep, q).r - focus);
+    gl_FragColor = vec4(texture2D(img, clamp(q, .001, .999)).rgb, alpha);
+  }`;
+const prog = gl.createProgram();
+for (const [type, src] of [[gl.VERTEX_SHADER, vs], [gl.FRAGMENT_SHADER, fs]]) {
+  const s = gl.createShader(type); gl.shaderSource(s, src); gl.compileShader(s);
+  if (!gl.getShaderParameter(s, gl.COMPILE_STATUS)) throw new Error(gl.getShaderInfoLog(s));
+  gl.attachShader(prog, s);
+}
+gl.linkProgram(prog); gl.useProgram(prog);
+gl.bindBuffer(gl.ARRAY_BUFFER, gl.createBuffer());
+gl.bufferData(gl.ARRAY_BUFFER, new Float32Array([-1, -1, 1, -1, -1, 1, 1, 1]), gl.STATIC_DRAW);
+gl.enableVertexAttribArray(0); gl.vertexAttribPointer(0, 2, gl.FLOAT, false, 0, 0);
+gl.enable(gl.BLEND); gl.blendFunc(gl.SRC_ALPHA, gl.ONE_MINUS_SRC_ALPHA);
+const U = (n) => gl.getUniformLocation(prog, n);
+
+const load = (src) => new Promise((ok, err) => { const i = new Image(); i.onload = () => ok(i); i.onerror = () => err(new Error(src)); i.src = src; });
+function texture(unit, image) {
+  gl.activeTexture(gl.TEXTURE0 + unit); gl.bindTexture(gl.TEXTURE_2D, gl.createTexture());
+  gl.texImage2D(gl.TEXTURE_2D, 0, gl.RGBA, gl.RGBA, gl.UNSIGNED_BYTE, image);
+  for (const p of [gl.TEXTURE_WRAP_S, gl.TEXTURE_WRAP_T]) gl.texParameteri(gl.TEXTURE_2D, p, gl.CLAMP_TO_EDGE);
+  gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_MIN_FILTER, gl.LINEAR);
+}
+const ready = Promise.all(SHOTS.flatMap((s) => [load(s.img), load(s.dep)])).then((imgs) => imgs.forEach((im, i) => texture(i, im)));
+
+const clamp = (x) => Math.min(Math.max(x, 0), 1);
+const smooth = (x) => { x = clamp(x); return x * x * (3 - 2 * x); };
+const ease = (x) => { x = clamp(x); return x < .5 ? 4 * x * x * x : 1 - Math.pow(-2 * x + 2, 3) / 2; };
+const lerp = (a, b, k) => a + (b - a) * k;
+
+window.__seek = async (ms) => {
+  await ready;
+  const t = ms / 1000;
+  gl.clearColor(0, 0, 0, 1); gl.clear(gl.COLOR_BUFFER_BIT);
+  SHOTS.forEach((s, i) => {
+    const local = t - s.start;
+    if (local < 0 || local > s.len) return;
+    const k = ease(local / s.len);
+    gl.uniform1i(U('img'), i * 2); gl.uniform1i(U('dep'), i * 2 + 1);
+    gl.uniform2f(U('cam'), lerp(s.cam0[0], s.cam1[0], k), lerp(s.cam0[1], s.cam1[1], k));
+    gl.uniform1f(U('zoom'), lerp(s.zoom0, s.zoom1, k));
+    gl.uniform1f(U('focus'), s.focus);
+    gl.uniform1f(U('alpha'), i === 0 ? 1 : smooth(local / XFADE));
+    gl.drawArrays(gl.TRIANGLE_STRIP, 0, 4);
+  });
+  for (const m of motes) {
+    m.el.style.transform = `translate(${m.x + m.dx * t / TOTAL}px, ${m.y + m.dy * t / TOTAL}px)`;
+  }
+  const inK = smooth((t - 0.6) / 0.9), outK = 1 - smooth((t - (TOTAL - 1.3)) / 0.8), a = Math.min(inK, outK);
+  for (const el of [document.getElementById('title'), document.getElementById('logo')]) {
+    el.style.opacity = a;
+    el.style.transform = `translateY(${(1 - inK) * 16}px)`;
+    el.style.filter = `blur(${(1 - a) * 6}px)`;
+  }
+  document.getElementById('fade').style.opacity = Math.max(1 - smooth(t / 0.5), smooth((t - (TOTAL - 0.5)) / 0.5));
+};
+window.__seek(0);
+</script>
+</body>
+</html>

@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Kit clip 2.5D</title>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;700;800&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../brand/tokens.css">
+<style>
+  /* Layers, bottom to top: WebGL scene (text-free photo + depth map, virtual camera push/orbit),
+     light sweep, dust, vignette, type, logo, fade. Everything is driven by the clip time t:
+     WebGL through window.__seek, the rest through CSS animations that tools/video.mjs seeks. */
+  html, body { margin: 0; background: #000; }
+  body { position: relative; width: 1080px; height: 1080px; overflow: hidden;
+         font-family: var(--to-font-body); color: var(--to-snow); }
+  body > * { position: absolute; }
+  canvas { inset: 0; width: 1080px; height: 1080px; }
+
+  .sweep { inset: -20%; mix-blend-mode: screen; opacity: 0;
+           background: linear-gradient(115deg, transparent 42%, rgba(255, 214, 160, .30) 50%, transparent 58%);
+           animation: sweep 10s linear both; }
+  .dust { inset: 0; mix-blend-mode: screen; }
+  .dust i { position: absolute; border-radius: 50%; background: rgba(255, 226, 180, .75); filter: blur(1px);
+            animation: float 10s linear both; }
+  .vignette { inset: 0; background: radial-gradient(75% 70% at 50% 50%, transparent 55%, rgba(0, 0, 0, .55) 100%); }
+
+  .title { left: 0; right: 0; top: 118px; text-align: center; animation: title 10s ease both; }
+  .title h1 { margin: 0; font-family: var(--to-font-display); font-weight: 800; font-size: 72px;
+              letter-spacing: var(--to-track-display); line-height: 1; text-shadow: 0 4px 30px rgba(0, 0, 0, .5); }
+  .title h1 span { font-weight: 500; font-size: 44px; margin: 0 18px; vertical-align: 10px; opacity: .85; }
+  .title .rule { width: 300px; height: 1px; margin: 24px auto 18px; background: rgba(250, 250, 250, .5); }
+  .title p { margin: 0; font-size: 22px; line-height: 1.45; color: rgba(250, 250, 250, .88); }
+  .logo { left: 50%; bottom: 84px; width: 210px; margin-left: -105px; animation: title 10s ease both; }
+  .fade { inset: 0; background: #000; animation: fade 10s linear both; }
+
+  @keyframes sweep { 0%, 28% { transform: translateX(-60%); opacity: 0 } 32% { opacity: 1 }
+                     52% { transform: translateX(60%); opacity: 1 } 56%, 100% { transform: translateX(60%); opacity: 0 } }
+  @keyframes float { from { transform: translate(0, 0) } to { transform: translate(var(--dx), -140px) } }
+  @keyframes title { 0%, 5% { opacity: 0; transform: translateY(14px); filter: blur(6px) }
+                     15%, 88% { opacity: 1; transform: none; filter: blur(0) } 97%, 100% { opacity: 0; filter: blur(4px) } }
+  @keyframes fade { 0% { opacity: 1 } 6% { opacity: 0 } 94% { opacity: 0 } 100% { opacity: 1 } }
+</style>
+</head>
+<body data-width="1080" data-height="1080" data-duration="10" data-fps="30">
+  <canvas id="gl" width="1080" height="1080"></canvas>
+  <div class="sweep"></div>
+  <div class="dust" id="dust"></div>
+  <div class="vignette"></div>
+  <div class="title">
+    <h1>Ray-Ban<span>×</span>HOYA</h1>
+    <div class="rule"></div>
+    <p>HOYA LifeStyle 4 Type Urban · FullControl 1.5 Sensity Grey<br>RayBan 70159</p>
+  </div>
+  <img class="logo" src="../../brand/logo/timeoptic-white.svg" alt="">
+  <div class="fade"></div>
+
+<script>
+// Dust: fixed pseudo-random layout so every render is identical.
+let seed = 7; const rnd = () => (seed = (seed * 16807) % 2147483647) / 2147483647;
+const dust = document.getElementById('dust');
+for (let i = 0; i < 40; i++) {
+  const s = 2 + rnd() * 4, el = document.createElement('i');
+  el.style.cssText = `left:${rnd() * 1080}px;top:${200 + rnd() * 900}px;width:${s}px;height:${s}px;opacity:${.25 + rnd() * .5};--dx:${(rnd() - .5) * 120}px`;
+  dust.appendChild(el);
+}
+
+// WebGL depth parallax. The camera pushes in and slides sideways; pixels move by (depth - focus),
+// so the frame (focus plane) stays put while the curtains and the brass bowl slide past it.
+const DURATION = 10000, FOCUS = 0.38;
+const gl = document.getElementById('gl').getContext('webgl', { preserveDrawingBuffer: true });
+const vs = `attribute vec2 p; varying vec2 uv; void main(){ uv = p * .5 + .5; uv.y = 1. - uv.y; gl_Position = vec4(p, 0, 1); }`;
+const fs = `precision highp float; varying vec2 uv; uniform sampler2D img, dep; uniform vec2 cam; uniform float zoom;
+  void main(){
+    vec2 c = (uv - .5) / zoom + .5, q = c;
+    for (int i = 0; i < 6; i++) q = c - cam * (texture2D(dep, q).r - ${FOCUS});
+    gl_FragColor = texture2D(img, clamp(q, .001, .999));
+  }`;
+const prog = gl.createProgram();
+for (const [type, src] of [[gl.VERTEX_SHADER, vs], [gl.FRAGMENT_SHADER, fs]]) {
+  const s = gl.createShader(type); gl.shaderSource(s, src); gl.compileShader(s);
+  if (!gl.getShaderParameter(s, gl.COMPILE_STATUS)) throw new Error(gl.getShaderInfoLog(s));
+  gl.attachShader(prog, s);
+}
+gl.linkProgram(prog); gl.useProgram(prog);
+gl.bindBuffer(gl.ARRAY_BUFFER, gl.createBuffer());
+gl.bufferData(gl.ARRAY_BUFFER, new Float32Array([-1, -1, 1, -1, -1, 1, 1, 1]), gl.STATIC_DRAW);
+gl.enableVertexAttribArray(0); gl.vertexAttribPointer(0, 2, gl.FLOAT, false, 0, 0);
+
+const load = (src) => new Promise((ok, err) => { const i = new Image(); i.onload = () => ok(i); i.onerror = err; i.src = src; });
+function texture(unit, image) {
+  gl.activeTexture(gl.TEXTURE0 + unit); gl.bindTexture(gl.TEXTURE_2D, gl.createTexture());
+  gl.texImage2D(gl.TEXTURE_2D, 0, gl.RGBA, gl.RGBA, gl.UNSIGNED_BYTE, image);
+  for (const p of [gl.TEXTURE_WRAP_S, gl.TEXTURE_WRAP_T]) gl.texParameteri(gl.TEXTURE_2D, p, gl.CLAMP_TO_EDGE);
+  gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_MIN_FILTER, gl.LINEAR);
+}
+const ease = (x) => x < .5 ? 4 * x * x * x : 1 - Math.pow(-2 * x + 2, 3) / 2;
+
+const ready = Promise.all([load('gen/C1.png'), load('gen/C1_depth.png')]).then(([img, dep]) => {
+  texture(0, img); texture(1, dep);
+  gl.uniform1i(gl.getUniformLocation(prog, 'img'), 0);
+  gl.uniform1i(gl.getUniformLocation(prog, 'dep'), 1);
+});
+window.__seek = async (ms) => {
+  await ready;
+  const k = ease(Math.min(ms / DURATION, 1));
+  gl.uniform2f(gl.getUniformLocation(prog, 'cam'), -0.06 + 0.12 * k, 0.015 - 0.03 * k);
+  gl.uniform1f(gl.getUniformLocation(prog, 'zoom'), 1.08 + 0.14 * k);
+  gl.drawArrays(gl.TRIANGLE_STRIP, 0, 4);
+};
+window.__seek(0);
+</script>
+</body>
+</html>

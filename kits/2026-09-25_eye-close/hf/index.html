@@ -1,0 +1,154 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=1080, height=1920" />
+    <!--
+      TIMEOPTIC eye break, version 2: close your eyes for 15 seconds while a calm voice counts 1-15.
+        0-2 s      "Close your eyes" (voice at 0.3 s), the eye closes
+        2-17 s     rest: numbers 1..15, one per second (voice counts), dim green, slow breathing glow
+        17.2-19.5  "Open your eyes" (voice), light returns, TIMEOPTIC wordmark
+      Voice: local Kokoro-82M TTS (af_heart, Apache-2.0). Bed: tools/ambient.py (our own synth).
+    -->
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/gsap.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@300;500;700;800&family=Inter:wght@400;500&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="assets/tokens.css" />
+    <style>
+      * { margin: 0; padding: 0; box-sizing: border-box; }
+      html, body { width: 1080px; height: 1920px; overflow: hidden; background: #e9efe9; }
+      #root { position: relative; width: 1080px; height: 1920px; overflow: hidden; font-family: var(--to-font-body); color: var(--to-green); }
+      .layer { position: absolute; }
+      .bg { position: absolute; inset: 0; }
+      #bgLight { background: radial-gradient(ellipse 70% 50% at 50% 45%, #f6f9f5 0%, #e1ebe4 60%, #cddcd2 100%); }
+      #bgDark { background: radial-gradient(ellipse 70% 50% at 50% 50%, #1f3d32 0%, #142b22 65%, #0c1c16 100%); opacity: 0; }
+      #glow { left: 140px; top: 560px; width: 800px; height: 800px; border-radius: 50%; opacity: 0;
+              background: radial-gradient(circle, rgba(120, 200, 160, .22) 0%, rgba(120, 200, 160, .08) 45%, rgba(120, 200, 160, 0) 70%); }
+      .t { position: absolute; left: 60px; right: 60px; text-align: center; }
+      .t .w { display: inline-block; }
+      .kicker { font-family: var(--to-font-display); font-weight: 700; font-size: 30px; letter-spacing: .32em; text-transform: uppercase; }
+      .head { font-family: var(--to-font-display); font-weight: 800; font-size: 96px; line-height: 1.05; letter-spacing: -.02em; }
+      .sub { font-size: 38px; font-weight: 500; opacity: .8; }
+      #eye { left: 240px; top: 760px; width: 600px; height: 360px; }
+      #nums { left: 0; top: 740px; width: 1080px; height: 440px; }
+      #nums span { position: absolute; left: 0; right: 0; text-align: center; font-family: var(--to-font-display); font-weight: 300;
+                   font-size: 360px; line-height: 440px; color: #e6f2ea; opacity: 0; }
+      #ring { left: 290px; top: 710px; width: 500px; height: 500px; opacity: 0; }
+      #rest { top: 1420px; color: #cfe3d7; }
+      #logo { left: 390px; top: 936px; width: 300px; height: 48px; transform-origin: 50% 50%; opacity: 0; }
+      #logo b { position: absolute; top: 0; height: 48px; background: url(assets/timeoptic.svg) no-repeat; background-size: 300px 47.6px; }
+      #logo .shine { position: absolute; inset: 0; -webkit-mask: url(assets/timeoptic-mono.svg) center / 100% no-repeat; mask: url(assets/timeoptic-mono.svg) center / 100% no-repeat; overflow: hidden; }
+      #logo .shine i { position: absolute; top: 0; bottom: 0; left: 0; width: 80px; transform: translateX(-90px); background: linear-gradient(100deg, transparent, rgba(239, 207, 156, .95), transparent); }
+    </style>
+  </head>
+  <body>
+    <div id="root" data-composition-id="main" data-start="0" data-duration="19.5" data-width="1080" data-height="1920">
+      <div id="bgs" class="clip layer" data-start="0" data-duration="19.5" data-track-index="0" style="inset:0">
+        <div class="bg" id="bgLight"></div><div class="bg" id="bgDark"></div>
+      </div>
+      <div id="glow" class="clip layer" data-start="0" data-duration="19.5" data-track-index="1"></div>
+
+      <svg id="eye" class="clip layer" data-start="0" data-duration="19.5" data-track-index="2" viewBox="0 0 600 360">
+        <defs><clipPath id="almond"><path d="M20 180 Q300 -50 580 180 Q300 410 20 180Z" /></clipPath></defs>
+        <path id="white" d="M20 180 Q300 -50 580 180 Q300 410 20 180Z" fill="#fbfdfb" />
+        <g id="ball" clip-path="url(#almond)">
+          <circle cx="300" cy="180" r="100" fill="#41996E" /><circle cx="300" cy="180" r="44" fill="#123A29" /><circle cx="330" cy="150" r="17" fill="#fff" opacity=".9" />
+          <rect id="lid" x="0" y="-360" width="600" height="360" fill="#e1ebe4" />
+        </g>
+        <path id="outline" d="M20 180 Q300 -50 580 180 Q300 410 20 180Z" fill="none" stroke="#123A29" stroke-width="9" />
+        <path id="closed" d="M20 180 Q300 330 580 180" fill="none" stroke="#123A29" stroke-width="9" stroke-linecap="round" opacity="0" />
+        <g id="lashes" opacity="0" stroke="#123A29" stroke-width="8" stroke-linecap="round">
+          <line x1="140" y1="236" x2="118" y2="282" /><line x1="220" y1="262" x2="210" y2="312" /><line x1="300" y1="270" x2="300" y2="322" />
+          <line x1="380" y1="262" x2="390" y2="312" /><line x1="460" y1="236" x2="482" y2="282" />
+        </g>
+      </svg>
+
+      <svg id="ring" class="clip layer" data-start="0" data-duration="19.5" data-track-index="3" viewBox="0 0 500 500">
+        <circle cx="250" cy="250" r="236" fill="none" stroke="rgba(207,227,215,.18)" stroke-width="6" />
+        <circle id="arc" cx="250" cy="250" r="236" fill="none" stroke="#EFCF9C" stroke-width="6" stroke-linecap="round"
+                stroke-dasharray="1483" stroke-dashoffset="1483" transform="rotate(-90 250 250)" />
+      </svg>
+      <div id="nums" class="clip layer" data-start="0" data-duration="19.5" data-track-index="4"></div>
+
+      <div id="s0" class="clip layer" data-start="0" data-duration="2.3" data-track-index="5" style="inset:0">
+        <div class="t kicker" style="top:380px">15-second eye break</div>
+        <div class="t head words" style="top:450px">Close your eyes</div>
+      </div>
+      <div id="s1" class="clip layer" data-start="1.8" data-duration="15.4" data-track-index="6" style="inset:0">
+        <div class="t sub words" id="rest">Relax. Just listen and breathe.</div>
+      </div>
+      <div id="s2" class="clip layer" data-start="17" data-duration="2.5" data-track-index="7" style="inset:0">
+        <div class="t head words" style="top:600px; font-size:84px">Now open your eyes</div>
+        <div class="t sub words" style="top:1080px">Take care of your eyes</div>
+      </div>
+      <div id="logo" class="clip layer" data-start="0" data-duration="19.5" data-track-index="8" aria-label="TIMEOPTIC"><div class="shine"><i></i></div></div>
+    </div>
+
+    <script>
+      window.__timelines = window.__timelines || {};
+      const tl = gsap.timeline({ paused: true });
+
+      document.querySelectorAll('.words').forEach((el) => {
+        const words = el.textContent.split(' ');
+        el.textContent = '';
+        words.forEach((w, i) => {
+          const s = document.createElement('span');
+          s.className = 'w';
+          s.textContent = w;
+          el.append(s);
+          if (i < words.length - 1) el.append(' ');
+        });
+      });
+      const nums = document.getElementById('nums');
+      for (let n = 1; n <= 15; n++) { const s = document.createElement('span'); s.textContent = n; nums.append(s); }
+      const LETTERS = [[0, 282], [310, 392], [438, 834], [876, 1134], [1170, 1498], [1540, 1784], [1808, 2078], [2112, 2164], [2214, 2520]];
+      const logo = document.getElementById('logo'), k = 300 / 2520;
+      LETTERS.forEach(([x0, x1]) => {
+        const el = document.createElement('b');
+        el.style.cssText = `left:${x0 * k}px;width:${(x1 - x0) * k + 1}px;background-position:${-x0 * k}px 0;`;
+        logo.insertBefore(el, logo.firstChild);
+      });
+      const wordsIn = (sel, at, stagger = 0.12) => tl.from(`${sel} .w`, { opacity: 0, y: 24, filter: 'blur(8px)', duration: 0.7, ease: 'power2.out', stagger }, at);
+
+      // 0-2: the eye is open, then slowly closes; "Close your eyes"
+      tl.fromTo('#eye', { opacity: 0, scale: 1.08 }, { opacity: 1, scale: 1, duration: 0.5, ease: 'power2.out' }, 0);
+      tl.from('#s0 .kicker', { opacity: 0, y: 12, duration: 0.6 }, 0.1);
+      wordsIn('#s0 .head', 0.3);
+      tl.to('#lid', { attr: { y: 0 }, duration: 1.0, ease: 'sine.inOut' }, 0.9);
+      tl.to(['#white', '#outline', '#ball'], { opacity: 0, duration: 0.3 }, 1.8);
+      tl.to(['#closed', '#lashes'], { opacity: 1, duration: 0.3 }, 1.7);
+      tl.to('#s0 .t', { opacity: 0, filter: 'blur(10px)', duration: 0.5, ease: 'power2.in' }, 1.8);
+
+      // 2-17: rest — dark, calm, one number per second
+      tl.to('#bgDark', { opacity: 1, duration: 1.0, ease: 'sine.inOut' }, 1.6);
+      tl.to('#closed', { attr: { stroke: '#cfe3d7' }, duration: 1.0 }, 1.6);
+      tl.to('#lashes', { attr: { stroke: '#cfe3d7' }, duration: 1.0 }, 1.6);
+      tl.to('#eye', { y: -520, scale: 0.45, duration: 1.0, ease: 'power2.inOut' }, 1.7);
+      tl.to('#ring', { opacity: 1, duration: 0.6 }, 1.9);
+      tl.fromTo('#arc', { attr: { 'stroke-dashoffset': 1483 } }, { attr: { 'stroke-dashoffset': 0 }, duration: 15, ease: 'none' }, 2);
+      tl.to('#glow', { opacity: 1, duration: 1 }, 2);
+      for (let c = 0; c < 4; c++) tl.fromTo('#glow', { scale: 0.85 }, { keyframes: { scale: [0.85, 1.1, 0.85] }, duration: 3.75, ease: 'sine.inOut', immediateRender: false }, 2 + c * 3.75);
+      const spans = nums.querySelectorAll('span');
+      spans.forEach((s, i) => {
+        const t = 2 + i;
+        tl.fromTo(s, { opacity: 0, scale: 0.9, filter: 'blur(10px)' }, { opacity: 1, scale: 1, filter: 'blur(0px)', duration: 0.35, ease: 'power2.out', immediateRender: false }, t);
+        if (i < 14) tl.to(s, { opacity: 0, scale: 1.06, filter: 'blur(8px)', duration: 0.35, ease: 'power2.in' }, t + 0.7);
+      });
+      wordsIn('#rest', 2.4, 0.1);
+      tl.to('#rest', { opacity: 0, duration: 0.5 }, 16.6);
+
+      // 17-19.5: open your eyes — light returns, the wordmark
+      tl.to(spans[14], { opacity: 0, filter: 'blur(8px)', duration: 0.5 }, 17);
+      tl.to(['#ring', '#glow', '#eye'], { opacity: 0, duration: 0.5 }, 17);
+      tl.to('#bgDark', { opacity: 0, duration: 1.0, ease: 'sine.inOut' }, 17.1);
+      wordsIn('#s2 .head', 17.3, 0.1);
+      tl.set('#logo', { opacity: 1 }, 17.6);
+      tl.fromTo('#logo', { scale: 2.3 }, { scale: 2.6, duration: 1.9, ease: 'none', immediateRender: false }, 17.6);
+      tl.from('#logo b', { y: 30, opacity: 0, filter: 'blur(6px)', duration: 0.7, ease: 'power2.out', stagger: 0.07 }, 17.6);
+      tl.fromTo('#logo .shine i', { x: -90 }, { x: 320, duration: 1.1, ease: 'power2.inOut', immediateRender: false }, 18.4);
+      wordsIn('#s2 .sub', 18.2, 0.08);
+
+      window.__timelines['main'] = tl;
+      tl.seek(0);
+    </script>
+  </body>
+</html>

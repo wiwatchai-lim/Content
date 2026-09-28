@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="th">
+<head>
+<meta charset="utf-8">
+<title>3-detail-split</title>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;700;800&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../brand/tokens.css">
+<style>
+  /* From ref.jpg: small full frame on top, zoomed hinge detail bleeding off the left edge below, m/ c/ model info + bullets on the right */
+  :root {
+    --ink: #1c1c1c;
+    --muted: #4f4f4f;
+  }
+  html, body { margin: 0; background: transparent; }
+  body { position: relative; width: 1080px; height: 1080px; overflow: hidden; font-family: var(--to-font-body); color: var(--ink); }
+  body > [data-layer] { position: absolute; box-sizing: border-box; }
+
+  .background { inset: 0; background: linear-gradient(180deg, #f3f3f2 0%, #e7e7e6 100%); }
+  .title { left: 0; right: 0; top: 74px; text-align: center; }
+  .title b { display: block; font-family: var(--to-font-display); font-size: 38px; font-weight: 700; }
+  .title span { font-family: var(--to-font-body); font-size: 24px; font-weight: 400; }
+  .product { left: 250px; top: 176px; width: 580px; filter: drop-shadow(0 16px 12px rgba(0, 0, 0, .14)); }
+  .detail { left: -520px; top: 566px; width: 1180px; filter: drop-shadow(0 26px 22px rgba(0, 0, 0, .16)); }
+  .info { left: 700px; top: 520px; width: 320px; }
+  .info p { margin: 0; line-height: 1.25; }
+  .info i { font-size: 30px; font-weight: 400; margin-right: 8px; }
+  .info .model { font-family: var(--to-font-display); font-size: 46px; font-weight: 700; }
+  .info .color { font-family: var(--to-font-body); font-size: 34px; font-weight: 400; }
+  .info ul { margin: 18px 0 0; padding: 0; list-style: none; font-family: var(--to-font-body); font-size: 18px; font-weight: 400; line-height: 1.55; color: var(--muted); }
+  .info li::before { content: "- "; }
+  .logo { left: var(--to-margin); top: var(--to-margin); width: var(--to-logo-width); }
+</style>
+</head>
+<body data-width="1080" data-height="1080">
+  <div class="background" data-layer="background"></div>
+  <img class="logo" data-layer="logo" src="../../brand/logo/timeoptic.svg" alt="">
+  <div class="title" data-layer="title"><b>Bestselling</b><span>Lens feature model</span></div>
+  <img class="product" data-layer="product" src="../_preview/front.png" alt="">
+  <img class="detail" data-layer="detail" src="../_preview/angle.png" alt="">
+  <div class="info" data-layer="info">
+    <p><i>m/</i><span class="model">Model</span></p>
+    <p><i>c/</i><span class="color">Color</span></p>
+    <ul>
+      <li>Lens name</li>
+      <li>Lens key feature</li>
+      <li>Coating name</li>
+      <li>Frame material</li>
+    </ul>
+  </div>
+</body>
+</html>

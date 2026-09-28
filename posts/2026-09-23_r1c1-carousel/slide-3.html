@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>R1C1 carousel — 3 go opposite</title>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@700;800&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../brand/tokens.css">
+<link rel="stylesheet" href="slides.css">
+<style>
+  /* Two in-stock frames from the kits: angular Oakley OX8208-0552, round Bolon BJ3205-B10. */
+  .headline { top: 132px; font-size: 92px; }
+  .accent { top: 258px; }
+  .frame { left: 50%; transform: translateX(-50%); filter: drop-shadow(0 18px 18px rgba(33, 33, 33, .14)); }
+  .frame-a { top: 316px; width: 600px; }
+  .frame-b { top: 650px; width: 600px; }
+  .rule { left: 200px; right: 200px; top: 614px; height: 1px; background: var(--to-hairline); }
+  .tag { left: 0; right: 0; text-align: center; font-size: 26px; color: #4A4843; }
+  .tag b { font-family: var(--to-font-display); font-weight: 700; color: var(--to-green); }
+  .tag-a { top: 552px; }
+  .tag-b { top: 868px; }
+</style>
+</head>
+<body data-width="1080" data-height="1080">
+  <div class="background" data-layer="background"></div>
+  <img class="store" data-layer="store" src="../../brand/store-lineart.png" alt="">
+  <div class="eyebrow" data-layer="eyebrow">Step 2</div>
+  <h1 class="headline" data-layer="headline">Go opposite</h1>
+  <div class="accent" data-layer="accent"></div>
+  <img class="frame frame-a" data-layer="frame-angular" src="../../kits/2026-09-21_ox8208-0552/layers/OX8208-0552_1.png" alt="">
+  <div class="tag tag-a" data-layer="tag-angular"><b>Soft, round face</b> → a sharper frame</div>
+  <div class="rule" data-layer="rule"></div>
+  <img class="frame frame-b" data-layer="frame-round" src="../../kits/2026-09-22_bj3205-b10/layers/BJ3205-B10_1.png" alt="">
+  <div class="tag tag-b" data-layer="tag-round"><b>Sharp, square face</b> → a softer frame</div>
+  <img class="logo" data-layer="logo" src="../../brand/logo/timeoptic.svg" alt="">
+  <div class="page" data-layer="page">3 / 4</div>
+</body>
+</html>

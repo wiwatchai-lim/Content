@@ -1,0 +1,4 @@
+- `bg/crowd.png` — Codex image_gen (user approved, 2026-09-28), prompt: outdoor festival crowd from behind, overcast sky, stage on the right, no text.
+- Frame photos `data/frames/images/Oakley/OX8191-0355_1/_2.jpg` (verified row in `_check`).
+- Idea after Levi's "Can you catch the jorts?" TikTok (user's reference `Downloads/Download (4).mp4`); no footage or graphics copied.
+- `bg/crowd_flow.mp4` — the user's Google Flow clip (2026-09-28, from bg/crowd.png + our prompt); 4.5–5.95 s used as the background.

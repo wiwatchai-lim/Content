@@ -1,0 +1,23 @@
+# Installed / machine-specific
+node_modules/
+__pycache__/
+*.pyc
+.env
+.env.*
+
+# Scratch space (Codex replies, test renders, backups)
+tmp/
+
+# Render leftovers and superseded versions
+kits/**/export/_*.mp4
+kits/**/export/*.silent.mp4
+kits/**/export/*_oldvoice.mp4
+kits/2026-09-24_ox8080-0158/export/clip-hf-v1.mp4
+kits/2026-09-24_ox8080-0158/export/clip-hf-v2-freakedout.mp4
+kits/2026-09-24_ox8080-0158/export/clip-hf_music.mp4
+kits/**/codex/wan/
+
+# OS clutter
+Thumbs.db
+desktop.ini
+.DS_Store

@@ -1,0 +1,150 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>BOSS 1427 character clip</title>
+<!--
+  Character motion poster 9:16 (Sight First reference), style 13-model-promo on the TIMEOPTIC tokens:
+  heavy headline top-left, giant faded word behind the model, spec stickers popping around him.
+  The model (gen/model.png, AI, no glasses) wears the real frame: layers/BOSS1427_1_face.png is the
+  front cutout with the see-through temples removed, fitted to his pupils (472,406) / (630,392).
+  Headline = HOYA's own line for Nulux iDentity V+. 120 BPM, one beat = 0.5 s.
+  Render: npm run video -- kits/2026-09-21_boss1427/motion.html  ->  export/motion.mp4
+-->
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;700;800;900&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../brand/tokens.css">
+<style>
+  :root { --muted: #5e5a54; --t: 10s; }
+  html, body { margin: 0; background: var(--to-snow); }
+  body { position: relative; width: 1080px; height: 1920px; overflow: hidden; font-family: var(--to-font-body); color: var(--to-black); }
+  body > [data-layer] { position: absolute; box-sizing: border-box; }
+  [data-layer], [data-layer] * { animation-duration: var(--t); animation-fill-mode: both; animation-timing-function: linear; }
+
+  .background { inset: 0; background: linear-gradient(180deg, var(--to-snow) 0%, var(--to-snow) 30%, var(--to-pastel) 100%); }
+  .leaf-shadow { right: -200px; top: -120px; width: 900px; height: 900px; filter: blur(10px); animation-name: leaf; }
+  .store { right: -70px; top: 40px; width: 560px; filter: drop-shadow(0 0 1px rgba(33, 33, 33, .6)) drop-shadow(0 1px 3px rgba(33, 33, 33, .3)); animation-name: store; }
+
+  .logo { left: var(--to-margin); top: 200px; width: 230px; height: 37px; }
+  .logo b { position: absolute; top: 0; height: 37px; background: url(../../brand/logo/timeoptic.svg) no-repeat;
+            background-size: 230px 36.5px; animation-name: bounceIn, wave; animation-duration: .7s, .6s;
+            animation-timing-function: linear, ease-in-out; }
+
+  .giant { left: -30px; right: -30px; top: 820px; text-align: center; font-family: var(--to-font-display); font-weight: 900;
+           font-size: 430px; line-height: 1; letter-spacing: -0.04em; color: rgba(33, 33, 33, .07); animation-name: giant; }
+
+  .kicker { left: var(--to-margin); top: 330px; font-family: var(--to-font-display); font-weight: 700; font-size: 26px;
+            letter-spacing: var(--to-track-eyebrow); color: var(--to-green); animation-name: kicker; }
+  .headline { left: var(--to-margin); right: 60px; top: 372px; font-family: var(--to-font-display); font-weight: 800;
+              font-size: 104px; line-height: 1.02; letter-spacing: var(--to-track-display); text-transform: uppercase; }
+  .headline div { white-space: nowrap; }
+  .headline .accent { color: var(--to-green); }
+  .rule { left: var(--to-margin); top: 600px; width: 150px; height: 5px; background: var(--to-peach); transform-origin: left; animation-name: wipe; }
+  .headline i, .sub i { display: inline-block; font-style: normal; white-space: pre; animation-name: bounceIn, wave;
+                        animation-duration: .7s, .6s; animation-timing-function: linear, ease-in-out; }
+
+  /* Model + real frame share one box in the model's own pixel space (1086 × 1448), scaled onto the canvas. */
+  .person { left: 40px; top: 587px; width: 1086px; height: 1448px; transform-origin: 50% 100%; animation-name: personIn; }
+  .person .inner { position: absolute; left: 0; top: 0; width: 1086px; height: 1448px; transform: scale(.9208); transform-origin: 0 0; }
+  .person .model { position: absolute; left: 0; top: 0; width: 1086px; }
+  .person .frame { position: absolute; left: 0; top: 0; width: 2279px; height: 779px; transform-origin: 1142px 369px;
+                   transform: translate(-591px, 32px) rotate(-5.06deg) scale(.154); filter: drop-shadow(0 18px 14px rgba(0, 0, 0, .28)); }
+  .person .frame img { position: absolute; inset: 0; width: 100%; }
+  .person .lens { position: absolute; inset: 0; -webkit-mask: url(layers/BOSS1427_1_lens.png) 0 0 / 100% 100% no-repeat;
+                  mask: url(layers/BOSS1427_1_lens.png) 0 0 / 100% 100% no-repeat;
+                  background: linear-gradient(118deg, rgba(210, 225, 236, .10) 0%, rgba(255, 255, 255, .42) 20%, rgba(210, 225, 236, .06) 30%,
+                              rgba(210, 225, 236, .06) 62%, rgba(255, 255, 255, .28) 70%, rgba(210, 225, 236, .10) 80%); }
+
+  .tag { background: var(--to-snow); border-radius: 0; box-shadow: 0 12px 30px rgba(33, 33, 33, .16); padding: 22px 28px 24px;
+         font-size: 26px; line-height: 1.35; color: var(--muted); }
+  .tag h4 { margin: 0 0 6px; font-family: var(--to-font-display); font-weight: 700; font-size: 20px; letter-spacing: var(--to-track-eyebrow); color: var(--to-green); }
+  .tag b { display: block; font-weight: 600; color: var(--to-black); font-size: 28px; }
+  .tag::before { content: ""; position: absolute; left: -9px; top: 24px; width: 18px; height: 18px; border-radius: 50%; background: var(--to-peach); }
+  .tag-frame { left: 640px; top: 690px; width: 380px; transform-origin: 0 50%; animation-name: tag1; }
+  .tag-lens { left: 40px; top: 1440px; width: 440px; transform-origin: 100% 50%; animation-name: tag2; }
+  .tag-coat { left: 660px; top: 1250px; width: 380px; transform-origin: 0 50%; animation-name: tag3; }
+
+  .cta { left: 290px; width: 500px; top: 1700px; height: 92px; border-radius: 46px; background: var(--to-green); color: var(--to-snow);
+         display: flex; align-items: center; justify-content: center; gap: 18px; font-family: var(--to-font-display); font-weight: 700; font-size: 32px;
+         letter-spacing: var(--to-track-eyebrow); text-transform: uppercase; box-shadow: 0 14px 30px rgba(18, 58, 41, .35); animation-name: cta; }
+  .cta svg { width: 30px; height: 30px; stroke: var(--to-snow); stroke-width: 2.4; fill: none; animation-name: nudge; }
+
+  /* Percentages are of the 10 s clip: 1% = 0.1 s. */
+  @keyframes leaf     { from { transform: translate(0, 0) rotate(0deg) } to { transform: translate(-40px, 30px) rotate(-3deg) } }
+  @keyframes store    { 0% { opacity: 0; transform: translate(30px, 20px) } 14% { opacity: .95 } 100% { opacity: .95; transform: translate(-10px, 0) } }
+  @keyframes bounceIn { 0% { opacity: 0; transform: translateY(60px) scale(.3) rotate(-8deg) } 45% { opacity: 1; transform: translateY(-18px) scale(1.18) rotate(3deg) }
+                        70% { transform: translateY(6px) scale(.95) rotate(-1deg) } 100% { opacity: 1; transform: none } }
+  @keyframes wave     { 0%, 100% { transform: none } 40% { transform: translateY(-16px) scale(1.06) } }
+  @keyframes kicker   { 0%, 5% { opacity: 0; transform: scale(.4) } 8% { opacity: 1; transform: scale(1.18) } 10% { transform: scale(.94) } 12%, 100% { opacity: 1; transform: none } }
+  @keyframes wipe     { 0%, 24% { transform: scaleX(0) } 30%, 100% { transform: scaleX(1) } }
+  @keyframes giant    { 0% { opacity: 0; transform: translateY(40px) } 20% { opacity: 1 } 100% { opacity: 1; transform: translateY(-30px) } }
+  /* The model is on screen from frame one (product first), lands with a bounce, then sways gently. */
+  @keyframes personIn { 0% { transform: translateY(60px) scale(.92) } 4% { transform: translateY(-14px) scale(1.02) } 7% { transform: translateY(4px) scale(.995) }
+                        9% { transform: none } 40% { transform: rotate(.6deg) } 70% { transform: rotate(-.5deg) } 100% { transform: none } }
+  @keyframes tag1     { 0%, 30% { opacity: 0; transform: scale(.3) rotate(-10deg) } 33% { opacity: 1; transform: scale(1.12) rotate(3deg) } 35% { transform: scale(.96) rotate(1deg) } 37%, 100% { opacity: 1; transform: rotate(2deg) } }
+  @keyframes tag2     { 0%, 35% { opacity: 0; transform: scale(.3) rotate(10deg) } 38% { opacity: 1; transform: scale(1.12) rotate(-4deg) } 40% { transform: scale(.96) rotate(-2deg) } 42%, 100% { opacity: 1; transform: rotate(-2deg) } }
+  @keyframes tag3     { 0%, 40% { opacity: 0; transform: scale(.3) rotate(-10deg) } 43% { opacity: 1; transform: scale(1.12) rotate(4deg) } 45% { transform: scale(.96) rotate(1deg) } 47%, 100% { opacity: 1; transform: rotate(1.5deg) } }
+  @keyframes cta      { 0%, 50% { opacity: 0; transform: scale(.3) } 53% { opacity: 1; transform: scale(1.14) } 55% { transform: scale(.94) } 57%, 75% { opacity: 1; transform: none }
+                        76% { transform: scale(1.06) rotate(-2deg) } 78% { transform: scale(1.06) rotate(2deg) } 80%, 100% { transform: none } }
+  @keyframes nudge    { 0%, 60% { transform: none } 64% { transform: translateX(8px) } 68%, 84% { transform: none } 88% { transform: translateX(8px) } 92%, 100% { transform: none } }
+</style>
+</head>
+<body data-width="1080" data-height="1920" data-duration="10" data-fps="30">
+  <div class="background" data-layer="background"></div>
+  <svg class="leaf-shadow" data-layer="leaf-shadow" viewBox="0 0 760 760" xmlns="http://www.w3.org/2000/svg">
+    <g style="fill: var(--to-hairline);">
+      <path d="M760 40 C560 120 380 260 200 470 C380 330 560 230 760 170 Z"/>
+      <path d="M760 200 C590 250 430 360 290 560 C450 420 600 340 760 310 Z"/>
+      <path d="M700 0 C600 140 520 300 470 520 C560 330 640 190 760 90 Z"/>
+      <path d="M560 0 C500 120 430 230 330 330 C450 250 530 150 620 40 Z"/>
+      <path d="M760 360 C640 400 540 480 460 620 C560 520 660 470 760 450 Z"/>
+    </g>
+  </svg>
+  <img class="store" data-layer="store" src="../../brand/store-lineart.png" alt="">
+  <div class="giant" data-layer="giant">BOSS</div>
+  <div class="logo" data-layer="logo" aria-label="TIMEOPTIC"></div>
+  <div class="kicker" data-layer="kicker">BOSS 1427 × HOYA</div>
+  <div class="headline" data-layer="headline"><div class="l1">Sharp vision.</div><div class="l2 accent">Tailored to you.</div></div>
+  <div class="rule" data-layer="rule"></div>
+
+  <div class="person" data-layer="person">
+    <div class="inner">
+      <img class="model" src="layers/model.png" alt="">
+      <div class="frame"><img src="layers/BOSS1427_1_face.png" alt=""><div class="lens"></div></div>
+    </div>
+  </div>
+
+  <div class="tag tag-frame" data-layer="tag-frame"><h4>FRAME</h4><b>BOSS 1427</b>Matte black / grey</div>
+  <div class="tag tag-lens" data-layer="tag-lens"><h4>LENS</h4><b>HOYA Nulux iDentity V+</b>Sharp from edge to edge</div>
+  <div class="tag tag-coat" data-layer="tag-coat"><h4>COATING</h4><b>Hi-Vision LongLife BlueControl</b>Neutralises blue light from screens</div>
+
+  <div class="cta" data-layer="cta">Message us <svg viewBox="0 0 24 24"><path d="M4 12 H19 M13 6 L19 12 L13 18"/></svg></div>
+
+<script>
+// Wordmark cut into its 9 letters (slices of the 2520px-wide logo trace) so each can bounce.
+const LETTERS = [[0, 282], [310, 392], [438, 834], [876, 1134], [1170, 1498], [1540, 1784], [1808, 2078], [2112, 2164], [2214, 2520]];
+const logo = document.querySelector('.logo'), k = 230 / 2520;
+LETTERS.forEach(([x0, x1], n) => {
+  const b = document.createElement('b');
+  b.style.cssText = `left:${x0 * k}px;width:${(x1 - x0) * k + 1}px;background-position:${-x0 * k}px 0;` +
+                    `animation-delay:${0.5 + n * 0.0625}s, ${6.75 + n * 0.035}s`;
+  logo.append(b);
+});
+// Headline letters / words with staggered delays (seconds into the clip).
+function split(el, unit, start, step, wave) {
+  const parts = unit === 'char' ? [...el.textContent] : el.textContent.split(/(\s+)/);
+  el.textContent = '';
+  let n = 0;
+  for (const part of parts) {
+    if (/^\s+$/.test(part)) { el.append(part); continue; }
+    const i = document.createElement('i');
+    i.textContent = part;
+    i.style.animationDelay = wave ? `${start + n * step}s, ${wave + n * 0.035}s` : `${start + n * step}s`;
+    el.append(i); n++;
+  }
+  return n;
+}
+const n1 = split(document.querySelector('.headline .l1'), 'char', 1.0, 0.0625, 6.0);
+split(document.querySelector('.headline .l2'), 'char', 1.0 + n1 * 0.0625, 0.0625, 6.0 + n1 * 0.035);
+</script>
+</body>
+</html>

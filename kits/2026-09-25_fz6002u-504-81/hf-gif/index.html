@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=450, height=800" />
+    <!-- Flag girl alone (Codex-generated photo, cut out), one seamless 2-beat loop at 95.72 BPM, for export/flag-girl.gif (transparent). -->
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/gsap.min.js"></script>
+    <style>
+      * { margin: 0; padding: 0; box-sizing: border-box; }
+      html, body { width: 450px; height: 800px; overflow: hidden; background: transparent; }
+      #root { position: relative; width: 450px; height: 800px; overflow: hidden; }
+      #girl { position: absolute; left: 0; top: 0; width: 450px; height: 800px; }
+      .fg-sway { position: absolute; inset: 0; transform-origin: 50% 100%; }
+      .fg-sway img { position: absolute; inset: 0; width: 100%; height: 100%; }
+      .fg-flag { transform-origin: 25.3% 17%; }
+    </style>
+  </head>
+  <body>
+    <div id="root" data-composition-id="main" data-start="0" data-duration="1.2536" data-width="450" data-height="800">
+      <div id="girl" class="clip" data-start="0" data-duration="1.2536" data-track-index="0">
+        <div class="fg-sway"><img class="fg-body" src="assets/flag-girl-body.png" alt="" /><img class="fg-flag" src="assets/flag-girl-flag.png" alt="" /></div>
+      </div>
+    </div>
+    <script>
+      window.__timelines = window.__timelines || {};
+      const tl = gsap.timeline({ paused: true });
+      const B = 60 / 95.72;
+      tl.to('#girl .fg-flag', { keyframes: { rotation: [0, -11, 8, 0], skewY: [0, 3, -2, 0] }, duration: B, ease: 'sine.inOut', repeat: 1 }, 0);
+      tl.to('#girl .fg-sway', { keyframes: { rotation: [0, 1.3, -0.9, 0], y: [0, -6, 0, 0] }, duration: B, ease: 'sine.inOut', repeat: 1 }, 0);
+      window.__timelines['main'] = tl;
+      tl.seek(0);
+    </script>
+  </body>
+</html>

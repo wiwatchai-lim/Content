@@ -1,0 +1,49 @@
+/* Flood / heavy-rain care notice. One stylesheet, four pages: tiktok-* 1080×1920, facebook-* 1080×1350, th + en.
+   Dark rainy green ground, one square snow card (the brand is square-cornered), wordmark on top, message, rule, wish. */
+html, body { margin: 0; background: transparent; }
+body { position: relative; width: 1080px; overflow: hidden; font-family: var(--to-font-body); color: var(--to-black); }
+body.tiktok { height: 1920px; }
+body.facebook { height: 1350px; }
+body > [data-layer] { position: absolute; box-sizing: border-box; }
+
+.background { inset: 0;
+  background:
+    repeating-linear-gradient(102deg, transparent 0 46px, rgba(250, 250, 250, .05) 46px 48px, transparent 48px 131px),
+    repeating-linear-gradient(104deg, transparent 0 83px, rgba(250, 250, 250, .035) 83px 84px, transparent 84px 197px),
+    radial-gradient(ellipse 85% 60% at 50% 40%, #1d4a37 0%, var(--to-green) 55%, #0b2118 100%); }
+.lineart { right: -40px; top: 40px; width: 380px; opacity: .14; }
+
+.card { left: 90px; width: 900px; padding: 96px 80px 92px; background: var(--to-snow); text-align: center;
+        box-shadow: 0 30px 80px rgba(0, 0, 0, .35); }
+body.tiktok .card { top: 50%; transform: translateY(-58%); }   /* a little above centre: TikTok's caption covers the bottom */
+body.facebook .card { top: 50%; transform: translateY(-50%); }
+.card .logo { display: block; width: 380px; margin: 0 auto; }
+.card .accent { width: 72px; height: 5px; margin: 44px auto 48px; background: var(--to-peach); }
+.card p { margin: 0 0 30px; font-size: 36px; line-height: 1.6; text-wrap: balance; }
+.card .rule { height: 2px; margin: 50px 60px 46px; background: var(--to-hairline); }
+.card .wish { margin: 0; font-family: var(--to-font-display); font-weight: 800; font-size: 46px; line-height: 1.35; color: var(--to-green); }
+
+html[lang="th"] body, html[lang="th"] .card .wish { font-family: var(--to-font-thai); }
+html[lang="th"] .card p { font-size: 35px; line-height: 1.7; }
+html[lang="th"] .card .wish { font-weight: 700; font-size: 44px; line-height: 1.5; }
+
+/* TikTok is tall: a bigger card so it doesn't float small in the frame */
+body.tiktok .card { padding: 110px 70px 106px; }
+body.tiktok .card .logo { width: 440px; }
+body.tiktok .card p { font-size: 40px; }
+body.tiktok .card .wish { font-size: 47px; }
+html[lang="th"] body.tiktok .card p { font-size: 36px; line-height: 1.8; }
+html[lang="th"] body.tiktok .card .wish { font-size: 50px; }
+
+/* Instagram story: same tall canvas as TikTok, card dead centre (story UI is thin top and bottom) */
+body.story .card { transform: translateY(-50%); }
+
+/* Same card size for th and en of each format; content centred inside (en runs longer) */
+.card { display: flex; flex-direction: column; justify-content: center; }
+body.facebook .card { height: 1010px; }
+body.tiktok .card { height: 1100px; }
+.card > * { flex-shrink: 0; }   /* keep the rule from collapsing inside the fixed-height card */
+/* Thai sets shorter than English: open its spacing so the text block fills the same area */
+html[lang="th"] body.facebook .card p { line-height: 1.95; margin-bottom: 49px; }
+html[lang="th"] body.facebook .card .wish { font-size: 46px; line-height: 1.6; }
+html[lang="th"] body.tiktok .card p { line-height: 2; margin-bottom: 36px; }

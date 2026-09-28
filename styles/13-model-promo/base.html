@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>13-model-promo</title>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;700;800&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../brand/tokens.css">
+<style>
+  /* From ref.jpg: a hard headline in the top-left, the SAME words repeated huge and ghosted behind the
+     subject, a cut-out figure wearing the product, two small spec callouts flanking the face, a heavy
+     discount block bottom-left and a call to action bottom-right.
+
+     Taken: that structure — headline, ghost-type echo, subject, flanking callouts, promo block.
+     NOT taken: their model photograph, the product in their picture, their two shop logos, and their
+     wording. All of it belongs to whoever made that poster.
+
+     SUBJECT SLOT: this style is built around a cut-out person. It currently points at
+     data/models/model-a_1.png — AI-generated, transparent background, deliberately NOT wearing glasses.
+     If the model is AI-generated: never imply a real customer or a real testimonial.
+
+     STILL MISSING — the frame on the face. The model wears no glasses on purpose, because a generated
+     frame is not a frame we sell. Before this style ships as a real post, composite a real cut-out from
+     data/frames/images/ onto the face: match the eye line, scale the frame to the face width, and keep
+     the temples behind the ears. That is a per-post job, not something this template does by itself.
+     Until that is done, treat this preview as a layout test, not a publishable post.
+
+     Not a promotion → delete the `promo` layer. */
+  html, body { margin: 0; background: transparent; }
+  body { position: relative; width: 1080px; height: 1080px; overflow: hidden;
+         font-family: var(--to-font-body); color: var(--to-black); }
+  body > [data-layer] { position: absolute; box-sizing: border-box; }
+
+  .background { inset: 0; background: linear-gradient(168deg, var(--to-snow) 0%, #F1EFE9 62%, var(--to-timberwolf) 100%); }
+  /* The echo: same words as the headline, oversized, sunk behind the subject. */
+  /* The echo sits INSIDE the canvas — never clipped by an edge — and stops above the promo block. */
+  .ghost { left: 40px; right: 40px; top: 426px; margin: 0; font-family: var(--to-font-display); font-weight: 800;
+           font-size: 116px; line-height: .86; letter-spacing: var(--to-track-display); text-transform: uppercase;
+           color: color-mix(in srgb, var(--to-green) 13%, transparent); }
+  /* A figure is portrait, not landscape: anchor it to the bottom-right and let the headline and the
+     ghost echo own the left. A product photo dropped in here needs its own size — see the note above. */
+  .subject { right: 40px; bottom: 0; width: 520px; filter: drop-shadow(0 30px 34px rgba(33, 33, 33, .3)); }
+  .headline { left: var(--to-margin); top: 84px; margin: 0; font-family: var(--to-font-display); font-weight: 800;
+              font-size: 62px; line-height: .98; letter-spacing: var(--to-track-display); text-transform: uppercase;
+              color: var(--to-green); }
+  .tag-left { left: var(--to-margin); top: 300px; width: 210px; font-family: var(--to-font-display); font-weight: 700;
+              font-size: 15px; letter-spacing: var(--to-track-eyebrow); text-transform: uppercase; line-height: 1.5;
+              color: var(--to-black); }
+  .tag-right { right: var(--to-margin); top: 300px; width: 210px; text-align: right; font-family: var(--to-font-display);
+               font-weight: 700; font-size: 15px; letter-spacing: var(--to-track-eyebrow); text-transform: uppercase;
+               line-height: 1.5; color: var(--to-black); }
+  .promo { left: var(--to-margin); bottom: 132px; color: var(--to-green); font-family: var(--to-font-display); line-height: .84; }
+  .promo s { display: block; margin-bottom: 10px; font-size: 26px; font-weight: 500; color: var(--to-black); opacity: .55; }
+  .promo b { font-weight: 800; font-size: 148px; }
+  .promo sup { font-size: 52px; vertical-align: top; }
+  .promo small { display: block; margin-top: 12px; font-family: var(--to-font-body); font-size: 17px;
+                 letter-spacing: var(--to-track-eyebrow); text-transform: uppercase; color: var(--to-black); }
+  /* The subject owns the right half, so the CTA lives on the left under the promo block. */
+  .cta { left: var(--to-margin); bottom: 384px; text-align: left; font-family: var(--to-font-display); font-weight: 700;
+         font-size: 22px; letter-spacing: var(--to-track-eyebrow); text-transform: uppercase; color: var(--to-green); }
+  .cta::before { content: ""; display: block; width: 46px; height: 4px; margin: 0 0 14px 0; background: var(--to-peach); }
+  .specs { left: var(--to-margin); bottom: var(--to-margin); font-family: var(--to-font-body); font-size: 17px;
+           letter-spacing: 1px; color: color-mix(in srgb, var(--to-black) 62%, transparent); }
+  .logo { right: var(--to-margin); top: var(--to-margin); width: var(--to-logo-width); }
+</style>
+</head>
+<body data-width="1080" data-height="1080">
+  <div class="background" data-layer="background"></div>
+  <h2 class="ghost" data-layer="ghost">Echo<br>the<br>headline</h2>
+  <img class="subject" data-layer="subject" src="../../data/models/model-a_1.png" alt="">
+  <h1 class="headline" data-layer="headline">Headline<br>in three<br>short lines</h1>
+  <div class="tag-left" data-layer="tag-left">Frame type<br>/ material</div>
+  <div class="tag-right" data-layer="tag-right">Lens claim<br>from data/</div>
+  <div class="promo" data-layer="promo"><s>฿0,000</s><b>35</b><sup>%</sup><small>Limited time offer</small></div>
+  <div class="cta" data-layer="cta">Order now</div>
+  <div class="specs" data-layer="specs">BRAND MODEL · LENS NAME · COATING NAME</div>
+  <img class="logo" data-layer="logo" src="../../brand/logo/timeoptic.svg" alt="">
+</body>
+</html>

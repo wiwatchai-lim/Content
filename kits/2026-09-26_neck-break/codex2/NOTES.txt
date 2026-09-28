@@ -1,0 +1,2 @@
+chinright.png = hflip of chinleft.png (Codex blocked the chinright generation)
+left.png = hflip of left_wrong-direction.png (Codex turned her to picture right)

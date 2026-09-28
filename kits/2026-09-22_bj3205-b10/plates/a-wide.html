@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><title>Plate A wide</title>
+<!-- Empty set for Wan (no glasses, no text): cream wall, linen table, afternoon sun through leaves. -->
+<style>
+  html, body { margin: 0; }
+  body { position: relative; width: 1080px; height: 1920px; overflow: hidden; background: #efe6d8; }
+  body > div, body > svg { position: absolute; }
+  .wall { inset: 0 0 38% 0; background: linear-gradient(180deg, #e9dfcf 0%, #f3ebdf 55%, #efe4d3 100%); }
+  .table { left: 0; right: 0; top: 62%; bottom: 0; background: linear-gradient(180deg, #d9cbb6 0%, #e6dac8 18%, #d8c9b2 100%); }
+  .edge { left: 0; right: 0; top: 62%; height: 3px; background: rgba(120, 95, 60, .18); filter: blur(1px); }
+  .sun { left: -200px; top: -300px; width: 1500px; height: 2600px; transform: rotate(-24deg);
+         background: linear-gradient(90deg, transparent 0%, rgba(255, 226, 170, .0) 28%, rgba(255, 222, 165, .55) 42%, rgba(255, 230, 185, .45) 58%, transparent 72%);
+         mix-blend-mode: screen; filter: blur(30px); }
+  .leaves { right: -260px; top: -160px; width: 1300px; height: 1500px; filter: blur(14px); opacity: .55; mix-blend-mode: multiply; }
+  .leaves2 { left: -300px; top: 1250px; width: 1100px; height: 900px; filter: blur(22px); opacity: .35; mix-blend-mode: multiply; }
+  .vignette { inset: 0; background: radial-gradient(ellipse 80% 60% at 50% 55%, transparent 55%, rgba(60, 40, 20, .28) 100%); }
+  .grain { inset: 0; opacity: .18; mix-blend-mode: overlay; }
+</style></head>
+<body data-width="1080" data-height="1920">
+  <div class="wall" data-layer="wall"></div>
+  <div class="table" data-layer="table"></div>
+  <div class="edge" data-layer="edge"></div>
+  <div class="sun" data-layer="sun"></div>
+  <svg class="leaves" data-layer="leaves" viewBox="0 0 760 760"><g fill="#6b5a3e">
+    <path d="M760 40 C560 120 380 260 200 470 C380 330 560 230 760 170 Z"/><path d="M760 200 C590 250 430 360 290 560 C450 420 600 340 760 310 Z"/>
+    <path d="M700 0 C600 140 520 300 470 520 C560 330 640 190 760 90 Z"/><path d="M560 0 C500 120 430 230 330 330 C450 250 530 150 620 40 Z"/>
+    <path d="M760 360 C640 400 540 480 460 620 C560 520 660 470 760 450 Z"/><path d="M420 0 C380 90 320 160 240 210 C330 180 400 110 460 20 Z"/></g></svg>
+  <svg class="leaves2" data-layer="leaves2" viewBox="0 0 760 760"><g fill="#6b5a3e" transform="rotate(160 380 380)">
+    <path d="M760 40 C560 120 380 260 200 470 C380 330 560 230 760 170 Z"/><path d="M760 200 C590 250 430 360 290 560 C450 420 600 340 760 310 Z"/>
+    <path d="M700 0 C600 140 520 300 470 520 C560 330 640 190 760 90 Z"/></g></svg>
+  <div class="vignette" data-layer="vignette"></div>
+  <svg class="grain" data-layer="grain" width="1080" height="1920"><filter id="n"><feTurbulence type="fractalNoise" baseFrequency=".9" numOctaves="2" stitchTiles="stitch"/></filter><rect width="100%" height="100%" filter="url(#n)"/></svg>
+</body></html>

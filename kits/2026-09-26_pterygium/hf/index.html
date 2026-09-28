@@ -1,0 +1,200 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=1080, height=1920" />
+    <!--
+      TIMEOPTIC eye-health explainer: what is a pterygium and what causes it. English, voice-over (Gemini TTS), ~30 s.
+        0-2.4    hook: a big eye with a fleshy wedge on it, pulsing ring, "What's growing on your eye?"
+        2.4-10.2 name + what it is: "PTERYGIUM" tag, the wedge creeps toward the cornea while its blood vessels draw in
+        10.2-20.9 causes: eye shrinks up, "What causes it?", three rows: UV from the sun / wind & dust / dry eyes
+        20.9-27  prevention: UV-blocking sunglasses / blink often / see an eye doctor if it grows
+        27-30.5  wordmark, "Let TIMEOPTIC take care of your eyes"
+      Cue times follow the voice lines in audio/en (see make_audio.py). Type inside the TikTok safe zone (x 60-940, y 220-1480).
+    -->
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/gsap.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@300;500;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="assets/tokens.css" />
+    <style>
+      * { margin: 0; padding: 0; box-sizing: border-box; }
+      html, body { width: 1080px; height: 1920px; overflow: hidden; background: #e9efe9; }
+      #root { position: relative; width: 1080px; height: 1920px; overflow: hidden; font-family: var(--to-font-display); color: var(--to-green); }
+      .layer { position: absolute; }
+      #bg { inset: 0; background: radial-gradient(ellipse 75% 50% at 50% 42%, #f7faf6 0%, #e2ece5 58%, #cddcd2 100%); }
+      .t { position: absolute; left: 120px; right: 120px; text-align: center; }
+      #kicker { top: 300px; font-weight: 700; font-size: 32px; letter-spacing: .24em; text-transform: uppercase; opacity: .75; }
+      #eyeWrap { left: 130px; top: 600px; width: 820px; height: 451px; }
+      #eyeWrap svg { width: 100%; height: 100%; overflow: visible; }
+      .head { font-weight: 800; font-size: 84px; line-height: 1.05; letter-spacing: -.02em; }
+      .head em { font-style: normal; color: #d0543f; }
+      .sub { font-family: var(--to-font-body); font-weight: 500; font-size: 40px; line-height: 1.4; text-wrap: balance; color: var(--to-black); opacity: .85; }
+      #tag { left: 185px; top: 500px; padding: 14px 26px; background: #d0543f; color: #fff; font-weight: 800; font-size: 34px; letter-spacing: .12em; }
+      #tagline { left: 313px; top: 572px; width: 4px; height: 200px; background: #d0543f; transform-origin: 50% 0; }
+      .row { position: absolute; left: 110px; width: 820px; height: 150px; display: flex; align-items: center; gap: 36px; }
+      .row .ic { flex: 0 0 150px; height: 150px; border-radius: 50%; background: #fff; box-shadow: 0 10px 30px rgba(18, 58, 41, .12);
+                 display: flex; align-items: center; justify-content: center; }
+      .row .ic svg { width: 96px; height: 96px; }
+      .row b { display: block; font-weight: 800; font-size: 56px; line-height: 1.05; letter-spacing: -.01em; }
+      .row span { display: block; margin-top: 8px; font-family: var(--to-font-body); font-weight: 500; font-size: 34px; color: var(--to-black); opacity: .75; }
+      .row .num { position: absolute; left: -14px; top: -8px; width: 52px; height: 52px; border-radius: 50%; background: #d0543f; color: #fff;
+                  font-weight: 800; font-size: 30px; display: flex; align-items: center; justify-content: center; }
+      /* the name in running text: "Time Optic", two words, all bold (user, 2026-09-26) */
+      .brand b { font-weight: 800; }
+      .brand i { font-style: normal; font-weight: 800; }
+      #endline { top: 1080px; font-weight: 700; font-size: 58px; line-height: 1.25; }
+      #logo { left: 384px; top: 900px; width: 312px; height: 48px; transform-origin: 50% 50%; opacity: 0; }
+      #logo b { position: absolute; top: 0; height: 48px; background: url(assets/timeoptic.svg) no-repeat; background-size: 300px 47.6px; }
+      #logo .shine { position: absolute; left: 0; top: 0; bottom: 0; width: 136px; -webkit-mask: url(assets/timeoptic-mono.svg) center / 100% no-repeat; mask: url(assets/timeoptic-mono.svg) center / 100% no-repeat; overflow: hidden; }
+      #logo .shine i { position: absolute; top: 0; bottom: 0; left: 0; width: 80px; transform: translateX(-90px); background: linear-gradient(100deg, transparent, rgba(239, 207, 156, .95), transparent); }
+      #endline .bt, .brand .bt { color: #123A29; font-weight: 800; }  /* same two colours as the logo: TIME green, OPTIC black */
+      #endline .bo, .brand .bo { color: #212121; font-weight: 800; }
+    </style>
+  </head>
+  <body>
+    <div id="root" data-composition-id="main" data-start="0" data-duration="30.5" data-width="1080" data-height="1920">
+      <div id="bg" class="clip layer" data-start="0" data-duration="30.5" data-track-index="0"></div>
+      <div id="kicker" class="clip t" data-start="0" data-duration="27" data-track-index="1">Eye health · <span class="brand"><b class="bt">Time</b> <b class="bo">Optic</b></span></div>
+
+      <div id="eyeWrap" class="clip layer" data-start="0" data-duration="27" data-track-index="2">
+        <svg viewBox="0 0 800 440">
+          <defs><clipPath id="almond"><path d="M40 220 Q400 -60 760 220 Q400 500 40 220Z" /></clipPath></defs>
+          <path d="M40 220 Q400 -60 760 220 Q400 500 40 220Z" fill="#fbf6f3" />
+          <g clip-path="url(#almond)">
+            <path d="M40 220 Q400 -60 760 220 Q400 500 40 220Z" fill="none" stroke="rgba(214,120,110,.12)" stroke-width="60" />
+            <circle cx="400" cy="220" r="122" fill="#7a5433" /><circle cx="400" cy="220" r="96" fill="#8f6640" />
+            <circle cx="400" cy="220" r="54" fill="#1b1410" /><circle cx="428" cy="192" r="18" fill="#fff" opacity=".9" />
+            <g id="pty">
+              <path d="M40 220 Q170 140 292 200 L296 240 Q170 300 40 220Z" fill="#e5968a" opacity=".92" />
+              <g fill="none" stroke="#c43d33" stroke-width="4" stroke-linecap="round" class="ves">
+                <path d="M60 214 Q170 180 288 206" /><path d="M60 226 Q170 262 288 236" /><path d="M80 220 Q180 214 292 221" />
+                <path d="M130 200 Q180 196 230 210" /><path d="M130 240 Q185 246 232 232" />
+              </g>
+            </g>
+          </g>
+          <path d="M40 220 Q400 -60 760 220 Q400 500 40 220Z" fill="none" stroke="#123A29" stroke-width="10" />
+          <circle id="ring" cx="175" cy="220" r="112" fill="none" stroke="#d0543f" stroke-width="7" stroke-dasharray="18 14" opacity="0" />
+        </svg>
+      </div>
+      <div id="tag" class="clip layer" data-start="2.3" data-duration="8" data-track-index="3">PTERYGIUM</div>
+      <div id="tagline" class="clip layer" data-start="2.3" data-duration="8" data-track-index="4"></div>
+
+      <div id="s1" class="clip layer" data-start="0" data-duration="2.6" data-track-index="5" style="inset:0">
+        <div class="t head" style="top:1190px">What's growing<br>on your <em>eye?</em></div>
+      </div>
+      <div id="s2" class="clip layer" data-start="2.3" data-duration="8" data-track-index="6" style="inset:0">
+        <div class="t head" id="s2h" style="top:1140px; font-size:70px">It's called a <em>pterygium</em></div>
+        <div class="t sub" id="s2s" style="top:1250px">A fleshy growth with blood vessels, creeping from the white of the eye onto the cornea.</div>
+      </div>
+
+      <div id="s3" class="clip layer" data-start="10" data-duration="11" data-track-index="7" style="inset:0">
+        <div class="t head" style="top:690px">What causes it?</div>
+        <div class="row" style="top:840px"><div class="ic">
+          <svg viewBox="0 0 100 100"><circle cx="50" cy="50" r="20" fill="#f0a23a" /><g stroke="#f0a23a" stroke-width="7" stroke-linecap="round">
+            <path d="M50 8v12M50 80v12M8 50h12M80 50h12M20 20l9 9M71 71l9 9M80 20l-9 9M29 71l-9 9" /></g></svg></div>
+          <div><b>UV from the sun</b><span>The biggest risk</span></div></div>
+        <div class="row" style="top:1040px"><div class="ic">
+          <svg viewBox="0 0 100 100"><g fill="none" stroke="#5b8fb0" stroke-width="7" stroke-linecap="round">
+            <path d="M10 38h52a12 12 0 1 0-12-12" /><path d="M10 56h70a12 12 0 1 1-12 12" /><path d="M10 74h36" /></g>
+            <g fill="#b89a74"><circle cx="78" cy="36" r="3" /><circle cx="88" cy="50" r="2.5" /><circle cx="68" cy="84" r="3" /></g></svg></div>
+          <div><b>Wind &amp; dust</b><span>Irritating your eyes again and again</span></div></div>
+        <div class="row" style="top:1240px"><div class="ic">
+          <svg viewBox="0 0 100 100"><path d="M8 50 Q50 14 92 50 Q50 86 8 50Z" fill="#fbf6f3" stroke="#123A29" stroke-width="6" />
+            <circle cx="50" cy="50" r="15" fill="#7a5433" /><circle cx="50" cy="50" r="7" fill="#1b1410" />
+            <path d="M22 50 Q30 44 36 50 M64 50 Q70 44 78 50" stroke="#d0543f" stroke-width="3" fill="none" /></svg></div>
+          <div><b>Dry eyes</b><span>Not blinking enough at screens</span></div></div>
+      </div>
+
+      <div id="s4" class="clip layer" data-start="20.6" data-duration="6.6" data-track-index="8" style="inset:0">
+        <div class="t head" style="top:690px">Protect your eyes</div>
+        <div class="row" style="top:840px"><div class="ic">
+          <svg viewBox="0 0 100 100"><g fill="#1f2a26"><path d="M8 40h36v10a14 14 0 0 1-14 14h-8A14 14 0 0 1 8 50Z" /><path d="M56 40h36v10a14 14 0 0 1-14 14h-8a14 14 0 0 1-14-14Z" /></g>
+            <path d="M44 44q6-5 12 0" stroke="#1f2a26" stroke-width="5" fill="none" /><path d="M14 46l10-4M62 46l10-4" stroke="#fff" stroke-width="3" opacity=".6" /></svg></div>
+          <div><b>UV-blocking sunglasses</b><span>Outdoors, even on cloudy days</span></div></div>
+        <div class="row" style="top:1040px"><div class="ic">
+          <svg viewBox="0 0 100 100"><path d="M12 46 Q50 78 88 46" stroke="#123A29" stroke-width="7" fill="none" stroke-linecap="round" />
+            <g stroke="#123A29" stroke-width="5" stroke-linecap="round"><path d="M26 58l-6 10M42 64l-2 11M58 64l2 11M74 58l6 10" /></g></svg></div>
+          <div><b>Blink often</b><span>Rest your eyes from screens</span></div></div>
+        <div class="row" style="top:1240px"><div class="ic">
+          <svg viewBox="0 0 100 100"><rect x="38" y="16" width="24" height="68" rx="6" fill="#d0543f" /><rect x="16" y="38" width="68" height="24" rx="6" fill="#d0543f" /></svg></div>
+          <div><b>See an eye doctor</b><span>If it grows or turns red</span></div></div>
+      </div>
+
+      <div id="end" class="clip layer" data-start="26.9" data-duration="3.6" data-track-index="9" style="inset:0">
+        <div id="endline" class="t">Let <span class="brand"><b class="bt">Time</b> <b class="bo">Optic</b></span> take<br>care of your eyes</div>
+      </div>
+      <div id="logo" class="clip layer" data-start="0" data-duration="30.5" data-track-index="10" aria-label="TIMEOPTIC"><div class="shine"><i></i></div></div>
+    </div>
+
+    <script>
+      window.__timelines = window.__timelines || {};
+      const tl = gsap.timeline({ paused: true });
+      const LETTERS = [[0, 282], [310, 392], [438, 834], [876, 1134], [1170, 1498], [1540, 1784], [1808, 2078], [2112, 2164], [2214, 2520]];
+      const logo = document.getElementById('logo'), k = 300 / 2520;
+      const LOGO_GAP = 12;  // space between TIME and OPTIC
+      LETTERS.forEach(([x0, x1], n) => {
+        const el = document.createElement('b');
+        el.style.cssText = `left:${x0 * k + (n >= 4 ? LOGO_GAP : 0)}px;width:${(x1 - x0) * k + 1}px;background-position:${-x0 * k}px 0;`;
+        logo.insertBefore(el, logo.firstChild);
+      });
+      const inText = (sel, at) => tl.fromTo(sel, { opacity: 0, y: 30, filter: 'blur(8px)' }, { opacity: 1, y: 0, filter: 'blur(0px)', duration: 0.4, ease: 'power3.out', immediateRender: false }, at);
+      const outText = (sel, at) => tl.to(sel, { opacity: 0, y: -24, filter: 'blur(6px)', duration: 0.3, ease: 'power2.in' }, at);
+
+      // the wedge grows from the inner corner (40,220) toward the cornea: transform attribute, so no origin drift
+      const pty = document.getElementById('pty'), grow = { s: 0.8 };
+      const setGrow = () => pty.setAttribute('transform', `translate(40 220) scale(${grow.s} 1) translate(-40 -220)`);
+      setGrow();
+      const ves = document.querySelectorAll('.ves path');
+      ves.forEach((p) => { const L = p.getTotalLength(); p.style.strokeDasharray = L; p.style.strokeDashoffset = 0; p.dataset.len = L; });
+
+      // 0-2.4 hook: already on screen at frame 0, slow push, pulsing ring on the wedge
+      tl.fromTo('#eyeWrap', { scale: 1.05 }, { scale: 1, duration: 2.4, ease: 'power2.out' }, 0);
+      tl.fromTo('#s1 .head', { scale: 1.15 }, { scale: 1, duration: 0.25, ease: 'power3.out' }, 0);
+      tl.set('#ring', { opacity: 1 }, 0);
+      tl.fromTo('#ring', { scale: 1.2, transformOrigin: '50% 50%' }, { scale: 1, duration: 0.6, ease: 'power2.out', repeat: 3, immediateRender: false }, 0);
+      outText('#s1 .head', 2.2);
+
+      // 2.4-10.2 name, then it creeps onto the cornea with its vessels
+      tl.to('#ring', { opacity: 0, duration: 0.3 }, 2.4);
+      tl.fromTo('#tag', { opacity: 0, y: -20 }, { opacity: 1, y: 0, duration: 0.35, ease: 'back.out(2)' }, 2.45);
+      tl.fromTo('#tagline', { scaleY: 0 }, { scaleY: 1, duration: 0.35, ease: 'power2.out' }, 2.55);
+      inText('#s2h', 2.45);
+      inText('#s2s', 4.5);
+      ves.forEach((p, i) => tl.fromTo(p, { strokeDashoffset: p.dataset.len }, { strokeDashoffset: 0, duration: 1.2, ease: 'power2.out', immediateRender: false }, 4.6 + i * 0.25));
+      tl.fromTo(grow, { s: 0.8 }, { s: 1.18, duration: 5, ease: 'sine.inOut', onUpdate: setGrow, immediateRender: false }, 4.6);
+      tl.to(['#tag', '#tagline'], { opacity: 0, duration: 0.3 }, 9.9);
+      outText(['#s2h', '#s2s'], 9.9);
+
+      // 10.2-20.9 causes: eye shrinks to the top, three rows come in on the voice
+      tl.to('#eyeWrap', { scale: 0.46, y: -300, duration: 0.6, ease: 'power3.inOut' }, 10.1);
+      inText('#s3 .head', 10.3);
+      [11.45, 14.3, 17.8].forEach((at, i) => {
+        const row = `#s3 .row:nth-of-type(${i + 2})`;
+        tl.fromTo(row, { opacity: 0, x: 120 }, { opacity: 1, x: 0, duration: 0.45, ease: 'power3.out', immediateRender: false }, at);
+        tl.fromTo(`${row} .ic`, { scale: 0.5 }, { scale: 1, duration: 0.5, ease: 'back.out(2.5)', immediateRender: false }, at + 0.1);
+      });
+      tl.set('#s3 .row', { opacity: 0 }, 0);
+      tl.fromTo('#s3 .row:nth-of-type(2) .ic svg', { rotation: 0 }, { rotation: 90, duration: 3, ease: 'none', immediateRender: false }, 11.5);
+      tl.to('#s3 > *', { opacity: 0, x: -80, duration: 0.35, ease: 'power2.in', stagger: 0.05 }, 20.55);
+
+      // 20.9-27 prevention
+      inText('#s4 .head', 20.9);
+      [21.0, 22.9, 24.4].forEach((at, i) => {
+        const row = `#s4 .row:nth-of-type(${i + 2})`;
+        tl.fromTo(row, { opacity: 0, x: 120 }, { opacity: 1, x: 0, duration: 0.45, ease: 'power3.out', immediateRender: false }, at);
+        tl.fromTo(`${row} .ic`, { scale: 0.5 }, { scale: 1, duration: 0.5, ease: 'back.out(2.5)', immediateRender: false }, at + 0.1);
+      });
+      tl.set('#s4 .row', { opacity: 0 }, 0);
+      tl.to(['#s4', '#eyeWrap', '#kicker'], { opacity: 0, y: -30, filter: 'blur(8px)', duration: 0.45, ease: 'power2.in' }, 26.7);
+
+      // 27-30.5 wordmark
+      tl.set('#logo', { opacity: 1 }, 27.1);
+      tl.fromTo('#logo', { scale: 2.2 }, { scale: 2.55, duration: 3.4, ease: 'none', immediateRender: false }, 27.1);
+      tl.from('#logo b', { y: 30, opacity: 0, filter: 'blur(6px)', duration: 0.6, ease: 'power2.out', stagger: 0.06 }, 27.1);
+      tl.fromTo('#logo .shine i', { x: -90 }, { x: 320, duration: 1.0, ease: 'power2.inOut', immediateRender: false }, 27.9);
+      tl.from('#endline', { opacity: 0, y: 24, filter: 'blur(8px)', duration: 0.6, ease: 'power2.out' }, 27.3);
+
+      window.__timelines['main'] = tl;
+      tl.seek(0);
+    </script>
+  </body>
+</html>

@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>11-color-swap</title>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;700;800&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../brand/tokens.css">
+<style>
+  /* From ref.mp4 (stills ref.png, ref-2.png): a flat colour field, a three-line headline held still in the upper third
+     with the middle word much heavier, and the product angled below with a long soft cast shadow. In the clip the
+     background and the product swap every beat while the headline never moves; the ref ends on the shop's own logo card,
+     which we never reproduce.
+     Own skin: palette colours only, our own wording.
+     This style is built for a clip: copy it to clip.html, give <body> data-duration, and swap --field / the product
+     image on beats of equal length (e.g. 4 beats of 1.5s in a 6s loop) so the last beat hands back to the first. */
+  :root {
+    --field: var(--to-pastel);
+  }
+  html, body { margin: 0; background: transparent; }
+  body { position: relative; width: 1080px; height: 1080px; overflow: hidden; font-family: var(--to-font-body); color: var(--to-green); }
+  body > [data-layer] { position: absolute; box-sizing: border-box; }
+
+  .background { inset: 0; background: var(--field); }
+  .headline { left: 80px; right: 80px; top: 120px; margin: 0; text-align: center; font-family: var(--to-font-display);
+              font-weight: 500; font-size: 54px; line-height: 1.12; }
+  .headline b { display: block; margin: 4px 0; font-size: 122px; font-weight: 800; letter-spacing: var(--to-track-display); }
+  .shadow { left: 230px; top: 838px; width: 620px; height: 66px; border-radius: 50%;
+            background: radial-gradient(closest-side, rgba(33, 33, 33, .3), rgba(33, 33, 33, 0)); filter: blur(10px); }
+  .product { left: 160px; top: 572px; width: 760px; transform: rotate(-5deg); filter: drop-shadow(0 26px 26px rgba(33, 33, 33, .28)); }
+  .specs { left: 0; right: 0; bottom: 56px; text-align: center; font-family: var(--to-font-body);
+           font-size: 20px; letter-spacing: var(--to-track-eyebrow); text-transform: uppercase; }
+  .logo { left: var(--to-margin); top: var(--to-margin); width: var(--to-logo-width); }
+</style>
+</head>
+<body data-width="1080" data-height="1080">
+  <div class="background" data-layer="background"></div>
+  <img class="logo" data-layer="logo" src="../../brand/logo/timeoptic.svg" alt="">
+  <h1 class="headline" data-layer="headline">Choose your<b>FRAME</b>for the season</h1>
+  <div class="shadow" data-layer="shadow"></div>
+  <img class="product" data-layer="product" src="../_preview/angle.png" alt="">
+  <div class="specs" data-layer="specs">BRAND MODEL · LENS NAME · COATING NAME</div>
+</body>
+</html>

@@ -1,0 +1,109 @@
+{
+ "bpm": 96,
+ "seconds": 12.5,
+ "song": "audio/sound.m4a",
+ "song_start": 17.554,
+ "fade_out": 0.8,
+ "sfx": [
+  {
+   "t": 0.0,
+   "file": "impact-bass-1",
+   "gain": 0.7
+  },
+  {
+   "t": 0.625,
+   "file": "click",
+   "gain": 0.4
+  },
+  {
+   "t": 1.25,
+   "file": "click",
+   "gain": 0.4
+  },
+  {
+   "t": 1.875,
+   "file": "pop",
+   "gain": 0.35
+  },
+  {
+   "t": 2.3,
+   "file": "whoosh-short",
+   "gain": 0.45
+  },
+  {
+   "t": 2.5,
+   "file": "impact-bass-1",
+   "gain": 0.5
+  },
+  {
+   "t": 3.125,
+   "file": "click-soft",
+   "gain": 0.4
+  },
+  {
+   "t": 3.75,
+   "file": "click-soft",
+   "gain": 0.4
+  },
+  {
+   "t": 4.375,
+   "file": "click-soft",
+   "gain": 0.4
+  },
+  {
+   "t": 4.8,
+   "file": "whoosh",
+   "gain": 0.35
+  },
+  {
+   "t": 5.625,
+   "file": "whoosh-short",
+   "gain": 0.3
+  },
+  {
+   "t": 6.25,
+   "file": "whoosh-short",
+   "gain": 0.3
+  },
+  {
+   "t": 6.875,
+   "file": "pop",
+   "gain": 0.3
+  },
+  {
+   "t": 7.3,
+   "file": "whoosh",
+   "gain": 0.4
+  },
+  {
+   "t": 8.125,
+   "file": "click-soft",
+   "gain": 0.4
+  },
+  {
+   "t": 8.75,
+   "file": "whoosh-short",
+   "gain": 0.3
+  },
+  {
+   "t": 9.375,
+   "file": "whoosh-short",
+   "gain": 0.3
+  },
+  {
+   "t": 9.6,
+   "file": "sparkle",
+   "gain": 0.3
+  },
+  {
+   "t": 10.0,
+   "file": "impact-bass-2",
+   "gain": 0.45
+  },
+  {
+   "t": 11.25,
+   "file": "chime",
+   "gain": 0.3
+  }
+ ]
+}

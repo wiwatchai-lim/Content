@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>R1C1 carousel — 4 try it on</title>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@700;800&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../brand/tokens.css">
+<link rel="stylesheet" href="slides.css">
+<style>
+  /* Photo on top (free Pexels photo 5201992), green panel with step 3 + call to action. */
+  .photo { object-position: 50% 55%; }
+  .eyebrow { top: 664px; color: var(--to-peach); }
+  .headline { top: 702px; font-size: 76px; }
+  .body { top: 800px; right: var(--to-margin); font-size: 28px; color: rgba(250, 250, 250, .85); }
+  .cta { right: var(--to-margin); bottom: calc(var(--to-margin) + 2px); font-family: var(--to-font-display); font-weight: 700;
+         font-size: 18px; letter-spacing: var(--to-track-eyebrow); text-transform: uppercase; color: var(--to-peach); }
+</style>
+</head>
+<body data-width="1080" data-height="1080">
+  <img class="photo" data-layer="photo" src="layers/pexels-5201992.jpg" alt="">
+  <div class="panel" data-layer="panel"></div>
+  <img class="store on-photo" data-layer="store" src="../../brand/store-lineart.png" alt="">
+  <div class="eyebrow" data-layer="eyebrow">Step 3</div>
+  <h1 class="headline on-dark" data-layer="headline">Try it on</h1>
+  <p class="body" data-layer="body">Check the balance from the side, not just a front-on selfie.</p>
+  <img class="logo" data-layer="logo" src="../../brand/logo/timeoptic-white.svg" alt="">
+  <div class="cta" data-layer="cta">Try frames with us in Hua Hin</div>
+</body>
+</html>

@@ -1,0 +1,174 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Oakley OX8208 motion poster</title>
+<!--
+  Motion poster 9:16, style 6-feature-grid stretched to a story canvas, on the TIMEOPTIC tokens.
+  The frame is the real cutout (layers/OX8208-0552_1.png); only the type, rule, icons and CTA move in,
+  the frame just settles and catches two light glints. Rules from the team's CutMotion notes:
+  product on the first frame, everything keeps moving a little, text holds ≥ 1.8 s, end card holds.
+  Render: npm run video -- kits/2026-09-21_ox8208-0552/motion.html  ->  export/motion.mp4
+-->
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;700;800&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../brand/tokens.css">
+<style>
+  :root { --muted: #5e5a54; --t: 10s; }
+  html, body { margin: 0; background: var(--to-snow); }
+  body { position: relative; width: 1080px; height: 1920px; overflow: hidden; font-family: var(--to-font-body); color: var(--to-black); }
+  body > [data-layer] { position: absolute; box-sizing: border-box; }
+  [data-layer], [data-layer] * { animation-duration: var(--t); animation-fill-mode: both; animation-timing-function: linear; }
+
+  .background { inset: 0; background: linear-gradient(180deg, var(--to-snow) 0%, var(--to-snow) 35%, var(--to-timberwolf) 100%); }
+  .leaf-shadow { right: -200px; top: -120px; width: 900px; height: 900px; filter: blur(10px); animation-name: leaf; }
+  .logo { left: var(--to-margin); top: 200px; width: 230px; height: 37px; }
+  /* Wordmark cut into its 9 letters (background slices of the logo SVG) so each can bounce. */
+  .logo b { position: absolute; top: 0; height: 37px; background: url(../../brand/logo/timeoptic.svg) no-repeat;
+            background-size: 230px 36.5px; animation-name: bounceIn, wave; animation-duration: .7s, .6s;
+            animation-timing-function: linear, ease-in-out; }
+  .logo .shine { position: absolute; inset: 0; -webkit-mask: url(../../brand/logo/timeoptic-mono.svg) center / 100% no-repeat;
+                 mask: url(../../brand/logo/timeoptic-mono.svg) center / 100% no-repeat; }
+  .logo .shine i { position: absolute; top: 0; bottom: 0; left: 0; width: 70px;
+                   background: linear-gradient(100deg, transparent, rgba(239, 207, 156, .95), transparent); animation-name: logoShine; }
+  .store { right: -70px; top: 40px; width: 560px; filter: drop-shadow(0 0 1px rgba(33, 33, 33, .6)) drop-shadow(0 1px 3px rgba(33, 33, 33, .3)); animation-name: store; }
+  .lens { position: absolute; inset: 0; -webkit-mask: url(layers/OX8208-0552_1_lens.png) center / 100% no-repeat;
+          mask: url(layers/OX8208-0552_1_lens.png) center / 100% no-repeat;
+          background: linear-gradient(160deg, rgba(190, 212, 228, .30) 0%, rgba(160, 185, 205, .16) 45%, rgba(210, 225, 236, .26) 100%); }
+  .lens::after { content: ""; position: absolute; inset: 0;
+                 background: linear-gradient(118deg, transparent 18%, rgba(255, 255, 255, .55) 22%, transparent 27%, transparent 60%, rgba(255, 255, 255, .35) 63%, transparent 66%); }
+
+  .kicker { left: 0; right: 0; top: 330px; text-align: center; font-family: var(--to-font-display); font-weight: 700;
+            font-size: 26px; letter-spacing: var(--to-track-eyebrow); color: var(--to-green); animation-name: kicker; }
+  .headline { left: 0; right: 0; top: 380px; height: 170px; text-align: center; }
+  .headline span { display: block; font-family: var(--to-font-display); font-weight: 800; font-size: 96px; line-height: 170px;
+                   letter-spacing: var(--to-track-display); text-transform: uppercase; }
+  /* Letters bounce in one by one (Gen Z reference), then ripple once as a wave. Delays are set per letter in the script. */
+  .headline i, .sub i { display: inline-block; font-style: normal; white-space: pre; animation-name: bounceIn, wave;
+                        animation-duration: .7s, .6s; animation-timing-function: linear, ease-in-out; }
+  .sub i { animation-name: bounceIn; animation-duration: .55s; }
+  .rule { left: 465px; top: 566px; width: 150px; height: 4px; background: var(--to-peach); transform-origin: center; animation-name: wipe; }
+  .sub { left: 120px; right: 120px; top: 600px; text-align: center; text-wrap: balance; font-weight: 400; font-size: 32px; line-height: 1.4; color: var(--muted); }
+
+  .shadow { left: 170px; top: 1095px; width: 740px; height: 60px; border-radius: 50%;
+            background: radial-gradient(closest-side, rgba(33, 33, 33, .30), rgba(33, 33, 33, 0)); filter: blur(10px); animation-name: shadow; }
+  .product { left: 70px; top: 740px; width: 940px; height: 341px; animation-name: settle; }
+  .product img { width: 100%; display: block; }
+  /* Light glint clipped to the frame's own alpha — the mask is static, only the gradient moves. */
+  .product .glint { position: absolute; inset: 0; -webkit-mask: url(layers/OX8208-0552_1.png) center / 100% no-repeat;
+                    mask: url(layers/OX8208-0552_1.png) center / 100% no-repeat; overflow: hidden; }
+  .product .glint i { position: absolute; top: -20%; bottom: -20%; left: 0; width: 200px;
+                      background: linear-gradient(100deg, transparent, rgba(255, 255, 255, .85), transparent); animation-name: glint; }
+
+  .features { left: 60px; right: 60px; top: 1270px; display: grid; grid-template-columns: repeat(3, 1fr); text-align: center; }
+  .features > div { padding: 0 18px; animation-name: pop1; }
+  .features > div:nth-child(2) { animation-name: pop2; }
+  .features > div:nth-child(3) { animation-name: pop3; }
+  .features > div + div { border-left: 1px solid var(--to-hairline); }
+  .features svg { width: 64px; height: 64px; stroke: var(--to-black); stroke-width: 1.6; fill: none; stroke-linecap: round; stroke-linejoin: round; }
+  .features h3 { margin: 14px 0 10px; font-family: var(--to-font-display); font-weight: 700; font-size: 24px;
+                 letter-spacing: var(--to-track-eyebrow); color: var(--to-green); }
+  .features p { margin: 0; font-size: 25px; line-height: 1.45; color: var(--muted); }
+  .features b { display: block; font-family: var(--to-font-body); font-weight: 500; color: var(--to-black); }
+
+  .cta { left: 290px; width: 500px; top: 1560px; height: 92px; border-radius: 46px; background: var(--to-green); color: var(--to-snow);
+         display: flex; align-items: center; justify-content: center; gap: 18px; font-family: var(--to-font-display); font-weight: 700; font-size: 32px;
+         letter-spacing: var(--to-track-eyebrow); text-transform: uppercase; animation-name: cta; }
+  .cta svg { width: 30px; height: 30px; stroke: var(--to-snow); stroke-width: 2.4; fill: none; animation-name: nudge; }
+  .specs { left: 0; right: 0; top: 1690px; text-align: center; font-family: var(--to-font-display); font-weight: 500; font-size: 20px;
+           letter-spacing: var(--to-track-eyebrow); color: var(--muted); animation-name: fadeLate; }
+
+  /* Percentages are of the 10 s clip: 1% = 0.1 s. */
+  @keyframes leaf     { from { transform: translate(0, 0) rotate(0deg) } to { transform: translate(-40px, 30px) rotate(-3deg) } }
+  @keyframes logoIn   { 0%, 2% { transform: translateY(110%) } 9% { transform: translateY(-6%) } 11%, 100% { transform: none } }
+  @keyframes logoShine { 0%, 12% { transform: translateX(-90px) } 20% { transform: translateX(260px) }
+                         20.01%, 62% { transform: translateX(-90px) } 70%, 100% { transform: translateX(260px) } }
+  @keyframes store    { 0% { opacity: 0; transform: translate(30px, 20px) } 14% { opacity: .95 } 100% { opacity: .95; transform: translate(-10px, 0) } }
+  @keyframes kicker   { 0%, 5% { opacity: 0; transform: scale(.4) } 8% { opacity: 1; transform: scale(1.18) } 10% { transform: scale(.94) } 12%, 100% { opacity: 1; transform: none } }
+  @keyframes bounceIn { 0% { opacity: 0; transform: translateY(60px) scale(.3) rotate(-8deg) } 45% { opacity: 1; transform: translateY(-18px) scale(1.18) rotate(3deg) }
+                        70% { transform: translateY(6px) scale(.95) rotate(-1deg) } 100% { opacity: 1; transform: none } }
+  @keyframes wave     { 0%, 100% { transform: none } 40% { transform: translateY(-16px) scale(1.06) } }
+  @keyframes rise     { 0%, 7% { transform: translateY(105%) } 14% { transform: translateY(-3%) } 16%, 100% { transform: none } }
+  @keyframes wipe     { 0%, 14% { transform: scaleX(0) } 20%, 100% { transform: scaleX(1) } }
+  @keyframes sub      { 0%, 17% { opacity: 0; transform: translateY(24px) } 23%, 100% { opacity: 1; transform: none } }
+  @keyframes settle   { 0% { transform: translateY(-26px) scale(1.05) } 12% { transform: translateY(4px) scale(1) }
+                        16% { transform: none } 58% { transform: translateY(-10px) } 100% { transform: translateY(0) } }
+  @keyframes shadow   { 0% { opacity: .4; transform: scale(1.15) } 12%, 100% { opacity: 1; transform: none } }
+  @keyframes glint    { 0%, 24% { transform: translateX(-260px) } 34% { transform: translateX(1000px) }
+                        34.01%, 72% { transform: translateX(-260px) } 82%, 100% { transform: translateX(1000px) } }
+  @keyframes pop1     { 0%, 30% { opacity: 0; transform: scale(.3) rotate(-10deg) } 33% { opacity: 1; transform: scale(1.15) rotate(3deg) } 35% { transform: scale(.95) } 37%, 100% { opacity: 1; transform: none } }
+  @keyframes pop2     { 0%, 35% { opacity: 0; transform: scale(.3) rotate(10deg) } 38% { opacity: 1; transform: scale(1.15) rotate(-3deg) } 40% { transform: scale(.95) } 42%, 100% { opacity: 1; transform: none } }
+  @keyframes pop3     { 0%, 40% { opacity: 0; transform: scale(.3) rotate(-10deg) } 43% { opacity: 1; transform: scale(1.15) rotate(3deg) } 45% { transform: scale(.95) } 47%, 100% { opacity: 1; transform: none } }
+  @keyframes cta      { 0%, 50% { opacity: 0; transform: scale(.3) } 53% { opacity: 1; transform: scale(1.14) } 55% { transform: scale(.94) } 57%, 72% { opacity: 1; transform: none }
+                        75% { transform: scale(1.06) rotate(-2deg) } 77% { transform: scale(1.06) rotate(2deg) } 79%, 100% { transform: none } }
+  @keyframes nudge    { 0%, 60% { transform: none } 64% { transform: translateX(8px) } 68%, 84% { transform: none }
+                        88% { transform: translateX(8px) } 92%, 100% { transform: none } }
+  @keyframes fadeLate { 0%, 55% { opacity: 0 } 62%, 100% { opacity: 1 } }
+</style>
+</head>
+<body data-width="1080" data-height="1920" data-duration="10" data-fps="30">
+  <div class="background" data-layer="background"></div>
+  <svg class="leaf-shadow" data-layer="leaf-shadow" viewBox="0 0 760 760" xmlns="http://www.w3.org/2000/svg">
+    <g style="fill: var(--to-hairline);">
+      <path d="M760 40 C560 120 380 260 200 470 C380 330 560 230 760 170 Z"/>
+      <path d="M760 200 C590 250 430 360 290 560 C450 420 600 340 760 310 Z"/>
+      <path d="M700 0 C600 140 520 300 470 520 C560 330 640 190 760 90 Z"/>
+      <path d="M560 0 C500 120 430 230 330 330 C450 250 530 150 620 40 Z"/>
+      <path d="M760 360 C640 400 540 480 460 620 C560 520 660 470 760 450 Z"/>
+    </g>
+  </svg>
+  <img class="store" data-layer="store" src="../../brand/store-lineart.png" alt="">
+  <div class="logo" data-layer="logo" aria-label="TIMEOPTIC"><div class="shine"><i></i></div></div>
+  <div class="kicker" data-layer="kicker">OAKLEY · HSTN SQ</div>
+  <div class="headline" data-layer="headline"><span>Sport, Sharpened</span></div>
+  <div class="rule" data-layer="rule"></div>
+  <div class="sub" data-layer="sub">Lenses designed to reduce visual fatigue from digital screens</div>
+  <div class="shadow" data-layer="shadow"></div>
+  <div class="product" data-layer="product">
+    <img src="layers/OX8208-0552_1.png" alt="">
+    <div class="lens"></div>
+    <div class="glint"><i></i></div>
+  </div>
+  <div class="features" data-layer="features">
+    <div>
+      <svg viewBox="0 0 48 48"><circle cx="13" cy="26" r="9"/><circle cx="35" cy="26" r="9"/><path d="M22 25 Q24 22 26 25"/><path d="M4 24 L2 18"/><path d="M44 24 L46 18"/></svg>
+      <h3>FRAME</h3><p><b>Oakley OX8208</b>Geometric square<br>Matt Abyss</p>
+    </div>
+    <div>
+      <svg viewBox="0 0 48 48"><ellipse cx="24" cy="24" rx="15" ry="18"/><path d="M15 16 Q19 10 26 9"/></svg>
+      <h3>LENS</h3><p><b>Essilor Eyezen+</b>Less screen<br>eye fatigue</p>
+    </div>
+    <div>
+      <svg viewBox="0 0 48 48"><path d="M24 5 L39 11 V23 C39 33 32 40 24 43 C16 40 9 33 9 23 V11 Z"/><path d="M17 24 L22 29 L31 19"/></svg>
+      <h3>COATING</h3><p><b>Crizal Prevencia</b>Filters blue-violet<br>light · UV</p>
+    </div>
+  </div>
+  <div class="cta" data-layer="cta">Message us <svg viewBox="0 0 24 24"><path d="M4 12 H19 M13 6 L19 12 L13 18"/></svg></div>
+  <div class="specs" data-layer="specs">OX8208-0552 · EYEZEN+ · CRIZAL PREVENCIA</div>
+<script>
+// Split the headline and subline into letters / words with staggered delays (seconds into the clip).
+function split(el, unit, start, step, wave) {
+  const parts = unit === 'char' ? [...el.textContent] : el.textContent.split(/(\s+)/);
+  el.textContent = '';
+  let n = 0;
+  for (const part of parts) {
+    if (/^\s+$/.test(part)) { el.append(part); continue; }
+    const i = document.createElement('i');
+    i.textContent = part;
+    i.style.animationDelay = wave ? `${start + n * step}s, ${wave + n * 0.035}s` : `${start + n * step}s`;
+    el.append(i); n++;
+  }
+}
+// Letter slices of the 2520px-wide logo PNG trace, scaled to the 230px wordmark.
+const LETTERS = [[0, 282], [310, 392], [438, 834], [876, 1134], [1170, 1498], [1540, 1784], [1808, 2078], [2112, 2164], [2214, 2520]];
+const logo = document.querySelector('.logo'), k = 230 / 2520;
+LETTERS.forEach(([x0, x1], n) => {
+  const b = document.createElement('b');
+  b.style.cssText = `left:${x0 * k}px;width:${(x1 - x0) * k + 1}px;background-position:${-x0 * k}px 0;` +
+                    `animation-delay:${0.5 + n * 0.0625}s, ${6.75 + n * 0.035}s`;
+  logo.insertBefore(b, logo.firstChild);
+});
+split(document.querySelector('.headline span'), 'char', 1.0, 0.0625, 6.0);
+split(document.querySelector('.sub'), 'word', 2.0, 0.0625);
+</script>
+</body>
+</html>

@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>R1C1 carousel — 2 know your outline</title>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@700;800&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../brand/tokens.css">
+<link rel="stylesheet" href="slides.css">
+<style>
+  .headline { top: 132px; font-size: 92px; }
+  .accent { top: 258px; }
+  .faces { left: 90px; right: 90px; top: 330px; height: 360px; display: flex; justify-content: space-between; align-items: flex-end; }
+  .faces figure { margin: 0; width: 270px; text-align: center; }
+  .faces svg { width: 230px; height: 290px; overflow: visible; }
+  .faces figcaption { margin-top: 18px; font-family: var(--to-font-display); font-weight: 700; font-size: 22px;
+                      letter-spacing: var(--to-track-eyebrow); text-transform: uppercase; color: var(--to-green); }
+  .body { top: 760px; right: var(--to-margin); }
+</style>
+</head>
+<body data-width="1080" data-height="1080">
+  <div class="background" data-layer="background"></div>
+  <img class="store" data-layer="store" src="../../brand/store-lineart.png" alt="">
+  <div class="eyebrow" data-layer="eyebrow">Step 1</div>
+  <h1 class="headline" data-layer="headline">Know your outline</h1>
+  <div class="accent" data-layer="accent"></div>
+  <!-- Face outlines drawn by hand: round, square, oval. Same stroke, same height band. -->
+  <div class="faces" data-layer="faces">
+    <figure>
+      <svg viewBox="0 0 230 290"><path d="M115 22 C 180 22 212 80 212 150 C 212 222 172 272 115 272 C 58 272 18 222 18 150 C 18 80 50 22 115 22 Z" fill="none" stroke="#123A29" stroke-width="6"/></svg>
+      <figcaption>Round</figcaption>
+    </figure>
+    <figure>
+      <svg viewBox="0 0 230 290"><path d="M40 30 L 190 30 Q 205 30 205 46 L 205 205 Q 205 262 150 270 L 80 270 Q 25 262 25 205 L 25 46 Q 25 30 40 30 Z" fill="none" stroke="#123A29" stroke-width="6"/></svg>
+      <figcaption>Square</figcaption>
+    </figure>
+    <figure>
+      <svg viewBox="0 0 230 290"><path d="M115 10 C 170 10 198 70 198 140 C 198 222 160 282 115 282 C 70 282 32 222 32 140 C 32 70 60 10 115 10 Z" fill="none" stroke="#123A29" stroke-width="6"/></svg>
+      <figcaption>Oval</figcaption>
+    </figure>
+  </div>
+  <p class="body" data-layer="body">Look in a mirror at your jaw and cheekbones.<br>Which shape is closest to yours?</p>
+  <img class="logo" data-layer="logo" src="../../brand/logo/timeoptic.svg" alt="">
+  <div class="page" data-layer="page">2 / 4</div>
+</body>
+</html>

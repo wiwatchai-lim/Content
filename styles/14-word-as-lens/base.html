@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>14-word-as-lens</title>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;700;800&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../brand/tokens.css">
+<style>
+  /* From ref.jpg: a short phrase set very wide on a pale studio ground, where the product stands IN
+     the word — it replaces two round letters, so the frame is read as type and as product at once.
+
+     Taken: that device — a word split around the product, generous letterspacing, flat light ground.
+     NOT taken: their phrase, their product, their shop logo.
+
+     How to use it: pick a word whose middle is two round letters the frame can stand in — GOOD, LOOK,
+     FOCUS, ZOOM, COOL (the placeholder here is STAY / C__L / ALL DAY). Put the letters before the gap in
+     `word-a`, the letters after it in `word-b`, and
+     size the product so its two lenses land where those letters would be. The line above and the line
+     below carry the rest of the phrase. It only works with a FRONT-ON photo (`_1`), never an angled one. */
+  html, body { margin: 0; background: transparent; }
+  body { position: relative; width: 1080px; height: 1080px; overflow: hidden;
+         font-family: var(--to-font-body); color: var(--to-black); }
+  body > [data-layer] { position: absolute; box-sizing: border-box; }
+
+  .background { inset: 0; background: linear-gradient(170deg, var(--to-snow) 0%, #F0EEE8 60%, var(--to-timberwolf) 100%); }
+  .line-top { left: 96px; top: 330px; font-family: var(--to-font-display); font-weight: 700; font-size: 62px;
+              letter-spacing: .22em; text-transform: uppercase; color: var(--to-black); }
+  /* The two halves of the split word. Nudge them, not the product, when the fit is off. */
+  .word-a { left: 96px; top: 452px; font-family: var(--to-font-display); font-weight: 700; font-size: 190px;
+            line-height: 1; letter-spacing: .04em; text-transform: uppercase; color: var(--to-black); }
+  .word-b { right: 96px; top: 452px; font-family: var(--to-font-display); font-weight: 700; font-size: 190px;
+            line-height: 1; letter-spacing: .04em; text-transform: uppercase; color: var(--to-black); }
+  .product { left: 292px; top: 442px; width: 500px; filter: drop-shadow(0 18px 20px rgba(33, 33, 33, .22)); }
+  .line-bottom { right: 96px; top: 690px; font-family: var(--to-font-display); font-weight: 700; font-size: 62px;
+                 letter-spacing: .22em; text-transform: uppercase; color: var(--to-black); }
+  .rule { left: 96px; top: 812px; width: 64px; height: 4px; background: var(--to-peach); }
+  .specs { left: 96px; top: 856px; font-family: var(--to-font-body); font-size: 20px; line-height: 1.5;
+           color: color-mix(in srgb, var(--to-black) 66%, transparent); }
+  .cta { left: 96px; bottom: var(--to-margin); font-family: var(--to-font-display); font-weight: 700; font-size: 17px;
+         letter-spacing: var(--to-track-eyebrow); text-transform: uppercase; color: var(--to-green); }
+  .logo { right: var(--to-margin); bottom: var(--to-margin); width: var(--to-logo-width); }
+</style>
+</head>
+<body data-width="1080" data-height="1080">
+  <div class="background" data-layer="background"></div>
+  <div class="line-top" data-layer="line-top">Stay</div>
+  <div class="word-a" data-layer="word-a">C</div>
+  <img class="product" data-layer="product" src="../_preview/front.png" alt="">
+  <div class="word-b" data-layer="word-b">L</div>
+  <div class="line-bottom" data-layer="line-bottom">All day</div>
+  <div class="rule" data-layer="rule"></div>
+  <div class="specs" data-layer="specs">Lens name · Coating name<br>Brand Model</div>
+  <div class="cta" data-layer="cta">Message us to try them on</div>
+  <img class="logo" data-layer="logo" src="../../brand/logo/timeoptic.svg" alt="">
+</body>
+</html>

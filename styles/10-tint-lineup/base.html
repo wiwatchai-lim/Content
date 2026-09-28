@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>10-tint-lineup</title>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;700;800&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../brand/tokens.css">
+<style>
+  /* From ref.jpg: a row of translucent tinted lens discs overlapping across the upper half on a cream ground,
+     heavy sans headline bottom-left with one word underlined, small italic subline under it.
+     Own skin: the discs use palette colours only, and the wording is ours — the ref's own copy is never reused.
+     Use for tint / mirror / photochromic posts, where the colour range is the story. */
+  :root {
+    --cream: #F3F1EB;
+    --muted: #6E6A61;
+  }
+  html, body { margin: 0; background: transparent; }
+  body { position: relative; width: 1080px; height: 1080px; overflow: hidden; font-family: var(--to-font-body); color: var(--to-black); }
+  body > [data-layer] { position: absolute; box-sizing: border-box; }
+
+  .background { inset: 0; background: linear-gradient(170deg, var(--to-snow) 0%, var(--cream) 62%, #E8E4DB 100%); }
+
+  /* One layer holds the whole lineup: the discs only read as a set, and they are edited as a set. */
+  .tints { left: 60px; top: 128px; width: 960px; height: 470px; }
+  .tints i { position: absolute; top: 0; width: 330px; height: 448px; border-radius: 50%;
+             border: 3px solid rgba(33, 33, 33, .55); box-shadow: 0 18px 24px rgba(33, 33, 33, .12); }
+  .tints i:nth-child(1) { left: 0;    background: color-mix(in srgb, var(--to-green) 55%, transparent); }
+  .tints i:nth-child(2) { left: 210px; background: color-mix(in srgb, var(--to-peach) 78%, transparent); }
+  .tints i:nth-child(3) { left: 420px; background: color-mix(in srgb, var(--to-pastel) 80%, transparent); }
+  .tints i:nth-child(4) { left: 630px; background: color-mix(in srgb, var(--to-timberwolf) 82%, transparent); }
+
+  .product { right: 56px; bottom: 258px; width: 440px; filter: drop-shadow(0 18px 20px rgba(33, 33, 33, .18)); }
+  .headline { left: 70px; right: 420px; bottom: 190px; margin: 0; font-family: var(--to-font-display);
+              font-size: 62px; font-weight: 800; line-height: 1.08; letter-spacing: var(--to-track-display); }
+  .headline u { text-decoration-thickness: 5px; text-underline-offset: 8px; }
+  .subline { left: 70px; right: 420px; bottom: 138px; font-size: 24px; font-style: italic; color: var(--muted); }
+  .specs { left: 70px; right: 70px; bottom: 64px; font-family: var(--to-font-body); font-size: 20px;
+           letter-spacing: var(--to-track-eyebrow); text-transform: uppercase; color: var(--muted); }
+  .logo { left: var(--to-margin); top: var(--to-margin); width: var(--to-logo-width); }
+</style>
+</head>
+<body data-width="1080" data-height="1080">
+  <div class="background" data-layer="background"></div>
+  <img class="logo" data-layer="logo" src="../../brand/logo/timeoptic.svg" alt="">
+  <div class="tints" data-layer="tints"><i></i><i></i><i></i><i></i></div>
+  <img class="product" data-layer="product" src="../_preview/front.png" alt="">
+  <h1 class="headline" data-layer="headline">Pick the tint<br>that <u>fits you</u></h1>
+  <div class="subline" data-layer="subline">Lens name, in the colours it comes in</div>
+  <div class="specs" data-layer="specs">BRAND MODEL · LENS NAME · COATING NAME</div>
+</body>
+</html>

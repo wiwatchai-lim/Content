@@ -1,0 +1,143 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Bolon BJ3205 clip</title>
+<!--
+  9:16 clip, two shots. The moving set (leaf shadows, sun, camera drift) is Wan 2.2 image-to-video
+  made from the empty plates in plates/ (gen/V1.mp4, gen/V2.mp4). The glasses are NOT from Wan:
+  they are the real cutouts in layers/ laid on top, so the product can never warp.
+  Render: npm run video -- kits/2026-09-22_bj3205-b10  ->  export/clip.mp4 (no audio)
+-->
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;700;800&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../brand/tokens.css">
+<style>
+  html, body { margin: 0; background: #efe6d8; }
+  body { position: relative; width: 1080px; height: 1920px; overflow: hidden; font-family: var(--to-font-body); color: var(--to-black); }
+  body > * { position: absolute; }
+  video { inset: 0; width: 100%; height: 100%; object-fit: cover; opacity: 0; filter: blur(1.5px); }
+
+  .shot { inset: 0; opacity: 0; }
+  .shot > * { position: absolute; }
+  .shadow { border-radius: 50%; background: radial-gradient(closest-side, rgba(40, 28, 15, .42), rgba(40, 28, 15, 0)); filter: blur(12px); }
+  .product img { width: 100%; display: block; }
+  .lens { position: absolute; inset: 0; mask-size: 100%; -webkit-mask-size: 100%; mask-repeat: no-repeat; -webkit-mask-repeat: no-repeat;
+          background: linear-gradient(160deg, rgba(255, 244, 225, .22) 0%, rgba(230, 215, 195, .10) 45%, rgba(255, 248, 235, .20) 100%); }
+  .lens i { position: absolute; top: -10%; bottom: -10%; width: 260px;
+            background: linear-gradient(100deg, transparent, rgba(255, 255, 255, .55), transparent); }
+  .glint { position: absolute; inset: 0; mask-size: 100%; -webkit-mask-size: 100%; overflow: hidden; }
+  .glint i { position: absolute; top: -20%; bottom: -20%; width: 180px;
+             background: linear-gradient(100deg, transparent, rgba(255, 255, 255, .7), transparent); }
+
+  .store { right: -70px; top: 40px; width: 560px; opacity: .6; filter: drop-shadow(0 1px 1px rgba(33, 33, 33, .16)) drop-shadow(0 0 1px rgba(33, 33, 33, .35)); }
+  .title { left: 0; right: 0; top: 330px; text-align: center; opacity: 0; }
+  .title h1 { margin: 0; font-family: var(--to-font-display); font-weight: 800; font-size: 84px; letter-spacing: var(--to-track-display);
+              line-height: 1; color: var(--to-green); text-transform: uppercase; }
+  .title h1 span { font-weight: 500; font-size: 50px; margin: 0 20px; vertical-align: 12px; color: var(--to-black); opacity: .7; }
+  .title .rule { width: 150px; height: 4px; margin: 30px auto 24px; background: var(--to-peach); transform-origin: center; }
+  .title p { margin: 0; font-size: 30px; line-height: 1.5; color: #5e5a54; }
+  .title p b { font-weight: 500; color: var(--to-black); }
+
+  .logo { left: 425px; bottom: 170px; width: 230px; height: 37px; opacity: 0; }
+  .logo b { position: absolute; top: 0; height: 37px; background: url(../../brand/logo/timeoptic.svg) no-repeat; background-size: 230px 36.5px;
+            animation: bounceIn .7s linear both; }
+  .logo .shine { position: absolute; inset: 0; -webkit-mask: url(../../brand/logo/timeoptic-mono.svg) center / 100% no-repeat;
+                 mask: url(../../brand/logo/timeoptic-mono.svg) center / 100% no-repeat; overflow: hidden; }
+  .logo .shine i { position: absolute; top: 0; bottom: 0; left: 0; width: 70px;
+                   background: linear-gradient(100deg, transparent, rgba(239, 207, 156, .95), transparent); }
+  @keyframes bounceIn { 0% { opacity: 0; transform: translateY(40px) scale(.3) rotate(-8deg) } 45% { opacity: 1; transform: translateY(-12px) scale(1.18) rotate(3deg) }
+                        70% { transform: translateY(4px) scale(.95) rotate(-1deg) } 100% { opacity: 1; transform: none } }
+  .fade { inset: 0; background: #efe6d8; }
+</style>
+</head>
+<body data-width="1080" data-height="1920" data-duration="9.5" data-fps="30">
+  <video id="v1" src="gen/V1.mp4" muted preload="auto" playsinline></video>
+  <video id="v2" src="gen/V2.mp4" muted preload="auto" playsinline></video>
+
+  <!-- Shot 1: front view on the table (plate A: tabletop starts at 62% = 1190px). -->
+  <div class="shot" id="s1">
+    <div class="shadow" style="left:150px; top:1195px; width:780px; height:70px;"></div>
+    <div class="product" id="p1" style="left:90px; top:960px; width:900px;">
+      <img src="layers/BJ3205-B10_1.png" alt="">
+      <div class="lens" style="mask-image:url(layers/BJ3205-B10_1_lens.png); -webkit-mask-image:url(layers/BJ3205-B10_1_lens.png);"><i></i></div>
+      <div class="glint" style="mask-image:url(layers/BJ3205-B10_1.png); -webkit-mask-image:url(layers/BJ3205-B10_1.png);"><i></i></div>
+    </div>
+  </div>
+  <!-- Shot 2: three-quarter view, closer (plate B: tabletop starts at 48% = 922px). -->
+  <div class="shot" id="s2">
+    <div class="shadow" style="left:110px; top:1250px; width:860px; height:80px;"></div>
+    <div class="product" id="p2" style="left:50px; top:1000px; width:980px;">
+      <img src="layers/BJ3205-B10_2.png" alt="">
+      <div class="lens" style="mask-image:url(layers/BJ3205-B10_2_lens.png); -webkit-mask-image:url(layers/BJ3205-B10_2_lens.png);"><i></i></div>
+      <div class="glint" style="mask-image:url(layers/BJ3205-B10_2.png); -webkit-mask-image:url(layers/BJ3205-B10_2.png);"><i></i></div>
+    </div>
+  </div>
+
+  <img class="store" src="../../brand/store-lineart.png" alt="">
+  <div class="title" id="title">
+    <h1>Bolon<span>×</span>Shamir</h1>
+    <div class="rule" id="rule"></div>
+    <p><b>Shamir Relax™ · Glacier Plus UV™</b><br>BJ3205-B10 · Shiny Black</p>
+  </div>
+  <div class="logo" id="logo" aria-label="TIMEOPTIC"><div class="shine"><i id="shine"></i></div></div>
+  <div class="fade" id="fade"></div>
+
+<script>
+const XFADE = 0.5;
+const SHOTS = [
+  { v: v1, el: s1, p: p1, start: 0, len: 5, from: 0 },
+  { v: v2, el: s2, p: p2, start: 4.5, len: 5, from: 0 },
+];
+const TOTAL = 9.5;
+
+// Wordmark letter slices (2520px-wide trace scaled to 230px), bounce in at 6.2 s.
+const LETTERS = [[0, 282], [310, 392], [438, 834], [876, 1134], [1170, 1498], [1540, 1784], [1808, 2078], [2112, 2164], [2214, 2520]];
+const k = 230 / 2520;
+LETTERS.forEach(([x0, x1], n) => {
+  const b = document.createElement('b');
+  b.style.cssText = `left:${x0 * k}px;width:${(x1 - x0) * k + 1}px;background-position:${-x0 * k}px 0;animation-delay:${6.2 + n * 0.0625}s`;
+  logo.insertBefore(b, logo.firstChild);
+});
+
+const clamp = (x) => Math.min(Math.max(x, 0), 1);
+const smooth = (x) => { x = clamp(x); return x * x * (3 - 2 * x); };
+const seekVideo = (v, t) => new Promise((ok) => {
+  if (Math.abs(v.currentTime - t) < 0.001) return ok();
+  v.addEventListener('seeked', ok, { once: true });
+  v.currentTime = t;
+});
+const loaded = Promise.all(SHOTS.map(({ v }) => new Promise((ok, err) => {
+  if (v.readyState >= 2) return ok();
+  v.addEventListener('loadeddata', ok, { once: true });
+  v.addEventListener('error', () => err(new Error(`cannot load ${v.src}`)), { once: true });
+})));
+
+window.__seek = async (ms) => {
+  await loaded;
+  const t = ms / 1000;
+  await Promise.all(SHOTS.map(async (s, i) => {
+    const local = t - s.start;
+    const visible = local > -0.05 && local < s.len + 0.05;
+    const a = visible ? (i === 0 ? 1 : smooth(local / XFADE)) : 0;
+    s.v.style.opacity = a; s.el.style.opacity = a;
+    const u = clamp(local / s.len);
+    // Glasses stay still on the table; only a slow push-in, in step with the set's camera drift.
+    s.p.style.transform = i === 0 ? `scale(${1 + u * 0.04})` : `translateX(${-18 * u}px) scale(${1.02 + u * 0.03})`;
+    s.p.style.transformOrigin = '50% 90%';
+    const g = s.el.querySelectorAll('i');
+    g[0].style.left = `${-300 + smooth((local - 1.2) / 1.6) * 1400}px`;  // lens reflection
+    g[1].style.left = `${-250 + smooth((local - 2.0) / 1.1) * 1350}px`;  // rim glint
+    if (visible) await seekVideo(s.v, Math.min(s.from + Math.max(local, 0), s.v.duration - 0.05));
+  }));
+  // Title on shot 1, fades out as shot 2 comes in; wordmark lands on shot 2 and holds to the end.
+  const tin = smooth((t - 0.6) / 0.8), tout = 1 - smooth((t - 4.1) / 0.6);
+  title.style.opacity = Math.min(tin, tout);
+  title.style.transform = `translateY(${(1 - tin) * 20}px)`;
+  rule.style.transform = `scaleX(${smooth((t - 1.0) / 0.6)})`;
+  logo.style.opacity = t > 6.1 ? 1 : 0;
+  shine.style.transform = `translateX(${-90 + smooth((t - 7.2) / 0.8) * 350}px)`;
+  fade.style.opacity = Math.max(1 - smooth(t / 0.5), smooth((t - (TOTAL - 0.5)) / 0.5));
+};
+</script>
+</body>
+</html>

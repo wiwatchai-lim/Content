@@ -1,0 +1,268 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=1080, height=1920" />
+    <!--
+      Oakley OX8080-0158 x ZEISS — vertical beat clip, 6 bars at 138 BPM (24 beats = 10.43 s), no audio.
+      Everything hits the beat grid (BPM below): the glasses bop on every beat, sway left/right every
+      two beats and travel between bars; letters bounce in and hop on beats. The music is added later
+      in TikTok/CapCut with its first downbeat at 0:00. Change BPM to fit another track.
+      The glasses are the real cutouts (assets/OX8080-0158_*.png); the lens glass is drawn inside the
+      lens mask made from the cutout's alpha holes.
+    -->
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/gsap.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;700;800;900&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="assets/tokens.css" />
+    <style>
+      * { margin: 0; padding: 0; box-sizing: border-box; }
+      html, body { width: 1080px; height: 1920px; overflow: hidden; background: #e6ebee; }
+      #root { position: relative; width: 1080px; height: 1920px; overflow: hidden; font-family: var(--to-font-body); color: var(--to-black); }
+      .layer { position: absolute; }
+
+      /* ---------- set ---------- */
+      #bg { inset: -60px; background: radial-gradient(ellipse 80% 55% at 50% 58%, #f6f8f9 0%, #e7ecef 55%, #d3dbe0 100%); }
+      #rings i { position: absolute; left: 540px; top: 1130px; width: 900px; height: 900px; margin: -450px 0 0 -450px; border-radius: 50%;
+                 border: 3px solid rgba(255, 255, 255, .9); box-shadow: 0 0 0 1px rgba(120, 140, 150, .12); opacity: 0; }
+      #floor { left: -100px; right: -100px; top: 1330px; height: 700px;
+               background: linear-gradient(180deg, rgba(160, 175, 185, .0) 0%, rgba(160, 175, 185, .22) 30%, rgba(140, 155, 165, .35) 100%); }
+      #eq { left: 190px; top: 1575px; width: 700px; height: 110px; display: flex; align-items: flex-end; justify-content: space-between; }
+      #eq i { width: 18px; height: 100%; background: var(--to-green); opacity: .85; transform-origin: bottom; transform: scaleY(.12); }
+
+      /* ---------- glasses: position > travel > sway > bop ---------- */
+      .glasses { position: absolute; }
+      .glasses > div { position: relative; }
+      .glasses img { display: block; width: 100%; }
+      .glasses .shadow { position: absolute; left: 10%; right: 10%; bottom: -60px; height: 60px; border-radius: 50%;
+                         background: radial-gradient(closest-side, rgba(30, 45, 55, .42), rgba(30, 45, 55, 0)); filter: blur(10px); }
+      .glass { position: absolute; inset: 0; -webkit-mask-size: 100% 100%; mask-size: 100% 100%; -webkit-mask-repeat: no-repeat; mask-repeat: no-repeat; overflow: hidden;
+               background: linear-gradient(170deg, rgba(255, 255, 255, .22) 0%, rgba(200, 215, 225, .07) 50%, rgba(235, 245, 255, .18) 100%); }
+      /* ZEISS AR reads as a faint blue sheen at an angle */
+      .glass .tint { position: absolute; inset: 0; background: linear-gradient(120deg, transparent 20%, rgba(120, 170, 235, .22) 50%, transparent 80%); }
+      .glass .win { position: absolute; top: 8%; width: 14%; height: 50%; border-radius: 16px; filter: blur(5px);
+                    background: linear-gradient(180deg, rgba(255, 255, 255, .55), rgba(255, 255, 255, .06)); transform: skewX(-14deg); }
+      .glass .streak { position: absolute; left: 0; transform: translateX(-150px); top: -20%; bottom: -20%; width: 9%; filter: blur(3px);
+                       background: linear-gradient(100deg, transparent, rgba(255, 255, 255, .7), transparent); }
+      .rimglint { position: absolute; inset: 0; -webkit-mask-size: 100% 100%; mask-size: 100% 100%; overflow: hidden; }
+      .rimglint i { position: absolute; left: 0; transform: translateX(-200px); top: -20%; bottom: -20%; width: 160px; background: linear-gradient(100deg, transparent, rgba(255, 255, 255, .85), transparent); }
+
+      /* ---------- type ---------- */
+      .type { position: absolute; left: 0; right: 0; text-align: center; white-space: nowrap; }
+      .type .ch { display: inline-block; will-change: transform; }
+      .kicker { font-family: var(--to-font-display); font-weight: 700; font-size: 30px; letter-spacing: .3em; color: var(--to-green); }
+      .mega { font-family: var(--to-font-display); font-weight: 900; font-size: 200px; line-height: 1; letter-spacing: -.02em; color: var(--to-green); text-transform: uppercase; }
+      .big { font-family: var(--to-font-display); font-weight: 800; font-size: 104px; line-height: 1; letter-spacing: -.02em; color: var(--to-black); text-transform: uppercase; }
+      .x { font-family: var(--to-font-display); font-weight: 500; font-size: 70px; color: #5b6b75; }
+      .sub { font-family: var(--to-font-body); font-weight: 500; font-size: 36px; color: #3f4a51; }
+      .chip { display: inline-block; padding: 16px 30px; background: var(--to-green); color: var(--to-snow); font-family: var(--to-font-display);
+              font-weight: 700; font-size: 34px; letter-spacing: .12em; text-transform: uppercase; }
+      .spec { font-family: var(--to-font-display); font-weight: 500; font-size: 26px; letter-spacing: .22em; color: #3f4a51; }
+      .rule { position: absolute; left: 465px; width: 150px; height: 5px; background: var(--to-peach); transform-origin: center; }
+
+      #store { right: -60px; top: 20px; width: 400px; opacity: .6; filter: drop-shadow(0 1px 1px rgba(33, 33, 33, .16)) drop-shadow(0 0 1px rgba(33, 33, 33, .3)); }
+      #logo { left: 390px; top: 1755px; width: 300px; height: 48px; }
+      #logo b { position: absolute; top: 0; height: 48px; background: url(assets/timeoptic.svg) no-repeat; background-size: 300px 47.6px; }
+      #logo .shine { position: absolute; inset: 0; -webkit-mask: url(assets/timeoptic-mono.svg) center / 100% no-repeat; mask: url(assets/timeoptic-mono.svg) center / 100% no-repeat; overflow: hidden; }
+      #logo .shine i { position: absolute; top: 0; bottom: 0; left: 0; width: 80px; transform: translateX(-90px); background: linear-gradient(100deg, transparent, rgba(239, 207, 156, .95), transparent); }
+      #flash { inset: 0; background: #fff; opacity: 0; }
+      #fade { inset: 0; background: #e6ebee; }
+    </style>
+  </head>
+  <body>
+    <div id="root" data-composition-id="main" data-start="0" data-duration="10.435" data-width="1080" data-height="1920">
+      <div id="set" class="clip layer" data-start="0" data-duration="10.435" data-track-index="0" style="inset:0">
+        <div id="bg" class="layer"></div>
+        <div id="floor" class="layer"></div>
+        <div id="rings" class="layer" style="inset:0"></div>
+      </div>
+
+      <!-- Shot A: front view, bars 1-3 -->
+      <div id="gA" class="glasses clip" data-start="0" data-duration="5.4" data-track-index="1" style="left:70px; top:960px; width:940px;">
+        <div class="travel"><div class="sway"><div class="shadow"></div><div class="bop">
+          <img src="assets/OX8080-0158_1.png" alt="" />
+          <div class="glass" style="-webkit-mask-image:url(assets/OX8080-0158_1_lens.png); mask-image:url(assets/OX8080-0158_1_lens.png);">
+            <i class="tint"></i><i class="win" style="left:14%"></i><i class="win" style="left:62%"></i><i class="streak"></i>
+          </div>
+          <div class="rimglint" style="-webkit-mask-image:url(assets/OX8080-0158_1.png); mask-image:url(assets/OX8080-0158_1.png);"><i></i></div>
+        </div></div></div>
+      </div>
+      <!-- Shot B: three-quarter view, bars 4-6 -->
+      <div id="gB" class="glasses clip" data-start="5.1" data-duration="5.335" data-track-index="2" style="left:60px; top:980px; width:960px;">
+        <div class="travel"><div class="sway"><div class="shadow"></div><div class="bop">
+          <img src="assets/OX8080-0158_2.png" alt="" />
+          <div class="glass" style="-webkit-mask-image:url(assets/OX8080-0158_2_lens.png); mask-image:url(assets/OX8080-0158_2_lens.png);">
+            <i class="tint"></i><i class="win" style="left:10%"></i><i class="win" style="left:50%"></i><i class="streak"></i>
+          </div>
+          <div class="rimglint" style="-webkit-mask-image:url(assets/OX8080-0158_2.png); mask-image:url(assets/OX8080-0158_2.png);"><i></i></div>
+        </div></div></div>
+      </div>
+
+      <div id="eq" class="clip layer" data-start="0" data-duration="10.435" data-track-index="3"></div>
+      <img id="store" class="clip layer" data-start="0" data-duration="10.435" data-track-index="7" src="assets/store-lineart.png" alt="" />
+
+      <!-- Type, shot A -->
+      <div id="tA" class="clip layer" data-start="0" data-duration="5.3" data-track-index="5" style="inset:0">
+        <div class="type kicker split" style="top:200px">NEW IN STORE</div>
+        <div class="type mega split" style="top:300px">OAKLEY</div>
+        <div class="type" style="top:515px"><span class="x split">×</span></div>
+        <div class="type big split" style="top:630px">ZEISS</div>
+        <div class="rule" id="ruleA" style="top:765px"></div>
+        <div class="type sub split" style="top:805px">Crosslink Zero · Satin Gray Smoke</div>
+      </div>
+      <!-- Type, shot B -->
+      <div id="tB" class="clip layer" data-start="5.1" data-duration="5.335" data-track-index="6" style="inset:0">
+        <div class="type kicker split" style="top:200px">THE LENS</div>
+        <div class="type big split" style="top:300px">SMARTLIFE</div>
+        <div class="type sub split" style="top:425px">Screens to real world, all day</div>
+        <div class="rule" id="ruleB" style="top:515px"></div>
+        <div class="type big split" style="top:560px; font-size:66px">DURAVISION PLUS</div>
+        <div class="type big split" style="top:636px; font-size:66px">BLUEPROTECT UV</div>
+        <div class="type sub split" style="top:730px">Reduces blue-violet light 390–440 nm</div>
+        <div class="type" style="top:1400px"><span class="chip split" id="chip">OX8080 · Crosslink Zero</span></div>
+        <div class="type spec split" style="top:1500px">OAKLEY OX8080-0158</div>
+      </div>
+
+      <div id="logo" class="clip layer" data-start="0" data-duration="10.435" data-track-index="8" aria-label="TIMEOPTIC"><div class="shine"><i></i></div></div>
+      <div id="flash" class="clip layer" data-start="0" data-duration="10.435" data-track-index="9"></div>
+      <div id="fade" class="clip layer" data-start="0" data-duration="10.435" data-track-index="10"></div>
+    </div>
+
+    <script>
+      window.__timelines = window.__timelines || {};
+      const tl = gsap.timeline({ paused: true });
+
+      const BPM = 138;                 // Beat It ~138 BPM; set to the chosen track's tempo
+      const B = 60 / BPM;              // one beat in seconds
+      const D = 24 * B;                // 6 bars
+      const b = (n) => n * B;          // beat n -> seconds
+
+      // Split text into letter spans.
+      document.querySelectorAll('.split').forEach((el) => {
+        const text = el.textContent;
+        el.textContent = '';
+        for (const c of text) {
+          if (c === ' ') { el.append(' '); continue; }
+          const s = document.createElement('span');
+          s.className = 'ch';
+          s.textContent = c;
+          el.append(s);
+        }
+      });
+
+      // Wordmark cut into its 9 letters (slices of the 2520px-wide trace, scaled to 300px).
+      const LETTERS = [[0, 282], [310, 392], [438, 834], [876, 1134], [1170, 1498], [1540, 1784], [1808, 2078], [2112, 2164], [2214, 2520]];
+      const logo = document.getElementById('logo'), k = 300 / 2520;
+      LETTERS.forEach(([x0, x1]) => {
+        const el = document.createElement('b');
+        el.style.cssText = `left:${x0 * k}px;width:${(x1 - x0) * k + 1}px;background-position:${-x0 * k}px 0;`;
+        logo.insertBefore(el, logo.firstChild);
+      });
+
+      // Fixed-seed random, no Math.random().
+      let seed = 11;
+      const rnd = () => ((seed = (seed * 16807) % 2147483647) / 2147483647);
+
+      // Equaliser bars and beat rings.
+      const eq = document.getElementById('eq');
+      for (let i = 0; i < 24; i++) eq.append(document.createElement('i'));
+      const rings = document.getElementById('rings');
+      for (let i = 0; i < 4; i++) rings.append(document.createElement('i'));
+
+      const bounceIn = (sel, at, stagger = 0.045) =>
+        tl.from(`${sel} .ch`, { y: 150, scale: 0.2, rotation: (i) => (i % 2 ? 24 : -24), opacity: 0, duration: 0.6, ease: 'back.out(3.4)', stagger }, at);
+      const hop = (sel, at, h = 30) =>
+        tl.to(`${sel} .ch`, { keyframes: { y: [0, -h, 0], scale: [1, 1.14, 1] }, duration: B * 0.9, ease: 'sine.inOut', stagger: 0.025 }, at);
+      const bounceOut = (sel, at) =>
+        tl.to(`${sel} .ch`, { y: -100, scale: 0.3, rotation: (i) => (i % 2 ? -20 : 20), opacity: 0, duration: 0.3, ease: 'back.in(2.5)', stagger: 0.012 }, at);
+      const q = (id, n) => `#${id} .type:nth-child(${n})`;
+
+      // ---------- every beat: rings, equaliser, glasses bop ----------
+      const ringEls = rings.querySelectorAll('i');
+      for (let n = 0; n < 24; n++) {
+        const t = b(n), down = n % 4 === 0;
+        tl.fromTo(ringEls[n % 4], { scale: 0.35, opacity: down ? 0.95 : 0.55 }, { scale: down ? 1.5 : 1.15, opacity: 0, duration: B * 1.8, ease: 'power2.out', immediateRender: false }, t);
+        eq.querySelectorAll('i').forEach((bar, i) => {
+          const center = 1 - Math.abs(i - 11.5) / 12;
+          const hi = Math.min(1, (down ? 0.55 : 0.3) + rnd() * 0.45 * (0.5 + center));
+          tl.fromTo(bar, { scaleY: hi }, { scaleY: 0.12, duration: B * 0.95, ease: 'power2.out', immediateRender: false }, t);
+        });
+        // Squash on the hit, rebound up, settle — on whichever pair is on screen.
+        const g = t < b(12) ? '#gA' : '#gB';
+        if (n === 0 || n === 12) continue; // entrances own these beats
+        tl.fromTo(`${g} .bop`, { y: 10, scaleY: down ? 0.9 : 0.95, scaleX: down ? 1.05 : 1.025 },
+          { keyframes: { y: [10, down ? -46 : -26, 0], scaleY: [0.92, 1.03, 1], scaleX: [1.04, 0.99, 1] }, duration: B * 0.95, ease: 'sine.out', immediateRender: false }, t);
+        tl.fromTo(`${g} .shadow`, { scaleX: 1.05, opacity: 1 }, { keyframes: { scaleX: [1.05, down ? 0.7 : 0.85, 1], opacity: [1, 0.55, 1] }, duration: B * 0.95, ease: 'sine.out', immediateRender: false }, t);
+      }
+      // Downbeat flash on bar 1, 4 and 6.
+      [0, 12, 20].forEach((n) => tl.fromTo('#flash', { opacity: 0.55 }, { opacity: 0, duration: B, ease: 'power2.out', immediateRender: false }, b(n)));
+
+      // ---------- sway: left/right every two beats ----------
+      const sway = (g, from, to) => {
+        for (let n = from; n < to; n += 2) {
+          const dir = ((n - from) / 2) % 2 ? -1 : 1;
+          tl.to(`${g} .sway`, { x: 46 * dir, rotation: 4.5 * dir, duration: b(2), ease: 'sine.inOut' }, b(n));
+        }
+      };
+      sway('#gA', 1, 11);
+      sway('#gB', 13, 23);
+
+      // ---------- travel ----------
+      // A slides in from the left and lands on beat 1, rides up to centre-high on bar 2, back down on bar 3,
+      // then whips out to the right on beat 11.
+      tl.from('#gA .travel', { x: -1250, rotation: -18, duration: B * 1, ease: 'power3.out' }, 0);
+      tl.to('#gA .travel', { y: -120, scale: 1.08, duration: b(2), ease: 'back.inOut(1.6)' }, b(4));
+      tl.to('#gA .travel', { y: 0, scale: 1, duration: b(2), ease: 'back.inOut(1.6)' }, b(8));
+      tl.to('#gA .travel', { x: 1300, rotation: 16, filter: 'blur(14px)', duration: B, ease: 'power3.in' }, b(11));
+      tl.to('#gA .glass .win', { xPercent: 140, duration: b(11), ease: 'none' }, 0);
+      tl.fromTo('#gA .glass .streak', { x: -150 }, { x: 1100, duration: b(2), ease: 'power2.inOut' }, b(2));
+      tl.fromTo('#gA .rimglint i', { x: -200 }, { x: 1100, duration: b(2), ease: 'power2.inOut' }, b(6));
+
+      // B drops from above onto the downbeat of bar 4, spins a little on bar 5, pushes forward on bar 6.
+      tl.from('#gB .travel', { y: -1100, rotation: 10, duration: B * 0.9, ease: 'power3.in' }, b(12) - B * 0.9);
+      tl.fromTo('#gB .bop', { scaleY: 0.82, scaleX: 1.1 }, { scaleY: 1, scaleX: 1, duration: B * 1.2, ease: 'elastic.out(1.2, 0.4)', immediateRender: false }, b(12));
+      tl.to('#gB .travel', { keyframes: { rotationY: [0, 22, -14, 0] }, duration: b(4), ease: 'sine.inOut' }, b(16));
+      tl.to('#gB .travel', { y: 60, scale: 1.1, duration: b(4), ease: 'power2.inOut' }, b(20));
+      tl.to('#gB .glass .win', { xPercent: 120, duration: b(11), ease: 'none' }, b(12));
+      tl.fromTo('#gB .glass .streak', { x: -150 }, { x: 1100, duration: b(2), ease: 'power2.inOut' }, b(14));
+      tl.fromTo('#gB .rimglint i', { x: -200 }, { x: 1100, duration: b(2), ease: 'power2.inOut' }, b(18));
+
+      // ---------- type on the grid ----------
+      bounceIn(q('tA', 1), b(0), 0.03);
+      bounceIn(q('tA', 2), b(1), 0.06);
+      bounceIn(q('tA', 3), b(2));
+      bounceIn(q('tA', 4), b(2) + 0.08, 0.05);
+      tl.from('#ruleA', { scaleX: 0, duration: B, ease: 'back.out(2)' }, b(3));
+      bounceIn(q('tA', 6), b(3), 0.015);
+      [4, 6, 8].forEach((n) => hop(q("tA", 2), b(n), 22));
+      [5, 7, 9].forEach((n) => hop(q('tA', 4), b(n), 30));
+      [1, 2, 3, 4, 6].forEach((n, i) => bounceOut(q('tA', n), b(11) + i * 0.03));
+      tl.to('#ruleA', { scaleX: 0, duration: 0.25, ease: 'power2.in' }, b(11));
+
+      bounceIn(q('tB', 1), b(12), 0.03);
+      bounceIn(q('tB', 2), b(12) + 0.1, 0.045);
+      bounceIn(q('tB', 3), b(13), 0.012);
+      tl.from('#ruleB', { scaleX: 0, duration: B, ease: 'back.out(2)' }, b(14));
+      bounceIn(q('tB', 5), b(14), 0.03);
+      bounceIn(q('tB', 6), b(15), 0.03);
+      bounceIn(q('tB', 7), b(16), 0.012);
+      tl.from('#chip', { scale: 0, rotation: -8, duration: B * 1.2, ease: 'back.out(3)' }, b(18));
+      bounceIn('#chip', b(18) + 0.05, 0.02);
+      bounceIn(q('tB', 9), b(19), 0.02);
+      [17, 19, 21].forEach((n) => hop(q("tB", 2), b(n), 22));
+      [20, 22].forEach((n) => { hop(q('tB', 5), b(n), 22); hop(q('tB', 6), b(n) + 0.06, 22); });
+
+      // ---------- brand ----------
+      tl.from('#store', { opacity: 0, x: 30, y: 20, duration: b(2), ease: 'power2.out' }, b(1));
+      tl.from('#logo b', { y: 60, scale: 0.3, rotation: (i) => (i % 2 ? 20 : -20), opacity: 0, duration: 0.6, ease: 'back.out(3)', stagger: B / 4 }, b(2));
+      [8, 16].forEach((n) => tl.to('#logo b', { keyframes: { y: [0, -16, 0] }, duration: B, ease: 'sine.inOut', stagger: 0.03 }, b(n)));
+      tl.fromTo('#logo .shine i', { x: -90 }, { x: 320, duration: b(2), ease: 'power2.inOut' }, b(5));
+      tl.fromTo('#logo .shine i', { x: -90 }, { x: 320, duration: b(2), ease: 'power2.inOut', immediateRender: false }, b(21));
+
+      tl.fromTo('#fade', { opacity: 1 }, { opacity: 0, duration: 0.25, ease: 'power1.out' }, 0);
+      tl.to('#fade', { opacity: 1, duration: 0.35, ease: 'power1.in' }, D - 0.35);
+
+      window.__timelines['main'] = tl;
+      tl.seek(0);
+    </script>
+  </body>
+</html>

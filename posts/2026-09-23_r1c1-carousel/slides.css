@@ -1,0 +1,27 @@
+/* Shared layout for the 4-slide R1C1 carousel ("Pick a frame for your face shape in 3 steps").
+   Every slide: eyebrow top-left, store line art top-right, logo bottom-left, page count bottom-right. */
+html, body { margin: 0; background: transparent; }
+body { position: relative; width: 1080px; height: 1080px; overflow: hidden;
+       font-family: var(--to-font-body); color: var(--to-black); }
+body > [data-layer] { position: absolute; box-sizing: border-box; margin: 0; }
+
+.background { inset: 0; background: linear-gradient(176deg, var(--to-snow) 0%, #F2F0EA 60%, var(--to-timberwolf) 100%); }
+.store { right: -50px; top: 36px; width: 320px; opacity: .5;
+         filter: drop-shadow(0 1px 1px rgba(33, 33, 33, .16)) drop-shadow(0 0 1px rgba(33, 33, 33, .35)); }
+.eyebrow { left: var(--to-margin); top: 84px; font-family: var(--to-font-display); font-weight: 700; font-size: 20px;
+           letter-spacing: var(--to-track-eyebrow); text-transform: uppercase; color: var(--to-green); }
+.headline { left: var(--to-margin); right: var(--to-margin); font-family: var(--to-font-display); font-weight: 800;
+            letter-spacing: var(--to-track-display); line-height: 1.02; color: var(--to-green); }
+.body { left: var(--to-margin); font-size: 30px; line-height: 1.4; color: #4A4843; }
+.accent { left: var(--to-margin); width: 72px; height: 4px; background: var(--to-peach); }
+.logo { left: var(--to-margin); bottom: var(--to-margin); width: var(--to-logo-width); }
+.page { right: var(--to-margin); bottom: calc(var(--to-margin) + 2px); font-family: var(--to-font-display); font-weight: 700;
+        font-size: 18px; letter-spacing: var(--to-track-eyebrow); color: var(--to-green); }
+
+/* dark panel variant (slides 1 and 4) */
+.photo { left: 0; top: 0; width: 1080px; height: 620px; object-fit: cover; }
+.panel { left: 0; right: 0; top: 620px; bottom: 0; background: var(--to-green); }
+.on-dark { color: var(--to-snow); }
+.page.on-dark { color: var(--to-peach); }
+/* on photos the line art sits on a busy ground: fainter */
+.store.on-photo { opacity: .38; }

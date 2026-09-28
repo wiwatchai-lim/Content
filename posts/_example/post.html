@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="th">
+<head>
+<meta charset="utf-8">
+<title>example post</title>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;700;800&family=Inter:wght@400;500&family=Noto+Sans+Thai:wght@400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../brand/tokens.css">
+<style>
+  /* ตัวอย่างโครง layer — ข้อมูลสินค้าทั้งหมดเป็นข้อความสมมติ
+     ขนาดมาตรฐาน 1080×1080 · สี/ฟอนต์/ระยะขอบดึงจาก brand/tokens.css ห้าม hardcode ค่าสีเอง
+     ทุกโพสต์ต้องมี layer "logo" — พื้นสว่างใช้ timeoptic.svg พื้นเข้มใช้ timeoptic-white.svg */
+  html, body { margin: 0; background: transparent; }
+  /* body ต้องโปร่งใสเสมอ พื้นหลังจริงคือ layer "background" */
+  body { position: relative; width: 1080px; height: 1080px; overflow: hidden;
+         font-family: var(--to-font-body); color: var(--to-black); }
+  body > [data-layer] { position: absolute; box-sizing: border-box; }
+
+  .background { inset: 0; background: linear-gradient(160deg, var(--to-snow) 0%, var(--to-timberwolf) 100%); }
+  .logo { left: var(--to-margin); top: 64px; width: var(--to-logo-width); }
+  .headline { left: var(--to-margin); top: 150px; width: 936px; margin: 0; font-family: var(--to-font-display);
+              font-weight: 800; font-size: 62px; line-height: 1.06; letter-spacing: var(--to-track-display);
+              text-transform: uppercase; color: var(--to-green); }
+  .product { left: 190px; top: 330px; width: 700px; filter: drop-shadow(0 26px 26px rgba(33, 33, 33, .18)); }
+  .specs { left: var(--to-margin); top: 726px; width: 936px; margin: 0; padding: 0; list-style: none;
+           font-size: 28px; line-height: 1.6; }
+  .specs b { display: inline-block; min-width: 150px; font-family: var(--to-font-display); font-weight: 700;
+             font-size: 16px; letter-spacing: var(--to-track-eyebrow); text-transform: uppercase; color: var(--to-green); }
+  .cta { left: var(--to-margin); bottom: var(--to-margin); padding: 14px 30px; border-radius: var(--to-radius);
+         background: var(--to-green); color: var(--to-snow); font-family: var(--to-font-display);
+         font-weight: 700; font-size: 26px; }
+</style>
+</head>
+<body data-width="1080" data-height="1080">
+  <div class="background" data-layer="background"></div>
+  <img class="logo" data-layer="logo" src="../../brand/logo/timeoptic.svg" alt="">
+  <h1 class="headline" data-layer="headline">Clear and comfortable<br>all day</h1>
+  <img class="product" data-layer="product" src="layers/frame.svg" alt="">
+  <ul class="specs" data-layer="specs">
+    <li><b>Frame</b>Sample Titanium Round 49-20-145</li>
+    <li><b>Lens</b>Sample 1.67</li>
+    <li><b>Coating</b>Sample anti-reflective</li>
+  </ul>
+  <div class="cta" data-layer="cta">Message us today</div>
+</body>
+</html>

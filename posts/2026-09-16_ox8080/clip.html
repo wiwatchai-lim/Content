@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>2026-09-16 OX8080 — clip</title>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;700;800&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../brand/tokens.css">
+<style>
+  /* Same layout as post.html, animated. Two kinds of motion only: the frame drifts, and the four
+     Peach dots pulse one after another around a 6s cycle (offset with negative delays, never a
+     one-shot fade-in), so the last frame of the loop hands back to the first. */
+  html, body { margin: 0; background: transparent; }
+  body { position: relative; width: 1080px; height: 1080px; overflow: hidden;
+         font-family: var(--to-font-body); color: var(--to-snow); }
+  body > [data-layer] { position: absolute; box-sizing: border-box; }
+
+  /* The product is an opaque black frame: it needs a LIGHT stage or it disappears. Timberwolf core,
+     easing out to Phthalo Green and then Raisin Black so the top stays dark enough for white type. */
+  .background { inset: 0; background: radial-gradient(58% 44% at 50% 56%, var(--to-timberwolf) 0%, #6E8577 38%, var(--to-green) 68%, var(--to-black) 100%); }
+  .logo { left: var(--to-margin); top: 64px; width: var(--to-logo-width); }
+  .headline { left: 120px; right: 120px; top: 152px; margin: 0; text-align: center;
+              font-family: var(--to-font-display); font-weight: 800; font-size: 46px; line-height: 1.06;
+              letter-spacing: var(--to-track-display); text-transform: uppercase; color: var(--to-snow); }
+  .product { left: 130px; top: 430px; width: 820px; filter: drop-shadow(0 30px 40px rgba(0, 0, 0, .5));
+             animation: drift 6s ease-in-out infinite; }
+
+  [data-layer^="callout"] { font-size: 21px; font-weight: 400; line-height: 1.36; color: rgba(250, 250, 250, .74); }
+  [data-layer^="callout"] b { display: block; font-family: var(--to-font-display); font-weight: 700;
+                              font-size: 15px; letter-spacing: var(--to-track-eyebrow); text-transform: uppercase;
+                              color: var(--to-snow); margin-bottom: 4px; }
+  [data-layer^="callout"] .dot { position: absolute; width: 11px; height: 11px; border-radius: 50%; background: var(--to-peach);
+                                 animation: pulse 6s ease-in-out infinite; }
+  [data-layer^="callout"] .line { position: absolute; height: 1px; background: rgba(250, 250, 250, .45); transform-origin: left center; }
+
+  .callout-a { left: 70px; top: 306px; width: 340px; text-align: right; }
+  .callout-a .dot { right: -30px; top: 24px; }
+  .callout-a .line { right: -142px; top: 29px; width: 116px; transform: rotate(16deg); }
+
+  .callout-b { left: 50px; top: 770px; width: 310px; text-align: right; }
+  .callout-b .dot { right: -30px; top: 22px; animation-delay: -4.5s; }
+  .callout-b .line { right: -128px; top: 27px; width: 104px; transform: rotate(-26deg); }
+
+  .callout-c { right: 60px; top: 306px; width: 340px; }
+  .callout-c .dot { left: -30px; top: 22px; animation-delay: -3s; }
+  .callout-c .line { left: -134px; top: 27px; width: 110px; transform: rotate(10deg); }
+
+  .callout-d { right: 60px; top: 770px; width: 320px; }
+  .callout-d .dot { left: -30px; top: 22px; animation-delay: -1.5s; }
+  .callout-d .line { left: -140px; top: 27px; width: 116px; transform: rotate(-26deg); }
+
+  .specs { left: 0; right: 0; bottom: var(--to-margin); text-align: center; font-family: var(--to-font-display);
+           font-weight: 500; font-size: 17px; letter-spacing: var(--to-track-eyebrow); text-transform: uppercase;
+           color: rgba(250, 250, 250, .72); }
+
+  @keyframes drift { 0%, 100% { transform: translateY(0) rotate(-6deg) } 50% { transform: translateY(-20px) rotate(-5deg) } }
+  @keyframes pulse { 0%, 70%, 100% { transform: scale(1); opacity: .75 } 12% { transform: scale(1.7); opacity: 1 } }
+</style>
+</head>
+<body data-width="1080" data-height="1080" data-duration="6" data-fps="30">
+  <div class="background" data-layer="background"></div>
+  <img class="logo" data-layer="logo" src="../../brand/logo/timeoptic-white.svg" alt="">
+  <h1 class="headline" data-layer="headline">One lens, from indoors to sunlight</h1>
+  <img class="product" data-layer="product" src="layers/OX8080-0758_1.png" alt="">
+  <div class="callout-a" data-layer="callout-a"><b>Darkens outdoors</b>21% faster to a category 3 tint<span class="dot"></span><span class="line"></span></div>
+  <div class="callout-b" data-layer="callout-b"><b>Clears indoors</b>almost 2x faster fade-back<span class="dot"></span><span class="line"></span></div>
+  <div class="callout-c" data-layer="callout-c"><b>Colour that holds</b>3x more colour stability<span class="dot"></span><span class="line"></span></div>
+  <div class="callout-d" data-layer="callout-d"><b>UV front and back</b>UV Control coats the rear surface<span class="dot"></span><span class="line"></span></div>
+  <div class="specs" data-layer="specs">Oakley OX8080 · HOYA Sensity 3 · Hi-Vision LongLife UV Control</div>
+</body>
+</html>

@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>12-still-lockup</title>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;700;800&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../brand/tokens.css">
+<style>
+  /* From ref.mp4 (stills ref.png, ref-2.png): a centred lockup — mark, small category label, one line of
+     headline, a short paragraph — held DEAD STILL while the picture behind it changes shot. Nothing in the
+     lockup moves, and that stillness is the whole idea: the motion is the stage, never the type.
+
+     Taken from the reference: the centred-lockup-over-changing-stage structure, and the dark studio ground.
+     NOT taken (all of it belongs to whoever made that film): their wordmark, their bracketed category device,
+     their tagline, their paragraph, their ESTD line, and their model footage — we have no such photography
+     and no right to it. Our lockup is the TIMEOPTIC mark and our own words.
+
+     Built for a clip: copy to clip.html, give <body> data-duration, and change only the `stage` and `product`
+     layers on beats of equal length. The lockup layers must never be animated. */
+  html, body { margin: 0; background: transparent; }
+  body { position: relative; width: 1080px; height: 1080px; overflow: hidden;
+         font-family: var(--to-font-body); color: var(--to-snow); }
+  body > [data-layer] { position: absolute; box-sizing: border-box; }
+
+  /* The stage: swap this layer's background per beat in a clip. */
+  /* Light at the top so the product reads as a product, not a silhouette; the brand darkness lives
+     in the lower half where the lockup sits. Swap this layer per beat in a clip. */
+  .stage { inset: 0; background: linear-gradient(184deg, var(--to-timberwolf) 0%, #93A096 20%, #46604F 44%, var(--to-green) 70%, var(--to-black) 100%); }
+  .product { left: 140px; top: 168px; width: 800px; filter: drop-shadow(0 40px 46px rgba(0, 0, 0, .55)); }
+  /* A veil so the lockup always reads — clear across the top so the product stays a product,
+     darkening downward over the type. Never heavy enough to turn the frame into a ghost. */
+  .scrim { inset: 0; background: linear-gradient(180deg, rgba(15, 21, 18, 0) 0%, rgba(15, 21, 18, 0) 30%, rgba(15, 21, 18, .52) 46%, rgba(15, 21, 18, .88) 68%, rgba(15, 21, 18, .95) 100%); }
+
+  /* Bottom-centre: the mark signs the frame off instead of leading it. Wider than the 170px corner
+     rule in brand/tokens.css on purpose — in this style it is the closing mark, not a corner signature. */
+  .logo { left: 50%; bottom: var(--to-margin); width: 240px; transform: translateX(-50%); }
+  .eyebrow { left: 0; right: 0; top: 528px; text-align: center; font-family: var(--to-font-display);
+             font-weight: 500; font-size: 19px; letter-spacing: var(--to-track-eyebrow);
+             text-transform: uppercase; color: var(--to-snow); opacity: .82; }
+  .rule { left: 50%; top: 576px; width: 64px; height: 3px; margin-left: -32px; background: var(--to-peach); }
+  .headline { left: 150px; right: 150px; top: 614px; margin: 0; text-align: center; font-family: var(--to-font-display);
+              font-weight: 800; font-size: 54px; line-height: 1.08; letter-spacing: var(--to-track-display);
+              text-transform: uppercase; color: var(--to-snow); }
+  .blurb { left: 220px; right: 220px; top: 742px; text-align: center; font-size: 20px; line-height: 1.6;
+           color: color-mix(in srgb, var(--to-snow) 78%, transparent); }
+  .cta { left: 0; right: 0; bottom: 176px; text-align: center; font-family: var(--to-font-display);
+         font-weight: 700; font-size: 17px; letter-spacing: var(--to-track-eyebrow);
+         text-transform: uppercase; color: var(--to-snow); }
+</style>
+</head>
+<body data-width="1080" data-height="1080">
+  <div class="stage" data-layer="stage"></div>
+  <img class="product" data-layer="product" src="../_preview/front.png" alt="">
+  <div class="scrim" data-layer="scrim"></div>
+  <img class="logo" data-layer="logo" src="../../brand/logo/timeoptic-white.svg" alt="">
+  <div class="eyebrow" data-layer="eyebrow">Frame · Lens · Coating</div>
+  <div class="rule" data-layer="rule"></div>
+  <h1 class="headline" data-layer="headline">Headline in one<br>short line</h1>
+  <div class="blurb" data-layer="blurb">Two or three quiet lines about the set — who it suits and what the lens does. Keep it shorter than it wants to be.</div>
+  <div class="cta" data-layer="cta">Message us to try them on</div>
+</body>
+</html>

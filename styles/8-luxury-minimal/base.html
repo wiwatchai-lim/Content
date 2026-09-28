@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>8-luxury-minimal</title>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;700;800&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../brand/tokens.css">
+<style>
+  /* Luxury minimal, built from styles/color_palete.jpg — no reference image.
+     Rules: one accent only (peach hairline), type small and widely spaced, at least half the canvas empty,
+     product centred and never bleeding off an edge, nothing decorative that isn't information.
+     Rebuilt on brand tokens, following brand/preview/a-quiet/post.html: Archivo 800 uppercase replaces the Cormorant serif. */
+  :root {
+    --muted: #7A776F;
+  }
+  html, body { margin: 0; background: transparent; }
+  body { position: relative; width: 1080px; height: 1080px; overflow: hidden; font-family: var(--to-font-body); color: var(--to-black); }
+  body > [data-layer] { position: absolute; box-sizing: border-box; }
+
+  .background { inset: 0; background: linear-gradient(176deg, var(--to-snow) 0%, #F3F1EB 58%, var(--to-timberwolf) 100%); }
+  .label { left: 0; right: 0; top: 110px; text-align: center; font-family: var(--to-font-display); font-weight: 700;
+           font-size: 18px; letter-spacing: var(--to-track-eyebrow); text-transform: uppercase; color: var(--to-green); }
+  .product { left: 130px; top: 280px; width: 820px; filter: drop-shadow(0 22px 22px rgba(33, 33, 33, .14)); }
+  .accent { left: 505px; top: 594px; width: 70px; height: 3px; background: var(--to-peach); }
+  .headline { left: 140px; right: 140px; top: 646px; margin: 0; text-align: center; font-family: var(--to-font-display);
+              font-weight: 800; font-size: 56px; line-height: 1.2; letter-spacing: var(--to-track-display);
+              text-transform: uppercase; color: var(--to-green); }
+  .specs { left: 0; right: 0; top: 856px; text-align: center; font-family: var(--to-font-body); font-size: 20px;
+           font-weight: 400; letter-spacing: 2px; color: var(--muted); }
+  .cta { left: 0; right: 0; bottom: 76px; text-align: center; font-family: var(--to-font-display); font-weight: 700;
+         font-size: 16px; letter-spacing: var(--to-track-eyebrow); text-transform: uppercase; color: var(--to-green); }
+  .logo { left: var(--to-margin); top: 68px; width: var(--to-logo-width); }
+</style>
+</head>
+<body data-width="1080" data-height="1080">
+  <div class="background" data-layer="background"></div>
+  <img class="logo" data-layer="logo" src="../../brand/logo/timeoptic.svg" alt="">
+  <div class="label" data-layer="label">BRAND MODEL · MATERIAL</div>
+  <img class="product" data-layer="product" src="../_preview/front.png" alt="">
+  <div class="accent" data-layer="accent"></div>
+  <h1 class="headline" data-layer="headline">Headline in two<br>quiet lines</h1>
+  <div class="specs" data-layer="specs">Lens name · Coating name</div>
+  <div class="cta" data-layer="cta">MESSAGE US TO TRY THEM ON</div>
+</body>
+</html>

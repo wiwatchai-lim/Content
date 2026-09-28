@@ -1,0 +1,458 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=1080, height=1920" />
+    <!--
+      Scuderia Ferrari FZ6002U 504/81 (Matte Black, Polarized Grey) — beat clip, mood "motorsport speed".
+      Cut to "Power Surge" (95.72 BPM) from 94.669 s in the song: 4 beats of the break, the drop on beat 4.
+      20 beats = 12.536 s. The song is added in TikTok (or muxed on for a local preview). Kicks land on the even beats.
+        beats 0-4    carbon grid: four start lights come on, one per beat; NEW IN STORE types in
+        beats 4-8    lights out: red screen, speed lines, the front view rushes in from far away, camera shakes on the kicks
+        beats 8-12   pit board drops in, the three-quarter view passes by, then one detail punch per beat
+        beats 12-16  white pit lane: the glasses lap through the frame, a new pass every beat
+        beats 16-20  chequered wipe to carbon, TIMEOPTIC wordmark centre
+      A broadcast-style lap timer runs top right the whole time.
+    -->
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/gsap.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,500;0,700;0,800;0,900;1,800;1,900&family=Chakra+Petch:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="assets/tokens.css" />
+    <style>
+      * { margin: 0; padding: 0; box-sizing: border-box; }
+      html, body { width: 1080px; height: 1920px; overflow: hidden; background: #0d0d0f; }
+      #root { position: relative; width: 1080px; height: 1920px; overflow: hidden; font-family: var(--to-font-body); color: #fff; }
+      .layer { position: absolute; }
+      :root { --red: #d40000; --red-hi: #ff2a1a; --carbon: #0d0d0f; --mono: 'Chakra Petch', 'Inter', monospace; }
+
+      #cam, #punch { position: absolute; inset: 0; transform-origin: 50% 55%; }
+      .bg { position: absolute; left: -400px; top: -400px; width: 1880px; height: 2720px; overflow: hidden; }
+      /* carbon fibre weave + vignette */
+      .carbon { background-color: #111;
+                background-image: linear-gradient(27deg, #161616 5px, transparent 5px), linear-gradient(207deg, #161616 5px, transparent 5px),
+                  linear-gradient(27deg, #232323 5px, transparent 5px), linear-gradient(207deg, #232323 5px, transparent 5px),
+                  linear-gradient(90deg, #1b1b1b 10px, transparent 10px),
+                  linear-gradient(#1d1d1d 25%, #1a1a1a 25%, #1a1a1a 50%, transparent 50%, transparent 75%, #242424 75%, #242424);
+                background-size: 20px 20px; }
+      .vig { position: absolute; inset: 0; background: radial-gradient(ellipse 45% 36% at 50% 55%, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, .55) 70%, rgba(0, 0, 0, .9) 100%); }
+      #bg1 { background: radial-gradient(ellipse 50% 40% at 50% 56%, #ff2a1a 0%, #d40000 55%, #7a0000 100%); }
+      #bg2 .kerb { position: absolute; left: 0; width: 3000px; height: 110px; top: 1990px;
+                   background: repeating-linear-gradient(90deg, #d40000 0 120px, #f4f4f4 120px 240px); transform: skewX(-30deg); }
+      #bg3 { background: linear-gradient(180deg, #ffffff 0%, #eeeeee 60%, #d9d9d9 100%); }
+      #bg3 .stripe { position: absolute; left: -200px; width: 2400px; height: 26px; background: var(--red); transform: rotate(-12deg); }
+      #bg4 .flag { position: absolute; inset: 0; opacity: .12;
+                   background: repeating-conic-gradient(#fff 0 25%, transparent 0 50%) 0 0 / 120px 120px; }
+      .speed { position: absolute; left: 0; top: 0; width: 1080px; height: 1920px; overflow: hidden; }
+      .speed i { position: absolute; height: 4px; border-radius: 2px; background: linear-gradient(90deg, rgba(255, 255, 255, 0), rgba(255, 255, 255, .85)); }
+      #speed3 i { background: linear-gradient(90deg, rgba(212, 0, 0, 0), rgba(212, 0, 0, .7)); }
+
+      /* start lights */
+      #gantry { left: 190px; top: 360px; width: 700px; height: 250px; display: flex; gap: 20px; justify-content: center; }
+      #gantry .col { width: 150px; height: 250px; background: #050505; border: 3px solid #2a2a2a; border-radius: 18px; display: flex; flex-direction: column; align-items: center; justify-content: space-evenly; }
+      #gantry .lt { width: 88px; height: 88px; border-radius: 50%; background: #2a0505; box-shadow: inset 0 0 12px rgba(0, 0, 0, .8); }
+      #gantry .lt { position: relative; }
+      #gantry .lt b { position: absolute; inset: 0; border-radius: 50%; opacity: 0; background: radial-gradient(circle at 40% 35%, #ffb3a8 0%, #ff2a1a 35%, #b00000 100%); box-shadow: 0 0 40px 10px rgba(255, 42, 26, .6); }
+
+      /* glasses: position > travel > move > shake */
+      .glasses { position: absolute; }
+      .glasses > div { position: relative; }
+      .glasses img, .gwrap img { display: block; width: 100%; }
+      .glasses .shadow { position: absolute; left: 12%; right: 12%; bottom: -60px; height: 50px; border-radius: 50%;
+                         background: radial-gradient(closest-side, rgba(0, 0, 0, .55), rgba(0, 0, 0, 0)); filter: blur(10px); }
+      .sheen { position: absolute; inset: 0; -webkit-mask-size: 100% 100%; mask-size: 100% 100%; -webkit-mask-repeat: no-repeat; mask-repeat: no-repeat; overflow: hidden; }
+      .sheen i { position: absolute; left: 0; top: -30%; bottom: -30%; width: 22%; transform: translateX(-400px) skewX(-20deg);
+                 background: linear-gradient(90deg, transparent, rgba(255, 255, 255, .45), transparent); }
+      .detail { position: absolute; left: -400px; top: -400px; width: 1880px; height: 2720px; overflow: hidden; }
+      .detail .zoom { position: absolute; inset: 0; transform-origin: 940px 1360px; }
+      .detail .gwrap { position: absolute; }
+
+      /* type */
+      .type { position: absolute; left: 0; right: 0; text-align: center; white-space: nowrap; }
+      .type .ch, .type .w { display: inline-block; }
+      .mono { font-family: var(--mono); font-weight: 600; font-size: 34px; letter-spacing: .28em; text-transform: uppercase; }
+      .mega { font-family: var(--to-font-display); font-style: italic; font-weight: 900; font-size: 200px; line-height: 1; letter-spacing: -.03em; text-transform: uppercase; }
+      .big { font-family: var(--to-font-display); font-style: italic; font-weight: 900; font-size: 120px; line-height: 1; letter-spacing: -.03em; text-transform: uppercase; }
+      .chip { display: inline-block; padding: 14px 28px; background: #0d0d0f; color: #fff; font-family: var(--mono); font-weight: 600; font-size: 32px; letter-spacing: .16em; text-transform: uppercase; transform: skewX(-12deg); }
+      #board { left: 190px; top: 150px; width: 700px; height: 380px; background: #f4f4f4; border: 10px solid #111; box-shadow: 0 24px 50px rgba(0, 0, 0, .5); }
+      #board::before, #board::after { content: ''; position: absolute; top: -170px; width: 8px; height: 170px; background: #888; }
+      #board::before { left: 120px; } #board::after { right: 120px; }
+      #board .row { position: absolute; left: 0; right: 0; text-align: center; font-family: var(--mono); font-weight: 700; color: #111; text-transform: uppercase; }
+      #board .r1 { top: 34px; font-size: 40px; letter-spacing: .2em; color: var(--red); }
+      #board .r2 { top: 110px; font-size: 92px; letter-spacing: .02em; }
+      #board .r3 { top: 240px; font-size: 64px; letter-spacing: .04em; }
+
+      #lap { right: 50px; top: 56px; font-family: var(--mono); font-weight: 600; font-size: 30px; letter-spacing: .1em; padding: 8px 16px; background: rgba(0, 0, 0, .55); color: #fff; }
+      #lap b { color: var(--red-hi); font-weight: 700; margin-right: 14px; }
+      #logo { left: 390px; top: 1755px; width: 300px; height: 48px; transform-origin: 50% 50%; filter: brightness(0) invert(1); }
+      #logo b { position: absolute; top: 0; height: 48px; background: url(assets/timeoptic.svg) no-repeat; background-size: 300px 47.6px; }
+      #logo .shine { position: absolute; inset: 0; -webkit-mask: url(assets/timeoptic-mono.svg) center / 100% no-repeat; mask: url(assets/timeoptic-mono.svg) center / 100% no-repeat; overflow: hidden; }
+      #logo .shine i { position: absolute; top: 0; bottom: 0; left: 0; width: 80px; transform: translateX(-90px); background: linear-gradient(100deg, transparent, rgba(255, 42, 26, .95), transparent); }
+      #logo-rule { left: 440px; top: 1240px; width: 200px; height: 8px; background: var(--red); transform: skewX(-20deg); transform-origin: center; }
+      /* Ferrari wordmark (brand/partner-logos/ferrari.svg), recoloured per section through a mask */
+      #flogo { left: 48px; top: 54px; width: 236px; height: 52px; background: #fff;
+               -webkit-mask: url(assets/ferrari.svg) left center / contain no-repeat; mask: url(assets/ferrari.svg) left center / contain no-repeat; }
+      /* flag girl: Codex-generated photo, cut out, flag split from the body so it can wave from the grip */
+      #girlF { left: -10px; top: 1330px; width: 315px; height: 560px; }
+      .fg-sway { position: absolute; inset: 0; transform-origin: 50% 100%; }
+      .fg-sway img { position: absolute; inset: 0; width: 100%; height: 100%; }
+      .fg-flag { transform-origin: 25.3% 17%; }
+      #car { position: absolute; left: 140px; top: 870px; width: 800px; height: 548px; transform-origin: 50% 60%; }
+      #chk { position: absolute; left: 0; top: -100px; width: 1800px; height: 2120px; transform: skewX(-15deg); visibility: hidden;
+             background: repeating-conic-gradient(#0d0d0f 0 25%, #f4f4f4 0 50%) 0 0 / 160px 160px; box-shadow: 0 0 0 14px #d40000; }
+      #car img { width: 100%; height: 100%; display: block; }
+      #bg1, #bg3, #bg4, .speed { visibility: hidden; opacity: 0; }  /* #bg2 (carbon + kerb) is visible at the open */
+      #flash { inset: 0; background: #fff; opacity: 0; }
+    </style>
+  </head>
+  <body>
+    <div id="root" data-composition-id="main" data-start="0" data-duration="12.536" data-width="1080" data-height="1920">
+      <div id="cam" class="clip" data-start="0" data-duration="12.536" data-track-index="0"><div id="punch">
+        <div id="bg0" class="bg carbon"><div class="vig"></div></div>
+        <div id="bg1" class="bg"><div class="vig" style="opacity:.5"></div></div>
+        <div id="bg2" class="bg carbon"><div class="vig"></div><div class="kerb"></div></div>
+        <div id="bg3" class="bg"><div class="stripe" style="top:1130px"></div><div class="stripe" style="top:1190px; opacity:.5"></div></div>
+        <div id="bg4" class="bg carbon"><div class="flag"></div><div class="vig"></div></div>
+        <div id="speed1" class="speed"></div>
+        <div id="speed3" class="speed"></div>
+
+        <!-- Front view -->
+        <div id="gA" class="glasses" style="left:90px; top:1010px; width:900px;">
+          <div class="travel"><div class="move"><div class="shake"><div class="shadow"></div>
+            <img src="assets/FZ6002U-504-81_1.png" alt="" />
+            <div class="sheen" style="-webkit-mask-image:url(assets/FZ6002U-504-81_1_lens.png); mask-image:url(assets/FZ6002U-504-81_1_lens.png);"><i></i></div>
+          </div></div></div>
+        </div>
+        <!-- Three-quarter view -->
+        <div id="gB" class="glasses" style="left:90px; top:1000px; width:900px;">
+          <div class="travel"><div class="move"><div class="shake"><div class="shadow"></div>
+            <img src="assets/FZ6002U-504-81_2.png" alt="" />
+            <div class="sheen" style="-webkit-mask-image:url(assets/FZ6002U-504-81_2_lens.png); mask-image:url(assets/FZ6002U-504-81_2_lens.png);"><i></i></div>
+          </div></div></div>
+        </div>
+
+        <!-- Hook opening: tight on the temple tip, travel along temple > shield > hinge > rim, then pull out -->
+        <div id="tease" style="position:absolute; inset:0; overflow:hidden;"><div class="tz" style="position:absolute; left:0; top:0; width:2048px; transform-origin:0 0;">
+          <img src="assets/FZ6002U-504-81_3.png" alt="" style="display:block; width:2048px;" /></div>
+          <div class="tz2" style="position:absolute; left:0; top:0; width:2048px; transform-origin:0 0; visibility:hidden;">
+          <img src="assets/FZ6002U-504-81_4.png" alt="" style="display:block; width:2048px;" /></div></div>
+        <!-- Side view -->
+        <div id="gC" class="glasses" style="left:90px; top:960px; width:900px;">
+          <div class="travel"><div class="move"><div class="shake"><div class="shadow"></div>
+            <img src="assets/FZ6002U-504-81_3.png" alt="" />
+          </div></div></div>
+        </div>
+        <!-- Folded, showing the model code printed inside the temple -->
+        <div id="gD" class="glasses" style="left:90px; top:1020px; width:900px;">
+          <div class="travel"><div class="move"><div class="shake"><div class="shadow"></div>
+            <img src="assets/FZ6002U-504-81_4.png" alt="" />
+          </div></div></div>
+        </div>
+
+        <!-- Details, beats 10-11 (point of interest at 940,1360 inside .detail = frame centre) -->
+        <div class="detail" id="d1"><div class="zoom"><div class="gwrap" style="width:2867px; left:426px; top:730px;">
+          <img src="assets/FZ6002U-504-81_3.png" alt="" /></div></div></div>
+        <div class="detail" id="d2"><div class="zoom"><div class="gwrap" style="width:2867px; left:-1020px; top:1052px;">
+          <img src="assets/FZ6002U-504-81_4.png" alt="" /></div></div></div>
+      </div></div>
+
+      <!-- start lights -->
+      <div id="gantry" class="clip layer" data-start="0" data-duration="2.51" data-track-index="3">
+        <div class="col"><i class="lt"><b></b></i><i class="lt"><b></b></i></div><div class="col"><i class="lt"><b></b></i><i class="lt"><b></b></i></div>
+        <div class="col"><i class="lt"><b></b></i><i class="lt"><b></b></i></div><div class="col"><i class="lt"><b></b></i><i class="lt"><b></b></i></div>
+      </div>
+
+      <!-- Type, break -->
+      <div id="t0" class="clip layer" data-start="0" data-duration="2.6" data-track-index="5" style="inset:0">
+        <div class="type mono split" style="top:220px">NEW IN STORE</div>
+        <div class="type mono split" style="top:1250px; font-size:28px; color:#bdbdbd">Scuderia Ferrari</div>
+      </div>
+      <!-- Type, drop -->
+      <div id="t1" class="clip layer" data-start="2.4" data-duration="2.75" data-track-index="6" style="inset:0">
+        <div class="type mono split" style="top:250px">Scuderia Ferrari</div>
+        <div class="type mega" style="top:310px"><span class="w" id="model">FZ6002U</span></div>
+        <div class="type" style="top:560px"><span class="chip w" id="chip1">Polarized Grey · Matte Black</span></div>
+      </div>
+      <!-- Pit board -->
+      <div id="board" class="clip layer" data-start="4.9" data-duration="2.75" data-track-index="7">
+        <div class="row r1">FZ6002U</div>
+        <div class="row r2 split">MATTE BLACK</div>
+        <div class="row r3 split">POLARIZED GREY</div>
+      </div>
+      <!-- Type, pit lane -->
+      <div id="t3" class="clip layer" data-start="7.4" data-duration="2.75" data-track-index="9" style="inset:0">
+        <div class="type mono split" style="top:230px; color:var(--red)">Universal Fit</div>
+        <div class="type big" style="top:290px; color:#0d0d0f"><span class="w" id="fit1">SQUARE</span></div>
+        <div class="type big" style="top:410px; color:var(--red)"><span class="w" id="fit2">59-18</span></div>
+      </div>
+      <!-- Type, end -->
+      <div id="t4" class="clip layer" data-start="9.9" data-duration="2.636" data-track-index="10" style="inset:0">
+        <div class="type mono split" style="top:1010px">NEW IN STORE</div>
+        <div class="type mono split" style="top:1290px; font-size:26px; color:#cfcfcf">Scuderia Ferrari FZ6002U</div>
+      </div>
+
+      <div id="girlF" class="clip layer" data-start="9.9" data-duration="2.636" data-track-index="16"><div class="fg-sway"><img class="fg-body" src="assets/flag-girl-body.png" alt="" /><img class="fg-flag" src="assets/flag-girl-flag.png" alt="" /></div></div>
+      <div id="flogo" class="clip layer" data-start="0" data-duration="12.536" data-track-index="18" aria-label="Ferrari"></div>
+      <!-- Ferrari SF90 head-on (user-supplied photo): rushes at the lens and "hits" it on every section cut -->
+      <!-- chequered-flag wipe for the cut at beat 12 -->
+      <div id="chkLane" class="clip layer" data-start="0" data-duration="12.536" data-track-index="20" style="inset:0"><div id="chk"></div></div>
+      <div id="hitLane" class="clip layer" data-start="0" data-duration="12.536" data-track-index="19" style="inset:0"><div id="car"></div></div>
+      <div id="lap" class="clip layer" data-start="0" data-duration="12.536" data-track-index="11"><b>LAP</b><span id="laptime">00:00.00</span></div>
+      <div id="logo-rule" class="clip layer" data-start="9.9" data-duration="2.636" data-track-index="12"></div>
+      <div id="logo" class="clip layer" data-start="0" data-duration="12.536" data-track-index="8" aria-label="TIMEOPTIC"><div class="shine"><i></i></div></div>
+      <div id="flash" class="clip layer" data-start="0" data-duration="12.536" data-track-index="13"></div>
+    </div>
+
+    <script>
+      window.__timelines = window.__timelines || {};
+      const tl = gsap.timeline({ paused: true });
+
+      const BPM = 95.72;               // "Power Surge"; beat grid measured from 94.669 s in the song
+      const B = 60 / BPM;
+      const b = (n) => n * B;
+      const D = 20 * B;
+
+      document.querySelectorAll('.split').forEach((el) => {
+        const text = el.textContent;
+        el.textContent = '';
+        for (const c of text) {
+          if (c === ' ') { el.append(' '); continue; }
+          const s = document.createElement('span');
+          s.className = 'ch';
+          s.textContent = c;
+          el.append(s);
+        }
+      });
+
+      const LETTERS = [[0, 282], [310, 392], [438, 834], [876, 1134], [1170, 1498], [1540, 1784], [1808, 2078], [2112, 2164], [2214, 2520]];
+      const logo = document.getElementById('logo'), k = 300 / 2520;
+      LETTERS.forEach(([x0, x1]) => {
+        const el = document.createElement('b');
+        el.style.cssText = `left:${x0 * k}px;width:${(x1 - x0) * k + 1}px;background-position:${-x0 * k}px 0;`;
+        logo.insertBefore(el, logo.firstChild);
+      });
+
+      // speed lines: fixed pseudo-random layout (deterministic)
+      const makeLines = (id, n) => {
+        const box = document.getElementById(id);
+        for (let i = 0; i < n; i++) {
+          const l = document.createElement('i');
+          l.style.top = `${(i * 137) % 1920}px`;
+          l.style.width = `${220 + ((i * 53) % 380)}px`;
+          l.style.left = '0px';
+          box.append(l);
+        }
+        return box.querySelectorAll('i');
+      };
+      const lines1 = makeLines('speed1', 28), lines3 = makeLines('speed3', 18);
+      const runLines = (lines, from, to, dir = -1) => {
+        tl.set(lines[0].parentNode, { autoAlpha: 1 }, from);
+        tl.set(lines[0].parentNode, { autoAlpha: 0 }, to);
+        lines.forEach((l, i) => {
+          const dur = 0.22 + ((i * 29) % 20) / 100;
+          const reps = Math.ceil((to - from) / dur);
+          tl.fromTo(l, { x: dir < 0 ? 1300 : -700 }, { x: dir < 0 ? -700 : 1300, duration: dur, ease: 'none', repeat: reps - 1, immediateRender: false }, from - ((i * 17) % 10) / 40);
+        });
+      };
+
+      // lap timer, driven by the timeline (seek-safe)
+      const lapEl = document.getElementById('laptime'), lap = { t: 0 };
+      const fmt = (t) => `00:${String(Math.floor(t)).padStart(2, '0')}.${String(Math.floor((t % 1) * 100)).padStart(2, '0')}`;
+      tl.to(lap, { t: D, duration: D, ease: 'none', onUpdate: () => { lapEl.textContent = fmt(lap.t); } }, 0);
+
+      const show = (sel, from, to) => { tl.set(sel, { autoAlpha: 0 }, 0); tl.set(sel, { autoAlpha: 1 }, from); if (to) tl.set(sel, { autoAlpha: 0 }, to); };
+      const q = (id, n) => `#${id} .type:nth-child(${n})`;
+
+      // ---------- visibility ----------
+      show('#gA', b(4), b(8));
+      show('#gB', b(8), b(9));
+      show('#gC', b(9), b(10));
+      ['#d1', '#d2'].forEach((d, i) => show(d, b(10 + i), b(11 + i)));
+      show('#gD', b(14), b(15));
+      // pit lane: a different angle every beat
+      [[12, '#gA'], [13, '#gC']].forEach(([n, g]) => { tl.set(g, { autoAlpha: 1 }, b(n)); tl.set(g, { autoAlpha: 0 }, b(n + 1)); });
+      tl.set('#gA', { autoAlpha: 1 }, b(16));
+
+      // ---------- backgrounds ----------
+      tl.set('#bg1', { autoAlpha: 1 }, b(4));
+      tl.set('#bg2', { autoAlpha: 1 }, b(8));
+      tl.set('#bg3', { autoAlpha: 1 }, b(12));
+      tl.set('#bg4', { autoAlpha: 1 }, b(16) - 0.2);
+      tl.fromTo('#bg4', { clipPath: 'polygon(100% 0%, 100% 0%, 140% 100%, 140% 100%)' },
+        { clipPath: 'polygon(-40% 0%, 100% 0%, 140% 100%, 0% 100%)', duration: 0.3, ease: 'power3.inOut', immediateRender: false }, b(16) - 0.2);
+      tl.fromTo('#bg2 .kerb', { x: 0 }, { x: -960, duration: b(4), ease: 'none', immediateRender: false }, b(8));
+      tl.fromTo('#bg3 .stripe', { x: 300 }, { x: -300, duration: b(4), ease: 'none', immediateRender: false }, b(12));
+      tl.fromTo('#bg4 .flag', { x: 0 }, { x: -240, duration: b(4), ease: 'none', immediateRender: false }, b(16));
+      runLines(lines1, b(4), b(8), -1);
+      runLines(lines3, b(12), b(16), 1);
+
+      // ---------- start lights: one column per beat, lights out on the drop ----------
+      const cols = document.querySelectorAll('#gantry .col');
+      cols.forEach((c, i) => {
+        tl.set(c.querySelectorAll('.lt b'), { opacity: 1 }, b(i));
+        tl.fromTo(c, { scale: 1.08 }, { scale: 1, duration: 0.2, ease: 'power2.out', immediateRender: false }, b(i));
+      });
+      tl.set('#gantry .lt b', { opacity: 0 }, b(4) - 0.02);
+      tl.from('#gantry', { y: -500, duration: 0.35, ease: 'power3.out' }, 0);
+      tl.fromTo('#cam', { scale: 1.0 }, { scale: 1.06, duration: b(4), ease: 'sine.in' }, 0);
+
+      // ---------- camera: whip pans on the section cuts, shake on the kicks ----------
+      const whipPan = (n, dir = 1, flash = 0.5) => {
+        tl.to('#punch', { x: -320 * dir, filter: 'blur(18px)', duration: 0.14, ease: 'power3.in' }, b(n) - 0.14);
+        tl.fromTo('#punch', { x: 320 * dir, filter: 'blur(18px)' }, { x: 0, filter: 'blur(0px)', duration: 0.26, ease: 'power3.out', immediateRender: false }, b(n));
+        if (flash) tl.fromTo('#flash', { opacity: flash }, { opacity: 0, duration: 0.3, ease: 'power2.out', immediateRender: false }, b(n));
+      };
+      for (let n = 4; n < 20; n += 2) {
+        if (n === 8 || n === 12 || n === 16) continue;
+        tl.to('#punch', { keyframes: { x: [0, -16, 12, -6, 0], y: [0, 9, -7, 3, 0] }, duration: 0.24, ease: 'none' }, b(n));
+      }
+      tl.fromTo('#cam', { rotation: -3, scale: 1.12 }, { rotation: 0, scale: 1.04, duration: b(4), ease: 'power2.out', immediateRender: false }, b(4));
+      tl.fromTo('#cam', { rotation: 0, scale: 1.0 }, { scale: 1.06, duration: b(4), ease: 'none', immediateRender: false }, b(8));
+      tl.fromTo('#cam', { rotation: 2, scale: 1.02 }, { rotation: 0, scale: 1.08, duration: b(4), ease: 'none', immediateRender: false }, b(12));
+      tl.fromTo('#cam', { rotation: 0, scale: 1.12 }, { scale: 1.02, duration: b(4), ease: 'power2.out', immediateRender: false }, b(16));
+
+      // ---------- drop: the front view rushes in from the distance ----------
+      tl.fromTo('#gA .move', { scale: 0.06, y: -260, filter: 'blur(10px)' }, { scale: 1, y: 0, filter: 'blur(0px)', duration: 0.34, ease: 'expo.out', immediateRender: false }, b(4));
+      tl.fromTo('#gA .travel', { rotation: 0 }, { keyframes: { rotation: [0, -3, 2, 0], y: [0, -30, 10, 0] }, duration: b(4), ease: 'sine.inOut', immediateRender: false }, b(4));
+      [6].forEach((n) => tl.fromTo('#gA .move', { scale: 1.12 }, { scale: 1, duration: 0.3, ease: 'power3.out', immediateRender: false }, b(n)));
+      tl.to('#gA .move', { scale: 1.3, x: 60, duration: B, ease: 'power2.in' }, b(7));
+      tl.fromTo('#gA .sheen i', { x: -400 }, { x: 1300, duration: B * 0.9, ease: 'power2.inOut', immediateRender: false }, b(5));
+
+      // ---------- pit: three-quarter view drives past, then details ----------
+      tl.fromTo('#gB .move', { x: -1400, skewX: 18, filter: 'blur(14px)' }, { x: 0, skewX: 0, filter: 'blur(0px)', duration: 0.3, ease: 'expo.out', immediateRender: false }, b(8));
+      tl.fromTo('#gC .move', { x: 1400, skewX: -18, filter: 'blur(14px)' }, { x: 0, skewX: 0, filter: 'blur(0px)', duration: 0.28, ease: 'expo.out', immediateRender: false }, b(9));
+      tl.to('#gC .move', { x: -40, duration: B - 0.28, ease: 'none' }, b(9) + 0.28);
+      tl.fromTo('#d1 .zoom', { scale: 1.4, rotation: -5, filter: 'blur(12px)' }, { scale: 1.05, rotation: 0, filter: 'blur(0px)', duration: 0.2, ease: 'power3.out', immediateRender: false }, b(10));
+      tl.to('#d1 .zoom', { scale: 1, x: -40, duration: B - 0.2, ease: 'none' }, b(10) + 0.2);
+      tl.fromTo('#d2 .zoom', { x: -1200, skewX: 16 }, { x: 0, skewX: 0, duration: 0.24, ease: 'expo.out', immediateRender: false }, b(11));
+      tl.to('#d2 .zoom', { x: 50, duration: B - 0.24, ease: 'none' }, b(11) + 0.24);
+
+      // ---------- pit lane: a new pass every beat ----------
+      const pass = (g, n, s, y) => {
+        tl.set(`${g} .travel`, { scale: s, y, rotation: 0 }, b(n));
+        tl.fromTo(`${g} .move`, { x: -1350, skewX: 20, filter: 'blur(12px)' }, { x: 0, skewX: 0, filter: 'blur(0px)', duration: 0.26, ease: 'expo.out', immediateRender: false }, b(n));
+        tl.to(`${g} .move`, { x: 70, duration: B - 0.26 - 0.1, ease: 'none' }, b(n) + 0.26);
+        tl.to(`${g} .move`, { x: 1350, skewX: -20, filter: 'blur(12px)', duration: 0.1, ease: 'power3.in' }, b(n + 1) - 0.1);
+      };
+      pass('#gA', 12, 0.95, 60); pass('#gC', 13, 0.8, -40); pass('#gD', 14, 0.85, 120);  // beat 15 belongs to the car
+
+      // ---------- end: front view settles under the wordmark ----------
+      tl.set('#gA .travel', { scale: 0.78, x: 0, y: -470, rotation: 0 }, b(16));  // end card: glasses on top
+      tl.fromTo('#gA .move', { x: -1300, skewX: 18, filter: 'blur(12px)' }, { x: 0, skewX: 0, filter: 'blur(0px)', duration: 0.4, ease: 'expo.out', immediateRender: false }, b(16) + 0.1);
+      tl.fromTo('#gA .sheen i', { x: -400 }, { x: 1300, duration: B * 1.2, ease: 'power2.inOut', immediateRender: false }, b(18));
+
+      // ---------- type ----------
+      // break: mono letters type on with the lights
+      tl.from(q('t0', 1) + ' .ch', { opacity: 0, duration: 0.01, stagger: B * 3 / 12 }, b(0.2));
+      tl.from(q('t0', 2) + ' .ch', { opacity: 0, y: 10, duration: 0.2, stagger: 0.04 }, b(2));
+      tl.to('#t0 .type', { opacity: 0, x: -200, duration: 0.2, ease: 'power3.in' }, b(4) - 0.22);
+      // drop: model slams in from the right, skewed
+      tl.from(q('t1', 1) + ' .ch', { opacity: 0, duration: 0.01, stagger: 0.03 }, b(4) + 0.1);
+      tl.from('#model', { x: 1300, skewX: -30, scaleX: 1.6, duration: 0.3, ease: 'expo.out' }, b(4));
+      tl.from('#chip1', { scaleX: 0, duration: 0.3, ease: 'back.out(2)' }, b(5));
+      [6].forEach((n) => tl.fromTo('#model', { scale: 1.08 }, { scale: 1, duration: 0.3, ease: 'power3.out', immediateRender: false }, b(n)));
+      tl.to(['#model', '#chip1', q('t1', 1)], { x: -1300, skewX: 30, duration: 0.22, ease: 'power3.in', stagger: 0.03 }, b(8) - 0.3);
+      // pit board swings down on its poles
+      tl.from('#board', { y: -700, rotation: -6, duration: 0.45, ease: 'back.out(1.6)' }, b(8));
+      tl.from('#board .r2 .ch', { opacity: 0, duration: 0.01, stagger: 0.04 }, b(8) + 0.35);
+      tl.from('#board .r3 .ch', { opacity: 0, duration: 0.01, stagger: 0.035 }, b(9) + 0.1);
+      tl.to('#board', { keyframes: { rotation: [0, 2, -1.5, 0] }, duration: b(2), ease: 'sine.inOut' }, b(9.5));
+      tl.to('#board', { y: -760, duration: 0.3, ease: 'power3.in' }, b(12) - 0.3);
+      // pit lane: lines slam in from alternate sides
+      tl.from(q('t3', 1) + ' .ch', { opacity: 0, duration: 0.01, stagger: 0.03 }, b(12));
+      tl.from('#fit1', { x: -1200, skewX: 30, duration: 0.28, ease: 'expo.out' }, b(12) + 0.05);
+      tl.from('#fit2', { x: 1200, skewX: -30, duration: 0.28, ease: 'expo.out' }, b(13));
+      tl.fromTo('#fit2', { scale: 1.12 }, { scale: 1, duration: 0.3, ease: 'power3.out', immediateRender: false }, b(14));
+      tl.to('#t3 .type', { opacity: 0, x: 400, duration: 0.2, ease: 'power3.in', stagger: 0.02 }, b(16) - 0.26);
+      // end
+      tl.from(q('t4', 1) + ' .ch', { opacity: 0, duration: 0.01, stagger: 0.04 }, b(16.5));
+      tl.from(q('t4', 2) + ' .ch', { opacity: 0, duration: 0.01, stagger: 0.025 }, b(17.2));
+
+      // ---------- brand ----------
+      tl.from('#lap', { x: 300, duration: 0.4, ease: 'power3.out' }, b(0.5));
+      tl.set('#lap', { background: 'rgba(13,13,15,.9)' }, b(12));
+      tl.set('#lap', { background: 'rgba(0,0,0,.55)' }, b(16));
+      tl.from('#logo b', { opacity: 0, x: -20, duration: 0.2, ease: 'power2.out', stagger: B / 8 }, b(1));
+      tl.fromTo('#logo .shine i', { x: -90 }, { x: 320, duration: B * 1.2, ease: 'power2.inOut' }, b(4));
+      tl.set('#logo', { filter: 'none' }, b(12));
+      tl.set('#logo', { filter: 'brightness(0) invert(1)' }, b(16));
+      tl.to('#logo', { y: 1160 - 24 - 1755, scale: 2.9, duration: B * 0.8, ease: 'expo.out' }, b(16));
+      tl.to('#logo', { scale: 3.1, duration: b(3), ease: 'none' }, b(16) + B * 0.8);
+      tl.from('#logo-rule', { scaleX: 0, duration: 0.3, ease: 'expo.out' }, b(16.5));
+      [18].forEach((n) => tl.to('#logo b', { keyframes: { x: [0, 10, 0] }, duration: B * 0.6, ease: 'power2.out', stagger: 0.025 }, b(n)));
+      tl.fromTo('#logo .shine i', { x: -90 }, { x: 320, duration: B * 1.3, ease: 'power2.inOut', immediateRender: false }, b(17));
+      tl.fromTo('#logo .shine i', { x: -90 }, { x: 320, duration: B * 1.3, ease: 'power2.inOut', immediateRender: false }, b(19));
+
+      // ---------- Ferrari wordmark top left: white on carbon/red, red on the white pit lane ----------
+      tl.fromTo('#flogo', { clipPath: 'inset(0% 100% 0% 0%)' }, { clipPath: 'inset(0% 0% 0% 0%)', duration: 0.4, ease: 'power3.out' }, b(0.5));
+      tl.set('#flogo', { backgroundColor: '#d40000' }, b(12));
+      tl.set('#flogo', { backgroundColor: '#ffffff' }, b(16));
+
+      // ---------- flag girl (Codex-generated photo) + Ferrari SF90 (user-supplied photo) ----------
+      // flag swings from the grip once per beat, body sways gently from the feet (seek-safe: plain tweens on tl)
+      const wave = (root, from, to, amp = 1) => {
+        const n = Math.round((to - from) / B);
+        tl.to(`${root} .fg-flag`, { keyframes: { rotation: [0, -10 * amp, 7 * amp, 0], skewY: [0, 3, -2, 0] }, duration: B, ease: 'sine.inOut', repeat: n - 1 }, from);
+        tl.to(`${root} .fg-sway`, { keyframes: { rotation: [0, 1.2 * amp, -0.8 * amp, 0], y: [0, -6, 0, 0] }, duration: B, ease: 'sine.inOut', repeat: n - 1 }, from);
+      };
+      document.getElementById('car').innerHTML = '<img src="assets/ferrari-sf90-front.png" alt="" />';  // user-supplied photo, head-on
+      tl.from('#girlF', { x: -400, duration: 0.35, ease: 'back.out(1.5)' }, b(16) + 0.2);
+      wave('#girlF', b(16), b(20), 1.2);
+      // the car launches on lights out, and again across the finish
+      tl.set('#car', { autoAlpha: 0 }, 0);
+      // Car hits: on the drop and into the end card the SF90 comes out of the distance, fills the lens with its windscreen on the downbeat,
+      // then impact (flash + shake + zoom-blur) and the next scene is already behind it.
+      const S = 9, originY = 870 + 0.6 * 548;                // #car transform origin in frame px
+      const hitY = 960 - (originY - 0.4 * 548 * S);          // puts the windscreen (20% down the car) on the frame centre
+      // beat 8: whip pan into the pit · beat 12: a chequered flag sweeps across and reveals the pit lane
+      whipPan(8, 1);
+      tl.set('#chk', { visibility: 'visible' }, b(12) - 0.25);
+      tl.fromTo('#chk', { x: 1300 }, { x: -2100, duration: 0.5, ease: 'none', immediateRender: false }, b(12) - 0.25);
+      tl.set('#chk', { visibility: 'hidden' }, b(12) + 0.26);
+      // each hit: the car appears far away, arrives mid-size and lingers (sharp, readable), creeps closer, then the final rush
+      const car60 = (scale) => 0.1 * 548 * scale;           // 60% origin sits this far below the car's centre
+      [
+        { n: 4,  t0: b(2.75), t1: b(3.25), start: { s: 0.06, cy: 1340 }, hold: { s: 0.75, cy: 1600 } },   // below the revealed glasses
+        { n: 16, t0: b(14.8), t1: b(15.15), start: { s: 0.06, cy: 1000 }, hold: { s: 1.1, cy: 1150 } },   // beat 15 is the car's own beat
+      ].forEach(({ n, t0, t1, start, hold }) => {
+        const yOf = (p) => p.cy - originY + car60(p.s);
+        const t2 = b(n) - 0.36;
+        tl.set('#car', { autoAlpha: 1 }, t0);
+        tl.fromTo('#car', { scale: start.s, y: yOf(start), opacity: 0, filter: 'blur(0px)' },
+          { scale: hold.s, y: yOf(hold), opacity: 1, duration: t1 - t0, ease: 'power2.out', immediateRender: false }, t0);
+        tl.to('#car', { scale: hold.s * 1.15, y: yOf({ s: hold.s * 1.15, cy: hold.cy + 20 }), duration: t2 - t1, ease: 'none' }, t1);
+        tl.to('#car', { scale: S, y: hitY, filter: 'blur(8px)', duration: 0.36, ease: 'power3.in' }, t2);
+        tl.set('#car', { autoAlpha: 0 }, b(n) + 0.02);
+        tl.fromTo('#flash', { opacity: 0.95 }, { opacity: 0, duration: 0.4, ease: 'power2.out', immediateRender: false }, b(n));
+        tl.fromTo('#punch', { scale: 1.3, filter: 'blur(16px)' }, { scale: 1, filter: 'blur(0px)', duration: 0.32, ease: 'power3.out', immediateRender: false }, b(n));
+        tl.to('#cam', { keyframes: { x: [0, -22, 18, -10, 4, 0], y: [0, 14, -12, 6, -2, 0] }, duration: 0.3, ease: 'none' }, b(n));
+      });
+
+      // ---------- hook opening: detail travel on the side view, then the reveal ----------
+      const at = (px, py, sc) => ({ x: 540 - px * sc, y: 960 - py * sc, scale: sc });
+      // hard cuts on the beat (no camera slides), a small punch-in drift inside each shot
+      const shots = [
+        [0, 367, 450, 1.4],     // BANG: shield at the hinge
+        [1, 1850, 700, 1.5],    // temple tip + red stripe
+        [2, 1400, 250, 1.25],   // folded: the model code printed inside the temple (tz2)
+        [3, 1024, 452, 0.46],   // the whole sunglasses
+      ];
+      gsap.set('#tease .tz', at(367, 450, 1.4));             // frame-0 state without relying on a set at t=0
+      shots.forEach(([n, px, py, sc]) => {
+        const el = n === 2 ? '#tease .tz2' : '#tease .tz';
+        tl.set(el, at(px, py, sc), b(n));
+        tl.to(el, { ...at(px, py, sc * 1.06), duration: B, ease: 'none' }, b(n) + (n === 0 ? 0.15 : 0));
+        if (n) tl.fromTo('#punch', { scale: 1.06 }, { scale: 1, duration: 0.18, ease: 'power3.out', immediateRender: false }, b(n));
+      });
+      // frame 0 slams in: over-scaled + blurred, snaps to rest in 0.15 s, flash + shake, impact-bass-1 at t=0
+      tl.fromTo('#tease', { scale: 1.9, filter: 'blur(18px)' }, { scale: 1, filter: 'blur(0px)', duration: 0.15, ease: 'power4.out' }, 0);
+      tl.fromTo('#flash', { opacity: 0.55 }, { opacity: 0, duration: 0.22, ease: 'power2.out', immediateRender: true }, 0);
+      tl.to('#cam', { keyframes: { x: [0, -24, 20, -12, 5, 0], y: [0, 16, -12, 7, -3, 0] }, duration: 0.32, ease: 'none' }, 0);
+      tl.set('#tease .tz', { visibility: 'hidden' }, b(2)); tl.set('#tease .tz2', { visibility: 'visible' }, b(2));
+      tl.set('#tease .tz', { visibility: 'visible' }, b(3)); tl.set('#tease .tz2', { visibility: 'hidden' }, b(3));
+      tl.set('#tease', { autoAlpha: 0 }, b(4));
+      tl.set('#bg2', { autoAlpha: 0 }, b(4));                // the open's kerb backdrop gives way to the red drop
+
+      window.__timelines['main'] = tl;
+      tl.seek(0);
+    </script>
+  </body>
+</html>

@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>CI preview — bold</title>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;700;800&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../tokens.css">
+<style>
+  /* Phthalo headline band over a Timberwolf stage — a dark frame needs a light
+     ground to read. Archivo at display weight, one Peach accent on the rule. */
+  html, body { margin: 0; background: transparent; }
+  body { position: relative; width: 1080px; height: 1080px; overflow: hidden;
+         font-family: var(--to-font-body); color: var(--to-snow); }
+  body > [data-layer] { position: absolute; box-sizing: border-box; }
+
+  .background { inset: 0; background: var(--to-timberwolf); }
+  .band { left: 0; top: 0; width: 1080px; height: 470px; background: var(--to-green); }
+  .kicker { left: var(--to-margin); top: 92px; font-family: var(--to-font-display); font-weight: 700;
+            font-size: 24px; letter-spacing: var(--to-track-eyebrow); text-transform: uppercase;
+            color: var(--to-peach); }
+  .headline { left: var(--to-margin); top: 138px; margin: 0; font-family: var(--to-font-display);
+              font-weight: 800; font-size: 148px; line-height: .9;
+              letter-spacing: var(--to-track-display); color: var(--to-snow); }
+  .rule { left: var(--to-margin); top: 404px; width: 132px; height: 4px; background: var(--to-peach); }
+  .product { left: 96px; top: 430px; width: 900px; transform: rotate(-9deg);
+             filter: drop-shadow(0 34px 30px rgba(33, 33, 33, .3)); }
+  .specs { left: var(--to-margin); bottom: 188px; display: flex; gap: 52px; font-size: 26px;
+           line-height: 1.5; color: var(--to-black); }
+  .specs b { display: block; font-family: var(--to-font-display); font-weight: 700; font-size: 15px;
+             letter-spacing: var(--to-track-eyebrow); text-transform: uppercase; color: var(--to-green); }
+  .price { left: var(--to-margin); bottom: var(--to-margin); padding: 14px 26px;
+           background: var(--to-green); color: var(--to-snow); font-family: var(--to-font-display);
+           font-weight: 700; font-size: 34px; }
+  .logo { right: var(--to-margin); bottom: 84px; width: var(--to-logo-width); }
+</style>
+</head>
+<body data-width="1080" data-height="1080">
+  <div class="background" data-layer="background"></div>
+  <div class="band" data-layer="band"></div>
+  <div class="kicker" data-layer="kicker">Built for screen days</div>
+  <h1 class="headline" data-layer="headline">BOSS<br>1197</h1>
+  <div class="rule" data-layer="rule"></div>
+  <img class="product" data-layer="product" src="../../../posts/2026-09-16_boss1197/layers/BOSS1197_1.png" alt="">
+  <div class="specs" data-layer="specs">
+    <span><b>Lens</b>HOYA Sync III</span>
+    <span><b>Coating</b>Hi-Vision LongLife BlueControl</span>
+  </div>
+  <div class="price" data-layer="price">Fitted in store</div>
+  <img class="logo" data-layer="logo" src="../../logo/timeoptic.svg" alt="">
+</body>
+</html>

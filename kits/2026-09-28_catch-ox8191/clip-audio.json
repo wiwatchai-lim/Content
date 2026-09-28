@@ -1,0 +1,18 @@
+{
+ "seconds": 1.4,
+ "song": "audio/sound.m4a",
+ "song_start": 17.554,
+ "fade_out": 0.1,
+ "sfx": [
+  {
+   "t": 0.18,
+   "file": "whoosh",
+   "gain": 0.5
+  },
+  {
+   "t": 0.78,
+   "file": "whoosh-short",
+   "gain": 0.45
+  }
+ ]
+}

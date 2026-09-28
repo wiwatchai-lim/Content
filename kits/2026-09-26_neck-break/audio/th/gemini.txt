@@ -1,0 +1,10 @@
+00|มาพักสายตากันเถอะ||a friendly, upbeat but warm voice inviting a friend to take a break
+01|หลับตา||a warm, friendly fitness coach giving a quick, crisp cue, brisk natural pace, short, no pauses
+02|เงยหน้าขึ้น||a warm, friendly fitness coach giving a quick, crisp cue, brisk natural pace, short, no pauses
+03|หันไปทางขวา||a warm, friendly fitness coach giving a quick, crisp cue, brisk natural pace, short, no pauses
+04|หันไปทางซ้าย||a warm, friendly fitness coach giving a quick, crisp cue, brisk natural pace, short, no pauses
+05|เงยหน้าขึ้น ยืดคอไปข้างหลัง||a warm, friendly fitness coach giving a quick, crisp cue, brisk natural pace, short, no pauses
+06|หันไปทางขวา ให้คางชิดไหล่||a warm, friendly fitness coach giving a quick, crisp cue, brisk natural pace, short, no pauses
+07|หันไปทางซ้าย ให้คางชิดไหล่||a warm, friendly fitness coach giving a quick, crisp cue, brisk natural pace, short, no pauses
+08|ลืมตา||a warm, friendly fitness coach giving a quick, crisp cue, brisk natural pace, short, no pauses
+09|ให้ไทม์ออปติกดูแลสายตาของคุณ||a warm, friendly fitness coach giving a quick, crisp cue, brisk natural pace, short, no pauses

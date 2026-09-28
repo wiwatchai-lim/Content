@@ -1,0 +1,437 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=1080, height=1920" />
+    <!--
+      Timberland TB1670-F (052 Brown + 001 Black) x ZEISS PhotoFusion X — beat clip, outdoor / earthy mood.
+      Cut to "Green Glass Walls" (music/, 125.63 BPM, grid fitted on the onsets) from 19.154 s in the song, 30 beats = 14.33 s.
+      The kick falls on beats 1 and 4 of every 8, so each section is 8 beats long.
+        beats 0-4    hook: frame 0 slams in on the 052 hinge + orange stripe (over-scale, blur, flash, shake), then a hard cut
+                     every beat (temple tip, rim, bridge) with one spec stamp each; beat 4 cuts to the whole three-quarter view
+        beats 5-8    TIMBERLAND is stamped over the revealed frame, TB1670-F on the next beat
+        beats 8-16   plank wipe to a quiet sage field: both colours side by side (8-12), the 052 folded view (12-14), 001 alone (14-16)
+        beats 16-24  sunrise wipe to wheat: the sun sweeps across and the lenses darken (PhotoFusion X), then clear on the drop-out
+        beats 24-30  paper slides down: TIMEOPTIC wordmark centre, both colours under it
+      Timberland logo top left for the whole clip. The upload goes out without music; the song is added in TikTok.
+    -->
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/gsap.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,500..900&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="assets/tokens.css" />
+    <style>
+      * { margin: 0; padding: 0; box-sizing: border-box; }
+      html, body { width: 1080px; height: 1920px; overflow: hidden; background: #f1e8d6; }
+      #root { position: relative; width: 1080px; height: 1920px; overflow: hidden; font-family: var(--to-font-body); color: #2b2418;
+              --forest: #24402c; --forest-dk: #15261b; --timber: #6b4a2b; --wheat: #e6c98f; --paper: #f1e8d6; --sun: #f2a65a; }
+      .layer { position: absolute; }
+
+      /* ---------- camera ---------- */
+      #cam, #punch { position: absolute; inset: 0; transform-origin: 50% 55%; }
+      .bg { position: absolute; left: -300px; top: -300px; width: 1680px; height: 2520px; overflow: hidden; }
+      .contours { position: absolute; left: 300px; top: 300px; width: 1080px; height: 1920px; overflow: visible; }
+      .contours path { fill: none; stroke-width: 2.4; }
+      /* paper: warm cream with a soft fibre grain */
+      #bgPaper { background:
+          radial-gradient(ellipse 60% 45% at 50% 62%, rgba(255, 250, 238, .9), rgba(255, 250, 238, 0) 70%),
+          repeating-linear-gradient(8deg, rgba(120, 95, 60, .035) 0 2px, transparent 2px 7px),
+          repeating-linear-gradient(-14deg, rgba(120, 95, 60, .03) 0 1px, transparent 1px 11px), #efe4cf; }
+      #bgPaper .contours path { stroke: rgba(36, 64, 44, .22); }
+      #sun { left: 540px; top: 1500px; width: 1500px; height: 1500px; margin: -750px 0 0 -750px; border-radius: 50%;
+             background: radial-gradient(closest-side, rgba(242, 166, 90, .55), rgba(242, 166, 90, .18) 55%, rgba(242, 166, 90, 0)); }
+      #sweep { left: -200px; top: -200px; width: 460px; height: 2600px; transform: rotate(18deg);
+               background: linear-gradient(90deg, rgba(255, 236, 200, 0), rgba(255, 236, 200, .55), rgba(255, 236, 200, 0)); }
+      /* forest: timber grain in deep green, two rows of pines for parallax */
+      #bgForest { background: radial-gradient(ellipse 55% 42% at 50% 55%, #eef0e6 0%, #d9dfcf 55%, #c2cbb6 100%); }
+      .pines { position: absolute; left: 0; width: 3400px; height: 900px; }
+      .pines i { position: absolute; bottom: 0; clip-path: polygon(50% 0, 62% 22%, 56% 22%, 72% 48%, 64% 48%, 86% 78%, 55% 78%, 55% 100%, 45% 100%, 45% 78%, 14% 78%, 36% 48%, 28% 48%, 44% 22%, 38% 22%); }
+      #pinesBack { top: 1500px; } #pinesBack i { background: rgba(36, 64, 44, .10); }
+      #pinesFront { top: 1760px; } #pinesFront i { background: rgba(36, 64, 44, .18); }
+      .plank { position: absolute; top: 0; height: 100%; }
+      /* wheat field light */
+      #bgWheat { background:
+          radial-gradient(ellipse 50% 38% at 50% 58%, #fff3d6 0%, #f0d9a6 50%, #d9b877 100%); }
+      #bgWheat .contours path { stroke: rgba(107, 74, 43, .22); }
+      #sun2 { left: 540px; top: 2200px; width: 1700px; height: 1700px; margin: -850px 0 0 -850px; border-radius: 50%;
+              background: radial-gradient(closest-side, rgba(255, 214, 140, .95), rgba(242, 166, 90, .45) 45%, rgba(242, 166, 90, 0)); }
+      #bgEnd { background:
+          radial-gradient(ellipse 60% 45% at 50% 50%, rgba(255, 250, 238, .95), rgba(255, 250, 238, 0) 70%),
+          repeating-linear-gradient(8deg, rgba(120, 95, 60, .035) 0 2px, transparent 2px 7px), #eee2c9; }
+      #bgEnd .contours path { stroke: rgba(36, 64, 44, .16); }
+      #bgForest, #bgWheat, #bgEnd { visibility: hidden; }
+      #gF, #g052, #g001, #g052f, #e052, #e001 { visibility: hidden; }
+      #hookG { position: absolute; transform-origin: 0 0; }
+      #hookG img { display: block; width: 100%; }
+      #hookG .shadow { position: absolute; left: 12%; right: 12%; bottom: -54px; height: 46px; border-radius: 50%; opacity: 0;
+                       background: radial-gradient(closest-side, rgba(40, 28, 12, .38), rgba(40, 28, 12, 0)); filter: blur(9px); }
+      #tlogo { left: 56px; top: 64px; width: 260px; height: 45px; background: var(--forest);
+               -webkit-mask: url(assets/timberland.png) left center / contain no-repeat; mask: url(assets/timberland.png) left center / contain no-repeat; }
+      #hero, #model, #lab052, #lab001, #coat, .dlab { opacity: 0; }
+
+      /* ---------- glasses ---------- */
+      .glasses { position: absolute; }
+      .glasses > div { position: relative; }
+      .glasses img { display: block; width: 100%; }
+      .glasses .shadow { position: absolute; left: 12%; right: 12%; bottom: -54px; height: 46px; border-radius: 50%;
+                         background: radial-gradient(closest-side, rgba(40, 28, 12, .38), rgba(40, 28, 12, 0)); filter: blur(9px); }
+      .glass { position: absolute; inset: 0; -webkit-mask-size: 100% 100%; mask-size: 100% 100%; -webkit-mask-repeat: no-repeat; mask-repeat: no-repeat; overflow: hidden;
+               background: linear-gradient(170deg, rgba(255, 255, 255, .24) 0%, rgba(230, 220, 200, .06) 50%, rgba(255, 248, 235, .18) 100%); }
+      .glass .shade { position: absolute; inset: 0; opacity: 0; background: linear-gradient(175deg, rgba(58, 46, 36, .82), rgba(78, 62, 48, .7)); }
+      .glass .win { position: absolute; top: 8%; width: 13%; height: 48%; border-radius: 16px; filter: blur(5px);
+                    background: linear-gradient(180deg, rgba(255, 255, 255, .5), rgba(255, 255, 255, .05)); transform: skewX(-14deg); }
+      .glass .streak { position: absolute; left: 0; transform: translateX(-150px); top: -20%; bottom: -20%; width: 9%; filter: blur(3px);
+                       background: linear-gradient(100deg, transparent, rgba(255, 244, 220, .75), transparent); }
+
+      /* ---------- type (outside the camera) ---------- */
+      .type { position: absolute; left: 0; right: 0; text-align: center; white-space: nowrap; }
+      .type .ch, .type .w { display: inline-block; will-change: transform; }
+      .kicker { font-family: var(--to-font-display); font-weight: 700; font-size: 28px; letter-spacing: .34em; color: var(--timber); }
+      .cond { font-family: 'Archivo', sans-serif; font-stretch: 62%; font-variation-settings: 'wdth' 62; font-weight: 900; line-height: .9; text-transform: uppercase; letter-spacing: .01em; }
+      .hero { font-size: 200px; color: var(--forest); }
+      .big { font-size: 128px; color: var(--forest); }
+      .sub { font-family: var(--to-font-body); font-weight: 500; font-size: 36px; color: #4c3f2c; }
+      .stamp { display: inline-block; padding: 12px 26px 8px; border: 5px solid currentColor; outline: 2px solid currentColor; outline-offset: 6px;
+               font-family: 'Archivo', sans-serif; font-stretch: 75%; font-weight: 900; font-size: 44px; letter-spacing: .12em; text-transform: uppercase;
+               -webkit-mask-image: repeating-radial-gradient(circle at 37% 41%, #000 0 2px, rgba(0, 0, 0, .72) 2px 3px, #000 3px 5px);
+               mask-image: repeating-radial-gradient(circle at 37% 41%, #000 0 2px, rgba(0, 0, 0, .72) 2px 3px, #000 3px 5px); }
+      .onDark .kicker { color: var(--wheat); }
+      .onDark .big { color: #f6ecd6; }
+      .onDark .sub { color: #dfe6d8; }
+      .spec { font-family: var(--to-font-display); font-weight: 600; font-size: 26px; letter-spacing: .24em; color: #4c3f2c; }
+      .rule { position: absolute; left: 470px; width: 140px; height: 5px; background: var(--sun); transform-origin: center; }
+
+      #logo { left: 390px; top: 1755px; width: 300px; height: 48px; transform-origin: 50% 50%; }
+      #logo b { position: absolute; top: 0; height: 48px; background: url(assets/timeoptic.svg) no-repeat; background-size: 300px 47.6px; }
+      #logo .shine { position: absolute; inset: 0; -webkit-mask: url(assets/timeoptic-mono.svg) center / 100% no-repeat; mask: url(assets/timeoptic-mono.svg) center / 100% no-repeat; overflow: hidden; }
+      #logo .shine i { position: absolute; top: 0; bottom: 0; left: 0; width: 80px; transform: translateX(-90px); background: linear-gradient(100deg, transparent, rgba(242, 166, 90, .95), transparent); }
+      #flash { inset: 0; background: #fff6e2; opacity: 0; }
+      #fade { inset: 0; background: #f1e8d6; opacity: 0; }
+    </style>
+  </head>
+  <body>
+    <div id="root" data-composition-id="main" data-start="0" data-duration="14.328" data-width="1080" data-height="1920">
+      <div id="cam" class="clip" data-start="0" data-duration="14.328" data-track-index="0"><div id="punch">
+        <div id="bgPaper" class="bg">
+          <svg class="contours" viewBox="0 0 1080 1920" data-cx="540" data-cy="1200"></svg>
+          <div id="sun" class="layer"></div>
+          <div id="sweep" class="layer"></div>
+        </div>
+        <div id="bgForest" class="bg">
+          <div id="glade" class="layer" style="left:300px; top:1100px; width:1080px; height:1100px; background:radial-gradient(ellipse 50% 45% at 55% 50%, rgba(236, 214, 160, .55), rgba(236, 214, 160, .18) 55%, rgba(236, 214, 160, 0) 75%);"></div>
+          <div id="pinesBack" class="pines"></div>
+          <div id="pinesFront" class="pines"></div>
+        </div>
+        <div id="planks" class="bg" style="visibility:hidden"></div>
+        <div id="bgWheat" class="bg">
+          <svg class="contours" viewBox="0 0 1080 1920" data-cx="700" data-cy="1300"></svg>
+          <div id="sun2" class="layer"></div>
+        </div>
+        <div id="bgEnd" class="bg"><svg class="contours" viewBox="0 0 1080 1920" data-cx="380" data-cy="900"></svg></div>
+
+        <!-- 052 front: beats 0-8 and 16-24 -->
+        <div id="gF" class="glasses" style="left:100px; top:1010px; width:880px;">
+          <div class="travel"><div class="sway"><div class="shadow"></div><div class="bob">
+            <img src="assets/TB1670-F052_1.png" alt="" />
+            <div class="glass" style="-webkit-mask-image:url(assets/TB1670-F052_1_lens.png); mask-image:url(assets/TB1670-F052_1_lens.png);">
+              <i class="shade"></i><i class="win" style="left:12%"></i><i class="win" style="left:62%"></i><i class="streak"></i>
+            </div>
+          </div></div></div>
+        </div>
+        <!-- hook: the 052 three-quarter view at 3000px wide, moved so each point of interest sits at the frame centre -->
+        <div id="hook" class="layer" style="inset:0">
+          <div id="hookG" style="width:3000px; left:0; top:0;"><div class="shadow"></div><div class="bob">
+            <img src="assets/TB1670-F052_2.png" alt="" />
+            <div class="glass" style="-webkit-mask-image:url(assets/TB1670-F052_2_lens.png); mask-image:url(assets/TB1670-F052_2_lens.png);"><i class="win" style="left:30%"></i><i class="streak"></i></div>
+          </div></div>
+        </div>
+
+        <!-- the two colours: beats 8-16 -->
+        <div id="g052" class="glasses" style="left:40px; top:900px; width:760px;">
+          <div class="travel"><div class="sway"><div class="shadow"></div><div class="bob">
+            <img src="assets/TB1670-F052_2.png" alt="" />
+            <div class="glass" style="-webkit-mask-image:url(assets/TB1670-F052_2_lens.png); mask-image:url(assets/TB1670-F052_2_lens.png);"><i class="win" style="left:40%"></i><i class="streak"></i></div>
+          </div></div></div>
+        </div>
+        <div id="g001" class="glasses" style="left:430px; top:1270px; width:600px;">
+          <div class="travel"><div class="sway"><div class="shadow"></div><div class="bob">
+            <img src="assets/TB1670-F001_2.png" alt="" />
+            <div class="glass" style="-webkit-mask-image:url(assets/TB1670-F001_2_lens.png); mask-image:url(assets/TB1670-F001_2_lens.png);"><i class="win" style="left:40%"></i><i class="streak"></i></div>
+          </div></div></div>
+        </div>
+        <!-- 052 folded, beats 12-14 -->
+        <div id="g052f" class="glasses" style="left:110px; top:1000px; width:860px;">
+          <div class="travel"><div class="sway"><div class="shadow"></div><div class="bob"><img src="assets/TB1670-F052_3.png" alt="" /></div></div></div>
+        </div>
+        <!-- end card pair -->
+        <div id="e052" class="glasses" style="left:70px; top:1260px; width:450px;">
+          <div class="travel"><div class="shadow"></div>
+            <img src="assets/TB1670-F052_2.png" alt="" />
+            <div class="glass" style="-webkit-mask-image:url(assets/TB1670-F052_2_lens.png); mask-image:url(assets/TB1670-F052_2_lens.png);"></div>
+          </div>
+        </div>
+        <div id="e001" class="glasses" style="left:560px; top:1240px; width:450px;">
+          <div class="travel"><div class="shadow"></div>
+            <img src="assets/TB1670-F001_2.png" alt="" />
+            <div class="glass" style="-webkit-mask-image:url(assets/TB1670-F001_2_lens.png); mask-image:url(assets/TB1670-F001_2_lens.png);"></div>
+          </div>
+        </div>
+      </div></div>
+
+      <!-- Type: paper map -->
+      <div id="t0" class="clip layer" data-start="2.2" data-duration="1.7" data-track-index="5" style="inset:0">
+        <div class="type kicker split" style="top:220px">NEW IN STORE</div>
+        <div class="type cond hero" style="top:300px"><span class="w" id="hero">TIMBERLAND</span></div>
+        <div class="type" style="top:560px"><span class="stamp w" id="model" style="color:var(--timber)">TB1670-F</span></div>
+      </div>
+      <!-- Type: details -->
+      <div id="td" class="clip layer" data-start="0" data-duration="2.0" data-track-index="7" style="inset:0">
+        <div class="type" style="top:300px"><span class="stamp w dlab" style="color:var(--timber)">052 · Brown</span></div>
+        <div class="type" style="top:300px"><span class="stamp w dlab" style="color:var(--timber)">Spring hinge</span></div>
+        <div class="type" style="top:300px"><span class="stamp w dlab" style="color:var(--timber)">Full rim</span></div>
+        <div class="type" style="top:300px"><span class="stamp w dlab" style="color:var(--timber)">55 · 19 · 145</span></div>
+      </div>
+      <!-- Type: the two colours -->
+      <div id="t1" class="clip layer" data-start="3.8" data-duration="4.0" data-track-index="6" style="inset:0">
+        <div class="type kicker split" style="top:230px">TWO COLOURWAYS</div>
+        <div class="type cond big split" style="top:285px">ONE FRAME</div>
+        <div class="layer" style="left:110px; top:780px"><span class="stamp w" id="lab052" style="color:var(--timber)">052 · Brown</span></div>
+        <div class="layer" style="left:560px; top:1600px"><span class="stamp w" id="lab001" style="color:var(--forest)">001 · Black</span></div>
+      </div>
+      <!-- Type: lens + coating -->
+      <div id="t2" class="clip layer" data-start="7.5" data-duration="4.1" data-track-index="9" style="inset:0">
+        <div class="type kicker split" style="top:230px">THE LENS</div>
+        <div class="type cond big" style="top:285px; font-size:120px"><span class="w" id="lens">ZEISS PHOTOFUSION X</span></div>
+        <div class="type sub words" style="top:410px">Sunglass-dark outdoors</div>
+        <div class="type sub words" style="top:462px">UV protection up to 400 nm, clear or dark</div>
+        <div class="type" style="top:1560px"><span class="stamp w" id="coat" style="color:var(--forest); font-size:34px">DuraVision Plus Platinum UV</span></div>
+      </div>
+      <!-- Type: end card -->
+      <div id="t3" class="clip layer" data-start="11.3" data-duration="3.028" data-track-index="10" style="inset:0">
+        <div class="type kicker split" style="top:780px">NEW IN STORE</div>
+        <div class="rule" id="rule" style="top:1060px"></div>
+        <div class="type spec split" style="top:1100px">TIMBERLAND TB1670-F · 052 / 001</div>
+      </div>
+
+      <div id="tlogo" class="clip layer" data-start="0" data-duration="14.328" data-track-index="13" aria-label="Timberland"></div>
+      <div id="logo" class="clip layer" data-start="0" data-duration="14.328" data-track-index="8" aria-label="TIMEOPTIC"><div class="shine"><i></i></div></div>
+      <div id="flash" class="clip layer" data-start="0" data-duration="14.328" data-track-index="11"></div>
+      <div id="fade" class="clip layer" data-start="0" data-duration="14.328" data-track-index="12"></div>
+    </div>
+
+    <script>
+      window.__timelines = window.__timelines || {};
+      const tl = gsap.timeline({ paused: true });
+
+      const BPM = 125.628;             // "Green Glass Walls", grid fitted on the onset envelope, first beat at 19.154 s
+      const B = 60 / BPM;
+      const b = (n) => n * B;
+
+      // ---------- build: letters, words, contour maps, pines, planks ----------
+      document.querySelectorAll('.split').forEach((el) => {
+        const text = el.textContent; el.textContent = '';
+        for (const c of text) {
+          if (c === ' ') { el.append(' '); continue; }
+          const s = document.createElement('span'); s.className = 'ch'; s.textContent = c; el.append(s);
+        }
+      });
+      document.querySelectorAll('.words').forEach((el) => {
+        const words = el.textContent.split(' '); el.textContent = '';
+        words.forEach((w, i) => {
+          const s = document.createElement('span'); s.className = 'w'; s.textContent = w; el.append(s);
+          if (i < words.length - 1) el.append(' ');
+        });
+      });
+
+      // Topographic rings: wobbly closed curves, deterministic.
+      const NS = 'http://www.w3.org/2000/svg';
+      document.querySelectorAll('.contours').forEach((svg, si) => {
+        const cx = +svg.dataset.cx, cy = +svg.dataset.cy;
+        for (let k = 1; k <= 11; k++) {
+          const r0 = 70 + k * 88;
+          let d = '';
+          for (let a = 0; a <= 360; a += 4) {
+            const t = (a * Math.PI) / 180;
+            const r = r0 * (1 + 0.09 * Math.sin(3 * t + k * 0.6 + si) + 0.05 * Math.sin(5 * t - k * 0.9) + 0.03 * Math.sin(9 * t + k));
+            d += `${a ? 'L' : 'M'}${(cx + r * Math.cos(t)).toFixed(1)},${(cy + r * 0.82 * Math.sin(t)).toFixed(1)}`;
+          }
+          const p = document.createElementNS(NS, 'path');
+          p.setAttribute('d', d + 'Z');
+          svg.append(p);
+        }
+      });
+      document.querySelectorAll('.contours path').forEach((p) => {
+        const L = p.getTotalLength();
+        p.style.strokeDasharray = L; p.style.strokeDashoffset = L; p.dataset.len = L;
+      });
+
+      const pineRow = (id, n, h0, gap) => {
+        const row = document.getElementById(id);
+        for (let i = 0; i < n; i++) {
+          const el = document.createElement('i');
+          const h = h0 * (0.7 + 0.3 * Math.abs(Math.sin(i * 1.7)));
+          el.style.cssText = `left:${i * gap + 40 * Math.sin(i * 2.3)}px;width:${h * 0.55}px;height:${h}px;`;
+          row.append(el);
+        }
+      };
+      pineRow('pinesBack', 26, 520, 140);
+      pineRow('pinesFront', 18, 420, 210);
+
+      const planks = document.getElementById('planks');
+      const PC = ['#6b4a2b', '#5c3f24', '#76532f', '#624426', '#6f4d2c', '#5a3d22', '#735030'];
+      PC.forEach((c, i) => {
+        const el = document.createElement('div');
+        el.className = 'plank';
+        el.style.cssText = `left:${i * 240}px;width:242px;background:linear-gradient(90deg, rgba(0,0,0,.18), transparent 12%, transparent 88%, rgba(0,0,0,.22)), repeating-linear-gradient(0deg, rgba(0,0,0,.06) 0 2px, transparent 2px 23px), ${c};`;
+        planks.append(el);
+      });
+
+      const LETTERS = [[0, 282], [310, 392], [438, 834], [876, 1134], [1170, 1498], [1540, 1784], [1808, 2078], [2112, 2164], [2214, 2520]];
+      const logo = document.getElementById('logo'), k = 300 / 2520;
+      LETTERS.forEach(([x0, x1]) => {
+        const el = document.createElement('b');
+        el.style.cssText = `left:${x0 * k}px;width:${(x1 - x0) * k + 1}px;background-position:${-x0 * k}px 0;`;
+        logo.insertBefore(el, logo.firstChild);
+      });
+
+      // ---------- helpers ----------
+      const show = (sel, from, to) => { tl.set(sel, { autoAlpha: 1 }, from); if (to) tl.set(sel, { autoAlpha: 0 }, to); };
+      const q = (id, n) => `#${id} .type:nth-child(${n})`;
+      // Rugged stamp: drops from big, lands hard with a small camera jolt.
+      const stamp = (sel, at, rot = -3) => {
+        tl.fromTo(sel, { scale: 1.9, rotation: rot * 3, opacity: 0 }, { scale: 1, rotation: rot, opacity: 1, duration: 0.2, ease: 'power4.in', immediateRender: false }, at);
+        tl.fromTo('#punch', { x: 0, y: 0 }, { keyframes: { x: [0, 7, -5, 3, 0], y: [0, -5, 4, -2, 0] }, duration: 0.26, ease: 'none', immediateRender: false }, at + 0.2);
+      };
+      const rise = (sel, at, stagger = 0.05) => tl.from(sel, { y: 40, opacity: 0, duration: 0.5, ease: 'power3.out', stagger }, at);
+      const drawMap = (bg, at, dur) => tl.to(`${bg} .contours path`, { strokeDashoffset: 0, duration: dur, ease: 'power1.inOut', stagger: 0.06 }, at);
+
+      // ---------- visibility ----------
+      tl.set('#gF', { autoAlpha: 1 }, b(16)); tl.set('#gF', { autoAlpha: 0 }, b(24));
+      show(['#g052', '#g001'], b(8), b(12)); tl.set('#g001', { autoAlpha: 1 }, b(14)); tl.set('#g001', { autoAlpha: 0 }, b(16));
+      show('#g052f', b(12), b(14));
+      show(['#e052', '#e001'], b(24));
+
+      // ---------- camera: slow, steady ----------
+      tl.fromTo('#cam', { scale: 1.0, y: 30 }, { scale: 1.06, y: 0, duration: b(8), ease: 'sine.inOut' }, 0);
+      tl.fromTo('#cam', { scale: 1.08, rotation: -1.5 }, { scale: 1.02, rotation: 1, duration: b(8), ease: 'none', immediateRender: false }, b(8));
+      tl.fromTo('#cam', { scale: 1.02 }, { scale: 1.09, duration: b(8), ease: 'sine.inOut', immediateRender: false }, b(16));
+      tl.fromTo('#cam', { scale: 1.1, rotation: 0 }, { scale: 1.03, duration: b(6), ease: 'power2.out', immediateRender: false }, b(24));
+      // soft pump on the kicks (beats 0 and 3 of each 8)
+      [3, 8, 11, 16, 17, 18, 19, 20, 21, 24, 27].forEach((n) =>
+        tl.fromTo('#punch', { scale: n >= 16 && n <= 21 ? 1.03 : 1.018 }, { scale: 1, duration: B * 0.7, ease: 'power2.out', immediateRender: false }, b(n)));
+
+      // ---------- section 1: paper map (0-8) ----------
+      drawMap('#bgPaper', 0, b(6));
+      tl.fromTo('#sun', { y: 500, scale: 0.8 }, { y: 0, scale: 1.1, duration: b(8), ease: 'sine.out' }, 0);
+      tl.fromTo('#sweep', { x: -500 }, { x: 1700, duration: b(4), ease: 'power1.inOut' }, b(1));
+      // hook (0-4): slam in on the hinge + orange stripe, then a hard cut every beat (temple tip, rim, bridge), whole frame on beat 4
+      const S = 3000 / 1479;                      // layer px -> hook px at scale 1
+      const at = (px, py, k = 1) => ({ x: 540 - k * px * S, y: 960 - k * py * S, scale: k });
+      const SHOTS = [[1000, 92, 1.05], [1400, 190, 1], [620, 190, 1], [407, 111, 1.1]];
+      SHOTS.forEach(([px, py, k], n) => {
+        tl.set('#hookG', at(px, py, k), b(n));
+        tl.fromTo('#hookG .bob', { scale: 1.05 }, { scale: 1, duration: B * 0.9, ease: 'power2.out', immediateRender: false }, b(n));
+      });
+      // frame 0 impact: over-scale + blur snapping to rest in 0.15 s, flash, small shake
+      tl.fromTo('#punch', { scale: 1.45, filter: 'blur(24px)' }, { scale: 1, filter: 'blur(0px)', duration: 0.15, ease: 'power3.out', immediateRender: true }, 0);
+      tl.fromTo('#flash', { opacity: 0.85 }, { opacity: 0, duration: 0.3, ease: 'power2.out', immediateRender: true }, 0);
+      tl.fromTo('#hook', { x: 0, y: 0 }, { keyframes: { x: [0, 12, -9, 5, -2, 0], y: [0, -8, 6, -3, 1, 0] }, duration: 0.3, ease: 'none', immediateRender: false }, 0.15);
+      // beat 4: cut to the whole three-quarter view with a smaller slam
+      tl.set('#hookG', { x: 90, y: 900, scale: 0.3 }, b(4));
+      tl.fromTo('#punch', { scale: 1.2, filter: 'blur(12px)' }, { scale: 1, filter: 'blur(0px)', duration: 0.18, ease: 'power3.out', immediateRender: false }, b(4));
+      tl.to('#hookG .shadow', { opacity: 1, duration: 0.2 }, b(4));
+      tl.fromTo('#hookG .glass .streak', { x: -150 }, { x: 1000, duration: B * 1.4, ease: 'power2.inOut', immediateRender: false }, b(5.3));
+      tl.to('#hookG .bob', { y: -18, duration: b(1.2), ease: 'sine.inOut', yoyo: true, repeat: 1 }, b(5.2));
+      tl.to('#hookG', { x: -1110, duration: 0.34, ease: 'power2.in' }, b(8) - 0.34);
+      tl.to('#bgPaper .contours', { x: -160, duration: b(8), ease: 'none' }, 0);
+
+      // one stamp per cut: Spring hinge, 052 · Brown, Full rim, 55 · 19 · 145
+      [2, 1, 3, 4].forEach((c, n) => {
+        const lab = `#td .type:nth-child(${c}) .dlab`;
+        tl.fromTo(lab, { scale: 1.8, rotation: -8, opacity: 0 }, { scale: 1, rotation: n % 2 ? 2 : -3, opacity: 1, duration: 0.14, ease: 'power4.in', immediateRender: false }, b(n) + 0.05);
+        tl.set(lab, { opacity: 0 }, b(n + 1) - 0.01);
+      });
+
+      rise(q('t0', 1) + ' .ch', b(4.8), 0.03);
+      stamp('#hero', b(5), -2);
+      stamp('#model', b(6), -4);
+      tl.to('#t0 .type', { x: -700, opacity: 0, duration: 0.36, ease: 'power2.in', stagger: 0.03 }, b(8) - 0.4);
+
+      // ---------- section 2: forest, two colours (8-16) ----------
+      tl.set('#planks', { autoAlpha: 1 }, b(8) - 0.34);
+      tl.fromTo('#planks .plank', { yPercent: -100 }, { yPercent: 0, duration: 0.24, ease: 'power3.in', stagger: 0.035, immediateRender: false }, b(8) - 0.34);
+      tl.set('#bgForest', { autoAlpha: 1 }, b(8));
+      tl.to('#planks .plank', { yPercent: 100, duration: 0.3, ease: 'power3.out', stagger: 0.03 }, b(8));
+      tl.set('#planks', { autoAlpha: 0 }, b(8) + 0.6);
+      tl.fromTo('#pinesBack', { x: 0 }, { x: -520, duration: b(8), ease: 'none', immediateRender: false }, b(8));
+      tl.fromTo('#pinesFront', { x: -200 }, { x: -1250, duration: b(8), ease: 'none', immediateRender: false }, b(8));
+
+      tl.fromTo('#g052 .travel', { x: -1000, y: -40 }, { x: 0, y: 0, duration: b(2), ease: 'power3.out', immediateRender: false }, b(8));
+      tl.to('#g052 .travel', { x: 30, y: -30, duration: b(1.6), ease: 'none' }, b(10));
+      tl.fromTo('#g001 .travel', { x: 1000, y: 40 }, { x: 0, y: 0, duration: b(1.2), ease: 'power3.out', immediateRender: false }, b(9.5));
+      tl.to('#g001 .travel', { x: -30, y: 20, duration: b(1), ease: 'none' }, b(10.7));
+      tl.to(['#g052 .sway', '#g001 .sway'], { rotation: 2, duration: b(0.9), ease: 'sine.inOut', yoyo: true, repeat: 1 }, b(10));
+      tl.fromTo('#g052 .glass .streak', { x: -150 }, { x: 900, duration: B * 1.6, ease: 'power2.inOut', immediateRender: false }, b(10));
+      tl.to(['#g052 .travel', '#g001 .travel'], { x: (i) => (i ? 1100 : -1100), duration: 0.34, ease: 'power2.in' }, b(12) - 0.34);
+      tl.fromTo('#g052f .travel', { y: -900, rotation: -6 }, { y: 0, rotation: 0, duration: 0.4, ease: 'power3.out', immediateRender: false }, b(12));
+      tl.to('#g052f .travel', { scale: 1.06, duration: b(2) - 0.7, ease: 'none' }, b(12) + 0.4);
+      tl.to('#g052f .travel', { y: 900, duration: 0.3, ease: 'power2.in' }, b(14) - 0.3);
+      // 001 alone, centred, at its native size (600px source)
+      tl.set('#g001', { left: 240, top: 1080 }, b(14));
+      tl.fromTo('#g001 .travel', { x: 0, y: -700, rotation: 0 }, { y: 0, duration: 0.36, ease: 'power3.out', immediateRender: false }, b(14));
+      tl.fromTo('#g001 .glass .streak', { x: -150 }, { x: 700, duration: B * 1.2, ease: 'power2.inOut', immediateRender: false }, b(14.5));
+      tl.to('#g001 .travel', { x: 1100, duration: 0.34, ease: 'power2.in' }, b(16) - 0.34);
+
+      rise(q('t1', 1) + ' .ch', b(8), 0.03);
+      rise(q('t1', 2) + ' .ch', b(8) + 0.1, 0.04);
+      stamp('#lab052', b(9), -3);
+      stamp('#lab001', b(10.5), 2);
+      tl.to('#t1 .layer', { opacity: 0, duration: 0.2 }, b(12) - 0.3);
+      tl.to('#t1 .type', { y: -60, opacity: 0, duration: 0.3, ease: 'power2.in', stagger: 0.03 }, b(14.9));
+
+      // ---------- section 3: sunrise, the lenses darken (16-24) ----------
+      tl.set('#bgWheat', { autoAlpha: 1 }, b(16) - 0.3);
+      tl.fromTo('#bgWheat', { clipPath: 'circle(0% at 50% 100%)' }, { clipPath: 'circle(120% at 50% 100%)', duration: 0.42, ease: 'power2.out', immediateRender: false }, b(16) - 0.3);
+      tl.fromTo('#flash', { opacity: 0.55 }, { opacity: 0, duration: 0.4, ease: 'power2.out', immediateRender: false }, b(16));
+      drawMap('#bgWheat', b(16), b(5));
+      tl.fromTo('#sun2', { y: 400 }, { y: -700, duration: b(6), ease: 'sine.out', immediateRender: false }, b(16));
+      tl.set('#gF .travel', { x: 0, rotation: 0 }, b(16));
+      tl.fromTo('#gF .travel', { y: 120, scale: 0.9 }, { y: -20, scale: 1.02, duration: b(6), ease: 'sine.out', immediateRender: false }, b(16));
+      // PhotoFusion X: the shade follows the sun up, then clears on the drop-out (beats 22-23)
+      tl.fromTo('#gF .glass .shade', { opacity: 0 }, { opacity: 1, duration: b(4), ease: 'power1.in', immediateRender: false }, b(16.5));
+      tl.fromTo('#gF .glass .streak', { x: -150 }, { x: 1000, duration: B * 1.4, ease: 'power2.inOut', immediateRender: false }, b(20));
+      tl.to('#gF .glass .shade', { opacity: 0, duration: b(1.6), ease: 'power2.out' }, b(22));
+
+      rise(q('t2', 1) + ' .ch', b(16), 0.03);
+      stamp('#lens', b(16) + 0.08, -1.5);
+      rise(q('t2', 3) + ' .w', b(17), 0.1);
+      rise(q('t2', 4) + ' .w', b(18), 0.06);
+      stamp('#coat', b(20), 2);
+      tl.to('#t2 .type', { opacity: 0, filter: 'blur(10px)', duration: 0.3, ease: 'power2.in', stagger: 0.03 }, b(23.2));
+      tl.to('#gF .travel', { y: 800, opacity: 0, duration: b(1), ease: 'power2.in' }, b(23));
+
+      // ---------- section 4: end card (24-30) ----------
+      tl.set('#bgEnd', { autoAlpha: 1 }, b(24) - 0.3);
+      tl.fromTo('#bgEnd', { yPercent: -100 }, { yPercent: 0, duration: 0.3, ease: 'power3.in', immediateRender: false }, b(24) - 0.3);
+      drawMap('#bgEnd', b(24), b(5));
+      tl.fromTo('#e052 .travel', { x: -700 }, { x: 0, duration: b(1.5), ease: 'power3.out', immediateRender: false }, b(24));
+      tl.fromTo('#e001 .travel', { x: 700 }, { x: 0, duration: b(1.5), ease: 'power3.out', immediateRender: false }, b(24.5));
+      tl.to('#e052 .travel', { y: -14, duration: b(4), ease: 'sine.inOut' }, b(25.5));
+      tl.to('#e001 .travel', { y: 14, duration: b(4), ease: 'sine.inOut' }, b(26));
+
+      tl.to('#logo', { y: 960 - 24 - 1755, scale: 2.9, duration: 0.3, ease: 'power4.in' }, b(24) - 0.3);
+      tl.fromTo('#punch', { x: 0 }, { keyframes: { x: [0, 8, -6, 3, 0], y: [0, -6, 4, -2, 0] }, duration: 0.28, ease: 'none', immediateRender: false }, b(24));
+      tl.to('#logo', { scale: 3.05, duration: b(6), ease: 'none' }, b(24));
+      tl.fromTo('#rule', { scaleX: 0 }, { scaleX: 1, duration: B, ease: 'power3.out', immediateRender: false }, b(25));
+      rise(q('t3', 1) + ' .ch', b(24.5), 0.03);
+      rise(q('t3', 3) + ' .ch', b(25.5), 0.012);
+      tl.fromTo('#logo .shine i', { x: -90 }, { x: 320, duration: B * 2, ease: 'power2.inOut', immediateRender: false }, b(27));
+
+      // ---------- brand wordmark at the bottom: letters rise one by one ----------
+      tl.from('#logo b', { y: 40, opacity: 0, duration: 0.5, ease: 'power3.out', stagger: B / 5 }, b(1));
+      tl.fromTo('#logo .shine i', { x: -90 }, { x: 320, duration: B * 2, ease: 'power2.inOut' }, b(4));
+
+
+      window.__timelines['main'] = tl;
+      tl.seek(0);
+    </script>
+  </body>
+</html>

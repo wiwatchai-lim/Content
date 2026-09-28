@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="th">
+<head>
+<meta charset="utf-8">
+<title>2-titanium-center</title>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;700;800&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../brand/tokens.css">
+<style>
+  /* From ref.jpg: oversized frame bleeding off both edges, cropped around the bridge, flat light-gray background, centered headline, lots of space */
+  :root {
+    --muted: #6b6b6b;
+  }
+  html, body { margin: 0; background: transparent; }
+  body { position: relative; width: 1080px; height: 1080px; overflow: hidden; font-family: var(--to-font-body); color: var(--to-black); }
+  body > [data-layer] { position: absolute; box-sizing: border-box; }
+
+  .background { inset: 0; background: radial-gradient(90% 65% at 50% 36%, #f4f4f3 0%, #ececeb 70%, #e4e4e3 100%); }
+  .product { left: -200px; top: 150px; width: 1480px; filter: drop-shadow(0 22px 22px rgba(0, 0, 0, .12)); }
+  .headline { left: 80px; right: 80px; top: 730px; margin: 0; text-align: center; font-family: var(--to-font-display); font-weight: 700; font-size: 48px; line-height: 1.4; letter-spacing: var(--to-track-display); }
+  .subline { left: 0; right: 0; top: 820px; text-align: center; font-family: var(--to-font-display); font-size: 24px; font-weight: 700; }
+  .specs { left: 0; right: 0; bottom: 84px; text-align: center; font-size: 21px; letter-spacing: 1px; color: var(--muted); }
+  .logo { left: var(--to-margin); top: var(--to-margin); width: var(--to-logo-width); }
+</style>
+</head>
+<body data-width="1080" data-height="1080">
+  <div class="background" data-layer="background"></div>
+  <img class="logo" data-layer="logo" src="../../brand/logo/timeoptic.svg" alt="">
+  <img class="product" data-layer="product" src="../_preview/front.png" alt="">
+  <h1 class="headline" data-layer="headline">Exclusivity in Every Frame</h1>
+  <div class="subline" data-layer="subline">Brand Model</div>
+  <div class="specs" data-layer="specs">Lens Lens name · Coating Coating name</div>
+</body>
+</html>

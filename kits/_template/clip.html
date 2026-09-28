@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Kit clip</title>
+<!--
+  Cinematic clip from the raw AI video in gen/ (V.mp4, one 10 s take made in CapCut / Kling, or several takes).
+  Copy into the kit folder, fill in SHOTS and the title text, then: npm run video -- kits/<folder>
+  -> kits/<folder>/export/clip.mp4 (no audio; music is added in CapCut afterwards).
+  Everything is drawn from the clip time in window.__seek, so every render is identical.
+-->
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;700;800&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../brand/tokens.css">
+<style>
+  html, body { margin: 0; background: #000; }
+  body { position: relative; overflow: hidden; font-family: var(--to-font-body); color: var(--to-snow); }
+  body > * { position: absolute; }
+  video { inset: 0; width: 100%; height: 100%; object-fit: cover; opacity: 0; }
+  .shade { inset: 0; background: linear-gradient(to bottom, rgba(0, 0, 0, .45) 0%, transparent 32%, transparent 78%, rgba(0, 0, 0, .45) 100%); }
+  .title { left: 0; right: 0; top: 11%; text-align: center; opacity: 0; }
+  .title h1 { margin: 0; font-family: var(--to-font-display); font-weight: 800; font-size: 76px;
+              letter-spacing: var(--to-track-display); line-height: 1; text-shadow: 0 4px 30px rgba(0, 0, 0, .5); }
+  .title h1 span { font-weight: 500; font-size: 46px; margin: 0 18px; vertical-align: 10px; opacity: .85; }
+  .title .rule { width: 320px; height: 1px; margin: 26px auto 20px; background: rgba(250, 250, 250, .5); }
+  .title p { margin: 0; font-size: 26px; line-height: 1.45; color: rgba(250, 250, 250, .9); }
+  .logo { left: 50%; bottom: 7%; width: 230px; margin-left: -115px; opacity: 0; }
+  .fade { inset: 0; background: #000; }
+</style>
+</head>
+<body data-width="1080" data-height="1920" data-fps="30">
+  <div id="shots"></div>
+  <div class="shade"></div>
+  <div class="title" id="title">
+    <h1>Brand<span>×</span>LensBrand</h1>
+    <div class="rule"></div>
+    <p>Lens name · Coating name<br>Model</p>
+  </div>
+  <img class="logo" id="logo" src="../../brand/logo/timeoptic-white.svg" alt="">
+  <div class="fade" id="fade"></div>
+
+<script>
+// src: raw clip · from: second in the raw clip to start at · len: seconds on screen.
+// Shots overlap by XFADE seconds and dissolve into each other.
+const SHOTS = [
+  { src: 'gen/V.mp4', from: 0, len: 10 },
+  // Separate takes instead: { src: 'gen/V1.mp4', from: 0.3, len: 4.2 }, ...
+];
+const XFADE = 0.5;
+
+document.body.style.width = document.body.dataset.width + 'px';
+document.body.style.height = document.body.dataset.height + 'px';
+
+let start = 0;
+const shots = SHOTS.map((s) => {
+  const v = document.createElement('video');
+  Object.assign(v, { src: s.src, muted: true, preload: 'auto', playsInline: true });
+  document.body.insertBefore(v, document.getElementById('shots'));
+  const shot = { ...s, v, start };
+  start += s.len - XFADE;
+  return shot;
+});
+const TOTAL = start + XFADE;
+document.body.dataset.duration = TOTAL.toFixed(2);
+
+const clamp = (x) => Math.min(Math.max(x, 0), 1);
+const smooth = (x) => { x = clamp(x); return x * x * (3 - 2 * x); };
+const seekVideo = (v, t) => new Promise((ok) => {
+  if (Math.abs(v.currentTime - t) < 0.001) return ok();
+  v.addEventListener('seeked', ok, { once: true });
+  v.currentTime = t;
+});
+const loaded = Promise.all(shots.map(({ v }) => new Promise((ok, err) => {
+  if (v.readyState >= 2) return ok();
+  v.addEventListener('loadeddata', ok, { once: true });
+  v.addEventListener('error', () => err(new Error(`cannot load ${v.src}`)), { once: true });
+})));
+
+window.__seek = async (ms) => {
+  await loaded;
+  const t = ms / 1000;
+  await Promise.all(shots.map(async (s, i) => {
+    const local = t - s.start;
+    const fadeIn = i === 0 ? 1 : smooth(local / XFADE);
+    const visible = local > -0.05 && local < s.len + 0.05;
+    s.v.style.opacity = visible ? fadeIn : 0;
+    if (visible) await seekVideo(s.v, Math.min(s.from + Math.max(local, 0), s.v.duration - 0.05));
+  }));
+  // Type fades in with a small rise after the first second and leaves just before the end.
+  const inK = smooth((t - 0.6) / 0.9), outK = 1 - smooth((t - (TOTAL - 1.3)) / 0.8);
+  const k = Math.min(inK, outK);
+  for (const el of [document.getElementById('title'), document.getElementById('logo')]) {
+    el.style.opacity = k;
+    el.style.transform = `translateY(${(1 - inK) * 16}px)`;
+    el.style.filter = `blur(${(1 - k) * 6}px)`;
+  }
+  document.getElementById('fade').style.opacity = Math.max(1 - smooth(t / 0.5), smooth((t - (TOTAL - 0.5)) / 0.5));
+};
+</script>
+</body>
+</html>

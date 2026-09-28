@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="th">
+<head>
+<meta charset="utf-8">
+<title>4-bold-promo</title>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;700;800&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../brand/tokens.css">
+<style>
+  /* From ref.jpg: full-width heavy word + italic serif kicker above, 3 specs separated by /, large tilted product, discount badge bottom-right.
+     Palette: Phthalo green replaces the ref's maroon; now on brand tokens.
+     Not a promotion → delete the three price layers: badge-old, badge-number, badge-caption.
+
+     LAYERS (PSD): `arm` (ครึ่งอกสูทเนกไทเขียว) กับ `product` (กรอบแว่น) แยกชั้นกัน ตั้งใจให้ลบขาแว่น
+     ที่พาดทับมือได้เองใน Photoshop โดยตัวคนไม่กระทบ · ราคาแยกสามชั้นเพื่อแก้ทีละชั้น
+     ตัวอักษรใน PSD เป็นภาพแล้ว พิมพ์ทับไม่ได้ ถ้าจะเปลี่ยนคำต้องแก้ HTML แล้วเรนเดอร์ใหม่
+
+     ค่าปัจจุบัน = "นิ้วจับขาแว่น + แว่นอยู่กลางผืน" ได้พร้อมกันด้วยการเลื่อนมือไปหาแว่น
+     (`.product left:240 top:450 width:520` เอียง -6° · `.arm right:-236 bottom:-55 width:760`)
+
+     กติกา: ขอบขวาของกรอบต้องตรงกับง่ามนิ้วพอดี ไม่งั้นได้แค่แว่นลอยผ่านมือ
+     ง่ามนิ้วอยู่ราว 27% จากซ้าย 20% จากบน ของกรอบภาพ arm-suit_1.png
+     กรอบรุ่นอื่นสัดส่วนต่างกัน ต้องเรนเดอร์แล้ววัดใหม่ทุกครั้ง
+
+     ข้อแลกเปลี่ยนที่รู้แล้ว: พอดันมือไปขวาเพื่อไปเจอขาแว่นกลางผืน มุมขวาล่างของภาพแขน
+     ซึ่งเป็นที่อยู่ของเนกไทจะหลุดออกนอกเฟรม — เนกไทหาย
+     อยากได้ครบทั้งสาม (จับขาแว่น + แว่นกลาง + เห็นเนกไท) ต้องสลับไป arm-suit_2.png
+     ซึ่งเนกไทอยู่กลางลำตัวไม่ใช่มุมภาพ แล้วใช้ค่า left:50 bottom:-80 width:780 */
+  html, body { margin: 0; background: transparent; }
+  body { position: relative; width: 1080px; height: 1080px; overflow: hidden; font-family: var(--to-font-body); color: var(--to-black); }
+  body > [data-layer] { position: absolute; box-sizing: border-box; }
+
+  .background { inset: 0; background: var(--to-timberwolf); }
+  .grain { left: 0; top: 0; width: 1080px; height: 1080px; opacity: .5; }
+  .kicker { left: 0; right: 0; top: 52px; text-align: center; font-family: var(--to-font-display); font-weight: 700; font-size: 28px; letter-spacing: var(--to-track-eyebrow); text-transform: uppercase; color: var(--to-green); }
+  .big { left: 0; right: 0; top: 128px; text-align: center; font-family: var(--to-font-display); font-weight: 800; font-size: 200px; line-height: 1.05; letter-spacing: var(--to-track-display); color: var(--to-green); }
+  /* ช่องระหว่างคำว่า VISION กับกรอบแว่นแคบ — สูงเกินไปชน VISION ต่ำเกินไปโดนกรอบแว่นพาดทับ */
+  .meta { left: 0; right: 0; top: 310px; display: flex; justify-content: center; align-items: center; gap: 26px; font-family: var(--to-font-body); font-size: 17px; line-height: 1.15; text-transform: uppercase; }
+  .meta i { font-style: normal; color: #9a948a; }
+  /* แขนสวมสูทเข้าจากมุมขวาล่าง นิ้วจีบค้างไว้เป็นช่องให้วางกรอบแว่นจริง
+     (ref ใช้มือถือแว่นของแบรนด์อื่น เราจึง gen มือเปล่าแล้ววางสินค้าจริงทับ) */
+  /* arm-suit_1.png = แขนอย่างเดียวตามโครง ref มีขอบโปร่งรอบตัว เข้าเฟรมจากมุมขวาล่าง
+     สลับไปใช้ arm-suit_2.png (ครึ่งอก เนื้อเต็มเฟรม เห็นเนกไทเต็มเส้น) ได้ แต่ต้องใช้ค่าคนละชุด:
+     left: 50px; bottom: -80px; width: 780px; */
+  .arm { right: -236px; bottom: -55px; width: 760px; }
+  /* กรอบแว่นจริงนั่งในช่องนิ้ว — ขยับสามค่านี้ทีละโพสต์ให้ขาแว่นพอดีกับนิ้วที่จีบ
+     ค่าปัจจุบันจูนไว้กับ BOSS1197 (ภาพหน้าตรง อัตราส่วนราว 3.3:1) กรอบรุ่นอื่นสัดส่วนต่างกัน
+     ต้องเรนเดอร์แล้วดูว่าขาแว่นตกในง่ามนิ้วจริงไหม ถ้าลอยให้เลื่อน left/top ทีละ 20-40px
+     ใช้ได้เฉพาะภาพหน้าตรง `_1` เท่านั้น ภาพมุมเอียง `_2` จะดูเหมือนแว่นลอยไม่ได้ถูกถือ */
+  /* แว่นวางกึ่งกลางผืน ไม่ฝืนให้มือหนีบ — รูปกรอบเป็นภาพหน้าตรงระนาบแบน ส่วนมือในภาพอยู่คนละระนาบ
+     ประกบยังไงก็ไม่เป็นธรรมชาติ · `product` กับ `arm` แยก layer ใน PSD ลบขาแว่นที่ทับมือได้เลย */
+  .product { left: 240px; top: 450px; width: 520px; transform: rotate(-6deg); filter: drop-shadow(0 24px 22px rgba(18, 58, 41, .32)); }
+  /* ราคาแยกเป็น 3 layer เพื่อให้แก้ทีละชั้นใน PSD ได้ — ไม่ใช่ก้อนเดียวแบบเดิม
+     ไม่ใช่โปรโมชัน → ลบทั้งสาม layer: badge-old, badge-number, badge-caption
+     ราคาขีดฆ่าเคยเป็นสี Peach แล้วตกไปนอนบนแขนสูทดำจนอ่านไม่ออก จึงใช้ Snow */
+  .badge-old { right: 64px; bottom: 268px; text-align: right; font-family: var(--to-font-display);
+               font-weight: 500; font-size: 32px; color: var(--to-snow); opacity: .75; text-decoration: line-through; }
+  .badge-number { right: 64px; bottom: 104px; text-align: right; font-family: var(--to-font-display);
+                  font-weight: 800; font-size: 150px; line-height: .9; color: var(--to-snow); }
+  .badge-number sup { font-size: 56px; vertical-align: top; }
+  .badge-caption { right: 64px; bottom: 64px; text-align: right; font-family: var(--to-font-display);
+                   font-weight: 700; font-size: 18px; letter-spacing: var(--to-track-eyebrow);
+                   text-transform: uppercase; color: var(--to-snow); }
+  .cta { left: 64px; bottom: 64px; padding: 13px 28px; border-radius: var(--to-radius); background: var(--to-snow); font-family: var(--to-font-display); font-weight: 700; font-size: 20px; letter-spacing: var(--to-track-eyebrow); text-transform: uppercase; color: var(--to-black); }
+  .logo { left: var(--to-margin); top: var(--to-margin); width: var(--to-logo-width); }
+</style>
+</head>
+<body data-width="1080" data-height="1080">
+  <div class="background" data-layer="background"></div>
+  <img class="logo" data-layer="logo" src="../../brand/logo/timeoptic.svg" alt="">
+  <svg class="grain" data-layer="grain" viewBox="0 0 1080 1080" xmlns="http://www.w3.org/2000/svg">
+    <filter id="n"><feTurbulence type="fractalNoise" baseFrequency=".9" numOctaves="2" stitchTiles="stitch"/><feColorMatrix values="0 0 0 0 .45  0 0 0 0 .4  0 0 0 0 .35  0 0 0 .18 0"/></filter>
+    <rect width="1080" height="1080" filter="url(#n)"/>
+  </svg>
+  <div class="kicker" data-layer="kicker">elevate your</div>
+  <div class="big" data-layer="big">VISION</div>
+  <div class="meta" data-layer="meta"><span>Lens<br>Lens name</span><i>/</i><span>Coating<br>name</span><i>/</i><span>Brand<br>Model</span></div>
+  <img class="arm" data-layer="arm" src="../../data/models/arm-suit_1.png" alt="">
+  <img class="product" data-layer="product" src="../_preview/angle.png" alt="">
+  <div class="badge-old" data-layer="badge-old">฿0,000</div>
+  <div class="badge-number" data-layer="badge-number">35<sup>%</sup></div>
+  <div class="badge-caption" data-layer="badge-caption">LIMITED TIME OFFER</div>
+  <div class="cta" data-layer="cta">ORDER NOW</div>
+</body>
+</html>

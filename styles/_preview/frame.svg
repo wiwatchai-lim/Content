@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 340" width="900" height="340">
+  <!-- Placeholder frame used only for style previews. Real posts use photos from data/frames/. -->
+  <defs>
+    <path id="rim" fill-rule="evenodd" d="M44 78 C44 50 64 40 96 38 L372 32 C408 30 424 50 424 88 L420 226 C414 292 366 314 300 314 L166 314 C96 314 54 280 48 214 Z
+      M76 94 C76 76 88 70 110 69 L362 64 C384 64 394 76 394 98 L391 222 C387 268 354 284 298 284 L170 284 C118 284 86 262 80 212 Z"/>
+    <path id="glass" d="M76 94 C76 76 88 70 110 69 L362 64 C384 64 394 76 394 98 L391 222 C387 268 354 284 298 284 L170 284 C118 284 86 262 80 212 Z"/>
+    <linearGradient id="lens" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#ffffff" stop-opacity=".5"/>
+      <stop offset=".5" stop-color="#d6e7ee" stop-opacity=".16"/>
+      <stop offset="1" stop-color="#9ec3cf" stop-opacity=".32"/>
+    </linearGradient>
+    <linearGradient id="acetate" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#3b3835"/>
+      <stop offset=".22" stop-color="#1b1a19"/>
+      <stop offset="1" stop-color="#0c0c0c"/>
+    </linearGradient>
+    <clipPath id="clip"><use href="#glass"/></clipPath>
+    <g id="half">
+      <use href="#glass" fill="url(#lens)"/>
+      <path d="M120 300 L270 50 L320 50 L170 300 Z" fill="#fff" opacity=".16" clip-path="url(#clip)"/>
+      <use href="#rim" fill="url(#acetate)"/>
+      <path d="M104 46 L368 40" stroke="#fff" stroke-opacity=".2" stroke-width="3" stroke-linecap="round"/>
+      <path d="M46 84 L6 70 C2 70 0 74 0 78 L0 92 C0 96 2 99 6 100 L46 116 Z" fill="#121212"/>
+    </g>
+  </defs>
+  <use href="#half"/>
+  <use href="#half" transform="translate(900 0) scale(-1 1)"/>
+  <path d="M414 92 C440 64 460 64 486 92 L486 116 C460 92 440 92 414 116 Z" fill="#161514"/>
+</svg>

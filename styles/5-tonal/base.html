@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="th">
+<head>
+<meta charset="utf-8">
+<title>5-tonal</title>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;700;800&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../brand/tokens.css">
+<style>
+  /* From ref.jpg: tonal background matching the frame color with a soft center glow, bold uppercase headline a shade darker, angled frame centered,
+     SHOP NOW bottom-left, model code bottom-right — set the --tone* colors to match each post's frame.
+     Rebuilt on brand tokens: --tone* default to the brand's neutral surfaces (Timberwolf / Pastel Gray), still meant to be retuned per post. */
+  :root {
+    --tone-light: var(--to-timberwolf);
+    --tone: var(--to-pastel);
+    --tone-dark: #9A9C8C; /* darker neutral in the same family, for the vignette edge */
+    --text: var(--to-black);
+    --deep: var(--to-green);
+  }
+  html, body { margin: 0; background: transparent; }
+  body { position: relative; width: 1080px; height: 1080px; overflow: hidden; font-family: var(--to-font-body); color: var(--text); }
+  body > [data-layer] { position: absolute; box-sizing: border-box; }
+
+  .background { inset: 0; background: radial-gradient(75% 65% at 50% 46%, var(--tone-light) 0%, var(--tone) 55%, var(--tone-dark) 130%); }
+  .brand { right: var(--to-margin); top: 56px; font-family: var(--to-font-display); font-weight: 700; font-size: 34px;
+           letter-spacing: var(--to-track-eyebrow); text-transform: uppercase; color: var(--deep); }
+  .headline { left: 0; right: 0; top: 240px; margin: 0; text-align: center; font-family: var(--to-font-display);
+              font-weight: 800; font-size: 96px; line-height: 1.02; letter-spacing: var(--to-track-display); color: var(--to-black); }
+  .headline span { display: block; margin-top: 14px; font-size: 54px; font-weight: 700; }
+  .product { left: 110px; top: 470px; width: 860px; transform: rotate(-4deg); filter: drop-shadow(0 30px 26px rgba(33, 33, 33, .25)); }
+  .specs { right: var(--to-margin); bottom: 104px; text-align: right; font-family: var(--to-font-body); font-size: 22px; font-weight: 500; }
+  .cta { left: var(--to-margin); bottom: 52px; font-family: var(--to-font-display); font-weight: 700; font-size: 42px;
+         text-transform: uppercase; color: var(--deep); }
+  .code { right: var(--to-margin); bottom: 56px; font-family: var(--to-font-display); font-weight: 700; font-size: 30px;
+          letter-spacing: var(--to-track-eyebrow); text-transform: uppercase; color: var(--text); }
+  .logo { left: var(--to-margin); top: var(--to-margin); width: var(--to-logo-width); }
+</style>
+</head>
+<body data-width="1080" data-height="1080">
+  <div class="background" data-layer="background"></div>
+  <img class="logo" data-layer="logo" src="../../brand/logo/timeoptic.svg" alt="">
+  <div class="brand" data-layer="brand">Brand</div>
+  <h1 class="headline" data-layer="headline">PURE VISION<span>EVERYDAY</span></h1>
+  <img class="product" data-layer="product" src="../_preview/angle.png" alt="">
+  <div class="specs" data-layer="specs">Lens Lens name · Coating Coating name</div>
+  <div class="cta" data-layer="cta">SHOP NOW</div>
+  <div class="code" data-layer="code">MODEL C1 49</div>
+</body>
+</html>

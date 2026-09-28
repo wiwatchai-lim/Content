@@ -1,0 +1,393 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=1080, height=1920" />
+    <!--
+      Bolon BJ3185 B10 (Yorkville, black) x HOYA — beat clip, minimal. The glasses are the hero on calm warm neutrals,
+      one quiet clay accent, lots of space. Bolon logo top left for the whole clip, TIMEOPTIC wordmark on the end card.
+      Edit 2026-09-28 (user): fewer whole-frame shots, more close-ups; lens changed from Shamir to HOYA Nulux Classic + Hi-Vision LongLife.
+      Cut to "Neon Show" (96 BPM) from 17.554 s in the song: the bass returns on beat 4 (20.05 s). 20 beats = 12.5 s.
+        beats 0-4    hook: "BOLON" temple tip slammed in on frame 0 (over-scale + blur + flash + shake), hard cuts on the beat:
+                     double temple lines, bridge, front rim in profile
+        beats 4-8    stone panel rises on the drop: the whole three-quarter view on beat 4, then close-ups on 5-7
+                     (ribbed temple tip, nose pad, lens with a light streak), BJ3185 bounces in
+        beats 8-12   soft grey splits in from both sides: one detail per beat (temple lines, bridge, temple tip, lens)
+        beats 12-16  warm white circle opens: side view glides in, close-ups on 13-14 (brow corner, end piece), front on 15
+        beats 16-20  stone end card: TIMEOPTIC centre, the front view under it
+    -->
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/gsap.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;700;800;900&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="assets/tokens.css" />
+    <style>
+      * { margin: 0; padding: 0; box-sizing: border-box; }
+      html, body { width: 1080px; height: 1920px; overflow: hidden; background: #f4f1ec; }
+      #root { position: relative; width: 1080px; height: 1920px; overflow: hidden; font-family: var(--to-font-body); color: #1c1b19;
+              --warm: #f4f1ec; --stone: #e2dcd2; --grey: #dcdcda; --clay: #8a5634; --ink: #1c1b19; --mute: #6b655d; }
+      .layer { position: absolute; }
+
+      #cam, #punch { position: absolute; inset: 0; transform-origin: 50% 55%; }
+      .bg { position: absolute; left: -400px; top: -400px; width: 1880px; height: 2720px; overflow: hidden; }
+      #bg0 { background: radial-gradient(ellipse 50% 36% at 50% 55%, #fbfaf7 0%, #f4f1ec 60%, #ebe6de 100%); }
+      #bg1 { background: radial-gradient(ellipse 50% 36% at 50% 56%, #ece7df 0%, #e2dcd2 60%, #d6cfc3 100%); }
+      #bg2 { background: transparent; }
+      #bg2 .half { position: absolute; top: 0; width: 940px; height: 2720px; background: #dcdcda; }
+      #bg2 .half.r { left: 940px; }
+      #bg3 { background: radial-gradient(ellipse 50% 36% at 50% 55%, #fdfcfa 0%, #f4f1ec 65%, #e9e4dc 100%); }
+      #bg3 .disc { position: absolute; left: 940px; top: 1360px; width: 1100px; height: 1100px; margin: -550px 0 0 -550px; border-radius: 50%; border: 2px solid rgba(168, 113, 74, .35); }
+      #bg4 { background: radial-gradient(ellipse 50% 36% at 50% 50%, #ebe6de 0%, #e2dcd2 70%); }
+      #bg1, #bg2, #bg3, #bg4 { visibility: hidden; }
+
+      .glasses { position: absolute; }
+      .glasses > div, .gwrap { position: relative; }
+      .glasses img, .gwrap img { display: block; width: 100%; }
+      .glasses .ghost { position: absolute; left: 0; top: 0; opacity: 0; filter: brightness(0) invert(.55); }
+      .glasses .shadow { position: absolute; left: 12%; right: 12%; bottom: -60px; height: 50px; border-radius: 50%;
+                         background: radial-gradient(closest-side, rgba(40, 32, 24, .32), rgba(40, 32, 24, 0)); filter: blur(10px); }
+      .glass { position: absolute; inset: 0; -webkit-mask-size: 100% 100%; mask-size: 100% 100%; -webkit-mask-repeat: no-repeat; mask-repeat: no-repeat; overflow: hidden;
+               background: linear-gradient(170deg, rgba(255, 255, 255, .28) 0%, rgba(215, 220, 222, .08) 50%, rgba(240, 238, 232, .22) 100%); }
+      .glass .win { position: absolute; top: 8%; width: 12%; height: 50%; border-radius: 16px; filter: blur(5px);
+                    background: linear-gradient(180deg, rgba(255, 255, 255, .6), rgba(255, 255, 255, .06)); transform: skewX(-14deg); }
+      .glass .streak { position: absolute; left: 0; top: -20%; bottom: -20%; width: 9%; filter: blur(3px); transform: translateX(-150px);
+                       background: linear-gradient(100deg, transparent, rgba(255, 255, 255, .75), transparent); }
+
+      .detail { position: absolute; left: -400px; top: -400px; width: 1880px; height: 2720px; overflow: hidden; }
+      .detail .zoom { position: absolute; inset: 0; transform-origin: 940px 1360px; }
+      .detail .gwrap { position: absolute; }
+
+      .type { position: absolute; left: 0; right: 0; text-align: center; white-space: nowrap; }
+      .type .ch, .type .w { display: inline-block; will-change: transform; }
+      .kicker { font-family: var(--to-font-display); font-weight: 700; font-size: 28px; letter-spacing: .34em; color: var(--clay); }
+      .big { font-family: var(--to-font-display); font-weight: 800; font-size: 104px; line-height: 1; letter-spacing: -.02em; color: var(--ink); text-transform: uppercase; }
+      .mega { font-family: var(--to-font-display); font-weight: 900; font-size: 200px; line-height: 1; letter-spacing: -.03em; color: var(--ink); }
+      .light { font-family: var(--to-font-display); font-weight: 500; font-size: 64px; letter-spacing: .02em; color: var(--ink); }
+      .sub { font-family: var(--to-font-body); font-weight: 500; font-size: 34px; color: var(--mute); }
+      .rule { position: absolute; left: 490px; width: 100px; height: 3px; background: var(--clay); transform-origin: center; }
+      .chip { display: inline-block; padding: 14px 28px; border: 2px solid var(--clay); color: var(--ink); font-family: var(--to-font-display);
+              font-weight: 700; font-size: 28px; letter-spacing: .16em; text-transform: uppercase; }
+      .wipe { clip-path: inset(0 0 0 0); }
+
+      #bolon { left: 64px; top: 64px; width: 240px; height: 62px; opacity: .92; }
+      #logo { left: 384px; top: 936px; width: 312px; height: 48px; transform-origin: 50% 50%; }
+      #logo b { position: absolute; top: 0; height: 48px; background: url(assets/timeoptic.svg) no-repeat; background-size: 300px 47.6px; }
+      #logo .shine { position: absolute; inset: 0; -webkit-mask: url(assets/timeoptic-mono.svg) center / 100% no-repeat; mask: url(assets/timeoptic-mono.svg) center / 100% no-repeat; overflow: hidden; }
+      #logo .shine i { position: absolute; top: 0; bottom: 0; left: 0; width: 80px; transform: translateX(-90px); background: linear-gradient(100deg, transparent, rgba(239, 207, 156, .95), transparent); }
+      #logo-rule { left: 490px; top: 1045px; width: 100px; height: 3px; background: var(--clay); transform-origin: center; }
+      #flash { inset: 0; background: #fff; opacity: 0; }
+    </style>
+  </head>
+  <body>
+    <div id="root" data-composition-id="main" data-start="0" data-duration="12.5" data-width="1080" data-height="1920">
+      <div id="cam" class="clip" data-start="0" data-duration="12.5" data-track-index="0"><div id="punch">
+        <div id="bg0" class="bg"></div>
+        <div id="bg1" class="bg"></div>
+        <div id="bg2" class="bg"><div class="half l" style="left:0"></div><div class="half r"></div></div>
+        <div id="bg3" class="bg"><div class="disc"></div></div>
+        <div id="bg4" class="bg"></div>
+
+        <!-- Hook shots, hard cuts on beats 0, 1, 2 (point of interest mapped to 940,1360 inside .detail) -->
+        <div class="detail" id="h1"><div class="zoom"><div class="gwrap" style="width:3277px; left:-2068px; top:560px;">
+          <img src="assets/BJ3185-B10_3.png" alt="" /></div></div></div>
+        <div class="detail" id="h2"><div class="zoom"><div class="gwrap" style="width:4506px; left:-2228px; top:964px;">
+          <img src="assets/BJ3185-B10_2.png" alt="" /></div></div></div>
+        <div class="detail" id="h3"><div class="zoom"><div class="gwrap" style="width:3686px; left:-230px; top:1000px;">
+          <img src="assets/BJ3185-B10_2.png" alt="" />
+          <div class="glass" style="-webkit-mask-image:url(assets/BJ3185-B10_2_lens.png); mask-image:url(assets/BJ3185-B10_2_lens.png);">
+            <i class="win" style="left:10%"></i><i class="win" style="left:50%"></i><i class="streak"></i></div></div></div></div>
+
+        <div class="detail" id="h4"><div class="zoom"><div class="gwrap" style="width:3277px; left:844px; top:1060px;">
+          <img src="assets/BJ3185-B10_3.png" alt="" /></div></div></div>
+        <!-- Close-ups on beats 5, 6, 7, 13, 14 -->
+        <div class="detail" id="c1"><div class="zoom"><div class="gwrap" style="width:3482px; left:-1712px; top:711px;">
+          <img src="assets/BJ3185-B10_3.png" alt="" /></div></div></div>
+        <div class="detail" id="c2"><div class="zoom"><div class="gwrap" style="width:3072px; left:-200px; top:1015px;">
+          <img src="assets/BJ3185-B10_2.png" alt="" />
+          <div class="glass" style="-webkit-mask-image:url(assets/BJ3185-B10_2_lens.png); mask-image:url(assets/BJ3185-B10_2_lens.png);"></div></div></div></div>
+        <div class="detail" id="c3"><div class="zoom"><div class="gwrap" style="width:2560px; left:465px; top:1048px;">
+          <img src="assets/BJ3185-B10_1.png" alt="" />
+          <div class="glass" style="-webkit-mask-image:url(assets/BJ3185-B10_1_lens.png); mask-image:url(assets/BJ3185-B10_1_lens.png);">
+            <i class="win" style="left:12%"></i><i class="streak"></i></div></div></div></div>
+        <div class="detail" id="c4"><div class="zoom"><div class="gwrap" style="width:3686px; left:-536px; top:1144px;">
+          <img src="assets/BJ3185-B10_1.png" alt="" />
+          <div class="glass" style="-webkit-mask-image:url(assets/BJ3185-B10_1_lens.png); mask-image:url(assets/BJ3185-B10_1_lens.png);"></div></div></div></div>
+        <div class="detail" id="c5"><div class="zoom"><div class="gwrap" style="width:3072px; left:850px; top:1195px;">
+          <img src="assets/BJ3185-B10_2.png" alt="" />
+          <div class="glass" style="-webkit-mask-image:url(assets/BJ3185-B10_2_lens.png); mask-image:url(assets/BJ3185-B10_2_lens.png);"></div></div></div></div>
+
+        <!-- Front view -->
+        <div id="gA" class="glasses" style="left:130px; top:900px; width:820px;">
+          <div class="travel"><div class="warp"><div class="sway"><div class="shadow"></div><div class="bop">
+            <img class="ghost" src="assets/BJ3185-B10_1.png" alt="" />
+            <img src="assets/BJ3185-B10_1.png" alt="" />
+            <div class="glass" style="-webkit-mask-image:url(assets/BJ3185-B10_1_lens.png); mask-image:url(assets/BJ3185-B10_1_lens.png);">
+              <i class="win" style="left:12%"></i><i class="win" style="left:61%"></i><i class="streak"></i>
+            </div>
+          </div></div></div></div>
+        </div>
+        <!-- Three-quarter view -->
+        <div id="gB" class="glasses" style="left:170px; top:920px; width:740px;">
+          <div class="travel"><div class="warp"><div class="sway"><div class="shadow"></div><div class="bop">
+            <img class="ghost" src="assets/BJ3185-B10_2.png" alt="" />
+            <img src="assets/BJ3185-B10_2.png" alt="" />
+            <div class="glass" style="-webkit-mask-image:url(assets/BJ3185-B10_2_lens.png); mask-image:url(assets/BJ3185-B10_2_lens.png);">
+              <i class="win" style="left:10%"></i><i class="win" style="left:50%"></i><i class="streak"></i>
+            </div>
+          </div></div></div></div>
+        </div>
+        <!-- Side view -->
+        <div id="gC" class="glasses" style="left:100px; top:930px; width:880px;">
+          <div class="travel"><div class="warp"><div class="sway"><div class="shadow"></div><div class="bop">
+            <img src="assets/BJ3185-B10_3.png" alt="" />
+          </div></div></div></div>
+        </div>
+
+        <!-- Details, one per beat 8-11 (point of interest at 940,1360 inside .detail) -->
+        <div class="detail" id="d1"><div class="zoom"><div class="gwrap" style="width:3277px; left:524px; top:1088px;">
+          <img src="assets/BJ3185-B10_3.png" alt="" /></div></div></div>
+        <div class="detail" id="d2"><div class="zoom"><div class="gwrap" style="width:2867px; left:-494px; top:1038px;">
+          <img src="assets/BJ3185-B10_1.png" alt="" />
+          <div class="glass" style="-webkit-mask-image:url(assets/BJ3185-B10_1_lens.png); mask-image:url(assets/BJ3185-B10_1_lens.png);"></div></div></div></div>
+        <div class="detail" id="d3"><div class="zoom"><div class="gwrap" style="width:3686px; left:-2570px; top:1054px;">
+          <img src="assets/BJ3185-B10_1.png" alt="" /></div></div></div>
+        <div class="detail" id="d4"><div class="zoom"><div class="gwrap" style="width:2253px; left:-197px; top:983px;">
+          <img src="assets/BJ3185-B10_2.png" alt="" />
+          <div class="glass" style="-webkit-mask-image:url(assets/BJ3185-B10_2_lens.png); mask-image:url(assets/BJ3185-B10_2_lens.png);">
+            <i class="win" style="left:50%"></i><i class="streak"></i></div></div></div></div>
+      </div></div>
+
+      <img id="bolon" class="clip layer" data-start="0" data-duration="12.5" data-track-index="7" src="assets/bolon.svg" alt="Bolon" />
+
+      <!-- Type, warm white -->
+      <div id="t0" class="clip layer" data-start="0" data-duration="3.3" data-track-index="5" style="inset:0">
+        <div class="type kicker split" style="top:300px">NEW IN STORE</div>
+        <div class="type big wipe" style="top:370px">YORKVILLE</div>
+        <div class="rule" id="rule0" style="top:510px"></div>
+        <div class="type sub words" style="top:545px">Bolon BJ3185 · B10 Black</div>
+      </div>
+      <!-- Type, stone -->
+      <div id="t1" class="clip layer" data-start="2.8" data-duration="2.7" data-track-index="6" style="inset:0">
+        <div class="type mega split" style="top:290px">BJ3185</div>
+        <div class="type light" style="top:510px"><span class="w" id="col">B10 · Black</span></div>
+      </div>
+      <!-- Type, the lens -->
+      <div id="t2" class="clip layer" data-start="4.9" data-duration="2.7" data-track-index="9" style="inset:0">
+        <div class="type kicker split" style="top:260px">THE LENS</div>
+        <div class="type big wipe" style="top:320px; font-size:70px">HOYA NULUX CLASSIC</div>
+        <div class="type sub words" style="top:430px">Pixel-sharp vision in an ultra-thin lens</div>
+      </div>
+      <!-- Type, the coating -->
+      <div id="t3" class="clip layer" data-start="7.4" data-duration="2.7" data-track-index="10" style="inset:0">
+        <div class="type kicker split" style="top:260px">THE COATING</div>
+        <div class="type big" style="top:320px; font-size:72px"><span class="w" id="cname">HI-VISION LONGLIFE</span></div>
+        <div class="type sub words" style="top:430px">HOYA's most durable anti-reflective coating</div>
+      </div>
+      <!-- Type, end card -->
+      <div id="t4" class="clip layer" data-start="9.9" data-duration="2.6" data-track-index="11" style="inset:0">
+        <div class="type kicker split" style="top:780px">NEW IN STORE</div>
+        <div class="type" style="top:1390px"><span class="chip w" id="endchip">Bolon BJ3185 · HOYA Nulux Classic</span></div>
+      </div>
+
+      <div id="logo-rule" class="clip layer" data-start="9.9" data-duration="2.6" data-track-index="12"></div>
+      <div id="logo" class="clip layer" data-start="0" data-duration="12.5" data-track-index="8" aria-label="TIMEOPTIC"><div class="shine"><i></i></div></div>
+      <div id="flash" class="clip layer" data-start="0" data-duration="12.5" data-track-index="13"></div>
+    </div>
+
+    <script>
+      window.__timelines = window.__timelines || {};
+      const tl = gsap.timeline({ paused: true });
+
+      const BPM = 96;                  // "Neon Show"; beat grid measured from 17.554 s in the song
+      const B = 60 / BPM;
+      const b = (n) => n * B;
+
+      document.querySelectorAll('.split').forEach((el) => {
+        const text = el.textContent;
+        el.textContent = '';
+        for (const c of text) {
+          if (c === ' ') { el.append(' '); continue; }
+          const s = document.createElement('span');
+          s.className = 'ch';
+          s.textContent = c;
+          el.append(s);
+        }
+      });
+      document.querySelectorAll('.words').forEach((el) => {
+        const words = el.textContent.split(' ');
+        el.textContent = '';
+        words.forEach((w, i) => {
+          const s = document.createElement('span');
+          s.className = 'w';
+          s.textContent = w;
+          el.append(s);
+          if (i < words.length - 1) el.append(' ');
+        });
+      });
+
+      const LETTERS = [[0, 282], [310, 392], [438, 834], [876, 1134], [1170, 1498], [1540, 1784], [1808, 2078], [2112, 2164], [2214, 2520]];
+      const logo = document.getElementById('logo'), k = 300 / 2520;
+      const LOGO_GAP = 12;  // space between TIME and OPTIC
+      LETTERS.forEach(([x0, x1], n) => {
+        const el = document.createElement('b');
+        el.style.cssText = `left:${x0 * k + (n >= 4 ? LOGO_GAP : 0)}px;width:${(x1 - x0) * k + 1}px;background-position:${-x0 * k}px 0;`;
+        logo.insertBefore(el, logo.firstChild);
+      });
+
+      // ---------- type moves ----------
+      const bounceIn = (sel, at, stagger = 0.05) =>
+        tl.from(`${sel} .ch`, { y: 140, scale: 0.3, rotation: (i) => (i % 2 ? 18 : -18), opacity: 0, duration: 0.55, ease: 'back.out(3)', stagger }, at);
+      const fadeIn = (sel, at, stagger = 0.04) =>
+        tl.from(sel, { opacity: 0, y: 12, duration: 0.5, ease: 'power2.out', stagger }, at);
+      const wipeIn = (sel, at, dur = 0.5) =>
+        tl.fromTo(sel, { clipPath: 'inset(0% 100% 0% 0%)' }, { clipPath: 'inset(0% 0% 0% 0%)', duration: dur, ease: 'power3.out' }, at);
+      const slideIn = (sel, at, from = -1) =>
+        tl.from(sel, { x: 700 * from, opacity: 0, duration: 0.45, ease: 'expo.out' }, at);
+      const hop = (sel, at, h = 14) =>
+        tl.to(sel, { keyframes: { y: [0, -h, 0] }, duration: B * 0.8, ease: 'sine.inOut', stagger: 0.025 }, at);
+      const q = (id, n) => `#${id} .type:nth-child(${n})`;
+      const show = (sel, from, to) => { tl.set(sel, { autoAlpha: 0 }, 0); tl.set(sel, { autoAlpha: 1 }, from); if (to) tl.set(sel, { autoAlpha: 0 }, to); };
+
+      // ---------- glasses moves ----------
+      // Jump cut: a quick blur-out, the glasses land at the new spot with one soft grey echo.
+      const jump = (g, at, p, out = true) => {
+        if (out) tl.to(`${g} .warp`, { opacity: 0, scale: 0.97, filter: 'blur(8px)', duration: 0.08, ease: 'power2.in' }, at - 0.08);
+        tl.set(`${g} .travel`, { x: p.x || 0, y: p.y || 0, scale: p.s || 1, rotation: p.r || 0 }, at);
+        tl.fromTo(`${g} .warp`, { opacity: 0, scale: 1.04, filter: 'blur(10px)' }, { opacity: 1, scale: 1, filter: 'blur(0px)', duration: 0.26, ease: 'expo.out', immediateRender: false }, at);
+        tl.fromTo(`${g} .ghost`, { x: (p.x || 0) > 0 ? -60 : 60, opacity: 0.35 }, { x: 0, opacity: 0, duration: 0.35, ease: 'power2.out', immediateRender: false }, at);
+      };
+      const bop = (g, at, h = 22) => {
+        tl.fromTo(`${g} .bop`, { y: 6 }, { keyframes: { y: [6, -h, 0] }, duration: B * 0.9, ease: 'sine.out', immediateRender: false }, at);
+        tl.fromTo(`${g} .shadow`, { scaleX: 1.04, opacity: 1 }, { keyframes: { scaleX: [1.04, 0.82, 1], opacity: [1, 0.6, 1] }, duration: B * 0.9, ease: 'sine.out', immediateRender: false }, at);
+      };
+
+      // ---------- visibility ----------
+      show('#gA', b(15)); show('#h1', 0, b(1)); show('#h2', b(1), b(2)); show('#h3', b(2), b(3));
+      show('#h4', b(3), b(4));
+      show('#gB', b(4), b(5));
+      show('#gC', b(12), b(13));
+      [['#c1', 5], ['#c2', 6], ['#c3', 7], ['#c4', 13], ['#c5', 14]].forEach(([c, n]) => show(c, b(n), b(n + 1)));
+      ['#d1', '#d2', '#d3', '#d4'].forEach((d, i) => show(d, b(8 + i), b(9 + i)));
+
+      // ---------- backgrounds: a quiet transition at each section ----------
+      tl.set('#bg1', { autoAlpha: 1 }, b(4) - 0.2);
+      tl.fromTo('#bg1', { yPercent: 100 }, { yPercent: 0, duration: 0.3, ease: 'power3.out', immediateRender: false }, b(4) - 0.2);
+      tl.set('#bg2', { autoAlpha: 1 }, b(8) - 0.2);
+      tl.fromTo('#bg2 .l', { xPercent: -100 }, { xPercent: 0, duration: 0.3, ease: 'power3.out', immediateRender: false }, b(8) - 0.2);
+      tl.fromTo('#bg2 .r', { xPercent: 100 }, { xPercent: 0, duration: 0.3, ease: 'power3.out', immediateRender: false }, b(8) - 0.2);
+      tl.set('#bg3', { autoAlpha: 1 }, b(12) - 0.2);
+      tl.fromTo('#bg3', { clipPath: 'circle(0% at 50% 55%)' }, { clipPath: 'circle(80% at 50% 55%)', duration: 0.4, ease: 'power3.out', immediateRender: false }, b(12) - 0.2);
+      tl.fromTo('#bg3 .disc', { scale: 0.6, opacity: 0 }, { scale: 1, opacity: 1, duration: b(2), ease: 'power2.out', immediateRender: false }, b(12));
+      tl.set('#bg4', { autoAlpha: 1 }, b(16) - 0.25);
+      tl.fromTo('#bg4', { opacity: 0 }, { opacity: 1, duration: 0.3, ease: 'power1.out', immediateRender: false }, b(16) - 0.25);
+
+      // ---------- camera: slow push per section, a small kick on the downbeats ----------
+      tl.fromTo('#cam', { scale: 1.0 }, { scale: 1.05, duration: b(4), ease: 'sine.inOut' }, 0);
+      tl.fromTo('#cam', { scale: 1.02 }, { scale: 1.06, duration: b(4), ease: 'none', immediateRender: false }, b(4));
+      tl.fromTo('#cam', { scale: 1.0 }, { scale: 1.03, duration: b(4), ease: 'none', immediateRender: false }, b(8));
+      tl.fromTo('#cam', { scale: 1.02 }, { scale: 1.06, duration: b(4), ease: 'none', immediateRender: false }, b(12));
+      tl.fromTo('#cam', { scale: 1.04 }, { scale: 1.0, duration: b(4), ease: 'power2.out', immediateRender: false }, b(16));
+      [4, 12, 16].forEach((n) => tl.fromTo('#punch', { scale: 1.04 }, { scale: 1, duration: B * 0.7, ease: 'power3.out', immediateRender: false }, b(n)));
+
+      // ---------- shot: hook (0-4) — slam in on frame 0, then hard cuts on the beat ----------
+      tl.fromTo('#h1 .zoom', { scale: 1.35, filter: 'blur(18px)' }, { scale: 1, filter: 'blur(0px)', duration: 0.15, ease: 'power4.out' }, 0);
+      tl.fromTo('#flash', { opacity: 0.9 }, { opacity: 0, duration: 0.3, ease: 'power2.out' }, 0);
+      tl.fromTo('#punch', { x: -18, y: 10 }, { keyframes: { x: [-18, 14, -8, 4, 0], y: [10, -8, 4, -2, 0] }, duration: 0.28, ease: 'none' }, 0);
+      tl.to('#h1 .zoom', { scale: 1.06, x: -40, duration: B - 0.15, ease: 'none' }, 0.15);
+      [['#h2', 1, 40], ['#h3', 2, -40]].forEach(([h, n, dx]) => {
+        tl.fromTo(`${h} .zoom`, { scale: 1.12 }, { scale: 1, duration: 0.12, ease: 'power3.out', immediateRender: false }, b(n));
+        tl.to(`${h} .zoom`, { scale: 1.05, x: dx, duration: B - 0.12, ease: 'none' }, b(n) + 0.12);
+        tl.fromTo('#punch', { x: dx / 4 }, { x: 0, duration: 0.14, ease: 'power2.out', immediateRender: false }, b(n));
+      });
+      tl.fromTo('#h3 .glass .streak', { x: -150 }, { x: 1900, duration: B * 0.8, ease: 'power2.inOut', immediateRender: false }, b(2) + 0.1);
+      // beat 3: hard cut to the front rim in profile, drifting up
+      tl.fromTo('#h4 .zoom', { scale: 1.15 }, { scale: 1, duration: 0.12, ease: 'power3.out', immediateRender: false }, b(3));
+      tl.to('#h4 .zoom', { scale: 1.05, y: -30, duration: B - 0.12, ease: 'none' }, b(3) + 0.12);
+
+      // ---------- shot: the whole three-quarter view on the drop (4), then close-ups (5-7) ----------
+      tl.set('#gB .travel', { x: 0, y: 40, scale: 1 }, b(4));
+      tl.fromTo('#gB .warp', { scale: 1.1, filter: 'blur(8px)' }, { scale: 1, filter: 'blur(0px)', duration: 0.16, ease: 'power3.out', immediateRender: false }, b(4));
+      bop('#gB', b(4) + 0.12, 24);
+      tl.to('#gB .glass .win', { xPercent: 120, duration: B, ease: 'none' }, b(4));
+      // 5: ribbed temple tip, snaps out of a blur
+      tl.fromTo('#c1 .zoom', { scale: 1.3, filter: 'blur(10px)' }, { scale: 1, filter: 'blur(0px)', duration: 0.16, ease: 'power4.out', immediateRender: false }, b(5));
+      tl.to('#c1 .zoom', { x: -40, duration: B - 0.16, ease: 'none' }, b(5) + 0.16);
+      // 6: nose pad, mask wipe from the bottom
+      tl.fromTo('#c2', { clipPath: 'inset(100% 0% 0% 0%)' }, { clipPath: 'inset(0% 0% 0% 0%)', duration: 0.22, ease: 'expo.out', immediateRender: false }, b(6));
+      tl.fromTo('#c2 .zoom', { scale: 1.08 }, { scale: 1, duration: B, ease: 'power2.out', immediateRender: false }, b(6));
+      // 7: the lens, a light streak runs across it
+      tl.fromTo('#c3 .zoom', { scale: 1.12 }, { scale: 1, duration: 0.12, ease: 'power3.out', immediateRender: false }, b(7));
+      tl.to('#c3 .zoom', { scale: 1.04, duration: B - 0.12, ease: 'none' }, b(7) + 0.12);
+      tl.fromTo('#c3 .glass .streak', { x: -150 }, { x: 1500, duration: B * 0.8, ease: 'power2.inOut', immediateRender: false }, b(7) + 0.05);
+      [5, 6, 7].forEach((n) => tl.fromTo('#punch', { x: n % 2 ? 12 : -12 }, { x: 0, duration: 0.14, ease: 'power2.out', immediateRender: false }, b(n)));
+
+      // ---------- shot: details (8-12) — zoom, slide left, slide right, rise ----------
+      tl.fromTo('#d1 .zoom', { scale: 1.2, opacity: 0 }, { scale: 1.04, opacity: 1, duration: 0.3, ease: 'power3.out', immediateRender: false }, b(8));
+      tl.to('#d1 .zoom', { scale: 1, duration: B - 0.3, ease: 'none' }, b(8) + 0.3);
+      tl.fromTo('#d2 .zoom', { x: -900 }, { x: 0, duration: 0.28, ease: 'expo.out', immediateRender: false }, b(9));
+      tl.to('#d2 .zoom', { x: 30, duration: B - 0.28, ease: 'none' }, b(9) + 0.28);
+      tl.fromTo('#d3 .zoom', { x: 900 }, { x: 0, duration: 0.28, ease: 'expo.out', immediateRender: false }, b(10));
+      tl.to('#d3 .zoom', { x: -30, duration: B - 0.28, ease: 'none' }, b(10) + 0.28);
+      tl.fromTo('#d4 .zoom', { y: 500, opacity: 0 }, { y: 0, opacity: 1, duration: 0.3, ease: 'expo.out', immediateRender: false }, b(11));
+      tl.fromTo('#d4 .glass .streak', { x: -150 }, { x: 1900, duration: B * 0.8, ease: 'power2.inOut', immediateRender: false }, b(11) + 0.1);
+
+      // ---------- shot: side > three-quarter > front (12-16) ----------
+      tl.fromTo('#gC .travel', { x: 1100 }, { x: 0, duration: B * 0.9, ease: 'expo.out', immediateRender: false }, b(12));
+      tl.to('#gC .travel', { x: -30, duration: B * 0.1, ease: 'none' }, b(12) + B * 0.9);
+      // 13: brow corner by the bridge, slides down; 14: end piece of the three-quarter view, snaps out of a blur
+      tl.fromTo('#c4 .zoom', { y: -500 }, { y: 0, duration: 0.26, ease: 'expo.out', immediateRender: false }, b(13));
+      tl.to('#c4 .zoom', { y: 20, duration: B - 0.26, ease: 'none' }, b(13) + 0.26);
+      tl.fromTo('#c5 .zoom', { scale: 1.25, filter: 'blur(10px)' }, { scale: 1, filter: 'blur(0px)', duration: 0.16, ease: 'power4.out', immediateRender: false }, b(14));
+      tl.to('#c5 .zoom', { x: 40, duration: B - 0.16, ease: 'none' }, b(14) + 0.16);
+      // 15: the front opens like a turn
+      tl.set('#gA .travel', { x: 0, y: 40, scale: 1 }, b(15));
+      tl.set('#gA .warp', { opacity: 1, filter: 'blur(0px)' }, b(15));
+      tl.fromTo('#gA .warp', { scaleX: 0.05 }, { scaleX: 1, duration: 0.28, ease: 'back.out(1.6)', immediateRender: false }, b(15));
+      tl.fromTo('#gA .glass .streak', { x: -150 }, { x: 1000, duration: B * 0.9, ease: 'power2.inOut', immediateRender: false }, b(15.2));
+
+      // ---------- end (16-20) ----------
+      tl.to('#gA .warp', { opacity: 0, duration: 0.12, ease: 'power1.in' }, b(16) - 0.12);
+      tl.set('#gA .travel', { y: 180, scale: 0.6 }, b(16));
+      tl.fromTo('#gA .warp', { opacity: 0, y: 30 }, { opacity: 1, y: 0, duration: 0.45, ease: 'power2.out', immediateRender: false }, b(16.6));
+      [17, 18, 19].forEach((n) => bop('#gA', b(n), 12));
+
+      // ---------- type ----------
+      fadeIn(q('t0', 1) + ' .ch', b(3), 0.02);
+      wipeIn(q('t0', 2), b(3), 0.35);
+      tl.from('#rule0', { scaleX: 0, duration: B * 0.6, ease: 'power3.out' }, b(3.2));
+      fadeIn(q('t0', 4) + ' .w', b(3.2), 0.05);
+      tl.to('#t0 .type, #rule0', { y: -40, opacity: 0, duration: 0.2, ease: 'power2.in', stagger: 0.02 }, b(4.6));
+
+      bounceIn(q('t1', 1), b(4.8), 0.05);
+      slideIn('#col', b(5.5), -1);
+      hop(q('t1', 1) + ' .ch', b(6));
+      hop(q('t1', 1) + ' .ch', b(7));
+      tl.to(q('t1', 1) + ' .ch', { y: -80, opacity: 0, duration: 0.24, ease: 'back.in(2)', stagger: 0.015 }, b(8) - 0.32);
+      tl.to('#col', { x: 700, opacity: 0, duration: 0.24, ease: 'power3.in' }, b(8) - 0.3);
+
+      fadeIn(q('t2', 1) + ' .ch', b(8), 0.03);
+      wipeIn(q('t2', 2), b(8) + 0.1, 0.5);
+      fadeIn(q('t2', 3) + ' .w', b(9), 0.08);
+      tl.to('#t2 .type', { opacity: 0, y: -30, duration: 0.25, ease: 'power2.in', stagger: 0.03 }, b(12) - 0.32);
+
+      fadeIn(q('t3', 1) + ' .ch', b(12), 0.03);
+      slideIn('#cname', b(12) + 0.1, 1);
+      fadeIn(q('t3', 3) + ' .w', b(13), 0.06);
+      tl.to('#t3 .type', { opacity: 0, duration: 0.25, ease: 'power1.in', stagger: 0.03 }, b(16) - 0.3);
+
+      fadeIn(q('t4', 1) + ' .ch', b(16.5), 0.03);
+      tl.from('#endchip', { opacity: 0, y: 20, duration: 0.5, ease: 'power2.out' }, b(17));
+
+      // ---------- brand ----------
+      // the wordmark only on the end card: over the close-ups it would sit on the black frame or clash with the type
+      tl.set('#logo', { scale: 2.9 }, 0);
+      tl.from('#logo b', { y: 40, opacity: 0, filter: 'blur(6px)', duration: 0.45, ease: 'back.out(2)', stagger: B / 8 }, b(16));
+      tl.to('#logo', { scale: 3.05, duration: b(3), ease: 'none' }, b(16) + B * 0.9);
+      tl.from('#logo-rule', { scaleX: 0, duration: B, ease: 'power3.out' }, b(16.5));
+      [17, 18, 19].forEach((n) => tl.to('#logo b', { keyframes: { y: [0, -10, 0] }, duration: B * 0.8, ease: 'sine.inOut', stagger: 0.03 }, b(n)));
+      tl.fromTo('#logo .shine i', { x: -90 }, { x: 320, duration: B * 1.4, ease: 'power2.inOut', immediateRender: false }, b(18));
+
+
+      window.__timelines['main'] = tl;
+      tl.seek(0);
+    </script>
+  </body>
+</html>

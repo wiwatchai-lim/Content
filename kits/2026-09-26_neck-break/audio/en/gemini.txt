@@ -1,0 +1,10 @@
+00|Let's take a break.||a friendly, upbeat but warm voice inviting a friend to take a break
+01|Close your eyes.||a warm, friendly fitness coach giving a quick, crisp cue, brisk natural pace, short, no pauses
+02|Look up.||a warm, friendly fitness coach giving a quick, crisp cue, brisk natural pace, short, no pauses
+03|Turn to the right.||a warm, friendly fitness coach giving a quick, crisp cue, brisk natural pace, short, no pauses
+04|Turn to the left.||a warm, friendly fitness coach giving a quick, crisp cue, brisk natural pace, short, no pauses
+05|Look up, and stretch your neck back.||a warm, friendly fitness coach giving a quick, crisp cue, brisk natural pace, short, no pauses
+06|Turn right, chin to your shoulder.||a warm, friendly fitness coach giving a quick, crisp cue, brisk natural pace, short, no pauses
+07|Turn left, chin to your shoulder.||a warm, friendly fitness coach giving a quick, crisp cue, brisk natural pace, short, no pauses
+08|Open your eyes.||a warm, friendly fitness coach giving a quick, crisp cue, brisk natural pace, short, no pauses
+09|Let Time Optic take care of your eyes.||a warm, friendly fitness coach giving a quick, crisp cue, brisk natural pace, short, no pauses

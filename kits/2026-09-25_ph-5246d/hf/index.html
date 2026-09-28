@@ -1,0 +1,368 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=1080, height=1920" />
+    <!--
+      Paul Hueman PHF-5246D x HOYA — beat clip, "quiet minimal luxury".
+      Cut to "Silent Desire" (90.75 BPM) from 9.880 s in the song: two beats, the two-beat break, then the drop on beat 4.
+      20 beats = 13.22 s. The song is added in TikTok (or muxed on for a local preview).
+        beats 0-4    gallery white: hairline frame draws, the front view is revealed through a mask and pulls into focus
+        beats 4-8    drop: the white splits like gallery doors onto stone, three-quarter view glides, brand line
+        beats 8-12   white wipes down from the top, the lens; focus racks on the kicks
+        beats 12-16  charcoal snaps open from a line, a lit vitrine holds the glasses, the coating
+        beats 16-20  white end card, TIMEOPTIC wordmark centred
+      The glasses are the real cutouts (800 px source) and are never shown wider than their native size.
+    -->
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/gsap.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;700;800&family=Inter:wght@300;400;500&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="assets/tokens.css" />
+    <style>
+      * { margin: 0; padding: 0; box-sizing: border-box; }
+      html, body { width: 1080px; height: 1920px; overflow: hidden; background: #f4f2ee; }
+      #root { position: relative; width: 1080px; height: 1920px; overflow: hidden; font-family: var(--to-font-body); color: #232323; }
+      .layer { position: absolute; }
+      #cam { position: absolute; inset: 0; transform-origin: 50% 50%; }
+
+      /* ---------- backgrounds ---------- */
+      .bg { position: absolute; inset: -60px; }
+      #bgStone { background: radial-gradient(ellipse 60% 45% at 50% 52%, #e6e1d8 0%, #d9d4cb 60%, #c9c2b6 100%); }
+      .door { position: absolute; top: -60px; bottom: -60px; width: 600px; background: #f4f2ee; }
+      #doorL { left: -60px; }
+      #doorR { right: -60px; }
+      #bgWhite2 { background: radial-gradient(ellipse 60% 45% at 50% 50%, #faf9f6 0%, #f1eee8 70%, #e6e2da 100%); }
+      #bgChar { background: radial-gradient(ellipse 55% 40% at 50% 55%, #2e2d2b 0%, #211f1e 70%, #171615 100%); }
+      #vitrine { left: 150px; top: 820px; width: 780px; height: 620px; background: linear-gradient(180deg, #fbfaf7, #ece8e1);
+                 box-shadow: 0 40px 90px rgba(0, 0, 0, .45); transform-origin: 50% 50%; }
+      #bgWhite3 { background: #f4f2ee; opacity: 0; }
+      #bgWhite2 { clip-path: inset(0% 0% 100% 0%); }
+      #bgChar { clip-path: inset(50% 0% 50% 0%); }
+      #gA, #gB, #gC { visibility: hidden; }
+      /* Hook: hard cuts between real cutouts at <= 1:1 — detail, detail, detail, whole frame */
+      #tease { inset: 0; }
+      #tease .shot { position: absolute; inset: 0; transform-origin: 540px 1080px; visibility: hidden; }
+      #tease .shot.m { -webkit-mask-image: radial-gradient(circle 240px at 540px 1080px, #000 50%, transparent 100%);
+                       mask-image: radial-gradient(circle 240px at 540px 1080px, #000 50%, transparent 100%); }
+      #tease img { position: absolute; display: block; max-width: none; }
+      /* Detail cards: the real cutout at 1:1 pixel scale (never enlarged), framed tight, soft vignette */
+      .detail { position: absolute; left: 310px; top: 900px; width: 460px; height: 460px; overflow: hidden; visibility: hidden;
+                background: #faf9f6; box-shadow: 0 0 0 1px rgba(35, 35, 35, .35), 0 30px 60px rgba(60, 50, 40, .12); }
+      .detail img { position: absolute; display: block; }
+      .detail::after { content: ''; position: absolute; inset: 0; background: radial-gradient(closest-side, rgba(250, 249, 246, 0) 62%, rgba(236, 232, 225, .9) 100%); }
+      #phlogo { left: 96px; top: 104px; width: 250px; }
+
+      /* ---------- hairlines ---------- */
+      .hl { position: absolute; background: #232323; opacity: .5; }
+      #frT, #frB { left: 60px; right: 60px; height: 1px; transform-origin: 50% 50%; }
+      #frT { top: 60px; } #frB { bottom: 60px; }
+      #frL, #frR { top: 60px; bottom: 60px; width: 1px; transform-origin: 50% 50%; }
+      #frL { left: 60px; } #frR { right: 60px; }
+      #metro { left: 0; right: 0; top: 1680px; height: 14px; text-align: center; font-size: 0; }
+      #metro i { display: inline-block; width: 1px; height: 14px; margin: 0 11px; background: #232323; opacity: .2; }
+
+      /* ---------- glasses: position > move > focus > breath ---------- */
+      .glasses { position: absolute; }
+      .glasses > div { position: relative; }
+      .glasses img { display: block; width: 100%; }
+      .glasses .shadow { position: absolute; left: 12%; right: 12%; bottom: -54px; height: 40px; border-radius: 50%;
+                         background: radial-gradient(closest-side, rgba(30, 28, 25, .28), rgba(30, 28, 25, 0)); filter: blur(8px); }
+      .glass { position: absolute; inset: 0; -webkit-mask-size: 100% 100%; mask-size: 100% 100%; -webkit-mask-repeat: no-repeat; mask-repeat: no-repeat; overflow: hidden;
+               background: linear-gradient(165deg, rgba(255, 255, 255, .35) 0%, rgba(220, 215, 205, .08) 55%, rgba(255, 255, 255, .22) 100%); }
+      .glass .sheen { position: absolute; top: -20%; bottom: -20%; left: 0; width: 12%; transform: translateX(-120px); filter: blur(6px);
+                      background: linear-gradient(100deg, transparent, rgba(255, 255, 255, .8), transparent); }
+
+      /* ---------- type ---------- */
+      .type { position: absolute; left: 0; right: 0; text-align: center; white-space: nowrap; }
+      .type .ch, .type .w { display: inline-block; }
+      .mask { display: inline-block; overflow: hidden; vertical-align: top; padding: 0 4px; }
+      .mask > span { display: inline-block; }
+      .eyebrow { font-family: var(--to-font-display); font-weight: 500; font-size: 24px; letter-spacing: .5em; color: #4f4a43; text-transform: uppercase; }
+      .brand { font-family: var(--to-font-display); font-weight: 400; font-size: 78px; letter-spacing: .32em; color: #232323; text-transform: uppercase; }
+      .title { font-family: var(--to-font-display); font-weight: 500; font-size: 58px; letter-spacing: .08em; color: #232323; text-transform: uppercase; }
+      .quote { font-family: var(--to-font-body); font-weight: 300; font-size: 44px; letter-spacing: .01em; color: #3a3631; }
+      .fine { font-family: var(--to-font-display); font-weight: 500; font-size: 22px; letter-spacing: .36em; color: #4f4a43; text-transform: uppercase; }
+      .rule { position: absolute; left: 490px; width: 100px; height: 1px; background: #a88a5c; transform-origin: 50% 50%; }
+      .dark .eyebrow, .dark .fine { color: #b9b2a6; }
+      .dark .title { color: #f4f2ee; }
+      .dark .quote { color: #e6e1d8; }
+
+      #logo { left: 390px; top: 1755px; width: 300px; height: 48px; transform-origin: 50% 50%; }
+      #logo b { position: absolute; top: 0; height: 48px; background: url(assets/timeoptic.svg) no-repeat; background-size: 300px 47.6px; }
+      #logo .shine { position: absolute; inset: 0; -webkit-mask: url(assets/timeoptic-mono.svg) center / 100% no-repeat; mask: url(assets/timeoptic-mono.svg) center / 100% no-repeat; overflow: hidden; }
+      #logo .shine i { position: absolute; top: 0; bottom: 0; left: 0; width: 80px; transform: translateX(-90px); background: linear-gradient(100deg, transparent, rgba(239, 207, 156, .95), transparent); }
+      #flash { inset: 0; background: #fff; opacity: 0; }
+      #fade { inset: 0; background: #f4f2ee; opacity: 0; }
+    </style>
+  </head>
+  <body>
+    <div id="root" data-composition-id="main" data-start="0" data-duration="13.223" data-width="1080" data-height="1920">
+      <div id="cam" class="clip" data-start="0" data-duration="13.223" data-track-index="0">
+        <div id="bgStone" class="bg"></div>
+        <div id="doorL" class="door"></div>
+        <div id="doorR" class="door"></div>
+        <div id="bgWhite2" class="bg"></div>
+        <div id="bgChar" class="bg"><div id="vitrine" class="layer"></div></div>
+        <div id="bgWhite3" class="bg"></div>
+
+        <!-- Front view -->
+        <div id="gA" class="glasses" style="left:190px; top:990px; width:700px;">
+          <div class="move"><div class="focus"><div class="shadow"></div><div class="breath">
+            <img src="assets/5246D_1.png" alt="" />
+            <div class="glass" style="-webkit-mask-image:url(assets/5246D_1_lens.png); mask-image:url(assets/5246D_1_lens.png);"><i class="sheen"></i></div>
+          </div></div></div>
+        </div>
+        <!-- Three-quarter view -->
+        <div id="gB" class="glasses" style="left:190px; top:960px; width:700px;">
+          <div class="move"><div class="focus"><div class="shadow"></div><div class="breath">
+            <img src="assets/5246D_2.png" alt="" />
+            <div class="glass" style="-webkit-mask-image:url(assets/5246D_2_lens.png); mask-image:url(assets/5246D_2_lens.png);"><i class="sheen"></i></div>
+          </div></div></div>
+        </div>
+        <!-- Side view -->
+        <div id="gC" class="glasses" style="left:170px; top:1040px; width:740px;">
+          <div class="move"><div class="focus"><div class="shadow"></div><div class="breath">
+            <img src="assets/5246D_3.png" alt="" />
+          </div></div></div>
+        </div>
+      </div>
+
+      <div id="tease" class="clip layer" data-start="0" data-duration="2.7" data-track-index="13">
+        <div class="shot m" id="s1"><img src="assets/5246D_1.png" style="width:784px; height:285px; left:-195px; top:1015px;" alt="" /></div>
+        <div class="shot m" id="s2"><img src="assets/5246D_1.png" style="width:784px; height:285px; left:150px; top:970px;" alt="" /></div>
+        <div class="shot m" id="s3"><img src="assets/5246D_2.png" style="width:781px; height:347px; left:70px; top:900px;" alt="" /></div>
+        <div class="shot" id="s4"><img src="assets/5246D_2.png" style="width:781px; height:347px; left:150px; top:907px;" alt="" /></div>
+      </div>
+
+      <div id="details" class="clip layer" data-start="5.2" data-duration="2.75" data-track-index="3" style="inset:0">
+        <div class="detail" id="d1"><img src="assets/5246D_1.png" style="width:784px; left:-505px; top:165px;" alt="" /></div>
+        <div class="detail" id="d2"><img src="assets/5246D_1.png" style="width:784px; left:-160px; top:120px;" alt="" /></div>
+        <div class="detail" id="d3"><img src="assets/5246D_2.png" style="width:781px; left:-240px; top:50px;" alt="" /></div>
+        <div class="detail" id="d4"><img src="assets/5246D_3.png" style="width:781px; left:80px; top:175px;" alt="" /></div>
+      </div>
+      <img id="phlogo" class="clip layer" data-start="0" data-duration="13.223" data-track-index="4" src="assets/paul-hueman.png" alt="Paul Hueman" />
+
+      <div id="frame" class="clip layer" data-start="0" data-duration="13.223" data-track-index="1" style="inset:0">
+        <div id="frT" class="hl"></div><div id="frB" class="hl"></div><div id="frL" class="hl"></div><div id="frR" class="hl"></div>
+      </div>
+      <div id="metro" class="clip layer" data-start="0" data-duration="13.223" data-track-index="2"></div>
+
+      <!-- Type: intro -->
+      <div id="t0" class="clip layer" data-start="0" data-duration="2.75" data-track-index="5" style="inset:0">
+        <div class="type brand split" style="top:560px">PAUL HUEMAN</div>
+        <div class="rule" id="r0" style="top:690px"></div>
+        <div class="type fine split" style="top:730px">PHF-5246D</div>
+      </div>
+      <!-- Type: stone -->
+      <div id="t1" class="clip layer" data-start="2.5" data-duration="2.95" data-track-index="6" style="inset:0">
+        <div class="type eyebrow split" style="top:470px">New in store</div>
+        <div class="type title" style="top:540px"><span class="mask"><span>Paul Hueman</span></span></div>
+        <div class="type fine split" style="top:640px">Round-square · Riveted brow</div>
+      </div>
+      <!-- Type: the lens -->
+      <div id="t2" class="clip layer" data-start="5.2" data-duration="2.95" data-track-index="7" style="inset:0">
+        <div class="type eyebrow split" style="top:470px">The lens</div>
+        <div class="type title" style="top:540px"><span class="mask"><span>HOYA Nulux iDentity V+</span></span></div>
+        <div class="rule" id="r2" style="top:640px"></div>
+        <div class="type quote words" style="top:675px">Sharp vision. Tailored to you.</div>
+      </div>
+      <!-- Type: the coating -->
+      <div id="t3" class="clip layer dark" data-start="7.8" data-duration="2.95" data-track-index="9" style="inset:0">
+        <div class="type eyebrow split" style="top:470px">The coating</div>
+        <div class="type title" style="top:540px"><span class="mask"><span>HOYA Hi-Vision Meiryo</span></span></div>
+        <div class="type quote words" style="top:640px">Clarity that lasts.</div>
+        <div class="type fine split" style="top:1500px">100% UV protection</div>
+      </div>
+      <!-- Type: end -->
+      <div id="t4" class="clip layer" data-start="10.4" data-duration="2.823" data-track-index="10" style="inset:0">
+        <div class="type eyebrow split" style="top:800px">New in store</div>
+        <div class="rule" id="r4" style="top:1015px"></div>
+        <div class="type fine split" style="top:1050px">Paul Hueman PHF-5246D · HOYA</div>
+      </div>
+
+      <div id="logo" class="clip layer" data-start="0" data-duration="13.223" data-track-index="8" aria-label="TIMEOPTIC"><div class="shine"><i></i></div></div>
+      <div id="flash" class="clip layer" data-start="0" data-duration="13.223" data-track-index="11"></div>
+      <div id="fade" class="clip layer" data-start="0" data-duration="13.223" data-track-index="12"></div>
+    </div>
+
+    <script>
+      window.__timelines = window.__timelines || {};
+      const tl = gsap.timeline({ paused: true });
+
+      const BPM = 90.75;               // "Silent Desire", grid fitted to the detected beats from 9.880 s
+      const B = 60 / BPM;
+      const b = (n) => n * B;
+
+      document.querySelectorAll('.split').forEach((el) => {
+        const text = el.textContent;
+        el.textContent = '';
+        for (const c of text) {
+          if (c === ' ') { el.append(' '); continue; }
+          const s = document.createElement('span');
+          s.className = 'ch';
+          s.textContent = c;
+          el.append(s);
+        }
+      });
+      document.querySelectorAll('.words').forEach((el) => {
+        const words = el.textContent.split(' ');
+        el.textContent = '';
+        words.forEach((w, i) => {
+          const s = document.createElement('span');
+          s.className = 'w';
+          s.textContent = w;
+          el.append(s);
+          if (i < words.length - 1) el.append(' ');
+        });
+      });
+
+      const LETTERS = [[0, 282], [310, 392], [438, 834], [876, 1134], [1170, 1498], [1540, 1784], [1808, 2078], [2112, 2164], [2214, 2520]];
+      const logo = document.getElementById('logo'), k = 300 / 2520;
+      LETTERS.forEach(([x0, x1]) => {
+        const el = document.createElement('b');
+        el.style.cssText = `left:${x0 * k}px;width:${(x1 - x0) * k + 1}px;background-position:${-x0 * k}px 0;`;
+        logo.insertBefore(el, logo.firstChild);
+      });
+      const metro = document.getElementById('metro');
+      for (let i = 0; i < 20; i++) metro.append(document.createElement('i'));
+      const ticks = metro.querySelectorAll('i');
+
+      const q = (id, n) => `#${id} > :nth-child(${n})`;
+      const show = (sel, from, to) => { tl.set(sel, { autoAlpha: 0 }, 0); tl.set(sel, { autoAlpha: 1 }, from); if (to) tl.set(sel, { autoAlpha: 0 }, to); };
+
+      // ---------- type moves: slow, precise ----------
+      const letters = (sel, at, stagger = 0.05) =>
+        tl.from(`${sel} .ch`, { opacity: 0, filter: 'blur(8px)', duration: 0.7, ease: 'power2.out', stagger }, at);
+      const rise = (sel, at) =>
+        tl.from(`${sel} .mask > span`, { yPercent: 110, duration: 0.8, ease: 'expo.out' }, at);
+      const words = (sel, at) =>
+        tl.from(`${sel} .w`, { opacity: 0, y: 18, duration: 0.7, ease: 'power3.out', stagger: B / 3 }, at);
+      const rule = (sel, at) => tl.from(sel, { scaleX: 0, duration: B * 1.2, ease: 'power3.inOut' }, at);
+      const leave = (sel, at) =>
+        tl.to(sel, { opacity: 0, y: -16, filter: 'blur(6px)', duration: 0.4, ease: 'power2.in', stagger: 0.04 }, at);
+
+      // ---------- visibility ----------
+      show('#gA', b(4) - 0.1, b(6.4)); tl.set('#gA', { autoAlpha: 1 }, b(14)); tl.set('#gA', { autoAlpha: 0 }, b(16)); tl.set('#gA', { autoAlpha: 1 }, b(16.5));
+      show('#gB', b(12) + 0.2, null); tl.set('#gB', { autoAlpha: 0 }, b(14) + 0.3);
+      show('#gC', b(6) - 0.1, b(8));
+      ['#d1', '#d2', '#d3', '#d4'].forEach((d, i) => { tl.set(d, { autoAlpha: 1 }, b(8 + i)); tl.set(d, { autoAlpha: 0 }, b(9 + i)); });
+
+      // ---------- backgrounds ----------
+      // drop: the white opens like gallery doors onto stone (sharp accent 1)
+      tl.set(['#doorL', '#doorR'], { autoAlpha: 1 }, 0);
+      tl.fromTo('#doorL', { x: 0 }, { x: -620, duration: 0.42, ease: 'power4.inOut', immediateRender: false }, b(4) - 0.2);
+      tl.fromTo('#doorR', { x: 0 }, { x: 620, duration: 0.42, ease: 'power4.inOut', immediateRender: false }, b(4) - 0.2);
+      // lens: white wipes down from the top, soft
+      tl.fromTo('#bgWhite2', { clipPath: 'inset(0% 0% 100% 0%)' }, { clipPath: 'inset(0% 0% 0% 0%)', duration: 0.6, ease: 'power2.inOut', immediateRender: false }, b(8) - 0.35);
+      // coating: charcoal snaps open from a horizontal line (sharp accent 2), the vitrine rises
+      tl.fromTo('#bgChar', { clipPath: 'inset(50% 0% 50% 0%)' }, { clipPath: 'inset(0% 0% 0% 0%)', duration: 0.24, ease: 'expo.out', immediateRender: false }, b(12));
+      tl.fromTo('#vitrine', { scaleY: 0.02, scaleX: 0.6 }, { scaleY: 1, scaleX: 1, duration: 0.5, ease: 'expo.out', immediateRender: false }, b(12) + 0.08);
+      tl.fromTo('#flash', { opacity: 0.55 }, { opacity: 0, duration: 0.4, ease: 'power2.out', immediateRender: false }, b(12));
+      // end: white fades back
+      tl.fromTo('#bgWhite3', { opacity: 0 }, { opacity: 1, duration: 0.6, ease: 'power2.inOut', immediateRender: false }, b(16) - 0.3);
+
+      // hairline frame + metronome ticks
+      tl.from(['#frT', '#frB'], { scaleX: 0, duration: b(2), ease: 'power3.inOut' }, 0);
+      tl.from(['#frL', '#frR'], { scaleY: 0, duration: b(2), ease: 'power3.inOut' }, b(0.5));
+      tl.from('#metro', { opacity: 0, duration: b(1) }, 0);
+      ticks.forEach((t, n) => {
+        const kick = n % 2 === 0;
+        tl.fromTo(t, { opacity: 0.2, scaleY: 1 }, { keyframes: { opacity: [kick ? 1 : 0.7, 0.55], scaleY: [kick ? 2.2 : 1.5, 1] }, duration: B, ease: 'power2.out', immediateRender: false }, b(n));
+      });
+      tl.set(['#frT', '#frB', '#frL', '#frR', '#metro i'], { backgroundColor: '#f4f2ee' }, b(12));
+      tl.set(['#frT', '#frB', '#frL', '#frR', '#metro i'], { backgroundColor: '#232323' }, b(16));
+
+      // ---------- camera: level, a slow push per section ----------
+      [[0, 1, 1.04], [4, 1.02, 1.05], [8, 1.03, 1.0], [12, 1.0, 1.04], [16, 1.02, 1.0]].forEach(([n, s0, s1]) =>
+        tl.fromTo('#cam', { scale: s0 }, { scale: s1, duration: b(4), ease: 'sine.inOut', immediateRender: false }, b(n)));
+
+      // ---------- glasses ----------
+      // intro: revealed through a widening slit, then the focus pulls in on the break
+      // hook (break, beats 0-4): the aperture travels temple tip > hinge > rim > bridge, then opens on the whole frame
+      // frame 0 slams in on the rivet endpiece (from 1:1 down to rest, blur + crisp flash + small shake), then one hard cut per beat
+      ['#s1', '#s2', '#s3', '#s4'].forEach((id, i) => {
+        tl.set(id, { autoAlpha: 1 }, b(i));
+        if (i < 3) tl.set(id, { autoAlpha: 0 }, b(i + 1));
+      });
+      tl.fromTo('#s1', { scale: 1, y: -40, filter: 'blur(14px) brightness(1.6)' }, { scale: 1, y: 0, filter: 'blur(0px) brightness(1)', duration: 0.15, ease: 'power4.out' }, 0);
+      tl.fromTo('#tease', { x: 0, y: 0 }, { keyframes: { x: [0, -10, 8, -5, 3, 0], y: [0, 6, -5, 3, -1, 0] }, duration: 0.26, ease: 'none' }, 0);
+      tl.fromTo('#flash', { opacity: 0.45 }, { opacity: 0, duration: 0.2, ease: 'power2.out' }, 0);
+      tl.fromTo('#s2', { scale: 1, x: 30, filter: 'blur(5px)' }, { scale: 1, x: 0, filter: 'blur(0px)', duration: 0.12, ease: 'power3.out', immediateRender: false }, b(1));
+      tl.fromTo('#s3', { scale: 1, x: -30, filter: 'blur(5px)' }, { scale: 1, x: 0, filter: 'blur(0px)', duration: 0.12, ease: 'power3.out', immediateRender: false }, b(2));
+      tl.fromTo('#s4', { scale: 0.96, filter: 'blur(4px)' }, { scale: 0.9, filter: 'blur(0px)', duration: 0.14, ease: 'power3.out', immediateRender: false }, b(3));
+      tl.to('#s4', { scale: 0.88, duration: b(1) - 0.3, ease: 'none' }, b(3) + 0.14);
+      tl.to('#tease', { opacity: 0, filter: 'blur(6px)', duration: 0.16, ease: 'power2.in' }, b(4) - 0.16);
+      tl.fromTo('#gA .move', { x: 260, opacity: 0 }, { x: 0, opacity: 1, duration: b(1.5), ease: 'expo.out', immediateRender: false }, b(4));
+      tl.to('#gA .move', { x: -40, duration: b(0.5), ease: 'none' }, b(5.5));
+      tl.fromTo('#gA .glass .sheen', { x: -120 }, { x: 900, duration: b(1.2), ease: 'power2.inOut', immediateRender: false }, b(4.8));
+      tl.to('#gA .move', { x: -320, opacity: 0, duration: 0.45, ease: 'power3.in' }, b(6) - 0.35);
+      tl.fromTo('#gC .move', { x: 320, opacity: 0 }, { x: 0, opacity: 1, duration: b(1.2), ease: 'expo.out', immediateRender: false }, b(6) - 0.1);
+      tl.to('#gC .move', { x: -30, duration: b(0.8), ease: 'none' }, b(7.1));
+      tl.to('#gC .move', { opacity: 0, filter: 'blur(8px)', duration: 0.35, ease: 'power2.in' }, b(8) - 0.35);
+      // lens: one detail per beat, a precise punch-in (scale stays at or below 1:1) with a mask reveal
+      ['#d1', '#d2', '#d3', '#d4'].forEach((d, i) => {
+        const from = ['inset(50% 0% 50% 0%)', 'inset(0% 50% 0% 50%)', 'inset(0% 0% 100% 0%)', 'inset(0% 100% 0% 0%)'][i];
+        tl.fromTo(d, { clipPath: from }, { clipPath: 'inset(0% 0% 0% 0%)', duration: 0.32, ease: 'expo.out', immediateRender: false }, b(8 + i));
+        tl.fromTo(`${d} img`, { scale: 0.9, filter: 'blur(6px)' }, { scale: 1, filter: 'blur(0px)', duration: 0.5, ease: 'power3.out', immediateRender: false }, b(8 + i));
+        tl.to(`${d} img`, { x: i % 2 ? 14 : -14, duration: B - 0.5, ease: 'none' }, b(8 + i) + 0.5);
+      });
+      // coating: sits in the vitrine, turns slowly
+      tl.fromTo('#gB .move', { x: 0, y: 20, scale: 0.9, rotation: 0, opacity: 0 }, { y: 0, scale: 0.95, opacity: 1, duration: b(1), ease: 'power3.out', immediateRender: false }, b(12) + 0.2);
+      tl.to('#gB .move', { rotation: -2, x: -20, duration: b(1.5), ease: 'sine.inOut' }, b(12.8));
+      tl.to('#gB .move', { opacity: 0, filter: 'blur(8px)', duration: 0.3, ease: 'power2.in' }, b(14) - 0.3);
+      tl.fromTo('#gA .move', { x: 0, y: 0, scale: 0.9, opacity: 0 }, { scale: 0.92, opacity: 1, duration: b(1), ease: 'power3.out', immediateRender: false }, b(14));
+      tl.fromTo('#gA .focus', { filter: 'blur(10px)' }, { filter: 'blur(0px)', duration: b(1), ease: 'power2.out', immediateRender: false }, b(14));
+      tl.fromTo('#gA .glass .sheen', { x: -120 }, { x: 900, duration: b(1.4), ease: 'power2.inOut', immediateRender: false }, b(14.6));
+      tl.to('#gA .move', { opacity: 0, duration: 0.3, ease: 'power2.in' }, b(16) - 0.3);
+      // end: small, under the wordmark
+      tl.set('#gA .focus', { filter: 'blur(0px)' }, b(16.5));
+      tl.fromTo('#gA .move', { x: 0, y: 380, scale: 0.62, opacity: 0 }, { y: 360, scale: 0.62, opacity: 1, duration: b(1.5), ease: 'power2.out', immediateRender: false }, b(16.5));
+      // breath on the kicks (every other beat) while the product holds still
+      [4, 6, 8, 10, 12, 14].forEach((n) => {
+        const g = n < 6 ? '#gA' : n < 8 ? '#gC' : n < 12 ? null : n < 14 ? '#gB' : '#gA';
+        if (!g) return;
+        tl.fromTo(`${g} .breath`, { scale: 1.014 }, { scale: 1, duration: B * 1.5, ease: 'power2.out', immediateRender: false }, b(n));
+      });
+
+      // ---------- type ----------
+      letters(q('t0', 1), b(0), 0.06);
+      rule('#r0', b(1));
+      letters(q('t0', 3), b(1.5), 0.05);
+      leave('#t0 > *', b(4) - 0.5);
+
+      letters(q('t1', 1), b(4), 0.03);
+      rise(q('t1', 2), b(4) + 0.1);
+      letters(q('t1', 3), b(5), 0.02);
+      leave('#t1 > *', b(8) - 0.5);
+
+      letters(q('t2', 1), b(8), 0.03);
+      rise(q('t2', 2), b(8) + 0.1);
+      rule('#r2', b(9));
+      words(q('t2', 4), b(9));
+      leave('#t2 > *', b(12) - 0.45);
+
+      letters(q('t3', 1), b(12), 0.03);
+      rise(q('t3', 2), b(12) + 0.12);
+      words(q('t3', 3), b(13));
+      letters(q('t3', 4), b(14), 0.03);
+      leave('#t3 > *', b(16) - 0.45);
+
+      // ---------- wordmark ----------
+      tl.from('#logo b', { opacity: 0, y: 14, duration: 0.8, ease: 'power2.out', stagger: B / 5 }, b(1.5));
+      tl.fromTo('#logo .shine i', { x: -90 }, { x: 320, duration: B * 2, ease: 'power2.inOut' }, b(6));
+      tl.set(['#logo', '#phlogo'], { filter: 'brightness(0) invert(1)' }, b(12));
+      tl.set(['#logo', '#phlogo'], { filter: 'none' }, b(16));
+      tl.from('#phlogo', { opacity: 0, x: -12, duration: b(1.5), ease: 'power2.out' }, b(0.5));
+      tl.to('#logo', { y: 920 - 24 - 1755, scale: 2.6, duration: b(1.5), ease: 'expo.inOut' }, b(16));
+      tl.to('#logo', { scale: 2.72, duration: b(2.5), ease: 'none' }, b(17.5));
+      letters(q('t4', 1), b(16.5), 0.04);
+      rule('#r4', b(17));
+      letters(q('t4', 3), b(17.5), 0.02);
+      tl.fromTo('#logo .shine i', { x: -90 }, { x: 320, duration: B * 2, ease: 'power2.inOut', immediateRender: false }, b(18));
+      tl.to('#metro', { opacity: 0, duration: b(1) }, b(16));
+
+
+      window.__timelines['main'] = tl;
+      tl.seek(0);
+    </script>
+  </body>
+</html>

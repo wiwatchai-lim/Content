@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>2026-09-16 BOSS1197 — clip</title>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;700;800&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../brand/tokens.css">
+<style>
+  /* Same layout as post.html, animated. Only two things move: the frame drifts and the Peach
+     accent breathes. Both have a 6s period so the last frame hands back to the first. */
+  html, body { margin: 0; background: transparent; }
+  body { position: relative; width: 1080px; height: 1080px; overflow: hidden;
+         font-family: var(--to-font-body); color: var(--to-black); }
+  body > [data-layer] { position: absolute; box-sizing: border-box; }
+
+  .background { inset: 0; background: linear-gradient(176deg, var(--to-snow) 0%, #F2F0EA 58%, var(--to-timberwolf) 100%); }
+  .logo { left: var(--to-margin); top: 68px; width: var(--to-logo-width); }
+  .label { left: 0; right: 0; top: 112px; text-align: center; font-family: var(--to-font-display);
+           font-weight: 700; font-size: 20px; letter-spacing: var(--to-track-eyebrow);
+           text-transform: uppercase; color: var(--to-green); }
+  .product { left: 130px; top: 268px; width: 820px; filter: drop-shadow(0 22px 22px rgba(33, 33, 33, .14));
+             animation: drift 6s ease-in-out infinite; }
+  .accent { left: 505px; top: 600px; width: 70px; height: 3px; background: var(--to-peach);
+            animation: stretch 6s ease-in-out infinite; }
+  .headline { left: 140px; right: 140px; top: 648px; margin: 0; text-align: center;
+              font-family: var(--to-font-display); font-weight: 800; font-size: 74px; line-height: 1.04;
+              letter-spacing: var(--to-track-display); color: var(--to-green); }
+  .specs { left: 0; right: 0; top: 858px; text-align: center; font-size: 22px; line-height: 1.5; color: #6F6C66; }
+  .cta { left: 0; right: 0; bottom: var(--to-margin); text-align: center; font-family: var(--to-font-display);
+         font-weight: 700; font-size: 17px; letter-spacing: var(--to-track-eyebrow);
+         text-transform: uppercase; color: var(--to-green); }
+
+  @keyframes drift { 0%, 100% { transform: translateY(0) } 50% { transform: translateY(-22px) } }
+  @keyframes stretch { 0%, 100% { transform: scaleX(1); opacity: .9 } 50% { transform: scaleX(1.9); opacity: 1 } }
+</style>
+</head>
+<body data-width="1080" data-height="1080" data-duration="6" data-fps="30">
+  <div class="background" data-layer="background"></div>
+  <img class="logo" data-layer="logo" src="../../brand/logo/timeoptic.svg" alt="">
+  <div class="label" data-layer="label">BOSS 1197 · Titanium</div>
+  <img class="product" data-layer="product" src="layers/BOSS1197_1.png" alt="">
+  <div class="accent" data-layer="accent"></div>
+  <h1 class="headline" data-layer="headline">REFLECT<br>YOUR STYLE</h1>
+  <div class="specs" data-layer="specs">HOYA Polarised · HOYA Mirror and Light Mirror<br>Seven mirror colours · 100% UV-A &amp; UV-B</div>
+  <div class="cta" data-layer="cta">Message us to try them on</div>
+</body>
+</html>

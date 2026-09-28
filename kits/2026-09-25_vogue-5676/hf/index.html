@@ -1,0 +1,384 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=1080, height=1920" />
+    <!--
+      Vogue Eyewear VO5676 in all three stocked colours (W44 Black, W656 Dark Havana, 2726 Transparent Grey) x Essilor.
+      Mood: fashion romance pop — blush / cream / lilac, serif italics, light leaks and glossy sweeps, graceful glides with playful pops.
+      Cut to "Tenfold Love" (90 BPM), from 22.689 s in the song: 4 beats of the breakdown, the drop on beat 4. 20 beats = 13.33 s.
+        Official Vogue Eyewear logo top left for the whole clip; front (_1), three-quarter (_2) and side (_3) photos of every colour.
+        beats 0-4    hook: frame 0 slams in the three-colour line-up on blush (flash + shake), then hard cuts on the beat: vogue plaque, havana 3/4, grey side
+        beats 4-8    drop: light leak to blush, one colour front view per beat with its name, then a diagonal three-quarter fan (callback to the opening)
+        beats 8-12   lilac iris, one detail punch-in per beat: temple plaque, hinge, the lens darkens (Transitions GEN S), fades back
+        beats 12-16  glossy sweep: colours and angles dissolve into each other every beat (Crizal Sapphire HR)
+        beats 16-20  cream end card: TIMEOPTIC wordmark centre, the three colours pop in a row
+    -->
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/gsap.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;700;800&family=Inter:wght@400;500&family=Playfair+Display:ital,wght@0,500;1,400;1,500;1,600&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="assets/tokens.css" />
+    <style>
+      * { margin: 0; padding: 0; box-sizing: border-box; }
+      html, body { width: 1080px; height: 1920px; overflow: hidden; background: #fbf5ee; }
+      #root { position: relative; width: 1080px; height: 1920px; overflow: hidden; font-family: var(--to-font-body); color: #4a2c43; }
+      .layer { position: absolute; }
+
+      #cam, #punch { position: absolute; inset: 0; transform-origin: 50% 58%; }
+      .bg { position: absolute; left: -200px; top: -200px; width: 1480px; height: 2320px; overflow: hidden; }
+      .bg i { position: absolute; border-radius: 50%; filter: blur(80px); opacity: .55; }
+      #bg0 { background: linear-gradient(180deg, #fdf8f2 0%, #f7ece3 100%); }
+      #bg1, #bgO { background: linear-gradient(170deg, #fbe4e4 0%, #f5d2d6 60%, #eec3cb 100%); }
+      #bg2 { background: linear-gradient(170deg, #eee6f7 0%, #e0d4f0 60%, #d3c3e8 100%); }
+      #bg3 { background: linear-gradient(160deg, #fdf3ee 0%, #f8dfe0 50%, #ecdcf2 100%); }
+      #bg4 { background: linear-gradient(180deg, #fdf9f4 0%, #f6ebe4 100%); }
+      #bg1, #bg2, #bg3, #bg4 { visibility: hidden; opacity: 0; }
+      #gloss { left: -600px; top: -200px; width: 380px; height: 2320px; transform: rotate(18deg); opacity: 0;
+               background: linear-gradient(90deg, rgba(255, 255, 255, 0), rgba(255, 255, 255, .95) 50%, rgba(255, 255, 255, 0)); }
+      #sun { left: 640px; top: 520px; width: 900px; height: 900px; border-radius: 50%; opacity: 0;
+             background: radial-gradient(closest-side, rgba(255, 214, 170, .95), rgba(255, 214, 170, 0)); }
+      #halo { left: 90px; top: 800px; width: 900px; height: 800px; border-radius: 50%; opacity: 0;
+              background: radial-gradient(closest-side, rgba(255, 255, 255, .95), rgba(255, 255, 255, 0)); }
+
+      /* glasses: position > travel > sway > bop */
+      .glasses { position: absolute; }
+      .glasses > div { position: relative; }
+      .glasses img { display: block; width: 100%; }
+      .glasses .shadow { position: absolute; left: 12%; right: 12%; bottom: -60px; height: 50px; border-radius: 50%;
+                         background: radial-gradient(closest-side, rgba(90, 50, 70, .28), rgba(90, 50, 70, 0)); filter: blur(10px); }
+      .glass { position: absolute; inset: 0; -webkit-mask-size: 100% 100%; mask-size: 100% 100%; -webkit-mask-repeat: no-repeat; mask-repeat: no-repeat; overflow: hidden;
+               background: linear-gradient(170deg, rgba(255, 255, 255, .25) 0%, rgba(240, 220, 230, .08) 50%, rgba(255, 245, 250, .2) 100%); }
+      .glass .tint { position: absolute; inset: 0; background: linear-gradient(120deg, transparent 20%, rgba(230, 170, 200, .22) 50%, transparent 80%); }
+      .glass .ph { position: absolute; inset: 0; opacity: 0; background: linear-gradient(180deg, rgba(70, 52, 64, .86), rgba(95, 72, 84, .74)); }
+      .glass .win { position: absolute; top: 8%; width: 13%; height: 55%; border-radius: 16px; filter: blur(5px);
+                    background: linear-gradient(180deg, rgba(255, 255, 255, .6), rgba(255, 255, 255, .06)); transform: skewX(-14deg); }
+      .rimglint { position: absolute; inset: 0; -webkit-mask-size: 100% 100%; mask-size: 100% 100%; overflow: hidden; }
+      .rimglint i { position: absolute; left: 0; transform: translateX(-200px); top: -20%; bottom: -20%; width: 150px; background: linear-gradient(100deg, transparent, rgba(255, 255, 255, .9), transparent); }
+
+      .spark { position: absolute; width: 46px; height: 46px; margin: -23px 0 0 -23px; opacity: 0; background: #fff;
+               clip-path: polygon(50% 0, 60% 40%, 100% 50%, 60% 60%, 50% 100%, 40% 60%, 0 50%, 40% 40%); filter: drop-shadow(0 0 6px rgba(217, 138, 157, .9)); }
+
+      /* detail punch-ins: the real cutout enlarged, point of interest at the frame centre (540,960 -> 940,1360 inside .detail) */
+      .detail { position: absolute; left: -400px; top: -400px; width: 1880px; height: 2720px; overflow: hidden;
+                background: radial-gradient(ellipse 45% 38% at 50% 50%, #faf6fc 0%, #ebe2f3 60%, #dccfea 100%); }
+      .detail .zoom { position: absolute; inset: 0; transform-origin: 940px 1360px; }
+      .detail .gwrap { position: absolute; }
+      .detail .gwrap img { display: block; width: 100%; }
+      #vlogo { left: 64px; top: 78px; width: 230px; opacity: .92; }
+
+      /* type (outside the camera) */
+      .type { position: absolute; left: 0; right: 0; text-align: center; white-space: nowrap; }
+      .type .ch, .type .w { display: inline-block; will-change: transform; }
+      .kicker { font-family: var(--to-font-display); font-weight: 700; font-size: 28px; letter-spacing: .34em; color: #b0647c; }
+      .serif { font-family: 'Playfair Display', Georgia, serif; font-style: italic; font-weight: 500; font-size: 150px; line-height: 1.05; color: #4a2c43; letter-spacing: -.01em; }
+      .serif.xl { font-size: 250px; }
+      .serif.md { font-size: 108px; }
+      .sub { font-family: 'Playfair Display', Georgia, serif; font-style: italic; font-weight: 400; font-size: 40px; color: #6d4a62; }
+      .spec { font-family: var(--to-font-display); font-weight: 500; font-size: 28px; letter-spacing: .26em; color: #6d4a62; }
+      .pill { display: inline-block; padding: 14px 34px; border-radius: 999px; background: #fff; color: #4a2c43; box-shadow: 0 8px 30px rgba(176, 100, 124, .25);
+              font-family: var(--to-font-display); font-weight: 700; font-size: 30px; letter-spacing: .16em; text-transform: uppercase; }
+      .rise { clip-path: inset(-40% 0 -40% 0); }
+
+      #logo { left: 390px; top: 1755px; width: 300px; height: 48px; transform-origin: 50% 50%; }
+      #logo b { position: absolute; top: 0; height: 48px; background: url(assets/timeoptic.svg) no-repeat; background-size: 300px 47.6px; }
+      #logo .shine { position: absolute; inset: 0; -webkit-mask: url(assets/timeoptic-mono.svg) center / 100% no-repeat; mask: url(assets/timeoptic-mono.svg) center / 100% no-repeat; overflow: hidden; }
+      #logo .shine i { position: absolute; top: 0; bottom: 0; left: 0; width: 80px; transform: translateX(-90px); background: linear-gradient(100deg, transparent, rgba(239, 207, 156, .95), transparent); }
+      #logo-rule { left: 465px; top: 1062px; width: 150px; height: 5px; background: #d98a9d; transform-origin: center; border-radius: 3px; }
+      #leak { inset: 0; opacity: 0; background: radial-gradient(ellipse 70% 50% at 70% 30%, rgba(255, 196, 170, .95), rgba(255, 220, 230, .6) 45%, rgba(255, 240, 245, 0) 80%); }
+      #flash { inset: 0; background: #fff; opacity: 0; }
+    </style>
+  </head>
+  <body>
+    <div id="root" data-composition-id="main" data-start="0" data-duration="13.333" data-width="1080" data-height="1920">
+      <div id="cam" class="clip" data-start="0" data-duration="13.333" data-track-index="0"><div id="punch">
+        <div id="bg0" class="bg"><i style="left:-100px; top:300px; width:900px; height:900px; background:#f6d9dc"></i><i style="left:700px; top:1400px; width:800px; height:800px; background:#ece0f3"></i></div>
+        <div id="bgO" class="bg"><i style="left:800px; top:200px; width:900px; height:900px; background:#fff1ea"></i><i style="left:-200px; top:1500px; width:900px; height:900px; background:#f3c4d0"></i></div>
+        <div id="bg1" class="bg"><i style="left:800px; top:200px; width:900px; height:900px; background:#fff1ea"></i><i style="left:-200px; top:1500px; width:900px; height:900px; background:#f3c4d0"></i></div>
+        <div id="bg2" class="bg"><i style="left:-100px; top:250px; width:900px; height:900px; background:#f7eefc"></i><i style="left:700px; top:1500px; width:900px; height:900px; background:#cdb8e6"></i></div>
+        <div id="bg3" class="bg"><i style="left:600px; top:300px; width:900px; height:900px; background:#fde9e2"></i><i style="left:-200px; top:1400px; width:900px; height:900px; background:#e6d6f3"></i></div>
+        <div id="bg4" class="bg"><i style="left:-100px; top:1300px; width:900px; height:900px; background:#f6d9dc"></i><i style="left:700px; top:200px; width:800px; height:800px; background:#efe3f5"></i></div>
+        <div id="sun" class="layer"></div>
+        <div id="halo" class="layer"></div>
+        <div id="stage" class="layer" style="inset:0"></div>
+        <div id="tease" class="layer" style="left:-400px; top:-400px; width:1880px; height:2720px; overflow:hidden;">
+          <div class="tw" style="position:absolute; left:0; top:0; width:1487px; transform-origin:0 0;"><img src="assets/5676-W44_2.png" alt="" style="display:block; width:100%;" />
+            <div class="glass" style="-webkit-mask-image:url(assets/5676-W44_2_lens.png); mask-image:url(assets/5676-W44_2_lens.png);"><i class="tint"></i><i class="win" style="left:14%"></i><i class="win" style="left:40%"></i></div>
+            <div class="rimglint" style="-webkit-mask-image:url(assets/5676-W44_2.png); mask-image:url(assets/5676-W44_2.png);"><i></i></div></div>
+        </div>
+        <div id="sparks" class="layer" style="inset:0"></div>
+        <div class="detail" id="d1"><div class="zoom"><div class="gwrap" style="width:2200px; left:580px; top:1020px;"><img src="assets/5676-W656_3.png" alt="" /></div></div></div>
+        <div class="detail" id="d2"><div class="zoom"><div class="gwrap" style="width:2800px; left:-1213px; top:1180px;"><img src="assets/5676-W44_2.png" alt="" /></div></div></div>
+        <div class="detail" id="d3"><div class="zoom"><div class="gwrap" style="width:2300px; left:-243px; top:1130px;"><img src="assets/5676-2726_2.png" alt="" />
+          <div class="glass" style="-webkit-mask-image:url(assets/5676-2726_2_lens.png); mask-image:url(assets/5676-2726_2_lens.png);"><i class="tint"></i><i class="ph"></i></div></div></div></div>
+        <div class="detail" id="d4"><div class="zoom"><div class="gwrap" style="width:1600px; left:340px; top:1290px;"><img src="assets/5676-2726_2.png" alt="" />
+          <div class="glass" style="-webkit-mask-image:url(assets/5676-2726_2_lens.png); mask-image:url(assets/5676-2726_2_lens.png);"><i class="tint"></i><i class="ph"></i><i class="win" style="left:30%"></i></div></div></div></div>
+        <div id="gloss" class="layer"></div>
+      </div></div>
+
+      <!-- breakdown -->
+      <div id="t0" class="clip layer" data-start="0" data-duration="0.7" data-track-index="5" style="inset:0">
+        <div class="type kicker" style="top:215px">VO5676 · ONE FRAME</div>
+        <div class="type serif" style="top:320px">Three Shades</div>
+
+      </div>
+      <!-- drop: colours -->
+      <div id="t1" class="clip layer" data-start="2.5" data-duration="3" data-track-index="6" style="inset:0">
+        <div class="type kicker split" style="top:215px">NEW IN STORE</div>
+        <div class="type serif md split" style="top:330px">Pick Your Shade</div>
+        <div class="type" style="top:1450px"><span class="pill" id="p1">Black</span></div>
+        <div class="type" style="top:1450px"><span class="pill" id="p2">Dark Havana</span></div>
+        <div class="type" style="top:1450px"><span class="pill" id="p3">Transparent Grey</span></div>
+      </div>
+      <!-- the lens -->
+      <div id="t2" class="clip layer" data-start="5.2" data-duration="2.8" data-track-index="7" style="inset:0">
+        <div class="type kicker split" style="top:250px">THE LENS</div>
+        <div class="type serif md rise" style="top:310px">Transitions</div>
+        <div class="type serif md rise" style="top:430px">GEN S</div>
+        <div class="type sub words" style="top:600px">Fadeback in less than two minutes</div>
+      </div>
+      <!-- the coating -->
+      <div id="t3" class="clip layer" data-start="7.9" data-duration="2.85" data-track-index="9" style="inset:0">
+        <div class="type kicker split" style="top:250px">THE COATING</div>
+        <div class="type serif md split" style="top:310px">Crizal</div>
+        <div class="type serif md split" style="top:430px">Sapphire HR</div>
+        <div class="type sub words" style="top:600px">“The best anti-reflective coating overall”</div>
+      </div>
+      <!-- end card -->
+      <div id="t4" class="clip layer" data-start="10.6" data-duration="2.733" data-track-index="10" style="inset:0">
+        <div class="type serif md split" style="top:700px">Find your shade</div>
+        <div class="type spec split" style="top:1105px">VOGUE EYEWEAR VO5676</div>
+      </div>
+
+      <img id="vlogo" class="clip layer" data-start="0" data-duration="13.333" data-track-index="14" src="assets/vogue-logo.svg" alt="Vogue Eyewear" />
+      <div id="logo-rule" class="clip layer" data-start="10.6" data-duration="2.733" data-track-index="11"></div>
+      <div id="logo" class="clip layer" data-start="0" data-duration="13.333" data-track-index="8" aria-label="TIMEOPTIC"><div class="shine"><i></i></div></div>
+      <div id="leak" class="clip layer" data-start="0" data-duration="13.333" data-track-index="12"></div>
+      <div id="flash" class="clip layer" data-start="0" data-duration="13.333" data-track-index="13"></div>
+    </div>
+
+    <script>
+      window.__timelines = window.__timelines || {};
+      const tl = gsap.timeline({ paused: true });
+
+      const BPM = 90;                  // "Tenfold Love"; grid anchored on the drop at 25.356 s in the song
+      const B = 60 / BPM;
+      const b = (n) => n * B;
+
+      // ---------- build the glasses (real cutouts + lens layer) ----------
+      // angle: 1 front, 2 three-quarter, 3 side (no lens layer on the side view)
+      const GL = (id, code, angle, css) => {
+        const img = `assets/5676-${code}_${angle}.png`, lens = `assets/5676-${code}_${angle}_lens.png`;
+        const glass = angle === 3 ? '' : `<div class="glass" style="-webkit-mask-image:url(${lens}); mask-image:url(${lens});"><i class="tint"></i><i class="ph"></i><i class="win" style="left:14%"></i><i class="win" style="left:${angle === 2 ? 40 : 60}%"></i></div>`;
+        return `<div id="${id}" class="glasses" style="${css}"><div class="travel"><div class="sway"><div class="shadow"></div><div class="bop">
+          <img src="${img}" alt="" />${glass}
+          <div class="rimglint" style="-webkit-mask-image:url(${img}); mask-image:url(${img});"><i></i></div>
+        </div></div></div></div>`;
+      };
+      const FRONT = 'left:130px; top:1060px; width:820px;', QUARTER = 'left:90px; top:1040px; width:900px;', SIDE = 'left:150px; top:1020px; width:780px;';
+      document.getElementById('stage').innerHTML = [
+        GL('o1', 'W44', 1, FRONT), GL('o2', 'W656', 1, FRONT), GL('o3', '2726', 1, FRONT),            // hook: line-up slammed in at frame 0
+        GL('c2', 'W656', 2, QUARTER), GL('c3', '2726', 3, SIDE),                                     // hook: hard cuts on beats 2 and 3
+        GL('sa', 'W44', 1, FRONT), GL('sb', 'W656', 1, FRONT), GL('sc', '2726', 1, FRONT),          // drop: one colour per beat
+        GL('fa', 'W44', 2, QUARTER), GL('fb', 'W656', 2, QUARTER), GL('fc', '2726', 2, QUARTER),      // drop: three-quarter diagonal fan
+        GL('h1', 'W656', 2, QUARTER), GL('h2', 'W44', 3, SIDE), GL('h3', '2726', 2, QUARTER), GL('h4', 'W656', 1, FRONT), // coating
+        GL('e1', 'W44', 1, 'left:30px; top:1300px; width:330px;'), GL('e2', 'W656', 1, 'left:375px; top:1300px; width:330px;'), GL('e3', '2726', 1, 'left:720px; top:1300px; width:330px;'),
+      ].join('');
+
+      // sparkles around the main frame
+      const SP = [[180, 1010, 1], [930, 1030, 0.7], [110, 1400, 0.6], [960, 1380, 1], [540, 960, 0.55], [330, 1470, 0.5], [760, 1480, 0.7], [880, 900, 0.45]];
+      const sparks = document.getElementById('sparks');
+      SP.forEach(([x, y, s]) => { const d = document.createElement('div'); d.className = 'spark'; d.style.cssText = `left:${x}px; top:${y}px;`; d.dataset.s = s; sparks.append(d); });
+      const sparkEls = [...sparks.children];
+
+      // split letters / words
+      document.querySelectorAll('.split').forEach((el) => {
+        const text = el.textContent; el.textContent = '';
+        for (const c of text) {
+          if (c === ' ') { el.append(' '); continue; }
+          const s = document.createElement('span'); s.className = 'ch'; s.textContent = c; el.append(s);
+        }
+      });
+      document.querySelectorAll('.words').forEach((el) => {
+        const words = el.textContent.split(' '); el.textContent = '';
+        words.forEach((w, i) => { const s = document.createElement('span'); s.className = 'w'; s.textContent = w; el.append(s); if (i < words.length - 1) el.append(' '); });
+      });
+
+      const LETTERS = [[0, 282], [310, 392], [438, 834], [876, 1134], [1170, 1498], [1540, 1784], [1808, 2078], [2112, 2164], [2214, 2520]];
+      const logo = document.getElementById('logo'), k = 300 / 2520;
+      LETTERS.forEach(([x0, x1]) => {
+        const el = document.createElement('b');
+        el.style.cssText = `left:${x0 * k}px;width:${(x1 - x0) * k + 1}px;background-position:${-x0 * k}px 0;`;
+        logo.insertBefore(el, logo.firstChild);
+      });
+
+      // ---------- helpers ----------
+      const q = (id, n) => `#${id} .type:nth-child(${n})`;
+      const show = (sel, from, to) => { tl.set(sel, { autoAlpha: 0 }, 0); tl.set(sel, { autoAlpha: 1 }, from); if (to) tl.set(sel, { autoAlpha: 0 }, to); };
+      const letterFade = (sel, at, stagger = 0.04) => tl.from(`${sel} .ch`, { opacity: 0, y: 16, duration: 0.5, ease: 'power2.out', stagger }, at);
+      const riseIn = (sel, at, dur = 0.8) => tl.fromTo(sel, { clipPath: 'inset(-40% 0% 100% 0%)', y: 70, filter: 'blur(12px)' },
+        { clipPath: 'inset(-40% 0% -40% 0%)', y: 0, filter: 'blur(0px)', duration: dur, ease: 'expo.out', immediateRender: false }, at);
+      const popLetters = (sel, at, stagger = 0.04) => tl.from(`${sel} .ch`, { scale: 0, y: 40, rotation: (i) => (i % 2 ? 14 : -14), opacity: 0, duration: 0.5, ease: 'back.out(3)', stagger }, at);
+      const wordsGlide = (sel, at, from = 60) => tl.from(`${sel} .w`, { x: from, opacity: 0, duration: 0.6, ease: 'power3.out', stagger: 0.07 }, at);
+      const softOut = (sel, at) => tl.to(sel, { y: -40, opacity: 0, filter: 'blur(10px)', duration: 0.32, ease: 'power2.in', stagger: 0.03 }, at);
+      const sparkle = (at, n = 5, off = 0) => {
+        for (let i = 0; i < n; i++) {
+          const el = sparkEls[(i + off) % sparkEls.length], s = +el.dataset.s;
+          tl.fromTo(el, { scale: 0, rotation: -45, opacity: 1 }, { keyframes: { scale: [0, s * 1.2, 0], rotation: [-45, 20, 60] }, duration: 0.55, ease: 'sine.out', immediateRender: false }, at + i * 0.04);
+          tl.set(el, { opacity: 0 }, at + i * 0.04 + 0.56);
+        }
+      };
+      const leak = (at, peak = 0.85) => tl.fromTo('#leak', { opacity: 0 }, { keyframes: { opacity: [0, peak, 0] }, duration: 0.7, ease: 'sine.inOut', immediateRender: false }, at - 0.3);
+      const pump = (at, s = 1.035) => tl.fromTo('#punch', { scale: s }, { scale: 1, duration: B * 0.8, ease: 'power2.out', immediateRender: false }, at);
+      const pop = (g, at) => tl.fromTo(`${g} .bop`, { scale: 0.6, rotation: -6 }, { scale: 1, rotation: 0, duration: 0.45, ease: 'back.out(3)', immediateRender: false }, at);
+      const float = (g, from, beats) => tl.fromTo(`${g} .sway`, { y: 0 }, { keyframes: { y: [0, -22, 0, -14, 0] }, duration: b(beats), ease: 'sine.inOut', immediateRender: false }, from);
+      const glint = (g, at, w = 1100) => tl.fromTo(`${g} .rimglint i`, { x: -200 }, { x: w, duration: B * 1.3, ease: 'power2.inOut', immediateRender: false }, at);
+
+      // ---------- visibility ----------
+      // line-up placed outside the timeline so frame 0 already shows it
+      ['#o1', '#o2', '#o3'].forEach((g, i) => gsap.set(`${g} .travel`, { x: [-150, 0, 150][i], y: [-300, 0, 300][i], scale: 0.62, rotation: [-6, 0, 6][i] }));
+      tl.set(['#o1', '#o2', '#o3', '#bgO'], { autoAlpha: 0 }, b(1));
+      show('#tease', b(1), b(2)); show('#c2', b(2), b(3)); show('#c3', b(3), b(4));
+      show('#sa', b(4), b(5)); show('#sb', b(5), b(6)); show('#sc', b(6), b(7));
+      show(['#fa', '#fb', '#fc'], b(7), b(8));
+      ['#d1', '#d2', '#d3', '#d4'].forEach((d, i) => show(d, b(8 + i), b(9 + i)));
+      show(['#h1', '#h2', '#h3', '#h4'], b(12), b(16));
+      show(['#e1', '#e2', '#e3'], b(16));
+      ['#p1', '#p2', '#p3'].forEach((p, i) => show(p, b(4 + i), b(5 + i)));
+
+      // ---------- backgrounds: soft drift + a different soft transition per section ----------
+      document.querySelectorAll('.bg').forEach((bg, i) => {
+        const blobs = bg.querySelectorAll('i');
+        tl.fromTo(blobs[0], { x: 0, y: 0 }, { x: 160, y: 120, duration: 13.333, ease: 'sine.inOut' }, 0);
+        tl.fromTo(blobs[1], { x: 0, y: 0 }, { x: -140, y: -160, duration: 13.333, ease: 'sine.inOut' }, 0);
+      });
+      tl.set('#bg1', { autoAlpha: 1 }, b(4) - 0.3);
+      tl.fromTo('#bg1', { opacity: 0 }, { opacity: 1, duration: 0.35, ease: 'sine.inOut', immediateRender: false }, b(4) - 0.3);
+      leak(b(4));
+      tl.set('#bg2', { autoAlpha: 1 }, b(8) - 0.2);
+      tl.fromTo('#bg2', { clipPath: 'circle(0% at 50% 62%)' }, { clipPath: 'circle(85% at 50% 62%)', duration: 0.5, ease: 'power2.out', immediateRender: false }, b(8) - 0.2);
+      tl.set('#bg3', { autoAlpha: 1 }, b(12) - 0.25);
+      tl.fromTo('#bg3', { clipPath: 'polygon(0% 0%, 0% 0%, -30% 100%, -30% 100%)' },
+        { clipPath: 'polygon(0% 0%, 130% 0%, 100% 100%, -30% 100%)', duration: 0.45, ease: 'power2.inOut', immediateRender: false }, b(12) - 0.25);
+      tl.fromTo('#gloss', { x: 0, opacity: 0.9 }, { x: 1900, opacity: 0.9, duration: 0.5, ease: 'power2.inOut', immediateRender: false }, b(12) - 0.28);
+      tl.set('#gloss', { opacity: 0 }, b(12) + 0.25);
+      tl.set('#bg4', { autoAlpha: 1 }, b(16) - 0.3);
+      tl.fromTo('#bg4', { opacity: 0 }, { opacity: 1, duration: 0.4, ease: 'sine.inOut', immediateRender: false }, b(16) - 0.3);
+      leak(b(16), 0.7);
+
+      // camera: slow elegant push, soft pumps on the downbeats (no whips — this clip glides)
+      tl.fromTo('#cam', { scale: 1 }, { scale: 1.06, duration: b(4), ease: 'sine.inOut' }, 0);
+      tl.fromTo('#cam', { scale: 1.02, y: 0 }, { scale: 1.07, y: -20, duration: b(8), ease: 'none', immediateRender: false }, b(4));
+      tl.fromTo('#cam', { scale: 1.02, y: 0 }, { scale: 1.08, y: -20, duration: b(4), ease: 'none', immediateRender: false }, b(12));
+      tl.fromTo('#cam', { scale: 1.06, y: 0 }, { scale: 1.0, duration: b(4), ease: 'power2.out', immediateRender: false }, b(16));
+      [4, 8, 12, 16].forEach((n) => pump(b(n), 1.05));
+      for (let n = 5; n < 16; n++) if (n % 4) pump(b(n), 1.015);
+
+      // halo breathes behind the frame on every beat of the drop and the coating
+      for (let n = 4; n < 16; n++) {
+        if (n >= 8 && n < 12) continue;
+        tl.fromTo('#halo', { opacity: 0.85, scale: 0.9 }, { opacity: 0.35, scale: 1.05, duration: B * 0.9, ease: 'power2.out', immediateRender: false }, b(n));
+      }
+      tl.to('#halo', { opacity: 0, duration: 0.3 }, b(16));
+
+      // ---------- breakdown (0-4): the black frame glides in ----------
+      // Hook: frame 0 slams in (over-scale + blur + flash, snaps to rest in 0.15 s, small shake), then one hard cut per beat
+      tl.fromTo('#punch', { scale: 1.35, filter: 'blur(18px)' }, { scale: 1, filter: 'blur(0px)', duration: 0.15, ease: 'power3.out', immediateRender: false }, 0);
+      tl.fromTo('#flash', { opacity: 0.75 }, { opacity: 0, duration: 0.3, ease: 'power2.out', immediateRender: false }, 0);
+      tl.to('#punch', { keyframes: { x: [0, -16, 12, -7, 4, 0], y: [0, 8, -6, 3, 0, 0] }, duration: 0.3, ease: 'none' }, 0.12);
+      sparkle(0.1, 6, 2);
+      tl.to(['#o1 .bop', '#o2 .bop', '#o3 .bop'], { keyframes: { y: [0, -14, 0] }, duration: B * 0.8, ease: 'sine.inOut', stagger: 0.06 }, 0.2);
+      // beat 1: the vogue plaque, tight
+      const stop = (px, py, sc) => ({ x: 940 - px * sc, y: 1360 - py * sc, scale: sc });
+      gsap.set('#tease .tw', stop(1126, 186, 2.6));
+      tl.fromTo('#tease .tw', stop(1126, 186, 2.75), { ...stop(1126, 186, 2.55), duration: B, ease: 'power2.out', immediateRender: false }, b(1));
+      tl.fromTo('#tease .rimglint i', { x: -200 }, { x: 1700, duration: B * 0.9, ease: 'power2.inOut', immediateRender: false }, b(1) + 0.08);
+      // beats 2 and 3: havana three-quarter, grey side, each a hard cut with a punch
+      [1, 2, 3].forEach((n) => tl.fromTo('#punch', { scale: 1.08 }, { scale: 1, duration: 0.22, ease: 'power3.out', immediateRender: false }, b(n)));
+      tl.fromTo('#c2 .travel', { x: 60, rotation: 3 }, { x: -20, rotation: 0, duration: B, ease: 'power2.out', immediateRender: false }, b(2));
+      tl.fromTo('#c3 .travel', { x: -60 }, { x: 20, duration: B, ease: 'power2.out', immediateRender: false }, b(3));
+      glint('#c2', b(2) + 0.1); glint('#c3', b(3) + 0.1);
+
+      // ---------- drop (4-8): one colour per beat, sparkle pops, then all three fan out ----------
+      pop('#sa', b(4)); sparkle(b(4), 5, 0);
+      pop('#sb', b(5)); sparkle(b(5), 4, 3);
+      pop('#sc', b(6)); sparkle(b(6), 5, 5);
+      ['#fa', '#fb', '#fc'].forEach((g, i) => {
+        tl.fromTo(`${g} .travel`, { x: 0, y: 0, scale: 0.3, rotation: 0, opacity: 0 },
+          { x: [170, 0, -170][i], y: [-330, 0, 330][i], scale: 0.56, rotation: [5, 0, -5][i], opacity: 1, duration: 0.5, ease: 'back.out(2)', immediateRender: false }, b(7) + i * 0.05);
+      });
+      sparkle(b(7), 8, 0);
+      ['#fa', '#fb', '#fc'].forEach((g, i) => tl.to(`${g} .travel`, { opacity: 0, y: '-=120', duration: 0.3, ease: 'power2.in' }, b(8) - 0.3 + i * 0.03));
+      ['#p1', '#p2', '#p3'].forEach((p, i) => tl.from(p, { scale: 0.4, y: 30, opacity: 0, duration: 0.4, ease: 'back.out(3)' }, b(4 + i) + 0.05));
+
+      // ---------- details (8-12): one punch-in per beat, alternating moves; the lens darkens then fades back ----------
+      tl.fromTo('#d1 .zoom', { scale: 1.25, x: 120, filter: 'blur(10px)' }, { scale: 1.05, x: 0, filter: 'blur(0px)', duration: 0.3, ease: 'power3.out', immediateRender: false }, b(8));
+      tl.to('#d1 .zoom', { scale: 1, x: -40, duration: B - 0.3, ease: 'none' }, b(8) + 0.3);
+      tl.fromTo('#d2 .zoom', { y: 700, rotation: -4 }, { y: 0, rotation: 0, duration: 0.32, ease: 'expo.out', immediateRender: false }, b(9));
+      tl.to('#d2 .zoom', { y: -30, duration: B - 0.32, ease: 'none' }, b(9) + 0.32);
+      tl.fromTo('#d3 .zoom', { scale: 0.8, opacity: 0 }, { scale: 1, opacity: 1, duration: 0.3, ease: 'back.out(2)', immediateRender: false }, b(10));
+      tl.to('#d3 .zoom', { scale: 1.05, duration: B - 0.3, ease: 'none' }, b(10) + 0.3);
+      tl.fromTo('#d3 .glass .ph', { opacity: 0 }, { opacity: 1, duration: B * 0.85, ease: 'sine.inOut', immediateRender: false }, b(10) + 0.05);
+      tl.fromTo('#d4 .zoom', { x: -900 }, { x: 0, duration: 0.32, ease: 'expo.out', immediateRender: false }, b(11));
+      tl.fromTo('#d4 .glass .ph', { opacity: 1 }, { opacity: 0, duration: B * 0.9, ease: 'sine.inOut', immediateRender: false }, b(11));
+      tl.fromTo('#d4 .glass .win', { xPercent: -60 }, { xPercent: 200, duration: B, ease: 'none', immediateRender: false }, b(11));
+
+      // ---------- coating (12-16): colours dissolve into each other on the beat, glossy sheen ----------
+      const dissolve = (from, to, at) => {
+        tl.to(`${from} .bop`, { opacity: 0, filter: 'blur(14px)', scale: 1.04, duration: 0.3, ease: 'sine.in' }, at - 0.12);
+        tl.fromTo(`${to} .bop`, { opacity: 0, filter: 'blur(14px)', scale: 0.96 }, { opacity: 1, filter: 'blur(0px)', scale: 1, duration: 0.34, ease: 'sine.out', immediateRender: false }, at - 0.06);
+      };
+      tl.set(['#h2 .bop', '#h3 .bop', '#h4 .bop'], { opacity: 0 }, b(12));
+      tl.fromTo('#h1 .bop', { opacity: 0, scale: 1.1, filter: 'blur(16px)' }, { opacity: 1, scale: 1, filter: 'blur(0px)', duration: 0.5, ease: 'power2.out', immediateRender: false }, b(12));
+      dissolve('#h1', '#h2', b(13));
+      dissolve('#h2', '#h3', b(14));
+      dissolve('#h3', '#h4', b(15));
+      tl.fromTo(['#h1 .sway', '#h2 .sway', '#h3 .sway', '#h4 .sway'], { rotation: -2 }, { keyframes: { rotation: [-2, 2, -2, 2, 0] }, duration: b(4), ease: 'sine.inOut', immediateRender: false }, b(12));
+      [12.3, 13.3, 14.3, 15.3].forEach((n, i) => glint(['#h1', '#h2', '#h3', '#h4'][i], b(n)));
+      tl.to('#h4 .travel', { scale: 0.7, opacity: 0, duration: 0.3, ease: 'power2.in' }, b(16) - 0.3);
+
+      // ---------- end (16-20): the three colours pop in a row under the wordmark ----------
+      ['#e1', '#e2', '#e3'].forEach((g, i) => {
+        tl.from(`${g} .travel`, { scale: 0, y: 80, rotation: [-10, 0, 10][i], duration: 0.55, ease: 'back.out(2.6)' }, b(16.5 + i * 0.5));
+        [17.5, 18.5, 19.5].forEach((n) => tl.to(`${g} .bop`, { keyframes: { y: [0, -18, 0] }, duration: B * 0.8, ease: 'sine.inOut' }, b(n) + i * 0.06));
+      });
+      tl.set(sparkEls, { top: (i) => [1290, 1300, 1450, 1440, 1250, 1480, 1470, 1260][i] }, b(16));
+      sparkle(b(18), 6, 1);
+
+      // ---------- type ----------
+      tl.fromTo('#t0', { scale: 1.3, filter: 'blur(10px)' }, { scale: 1, filter: 'blur(0px)', duration: 0.15, ease: 'power3.out', immediateRender: false }, 0);
+      tl.set('#t0', { autoAlpha: 0 }, b(1));
+
+      letterFade(q('t1', 1), b(4), 0.04);
+      popLetters(q('t1', 2), b(4) + 0.05, 0.035);
+      tl.to(q('t1', 2) + ' .ch', { keyframes: { y: [0, -16, 0] }, duration: B * 0.7, ease: 'sine.inOut', stagger: 0.02 }, b(6));
+      softOut([q('t1', 1), q('t1', 2)], b(8) - 0.36);
+      tl.to('#p3', { opacity: 0, duration: 0.01 }, b(7));
+
+      letterFade(q('t2', 1), b(8), 0.04);
+      riseIn(q('t2', 2), b(8) + 0.1);
+      riseIn(q('t2', 3), b(8) + 0.3);
+      wordsGlide(q('t2', 4), b(9), 60);
+      softOut('#t2 .type', b(12) - 0.4);
+
+      letterFade(q('t3', 1), b(12), 0.04);
+      tl.from(`${q('t3', 2)} .ch, ${q('t3', 3)} .ch`, { opacity: 0, y: 30, filter: 'blur(8px)', duration: 0.45, ease: 'power2.out', stagger: 0.035 }, b(12) + 0.1);
+      wordsGlide(q('t3', 4), b(13), -60);
+      softOut('#t3 .type', b(16) - 0.4);
+
+      riseIn(q('t4', 1), b(17), 0.9);
+      letterFade(q('t4', 2), b(17.5), 0.02);
+
+      // ---------- brand ----------
+      tl.from('#logo b', { y: -30, opacity: 0, duration: 0.6, ease: 'power2.out', stagger: B / 6 }, b(2));
+      tl.fromTo('#logo .shine i', { x: -90 }, { x: 320, duration: B * 1.5, ease: 'power2.inOut' }, b(3));
+      tl.to('#logo', { y: 960 - 24 - 1755, scale: 2.9, duration: B * 1.1, ease: 'expo.out' }, b(16));
+      tl.to('#logo', { scale: 3.05, duration: b(3), ease: 'none' }, b(16) + B * 1.1);
+      tl.from('#logo-rule', { scaleX: 0, duration: B, ease: 'power3.out' }, b(16.6));
+      [17, 18, 19].forEach((n) => tl.to('#logo b', { keyframes: { y: [0, -10, 0] }, duration: B * 0.8, ease: 'sine.inOut', stagger: 0.03 }, b(n)));
+      tl.fromTo('#logo .shine i', { x: -90 }, { x: 320, duration: B * 1.4, ease: 'power2.inOut', immediateRender: false }, b(18));
+
+
+      window.__timelines['main'] = tl;
+      tl.seek(0);
+    </script>
+  </body>
+</html>
