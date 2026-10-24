@@ -1,0 +1,34 @@
+/* Shared layout for every slide: 1080×1350, anime art fills the frame, comic-style type on top.
+   Art comes from slides/slide-0N.png (Codex, text-free); until it exists the sky placeholder shows. */
+html, body { margin: 0; background: transparent; }
+body { position: relative; width: 1080px; height: 1350px; overflow: hidden; font-family: 'Inter', sans-serif; }
+body > [data-layer] { position: absolute; box-sizing: border-box; }
+
+.background { inset: 0; background: radial-gradient(circle at 20% 18%, #fff 0 34px, transparent 35px),
+              radial-gradient(circle at 82% 30%, #fff 0 24px, transparent 25px),
+              linear-gradient(180deg, #2a8de0 0%, #8fd0ff 100%); }
+.art { inset: 0; width: 100%; height: 100%; object-fit: cover; }
+
+.logo { right: 56px; top: 52px; width: 190px; filter: drop-shadow(0 0 2px #111) drop-shadow(3px 3px 0 #111); }
+.count { left: 56px; top: 48px; padding: 6px 18px; background: #fff; border: 5px solid #111;
+         font: 400 34px/1 'Bangers', sans-serif; letter-spacing: .06em; color: #111; transform: rotate(-3deg); }
+
+/* Big headline: thick black outline + hard drop shadow, like a manga cover title */
+.title { left: 50px; right: 50px; margin: 0; font: 400 128px/.92 'Bangers', sans-serif; letter-spacing: .02em;
+         color: #ffd21f; -webkit-text-stroke: 7px #111; paint-order: stroke fill;
+         text-shadow: 9px 9px 0 #d7261e; transform: rotate(-3deg); }
+.title.top { top: 130px; }
+.title.bottom { bottom: 330px; }
+
+/* Text panel: white box, heavy border, hard shadow */
+.panel { left: 50px; right: 50px; bottom: 60px; padding: 30px 38px; background: #fff; border: 7px solid #111;
+         box-shadow: 14px 14px 0 #111; font: 500 38px/1.3 'Inter', sans-serif; color: #111; }
+.panel b { font-weight: 800; color: #d7261e; }
+.panel .tag { display: inline-block; margin-bottom: 10px; padding: 4px 14px; background: #111; color: #ffd21f;
+              font: 400 32px/1.1 'Bangers', sans-serif; letter-spacing: .08em; }
+.swipe { right: 70px; bottom: 26px; font: 400 30px/1 'Bangers', sans-serif; letter-spacing: .1em; color: #fff;
+         -webkit-text-stroke: 4px #111; paint-order: stroke fill; }
+
+/* Per-slide nudges so the title stays off faces */
+.title.small { font-size: 100px; text-shadow: 7px 7px 0 #d7261e; }
+.title.right { left: auto; right: 50px; text-align: right; top: 120px; }
