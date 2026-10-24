@@ -1,0 +1,3 @@
+Level 1: YES. A and B are both #7E8F86; the dark-to-light gradient makes A look lighter
+Level 2: YES. Tiles A and B are both #6F706D; B sits in the ball's shadow, so your brain brightens it
+Level 3: NO. A bars are #868686, B bars are #969696 (B is lighter); on black stripes A looks lighter than it is (White's illusion), so they look about the same

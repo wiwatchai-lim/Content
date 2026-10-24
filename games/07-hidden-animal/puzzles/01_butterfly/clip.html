@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8">
+<title>Hidden animal</title>
+<link rel="stylesheet" href="../../../../brand/tokens.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;700;800&family=Inter:wght@500;700&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{width:1080px;height:1920px;overflow:hidden;background:var(--to-snow);color:var(--to-green);font-family:var(--to-font-display);position:relative}
+.logo{position:absolute;top:96px;left:50%;width:210px;transform:translateX(-50%);opacity:.85}
+.head{position:absolute;top:200px;left:0;right:0;text-align:center;animation:drop 15s both}
+.eyebrow{font:700 30px/1 var(--to-font-body);letter-spacing:var(--to-track-eyebrow);color:var(--to-black);opacity:.7}
+.title{margin-top:18px;font-weight:800;font-size:92px;letter-spacing:var(--to-track-display);line-height:1}
+.title em{font-style:normal;display:inline-block;background:var(--to-green);color:var(--to-snow);padding:0 22px;margin-left:10px}
+.sub{margin-top:20px;font:700 30px/1 var(--to-font-body);letter-spacing:.12em;color:var(--to-green-on-dark)}
+@keyframes drop{0%{opacity:0;transform:translateY(-40px)}3.333%,100%{opacity:1;transform:none}}
+.stage{position:absolute;left:90px;top:470px;width:900px;height:860px}
+.count{position:absolute;left:0;right:0;top:1355px;height:180px;text-align:center}
+.dg{position:absolute;left:0;right:0;font-weight:800;font-size:170px;line-height:180px;opacity:0}
+.timer{position:absolute;left:90px;right:90px;top:1545px;height:16px;background:var(--to-timberwolf)}
+.timer i{position:absolute;inset:0;background:var(--to-green);transform-origin:left}
+.answer{position:absolute;left:0;right:0;top:1370px;text-align:center}
+.answer .big{font-weight:800;font-size:96px;letter-spacing:var(--to-track-display)}
+.answer .where{margin-top:14px;font:700 40px/1.25 var(--to-font-body);letter-spacing:.08em;color:var(--to-black)}
+
+#field{position:absolute;inset:0;animation:in 15s both}
+@keyframes in{0%{opacity:0}3.333%,100%{opacity:1}}
+.animal{position:absolute;inset:0}
+.animal g{animation:reveal 15s both}
+.animal path{fill:#C0392B;stroke:#C0392B;stroke-width:6;stroke-linejoin:round;vector-effect:non-scaling-stroke}
+@keyframes reveal{0%,72.000%{opacity:0}76.000%,100%{opacity:.5}}
+@keyframes cd0{0%,5.323%{opacity:0;transform:scale(1.4)}5.333%{opacity:1;transform:scale(1.4)}6.533%{opacity:1;transform:scale(1)}11.990%{opacity:1;transform:scale(1)}12.000%,100%{opacity:0}}.cd0{animation:cd0 15s linear both}
+@keyframes cd1{0%,11.990%{opacity:0;transform:scale(1.4)}12.000%{opacity:1;transform:scale(1.4)}13.200%{opacity:1;transform:scale(1)}18.657%{opacity:1;transform:scale(1)}18.667%,100%{opacity:0}}.cd1{animation:cd1 15s linear both}
+@keyframes cd2{0%,18.657%{opacity:0;transform:scale(1.4)}18.667%{opacity:1;transform:scale(1.4)}19.867%{opacity:1;transform:scale(1)}25.323%{opacity:1;transform:scale(1)}25.333%,100%{opacity:0}}.cd2{animation:cd2 15s linear both}
+@keyframes cd3{0%,25.323%{opacity:0;transform:scale(1.4)}25.333%{opacity:1;transform:scale(1.4)}26.533%{opacity:1;transform:scale(1)}31.990%{opacity:1;transform:scale(1)}32.000%,100%{opacity:0}}.cd3{animation:cd3 15s linear both}
+@keyframes cd4{0%,31.990%{opacity:0;transform:scale(1.4)}32.000%{opacity:1;transform:scale(1.4)}33.200%{opacity:1;transform:scale(1)}38.657%{opacity:1;transform:scale(1)}38.667%,100%{opacity:0}}.cd4{animation:cd4 15s linear both}
+@keyframes cd5{0%,38.657%{opacity:0;transform:scale(1.4)}38.667%{opacity:1;transform:scale(1.4)}39.867%{opacity:1;transform:scale(1)}45.323%{opacity:1;transform:scale(1)}45.333%,100%{opacity:0}}.cd5{animation:cd5 15s linear both}
+@keyframes cd6{0%,45.323%{opacity:0;transform:scale(1.4)}45.333%{opacity:1;transform:scale(1.4)}46.533%{opacity:1;transform:scale(1)}51.990%{opacity:1;transform:scale(1)}52.000%,100%{opacity:0}}.cd6{animation:cd6 15s linear both}
+@keyframes cd7{0%,51.990%{opacity:0;transform:scale(1.4)}52.000%{opacity:1;transform:scale(1.4)}53.200%{opacity:1;transform:scale(1)}58.657%{opacity:1;transform:scale(1)}58.667%,100%{opacity:0}}.cd7{animation:cd7 15s linear both}
+@keyframes cd8{0%,58.657%{opacity:0;transform:scale(1.4)}58.667%{opacity:1;transform:scale(1.4)}59.867%{opacity:1;transform:scale(1)}65.323%{opacity:1;transform:scale(1)}65.333%,100%{opacity:0}}.cd8{animation:cd8 15s linear both}
+@keyframes cd9{0%,65.323%{opacity:0;transform:scale(1.4)}65.333%{opacity:1;transform:scale(1.4)}66.533%{opacity:1;transform:scale(1)}71.990%{opacity:1;transform:scale(1)}72.000%,100%{opacity:0}}.cd9{animation:cd9 15s linear both}
+.ct{animation:ctf 15s both}.ct i{animation:ctn 15s linear both}@keyframes ctn{0%,5.333%{transform:scaleX(1)}72.000%,100%{transform:scaleX(0)}}@keyframes ctf{0%,3.333%{opacity:0}5.333%,72.000%{opacity:1}74.000%,100%{opacity:0}}
+.ans{animation:ansk 15s both}@keyframes ansk{0%,76.000%{opacity:0;transform:translateY(30px)}79.333%{opacity:1;transform:none}100%{opacity:1;transform:none}}
+</style></head>
+<body data-width="1080" data-height="1920" data-duration="15" data-fps="30">
+<img class="logo" src="../../../../brand/logo/timeoptic.svg" alt="">
+<div class="head">
+  <div class="eyebrow">EYE TEST · LOOK CLOSER</div>
+  <div class="title">SPOT THE<em>ANIMAL</em></div>
+  <div class="sub">SOMETHING IS HIDING IN HERE</div>
+</div>
+<div class="stage">
+<canvas id="field" width="900" height="860"></canvas>
+<svg class="animal" viewBox="0 0 900 860" width="900" height="860"><g transform="matrix(-0.9005904049845412 0 0 0.9005904049845412 558.4 452.6)"><path d="M-13.989035349655865 0.22552581685983597 A105 70 35 1 1 -186.01096465034414 -120.22552581685983 A105 70 35 1 1 -13.989035349655865 0.22552581685983597Z"/><path d="M186.01096465034414 -120.22552581685983 A105 70 -35 1 1 13.989035349655865 0.22552581685983597 A105 70 -35 1 1 186.01096465034414 -120.22552581685983Z"/><path d="M-13.02105281119259 38.702496582724685 A72 48 -35 1 1 -130.9789471888074 121.29750341727532 A72 48 -35 1 1 -13.02105281119259 38.702496582724685Z"/><path d="M130.9789471888074 121.29750341727532 A72 48 35 1 1 13.02105281119259 38.702496582724685 A72 48 35 1 1 130.9789471888074 121.29750341727532Z"/><path d="M14 0 A14 130 0 1 1 -14 0 A14 130 0 1 1 14 0Z"/><path d="M-1.1412818342935505 -122.31523089942387 L-46.14128183429355 -197.31523089942388 L-53.85871816570645 -192.68476910057612 L-8.858718165706449 -117.68476910057613Z"/><path d="M8.858718165706449 -117.68476910057613 L53.85871816570645 -192.68476910057612 L46.14128183429355 -197.31523089942388 L1.1412818342935505 -122.31523089942387Z"/></g></svg>
+</div>
+<div class="count"><b class="dg cd0">10</b><b class="dg cd1">9</b><b class="dg cd2">8</b><b class="dg cd3">7</b><b class="dg cd4">6</b><b class="dg cd5">5</b><b class="dg cd6">4</b><b class="dg cd7">3</b><b class="dg cd8">2</b><b class="dg cd9">1</b></div><div class="timer ct"><i></i></div><div class="answer ans"><div class="big">A BUTTERFLY!</div><div class="where">YOUR EYES SPOT IT BY THE<br>DIRECTION OF THE LINES</div></div>
+<script>
+
+(() => {
+  // mulberry32, same as games/_lib
+  let h = 1779033703; for (const c of "animals-set-1-1") h = Math.imul(h ^ c.charCodeAt(0), 3432918353), h = (h << 13) | (h >>> 19);
+  let a = h >>> 0;
+  const rand = () => { a = (a + 0x6d2b79f5) | 0; let t = Math.imul(a ^ (a >>> 15), 1 | a); t = (t + Math.imul(t ^ (t >>> 7), 61 | t)) ^ t; return ((t ^ (t >>> 14)) >>> 0) / 4294967296; };
+  const cv = document.getElementById('field'), ctx = cv.getContext('2d');
+  const shapes = ["M-13.989035349655865 0.22552581685983597 A105 70 35 1 1 -186.01096465034414 -120.22552581685983 A105 70 35 1 1 -13.989035349655865 0.22552581685983597Z","M186.01096465034414 -120.22552581685983 A105 70 -35 1 1 13.989035349655865 0.22552581685983597 A105 70 -35 1 1 186.01096465034414 -120.22552581685983Z","M-13.02105281119259 38.702496582724685 A72 48 -35 1 1 -130.9789471888074 121.29750341727532 A72 48 -35 1 1 -13.02105281119259 38.702496582724685Z","M130.9789471888074 121.29750341727532 A72 48 35 1 1 13.02105281119259 38.702496582724685 A72 48 35 1 1 130.9789471888074 121.29750341727532Z","M14 0 A14 130 0 1 1 -14 0 A14 130 0 1 1 14 0Z","M-1.1412818342935505 -122.31523089942387 L-46.14128183429355 -197.31523089942388 L-53.85871816570645 -192.68476910057612 L-8.858718165706449 -117.68476910057613Z","M8.858718165706449 -117.68476910057613 L53.85871816570645 -192.68476910057612 L46.14128183429355 -197.31523089942388 L1.1412818342935505 -122.31523089942387Z"].map((d) => { const p = new Path2D(); p.addPath(new Path2D(d), new DOMMatrix([-0.9005904049845412,0,0,0.9005904049845412,558.4,452.6])); return p; });
+  const inside = (x, y) => shapes.some((p) => ctx.isPointInPath(p, x, y));
+  const greens = ['#123A29', '#1F5A3E', '#2E7350', '#41996E', '#5E8C6E'];
+  ctx.fillStyle = '#E9EDE4'; ctx.fillRect(0, 0, cv.width, cv.height);
+  ctx.lineCap = 'round';
+  const step = 13;
+  for (let y = -step; y < cv.height + step; y += step) for (let x = -step; x < cv.width + step; x += step) {
+    const px = x + (rand() - 0.5) * step, py = y + (rand() - 0.5) * step;
+    const ang = inside(px, py) ? 1.372 + (rand() - 0.5) * 1.1 : rand() * Math.PI;
+    const len = 18 + rand() * 8;
+    ctx.strokeStyle = greens[Math.floor(rand() * greens.length)];
+    ctx.lineWidth = 3.4;
+    ctx.beginPath();
+    ctx.moveTo(px - Math.cos(ang) * len / 2, py - Math.sin(ang) * len / 2);
+    ctx.lineTo(px + Math.cos(ang) * len / 2, py + Math.sin(ang) * len / 2);
+    ctx.stroke();
+  }
+})();
+</script>
+</body></html>

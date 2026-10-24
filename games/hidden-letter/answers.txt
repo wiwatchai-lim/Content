@@ -1,0 +1,11 @@
+01_F-in-E  level 1  7×10  answer: row 8, column 4
+02_N-in-M  level 2  8×11  answer: row 4, column 5
+03_W-in-V  level 3  9×12  answer: row 3, column 7
+04_L-in-I  level 4  9×13  answer: row 5, column 3
+05_E-in-F  level 5  10×14  answer: row 8, column 2
+06_Q-in-O  level 6  11×15  answer: row 5, column 10
+07_C-in-O  level 7  12×16  answer: row 9, column 7
+08_8-in-B  level 8  13×18  answer: row 12, column 3
+09_Z-in-2  level 9  14×19  answer: row 2, column 8
+10_O-in-0  level 10  15×20  answer: row 6, column 13
+11_0-in-O  level 100  20×26  answer: row 19, column 7

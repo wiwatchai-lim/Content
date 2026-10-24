@@ -1,0 +1,3 @@
+Level 1: row 7, column 8 (9×10, fillers 8)
+Level 2: row 11, column 8 (12×13, fillers 8)
+Level 3: row 13, column 2 (14×15, fillers 8/8/9/5/0/8)

@@ -1,0 +1,3 @@
+Level 1: line 1 ends at C (3 lines; all: 1→C, 2→A, 3→B)
+Level 2: line 4 ends at B (5 lines; all: 1→C, 2→E, 3→A, 4→B, 5→D)
+Level 3: line 3 ends at A (7 lines; all: 1→E, 2→G, 3→A, 4→F, 5→C, 6→B, 7→D)

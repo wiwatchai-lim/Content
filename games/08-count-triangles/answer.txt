@@ -1,0 +1,4 @@
+Level 1: 8 triangles
+Level 2: 18 triangles
+Level 3: 35 triangles
+(counted by script: 8 / 18 / 35; square with both diagonals; triangle with 2 apex lines + 2 cross bars; pentagon with all diagonals)

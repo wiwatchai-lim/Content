@@ -1,0 +1,3 @@
+Level 1: a rabbit, facing left
+Level 2: an elephant, facing left
+Level 3: a turtle, facing left

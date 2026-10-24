@@ -1,0 +1,266 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8">
+<title>Colour vision test</title>
+<link rel="stylesheet" href="../../../../brand/tokens.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;700;800&family=Inter:wght@500;700&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{width:1080px;height:1920px;overflow:hidden;background:var(--to-snow);color:var(--to-green);font-family:var(--to-font-display);position:relative}
+.logo{position:absolute;top:96px;left:50%;width:210px;transform:translateX(-50%);opacity:.85}
+.head{position:absolute;top:200px;left:0;right:0;text-align:center;animation:drop 31.8s both}
+.eyebrow{font:700 30px/1 var(--to-font-body);letter-spacing:var(--to-track-eyebrow);color:var(--to-black);opacity:.7}
+.title{margin-top:18px;font-weight:800;font-size:92px;letter-spacing:var(--to-track-display);line-height:1}
+.title em{font-style:normal;display:inline-block;background:var(--to-green);color:var(--to-snow);padding:0 22px;margin-left:10px}
+.sub{margin-top:20px;font:700 30px/1 var(--to-font-body);letter-spacing:.12em;color:var(--to-green-on-dark)}
+@keyframes drop{0%{opacity:0;transform:translateY(-40px)}1.572%,100%{opacity:1;transform:none}}
+.stage{position:absolute;left:90px;top:470px;width:900px;height:860px}
+.count{position:absolute;left:0;right:0;top:1355px;height:180px;text-align:center}
+.dg{position:absolute;left:0;right:0;font-weight:800;font-size:170px;line-height:180px;opacity:0}
+.timer{position:absolute;left:90px;right:90px;top:1545px;height:16px;background:var(--to-timberwolf)}
+.timer i{position:absolute;inset:0;background:var(--to-green);transform-origin:left}
+.answer{position:absolute;left:0;right:0;top:1370px;text-align:center}
+.answer .big{font-weight:800;font-size:96px;letter-spacing:var(--to-track-display)}
+.answer .where{margin-top:14px;font:700 40px/1.25 var(--to-font-body);letter-spacing:.08em;color:var(--to-black)}
+
+.head{opacity:0}
+.ban .lv{font-weight:800;font-size:190px;line-height:1;letter-spacing:var(--to-track-display)}
+.ban .df{display:inline-block;margin-top:24px;padding:16px 40px;font:800 54px/1 var(--to-font-body);letter-spacing:.2em;color:var(--to-snow)}
+.vig{position:absolute;inset:0;pointer-events:none;box-shadow:inset 0 0 170px 40px rgba(192,57,43,.55);opacity:0;z-index:4}
+.pips{position:absolute;left:0;right:0;top:1640px;display:flex;justify-content:center;gap:22px;animation:pipsk 31.8s both}
+@keyframes pipsk{0%,4.403%{opacity:0}5.031%,88.365%{opacity:1}89.308%,100%{opacity:0}}
+.pips span{width:150px;padding:14px 0;text-align:center;border:4px solid var(--to-green);font:800 30px/1 var(--to-font-body);letter-spacing:.12em}
+
+.hook{position:absolute;left:0;right:0;top:560px;text-align:center;animation:hookk 31.8s both}
+.hook .top{font:700 34px/1 var(--to-font-body);letter-spacing:var(--to-track-eyebrow);color:var(--to-black);opacity:.75}
+.hook .big{margin-top:34px;font-weight:800;font-size:136px;line-height:.98;letter-spacing:var(--to-track-display)}
+.hook .big em{font-style:normal;color:#C0392B}
+.hook .small{margin-top:40px;display:inline-block;font:800 40px/1 var(--to-font-body);letter-spacing:.12em;color:var(--to-snow);background:var(--to-green);padding:20px 34px}
+@keyframes hookk{0%{opacity:0;transform:scale(1.25)}0.786%{opacity:1;transform:scale(.97)}1.258%{transform:scale(1)}4.245%{opacity:1;transform:scale(1)}5.031%,100%{opacity:0;transform:scale(.9)}}
+.hook .small{animation:hooks 31.8s both}
+@keyframes hooks{0%,1.415%{opacity:0;transform:translateY(20px)}2.201%,100%{opacity:1;transform:none}}
+@keyframes L0seg{0%,5.031%{opacity:0}5.818%,34.434%{opacity:1}35.220%,100%{opacity:0}}
+.L0{animation:L0seg 31.8s both}
+@keyframes L0stg{0%,7.075%{opacity:0;transform:scale(.94)}8.176%,34.434%{opacity:1;transform:none}35.220%,100%{opacity:0}}
+.L0stg{position:absolute;inset:0;overflow:hidden;animation:L0stg 31.8s both}
+.L0ban{position:absolute;left:0;right:0;top:720px;text-align:center;animation:L0ban 31.8s both;z-index:5}
+@keyframes L0ban{0%,5.031%{opacity:0;transform:scale(2.2)}5.597%{opacity:1;transform:scale(.95)}5.975%,7.233%{opacity:1;transform:scale(1)}8.019%,100%{opacity:0;transform:scale(1.1)}}
+.L0zm{position:absolute;inset:0;transform-origin:452px 438px;animation:L0zm 31.8s both}
+@keyframes L0zm{0%,28.616%{transform:scale(1)}30.031%,33.019%{transform:scale(1.15)}34.434%,100%{transform:scale(1)}}
+.L0sh{position:absolute;inset:0;animation:L0sh 31.8s linear both}
+@keyframes L0sh{0%,20.755%{transform:none}20.755%{transform:translate(-2px,-0.8px)}21.069%{transform:translate(2.25px,1.3499999999999999px)}21.384%{transform:translate(-2.5px,-1px)}21.698%{transform:translate(2.75px,-1.1px)}22.013%{transform:translate(-3px,1.7999999999999998px)}22.327%{transform:translate(3.25px,-1.3px)}22.642%{transform:translate(-3.5px,-1.4000000000000001px)}22.956%{transform:translate(3.75px,2.25px)}23.270%{transform:translate(-4px,-1.6px)}23.585%{transform:translate(4.25px,-1.7000000000000002px)}23.899%{transform:translate(-4.5px,2.6999999999999997px)}24.214%{transform:translate(4.75px,-1.9000000000000001px)}24.528%{transform:translate(-5px,-2px)}24.843%{transform:translate(5.25px,3.15px)}25.157%{transform:translate(-5.5px,-2.2px)}25.472%{transform:translate(5.75px,-2.3000000000000003px)}25.786%{transform:translate(-6px,3.5999999999999996px)}26.101%{transform:translate(6.25px,-2.5px)}26.415%{transform:translate(-6.5px,-2.6px)}26.730%{transform:translate(6.75px,4.05px)}27.044%,100%{transform:none}}
+
+.L0bg,.L0fg,.L0ol{position:absolute;inset:0}
+.L0bg{animation:L0bgk 31.8s both}
+@keyframes L0bgk{0%,27.044%{opacity:1}28.302%,100%{opacity:.12}}
+.L0fg{animation:L0fgk 31.8s both}
+@keyframes L0fgk{0%,27.044%{filter:saturate(1)}28.302%,100%{filter:saturate(1.6)}}
+.L0ol{animation:L0olk 31.8s both}
+@keyframes L0olk{0%,27.673%{opacity:0}28.931%,100%{opacity:1}}.L0d0{animation:L0d0 31.8s linear both}
+@keyframes L0d0{0%,8.145%{opacity:0}8.176%{opacity:1;transform:scale(1.35)}8.962%{opacity:1;transform:scale(1)}11.289%{opacity:1;transform:scale(1)}11.321%,100%{opacity:0}}.L0d1{animation:L0d1 31.8s linear both}
+@keyframes L0d1{0%,11.289%{opacity:0}11.321%{opacity:1;transform:scale(1.35)}12.107%{opacity:1;transform:scale(1)}14.434%{opacity:1;transform:scale(1)}14.465%,100%{opacity:0}}.L0d2{animation:L0d2 31.8s linear both}
+@keyframes L0d2{0%,14.434%{opacity:0}14.465%{opacity:1;transform:scale(1.35)}15.252%{opacity:1;transform:scale(1)}17.579%{opacity:1;transform:scale(1)}17.610%,100%{opacity:0}}.L0d3{animation:L0d3 31.8s linear both}
+@keyframes L0d3{0%,17.579%{opacity:0}17.610%{opacity:1;transform:scale(1.7)}18.396%{opacity:1;transform:scale(1)}20.723%{opacity:1;transform:scale(1)}20.755%,100%{opacity:0}}.L0v3{animation:L0v3 31.8s linear both}
+@keyframes L0v3{0%,17.579%{opacity:0}17.610%{opacity:0.55}19.497%,100%{opacity:0}}.L0d4{animation:L0d4 31.8s linear both}
+@keyframes L0d4{0%,20.723%{opacity:0}20.755%{opacity:1;transform:scale(1.7)}21.541%{opacity:1;transform:scale(1)}23.868%{opacity:1;transform:scale(1)}23.899%,100%{opacity:0}}.L0v4{animation:L0v4 31.8s linear both}
+@keyframes L0v4{0%,20.723%{opacity:0}20.755%{opacity:0.75}22.642%,100%{opacity:0}}.L0d5{animation:L0d5 31.8s linear both}
+@keyframes L0d5{0%,23.868%{opacity:0}23.899%{opacity:1;transform:scale(1.7)}24.686%{opacity:1;transform:scale(1)}27.013%{opacity:1;transform:scale(1)}27.044%,100%{opacity:0}}.L0v5{animation:L0v5 31.8s linear both}
+@keyframes L0v5{0%,23.868%{opacity:0}23.899%{opacity:0.95}25.786%,100%{opacity:0}}.L0t{animation:L0tf 31.8s both}.L0t i{animation:L0tn 31.8s linear both}
+@keyframes L0tn{0%,8.176%{transform:scaleX(1);background:var(--to-green)}17.610%{background:var(--to-green)}17.925%{background:#C0392B}27.044%,100%{transform:scaleX(0);background:#C0392B}}
+@keyframes L0tf{0%,7.233%{opacity:0}8.176%,27.044%{opacity:1}27.987%,100%{opacity:0}}.L0ans{animation:L0ans 31.8s both}
+@keyframes L0ans{0%,27.830%{opacity:0;transform:translateY(30px)}28.931%,34.434%{opacity:1;transform:none}35.220%,100%{opacity:0}}.pip0{animation:pip0 31.8s both}@keyframes pip0{0%,5.031%{background:transparent;color:var(--to-green)}5.660%,100%{background:var(--to-green);color:var(--to-snow)}}
+@keyframes L1seg{0%,35.220%{opacity:0}36.006%,61.478%{opacity:1}62.264%,100%{opacity:0}}
+.L1{animation:L1seg 31.8s both}
+@keyframes L1stg{0%,37.264%{opacity:0;transform:scale(.94)}38.365%,61.478%{opacity:1;transform:none}62.264%,100%{opacity:0}}
+.L1stg{position:absolute;inset:0;overflow:hidden;animation:L1stg 31.8s both}
+.L1ban{position:absolute;left:0;right:0;top:720px;text-align:center;animation:L1ban 31.8s both;z-index:5}
+@keyframes L1ban{0%,35.220%{opacity:0;transform:scale(2.2)}35.786%{opacity:1;transform:scale(.95)}36.164%,37.421%{opacity:1;transform:scale(1)}38.208%,100%{opacity:0;transform:scale(1.1)}}
+.L1zm{position:absolute;inset:0;transform-origin:461px 423px;animation:L1zm 31.8s both}
+@keyframes L1zm{0%,55.660%{transform:scale(1)}57.075%,60.063%{transform:scale(1.15)}61.478%,100%{transform:scale(1)}}
+.L1sh{position:absolute;inset:0;animation:L1sh 31.8s linear both}
+@keyframes L1sh{0%,47.799%{transform:none}47.799%{transform:translate(-2px,-0.8px)}48.113%{transform:translate(2.25px,1.3499999999999999px)}48.428%{transform:translate(-2.5px,-1px)}48.742%{transform:translate(2.75px,-1.1px)}49.057%{transform:translate(-3px,1.7999999999999998px)}49.371%{transform:translate(3.25px,-1.3px)}49.686%{transform:translate(-3.5px,-1.4000000000000001px)}50.000%{transform:translate(3.75px,2.25px)}50.314%{transform:translate(-4px,-1.6px)}50.629%{transform:translate(4.25px,-1.7000000000000002px)}50.943%{transform:translate(-4.5px,2.6999999999999997px)}51.258%{transform:translate(4.75px,-1.9000000000000001px)}51.572%{transform:translate(-5px,-2px)}51.887%{transform:translate(5.25px,3.15px)}52.201%{transform:translate(-5.5px,-2.2px)}52.516%{transform:translate(5.75px,-2.3000000000000003px)}52.830%{transform:translate(-6px,3.5999999999999996px)}53.145%{transform:translate(6.25px,-2.5px)}53.459%{transform:translate(-6.5px,-2.6px)}53.774%{transform:translate(6.75px,4.05px)}54.088%,100%{transform:none}}
+
+.L1bg,.L1fg,.L1ol{position:absolute;inset:0}
+.L1bg{animation:L1bgk 31.8s both}
+@keyframes L1bgk{0%,54.088%{opacity:1}55.346%,100%{opacity:.12}}
+.L1fg{animation:L1fgk 31.8s both}
+@keyframes L1fgk{0%,54.088%{filter:saturate(1)}55.346%,100%{filter:saturate(1.6)}}
+.L1ol{animation:L1olk 31.8s both}
+@keyframes L1olk{0%,54.717%{opacity:0}55.975%,100%{opacity:1}}.L1d0{animation:L1d0 31.8s linear both}
+@keyframes L1d0{0%,38.333%{opacity:0}38.365%{opacity:1;transform:scale(1.35)}39.151%{opacity:1;transform:scale(1)}41.478%{opacity:1;transform:scale(1)}41.509%,100%{opacity:0}}.L1d1{animation:L1d1 31.8s linear both}
+@keyframes L1d1{0%,41.478%{opacity:0}41.509%{opacity:1;transform:scale(1.35)}42.296%{opacity:1;transform:scale(1)}44.623%{opacity:1;transform:scale(1)}44.654%,100%{opacity:0}}.L1d2{animation:L1d2 31.8s linear both}
+@keyframes L1d2{0%,44.623%{opacity:0}44.654%{opacity:1;transform:scale(1.7)}45.440%{opacity:1;transform:scale(1)}47.767%{opacity:1;transform:scale(1)}47.799%,100%{opacity:0}}.L1v2{animation:L1v2 31.8s linear both}
+@keyframes L1v2{0%,44.623%{opacity:0}44.654%{opacity:0.55}46.541%,100%{opacity:0}}.L1d3{animation:L1d3 31.8s linear both}
+@keyframes L1d3{0%,47.767%{opacity:0}47.799%{opacity:1;transform:scale(1.7)}48.585%{opacity:1;transform:scale(1)}50.912%{opacity:1;transform:scale(1)}50.943%,100%{opacity:0}}.L1v3{animation:L1v3 31.8s linear both}
+@keyframes L1v3{0%,47.767%{opacity:0}47.799%{opacity:0.75}49.686%,100%{opacity:0}}.L1d4{animation:L1d4 31.8s linear both}
+@keyframes L1d4{0%,50.912%{opacity:0}50.943%{opacity:1;transform:scale(1.7)}51.730%{opacity:1;transform:scale(1)}54.057%{opacity:1;transform:scale(1)}54.088%,100%{opacity:0}}.L1v4{animation:L1v4 31.8s linear both}
+@keyframes L1v4{0%,50.912%{opacity:0}50.943%{opacity:0.95}52.830%,100%{opacity:0}}.L1t{animation:L1tf 31.8s both}.L1t i{animation:L1tn 31.8s linear both}
+@keyframes L1tn{0%,38.365%{transform:scaleX(1);background:var(--to-green)}44.654%{background:var(--to-green)}44.969%{background:#C0392B}54.088%,100%{transform:scaleX(0);background:#C0392B}}
+@keyframes L1tf{0%,37.421%{opacity:0}38.365%,54.088%{opacity:1}55.031%,100%{opacity:0}}.L1ans{animation:L1ans 31.8s both}
+@keyframes L1ans{0%,54.874%{opacity:0;transform:translateY(30px)}55.975%,61.478%{opacity:1;transform:none}62.264%,100%{opacity:0}}.pip1{animation:pip1 31.8s both}@keyframes pip1{0%,35.220%{background:transparent;color:var(--to-green)}35.849%,100%{background:var(--to-green);color:var(--to-snow)}}
+@keyframes L2seg{0%,62.264%{opacity:0}63.050%,88.522%{opacity:1}89.308%,100%{opacity:0}}
+.L2{animation:L2seg 31.8s both}
+@keyframes L2stg{0%,64.308%{opacity:0;transform:scale(.94)}65.409%,88.522%{opacity:1;transform:none}89.308%,100%{opacity:0}}
+.L2stg{position:absolute;inset:0;overflow:hidden;animation:L2stg 31.8s both}
+.L2ban{position:absolute;left:0;right:0;top:720px;text-align:center;animation:L2ban 31.8s both;z-index:5}
+@keyframes L2ban{0%,62.264%{opacity:0;transform:scale(2.2)}62.830%{opacity:1;transform:scale(.95)}63.208%,64.465%{opacity:1;transform:scale(1)}65.252%,100%{opacity:0;transform:scale(1.1)}}
+.L2zm{position:absolute;inset:0;transform-origin:468px 448px;animation:L2zm 31.8s both}
+@keyframes L2zm{0%,82.704%{transform:scale(1)}84.119%,87.107%{transform:scale(1.15)}88.522%,100%{transform:scale(1)}}
+.L2sh{position:absolute;inset:0;animation:L2sh 31.8s linear both}
+@keyframes L2sh{0%,74.843%{transform:none}74.843%{transform:translate(-2px,-0.8px)}75.157%{transform:translate(2.25px,1.3499999999999999px)}75.472%{transform:translate(-2.5px,-1px)}75.786%{transform:translate(2.75px,-1.1px)}76.101%{transform:translate(-3px,1.7999999999999998px)}76.415%{transform:translate(3.25px,-1.3px)}76.730%{transform:translate(-3.5px,-1.4000000000000001px)}77.044%{transform:translate(3.75px,2.25px)}77.358%{transform:translate(-4px,-1.6px)}77.673%{transform:translate(4.25px,-1.7000000000000002px)}77.987%{transform:translate(-4.5px,2.6999999999999997px)}78.302%{transform:translate(4.75px,-1.9000000000000001px)}78.616%{transform:translate(-5px,-2px)}78.931%{transform:translate(5.25px,3.15px)}79.245%{transform:translate(-5.5px,-2.2px)}79.560%{transform:translate(5.75px,-2.3000000000000003px)}79.874%{transform:translate(-6px,3.5999999999999996px)}80.189%{transform:translate(6.25px,-2.5px)}80.503%{transform:translate(-6.5px,-2.6px)}80.818%{transform:translate(6.75px,4.05px)}81.132%,100%{transform:none}}
+
+.L2bg,.L2fg,.L2ol{position:absolute;inset:0}
+.L2bg{animation:L2bgk 31.8s both}
+@keyframes L2bgk{0%,81.132%{opacity:1}82.390%,100%{opacity:.12}}
+.L2fg{animation:L2fgk 31.8s both}
+@keyframes L2fgk{0%,81.132%{filter:saturate(1)}82.390%,100%{filter:saturate(1.6)}}
+.L2ol{animation:L2olk 31.8s both}
+@keyframes L2olk{0%,81.761%{opacity:0}83.019%,100%{opacity:1}}.L2d0{animation:L2d0 31.8s linear both}
+@keyframes L2d0{0%,65.377%{opacity:0}65.409%{opacity:1;transform:scale(1.35)}66.195%{opacity:1;transform:scale(1)}68.522%{opacity:1;transform:scale(1)}68.553%,100%{opacity:0}}.L2d1{animation:L2d1 31.8s linear both}
+@keyframes L2d1{0%,68.522%{opacity:0}68.553%{opacity:1;transform:scale(1.35)}69.340%{opacity:1;transform:scale(1)}71.667%{opacity:1;transform:scale(1)}71.698%,100%{opacity:0}}.L2d2{animation:L2d2 31.8s linear both}
+@keyframes L2d2{0%,71.667%{opacity:0}71.698%{opacity:1;transform:scale(1.7)}72.484%{opacity:1;transform:scale(1)}74.811%{opacity:1;transform:scale(1)}74.843%,100%{opacity:0}}.L2v2{animation:L2v2 31.8s linear both}
+@keyframes L2v2{0%,71.667%{opacity:0}71.698%{opacity:0.55}73.585%,100%{opacity:0}}.L2d3{animation:L2d3 31.8s linear both}
+@keyframes L2d3{0%,74.811%{opacity:0}74.843%{opacity:1;transform:scale(1.7)}75.629%{opacity:1;transform:scale(1)}77.956%{opacity:1;transform:scale(1)}77.987%,100%{opacity:0}}.L2v3{animation:L2v3 31.8s linear both}
+@keyframes L2v3{0%,74.811%{opacity:0}74.843%{opacity:0.75}76.730%,100%{opacity:0}}.L2d4{animation:L2d4 31.8s linear both}
+@keyframes L2d4{0%,77.956%{opacity:0}77.987%{opacity:1;transform:scale(1.7)}78.774%{opacity:1;transform:scale(1)}81.101%{opacity:1;transform:scale(1)}81.132%,100%{opacity:0}}.L2v4{animation:L2v4 31.8s linear both}
+@keyframes L2v4{0%,77.956%{opacity:0}77.987%{opacity:0.95}79.874%,100%{opacity:0}}.L2t{animation:L2tf 31.8s both}.L2t i{animation:L2tn 31.8s linear both}
+@keyframes L2tn{0%,65.409%{transform:scaleX(1);background:var(--to-green)}71.698%{background:var(--to-green)}72.013%{background:#C0392B}81.132%,100%{transform:scaleX(0);background:#C0392B}}
+@keyframes L2tf{0%,64.465%{opacity:0}65.409%,81.132%{opacity:1}82.075%,100%{opacity:0}}.L2ans{animation:L2ans 31.8s both}
+@keyframes L2ans{0%,81.918%{opacity:0;transform:translateY(30px)}83.019%,88.522%{opacity:1;transform:none}89.308%,100%{opacity:0}}.pip2{animation:pip2 31.8s both}@keyframes pip2{0%,62.264%{background:transparent;color:var(--to-green)}62.893%,100%{background:var(--to-green);color:var(--to-snow)}}
+.endc{position:absolute;left:0;right:0;top:560px;text-align:center;animation:endk 31.8s both}
+.endc .big{font-weight:800;font-size:112px;line-height:1;letter-spacing:var(--to-track-display)}
+.endc .tiers{margin:56px auto 0;width:760px;text-align:left}
+.tier{display:flex;align-items:center;gap:36px;padding:20px 0;border-top:3px solid var(--to-hairline);font:800 52px/1 var(--to-font-display)}
+.tier b{display:inline-block;width:170px;text-align:center;background:var(--to-green);color:var(--to-snow);padding:14px 0}
+.tier:first-child b{background:#C0392B}
+.endc .sub{margin-top:50px;font:800 42px/1 var(--to-font-body);letter-spacing:.1em;color:#C0392B}
+@keyframes endk{0%,89.308%{opacity:0;transform:scale(.9)}90.409%,100%{opacity:1;transform:none}}
+.endc .tier{animation:tierk 31.8s both}
+.endc .tier:nth-child(1){animation-name:tier0}@keyframes tier0{0%,90.252%{opacity:0;transform:translateX(-40px)}91.038%,100%{opacity:1;transform:none}}
+.endc .tier:nth-child(2){animation-name:tier1}@keyframes tier1{0%,90.818%{opacity:0;transform:translateX(-40px)}91.604%,100%{opacity:1;transform:none}}
+.endc .tier:nth-child(3){animation-name:tier2}@keyframes tier2{0%,91.384%{opacity:0;transform:translateX(-40px)}92.170%,100%{opacity:1;transform:none}}
+.endc .tier:nth-child(4){animation-name:tier3}@keyframes tier3{0%,91.950%{opacity:0;transform:translateX(-40px)}92.736%,100%{opacity:1;transform:none}}
+</style></head>
+<body data-width="1080" data-height="1920" data-duration="31.8" data-fps="30">
+<img class="logo" src="../../../../brand/logo/timeoptic.svg" alt="">
+
+<div class="stage">
+<div class="L0stg"><div class="L0sh"><div class="L0zm"><canvas id="L0bg" class="L0bg" width="900" height="860"></canvas><canvas id="L0fg" class="L0fg" width="900" height="860"></canvas><script>
+(() => {
+  let h = 1779033703; for (const c of "2026-10-24-06_bird-duck-butterfly-L0") h = Math.imul(h ^ c.charCodeAt(0), 3432918353), h = (h << 13) | (h >>> 19);
+  let a = h >>> 0;
+  const rand = () => { a = (a + 0x6d2b79f5) | 0; let t = Math.imul(a ^ (a >>> 15), 1 | a); t = (t + Math.imul(t ^ (t >>> 7), 61 | t)) ^ t; return ((t ^ (t >>> 14)) >>> 0) / 4294967296; };
+  const bg = document.getElementById('L0bg').getContext('2d'), fg = document.getElementById('L0fg').getContext('2d');
+  const shapes = ["M150.39998654902422 -14.9405710888403 A135 82 -15 1 1 -110.39998654902422 54.9405710888403 A135 82 -15 1 1 150.39998654902422 -14.9405710888403Z","M-35 -60 A65 65 0 1 1 -165 -60 A65 65 0 1 1 -35 -60Z","M-150 -85 L-220 -55 L-150 -30Z","M95 5 L220 -45 L220 30 L110 70Z"].map((d) => { const p = new Path2D(); p.addPath(new Path2D(d), new DOMMatrix([1.455,0,0,1.455,452,452.5])); return p; });
+  const inside = (x, y) => shapes.some((p) => fg.isPointInPath(p, x, y));
+  const CX = 450, CY = 430, R = 410, GAP = 2.6, CELL = 42, G = new Map();
+  const key = (i, j) => i * 1000 + j;
+  const fits = (x, y, r) => {
+    const i = Math.floor(x / CELL), j = Math.floor(y / CELL);
+    for (let di = -1; di <= 1; di++) for (let dj = -1; dj <= 1; dj++) for (const d of G.get(key(i + di, j + dj)) || [])
+      if (Math.hypot(d[0] - x, d[1] - y) < d[2] + r + GAP) return false;
+    return true;
+  };
+  const dots = [];
+  for (const [r0, tries] of [[12, 1800], [10, 3200], [8, 5500], [6.5, 9000], [5, 14000], [4, 18000]]) {
+    for (let k = 0; k < tries; k++) {
+      const r = r0 * (0.88 + rand() * 0.24), ang = rand() * Math.PI * 2, dist = Math.sqrt(rand()) * (R - r);
+      const x = CX + Math.cos(ang) * dist, y = CY + Math.sin(ang) * dist;
+      if (!fits(x, y, r)) continue;
+      const d = [x, y, r], kk = key(Math.floor(x / CELL), Math.floor(y / CELL));
+      if (!G.has(kk)) G.set(kk, []);
+      G.get(kk).push(d);
+      dots.push(d);
+    }
+  }
+  const pal = { fig: {"L":[0.58,0.7],"C":0.16,"h":25,"hj":12}, bg: {"L":[0.64,0.8],"C":0.08,"h":250,"hj":20} };
+  for (const [x, y, r] of dots) {
+    const isFig = inside(x, y), P = isFig ? pal.fig : pal.bg, ctx = isFig ? fg : bg;
+    const L = P.L[0] + rand() * (P.L[1] - P.L[0]), C = P.C * (0.8 + rand() * 0.4), H = P.h + (rand() - 0.5) * P.hj;
+    ctx.fillStyle = 'oklch(' + L.toFixed(3) + ' ' + C.toFixed(3) + ' ' + H.toFixed(1) + ')';
+    ctx.beginPath(); ctx.arc(x, y, r, 0, Math.PI * 2); ctx.fill();
+  }
+})();
+</script><svg class="L0ol" viewBox="0 0 900 860" width="900" height="860">
+<defs><mask id="L0mk" maskUnits="userSpaceOnUse" x="0" y="0" width="900" height="860"><rect width="900" height="860" fill="#fff"/><g transform="matrix(1.455 0 0 1.455 452 452.5)" fill="#000"><path d="M150.39998654902422 -14.9405710888403 A135 82 -15 1 1 -110.39998654902422 54.9405710888403 A135 82 -15 1 1 150.39998654902422 -14.9405710888403Z"/><path d="M-35 -60 A65 65 0 1 1 -165 -60 A65 65 0 1 1 -35 -60Z"/><path d="M-150 -85 L-220 -55 L-150 -30Z"/><path d="M95 5 L220 -45 L220 30 L110 70Z"/></g></mask></defs>
+<g mask="url(#L0mk)"><g transform="matrix(1.455 0 0 1.455 452 452.5)" fill="none" stroke="#123A29" stroke-width="9.6" stroke-linejoin="round"><path d="M150.39998654902422 -14.9405710888403 A135 82 -15 1 1 -110.39998654902422 54.9405710888403 A135 82 -15 1 1 150.39998654902422 -14.9405710888403Z"/><path d="M-35 -60 A65 65 0 1 1 -165 -60 A65 65 0 1 1 -35 -60Z"/><path d="M-150 -85 L-220 -55 L-150 -30Z"/><path d="M95 5 L220 -45 L220 30 L110 70Z"/></g></g></svg></div></div></div><div class="L1stg"><div class="L1sh"><div class="L1zm"><canvas id="L1bg" class="L1bg" width="900" height="860"></canvas><canvas id="L1fg" class="L1fg" width="900" height="860"></canvas><script>
+(() => {
+  let h = 1779033703; for (const c of "2026-10-24-06_bird-duck-butterfly-L1") h = Math.imul(h ^ c.charCodeAt(0), 3432918353), h = (h << 13) | (h >>> 19);
+  let a = h >>> 0;
+  const rand = () => { a = (a + 0x6d2b79f5) | 0; let t = Math.imul(a ^ (a >>> 15), 1 | a); t = (t + Math.imul(t ^ (t >>> 7), 61 | t)) ^ t; return ((t ^ (t >>> 14)) >>> 0) / 4294967296; };
+  const bg = document.getElementById('L1bg').getContext('2d'), fg = document.getElementById('L1fg').getContext('2d');
+  const shapes = ["M165 50 A140 76 0 1 1 -115 50 A140 76 0 1 1 165 50Z","M-37 -70 A58 58 0 1 1 -153 -70 A58 58 0 1 1 -37 -70Z","M-113 -58 A52 22 0 1 1 -217 -58 A52 22 0 1 1 -113 -58Z","M-122.98166405647882 -35.57052197529052 L-87.98166405647882 44.42947802470948 L-22.018335943521187 15.57052197529052 L-57.01833594352119 -64.42947802470948Z","M125 15 L205 -50 L180 60Z"].map((d) => { const p = new Path2D(); p.addPath(new Path2D(d), new DOMMatrix([-1.524,0,0,1.524,453.4,430.6])); return p; });
+  const inside = (x, y) => shapes.some((p) => fg.isPointInPath(p, x, y));
+  const CX = 450, CY = 430, R = 410, GAP = 2.6, CELL = 42, G = new Map();
+  const key = (i, j) => i * 1000 + j;
+  const fits = (x, y, r) => {
+    const i = Math.floor(x / CELL), j = Math.floor(y / CELL);
+    for (let di = -1; di <= 1; di++) for (let dj = -1; dj <= 1; dj++) for (const d of G.get(key(i + di, j + dj)) || [])
+      if (Math.hypot(d[0] - x, d[1] - y) < d[2] + r + GAP) return false;
+    return true;
+  };
+  const dots = [];
+  for (const [r0, tries] of [[12, 1800], [10, 3200], [8, 5500], [6.5, 9000], [5, 14000], [4, 18000]]) {
+    for (let k = 0; k < tries; k++) {
+      const r = r0 * (0.88 + rand() * 0.24), ang = rand() * Math.PI * 2, dist = Math.sqrt(rand()) * (R - r);
+      const x = CX + Math.cos(ang) * dist, y = CY + Math.sin(ang) * dist;
+      if (!fits(x, y, r)) continue;
+      const d = [x, y, r], kk = key(Math.floor(x / CELL), Math.floor(y / CELL));
+      if (!G.has(kk)) G.set(kk, []);
+      G.get(kk).push(d);
+      dots.push(d);
+    }
+  }
+  const pal = { fig: {"L":[0.64,0.74],"C":0.11,"h":55,"hj":12}, bg: {"L":[0.64,0.74],"C":0.1,"h":125,"hj":16} };
+  for (const [x, y, r] of dots) {
+    const isFig = inside(x, y), P = isFig ? pal.fig : pal.bg, ctx = isFig ? fg : bg;
+    const L = P.L[0] + rand() * (P.L[1] - P.L[0]), C = P.C * (0.8 + rand() * 0.4), H = P.h + (rand() - 0.5) * P.hj;
+    ctx.fillStyle = 'oklch(' + L.toFixed(3) + ' ' + C.toFixed(3) + ' ' + H.toFixed(1) + ')';
+    ctx.beginPath(); ctx.arc(x, y, r, 0, Math.PI * 2); ctx.fill();
+  }
+})();
+</script><svg class="L1ol" viewBox="0 0 900 860" width="900" height="860">
+<defs><mask id="L1mk" maskUnits="userSpaceOnUse" x="0" y="0" width="900" height="860"><rect width="900" height="860" fill="#fff"/><g transform="matrix(-1.524 0 0 1.524 453.4 430.6)" fill="#000"><path d="M165 50 A140 76 0 1 1 -115 50 A140 76 0 1 1 165 50Z"/><path d="M-37 -70 A58 58 0 1 1 -153 -70 A58 58 0 1 1 -37 -70Z"/><path d="M-113 -58 A52 22 0 1 1 -217 -58 A52 22 0 1 1 -113 -58Z"/><path d="M-122.98166405647882 -35.57052197529052 L-87.98166405647882 44.42947802470948 L-22.018335943521187 15.57052197529052 L-57.01833594352119 -64.42947802470948Z"/><path d="M125 15 L205 -50 L180 60Z"/></g></mask></defs>
+<g mask="url(#L1mk)"><g transform="matrix(-1.524 0 0 1.524 453.4 430.6)" fill="none" stroke="#123A29" stroke-width="9.2" stroke-linejoin="round"><path d="M165 50 A140 76 0 1 1 -115 50 A140 76 0 1 1 165 50Z"/><path d="M-37 -70 A58 58 0 1 1 -153 -70 A58 58 0 1 1 -37 -70Z"/><path d="M-113 -58 A52 22 0 1 1 -217 -58 A52 22 0 1 1 -113 -58Z"/><path d="M-122.98166405647882 -35.57052197529052 L-87.98166405647882 44.42947802470948 L-22.018335943521187 15.57052197529052 L-57.01833594352119 -64.42947802470948Z"/><path d="M125 15 L205 -50 L180 60Z"/></g></g></svg></div></div></div><div class="L2stg"><div class="L2sh"><div class="L2zm"><canvas id="L2bg" class="L2bg" width="900" height="860"></canvas><canvas id="L2fg" class="L2fg" width="900" height="860"></canvas><script>
+(() => {
+  let h = 1779033703; for (const c of "2026-10-24-06_bird-duck-butterfly-L2") h = Math.imul(h ^ c.charCodeAt(0), 3432918353), h = (h << 13) | (h >>> 19);
+  let a = h >>> 0;
+  const rand = () => { a = (a + 0x6d2b79f5) | 0; let t = Math.imul(a ^ (a >>> 15), 1 | a); t = (t + Math.imul(t ^ (t >>> 7), 61 | t)) ^ t; return ((t ^ (t >>> 14)) >>> 0) / 4294967296; };
+  const bg = document.getElementById('L2bg').getContext('2d'), fg = document.getElementById('L2fg').getContext('2d');
+  const shapes = ["M-11.531579216788884 1.9462551259129697 A108 74 35 1 1 -188.46842078321112 -121.94625512591297 A108 74 35 1 1 -11.531579216788884 1.9462551259129697Z","M188.46842078321112 -121.94625512591297 A108 74 -35 1 1 11.531579216788884 1.9462551259129697 A108 74 -35 1 1 188.46842078321112 -121.94625512591297Z","M-12.744444634036626 38.408190837320504 A76 52 -35 1 1 -137.25555536596337 125.5918091626795 A76 52 -35 1 1 -12.744444634036626 38.408190837320504Z","M137.25555536596337 125.5918091626795 A76 52 35 1 1 12.744444634036626 38.408190837320504 A76 52 35 1 1 137.25555536596337 125.5918091626795Z","M26 5 A26 140 0 1 1 -26 5 A26 140 0 1 1 26 5Z"].map((d) => { const p = new Path2D(); p.addPath(new Path2D(d), new DOMMatrix([1.6,0,0,1.6,468,452])); return p; });
+  const inside = (x, y) => shapes.some((p) => fg.isPointInPath(p, x, y));
+  const CX = 450, CY = 430, R = 410, GAP = 2.6, CELL = 42, G = new Map();
+  const key = (i, j) => i * 1000 + j;
+  const fits = (x, y, r) => {
+    const i = Math.floor(x / CELL), j = Math.floor(y / CELL);
+    for (let di = -1; di <= 1; di++) for (let dj = -1; dj <= 1; dj++) for (const d of G.get(key(i + di, j + dj)) || [])
+      if (Math.hypot(d[0] - x, d[1] - y) < d[2] + r + GAP) return false;
+    return true;
+  };
+  const dots = [];
+  for (const [r0, tries] of [[12, 1800], [10, 3200], [8, 5500], [6.5, 9000], [5, 14000], [4, 18000]]) {
+    for (let k = 0; k < tries; k++) {
+      const r = r0 * (0.88 + rand() * 0.24), ang = rand() * Math.PI * 2, dist = Math.sqrt(rand()) * (R - r);
+      const x = CX + Math.cos(ang) * dist, y = CY + Math.sin(ang) * dist;
+      if (!fits(x, y, r)) continue;
+      const d = [x, y, r], kk = key(Math.floor(x / CELL), Math.floor(y / CELL));
+      if (!G.has(kk)) G.set(kk, []);
+      G.get(kk).push(d);
+      dots.push(d);
+    }
+  }
+  const pal = { fig: {"L":[0.62,0.72],"C":0.12,"h":22,"hj":8}, bg: {"L":[0.65,0.75],"C":0.11,"h":64,"hj":10} };
+  for (const [x, y, r] of dots) {
+    const isFig = inside(x, y), P = isFig ? pal.fig : pal.bg, ctx = isFig ? fg : bg;
+    const L = P.L[0] + rand() * (P.L[1] - P.L[0]), C = P.C * (0.8 + rand() * 0.4), H = P.h + (rand() - 0.5) * P.hj;
+    ctx.fillStyle = 'oklch(' + L.toFixed(3) + ' ' + C.toFixed(3) + ' ' + H.toFixed(1) + ')';
+    ctx.beginPath(); ctx.arc(x, y, r, 0, Math.PI * 2); ctx.fill();
+  }
+})();
+</script><svg class="L2ol" viewBox="0 0 900 860" width="900" height="860">
+<defs><mask id="L2mk" maskUnits="userSpaceOnUse" x="0" y="0" width="900" height="860"><rect width="900" height="860" fill="#fff"/><g transform="matrix(1.6 0 0 1.6 468 452)" fill="#000"><path d="M-11.531579216788884 1.9462551259129697 A108 74 35 1 1 -188.46842078321112 -121.94625512591297 A108 74 35 1 1 -11.531579216788884 1.9462551259129697Z"/><path d="M188.46842078321112 -121.94625512591297 A108 74 -35 1 1 11.531579216788884 1.9462551259129697 A108 74 -35 1 1 188.46842078321112 -121.94625512591297Z"/><path d="M-12.744444634036626 38.408190837320504 A76 52 -35 1 1 -137.25555536596337 125.5918091626795 A76 52 -35 1 1 -12.744444634036626 38.408190837320504Z"/><path d="M137.25555536596337 125.5918091626795 A76 52 35 1 1 12.744444634036626 38.408190837320504 A76 52 35 1 1 137.25555536596337 125.5918091626795Z"/><path d="M26 5 A26 140 0 1 1 -26 5 A26 140 0 1 1 26 5Z"/></g></mask></defs>
+<g mask="url(#L2mk)"><g transform="matrix(1.6 0 0 1.6 468 452)" fill="none" stroke="#123A29" stroke-width="8.8" stroke-linejoin="round"><path d="M-11.531579216788884 1.9462551259129697 A108 74 35 1 1 -188.46842078321112 -121.94625512591297 A108 74 35 1 1 -11.531579216788884 1.9462551259129697Z"/><path d="M188.46842078321112 -121.94625512591297 A108 74 -35 1 1 11.531579216788884 1.9462551259129697 A108 74 -35 1 1 188.46842078321112 -121.94625512591297Z"/><path d="M-12.744444634036626 38.408190837320504 A76 52 -35 1 1 -137.25555536596337 125.5918091626795 A76 52 -35 1 1 -12.744444634036626 38.408190837320504Z"/><path d="M137.25555536596337 125.5918091626795 A76 52 35 1 1 12.744444634036626 38.408190837320504 A76 52 35 1 1 137.25555536596337 125.5918091626795Z"/><path d="M26 5 A26 140 0 1 1 -26 5 A26 140 0 1 1 26 5Z"/></g></g></svg></div></div></div>
+</div>
+<div class="head L0"><div class="eyebrow">COLOUR VISION TEST · LEVEL 1</div><div class="title">WHAT<em>ANIMAL?</em></div><div class="sub">NORMAL VISION CHECK · 6 SECONDS</div></div><div class="head L1"><div class="eyebrow">COLOUR VISION TEST · LEVEL 2</div><div class="title">WHAT<em>ANIMAL?</em></div><div class="sub">RED–GREEN TEST · 5 SECONDS</div></div><div class="head L2"><div class="eyebrow">COLOUR VISION TEST · LEVEL 3</div><div class="title">WHAT<em>ANIMAL?</em></div><div class="sub">ALMOST THE SAME COLOUR · 5 SECONDS</div></div><div class="hook"><div class="top">COLOUR VISION TEST · 3 LEVELS</div><div class="big">CAN YOU SEE<br><em>ALL 3</em>?</div><div class="small">COLOUR BLIND TEST</div></div><div class="ban L0ban"><div class="lv">LEVEL 1</div><div class="df" style="background:var(--to-green-on-dark)">EASY</div></div><div class="count"><b class="dg L0d0">6</b><b class="dg L0d1">5</b><b class="dg L0d2">4</b><b class="dg L0d3" style="color:#C0392B">3</b><b class="dg L0d4" style="color:#C0392B">2</b><b class="dg L0d5" style="color:#C0392B">1</b></div><div class="timer L0t"><i></i></div><div class="vig L0v3"></div><div class="vig L0v4"></div><div class="vig L0v5"></div><div class="answer L0ans"><div class="big">A BIRD!</div><div class="where">EVERYONE SHOULD SEE THIS ONE</div></div><div class="ban L1ban"><div class="lv">LEVEL 2</div><div class="df" style="background:#D68A1E">HARD</div></div><div class="count"><b class="dg L1d0">5</b><b class="dg L1d1">4</b><b class="dg L1d2" style="color:#C0392B">3</b><b class="dg L1d3" style="color:#C0392B">2</b><b class="dg L1d4" style="color:#C0392B">1</b></div><div class="timer L1t"><i></i></div><div class="vig L1v2"></div><div class="vig L1v3"></div><div class="vig L1v4"></div><div class="answer L1ans"><div class="big">A DUCK!</div><div class="where">RED–GREEN COLOUR BLINDNESS<br>HIDES THIS ONE</div></div><div class="ban L2ban"><div class="lv">LEVEL 3</div><div class="df" style="background:#C0392B">INSANE</div></div><div class="count"><b class="dg L2d0">5</b><b class="dg L2d1">4</b><b class="dg L2d2" style="color:#C0392B">3</b><b class="dg L2d3" style="color:#C0392B">2</b><b class="dg L2d4" style="color:#C0392B">1</b></div><div class="timer L2t"><i></i></div><div class="vig L2v2"></div><div class="vig L2v3"></div><div class="vig L2v4"></div><div class="answer L2ans"><div class="big">A BUTTERFLY!</div><div class="where">ONLY SHARP COLOUR VISION<br>CATCHES THIS ONE</div></div><div class="endc"><div class="big">HOW MANY<br>DID YOU SEE?</div><div class="tiers"><div class="tier"><b>3/3</b><span>PERFECT COLOURS</span></div><div class="tier"><b>2/3</b><span>GREAT COLOURS</span></div><div class="tier"><b>1/3</b><span>COLOUR CHECK?</span></div><div class="tier"><b>0/3</b><span>SEE AN EXPERT</span></div></div><div class="sub">COMMENT YOUR SCORE 👇<div style="margin-top:26px;font:700 30px/1.35 var(--to-font-body);letter-spacing:.04em;color:var(--to-black);opacity:.75">Just for fun — not a medical test.<br>Unsure? See an eye-care professional.<br>TIMEOPTIC can help.</div></div></div><div class="pips"><span class="pip0">LV 1</span><span class="pip1">LV 2</span><span class="pip2">LV 3</span></div>
+
+</body></html>

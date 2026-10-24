@@ -1,0 +1,3 @@
+Level 1: 3 differences in B: right rivets, left temple tip, right shine
+Level 2: 4 differences in B: left lens corners, right lens corners, right rivet, left nose pad
+Level 3: 5 differences in B: left lens corners, right shine, left shine, left nose pad, right rivet (B is tilted, that is not a difference)

@@ -1,0 +1,279 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8">
+<title>Count the triangles</title>
+<link rel="stylesheet" href="../../brand/tokens.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;700;800&family=Inter:wght@500;700&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{width:1080px;height:1920px;overflow:hidden;background:var(--to-snow);color:var(--to-green);font-family:var(--to-font-display);position:relative}
+.logo{position:absolute;top:96px;left:50%;width:210px;transform:translateX(-50%);opacity:.85}
+.head{position:absolute;top:200px;left:0;right:0;text-align:center;animation:drop 36.8s both}
+.eyebrow{font:700 30px/1 var(--to-font-body);letter-spacing:var(--to-track-eyebrow);color:var(--to-black);opacity:.7}
+.title{margin-top:18px;font-weight:800;font-size:92px;letter-spacing:var(--to-track-display);line-height:1}
+.title em{font-style:normal;display:inline-block;background:var(--to-green);color:var(--to-snow);padding:0 22px;margin-left:10px}
+.sub{margin-top:20px;font:700 30px/1 var(--to-font-body);letter-spacing:.12em;color:var(--to-green-on-dark)}
+@keyframes drop{0%{opacity:0;transform:translateY(-40px)}1.359%,100%{opacity:1;transform:none}}
+.stage{position:absolute;left:90px;top:470px;width:900px;height:860px}
+.count{position:absolute;left:0;right:0;top:1355px;height:180px;text-align:center}
+.dg{position:absolute;left:0;right:0;font-weight:800;font-size:170px;line-height:180px;opacity:0}
+.timer{position:absolute;left:90px;right:90px;top:1545px;height:16px;background:var(--to-timberwolf)}
+.timer i{position:absolute;inset:0;background:var(--to-green);transform-origin:left}
+.answer{position:absolute;left:0;right:0;top:1370px;text-align:center}
+.answer .big{font-weight:800;font-size:96px;letter-spacing:var(--to-track-display)}
+.answer .where{margin-top:14px;font:700 40px/1.25 var(--to-font-body);letter-spacing:.08em;color:var(--to-black)}
+
+.head{opacity:0}
+.ban .lv{font-weight:800;font-size:190px;line-height:1;letter-spacing:var(--to-track-display)}
+.ban .df{display:inline-block;margin-top:24px;padding:16px 40px;font:800 54px/1 var(--to-font-body);letter-spacing:.2em;color:var(--to-snow)}
+.vig{position:absolute;inset:0;pointer-events:none;box-shadow:inset 0 0 170px 40px rgba(192,57,43,.55);opacity:0;z-index:4}
+.pips{position:absolute;left:0;right:0;top:1640px;display:flex;justify-content:center;gap:22px;animation:pipsk 36.8s both}
+@keyframes pipsk{0%,3.804%{opacity:0}4.348%,89.946%{opacity:1}90.761%,100%{opacity:0}}
+.pips span{width:150px;padding:14px 0;text-align:center;border:4px solid var(--to-green);font:800 30px/1 var(--to-font-body);letter-spacing:.12em}
+
+.hook{position:absolute;left:0;right:0;top:560px;text-align:center;animation:hookk 36.8s both}
+.hook .top{font:700 34px/1 var(--to-font-body);letter-spacing:var(--to-track-eyebrow);color:var(--to-black);opacity:.75}
+.hook .big{margin-top:34px;font-weight:800;font-size:136px;line-height:.98;letter-spacing:var(--to-track-display)}
+.hook .big em{font-style:normal;color:#C0392B}
+.hook .small{margin-top:40px;display:inline-block;font:800 40px/1 var(--to-font-body);letter-spacing:.12em;color:var(--to-snow);background:var(--to-green);padding:20px 34px}
+@keyframes hookk{0%{opacity:0;transform:scale(1.25)}0.679%{opacity:1;transform:scale(.97)}1.087%{transform:scale(1)}3.668%{opacity:1;transform:scale(1)}4.348%,100%{opacity:0;transform:scale(.9)}}
+.hook .small{animation:hooks 36.8s both}
+@keyframes hooks{0%,1.223%{opacity:0;transform:translateY(20px)}1.902%,100%{opacity:1;transform:none}}
+@keyframes L0seg{0%,4.348%{opacity:0}5.027%,35.190%{opacity:1}35.870%,100%{opacity:0}}
+.L0{animation:L0seg 36.8s both}
+@keyframes L0stg{0%,6.114%{opacity:0;transform:scale(.94)}7.065%,35.190%{opacity:1;transform:none}35.870%,100%{opacity:0}}
+.L0stg{position:absolute;inset:0;overflow:hidden;animation:L0stg 36.8s both}
+.L0ban{position:absolute;left:0;right:0;top:720px;text-align:center;animation:L0ban 36.8s both;z-index:5}
+@keyframes L0ban{0%,4.348%{opacity:0;transform:scale(2.2)}4.837%{opacity:1;transform:scale(.95)}5.163%,6.250%{opacity:1;transform:scale(1)}6.929%,100%{opacity:0;transform:scale(1.1)}}
+.L0zm{position:absolute;inset:0}
+.L0sh{position:absolute;inset:0;animation:L0sh 36.8s linear both}
+@keyframes L0sh{0%,23.370%{transform:none}23.370%{transform:translate(-2px,-0.8px)}23.641%{transform:translate(2.25px,1.3499999999999999px)}23.913%{transform:translate(-2.5px,-1px)}24.185%{transform:translate(2.75px,-1.1px)}24.457%{transform:translate(-3px,1.7999999999999998px)}24.728%{transform:translate(3.25px,-1.3px)}25.000%{transform:translate(-3.5px,-1.4000000000000001px)}25.272%{transform:translate(3.75px,2.25px)}25.543%{transform:translate(-4px,-1.6px)}25.815%{transform:translate(4.25px,-1.7000000000000002px)}26.087%{transform:translate(-4.5px,2.6999999999999997px)}26.359%{transform:translate(4.75px,-1.9000000000000001px)}26.630%{transform:translate(-5px,-2px)}26.902%{transform:translate(5.25px,3.15px)}27.174%{transform:translate(-5.5px,-2.2px)}27.446%{transform:translate(5.75px,-2.3000000000000003px)}27.717%{transform:translate(-6px,3.5999999999999996px)}27.989%{transform:translate(6.25px,-2.5px)}28.261%{transform:translate(-6.5px,-2.6px)}28.533%{transform:translate(6.75px,4.05px)}28.804%,100%{transform:none}}
+
+.L0svg{position:absolute;inset:0;overflow:visible}
+.L0fig line{stroke:var(--to-green);stroke-width:10;stroke-linecap:round;animation:L0ln 36.8s both}
+@keyframes L0ln{0%,28.804%{stroke:var(--to-green)}29.620%,34.375%{stroke:rgba(18,58,41,.45)}35.190%,100%{stroke:var(--to-green)}}
+.L0hl polygon{fill:#C0392B;stroke:#C0392B;stroke-width:14;stroke-linejoin:round;fill-opacity:0;stroke-opacity:0}
+.L0ctr{position:absolute;right:-10px;top:-20px;width:170px;height:170px;border-radius:50%;background:#C0392B;animation:L0ctr 36.8s both}
+@keyframes L0ctr{0%,28.940%{opacity:0;transform:scale(.4)}29.484%,100%{opacity:1;transform:none}}
+.L0ctr b{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;font:800 92px/1 var(--to-font-display);color:var(--to-snow);opacity:0}
+.L0t0{animation:L0t0 36.8s both}@keyframes L0t0{0%,29.209%{fill-opacity:0;stroke-opacity:0}29.212%,29.855%{fill-opacity:.42;stroke-opacity:1}29.857%,100%{fill-opacity:0;stroke-opacity:0}}
+.L0n0{animation:L0n0 36.8s both}@keyframes L0n0{0%,29.209%{opacity:0}29.212%{opacity:1;transform:scale(1.15)}29.538%{transform:scale(1)}29.855%{opacity:1}29.857%,100%{opacity:0}}
+.L0t1{animation:L0t1 36.8s both}@keyframes L0t1{0%,29.855%{fill-opacity:0;stroke-opacity:0}29.857%,30.500%{fill-opacity:.42;stroke-opacity:1}30.503%,100%{fill-opacity:0;stroke-opacity:0}}
+.L0n1{animation:L0n1 36.8s both}@keyframes L0n1{0%,29.855%{opacity:0}29.857%{opacity:1;transform:scale(1.15)}30.183%{transform:scale(1)}30.500%{opacity:1}30.503%,100%{opacity:0}}
+.L0t2{animation:L0t2 36.8s both}@keyframes L0t2{0%,30.500%{fill-opacity:0;stroke-opacity:0}30.503%,31.145%{fill-opacity:.42;stroke-opacity:1}31.148%,100%{fill-opacity:0;stroke-opacity:0}}
+.L0n2{animation:L0n2 36.8s both}@keyframes L0n2{0%,30.500%{opacity:0}30.503%{opacity:1;transform:scale(1.15)}30.829%{transform:scale(1)}31.145%{opacity:1}31.148%,100%{opacity:0}}
+.L0t3{animation:L0t3 36.8s both}@keyframes L0t3{0%,31.145%{fill-opacity:0;stroke-opacity:0}31.148%,31.791%{fill-opacity:.42;stroke-opacity:1}31.793%,100%{fill-opacity:0;stroke-opacity:0}}
+.L0n3{animation:L0n3 36.8s both}@keyframes L0n3{0%,31.145%{opacity:0}31.148%{opacity:1;transform:scale(1.15)}31.474%{transform:scale(1)}31.791%{opacity:1}31.793%,100%{opacity:0}}
+.L0t4{animation:L0t4 36.8s both}@keyframes L0t4{0%,31.791%{fill-opacity:0;stroke-opacity:0}31.793%,32.436%{fill-opacity:.42;stroke-opacity:1}32.439%,100%{fill-opacity:0;stroke-opacity:0}}
+.L0n4{animation:L0n4 36.8s both}@keyframes L0n4{0%,31.791%{opacity:0}31.793%{opacity:1;transform:scale(1.15)}32.120%{transform:scale(1)}32.436%{opacity:1}32.439%,100%{opacity:0}}
+.L0t5{animation:L0t5 36.8s both}@keyframes L0t5{0%,32.436%{fill-opacity:0;stroke-opacity:0}32.439%,33.082%{fill-opacity:.42;stroke-opacity:1}33.084%,100%{fill-opacity:0;stroke-opacity:0}}
+.L0n5{animation:L0n5 36.8s both}@keyframes L0n5{0%,32.436%{opacity:0}32.439%{opacity:1;transform:scale(1.15)}32.765%{transform:scale(1)}33.082%{opacity:1}33.084%,100%{opacity:0}}
+.L0t6{animation:L0t6 36.8s both}@keyframes L0t6{0%,33.082%{fill-opacity:0;stroke-opacity:0}33.084%,33.727%{fill-opacity:.42;stroke-opacity:1}33.730%,100%{fill-opacity:0;stroke-opacity:0}}
+.L0n6{animation:L0n6 36.8s both}@keyframes L0n6{0%,33.082%{opacity:0}33.084%{opacity:1;transform:scale(1.15)}33.410%{transform:scale(1)}33.727%{opacity:1}33.730%,100%{opacity:0}}
+.L0t7{animation:L0t7 36.8s both}@keyframes L0t7{0%,33.727%{fill-opacity:0;stroke-opacity:0}33.730%,34.372%{fill-opacity:.42;stroke-opacity:1}34.375%,100%{fill-opacity:0;stroke-opacity:0}}
+.L0n7{animation:L0n7 36.8s both}@keyframes L0n7{0%,33.727%{opacity:0}33.730%{opacity:1;transform:scale(1.6)}34.056%{transform:scale(1)}100%{opacity:1}}
+.L0d0{animation:L0d0 36.8s linear both}
+@keyframes L0d0{0%,7.038%{opacity:0}7.065%{opacity:1;transform:scale(1.35)}7.745%{opacity:1;transform:scale(1)}9.755%{opacity:1;transform:scale(1)}9.783%,100%{opacity:0}}.L0d1{animation:L0d1 36.8s linear both}
+@keyframes L0d1{0%,9.755%{opacity:0}9.783%{opacity:1;transform:scale(1.35)}10.462%{opacity:1;transform:scale(1)}12.473%{opacity:1;transform:scale(1)}12.500%,100%{opacity:0}}.L0d2{animation:L0d2 36.8s linear both}
+@keyframes L0d2{0%,12.473%{opacity:0}12.500%{opacity:1;transform:scale(1.35)}13.179%{opacity:1;transform:scale(1)}15.190%{opacity:1;transform:scale(1)}15.217%,100%{opacity:0}}.L0d3{animation:L0d3 36.8s linear both}
+@keyframes L0d3{0%,15.190%{opacity:0}15.217%{opacity:1;transform:scale(1.35)}15.897%{opacity:1;transform:scale(1)}17.908%{opacity:1;transform:scale(1)}17.935%,100%{opacity:0}}.L0d4{animation:L0d4 36.8s linear both}
+@keyframes L0d4{0%,17.908%{opacity:0}17.935%{opacity:1;transform:scale(1.35)}18.614%{opacity:1;transform:scale(1)}20.625%{opacity:1;transform:scale(1)}20.652%,100%{opacity:0}}.L0d5{animation:L0d5 36.8s linear both}
+@keyframes L0d5{0%,20.625%{opacity:0}20.652%{opacity:1;transform:scale(1.7)}21.332%{opacity:1;transform:scale(1)}23.342%{opacity:1;transform:scale(1)}23.370%,100%{opacity:0}}.L0v5{animation:L0v5 36.8s linear both}
+@keyframes L0v5{0%,20.625%{opacity:0}20.652%{opacity:0.55}22.283%,100%{opacity:0}}.L0d6{animation:L0d6 36.8s linear both}
+@keyframes L0d6{0%,23.342%{opacity:0}23.370%{opacity:1;transform:scale(1.7)}24.049%{opacity:1;transform:scale(1)}26.060%{opacity:1;transform:scale(1)}26.087%,100%{opacity:0}}.L0v6{animation:L0v6 36.8s linear both}
+@keyframes L0v6{0%,23.342%{opacity:0}23.370%{opacity:0.75}25.000%,100%{opacity:0}}.L0d7{animation:L0d7 36.8s linear both}
+@keyframes L0d7{0%,26.060%{opacity:0}26.087%{opacity:1;transform:scale(1.7)}26.766%{opacity:1;transform:scale(1)}28.777%{opacity:1;transform:scale(1)}28.804%,100%{opacity:0}}.L0v7{animation:L0v7 36.8s linear both}
+@keyframes L0v7{0%,26.060%{opacity:0}26.087%{opacity:0.95}27.717%,100%{opacity:0}}.L0t{animation:L0tf 36.8s both}.L0t i{animation:L0tn 36.8s linear both}
+@keyframes L0tn{0%,7.065%{transform:scaleX(1);background:var(--to-green)}20.652%{background:var(--to-green)}20.924%{background:#C0392B}28.804%,100%{transform:scaleX(0);background:#C0392B}}
+@keyframes L0tf{0%,6.250%{opacity:0}7.065%,28.804%{opacity:1}29.620%,100%{opacity:0}}.L0ans{animation:L0ans 36.8s both}
+@keyframes L0ans{0%,29.484%{opacity:0;transform:translateY(30px)}30.435%,35.190%{opacity:1;transform:none}35.870%,100%{opacity:0}}.pip0{animation:pip0 36.8s both}@keyframes pip0{0%,4.348%{background:transparent;color:var(--to-green)}4.891%,100%{background:var(--to-green);color:var(--to-snow)}}
+@keyframes L1seg{0%,35.870%{opacity:0}36.549%,63.995%{opacity:1}64.674%,100%{opacity:0}}
+.L1{animation:L1seg 36.8s both}
+@keyframes L1stg{0%,37.636%{opacity:0;transform:scale(.94)}38.587%,63.995%{opacity:1;transform:none}64.674%,100%{opacity:0}}
+.L1stg{position:absolute;inset:0;overflow:hidden;animation:L1stg 36.8s both}
+.L1ban{position:absolute;left:0;right:0;top:720px;text-align:center;animation:L1ban 36.8s both;z-index:5}
+@keyframes L1ban{0%,35.870%{opacity:0;transform:scale(2.2)}36.359%{opacity:1;transform:scale(.95)}36.685%,37.772%{opacity:1;transform:scale(1)}38.451%,100%{opacity:0;transform:scale(1.1)}}
+.L1zm{position:absolute;inset:0}
+.L1sh{position:absolute;inset:0;animation:L1sh 36.8s linear both}
+@keyframes L1sh{0%,52.174%{transform:none}52.174%{transform:translate(-2px,-0.8px)}52.446%{transform:translate(2.25px,1.3499999999999999px)}52.717%{transform:translate(-2.5px,-1px)}52.989%{transform:translate(2.75px,-1.1px)}53.261%{transform:translate(-3px,1.7999999999999998px)}53.533%{transform:translate(3.25px,-1.3px)}53.804%{transform:translate(-3.5px,-1.4000000000000001px)}54.076%{transform:translate(3.75px,2.25px)}54.348%{transform:translate(-4px,-1.6px)}54.620%{transform:translate(4.25px,-1.7000000000000002px)}54.891%{transform:translate(-4.5px,2.6999999999999997px)}55.163%{transform:translate(4.75px,-1.9000000000000001px)}55.435%{transform:translate(-5px,-2px)}55.707%{transform:translate(5.25px,3.15px)}55.978%{transform:translate(-5.5px,-2.2px)}56.250%{transform:translate(5.75px,-2.3000000000000003px)}56.522%{transform:translate(-6px,3.5999999999999996px)}56.793%{transform:translate(6.25px,-2.5px)}57.065%{transform:translate(-6.5px,-2.6px)}57.337%{transform:translate(6.75px,4.05px)}57.609%,100%{transform:none}}
+
+.L1svg{position:absolute;inset:0;overflow:visible}
+.L1fig line{stroke:var(--to-green);stroke-width:8;stroke-linecap:round;animation:L1ln 36.8s both}
+@keyframes L1ln{0%,57.609%{stroke:var(--to-green)}58.424%,63.179%{stroke:rgba(18,58,41,.45)}63.995%,100%{stroke:var(--to-green)}}
+.L1hl polygon{fill:#C0392B;stroke:#C0392B;stroke-width:12;stroke-linejoin:round;fill-opacity:0;stroke-opacity:0}
+.L1ctr{position:absolute;right:-10px;top:-20px;width:170px;height:170px;border-radius:50%;background:#C0392B;animation:L1ctr 36.8s both}
+@keyframes L1ctr{0%,57.745%{opacity:0;transform:scale(.4)}58.288%,100%{opacity:1;transform:none}}
+.L1ctr b{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;font:800 92px/1 var(--to-font-display);color:var(--to-snow);opacity:0}
+.L1t0{animation:L1t0 36.8s both}@keyframes L1t0{0%,58.014%{fill-opacity:0;stroke-opacity:0}58.016%,58.300%{fill-opacity:.42;stroke-opacity:1}58.303%,100%{fill-opacity:0;stroke-opacity:0}}
+.L1n0{animation:L1n0 36.8s both}@keyframes L1n0{0%,58.014%{opacity:0}58.016%{opacity:1;transform:scale(1.15)}58.342%{transform:scale(1)}58.300%{opacity:1}58.303%,100%{opacity:0}}
+.L1t1{animation:L1t1 36.8s both}@keyframes L1t1{0%,58.300%{fill-opacity:0;stroke-opacity:0}58.303%,58.587%{fill-opacity:.42;stroke-opacity:1}58.590%,100%{fill-opacity:0;stroke-opacity:0}}
+.L1n1{animation:L1n1 36.8s both}@keyframes L1n1{0%,58.300%{opacity:0}58.303%{opacity:1;transform:scale(1.15)}58.629%{transform:scale(1)}58.587%{opacity:1}58.590%,100%{opacity:0}}
+.L1t2{animation:L1t2 36.8s both}@keyframes L1t2{0%,58.587%{fill-opacity:0;stroke-opacity:0}58.590%,58.874%{fill-opacity:.42;stroke-opacity:1}58.877%,100%{fill-opacity:0;stroke-opacity:0}}
+.L1n2{animation:L1n2 36.8s both}@keyframes L1n2{0%,58.587%{opacity:0}58.590%{opacity:1;transform:scale(1.15)}58.916%{transform:scale(1)}58.874%{opacity:1}58.877%,100%{opacity:0}}
+.L1t3{animation:L1t3 36.8s both}@keyframes L1t3{0%,58.874%{fill-opacity:0;stroke-opacity:0}58.877%,59.161%{fill-opacity:.42;stroke-opacity:1}59.164%,100%{fill-opacity:0;stroke-opacity:0}}
+.L1n3{animation:L1n3 36.8s both}@keyframes L1n3{0%,58.874%{opacity:0}58.877%{opacity:1;transform:scale(1.15)}59.203%{transform:scale(1)}59.161%{opacity:1}59.164%,100%{opacity:0}}
+.L1t4{animation:L1t4 36.8s both}@keyframes L1t4{0%,59.161%{fill-opacity:0;stroke-opacity:0}59.164%,59.448%{fill-opacity:.42;stroke-opacity:1}59.450%,100%{fill-opacity:0;stroke-opacity:0}}
+.L1n4{animation:L1n4 36.8s both}@keyframes L1n4{0%,59.161%{opacity:0}59.164%{opacity:1;transform:scale(1.15)}59.490%{transform:scale(1)}59.448%{opacity:1}59.450%,100%{opacity:0}}
+.L1t5{animation:L1t5 36.8s both}@keyframes L1t5{0%,59.448%{fill-opacity:0;stroke-opacity:0}59.450%,59.735%{fill-opacity:.42;stroke-opacity:1}59.737%,100%{fill-opacity:0;stroke-opacity:0}}
+.L1n5{animation:L1n5 36.8s both}@keyframes L1n5{0%,59.448%{opacity:0}59.450%{opacity:1;transform:scale(1.15)}59.777%{transform:scale(1)}59.735%{opacity:1}59.737%,100%{opacity:0}}
+.L1t6{animation:L1t6 36.8s both}@keyframes L1t6{0%,59.735%{fill-opacity:0;stroke-opacity:0}59.737%,60.021%{fill-opacity:.42;stroke-opacity:1}60.024%,100%{fill-opacity:0;stroke-opacity:0}}
+.L1n6{animation:L1n6 36.8s both}@keyframes L1n6{0%,59.735%{opacity:0}59.737%{opacity:1;transform:scale(1.15)}60.063%{transform:scale(1)}60.021%{opacity:1}60.024%,100%{opacity:0}}
+.L1t7{animation:L1t7 36.8s both}@keyframes L1t7{0%,60.021%{fill-opacity:0;stroke-opacity:0}60.024%,60.308%{fill-opacity:.42;stroke-opacity:1}60.311%,100%{fill-opacity:0;stroke-opacity:0}}
+.L1n7{animation:L1n7 36.8s both}@keyframes L1n7{0%,60.021%{opacity:0}60.024%{opacity:1;transform:scale(1.15)}60.350%{transform:scale(1)}60.308%{opacity:1}60.311%,100%{opacity:0}}
+.L1t8{animation:L1t8 36.8s both}@keyframes L1t8{0%,60.308%{fill-opacity:0;stroke-opacity:0}60.311%,60.595%{fill-opacity:.42;stroke-opacity:1}60.598%,100%{fill-opacity:0;stroke-opacity:0}}
+.L1n8{animation:L1n8 36.8s both}@keyframes L1n8{0%,60.308%{opacity:0}60.311%{opacity:1;transform:scale(1.15)}60.637%{transform:scale(1)}60.595%{opacity:1}60.598%,100%{opacity:0}}
+.L1t9{animation:L1t9 36.8s both}@keyframes L1t9{0%,60.595%{fill-opacity:0;stroke-opacity:0}60.598%,60.882%{fill-opacity:.42;stroke-opacity:1}60.885%,100%{fill-opacity:0;stroke-opacity:0}}
+.L1n9{animation:L1n9 36.8s both}@keyframes L1n9{0%,60.595%{opacity:0}60.598%{opacity:1;transform:scale(1.15)}60.924%{transform:scale(1)}60.882%{opacity:1}60.885%,100%{opacity:0}}
+.L1t10{animation:L1t10 36.8s both}@keyframes L1t10{0%,60.882%{fill-opacity:0;stroke-opacity:0}60.885%,61.169%{fill-opacity:.42;stroke-opacity:1}61.171%,100%{fill-opacity:0;stroke-opacity:0}}
+.L1n10{animation:L1n10 36.8s both}@keyframes L1n10{0%,60.882%{opacity:0}60.885%{opacity:1;transform:scale(1.15)}61.211%{transform:scale(1)}61.169%{opacity:1}61.171%,100%{opacity:0}}
+.L1t11{animation:L1t11 36.8s both}@keyframes L1t11{0%,61.169%{fill-opacity:0;stroke-opacity:0}61.171%,61.456%{fill-opacity:.42;stroke-opacity:1}61.458%,100%{fill-opacity:0;stroke-opacity:0}}
+.L1n11{animation:L1n11 36.8s both}@keyframes L1n11{0%,61.169%{opacity:0}61.171%{opacity:1;transform:scale(1.15)}61.498%{transform:scale(1)}61.456%{opacity:1}61.458%,100%{opacity:0}}
+.L1t12{animation:L1t12 36.8s both}@keyframes L1t12{0%,61.456%{fill-opacity:0;stroke-opacity:0}61.458%,61.742%{fill-opacity:.42;stroke-opacity:1}61.745%,100%{fill-opacity:0;stroke-opacity:0}}
+.L1n12{animation:L1n12 36.8s both}@keyframes L1n12{0%,61.456%{opacity:0}61.458%{opacity:1;transform:scale(1.15)}61.784%{transform:scale(1)}61.742%{opacity:1}61.745%,100%{opacity:0}}
+.L1t13{animation:L1t13 36.8s both}@keyframes L1t13{0%,61.742%{fill-opacity:0;stroke-opacity:0}61.745%,62.029%{fill-opacity:.42;stroke-opacity:1}62.032%,100%{fill-opacity:0;stroke-opacity:0}}
+.L1n13{animation:L1n13 36.8s both}@keyframes L1n13{0%,61.742%{opacity:0}61.745%{opacity:1;transform:scale(1.15)}62.071%{transform:scale(1)}62.029%{opacity:1}62.032%,100%{opacity:0}}
+.L1t14{animation:L1t14 36.8s both}@keyframes L1t14{0%,62.029%{fill-opacity:0;stroke-opacity:0}62.032%,62.316%{fill-opacity:.42;stroke-opacity:1}62.319%,100%{fill-opacity:0;stroke-opacity:0}}
+.L1n14{animation:L1n14 36.8s both}@keyframes L1n14{0%,62.029%{opacity:0}62.032%{opacity:1;transform:scale(1.15)}62.358%{transform:scale(1)}62.316%{opacity:1}62.319%,100%{opacity:0}}
+.L1t15{animation:L1t15 36.8s both}@keyframes L1t15{0%,62.316%{fill-opacity:0;stroke-opacity:0}62.319%,62.603%{fill-opacity:.42;stroke-opacity:1}62.606%,100%{fill-opacity:0;stroke-opacity:0}}
+.L1n15{animation:L1n15 36.8s both}@keyframes L1n15{0%,62.316%{opacity:0}62.319%{opacity:1;transform:scale(1.15)}62.645%{transform:scale(1)}62.603%{opacity:1}62.606%,100%{opacity:0}}
+.L1t16{animation:L1t16 36.8s both}@keyframes L1t16{0%,62.603%{fill-opacity:0;stroke-opacity:0}62.606%,62.890%{fill-opacity:.42;stroke-opacity:1}62.893%,100%{fill-opacity:0;stroke-opacity:0}}
+.L1n16{animation:L1n16 36.8s both}@keyframes L1n16{0%,62.603%{opacity:0}62.606%{opacity:1;transform:scale(1.15)}62.932%{transform:scale(1)}62.890%{opacity:1}62.893%,100%{opacity:0}}
+.L1t17{animation:L1t17 36.8s both}@keyframes L1t17{0%,62.890%{fill-opacity:0;stroke-opacity:0}62.893%,63.177%{fill-opacity:.42;stroke-opacity:1}63.179%,100%{fill-opacity:0;stroke-opacity:0}}
+.L1n17{animation:L1n17 36.8s both}@keyframes L1n17{0%,62.890%{opacity:0}62.893%{opacity:1;transform:scale(1.6)}63.219%{transform:scale(1)}100%{opacity:1}}
+.L1d0{animation:L1d0 36.8s linear both}
+@keyframes L1d0{0%,38.560%{opacity:0}38.587%{opacity:1;transform:scale(1.35)}39.266%{opacity:1;transform:scale(1)}41.277%{opacity:1;transform:scale(1)}41.304%,100%{opacity:0}}.L1d1{animation:L1d1 36.8s linear both}
+@keyframes L1d1{0%,41.277%{opacity:0}41.304%{opacity:1;transform:scale(1.35)}41.984%{opacity:1;transform:scale(1)}43.995%{opacity:1;transform:scale(1)}44.022%,100%{opacity:0}}.L1d2{animation:L1d2 36.8s linear both}
+@keyframes L1d2{0%,43.995%{opacity:0}44.022%{opacity:1;transform:scale(1.35)}44.701%{opacity:1;transform:scale(1)}46.712%{opacity:1;transform:scale(1)}46.739%,100%{opacity:0}}.L1d3{animation:L1d3 36.8s linear both}
+@keyframes L1d3{0%,46.712%{opacity:0}46.739%{opacity:1;transform:scale(1.35)}47.418%{opacity:1;transform:scale(1)}49.429%{opacity:1;transform:scale(1)}49.457%,100%{opacity:0}}.L1d4{animation:L1d4 36.8s linear both}
+@keyframes L1d4{0%,49.429%{opacity:0}49.457%{opacity:1;transform:scale(1.7)}50.136%{opacity:1;transform:scale(1)}52.147%{opacity:1;transform:scale(1)}52.174%,100%{opacity:0}}.L1v4{animation:L1v4 36.8s linear both}
+@keyframes L1v4{0%,49.429%{opacity:0}49.457%{opacity:0.55}51.087%,100%{opacity:0}}.L1d5{animation:L1d5 36.8s linear both}
+@keyframes L1d5{0%,52.147%{opacity:0}52.174%{opacity:1;transform:scale(1.7)}52.853%{opacity:1;transform:scale(1)}54.864%{opacity:1;transform:scale(1)}54.891%,100%{opacity:0}}.L1v5{animation:L1v5 36.8s linear both}
+@keyframes L1v5{0%,52.147%{opacity:0}52.174%{opacity:0.75}53.804%,100%{opacity:0}}.L1d6{animation:L1d6 36.8s linear both}
+@keyframes L1d6{0%,54.864%{opacity:0}54.891%{opacity:1;transform:scale(1.7)}55.571%{opacity:1;transform:scale(1)}57.582%{opacity:1;transform:scale(1)}57.609%,100%{opacity:0}}.L1v6{animation:L1v6 36.8s linear both}
+@keyframes L1v6{0%,54.864%{opacity:0}54.891%{opacity:0.95}56.522%,100%{opacity:0}}.L1t{animation:L1tf 36.8s both}.L1t i{animation:L1tn 36.8s linear both}
+@keyframes L1tn{0%,38.587%{transform:scaleX(1);background:var(--to-green)}49.457%{background:var(--to-green)}49.728%{background:#C0392B}57.609%,100%{transform:scaleX(0);background:#C0392B}}
+@keyframes L1tf{0%,37.772%{opacity:0}38.587%,57.609%{opacity:1}58.424%,100%{opacity:0}}.L1ans{animation:L1ans 36.8s both}
+@keyframes L1ans{0%,58.288%{opacity:0;transform:translateY(30px)}59.239%,63.995%{opacity:1;transform:none}64.674%,100%{opacity:0}}.pip1{animation:pip1 36.8s both}@keyframes pip1{0%,35.870%{background:transparent;color:var(--to-green)}36.413%,100%{background:var(--to-green);color:var(--to-snow)}}
+@keyframes L2seg{0%,64.674%{opacity:0}65.353%,90.082%{opacity:1}90.761%,100%{opacity:0}}
+.L2{animation:L2seg 36.8s both}
+@keyframes L2stg{0%,66.440%{opacity:0;transform:scale(.94)}67.391%,90.082%{opacity:1;transform:none}90.761%,100%{opacity:0}}
+.L2stg{position:absolute;inset:0;overflow:hidden;animation:L2stg 36.8s both}
+.L2ban{position:absolute;left:0;right:0;top:720px;text-align:center;animation:L2ban 36.8s both;z-index:5}
+@keyframes L2ban{0%,64.674%{opacity:0;transform:scale(2.2)}65.163%{opacity:1;transform:scale(.95)}65.489%,66.576%{opacity:1;transform:scale(1)}67.255%,100%{opacity:0;transform:scale(1.1)}}
+.L2zm{position:absolute;inset:0}
+.L2sh{position:absolute;inset:0;animation:L2sh 36.8s linear both}
+@keyframes L2sh{0%,78.261%{transform:none}78.261%{transform:translate(-2px,-0.8px)}78.533%{transform:translate(2.25px,1.3499999999999999px)}78.804%{transform:translate(-2.5px,-1px)}79.076%{transform:translate(2.75px,-1.1px)}79.348%{transform:translate(-3px,1.7999999999999998px)}79.620%{transform:translate(3.25px,-1.3px)}79.891%{transform:translate(-3.5px,-1.4000000000000001px)}80.163%{transform:translate(3.75px,2.25px)}80.435%{transform:translate(-4px,-1.6px)}80.707%{transform:translate(4.25px,-1.7000000000000002px)}80.978%{transform:translate(-4.5px,2.6999999999999997px)}81.250%{transform:translate(4.75px,-1.9000000000000001px)}81.522%{transform:translate(-5px,-2px)}81.793%{transform:translate(5.25px,3.15px)}82.065%{transform:translate(-5.5px,-2.2px)}82.337%{transform:translate(5.75px,-2.3000000000000003px)}82.609%{transform:translate(-6px,3.5999999999999996px)}82.880%{transform:translate(6.25px,-2.5px)}83.152%{transform:translate(-6.5px,-2.6px)}83.424%{transform:translate(6.75px,4.05px)}83.696%,100%{transform:none}}
+
+.L2svg{position:absolute;inset:0;overflow:visible}
+.L2fig line{stroke:var(--to-green);stroke-width:8;stroke-linecap:round;animation:L2ln 36.8s both}
+@keyframes L2ln{0%,83.696%{stroke:var(--to-green)}84.511%,89.266%{stroke:rgba(18,58,41,.45)}90.082%,100%{stroke:var(--to-green)}}
+.L2hl polygon{fill:#C0392B;stroke:#C0392B;stroke-width:12;stroke-linejoin:round;fill-opacity:0;stroke-opacity:0}
+.L2ctr{position:absolute;right:-10px;top:-20px;width:170px;height:170px;border-radius:50%;background:#C0392B;animation:L2ctr 36.8s both}
+@keyframes L2ctr{0%,83.832%{opacity:0;transform:scale(.4)}84.375%,100%{opacity:1;transform:none}}
+.L2ctr b{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;font:800 92px/1 var(--to-font-display);color:var(--to-snow);opacity:0}
+.L2t0{animation:L2t0 36.8s both}@keyframes L2t0{0%,84.101%{fill-opacity:0;stroke-opacity:0}84.103%,84.248%{fill-opacity:.42;stroke-opacity:1}84.251%,100%{fill-opacity:0;stroke-opacity:0}}
+.L2n0{animation:L2n0 36.8s both}@keyframes L2n0{0%,84.101%{opacity:0}84.103%{opacity:1;transform:scale(1.15)}84.429%{transform:scale(1)}84.248%{opacity:1}84.251%,100%{opacity:0}}
+.L2t1{animation:L2t1 36.8s both}@keyframes L2t1{0%,84.248%{fill-opacity:0;stroke-opacity:0}84.251%,84.396%{fill-opacity:.42;stroke-opacity:1}84.398%,100%{fill-opacity:0;stroke-opacity:0}}
+.L2n1{animation:L2n1 36.8s both}@keyframes L2n1{0%,84.248%{opacity:0}84.251%{opacity:1;transform:scale(1.15)}84.577%{transform:scale(1)}84.396%{opacity:1}84.398%,100%{opacity:0}}
+.L2t2{animation:L2t2 36.8s both}@keyframes L2t2{0%,84.396%{fill-opacity:0;stroke-opacity:0}84.398%,84.543%{fill-opacity:.42;stroke-opacity:1}84.546%,100%{fill-opacity:0;stroke-opacity:0}}
+.L2n2{animation:L2n2 36.8s both}@keyframes L2n2{0%,84.396%{opacity:0}84.398%{opacity:1;transform:scale(1.15)}84.724%{transform:scale(1)}84.543%{opacity:1}84.546%,100%{opacity:0}}
+.L2t3{animation:L2t3 36.8s both}@keyframes L2t3{0%,84.543%{fill-opacity:0;stroke-opacity:0}84.546%,84.691%{fill-opacity:.42;stroke-opacity:1}84.693%,100%{fill-opacity:0;stroke-opacity:0}}
+.L2n3{animation:L2n3 36.8s both}@keyframes L2n3{0%,84.543%{opacity:0}84.546%{opacity:1;transform:scale(1.15)}84.872%{transform:scale(1)}84.691%{opacity:1}84.693%,100%{opacity:0}}
+.L2t4{animation:L2t4 36.8s both}@keyframes L2t4{0%,84.691%{fill-opacity:0;stroke-opacity:0}84.693%,84.838%{fill-opacity:.42;stroke-opacity:1}84.841%,100%{fill-opacity:0;stroke-opacity:0}}
+.L2n4{animation:L2n4 36.8s both}@keyframes L2n4{0%,84.691%{opacity:0}84.693%{opacity:1;transform:scale(1.15)}85.019%{transform:scale(1)}84.838%{opacity:1}84.841%,100%{opacity:0}}
+.L2t5{animation:L2t5 36.8s both}@keyframes L2t5{0%,84.838%{fill-opacity:0;stroke-opacity:0}84.841%,84.986%{fill-opacity:.42;stroke-opacity:1}84.988%,100%{fill-opacity:0;stroke-opacity:0}}
+.L2n5{animation:L2n5 36.8s both}@keyframes L2n5{0%,84.838%{opacity:0}84.841%{opacity:1;transform:scale(1.15)}85.167%{transform:scale(1)}84.986%{opacity:1}84.988%,100%{opacity:0}}
+.L2t6{animation:L2t6 36.8s both}@keyframes L2t6{0%,84.986%{fill-opacity:0;stroke-opacity:0}84.988%,85.133%{fill-opacity:.42;stroke-opacity:1}85.136%,100%{fill-opacity:0;stroke-opacity:0}}
+.L2n6{animation:L2n6 36.8s both}@keyframes L2n6{0%,84.986%{opacity:0}84.988%{opacity:1;transform:scale(1.15)}85.314%{transform:scale(1)}85.133%{opacity:1}85.136%,100%{opacity:0}}
+.L2t7{animation:L2t7 36.8s both}@keyframes L2t7{0%,85.133%{fill-opacity:0;stroke-opacity:0}85.136%,85.281%{fill-opacity:.42;stroke-opacity:1}85.283%,100%{fill-opacity:0;stroke-opacity:0}}
+.L2n7{animation:L2n7 36.8s both}@keyframes L2n7{0%,85.133%{opacity:0}85.136%{opacity:1;transform:scale(1.15)}85.462%{transform:scale(1)}85.281%{opacity:1}85.283%,100%{opacity:0}}
+.L2t8{animation:L2t8 36.8s both}@keyframes L2t8{0%,85.281%{fill-opacity:0;stroke-opacity:0}85.283%,85.428%{fill-opacity:.42;stroke-opacity:1}85.431%,100%{fill-opacity:0;stroke-opacity:0}}
+.L2n8{animation:L2n8 36.8s both}@keyframes L2n8{0%,85.281%{opacity:0}85.283%{opacity:1;transform:scale(1.15)}85.609%{transform:scale(1)}85.428%{opacity:1}85.431%,100%{opacity:0}}
+.L2t9{animation:L2t9 36.8s both}@keyframes L2t9{0%,85.428%{fill-opacity:0;stroke-opacity:0}85.431%,85.576%{fill-opacity:.42;stroke-opacity:1}85.578%,100%{fill-opacity:0;stroke-opacity:0}}
+.L2n9{animation:L2n9 36.8s both}@keyframes L2n9{0%,85.428%{opacity:0}85.431%{opacity:1;transform:scale(1.15)}85.757%{transform:scale(1)}85.576%{opacity:1}85.578%,100%{opacity:0}}
+.L2t10{animation:L2t10 36.8s both}@keyframes L2t10{0%,85.576%{fill-opacity:0;stroke-opacity:0}85.578%,85.723%{fill-opacity:.42;stroke-opacity:1}85.726%,100%{fill-opacity:0;stroke-opacity:0}}
+.L2n10{animation:L2n10 36.8s both}@keyframes L2n10{0%,85.576%{opacity:0}85.578%{opacity:1;transform:scale(1.15)}85.905%{transform:scale(1)}85.723%{opacity:1}85.726%,100%{opacity:0}}
+.L2t11{animation:L2t11 36.8s both}@keyframes L2t11{0%,85.723%{fill-opacity:0;stroke-opacity:0}85.726%,85.871%{fill-opacity:.42;stroke-opacity:1}85.873%,100%{fill-opacity:0;stroke-opacity:0}}
+.L2n11{animation:L2n11 36.8s both}@keyframes L2n11{0%,85.723%{opacity:0}85.726%{opacity:1;transform:scale(1.15)}86.052%{transform:scale(1)}85.871%{opacity:1}85.873%,100%{opacity:0}}
+.L2t12{animation:L2t12 36.8s both}@keyframes L2t12{0%,85.871%{fill-opacity:0;stroke-opacity:0}85.873%,86.018%{fill-opacity:.42;stroke-opacity:1}86.021%,100%{fill-opacity:0;stroke-opacity:0}}
+.L2n12{animation:L2n12 36.8s both}@keyframes L2n12{0%,85.871%{opacity:0}85.873%{opacity:1;transform:scale(1.15)}86.200%{transform:scale(1)}86.018%{opacity:1}86.021%,100%{opacity:0}}
+.L2t13{animation:L2t13 36.8s both}@keyframes L2t13{0%,86.018%{fill-opacity:0;stroke-opacity:0}86.021%,86.166%{fill-opacity:.42;stroke-opacity:1}86.168%,100%{fill-opacity:0;stroke-opacity:0}}
+.L2n13{animation:L2n13 36.8s both}@keyframes L2n13{0%,86.018%{opacity:0}86.021%{opacity:1;transform:scale(1.15)}86.347%{transform:scale(1)}86.166%{opacity:1}86.168%,100%{opacity:0}}
+.L2t14{animation:L2t14 36.8s both}@keyframes L2t14{0%,86.166%{fill-opacity:0;stroke-opacity:0}86.168%,86.313%{fill-opacity:.42;stroke-opacity:1}86.316%,100%{fill-opacity:0;stroke-opacity:0}}
+.L2n14{animation:L2n14 36.8s both}@keyframes L2n14{0%,86.166%{opacity:0}86.168%{opacity:1;transform:scale(1.15)}86.495%{transform:scale(1)}86.313%{opacity:1}86.316%,100%{opacity:0}}
+.L2t15{animation:L2t15 36.8s both}@keyframes L2t15{0%,86.313%{fill-opacity:0;stroke-opacity:0}86.316%,86.461%{fill-opacity:.42;stroke-opacity:1}86.464%,100%{fill-opacity:0;stroke-opacity:0}}
+.L2n15{animation:L2n15 36.8s both}@keyframes L2n15{0%,86.313%{opacity:0}86.316%{opacity:1;transform:scale(1.15)}86.642%{transform:scale(1)}86.461%{opacity:1}86.464%,100%{opacity:0}}
+.L2t16{animation:L2t16 36.8s both}@keyframes L2t16{0%,86.461%{fill-opacity:0;stroke-opacity:0}86.464%,86.608%{fill-opacity:.42;stroke-opacity:1}86.611%,100%{fill-opacity:0;stroke-opacity:0}}
+.L2n16{animation:L2n16 36.8s both}@keyframes L2n16{0%,86.461%{opacity:0}86.464%{opacity:1;transform:scale(1.15)}86.790%{transform:scale(1)}86.608%{opacity:1}86.611%,100%{opacity:0}}
+.L2t17{animation:L2t17 36.8s both}@keyframes L2t17{0%,86.608%{fill-opacity:0;stroke-opacity:0}86.611%,86.756%{fill-opacity:.42;stroke-opacity:1}86.759%,100%{fill-opacity:0;stroke-opacity:0}}
+.L2n17{animation:L2n17 36.8s both}@keyframes L2n17{0%,86.608%{opacity:0}86.611%{opacity:1;transform:scale(1.15)}86.937%{transform:scale(1)}86.756%{opacity:1}86.759%,100%{opacity:0}}
+.L2t18{animation:L2t18 36.8s both}@keyframes L2t18{0%,86.756%{fill-opacity:0;stroke-opacity:0}86.759%,86.903%{fill-opacity:.42;stroke-opacity:1}86.906%,100%{fill-opacity:0;stroke-opacity:0}}
+.L2n18{animation:L2n18 36.8s both}@keyframes L2n18{0%,86.756%{opacity:0}86.759%{opacity:1;transform:scale(1.15)}87.085%{transform:scale(1)}86.903%{opacity:1}86.906%,100%{opacity:0}}
+.L2t19{animation:L2t19 36.8s both}@keyframes L2t19{0%,86.903%{fill-opacity:0;stroke-opacity:0}86.906%,87.051%{fill-opacity:.42;stroke-opacity:1}87.054%,100%{fill-opacity:0;stroke-opacity:0}}
+.L2n19{animation:L2n19 36.8s both}@keyframes L2n19{0%,86.903%{opacity:0}86.906%{opacity:1;transform:scale(1.15)}87.232%{transform:scale(1)}87.051%{opacity:1}87.054%,100%{opacity:0}}
+.L2t20{animation:L2t20 36.8s both}@keyframes L2t20{0%,87.051%{fill-opacity:0;stroke-opacity:0}87.054%,87.198%{fill-opacity:.42;stroke-opacity:1}87.201%,100%{fill-opacity:0;stroke-opacity:0}}
+.L2n20{animation:L2n20 36.8s both}@keyframes L2n20{0%,87.051%{opacity:0}87.054%{opacity:1;transform:scale(1.15)}87.380%{transform:scale(1)}87.198%{opacity:1}87.201%,100%{opacity:0}}
+.L2t21{animation:L2t21 36.8s both}@keyframes L2t21{0%,87.198%{fill-opacity:0;stroke-opacity:0}87.201%,87.346%{fill-opacity:.42;stroke-opacity:1}87.349%,100%{fill-opacity:0;stroke-opacity:0}}
+.L2n21{animation:L2n21 36.8s both}@keyframes L2n21{0%,87.198%{opacity:0}87.201%{opacity:1;transform:scale(1.15)}87.527%{transform:scale(1)}87.346%{opacity:1}87.349%,100%{opacity:0}}
+.L2t22{animation:L2t22 36.8s both}@keyframes L2t22{0%,87.346%{fill-opacity:0;stroke-opacity:0}87.349%,87.493%{fill-opacity:.42;stroke-opacity:1}87.496%,100%{fill-opacity:0;stroke-opacity:0}}
+.L2n22{animation:L2n22 36.8s both}@keyframes L2n22{0%,87.346%{opacity:0}87.349%{opacity:1;transform:scale(1.15)}87.675%{transform:scale(1)}87.493%{opacity:1}87.496%,100%{opacity:0}}
+.L2t23{animation:L2t23 36.8s both}@keyframes L2t23{0%,87.493%{fill-opacity:0;stroke-opacity:0}87.496%,87.641%{fill-opacity:.42;stroke-opacity:1}87.644%,100%{fill-opacity:0;stroke-opacity:0}}
+.L2n23{animation:L2n23 36.8s both}@keyframes L2n23{0%,87.493%{opacity:0}87.496%{opacity:1;transform:scale(1.15)}87.822%{transform:scale(1)}87.641%{opacity:1}87.644%,100%{opacity:0}}
+.L2t24{animation:L2t24 36.8s both}@keyframes L2t24{0%,87.641%{fill-opacity:0;stroke-opacity:0}87.644%,87.788%{fill-opacity:.42;stroke-opacity:1}87.791%,100%{fill-opacity:0;stroke-opacity:0}}
+.L2n24{animation:L2n24 36.8s both}@keyframes L2n24{0%,87.641%{opacity:0}87.644%{opacity:1;transform:scale(1.15)}87.970%{transform:scale(1)}87.788%{opacity:1}87.791%,100%{opacity:0}}
+.L2t25{animation:L2t25 36.8s both}@keyframes L2t25{0%,87.788%{fill-opacity:0;stroke-opacity:0}87.791%,87.936%{fill-opacity:.42;stroke-opacity:1}87.939%,100%{fill-opacity:0;stroke-opacity:0}}
+.L2n25{animation:L2n25 36.8s both}@keyframes L2n25{0%,87.788%{opacity:0}87.791%{opacity:1;transform:scale(1.15)}88.117%{transform:scale(1)}87.936%{opacity:1}87.939%,100%{opacity:0}}
+.L2t26{animation:L2t26 36.8s both}@keyframes L2t26{0%,87.936%{fill-opacity:0;stroke-opacity:0}87.939%,88.083%{fill-opacity:.42;stroke-opacity:1}88.086%,100%{fill-opacity:0;stroke-opacity:0}}
+.L2n26{animation:L2n26 36.8s both}@keyframes L2n26{0%,87.936%{opacity:0}87.939%{opacity:1;transform:scale(1.15)}88.265%{transform:scale(1)}88.083%{opacity:1}88.086%,100%{opacity:0}}
+.L2t27{animation:L2t27 36.8s both}@keyframes L2t27{0%,88.083%{fill-opacity:0;stroke-opacity:0}88.086%,88.231%{fill-opacity:.42;stroke-opacity:1}88.234%,100%{fill-opacity:0;stroke-opacity:0}}
+.L2n27{animation:L2n27 36.8s both}@keyframes L2n27{0%,88.083%{opacity:0}88.086%{opacity:1;transform:scale(1.15)}88.412%{transform:scale(1)}88.231%{opacity:1}88.234%,100%{opacity:0}}
+.L2t28{animation:L2t28 36.8s both}@keyframes L2t28{0%,88.231%{fill-opacity:0;stroke-opacity:0}88.234%,88.378%{fill-opacity:.42;stroke-opacity:1}88.381%,100%{fill-opacity:0;stroke-opacity:0}}
+.L2n28{animation:L2n28 36.8s both}@keyframes L2n28{0%,88.231%{opacity:0}88.234%{opacity:1;transform:scale(1.15)}88.560%{transform:scale(1)}88.378%{opacity:1}88.381%,100%{opacity:0}}
+.L2t29{animation:L2t29 36.8s both}@keyframes L2t29{0%,88.378%{fill-opacity:0;stroke-opacity:0}88.381%,88.526%{fill-opacity:.42;stroke-opacity:1}88.529%,100%{fill-opacity:0;stroke-opacity:0}}
+.L2n29{animation:L2n29 36.8s both}@keyframes L2n29{0%,88.378%{opacity:0}88.381%{opacity:1;transform:scale(1.15)}88.707%{transform:scale(1)}88.526%{opacity:1}88.529%,100%{opacity:0}}
+.L2t30{animation:L2t30 36.8s both}@keyframes L2t30{0%,88.526%{fill-opacity:0;stroke-opacity:0}88.529%,88.674%{fill-opacity:.42;stroke-opacity:1}88.676%,100%{fill-opacity:0;stroke-opacity:0}}
+.L2n30{animation:L2n30 36.8s both}@keyframes L2n30{0%,88.526%{opacity:0}88.529%{opacity:1;transform:scale(1.15)}88.855%{transform:scale(1)}88.674%{opacity:1}88.676%,100%{opacity:0}}
+.L2t31{animation:L2t31 36.8s both}@keyframes L2t31{0%,88.674%{fill-opacity:0;stroke-opacity:0}88.676%,88.821%{fill-opacity:.42;stroke-opacity:1}88.824%,100%{fill-opacity:0;stroke-opacity:0}}
+.L2n31{animation:L2n31 36.8s both}@keyframes L2n31{0%,88.674%{opacity:0}88.676%{opacity:1;transform:scale(1.15)}89.002%{transform:scale(1)}88.821%{opacity:1}88.824%,100%{opacity:0}}
+.L2t32{animation:L2t32 36.8s both}@keyframes L2t32{0%,88.821%{fill-opacity:0;stroke-opacity:0}88.824%,88.969%{fill-opacity:.42;stroke-opacity:1}88.971%,100%{fill-opacity:0;stroke-opacity:0}}
+.L2n32{animation:L2n32 36.8s both}@keyframes L2n32{0%,88.821%{opacity:0}88.824%{opacity:1;transform:scale(1.15)}89.150%{transform:scale(1)}88.969%{opacity:1}88.971%,100%{opacity:0}}
+.L2t33{animation:L2t33 36.8s both}@keyframes L2t33{0%,88.969%{fill-opacity:0;stroke-opacity:0}88.971%,89.116%{fill-opacity:.42;stroke-opacity:1}89.119%,100%{fill-opacity:0;stroke-opacity:0}}
+.L2n33{animation:L2n33 36.8s both}@keyframes L2n33{0%,88.969%{opacity:0}88.971%{opacity:1;transform:scale(1.15)}89.297%{transform:scale(1)}89.116%{opacity:1}89.119%,100%{opacity:0}}
+.L2t34{animation:L2t34 36.8s both}@keyframes L2t34{0%,89.116%{fill-opacity:0;stroke-opacity:0}89.119%,89.264%{fill-opacity:.42;stroke-opacity:1}89.266%,100%{fill-opacity:0;stroke-opacity:0}}
+.L2n34{animation:L2n34 36.8s both}@keyframes L2n34{0%,89.116%{opacity:0}89.119%{opacity:1;transform:scale(1.6)}89.445%{transform:scale(1)}100%{opacity:1}}
+.L2d0{animation:L2d0 36.8s linear both}
+@keyframes L2d0{0%,67.364%{opacity:0}67.391%{opacity:1;transform:scale(1.35)}68.071%{opacity:1;transform:scale(1)}70.082%{opacity:1;transform:scale(1)}70.109%,100%{opacity:0}}.L2d1{animation:L2d1 36.8s linear both}
+@keyframes L2d1{0%,70.082%{opacity:0}70.109%{opacity:1;transform:scale(1.35)}70.788%{opacity:1;transform:scale(1)}72.799%{opacity:1;transform:scale(1)}72.826%,100%{opacity:0}}.L2d2{animation:L2d2 36.8s linear both}
+@keyframes L2d2{0%,72.799%{opacity:0}72.826%{opacity:1;transform:scale(1.35)}73.505%{opacity:1;transform:scale(1)}75.516%{opacity:1;transform:scale(1)}75.543%,100%{opacity:0}}.L2d3{animation:L2d3 36.8s linear both}
+@keyframes L2d3{0%,75.516%{opacity:0}75.543%{opacity:1;transform:scale(1.7)}76.223%{opacity:1;transform:scale(1)}78.234%{opacity:1;transform:scale(1)}78.261%,100%{opacity:0}}.L2v3{animation:L2v3 36.8s linear both}
+@keyframes L2v3{0%,75.516%{opacity:0}75.543%{opacity:0.55}77.174%,100%{opacity:0}}.L2d4{animation:L2d4 36.8s linear both}
+@keyframes L2d4{0%,78.234%{opacity:0}78.261%{opacity:1;transform:scale(1.7)}78.940%{opacity:1;transform:scale(1)}80.951%{opacity:1;transform:scale(1)}80.978%,100%{opacity:0}}.L2v4{animation:L2v4 36.8s linear both}
+@keyframes L2v4{0%,78.234%{opacity:0}78.261%{opacity:0.75}79.891%,100%{opacity:0}}.L2d5{animation:L2d5 36.8s linear both}
+@keyframes L2d5{0%,80.951%{opacity:0}80.978%{opacity:1;transform:scale(1.7)}81.658%{opacity:1;transform:scale(1)}83.668%{opacity:1;transform:scale(1)}83.696%,100%{opacity:0}}.L2v5{animation:L2v5 36.8s linear both}
+@keyframes L2v5{0%,80.951%{opacity:0}80.978%{opacity:0.95}82.609%,100%{opacity:0}}.L2t{animation:L2tf 36.8s both}.L2t i{animation:L2tn 36.8s linear both}
+@keyframes L2tn{0%,67.391%{transform:scaleX(1);background:var(--to-green)}75.543%{background:var(--to-green)}75.815%{background:#C0392B}83.696%,100%{transform:scaleX(0);background:#C0392B}}
+@keyframes L2tf{0%,66.576%{opacity:0}67.391%,83.696%{opacity:1}84.511%,100%{opacity:0}}.L2ans{animation:L2ans 36.8s both}
+@keyframes L2ans{0%,84.375%{opacity:0;transform:translateY(30px)}85.326%,90.082%{opacity:1;transform:none}90.761%,100%{opacity:0}}.pip2{animation:pip2 36.8s both}@keyframes pip2{0%,64.674%{background:transparent;color:var(--to-green)}65.217%,100%{background:var(--to-green);color:var(--to-snow)}}
+.endc{position:absolute;left:0;right:0;top:560px;text-align:center;animation:endk 36.8s both}
+.endc .big{font-weight:800;font-size:112px;line-height:1;letter-spacing:var(--to-track-display)}
+.endc .tiers{margin:56px auto 0;width:760px;text-align:left}
+.tier{display:flex;align-items:center;gap:36px;padding:20px 0;border-top:3px solid var(--to-hairline);font:800 52px/1 var(--to-font-display)}
+.tier b{display:inline-block;width:170px;text-align:center;background:var(--to-green);color:var(--to-snow);padding:14px 0}
+.tier:first-child b{background:#C0392B}
+.endc .sub{margin-top:50px;font:800 42px/1 var(--to-font-body);letter-spacing:.1em;color:#C0392B}
+@keyframes endk{0%,90.761%{opacity:0;transform:scale(.9)}91.712%,100%{opacity:1;transform:none}}
+.endc .tier{animation:tierk 36.8s both}
+.endc .tier:nth-child(1){animation-name:tier0}@keyframes tier0{0%,91.576%{opacity:0;transform:translateX(-40px)}92.255%,100%{opacity:1;transform:none}}
+.endc .tier:nth-child(2){animation-name:tier1}@keyframes tier1{0%,92.065%{opacity:0;transform:translateX(-40px)}92.745%,100%{opacity:1;transform:none}}
+.endc .tier:nth-child(3){animation-name:tier2}@keyframes tier2{0%,92.554%{opacity:0;transform:translateX(-40px)}93.234%,100%{opacity:1;transform:none}}
+.endc .tier:nth-child(4){animation-name:tier3}@keyframes tier3{0%,93.043%{opacity:0;transform:translateX(-40px)}93.723%,100%{opacity:1;transform:none}}
+</style></head>
+<body data-width="1080" data-height="1920" data-duration="36.8" data-fps="30">
+<img class="logo" src="../../brand/logo/timeoptic.svg" alt="">
+
+<div class="stage">
+<div class="L0stg"><div class="L0sh"><div class="L0zm"><svg class="L0svg" viewBox="0 0 900 860" width="900" height="860"><g class="L0hl"><polygon class="L0t0" points="190.0,170.0 710.0,170.0 450.0,430.0"/><polygon class="L0t1" points="190.0,170.0 190.0,690.0 450.0,430.0"/><polygon class="L0t2" points="710.0,170.0 710.0,690.0 450.0,430.0"/><polygon class="L0t3" points="710.0,690.0 190.0,690.0 450.0,430.0"/><polygon class="L0t4" points="190.0,170.0 710.0,170.0 710.0,690.0"/><polygon class="L0t5" points="190.0,170.0 710.0,170.0 190.0,690.0"/><polygon class="L0t6" points="190.0,170.0 710.0,690.0 190.0,690.0"/><polygon class="L0t7" points="710.0,170.0 710.0,690.0 190.0,690.0"/></g><g class="L0fig"><line x1="190.0" y1="170.0" x2="710.0" y2="170.0"/><line x1="710.0" y1="170.0" x2="710.0" y2="690.0"/><line x1="710.0" y1="690.0" x2="190.0" y2="690.0"/><line x1="190.0" y1="690.0" x2="190.0" y2="170.0"/><line x1="190.0" y1="170.0" x2="710.0" y2="690.0"/><line x1="710.0" y1="170.0" x2="190.0" y2="690.0"/></g></svg><div class="L0ctr"><b class="L0n0">1</b><b class="L0n1">2</b><b class="L0n2">3</b><b class="L0n3">4</b><b class="L0n4">5</b><b class="L0n5">6</b><b class="L0n6">7</b><b class="L0n7">8</b></div></div></div></div><div class="L1stg"><div class="L1sh"><div class="L1zm"><svg class="L1svg" viewBox="0 0 900 860" width="900" height="860"><g class="L1hl"><polygon class="L1t0" points="450.0,70.0 298.0,358.0 399.3,358.0"/><polygon class="L1t1" points="450.0,70.0 399.3,358.0 500.7,358.0"/><polygon class="L1t2" points="450.0,70.0 602.0,358.0 500.7,358.0"/><polygon class="L1t3" points="450.0,70.0 298.0,358.0 500.7,358.0"/><polygon class="L1t4" points="450.0,70.0 602.0,358.0 399.3,358.0"/><polygon class="L1t5" points="450.0,70.0 363.9,559.6 536.1,559.6"/><polygon class="L1t6" points="450.0,70.0 191.6,559.6 363.9,559.6"/><polygon class="L1t7" points="450.0,70.0 708.4,559.6 536.1,559.6"/><polygon class="L1t8" points="450.0,70.0 298.0,358.0 602.0,358.0"/><polygon class="L1t9" points="450.0,70.0 191.6,559.6 536.1,559.6"/><polygon class="L1t10" points="450.0,70.0 708.4,559.6 363.9,559.6"/><polygon class="L1t11" points="70.0,790.0 450.0,70.0 323.3,790.0"/><polygon class="L1t12" points="450.0,70.0 323.3,790.0 576.7,790.0"/><polygon class="L1t13" points="830.0,790.0 450.0,70.0 576.7,790.0"/><polygon class="L1t14" points="450.0,70.0 191.6,559.6 708.4,559.6"/><polygon class="L1t15" points="70.0,790.0 450.0,70.0 576.7,790.0"/><polygon class="L1t16" points="830.0,790.0 450.0,70.0 323.3,790.0"/><polygon class="L1t17" points="70.0,790.0 830.0,790.0 450.0,70.0"/></g><g class="L1fig"><line x1="70.0" y1="790.0" x2="830.0" y2="790.0"/><line x1="450.0" y1="70.0" x2="70.0" y2="790.0"/><line x1="450.0" y1="70.0" x2="830.0" y2="790.0"/><line x1="450.0" y1="70.0" x2="323.3" y2="790.0"/><line x1="450.0" y1="70.0" x2="576.7" y2="790.0"/><line x1="298.0" y1="358.0" x2="602.0" y2="358.0"/><line x1="191.6" y1="559.6" x2="708.4" y2="559.6"/></g></svg><div class="L1ctr"><b class="L1n0">1</b><b class="L1n1">2</b><b class="L1n2">3</b><b class="L1n3">4</b><b class="L1n4">5</b><b class="L1n5">6</b><b class="L1n6">7</b><b class="L1n7">8</b><b class="L1n8">9</b><b class="L1n9">10</b><b class="L1n10">11</b><b class="L1n11">12</b><b class="L1n12">13</b><b class="L1n13">14</b><b class="L1n14">15</b><b class="L1n15">16</b><b class="L1n16">17</b><b class="L1n17">18</b></div></div></div></div><div class="L2stg"><div class="L2sh"><div class="L2zm"><svg class="L2svg" viewBox="0 0 900 860" width="900" height="860"><g class="L2hl"><polygon class="L2t0" points="220.8,770.5 308.3,501.0 450.0,604.0"/><polygon class="L2t1" points="820.9,334.5 591.7,501.0 537.6,334.5"/><polygon class="L2t2" points="450.0,65.0 537.6,334.5 362.4,334.5"/><polygon class="L2t3" points="79.1,334.5 362.4,334.5 308.3,501.0"/><polygon class="L2t4" points="679.2,770.5 591.7,501.0 450.0,604.0"/><polygon class="L2t5" points="220.8,770.5 79.1,334.5 308.3,501.0"/><polygon class="L2t6" points="450.0,65.0 820.9,334.5 537.6,334.5"/><polygon class="L2t7" points="450.0,65.0 79.1,334.5 362.4,334.5"/><polygon class="L2t8" points="679.2,770.5 220.8,770.5 450.0,604.0"/><polygon class="L2t9" points="820.9,334.5 679.2,770.5 591.7,501.0"/><polygon class="L2t10" points="220.8,770.5 79.1,334.5 450.0,604.0"/><polygon class="L2t11" points="450.0,65.0 820.9,334.5 591.7,501.0"/><polygon class="L2t12" points="820.9,334.5 679.2,770.5 537.6,334.5"/><polygon class="L2t13" points="679.2,770.5 220.8,770.5 308.3,501.0"/><polygon class="L2t14" points="450.0,65.0 820.9,334.5 362.4,334.5"/><polygon class="L2t15" points="450.0,65.0 79.1,334.5 308.3,501.0"/><polygon class="L2t16" points="220.8,770.5 79.1,334.5 362.4,334.5"/><polygon class="L2t17" points="450.0,65.0 79.1,334.5 537.6,334.5"/><polygon class="L2t18" points="679.2,770.5 220.8,770.5 591.7,501.0"/><polygon class="L2t19" points="820.9,334.5 679.2,770.5 450.0,604.0"/><polygon class="L2t20" points="450.0,65.0 220.8,770.5 591.7,501.0"/><polygon class="L2t21" points="820.9,334.5 220.8,770.5 362.4,334.5"/><polygon class="L2t22" points="820.9,334.5 79.1,334.5 450.0,604.0"/><polygon class="L2t23" points="679.2,770.5 220.8,770.5 79.1,334.5"/><polygon class="L2t24" points="450.0,65.0 820.9,334.5 679.2,770.5"/><polygon class="L2t25" points="450.0,65.0 220.8,770.5 79.1,334.5"/><polygon class="L2t26" points="679.2,770.5 79.1,334.5 537.6,334.5"/><polygon class="L2t27" points="450.0,65.0 820.9,334.5 79.1,334.5"/><polygon class="L2t28" points="450.0,65.0 679.2,770.5 308.3,501.0"/><polygon class="L2t29" points="820.9,334.5 679.2,770.5 220.8,770.5"/><polygon class="L2t30" points="820.9,334.5 220.8,770.5 79.1,334.5"/><polygon class="L2t31" points="450.0,65.0 820.9,334.5 220.8,770.5"/><polygon class="L2t32" points="450.0,65.0 679.2,770.5 220.8,770.5"/><polygon class="L2t33" points="820.9,334.5 679.2,770.5 79.1,334.5"/><polygon class="L2t34" points="450.0,65.0 679.2,770.5 79.1,334.5"/></g><g class="L2fig"><line x1="450.0" y1="65.0" x2="820.9" y2="334.5"/><line x1="450.0" y1="65.0" x2="679.2" y2="770.5"/><line x1="450.0" y1="65.0" x2="220.8" y2="770.5"/><line x1="450.0" y1="65.0" x2="79.1" y2="334.5"/><line x1="820.9" y1="334.5" x2="679.2" y2="770.5"/><line x1="820.9" y1="334.5" x2="220.8" y2="770.5"/><line x1="820.9" y1="334.5" x2="79.1" y2="334.5"/><line x1="679.2" y1="770.5" x2="220.8" y2="770.5"/><line x1="679.2" y1="770.5" x2="79.1" y2="334.5"/><line x1="220.8" y1="770.5" x2="79.1" y2="334.5"/></g></svg><div class="L2ctr"><b class="L2n0">1</b><b class="L2n1">2</b><b class="L2n2">3</b><b class="L2n3">4</b><b class="L2n4">5</b><b class="L2n5">6</b><b class="L2n6">7</b><b class="L2n7">8</b><b class="L2n8">9</b><b class="L2n9">10</b><b class="L2n10">11</b><b class="L2n11">12</b><b class="L2n12">13</b><b class="L2n13">14</b><b class="L2n14">15</b><b class="L2n15">16</b><b class="L2n16">17</b><b class="L2n17">18</b><b class="L2n18">19</b><b class="L2n19">20</b><b class="L2n20">21</b><b class="L2n21">22</b><b class="L2n22">23</b><b class="L2n23">24</b><b class="L2n24">25</b><b class="L2n25">26</b><b class="L2n26">27</b><b class="L2n27">28</b><b class="L2n28">29</b><b class="L2n29">30</b><b class="L2n30">31</b><b class="L2n31">32</b><b class="L2n32">33</b><b class="L2n33">34</b><b class="L2n34">35</b></div></div></div></div>
+</div>
+<div class="head L0"><div class="eyebrow">LEVEL 1 OF 3</div><div class="title">HOW MANY<em>▲</em></div><div class="sub">8 SECONDS · COUNT THEM ALL</div></div><div class="head L1"><div class="eyebrow">LEVEL 2 OF 3</div><div class="title">HOW MANY<em>▲</em></div><div class="sub">7 SECONDS · DON'T MISS THE BIG ONES</div></div><div class="head L2"><div class="eyebrow">LEVEL 3 OF 3</div><div class="title">HOW MANY<em>▲</em></div><div class="sub">6 SECONDS · GENIUS LEVEL</div></div><div class="hook"><div class="top">EYE TEST · 3 LEVELS</div><div class="big">ONLY <em>1%</em><br>PASS LEVEL 3</div><div class="small">COUNT THE TRIANGLES</div></div><div class="ban L0ban"><div class="lv">LEVEL 1</div><div class="df" style="background:var(--to-green-on-dark)">EASY</div></div><div class="count"><b class="dg L0d0">8</b><b class="dg L0d1">7</b><b class="dg L0d2">6</b><b class="dg L0d3">5</b><b class="dg L0d4">4</b><b class="dg L0d5" style="color:#C0392B">3</b><b class="dg L0d6" style="color:#C0392B">2</b><b class="dg L0d7" style="color:#C0392B">1</b></div><div class="timer L0t"><i></i></div><div class="vig L0v5"></div><div class="vig L0v6"></div><div class="vig L0v7"></div><div class="answer L0ans"><div class="big">8 TRIANGLES</div><div class="where">DID YOU COUNT THEM ALL?</div></div><div class="ban L1ban"><div class="lv">LEVEL 2</div><div class="df" style="background:#D68A1E">HARD</div></div><div class="count"><b class="dg L1d0">7</b><b class="dg L1d1">6</b><b class="dg L1d2">5</b><b class="dg L1d3">4</b><b class="dg L1d4" style="color:#C0392B">3</b><b class="dg L1d5" style="color:#C0392B">2</b><b class="dg L1d6" style="color:#C0392B">1</b></div><div class="timer L1t"><i></i></div><div class="vig L1v4"></div><div class="vig L1v5"></div><div class="vig L1v6"></div><div class="answer L1ans"><div class="big">18 TRIANGLES</div><div class="where">DID YOU COUNT THEM ALL?</div></div><div class="ban L2ban"><div class="lv">LEVEL 3</div><div class="df" style="background:#C0392B">INSANE</div></div><div class="count"><b class="dg L2d0">6</b><b class="dg L2d1">5</b><b class="dg L2d2">4</b><b class="dg L2d3" style="color:#C0392B">3</b><b class="dg L2d4" style="color:#C0392B">2</b><b class="dg L2d5" style="color:#C0392B">1</b></div><div class="timer L2t"><i></i></div><div class="vig L2v3"></div><div class="vig L2v4"></div><div class="vig L2v5"></div><div class="answer L2ans"><div class="big">35 TRIANGLES</div><div class="where">DID YOU COUNT THEM ALL?</div></div><div class="endc"><div class="big">HOW MANY<br>DID YOU GET?</div><div class="tiers"><div class="tier"><b>3/3</b><span>EAGLE EYES</span></div><div class="tier"><b>2/3</b><span>SHARP EYES</span></div><div class="tier"><b>1/3</b><span>NOT BAD</span></div><div class="tier"><b>0/3</b><span>EYE TEST TIME</span></div></div><div class="sub">COMMENT YOUR SCORE 👇</div></div><div class="pips"><span class="pip0">LV 1</span><span class="pip1">LV 2</span><span class="pip2">LV 3</span></div>
+
+</body></html>
