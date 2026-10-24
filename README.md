@@ -1,6 +1,25 @@
-# Eyewear posts
+# TIMEOPTIC Content
 
-สุ่มกรอบแว่นในสต็อก + จับคู่เลนส์ + coating แล้วได้ "ชุดวัตถุดิบ" ไว้ทำรูปเอง: รูปหลายมุม, ตัดพื้นหลัง, สไตล์แว่น, prompt แยก layer สำหรับ Codex
+โปรเจกต์ทำคอนเทนต์โซเชียลของร้านแว่น TIMEOPTIC ทำงานผ่าน Claude Code (สั่งเป็นภาษาไทยได้เลย)
+
+| ทำอะไรได้ | สั่งว่า | ผลอยู่ที่ |
+|---|---|---|
+| สุ่มแว่น + ชุดวัตถุดิบทำรูป (รูปหลายมุม, ตัดพื้น, prompt สำหรับ Codex) | "สุ่มแว่น" | `kits/` |
+| คลิปแว่นตัดตามจังหวะเพลง (TikTok/Reels) | "ทำคลิป …" | `kits/<kit>/export/` |
+| คลิปพักสายตา 15 วิ | "คลิปพักสายตา" | `kits/` |
+| เกมทดสอบสายตา 3 ด่าน 10 เกม + ทดสอบตาบอดสี + จับผิดภาพแว่น | "ทำเกม …", "ทำคลิปเกม 7 เพิ่ม 5 คลิป" | `games/` (ดู `games/README.md`) |
+| คารูเซลหลายสไลด์ | "ทำคารูเซล …" | `carousel/` (ดู `carousel/README.md`) |
+| โพสต์สำเร็จรูป 1080×1080 | "ทำโพสต์วันนี้" | `posts/` |
+
+## เกมทดสอบสายตา (`games/`)
+คลิปแนวตั้ง 1080×1920 ยาวราว 28–37 วิ ทุกเกมมีฮุกเปิด ("ONLY 2% PASS LEVEL 3") → 3 ด่าน EASY / HARD / INSANE ที่เวลาน้อยลงเรื่อยๆ
+(3 วิสุดท้ายตัวเลขแดง จอสั่น) → เฉลยพร้อมซูม → ตารางคะแนนชวนคอมเมนต์ ทุกโฟลเดอร์มี `export/clip.mp4`, `caption.txt`, `answer.txt`
+- ส่วนกลางอยู่ที่ `games/_lib/levels.mjs` แต่ละเกมมี `make.mjs` สร้างคลิป แล้วเรนเดอร์ด้วย `npm run video -- games/<เกม>`
+- เกม 7 ทดสอบตาบอดสี (จุดสีแบบ Ishihara) สร้างชุดใหม่: `node games/07-hidden-animal/make.mjs plates 5`
+- เกม 9 จับผิดภาพแว่น สุ่มจุดต่างใหม่: `node games/09-spot-the-difference/make.mjs series 5`
+- เพลงใส่เองตอนลง TikTok
+
+## สุ่มแว่น / ชุดวัตถุดิบ
 
 ## ต้องใส่อะไร
 1. `data/frames/` รูปกรอบ (ชื่อไฟล์ = รุ่น สี)
@@ -36,8 +55,8 @@
 
 ## Getting the project from GitHub
 
-The project lives in the private repo https://github.com/timeoptic/timeoptic-content (ask the owner for access).
-`git clone https://github.com/timeoptic/timeoptic-content.git eyewear-posts`, then follow the setup below.
+The project lives in https://github.com/wiwatchai-lim/Content (older copy: https://github.com/timeoptic/timeoptic-content).
+`git clone https://github.com/wiwatchai-lim/Content.git timeoptic-content`, then follow the setup below.
 Not in the repo (install or create on each machine): `node_modules/` (`npm install`), `tmp/`, `.env` (own Gemini key, only if new voice lines are needed).
 Save work back with `git add -A`, `git commit -m "..."`, `git push`.
 
