@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=1080, height=1920" />
+    <!--
+      Hua Hin · Anantara, 30 s. The user's three 10 s clips cut back to back, one calm line per shot, our storefront at the end.
+        Script 2 (user, 2026-09-29), each line on screen while the voice reads it:
+        0.3-4.9   "Some views make you stop for a moment."            (scene1)
+        5.1-9.5   "Some details are too beautiful to miss."           (scene1)
+        9.6-14.4  "The colors. The light. The world around you."      (scene2)
+        14.5-20.8 "Because seeing clearly changes the way you experience every moment." (scene2 -> scene3)
+        20.9-25.4 "Wherever you go, make every view worth seeing."    (scene3)
+        25.3   storefront (assets/shop.mp4, same clip as huahin-centara; old one in shop-old.mp4) settles in from 1.12x, voice says "Time Optic"
+        26.4   ending copied from huahin-centara (user, 2026-09-29): peach rule draws, "TAKE CARE OF YOUR VISION" in caps below it, no wordmark (the sign is the logo)
+      Voice: audio/vo-n/trim + vo-s/trim/06s (Gemini TTS 2.5-flash, voice Sulafat), mixed after render by audio/mix.sh into export/huahin-anantara_sulafat.mp4.
+    -->
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/gsap.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@300;500;700;800&family=Inter:wght@400;500&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="assets/tokens.css" />
+    <style>
+      * { margin: 0; padding: 0; box-sizing: border-box; }
+      html, body { width: 1080px; height: 1920px; overflow: hidden; background: #111; }
+      #root { position: relative; width: 1080px; height: 1920px; overflow: hidden; font-family: var(--to-font-display); color: #fff; }
+      .layer { position: absolute; }
+      .vid { left: 0; top: 0; width: 1080px; height: 1920px; object-fit: cover; }
+      #shade { inset: 0; background: linear-gradient(to bottom, rgba(12, 14, 16, 0) 45%, rgba(12, 14, 16, .38) 62%, rgba(12, 14, 16, .38) 78%, rgba(12, 14, 16, 0) 92%); }
+      .t { position: absolute; left: 110px; right: 110px; top: 1160px; text-align: center; font-weight: 300; font-size: 72px; line-height: 1.12; letter-spacing: -.02em; text-shadow: 0 2px 26px rgba(10, 12, 14, .55); opacity: 0; }
+      .t b { font-weight: 700; }
+      .t.long { font-size: 62px; }
+      #endshade { inset: 0; background: linear-gradient(to bottom, rgba(8, 20, 15, 0) 52%, rgba(8, 20, 15, .55) 66%, rgba(8, 20, 15, .88) 80%, rgba(8, 20, 15, .95) 100%); opacity: 0; }
+      #vign { inset: 0; background: radial-gradient(ellipse 80% 60% at 50% 42%, rgba(0, 0, 0, 0) 55%, rgba(0, 0, 0, .35) 100%); opacity: 0; }
+      #end .brand { position: absolute; left: 0; right: 0; top: 1560px; display: flex; flex-direction: column; align-items: center; }
+      #rule { width: 120px; height: 2px; margin-top: 0; background: var(--to-peach); }
+      #tag { margin-top: 34px; font-family: var(--to-font-body); font-weight: 400; font-size: 44px; letter-spacing: .22em; text-transform: uppercase; color: rgba(250, 250, 250, .92); opacity: 0; }
+    </style>
+  </head>
+  <body>
+    <div id="root" data-composition-id="main" data-start="0" data-duration="30" data-width="1080" data-height="1920">
+      <video id="v1" class="clip layer vid" data-start="0" data-duration="10" data-track-index="0" src="assets/scene1.mp4" muted playsinline></video>
+      <video id="v2" class="clip layer vid" data-start="10" data-duration="10" data-track-index="0" src="assets/scene2.mp4" muted playsinline></video>
+      <video id="v3" class="clip layer vid" data-start="20" data-duration="10" data-track-index="0" src="assets/scene3.mp4" muted playsinline></video>
+      <div id="shade" class="clip layer" data-start="0" data-duration="26.1" data-track-index="1"></div>
+      <div id="lines" class="clip layer" data-start="0" data-duration="25.4" data-track-index="2" style="inset:0">
+        <div id="l1" class="t">Some views make you<br><b>stop for a moment.</b></div>
+        <div id="l2" class="t">Some details are<br><b>too beautiful to miss.</b></div>
+        <div id="l3" class="t"><b>The colors.</b> The light.<br>The world around you.</div>
+        <div id="l4" class="t long">Because <b>seeing clearly</b><br>changes the way you<br>experience <b>every moment.</b></div>
+        <div id="l5" class="t">Wherever you go, make<br>every view <b>worth seeing.</b></div>
+      </div>
+      <video id="shop" class="clip layer vid" data-start="25.3" data-duration="4.7" data-track-index="3" src="assets/shop.mp4" muted playsinline></video>
+      <div id="endshade" class="clip layer" data-start="25.3" data-duration="4.7" data-track-index="4"></div>
+      <div id="vign" class="clip layer" data-start="25.3" data-duration="4.7" data-track-index="6"></div>
+      <div id="end" class="clip layer" data-start="25.8" data-duration="4.2" data-track-index="5" style="inset:0">
+        <div class="brand">
+          <div id="rule"></div>
+          <div id="tag">Take care of your vision</div>
+        </div>
+      </div>
+    </div>
+    <script>
+      window.__timelines = window.__timelines || {};
+      const tl = gsap.timeline({ paused: true });
+      // [id, in, out]
+      const LINES = [['#l1', 0.3, 4.9], ['#l2', 5.1, 9.5], ['#l3', 9.6, 14.4], ['#l4', 14.5, 20.8], ['#l5', 20.9, 25.4]];
+      for (const [id, a, b] of LINES) {
+        tl.fromTo(id, { opacity: 0, y: 24, filter: 'blur(8px)' }, { opacity: 1, y: 0, filter: 'blur(0px)', duration: 0.9, ease: 'power2.out' }, a);
+        tl.to(id, { opacity: 0, y: -14, filter: 'blur(6px)', duration: 0.6, ease: 'power2.in' }, b - 0.6);
+      }
+      tl.to('#shade', { opacity: 0, duration: 0.6 }, 25.4);
+      // ending = same as huahin-centara (user, 2026-09-29): storefront settles in, dark green shade, rule draws, tagline in caps; no wordmark on screen
+      tl.fromTo('#shop', { opacity: 0, scale: 1.12, filter: 'blur(6px)' }, { opacity: 1, filter: 'blur(0px)', duration: 0.8, ease: 'power2.out' }, 25.3);
+      tl.to('#shop', { scale: 1.0, duration: 4.7, ease: 'power1.out' }, 25.3);
+      tl.to('#endshade', { opacity: 1, duration: 1.0, ease: 'power1.inOut' }, 25.6);
+      tl.to('#vign', { opacity: 1, duration: 1.2 }, 25.6);
+      tl.fromTo('#rule', { scaleX: 0 }, { scaleX: 1, duration: 0.8, ease: 'power2.out' }, 26.4);
+      tl.fromTo('#tag', { opacity: 0, y: 14, filter: 'blur(6px)' }, { opacity: 1, y: 0, filter: 'blur(0px)', duration: 1.1, ease: 'power2.out' }, 27.1);
+      window.__timelines['main'] = tl;
+      tl.seek(0);
+    </script>
+  </body>
+</html>
