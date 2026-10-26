@@ -62,7 +62,9 @@ Save work back with `git add -A`, `git commit -m "..."`, `git push`.
 
 ## For Claude: setup on a new machine (read this first)
 
-This folder was copied from the owner's computer. Claude's memory from that computer did **not** come with it; every rule for clips lives in `.claude/skills/beat-clip/SKILL.md` (and `frame-kit`, `daily-post`). Talk to the user in Thai, keep it short, install things yourself, and ask only when an installer needs admin rights or a login.
+This folder was copied from the owner's computer. Every rule for clips lives in the project skills in `.claude/skills/` (`beat-clip`, `eye-break-clip`, `frame-kit`, `daily-post`, `remove-spots`). Talk to the user in Thai, keep it short, install things yourself, and ask only when an installer needs admin rights or a login.
+
+**Claude's memory from the owner's computer** is in `.claude/memory/`. On the first session copy every `.md` from there into this machine's memory folder for the project, `~/.claude/projects/<project-slug>/memory/` (the slug is the project path with `:`, `\` and `/` turned into `-`, e.g. `C:\timeoptic-content` → `C--timeoptic-content`). Don't overwrite memory files that already exist there. Copy back the other way (memory folder → `.claude/memory/`) before pushing, so GitHub keeps the latest notes.
 
 ### What to install
 Do steps 1–7 of the setup in `CLAUDE.md` (Node 20+, Chrome/Edge, `npm install`, smoke test, Codex, Python, FFmpeg + HyperFrames plugin; step 8 Wan is optional). On top of that, beat clips need:
@@ -97,6 +99,7 @@ ffmpeg -version && ffprobe -version
 npx --yes hyperframes@0.8.59 --version
 ls ~/.claude/plugins/cache/claude-plugins-official/hyperframes/*/skills/media-use/audio/assets/sfx
 ls kits/2026-09-24_ox8080-0158/export/clip-hf_privatejet.mp4
+ls ~/.claude/projects/*timeoptic-content*/memory/MEMORY.md
 ```
 Then do a test: render the reference clip once from `kits/2026-09-24_ox8080-0158/hf/` (`npx --yes hyperframes@0.8.59 render -o ../../../tmp/ready-test.mp4 --quiet`) and look at a few frames with Read. When everything passes, tell the user in Thai that it is ready and they can order a clip, e.g. "ทำคลิป Vogue ซักรุ่น".
 
