@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=1080, height=1920" />
+    <!--
+      Hua Hin Marriott Resort & Spa, 30 s. Second script from the user (2026-09-29): "Every day, there's something new waiting for your eyes." ... "See more. Experience more." / "Time Optic. Take care of your vision."
+      Same shots as the first script; voice lines spaced 0.7 s+ apart (user heard lines running together when gaps were 0.3 s).
+        0-5      hotel.mp4 (0-5)      facade + fountain, dusk sign   "Welcome to Hua Hin Marriott Resort & Spa."
+        5-8.6    hotel.mp4 (6-9.6)    gardens + pools from above      "Where beautiful gardens meet the sea, in the heart of Hua Hin."
+        8.6-10.6 beach.mp4 (0.2-2.2)  palm, umbrellas, sea
+        10.6-15.4 garden-hd.jpg       pulls back from the pool river "Every corner offers a different view, waiting to be discovered."
+        15.4-20.2 aerial-hd.jpg       pool, hotel, trees, sea         "Because beautiful places deserve to be seen clearly."
+        20.2-22.6 beach.mp4 (3.2-5.6) white beach                     "See the beauty. See the details. Enjoy every moment."
+        22.6-25.6 beach.mp4 (7-10)    hero aerial of the coast        "Wherever your journey takes you..."
+        25.4     storefront (assets/shop.mp4), voice "Time Optic. Take care of your vision."; ending as huahin-centara (no wordmark on screen)
+      Voice: audio/fast (Gemini TTS, voice Sulafat), mixed after render by audio/mix.sh.
+    -->
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/gsap.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@300;500;700;800&family=Inter:wght@400;500&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="assets/tokens.css" />
+    <style>
+      * { margin: 0; padding: 0; box-sizing: border-box; }
+      html, body { width: 1080px; height: 1920px; overflow: hidden; background: #111; }
+      #root { position: relative; width: 1080px; height: 1920px; overflow: hidden; font-family: var(--to-font-display); color: #fff; }
+      .layer { position: absolute; }
+      .vid { left: 0; top: 0; width: 1080px; height: 1920px; object-fit: cover; }
+      .still { left: 0; top: 0; width: 1080px; height: 1920px; overflow: hidden; }
+      .still img { position: absolute; top: 0; height: 1920px; will-change: transform; }
+      #pg { width: 2876px; left: -898px; transform-origin: 50% 85%; }
+      #pa { width: 2560px; left: 0; transform-origin: 50% 50%; }
+      #shade { inset: 0; background: linear-gradient(to bottom, rgba(12, 14, 16, 0) 45%, rgba(12, 14, 16, .38) 62%, rgba(12, 14, 16, .38) 78%, rgba(12, 14, 16, 0) 92%); }
+      .t { position: absolute; left: 100px; right: 100px; top: 1160px; text-align: center; font-weight: 300; font-size: 68px; line-height: 1.12; letter-spacing: -.02em; text-shadow: 0 2px 26px rgba(10, 12, 14, .6); opacity: 0; }
+      .t b { font-weight: 700; }
+      #endshade { inset: 0; background: linear-gradient(to bottom, rgba(8, 20, 15, 0) 52%, rgba(8, 20, 15, .55) 66%, rgba(8, 20, 15, .88) 80%, rgba(8, 20, 15, .95) 100%); opacity: 0; }
+      #vign { inset: 0; background: radial-gradient(ellipse 80% 60% at 50% 42%, rgba(0, 0, 0, 0) 55%, rgba(0, 0, 0, .35) 100%); opacity: 0; }
+      #end .brand { position: absolute; left: 0; right: 0; top: 1560px; display: flex; flex-direction: column; align-items: center; }
+      #rule { width: 120px; height: 2px; margin-top: 0; background: var(--to-peach); }
+      #tag { margin-top: 34px; font-family: var(--to-font-body); font-weight: 400; font-size: 44px; letter-spacing: .22em; text-transform: uppercase; color: rgba(250, 250, 250, .92); opacity: 0; }
+    </style>
+  </head>
+  <body>
+    <div id="root" data-composition-id="main" data-start="0" data-duration="30" data-width="1080" data-height="1920">
+      <video id="v1" class="clip layer vid" data-start="0" data-duration="5" data-media-start="0" data-track-index="0" src="assets/hotel.mp4" muted playsinline></video>
+      <video id="v2" class="clip layer vid" data-start="5" data-duration="3.6" data-media-start="6" data-track-index="0" src="assets/hotel.mp4" muted playsinline></video>
+      <video id="v3" class="clip layer vid" data-start="8.6" data-duration="2" data-media-start="0.2" data-track-index="0" src="assets/beach.mp4" muted playsinline></video>
+      <div id="s4" class="clip layer still" data-start="10.6" data-duration="4.8" data-track-index="0"><img data-layout-allow-overflow id="pg" src="assets/garden-hd.jpg" alt="" /></div>
+      <div id="s5" class="clip layer still" data-start="15.4" data-duration="4.8" data-track-index="0"><img data-layout-allow-overflow id="pa" src="assets/aerial-hd.jpg" alt="" /></div>
+      <video id="v6" class="clip layer vid" data-start="20.2" data-duration="2.4" data-media-start="3.2" data-track-index="0" src="assets/beach.mp4" muted playsinline></video>
+      <video id="v7" class="clip layer vid" data-start="22.6" data-duration="3" data-media-start="7" data-track-index="0" src="assets/beach.mp4" muted playsinline></video>
+      <div id="shade" class="clip layer" data-start="0" data-duration="26.1" data-track-index="1"></div>
+      <div id="lines" class="clip layer" data-start="0" data-duration="26.4" data-track-index="2" style="inset:0">
+        <div id="l1" class="t">Every day, there's<br>something new<br><b>waiting for your eyes.</b></div>
+        <div id="l2" class="t">A different <b>light.</b><br>A different <b>color.</b><br>A different <b>feeling.</b></div>
+        <div id="l3" class="t">And sometimes,<br>the smallest details make<br><b>the biggest difference.</b></div>
+        <div id="l4" class="t">Your eyes connect you<br>to <b>everything</b><br>around you.</div>
+        <div id="l5" class="t">So wherever life takes you,<br><b>never stop looking.</b></div>
+        <div id="l6" class="t"><b>See more.</b><br>Experience more.</div>
+      </div>
+      <video id="shop" class="clip layer vid" data-start="25.4" data-duration="4.6" data-track-index="3" src="assets/shop.mp4" muted playsinline></video>
+      <div id="endshade" class="clip layer" data-start="25.4" data-duration="4.6" data-track-index="4"></div>
+      <div id="vign" class="clip layer" data-start="25.4" data-duration="4.6" data-track-index="6"></div>
+      <div id="end" class="clip layer" data-start="26" data-duration="4" data-track-index="5" style="inset:0">
+        <div class="brand">
+          <div id="rule"></div>
+          <div id="tag">Take care of your vision</div>
+        </div>
+      </div>
+    </div>
+    <script>
+      window.__timelines = window.__timelines || {};
+      const tl = gsap.timeline({ paused: true });
+      // [id, in, out] — each line enters with its voice line (audio/mix.sh delays)
+      const LINES = [['#l1', 0.2, 4.8], ['#l2', 5.0, 10.4], ['#l3', 10.7, 15.9], ['#l4', 16.2, 19.9], ['#l5', 20.2, 24.2], ['#l6', 24.4, 26.4]];
+      for (const [id, a, b] of LINES) {
+        tl.fromTo(id, { opacity: 0, y: 24, filter: 'blur(8px)' }, { opacity: 1, y: 0, filter: 'blur(0px)', duration: 0.8, ease: 'power2.out' }, a);
+        tl.to(id, { opacity: 0, y: -14, filter: 'blur(6px)', duration: 0.5, ease: 'power2.in' }, b - 0.5);
+      }
+      // stills move like a camera: garden pulls back and rises from the pool river, aerial drifts across pool -> hotel
+      tl.fromTo('#pg', { scale: 1.32, y: 60 }, { scale: 1.0, y: 0, duration: 4.8, ease: 'sine.inOut' }, 10.6);
+      tl.fromTo('#pa', { x: -560, scale: 1.1 }, { x: -860, scale: 1.0, duration: 4.8, ease: 'sine.inOut' }, 15.4);
+      tl.to('#shade', { opacity: 0, duration: 0.6 }, 25.5);
+      tl.fromTo('#shop', { opacity: 0, scale: 1.12, filter: 'blur(6px)' }, { opacity: 1, filter: 'blur(0px)', duration: 0.8, ease: 'power2.out' }, 25.4);
+      tl.to('#shop', { scale: 1.0, duration: 4.6, ease: 'power1.out' }, 25.4);
+      tl.to('#endshade', { opacity: 1, duration: 1.0, ease: 'power1.inOut' }, 25.8);
+      tl.to('#vign', { opacity: 1, duration: 1.2 }, 25.8);
+      tl.fromTo('#rule', { scaleX: 0 }, { scaleX: 1, duration: 0.8, ease: 'power2.out' }, 27.0);
+      tl.fromTo('#tag', { opacity: 0, y: 14, filter: 'blur(6px)' }, { opacity: 1, y: 0, filter: 'blur(0px)', duration: 1.1, ease: 'power2.out' }, 27.6);
+      window.__timelines['main'] = tl;
+      tl.seek(0);
+    </script>
+  </body>
+</html>

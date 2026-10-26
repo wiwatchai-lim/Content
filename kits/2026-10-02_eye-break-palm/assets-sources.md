@@ -1,0 +1,3 @@
+- palm/source.mp4 — from the user (Palm_tree_on_tropical_beach_20261002103643.mp4, 10 s, 1080x1920, 24 fps). Cropped 1012x1800 + scaled to hide a "6 / 6" mark at the bottom, slowed 2.1x with minterpolate -> palm/palm_slow.mp4.
+- palm/palm_audio.wav — the clip's own sound, looped 3x with acrossfade; mixed at +14 dB.
+- hf-palm-v3/assets/ocean.mp4 — ocean footage from kits/2026-09-26_neck-break/ocean/ocean_long.mp4 (the user's clip, already posted), used 8-17 s as the "open horizon" part.

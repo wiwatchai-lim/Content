@@ -1,0 +1,29 @@
+/* TIMEOPTIC brand tokens — single source of truth for colour and type.
+   Use in a post template:  <link rel="stylesheet" href="../../brand/tokens.css"> */
+:root {
+  /* Core */
+  --to-green: #123A29;        /* Phthalo Green — the one brand green: logo, backgrounds, headlines */
+  --to-black: #212121;        /* Raisin Black — body text on light */
+  --to-snow: #FAFAFA;         /* Snow — page/canvas background, text on dark */
+
+  /* Support */
+  --to-peach: #EFCF9C;        /* Peach-Orange — one accent per layout, never body text */
+  --to-timberwolf: #D9D4CB;   /* warm neutral surface */
+  --to-pastel: #CFD0BF;       /* cool neutral surface */
+
+  /* Derived — Phthalo lifted for use on Raisin Black (4.6:1); accents only, never the logo */
+  --to-green-on-dark: #41996E;
+  --to-hairline: rgba(33, 33, 33, 0.14);
+
+  /* Type */
+  --to-font-display: 'Archivo', 'Inter', system-ui, sans-serif;  /* 700 / 800 — headlines; closest free match to the wordmark */
+  --to-font-body: 'Inter', system-ui, sans-serif;     /* 400 / 500 — body, specs */
+  --to-font-thai: 'Noto Sans Thai', 'Inter', sans-serif;
+  --to-track-display: -0.03em;  /* tight, like the wordmark */
+  --to-track-eyebrow: 0.18em;   /* uppercase labels */
+
+  /* Layout */
+  --to-margin: 72px;     /* safe margin on a 1080×1080 post */
+  --to-radius: 0px;      /* the brand is square-cornered */
+  --to-logo-width: 170px;
+}

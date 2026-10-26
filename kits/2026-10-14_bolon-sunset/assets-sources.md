@@ -1,0 +1,4 @@
+- photos/front.png, photos/side.png: AI images supplied by the user (2026-10-14)
+- photos/ref-temple.png: user's screenshot of the real temple
+- Motion: Wan 2.2 TI2V 5B (local ComfyUI), from the user's images
+- brand/partner-logos/bolon.svg (existing)

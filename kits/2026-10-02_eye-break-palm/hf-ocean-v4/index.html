@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=1080, height=1920" />
+    <!--
+      Eye break, ocean version (palm removed, user 2026-10-02), script v3 (user, 2026-10-02), all caps. Mood (user): 0-2 punchy (high contrast, tight framing, big type), 2-8 calmer, slow pull-out,
+      8-15 wide open sea (one continuous shot, assets/ocean.mp4 = the posted ocean clip's footage), end on clean deep green #123A29. Voice = audio/v3/voice.wav (mixed after render, see mix_v4.sh).
+        0-3.9   STOP SCROLLING. / YOUR EYES NEED 15 SECONDS.   (user asked 0-2 s; held until the voice line ends)
+        4-6     LOOK AWAY FROM THE SCREEN.
+        6.3-10  LOOK AT THE HORIZON.
+        10-14   BLINK. / BREATHE. / RELAX.  (one word per voice cue)
+        14-17.2 GIVE YOUR EYES / A MOMENT TO REST.
+        16.8-20.5 deep green panel, white wordmark, TAKE CARE OF YOUR VISION
+    -->
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/gsap.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@300;500;700;800&family=Inter:wght@400;500&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="assets/tokens.css" />
+    <style>
+      * { margin: 0; padding: 0; box-sizing: border-box; }
+      html, body { width: 1080px; height: 1920px; overflow: hidden; background: #1c1a24; }
+      #root { position: relative; width: 1080px; height: 1920px; overflow: hidden; font-family: var(--to-font-display); color: #fff; }
+      .layer { position: absolute; }
+      #sea { left: 0; top: 0; width: 1080px; height: 1920px; object-fit: cover; }
+      #shade { inset: 0; background: linear-gradient(to bottom, rgba(20, 16, 28, .25), rgba(20, 16, 28, 0) 35%, rgba(20, 16, 28, 0) 65%, rgba(20, 16, 28, .3)); }
+      .t { position: absolute; left: 120px; right: 120px; text-align: center; text-shadow: 0 2px 24px rgba(20, 16, 28, .45); }
+      #title { top: 780px; font-weight: 300; font-size: 88px; line-height: 1.05; letter-spacing: -.02em; }
+      #title b { font-weight: 800; }
+      #sub-x { top: 1010px; font-family: var(--to-font-body); font-weight: 500; font-size: 36px; letter-spacing: .06em; opacity: .9; }
+      .sh { position: absolute; inset: 0; background: radial-gradient(ellipse 75% 24% at 50% 46%, rgba(20,16,28,.45), rgba(20,16,28,0)); }
+      .s { font-weight: 300; font-size: 92px; line-height: 1.1; }
+      .s b, #jt b { font-weight: 800; }
+      #jt { top: 820px; font-weight: 300; font-size: 104px; }
+      .c { font-weight: 800; font-size: 80px; line-height: 1.12; letter-spacing: .01em; }
+      .c .w { font-weight: 300; }
+      #punch { inset: 0; background: radial-gradient(ellipse 75% 60% at 50% 45%, rgba(10,10,14,0) 40%, rgba(10,10,14,.55)); }
+      #green { inset: 0; opacity: 0; background: radial-gradient(ellipse 80% 55% at 50% 48%, #1a4a36, #123A29 60%, #0d2b1e); }
+      #h1 { display: block; font-size: 124px; line-height: .98; letter-spacing: -.01em; }
+      #h2 { display: block; margin-top: 40px; font-family: var(--to-font-body); font-weight: 500; font-size: 50px; letter-spacing: .08em; line-height: 1.3; }
+      .air { font-weight: 500 !important; }
+      #line { left: 240px; top: 1440px; width: 600px; height: 4px; border-radius: 2px; background: rgba(255, 255, 255, .25); overflow: hidden; }
+      #line i { position: absolute; inset: 0; background: rgba(255, 255, 255, .85); transform-origin: 0 50%; transform: scaleX(0); }
+      #veil { inset: 0; background: rgba(20, 16, 28, .45); opacity: 0; }
+      #logo { left: 228px; top: 860px; width: 624px; opacity: 0; }
+      #endline { top: 1010px; font-weight: 700; font-size: 44px; letter-spacing: .08em; line-height: 1.3; }
+      #endline b { font-weight: 800; }
+    </style>
+  </head>
+  <body>
+    <div id="root" data-composition-id="main" data-start="0" data-duration="20.5" data-width="1080" data-height="1920">
+      <video id="sea" class="clip layer" data-start="0" data-duration="20.5" data-track-index="0" src="assets/ocean.mp4" muted playsinline></video>
+      <div id="punch" class="clip layer" data-start="0" data-duration="4" data-track-index="11"></div>
+      <div id="shade" class="clip layer" data-start="0" data-duration="20.5" data-track-index="1"></div>
+      <div id="b1" class="clip layer" data-start="0" data-duration="4.3" data-track-index="2" style="inset:0">
+        <div class="sh"></div>
+        <div class="t c" style="top:640px"><span id="h1">STOP<br>SCROLLING.</span><span id="h2">YOUR EYES NEED<br>15 SECONDS.</span></div>
+      </div>
+      <div id="b2" class="clip layer" data-start="3.9" data-duration="2.5" data-track-index="3" style="inset:0">
+        <div class="sh"></div>
+        <div class="t c" style="top:850px">LOOK AWAY<br>FROM THE SCREEN.</div>
+      </div>
+      <div id="b3" class="clip layer" data-start="6.1" data-duration="4.2" data-track-index="4" style="inset:0">
+        <div class="sh"></div>
+        <div class="t c" style="top:850px">LOOK AT<br>THE HORIZON.</div>
+      </div>
+      <div id="b4" class="clip layer" data-start="9.9" data-duration="4.4" data-track-index="5" style="inset:0">
+        <div class="sh"></div>
+        <div class="t c air" style="top:760px"><span id="w1">BLINK.</span><br><span id="w2">BREATHE.</span><br><span id="w3">RELAX.</span></div>
+      </div>
+      <div id="b5" class="clip layer" data-start="13.9" data-duration="3.6" data-track-index="6" style="inset:0">
+        <div class="sh"></div>
+        <div class="t c air" style="top:850px">GIVE YOUR EYES<br>A MOMENT TO REST.</div>
+      </div>
+      <div id="green" class="clip layer" data-start="16.8" data-duration="3.7" data-track-index="7"></div>
+      <img id="logo" class="clip layer" data-start="17.2" data-duration="3.3" data-track-index="8" src="assets/timeoptic-white-spaced.svg" alt="TIMEOPTIC" />
+      <div id="end" class="clip layer" data-start="17.2" data-duration="3.3" data-track-index="9" style="inset:0">
+        <div id="endline" class="t">TAKE CARE OF YOUR VISION</div>
+      </div>
+    </div>
+    <script>
+      window.__timelines = window.__timelines || {};
+      const tl = gsap.timeline({ paused: true });
+      const IN = { opacity: 0, y: 20, filter: 'blur(6px)' }, SHOW = { opacity: 1, y: 0, filter: 'blur(0px)', duration: 0.7, ease: 'power2.out' };
+      const OUT = { opacity: 0, y: -16, filter: 'blur(6px)', duration: 0.6, ease: 'power2.in' };
+      const block = (id, t0, t1) => { tl.fromTo(`${id} .sh`, { opacity: 0 }, { opacity: 1, duration: 0.5 }, t0);
+        if (t1) tl.to([`${id} .t`, `${id} .sh`], OUT, t1); };
+      tl.fromTo('#sea', { scale: 1.3, filter: 'contrast(1.3) saturate(1.2) brightness(0.9)' }, { scale: 1.0, duration: 15, ease: 'sine.out' }, 0);
+      tl.to('#sea', { filter: 'contrast(1) saturate(1) brightness(1)', duration: 2.2, ease: 'sine.inOut' }, 2.0);
+      tl.to('#punch', { opacity: 0, duration: 2.0, ease: 'sine.inOut' }, 2.0);
+      block('#b1', 0, 3.6); tl.fromTo('#h1', { opacity: 0, scale: 1.08 }, { opacity: 1, scale: 1, duration: 0.35, ease: 'power3.out' }, 0); tl.fromTo('#h2', IN, SHOW, 1.3);
+      block('#b2', 3.9, 5.8); tl.fromTo('#b2 .t', IN, SHOW, 4.0);
+      block('#b3', 6.1, 9.6); tl.fromTo('#b3 .t', IN, SHOW, 6.3);
+      block('#b4', 9.9, 13.6); tl.fromTo('#w1', IN, SHOW, 10.0); tl.fromTo('#w2', IN, SHOW, 11.2); tl.fromTo('#w3', IN, SHOW, 12.1);
+      block('#b5', 13.9, 16.8); tl.fromTo('#b5 .t', IN, SHOW, 14.0);
+      tl.to('#green', { opacity: 1, duration: 0.8, ease: 'sine.inOut' }, 16.8);
+      tl.fromTo('#logo', { opacity: 0, y: 20, scale: 0.96 }, { opacity: 1, y: 0, scale: 1, duration: 0.9, ease: 'power2.out' }, 17.4);
+      tl.fromTo('#endline', { opacity: 0, y: 20 }, { opacity: 1, y: 0, duration: 0.8, ease: 'power2.out' }, 18.4);
+      window.__timelines['main'] = tl;
+      tl.seek(0);
+    </script>
+  </body>
+</html>

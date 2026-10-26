@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=1080, height=1920" />
+    <!--
+      Eye break, palm version, script v2 (user, 2026-10-02). Voice = audio/v2/voice.wav (mixed after render).
+        0.2-4.4   "Your eyes have been working all day."
+        4.8/6.4/8.0 "Look away." / "Breathe." / "Rest your eyes." stack in one by one
+        11.0-13.9 "Just 15 seconds."   then only the palm and the sea
+        16.2-20.5 veil, white wordmark, "Take care of your vision"
+    -->
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/gsap.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@300;500;700;800&family=Inter:wght@400;500&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="assets/tokens.css" />
+    <style>
+      * { margin: 0; padding: 0; box-sizing: border-box; }
+      html, body { width: 1080px; height: 1920px; overflow: hidden; background: #1c1a24; }
+      #root { position: relative; width: 1080px; height: 1920px; overflow: hidden; font-family: var(--to-font-display); color: #fff; }
+      .layer { position: absolute; }
+      #sea { left: 0; top: 0; width: 1080px; height: 1920px; object-fit: cover; }
+      #shade { inset: 0; background: linear-gradient(to bottom, rgba(20, 16, 28, .25), rgba(20, 16, 28, 0) 35%, rgba(20, 16, 28, 0) 65%, rgba(20, 16, 28, .3)); }
+      .t { position: absolute; left: 120px; right: 120px; text-align: center; text-shadow: 0 2px 24px rgba(20, 16, 28, .45); }
+      #title { top: 780px; font-weight: 300; font-size: 88px; line-height: 1.05; letter-spacing: -.02em; }
+      #title b { font-weight: 800; }
+      #sub-x { top: 1010px; font-family: var(--to-font-body); font-weight: 500; font-size: 36px; letter-spacing: .06em; opacity: .9; }
+      .sh { position: absolute; inset: 0; background: radial-gradient(ellipse 75% 24% at 50% 46%, rgba(20,16,28,.45), rgba(20,16,28,0)); }
+      .s { font-weight: 300; font-size: 92px; line-height: 1.1; }
+      .s b, #jt b { font-weight: 800; }
+      #jt { top: 820px; font-weight: 300; font-size: 104px; }
+      #line { left: 240px; top: 1440px; width: 600px; height: 4px; border-radius: 2px; background: rgba(255, 255, 255, .25); overflow: hidden; }
+      #line i { position: absolute; inset: 0; background: rgba(255, 255, 255, .85); transform-origin: 0 50%; transform: scaleX(0); }
+      #veil { inset: 0; background: rgba(20, 16, 28, .45); opacity: 0; }
+      #logo { left: 228px; top: 860px; width: 624px; opacity: 0; }
+      #endline { top: 1010px; font-weight: 500; font-size: 52px; line-height: 1.3; }
+      #endline b { font-weight: 800; }
+    </style>
+  </head>
+  <body>
+    <div id="root" data-composition-id="main" data-start="0" data-duration="20.5" data-width="1080" data-height="1920">
+      <video id="sea" class="clip layer" data-start="0" data-duration="20.5" data-track-index="0" src="assets/bg.mp4" muted playsinline></video>
+      <div id="shade" class="clip layer" data-start="0" data-duration="20.5" data-track-index="1"></div>
+      <div id="intro" class="clip layer" data-start="0" data-duration="5" data-track-index="2" style="inset:0">
+        <div id="ishade" class="sh"></div>
+        <div id="title" class="t">Your eyes have been<br>working <b>all day</b></div>
+      </div>
+      <div id="steps" class="clip layer" data-start="4.6" data-duration="6.6" data-track-index="3" style="inset:0">
+        <div id="sshade" class="sh"></div>
+        <div id="s1" class="t s" style="top:740px">Look away.</div>
+        <div id="s2" class="t s" style="top:860px">Breathe.</div>
+        <div id="s3" class="t s" style="top:980px"><b>Rest your eyes.</b></div>
+      </div>
+      <div id="just" class="clip layer" data-start="10.8" data-duration="3.6" data-track-index="4" style="inset:0">
+        <div id="jshade" class="sh"></div>
+        <div id="jt" class="t">Just <b>15 seconds</b></div>
+      </div>
+      <div id="veil" class="clip layer" data-start="16" data-duration="4.5" data-track-index="5"></div>
+      <img id="logo" class="clip layer" data-start="16" data-duration="4.5" data-track-index="6" src="assets/timeoptic-white-spaced.svg" alt="TIMEOPTIC" />
+      <div id="end" class="clip layer" data-start="16" data-duration="4.5" data-track-index="7" style="inset:0">
+        <div id="endline" class="t">Take Care of Your Vision</div>
+      </div>
+    </div>
+    <script>
+      window.__timelines = window.__timelines || {};
+      const tl = gsap.timeline({ paused: true });
+      const IN = { opacity: 0, y: 20, filter: 'blur(6px)' }, SHOW = { opacity: 1, y: 0, filter: 'blur(0px)', duration: 0.8, ease: 'power2.out' };
+      const OUT = { opacity: 0, y: -16, filter: 'blur(6px)', duration: 0.8, ease: 'power2.in' };
+      tl.fromTo('#title', IN, SHOW, 0.2);
+      tl.to(['#title', '#ishade'], OUT, 4.1);
+      tl.fromTo('#sshade', { opacity: 0 }, { opacity: 1, duration: 0.6 }, 4.6);
+      tl.fromTo('#s1', IN, SHOW, 4.8);
+      tl.fromTo('#s2', IN, SHOW, 6.4);
+      tl.fromTo('#s3', IN, SHOW, 8.0);
+      tl.to(['#s1', '#s2', '#s3', '#sshade'], { ...OUT, stagger: 0.08 }, 10.2);
+      tl.fromTo(['#jshade', '#jt'], IN, SHOW, 11.0);
+      tl.to(['#jt', '#jshade'], OUT, 13.5);
+      tl.to('#veil', { opacity: 1, duration: 0.8 }, 16.0);
+      tl.fromTo('#logo', { opacity: 0, y: 20, scale: 0.96 }, { opacity: 1, y: 0, scale: 1, duration: 0.9, ease: 'power2.out' }, 16.4);
+      tl.fromTo('#endline', { opacity: 0, y: 20 }, { opacity: 1, y: 0, duration: 0.8, ease: 'power2.out' }, 17.6);
+      window.__timelines['main'] = tl;
+      tl.seek(0);
+    </script>
+  </body>
+</html>

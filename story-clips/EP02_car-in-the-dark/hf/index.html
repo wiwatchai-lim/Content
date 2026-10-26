@@ -1,0 +1,462 @@
+<!doctype html>
+<html lang="th">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=1080, height=1920" />
+    <!--
+      Story clip EP02 "รถในความมืด" (user, 2026-10-26), follows EP01's end card ("ถ้าสิ่งที่ตามคุณมา รออยู่ที่รถ"). Same look as EP01. Thai only.
+      Voice = ../audio/voice.wav, cue + phrase times from ../audio/timing.json (mixed after render, see ../make.sh).
+      Science: a lit cabin turns the windows into mirrors; a day/night rear-view mirror's night tab reflects only the front glass (~4%);
+      oncoming high beams → look at the left edge line (left-hand traffic); glare recovery takes seconds (80 km/h × 2 s ≈ 44 m).
+      Scenes: car in clearing 0-12.3 | inside, lock, no cabin light 12.3-18 | window card 18-28.3 | road 28.3-35.6 | mirror glare 35.6-39.2
+      | prism card 39.2-44.5 | mirror night mode 44.5-49.8 | oncoming lights 49.8-56.6 | glare/distance card 56.6-67.3 | mirror blink 67.3-77.6
+      | next-episode 77.6-81.8 | TIMEOPTIC 81.6-84.2
+    -->
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/gsap.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@400;500;600;700&family=Anuphan:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <style>
+      * { margin: 0; padding: 0; box-sizing: border-box; }
+      html, body { width: 1080px; height: 1920px; overflow: hidden; background: #0a1124; }
+      #root { position: relative; width: 1080px; height: 1920px; overflow: hidden; font-family: 'Anuphan', sans-serif; color: #fff; }
+      .layer { position: absolute; }
+      .full { position: absolute; left: 0; top: 0; width: 1080px; height: 1920px; }
+      svg { display: block; overflow: visible; }
+
+      .sub { position: absolute; left: 50px; right: 50px; top: 1210px; text-align: center; font-family: 'Prompt', sans-serif; font-weight: 600;
+             font-size: 56px; line-height: 1.32; text-shadow: 0 3px 18px rgba(0,0,0,.75), 0 0 4px rgba(0,0,0,.6); }
+      .sub.y { color: #F5C84C; }
+      .sub.r span { display: inline-block; background: #D8343A; color: #fff; padding: 4px 26px 8px; border-radius: 10px; text-shadow: none;
+                    box-shadow: 0 6px 24px rgba(0,0,0,.35); }
+
+      .chip { position: absolute; top: 170px; height: 86px; background: #EEE8DC; border-radius: 16px; color: #1d2433; display: flex; align-items: center;
+              gap: 14px; padding: 0 26px 0 20px; box-shadow: 0 8px 26px rgba(0,0,0,.35); }
+      .chip small { display: block; font-size: 20px; font-weight: 500; color: #555a63; line-height: 1; }
+      .chip b { display: block; font-family: 'Prompt'; font-size: 40px; font-weight: 700; line-height: 1.05; letter-spacing: .02em; }
+      #batt b { color: #B8242A; }
+
+      .card { position: absolute; left: 80px; top: 520px; width: 920px; height: 640px; background: #EEE8DC; border-radius: 22px; color: #1d2433;
+              border-left: 14px solid #C99A2E; box-shadow: 0 24px 60px rgba(0,0,0,.45); overflow: hidden; }
+      .card .ttl { position: absolute; left: 34px; top: 26px; font-size: 30px; font-weight: 600; color: #4a4f5a; }
+      .card .lbl { position: absolute; font-size: 28px; font-weight: 600; color: #1d2433; text-align: center; }
+      .xbad { position: absolute; width: 76px; height: 76px; border-radius: 50%; background: #D8343A; color: #fff; font: 700 46px/76px 'Prompt';
+              text-align: center; box-shadow: 0 6px 16px rgba(0,0,0,.25); }
+      .banner { position: absolute; left: 120px; top: 330px; width: 840px; height: 130px; background: #EEE8DC; border-radius: 16px;
+                border-left: 14px solid #D8343A; color: #1d2433; font: 700 60px/130px 'Prompt'; padding-left: 40px; box-shadow: 0 16px 40px rgba(0,0,0,.4); }
+      .banner i { position: absolute; left: 40px; bottom: 24px; height: 6px; width: 0; background: #D8343A; border-radius: 3px; }
+      .badge { position: absolute; background: #EEE8DC; color: #1d2433; border-radius: 40px; padding: 10px 30px; font: 700 36px 'Prompt';
+               box-shadow: 0 10px 30px rgba(0,0,0,.4); display: flex; align-items: center; gap: 14px; }
+
+      .tile { position: absolute; top: 200px; width: 230px; text-align: center; }
+      .tile b { display: block; font: 700 120px/1 'Prompt'; color: #1d2433; }
+      .tile small { display: block; margin-top: 8px; font-size: 28px; font-weight: 600; color: #555a63; }
+      .op { position: absolute; top: 225px; font: 600 80px/1 'Prompt'; color: #8a8f99; }
+
+      #next { background: radial-gradient(ellipse 80% 45% at 50% 42%, #23181c, #0d0d11 70%); }
+      #next .pill { position: absolute; left: 50%; top: 640px; transform: translateX(-50%); border: 2px solid #4a4a55; border-radius: 40px; padding: 8px 30px;
+                    font-size: 30px; font-weight: 600; color: #d6d6dc; }
+      #next .pill:before { content: ''; display: inline-block; width: 12px; height: 12px; border-radius: 50%; background: #D8343A; margin-right: 12px; vertical-align: 4px; }
+      #next h1 { position: absolute; left: 60px; right: 60px; top: 730px; text-align: center; font: 700 86px/1.3 'Prompt'; color: #f2f2f4; }
+      #next .rl { position: absolute; left: 400px; top: 990px; width: 280px; height: 6px; background: #D8343A; border-radius: 3px; }
+      #next .s1 { position: absolute; left: 0; right: 0; top: 1030px; text-align: center; font-size: 36px; font-weight: 600; color: #e05a5f; }
+      #next .s2 { position: absolute; left: 0; right: 0; top: 1100px; text-align: center; font-size: 32px; color: #c8c8d0; }
+      #end { background: radial-gradient(ellipse 80% 55% at 50% 48%, #1a4a36, #123A29 60%, #0d2b1e); }
+      #end img { position: absolute; left: 228px; top: 840px; width: 624px; }
+      #end p { position: absolute; left: 0; right: 0; top: 1000px; text-align: center; font-size: 46px; font-weight: 600; color: #FAFAFA; }
+    </style>
+  </head>
+  <body>
+    <div id="root" data-composition-id="main" data-start="0" data-duration="84.2" data-width="1080" data-height="1920">
+
+      <!-- ===== night forest (same world as EP01) ===== -->
+      <div id="bg" class="clip full" data-start="0" data-duration="28.4" data-track-index="0">
+        <div id="world" class="full">
+          <svg class="full" viewBox="0 0 1080 1920" width="1080" height="1920">
+            <defs>
+              <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#070d22" /><stop offset=".55" stop-color="#14224a" /><stop offset="1" stop-color="#22355f" /></linearGradient>
+              <radialGradient id="moonglow"><stop offset="0" stop-color="#f6f1d8" stop-opacity=".55" /><stop offset="1" stop-color="#f6f1d8" stop-opacity="0" /></radialGradient>
+              <linearGradient id="ground" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#132326" /><stop offset="1" stop-color="#070f12" /></linearGradient>
+              <linearGradient id="path" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#4a4a48" /><stop offset="1" stop-color="#2c2620" /></linearGradient>
+              <linearGradient id="fog" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#5d6f94" stop-opacity="0" /><stop offset=".5" stop-color="#5d6f94" stop-opacity=".28" /><stop offset="1" stop-color="#5d6f94" stop-opacity="0" /></linearGradient>
+              <radialGradient id="glare"><stop offset="0" stop-color="#fff" /><stop offset=".25" stop-color="#fffbe6" stop-opacity=".9" /><stop offset="1" stop-color="#fffbe6" stop-opacity="0" /></radialGradient>
+              <linearGradient id="beams" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#fff4cf" stop-opacity="0" /><stop offset="1" stop-color="#fff4cf" stop-opacity=".22" /></linearGradient>
+              <filter id="soft"><feGaussianBlur stdDeviation="6" /></filter>
+              <filter id="soft2"><feGaussianBlur stdDeviation="14" /></filter>
+            </defs>
+            <rect x="-400" y="0" width="1880" height="1000" fill="url(#sky)" />
+            <g id="stars"></g>
+            <circle cx="780" cy="360" r="190" fill="url(#moonglow)" />
+            <circle cx="780" cy="360" r="62" fill="#f3edd2" />
+            <g id="far" fill="#16244a"></g>
+            <rect x="-400" y="930" width="1880" height="990" fill="url(#ground)" />
+            <polygon points="520,940 560,940 980,1920 100,1920" fill="url(#path)" opacity=".9" />
+            <g id="mid" fill="#0c172e"></g>
+            <rect x="-400" y="850" width="1880" height="220" fill="url(#fog)" />
+            <!-- parked car, side view, nose to the left -->
+            <g id="car" transform="translate(330 960)">
+              <path d="M0 120 L10 70 Q20 50 60 46 L120 40 L170 0 Q185 -10 210 -10 L330 -10 Q355 -10 370 5 L410 44 L440 50 Q470 56 470 90 L470 120 Z" fill="#3b4a5e" />
+              <path d="M140 42 L180 8 L260 8 L260 42 Z" fill="#1a2433" /><path d="M272 8 L330 8 Q345 8 355 18 L382 42 L272 42 Z" fill="#1a2433" />
+              <path d="M150 38 L184 12 L200 12 L170 38 Z" fill="#fff" opacity=".12" />
+              <rect x="0" y="96" width="470" height="10" fill="#2c3848" />
+              <circle cx="95" cy="122" r="36" fill="#0d1118" /><circle cx="95" cy="122" r="16" fill="#5b6575" />
+              <circle cx="380" cy="122" r="36" fill="#0d1118" /><circle cx="380" cy="122" r="16" fill="#5b6575" />
+              <rect x="6" y="66" width="22" height="12" rx="4" fill="#e9e3c8" opacity=".55" />
+            </g>
+            <g id="figure" opacity="0" filter="url(#soft)">
+              <ellipse cx="300" cy="900" rx="22" ry="27" fill="#aeb8cc" />
+              <path d="M272 925 Q300 912 328 925 L338 1100 Q300 1112 262 1100 Z" fill="#aeb8cc" />
+            </g>
+            <g id="near" fill="#050a16"></g>
+            <g id="grass" fill="#0a1714"></g>
+          </svg>
+        </div>
+      </div>
+
+      <!-- you, walking up to the car -->
+      <div id="you" class="clip layer" data-start="0" data-duration="9.5" data-track-index="1" style="left:470px;top:1250px;width:140px;height:360px">
+        <svg viewBox="0 0 140 360" width="140" height="360">
+          <rect x="38" y="210" width="28" height="140" rx="12" fill="#1c2438" /><rect x="74" y="210" width="28" height="140" rx="12" fill="#1c2438" />
+          <rect x="22" y="90" width="96" height="140" rx="34" fill="#2f5d8a" />
+          <rect x="10" y="100" width="22" height="110" rx="11" fill="#28507a" /><rect x="108" y="100" width="22" height="110" rx="11" fill="#28507a" />
+          <rect x="22" y="160" width="96" height="6" fill="#9fb4c8" opacity=".55" />
+          <rect x="58" y="70" width="24" height="26" fill="#a87a5a" />
+          <circle cx="70" cy="48" r="40" fill="#15100c" />
+        </svg>
+      </div>
+
+      <!-- inside the car: frame over the world, lock, no cabin light -->
+      <div id="cabin" class="clip full" data-start="12.3" data-duration="5.85" data-track-index="2">
+        <svg class="full" viewBox="0 0 1080 1920" width="1080" height="1920">
+          <path d="M0 0 L1080 0 L1080 330 Q540 300 0 330 Z" fill="#0b0d12" />
+          <path d="M0 330 L70 330 L-60 1400 L0 1400 Z" fill="#0b0d12" /><path d="M1080 330 L1010 330 L1140 1400 L1080 1400 Z" fill="#0b0d12" />
+          <path d="M0 1340 Q540 1250 1080 1340 L1080 1920 L0 1920 Z" fill="#14171e" />
+          <path d="M0 1340 Q540 1250 1080 1340" fill="none" stroke="#2a2f3a" stroke-width="10" />
+          <g transform="translate(790 1560)"><circle r="250" fill="none" stroke="#08090c" stroke-width="56" /><rect x="-40" y="-20" width="80" height="320" fill="#08090c" /></g>
+          <g id="dome" transform="translate(540 250)"><rect x="-70" y="-26" width="140" height="52" rx="18" fill="#2a2f3a" /><rect x="-46" y="-12" width="92" height="24" rx="10" fill="#565c69" /></g>
+          <g id="nodome" transform="translate(540 250)" opacity="0">
+            <circle r="90" fill="none" stroke="#D8343A" stroke-width="12" /><line x1="-62" y1="-62" x2="62" y2="62" stroke="#D8343A" stroke-width="12" stroke-linecap="round" />
+          </g>
+        </svg>
+        <div id="lock" class="badge" style="left:340px;top:980px">
+          <svg viewBox="0 0 40 48" width="34" height="40"><rect x="2" y="20" width="36" height="26" rx="5" fill="#1d2433" /><path d="M10 20 V13 a10 10 0 0 1 20 0 V20" fill="none" stroke="#1d2433" stroke-width="5" /></svg>ล็อกแล้ว
+        </div>
+        <div id="rule1" class="banner" style="top:480px">ห้ามเปิดไฟในรถ<i></i></div>
+      </div>
+
+      <!-- window card: dark cabin sees out, lit cabin sees itself -->
+      <div id="wincard" class="clip card" data-start="18" data-duration="10.3" data-track-index="3">
+        <div class="ttl">กระจกรถตอนกลางคืน</div>
+        <svg class="layer" style="left:0;top:0" viewBox="0 0 906 640" width="906" height="640">
+          <defs><clipPath id="w1"><rect x="40" y="100" width="390" height="380" rx="40" /></clipPath><clipPath id="w2"><rect x="476" y="100" width="390" height="380" rx="40" /></clipPath></defs>
+          <g clip-path="url(#w1)">
+            <rect x="40" y="100" width="390" height="380" fill="#16244a" /><rect x="40" y="380" width="390" height="100" fill="#0e1a24" />
+            <g fill="#0c172e"><polygon points="90,400 130,260 170,400" /><polygon points="340,400 380,240 420,400" /></g>
+            <g opacity=".8"><ellipse cx="240" cy="300" rx="16" ry="20" fill="#aeb8cc" /><path d="M222 318 Q240 310 258 318 L264 420 L216 420 Z" fill="#aeb8cc" /></g>
+          </g>
+          <g clip-path="url(#w2)">
+            <rect x="476" y="100" width="390" height="380" fill="#16244a" />
+            <rect id="mirror" x="476" y="100" width="390" height="380" fill="#c9d4e4" opacity="0" />
+            <g id="refl" opacity="0"><ellipse cx="671" cy="290" rx="62" ry="72" fill="#8d9bb3" /><path d="M560 480 Q571 380 671 372 Q771 380 782 480 Z" fill="#7d8aa1" />
+              <path d="M520 110 L600 110 L500 300 Z" fill="#fff" opacity=".35" /></g>
+          </g>
+          <rect x="40" y="100" width="390" height="380" rx="40" fill="none" stroke="#1d2433" stroke-width="10" />
+          <rect x="476" y="100" width="390" height="380" rx="40" fill="none" stroke="#1d2433" stroke-width="10" />
+          <g id="bulb" transform="translate(830 70)" opacity="0"><circle r="26" fill="#F5C84C" /><circle r="44" fill="#F5C84C" opacity=".25" /></g>
+        </svg>
+        <div class="lbl" style="left:40px;top:500px;width:390px">ในรถมืด<br><span style="font-weight:500;color:#555a63">มองเห็นข้างนอก</span></div>
+        <div class="lbl" id="l2" style="left:476px;top:500px;width:390px">ในรถสว่าง<br><span style="font-weight:500;color:#555a63">เห็นแค่หน้าตัวเอง</span></div>
+        <div class="xbad" id="outeye" style="left:800px;top:380px;width:96px;height:96px;font-size:0;background:#1d2433">
+          <svg viewBox="-30 -20 60 40" width="60" height="40" style="margin:28px 18px"><path d="M-26 0 Q0 -22 26 0 Q0 22 -26 0 Z" fill="#fff" /><circle r="9" fill="#D8343A" /></svg>
+        </div>
+      </div>
+
+      <!-- road (driving), with the cabin frame and the rear-view mirror -->
+      <div id="road" class="clip full" data-start="28.3" data-duration="49.3" data-track-index="4">
+        <svg class="full" viewBox="0 0 1080 1920" width="1080" height="1920">
+          <rect width="1080" height="1000" fill="url(#sky)" />
+          <g id="rstars"></g>
+          <g id="rtrees" fill="#0c172e"></g>
+          <rect y="990" width="1080" height="930" fill="#0b1116" />
+          <polygon points="585,1000 615,1000 1500,1920 -200,1920" fill="#23262b" />
+          <polygon points="585,1000 615,1000 1500,1920 -200,1920" fill="url(#beams)" />
+          <polygon id="edgeL" points="586,1000 590,1000 -110,1920 -170,1920" fill="#d9d9d9" opacity=".75" />
+          <polygon points="610,1000 614,1000 1470,1920 1410,1920" fill="#d9d9d9" opacity=".6" />
+          <g id="dashes" fill="#e8e8e8"></g>
+          <g id="oncoming" opacity="0">
+            <circle id="onL" cx="700" cy="1040" r="10" fill="#fffbe6" /><circle id="onR" cx="740" cy="1040" r="10" fill="#fffbe6" />
+            <circle id="onGlare" cx="720" cy="1040" r="60" fill="url(#glare)" />
+          </g>
+          <g id="look" opacity="0">
+            <polygon points="586,1000 590,1000 -110,1920 -170,1920" fill="#F5C84C" />
+            <g id="gaze" transform="translate(300 1450)"><circle r="44" fill="none" stroke="#F5C84C" stroke-width="6" stroke-dasharray="9 9" /><circle r="9" fill="#F5C84C" /></g>
+          </g>
+          <!-- cabin frame -->
+          <path d="M0 0 L1080 0 L1080 330 Q540 300 0 330 Z" fill="#0b0d12" />
+          <path d="M0 330 L70 330 L-60 1400 L0 1400 Z" fill="#0b0d12" /><path d="M1080 330 L1010 330 L1140 1400 L1080 1400 Z" fill="#0b0d12" />
+          <path d="M0 1340 Q540 1250 1080 1340 L1080 1920 L0 1920 Z" fill="#14171e" />
+          <path d="M0 1340 Q540 1250 1080 1340" fill="none" stroke="#2a2f3a" stroke-width="10" />
+          <g transform="translate(790 1560)"><circle r="250" fill="none" stroke="#08090c" stroke-width="56" /><rect x="-40" y="-20" width="80" height="320" fill="#08090c" /></g>
+          <g id="dash-glow" opacity=".7"><circle cx="640" cy="1380" r="8" fill="#41996E" /><circle cx="680" cy="1380" r="8" fill="#F5C84C" /></g>
+          <!-- small rear-view mirror -->
+          <rect x="530" y="300" width="20" height="60" fill="#0b0d12" />
+          <rect x="390" y="350" width="300" height="110" rx="30" fill="#0b0d12" />
+          <rect x="402" y="362" width="276" height="86" rx="22" fill="#121a2c" />
+          <g id="sLights" opacity="0"><circle cx="520" cy="410" r="9" fill="#fffbe6" /><circle cx="560" cy="410" r="9" fill="#fffbe6" /><circle cx="540" cy="410" r="40" fill="url(#glare)" opacity=".7" /></g>
+        </svg>
+      </div>
+
+      <!-- mirror close-up -->
+      <div id="mclose" class="clip full" data-start="35.6" data-duration="42" data-track-index="5">
+        <svg class="full" viewBox="0 0 1080 1920" width="1080" height="1920">
+          <rect width="1080" height="1920" fill="#06080d" />
+          <rect x="520" y="0" width="40" height="560" fill="#14171e" />
+          <rect x="60" y="540" width="960" height="420" rx="90" fill="#14171e" />
+          <clipPath id="mc"><rect x="90" y="570" width="900" height="360" rx="70" /></clipPath>
+          <g clip-path="url(#mc)">
+            <rect x="90" y="570" width="900" height="360" fill="#101a30" />
+            <polygon points="400,930 680,930 560,760 520,760" fill="#1d2026" />
+            <g fill="#0b1426"><polygon points="90,780 160,640 230,780" /><polygon points="200,790 260,680 320,790" /><polygon points="820,790 890,650 960,790" /><polygon points="760,800 810,700 860,800" /></g>
+            <rect x="90" y="570" width="900" height="360" fill="#000" opacity=".25" />
+            <rect id="tint" x="90" y="570" width="900" height="360" fill="#02040a" opacity="0" />
+            <g id="lights">
+              <circle id="glowBig" cx="540" cy="770" r="200" fill="url(#glare)" opacity=".8" />
+              <g id="eyeL" transform="translate(500 770)"><ellipse rx="22" ry="22" fill="#fffbe6" /></g>
+              <g id="eyeR" transform="translate(580 770)"><ellipse rx="22" ry="22" fill="#fffbe6" /></g>
+            </g>
+          </g>
+          <rect x="90" y="570" width="900" height="360" rx="70" fill="none" stroke="#262b36" stroke-width="6" />
+          <!-- night tab under the mirror -->
+          <g id="tab" transform="translate(540 960)"><rect x="-40" y="0" width="80" height="34" rx="10" fill="#262b36" /><rect id="tabk" x="-14" y="8" width="28" height="40" rx="8" fill="#565c69" /></g>
+        </svg>
+        <div id="nightchip" class="badge" style="left:330px;top:1040px;opacity:0">
+          <svg viewBox="0 0 30 30" width="32" height="32"><path d="M20 3 A13 13 0 1 0 27 20 A10 10 0 1 1 20 3 Z" fill="#1d2433" /></svg>โหมดกลางคืน</div>
+        <div id="whiteout" class="full" style="background:radial-gradient(circle at 50% 40%, #fff, #fffbe6 40%, rgba(255,251,230,.85));opacity:0"></div>
+      </div>
+
+      <!-- prism card -->
+      <div id="prism" class="clip card" data-start="39.2" data-duration="5.3" data-track-index="6">
+        <div class="ttl">ก้านใต้กระจกมองหลัง</div>
+        <svg class="layer" style="left:0;top:0" viewBox="0 0 906 640" width="906" height="640">
+          <g transform="translate(560 320)">
+            <g id="wedge">
+              <polygon points="-20,-200 40,-200 30,200 -20,200" fill="#cfe3f2" opacity=".9" stroke="#1d2433" stroke-width="4" />
+              <line x1="40" y1="-200" x2="30" y2="200" stroke="#8a95a6" stroke-width="12" />
+            </g>
+            <rect x="60" y="-30" width="90" height="60" rx="12" fill="#565c69" />
+          </g>
+          <line x1="80" y1="250" x2="540" y2="320" stroke="#F5C84C" stroke-width="14" stroke-linecap="round" />
+          <polygon points="540,320 500,298 506,340" fill="#F5C84C" />
+          <g id="dayRay"><line x1="560" y1="325" x2="120" y2="440" stroke="#F5C84C" stroke-width="14" stroke-linecap="round" /><polygon points="120,440 160,410 166,452" fill="#F5C84C" /></g>
+          <g id="nightRay" opacity="0">
+            <line x1="545" y1="325" x2="120" y2="440" stroke="#F5C84C" stroke-width="4" stroke-linecap="round" stroke-dasharray="4 10" />
+            <line x1="580" y1="320" x2="250" y2="560" stroke="#F5C84C" stroke-width="12" stroke-linecap="round" opacity=".6" />
+          </g>
+          <g transform="translate(90 440)"><circle r="32" fill="#fff" stroke="#1d2433" stroke-width="5" /><circle r="13" fill="#1d2433" /></g>
+        </svg>
+        <div class="lbl" id="pDay" style="left:30px;top:520px;width:500px;text-align:left">โหมดกลางวัน: สะท้อนกลับ <span style="color:#C0392B">~80%</span></div>
+        <div class="lbl" id="pNight" style="left:30px;top:520px;width:600px;text-align:left;opacity:0">โหมดกลางคืน: สะท้อนกลับแค่ <span style="color:#2e7d32">~4%</span></div>
+      </div>
+
+      <!-- glare + distance card -->
+      <div id="calc" class="clip card" data-start="56.6" data-duration="10.7" data-track-index="7">
+        <div class="ttl" id="cttl">หลังโดนแสงจ้า</div>
+        <div id="ph1" class="layer" style="left:0;top:0;width:906px;height:640px">
+          <svg class="layer" style="left:0;top:0" viewBox="0 0 906 640" width="906" height="640">
+            <rect x="90" y="300" width="726" height="44" rx="22" fill="#d6cfc0" />
+            <rect id="vbar" x="90" y="300" width="0" height="44" rx="22" fill="#3E7BE0" />
+            <g transform="translate(160 190)"><circle r="60" fill="url(#glare)" /><circle r="22" fill="#fff" /></g>
+          </svg>
+          <div class="lbl" style="left:90px;top:360px;width:300px;text-align:left">ตาพร่า</div>
+          <div class="lbl" style="left:516px;top:360px;width:300px;text-align:right">มองเห็นอีกครั้ง</div>
+          <div class="lbl" id="secs" style="left:0;top:460px;width:906px;font-size:40px;color:#C0392B">ใช้เวลาหลายวินาที</div>
+        </div>
+        <div id="ph2" class="layer" style="left:0;top:0;width:906px;height:640px;opacity:0">
+          <div class="tile" style="left:20px"><b>80</b><small>กม./ชม.</small></div>
+          <div class="op" style="left:250px">×</div>
+          <div class="tile" style="left:300px"><b>2</b><small>วินาที</small></div>
+          <div class="op" style="left:530px">=</div>
+          <div class="tile" id="res" style="left:600px;background:#D8343A;border-radius:24px;padding:20px 0 18px"><b style="color:#fff">44</b><small style="color:#ffd9d9">เมตร</small></div>
+          <div class="lbl" style="left:40px;top:500px;width:826px;font-weight:500;color:#555a63;border-top:4px dotted #C99A2E;padding-top:24px">80 กม./ชม. ≈ 22 เมตรต่อวินาที · ขับไปโดยมองไม่เห็นทาง</div>
+        </div>
+      </div>
+
+      <!-- chips -->
+      <div id="clock" class="chip clip" data-start="0.3" data-duration="77.2" data-track-index="20" style="left:56px">
+        <svg viewBox="-24 -24 48 48" width="46" height="46"><circle r="19" fill="none" stroke="#1d2433" stroke-width="4" /><path d="M0 -10 L0 0 L8 6" fill="none" stroke="#1d2433" stroke-width="4" stroke-linecap="round" /></svg>
+        <div><small>เวลา</small><b id="clockt">02:36</b></div>
+      </div>
+      <div id="batt" class="chip clip" data-start="0.3" data-duration="77.2" data-track-index="21" style="left:322px">
+        <svg viewBox="0 0 56 30" width="56" height="30"><rect x="1.5" y="1.5" width="46" height="27" rx="6" fill="none" stroke="#1d2433" stroke-width="3" /><rect x="50" y="9" width="5" height="12" rx="2" fill="#1d2433" /><rect id="battbar" x="6" y="6" width="2" height="18" rx="1" fill="#D8343A" /></svg>
+        <div><small>แบตเตอรี่</small><b id="battt">1%</b></div>
+      </div>
+
+      <!-- subtitles (cue + phrase times from ../audio/timing.json) -->
+      <div class="sub clip"   data-start="0.52"  data-duration="4.55" data-track-index="30">ตีสองสามสิบหก คุณมาถึงรถ<br>แบตเหลือ 1%</div>
+      <div class="sub clip"   data-start="5.23"  data-duration="4.15" data-track-index="30">หางตาคุณเห็น<br>ใครบางคนยืนอยู่ข้างประตูคนขับ</div>
+      <div class="sub clip"   data-start="9.56"  data-duration="2.6"  data-track-index="30">คุณหันไปมองตรงๆ… ไม่มีใคร</div>
+      <div class="sub clip"   data-start="12.49" data-duration="2.6"  data-track-index="30">คุณขึ้นรถ แล้วล็อกประตูทันที</div>
+      <div class="sub r clip" data-start="15.24" data-duration="2.75" data-track-index="30"><span>กฎข้อแรก ห้ามเปิดไฟในรถ</span></div>
+      <div class="sub y clip" data-start="18.15" data-duration="4.55" data-track-index="30">ถ้าในรถสว่างกว่าข้างนอก<br>กระจกรถจะสะท้อนเหมือนกระจกเงา</div>
+      <div class="sub clip"   data-start="22.87" data-duration="1.9"  data-track-index="30">คุณจะเห็นแค่หน้าตัวเอง</div>
+      <div class="sub y clip" data-start="24.83" data-duration="3.45" data-track-index="30">แต่สิ่งที่อยู่ข้างนอก<br>มองเห็นคุณชัดทุกอย่าง</div>
+      <div class="sub clip"   data-start="28.44" data-duration="2.95" data-track-index="30">คุณสตาร์ทรถ<br>แล้วขับออกไปบนถนนมืด</div>
+      <div class="sub clip"   data-start="31.73" data-duration="3.9"  data-track-index="30">ห้านาทีต่อมา<br>มีไฟสองดวงตามมาข้างหลัง</div>
+      <div class="sub clip"   data-start="35.82" data-duration="3.3"  data-track-index="30">แสงในกระจกมองหลัง<br>จ้าจนตาพร่า</div>
+      <div class="sub y clip" data-start="39.31" data-duration="4.95" data-track-index="30">กฎข้อสอง ดึงก้านใต้กระจกมองหลัง<br>ปรับเป็นโหมดกลางคืน</div>
+      <div class="sub y clip" data-start="44.62" data-duration="4.65" data-track-index="30">กระจกจะสะท้อนแสงแค่นิดเดียว<br>ไฟข้างหลังจะจางลงทันที</div>
+      <div class="sub y clip" data-start="50.03" data-duration="2.7"  data-track-index="30">กฎข้อสาม ถ้ามีรถสวนมา</div>
+      <div class="sub y clip" data-start="52.75" data-duration="3.85" data-track-index="30">อย่ามองไฟหน้า<br>ให้มองเส้นขอบถนนด้านซ้าย</div>
+      <div class="sub clip"   data-start="56.78" data-duration="5.15" data-track-index="30">ตาที่โดนแสงจ้า ต้องใช้เวลา<br>หลายวินาทีกว่าจะมองเห็นอีกครั้ง</div>
+      <div class="sub y clip" data-start="61.94" data-duration="5.3"  data-track-index="30">แค่ 2 วินาทีที่ 80 กม./ชม.<br>คือ 40 กว่าเมตรที่ขับแบบมองไม่เห็น</div>
+      <div class="sub clip"   data-start="67.57" data-duration="3.3"  data-track-index="30">คุณมองกระจกอีกครั้ง<br>ไฟสองดวงนั้นยังอยู่</div>
+      <div class="sub clip"   data-start="71.11" data-duration="3.4"  data-track-index="30">แล้วมันก็กะพริบ<br>พร้อมกันทั้งสองดวง</div>
+      <div class="sub r clip" data-start="74.67" data-duration="2.6"  data-track-index="30"><span>เหมือนมีใครกำลังกะพริบตา</span></div>
+
+      <div id="next" class="clip full" data-start="77.6" data-duration="4.2" data-track-index="40">
+        <div class="pill">ตอนต่อไป</div>
+        <h1>ถ้ามันตามคุณ<br>ไปถึงบ้าน</h1>
+        <div class="rl"></div>
+        <div class="s1">EP.3 เร็วๆ นี้</div>
+        <div class="s2">กดติดตาม แล้วไปรอดด้วยกัน</div>
+      </div>
+      <div id="end" class="clip full" data-start="81.6" data-duration="2.6" data-track-index="41">
+        <img src="assets/timeoptic-white-spaced.svg" alt="TIMEOPTIC" />
+        <p>ดูแลสายตา ให้มองเห็นในวันที่สำคัญ</p>
+      </div>
+    </div>
+
+    <script>
+      // ---------- deterministic scenery (same seeds as EP01) ----------
+      let seed = 7; const rnd = () => (seed = (seed * 16807) % 2147483647) / 2147483647;
+      const NS = 'http://www.w3.org/2000/svg';
+      const el = (tag, attrs, parent) => { const e = document.createElementNS(NS, tag); for (const k in attrs) e.setAttribute(k, attrs[k]); parent && parent.appendChild(e); return e; };
+      const pine = (g, x, base, w, h) => {
+        el('rect', { x: x - w * .06, y: base - h * .12, width: w * .12, height: h * .14 }, g);
+        for (let i = 0; i < 4; i++) { const top = base - h + i * h * .2, bot = base - h * .1 - (3 - i) * h * .14, ww = w * (.45 + i * .18);
+          el('polygon', { points: `${x},${top} ${x + ww / 2},${bot} ${x - ww / 2},${bot}` }, g); }
+      };
+      const stars = document.getElementById('stars');
+      for (let i = 0; i < 90; i++) el('circle', { cx: -380 + rnd() * 1840, cy: rnd() * 820, r: .8 + rnd() * 2.2, fill: '#dfe6ff', opacity: .3 + rnd() * .6 }, stars);
+      const far = document.getElementById('far');
+      for (let x = -400; x < 1500; x += 38 + rnd() * 30) pine(far, x, 960, 70 + rnd() * 40, 150 + rnd() * 120);
+      const mid = document.getElementById('mid');
+      for (let x = -400; x < 1500; x += 90 + rnd() * 70) { if (x > 250 && x < 850) continue; pine(mid, x, 1010 + rnd() * 30, 140 + rnd() * 60, 360 + rnd() * 160); }
+      const near = document.getElementById('near');
+      [[-120, 2100, 520, 1800], [80, 1960, 360, 1400], [1000, 1990, 420, 1500], [1250, 2100, 560, 1900]].forEach(([x, b, w, h]) => pine(near, x, b, w, h));
+      const grass = document.getElementById('grass');
+      for (let i = 0; i < 160; i++) { const x = -400 + rnd() * 1880, y = 1000 + rnd() * 920; if (x > 300 && x < 820 && y < 1300) continue;
+        el('path', { d: `M${x} ${y} l${-4 + rnd() * 8} ${-20 - rnd() * 30} l6 ${18 + rnd() * 20} z` }, grass); }
+      const rstars = document.getElementById('rstars');
+      for (let i = 0; i < 60; i++) el('circle', { cx: rnd() * 1080, cy: 330 + rnd() * 560, r: .8 + rnd() * 2, fill: '#dfe6ff', opacity: .3 + rnd() * .6 }, rstars);
+      const rtrees = document.getElementById('rtrees');
+      for (let x = -40; x < 1120; x += 50 + rnd() * 40) { if (x > 520 && x < 680) continue; pine(rtrees, x, 1000, 80 + rnd() * 50, 160 + rnd() * 160); }
+      // road dashes in perspective (centre line between the lanes)
+      const dashes = document.getElementById('dashes'), N = 9, dq = [];
+      for (let i = 0; i < N; i++) dq.push(el('polygon', {}, dashes));
+      const drawRoad = t => { for (let i = 0; i < N; i++) { const d = ((i / N) + t * .55) % 1, s = Math.pow(d, 2.4);
+        const y0 = 1000 + 920 * s, y1 = 1000 + 920 * Math.min(1, Math.pow(d + .045, 2.4)), x = u => 600 + (650 - 600) * ((u - 1000) / 920);
+        const w0 = 1 + 16 * s, w1 = 1 + 16 * Math.min(1, Math.pow(d + .045, 2.4));
+        dq[i].setAttribute('points', `${x(y0) - w0},${y0} ${x(y0) + w0},${y0} ${x(y1) + w1},${y1} ${x(y1) - w1},${y1}`); } };
+      drawRoad(0);
+
+      // ---------- timeline ----------
+      window.__timelines = window.__timelines || {};
+      const tl = gsap.timeline({ paused: true });
+      document.querySelectorAll('.sub').forEach(s => tl.fromTo(s, { opacity: 0, y: 14 }, { opacity: 1, y: 0, duration: .25, ease: 'power2.out' }, parseFloat(s.dataset.start)));
+      const count = (target, from, to, t, d, fmt) => { const o = { v: from };
+        tl.fromTo(o, { v: from }, { v: to, duration: d, ease: 'none', onUpdate: () => target.textContent = fmt(o.v) }, t); };
+      const blurBg = (t, on) => tl.to('#world', { filter: on ? 'blur(14px) brightness(.55)' : 'blur(0px) brightness(1)', duration: .5, ease: 'sine.inOut' }, t);
+      const hhmm = v => '02:' + String(Math.floor(v)).padStart(2, '0');
+
+      // clock + battery (1%, blinking)
+      count(document.getElementById('clockt'), 36, 38.9, 0.3, 31.2, hhmm);
+      count(document.getElementById('clockt'), 41, 47, 31.73, 45.5, hhmm);
+      tl.fromTo('#battt', { opacity: 1 }, { opacity: .25, duration: .5, repeat: 77, yoyo: true, ease: 'steps(1)' }, .3);
+
+      // 1. arrive at the car, a figure by the driver's door
+      tl.set('#world', { filter: 'blur(0px) brightness(1)', x: 0, scale: 1, transformOrigin: '540px 1000px' }, 0);
+      tl.fromTo('#world', { scale: 1.1 }, { scale: 1.2, duration: 12.3, ease: 'none' }, 0);
+      tl.fromTo('#you', { y: 160, scale: 1.25, opacity: 0 }, { y: 0, scale: .8, opacity: 1, duration: 5, ease: 'sine.out' }, 0);
+      tl.to('#you', { opacity: 0, duration: .4 }, 9.1);
+      tl.fromTo('#figure', { opacity: 0 }, { opacity: .3, duration: 1.2, ease: 'sine.in' }, 6.6);
+      tl.to('#world', { x: 230, duration: 1.4, ease: 'power2.inOut' }, 9.56);
+      tl.to('#figure', { opacity: 0, duration: .25 }, 11.0);
+      // 2. inside: lock + no cabin light
+      tl.set('#world', { x: 0, scale: 1.05 }, 12.3);
+      tl.fromTo('#cabin', { opacity: 0 }, { opacity: 1, duration: .3 }, 12.3);
+      tl.fromTo('#lock', { opacity: 0, scale: .6 }, { opacity: 1, scale: 1, duration: .35, ease: 'back.out(2)' }, 13.51);
+      tl.to('#lock', { opacity: 0, duration: .3 }, 15.0);
+      tl.fromTo('#rule1', { opacity: 0, x: -40 }, { opacity: 1, x: 0, duration: .35 }, 15.24);
+      tl.fromTo('#rule1 i', { width: 0 }, { width: 420, duration: .5 }, 15.6);
+      tl.fromTo('#nodome', { opacity: 0, scale: .6 }, { opacity: 1, scale: 1, duration: .35, ease: 'back.out(2)' }, 16.5);
+      // 3. window card
+      blurBg(18, true);
+      tl.to('#cabin', { opacity: 0, duration: .3 }, 17.85);
+      tl.fromTo('#wincard', { opacity: 0, y: 40 }, { opacity: 1, y: 0, duration: .4, ease: 'power2.out' }, 18.0);
+      tl.fromTo('#bulb', { opacity: 0 }, { opacity: 1, duration: .3 }, 20.19);
+      tl.fromTo('#mirror', { opacity: 0 }, { opacity: 1, duration: .6 }, 20.3);
+      tl.fromTo('#refl', { opacity: 0 }, { opacity: 1, duration: .6 }, 20.5);
+      tl.fromTo('#l2', { opacity: .35 }, { opacity: 1, duration: .3 }, 22.87);
+      tl.fromTo('#outeye', { opacity: 0, scale: 0 }, { opacity: 1, scale: 1, duration: .4, ease: 'back.out(2)' }, 24.83);
+      tl.to('#outeye', { scale: 1.15, duration: .3, yoyo: true, repeat: 3 }, 26.43);
+      // 4. drive
+      tl.fromTo('#road', { opacity: 0 }, { opacity: 1, duration: .4 }, 28.3);
+      const rp = { t: 0 }; tl.fromTo(rp, { t: 0 }, { t: 49.3, duration: 49.3, ease: 'none', onUpdate: () => drawRoad(rp.t) }, 28.3);
+      tl.fromTo('#sLights', { opacity: 0 }, { opacity: 1, duration: 1.2 }, 33.29);
+      // 5. mirror close-up + glare
+      tl.fromTo('#mclose', { opacity: 0, scale: .6, transformOrigin: '540px 400px' }, { opacity: 1, scale: 1, duration: .5, ease: 'power2.out' }, 35.6);
+      tl.fromTo('#lights', { scale: .6, svgOrigin: '540 770' }, { scale: 1.3, duration: 3, ease: 'power1.in' }, 35.6);
+      tl.fromTo('#whiteout', { opacity: 0 }, { opacity: .92, duration: .6 }, 37.64);
+      tl.to('#whiteout', { opacity: 0, duration: .4 }, 39.0);
+      // 6. prism card (over the close-up), then night mode on the mirror
+      tl.fromTo('#prism', { opacity: 0, y: 40 }, { opacity: 1, y: 0, duration: .4, ease: 'power2.out' }, 39.2);
+      tl.to('#wedge', { rotation: 9, svgOrigin: '0 0', duration: .6, ease: 'back.out(2)' }, 40.9);
+      tl.to('#dayRay', { opacity: 0, duration: .3 }, 41.3); tl.to('#nightRay', { opacity: 1, duration: .4 }, 41.4);
+      tl.to('#pDay', { opacity: 0, duration: .3 }, 42.81); tl.to('#pNight', { opacity: 1, duration: .3 }, 42.9);
+      tl.set('#lights', { scale: 1.2, svgOrigin: '540 770' }, 44.5);
+      tl.to('#tabk', { attr: { y: -20 }, duration: .3 }, 44.62);
+      tl.to('#tint', { opacity: .72, duration: .5 }, 44.7);
+      tl.to('#glowBig', { opacity: .15, duration: .5 }, 44.7); tl.to('#eyeL ellipse, #eyeR ellipse', { opacity: .45, duration: .5 }, 44.7);
+      tl.fromTo('#nightchip', { opacity: 0, y: 20 }, { opacity: 1, y: 0, duration: .35 }, 45.2);
+      tl.to('#mclose', { opacity: 0, duration: .4 }, 49.5);
+      tl.set('#mclose', { opacity: 1 }, 67.3); tl.set('#nightchip', { opacity: 0 }, 67.3);
+      // 7. oncoming lights, look at the left edge line
+      tl.fromTo('#oncoming', { opacity: 0 }, { opacity: 1, duration: .5 }, 50.03);
+      const oc = { p: 0 }, onL = document.getElementById('onL'), onR = document.getElementById('onR'), onG = document.getElementById('onGlare');
+      tl.fromTo(oc, { p: 0 }, { p: 1, duration: 5.8, ease: 'power2.in', onUpdate: () => { const s = Math.pow(oc.p, 2);
+        const y = 1040 + 300 * s, cx = 720 + 420 * s, gap = 20 + 200 * s;
+        onL.setAttribute('cx', cx - gap); onR.setAttribute('cx', cx + gap); onL.setAttribute('cy', y); onR.setAttribute('cy', y);
+        onL.setAttribute('r', 10 + 40 * s); onR.setAttribute('r', 10 + 40 * s); onG.setAttribute('cx', cx); onG.setAttribute('cy', y); onG.setAttribute('r', 60 + 600 * s); } }, 50.03);
+      tl.fromTo('#look', { opacity: 0 }, { opacity: 1, duration: .4 }, 54.19);
+      tl.fromTo('#gaze', { x: 300, y: 1450 }, { x: 160, y: 1600, duration: 1.2, ease: 'power2.inOut' }, 54.3);
+      tl.to('#oncoming', { opacity: 0, duration: .4 }, 56.2);
+      // 8. glare recovery + distance card
+      tl.fromTo('#calc', { opacity: 0, y: 40 }, { opacity: 1, y: 0, duration: .4, ease: 'power2.out' }, 56.6);
+      tl.fromTo('#vbar', { attr: { width: 0 } }, { attr: { width: 726 }, duration: 4.2, ease: 'power1.in' }, 57.2);
+      tl.to('#ph1', { opacity: 0, duration: .3 }, 61.7);
+      tl.set('#cttl', { textContent: 'หลังโดนแสงจ้า' }, 0); tl.set('#cttl', { textContent: 'ขับแบบมองไม่เห็น' }, 61.9);
+      tl.fromTo('#ph2', { opacity: 0 }, { opacity: 1, duration: .3 }, 61.94);
+      tl.fromTo('#ph2 .tile, #ph2 .op', { opacity: 0, y: 20 }, { opacity: 1, y: 0, duration: .3, stagger: .35 }, 62.0);
+      tl.fromTo('#res', { scale: .8 }, { scale: 1, duration: .4, ease: 'back.out(2)' }, 64.4);
+      tl.to('#calc', { opacity: 0, duration: .3 }, 67.0);
+      // 9. the two lights blink together
+      tl.set('#lights', { scale: 1.2, svgOrigin: '540 770' }, 67.3); tl.set('#eyeL ellipse, #eyeR ellipse', { opacity: .8 }, 67.3); tl.set('#glowBig', { opacity: .3 }, 67.3);
+      tl.fromTo('#lights', { scale: 1.2, svgOrigin: '540 770' }, { scale: 1.45, duration: 9, ease: 'none' }, 67.3);
+      [72.45, 73.4, 75.6].forEach(t => tl.to('#eyeL ellipse, #eyeR ellipse', { scaleY: .05, transformOrigin: '50% 50%', duration: .09, yoyo: true, repeat: 1, ease: 'power2.in' }, t));
+      tl.to('#eyeL ellipse, #eyeR ellipse', { attr: { rx: 30, ry: 14 }, duration: .6 }, 74.67);
+      tl.to('#mclose', { opacity: 0, duration: .8 }, 76.7);
+      // next + end
+      tl.fromTo('#next', { opacity: 0 }, { opacity: 1, duration: .5 }, 77.6);
+      tl.fromTo('#next .pill', { opacity: 0, y: 10 }, { opacity: 1, y: 0, duration: .4 }, 77.8);
+      tl.fromTo('#next h1', { opacity: 0, y: 24, filter: 'blur(6px)' }, { opacity: 1, y: 0, filter: 'blur(0px)', duration: .7, ease: 'power2.out' }, 78.0);
+      tl.fromTo('#next .rl', { scaleX: 0 }, { scaleX: 1, duration: .5 }, 79.0);
+      tl.fromTo('#next .s1', { opacity: 0 }, { opacity: 1, duration: .4 }, 79.3);
+      tl.fromTo('#next .s2', { opacity: 0 }, { opacity: 1, duration: .4 }, 79.8);
+      tl.fromTo('#end', { opacity: 0 }, { opacity: 1, duration: .5 }, 81.6);
+      tl.fromTo('#end img', { opacity: 0, y: 20, scale: .96 }, { opacity: 1, y: 0, scale: 1, duration: .8, ease: 'power2.out' }, 81.8);
+      tl.fromTo('#end p', { opacity: 0, y: 20 }, { opacity: 1, y: 0, duration: .7, ease: 'power2.out' }, 82.4);
+
+      window.__timelines['main'] = tl;
+      tl.seek(0);
+    </script>
+  </body>
+</html>

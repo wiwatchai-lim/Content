@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<style>html, body { margin: 0; background: #000; } body { width: 1080px; height: 676px; overflow: hidden; } canvas { display: block; }</style>
+</head>
+<body data-width="1080" data-height="676" data-duration="4.2" data-fps="30">
+<canvas id="gl" width="1080" height="676"></canvas>
+<script>
+const DURATION = 4.2 * 1000, FOCUS = 0.5;
+const gl = document.getElementById('gl').getContext('webgl', { preserveDrawingBuffer: true });
+const vs = `attribute vec2 p; varying vec2 uv; void main(){ uv = p * .5 + .5; uv.y = 1. - uv.y; gl_Position = vec4(p, 0, 1); }`;
+const fs = `precision highp float; varying vec2 uv; uniform sampler2D img, dep; uniform vec2 cam; uniform float zoom;
+  void main(){
+    vec2 c = (uv - .5) / zoom + .5, q = c;
+    for (int i = 0; i < 6; i++) q = c - cam * (texture2D(dep, q).r - ${FOCUS});
+    gl_FragColor = texture2D(img, clamp(q, .001, .999));
+  }`;
+const prog = gl.createProgram();
+for (const [type, src] of [[gl.VERTEX_SHADER, vs], [gl.FRAGMENT_SHADER, fs]]) {
+  const s = gl.createShader(type); gl.shaderSource(s, src); gl.compileShader(s);
+  if (!gl.getShaderParameter(s, gl.COMPILE_STATUS)) throw new Error(gl.getShaderInfoLog(s));
+  gl.attachShader(prog, s);
+}
+gl.linkProgram(prog); gl.useProgram(prog);
+gl.bindBuffer(gl.ARRAY_BUFFER, gl.createBuffer());
+gl.bufferData(gl.ARRAY_BUFFER, new Float32Array([-1, -1, 1, -1, -1, 1, 1, 1]), gl.STATIC_DRAW);
+gl.enableVertexAttribArray(0); gl.vertexAttribPointer(0, 2, gl.FLOAT, false, 0, 0);
+const load = (src) => new Promise((ok, err) => { const i = new Image(); i.onload = () => ok(i); i.onerror = err; i.src = src; });
+function texture(unit, image) {
+  gl.activeTexture(gl.TEXTURE0 + unit); gl.bindTexture(gl.TEXTURE_2D, gl.createTexture());
+  gl.texImage2D(gl.TEXTURE_2D, 0, gl.RGBA, gl.RGBA, gl.UNSIGNED_BYTE, image);
+  for (const p of [gl.TEXTURE_WRAP_S, gl.TEXTURE_WRAP_T]) gl.texParameteri(gl.TEXTURE_2D, p, gl.CLAMP_TO_EDGE);
+  gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_MIN_FILTER, gl.LINEAR);
+}
+const ease = (x) => x < .5 ? 2 * x * x : 1 - Math.pow(-2 * x + 2, 2) / 2;
+const ready = Promise.all([load('s7.jpg'), load('s7_depth.png')]).then(([img, dep]) => {
+  texture(0, img); texture(1, dep);
+  gl.uniform1i(gl.getUniformLocation(prog, 'img'), 0);
+  gl.uniform1i(gl.getUniformLocation(prog, 'dep'), 1);
+});
+window.__seek = async (ms) => {
+  await ready;
+  const k = ease(Math.min(ms / DURATION, 1)), L = (a, b) => a + (b - a) * k;
+  gl.uniform2f(gl.getUniformLocation(prog, 'cam'), L(-0.02, 0.03), L(0.03, -0.02));
+  gl.uniform1f(gl.getUniformLocation(prog, 'zoom'), L(1.06, 1.18));
+  gl.drawArrays(gl.TRIANGLE_STRIP, 0, 4);
+};
+window.__seek(0);
+</script>
+</body>
+</html>

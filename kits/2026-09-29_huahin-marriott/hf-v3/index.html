@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=1080, height=1920" />
+    <!--
+      Hua Hin Marriott, script v3 (user, 2026-10-02): a 20 s "guess the place" cut in the huahin-anantara v3 format; the Marriott sign is the "one detail" that gives it away.
+        0-4    beach.mp4 (0-4)       palm + umbrellas           "Time Optic has something for you to notice."
+        4-8    garden-hd.jpg         pulls back from the pool   "Do you know where we are?"
+        8-13   aerial-hd.jpg         slow drift                 "Don't rush."
+        13-16  hotel.mp4 (0-3)       push-in on the MARRIOTT sign  "One detail might give it away."
+        16-20  beach.mp4 (6.5-9.9 at 0.85x)     coast aerial, dark green shade, TIME OPTIC + TAKE CARE OF YOUR VISION ("Time Optic. Take care of your vision.")
+      Voice: audio/vo-v3 (Gemini 3.1 flash TTS, Sulafat; 05 reused from huahin-anantara), mixed after render by audio/mix-v3.sh -> export/huahin-marriott_v3.mp4.
+    -->
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/gsap.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@300;500;700;800&family=Inter:wght@400;500&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="assets/tokens.css" />
+    <style>
+      * { margin: 0; padding: 0; box-sizing: border-box; }
+      html, body { width: 1080px; height: 1920px; overflow: hidden; background: #111; }
+      #root { position: relative; width: 1080px; height: 1920px; overflow: hidden; font-family: var(--to-font-display); color: #fff; }
+      .layer { position: absolute; }
+      .vid { left: 0; top: 0; width: 1080px; height: 1920px; object-fit: cover; }
+      #shade { inset: 0; background: linear-gradient(to bottom, rgba(12, 14, 16, 0) 45%, rgba(12, 14, 16, .38) 56%, rgba(12, 14, 16, .42) 76%, rgba(12, 14, 16, .1) 92%); }
+      .t { position: absolute; left: 110px; right: 110px; top: 1060px; text-align: center; font-weight: 300; font-size: 72px; line-height: 1.12; letter-spacing: -.02em; text-shadow: 0 2px 26px rgba(10, 12, 14, .55); opacity: 0; }
+      .t b { font-weight: 700; }
+      .still { left: 0; top: 0; width: 1080px; height: 1920px; overflow: hidden; }
+      .still img { position: absolute; top: 0; height: 1920px; will-change: transform; }
+      #pg { width: 2876px; left: -898px; transform-origin: 50% 85%; }
+      #pa { width: 2560px; left: 0; transform-origin: 50% 50%; }
+      #v4 { transform-origin: 40% 27%; }
+      #endshade { inset: 0; background: linear-gradient(to bottom, rgba(8, 20, 15, 0) 36%, rgba(8, 20, 15, .5) 50%, rgba(8, 20, 15, .7) 66%, rgba(8, 20, 15, .4) 88%, rgba(8, 20, 15, .95) 100%); opacity: 0; }
+      #vign { inset: 0; background: radial-gradient(ellipse 80% 60% at 50% 42%, rgba(0, 0, 0, 0) 55%, rgba(0, 0, 0, .35) 100%); opacity: 0; }
+      #end .brand { position: absolute; left: 0; right: 0; top: 1040px; display: flex; flex-direction: column; align-items: center; }
+      #name { font-weight: 800; font-size: 104px; letter-spacing: .01em; line-height: 1; margin-bottom: 34px; text-shadow: 0 2px 26px rgba(10, 12, 14, .5); opacity: 0; }
+      #name span { font-weight: 300; }
+      #rule { width: 120px; height: 2px; margin-top: 0; background: var(--to-peach); }
+      #tag { margin-top: 30px; font-family: var(--to-font-body); font-weight: 400; font-size: 38px; letter-spacing: .2em; text-transform: uppercase; color: rgba(250, 250, 250, .92); opacity: 0; }
+    </style>
+  </head>
+  <body>
+    <div id="root" data-composition-id="main" data-start="0" data-duration="20" data-width="1080" data-height="1920">
+      <video id="v1" class="clip layer vid" data-start="0" data-duration="4" data-media-start="0" data-track-index="0" src="assets/beach.mp4" muted playsinline></video>
+      <div id="s2" class="clip layer still" data-start="4" data-duration="4" data-track-index="0"><img data-layout-allow-overflow id="pg" src="assets/garden-hd.jpg" alt="" /></div>
+      <div id="s3" class="clip layer still" data-start="8" data-duration="5" data-track-index="0"><img data-layout-allow-overflow id="pa" src="assets/aerial-hd.jpg" alt="" /></div>
+      <video id="v4" class="clip layer vid" data-start="13" data-duration="3" data-media-start="0" data-track-index="0" src="assets/hotel.mp4" muted playsinline></video>
+      <video id="v5" class="clip layer vid" data-start="16" data-duration="4" data-media-start="6.5" data-playback-rate="0.85" data-track-index="0" src="assets/beach.mp4" muted playsinline></video>
+      <div id="shade" class="clip layer" data-start="0" data-duration="17.6" data-track-index="1"></div>
+      <div id="lines" class="clip layer" data-start="0" data-duration="17.2" data-track-index="2" style="inset:0">
+        <div id="l1" class="t"><b class="bt">Time</b> <b class="bo">Optic</b> has something<br>for you <b>to notice.</b></div>
+        <div id="l2" class="t">Do you know<br><b>where we are?</b></div>
+        <div id="l3" class="t"><b>Don't rush.</b></div>
+        <div id="l4" class="t">One detail might<br><b>give it away.</b></div>
+      </div>
+      <div id="endshade" class="clip layer" data-start="16.9" data-duration="3.1" data-track-index="4"></div>
+      <div id="vign" class="clip layer" data-start="16.9" data-duration="3.1" data-track-index="6"></div>
+      <div id="end" class="clip layer" data-start="17" data-duration="3" data-track-index="5" style="inset:0">
+        <div class="brand">
+          <div id="name">TIME <span>OPTIC</span></div>
+          <div id="rule"></div>
+          <div id="tag">Take care of your vision</div>
+        </div>
+      </div>
+    </div>
+    <script>
+      window.__timelines = window.__timelines || {};
+      const tl = gsap.timeline({ paused: true });
+      // [id, in, out]
+      const LINES = [['#l1', 0.3, 4.2], ['#l2', 4.5, 8.0], ['#l3', 8.9, 12.8], ['#l4', 13.3, 17.0]];
+      for (const [id, a, b] of LINES) {
+        tl.fromTo(id, { opacity: 0, y: 24, filter: 'blur(8px)' }, { opacity: 1, y: 0, filter: 'blur(0px)', duration: 0.9, ease: 'power2.out' }, a);
+        tl.to(id, { opacity: 0, y: -14, filter: 'blur(6px)', duration: 0.6, ease: 'power2.in' }, b - 0.6);
+      }
+      // stills move like a camera; "One detail might give it away": push in on the MARRIOTT sign
+      tl.fromTo('#pg', { scale: 1.3, y: 60 }, { scale: 1.0, y: 0, duration: 4, ease: 'sine.inOut' }, 4);
+      tl.fromTo('#pa', { x: -500, scale: 1.12 }, { x: -820, scale: 1.0, duration: 5, ease: 'sine.inOut' }, 8);
+      tl.fromTo('#v4', { scale: 1.0 }, { scale: 1.7, duration: 3, ease: 'sine.inOut' }, 13);
+      tl.to('#shade', { opacity: 0, duration: 0.6 }, 17.0);
+      // ending: dark green shade over scene3, rule draws, tagline in caps
+      tl.to('#endshade', { opacity: 1, duration: 0.8, ease: 'power1.inOut' }, 17.1);
+      tl.to('#vign', { opacity: 1, duration: 1.0 }, 17.1);
+      tl.fromTo('#name', { opacity: 0, y: 20, scale: 0.97 }, { opacity: 1, y: 0, scale: 1, duration: 0.8, ease: 'power2.out' }, 17.0);
+      tl.fromTo('#rule', { scaleX: 0 }, { scaleX: 1, duration: 0.7, ease: 'power2.out' }, 17.9);
+      tl.fromTo('#tag', { opacity: 0, y: 14, filter: 'blur(6px)' }, { opacity: 1, y: 0, filter: 'blur(0px)', duration: 0.9, ease: 'power2.out' }, 18.3);
+      window.__timelines['main'] = tl;
+      tl.seek(0);
+    </script>
+  </body>
+</html>
