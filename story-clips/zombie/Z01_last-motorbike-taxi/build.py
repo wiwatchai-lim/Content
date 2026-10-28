@@ -1,0 +1,7 @@
+# template.html + audio/timing.json -> index.html
+import json, os
+D = os.path.dirname(os.path.abspath(__file__))
+t = json.load(open(f'{D}/audio/timing.json'))
+h = open(f'{D}/template.html', encoding='utf-8').read().replace('/*TIMING*/', json.dumps(t)).replace('@TOTAL@', str(t['total']))
+open(f'{D}/hf/index.html', 'w', encoding='utf-8').write(h)
+print('index.html', t['total'])

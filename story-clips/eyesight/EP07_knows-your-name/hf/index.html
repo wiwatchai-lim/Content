@@ -1,0 +1,598 @@
+<!doctype html>
+<html lang="th">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=1080, height=1920" />
+    <!--
+      Story clip EP07 "ถ้ามันรู้ชื่อคุณ" (user, 2026-10-28), follows EP06 (the second face in the black glass). Same look as EP01-06. Thai only.
+      Voice = ../audio/voice.wav, cue + phrase times from ../audio/timing.json (mixed after render, see ../make.sh).
+      Science: in the dark the colour cells (cones) almost stop and the eye runs on rods (sensitive, colour-blind); rods barely respond to red,
+      so red looks dark/black while blue-green looks relatively brighter -> don't trust colours in the dark (Purkinje shift).
+      Peripheral vision catches movement fast but sees little detail or colour. Viewer test: dominant eye with a hand triangle.
+      Scenes: room 0-4.6 | chat 4.6-9.6 | door, knocks, name 9.6-14.4 | room goes grey 14.4-18.9 | rule-1 card 18.9-37.3
+      | corner of the eye 37.3-41.0 | rule-2 card 41.0-46.4 | curtain 46.4-48.1 | dominant-eye card 48.1-53.4 | test 53.4-71.6
+      | door, lean in 71.6-74.5 | peephole 74.5-85.3 | lock 85.3-87.8 | phone: still in traffic 87.8-93.9 | door, name again 93.9-97.5
+      | next 97.4-101.0 | TIMEOPTIC 100.4-103.47
+    -->
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/gsap.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@400;500;600;700&family=Anuphan:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <style>
+      * { margin: 0; padding: 0; box-sizing: border-box; }
+      html, body { width: 1080px; height: 1920px; overflow: hidden; background: #0a1124; }
+      #root { position: relative; width: 1080px; height: 1920px; overflow: hidden; font-family: 'Anuphan', sans-serif; color: #fff; }
+      .layer { position: absolute; }
+      .full { position: absolute; left: 0; top: 0; width: 1080px; height: 1920px; }
+      svg { display: block; overflow: visible; }
+
+      .sub { position: absolute; left: 50px; right: 50px; top: 1210px; text-align: center; font-family: 'Prompt', sans-serif; font-weight: 600;
+             font-size: 56px; line-height: 1.32; text-shadow: 0 3px 18px rgba(0,0,0,.75), 0 0 4px rgba(0,0,0,.6); }
+      .sub.y { color: #F5C84C; }
+      .sub.r span { display: inline-block; background: #D8343A; color: #fff; padding: 4px 26px 8px; border-radius: 10px; text-shadow: none;
+                    box-shadow: 0 6px 24px rgba(0,0,0,.35); }
+      .sub.dk { color: #1d2433; text-shadow: none; font-size: 50px; }
+
+      .chip { position: absolute; top: 170px; height: 86px; background: #EEE8DC; border-radius: 16px; color: #1d2433; display: flex; align-items: center;
+              gap: 14px; padding: 0 26px 0 20px; box-shadow: 0 8px 26px rgba(0,0,0,.35); }
+      .chip small { display: block; font-size: 20px; font-weight: 500; color: #555a63; line-height: 1; }
+      .chip b { display: block; font-family: 'Prompt'; font-size: 40px; font-weight: 700; line-height: 1.05; letter-spacing: .02em; }
+
+      .card { position: absolute; left: 80px; top: 520px; width: 920px; height: 640px; background: #EEE8DC; border-radius: 22px; color: #1d2433;
+              border-left: 14px solid #C99A2E; box-shadow: 0 24px 60px rgba(0,0,0,.45); overflow: hidden; }
+      .card .ttl { position: absolute; left: 34px; top: 26px; font-size: 30px; font-weight: 600; color: #4a4f5a; }
+      .card .lbl { position: absolute; font-size: 28px; font-weight: 600; color: #1d2433; text-align: center; line-height: 1.35; }
+      .card .lbl i { display: block; font-style: normal; font-weight: 500; font-size: 24px; color: #555a63; }
+      .badge { position: absolute; border: 4px solid #D8343A; color: #C0392B; background: #fff6ef; border-radius: 14px; font: 700 40px/1 'Prompt';
+               padding: 16px 30px 20px; white-space: nowrap; }
+
+      /* chat on the phone */
+      .chat { background: #05070c; }
+      .bub { position: absolute; left: 340px; max-width: 400px; background: #e6e9f0; color: #1d2433; border-radius: 26px 26px 26px 8px; padding: 12px 24px 16px;
+             font: 600 32px/1.3 'Anuphan'; white-space: nowrap; }
+      .bub small { display: block; font-size: 18px; font-weight: 500; color: #7a8090; margin-top: 2px; }
+      .bub.new { background: #fff; border: 3px solid #D8343A; }
+      .who { position: absolute; left: 400px; top: 296px; font: 700 34px 'Prompt'; color: #1d2433; }
+      .who small { display: block; font: 500 20px 'Anuphan'; color: #2f8a57; margin-top: -4px; }
+
+      .knock { position: absolute; font: 700 64px 'Prompt'; color: #e9e3d4; text-shadow: 0 4px 20px rgba(0,0,0,.8); opacity: 0; }
+      .tag { position: absolute; background: #EEE8DC; color: #1d2433; border-radius: 12px; padding: 6px 22px 10px; font: 600 30px 'Anuphan';
+             box-shadow: 0 8px 24px rgba(0,0,0,.4); opacity: 0; white-space: nowrap; }
+
+      #test { background: #F3EFE6; color: #1d2433; }
+      #test h2 { position: absolute; left: 0; right: 0; top: 280px; text-align: center; font: 700 52px 'Prompt'; }
+      #test ol { position: absolute; left: 130px; top: 375px; list-style: none; font-size: 36px; font-weight: 600; line-height: 1.75; color: #4a4f5a; }
+      #test ol li b { display: inline-block; width: 50px; height: 50px; border-radius: 50%; background: #1d2433; color: #fff; text-align: center;
+                      font: 700 30px/50px 'Prompt'; margin-right: 20px; vertical-align: 4px; }
+      #test .el { position: absolute; top: 1335px; width: 250px; text-align: center; font-size: 30px; font-weight: 600; color: #4a4f5a; }
+      #test .cd { position: absolute; left: 440px; top: 1205px; width: 200px; text-align: center; font: 700 96px/1 'Prompt'; color: #C99A2E; opacity: 0; }
+      #test .bar { position: absolute; left: 240px; top: 1420px; width: 600px; height: 10px; border-radius: 5px; background: #ddd5c6; overflow: hidden; }
+      #test .bar i { position: absolute; inset: 0; background: #C99A2E; transform-origin: 0 50%; transform: scaleX(0); }
+      #test .note { position: absolute; left: 0; right: 0; top: 1460px; text-align: center; font-size: 26px; font-weight: 500; color: #7a7f88; }
+      #test .dom { position: absolute; left: 662px; top: 1150px; background: #C99A2E; color: #fff; border-radius: 10px; padding: 2px 16px 6px;
+                   font: 700 28px 'Prompt'; opacity: 0; }
+
+      #inset { position: absolute; left: 640px; top: 170px; width: 384px; height: 150px; background: #EEE8DC; border-radius: 16px; border-left: 10px solid #C99A2E;
+               box-shadow: 0 8px 26px rgba(0,0,0,.45); color: #1d2433; opacity: 0; }
+
+      #next { background: radial-gradient(ellipse 80% 45% at 50% 42%, #23181c, #0d0d11 70%); }
+      #next .pill { position: absolute; left: 50%; top: 640px; transform: translateX(-50%); border: 2px solid #4a4a55; border-radius: 40px; padding: 8px 30px;
+                    font-size: 30px; font-weight: 600; color: #d6d6dc; }
+      #next .pill:before { content: ''; display: inline-block; width: 12px; height: 12px; border-radius: 50%; background: #D8343A; margin-right: 12px; vertical-align: 4px; }
+      #next h1 { position: absolute; left: 60px; right: 60px; top: 730px; text-align: center; font: 700 86px/1.3 'Prompt'; color: #f2f2f4; }
+      #next .rl { position: absolute; left: 400px; top: 990px; width: 280px; height: 6px; background: #D8343A; border-radius: 3px; }
+      #next .s1 { position: absolute; left: 0; right: 0; top: 1030px; text-align: center; font-size: 36px; font-weight: 600; color: #e05a5f; }
+      #next .s2 { position: absolute; left: 0; right: 0; top: 1100px; text-align: center; font-size: 32px; color: #c8c8d0; }
+      #end { background: radial-gradient(ellipse 80% 55% at 50% 48%, #1a4a36, #123A29 60%, #0d2b1e); }
+      #end img { position: absolute; left: 228px; top: 840px; width: 624px; }
+      #end p { position: absolute; left: 0; right: 0; top: 1000px; text-align: center; font-size: 46px; font-weight: 600; color: #FAFAFA; }
+    </style>
+  </head>
+  <body>
+    <div id="root" data-composition-id="main" data-start="0" data-duration="103.47" data-width="1080" data-height="1920">
+      <svg width="0" height="0" style="position:absolute">
+        <defs>
+          <radialGradient id="pglow"><stop offset="0" stop-color="#dfe9ff" stop-opacity=".7" /><stop offset=".4" stop-color="#a9c0ff" stop-opacity=".22" /><stop offset="1" stop-color="#a9c0ff" stop-opacity="0" /></radialGradient>
+          <radialGradient id="redv"><stop offset=".45" stop-color="#d8343a" stop-opacity="0" /><stop offset="1" stop-color="#7a0c14" stop-opacity=".85" /></radialGradient>
+          <radialGradient id="edgev"><stop offset=".5" stop-color="#000" stop-opacity="0" /><stop offset="1" stop-color="#000" stop-opacity=".85" /></radialGradient>
+          <radialGradient id="exitg"><stop offset="0" stop-color="#4dff9a" stop-opacity=".55" /><stop offset="1" stop-color="#4dff9a" stop-opacity="0" /></radialGradient>
+          <radialGradient id="lensv"><stop offset=".55" stop-color="#000" stop-opacity="0" /><stop offset=".92" stop-color="#000" stop-opacity=".8" /><stop offset="1" stop-color="#000" stop-opacity="1" /></radialGradient>
+          <linearGradient id="gapg" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#2fae66" stop-opacity="0" /><stop offset=".5" stop-color="#2fae66" stop-opacity=".9" /><stop offset="1" stop-color="#2fae66" stop-opacity="0" /></linearGradient>
+          <clipPath id="lensc"><circle cx="540" cy="780" r="400" /></clipPath>
+          <filter id="soft"><feGaussianBlur stdDeviation="6" /></filter>
+          <filter id="soft2"><feGaussianBlur stdDeviation="2.5" /></filter>
+          <filter id="blurb"><feGaussianBlur stdDeviation="14" /></filter>
+        </defs>
+      </svg>
+
+      <!-- dark condo room: you in bed with the phone, the door on the left, the window + curtain on the right -->
+      <div id="room" class="clip full" data-start="0" data-duration="53.6" data-track-index="0">
+        <div id="roomw" class="full">
+          <svg class="full" viewBox="0 0 1080 1920" width="1080" height="1920">
+            <rect width="1080" height="1300" fill="#121827" />
+            <rect y="1300" width="1080" height="620" fill="#181d29" />
+            <!-- window with moonlight; curtain on the left half -->
+            <rect x="700" y="380" width="260" height="380" fill="#1d2b4a" stroke="#232b3c" stroke-width="12" />
+            <line x1="830" y1="380" x2="830" y2="760" stroke="#232b3c" stroke-width="8" />
+            <circle cx="900" cy="460" r="22" fill="#e8e2c4" opacity=".8" />
+            <g id="curt"><path d="M694 370 Q760 560 720 790 L640 790 Q665 560 640 370 Z" fill="#273047" /><path d="M672 380 Q700 580 680 785" stroke="#1b2133" stroke-width="6" fill="none" /></g>
+            <polygon points="700,1300 960,1300 1080,1600 760,1600" fill="#2a3a5c" opacity=".16" />
+            <!-- plant in the corner -->
+            <rect x="975" y="1210" width="70" height="90" rx="8" fill="#3a3229" />
+            <path d="M1010 1215 Q960 1120 990 1060 M1010 1215 Q1030 1110 1060 1080 M1010 1215 Q990 1140 1020 1040" stroke="#2f7a4a" stroke-width="18" stroke-linecap="round" fill="none" />
+            <!-- front door: peephole, deadbolt -->
+            <rect x="90" y="560" width="250" height="740" fill="#1a2030" stroke="#232a3c" stroke-width="10" />
+            <rect x="120" y="600" width="190" height="300" rx="6" fill="none" stroke="#151a27" stroke-width="6" />
+            <rect x="120" y="940" width="190" height="320" rx="6" fill="none" stroke="#151a27" stroke-width="6" />
+            <circle cx="215" cy="800" r="8" fill="#06080c" stroke="#3a4152" stroke-width="3" />
+            <rect x="292" y="950" width="22" height="46" rx="5" fill="#3a4152" />
+            <!-- bed with a red cushion -->
+            <rect x="460" y="1250" width="600" height="230" rx="20" fill="#1c2232" />
+            <rect x="460" y="1220" width="600" height="80" rx="30" fill="#252c3e" />
+            <ellipse id="cush" cx="930" cy="1220" rx="80" ry="40" fill="#b3262d" />
+            <rect x="480" y="1480" width="30" height="80" fill="#10141e" /><rect x="1010" y="1480" width="30" height="80" fill="#10141e" />
+            <!-- you, lying on the bed with the phone -->
+            <g id="youbed">
+              <path d="M520 1260 Q560 1190 700 1200 L860 1220 Q900 1250 860 1280 L540 1290 Z" fill="#06080f" />
+              <ellipse cx="545" cy="1205" rx="58" ry="50" fill="#06080f" />
+              <circle id="phg" cx="640" cy="1170" r="200" fill="url(#pglow)" />
+              <rect x="618" y="1150" width="44" height="28" rx="6" fill="#eef3ff" />
+            </g>
+            <!-- you, standing by the door -->
+            <g id="youst" opacity="0">
+              <path d="M330 1420 Q330 1010 430 960 Q530 1010 530 1420 Z" fill="#06080f" />
+              <ellipse cx="430" cy="890" rx="62" ry="76" fill="#06080f" />
+            </g>
+          </svg>
+        </div>
+        <svg class="full" id="namev" viewBox="0 0 1080 1920" width="1080" height="1920" style="opacity:0"><rect width="1080" height="1920" fill="url(#redv)" /></svg>
+        <svg class="full" id="edge" viewBox="0 0 1080 1920" width="1080" height="1920" style="opacity:0"><rect width="1080" height="1920" fill="url(#edgev)" /></svg>
+        <div class="knock" id="k1" style="left:560px;top:600px">ก๊อก</div>
+        <div class="knock" id="k2" style="left:640px;top:740px">ก๊อก</div>
+        <div class="knock" id="k3" style="left:580px;top:880px">ก๊อก</div>
+        <div class="tag" id="ctag" style="left:395px;top:1120px">แค่ม่านโดนลม</div>
+      </div>
+
+      <!-- phone POV: chat with your friend -->
+      <div id="chat1" class="clip full chat" data-start="4.6" data-duration="5.1" data-track-index="1">
+        <div id="chat1w" class="full">
+          <svg class="full" viewBox="0 0 1080 1920" width="1080" height="1920">
+            <circle cx="540" cy="720" r="700" fill="url(#pglow)" opacity=".55" />
+            <rect x="290" y="240" width="500" height="960" rx="60" fill="#111" />
+            <rect x="308" y="258" width="464" height="924" rx="46" fill="#f4f6fb" />
+            <rect x="480" y="276" width="120" height="26" rx="13" fill="#111" />
+            <rect x="308" y="370" width="464" height="2" fill="#dde1ea" />
+            <circle cx="360" cy="330" r="26" fill="#9fb4d6" /><circle cx="360" cy="322" r="10" fill="#e9eef8" /><path d="M342 346 Q360 330 378 346" fill="#e9eef8" />
+            <path d="M318 410" />
+            <path d="M240 1300 Q220 1050 300 900 L330 920 Q300 1080 340 1300 Z" fill="#3a2e2a" />
+            <path d="M840 1300 Q860 1050 780 900 L750 920 Q780 1080 740 1300 Z" fill="#3a2e2a" />
+          </svg>
+          <div class="who">ต้น<small>ออนไลน์</small></div>
+          <div class="bub" id="m1" style="top:410px">กำลังไปหานะ<small>23:30</small></div>
+          <div class="bub" id="m2" style="top:520px">ใส่เสื้อแดง
+            <svg style="display:inline-block;vertical-align:-6px;margin-left:8px" viewBox="0 0 40 36" width="40" height="36"><path d="M12 2 L2 9 L7 17 L11 14 L11 34 L29 34 L29 14 L33 17 L38 9 L28 2 Q20 8 12 2 Z" fill="#D8343A" /></svg>
+            <small>23:30</small></div>
+          <div class="bub" id="m3" style="top:640px">ถึงแล้วจะเคาะ<small>23:30</small></div>
+        </div>
+      </div>
+
+      <!-- rule 1: colour in the dark -->
+      <div id="c1" class="clip card" data-start="18.9" data-duration="18.4" data-track-index="2">
+        <div class="ttl" id="c1t">กฎข้อแรก · ตาในที่มืด</div>
+        <div id="c1a" class="layer" style="left:0;top:0;width:906px;height:640px">
+          <svg class="layer" style="left:0;top:0" viewBox="0 0 906 640" width="906" height="640">
+            <line x1="453" y1="100" x2="453" y2="580" stroke="#d6cfc0" stroke-width="4" />
+            <!-- cone cell -->
+            <g id="cone" transform="translate(226 250)">
+              <rect x="-22" y="40" width="44" height="90" rx="20" fill="#c9bfae" />
+              <path d="M-50 40 L0 -110 L50 40 Z" fill="#E0A030" />
+              <path d="M-30 -20 L0 -110 L30 -20 Z" fill="#D8343A" opacity=".8" />
+              <path d="M-40 10 L-30 -20 L30 -20 L40 10 Z" fill="#2f8a57" opacity=".8" />
+              <path d="M-50 40 L-40 10 L40 10 L50 40 Z" fill="#3a6fb0" opacity=".8" />
+            </g>
+            <!-- rod cell -->
+            <g id="rod" transform="translate(680 250)">
+              <circle id="rodg" r="120" fill="#fff3c4" opacity="0" />
+              <rect x="-22" y="40" width="44" height="90" rx="20" fill="#c9bfae" />
+              <rect x="-34" y="-120" width="68" height="160" rx="30" fill="#7d8494" />
+            </g>
+          </svg>
+          <div class="lbl" style="left:40px;top:410px;width:373px">เซลล์รูปกรวย<i>เห็นสี · ต้องใช้แสงมาก</i></div>
+          <div class="lbl" style="left:493px;top:410px;width:373px">เซลล์รูปแท่ง<i>ไวแสง · ไม่เห็นสี</i></div>
+          <div class="lbl" id="coneoff" style="left:40px;top:520px;width:373px;color:#C0392B;opacity:0">มืด → แทบหยุดทำงาน</div>
+          <div class="lbl" id="rodon" style="left:493px;top:520px;width:373px;color:#2f8a57;opacity:0">มืด → ทำงานแทน</div>
+        </div>
+        <div id="c1b" class="layer" style="left:0;top:0;width:906px;height:640px;opacity:0">
+          <svg class="layer" style="left:0;top:0" viewBox="0 0 906 640" width="906" height="640">
+            <rect x="30" y="90" width="410" height="420" rx="18" fill="#fbf8f1" stroke="#d6cfc0" stroke-width="3" />
+            <rect x="466" y="90" width="410" height="420" rx="18" fill="#1a1f2b" />
+            <g id="objL" transform="translate(30 90)">
+              <path d="M70 120 L30 150 L50 185 L68 172 L68 290 L172 290 L172 172 L190 185 L210 150 L170 120 Q120 150 70 120 Z" fill="#D8343A" />
+              <path d="M265 280 Q245 180 300 130 Q355 180 335 280 Z" fill="#2f9a5a" /><line x1="300" y1="150" x2="300" y2="280" stroke="#1f6a3c" stroke-width="5" />
+              <rect x="110" y="320" width="90" height="70" rx="10" fill="#3a78c8" /><path d="M200 335 Q235 355 200 375" stroke="#3a78c8" stroke-width="10" fill="none" />
+              <rect x="250" y="320" width="120" height="70" rx="10" fill="#E0A030" />
+            </g>
+            <g transform="translate(466 90)">
+              <path id="shirtD" d="M70 120 L30 150 L50 185 L68 172 L68 290 L172 290 L172 172 L190 185 L210 150 L170 120 Q120 150 70 120 Z" fill="#7a3a3c" />
+              <path id="leafD" d="M265 280 Q245 180 300 130 Q355 180 335 280 Z" fill="#3c5a48" />
+              <rect id="mugD" x="110" y="320" width="90" height="70" rx="10" fill="#34465f" /><path id="mugH" d="M200 335 Q235 355 200 375" stroke="#34465f" stroke-width="10" fill="none" />
+              <rect id="boxD" x="250" y="320" width="120" height="70" rx="10" fill="#5a5040" />
+              <circle id="ringG" cx="300" cy="205" r="95" fill="none" stroke="#F5C84C" stroke-width="5" stroke-dasharray="14 10" opacity="0" />
+              <circle id="ringB" cx="160" cy="355" r="70" fill="none" stroke="#F5C84C" stroke-width="5" stroke-dasharray="14 10" opacity="0" />
+            </g>
+          </svg>
+          <div class="lbl" style="left:30px;top:530px;width:410px">สว่าง</div>
+          <div class="lbl" style="left:466px;top:530px;width:410px">มืด</div>
+          <div class="lbl" id="redlbl" style="left:466px;top:100px;width:250px;color:#ff8a8f;opacity:0">แดง → เกือบดำ</div>
+        </div>
+        <div class="badge" id="c1x" style="left:190px;top:520px;opacity:0;transform:rotate(-4deg)">อย่าเชื่อสีในความมืด</div>
+      </div>
+
+      <!-- rule 2: the corner of the eye -->
+      <div id="c2" class="clip card" data-start="41.0" data-duration="5.4" data-track-index="3">
+        <div class="ttl">กฎข้อสอง · หางตา</div>
+        <svg class="layer" style="left:0;top:0" viewBox="0 0 906 640" width="906" height="640">
+          <!-- field of view seen from above -->
+          <path d="M453 560 L60 230 A520 520 0 0 1 846 230 Z" fill="#d9d2c3" />
+          <path d="M453 560 L380 120 A440 440 0 0 1 526 120 Z" fill="#F5C84C" opacity=".85" />
+          <circle cx="453" cy="590" r="44" fill="#1d2433" /><path d="M430 552 L453 520 L476 552 Z" fill="#1d2433" />
+          <g id="blob" transform="translate(130 300)">
+            <ellipse rx="34" ry="44" fill="#4a4f5a" filter="url(#soft2)" />
+            <path d="M-60 -20 Q-74 0 -60 20 M-80 -30 Q-100 0 -80 30" stroke="#C0392B" stroke-width="5" fill="none" stroke-linecap="round" />
+          </g>
+          <text id="q" x="130" y="232" text-anchor="middle" font-family="Prompt" font-weight="700" font-size="56" fill="#C0392B" opacity="0">?</text>
+        </svg>
+        <div class="lbl" style="left:303px;top:190px;width:300px">ตรงกลาง<i>ชัด · เห็นสี</i></div>
+        <div class="lbl" id="perl" style="left:560px;top:330px;width:330px">หางตา<i>จับการขยับได้ไว</i></div>
+        <div class="lbl" id="perl2" style="left:560px;top:420px;width:330px;color:#C0392B;opacity:0">แต่ไม่ชัด · สีจาง</div>
+      </div>
+
+      <!-- dominant eye: why it matters at a peephole -->
+      <div id="c3" class="clip card" data-start="48.1" data-duration="5.4" data-track-index="2">
+        <div class="ttl">ตาข้างถนัด</div>
+        <svg class="layer" style="left:0;top:0" viewBox="0 0 906 640" width="906" height="640">
+          <rect x="520" y="90" width="300" height="470" rx="10" fill="#3a3326" />
+          <circle cx="600" cy="300" r="20" fill="#1d2433" stroke="#8a8270" stroke-width="6" />
+          <g transform="translate(330 300)">
+            <path d="M-120 0 Q0 -80 120 0 Q0 80 -120 0 Z" fill="#fff" stroke="#1d2433" stroke-width="6" />
+            <circle r="36" fill="#5b7fa3" /><circle r="16" fill="#1d2433" />
+            <circle id="domg" r="150" fill="none" stroke="#C99A2E" stroke-width="8" opacity="0" />
+          </g>
+          <path d="M470 300 L575 300" stroke="#C99A2E" stroke-width="5" stroke-dasharray="10 8" />
+        </svg>
+        <div class="lbl" style="left:60px;top:500px;width:460px">ส่องรูเล็ก · เล็งเป้า<i>มักใช้ตาข้างนี้โดยไม่รู้ตัว</i></div>
+      </div>
+
+      <!-- viewer test: find your dominant eye -->
+      <div id="test" class="clip full" data-start="53.4" data-duration="18.3" data-track-index="5">
+        <h2>ลองเองตอนนี้ · หาตาข้างถนัด</h2>
+        <ol>
+          <li id="st1"><b>1</b>ทำสามเหลี่ยมด้วยมือ เหยียดแขนสุด</li>
+          <li id="st2"><b>2</b>ลืมตาสองข้าง ให้ของไกลอยู่กลาง</li>
+          <li id="st3"><b>3</b>ปิดตาซ้าย · ของยังอยู่ไหม?</li>
+          <li id="st4"><b>4</b>ปิดตาขวา · ของยังอยู่ไหม?</li>
+        </ol>
+        <svg class="layer" style="left:160px;top:660px" viewBox="0 0 760 470" width="760" height="470">
+          <rect width="760" height="470" rx="24" fill="#d8cfbf" />
+          <rect x="0" y="330" width="760" height="140" fill="#c8bda9" />
+          <rect x="500" y="80" width="180" height="120" rx="6" fill="#bfb39e" />
+          <g transform="translate(380 235)"><g id="tclock">
+            <circle r="34" fill="#fff" stroke="#1d2433" stroke-width="6" />
+            <path d="M0 -20 L0 0 L14 8" stroke="#1d2433" stroke-width="5" fill="none" stroke-linecap="round" />
+          </g></g>
+          <!-- two hands make a triangle; the hole is where the clock shows -->
+          <path fill-rule="evenodd" d="M30 470 L130 150 Q380 40 630 150 L730 470 Z M380 150 L480 300 Q380 318 280 300 Z" fill="#c08a64" />
+          <path d="M380 150 L300 95 M380 150 L460 95 M280 300 L190 340 M480 300 L570 340 M250 250 L170 200 M510 250 L590 200" stroke="#9a6a48" stroke-width="5" fill="none" stroke-linecap="round" />
+        </svg>
+        <svg class="layer" style="left:290px;top:1180px" viewBox="0 0 500 150" width="500" height="150">
+          <g transform="translate(125 70)">
+            <path d="M-95 0 Q0 -62 95 0 Q0 62 -95 0 Z" fill="#fff" stroke="#1d2433" stroke-width="6" />
+            <circle r="28" fill="#5b7fa3" /><circle r="12" fill="#1d2433" />
+            <path id="lidL" d="M-100 0 Q0 -68 100 0 Q0 68 -100 0 Z" fill="#c08a64" transform="scale(1 0)" />
+          </g>
+          <g transform="translate(375 70)">
+            <path d="M-95 0 Q0 -62 95 0 Q0 62 -95 0 Z" fill="#fff" stroke="#1d2433" stroke-width="6" />
+            <circle r="28" fill="#5b7fa3" /><circle r="12" fill="#1d2433" />
+            <path id="lidR" d="M-100 0 Q0 -68 100 0 Q0 68 -100 0 Z" fill="#c08a64" transform="scale(1 0)" />
+            <ellipse id="domr" rx="118" ry="78" fill="none" stroke="#C99A2E" stroke-width="7" opacity="0" />
+          </g>
+        </svg>
+        <div class="el" style="left:290px">ตาซ้าย</div>
+        <div class="el" style="left:540px">ตาขวา</div>
+        <div class="cd" id="cd">3</div>
+        <div class="dom" id="dom">ถนัด</div>
+        <div class="bar"><i></i></div>
+        <div class="note">ภาพตัวอย่าง: คนที่ถนัดตาขวา</div>
+      </div>
+
+      <!-- the front door, close: lean in, the lock, the gap under the door -->
+      <div id="door" class="clip full" data-start="71.4" data-duration="26.2" data-track-index="6" style="background:#0d1018">
+        <div id="doorw" class="full">
+          <svg class="full" viewBox="0 0 1080 1920" width="1080" height="1920">
+            <rect width="1080" height="1920" fill="#10141e" />
+            <rect x="150" y="0" width="780" height="1760" fill="#1b2232" />
+            <rect x="210" y="60" width="660" height="700" rx="10" fill="none" stroke="#151a27" stroke-width="10" />
+            <rect x="210" y="860" width="660" height="820" rx="10" fill="none" stroke="#151a27" stroke-width="10" />
+            <rect x="0" y="1760" width="1080" height="160" fill="#0b0e15" />
+            <rect id="gap" x="150" y="1748" width="780" height="12" fill="#05070a" />
+            <rect id="gapl" x="150" y="1748" width="780" height="12" fill="url(#gapg)" opacity="0" />
+            <g id="feet" opacity="0"><rect x="430" y="1746" width="70" height="16" fill="#000" /><rect x="580" y="1746" width="70" height="16" fill="#000" /></g>
+            <!-- peephole -->
+            <circle cx="540" cy="640" r="30" fill="#4a5162" /><circle cx="540" cy="640" r="15" fill="#05070a" />
+            <!-- deadbolt + chain -->
+            <rect x="770" y="880" width="64" height="170" rx="12" fill="#4a5162" />
+            <g id="knob"><rect x="789" y="925" width="26" height="80" rx="10" fill="#8a92a3" /></g>
+            <path d="M840 820 Q900 900 860 980" stroke="#6b7385" stroke-width="7" stroke-dasharray="12 8" fill="none" />
+            <!-- you, in profile, leaning to the peephole -->
+            <g id="lean">
+              <path d="M-80 1100 Q-60 860 180 820 Q300 830 300 1100 Z" fill="#06080f" />
+              <path d="M200 520 Q390 470 450 600 Q500 620 490 655 Q470 668 470 690 Q480 720 450 740 Q430 800 340 820 Q230 840 170 760 Q110 640 200 520 Z" fill="#06080f" />
+            </g>
+            <!-- your hand reaching for the lock -->
+            <g id="hand" opacity="0">
+              <path d="M1180 1500 L1220 1420 L850 990 L800 1030 Z" fill="#2b2321" />
+              <ellipse cx="820" cy="1000" rx="58" ry="44" fill="#2b2321" />
+            </g>
+          </svg>
+        </div>
+        <svg class="full" id="namev2" viewBox="0 0 1080 1920" width="1080" height="1920" style="opacity:0"><rect width="1080" height="1920" fill="url(#redv)" /></svg>
+      </div>
+
+      <!-- through the peephole: green exit light, a figure with its head down, a shirt that looks black -->
+      <div id="peep" class="clip full" data-start="74.5" data-duration="10.8" data-track-index="7" style="background:#000">
+        <div id="peepw" class="full">
+          <svg class="full" viewBox="0 0 1080 1920" width="1080" height="1920">
+            <g clip-path="url(#lensc)">
+              <rect x="100" y="360" width="880" height="840" fill="#050b07" />
+              <polygon points="140,380 940,380 640,600 440,600" fill="#07120b" />
+              <polygon points="440,900 640,900 940,1180 140,1180" fill="#0a1a10" />
+              <polygon points="140,380 440,600 440,900 140,1180" fill="#081209" />
+              <polygon points="940,380 640,600 640,900 940,1180" fill="#081209" />
+              <rect x="440" y="600" width="200" height="300" fill="#0c1d12" />
+              <polygon points="200,520 330,580 330,950 200,1040" fill="#0d1a12" stroke="#163322" stroke-width="4" />
+              <polygon points="880,520 750,580 750,950 880,1040" fill="#0d1a12" stroke="#163322" stroke-width="4" />
+              <circle cx="540" cy="560" r="230" fill="url(#exitg)" />
+              <rect x="470" y="535" width="140" height="50" rx="6" fill="#36d97a" />
+              <text x="540" y="569" text-anchor="middle" font-family="Anuphan" font-weight="700" font-size="26" fill="#eafff0">ทางหนีไฟ</text>
+              <g id="fig" opacity="0">
+                <path d="M490 760 Q540 735 590 760 L600 905 L585 1010 L560 1010 L548 915 L532 915 L520 1010 L495 1010 L480 905 Z" fill="#050606" />
+                <path d="M490 762 L470 900 L482 902 L500 790 M590 762 L610 900 L598 902 L580 790" fill="#050606" />
+                <path d="M492 762 Q540 738 588 762" stroke="#1f5a36" stroke-width="4" fill="none" />
+                <ellipse cx="540" cy="735" rx="30" ry="34" fill="#030404" />
+                <path d="M512 728 Q540 700 568 728" stroke="#1f5a36" stroke-width="3" fill="none" />
+              </g>
+              <rect x="100" y="360" width="880" height="840" fill="#1a6a3a" opacity=".1" />
+              <circle cx="540" cy="780" r="400" fill="url(#lensv)" />
+            </g>
+            <circle cx="540" cy="780" r="400" fill="none" stroke="#1d211e" stroke-width="10" />
+          </svg>
+        </div>
+        <div id="inset">
+          <svg class="layer" style="left:18px;top:24px" viewBox="0 0 340 100" width="340" height="100">
+            <rect x="0" y="0" width="100" height="100" rx="12" fill="#D8343A" />
+            <path d="M120 50 L200 50 M185 36 L202 50 L185 64" stroke="#1d2433" stroke-width="6" fill="none" stroke-linecap="round" />
+            <rect id="insD" x="222" y="0" width="100" height="100" rx="12" fill="#D8343A" />
+          </svg>
+          <div class="layer" style="left:18px;top:114px;width:120px;text-align:center;font:600 22px 'Anuphan'">แดง</div>
+          <div class="layer" style="left:230px;top:114px;width:120px;text-align:center;font:600 22px 'Anuphan'">ในที่มืด</div>
+        </div>
+      </div>
+
+      <!-- phone again: the friend is still in traffic -->
+      <div id="chat2" class="clip full chat" data-start="87.8" data-duration="6.2" data-track-index="8">
+        <div id="chat2w" class="full">
+          <svg class="full" viewBox="0 0 1080 1920" width="1080" height="1920">
+            <circle cx="540" cy="720" r="700" fill="url(#pglow)" opacity=".55" />
+            <rect x="290" y="240" width="500" height="960" rx="60" fill="#111" />
+            <rect x="308" y="258" width="464" height="924" rx="46" fill="#f4f6fb" />
+            <rect x="480" y="276" width="120" height="26" rx="13" fill="#111" />
+            <rect x="308" y="370" width="464" height="2" fill="#dde1ea" />
+            <circle cx="360" cy="330" r="26" fill="#9fb4d6" /><circle cx="360" cy="322" r="10" fill="#e9eef8" /><path d="M342 346 Q360 330 378 346" fill="#e9eef8" />
+            <path d="M240 1300 Q220 1050 300 900 L330 920 Q300 1080 340 1300 Z" fill="#3a2e2a" />
+            <path d="M840 1300 Q860 1050 780 900 L750 920 Q780 1080 740 1300 Z" fill="#3a2e2a" />
+          </svg>
+          <div class="who">ต้น<small>ออนไลน์</small></div>
+          <div class="bub" style="top:410px;opacity:.55">กำลังไปหานะ<small>23:30</small></div>
+          <div class="bub" style="top:520px;opacity:.55">ใส่เสื้อแดง<small>23:30</small></div>
+          <div class="bub" style="top:630px;opacity:.55">ถึงแล้วจะเคาะ<small>23:30</small></div>
+          <div class="bub new" id="m4" style="top:760px">รถติดมาก ยังไม่ถึงเลย<small>23:32</small></div>
+          <div class="bub new" id="m5" style="top:880px">อีกครึ่งชั่วโมงนะ<small>23:32</small></div>
+        </div>
+      </div>
+
+      <!-- clock chip -->
+      <div id="clock" class="chip clip" data-start="0.3" data-duration="97.0" data-track-index="20" style="left:56px">
+        <svg viewBox="-24 -24 48 48" width="46" height="46"><circle r="19" fill="none" stroke="#1d2433" stroke-width="4" /><path d="M0 -10 L0 0 L8 6" fill="none" stroke="#1d2433" stroke-width="4" stroke-linecap="round" /></svg>
+        <div><small>เวลา</small><b id="clockt">23:30</b></div>
+      </div>
+
+      <!-- subtitles (cue + phrase times from ../audio/timing.json) -->
+      <div class="sub clip"   data-start="0.54"  data-duration="3.95" data-track-index="30">ห้าทุ่มครึ่ง คุณปิดไฟ<br>นอนอยู่ในห้องมืด</div>
+      <div class="sub clip"   data-start="4.77"  data-duration="2.45" data-track-index="30">เพื่อนพิมพ์มาว่า กำลังไปหา</div>
+      <div class="sub y clip" data-start="7.31"  data-duration="2.35" data-track-index="30">ใส่เสื้อแดง ถึงแล้วจะเคาะ</div>
+      <div class="sub r clip" data-start="11.57" data-duration="2.7"  data-track-index="30"><span>เสียงจากนอกประตู<br>เรียกชื่อคุณ</span></div>
+      <div class="sub clip"   data-start="14.47" data-duration="4.1"  data-track-index="30">คุณลุกไปที่ประตู<br>ทุกอย่างในห้อง เป็นสีเทาไปหมด</div>
+      <div class="sub y clip" data-start="18.95" data-duration="4.4"  data-track-index="30">กฎข้อแรก ในที่มืด<br>ตาเปลี่ยนไปใช้เซลล์ที่ไวแสง</div>
+      <div class="sub y clip" data-start="23.41" data-duration="1.4"  data-track-index="30">แต่มองไม่เห็นสี</div>
+      <div class="sub clip"   data-start="24.91" data-duration="2.42" data-track-index="30">เซลล์พวกนี้แทบไม่รับแสงสีแดง</div>
+      <div class="sub y clip" data-start="27.39" data-duration="2.85" data-track-index="30">ของสีแดงจึงดูมืด<br>จนเหมือนสีดำ</div>
+      <div class="sub clip"   data-start="30.48" data-duration="3.6"  data-track-index="30">ส่วนสีฟ้าสีเขียว<br>กลับดูสว่างกว่า</div>
+      <div class="sub y clip" data-start="34.25" data-duration="2.9"  data-track-index="30">ในความมืด<br>อย่าเชื่อสีที่ตาเห็น</div>
+      <div class="sub clip"   data-start="37.57" data-duration="3.2"  data-track-index="30">แล้วมีอะไรบางอย่าง<br>ขยับแวบที่หางตา</div>
+      <div class="sub y clip" data-start="41.02" data-duration="3.3"  data-track-index="30">กฎข้อสอง<br>หางตาจับการเคลื่อนไหวได้ไว</div>
+      <div class="sub y clip" data-start="44.42" data-duration="2.0"  data-track-index="30">แต่เห็นรายละเอียดและสีได้น้อย</div>
+      <div class="sub clip"   data-start="48.14" data-duration="3.1"  data-track-index="30">เวลาส่องรูเล็กๆ<br>คนเรามักใช้ตาข้างถนัด</div>
+      <div class="sub y clip" data-start="51.32" data-duration="2.0"  data-track-index="30">ลองหาตาข้างถนัดของคุณดู</div>
+      <div class="sub dk clip" data-start="53.57" data-duration="2.9" data-track-index="30" style="top:1580px">ทำสามเหลี่ยมด้วยมือสองข้าง<br>เหยียดแขน</div>
+      <div class="sub dk clip" data-start="56.55" data-duration="3.2" data-track-index="30" style="top:1580px">ลืมตาทั้งสองข้าง<br>แล้วส่องของที่อยู่ไกล</div>
+      <div class="sub dk clip" data-start="67.54" data-duration="3.95" data-track-index="30" style="top:1580px">ตาข้างที่ยังเห็นของอยู่ในสามเหลี่ยม<br>คือตาข้างถนัดของคุณ</div>
+      <div class="sub clip"   data-start="71.9"  data-duration="2.4"  data-track-index="30">คุณเอาตาข้างถนัด<br>แนบตาแมว</div>
+      <div class="sub clip"   data-start="74.65" data-duration="3.25" data-track-index="30">ไฟทางเดินดับ<br>มีแค่แสงไฟทางหนีไฟสีเขียว</div>
+      <div class="sub clip"   data-start="78.35" data-duration="2.75" data-track-index="30">มีคนยืนก้มหน้าอยู่<br>ใส่เสื้อสีดำ</div>
+      <div class="sub clip"   data-start="81.28" data-duration="3.75" data-track-index="30">คุณบอกตัวเอง ในที่มืด<br>สีแดงก็ดูเป็นสีดำ</div>
+      <div class="sub clip"   data-start="85.33" data-duration="2.3"  data-track-index="30">คุณเอื้อมมือไปปลดกลอน</div>
+      <div class="sub r clip" data-start="87.85" data-duration="1.75" data-track-index="30"><span>แล้วมือถือก็สั่นอีกครั้ง</span></div>
+      <div class="sub r clip" data-start="89.77" data-duration="3.95" data-track-index="30"><span>เพื่อนพิมพ์มาว่า<br>รถติดมาก ยังไม่ถึงเลย</span></div>
+      <div class="sub r clip" data-start="93.96" data-duration="3.3"  data-track-index="30"><span>แล้วเสียงหน้าประตู<br>ก็เรียกชื่อคุณอีกครั้ง</span></div>
+
+      <div id="next" class="clip full" data-start="97.4" data-duration="3.6" data-track-index="40">
+        <div class="pill">ตอนต่อไป</div>
+        <h1>ถ้ามัน<br>โดนตา</h1>
+        <div class="rl"></div>
+        <div class="s1">EP.8 เร็วๆ นี้</div>
+        <div class="s2">กดติดตาม แล้วไปรอดด้วยกัน</div>
+      </div>
+      <div id="end" class="clip full" data-start="100.4" data-duration="3.07" data-track-index="41">
+        <img src="assets/timeoptic-white-spaced.svg" alt="TIMEOPTIC" />
+        <p>ดูแลสายตา ให้มองเห็นในวันที่สำคัญ</p>
+      </div>
+    </div>
+
+    <script>
+      window.__timelines = window.__timelines || {};
+      const tl = gsap.timeline({ paused: true });
+      document.querySelectorAll('.sub').forEach(s => tl.fromTo(s, { opacity: 0, y: 14 }, { opacity: 1, y: 0, duration: .25, ease: 'power2.out' }, parseFloat(s.dataset.start)));
+      const count = (target, from, to, t, d, fmt, ease = 'none') => { const o = { v: from };
+        tl.fromTo(o, { v: from }, { v: to, duration: d, ease, onUpdate: () => target.textContent = fmt(o.v) }, t); };
+      count(document.getElementById('clockt'), 30, 32.9, 0.3, 97.0, v => '23:' + String(Math.floor(v)).padStart(2, '0'));
+      const F = (g, b, br) => `grayscale(${g}) blur(${b}px) brightness(${br})`;
+      const blink = (sel, t, d = .12) => tl.to(sel, { attr: { transform: 'scale(1 1)' }, duration: d, yoyo: true, repeat: 1, ease: 'sine.inOut' }, t);
+
+      // room: you in bed, phone light
+      tl.set('#room', { filter: F(0, 0, 1) }, 0);
+      tl.fromTo('#roomw', { scale: 1.12, x: 0, y: 0, transformOrigin: '640px 1150px' }, { scale: 1, duration: 4.6, ease: 'sine.out' }, 0);
+      tl.to('#phg', { opacity: .7, duration: .4, yoyo: true, repeat: 5, ease: 'sine.inOut' }, 1.0);
+      // chat
+      tl.fromTo('#chat1', { opacity: 0 }, { opacity: 1, duration: .3 }, 4.6);
+      tl.fromTo('#chat1w', { scale: 1.05, transformOrigin: '540px 700px' }, { scale: 1, duration: 5, ease: 'sine.out' }, 4.6);
+      tl.fromTo('#m1', { opacity: 0, y: 20 }, { opacity: 1, y: 0, duration: .3, ease: 'back.out(2)' }, 4.8);
+      tl.fromTo('#m2', { opacity: 0, y: 20 }, { opacity: 1, y: 0, duration: .3, ease: 'back.out(2)' }, 7.3);
+      tl.fromTo('#m3', { opacity: 0, y: 20 }, { opacity: 1, y: 0, duration: .3, ease: 'back.out(2)' }, 8.5);
+      tl.to('#chat1', { opacity: 0, duration: .3 }, 9.4);
+      // door: three knocks, then your name
+      tl.set('#roomw', { scale: 1.6, x: 260, y: 0, transformOrigin: '215px 930px' }, 9.6);
+      tl.set('#phg', { opacity: .35 }, 9.6);
+      ['#k1', '#k2', '#k3'].forEach((k, i) => {
+        tl.fromTo(k, { opacity: 0, scale: .7 }, { opacity: 1, scale: 1, duration: .12, ease: 'back.out(3)' }, 9.95 + i * .5);
+        tl.to('#roomw', { x: 266, duration: .05, yoyo: true, repeat: 1 }, 9.95 + i * .5);
+      });
+      tl.to('#k1, #k2, #k3', { opacity: 0, duration: .4 }, 11.3);
+      tl.fromTo('#namev', { opacity: 0 }, { opacity: .9, duration: .5, yoyo: true, repeat: 1, ease: 'sine.inOut' }, 11.6);
+      tl.to('#roomw', { scale: 1.75, duration: 2.8, ease: 'sine.in' }, 11.6);
+      // you get up; everything goes grey
+      tl.set('#youbed', { opacity: 0 }, 14.4); tl.set('#youst', { opacity: 1 }, 14.4);
+      tl.set('#roomw', { scale: 1, x: 0, y: 0, transformOrigin: '540px 960px' }, 14.4);
+      tl.to('#room', { filter: F(1, 0, 1), duration: 1.6, ease: 'sine.inOut' }, 14.6);
+      tl.to('#roomw', { scale: 1.08, duration: 4.4, ease: 'none' }, 14.4);
+      tl.to('#room', { filter: F(1, 14, .5), duration: .3 }, 18.6);
+      // rule 1: cones stop, rods take over
+      tl.fromTo('#c1', { opacity: 0, y: 40 }, { opacity: 1, y: 0, duration: .4, ease: 'power2.out' }, 18.9);
+      tl.to('#cone', { opacity: .25, duration: .8 }, 20.1);
+      tl.fromTo('#coneoff', { opacity: 0 }, { opacity: 1, duration: .3 }, 20.2);
+      tl.to('#rodg', { opacity: .9, duration: .8 }, 21.2);
+      tl.fromTo('#rodon', { opacity: 0 }, { opacity: 1, duration: .3 }, 21.3);
+      tl.to('#c1a', { opacity: 0, duration: .3 }, 24.7);
+      tl.set('#c1t', { textContent: 'กฎข้อแรก · ตาในที่มืด' }, 0); tl.set('#c1t', { textContent: 'ของชุดเดียวกัน · สว่าง vs มืด' }, 24.9);
+      tl.fromTo('#c1b', { opacity: 0 }, { opacity: 1, duration: .3 }, 24.9);
+      tl.to('#shirtD', { fill: '#141416', duration: 1.4, ease: 'sine.inOut' }, 27.4);
+      tl.fromTo('#redlbl', { opacity: 0 }, { opacity: 1, duration: .3 }, 28.2);
+      tl.to('#leafD', { fill: '#8fa89a', duration: 1.2 }, 30.5);
+      tl.to('#mugD', { fill: '#8193ad', duration: 1.2 }, 30.5); tl.to('#mugH', { stroke: '#8193ad', duration: 1.2 }, 30.5);
+      tl.to('#boxD', { fill: '#3b372f', duration: 1.2 }, 30.5);
+      tl.fromTo('#ringG, #ringB', { opacity: 0 }, { opacity: 1, duration: .3 }, 31.7);
+      tl.fromTo('#c1x', { opacity: 0, scale: 1.6 }, { opacity: 1, scale: 1, duration: .35, ease: 'back.out(2)' }, 34.3);
+      tl.to('#c1', { opacity: 0, duration: .3 }, 37.0);
+      // corner of the eye: something moves at the edge
+      tl.set('#room', { filter: F(1, 0, .9) }, 37.3);
+      tl.set('#roomw', { scale: 1.35, x: 40, y: 0, transformOrigin: '215px 930px' }, 37.3);
+      tl.to('#roomw', { scale: 1.42, duration: 3.7, ease: 'none' }, 37.3);
+      tl.set('#edge', { opacity: 1 }, 37.3);
+      tl.set('#curt', { filter: 'url(#blurb)' }, 37.3);
+      tl.to('#curt', { x: 40, duration: .25, yoyo: true, repeat: 3, ease: 'sine.inOut' }, 38.4);
+      tl.to('#room', { filter: F(1, 14, .5), duration: .3 }, 40.7);
+      tl.set('#edge', { opacity: 0 }, 41.0);
+      // rule 2
+      tl.fromTo('#c2', { opacity: 0, y: 40 }, { opacity: 1, y: 0, duration: .4, ease: 'power2.out' }, 41.0);
+      tl.to('#blob', { x: 30, duration: .3, yoyo: true, repeat: 5, ease: 'sine.inOut' }, 42.3);
+      tl.fromTo('#q', { opacity: 0 }, { opacity: 1, duration: .3 }, 44.5);
+      tl.fromTo('#perl2', { opacity: 0 }, { opacity: 1, duration: .3 }, 44.5);
+      tl.to('#c2', { opacity: 0, duration: .3 }, 46.1);
+      // you look straight at it: the curtain
+      tl.set('#room', { filter: F(1, 0, 1) }, 46.4);
+      tl.set('#curt', { filter: 'none', x: 0 }, 46.4);
+      tl.set('#roomw', { scale: 1.5, x: -290, y: 230, transformOrigin: '830px 570px' }, 46.4);
+      tl.to('#curt', { x: 30, duration: .5, yoyo: true, repeat: 2, ease: 'sine.inOut' }, 46.5);
+      tl.fromTo('#ctag', { opacity: 0, y: 10 }, { opacity: 1, y: 0, duration: .3 }, 46.7);
+      tl.to('#ctag', { opacity: 0, duration: .2 }, 47.9);
+      tl.to('#room', { filter: F(1, 14, .5), duration: .3 }, 47.8);
+      // dominant eye card
+      tl.fromTo('#c3', { opacity: 0, y: 40 }, { opacity: 1, y: 0, duration: .4, ease: 'power2.out' }, 48.1);
+      tl.fromTo('#domg', { opacity: 0 }, { opacity: 1, duration: .4 }, 49.6);
+      tl.to('#c3', { opacity: 0, duration: .3 }, 53.1);
+      // viewer test
+      tl.fromTo('#test', { opacity: 0 }, { opacity: 1, duration: .4 }, 53.4);
+      tl.fromTo('#st1', { opacity: .25 }, { opacity: 1, duration: .3 }, 53.6);
+      tl.fromTo('#st2', { opacity: .25 }, { opacity: 1, duration: .3 }, 56.6);
+      tl.fromTo('#st3', { opacity: .25 }, { opacity: 1, duration: .3 }, 59.8);
+      tl.fromTo('#st4', { opacity: .25 }, { opacity: 1, duration: .3 }, 63.6);
+      tl.to('#lidL', { attr: { transform: 'scale(1 1)' }, duration: .25 }, 59.8);
+      tl.to('#lidL', { attr: { transform: 'scale(1 0)' }, duration: .25 }, 63.4);
+      tl.to('#lidR', { attr: { transform: 'scale(1 1)' }, duration: .25 }, 63.6);
+      tl.to('#tclock', { x: 190, duration: .15, ease: 'power2.out' }, 63.9);
+      tl.to('#lidR', { attr: { transform: 'scale(1 0)' }, duration: .25 }, 67.2);
+      tl.to('#tclock', { x: 0, duration: .15 }, 67.3);
+      [[59.9, 3], [61.1, 2], [62.3, 1], [63.7, 3], [64.9, 2], [66.1, 1]].forEach(([t, n]) => {
+        tl.set('#cd', { textContent: String(n) }, t);
+        tl.fromTo('#cd', { opacity: 1, scale: 1.3 }, { opacity: .35, scale: 1, duration: 1.1, ease: 'power2.out' }, t);
+      });
+      tl.set('#cd', { opacity: 0 }, 67.3);
+      tl.fromTo('#domr', { opacity: 0 }, { opacity: 1, duration: .3 }, 67.6);
+      tl.fromTo('#dom', { opacity: 0, y: 10 }, { opacity: 1, y: 0, duration: .3 }, 67.6);
+      tl.fromTo('#test .bar i', { scaleX: 0 }, { scaleX: 1, duration: 13.6, ease: 'none' }, 53.6);
+      tl.to('#test', { opacity: 0, duration: .3 }, 71.3);
+      // door: lean in to the peephole
+      tl.fromTo('#door', { opacity: 0 }, { opacity: 1, duration: .3 }, 71.4);
+      tl.fromTo('#lean', { x: -260 }, { x: 0, duration: 2.0, ease: 'power2.out' }, 71.6);
+      tl.fromTo('#doorw', { scale: 1, transformOrigin: '540px 640px' }, { scale: 1.25, duration: 3, ease: 'power1.in' }, 71.6);
+      // peephole
+      tl.fromTo('#peep', { opacity: 0 }, { opacity: 1, duration: .25 }, 74.5);
+      tl.fromTo('#peepw', { scale: 1.08, transformOrigin: '540px 780px' }, { scale: 1, duration: 10.8, ease: 'sine.out' }, 74.5);
+      tl.fromTo('#fig', { opacity: 0 }, { opacity: 1, duration: 1.2, ease: 'sine.in' }, 78.3);
+      tl.fromTo('#inset', { opacity: 0, y: -10 }, { opacity: 1, y: 0, duration: .3 }, 82.4);
+      tl.to('#insD', { fill: '#141416', duration: 1.2 }, 82.8);
+      tl.to('#peep', { opacity: 0, duration: .3 }, 85.0);
+      // door: hand to the lock
+      tl.set('#lean', { opacity: 0 }, 85.0);
+      tl.set('#doorw', { scale: 1.1, transformOrigin: '800px 960px' }, 85.0);
+      tl.fromTo('#hand', { opacity: 0, x: 260, y: 260 }, { opacity: 1, x: 0, y: 0, duration: 1.1, ease: 'power2.out' }, 85.3);
+      tl.to('#knob', { rotation: 35, svgOrigin: '802 965', duration: .9, ease: 'sine.inOut' }, 86.6);
+      // phone buzzes
+      tl.fromTo('#chat2', { opacity: 0 }, { opacity: 1, duration: .2 }, 87.8);
+      tl.to('#chat2w', { x: 8, duration: .05, yoyo: true, repeat: 9 }, 87.85);
+      tl.fromTo('#m4', { opacity: 0, y: 20 }, { opacity: 1, y: 0, duration: .3, ease: 'back.out(2)' }, 89.8);
+      tl.fromTo('#m5', { opacity: 0, y: 20 }, { opacity: 1, y: 0, duration: .3, ease: 'back.out(2)' }, 91.6);
+      tl.fromTo('#chat2w', { scale: 1 }, { scale: 1.08, transformOrigin: '540px 820px', duration: 5.8, ease: 'none' }, 88.0);
+      tl.to('#chat2', { opacity: 0, duration: .3 }, 93.7);
+      // door again: your name, feet in the green gap under the door
+      tl.set('#doorw', { scale: 1, transformOrigin: '540px 1300px' }, 93.9);
+      tl.set('#gapl', { opacity: .7 }, 93.9);
+      tl.to('#doorw', { scale: 1.12, duration: 3.6, ease: 'none' }, 93.9);
+      tl.fromTo('#feet', { opacity: 0 }, { opacity: 1, duration: .6 }, 94.6);
+      tl.to('#hand', { x: 140, y: 140, duration: .5, ease: 'power2.in' }, 94.1);
+      tl.fromTo('#namev2', { opacity: 0 }, { opacity: .9, duration: .5, yoyo: true, repeat: 1, ease: 'sine.inOut' }, 94.0);
+      tl.to('#namev2', { opacity: .6, duration: .6 }, 95.4);
+      tl.to('#door', { opacity: 0, duration: .3 }, 97.2);
+      // next + end
+      tl.fromTo('#next', { opacity: 0 }, { opacity: 1, duration: .5 }, 97.4);
+      tl.fromTo('#next .pill', { opacity: 0, y: 10 }, { opacity: 1, y: 0, duration: .4 }, 97.6);
+      tl.fromTo('#next h1', { opacity: 0, y: 24, filter: 'blur(6px)' }, { opacity: 1, y: 0, filter: 'blur(0px)', duration: .7, ease: 'power2.out' }, 97.8);
+      tl.fromTo('#next .rl', { scaleX: 0 }, { scaleX: 1, duration: .5 }, 98.8);
+      tl.fromTo('#next .s1', { opacity: 0 }, { opacity: 1, duration: .4 }, 99.1);
+      tl.fromTo('#next .s2', { opacity: 0 }, { opacity: 1, duration: .4 }, 99.5);
+      tl.fromTo('#end', { opacity: 0 }, { opacity: 1, duration: .5 }, 100.4);
+      tl.fromTo('#end img', { opacity: 0, y: 20, scale: .96 }, { opacity: 1, y: 0, scale: 1, duration: .8, ease: 'power2.out' }, 100.6);
+      tl.fromTo('#end p', { opacity: 0, y: 20 }, { opacity: 1, y: 0, duration: .7, ease: 'power2.out' }, 101.2);
+
+      window.__timelines['main'] = tl;
+      tl.seek(0);
+    </script>
+  </body>
+</html>

@@ -1,0 +1,526 @@
+<!doctype html>
+<html lang="th">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=1080, height=1920" />
+    <!--
+      Story clip EP09 "ถ้ามันรออยู่ในหมอก" (2026-10-28), follows EP08's end card. Same look as EP01-06. Thai only.
+      Voice = ../audio/voice.wav, cue + phrase times from ../audio/timing.json (mixed after render, see ../make.sh).
+      Science: in fog use low beams (+ fog lights if fitted), not high beams - the light scatters back off the droplets into a white wall;
+      fog lowers contrast so things look farther away than they are -> slow down, bigger gap, follow the left edge line (left-hand traffic);
+      halos/starbursts around lights on a CLEAR night can mean uncorrected short sight or astigmatism (older people: also cataract) -> eye check.
+      Viewer test: astigmatism dial, one eye then the other (4.3 s each in the voice pause, countdown on screen).
+      Scenes: outside, car into the fog 0-10.2 | POV drive 9.9-96.3 (high beams = white wall 10.4, low beams 28.2, shape on the road 31)
+      | lights card 14.7-27.9 | distance card 33.6-39.1 | slow/gap/left edge 39.1-44.6 | street lamp halo 44.8-49.2 | halo card 49.2-62.0
+      | astigmatism dial 62.0-84.1 | drive, shape still "far" 84.1-91.7 | brake: it is at the bumper 91.7-96.3 | next 96.3-99.9 | TIMEOPTIC 99.6-102.72
+    -->
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/gsap.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@400;500;600;700&family=Anuphan:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <style>
+      * { margin: 0; padding: 0; box-sizing: border-box; }
+      html, body { width: 1080px; height: 1920px; overflow: hidden; background: #0a1124; }
+      #root { position: relative; width: 1080px; height: 1920px; overflow: hidden; font-family: 'Anuphan', sans-serif; color: #fff; }
+      .layer { position: absolute; }
+      .full { position: absolute; left: 0; top: 0; width: 1080px; height: 1920px; }
+      svg { display: block; overflow: visible; }
+
+      .sub { position: absolute; left: 50px; right: 50px; top: 1210px; text-align: center; font-family: 'Prompt', sans-serif; font-weight: 600;
+             font-size: 56px; line-height: 1.32; text-shadow: 0 3px 18px rgba(0,0,0,.75), 0 0 4px rgba(0,0,0,.6); }
+      .sub.y { color: #F5C84C; }
+      .sub.r span { display: inline-block; background: #D8343A; color: #fff; padding: 4px 26px 8px; border-radius: 10px; text-shadow: none;
+                    box-shadow: 0 6px 24px rgba(0,0,0,.35); }
+      .sub.dk { color: #1d2433; text-shadow: none; top: 1400px; font-size: 46px; }
+      .sub.dk.rd { color: #C0392B; }
+
+      .chip { position: absolute; top: 170px; height: 86px; background: #EEE8DC; border-radius: 16px; color: #1d2433; display: flex; align-items: center;
+              gap: 14px; padding: 0 26px 0 20px; box-shadow: 0 8px 26px rgba(0,0,0,.35); }
+      .chip small { display: block; font-size: 20px; font-weight: 500; color: #555a63; line-height: 1; }
+      .chip b { display: block; font-family: 'Prompt'; font-size: 40px; font-weight: 700; line-height: 1.05; letter-spacing: .02em; }
+
+      .card { position: absolute; left: 80px; top: 520px; width: 920px; height: 640px; background: #EEE8DC; border-radius: 22px; color: #1d2433;
+              border-left: 14px solid #C99A2E; box-shadow: 0 24px 60px rgba(0,0,0,.45); overflow: hidden; }
+      .card .ttl { position: absolute; left: 34px; top: 26px; font-size: 30px; font-weight: 600; color: #4a4f5a; }
+      .card .lbl { position: absolute; font-size: 30px; font-weight: 600; color: #1d2433; text-align: center; line-height: 1.35; }
+      .row { position: absolute; left: 50px; width: 820px; height: 92px; display: flex; align-items: center; gap: 24px; font-size: 40px; font-weight: 600; }
+      .row i { flex: none; width: 60px; height: 60px; border-radius: 50%; background: #1d2433; color: #F5C84C; font: 700 34px/60px 'Prompt'; text-align: center; font-style: normal; }
+      .row small { font-size: 30px; font-weight: 500; color: #555a63; }
+
+      .pill { position: absolute; top: 300px; height: 70px; border-radius: 35px; background: #EEE8DC; color: #1d2433; font: 600 32px/70px 'Anuphan';
+              padding: 0 30px 0 22px; box-shadow: 0 8px 26px rgba(0,0,0,.35); display: flex; align-items: center; gap: 12px; }
+      .pill i { width: 40px; height: 40px; border-radius: 50%; background: #2f8a57; color: #fff; font: 700 26px/40px 'Prompt'; text-align: center; font-style: normal; }
+
+      #test { background: #F3EFE6; color: #1d2433; }
+      #test h2 { position: absolute; left: 0; right: 0; top: 285px; text-align: center; font: 700 56px 'Prompt'; }
+      #test .ins { position: absolute; left: 0; right: 0; top: 368px; text-align: center; font-size: 34px; font-weight: 600; color: #4a4f5a; }
+      #test .eye { position: absolute; left: 50%; top: 1238px; transform: translateX(-50%); height: 76px; border-radius: 38px; background: #1d2433; color: #fff;
+                   font: 600 36px/76px 'Anuphan'; padding: 0 16px 0 34px; display: flex; align-items: center; gap: 20px; white-space: nowrap; }
+      #test .eye b { width: 58px; height: 58px; border-radius: 50%; background: #F5C84C; color: #1d2433; font: 700 38px/58px 'Prompt'; text-align: center; }
+      #test .res { position: absolute; left: 50%; top: 1238px; transform: translateX(-50%); height: 76px; border-radius: 38px; background: #C0392B; color: #fff;
+                   font: 600 36px/76px 'Anuphan'; padding: 0 34px; white-space: nowrap; opacity: 0; }
+      #test .bar { position: absolute; left: 290px; top: 1342px; width: 500px; height: 10px; border-radius: 5px; background: #ddd5c6; overflow: hidden; }
+      #test .bar i { position: absolute; inset: 0; background: #C99A2E; transform-origin: 0 50%; transform: scaleX(0); }
+      #test .note { position: absolute; left: 0; right: 0; top: 1690px; text-align: center; font-size: 28px; font-weight: 500; color: #7a7f88; }
+
+      #next { background: radial-gradient(ellipse 80% 45% at 50% 42%, #23181c, #0d0d11 70%); }
+      #next .np { position: absolute; left: 50%; top: 640px; transform: translateX(-50%); border: 2px solid #4a4a55; border-radius: 40px; padding: 8px 30px;
+                  font-size: 30px; font-weight: 600; color: #d6d6dc; white-space: nowrap; }
+      #next .np:before { content: ''; display: inline-block; width: 12px; height: 12px; border-radius: 50%; background: #D8343A; margin-right: 12px; vertical-align: 4px; }
+      #next h1 { position: absolute; left: 60px; right: 60px; top: 760px; text-align: center; font: 700 96px/1.3 'Prompt'; color: #f2f2f4; }
+      #next .rl { position: absolute; left: 400px; top: 930px; width: 280px; height: 6px; background: #D8343A; border-radius: 3px; }
+      #next .s1 { position: absolute; left: 0; right: 0; top: 970px; text-align: center; font-size: 36px; font-weight: 600; color: #e05a5f; }
+      #next .s2 { position: absolute; left: 0; right: 0; top: 1040px; text-align: center; font-size: 32px; color: #c8c8d0; }
+      #end { background: radial-gradient(ellipse 80% 55% at 50% 48%, #1a4a36, #123A29 60%, #0d2b1e); }
+      #end img { position: absolute; left: 228px; top: 840px; width: 624px; }
+      #end p { position: absolute; left: 0; right: 0; top: 1000px; text-align: center; font-size: 46px; font-weight: 600; color: #FAFAFA; }
+    </style>
+  </head>
+  <body>
+    <div id="root" data-composition-id="main" data-start="0" data-duration="102.72" data-width="1080" data-height="1920">
+      <svg width="0" height="0" style="position:absolute">
+        <defs>
+          <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#0e1524" /><stop offset="1" stop-color="#3a4456" /></linearGradient>
+          <linearGradient id="fogv" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#b9c1cc" stop-opacity=".25" /><stop offset=".47" stop-color="#c9d0d9" stop-opacity=".9" />
+            <stop offset=".6" stop-color="#b9c1cc" stop-opacity=".55" /><stop offset="1" stop-color="#9aa3ae" stop-opacity=".12" /></linearGradient>
+          <radialGradient id="puff"><stop offset="0" stop-color="#d7dde5" stop-opacity=".55" /><stop offset="1" stop-color="#d7dde5" stop-opacity="0" /></radialGradient>
+          <radialGradient id="wallg" cx=".55" cy=".5" r=".6"><stop offset="0" stop-color="#f6f8fa" stop-opacity="1" /><stop offset=".55" stop-color="#e2e7ec" stop-opacity=".96" />
+            <stop offset="1" stop-color="#c5ccd5" stop-opacity=".8" /></radialGradient>
+          <radialGradient id="lowg"><stop offset="0" stop-color="#fff4d6" stop-opacity=".55" /><stop offset="1" stop-color="#fff4d6" stop-opacity="0" /></radialGradient>
+          <radialGradient id="ambg"><stop offset="0" stop-color="#ffc861" stop-opacity=".5" /><stop offset="1" stop-color="#ffc861" stop-opacity="0" /></radialGradient>
+          <radialGradient id="halo"><stop offset="0" stop-color="#fff6dc" stop-opacity="1" /><stop offset=".18" stop-color="#ffe7a8" stop-opacity=".7" />
+            <stop offset=".55" stop-color="#ffd27a" stop-opacity=".18" /><stop offset="1" stop-color="#ffd27a" stop-opacity="0" /></radialGradient>
+          <radialGradient id="tail"><stop offset="0" stop-color="#ff4a4a" stop-opacity=".8" /><stop offset="1" stop-color="#ff4a4a" stop-opacity="0" /></radialGradient>
+          <linearGradient id="beamY" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#fff2c4" stop-opacity=".95" /><stop offset="1" stop-color="#fff2c4" stop-opacity=".15" /></linearGradient>
+          <linearGradient id="beamA" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#ffc24d" stop-opacity=".95" /><stop offset="1" stop-color="#ffc24d" stop-opacity=".1" /></linearGradient>
+          <linearGradient id="torso" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#07090c" /><stop offset=".55" stop-color="#191d24" /><stop offset="1" stop-color="#2c3038" /></linearGradient>
+          <marker id="arr" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="5" markerHeight="5" orient="auto"><path d="M0 0 L10 5 L0 10 Z" fill="#D8343A" /></marker>
+          <marker id="arrD" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="5" markerHeight="5" orient="auto"><path d="M0 0 L10 5 L0 10 Z" fill="#4a4f5a" /></marker>
+          <filter id="soft"><feGaussianBlur stdDeviation="3" /></filter>
+        </defs>
+      </svg>
+
+      <!-- outside: your car leaves town into the fog (seen from behind) -->
+      <div id="ext" class="clip full" data-start="0" data-duration="10.2" data-track-index="0">
+        <div id="extw" class="full">
+          <svg class="full" viewBox="0 0 1080 1920" width="1080" height="1920">
+            <rect width="1080" height="800" fill="url(#sky)" />
+            <rect y="780" width="1080" height="1140" fill="#0f161c" />
+            <g id="xrows" stroke="#1b252c" stroke-width="4"></g>
+            <!-- power poles along the road -->
+            <g id="xpoles" stroke="#0a0f14" stroke-width="6"></g>
+            <polygon points="525,780 555,780 900,1920 180,1920" fill="#22262c" />
+            <polygon points="526,780 529,780 220,1920 196,1920" fill="#cfd3d8" opacity=".55" />
+            <polygon points="551,780 554,780 884,1920 860,1920" fill="#cfd3d8" opacity=".45" />
+            <g id="xdash" fill="#e6e6e6" opacity=".7"></g>
+            <!-- fog: flat bank on the horizon + puffs -->
+            <rect y="600" width="1080" height="1320" fill="url(#fogv)" opacity=".8" />
+            <g id="xpuffs"></g>
+            <!-- your car, rear view, headlights into the fog -->
+            <g id="xcar" transform="translate(540 1330)">
+              <ellipse cx="0" cy="-330" rx="230" ry="260" fill="url(#lowg)" />
+              <polygon points="-90,-60 90,-60 160,-420 -160,-420" fill="#fff4d6" opacity=".12" />
+              <rect x="-150" y="-70" width="300" height="120" rx="26" fill="#11151c" />
+              <path d="M-110 -70 Q-95 -150 -60 -160 L60 -160 Q95 -150 110 -70 Z" fill="#0b0e14" />
+              <path d="M-90 -80 Q-80 -140 -54 -146 L54 -146 Q80 -140 90 -80 Z" fill="#2b3446" />
+              <rect x="-138" y="-40" width="58" height="22" rx="8" fill="#ff3b3b" /><rect x="80" y="-40" width="58" height="22" rx="8" fill="#ff3b3b" />
+              <circle cx="-109" cy="-29" r="60" fill="url(#tail)" /><circle cx="109" cy="-29" r="60" fill="url(#tail)" />
+              <rect x="-40" y="0" width="80" height="22" rx="4" fill="#cfd3d8" />
+              <rect x="-140" y="44" width="50" height="34" rx="8" fill="#06080b" /><rect x="90" y="44" width="50" height="34" rx="8" fill="#06080b" />
+            </g>
+            <rect y="0" width="1080" height="1920" fill="#c9d0d9" opacity=".08" />
+          </svg>
+        </div>
+      </div>
+
+      <!-- POV: driving in the fog (whole middle of the episode; cards sit on top of it, blurred) -->
+      <div id="drive" class="clip full" data-start="9.9" data-duration="86.4" data-track-index="1">
+        <div id="drivew" class="full">
+          <svg class="full" viewBox="0 0 1080 1920" width="1080" height="1920">
+            <rect width="1080" height="1000" fill="url(#sky)" />
+            <path id="dtrees" d="M0 1000 L0 960 Q40 930 80 955 Q120 920 170 950 Q220 935 260 960 L330 975 L400 990 L800 990 Q850 960 900 965 Q950 930 1000 958 Q1040 940 1080 950 L1080 1000 Z" fill="#1c2430" />
+            <rect y="990" width="1080" height="930" fill="#0e1418" />
+            <polygon points="585,1000 615,1000 1500,1920 -200,1920" fill="#23262b" />
+            <!-- low-beam pool on the road -->
+            <g id="lowb" opacity="0">
+              <ellipse cx="600" cy="1330" rx="620" ry="260" fill="url(#lowg)" />
+              <polygon points="150,1920 1050,1920 700,1120 500,1120" fill="#fff4d6" opacity=".08" />
+            </g>
+            <g id="fogl" opacity="0"><ellipse cx="600" cy="1300" rx="760" ry="120" fill="url(#ambg)" /></g>
+            <polygon id="edgeL" points="586,1000 590,1000 -110,1920 -170,1920" fill="#d9d9d9" opacity=".75" />
+            <polygon points="610,1000 614,1000 1470,1920 1410,1920" fill="#d9d9d9" opacity=".6" />
+            <g id="dashes" fill="#e8e8e8"></g>
+            <!-- street lamp on the left verge -->
+            <g id="lamp" opacity="0">
+              <line x1="330" y1="1110" x2="330" y2="700" stroke="#0b0e12" stroke-width="12" />
+              <path d="M330 706 Q360 680 410 690" fill="none" stroke="#0b0e12" stroke-width="9" />
+              <rect x="396" y="688" width="40" height="14" rx="5" fill="#0b0e12" />
+              <g id="burst" transform="translate(416 712)">
+                <circle r="210" fill="url(#halo)" />
+                <circle r="105" fill="none" stroke="#ffe7a8" stroke-width="10" opacity=".35" />
+                <g id="rays" stroke="#fff3cf" stroke-linecap="round"></g>
+                <circle r="16" fill="#fffaf0" />
+              </g>
+            </g>
+            <!-- fog: bank + drifting puffs -->
+            <rect id="fogbase" y="0" width="1080" height="1920" fill="url(#fogv)" opacity=".85" />
+            <g id="puffs"></g>
+            <!-- the shape on the road, far (pale, low contrast; drawn over the fog bank so it reads as a faint grey shape) -->
+            <g id="fig" opacity="0" transform="translate(604 1062) scale(1.25)">
+              <g id="figs" fill="#4b535f">
+                <ellipse cx="0" cy="-108" rx="13" ry="16" />
+                <path d="M-18 -90 Q0 -96 18 -90 L22 -36 L14 0 L5 0 L2 -40 L-2 -40 L-5 0 L-14 0 L-22 -36 Z" />
+                <path d="M-18 -88 L-26 -40 L-21 -40 L-14 -78 Z" /><path d="M18 -88 L26 -40 L21 -40 L14 -78 Z" />
+              </g>
+            </g>
+            <!-- high beams into fog = white wall -->
+            <rect id="wall" y="330" width="1080" height="1100" fill="url(#wallg)" opacity="0" />
+            <g id="look" opacity="0">
+              <polygon points="586,1000 590,1000 -110,1920 -170,1920" fill="#F5C84C" />
+              <g transform="translate(300 1450)"><circle id="gaze" r="44" fill="none" stroke="#F5C84C" stroke-width="6" stroke-dasharray="9 9" /><circle r="9" fill="#F5C84C" /></g>
+            </g>
+            <!-- it, at the bumper (twist) -->
+            <g id="near" opacity="0">
+              <ellipse cx="560" cy="1240" rx="420" ry="210" fill="url(#lowg)" />
+              <path d="M330 1420 Q330 1000 420 930 Q490 890 560 890 Q630 890 700 930 Q790 1000 790 1420 Z" fill="url(#torso)" />
+              <path d="M330 1420 Q300 1180 360 990 L390 1000 Q350 1200 380 1420 Z" fill="#0d1014" /><path d="M790 1420 Q820 1180 760 990 L730 1000 Q770 1200 740 1420 Z" fill="#0d1014" />
+              <ellipse cx="560" cy="760" rx="110" ry="140" fill="#07090c" />
+              <g id="eyes" opacity="0"><ellipse cx="520" cy="760" rx="16" ry="9" fill="#e8eef5" /><ellipse cx="600" cy="760" rx="16" ry="9" fill="#e8eef5" />
+                <circle cx="520" cy="760" r="4" fill="#07090c" /><circle cx="600" cy="760" r="4" fill="#07090c" /></g>
+            </g>
+            <!-- cabin frame -->
+            <path d="M0 0 L1080 0 L1080 330 Q540 300 0 330 Z" fill="#0b0d12" />
+            <path d="M0 330 L70 330 L-60 1400 L0 1400 Z" fill="#0b0d12" /><path d="M1080 330 L1010 330 L1140 1400 L1080 1400 Z" fill="#0b0d12" />
+            <path d="M0 1340 Q540 1250 1080 1340 L1080 1920 L0 1920 Z" fill="#14171e" />
+            <path d="M0 1340 Q540 1250 1080 1340" fill="none" stroke="#2a2f3a" stroke-width="10" />
+            <g transform="translate(790 1560)"><circle r="250" fill="none" stroke="#08090c" stroke-width="56" /><rect x="-40" y="-20" width="80" height="320" fill="#08090c" /></g>
+            <g opacity=".85"><circle id="iHigh" cx="600" cy="1385" r="10" fill="#4a8cff" opacity="0" /><circle id="iLow" cx="640" cy="1385" r="10" fill="#41996E" /><circle id="iFog" cx="680" cy="1385" r="10" fill="#F5A623" opacity="0" /></g>
+            <rect x="530" y="300" width="20" height="60" fill="#0b0d12" />
+            <rect x="390" y="350" width="300" height="110" rx="30" fill="#0b0d12" />
+            <rect x="402" y="362" width="276" height="86" rx="22" fill="#2a3240" />
+          </svg>
+        </div>
+        <div id="pslow" class="pill" style="left:56px;opacity:0"><i>1</i>ขับช้าลง</div>
+        <div id="pgap" class="pill" style="left:330px;opacity:0"><i>2</i>เว้นระยะ</div>
+        <div id="pedge" class="pill" style="left:600px;opacity:0"><i>3</i>มองเส้นขอบซ้าย</div>
+      </div>
+
+      <!-- card 1: high vs low beams in fog -->
+      <div id="c1" class="clip card" data-start="14.7" data-duration="13.2" data-track-index="2">
+        <div class="ttl">ในหมอก ใช้ไฟแบบไหน</div>
+        <svg class="layer" style="left:0;top:0" viewBox="0 0 906 640" width="906" height="640">
+          <g transform="translate(30 90)">
+            <rect width="408" height="380" rx="16" fill="#1d2433" />
+            <g id="dropsL"></g>
+            <rect y="318" width="408" height="62" fill="#2a2f3a" />
+            <polygon id="hbeam" points="250,262 408,120 408,300" fill="url(#beamY)" opacity=".85" />
+            <rect id="hwall" x="300" y="110" width="108" height="200" fill="#eef1f4" opacity=".55" />
+            <g class="car"><path d="M20 312 L28 270 L80 260 L112 230 L186 230 L218 262 L250 270 L254 312 Z" fill="#8a93a6" /><path d="M120 238 L180 238 L204 262 L104 262 Z" fill="#2b3446" />
+              <circle cx="70" cy="314" r="20" fill="#0b0d12" /><circle cx="200" cy="314" r="20" fill="#0b0d12" /><rect x="244" y="266" width="10" height="12" rx="3" fill="#fff2c4" /></g>
+            <g id="ret" fill="none" stroke="#D8343A" stroke-width="6" stroke-linecap="round" marker-end="url(#arr)">
+              <path d="M330 150 Q260 170 205 236" /><path d="M350 210 Q280 215 214 244" /><path d="M335 270 Q270 260 222 252" />
+            </g>
+          </g>
+          <g transform="translate(468 90)">
+            <rect width="408" height="380" rx="16" fill="#1d2433" />
+            <g id="dropsR"></g>
+            <rect y="318" width="408" height="62" fill="#2a2f3a" />
+            <polygon points="250,268 408,312 408,330 300,322" fill="url(#beamY)" opacity=".85" />
+            <rect x="260" y="324" width="148" height="6" fill="#f2f2f2" />
+            <polygon id="fbeam" points="250,292 408,322 408,342 260,300" fill="url(#beamA)" opacity="0" />
+            <g class="car"><path d="M20 312 L28 270 L80 260 L112 230 L186 230 L218 262 L250 270 L254 312 Z" fill="#8a93a6" /><path d="M120 238 L180 238 L204 262 L104 262 Z" fill="#2b3446" />
+              <circle cx="70" cy="314" r="20" fill="#0b0d12" /><circle cx="200" cy="314" r="20" fill="#0b0d12" /><rect x="244" y="268" width="10" height="10" rx="3" fill="#fff2c4" />
+              <rect id="fdot" x="246" y="290" width="9" height="7" rx="2" fill="#ffc24d" opacity="0" /></g>
+          </g>
+        </svg>
+        <div class="lbl" style="left:30px;top:488px;width:408px;color:#C0392B">✕ ไฟสูง<br><span style="font-weight:500;font-size:26px;color:#555a63">แสงสะท้อนกลับเข้าตา</span></div>
+        <div class="lbl" style="left:468px;top:488px;width:408px;color:#2f8a57">✓ ไฟต่ำ<br><span id="fogtxt" style="font-weight:500;font-size:26px;color:#555a63">ส่องต่ำลงบนถนน</span></div>
+      </div>
+
+      <!-- card 2: fog lowers contrast -> looks farther -->
+      <div id="c2" class="clip card" data-start="33.6" data-duration="5.5" data-track-index="3">
+        <div class="ttl">หมอกหลอกระยะ</div>
+        <svg class="layer" style="left:0;top:0" viewBox="0 0 906 640" width="906" height="640">
+          <g transform="translate(30 90)">
+            <rect width="408" height="380" rx="16" fill="#26314a" />
+            <rect y="150" width="408" height="230" fill="#141a20" />
+            <polygon points="196,150 212,150 380,380 28,380" fill="#3a3f47" />
+            <g transform="translate(204 262)" fill="#05070a"><ellipse cx="0" cy="-62" rx="9" ry="11" /><path d="M-12 -50 L12 -50 L15 -20 L9 0 L3 0 L1 -22 L-1 -22 L-3 0 L-9 0 L-15 -20 Z" /></g>
+          </g>
+          <g transform="translate(468 90)">
+            <rect width="408" height="380" rx="16" fill="#26314a" />
+            <rect y="150" width="408" height="230" fill="#141a20" />
+            <polygon points="196,150 212,150 380,380 28,380" fill="#3a3f47" />
+            <g transform="translate(204 262)" fill="#05070a"><ellipse cx="0" cy="-62" rx="9" ry="11" /><path d="M-12 -50 L12 -50 L15 -20 L9 0 L3 0 L1 -22 L-1 -22 L-3 0 L-9 0 L-15 -20 Z" /></g>
+            <rect width="408" height="380" rx="16" fill="#cfd5dd" opacity=".72" />
+            <g id="ghost" opacity="0">
+              <g transform="translate(204 186) scale(.55)" fill="none" stroke="#C0392B" stroke-width="5" stroke-dasharray="8 6"><ellipse cx="0" cy="-62" rx="9" ry="11" /><path d="M-12 -50 L12 -50 L15 -20 L9 0 L3 0 L1 -22 L-1 -22 L-3 0 L-9 0 L-15 -20 Z" /></g>
+              <path d="M240 230 Q270 200 232 176" fill="none" stroke="#C0392B" stroke-width="5" marker-end="url(#arr)" />
+              <text x="204" y="132" text-anchor="middle" font-family="Anuphan" font-size="26" font-weight="700" fill="#C0392B">สมองคิดว่าอยู่ตรงนี้</text>
+            </g>
+          </g>
+        </svg>
+        <div class="lbl" style="left:30px;top:488px;width:408px">อากาศใส<br><span style="font-weight:500;font-size:26px;color:#555a63">ตัดกันชัด</span></div>
+        <div class="lbl" style="left:468px;top:488px;width:408px">ในหมอก<br><span style="font-weight:500;font-size:26px;color:#C0392B">จาง → ดูไกลกว่าจริง</span></div>
+      </div>
+
+      <!-- card 3: halos around lights -->
+      <div id="c3" class="clip card" data-start="49.2" data-duration="12.8" data-track-index="4">
+        <div class="ttl" id="c3t">แสงฟุ้งรอบดวงไฟ</div>
+        <div id="c3a" class="layer" style="left:0;top:0;width:906px;height:640px">
+          <svg class="layer" style="left:0;top:0" viewBox="0 0 906 640" width="906" height="640">
+            <g transform="translate(30 90)">
+              <rect width="408" height="380" rx="16" fill="#3a4250" />
+              <rect width="408" height="380" rx="16" fill="#aab3bf" opacity=".35" />
+              <line x1="204" y1="380" x2="204" y2="190" stroke="#0b0e12" stroke-width="10" />
+              <g transform="translate(204 180)"><circle r="110" fill="url(#halo)" /><circle r="12" fill="#fffaf0" /></g>
+            </g>
+            <g id="clear" transform="translate(468 90)" opacity=".15">
+              <rect width="408" height="380" rx="16" fill="#0e1524" />
+              <g id="cstars" fill="#dfe6ff"></g>
+              <line x1="204" y1="380" x2="204" y2="190" stroke="#05070a" stroke-width="10" />
+              <g transform="translate(204 180)"><circle r="100" fill="url(#halo)" /><circle r="62" fill="none" stroke="#ffe7a8" stroke-width="8" opacity=".45" />
+                <g id="crays" stroke="#fff3cf" stroke-linecap="round"></g><circle r="12" fill="#fffaf0" /></g>
+            </g>
+          </svg>
+          <div class="lbl" style="left:30px;top:488px;width:408px;color:#2f8a57">คืนหมอก<br><span style="font-weight:500;font-size:26px;color:#555a63">ฟุ้งแบบนี้ ปกติ</span></div>
+          <div id="clbl" class="lbl" style="left:468px;top:488px;width:408px;color:#C0392B;opacity:0">คืนฟ้าโปร่ง<br><span style="font-weight:500;font-size:26px;color:#555a63">ยังฟุ้ง ยังเป็นแฉก = เช็กตา</span></div>
+        </div>
+        <div id="c3b" class="layer" style="left:0;top:0;width:906px;height:640px;opacity:0">
+          <div class="row" id="r1" style="top:110px"><i>1</i><span>สายตาสั้น <small>ที่ยังไม่ได้แก้</small></span></div>
+          <div class="row" id="r2" style="top:220px"><i>2</i><span>สายตาเอียง <small>ที่ยังไม่ได้แก้</small></span></div>
+          <div class="row" id="r3" style="top:330px"><i>3</i><span>ต้อกระจก <small>ในผู้สูงอายุ</small></span></div>
+          <div id="go" class="layer" style="left:50px;top:470px;height:96px;padding:0 36px;border-radius:48px;background:#2f8a57;color:#fff;font:600 42px/96px 'Prompt'">→ ไปตรวจตา</div>
+        </div>
+      </div>
+
+      <!-- astigmatism dial for the viewer -->
+      <div id="test" class="clip full" data-start="62.0" data-duration="22.1" data-track-index="5">
+        <h2>เช็กสายตาเอียง</h2>
+        <div class="ins">ใส่แว่นถ้ามี · ปิดตาข้างหนึ่ง · มองจุดตรงกลาง</div>
+        <svg class="layer" style="left:150px;top:440px" viewBox="-400 -400 800 800" width="780" height="780">
+          <circle r="398" fill="#fff" stroke="#d6cfc0" stroke-width="4" />
+          <g id="spokes" stroke="#000" stroke-linecap="butt"></g>
+          <g id="nums" font-family="Prompt" font-weight="600" font-size="36" fill="#1d2433" text-anchor="middle"></g>
+          <circle r="11" fill="#000" />
+        </svg>
+        <div class="eye" id="eye"><span id="eyet">ปิดตาซ้าย · มองจุดกลาง</span><b id="cd">4</b></div>
+        <div class="res" id="res">อาจเป็นสายตาเอียง → ไปตรวจกับนักทัศนมาตร</div>
+        <div class="bar"><i id="bar"></i></div>
+        <div class="note">เช็กเบื้องต้นเท่านั้น ไม่แทนการตรวจตา</div>
+      </div>
+
+      <!-- chips -->
+      <div id="clock" class="chip clip" data-start="0.3" data-duration="95.9" data-track-index="20" style="left:56px">
+        <svg viewBox="-24 -24 48 48" width="46" height="46"><circle r="19" fill="none" stroke="#1d2433" stroke-width="4" /><path d="M0 -10 L0 0 L8 6" fill="none" stroke="#1d2433" stroke-width="4" stroke-linecap="round" /></svg>
+        <div><small>เวลา</small><b id="clockt">04:50</b></div>
+      </div>
+      <div id="spd" class="chip clip" data-start="0.3" data-duration="95.9" data-track-index="21" style="left:322px">
+        <svg viewBox="-24 -24 48 48" width="46" height="46"><path d="M-19 8 A20 20 0 1 1 19 8" fill="none" stroke="#1d2433" stroke-width="4" stroke-linecap="round" /><path id="needle" d="M0 4 L12 -10" stroke="#C0392B" stroke-width="4" stroke-linecap="round" /></svg>
+        <div><small>กม./ชม.</small><b id="spdt">70</b></div>
+      </div>
+
+      <!-- subtitles (cue + phrase times from ../audio/timing.json) -->
+      <div class="sub clip"   data-start="0.54"  data-duration="4.2"  data-track-index="30">ตีสี่ห้าสิบ คุณหนีออกมาได้<br>ขับรถออกจากเมือง</div>
+      <div class="sub clip"   data-start="4.97"  data-duration="4.8"  data-track-index="30">ถนนเส้นเล็กกลางทุ่ง<br>หมอกลงหนา จนแทบมองไม่เห็นทาง</div>
+      <div class="sub clip"   data-start="9.96"  data-duration="4.5"  data-track-index="30">คุณเปิดไฟสูง แต่ข้างหน้า<br>กลับกลายเป็นกำแพงสีขาว</div>
+      <div class="sub y clip" data-start="14.81" data-duration="4.3"  data-track-index="30">กฎข้อแรก ในหมอก<br>ใช้ไฟต่ำ อย่าใช้ไฟสูง</div>
+      <div class="sub clip"   data-start="19.32" data-duration="4.03" data-track-index="30">แสงไฟสูงกระทบละอองน้ำ<br>แล้วสะท้อนกลับเข้าตาคุณ</div>
+      <div class="sub clip"   data-start="23.42" data-duration="1.55" data-track-index="30">ยิ่งมองเห็นน้อยลง</div>
+      <div class="sub y clip" data-start="25.12" data-duration="2.65" data-track-index="30">ถ้ารถมีไฟตัดหมอก ให้เปิดด้วย</div>
+      <div class="sub clip"   data-start="28.21" data-duration="2.7"  data-track-index="30">คุณลดไฟลง<br>แล้วไกลออกไปในหมอก</div>
+      <div class="sub r clip" data-start="30.99" data-duration="2.55" data-track-index="30"><span>มีเงาดำ ยืนอยู่กลางถนน</span></div>
+      <div class="sub y clip" data-start="33.88" data-duration="2.85" data-track-index="30">กฎข้อสอง<br>หมอกทำให้ภาพจางลง</div>
+      <div class="sub y clip" data-start="36.8"  data-duration="2.15" data-track-index="30">ทุกอย่างจึงดูไกล<br>กว่าที่เป็นจริง</div>
+      <div class="sub y clip" data-start="39.12" data-duration="5.35" data-track-index="30">ขับให้ช้าลง เว้นระยะให้มากขึ้น<br>แล้วมองเส้นขอบถนนด้านซ้ายไว้</div>
+      <div class="sub clip"   data-start="44.87" data-duration="4.25" data-track-index="30">เสาไฟข้างทาง มีวงแสงฟุ้ง<br>และแสงแตกเป็นแฉก</div>
+      <div class="sub clip"   data-start="49.29" data-duration="2.1"  data-track-index="30">ในหมอก แบบนี้เป็นเรื่องปกติ</div>
+      <div class="sub y clip" data-start="51.47" data-duration="2.8"  data-track-index="30">แต่ถ้าคืนฟ้าโปร่ง<br>คุณก็ยังเห็นแบบนี้</div>
+      <div class="sub y clip" data-start="54.45" data-duration="3.8"  data-track-index="30">อาจเป็นสายตาสั้น หรือสายตาเอียง<br>ที่ยังไม่ได้แก้</div>
+      <div class="sub clip"   data-start="58.44" data-duration="2.15" data-track-index="30">ในผู้สูงอายุ อาจเป็นต้อกระจก</div>
+      <div class="sub y clip" data-start="60.66" data-duration="1.3"  data-track-index="30">ควรไปตรวจตา</div>
+      <div class="sub dk clip" data-start="62.32" data-duration="5.75" data-track-index="30">ลองเช็กสายตาเอียงตอนนี้<br>ใส่แว่นถ้ามี ปิดตาข้างหนึ่ง แล้วมองจุดตรงกลาง</div>
+      <div class="sub dk clip" data-start="72.25" data-duration="1.6"  data-track-index="30">สลับ ปิดอีกข้าง</div>
+      <div class="sub dk clip" data-start="77.99" data-duration="2.8"  data-track-index="30">ถ้ามีบางเส้น<br>ดูเข้มหรือคมกว่าเส้นอื่น</div>
+      <div class="sub dk rd clip" data-start="80.85" data-duration="3.0" data-track-index="30">อาจเป็นสายตาเอียง<br>ไปให้นักทัศนมาตรตรวจ</div>
+      <div class="sub clip"   data-start="84.39" data-duration="4.0"  data-track-index="30">คุณกลับมามองถนน ขับช้าๆ<br>เงานั้นยังดูอยู่ไกล</div>
+      <div class="sub clip"   data-start="88.74" data-duration="2.5"  data-track-index="30">แต่คุณลืมไปแล้ว<br>ว่าหมอกหลอกระยะ</div>
+      <div class="sub r clip" data-start="91.77" data-duration="1.55" data-track-index="30"><span>มันไม่ได้อยู่ไกลเลย</span></div>
+      <div class="sub r clip" data-start="93.45" data-duration="2.7"  data-track-index="30"><span>มันยืนอยู่<br>ตรงหน้ากันชนคุณ</span></div>
+
+      <div id="next" class="clip full" data-start="96.3" data-duration="3.6" data-track-index="40">
+        <div class="np">ตอนต่อไป · ตอนจบซีซั่น</div>
+        <h1>คืนสุดท้าย</h1>
+        <div class="rl"></div>
+        <div class="s1">EP.10 เร็วๆ นี้</div>
+        <div class="s2">กดติดตาม แล้วไปรอดด้วยกัน</div>
+      </div>
+      <div id="end" class="clip full" data-start="99.6" data-duration="3.12" data-track-index="41">
+        <img src="assets/timeoptic-white-spaced.svg" alt="TIMEOPTIC" />
+        <p>ดูแลสายตา ให้มองเห็นในวันที่สำคัญ</p>
+      </div>
+    </div>
+
+    <script>
+      let seed = 9; const rnd = () => (seed = (seed * 16807) % 2147483647) / 2147483647;
+      const NS = 'http://www.w3.org/2000/svg';
+      const el = (tag, attrs, parent) => { const e = document.createElementNS(NS, tag); for (const k in attrs) e.setAttribute(k, attrs[k]); parent && parent.appendChild(e); return e; };
+
+      // outside: field rows, poles, dashes, fog puffs
+      const xrows = document.getElementById('xrows');
+      for (let i = -14; i <= 14; i++) { if (Math.abs(i) < 2) continue; el('line', { x1: 540 + i * 20, y1: 790, x2: 540 + i * 260, y2: 1920 }, xrows); }
+      const xpoles = document.getElementById('xpoles');
+      [[0.06, 1], [0.16, 1], [0.34, 1], [0.7, 1]].forEach(([d]) => { const y = 790 + 1130 * d, x = 525 - (525 - 150) * d - 30, h = 40 + 900 * d;
+        el('line', { x1: x, y1: y, x2: x, y2: y - h, 'stroke-width': 2 + 14 * d }, xpoles); el('line', { x1: x - 30 * (.3 + d), y1: y - h + 10, x2: x + 30 * (.3 + d), y2: y - h + 10, 'stroke-width': 2 + 8 * d }, xpoles); });
+      const xdash = document.getElementById('xdash');
+      for (let i = 0; i < 8; i++) { const d0 = Math.pow(i / 8, 2), d1 = Math.pow((i + .45) / 8, 2), y0 = 780 + 1140 * d0, y1 = 780 + 1140 * d1;
+        el('polygon', { points: `${540 - 1 - 10 * d0},${y0} ${540 + 1 + 10 * d0},${y0} ${540 + 1 + 10 * d1},${y1} ${540 - 1 - 10 * d1},${y1}` }, xdash); }
+      const mkPuffs = (g, n, y0, y1) => { for (let i = 0; i < n; i++) el('ellipse', { cx: rnd() * 1300 - 110, cy: y0 + rnd() * (y1 - y0), rx: 260 + rnd() * 260, ry: 70 + rnd() * 80, fill: 'url(#puff)', class: 'pf' }, g); };
+      mkPuffs(document.getElementById('xpuffs'), 9, 620, 1500);
+      mkPuffs(document.getElementById('puffs'), 10, 760, 1350);
+      // lamp starburst rays (fixed, uneven lengths) + small version on the card
+      const rays = (g, n, r0, r1, w) => { for (let i = 0; i < n; i++) { const a = i / n * Math.PI * 2 + .2, L = r0 + rnd() * (r1 - r0);
+        el('line', { x1: Math.cos(a) * 20, y1: Math.sin(a) * 20, x2: Math.cos(a) * L, y2: Math.sin(a) * L, 'stroke-width': w * (.6 + rnd() * .6), opacity: .35 + rnd() * .4 }, g); } };
+      rays(document.getElementById('rays'), 14, 110, 240, 5);
+      rays(document.getElementById('crays'), 12, 70, 140, 4);
+      const cst = document.getElementById('cstars'); for (let i = 0; i < 26; i++) el('circle', { cx: 20 + rnd() * 370, cy: 20 + rnd() * 140, r: 1 + rnd() * 2, opacity: .4 + rnd() * .5 }, cst);
+      // droplets in the card panels: lit inside the beam
+      const drops = (g, inBeam) => { for (let i = 0; i < 70; i++) { const x = 20 + rnd() * 380, y = 20 + rnd() * 290;
+        el('circle', { cx: x, cy: y, r: 2 + rnd() * 2.5, fill: '#fff', opacity: inBeam(x, y) ? .85 : .15 }, g); } };
+      drops(document.getElementById('dropsL'), (x, y) => x > 255 && y > 262 - (x - 250) * .9 && y < 262 + (x - 250) * .25);
+      drops(document.getElementById('dropsR'), (x, y) => x > 255 && y > 268 + (x - 250) * .28 && y < 330);
+      // astigmatism dial: 12 directions (every 15 deg) through the centre, each a group of 3 parallel lines
+      const spokes = document.getElementById('spokes');
+      for (let k = 0; k < 12; k++) { const a = k * Math.PI / 12, c = Math.cos(a), s = Math.sin(a), g = el('g', { class: 'dir', 'data-k': k }, spokes);
+        for (const sgn of [1, -1]) for (const o of [-10, 0, 10]) { const r0 = 92, r1 = 330;
+          el('line', { x1: sgn * c * r0 - s * o, y1: sgn * s * r0 + c * o, x2: sgn * c * r1 - s * o, y2: sgn * s * r1 + c * o, 'stroke-width': 4.5 }, g); } }
+      const nums = document.getElementById('nums');
+      for (let h = 1; h <= 12; h++) { const a = (h / 12) * Math.PI * 2 - Math.PI / 2; el('text', { x: Math.cos(a) * 366, y: Math.sin(a) * 366 + 13 }, nums).textContent = h; }
+
+      // road dashes in perspective (centre line), driven by a distance value
+      const dashes = document.getElementById('dashes'), N = 9, dq = [];
+      for (let i = 0; i < N; i++) dq.push(el('polygon', {}, dashes));
+      const drawRoad = t => { for (let i = 0; i < N; i++) { const d = ((i / N) + t) % 1, s = Math.pow(d, 2.4);
+        const y0 = 1000 + 920 * s, y1 = 1000 + 920 * Math.min(1, Math.pow(d + .045, 2.4)), x = u => 600 + (650 - 600) * ((u - 1000) / 920);
+        const w0 = 1 + 16 * s, w1 = 1 + 16 * Math.min(1, Math.pow(d + .045, 2.4));
+        dq[i].setAttribute('points', `${x(y0) - w0},${y0} ${x(y0) + w0},${y0} ${x(y1) + w1},${y1} ${x(y1) - w1},${y1}`); } };
+      drawRoad(0);
+
+      // ---------- timeline ----------
+      window.__timelines = window.__timelines || {};
+      const tl = gsap.timeline({ paused: true });
+      document.querySelectorAll('.sub').forEach(s => tl.fromTo(s, { opacity: 0, y: 14 }, { opacity: 1, y: 0, duration: .25, ease: 'power2.out' }, parseFloat(s.dataset.start)));
+      const count = (target, from, to, t, d, fmt, ease = 'none') => { const o = { v: from };
+        tl.fromTo(o, { v: from }, { v: to, duration: d, ease, onUpdate: () => target.textContent = fmt(o.v) }, t); };
+      const blur = (t, on) => tl.to('#drivew', { filter: on ? 'blur(14px) brightness(.55)' : 'blur(0px) brightness(1)', duration: .4, ease: 'sine.inOut' }, t);
+      const cardIn = (id, t) => tl.fromTo(id, { opacity: 0, y: 40 }, { opacity: 1, y: 0, duration: .4, ease: 'power2.out' }, t);
+      count(document.getElementById('clockt'), 50, 54.8, 0.3, 95.9, v => '04:' + String(Math.floor(v)).padStart(2, '0'));
+      // speed: 70 -> 60 in the white wall -> 30 on rule 2 -> stop at the brake
+      const sp = document.getElementById('spdt'), needle = document.getElementById('needle');
+      const setSpd = v => { sp.textContent = Math.round(v); const a = (-200 + v / 100 * 220) * Math.PI / 180; needle.setAttribute('d', `M0 4 L${(Math.cos(a) * 15).toFixed(1)} ${(4 + Math.sin(a) * 15).toFixed(1)}`); };
+      const spo = { v: 70 }; setSpd(70);
+      const spd = (to, t, d, ease = 'power1.inOut') => tl.to(spo, { v: to, duration: d, ease, onUpdate: () => setSpd(spo.v) }, t);
+      spd(60, 11.0, 2.0); spd(30, 39.2, 2.6); spd(0, 91.75, 1.1, 'power3.out');
+      // road motion (distance), slower after rule 2, stops at the brake
+      const rd = { v: 0 }; const roll = (from, to, t, d, ease = 'none') => tl.fromTo(rd, { v: from }, { v: to, duration: d, ease, onUpdate: () => drawRoad(rd.v) }, t);
+      roll(0, 12, 9.9, 29.3); roll(12, 15.6, 39.2, 2.6, 'power1.out'); roll(15.6, 30, 41.8, 49.9); roll(30, 30.5, 91.7, 1.0, 'power3.out');
+
+      // outside
+      tl.fromTo('#extw', { scale: 1.08, transformOrigin: '540px 1100px' }, { scale: 1.22, duration: 10.2, ease: 'sine.inOut' }, 0);
+      tl.fromTo('#xcar', { attr: { transform: 'translate(540 1420) scale(1.05)' } }, { attr: { transform: 'translate(540 1060) scale(.62)' }, duration: 10.2, ease: 'sine.in' }, 0);
+      tl.fromTo('#xpuffs', { x: 0 }, { x: -120, duration: 10.2, ease: 'none' }, 0);
+      tl.to('#ext', { opacity: 0, duration: .4 }, 9.8);
+
+      // POV: high beams = white wall
+      tl.fromTo('#drive', { opacity: 0 }, { opacity: 1, duration: .4 }, 9.9);
+      tl.fromTo('#drivew', { scale: 1.06, transformOrigin: '600px 1000px' }, { scale: 1, duration: 4.6, ease: 'sine.out' }, 9.9);
+      tl.fromTo('#puffs', { x: 0 }, { x: -260, duration: 86, ease: 'none' }, 9.9);
+      tl.set('#iHigh', { opacity: 1 }, 10.6); tl.set('#iLow', { opacity: 0 }, 10.6);
+      tl.fromTo('#wall', { opacity: 0 }, { opacity: .96, duration: .5, ease: 'power2.out' }, 10.6);
+      blur(14.6, true);
+      // card 1
+      cardIn('#c1', 14.7);
+      tl.fromTo('#hwall', { opacity: 0 }, { opacity: .55, duration: .6 }, 19.4);
+      tl.fromTo('#ret path', { strokeDasharray: 200, strokeDashoffset: 200 }, { strokeDashoffset: 0, duration: .8, stagger: .2, ease: 'power2.out' }, 21.5);
+      tl.fromTo('#fbeam', { opacity: 0 }, { opacity: .9, duration: .5 }, 25.2); tl.fromTo('#fdot', { opacity: 0 }, { opacity: 1, duration: .3 }, 25.2);
+      tl.set('#fogtxt', { textContent: 'ส่องต่ำลงบนถนน' }, 0); tl.set('#fogtxt', { textContent: '+ ไฟตัดหมอก (ถ้ามี)' }, 25.2);
+      tl.to('#c1', { opacity: 0, duration: .3 }, 27.6);
+      blur(27.7, false);
+      // low beams on: the wall drops, road returns; far shape appears
+      tl.set('#iHigh', { opacity: 0 }, 28.3); tl.set('#iLow', { opacity: 1 }, 28.3); tl.set('#iFog', { opacity: 1 }, 28.3);
+      tl.to('#wall', { opacity: 0, duration: .8, ease: 'power2.in' }, 28.3);
+      tl.fromTo('#lowb', { opacity: 0 }, { opacity: 1, duration: .6 }, 28.4); tl.fromTo('#fogl', { opacity: 0 }, { opacity: 1, duration: .6 }, 28.5);
+      tl.fromTo('#drivew', { scale: 1 }, { scale: 1.12, duration: 5, ease: 'sine.inOut' }, 28.6);
+      tl.set('#fig', { opacity: 0 }, 0);
+      tl.fromTo('#fig', { opacity: 0 }, { opacity: .8, duration: 1.4, ease: 'sine.in' }, 30.9);
+      blur(33.5, true);
+      // card 2
+      cardIn('#c2', 33.6);
+      tl.fromTo('#ghost', { opacity: 0 }, { opacity: 1, duration: .5 }, 36.9);
+      tl.to('#c2', { opacity: 0, duration: .3 }, 38.8);
+      blur(39.0, false);
+      tl.to('#drivew', { scale: 1, duration: 1.2, ease: 'sine.inOut' }, 39.0);
+      // slow down, keep a gap, look at the left edge line
+      [['#pslow', 39.15], ['#pgap', 40.45], ['#pedge', 42.1]].forEach(([id, t]) => tl.fromTo(id, { opacity: 0, y: 14 }, { opacity: 1, y: 0, duration: .3, ease: 'back.out(2)' }, t));
+      tl.fromTo('#look', { opacity: 0 }, { opacity: .85, duration: .4 }, 42.1);
+      tl.fromTo('#gaze', { attr: { r: 30 } }, { attr: { r: 52 }, duration: .6, yoyo: true, repeat: 3, ease: 'sine.inOut' }, 42.2);
+      tl.to('#look, #pslow, #pgap, #pedge', { opacity: 0, duration: .4 }, 44.4);
+      // street lamp: halo and starburst, approaching
+      tl.fromTo('#lamp', { opacity: 0 }, { opacity: 1, duration: .8 }, 44.8);
+      tl.fromTo('#drivew', { scale: 1, transformOrigin: '600px 1000px' }, { scale: 1.18, transformOrigin: '420px 760px', duration: 4.4, ease: 'sine.inOut' }, 44.8);
+      tl.fromTo('#burst', { attr: { transform: 'translate(416 712) scale(.8)' } }, { attr: { transform: 'translate(416 712) scale(1.05)' }, duration: 4.4, ease: 'sine.inOut' }, 44.8);
+      tl.fromTo('#rays', { rotation: 0, svgOrigin: '0 0' }, { rotation: 8, duration: 4.4, ease: 'none' }, 44.8);
+      blur(49.1, true);
+      // card 3
+      cardIn('#c3', 49.2);
+      tl.to('#clear', { opacity: 1, duration: .5 }, 51.5); tl.fromTo('#clbl', { opacity: 0 }, { opacity: 1, duration: .4 }, 51.6);
+      tl.to('#c3a', { opacity: 0, duration: .3 }, 54.2);
+      tl.set('#c3t', { textContent: 'แสงฟุ้งรอบดวงไฟ' }, 0); tl.set('#c3t', { textContent: 'คืนฟ้าโปร่งยังฟุ้ง อาจเป็น…' }, 54.35);
+      tl.fromTo('#c3b', { opacity: 0 }, { opacity: 1, duration: .3 }, 54.35);
+      [['#r1', 54.45], ['#r2', 55.87], ['#r3', 58.45], ['#go', 60.68]].forEach(([id, t]) => tl.fromTo(id, { opacity: 0, x: -20 }, { opacity: 1, x: 0, duration: .35, ease: 'power2.out' }, t));
+      tl.to('#c3', { opacity: 0, duration: .3 }, 61.7);
+      // astigmatism dial (static; only the pill, countdown and bar change)
+      tl.fromTo('#test', { opacity: 0 }, { opacity: 1, duration: .4 }, 62.0);
+      tl.set('#lamp', { opacity: 0 }, 62.5); tl.set('#drivew', { scale: 1, transformOrigin: '600px 1000px' }, 62.5);
+      tl.set('#eyet', { textContent: 'ปิดตาซ้าย · มองจุดกลาง' }, 0); tl.set('#eyet', { textContent: 'ปิดตาขวา · มองจุดกลาง' }, 72.3);
+      tl.fromTo('#eye', { opacity: .35 }, { opacity: 1, duration: .3 }, 65.45);
+      count(document.getElementById('cd'), 3.999, 0.001, 67.9, 4.3, v => String(Math.ceil(v)));
+      count(document.getElementById('cd'), 3.999, 0.001, 73.65, 4.3, v => String(Math.ceil(v)));
+      tl.fromTo('#bar', { scaleX: 0 }, { scaleX: 1, duration: 4.3, ease: 'none' }, 67.9);
+      tl.set('#bar', { scaleX: 0 }, 72.25);
+      tl.fromTo('#bar', { scaleX: 0 }, { scaleX: 1, duration: 4.3, ease: 'none', immediateRender: false }, 73.65);
+      tl.fromTo('#eye', { scale: 1 }, { scale: 1.08, duration: .2, yoyo: true, repeat: 1 }, 72.25);
+      // after the test: example of what astigmatism looks like (one direction darker), then the advice
+      tl.to('#eye, .bar', { opacity: 0, duration: .3 }, 78.0);
+      tl.to('#spokes .dir:not([data-k="6"])', { opacity: .45, duration: .5 }, 78.2);
+      tl.to('#spokes .dir[data-k="6"] line', { attr: { 'stroke-width': 8 }, duration: .5 }, 78.2);
+      tl.fromTo('#res', { opacity: 0 }, { opacity: 1, duration: .4 }, 80.9);
+      tl.to('#test', { opacity: 0, duration: .4 }, 83.7);
+      // back on the road: slow, the shape still "far" (pale), creeping closer
+      blur(83.8, false);
+      tl.set('#iHigh', { opacity: 0 }, 83.8);
+      tl.fromTo('#fig', { opacity: .8, attr: { transform: 'translate(604 1062) scale(1.25)' } }, { opacity: .9, attr: { transform: 'translate(604 1100) scale(1.9)' }, duration: 7.9, ease: 'sine.in', immediateRender: false }, 83.8);
+      tl.fromTo('#drivew', { scale: 1 }, { scale: 1.08, duration: 7.9, ease: 'sine.in' }, 83.8);
+      // brake: it is right at the bumper
+      tl.to('#drivew', { x: 14, y: 22, duration: .06, yoyo: true, repeat: 7, ease: 'none' }, 91.72);
+      tl.to('#drivew', { scale: 1, duration: .3, ease: 'power3.out' }, 91.72);
+      tl.to('#fig', { opacity: 0, duration: .1 }, 91.75);
+      tl.to('#fogbase', { opacity: .3, duration: .25 }, 91.75);
+      tl.fromTo('#near', { opacity: 0, scale: .9, svgOrigin: '560 1340' }, { opacity: 1, scale: 1, duration: .25, ease: 'power3.out' }, 91.75);
+      tl.fromTo('#eyes', { opacity: 0 }, { opacity: 1, duration: .15 }, 93.45);
+      tl.fromTo('#drivew', { scale: 1 }, { scale: 1.1, duration: 2.6, ease: 'power1.in', immediateRender: false }, 93.5);
+      tl.to('#drive', { opacity: 0, duration: .25 }, 96.05);
+      // next + end
+      tl.fromTo('#next', { opacity: 0 }, { opacity: 1, duration: .5 }, 96.3);
+      tl.fromTo('#next .np', { opacity: 0, y: 10 }, { opacity: 1, y: 0, duration: .4 }, 97.1);
+      tl.fromTo('#next h1', { opacity: 0, y: 24, filter: 'blur(6px)' }, { opacity: 1, y: 0, filter: 'blur(0px)', duration: .7, ease: 'power2.out' }, 97.9);
+      tl.fromTo('#next .rl', { scaleX: 0 }, { scaleX: 1, duration: .5 }, 98.5);
+      tl.fromTo('#next .s1', { opacity: 0 }, { opacity: 1, duration: .4 }, 98.7);
+      tl.fromTo('#next .s2', { opacity: 0 }, { opacity: 1, duration: .4 }, 99.0);
+      tl.fromTo('#end', { opacity: 0 }, { opacity: 1, duration: .5 }, 99.6);
+      tl.fromTo('#end img', { opacity: 0, y: 20, scale: .96 }, { opacity: 1, y: 0, scale: 1, duration: .8, ease: 'power2.out' }, 99.8);
+      tl.fromTo('#end p', { opacity: 0, y: 20 }, { opacity: 1, y: 0, duration: .7, ease: 'power2.out' }, 100.4);
+
+      window.__timelines['main'] = tl;
+      tl.seek(0);
+    </script>
+  </body>
+</html>

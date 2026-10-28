@@ -1,0 +1,377 @@
+<!doctype html>
+<html lang="th">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=1080, height=1920" />
+    <!--
+      Story clip EP04 "ถ้าเช้าแล้ว มันยังไม่ไป" (user, 2026-10-27), follows EP03's end card. Same look as EP01-03. Thai only.
+      Voice = ../audio/voice.wav, cue + phrase times from ../audio/timing.json (mixed after render, see ../make.sh).
+      Science: after a night in the dark the pupils are wide and the eyes dark-adapted, so stepping into morning light whites everything out;
+      stop, squint, shade your eyes, and vision mostly recovers in about a minute. Never stare at the sun, even at sunrise: the eye's lens
+      focuses it to a spot that can burn the retina (solar retinopathy), and the retina has no pain nerves. UV-blocking sunglasses help in
+      daylight but do not make looking at the sun safe.
+      Scenes: hallway at dawn 0-12.6 | front door 12.4-15.8 | white-out + light-adaptation card 15.2-38 | yard facing the sunrise 15.5-64.1
+      | sun card 45-57.4 | sunglasses card 57.4-63.9 | yard, sun to the left, long shadows; the figure at the gate has none 63.9-80.5
+      | next 80.4-84 | TIMEOPTIC 83.9-87.09
+    -->
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/gsap.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@400;500;600;700&family=Anuphan:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <style>
+      * { margin: 0; padding: 0; box-sizing: border-box; }
+      html, body { width: 1080px; height: 1920px; overflow: hidden; background: #0a1124; }
+      #root { position: relative; width: 1080px; height: 1920px; overflow: hidden; font-family: 'Anuphan', sans-serif; color: #fff; }
+      .layer { position: absolute; }
+      .full { position: absolute; left: 0; top: 0; width: 1080px; height: 1920px; }
+      svg { display: block; overflow: visible; }
+
+      .sub { position: absolute; left: 50px; right: 50px; top: 1210px; text-align: center; font-family: 'Prompt', sans-serif; font-weight: 600;
+             font-size: 56px; line-height: 1.32; text-shadow: 0 3px 18px rgba(0,0,0,.75), 0 0 4px rgba(0,0,0,.6); }
+      .sub.y { color: #F5C84C; }
+      .sub.r span { display: inline-block; background: #D8343A; color: #fff; padding: 4px 26px 8px; border-radius: 10px; text-shadow: none;
+                    box-shadow: 0 6px 24px rgba(0,0,0,.35); }
+      .sub.dk { color: #1d2433; text-shadow: 0 0 18px rgba(255,255,255,.8); }
+      .sub.dy { color: #8a5a00; text-shadow: 0 0 18px rgba(255,255,255,.8); }
+
+      .chip { position: absolute; top: 170px; height: 86px; background: #EEE8DC; border-radius: 16px; color: #1d2433; display: flex; align-items: center;
+              gap: 14px; padding: 0 26px 0 20px; box-shadow: 0 8px 26px rgba(0,0,0,.35); }
+      .chip small { display: block; font-size: 20px; font-weight: 500; color: #555a63; line-height: 1; }
+      .chip b { display: block; font-family: 'Prompt'; font-size: 40px; font-weight: 700; line-height: 1.05; letter-spacing: .02em; }
+      #batt b { color: #6b6f78; }
+
+      .card { position: absolute; left: 80px; top: 520px; width: 920px; height: 640px; background: #EEE8DC; border-radius: 22px; color: #1d2433;
+              border-left: 14px solid #C99A2E; box-shadow: 0 24px 60px rgba(0,0,0,.45); overflow: hidden; }
+      .card .ttl { position: absolute; left: 34px; top: 26px; font-size: 30px; font-weight: 600; color: #4a4f5a; }
+      .card .lbl { position: absolute; font-size: 28px; font-weight: 600; color: #1d2433; text-align: center; }
+      .badge { position: absolute; background: #EEE8DC; color: #1d2433; border-radius: 40px; padding: 10px 30px; font: 700 36px 'Prompt';
+               box-shadow: 0 10px 30px rgba(0,0,0,.4); display: flex; align-items: center; gap: 14px; }
+
+      #white { background: radial-gradient(ellipse 70% 50% at 50% 45%, #ffffff, #fff8ec 60%, #f6e6d6); }
+      #next { background: radial-gradient(ellipse 80% 45% at 50% 42%, #23181c, #0d0d11 70%); }
+      #next .pill { position: absolute; left: 50%; top: 640px; transform: translateX(-50%); border: 2px solid #4a4a55; border-radius: 40px; padding: 8px 30px;
+                    font-size: 30px; font-weight: 600; color: #d6d6dc; }
+      #next .pill:before { content: ''; display: inline-block; width: 12px; height: 12px; border-radius: 50%; background: #D8343A; margin-right: 12px; vertical-align: 4px; }
+      #next h1 { position: absolute; left: 60px; right: 60px; top: 730px; text-align: center; font: 700 86px/1.3 'Prompt'; color: #f2f2f4; }
+      #next .rl { position: absolute; left: 400px; top: 990px; width: 280px; height: 6px; background: #D8343A; border-radius: 3px; }
+      #next .s1 { position: absolute; left: 0; right: 0; top: 1030px; text-align: center; font-size: 36px; font-weight: 600; color: #e05a5f; }
+      #next .s2 { position: absolute; left: 0; right: 0; top: 1100px; text-align: center; font-size: 32px; color: #c8c8d0; }
+      #end { background: radial-gradient(ellipse 80% 55% at 50% 48%, #1a4a36, #123A29 60%, #0d2b1e); }
+      #end img { position: absolute; left: 228px; top: 840px; width: 624px; }
+      #end p { position: absolute; left: 0; right: 0; top: 1000px; text-align: center; font-size: 46px; font-weight: 600; color: #FAFAFA; }
+    </style>  </head>
+  <body>
+    <div id="root" data-composition-id="main" data-start="0" data-duration="87.09" data-width="1080" data-height="1920">
+      <svg width="0" height="0" style="position:absolute">
+        <defs>
+          <linearGradient id="floor" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#151b28" /><stop offset="1" stop-color="#262a33" /></linearGradient>
+          <linearGradient id="dawn" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#2a2552" /><stop offset=".45" stop-color="#7a5594" /><stop offset=".78" stop-color="#e48ea2" /><stop offset="1" stop-color="#f8c79c" /></linearGradient>
+          <linearGradient id="morn" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#8fa9cf" /><stop offset=".6" stop-color="#cdd5e2" /><stop offset="1" stop-color="#f3dcc4" /></linearGradient>
+          <linearGradient id="ground1" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#4a3a5e" /><stop offset="1" stop-color="#211a2e" /></linearGradient>
+          <linearGradient id="ground2" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#7d8a62" /><stop offset="1" stop-color="#4e5a3f" /></linearGradient>
+          <radialGradient id="sunglow"><stop offset="0" stop-color="#fff6dc" stop-opacity=".95" /><stop offset=".3" stop-color="#ffd9a8" stop-opacity=".55" /><stop offset="1" stop-color="#ffb08a" stop-opacity="0" /></radialGradient>
+          <radialGradient id="burn"><stop offset="0" stop-color="#fff2b0" /><stop offset=".45" stop-color="#F08A30" /><stop offset="1" stop-color="#D8343A" stop-opacity="0" /></radialGradient>
+          <linearGradient id="lensg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#2c5a46" /><stop offset="1" stop-color="#0d1a14" /></linearGradient>
+          <filter id="soft"><feGaussianBlur stdDeviation="6" /></filter>
+        </defs>
+      </svg>
+
+      <!-- hallway at dawn (POV); the figure still at the end -->
+      <div id="hall" class="clip full" data-start="0" data-duration="12.8" data-track-index="0">
+        <div id="hallw" class="full">
+          <svg class="full" viewBox="0 0 1080 1920" width="1080" height="1920">
+            <polygon points="0,0 1080,0 660,760 420,760" fill="#0d121c" />
+            <polygon points="0,0 420,760 420,1080 0,1920" fill="#141a27" />
+            <polygon points="1080,0 660,760 660,1080 1080,1920" fill="#111725" />
+            <polygon points="0,1920 1080,1920 660,1080 420,1080" fill="url(#floor)" />
+            <rect x="420" y="760" width="240" height="320" fill="#0b0f18" />
+            <rect x="480" y="840" width="120" height="240" fill="#151b28" stroke="#1f2636" stroke-width="5" />
+            <polygon points="1080,520 860,560 860,960 1080,1060" fill="#3a4a6a" opacity=".55" />
+            <polygon points="860,1180 1040,1260 760,1500 560,1380" fill="#4a5a7a" opacity=".22" />
+            <g id="dawnWin" opacity="0">
+              <polygon points="1080,520 860,560 860,960 1080,1060" fill="#f0a6b4" opacity=".8" />
+              <line x1="970" y1="540" x2="970" y2="1010" stroke="#2a2030" stroke-width="10" />
+              <polygon points="860,1180 1040,1260 760,1500 560,1380" fill="#f3b49a" opacity=".35" />
+            </g>
+            <polygon points="150,560 300,640 300,860 150,880" fill="#0b0f18" stroke="#2a3245" stroke-width="6" />
+            <polygon points="330,700 380,730 380,830 330,840" fill="#0b0f18" stroke="#2a3245" stroke-width="4" />
+            <line x1="0" y1="1500" x2="420" y2="1060" stroke="#0a0e16" stroke-width="10" /><line x1="1080" y1="1500" x2="660" y2="1060" stroke="#0a0e16" stroke-width="10" />
+            <g id="ghost" opacity=".55" filter="url(#soft)">
+              <ellipse cx="540" cy="880" rx="24" ry="30" fill="#aeb8cc" /><path d="M509 906 Q540 894 571 906 L583 1080 Q540 1092 497 1080 Z" fill="#aeb8cc" />
+            </g>
+          </svg>
+        </div>
+      </div>
+
+      <!-- front door -->
+      <div id="doorSc" class="clip full" data-start="12.4" data-duration="3.4" data-track-index="1" style="background:#0e1320">
+        <svg class="full" viewBox="0 0 1080 1920" width="1080" height="1920">
+          <rect x="0" y="1500" width="1080" height="420" fill="#161b26" />
+          <rect x="330" y="560" width="420" height="940" fill="#fff8ec" />
+          <rect x="330" y="560" width="420" height="940" fill="none" stroke="#f3c9a0" stroke-width="10" filter="url(#soft)" />
+          <g id="doorP"><rect x="330" y="560" width="420" height="940" fill="#232a38" /><rect x="380" y="620" width="320" height="360" fill="none" stroke="#2f3749" stroke-width="10" />
+            <rect x="380" y="1040" width="320" height="400" fill="none" stroke="#2f3749" stroke-width="10" /><circle cx="700" cy="1030" r="14" fill="#8a8f9c" /></g>
+          <rect x="300" y="530" width="480" height="30" fill="#1a202c" /><rect x="300" y="530" width="30" height="970" fill="#1a202c" /><rect x="750" y="530" width="30" height="970" fill="#1a202c" />
+        </svg>
+      </div>
+
+      <!-- yard 1: facing the sunrise -->
+      <div id="yard1" class="clip full" data-start="15.5" data-duration="48.6" data-track-index="2">
+        <div id="y1w" class="full">
+          <svg class="full" viewBox="0 0 1080 1920" width="1080" height="1920">
+            <rect width="1080" height="1060" fill="url(#dawn)" />
+            <g fill="#f4b3bd" opacity=".55"><ellipse cx="220" cy="640" rx="190" ry="26" /><ellipse cx="820" cy="560" rx="230" ry="22" /><ellipse cx="700" cy="760" rx="150" ry="16" /></g>
+            <circle id="sunG" cx="540" cy="1010" r="420" fill="url(#sunglow)" />
+            <circle cx="540" cy="1010" r="78" fill="#fff4d8" />
+            <path d="M0 1000 Q180 950 360 990 Q540 1030 720 975 Q900 930 1080 990 L1080 1080 L0 1080 Z" fill="#5d4672" />
+            <rect y="1040" width="1080" height="880" fill="url(#ground1)" />
+            <polygon points="490,1050 590,1050 900,1920 180,1920" fill="#5a4a66" opacity=".7" />
+            <!-- shadows toward you -->
+            <g fill="#140f1e" opacity=".55">
+              <polygon points="140,1120 175,1120 110,1920 -40,1920" /><polygon points="900,1110 930,1110 1160,1920 1040,1920" />
+              <polygon points="758,1100 770,1100 880,1920 850,1920" />
+            </g>
+            <g fill="#241a33">
+              <rect x="150" y="900" width="22" height="220" /><circle cx="160" cy="860" r="110" /><circle cx="90" cy="920" r="80" /><circle cx="235" cy="920" r="74" />
+              <rect x="905" y="890" width="22" height="220" /><circle cx="915" cy="850" r="100" /><circle cx="990" cy="905" r="80" />
+              <rect x="758" y="560" width="12" height="540" /><rect x="720" y="590" width="88" height="10" />
+            </g>
+            <g stroke="#2b2038" stroke-width="10" fill="none"><line x1="0" y1="1110" x2="440" y2="1110" /><line x1="640" y1="1110" x2="1080" y2="1110" />
+              <line x1="0" y1="1150" x2="440" y2="1150" /><line x1="640" y1="1150" x2="1080" y2="1150" /></g>
+            <g fill="#2b2038"><rect x="40" y="1080" width="16" height="90" /><rect x="200" y="1080" width="16" height="90" /><rect x="360" y="1080" width="16" height="90" />
+              <rect x="430" y="1060" width="22" height="110" /><rect x="628" y="1060" width="22" height="110" /><rect x="700" y="1080" width="16" height="90" />
+              <rect x="860" y="1080" width="16" height="90" /><rect x="1020" y="1080" width="16" height="90" /></g>
+            <g stroke="#2b2038" stroke-width="7" fill="none"><rect x="456" y="1075" width="80" height="90" /><rect x="544" y="1075" width="80" height="90" /></g>
+          </svg>
+        </div>
+      </div>
+
+      <!-- white-out (light adaptation) -->
+      <div id="white" class="clip full" data-start="15.2" data-duration="23" data-track-index="3" style="opacity:0"></div>
+
+      <!-- rule 1 card: light adaptation -->
+      <div id="card1" class="clip card" data-start="17.9" data-duration="19.4" data-track-index="4">
+        <div class="ttl">จากที่มืด → ที่สว่าง</div>
+        <svg class="layer" style="left:0;top:0" viewBox="0 0 906 640" width="906" height="640">
+          <g transform="translate(240 300)">
+            <path d="M-200 0 Q0 -170 200 0 Q0 170 -200 0 Z" fill="#fff" stroke="#2b2b2b" stroke-width="6" />
+            <circle r="104" fill="#6b8fae" stroke="#2b2b2b" stroke-width="5" />
+            <circle id="pupil" r="84" fill="#111" />
+            <circle cx="-30" cy="-34" r="14" fill="#fff" opacity=".85" />
+            <g id="rays1" stroke="#F5C84C" stroke-width="8" stroke-linecap="round" opacity="0">
+              <line x1="-150" y1="-200" x2="-40" y2="-40" /><line x1="-40" y1="-230" x2="0" y2="-50" /><line x1="80" y1="-220" x2="40" y2="-40" /><line x1="180" y1="-170" x2="60" y2="-20" />
+            </g>
+            <circle id="flood" r="104" fill="#fffbe6" opacity="0" />
+          </g>
+          <g id="gauge" transform="translate(500 470)" opacity="0">
+            <rect width="360" height="26" rx="13" fill="#ddd5c6" /><rect id="gfill" width="360" height="26" rx="13" fill="#C99A2E" transform="scale(0 1)" />
+          </g>
+        </svg>
+        <div class="lbl" id="plab" style="left:40px;top:500px;width:400px">รูม่านตา <span id="pstate">เบิกกว้าง</span></div>
+        <div class="lbl" id="s1" style="left:500px;top:130px;text-align:left;opacity:0">① หยุดที่ประตู</div>
+        <div class="lbl" id="s2" style="left:500px;top:210px;text-align:left;opacity:0">② หรี่ตา</div>
+        <div class="lbl" id="s3" style="left:500px;top:290px;text-align:left;opacity:0">③ เอามือบังแสง</div>
+        <div class="lbl" id="glab" style="left:500px;top:510px;width:360px;text-align:left;opacity:0">ตาปรับแสง <b>~1 นาที</b></div>
+      </div>
+
+      <!-- rule 2 card: sun through the lens -->
+      <div id="card2" class="clip card" data-start="45" data-duration="12.4" data-track-index="5" style="border-left-color:#D8343A">
+        <div class="ttl" style="color:#C0392B">⚠ ห้ามจ้องดวงอาทิตย์</div>
+        <svg class="layer" style="left:0;top:0" viewBox="0 0 906 640" width="906" height="640">
+          <g transform="translate(110 320)"><circle r="46" fill="#F5C84C" stroke="#1d2433" stroke-width="4" />
+            <g stroke="#E0A030" stroke-width="6" stroke-linecap="round"><line x1="0" y1="-64" x2="0" y2="-84" /><line x1="0" y1="64" x2="0" y2="84" /><line x1="-64" y1="0" x2="-84" y2="0" />
+              <line x1="45" y1="-45" x2="59" y2="-59" /><line x1="-45" y1="-45" x2="-59" y2="-59" /><line x1="45" y1="45" x2="59" y2="59" /><line x1="-45" y1="45" x2="-59" y2="59" /></g></g>
+          <g transform="translate(560 320)">
+            <circle r="200" fill="#fff" stroke="#2b2b2b" stroke-width="6" />
+            <path d="M80 -183 A200 200 0 0 1 80 183" fill="none" stroke="#E7A27C" stroke-width="16" />
+            <path d="M-180 -86 Q-240 0 -180 86" fill="#d9eef7" stroke="#2b2b2b" stroke-width="5" />
+            <ellipse cx="-140" cy="0" rx="26" ry="72" fill="#9fd0e6" stroke="#2b2b2b" stroke-width="4" />
+          </g>
+          <g id="rays2" stroke="#E0A030" stroke-width="6" fill="none" stroke-linecap="round">
+            <path d="M160 270 L420 260 L752 320" /><path d="M165 320 L420 320 L752 320" /><path d="M160 370 L420 380 L752 320" />
+          </g>
+          <circle id="burnS" cx="748" cy="320" r="40" fill="url(#burn)" opacity="0" />
+        </svg>
+        <div class="lbl" id="b1" style="left:620px;top:410px;width:260px;opacity:0;color:#C0392B">จอตาไหม้</div>
+        <div class="lbl" id="b2" style="left:0;top:560px;width:906px;opacity:0">จอตาไม่มีเส้นประสาทรับความเจ็บ = <span style="color:#C0392B">ไม่รู้ตัว</span></div>
+      </div>
+
+      <!-- sunglasses card -->
+      <div id="card3" class="clip card" data-start="57.4" data-duration="6.5" data-track-index="6">
+        <div class="ttl">แว่นกันแดด</div>
+        <svg class="layer" style="left:0;top:0" viewBox="0 0 906 640" width="906" height="640">
+          <g transform="translate(453 250)">
+            <path d="M-60 -20 Q0 -50 60 -20" fill="none" stroke="#1d2433" stroke-width="12" />
+            <rect x="-290" y="-80" width="230" height="160" rx="70" fill="url(#lensg)" stroke="#1d2433" stroke-width="12" />
+            <rect x="60" y="-80" width="230" height="160" rx="70" fill="url(#lensg)" stroke="#1d2433" stroke-width="12" />
+            <path d="M-250 -50 L-190 -50" stroke="#fff" stroke-opacity=".35" stroke-width="10" stroke-linecap="round" /><path d="M100 -50 L160 -50" stroke="#fff" stroke-opacity=".35" stroke-width="10" stroke-linecap="round" />
+          </g>
+        </svg>
+        <div id="uv" class="badge" style="left:353px;top:350px;background:#F5C84C">UV400</div>
+        <div class="lbl" id="g1" style="left:0;top:460px;width:906px;color:#1f7a4a;opacity:0">✓ ถนอมตากลางแดด</div>
+        <div class="lbl" id="g2" style="left:0;top:530px;width:906px;color:#C0392B;opacity:0">✕ ใช้จ้องดวงอาทิตย์ไม่ได้</div>
+      </div>
+
+      <!-- yard 2: sun to the left, long shadows; the figure at the gate has none -->
+      <div id="yard2" class="clip full" data-start="63.9" data-duration="16.6" data-track-index="7">
+        <div id="y2w" class="full">
+          <svg class="full" viewBox="0 0 1080 1920" width="1080" height="1920">
+            <rect y="-400" width="1080" height="1480" fill="url(#morn)" />
+            <circle cx="-80" cy="1000" r="520" fill="url(#sunglow)" />
+            <path d="M0 1020 Q260 980 520 1010 Q800 1040 1080 1000 L1080 1090 L0 1090 Z" fill="#8a98a8" />
+            <rect y="1070" width="1080" height="850" fill="url(#ground2)" />
+            <!-- shadows, all pointing away from the sun -->
+            <g fill="#1a2016" opacity=".7">
+              <g id="shT"><polygon points="290,1160 314,1160 820,1230 800,1250" /><ellipse cx="900" cy="1236" rx="150" ry="34" /></g>
+              <polygon id="shP" points="553,1130 571,1130 1100,1192 1100,1214" />
+              <polygon points="700,1132 1080,1132 1080,1190 760,1150" opacity=".6" />
+              <g id="shY"><polygon points="140,1780 280,1780 1100,1830 1100,1900" /></g>
+            </g>
+            <g fill="#2e3a2a">
+              <rect x="290" y="930" width="24" height="230" /><circle cx="300" cy="880" r="110" /><circle cx="230" cy="940" r="80" /><circle cx="375" cy="935" r="76" />
+            </g>
+            <g fill="#3a3f48"><rect x="556" y="610" width="12" height="520" /><rect x="520" y="640" width="84" height="10" /></g>
+            <g fill="#4a4a4a"><rect x="700" y="1060" width="14" height="75" /><rect x="800" y="1050" width="18" height="85" /><rect x="960" y="1050" width="18" height="85" /><rect x="1050" y="1060" width="14" height="75" /></g>
+            <g stroke="#4a4a4a" stroke-width="8"><line x1="700" y1="1080" x2="800" y2="1080" /><line x1="700" y1="1110" x2="800" y2="1110" /><line x1="978" y1="1080" x2="1080" y2="1080" /><line x1="978" y1="1110" x2="1080" y2="1110" /></g>
+            <g stroke="#4a4a4a" stroke-width="6" fill="none"><rect x="822" y="1066" width="66" height="66" /><rect x="892" y="1066" width="66" height="66" /></g>
+            <g id="fig" opacity="0"><ellipse cx="890" cy="990" rx="22" ry="27" fill="#c3c8d4" /><path d="M862 1014 Q890 1004 918 1014 L930 1140 Q890 1150 850 1140 Z" fill="#c3c8d4" /></g>
+            <ellipse id="noSh" cx="955" cy="1148" rx="70" ry="16" fill="none" stroke="#D8343A" stroke-width="6" stroke-dasharray="14 10" opacity="0" />
+            <!-- you, from behind -->
+            <g fill="#20242c" transform="translate(0 -60)"><ellipse cx="210" cy="1500" rx="62" ry="72" /><path d="M120 1590 Q210 1550 300 1590 L320 1840 L100 1840 Z" /></g>
+          </svg>
+        </div>
+      </div>
+
+      <!-- chips -->
+      <div id="clock" class="chip clip" data-start="0.3" data-duration="79.9" data-track-index="20" style="left:56px">
+        <svg viewBox="-24 -24 48 48" width="46" height="46"><circle r="19" fill="none" stroke="#1d2433" stroke-width="4" /><path d="M0 -10 L0 0 L8 6" fill="none" stroke="#1d2433" stroke-width="4" stroke-linecap="round" /></svg>
+        <div><small>เวลา</small><b id="clockt">05:50</b></div>
+      </div>
+      <div id="batt" class="chip clip" data-start="0.3" data-duration="79.9" data-track-index="21" style="left:322px">
+        <svg viewBox="0 0 56 30" width="56" height="30"><rect x="1.5" y="1.5" width="46" height="27" rx="6" fill="none" stroke="#6b6f78" stroke-width="3" /><rect x="50" y="9" width="5" height="12" rx="2" fill="#6b6f78" /></svg>
+        <div><small>แบตเตอรี่</small><b>หมด</b></div>
+      </div>
+
+      <!-- subtitles (cue + phrase times from ../audio/timing.json) -->
+      <div class="sub clip"    data-start="0.54"  data-duration="3.7"  data-track-index="30">ตีห้าห้าสิบ<br>คุณเฝ้าปลายทางเดินมาทั้งคืน</div>
+      <div class="sub clip"    data-start="4.38"  data-duration="3.1"  data-track-index="30">แสงแรกของเช้า<br>ลอดเข้ามาทางหน้าต่าง</div>
+      <div class="sub clip"    data-start="7.64"  data-duration="2.6"  data-track-index="30">แต่ร่างนั้น ยังยืนอยู่ที่เดิม</div>
+      <div class="sub clip"    data-start="10.36" data-duration="2.9"  data-track-index="30">คุณตัดสินใจ วิ่งออกไปนอกบ้าน</div>
+      <div class="sub clip"    data-start="13.4"  data-duration="1.7"  data-track-index="30">คุณกระชากประตูเปิด</div>
+      <div class="sub dk clip" data-start="15.12" data-duration="2.75" data-track-index="30">แล้วทุกอย่างก็ขาวโพลน</div>
+      <div class="sub dy clip" data-start="17.98" data-duration="3.25" data-track-index="30">กฎข้อแรก<br>อยู่ในความมืดมาทั้งคืน</div>
+      <div class="sub r clip"  data-start="21.26" data-duration="2.45" data-track-index="30"><span>อย่าพุ่งออกไปกลางแสงจ้าทันที</span></div>
+      <div class="sub dk clip" data-start="23.81" data-duration="4.4"  data-track-index="30">รูม่านตาคุณยังเบิกกว้าง<br>แสงจึงทะลักเข้าตาเต็มที่</div>
+      <div class="sub dy clip" data-start="28.34" data-duration="5.45" data-track-index="30">หยุดที่ประตู หรี่ตา<br>เอามือบังแสง ให้ตาปรับตัวก่อน</div>
+      <div class="sub dk clip" data-start="33.9"  data-duration="3.75" data-track-index="30">ราวหนึ่งนาที<br>ตาจะเริ่มมองเห็นชัดขึ้น</div>
+      <div class="sub clip"    data-start="37.77" data-duration="3.6"  data-track-index="30">ภาพค่อยๆ กลับมา<br>พระอาทิตย์กำลังขึ้นตรงหน้า</div>
+      <div class="sub clip"    data-start="41.53" data-duration="3.3"  data-track-index="30">คุณอยากมองไปทางนั้น<br>ว่ามันตามมาหรือเปล่า</div>
+      <div class="sub y clip"  data-start="45.07" data-duration="1.2"  data-track-index="30">กฎข้อสอง</div>
+      <div class="sub r clip"  data-start="46.29" data-duration="2.75" data-track-index="30"><span>ห้ามจ้องดวงอาทิตย์<br>แม้แต่ตอนเช้า</span></div>
+      <div class="sub y clip"  data-start="49.15" data-duration="3.85" data-track-index="30">เลนส์ตาจะรวมแสงเป็นจุดเล็กๆ<br>แล้วเผาจอตาได้</div>
+      <div class="sub y clip"  data-start="53.13" data-duration="2.55" data-track-index="30">และจอตาไม่มีเส้นประสาท<br>รับความเจ็บ</div>
+      <div class="sub r clip"  data-start="55.71" data-duration="1.65" data-track-index="30"><span>คุณจะไม่รู้สึกอะไรเลย</span></div>
+      <div class="sub clip"    data-start="57.61" data-duration="3.95" data-track-index="30">แว่นกันแดดที่กันยูวีได้<br>ช่วยถนอมตากลางแดด</div>
+      <div class="sub y clip"  data-start="61.59" data-duration="2.3"  data-track-index="30">แต่ก็ใช้จ้องดวงอาทิตย์ไม่ได้</div>
+      <div class="sub clip"    data-start="64.13" data-duration="2.0"  data-track-index="30">คุณหลบสายตาลงมองพื้น</div>
+      <div class="sub clip"    data-start="66.28" data-duration="2.8"  data-track-index="30">ต้นไม้มีเงา เสาไฟมีเงา</div>
+      <div class="sub clip"    data-start="69.1"  data-duration="3.6"  data-track-index="30">ตัวคุณเองก็มีเงา<br>ทอดยาวไปทางเดียวกัน</div>
+      <div class="sub clip"    data-start="72.92" data-duration="3.3"  data-track-index="30">แล้วคุณก็เห็นมัน<br>ยืนอยู่ที่ประตูรั้ว</div>
+      <div class="sub clip"    data-start="76.37" data-duration="1.75" data-track-index="30">กลางแสงเช้าแบบนี้</div>
+      <div class="sub r clip"  data-start="78.13" data-duration="2.2"  data-track-index="30"><span>มันไม่มีเงาเลย</span></div>
+
+      <div id="next" class="clip full" data-start="80.4" data-duration="3.6" data-track-index="40">
+        <div class="pill">ตอนต่อไป</div>
+        <h1>ถ้ามัน<br>อยู่ในกระจก</h1>
+        <div class="rl"></div>
+        <div class="s1">EP.5 เร็วๆ นี้</div>
+        <div class="s2">กดติดตาม แล้วไปรอดด้วยกัน</div>
+      </div>
+      <div id="end" class="clip full" data-start="83.9" data-duration="3.19" data-track-index="41">
+        <img src="assets/timeoptic-white-spaced.svg" alt="TIMEOPTIC" />
+        <p>ดูแลสายตา ให้มองเห็นในวันที่สำคัญ</p>
+      </div>
+    </div>
+
+    <script>
+      window.__timelines = window.__timelines || {};
+      const tl = gsap.timeline({ paused: true });
+      document.querySelectorAll('.sub').forEach(s => tl.fromTo(s, { opacity: 0, y: 14 }, { opacity: 1, y: 0, duration: .25, ease: 'power2.out' }, parseFloat(s.dataset.start)));
+      const count = (target, from, to, t, d, fmt) => { const o = { v: from };
+        tl.fromTo(o, { v: from }, { v: to, duration: d, ease: 'none', onUpdate: () => target.textContent = fmt(o.v) }, t); };
+      count(document.getElementById('clockt'), 50, 64.9, 0.3, 79.9, v => { const m = Math.floor(v); return m < 60 ? '05:' + m : '06:' + String(m - 60).padStart(2, '0'); });
+
+      // hallway at dawn: window turns pink, the figure is still there
+      tl.fromTo('#hallw', { scale: 1.05, transformOrigin: '540px 920px' }, { scale: 1.18, duration: 10.3, ease: 'sine.inOut' }, 0);
+      tl.fromTo('#dawnWin', { opacity: 0 }, { opacity: 1, duration: 3.5, ease: 'sine.inOut' }, 4.2);
+      tl.fromTo('#ghost', { opacity: .35 }, { opacity: .7, duration: 1.2 }, 7.6);
+      tl.to('#hallw', { x: 700, duration: .7, ease: 'power2.in' }, 10.6);
+      tl.to('#hall', { opacity: 0, duration: .5 }, 12.3);
+      // front door, yanked open → white
+      tl.fromTo('#doorSc', { opacity: 0 }, { opacity: 1, duration: .5 }, 12.4);
+      tl.fromTo('#doorP', { scaleX: 1, svgOrigin: '330 1000' }, { scaleX: .02, duration: .6, ease: 'power3.in' }, 14.0);
+      tl.fromTo('#doorSc', { scale: 1 }, { scale: 1.6, transformOrigin: '540px 1030px', duration: 1.2, ease: 'power2.in' }, 14.4);
+      tl.fromTo('#white', { opacity: 0 }, { opacity: 1, duration: .5, ease: 'power2.in' }, 15.2);
+      tl.set('#y1w', { filter: 'blur(18px) brightness(1.6)' }, 15.5);
+      // light-adaptation card on the white-out
+      tl.to('#white', { opacity: .82, duration: 1.5 }, 17.4);
+      tl.fromTo('#card1', { opacity: 0, y: 40 }, { opacity: 1, y: 0, duration: .4, ease: 'power2.out' }, 17.9);
+      tl.fromTo('#flood', { opacity: 0 }, { opacity: .85, duration: .3 }, 21.3);
+      tl.to('#flood', { opacity: 0, duration: .8 }, 22.6);
+      tl.fromTo('#rays1', { opacity: 0 }, { opacity: 1, duration: .4 }, 23.8);
+      tl.fromTo('#rays1 line', { attr: { 'stroke-dasharray': '0 300' } }, { attr: { 'stroke-dasharray': '300 0' }, duration: .8, stagger: .15 }, 23.8);
+      tl.fromTo('#pupil', { scale: 1, svgOrigin: '0 0' }, { scale: 1.08, duration: .6, yoyo: true, repeat: 3, ease: 'sine.inOut' }, 25.9);
+      tl.fromTo('#s1', { opacity: 0, x: 20 }, { opacity: 1, x: 0, duration: .3 }, 28.3);
+      tl.fromTo('#s2', { opacity: 0, x: 20 }, { opacity: 1, x: 0, duration: .3 }, 29.7);
+      tl.fromTo('#s3', { opacity: 0, x: 20 }, { opacity: 1, x: 0, duration: .3 }, 30.9);
+      tl.to('#rays1', { opacity: .3, duration: .6 }, 32.3);
+      tl.fromTo('#gauge', { opacity: 0 }, { opacity: 1, duration: .3 }, 33.8);
+      tl.fromTo('#glab', { opacity: 0 }, { opacity: 1, duration: .3 }, 33.8);
+      tl.fromTo('#gfill', { attr: { transform: 'scale(0 1)' } }, { attr: { transform: 'scale(1 1)' }, duration: 3, ease: 'none' }, 33.9);
+      tl.to('#pupil', { scale: .4, duration: 3, ease: 'sine.inOut' }, 33.9);
+      tl.to('#rays1', { opacity: 0, duration: 1 }, 34.5);
+      tl.set('#pstate', { textContent: 'เบิกกว้าง' }, 0); tl.set('#pstate', { textContent: 'หดเล็กลง' }, 35.0);
+      tl.to('#card1', { opacity: 0, duration: .3 }, 37.0);
+      // the yard comes back into focus
+      tl.to('#white', { opacity: 0, duration: 1.4, ease: 'sine.out' }, 37.0);
+      tl.to('#y1w', { filter: 'blur(0px) brightness(1)', duration: 2.2, ease: 'sine.out' }, 37.0);
+      tl.fromTo('#y1w', { scale: 1.0, transformOrigin: '540px 1010px' }, { scale: 1.12, duration: 4, ease: 'sine.inOut' }, 37.0);
+      tl.to('#y1w', { scale: 1.45, duration: 3.6, ease: 'power1.in' }, 41.4);
+      tl.fromTo('#sunG', { scale: 1, svgOrigin: '540 1010' }, { scale: 1.6, duration: 3.6, ease: 'power1.in' }, 41.4);
+      tl.to('#y1w', { filter: 'blur(14px) brightness(.55)', duration: .5 }, 45.0);
+      // sun card
+      tl.fromTo('#card2', { opacity: 0, y: 40 }, { opacity: 1, y: 0, duration: .4, ease: 'power2.out' }, 45.0);
+      tl.fromTo('#rays2 path', { attr: { 'stroke-dasharray': '0 700' } }, { attr: { 'stroke-dasharray': '700 0' }, duration: 1.4, stagger: .2, ease: 'none' }, 49.1);
+      tl.fromTo('#burnS', { opacity: 0, scale: .3, svgOrigin: '748 320' }, { opacity: 1, scale: 1, duration: .6, ease: 'back.out(2)' }, 51.4);
+      tl.fromTo('#b1', { opacity: 0 }, { opacity: 1, duration: .3 }, 51.6);
+      tl.fromTo('#b2', { opacity: 0 }, { opacity: 1, duration: .3 }, 53.1);
+      tl.to('#card2', { opacity: 0, duration: .3 }, 57.1);
+      // sunglasses card
+      tl.fromTo('#card3', { opacity: 0, y: 40 }, { opacity: 1, y: 0, duration: .4, ease: 'power2.out' }, 57.4);
+      tl.fromTo('#uv', { opacity: 0, scale: .6 }, { opacity: 1, scale: 1, duration: .4, ease: 'back.out(2)' }, 58.6);
+      tl.fromTo('#g1', { opacity: 0 }, { opacity: 1, duration: .3 }, 59.8);
+      tl.fromTo('#g2', { opacity: 0 }, { opacity: 1, duration: .3 }, 61.6);
+      tl.to('#card3', { opacity: 0, duration: .3 }, 63.6);
+      // yard 2: look down at the shadows, then the figure at the gate
+      tl.fromTo('#yard2', { opacity: 0 }, { opacity: 1, duration: .5 }, 63.9);
+      tl.fromTo('#y2w', { y: 360 }, { y: 0, duration: 2.2, ease: 'sine.inOut' }, 64.1);
+      [['#shT', 66.3], ['#shP', 67.7], ['#shY', 69.1]].forEach(([s, t]) => tl.fromTo(s, { opacity: 1 }, { opacity: .35, duration: .3, yoyo: true, repeat: 3 }, t));
+      tl.fromTo('#fig', { opacity: 0 }, { opacity: .85, duration: 1.2 }, 72.9);
+      tl.fromTo('#y2w', { scale: 1, transformOrigin: '1010px 1090px' }, { scale: 1.55, duration: 7, ease: 'power1.in' }, 72.9);
+      tl.fromTo('#noSh', { opacity: 0 }, { opacity: 1, duration: .3, yoyo: true, repeat: 3 }, 78.2);
+      tl.set('#noSh', { opacity: 1 }, 79.4);
+      tl.to('#yard2', { opacity: 0, duration: .5 }, 79.9);
+      // next + end
+      tl.fromTo('#next', { opacity: 0 }, { opacity: 1, duration: .5 }, 80.4);
+      tl.fromTo('#next .pill', { opacity: 0, y: 10 }, { opacity: 1, y: 0, duration: .4 }, 80.6);
+      tl.fromTo('#next h1', { opacity: 0, y: 24, filter: 'blur(6px)' }, { opacity: 1, y: 0, filter: 'blur(0px)', duration: .7, ease: 'power2.out' }, 80.8);
+      tl.fromTo('#next .rl', { scaleX: 0 }, { scaleX: 1, duration: .5 }, 81.8);
+      tl.fromTo('#next .s1', { opacity: 0 }, { opacity: 1, duration: .4 }, 82.1);
+      tl.fromTo('#next .s2', { opacity: 0 }, { opacity: 1, duration: .4 }, 82.5);
+      tl.fromTo('#end', { opacity: 0 }, { opacity: 1, duration: .5 }, 83.9);
+      tl.fromTo('#end img', { opacity: 0, y: 20, scale: .96 }, { opacity: 1, y: 0, scale: 1, duration: .8, ease: 'power2.out' }, 84.1);
+      tl.fromTo('#end p', { opacity: 0, y: 20 }, { opacity: 1, y: 0, duration: .7, ease: 'power2.out' }, 84.7);
+
+      window.__timelines['main'] = tl;
+      tl.seek(0);
+    </script>
+  </body>
+</html>

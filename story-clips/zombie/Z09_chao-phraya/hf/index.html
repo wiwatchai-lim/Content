@@ -1,0 +1,1525 @@
+<!doctype html>
+<html lang="th">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=1080, height=1920" />
+    <!--
+      Zombie series "กรุงเทพฯ ไม่มีพรุ่งนี้" Z09 "เจ้าพระยา" (user, 2026-10-28). Pure zombie action, no eyewear/brand. Thai only.
+      ../template.html is the source: ../build.py inlines ../audio/timing.json (S = cue starts, E = cue ends, 1-based)
+      and ../_shared/cast.js (characters + timeline helpers, at // Shared cast + timeline helpers for the zombie series (from Z01). Inlined by each episode's build.py at /*CAST*/.
+// Needs in scope: el, G, piv, T, rnd, seed, $ (defined in the episode template) and gsap.
+      const SKIN = '#b97a4c', SKIN2 = '#d7a27a', ZSK = '#8fa088', RED = '#D8343A';
+
+      // ---------- characters (drawn facing right, origin at the feet) ----------
+      function tae(p, o, opt = {}) {
+        const g = G(p, o);
+        const aB = piv(g, -8, -292, { r: 12 });
+        el('path', { d: 'M-10 0 L10 0 L6 92 L-10 90 Z', fill: '#a56a40' }, aB);
+        el('circle', { cx: -2, cy: 98, r: 11, fill: '#a56a40' }, aB);
+        let lB, lF;
+        if (opt.sit) {
+          lB = piv(g, -6, -178); el('path', { d: 'M-16 -10 L16 -10 L72 2 L76 92 L54 94 L50 26 Z', fill: '#26314b' }, lB);
+          lF = piv(g, 8, -178); el('path', { d: 'M-14 -10 L16 -10 L82 4 L86 96 L62 98 L58 28 Z', fill: '#33426a' }, lF);
+          el('path', { d: 'M60 90 L104 92 Q110 106 98 106 L60 106 Z', fill: '#111' }, lF);
+        } else {
+          lB = piv(g, -10, -178); el('path', { d: 'M-14 0 L14 0 L6 86 L2 170 L-22 170 L-18 86 Z', fill: '#26314b' }, lB);
+          el('path', { d: 'M-24 160 L18 160 L18 178 L-26 178 Z', fill: '#111' }, lB);
+          lF = piv(g, 8, -178); el('path', { d: 'M-14 0 L14 0 L22 86 L28 170 L4 170 L-2 88 Z', fill: '#33426a' }, lF);
+          el('path', { d: 'M2 160 L48 162 Q54 178 44 178 L2 178 Z', fill: '#111' }, lF);
+        }
+        el('path', { d: 'M-36 -306 Q0 -318 36 -306 L30 -168 L-30 -168 Z', fill: '#f07a1e' }, g);
+        el('path', { d: 'M-7 -312 L7 -312 L6 -170 L-6 -170 Z', fill: '#22262f' }, g);
+        el('rect', { x: -33, y: -218, width: 66, height: 9, fill: '#ffe08a' }, g);
+        el('rect', { x: 12, y: -280, width: 18, height: 20, rx: 3, fill: '#fff' }, g);
+        el('text', { x: 21, y: -264, 'font-size': 14, 'font-weight': 800, 'text-anchor': 'middle', fill: '#111', 'font-family': 'Prompt' }, g).textContent = '12';
+        el('rect', { x: -8, y: -326, width: 16, height: 22, fill: SKIN }, g);
+        const hd = G(g, { x: 4, y: -352 });
+        el('circle', { r: 32, fill: SKIN }, hd);
+        el('path', { d: 'M-33 -2 Q-32 -42 4 -40 Q36 -38 33 -8 L20 -16 Q-2 -28 -22 -10 Z', fill: '#15161a' }, hd);
+        el('circle', { cx: -8, cy: 2, r: 7, fill: '#a56a40' }, hd);
+        el('circle', { cx: 20, cy: -4, r: 4, fill: '#111' }, hd);
+        el('path', { d: 'M12 -14 L28 -16', stroke: '#111', 'stroke-width': 4, 'stroke-linecap': 'round' }, hd);
+        const mouth = el('path', { d: 'M16 16 Q22 18 28 15', stroke: '#5a2a1a', 'stroke-width': 4, fill: 'none', 'stroke-linecap': 'round' }, hd);
+        let helmHead = null;
+        if (opt.helmetOn) { helmHead = G(hd);
+          el('path', { d: 'M-38 -8 Q-40 -50 4 -50 Q42 -48 40 -14 L40 -10 L-38 -8 Z', fill: '#c4262c' }, helmHead);
+          el('path', { d: 'M-30 -20 Q0 -44 30 -30', stroke: '#fff', 'stroke-width': 5, fill: 'none', opacity: .5 }, helmHead); }
+        const aF = piv(g, 14, -292, opt.armF || {});
+        el('path', { d: 'M-11 0 L11 0 L14 90 L-6 94 Z', fill: SKIN }, aF);
+        el('path', { d: 'M-14 -6 L14 -6 L13 30 L-13 30 Z', fill: '#22262f' }, aF);
+        el('circle', { cx: 4, cy: 100, r: 13, fill: SKIN }, aF);
+        let helm = null;
+        if (opt.helmet) { helm = G(aF, { x: 4, y: 130 });
+          el('line', { x1: 0, y1: -30, x2: 0, y2: -10, stroke: '#222', 'stroke-width': 4 }, helm);
+          el('path', { d: 'M-32 14 Q-34 -32 0 -32 Q34 -32 32 14 Z', fill: '#c4262c', stroke: '#111', 'stroke-width': 4 }, helm);
+          el('path', { d: 'M4 -10 L30 -10 L32 12 L6 12 Z', fill: '#1a1a1f' }, helm); }
+        return { g, aF, aB, lF, lB, hd, mouth, helm };
+      }
+      function fon(p, o, opt = {}) {
+        const g = G(p, o);
+        const aB = piv(g, -10, -290, { r: 8 }); el('path', { d: 'M-10 0 L10 0 L6 88 L-10 86 Z', fill: '#c48d66' }, aB);
+        const lB = piv(g, -10, -176); el('path', { d: 'M-14 0 L14 0 L8 168 L-16 168 Z', fill: '#1f7f74' }, lB);
+        el('path', { d: 'M-20 162 L18 162 L18 178 L-22 178 Z', fill: '#f2f2f2' }, lB);
+        const lF = piv(g, 8, -176); el('path', { d: 'M-14 0 L14 0 L22 168 L-2 168 Z', fill: '#23867a' }, lF);
+        el('path', { d: 'M-4 162 L38 162 Q44 178 34 178 L-4 178 Z', fill: '#f2f2f2' }, lF);
+        el('path', { d: 'M-34 -302 Q0 -314 34 -302 L32 -166 L-32 -166 Z', fill: '#2a9d8f' }, g);
+        el('path', { d: 'M-12 -306 L0 -280 L12 -306 Z', fill: '#1f7f74' }, g);
+        el('rect', { x: -8, y: -322, width: 16, height: 20, fill: SKIN2 }, g);
+        const hd = G(g, { x: 2, y: -346 });
+        el('circle', { cx: -30, cy: -18, r: 17, fill: '#1a1416' }, hd);
+        el('circle', { r: 30, fill: SKIN2 }, hd);
+        el('path', { d: 'M-31 6 Q-34 -38 2 -38 Q32 -36 30 -10 Q8 -24 -14 -16 L-20 18 Z', fill: '#1a1416' }, hd);
+        el('circle', { cx: 18, cy: -4, r: 3.8, fill: '#111' }, hd);
+        const mouth = el('path', { d: 'M14 15 Q20 17 25 14', stroke: '#7a3a2a', 'stroke-width': 4, fill: 'none', 'stroke-linecap': 'round' }, hd);
+        const aF = piv(g, 12, -290, opt.armF || { r: -20 });
+        el('path', { d: 'M-10 0 L10 0 L12 88 L-6 90 Z', fill: SKIN2 }, aF);
+        el('path', { d: 'M-13 -6 L13 -6 L12 26 L-12 26 Z', fill: '#2a9d8f' }, aF);
+        el('circle', { cx: 4, cy: 96, r: 12, fill: SKIN2 }, aF);
+        const pole = piv(aF, 4, 96, opt.pole || { r: 20 });
+        el('line', { x1: 0, y1: -230, x2: 0, y2: 130, stroke: '#c9ced6', 'stroke-width': 8, 'stroke-linecap': 'round' }, pole);
+        el('path', { d: 'M0 -230 Q22 -236 20 -214', stroke: '#c9ced6', 'stroke-width': 6, fill: 'none' }, pole);
+        el('rect', { x: 6, y: -214, width: 34, height: 52, rx: 10, fill: '#e8f4ff', opacity: .85, stroke: '#9fb2c8', 'stroke-width': 3 }, pole);
+        el('line', { x1: -44, y1: 130, x2: 44, y2: 130, stroke: '#9aa1ab', 'stroke-width': 8, 'stroke-linecap': 'round' }, pole);
+        el('circle', { cx: -44, cy: 138, r: 8, fill: '#333' }, pole); el('circle', { cx: 44, cy: 138, r: 8, fill: '#333' }, pole);
+        return { g, aF, aB, lF, lB, hd, mouth, pole };
+      }
+      const SHIRTS = ['#cfd3cf', '#5a6a8a', '#7a4a3a', '#3e5a4a', '#8a7a5a', '#6a3a5a'];
+      function zomb(p, o, opt = {}) {
+        const g = G(p, o);
+        const sh = opt.shirt || SHIRTS[Math.floor(rnd() * SHIRTS.length)];
+        const aB = piv(g, 16, -282, { r: opt.armR ?? -6 });
+        el('path', { d: 'M0 -9 L96 -10 L98 6 L0 10 Z', fill: '#768670' }, aB);
+        el('path', { d: 'M94 -12 L118 -14 M94 -2 L120 -2 M94 6 L116 10', stroke: '#768670', 'stroke-width': 6, 'stroke-linecap': 'round' }, aB);
+        if (!opt.noLegs) {
+          el('path', { d: 'M-24 -172 L2 -172 L-8 -84 L-20 0 L-44 0 L-30 -86 Z', fill: '#2d2a33' }, g);
+          el('path', { d: 'M-2 -172 L22 -172 L26 -84 L36 0 L12 0 L2 -84 Z', fill: '#3b3446' }, g);
+        }
+        el('path', { d: 'M-32 -292 Q8 -316 44 -284 L30 -164 L-30 -164 Z', fill: sh }, g);
+        el('path', { d: 'M-10 -170 L-2 -200 L8 -172 L20 -196 L28 -166 Z', fill: '#1a1418', opacity: .5 }, g);
+        el('path', { d: 'M8 -300 Q26 -296 34 -280 L26 -250 Q18 -270 4 -276 Z', fill: '#7a1418' }, g);
+        const hd = G(g, { x: 30, y: -318, r: 12 });
+        el('circle', { r: 30, fill: ZSK }, hd);
+        el('path', { d: 'M-30 -4 Q-26 -32 6 -32 Q-10 -20 -16 4 Z', fill: '#3a3a38' }, hd);
+        el('circle', { cx: 16, cy: -6, r: 10, fill: 'url(#gEye)' }, hd);
+        el('circle', { cx: 16, cy: -6, r: 5, fill: '#fff' }, hd);
+        el('path', { d: 'M8 12 Q18 20 28 10', stroke: '#5a0a10', 'stroke-width': 5, fill: 'none' }, hd);
+        el('path', { d: 'M14 16 L14 30', stroke: '#8a1018', 'stroke-width': 4 }, hd);
+        const aF = piv(g, 22, -276, { r: opt.armF ?? 4 });
+        el('path', { d: 'M0 -10 L100 -8 L100 8 L0 10 Z', fill: ZSK }, aF);
+        el('path', { d: 'M98 -10 L124 -12 M98 0 L126 0 M98 8 L122 12', stroke: ZSK, 'stroke-width': 6, 'stroke-linecap': 'round' }, aF);
+        return { g, aF, aB, hd };
+      }
+      function bike(p, o) {
+        const g = G(p, o);
+        [-95, 95].forEach(x => { const w = G(g, { x, y: -46 });
+          el('circle', { r: 46, fill: '#15161a' }, w); el('circle', { r: 30, fill: 'none', stroke: '#3a3d45', 'stroke-width': 4 }, w);
+          el('circle', { r: 12, fill: '#9aa0aa' }, w); });
+        el('line', { x1: 80, y1: -120, x2: 95, y2: -46, stroke: '#333', 'stroke-width': 9 }, g);
+        el('path', { d: 'M-118 -78 L-30 -98 L66 -90 L112 -70 L98 -52 L-96 -52 Z', fill: '#c4262c' }, g);
+        el('path', { d: 'M-100 -96 L10 -104 L12 -92 L-100 -84 Z', fill: '#111' }, g);
+        el('path', { d: 'M-40 -52 L40 -52 L30 -26 L-30 -26 Z', fill: '#2a2c32' }, g);
+        el('line', { x1: 70, y1: -122, x2: 108, y2: -136, stroke: '#222', 'stroke-width': 8, 'stroke-linecap': 'round' }, g);
+        el('circle', { cx: 112, cy: -92, r: 12, fill: '#ffe7a0' }, g);
+        return g;
+      }
+      function person(p, x, y, s, col, run, z) {
+        const g = G(p, { x, y, sx: s, sy: Math.abs(s) });
+        el('circle', { cx: 4, cy: -150, r: 18, fill: col }, g);
+        el('path', { d: run ? 'M-16 -128 L22 -128 L18 -60 L44 0 L28 4 L4 -50 L-16 4 L-32 0 L-10 -62 Z' : 'M-16 -128 L22 -128 L18 -60 L22 0 L8 0 L2 -50 L-6 0 L-20 0 L-14 -62 Z', fill: col }, g);
+        el('path', { d: run ? 'M18 -122 L46 -96 L40 -88 L14 -108 M-12 -122 L-40 -100 L-34 -92 L-8 -108' : 'M18 -122 L52 -116 L52 -106 L16 -108', stroke: col, 'stroke-width': 10, fill: 'none', 'stroke-linecap': 'round' }, g);
+        if (z) { el('circle', { cx: 12, cy: -154, r: 4, fill: '#fff' }, g); }
+        return g;
+      }
+      function car(p, x, y, s, col) {
+        const g = G(p, { x, y, sx: s, sy: s });
+        el('path', { d: 'M-130 -30 L-118 -70 L-70 -76 L-40 -118 L60 -118 L96 -76 L130 -66 L134 -30 Z', fill: col }, g);
+        el('path', { d: 'M-30 -108 L20 -108 L20 -80 L-56 -78 Z M30 -108 L56 -108 L82 -80 L30 -80 Z', fill: '#2a3140', opacity: .85 }, g);
+        [-80, 84].forEach(cx => { el('circle', { cx, cy: -26, r: 26, fill: '#141418' }, g); el('circle', { cx, cy: -26, r: 9, fill: '#888' }, g); });
+        return g;
+      }
+      function busBody(p, x, y, len, roofY) {
+        const g = G(p, { x, y });
+        el('rect', { x: 0, y: roofY, width: len, height: 330, rx: 18, fill: '#c8352e' }, g);
+        el('rect', { x: 0, y: roofY, width: len, height: 18, fill: '#a32a24' }, g);
+        el('rect', { x: 0, y: roofY + 190, width: len, height: 22, fill: '#f2efe6' }, g);
+        for (let i = 30; i < len - 100; i += 150) el('rect', { x: i, y: roofY + 42, width: 124, height: 120, rx: 8, fill: '#1c2230' }, g);
+        el('circle', { cx: 120, cy: roofY + 330, r: 48, fill: '#141418' }, g); el('circle', { cx: len - 160, cy: roofY + 330, r: 48, fill: '#141418' }, g);
+        return g;
+      }
+      function skyline(p, y, col, seedN, h = 260) {
+        const g = G(p); let x = -60; seed = seedN;
+        while (x < 1200) { const w = 70 + rnd() * 120, hh = 80 + rnd() * h;
+          el('rect', { x, y: y - hh, width: w, height: hh + 400, fill: col }, g);
+          if (rnd() > .5) el('rect', { x: x + w * .4, y: y - hh - 40, width: 6, height: 40, fill: col }, g);
+          x += w + 6; }
+        return g;
+      }
+      function zSil(p, x, y, s, col = '#120d16') { const g = person(p, x, y, s, col, false, true); return g; }
+
+      // ---------- timeline helpers ----------
+      window.__timelines = window.__timelines || {};
+      const tl = gsap.timeline({ paused: true });
+      const mv = (g, t, d, a, b, ease = 'power2.out') => tl.fromTo(g, { attr: { transform: T(a) } }, { attr: { transform: T(b) }, duration: d, ease, immediateRender: false }, t);
+      const show = (id, t0, t1, fade = 0) => { if (t0 > 0) tl.fromTo('#' + id, { opacity: 0 }, { opacity: 1, duration: fade || .01, immediateRender: false }, t0); tl.to('#' + id, { opacity: 0, duration: .01 }, t1); };
+      const cam = (id, t, d, a, b, ease = 'sine.inOut') => tl.fromTo('#' + id + ' .cam', a, { ...b, duration: d, ease, immediateRender: false }, t);
+      const shake = (id, t, amp = 22, n = 6) => { FXLOG.push({ t: +t.toFixed(3), kind: 'shake', amp }); for (let i = 0; i < n; i++) tl.to('#' + id + ' .cam', { x: (i % 2 ? -1 : 1) * amp * (1 - i / n), y: (rnd() - .5) * amp, duration: .035 }, t + i * .035); tl.to('#' + id + ' .cam', { x: 0, y: 0, duration: .04 }, t + n * .035); };
+      const fxl = $('fxl');
+      const FXLOG = window.__fx = [];   // every SFX word / hit, read by _shared/fxlog.py -> audio/fx.json for the sound bed
+      const word = (t, txt, x, y, cls = '', rot = -8, hold = .55) => {
+        FXLOG.push({ t: +t.toFixed(3), kind: 'word', txt });
+        const d = document.createElement('div'); d.className = 'fx ' + cls; d.textContent = txt; d.style.left = x + 'px'; d.style.top = y + 'px'; fxl.appendChild(d);
+        tl.fromTo(d, { opacity: 0, scale: .2, rotation: rot - 14 }, { opacity: 1, scale: 1.15, rotation: rot, duration: .1, ease: 'back.out(3)', immediateRender: false }, t);
+        tl.to(d, { scale: 1, duration: .1 }, t + .1);
+        tl.to(d, { opacity: 0, scale: 1.3, duration: .2 }, t + hold);
+      };
+      const burst = (p, t, x, y, col = '#fff') => { const g = G(p, { x, y }); g.setAttribute('opacity', 0);
+        for (let i = 0; i < 14; i++) { const a = i / 14 * Math.PI * 2 + rnd() * .2, r1 = 50 + rnd() * 20, r2 = 150 + rnd() * 90;
+          el('path', { d: `M${Math.cos(a - .06) * r1} ${Math.sin(a - .06) * r1} L${Math.cos(a) * r2} ${Math.sin(a) * r2} L${Math.cos(a + .06) * r1} ${Math.sin(a + .06) * r1} Z`, fill: col }, g); }
+        tl.fromTo(g, { opacity: 1, attr: { transform: T({ x, y, sx: .4, sy: .4 }) } }, { attr: { transform: T({ x, y, sx: 1.2, sy: 1.2 }) }, duration: .18, immediateRender: false }, t);
+        tl.to(g, { opacity: 0, duration: .12 }, t + .18); };
+      const flash = (t, o = .85) => { tl.fromTo('#flash', { opacity: o }, { opacity: 0, duration: .16, immediateRender: false }, t); };
+      const hit = (scene, svg, t, x, y, txt, wx, wy, cls, rot) => { FXLOG.push({ t: +t.toFixed(3), kind: 'hit', txt }); flash(t); burst(svg, t, x, y); shake(scene, t); word(t, txt, wx, wy, cls, rot); };
+      const speedLines = (p, n, col, dir = 1) => { const g = G(p);
+        for (let i = 0; i < n; i++) { const y = rnd() * 1920, w = 200 + rnd() * 500; el('rect', { x: rnd() * 1080, y, width: w, height: 3 + rnd() * 5, fill: col, opacity: .25 + rnd() * .4 }, g); }
+        return g; };
+
+
+      // ---------- cast added for Z02-Z10 (same conventions: facing right, origin at the feet, flip with sx: -s) ----------
+      // มิว (10): ~70% of an adult; opt.bandage puts the Z04 bandage on her forearm (drawn on the front arm so it stays visible). opt.whistle = ลุงชาญ's whistle (Z08+).
+      function mew(p, o, opt = {}) {
+        const g = G(p, o);
+        const aB = piv(g, -8, -196, { r: 10 }); el('path', { d: 'M-7 0 L7 0 L5 62 L-7 60 Z', fill: SKIN2 }, aB);
+        const lB = piv(g, -7, -118); el('path', { d: 'M-9 0 L9 0 L6 112 L-10 112 Z', fill: SKIN2 }, lB);
+        el('path', { d: 'M-14 106 L12 106 L12 118 L-16 118 Z', fill: '#e85a8a' }, lB);
+        const lF = piv(g, 6, -118); el('path', { d: 'M-9 0 L9 0 L14 112 L-2 112 Z', fill: SKIN2 }, lF);
+        el('path', { d: 'M-4 106 L24 106 Q28 118 20 118 L-4 118 Z', fill: '#e85a8a' }, lF);
+        el('path', { d: 'M-26 -150 L26 -150 L32 -112 L-32 -112 Z', fill: '#3a4a8a' }, g);
+        el('path', { d: 'M-24 -206 Q0 -214 24 -206 L24 -148 L-24 -148 Z', fill: '#f5a8c8' }, g);
+        el('rect', { x: -40, y: -204, width: 18, height: 54, rx: 6, fill: '#f0c040' }, g);
+        if (opt.whistle) { el('path', { d: 'M-10 -206 L0 -178 L10 -206', stroke: '#c0392b', 'stroke-width': 3, fill: 'none' }, g);
+          el('rect', { x: -6, y: -182, width: 12, height: 8, rx: 2, fill: '#c9ced6' }, g); }
+        el('rect', { x: -5, y: -218, width: 10, height: 14, fill: SKIN2 }, g);
+        const hd = G(g, { x: 2, y: -240 });
+        el('circle', { cx: -26, cy: 0, r: 10, fill: '#1a1416' }, hd); el('circle', { cx: 24, cy: -2, r: 9, fill: '#1a1416' }, hd);
+        el('circle', { r: 25, fill: SKIN2 }, hd);
+        el('path', { d: 'M-26 2 Q-28 -32 2 -32 Q28 -30 26 -4 Q4 -18 -16 -10 Z', fill: '#1a1416' }, hd);
+        el('circle', { cx: 14, cy: -2, r: 3.5, fill: '#111' }, hd);
+        const mouth = el('path', { d: 'M10 12 Q15 14 20 11', stroke: '#7a3a2a', 'stroke-width': 3, fill: 'none', 'stroke-linecap': 'round' }, hd);
+        const aF = piv(g, 10, -196, opt.armF || {}); el('path', { d: 'M-7 0 L7 0 L9 62 L-5 64 Z', fill: SKIN2 }, aF);
+        el('circle', { cx: 2, cy: 68, r: 8, fill: SKIN2 }, aF);
+        if (opt.bandage) el('rect', { x: -8, y: 30, width: 18, height: 20, rx: 3, fill: '#f4f4f0', stroke: '#c9c4b8', 'stroke-width': 2 }, aF);
+        return { g, aF, aB, lF, lB, hd, mouth };
+      }
+      // ข้าวตัง: small brown dog with a red collar. tail and hd are pivot groups (wag: mv(d.tail, t, .1, {r:-30}, {r:20})); bark = change mouth d.
+      function dog(p, o) {
+        const g = G(p, o);
+        [-30, 26].forEach(x => el('rect', { x: x - 6, y: -40, width: 12, height: 40, rx: 4, fill: '#7a4a28' }, g));
+        const tail = piv(g, -44, -58, { r: -30 }); el('path', { d: 'M0 0 Q-20 -24 -14 -46', stroke: '#9a6232', 'stroke-width': 10, fill: 'none', 'stroke-linecap': 'round' }, tail);
+        el('ellipse', { cx: 0, cy: -56, rx: 50, ry: 24, fill: '#9a6232' }, g);
+        [-18, 36].forEach(x => el('rect', { x: x - 6, y: -42, width: 12, height: 42, rx: 4, fill: '#8a5428' }, g));
+        const hd = piv(g, 40, -70);
+        el('circle', { cx: 10, cy: -14, r: 22, fill: '#9a6232' }, hd);
+        el('path', { d: 'M26 -10 L48 -6 L46 6 L24 4 Z', fill: '#b07444' }, hd);
+        el('circle', { cx: 48, cy: -4, r: 5, fill: '#111' }, hd);
+        el('path', { d: 'M-4 -30 L-14 -4 L4 -14 Z', fill: '#5a3418' }, hd);
+        el('circle', { cx: 18, cy: -20, r: 3.5, fill: '#111' }, hd);
+        const mouth = el('path', { d: 'M30 6 L46 8', stroke: '#3a1a10', 'stroke-width': 3, fill: 'none' }, hd);
+        el('rect', { x: -2, y: -2, width: 20, height: 6, rx: 3, fill: '#d8343a' }, hd);
+        return { g, tail, hd, mouth };
+      }
+      // ลุงชาญ (61): security guard, navy cap, light-blue uniform, grey moustache, whistle; krabong staff in the front hand (staff pivots at the hand).
+      function chan(p, o, opt = {}) {
+        const g = G(p, o);
+        const aB = piv(g, -8, -290, { r: 10 }); el('path', { d: 'M-10 0 L10 0 L6 88 L-10 86 Z', fill: '#a8723f' }, aB);
+        const lB = piv(g, -10, -176); el('path', { d: 'M-14 0 L14 0 L6 168 L-18 168 Z', fill: '#1f2a44' }, lB);
+        el('path', { d: 'M-22 160 L16 160 L16 178 L-24 178 Z', fill: '#0d0d10' }, lB);
+        const lF = piv(g, 8, -176); el('path', { d: 'M-14 0 L14 0 L22 168 L-2 168 Z', fill: '#26324f' }, lF);
+        el('path', { d: 'M-2 160 L44 162 Q50 178 40 178 L-2 178 Z', fill: '#0d0d10' }, lF);
+        el('path', { d: 'M-36 -304 Q0 -316 36 -304 L32 -168 L-32 -168 Z', fill: '#9cc3e0' }, g);
+        el('rect', { x: -32, y: -180, width: 64, height: 14, fill: '#111' }, g);
+        el('rect', { x: 10, y: -280, width: 18, height: 12, fill: '#c99a2e' }, g);
+        el('path', { d: 'M-36 -300 L-44 -276 L-30 -270 Z M36 -300 L44 -276 L30 -270 Z', fill: '#1f2a44' }, g);
+        el('rect', { x: -8, y: -324, width: 16, height: 22, fill: '#b98050' }, g);
+        const hd = G(g, { x: 4, y: -350 });
+        el('circle', { r: 31, fill: '#b98050' }, hd);
+        el('path', { d: 'M-30 -4 Q-30 -14 -22 -18 L-22 6 Z', fill: '#d0d0d0' }, hd);
+        el('circle', { cx: 19, cy: -4, r: 3.8, fill: '#111' }, hd);
+        el('path', { d: 'M10 -14 L28 -14', stroke: '#e0e0e0', 'stroke-width': 4 }, hd);
+        el('path', { d: 'M8 10 Q20 4 32 10 L30 14 Q20 10 10 14 Z', fill: '#e0e0e0' }, hd);
+        const mouth = el('path', { d: 'M14 20 Q21 22 27 19', stroke: '#5a2a1a', 'stroke-width': 3.5, fill: 'none', 'stroke-linecap': 'round' }, hd);
+        el('path', { d: 'M-34 -10 Q-34 -46 2 -46 Q34 -46 34 -14 Z', fill: '#1f2a44' }, hd);
+        el('path', { d: 'M20 -16 L54 -12 L52 -6 L20 -8 Z', fill: '#141c30' }, hd);
+        const aF = piv(g, 12, -290, opt.armF || { r: -20 });
+        el('path', { d: 'M-11 0 L11 0 L13 88 L-6 90 Z', fill: '#b98050' }, aF);
+        el('path', { d: 'M-14 -6 L14 -6 L13 34 L-13 34 Z', fill: '#9cc3e0' }, aF);
+        el('circle', { cx: 4, cy: 96, r: 12, fill: '#b98050' }, aF);
+        const staff = piv(aF, 4, 96, opt.staff || { r: 10 });
+        el('line', { x1: 0, y1: -260, x2: 0, y2: 160, stroke: '#7a5228', 'stroke-width': 11, 'stroke-linecap': 'round' }, staff);
+        el('line', { x1: 0, y1: -260, x2: 0, y2: -230, stroke: '#3a2410', 'stroke-width': 13 }, staff);
+        el('line', { x1: 0, y1: 130, x2: 0, y2: 160, stroke: '#3a2410', 'stroke-width': 13 }, staff);
+        const whistle = el('rect', { x: 20, y: -300, width: 14, height: 9, rx: 2, fill: '#c9ced6' }, g);
+        return { g, aF, aB, lF, lB, hd, mouth, staff, whistle };
+      }
+      // เสี่ยเปา (human, Z05 sting / Z06): heavy gang boss, loud flower shirt, gold chain + gold tooth, slick hair, golf club (club pivots at the hand).
+      function pao(p, o, opt = {}) {
+        const g = G(p, o);
+        const aB = piv(g, -14, -292, { r: 12 }); el('path', { d: 'M-12 0 L12 0 L8 90 L-12 88 Z', fill: '#c48a5a' }, aB);
+        const lB = piv(g, -12, -176); el('path', { d: 'M-18 0 L18 0 L8 168 L-20 168 Z', fill: '#222' }, lB);
+        el('path', { d: 'M-24 160 L16 160 L16 178 L-26 178 Z', fill: '#5a3a1a' }, lB);
+        const lF = piv(g, 10, -176); el('path', { d: 'M-18 0 L18 0 L24 168 L-4 168 Z', fill: '#2a2a2a' }, lF);
+        el('path', { d: 'M-4 160 L46 162 Q52 178 42 178 L-4 178 Z', fill: '#5a3a1a' }, lF);
+        el('path', { d: 'M-50 -300 Q0 -320 50 -300 L56 -200 Q0 -150 -56 -200 Z', fill: '#e0503a' }, g);
+        [[-30, -280, '#ffd23f'], [10, -290, '#3ac0a0'], [34, -250, '#fff'], [-20, -230, '#3ac0a0'], [20, -215, '#ffd23f'], [-40, -200, '#fff'], [0, -255, '#fff']]
+          .forEach(([cx, cy, f]) => el('circle', { cx, cy, r: 9, fill: f }, g));
+        el('path', { d: 'M-22 -306 Q2 -270 26 -306', stroke: '#e8c040', 'stroke-width': 8, fill: 'none' }, g);
+        el('rect', { x: -10, y: -326, width: 20, height: 22, fill: '#c48a5a' }, g);
+        const hd = G(g, { x: 4, y: -352 });
+        el('circle', { r: 34, fill: '#c48a5a' }, hd);
+        el('path', { d: 'M-34 -4 Q-34 -44 4 -42 Q36 -40 34 -14 Q0 -30 -20 -16 Z', fill: '#0d0d0d' }, hd);
+        el('circle', { cx: 20, cy: -4, r: 3.8, fill: '#111' }, hd);
+        el('path', { d: 'M10 -14 L30 -12', stroke: '#111', 'stroke-width': 5 }, hd);
+        const mouth = el('path', { d: 'M12 16 Q22 22 32 14', stroke: '#5a2a1a', 'stroke-width': 4, fill: 'none', 'stroke-linecap': 'round' }, hd);
+        el('rect', { x: 26, y: 12, width: 8, height: 5, fill: '#e8c040' }, hd);
+        const aF = piv(g, 18, -292, opt.armF || { r: -10 });
+        el('path', { d: 'M-12 0 L12 0 L14 90 L-6 92 Z', fill: '#c48a5a' }, aF);
+        el('path', { d: 'M-15 -6 L15 -6 L14 30 L-14 30 Z', fill: '#e0503a' }, aF);
+        el('circle', { cx: 4, cy: 98, r: 13, fill: '#c48a5a' }, aF);
+        const club = piv(aF, 4, 98, opt.club || { r: 0 });
+        el('line', { x1: 0, y1: -20, x2: 0, y2: 200, stroke: '#c9ced6', 'stroke-width': 6 }, club);
+        el('path', { d: 'M-4 196 L34 196 L36 212 L-6 210 Z', fill: '#9aa1ab' }, club);
+        return { g, aF, aB, lF, lB, hd, mouth, club };
+      }
+      // gang member (Z06): human in a black tank top; same body as zomb() but normal skin and eyes.
+      function thug(p, o, opt = {}) {
+        const z = zomb(p, o, { shirt: '#151515', armF: opt.armF ?? 60, armR: opt.armR ?? 70 });
+        const c = z.hd.querySelectorAll('circle');
+        c[0].setAttribute('fill', '#c48a5a'); z.g.querySelectorAll('path').forEach(pth => { const f = pth.getAttribute('fill'); if (f === '#7a1418' || f === '#768670') pth.setAttribute('fill', f === '#7a1418' ? '#151515' : '#a8743f'); }); c[1].setAttribute('opacity', 0); c[2].setAttribute('r', 3.8); c[2].setAttribute('fill', '#111');
+        z.g.querySelectorAll('path').forEach(pth => { if (pth.getAttribute('fill') === ZSK || pth.getAttribute('stroke') === ZSK) { pth.getAttribute('fill') === ZSK && pth.setAttribute('fill', '#c48a5a'); pth.getAttribute('stroke') === ZSK && pth.setAttribute('stroke', '#c48a5a'); } });
+        return z;
+      }
+      // brute zombie (Z05; brute เสี่ยเปา in Z10 with opt.pao: white car-door armour, gold chain, slick hair, golf club fused to the hand). Use sx/sy ~1.5-2.2.
+      function brute(p, o, opt = {}) {
+        const g = G(p, o);
+        const aB = piv(g, -30, -300, { r: opt.armR ?? 20 });
+        el('path', { d: 'M-22 0 L22 0 L18 150 L-24 146 Z', fill: '#6f7f6a' }, aB); el('circle', { cx: -2, cy: 160, r: 26, fill: '#6f7f6a' }, aB);
+        el('path', { d: 'M-50 -176 L-4 -176 L-14 0 L-60 0 Z', fill: '#2a2630' }, g);
+        el('path', { d: 'M4 -176 L50 -176 L58 0 L14 0 Z', fill: '#352f3e' }, g);
+        el('path', { d: 'M-70 -330 Q0 -370 72 -330 L62 -170 L-62 -170 Z', fill: opt.pao ? '#a03a2a' : '#4a4038' }, g);
+        if (opt.pao) el('path', { d: 'M-30 -340 Q4 -290 36 -340', stroke: '#e8c040', 'stroke-width': 10, fill: 'none' }, g);
+        const door = G(g, { x: 0, y: -260 });
+        el('path', { d: 'M-60 -60 L56 -66 L60 70 L-58 74 Z', fill: opt.pao ? '#e8e8e8' : '#3a6a9a', stroke: '#222', 'stroke-width': 6 }, door);
+        el('path', { d: 'M-46 -54 L42 -58 L44 -10 L-46 -6 Z', fill: '#1c2230', opacity: .8 }, door);
+        el('rect', { x: 30, y: 14, width: 22, height: 8, fill: '#888' }, door);
+        el('path', { d: 'M-70 -320 L60 -180', stroke: '#888', 'stroke-width': 8, 'stroke-dasharray': '14 6' }, g);
+        const hd = G(g, { x: 20, y: -372, r: 10 });
+        el('circle', { r: 40, fill: '#7f8f78' }, hd);
+        if (opt.pao) el('path', { d: 'M-40 -4 Q-40 -50 4 -48 Q40 -46 38 -18 Q0 -34 -24 -18 Z', fill: '#0d0d0d' }, hd);
+        el('circle', { cx: 20, cy: -8, r: 13, fill: 'url(#gEye)' }, hd); el('circle', { cx: 20, cy: -8, r: 6.5, fill: '#fff' }, hd);
+        el('path', { d: 'M6 16 Q22 28 36 14', stroke: '#5a0a10', 'stroke-width': 7, fill: 'none' }, hd);
+        const aF = piv(g, 40, -300, { r: opt.armF ?? -10 });
+        el('path', { d: 'M-22 0 L22 0 L18 150 L-24 146 Z', fill: '#7f8f78' }, aF); el('circle', { cx: -2, cy: 160, r: 28, fill: '#7f8f78' }, aF);
+        let club = null;
+        if (opt.pao) { club = piv(aF, -2, 160, { r: 0 });
+          el('line', { x1: 0, y1: 0, x2: 0, y2: 260, stroke: '#c9ced6', 'stroke-width': 9 }, club);
+          el('path', { d: 'M-6 254 L46 254 L48 274 L-8 272 Z', fill: '#9aa1ab' }, club); }
+        return { g, aF, aB, hd, door, club };
+      }
+      // night runner = zomb() leaning forward: zomb(p, { x, y, sx, sy, r: 18 }, { armF: -20, armR: -10 }).
+) -> index.html.
+      Everything is drawn in SVG by the script below; scenes switch on cue times, so re-timing the voice needs no edits here.
+      Scenes: canal 1, 3, 5 | bell tower 2 | Fon 4 | river + bridge 6-7 | dog 8 | under the bridge 9 | boat fight + slow-mo 10-17
+      | drift montage 18 | two-shot 19-20 | ship ahead 21 | under the pier 22-25 | smile + timer 26 | next 27
+    -->
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/gsap.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@400;500;600;700;800;900&family=Anuphan:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <style>
+      * { margin: 0; padding: 0; box-sizing: border-box; }
+      html, body { width: 1080px; height: 1920px; overflow: hidden; background: #070a14; }
+      #root { position: relative; width: 1080px; height: 1920px; overflow: hidden; font-family: 'Anuphan', sans-serif; color: #fff; }
+      .full { position: absolute; left: 0; top: 0; width: 1080px; height: 1920px; }
+      .scene { opacity: 0; overflow: hidden; }
+      .cam { transform-origin: 540px 960px; }
+      svg { display: block; overflow: visible; }
+
+      .sub { position: absolute; left: 50px; right: 50px; top: 1600px; text-align: center; font-family: 'Prompt', sans-serif; font-weight: 700;
+             font-size: 58px; line-height: 1.3; opacity: 0; text-shadow: 0 4px 0 #000, 0 0 18px rgba(0,0,0,.9), 0 0 4px #000; }
+      .sub.y { color: #FFD23F; }
+      .sub.r span { display: inline-block; background: #D8343A; color: #fff; padding: 4px 26px 8px; border-radius: 10px; text-shadow: none;
+                    box-shadow: 0 6px 24px rgba(0,0,0,.45); }
+      .sub b { color: #9fe8ff; font-weight: 800; }
+
+      .chip { position: absolute; top: 150px; height: 86px; background: #EEE8DC; border-radius: 16px; color: #1d2433; display: flex; align-items: center;
+              gap: 14px; padding: 0 26px 0 20px; box-shadow: 0 8px 26px rgba(0,0,0,.45); }
+      .chip small { display: block; font-size: 20px; font-weight: 500; color: #555a63; line-height: 1; }
+      .chip b { display: block; font-family: 'Prompt'; font-size: 40px; font-weight: 700; line-height: 1.05; letter-spacing: .02em; }
+      #ep { left: auto; right: 56px; background: #D8343A; color: #fff; font: 800 34px 'Prompt'; padding: 0 26px; }
+      #timer { left: 330px; top: 1180px; background: #D8343A; color: #fff; opacity: 0; transform-origin: 0 0; }
+      #timer small { color: #fff; }
+
+      .badge { position: absolute; left: 60px; top: 1380px; background: rgba(12,12,18,.82); border-left: 10px solid #FFD23F; border-radius: 10px;
+               padding: 14px 26px; font: 600 38px 'Prompt'; color: #fff; opacity: 0; white-space: nowrap; }
+      .badge i { font-style: normal; color: #FFD23F; }
+
+      .fx { position: absolute; font: 900 150px/1 'Prompt'; color: #FFD23F; opacity: 0; white-space: nowrap;
+            -webkit-text-stroke: 10px #111; paint-order: stroke fill; text-shadow: 10px 10px 0 #D8343A; transform-origin: 50% 50%; }
+      .fx.w { color: #fff; text-shadow: 10px 10px 0 #2a6cd8; }
+      .fx.s { font-size: 96px; }
+      .fx.xs { font-size: 70px; -webkit-text-stroke: 7px #111; text-shadow: 6px 6px 0 #D8343A; }
+      .fx.red { color: #ff4a50; text-shadow: none; }
+
+      #title { position: absolute; left: 0; right: 0; top: 360px; text-align: center; opacity: 0; }
+      #title h1 { font: 900 112px/1.05 'Prompt'; color: #fff; -webkit-text-stroke: 8px #111; paint-order: stroke fill; text-shadow: 8px 8px 0 #D8343A; }
+      #title p { margin-top: 18px; display: inline-block; background: #FFD23F; color: #111; font: 800 44px 'Prompt'; padding: 6px 28px; border-radius: 8px; }
+
+      #flash { background: #fff; opacity: 0; }
+      #redv { background: radial-gradient(ellipse 70% 60% at 50% 50%, rgba(216,52,58,0) 40%, rgba(150,10,20,.85)); opacity: 0; }
+      #blk { background: #000; opacity: 0; }
+      #bars { pointer-events: none; }
+      #bars div { position: absolute; left: 0; width: 1080px; height: 0; background: #000; }
+
+      #next { background: radial-gradient(ellipse 80% 45% at 50% 42%, #18243f, #070a16 70%); }
+      #next .dawn { position: absolute; left: 0; right: 0; bottom: 0; height: 260px; background: linear-gradient(to top, rgba(255,140,60,.55), rgba(255,140,60,0)); }
+      #next .dl { position: absolute; left: 0; right: 0; bottom: 120px; height: 6px; background: #ff9a3d; box-shadow: 0 0 30px #ff9a3d; }
+      #next .pill { position: absolute; left: 50%; top: 600px; transform: translateX(-50%); border: 2px solid #4a5068; border-radius: 40px; padding: 8px 30px;
+                    font-size: 32px; font-weight: 600; color: #d6d6dc; white-space: nowrap; }
+      #next .pill:before { content: ''; display: inline-block; width: 12px; height: 12px; border-radius: 50%; background: #D8343A; margin-right: 12px; vertical-align: 4px; }
+      #next h1 { position: absolute; left: 40px; right: 40px; top: 700px; text-align: center; font: 900 120px/1.15 'Prompt'; color: #fff;
+                 -webkit-text-stroke: 8px #111; paint-order: stroke fill; text-shadow: 8px 8px 0 #D8343A; }
+      #next .rl { position: absolute; left: 400px; top: 1000px; width: 280px; height: 8px; background: #ff9a3d; border-radius: 4px; }
+      #next .s1 { position: absolute; left: 0; right: 0; top: 1040px; text-align: center; font: 700 40px 'Prompt'; color: #FFD23F; }
+      #next .s2 { position: absolute; left: 0; right: 0; top: 1110px; text-align: center; font-size: 34px; color: #c8c8d0; }
+      #next .sr { position: absolute; left: 0; right: 0; top: 300px; text-align: center; font: 800 46px 'Prompt'; color: #e05a5f; letter-spacing: .04em; }
+    </style>
+  </head>
+  <body>
+    <div id="root" data-composition-id="main" data-start="0" data-duration="96.53" data-width="1080" data-height="1920">
+      <svg width="0" height="0" style="position:absolute">
+        <defs>
+          <linearGradient id="gNight" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#05070f" /><stop offset=".6" stop-color="#121a33" /><stop offset="1" stop-color="#1c2444" /></linearGradient>
+          <linearGradient id="gNavy" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#0a1024" /><stop offset=".7" stop-color="#1e2a52" /></linearGradient>
+          <linearGradient id="gPurple" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#1a1638" /><stop offset=".55" stop-color="#4a2c5e" /><stop offset=".8" stop-color="#a0506a" /></linearGradient>
+          <linearGradient id="gPreDawn" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#1c1a40" /><stop offset=".5" stop-color="#523466" /><stop offset=".72" stop-color="#d27058" /><stop offset=".8" stop-color="#ffb070" /></linearGradient>
+          <linearGradient id="gWater" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#101a30" /><stop offset="1" stop-color="#04070e" /></linearGradient>
+          <radialGradient id="gGlow"><stop offset="0" stop-color="#ffe2a0" stop-opacity=".9" /><stop offset="1" stop-color="#ffe2a0" stop-opacity="0" /></radialGradient>
+          <radialGradient id="gEye"><stop offset="0" stop-color="#fff" stop-opacity=".9" /><stop offset="1" stop-color="#fff" stop-opacity="0" /></radialGradient>
+          <filter id="fBlur"><feGaussianBlur stdDeviation="5" /></filter>
+        </defs>
+      </svg>
+
+      <div id="canal" class="scene full" style="opacity:1"><div class="cam full"><svg class="full" viewBox="0 0 1080 1920" id="sCanal"></svg></div></div>
+      <div id="tower" class="scene full"><div class="cam full"><svg class="full" viewBox="0 0 1080 1920" id="sTower"></svg></div></div>
+      <div id="fonc" class="scene full"><div class="cam full"><svg class="full" viewBox="0 0 1080 1920" id="sFonc"></svg></div></div>
+      <div id="river" class="scene full"><div class="cam full"><svg class="full" viewBox="0 0 1080 1920" id="sRiver"></svg></div></div>
+      <div id="bark" class="scene full"><div class="cam full"><svg class="full" viewBox="0 0 1080 1920" id="sBark"></svg></div></div>
+      <div id="under" class="scene full"><div class="cam full"><svg class="full" viewBox="0 0 1080 1920" id="sUnder"></svg></div></div>
+      <div id="boat" class="scene full"><div class="cam full"><svg class="full" viewBox="0 0 1080 1920" id="sBoat"></svg></div></div>
+      <div id="drift" class="scene full"><div class="cam full"><svg class="full" viewBox="0 0 1080 1920" id="sDrift"></svg></div></div>
+      <div id="two" class="scene full"><div class="cam full"><svg class="full" viewBox="0 0 1080 1920" id="sTwo"></svg></div></div>
+      <div id="ship" class="scene full"><div class="cam full"><svg class="full" viewBox="0 0 1080 1920" id="sShip"></svg></div></div>
+      <div id="pier" class="scene full"><div class="cam full"><svg class="full" viewBox="0 0 1080 1920" id="sPier"></svg></div></div>
+      <div id="smile" class="scene full"><div class="cam full"><svg class="full" viewBox="0 0 1080 1920" id="sSmile"></svg></div></div>
+
+      <div id="redv" class="full"></div>
+      <div id="flash" class="full"></div>
+      <div id="bars" class="full"><div id="barT" style="top:0"></div><div id="barB" style="bottom:0"></div></div>
+      <div id="blk" class="full"></div>
+      <div id="fxl" class="full"></div>
+
+      <div id="title"><h1>กรุงเทพฯ<br>ไม่มีพรุ่งนี้</h1><p>EP.9 เจ้าพระยา</p></div>
+      <div id="bRiver" class="badge"><i>แม่น้ำเจ้าพระยา</i> · ใต้สะพานพุทธ</div>
+      <div id="bFort" class="badge"><i>ป้อมพระจุลจอมเกล้า</i> · ปากน้ำ</div>
+
+      <div id="clock" class="chip" style="left:56px">
+        <svg viewBox="-24 -24 48 48" width="46" height="46"><circle r="19" fill="none" stroke="#1d2433" stroke-width="4" /><path d="M0 -10 L0 0 L8 6" fill="none" stroke="#1d2433" stroke-width="4" stroke-linecap="round" /></svg>
+        <div><small>วันที่ 3</small><b id="clockt">01:02</b></div>
+      </div>
+      <div id="ep" class="chip">EP.9</div>
+
+      <div id="subs"></div>
+
+      <div id="next" class="scene full">
+        <div class="dawn"></div><div class="dl"></div>
+        <div class="sr">กรุงเทพฯ ไม่มีพรุ่งนี้</div>
+        <div class="pill">ตอนหน้า</div>
+        <h1>รุ่งเช้า<br>ที่ปากน้ำ</h1>
+        <div class="rl"></div>
+        <div class="s1">EP.10 ตอนจบ เร็วๆ นี้</div>
+        <div class="s2">กดติดตาม แล้วไปรอดด้วยกัน</div>
+      </div>
+
+      <div id="timer" class="chip">
+        <svg viewBox="-24 -24 48 48" width="46" height="46"><circle r="19" fill="none" stroke="#fff" stroke-width="4" /><path d="M0 -10 L0 0 L8 6" fill="none" stroke="#fff" stroke-width="4" stroke-linecap="round" /></svg>
+        <div><small>ถูกกัด</small><b id="timert">03:00</b></div>
+      </div>
+    </div>
+
+    <script>
+      const TIMING = {"total": 96.53, "cues": [{"n": 1, "start": 0.5, "end": 1.45}, {"n": 2, "start": 3.55, "end": 6.62}, {"n": 3, "start": 7.52, "end": 9.37}, {"n": 4, "start": 10.47, "end": 13.31}, {"n": 5, "start": 14.51, "end": 16.4}, {"n": 6, "start": 18.8, "end": 21.05}, {"n": 7, "start": 22.85, "end": 24.84}, {"n": 8, "start": 26.84, "end": 28.53}, {"n": 9, "start": 28.83, "end": 29.97}, {"n": 10, "start": 32.77, "end": 33.87}, {"n": 11, "start": 37.27, "end": 40.95}, {"n": 12, "start": 42.35, "end": 44.47}, {"n": 13, "start": 47.27, "end": 48.81}, {"n": 14, "start": 51.31, "end": 53.88}, {"n": 15, "start": 55.28, "end": 58.07}, {"n": 16, "start": 59.37, "end": 61.01}, {"n": 17, "start": 63.81, "end": 66.19}, {"n": 18, "start": 67.89, "end": 70.89}, {"n": 19, "start": 71.89, "end": 73.98}, {"n": 20, "start": 74.88, "end": 77.24}, {"n": 21, "start": 78.84, "end": 80.3}, {"n": 22, "start": 80.9, "end": 83.34}, {"n": 23, "start": 83.54, "end": 85.86}, {"n": 24, "start": 86.06, "end": 86.82}, {"n": 25, "start": 87.02, "end": 89.18}, {"n": 26, "start": 89.88, "end": 90.87}, {"n": 27, "start": 92.17, "end": 94.33}]};
+      const S = [0], E = [0]; TIMING.cues.forEach(c => { S[c.n] = c.start; E[c.n] = c.end; });
+      const END = TIMING.total;
+      let seed = 9; const rnd = () => (seed = (seed * 16807) % 2147483647) / 2147483647;
+      const NS = 'http://www.w3.org/2000/svg';
+      const el = (tag, a, p) => { const e = document.createElementNS(NS, tag); for (const k in a) e.setAttribute(k, a[k]); p && p.appendChild(e); return e; };
+      const $ = id => document.getElementById(id);
+      const T = o => `translate(${o.x ?? 0} ${o.y ?? 0}) rotate(${o.r ?? 0}) scale(${o.sx ?? 1} ${o.sy ?? 1})`;
+      const G = (p, o = {}) => el('g', { transform: T(o) }, p);
+      const piv = (p, x, y, o = {}) => G(G(p, { x, y }), o);   // inner group rotates around (x, y)
+
+// Shared cast + timeline helpers for the zombie series (from Z01). Inlined by each episode's build.py at /*CAST*/.
+// Needs in scope: el, G, piv, T, rnd, seed, $ (defined in the episode template) and gsap.
+      const SKIN = '#b97a4c', SKIN2 = '#d7a27a', ZSK = '#8fa088', RED = '#D8343A';
+
+      // ---------- characters (drawn facing right, origin at the feet) ----------
+      function tae(p, o, opt = {}) {
+        const g = G(p, o);
+        const aB = piv(g, -8, -292, { r: 12 });
+        el('path', { d: 'M-10 0 L10 0 L6 92 L-10 90 Z', fill: '#a56a40' }, aB);
+        el('circle', { cx: -2, cy: 98, r: 11, fill: '#a56a40' }, aB);
+        let lB, lF;
+        if (opt.sit) {
+          lB = piv(g, -6, -178); el('path', { d: 'M-16 -10 L16 -10 L72 2 L76 92 L54 94 L50 26 Z', fill: '#26314b' }, lB);
+          lF = piv(g, 8, -178); el('path', { d: 'M-14 -10 L16 -10 L82 4 L86 96 L62 98 L58 28 Z', fill: '#33426a' }, lF);
+          el('path', { d: 'M60 90 L104 92 Q110 106 98 106 L60 106 Z', fill: '#111' }, lF);
+        } else {
+          lB = piv(g, -10, -178); el('path', { d: 'M-14 0 L14 0 L6 86 L2 170 L-22 170 L-18 86 Z', fill: '#26314b' }, lB);
+          el('path', { d: 'M-24 160 L18 160 L18 178 L-26 178 Z', fill: '#111' }, lB);
+          lF = piv(g, 8, -178); el('path', { d: 'M-14 0 L14 0 L22 86 L28 170 L4 170 L-2 88 Z', fill: '#33426a' }, lF);
+          el('path', { d: 'M2 160 L48 162 Q54 178 44 178 L2 178 Z', fill: '#111' }, lF);
+        }
+        el('path', { d: 'M-36 -306 Q0 -318 36 -306 L30 -168 L-30 -168 Z', fill: '#f07a1e' }, g);
+        el('path', { d: 'M-7 -312 L7 -312 L6 -170 L-6 -170 Z', fill: '#22262f' }, g);
+        el('rect', { x: -33, y: -218, width: 66, height: 9, fill: '#ffe08a' }, g);
+        el('rect', { x: 12, y: -280, width: 18, height: 20, rx: 3, fill: '#fff' }, g);
+        el('text', { x: 21, y: -264, 'font-size': 14, 'font-weight': 800, 'text-anchor': 'middle', fill: '#111', 'font-family': 'Prompt' }, g).textContent = '12';
+        el('rect', { x: -8, y: -326, width: 16, height: 22, fill: SKIN }, g);
+        const hd = G(g, { x: 4, y: -352 });
+        el('circle', { r: 32, fill: SKIN }, hd);
+        el('path', { d: 'M-33 -2 Q-32 -42 4 -40 Q36 -38 33 -8 L20 -16 Q-2 -28 -22 -10 Z', fill: '#15161a' }, hd);
+        el('circle', { cx: -8, cy: 2, r: 7, fill: '#a56a40' }, hd);
+        el('circle', { cx: 20, cy: -4, r: 4, fill: '#111' }, hd);
+        el('path', { d: 'M12 -14 L28 -16', stroke: '#111', 'stroke-width': 4, 'stroke-linecap': 'round' }, hd);
+        const mouth = el('path', { d: 'M16 16 Q22 18 28 15', stroke: '#5a2a1a', 'stroke-width': 4, fill: 'none', 'stroke-linecap': 'round' }, hd);
+        let helmHead = null;
+        if (opt.helmetOn) { helmHead = G(hd);
+          el('path', { d: 'M-38 -8 Q-40 -50 4 -50 Q42 -48 40 -14 L40 -10 L-38 -8 Z', fill: '#c4262c' }, helmHead);
+          el('path', { d: 'M-30 -20 Q0 -44 30 -30', stroke: '#fff', 'stroke-width': 5, fill: 'none', opacity: .5 }, helmHead); }
+        const aF = piv(g, 14, -292, opt.armF || {});
+        el('path', { d: 'M-11 0 L11 0 L14 90 L-6 94 Z', fill: SKIN }, aF);
+        el('path', { d: 'M-14 -6 L14 -6 L13 30 L-13 30 Z', fill: '#22262f' }, aF);
+        el('circle', { cx: 4, cy: 100, r: 13, fill: SKIN }, aF);
+        let helm = null;
+        if (opt.helmet) { helm = G(aF, { x: 4, y: 130 });
+          el('line', { x1: 0, y1: -30, x2: 0, y2: -10, stroke: '#222', 'stroke-width': 4 }, helm);
+          el('path', { d: 'M-32 14 Q-34 -32 0 -32 Q34 -32 32 14 Z', fill: '#c4262c', stroke: '#111', 'stroke-width': 4 }, helm);
+          el('path', { d: 'M4 -10 L30 -10 L32 12 L6 12 Z', fill: '#1a1a1f' }, helm); }
+        return { g, aF, aB, lF, lB, hd, mouth, helm };
+      }
+      function fon(p, o, opt = {}) {
+        const g = G(p, o);
+        const aB = piv(g, -10, -290, { r: 8 }); el('path', { d: 'M-10 0 L10 0 L6 88 L-10 86 Z', fill: '#c48d66' }, aB);
+        const lB = piv(g, -10, -176); el('path', { d: 'M-14 0 L14 0 L8 168 L-16 168 Z', fill: '#1f7f74' }, lB);
+        el('path', { d: 'M-20 162 L18 162 L18 178 L-22 178 Z', fill: '#f2f2f2' }, lB);
+        const lF = piv(g, 8, -176); el('path', { d: 'M-14 0 L14 0 L22 168 L-2 168 Z', fill: '#23867a' }, lF);
+        el('path', { d: 'M-4 162 L38 162 Q44 178 34 178 L-4 178 Z', fill: '#f2f2f2' }, lF);
+        el('path', { d: 'M-34 -302 Q0 -314 34 -302 L32 -166 L-32 -166 Z', fill: '#2a9d8f' }, g);
+        el('path', { d: 'M-12 -306 L0 -280 L12 -306 Z', fill: '#1f7f74' }, g);
+        el('rect', { x: -8, y: -322, width: 16, height: 20, fill: SKIN2 }, g);
+        const hd = G(g, { x: 2, y: -346 });
+        el('circle', { cx: -30, cy: -18, r: 17, fill: '#1a1416' }, hd);
+        el('circle', { r: 30, fill: SKIN2 }, hd);
+        el('path', { d: 'M-31 6 Q-34 -38 2 -38 Q32 -36 30 -10 Q8 -24 -14 -16 L-20 18 Z', fill: '#1a1416' }, hd);
+        el('circle', { cx: 18, cy: -4, r: 3.8, fill: '#111' }, hd);
+        const mouth = el('path', { d: 'M14 15 Q20 17 25 14', stroke: '#7a3a2a', 'stroke-width': 4, fill: 'none', 'stroke-linecap': 'round' }, hd);
+        const aF = piv(g, 12, -290, opt.armF || { r: -20 });
+        el('path', { d: 'M-10 0 L10 0 L12 88 L-6 90 Z', fill: SKIN2 }, aF);
+        el('path', { d: 'M-13 -6 L13 -6 L12 26 L-12 26 Z', fill: '#2a9d8f' }, aF);
+        el('circle', { cx: 4, cy: 96, r: 12, fill: SKIN2 }, aF);
+        const pole = piv(aF, 4, 96, opt.pole || { r: 20 });
+        el('line', { x1: 0, y1: -230, x2: 0, y2: 130, stroke: '#c9ced6', 'stroke-width': 8, 'stroke-linecap': 'round' }, pole);
+        el('path', { d: 'M0 -230 Q22 -236 20 -214', stroke: '#c9ced6', 'stroke-width': 6, fill: 'none' }, pole);
+        el('rect', { x: 6, y: -214, width: 34, height: 52, rx: 10, fill: '#e8f4ff', opacity: .85, stroke: '#9fb2c8', 'stroke-width': 3 }, pole);
+        el('line', { x1: -44, y1: 130, x2: 44, y2: 130, stroke: '#9aa1ab', 'stroke-width': 8, 'stroke-linecap': 'round' }, pole);
+        el('circle', { cx: -44, cy: 138, r: 8, fill: '#333' }, pole); el('circle', { cx: 44, cy: 138, r: 8, fill: '#333' }, pole);
+        return { g, aF, aB, lF, lB, hd, mouth, pole };
+      }
+      const SHIRTS = ['#cfd3cf', '#5a6a8a', '#7a4a3a', '#3e5a4a', '#8a7a5a', '#6a3a5a'];
+      function zomb(p, o, opt = {}) {
+        const g = G(p, o);
+        const sh = opt.shirt || SHIRTS[Math.floor(rnd() * SHIRTS.length)];
+        const aB = piv(g, 16, -282, { r: opt.armR ?? -6 });
+        el('path', { d: 'M0 -9 L96 -10 L98 6 L0 10 Z', fill: '#768670' }, aB);
+        el('path', { d: 'M94 -12 L118 -14 M94 -2 L120 -2 M94 6 L116 10', stroke: '#768670', 'stroke-width': 6, 'stroke-linecap': 'round' }, aB);
+        if (!opt.noLegs) {
+          el('path', { d: 'M-24 -172 L2 -172 L-8 -84 L-20 0 L-44 0 L-30 -86 Z', fill: '#2d2a33' }, g);
+          el('path', { d: 'M-2 -172 L22 -172 L26 -84 L36 0 L12 0 L2 -84 Z', fill: '#3b3446' }, g);
+        }
+        el('path', { d: 'M-32 -292 Q8 -316 44 -284 L30 -164 L-30 -164 Z', fill: sh }, g);
+        el('path', { d: 'M-10 -170 L-2 -200 L8 -172 L20 -196 L28 -166 Z', fill: '#1a1418', opacity: .5 }, g);
+        el('path', { d: 'M8 -300 Q26 -296 34 -280 L26 -250 Q18 -270 4 -276 Z', fill: '#7a1418' }, g);
+        const hd = G(g, { x: 30, y: -318, r: 12 });
+        el('circle', { r: 30, fill: ZSK }, hd);
+        el('path', { d: 'M-30 -4 Q-26 -32 6 -32 Q-10 -20 -16 4 Z', fill: '#3a3a38' }, hd);
+        el('circle', { cx: 16, cy: -6, r: 10, fill: 'url(#gEye)' }, hd);
+        el('circle', { cx: 16, cy: -6, r: 5, fill: '#fff' }, hd);
+        el('path', { d: 'M8 12 Q18 20 28 10', stroke: '#5a0a10', 'stroke-width': 5, fill: 'none' }, hd);
+        el('path', { d: 'M14 16 L14 30', stroke: '#8a1018', 'stroke-width': 4 }, hd);
+        const aF = piv(g, 22, -276, { r: opt.armF ?? 4 });
+        el('path', { d: 'M0 -10 L100 -8 L100 8 L0 10 Z', fill: ZSK }, aF);
+        el('path', { d: 'M98 -10 L124 -12 M98 0 L126 0 M98 8 L122 12', stroke: ZSK, 'stroke-width': 6, 'stroke-linecap': 'round' }, aF);
+        return { g, aF, aB, hd };
+      }
+      function bike(p, o) {
+        const g = G(p, o);
+        [-95, 95].forEach(x => { const w = G(g, { x, y: -46 });
+          el('circle', { r: 46, fill: '#15161a' }, w); el('circle', { r: 30, fill: 'none', stroke: '#3a3d45', 'stroke-width': 4 }, w);
+          el('circle', { r: 12, fill: '#9aa0aa' }, w); });
+        el('line', { x1: 80, y1: -120, x2: 95, y2: -46, stroke: '#333', 'stroke-width': 9 }, g);
+        el('path', { d: 'M-118 -78 L-30 -98 L66 -90 L112 -70 L98 -52 L-96 -52 Z', fill: '#c4262c' }, g);
+        el('path', { d: 'M-100 -96 L10 -104 L12 -92 L-100 -84 Z', fill: '#111' }, g);
+        el('path', { d: 'M-40 -52 L40 -52 L30 -26 L-30 -26 Z', fill: '#2a2c32' }, g);
+        el('line', { x1: 70, y1: -122, x2: 108, y2: -136, stroke: '#222', 'stroke-width': 8, 'stroke-linecap': 'round' }, g);
+        el('circle', { cx: 112, cy: -92, r: 12, fill: '#ffe7a0' }, g);
+        return g;
+      }
+      function person(p, x, y, s, col, run, z) {
+        const g = G(p, { x, y, sx: s, sy: Math.abs(s) });
+        el('circle', { cx: 4, cy: -150, r: 18, fill: col }, g);
+        el('path', { d: run ? 'M-16 -128 L22 -128 L18 -60 L44 0 L28 4 L4 -50 L-16 4 L-32 0 L-10 -62 Z' : 'M-16 -128 L22 -128 L18 -60 L22 0 L8 0 L2 -50 L-6 0 L-20 0 L-14 -62 Z', fill: col }, g);
+        el('path', { d: run ? 'M18 -122 L46 -96 L40 -88 L14 -108 M-12 -122 L-40 -100 L-34 -92 L-8 -108' : 'M18 -122 L52 -116 L52 -106 L16 -108', stroke: col, 'stroke-width': 10, fill: 'none', 'stroke-linecap': 'round' }, g);
+        if (z) { el('circle', { cx: 12, cy: -154, r: 4, fill: '#fff' }, g); }
+        return g;
+      }
+      function car(p, x, y, s, col) {
+        const g = G(p, { x, y, sx: s, sy: s });
+        el('path', { d: 'M-130 -30 L-118 -70 L-70 -76 L-40 -118 L60 -118 L96 -76 L130 -66 L134 -30 Z', fill: col }, g);
+        el('path', { d: 'M-30 -108 L20 -108 L20 -80 L-56 -78 Z M30 -108 L56 -108 L82 -80 L30 -80 Z', fill: '#2a3140', opacity: .85 }, g);
+        [-80, 84].forEach(cx => { el('circle', { cx, cy: -26, r: 26, fill: '#141418' }, g); el('circle', { cx, cy: -26, r: 9, fill: '#888' }, g); });
+        return g;
+      }
+      function busBody(p, x, y, len, roofY) {
+        const g = G(p, { x, y });
+        el('rect', { x: 0, y: roofY, width: len, height: 330, rx: 18, fill: '#c8352e' }, g);
+        el('rect', { x: 0, y: roofY, width: len, height: 18, fill: '#a32a24' }, g);
+        el('rect', { x: 0, y: roofY + 190, width: len, height: 22, fill: '#f2efe6' }, g);
+        for (let i = 30; i < len - 100; i += 150) el('rect', { x: i, y: roofY + 42, width: 124, height: 120, rx: 8, fill: '#1c2230' }, g);
+        el('circle', { cx: 120, cy: roofY + 330, r: 48, fill: '#141418' }, g); el('circle', { cx: len - 160, cy: roofY + 330, r: 48, fill: '#141418' }, g);
+        return g;
+      }
+      function skyline(p, y, col, seedN, h = 260) {
+        const g = G(p); let x = -60; seed = seedN;
+        while (x < 1200) { const w = 70 + rnd() * 120, hh = 80 + rnd() * h;
+          el('rect', { x, y: y - hh, width: w, height: hh + 400, fill: col }, g);
+          if (rnd() > .5) el('rect', { x: x + w * .4, y: y - hh - 40, width: 6, height: 40, fill: col }, g);
+          x += w + 6; }
+        return g;
+      }
+      function zSil(p, x, y, s, col = '#120d16') { const g = person(p, x, y, s, col, false, true); return g; }
+
+      // ---------- timeline helpers ----------
+      window.__timelines = window.__timelines || {};
+      const tl = gsap.timeline({ paused: true });
+      const mv = (g, t, d, a, b, ease = 'power2.out') => tl.fromTo(g, { attr: { transform: T(a) } }, { attr: { transform: T(b) }, duration: d, ease, immediateRender: false }, t);
+      const show = (id, t0, t1, fade = 0) => { if (t0 > 0) tl.fromTo('#' + id, { opacity: 0 }, { opacity: 1, duration: fade || .01, immediateRender: false }, t0); tl.to('#' + id, { opacity: 0, duration: .01 }, t1); };
+      const cam = (id, t, d, a, b, ease = 'sine.inOut') => tl.fromTo('#' + id + ' .cam', a, { ...b, duration: d, ease, immediateRender: false }, t);
+      const shake = (id, t, amp = 22, n = 6) => { FXLOG.push({ t: +t.toFixed(3), kind: 'shake', amp }); for (let i = 0; i < n; i++) tl.to('#' + id + ' .cam', { x: (i % 2 ? -1 : 1) * amp * (1 - i / n), y: (rnd() - .5) * amp, duration: .035 }, t + i * .035); tl.to('#' + id + ' .cam', { x: 0, y: 0, duration: .04 }, t + n * .035); };
+      const fxl = $('fxl');
+      const FXLOG = window.__fx = [];   // every SFX word / hit, read by _shared/fxlog.py -> audio/fx.json for the sound bed
+      const word = (t, txt, x, y, cls = '', rot = -8, hold = .55) => {
+        FXLOG.push({ t: +t.toFixed(3), kind: 'word', txt });
+        const d = document.createElement('div'); d.className = 'fx ' + cls; d.textContent = txt; d.style.left = x + 'px'; d.style.top = y + 'px'; fxl.appendChild(d);
+        tl.fromTo(d, { opacity: 0, scale: .2, rotation: rot - 14 }, { opacity: 1, scale: 1.15, rotation: rot, duration: .1, ease: 'back.out(3)', immediateRender: false }, t);
+        tl.to(d, { scale: 1, duration: .1 }, t + .1);
+        tl.to(d, { opacity: 0, scale: 1.3, duration: .2 }, t + hold);
+      };
+      const burst = (p, t, x, y, col = '#fff') => { const g = G(p, { x, y }); g.setAttribute('opacity', 0);
+        for (let i = 0; i < 14; i++) { const a = i / 14 * Math.PI * 2 + rnd() * .2, r1 = 50 + rnd() * 20, r2 = 150 + rnd() * 90;
+          el('path', { d: `M${Math.cos(a - .06) * r1} ${Math.sin(a - .06) * r1} L${Math.cos(a) * r2} ${Math.sin(a) * r2} L${Math.cos(a + .06) * r1} ${Math.sin(a + .06) * r1} Z`, fill: col }, g); }
+        tl.fromTo(g, { opacity: 1, attr: { transform: T({ x, y, sx: .4, sy: .4 }) } }, { attr: { transform: T({ x, y, sx: 1.2, sy: 1.2 }) }, duration: .18, immediateRender: false }, t);
+        tl.to(g, { opacity: 0, duration: .12 }, t + .18); };
+      const flash = (t, o = .85) => { tl.fromTo('#flash', { opacity: o }, { opacity: 0, duration: .16, immediateRender: false }, t); };
+      const hit = (scene, svg, t, x, y, txt, wx, wy, cls, rot) => { FXLOG.push({ t: +t.toFixed(3), kind: 'hit', txt }); flash(t); burst(svg, t, x, y); shake(scene, t); word(t, txt, wx, wy, cls, rot); };
+      const speedLines = (p, n, col, dir = 1) => { const g = G(p);
+        for (let i = 0; i < n; i++) { const y = rnd() * 1920, w = 200 + rnd() * 500; el('rect', { x: rnd() * 1080, y, width: w, height: 3 + rnd() * 5, fill: col, opacity: .25 + rnd() * .4 }, g); }
+        return g; };
+
+
+      // ---------- cast added for Z02-Z10 (same conventions: facing right, origin at the feet, flip with sx: -s) ----------
+      // มิว (10): ~70% of an adult; opt.bandage puts the Z04 bandage on her forearm (drawn on the front arm so it stays visible). opt.whistle = ลุงชาญ's whistle (Z08+).
+      function mew(p, o, opt = {}) {
+        const g = G(p, o);
+        const aB = piv(g, -8, -196, { r: 10 }); el('path', { d: 'M-7 0 L7 0 L5 62 L-7 60 Z', fill: SKIN2 }, aB);
+        const lB = piv(g, -7, -118); el('path', { d: 'M-9 0 L9 0 L6 112 L-10 112 Z', fill: SKIN2 }, lB);
+        el('path', { d: 'M-14 106 L12 106 L12 118 L-16 118 Z', fill: '#e85a8a' }, lB);
+        const lF = piv(g, 6, -118); el('path', { d: 'M-9 0 L9 0 L14 112 L-2 112 Z', fill: SKIN2 }, lF);
+        el('path', { d: 'M-4 106 L24 106 Q28 118 20 118 L-4 118 Z', fill: '#e85a8a' }, lF);
+        el('path', { d: 'M-26 -150 L26 -150 L32 -112 L-32 -112 Z', fill: '#3a4a8a' }, g);
+        el('path', { d: 'M-24 -206 Q0 -214 24 -206 L24 -148 L-24 -148 Z', fill: '#f5a8c8' }, g);
+        el('rect', { x: -40, y: -204, width: 18, height: 54, rx: 6, fill: '#f0c040' }, g);
+        if (opt.whistle) { el('path', { d: 'M-10 -206 L0 -178 L10 -206', stroke: '#c0392b', 'stroke-width': 3, fill: 'none' }, g);
+          el('rect', { x: -6, y: -182, width: 12, height: 8, rx: 2, fill: '#c9ced6' }, g); }
+        el('rect', { x: -5, y: -218, width: 10, height: 14, fill: SKIN2 }, g);
+        const hd = G(g, { x: 2, y: -240 });
+        el('circle', { cx: -26, cy: 0, r: 10, fill: '#1a1416' }, hd); el('circle', { cx: 24, cy: -2, r: 9, fill: '#1a1416' }, hd);
+        el('circle', { r: 25, fill: SKIN2 }, hd);
+        el('path', { d: 'M-26 2 Q-28 -32 2 -32 Q28 -30 26 -4 Q4 -18 -16 -10 Z', fill: '#1a1416' }, hd);
+        el('circle', { cx: 14, cy: -2, r: 3.5, fill: '#111' }, hd);
+        const mouth = el('path', { d: 'M10 12 Q15 14 20 11', stroke: '#7a3a2a', 'stroke-width': 3, fill: 'none', 'stroke-linecap': 'round' }, hd);
+        const aF = piv(g, 10, -196, opt.armF || {}); el('path', { d: 'M-7 0 L7 0 L9 62 L-5 64 Z', fill: SKIN2 }, aF);
+        el('circle', { cx: 2, cy: 68, r: 8, fill: SKIN2 }, aF);
+        if (opt.bandage) el('rect', { x: -8, y: 30, width: 18, height: 20, rx: 3, fill: '#f4f4f0', stroke: '#c9c4b8', 'stroke-width': 2 }, aF);
+        return { g, aF, aB, lF, lB, hd, mouth };
+      }
+      // ข้าวตัง: small brown dog with a red collar. tail and hd are pivot groups (wag: mv(d.tail, t, .1, {r:-30}, {r:20})); bark = change mouth d.
+      function dog(p, o) {
+        const g = G(p, o);
+        [-30, 26].forEach(x => el('rect', { x: x - 6, y: -40, width: 12, height: 40, rx: 4, fill: '#7a4a28' }, g));
+        const tail = piv(g, -44, -58, { r: -30 }); el('path', { d: 'M0 0 Q-20 -24 -14 -46', stroke: '#9a6232', 'stroke-width': 10, fill: 'none', 'stroke-linecap': 'round' }, tail);
+        el('ellipse', { cx: 0, cy: -56, rx: 50, ry: 24, fill: '#9a6232' }, g);
+        [-18, 36].forEach(x => el('rect', { x: x - 6, y: -42, width: 12, height: 42, rx: 4, fill: '#8a5428' }, g));
+        const hd = piv(g, 40, -70);
+        el('circle', { cx: 10, cy: -14, r: 22, fill: '#9a6232' }, hd);
+        el('path', { d: 'M26 -10 L48 -6 L46 6 L24 4 Z', fill: '#b07444' }, hd);
+        el('circle', { cx: 48, cy: -4, r: 5, fill: '#111' }, hd);
+        el('path', { d: 'M-4 -30 L-14 -4 L4 -14 Z', fill: '#5a3418' }, hd);
+        el('circle', { cx: 18, cy: -20, r: 3.5, fill: '#111' }, hd);
+        const mouth = el('path', { d: 'M30 6 L46 8', stroke: '#3a1a10', 'stroke-width': 3, fill: 'none' }, hd);
+        el('rect', { x: -2, y: -2, width: 20, height: 6, rx: 3, fill: '#d8343a' }, hd);
+        return { g, tail, hd, mouth };
+      }
+      // ลุงชาญ (61): security guard, navy cap, light-blue uniform, grey moustache, whistle; krabong staff in the front hand (staff pivots at the hand).
+      function chan(p, o, opt = {}) {
+        const g = G(p, o);
+        const aB = piv(g, -8, -290, { r: 10 }); el('path', { d: 'M-10 0 L10 0 L6 88 L-10 86 Z', fill: '#a8723f' }, aB);
+        const lB = piv(g, -10, -176); el('path', { d: 'M-14 0 L14 0 L6 168 L-18 168 Z', fill: '#1f2a44' }, lB);
+        el('path', { d: 'M-22 160 L16 160 L16 178 L-24 178 Z', fill: '#0d0d10' }, lB);
+        const lF = piv(g, 8, -176); el('path', { d: 'M-14 0 L14 0 L22 168 L-2 168 Z', fill: '#26324f' }, lF);
+        el('path', { d: 'M-2 160 L44 162 Q50 178 40 178 L-2 178 Z', fill: '#0d0d10' }, lF);
+        el('path', { d: 'M-36 -304 Q0 -316 36 -304 L32 -168 L-32 -168 Z', fill: '#9cc3e0' }, g);
+        el('rect', { x: -32, y: -180, width: 64, height: 14, fill: '#111' }, g);
+        el('rect', { x: 10, y: -280, width: 18, height: 12, fill: '#c99a2e' }, g);
+        el('path', { d: 'M-36 -300 L-44 -276 L-30 -270 Z M36 -300 L44 -276 L30 -270 Z', fill: '#1f2a44' }, g);
+        el('rect', { x: -8, y: -324, width: 16, height: 22, fill: '#b98050' }, g);
+        const hd = G(g, { x: 4, y: -350 });
+        el('circle', { r: 31, fill: '#b98050' }, hd);
+        el('path', { d: 'M-30 -4 Q-30 -14 -22 -18 L-22 6 Z', fill: '#d0d0d0' }, hd);
+        el('circle', { cx: 19, cy: -4, r: 3.8, fill: '#111' }, hd);
+        el('path', { d: 'M10 -14 L28 -14', stroke: '#e0e0e0', 'stroke-width': 4 }, hd);
+        el('path', { d: 'M8 10 Q20 4 32 10 L30 14 Q20 10 10 14 Z', fill: '#e0e0e0' }, hd);
+        const mouth = el('path', { d: 'M14 20 Q21 22 27 19', stroke: '#5a2a1a', 'stroke-width': 3.5, fill: 'none', 'stroke-linecap': 'round' }, hd);
+        el('path', { d: 'M-34 -10 Q-34 -46 2 -46 Q34 -46 34 -14 Z', fill: '#1f2a44' }, hd);
+        el('path', { d: 'M20 -16 L54 -12 L52 -6 L20 -8 Z', fill: '#141c30' }, hd);
+        const aF = piv(g, 12, -290, opt.armF || { r: -20 });
+        el('path', { d: 'M-11 0 L11 0 L13 88 L-6 90 Z', fill: '#b98050' }, aF);
+        el('path', { d: 'M-14 -6 L14 -6 L13 34 L-13 34 Z', fill: '#9cc3e0' }, aF);
+        el('circle', { cx: 4, cy: 96, r: 12, fill: '#b98050' }, aF);
+        const staff = piv(aF, 4, 96, opt.staff || { r: 10 });
+        el('line', { x1: 0, y1: -260, x2: 0, y2: 160, stroke: '#7a5228', 'stroke-width': 11, 'stroke-linecap': 'round' }, staff);
+        el('line', { x1: 0, y1: -260, x2: 0, y2: -230, stroke: '#3a2410', 'stroke-width': 13 }, staff);
+        el('line', { x1: 0, y1: 130, x2: 0, y2: 160, stroke: '#3a2410', 'stroke-width': 13 }, staff);
+        const whistle = el('rect', { x: 20, y: -300, width: 14, height: 9, rx: 2, fill: '#c9ced6' }, g);
+        return { g, aF, aB, lF, lB, hd, mouth, staff, whistle };
+      }
+      // เสี่ยเปา (human, Z05 sting / Z06): heavy gang boss, loud flower shirt, gold chain + gold tooth, slick hair, golf club (club pivots at the hand).
+      function pao(p, o, opt = {}) {
+        const g = G(p, o);
+        const aB = piv(g, -14, -292, { r: 12 }); el('path', { d: 'M-12 0 L12 0 L8 90 L-12 88 Z', fill: '#c48a5a' }, aB);
+        const lB = piv(g, -12, -176); el('path', { d: 'M-18 0 L18 0 L8 168 L-20 168 Z', fill: '#222' }, lB);
+        el('path', { d: 'M-24 160 L16 160 L16 178 L-26 178 Z', fill: '#5a3a1a' }, lB);
+        const lF = piv(g, 10, -176); el('path', { d: 'M-18 0 L18 0 L24 168 L-4 168 Z', fill: '#2a2a2a' }, lF);
+        el('path', { d: 'M-4 160 L46 162 Q52 178 42 178 L-4 178 Z', fill: '#5a3a1a' }, lF);
+        el('path', { d: 'M-50 -300 Q0 -320 50 -300 L56 -200 Q0 -150 -56 -200 Z', fill: '#e0503a' }, g);
+        [[-30, -280, '#ffd23f'], [10, -290, '#3ac0a0'], [34, -250, '#fff'], [-20, -230, '#3ac0a0'], [20, -215, '#ffd23f'], [-40, -200, '#fff'], [0, -255, '#fff']]
+          .forEach(([cx, cy, f]) => el('circle', { cx, cy, r: 9, fill: f }, g));
+        el('path', { d: 'M-22 -306 Q2 -270 26 -306', stroke: '#e8c040', 'stroke-width': 8, fill: 'none' }, g);
+        el('rect', { x: -10, y: -326, width: 20, height: 22, fill: '#c48a5a' }, g);
+        const hd = G(g, { x: 4, y: -352 });
+        el('circle', { r: 34, fill: '#c48a5a' }, hd);
+        el('path', { d: 'M-34 -4 Q-34 -44 4 -42 Q36 -40 34 -14 Q0 -30 -20 -16 Z', fill: '#0d0d0d' }, hd);
+        el('circle', { cx: 20, cy: -4, r: 3.8, fill: '#111' }, hd);
+        el('path', { d: 'M10 -14 L30 -12', stroke: '#111', 'stroke-width': 5 }, hd);
+        const mouth = el('path', { d: 'M12 16 Q22 22 32 14', stroke: '#5a2a1a', 'stroke-width': 4, fill: 'none', 'stroke-linecap': 'round' }, hd);
+        el('rect', { x: 26, y: 12, width: 8, height: 5, fill: '#e8c040' }, hd);
+        const aF = piv(g, 18, -292, opt.armF || { r: -10 });
+        el('path', { d: 'M-12 0 L12 0 L14 90 L-6 92 Z', fill: '#c48a5a' }, aF);
+        el('path', { d: 'M-15 -6 L15 -6 L14 30 L-14 30 Z', fill: '#e0503a' }, aF);
+        el('circle', { cx: 4, cy: 98, r: 13, fill: '#c48a5a' }, aF);
+        const club = piv(aF, 4, 98, opt.club || { r: 0 });
+        el('line', { x1: 0, y1: -20, x2: 0, y2: 200, stroke: '#c9ced6', 'stroke-width': 6 }, club);
+        el('path', { d: 'M-4 196 L34 196 L36 212 L-6 210 Z', fill: '#9aa1ab' }, club);
+        return { g, aF, aB, lF, lB, hd, mouth, club };
+      }
+      // gang member (Z06): human in a black tank top; same body as zomb() but normal skin and eyes.
+      function thug(p, o, opt = {}) {
+        const z = zomb(p, o, { shirt: '#151515', armF: opt.armF ?? 60, armR: opt.armR ?? 70 });
+        const c = z.hd.querySelectorAll('circle');
+        c[0].setAttribute('fill', '#c48a5a'); z.g.querySelectorAll('path').forEach(pth => { const f = pth.getAttribute('fill'); if (f === '#7a1418' || f === '#768670') pth.setAttribute('fill', f === '#7a1418' ? '#151515' : '#a8743f'); }); c[1].setAttribute('opacity', 0); c[2].setAttribute('r', 3.8); c[2].setAttribute('fill', '#111');
+        z.g.querySelectorAll('path').forEach(pth => { if (pth.getAttribute('fill') === ZSK || pth.getAttribute('stroke') === ZSK) { pth.getAttribute('fill') === ZSK && pth.setAttribute('fill', '#c48a5a'); pth.getAttribute('stroke') === ZSK && pth.setAttribute('stroke', '#c48a5a'); } });
+        return z;
+      }
+      // brute zombie (Z05; brute เสี่ยเปา in Z10 with opt.pao: white car-door armour, gold chain, slick hair, golf club fused to the hand). Use sx/sy ~1.5-2.2.
+      function brute(p, o, opt = {}) {
+        const g = G(p, o);
+        const aB = piv(g, -30, -300, { r: opt.armR ?? 20 });
+        el('path', { d: 'M-22 0 L22 0 L18 150 L-24 146 Z', fill: '#6f7f6a' }, aB); el('circle', { cx: -2, cy: 160, r: 26, fill: '#6f7f6a' }, aB);
+        el('path', { d: 'M-50 -176 L-4 -176 L-14 0 L-60 0 Z', fill: '#2a2630' }, g);
+        el('path', { d: 'M4 -176 L50 -176 L58 0 L14 0 Z', fill: '#352f3e' }, g);
+        el('path', { d: 'M-70 -330 Q0 -370 72 -330 L62 -170 L-62 -170 Z', fill: opt.pao ? '#a03a2a' : '#4a4038' }, g);
+        if (opt.pao) el('path', { d: 'M-30 -340 Q4 -290 36 -340', stroke: '#e8c040', 'stroke-width': 10, fill: 'none' }, g);
+        const door = G(g, { x: 0, y: -260 });
+        el('path', { d: 'M-60 -60 L56 -66 L60 70 L-58 74 Z', fill: opt.pao ? '#e8e8e8' : '#3a6a9a', stroke: '#222', 'stroke-width': 6 }, door);
+        el('path', { d: 'M-46 -54 L42 -58 L44 -10 L-46 -6 Z', fill: '#1c2230', opacity: .8 }, door);
+        el('rect', { x: 30, y: 14, width: 22, height: 8, fill: '#888' }, door);
+        el('path', { d: 'M-70 -320 L60 -180', stroke: '#888', 'stroke-width': 8, 'stroke-dasharray': '14 6' }, g);
+        const hd = G(g, { x: 20, y: -372, r: 10 });
+        el('circle', { r: 40, fill: '#7f8f78' }, hd);
+        if (opt.pao) el('path', { d: 'M-40 -4 Q-40 -50 4 -48 Q40 -46 38 -18 Q0 -34 -24 -18 Z', fill: '#0d0d0d' }, hd);
+        el('circle', { cx: 20, cy: -8, r: 13, fill: 'url(#gEye)' }, hd); el('circle', { cx: 20, cy: -8, r: 6.5, fill: '#fff' }, hd);
+        el('path', { d: 'M6 16 Q22 28 36 14', stroke: '#5a0a10', 'stroke-width': 7, fill: 'none' }, hd);
+        const aF = piv(g, 40, -300, { r: opt.armF ?? -10 });
+        el('path', { d: 'M-22 0 L22 0 L18 150 L-24 146 Z', fill: '#7f8f78' }, aF); el('circle', { cx: -2, cy: 160, r: 28, fill: '#7f8f78' }, aF);
+        let club = null;
+        if (opt.pao) { club = piv(aF, -2, 160, { r: 0 });
+          el('line', { x1: 0, y1: 0, x2: 0, y2: 260, stroke: '#c9ced6', 'stroke-width': 9 }, club);
+          el('path', { d: 'M-6 254 L46 254 L48 274 L-8 272 Z', fill: '#9aa1ab' }, club); }
+        return { g, aF, aB, hd, door, club };
+      }
+      // night runner = zomb() leaning forward: zomb(p, { x, y, sx, sy, r: 18 }, { armF: -20, armR: -10 }).
+
+
+      // ---------- Z09 props ----------
+      // long-tail boat, side view, stern (engine) left, bow right; origin = deck centre, deck at y 0, waterline ~ y 40.
+      // Layers: back (posts, engine, shaft) < chars < front (hull side, covers the feet) < roof (canopy) < top (things on the canopy).
+      function longtail(p, o) {
+        const g = G(p, o);
+        const back = G(g), chars = G(g), front = G(g), roof = G(g), top = G(g);
+        el('rect', { x: -440, y: -40, width: 900, height: 14, fill: '#3e2616' }, back);
+        [-220, 220].forEach(x => el('rect', { x: x - 5, y: -444, width: 10, height: 444, fill: '#4a4e58' }, back));
+        // engine + long shaft + tiller
+        const eng = G(back, { x: -470, y: -50 });
+        el('line', { x1: 0, y1: 0, x2: -100, y2: 150, stroke: '#7d838e', 'stroke-width': 11, 'stroke-linecap': 'round' }, eng);
+        const prop = G(eng, { x: -100, y: 150 });
+        el('ellipse', { rx: 34, ry: 8, fill: '#a0a6b0' }, prop); el('ellipse', { rx: 8, ry: 30, fill: '#8a909a' }, prop);
+        el('rect', { x: -38, y: -44, width: 76, height: 56, rx: 8, fill: '#5a616c' }, eng);
+        el('rect', { x: -30, y: -60, width: 22, height: 20, fill: '#3a3f48' }, eng);
+        el('line', { x1: 20, y1: -20, x2: 110, y2: -96, stroke: '#2a2d33', 'stroke-width': 9, 'stroke-linecap': 'round' }, eng);
+        // hull
+        el('path', { d: 'M-450 -26 Q0 -12 430 -40 Q472 -64 500 -132 L514 -128 Q506 -40 452 22 Q300 74 0 74 Q-300 74 -426 52 Q-458 30 -450 -26 Z', fill: '#6b4428', stroke: '#2a180c', 'stroke-width': 4 }, front);
+        el('path', { d: 'M-450 -26 Q0 -12 430 -40 Q472 -64 500 -132', stroke: '#e0b030', 'stroke-width': 9, fill: 'none' }, front);
+        el('path', { d: 'M-440 4 Q0 18 440 -8', stroke: '#c8352e', 'stroke-width': 10, fill: 'none' }, front);
+        ['#ff5a9a', '#ffd23f', '#3fd27a', '#fff'].forEach((c, i) => el('path', { d: `M506 -128 Q${520 + i * 6} -96 ${512 + i * 9} -60`, stroke: c, 'stroke-width': 5, fill: 'none' }, front));
+        // canopy: two halves (pivot at the outer ends) so it can tear in the middle
+        const cL = piv(roof, -250, -446), cR = piv(roof, 250, -446);
+        el('rect', { x: 0, y: -12, width: 252, height: 24, fill: '#2e5f8f' }, cL); el('rect', { x: -252, y: -12, width: 252, height: 24, fill: '#2e5f8f' }, cR);
+        for (let x = 8; x < 250; x += 26) { el('path', { d: `M${x} 12 l12 0 l-6 12 Z`, fill: '#e8c040' }, cL); el('path', { d: `M${-x - 12} 12 l12 0 l-6 12 Z`, fill: '#e8c040' }, cR); }
+        const dent = el('path', { d: 'M-220 -434 Q-170 -360 -130 -380 Q-100 -366 -80 -434 Z', fill: '#24507a', opacity: 0 }, roof);
+        const lan = G(roof, { x: -150, y: -434 });
+        el('line', { x1: 0, y1: 0, x2: 0, y2: 44, stroke: '#222', 'stroke-width': 3 }, lan);
+        el('circle', { cy: 70, r: 40, fill: 'url(#gGlow)', opacity: .7 }, lan);
+        el('ellipse', { cy: 70, rx: 18, ry: 24, fill: '#ffcf6a', stroke: '#7a3a12', 'stroke-width': 4 }, lan);
+        return { g, back, chars, front, roof, top, prop, cL, cR, dent, lan };
+      }
+      // Memorial Bridge, side view: steel truss deck between y and y+60, bascule towers, pillars down to the water
+      function memBridge(p, y, col, h = 180) {
+        const g = G(p);
+        el('rect', { x: -100, y, width: 1300, height: 60, fill: col }, g);
+        for (let x = -100; x < 1200; x += 90) { el('path', { d: `M${x} ${y} L${x + 45} ${y - h} L${x + 90} ${y}`, stroke: col, 'stroke-width': 12, fill: 'none' }, g); }
+        el('rect', { x: -100, y: y - h - 10, width: 1300, height: 16, fill: col }, g);
+        [420, 640].forEach(x => el('rect', { x, y: y - h - 120, width: 40, height: h + 180, fill: col }, g));
+        [140, 900].forEach(x => el('rect', { x: x - 40, y: y + 60, width: 80, height: 900, fill: col }, g));
+        for (let i = 0; i < 9; i++) el('circle', { cx: 60 + i * 120, cy: y + 8, r: 5, fill: '#ffe2a0', opacity: .55 }, g);
+        return g;
+      }
+      // splash: crown + droplets, stays near (x, y)
+      function splash(p, t, x, y, s = 1) {
+        const g = G(p, { x, y, sx: s, sy: s }); g.setAttribute('opacity', 0);
+        const crown = el('path', { d: 'M-90 0 L-70 -70 L-40 -10 L-10 -110 L20 -10 L50 -80 L80 0 Z', fill: '#cfe6ff', opacity: .85 }, g);
+        tl.set(g, { attr: { opacity: 1 } }, t);
+        tl.fromTo(crown, { attr: { transform: T({ sx: .2, sy: .1 }) } }, { attr: { transform: T({ sx: 1.3, sy: 1.2 }) }, duration: .25, ease: 'power2.out', immediateRender: false }, t);
+        for (let i = 0; i < 12; i++) { const d = el('circle', { r: 6 + rnd() * 8, fill: '#e2f0ff' }, g), dx = (rnd() - .5) * 320, up = 120 + rnd() * 160;
+          tl.fromTo(d, { attr: { transform: T({}) } }, { attr: { transform: T({ x: dx * .6, y: -up }) }, duration: .3, ease: 'power2.out', immediateRender: false }, t);
+          tl.to(d, { attr: { transform: T({ x: dx, y: 40 }) }, duration: .35, ease: 'power2.in' }, t + .3); }
+        tl.to(g, { attr: { opacity: 0 }, duration: .2 }, t + .7);
+      }
+      // sound rings spreading from (x, y)
+      function rings(p, t, d, x, y, col = '#ff9a3d', every = .5, r1 = 500) {
+        for (let k = 0; k * every < d; k++) { const c = el('circle', { cx: x, cy: y, r: 20, fill: 'none', stroke: col, 'stroke-width': 10, opacity: 0 }, p);
+          tl.fromTo(c, { attr: { r: 20, opacity: .9 } }, { attr: { r: r1, opacity: 0 }, duration: 1.2, ease: 'none', immediateRender: false }, t + k * every); }
+      }
+      // wooden canal houses on stilts along a bank line
+      function houses(p, y, sd, sc = 1, lit = .0) {
+        const g = G(p); seed = sd; let x = -40;
+        while (x < 1140) { const w = (150 + rnd() * 110) * sc, h = (180 + rnd() * 160) * sc, c = ['#2a2230', '#30283a', '#251e2a'][Math.floor(rnd() * 3)];
+          el('rect', { x, y: y - h, width: w, height: h, fill: c }, g);
+          el('path', { d: `M${x - 16} ${y - h} L${x + w / 2} ${y - h - 70 * sc} L${x + w + 16} ${y - h} Z`, fill: '#1a1420' }, g);
+          for (let k = 0; k < 4; k++) el('rect', { x: x + 6 + k * (w - 18) / 3, y, width: 8, height: 90 * sc, fill: '#1a1420' }, g);
+          if (rnd() < lit) el('rect', { x: x + w * .3, y: y - h * .6, width: w * .3, height: h * .25, fill: '#ffcf6a', opacity: .5 }, g);
+          x += w + 10; }
+        return g;
+      }
+      // legs cycle for a running character (lF/lB pivots)
+      const legs = (c, t, d, step = .12, a = 34) => { for (let k = 0; k * step < d; k++) { const s = k % 2 ? 1 : -1;
+        tl.to(c.lF, { attr: { transform: T({ r: -a * s }) }, duration: step, ease: 'sine.inOut' }, t + k * step);
+        tl.to(c.lB, { attr: { transform: T({ r: a * s }) }, duration: step, ease: 'sine.inOut' }, t + k * step); }
+        tl.to([c.lF, c.lB], { attr: { transform: T({}) }, duration: .1 }, t + d); };
+      const runner = (p, o, opt = {}) => zomb(p, o, { armF: -20, armR: -10, ...opt });
+      const mouthTo = (m, t, d) => tl.to(m, { attr: { d }, duration: .08 }, t);
+      const OPEN = 'M14 10 Q22 28 30 10 Z', SHUT = 'M16 16 Q22 18 28 15';
+
+      // ---------- subtitles ----------
+      const LINES = [null,
+        ['<b>เต้:</b> “ติดสิวะ! ติด!”', 'r'],
+        ['ระฆังเงียบแล้ว…<br>และพวกมันหันกลับมาหาเรา', 'r'],
+        ['ตีหนึ่งสองนาที วันที่สาม', 'y'],
+        ['<b>ฝน:</b> “เรือรบออกตอนรุ่งสาง<br>ต้องถึงปากน้ำให้ทัน”', 'y'],
+        ['<b>เต้:</b> “ติดแล้ว! นั่งดีๆ<br>วินเรือมาแล้ว!”', ''],
+        ['ออกจากคลอง…<br>เจ้าพระยามืดสนิท', ''],
+        ['แต่เสียงดัง… คือเหยื่อล่อ', 'r'],
+        ['ข้าวตังเห่าขึ้นไปบนสะพานพุทธ', 'r'],
+        ['<b>ฝน:</b> “บนสะพาน! หมอบ!”', 'r'],
+        ['<b>เต้:</b> “ลงผิดป้ายแล้วพี่!”', ''],
+        ['ตัวที่สอง สาม สี่…<br>ร่วงลงมาไม่หยุด', 'r'],
+        ['<b>เต้:</b> “ฝนตกหนักเลย…<br>ไม่ได้หมายถึงเธอนะ!”', ''],
+        ['<b>ฝน:</b> “ตีที่หัว!<br>อย่าให้มันกัด!”', 'y'],
+        ['เรือเอียง…<br>มิวลื่นไถลไปท้ายเรือ', 'r'],
+        ['มิวเป่านกหวีดลุงชาญ…<br>ข้าวตังพุ่งมางับ!', 'y'],
+        ['<b>เต้:</b> “ค่าโดยสาร…<br>ซอมบี้ไม่รับ!”', ''],
+        ['ตัวสุดท้าย…<br>จมหายไปในแม่น้ำ', ''],
+        ['ดับเครื่อง… ลอยตามน้ำ<br>ไปเงียบๆ ทั้งคืน', ''],
+        ['<b>มิว:</b> “ลุงชาญจะรู้ไหม<br>ว่าเรารอด”', ''],
+        ['<b>เต้:</b> “รู้สิ<br>ลุงตีระฆังดังขนาดนั้น”', ''],
+        ['ไฟเรือรบอยู่ตรงหน้าแล้ว', 'y'],
+        ['แต่ข้าวตัง…<br>ขู่ใส่น้ำใต้ท่าเรือ', 'r'],
+        ['มือซีดๆ โผล่ขึ้นมาคว้ามิว', 'r'],
+        ['<b>เต้:</b> “ปล่อยน้องนะ!”', 'r'],
+        ['เต้ดึงมิวกลับมาได้…<br>แต่แขนเขา…', 'r'],
+        ['<b>เต้:</b> “แค่… ข่วนน่า”', 'y'],
+        null];
+      const subs = $('subs');
+      for (let n = 1; n < LINES.length; n++) { if (!LINES[n]) continue;
+        const d = document.createElement('div'); d.className = 'sub ' + LINES[n][1];
+        d.innerHTML = LINES[n][1] === 'r' ? `<span>${LINES[n][0]}</span>` : LINES[n][0]; subs.appendChild(d);
+        const off = Math.min(E[n] + .35, (S[n + 1] ?? END) - .05);
+        tl.fromTo(d, { opacity: 0, y: 14 }, { opacity: 1, y: 0, duration: .18, ease: 'power2.out', immediateRender: false }, S[n] - .05);
+        tl.to(d, { opacity: 0, duration: .1 }, off); }
+
+      // clock: 01:02 -> 01:20 through the fight, jumps 01:21 / 03:10 / 04:40 / 05:31 in the drift montage, 05:52 at the ship
+      const hm = m => String(Math.floor(m / 60) % 24).padStart(2, '0') + ':' + String(Math.floor(m) % 60).padStart(2, '0');
+      const clockAt = t => {
+        const m0 = S[18] - .05;
+        if (t < m0) return hm(62 + 18 * Math.max(0, Math.min(1, (t - S[3]) / (m0 - S[3]))));
+        if (t < m0 + .9) return '01:21'; if (t < m0 + 1.7) return '03:10'; if (t < m0 + 2.5) return '04:40';
+        if (t < S[21] - .05) return hm(331 + 20 * (t - m0 - 2.5) / (S[21] - m0 - 2.5));
+        return hm(352 + 2 * (t - S[21]) / (END - S[21])); };
+      { const o = { v: 0 }; tl.fromTo(o, { v: 0 }, { v: END, duration: END, ease: 'none', immediateRender: false, onUpdate: () => $('clockt').textContent = clockAt(o.v) }, 0); }
+      tl.to('#clock', { backgroundColor: '#FFD23F', duration: .2 }, S[3] - .05); tl.to('#clock', { backgroundColor: '#EEE8DC', duration: .4 }, E[3] + .3);
+      [S[18] + .85, S[18] + 1.65, S[18] + 2.45, S[21] - .05].forEach(t => { tl.fromTo('#clock', { scale: 1.25 }, { scale: 1, duration: .3, ease: 'back.out(3)', immediateRender: false }, t); });
+      tl.to('#clock', { backgroundColor: RED, duration: .3 }, S[23]); tl.to('#clockt, #clock small', { color: '#fff', duration: .3 }, S[23]);
+      tl.to('#clock, #ep', { opacity: 0, duration: .3 }, S[27] - .2);
+      // bite timer: 03:00 from line 26, real seconds, under Tae's arm, then up into the corner for the card
+      const TM0 = S[26] + .3;
+      { const o = { v: 0 }; tl.fromTo(o, { v: 0 }, { v: END, duration: END, ease: 'none', immediateRender: false,
+          onUpdate: () => { const r = Math.max(0, 180 - Math.floor(Math.max(0, o.v - TM0))); $('timert').textContent = '0' + Math.floor(r / 60) + ':' + String(r % 60).padStart(2, '0'); } }, 0); }
+      tl.fromTo('#timer', { opacity: 0, scale: 2.2 }, { opacity: 1, scale: 1.5, duration: .25, ease: 'back.out(2)', immediateRender: false }, TM0);
+      tl.to('#timer', { x: 430, y: -1030, scale: 1, duration: .5, ease: 'power2.inOut' }, S[27] - .1);
+      for (let k = 0; TM0 + k < END; k++) tl.fromTo('#timer', { boxShadow: '0 0 0 0 rgba(255,60,60,.9)' }, { boxShadow: '0 0 0 22px rgba(255,60,60,0)', duration: .6, immediateRender: false }, TM0 + k);
+
+      // ================= 1, 3, 5. canal behind the temple: engine won't start =================
+      { const s = $('sCanal'), BANK = 1150;
+        el('rect', { width: 1080, height: 1920, fill: 'url(#gNight)' }, s);
+        el('circle', { cx: 820, cy: 420, r: 60, fill: '#dfe4f0', opacity: .5 }, s);
+        // temple roof line far behind
+        el('path', { d: 'M560 760 L700 640 L840 760 Z M600 700 L700 600 L800 700 Z', fill: '#141024' }, s);
+        el('path', { d: 'M700 600 L700 520 L712 560 Z', fill: '#141024' }, s);
+        houses(s, 1020, 4, .9, .1);
+        el('rect', { y: 1020, width: 1080, height: 140, fill: '#1c1626' }, s);
+        el('rect', { y: BANK - 10, width: 1080, height: 16, fill: '#3a3040' }, s);
+        el('rect', { y: BANK, width: 1080, height: 770, fill: 'url(#gWater)' }, s);
+        for (let i = 0; i < 14; i++) el('rect', { x: rnd() * 1080, y: BANK + 60 + rnd() * 600, width: 60 + rnd() * 160, height: 4, fill: '#8fa6d0', opacity: .18 }, s);
+        // runners sprinting along the far bank
+        const rs = [0, 1, 2].map(i => runner(s, { x: -200 - i * 160, y: BANK, sx: .5, sy: .5, r: 18 }));
+        const bt = G(s, { x: 520, y: 1430 });
+        const B = longtail(bt, { sx: .8, sy: .8 });
+        const tC = tae(B.chars, { x: -380, sx: 1, sy: 1 }, { helmetOn: true, armF: { r: -40 } });
+        const fC = fon(B.chars, { x: -200, sx: 1, sy: 1 }, { armF: { r: -50 }, pole: { r: 50 } });
+        const mC = mew(B.chars, { x: 60, sx: 1, sy: 1 }, { whistle: true, bandage: true, armF: { r: -70 } });
+        dog(B.chars, { x: 140, sx: -.9, sy: .9 });
+        el('rect', { y: 1500, width: 1080, height: 420, fill: '#060a14', opacity: .55 }, s);
+        // 1: the starter-cord yanks (front arm whips back), push in on Tae's face from the boat floor
+        const cord = el('line', { x1: -470, y1: -50, x2: -370, y2: -230, stroke: '#ddd', 'stroke-width': 3 }, B.back);
+        [.25, 1.25, 2.3].forEach(k => { mv(tC.aF, k, .12, { r: -40 }, { r: -150 }, 'power3.out'); mv(tC.aF, k + .3, .4, { r: -150 }, { r: -40 }, 'sine.inOut');
+          mv(tC.g, k, .12, { x: -380 }, { x: -380, r: -8 }, 'power3.out'); mv(tC.g, k + .3, .4, { x: -380, r: -8 }, { x: -380 }); });
+        word(.3, 'กระชาก!', 300, 440, 'w s', -8, .7); word(1.3, 'กระชาก!', 420, 580, 'w s', 6, .7);
+        word(2.0, 'แป๊ก… แป๊ก…', 300, 1220, 'xs', -4, .9);
+        cam('canal', 0, S[2] - .05, { scale: 2.1, transformOrigin: '250px 1150px' }, { scale: 2.7, transformOrigin: '230px 1060px' }, 'power1.in');
+        rs.forEach((r, i) => { mv(r.g, 0, S[5], { x: -200 - i * 160, y: BANK, sx: .5, sy: .5, r: 18 }, { x: 330 - i * 120, y: BANK, sx: .5, sy: .5, r: 18 }, 'none'); });
+        // 3: wide; Fon pushes off the bank with the pole, Mew hugs Khao Tang
+        cam('canal', S[3] - .05, S[4] - S[3], { scale: 1, transformOrigin: '540px 1300px' }, { scale: 1.05, transformOrigin: '540px 1300px' });
+        mv(fC.pole, S[3] + .2, .6, { r: 50 }, { r: 120 }, 'sine.inOut'); mv(fC.pole, S[3] + 1, .6, { r: 120 }, { r: 50 }, 'sine.inOut');
+        mv(bt, S[3] - .05, S[4] - S[3] + 1, { x: 520, y: 1430 }, { x: 560, y: 1430 }, 'none');
+        // 5: the engine catches, the boat leaps away; the first runner jumps from the bank too late
+        const g0 = S[5] - .05;
+        cam('canal', g0, .2, { scale: 1.05, transformOrigin: '540px 1300px' }, { scale: 1.2, transformOrigin: '540px 1300px' }, 'power2.out');
+        for (let k = 0; k < 12; k++) mv(B.prop, g0 + k * .1, .1, { x: -100, y: 150, r: 0 }, { x: -100, y: 150, r: 180 }, 'none');
+        shake('canal', g0 + .1, 18, 10);
+        word(g0 + .05, 'แท้น แท้น แท้น!', 60, 770, '', -6, 1.1);
+        mv(bt, g0 + .5, 1.6, { x: 560, y: 1430 }, { x: 1700, y: 1430, r: -3 }, 'power2.in');
+        mouthTo(tC.mouth, S[5], OPEN); mouthTo(tC.mouth, E[5], SHUT);
+        const jumper = rs[0];
+        mv(jumper.g, g0 + 1.1, .5, { x: 330, y: BANK, sx: .5, sy: .5, r: 18 }, { x: 560, y: BANK + 140, sx: .62, sy: .62, r: 60 }, 'power1.out');
+        mv(jumper.g, g0 + 1.6, .3, { x: 560, y: BANK + 140, sx: .62, sy: .62, r: 60 }, { x: 620, y: BANK + 420, sx: .62, sy: .62, r: 110 }, 'power2.in');
+        splash(s, g0 + 1.9, 620, 1440, 1.1);
+        cam('canal', g0 + .5, 1.8, { scale: 1.2, transformOrigin: '540px 1300px', x: 0 }, { scale: 1.2, transformOrigin: '540px 1300px', x: -60 }, 'power2.in');
+        tl.fromTo('#title', { opacity: 0, scale: 1.6 }, { opacity: 1, scale: 1, duration: .25, ease: 'power3.out', immediateRender: false }, g0 + .35);
+        tl.to('#title', { opacity: 0, y: -30, duration: .3 }, S[6] - .45);
+        show('canal', 0, S[2] - .05); show('canal', S[3] - .05, S[4] - .05); show('canal', S[5] - .05, S[6] - .05); }
+
+      // ================= 2. silent bell tower; the horde turns; Mew's hand on the whistle =================
+      { const s = $('sTower'), t0 = S[2] - .05;
+        el('rect', { y: -200, width: 1080, height: 2200, fill: 'url(#gNavy)' }, s);
+        el('circle', { cx: 860, cy: 260, r: 56, fill: '#dfe4f0', opacity: .55 }, s);
+        const tw = G(s, { x: 540, y: 1180 });
+        el('rect', { x: -170, y: -260, width: 340, height: 260, fill: '#2a2a40' }, tw);
+        for (let i = 0; i < 6; i++) el('rect', { x: -200 + i * 10, y: -i * 44, width: 400 - i * 20, height: 12, fill: '#3a3a56' }, tw);
+        [-130, 130].forEach(x => el('rect', { x: x - 16, y: -560, width: 32, height: 300, fill: '#2a2a40' }, tw));
+        el('path', { d: 'M-210 -560 L210 -560 L120 -680 L60 -720 L0 -860 L-60 -720 L-120 -680 Z', fill: '#3a1c24' }, tw);
+        el('path', { d: 'M-210 -560 L-250 -600 M210 -560 L250 -600', stroke: '#3a1c24', 'stroke-width': 12, 'stroke-linecap': 'round' }, tw);
+        const bell = G(tw, { x: 0, y: -520 });
+        el('path', { d: 'M-60 120 Q-60 20 0 10 Q60 20 60 120 L74 136 L-74 136 Z', fill: '#8a6a2a' }, bell);
+        el('line', { x1: 0, y1: -30, x2: 0, y2: 12, stroke: '#555', 'stroke-width': 6 }, bell);
+        // "silent" icon: a slashed ring over the bell
+        const mute = G(tw, { x: 0, y: -440 }); mute.setAttribute('opacity', 0);
+        el('circle', { r: 120, fill: 'none', stroke: RED, 'stroke-width': 14 }, mute);
+        el('line', { x1: -84, y1: -84, x2: 84, y2: 84, stroke: RED, 'stroke-width': 14 }, mute);
+        tl.fromTo(mute, { attr: { opacity: 0, transform: T({ x: 0, y: -440, sx: 1.6, sy: 1.6 }) } }, { attr: { opacity: .9, transform: T({ x: 0, y: -440 }) }, duration: .25, ease: 'back.out(2)', immediateRender: false }, t0 + .4);
+        // temple wall in front
+        el('rect', { y: 1300, width: 1080, height: 240, fill: '#d8d2c2' }, s);
+        for (let x = 0; x < 1080; x += 90) el('path', { d: `M${x} 1300 L${x + 45} 1250 L${x + 90} 1300 Z`, fill: '#d8d2c2' }, s);
+        el('rect', { y: 1540, width: 1080, height: 380, fill: '#0e1220' }, s);
+        // horde on the tower steps, then their heads turn toward the canal (screen right-bottom)
+        seed = 33; const hz = [];
+        for (let i = 0; i < 9; i++) { const x = 230 + i * 70 + rnd() * 20, y = 1180 - (i % 3) * 30; const z = G(s, { x, y, sx: -.7, sy: .7 });
+          zSil(z, 0, 0, 1, '#121020'); hz.push([z, x, y]); }
+        hz.forEach(([z, x, y], i) => mv(z, t0 + 1.2 + i * .07, .15, { x, y, sx: -.7, sy: .7 }, { x, y, sx: .7, sy: .7 }, 'power2.out'));
+        rings(s, t0 + 1.4, 2, 1080, 1700, '#ff9a3d', .5, 700);
+        // below the frame: Mew's hand closes on Lung Chan's whistle
+        const h = G(s, { x: 540, y: 2500 });
+        el('rect', { x: -1000, y: -900, width: 2600, height: 1500, fill: '#0e1220' }, h);
+        el('path', { d: 'M-300 -500 Q-60 -260 0 -40', stroke: '#c0392b', 'stroke-width': 12, fill: 'none' }, h);
+        el('rect', { x: -60, y: -60, width: 150, height: 74, rx: 16, fill: '#c9ced6', stroke: '#6a6e76', 'stroke-width': 6 }, h);
+        el('circle', { cx: 60, cy: -24, r: 14, fill: '#333' }, h);
+        const fist = G(h, { x: 180, y: 40 });
+        el('path', { d: 'M520 40 L80 -40 Q10 -50 -20 -10 L-30 60 Q-10 110 60 100 L520 150 Z', fill: SKIN2 }, fist);
+        el('path', { d: 'M520 20 L300 0 L300 170 L520 190 Z', fill: '#f0c040' }, fist);
+        el('rect', { x: 160, y: 20, width: 90, height: 100, rx: 10, fill: '#f4f4f0', stroke: '#c9c4b8', 'stroke-width': 4 }, fist);
+        mv(fist, t0 + 2.2, .8, { x: 420, y: 40 }, { x: 120, y: 30 }, 'power2.out');
+        cam('tower', t0, 2.2, { y: 300, scale: 1.1, transformOrigin: '540px 900px' }, { y: 0, scale: 1, transformOrigin: '540px 900px' }, 'sine.inOut');
+        cam('tower', t0 + 2.2, S[3] - t0 - 2.2, { y: 0, scale: 1, transformOrigin: '540px 900px' }, { y: -1500, scale: 1.25, transformOrigin: '540px 2400px' }, 'power2.inOut');
+        show('tower', t0, S[3] - .05); }
+
+      // ================= 4. Fon close, eyes on the canal mouth =================
+      { const s = $('sFonc'), t0 = S[4] - .05;
+        el('rect', { width: 1080, height: 1920, fill: 'url(#gNight)' }, s);
+        houses(s, 1050, 12, 1.2, .05);
+        el('rect', { x: 620, y: 700, width: 460, height: 400, fill: '#1a2448' }, s);
+        skyline(s, 1080, '#0c1020', 44, 160);
+        el('rect', { y: 1080, width: 1080, height: 840, fill: 'url(#gWater)' }, s);
+        const fF = fon(s, { x: 360, y: 2050, sx: 3.2, sy: 3.2 }, { armF: { r: -30 }, pole: { r: 30 } });
+        mouthTo(fF.mouth, S[4] + .1, 'M12 12 Q19 22 26 12 Z');
+        for (let k = 0; k < 6; k++) mouthTo(fF.mouth, S[4] + .4 + k * .4, k % 2 ? 'M12 12 Q19 22 26 12 Z' : 'M14 15 Q20 17 25 14');
+        mouthTo(fF.mouth, E[4], 'M14 15 Q20 17 25 14');
+        cam('fonc', t0, S[5] - t0, { scale: 1, transformOrigin: '400px 1000px' }, { scale: 1.12, transformOrigin: '400px 1000px' });
+        show('fonc', t0, S[5] - .05); }
+
+      // ================= 6-7. out onto the black river; the engine noise reaches the bridge =================
+      { const s = $('sRiver'), t0 = S[6] - .05;
+        el('rect', { width: 1080, height: 1920, fill: 'url(#gNight)' }, s);
+        const far = G(s); skyline(far, 1180, '#0d1222', 52, 300); const far2 = G(far, { x: 1180 }); skyline(far2, 1180, '#0d1222', 52, 300);
+        memBridge(s, 560, '#151a2c', 170);
+        // heads on the bridge deck
+        seed = 71; const bz = [];
+        for (let i = 0; i < 8; i++) { const x = 120 + i * 120 + rnd() * 30, z = G(s, { x, y: 560, sx: -.45, sy: .45 }); zSil(z, 0, 0, 1, '#0a0c16'); bz.push([z, x]); }
+        el('rect', { y: 1180, width: 1080, height: 740, fill: 'url(#gWater)' }, s);
+        seed = 72; for (let i = 0; i < 16; i++) el('rect', { x: rnd() * 1080, y: 1220 + rnd() * 600, width: 80 + rnd() * 200, height: 4, fill: '#8fa6d0', opacity: .15 }, s);
+        const wake = G(s);
+        el('path', { d: 'M560 1560 L-200 1500 L-200 1640 Z', fill: '#c8d6f0', opacity: .35 }, wake);
+        el('path', { d: 'M560 1560 L-200 1540 L-200 1580 Z', fill: '#fff', opacity: .5 }, wake);
+        const bt = G(s, { x: 600, y: 1560 });
+        const B = longtail(bt, { sx: .55, sy: .55 });
+        tae(B.chars, { x: -390 }, { helmetOn: true, armF: { r: -60 } }); fon(B.chars, { x: -200 }, { armF: { r: -30 }, pole: { r: 20 } });
+        mew(B.chars, { x: 40 }, { whistle: true, bandage: true }); dog(B.chars, { x: 300 });
+        tl.fromTo(far, { attr: { transform: T({ x: 0 }) } }, { attr: { transform: T({ x: -600 }) }, duration: S[8] - t0, ease: 'none', immediateRender: false }, t0);
+        for (let k = 0; k < (S[8] - t0) / .1; k++) mv(B.prop, t0 + k * .1, .1, { x: -100, y: 150, r: 0 }, { x: -100, y: 150, r: 180 }, 'none');
+        for (let k = 0; k < (S[8] - t0) / .3; k++) mv(bt, t0 + k * .3, .3, { x: 600, y: 1560 + (k % 2 ? 4 : -4) }, { x: 600, y: 1560 + (k % 2 ? -4 : 4) }, 'sine.inOut');
+        tl.fromTo('#bRiver', { opacity: 0, x: -40 }, { opacity: 1, x: 0, duration: .3, immediateRender: false }, S[6] + .4);
+        tl.to('#bRiver', { opacity: 0, duration: .2 }, E[6] + .3);
+        // 6: lateral track on the boat; 7: tilt up the wake to the bridge, rings spread, heads turn
+        cam('river', t0, S[7] - t0, { scale: 1.9, transformOrigin: '600px 1560px', y: 0 }, { scale: 1.7, transformOrigin: '600px 1560px', y: 0 }, 'sine.inOut');
+        cam('river', S[7] - .3, 1.6, { scale: 1.7, transformOrigin: '600px 1560px', y: 0 }, { scale: 1, transformOrigin: '540px 960px', y: 0 }, 'power2.inOut');
+        rings(s, S[7] - .2, S[8] - S[7], 420, 1560, '#ff9a3d', .45, 900);
+        word(S[7] + .3, 'หึ่งงง', 560, 1180, 'w s', -4, 1.6);
+        bz.forEach(([z, x], i) => mv(z, S[7] + 1.4 + i * .08, .15, { x, y: 560, sx: -.45, sy: .45 }, { x, y: 560, sx: .45, sy: .45 }, 'power2.out'));
+        cam('river', S[7] + 1.4, S[8] - S[7] - 1.3, { scale: 1, transformOrigin: '540px 560px', y: 0 }, { scale: 1.35, transformOrigin: '540px 560px', y: 0 }, 'sine.in');
+        show('river', t0, S[8] - .05); }
+
+      // ================= 8. Khao Tang barks up at the bridge =================
+      { const s = $('sBark'), t0 = S[8] - .05;
+        el('rect', { width: 1080, height: 1920, fill: 'url(#gNight)' }, s);
+        memBridge(s, 260, '#151a2c', 160);
+        seed = 81; for (let i = 0; i < 4; i++) { const z = G(s, { x: 300 + i * 160, y: 260, sx: .5, sy: .5 }); zSil(z, 0, 0, 1, '#0a0c16'); }
+        el('rect', { y: 1500, width: 1080, height: 420, fill: 'url(#gWater)' }, s);
+        const bow = G(s, { x: 120, y: 1520, sx: 2.4, sy: 2.4 });
+        el('path', { d: 'M-200 -26 L200 -36 Q240 -60 268 -128 L282 -124 Q274 -40 220 22 L-200 40 Z', fill: '#6b4428', stroke: '#2a180c', 'stroke-width': 4 }, bow);
+        el('path', { d: 'M-200 -26 L200 -36 Q240 -60 268 -128', stroke: '#e0b030', 'stroke-width': 8, fill: 'none' }, bow);
+        const d = dog(s, { x: 420, y: 1460, sx: 2.6, sy: 2.6 });
+        mv(d.hd, t0, .2, {}, { r: -30 });
+        for (let k = 0; k < 5; k++) { mouthTo(d.mouth, S[8] + k * .32, 'M28 4 L50 -2 L46 14 Z'); mouthTo(d.mouth, S[8] + k * .32 + .16, 'M30 6 L46 8');
+          mv(d.g, S[8] + k * .32, .16, { x: 420, y: 1460, sx: 2.6, sy: 2.6 }, { x: 420, y: 1440, sx: 2.6, sy: 2.6 }, 'power2.out'); }
+        for (let k = 0; k < 8; k++) mv(d.tail, t0 + k * .12, .12, { r: k % 2 ? 20 : -30 }, { r: k % 2 ? -30 : 20 }, 'none');
+        word(S[8] + .05, 'โฮ่ง!', 520, 820, 'w', -10, .45); word(S[8] + .7, 'โฮ่ง!', 600, 600, 'w', 8, .5);
+        cam('bark', t0, .3, { scale: 1.25, transformOrigin: '600px 1200px' }, { scale: 1.45, transformOrigin: '600px 1200px' }, 'power3.out');
+        cam('bark', t0 + .3, S[9] - t0 - .3, { scale: 1.45, transformOrigin: '600px 1200px' }, { scale: 1.1, transformOrigin: '600px 700px' }, 'sine.inOut');
+        show('bark', t0, S[9] - .05); }
+
+      // ================= 9. straight up under the girders: they climb over and drop =================
+      const F0 = S[10] - 2.0;   // fight scene starts
+      { const s = $('sUnder'), t0 = S[9] - .05;
+        el('rect', { width: 1080, height: 1920, fill: '#0a0e1c' }, s);
+        el('path', { d: 'M380 0 L700 0 L640 1920 L440 1920 Z', fill: '#1a2448' }, s);
+        for (let i = 0; i < 12; i++) { const y = i * 170; el('rect', { x: -40, y, width: 1160, height: 34, fill: '#232a3e' }, s);
+          el('path', { d: `M-40 ${y} L540 ${y + 170} L1120 ${y}`, stroke: '#1c2234', 'stroke-width': 18, fill: 'none' }, s); }
+        [180, 900].forEach(x => el('rect', { x: x - 60, y: 0, width: 120, height: 1920, fill: '#161c2c' }, s));
+        for (let i = 0; i < 10; i++) el('circle', { cx: 300 + (i % 2) * 480, cy: 100 + i * 180, r: 7, fill: '#ffe2a0', opacity: .7 }, s);
+        // three falling runners, arms up, growing as they drop at the camera
+        [[420, .35, .1], [700, .3, .55], [260, .28, .95]].forEach(([x, s0, dt], i) => {
+          const z = runner(s, { x, y: 200, sx: s0, sy: s0 }, { armF: -160, armR: -170 });
+          mv(z.g, t0 + dt, F0 - t0 - dt + .1, { x, y: 150, sx: s0, sy: s0, r: i ? -10 : 10 }, { x: 540 + (x - 540) * 1.6, y: 2200, sx: s0 * 6, sy: s0 * 6, r: i ? -25 : 25 }, 'power2.in'); });
+        cam('under', t0, F0 - t0, { scale: 1, rotation: 0 }, { scale: 1.15, rotation: 6 }, 'power1.in');
+        shake('under', t0 + .2, 10, 8);
+        show('under', t0, F0); }
+
+      // ================= 10-17. the boat fight + slow-mo flying elbow =================
+      { const s = $('sBoat'), BX = 590, BY = 1300;
+        const P = (lx, ly) => [BX + lx, BY + ly];   // boat-local -> screen (ignores the rocking)
+        el('rect', { width: 1080, height: 1920, fill: 'url(#gNight)' }, s);
+        const far = G(s); skyline(far, 1240, '#0d1222', 91, 260); const far2 = G(far, { x: 1180 }); skyline(far2, 1240, '#0d1222', 91, 260);
+        // the bridge underside above, with its lights (the lights behind Tae in the slow-mo)
+        el('rect', { x: -100, y: 0, width: 1300, height: 240, fill: '#151a2c' }, s);
+        for (let x = -100; x < 1200; x += 110) el('path', { d: `M${x} 240 L${x + 55} 330 L${x + 110} 240`, stroke: '#151a2c', 'stroke-width': 16, fill: 'none' }, s);
+        el('rect', { x: -100, y: 320, width: 1300, height: 18, fill: '#151a2c' }, s);
+        for (let i = 0; i < 9; i++) el('circle', { cx: 60 + i * 120, cy: 250, r: 9, fill: '#ffe2a0' }, s);
+        for (let i = 0; i < 9; i++) el('circle', { cx: 60 + i * 120, cy: 250, r: 40, fill: 'url(#gGlow)', opacity: .5 }, s);
+        el('rect', { y: 1240, width: 1080, height: 680, fill: 'url(#gWater)' }, s);
+        const wake = G(s); seed = 93;
+        for (let i = 0; i < 18; i++) el('rect', { x: rnd() * 2200, y: 1260 + rnd() * 600, width: 100 + rnd() * 220, height: 5, fill: '#9fb6e0', opacity: .2 }, wake);
+        const bob = G(s, { x: BX, y: BY }), rock = G(bob);
+        const B = longtail(rock, {});
+        const C = B.chars;
+        const fF = fon(C, { x: -250, sx: .9, sy: .9 }, { armF: { r: -30 }, pole: { r: 30 } });
+        const mW = mew(C, { x: -120, sx: .95, sy: .85 }, { whistle: true, bandage: true, armF: { r: -30 } });
+        const tF = tae(C, { x: -390, sx: .9, sy: .9 }, { helmet: true, armF: { r: -40 } });
+        const dG = dog(C, { x: 330 });
+        const loose = G(C, { x: 30, y: -14 }); loose.setAttribute('opacity', 0);   // the helmet when it is knocked away
+        el('path', { d: 'M-30 14 Q-32 -30 0 -30 Q32 -30 30 14 Z', fill: '#c4262c', stroke: '#111', 'stroke-width': 4 }, loose);
+        el('path', { d: 'M4 -8 L28 -8 L30 12 L6 12 Z', fill: '#1a1a1f' }, loose);
+        // runners: r1 bow, r3 front, r4 stern, r6 over the gunwale (front layer), r5 in the water at the side, r7 big one on the canopy
+        const r1 = runner(C, { x: 140, y: -1400, sx: -.9, sy: .9 });
+        const r3 = runner(C, { x: 200, y: -1400, sx: -.9, sy: .9 }, { shirt: '#7a4a3a' });
+        const r4 = runner(C, { x: -430, y: -1400, sx: .9, sy: .9 }, { shirt: '#5a6a8a' });
+        const r6 = runner(B.front, { x: -60, y: 260, sx: -.9, sy: .9 }, { shirt: '#3e5a4a', noLegs: true });
+        const r5 = runner(B.front, { x: -300, y: 330, sx: .9, sy: .9 }, { shirt: '#8a7a5a', noLegs: true, armF: -60, armR: -70 });
+        const r7 = runner(B.top, { x: 90, y: -300, sx: -1.05, sy: 1.05 }, { shirt: '#6a3a5a', armF: -50, armR: -60 });
+        [r6, r5, r7].forEach(z => z.g.setAttribute('opacity', 0));
+        const fw = el('rect', { x: -60, y: 1340, width: 1200, height: 600, fill: '#070c18', opacity: .9 }, s);   // front water hides what falls in
+        el('path', { d: 'M-60 1344 Q60 1328 180 1344 T420 1344 T660 1344 T900 1344 T1140 1344', stroke: '#9fb6e0', 'stroke-width': 4, fill: 'none', opacity: .4 }, s);
+        const pillar = G(s, { x: 1500 });   // bridge pillar for the swerve (foreground)
+        el('rect', { x: -130, y: 300, width: 260, height: 1700, fill: '#2a2f3e' }, pillar); el('rect', { x: -130, y: 300, width: 40, height: 1700, fill: '#3a4052' }, pillar);
+        const drops = G(s); drops.setAttribute('opacity', 0); seed = 95;   // hanging droplets in the slow-mo
+        for (let i = 0; i < 26; i++) el('ellipse', { cx: 120 + rnd() * 860, cy: 300 + rnd() * 1000, rx: 5, ry: 9, fill: '#cfe6ff', opacity: .7 }, drops);
+        const bubbles = G(s); bubbles.setAttribute('opacity', 0);
+        for (let i = 0; i < 3; i++) el('ellipse', { cx: 790, cy: 1420, rx: 40 + i * 50, ry: 10 + i * 12, fill: 'none', stroke: '#cfe6ff', 'stroke-width': 4, opacity: .7 - i * .2 }, bubbles);
+        // whole-scene motion: water + skyline slide (the boat is moving), prop spins, gentle bob
+        const t0 = F0, t1 = S[18] - .05;
+        tl.fromTo(far, { attr: { transform: T({ x: 0 }) } }, { attr: { transform: T({ x: -500 }) }, duration: t1 - t0, ease: 'none', immediateRender: false }, t0);
+        tl.fromTo(wake, { attr: { transform: T({ x: 0 }) } }, { attr: { transform: T({ x: -1100 }) }, duration: t1 - t0, ease: 'none', immediateRender: false }, t0);
+        for (let k = 0; k < (t1 - t0) / .1; k++) mv(B.prop, t0 + k * .1, .1, { x: -100, y: 150, r: 0 }, { x: -100, y: 150, r: 180 }, 'none');
+        for (let k = 0; k < (t1 - t0) / .5; k++) mv(bob, t0 + k * .5, .5, { x: BX, y: BY + (k % 2 ? 5 : -5) }, { x: BX, y: BY + (k % 2 ? -5 : 5) }, 'sine.inOut');
+        let curR = 0; const rockTo = (t, d, r, ease = 'sine.inOut') => { mv(rock, t, d, { r: curR }, { r }, ease); curR = r; };
+        cam('boat', t0, .5, { scale: 1.3, transformOrigin: '700px 1100px', rotation: 0, filter: 'none' }, { scale: 1.15, transformOrigin: '700px 1100px', rotation: 0 }, 'power2.out');
+
+        // --- beat 1: r1 lands on the bow like a frog; Tae runs up and swings the helmet: พลั่ก!
+        const L1 = S[10] - 1.75, H1 = S[10] - .35;
+        mv(r1.g, t0, L1 - t0, { x: 140, y: -1400, sx: -.9, sy: .9, r: 0 }, { x: 140, y: 0, sx: -.9, sy: .9 }, 'power2.in');
+        mv(r1.g, L1, .12, { x: 140, y: 0, sx: -.9, sy: .9 }, { x: 140, y: 0, sx: -1, sy: .6, r: 20 }, 'power3.out');
+        word(L1, 'ตุ้บ!', 600, 760, 'w s', 6, .45); shake('boat', L1, 14, 6); rockTo(L1, .15, 3); rockTo(L1 + .15, .4, 0);
+        mv(mW.g, L1 + .1, .2, { x: -120, sx: .95, sy: .85 }, { x: -150, sx: .95, sy: .75, r: -10 });
+        mv(r1.aF, L1 + .3, .3, { r: -20 }, { r: -50 }); mv(r1.aB, L1 + .3, .3, { r: -10 }, { r: -40 });
+        mouthTo(mW.mouth, L1 + .1, 'M10 8 Q15 20 20 8 Z');
+        mv(tF.g, L1 + .3, 1.0, { x: -390, sx: .9, sy: .9 }, { x: 0, sx: .9, sy: .9, r: 8 }, 'power1.inOut'); legs(tF, L1 + .3, 1.0);
+        mv(tF.aF, H1 - .4, .3, { r: -40 }, { r: -175 }, 'power2.in');
+        mv(tF.aF, H1 - .1, .1, { r: -175 }, { r: 60 }, 'power4.in');
+        hit('boat', s, H1, ...P(150, -270), 'พลั่ก!', 380, 560, '', -10);
+        mv(r1.g, H1 + .02, .7, { x: 140, y: 0, sx: -1, sy: .6, r: 20 }, { x: 560, y: 400, sx: -.9, sy: .9, r: 260 }, 'power2.in');
+        splash(s, H1 + .5, ...P(470, 60), .9);
+        mv(tF.aF, H1 + .3, .3, { r: 60 }, { r: -20 }); mv(tF.g, H1 + .3, .3, { x: 0, sx: .9, sy: .9, r: 8 }, { x: 0, sx: .9, sy: .9 });
+        mouthTo(tF.mouth, S[10], OPEN); mouthTo(tF.mouth, E[10], SHUT);
+        cam('boat', L1 - .1, .3, { scale: 1.15, transformOrigin: '700px 1100px' }, { scale: 1.55, transformOrigin: '700px 1000px' }, 'power3.out');
+        cam('boat', H1 + .3, .5, { scale: 1.55, transformOrigin: '700px 1000px' }, { scale: 1.2, transformOrigin: '540px 1000px' }, 'power2.out');
+
+        // --- beat 2: r2 lands on the canopy (a body-shaped dent); Fon jams the pole up through it: ปึ้ก!
+        const D2 = S[10] + 1.2, H2 = S[10] + 2.4;
+        tl.set(B.dent, { attr: { opacity: 1 } }, D2); word(D2, 'ตึง!', 260, 640, 'w s', -6, .4); rockTo(D2, .12, -2); rockTo(D2 + .12, .3, 0);
+        mv(B.lan, D2, .3, { x: -150, y: -434 }, { x: -150, y: -400, r: 20 }, 'power2.out');
+        mv(fF.hd, D2 + .1, .2, { x: 2, y: -346 }, { x: 2, y: -346, r: -30 });
+        mv(fF.aF, H2 - .5, .3, { r: -30 }, { r: -60 }, 'power2.inOut'); mv(fF.pole, H2 - .5, .3, { r: 30 }, { r: 60 });
+        mv(fF.aF, H2 - .12, .12, { r: -60 }, { r: -170 }, 'power4.in'); mv(fF.pole, H2 - .12, .12, { r: 60 }, { r: 170 }, 'power4.in');
+        mv(fF.g, H2 - .12, .12, { x: -250, sx: .9, sy: .9 }, { x: -230, y: -20, sx: .9, sy: .9 }, 'power4.in');
+        hit('boat', s, H2, ...P(-160, -420), 'ปึ้ก!', 160, 420, 'w', 8);
+        tl.set(B.dent, { attr: { opacity: 0 } }, H2 + .15);
+        mv(B.lan, H2 + .15, .4, { x: -150, y: -400, r: 20 }, { x: -150, y: -434 }, 'back.out(2)');
+        mv(fF.aF, H2 + .4, .3, { r: -170 }, { r: -30 }); mv(fF.pole, H2 + .4, .3, { r: 170 }, { r: 30 }); mv(fF.hd, H2 + .4, .2, { x: 2, y: -346, r: -30 }, { x: 2, y: -346 });
+        mv(fF.g, H2 + .4, .3, { x: -230, y: -20, sx: .9, sy: .9 }, { x: -250, sx: .9, sy: .9 });
+
+        // --- beat 3: two more at once, bow side and stern side; the boat rocks hard, water slops in
+        const L3 = S[11] + .1;
+        mv(r3.g, L3 - .4, .4, { x: 200, y: -1400, sx: -.9, sy: .9 }, { x: 200, y: 0, sx: -.9, sy: .9 }, 'power2.in');
+        mv(r4.g, L3 - .2, .4, { x: -430, y: -1400, sx: .9, sy: .9 }, { x: -430, y: 0, sx: .9, sy: .9 }, 'power2.in');
+        word(L3, 'ตุ้บ!', 640, 700, 'w s', 8, .4); word(L3 + .2, 'ตุ้บ!', 120, 760, 'w s', -8, .4);
+        shake('boat', L3, 18, 8); shake('boat', L3 + .2, 18, 8);
+        [6, -6, 4, -4, 2, 0].forEach((r, i) => rockTo(L3 + .2 + i * .35, .35, r));
+        splash(s, L3 + .3, ...P(380, -10), .7); splash(s, L3 + .75, ...P(-380, -10), .7);
+        cam('boat', L3 - .3, .3, { scale: 1.2, transformOrigin: '540px 1000px' }, { scale: 1, transformOrigin: '540px 1000px' }, 'power2.out');
+        mv(mW.g, L3 + .2, .3, { x: -150, sx: .95, sy: .75, r: -10 }, { x: -130, sx: .95, sy: .7, r: 0 });
+
+        // --- beat 4: r3 swipes; Tae ducks, the claw knocks the helmet away; it rolls, he stops it with his foot
+        const N4 = E[11] + .15;
+        mv(r3.aF, N4 - .2, .25, { r: -20 }, { r: -90 }, 'power3.in'); mv(r3.aF, N4 + .05, .2, { r: -90 }, { r: 30 }, 'power2.out');
+        mv(tF.g, N4 - .15, .15, { x: 0, sx: .9, sy: .9 }, { x: -20, y: 60, sx: .9, sy: .8, r: -10 }, 'power3.out');
+        word(N4, 'วืด!', 420, 600, 'w xs', -6, .4);
+        tl.set(tF.helm, { attr: { opacity: 0 } }, N4); tl.set(loose, { attr: { opacity: 1 } }, N4);
+        mv(loose, N4, .55, { x: 30, y: -60 }, { x: 150, y: -16, r: 360 }, 'power1.out');
+        mv(tF.lF, N4 + .45, .15, {}, { r: -30 }); word(N4 + .6, 'หยุด!', 640, 980, 'xs', 6, .4);
+        mv(tF.g, N4 + .3, .3, { x: -20, y: 60, sx: .9, sy: .8, r: -10 }, { x: 40, sx: .9, sy: .9 });
+        mv(tF.lF, N4 + .75, .1, { r: -30 }, { r: -80 }, 'power3.out');
+        mv(loose, N4 + .75, .3, { x: 150, y: -16, r: 360 }, { x: 70, y: -240, r: 720 }, 'power2.out');
+        tl.set(loose, { attr: { opacity: 0 } }, N4 + 1.05); tl.set(tF.helm, { attr: { opacity: 1 } }, N4 + 1.05);
+        mv(tF.lF, N4 + .9, .2, { r: -80 }, { r: 0 });
+        cam('boat', N4 - .2, .3, { scale: 1, transformOrigin: '540px 1000px' }, { scale: 1.6, transformOrigin: '700px 1150px' }, 'power3.out');
+        // --- beat 5: elbow to the temple ปั้ก! then a knee as it folds ตุ้บ! -> overboard
+        const H3 = S[12] + .05, H4 = S[12] + .6;
+        mv(tF.aF, H3 - .25, .2, { r: -20 }, { r: 40 }, 'power2.in'); mv(tF.aF, H3 - .05, .08, { r: 40 }, { r: -120 }, 'power4.in');
+        mv(tF.g, H3 - .05, .1, { x: 40, sx: .9, sy: .9 }, { x: 70, sx: .9, sy: .9, r: 10 }, 'power4.in');
+        hit('boat', s, H3, ...P(210, -290), 'ปั้ก!', 560, 520, '', -8);
+        mv(r3.g, H3 + .02, .3, { x: 200, y: 0, sx: -.9, sy: .9 }, { x: 230, y: 30, sx: -.9, sy: .8, r: -20 }, 'power2.out');
+        mv(tF.lF, H4 - .12, .12, { r: 0 }, { r: -100 }, 'power3.out');
+        hit('boat', s, H4, ...P(180, -170), 'ตุ้บ!', 600, 820, 'w', 8);
+        mv(r3.g, H4 + .02, .6, { x: 230, y: 30, sx: -.9, sy: .8, r: -20 }, { x: 520, y: 380, sx: -.9, sy: .9, r: -150 }, 'power2.in');
+        splash(s, H4 + .5, ...P(460, 50), .9);
+        mv(tF.lF, H4 + .2, .25, { r: -100 }, { r: 0 }); mv(tF.aF, H4 + .2, .3, { r: -120 }, { r: -20 }); mv(tF.g, H4 + .2, .3, { x: 70, sx: .9, sy: .9, r: 10 }, { x: 40, sx: .9, sy: .9 });
+        cam('boat', H4 + .4, .4, { scale: 1.6, transformOrigin: '700px 1150px' }, { scale: 1.45, transformOrigin: '420px 1050px' }, 'power2.out');
+        // the joke: Tae grins at Fon, Fon shakes her head without looking
+        mouthTo(tF.mouth, S[12] + .9, OPEN); mouthTo(tF.mouth, E[12], SHUT);
+        for (let k = 0; k < 4; k++) mv(fF.hd, S[12] + 1.2 + k * .18, .18, { x: 2, y: -346, r: k % 2 ? 12 : -12 }, { x: 2, y: -346, r: k % 2 ? -12 : 12 }, 'sine.inOut');
+        mv(fF.hd, S[12] + 1.92, .1, { x: 2, y: -346, r: -12 }, { x: 2, y: -346 });
+
+        // --- beat 6: r4 grabs Fon's pole from behind; they wrestle; she shoves, it stumbles into the propeller: ครืดดด!
+        const W6 = E[12] + .2, H5 = S[13] - .55;
+        mv(fF.g, W6 - .2, .05, { x: -250, sx: .9, sy: .9 }, { x: -250, sx: -.9, sy: .9 });
+        mv(fF.aF, W6 - .2, .2, { r: -30 }, { r: -70 }); mv(fF.pole, W6 - .2, .2, { r: 30 }, { r: 160 });
+        mv(r4.g, W6 - .3, .3, { x: -430, y: 0, sx: .9, sy: .9 }, { x: -380, y: 0, sx: .9, sy: .9, r: 10 });
+        word(W6, 'หมับ!', 60, 700, 'w xs', -6, .4);
+        cam('boat', W6 - .3, .4, { scale: 1.45, transformOrigin: '420px 1050px' }, { scale: 1.6, transformOrigin: '260px 1050px' }, 'power2.out');
+        for (let k = 0; k < 6; k++) { const dx = k % 2 ? 22 : -22;
+          mv(fF.g, W6 + .15 + k * .18, .18, { x: -250 - dx, sx: -.9, sy: .9 }, { x: -250 + dx, sx: -.9, sy: .9 }, 'sine.inOut');
+          mv(r4.g, W6 + .15 + k * .18, .18, { x: -380 - dx, sx: .9, sy: .9, r: 10 }, { x: -380 + dx, sx: .9, sy: .9, r: 10 }, 'sine.inOut'); }
+        const sh = W6 + .15 + 6 * .18;
+        mv(fF.g, sh, .15, { x: -250 + 22, sx: -.9, sy: .9 }, { x: -290, sx: -.9, sy: .9, r: 10 }, 'power3.out');
+        word(sh, 'ผลัก!', 160, 560, 'w s', 6, .4);
+        mv(r4.g, sh, H5 - sh, { x: -358, sx: .9, sy: .9, r: 10 }, { x: -560, y: 120, sx: .9, sy: .9, r: -70 }, 'power2.in');
+        hit('boat', s, H5, ...P(-570, 100), 'ครืดดด!', 40, 900, '', -6);
+        splash(s, H5, ...P(-560, 60), 1.4); splash(s, H5 + .25, ...P(-520, 60), 1.1);
+        mv(r4.g, H5 + .05, .4, { x: -560, y: 120, sx: .9, sy: .9, r: -70 }, { x: -600, y: 600, sx: .9, sy: .9, r: -120 }, 'power2.in');
+        mv(fF.g, H5 + .3, .3, { x: -290, sx: -.9, sy: .9, r: 10 }, { x: -250, sx: .9, sy: .9 });
+        mv(fF.aF, H5 + .3, .3, { r: -70 }, { r: -30 }); mv(fF.pole, H5 + .3, .3, { r: 160 }, { r: 30 });
+
+        // --- beat 7: "ตีที่หัว!" r6 climbs over the gunwale; Fon smashes the hanging lantern into its head: เคร้ง!
+        const H6 = E[13] + .35;
+        tl.set(r6.g, { attr: { opacity: 1 } }, S[13]);
+        mv(r6.g, S[13], E[13] - S[13] + .1, { x: -60, y: 260, sx: -.9, sy: .9 }, { x: -60, y: 110, sx: -.9, sy: .9, r: -10 }, 'power1.out');
+        mouthTo(fF.mouth, S[13], 'M12 10 Q20 28 28 10 Z'); mouthTo(fF.mouth, E[13], 'M14 15 Q20 17 25 14');
+        cam('boat', S[13] - .1, .3, { scale: 1.6, transformOrigin: '260px 1050px' }, { scale: 1.5, transformOrigin: '400px 1000px' }, 'power3.out');
+        mv(fF.aF, H6 - .45, .3, { r: -30 }, { r: -150 }, 'power2.out'); mv(fF.pole, H6 - .45, .3, { r: 30 }, { r: 170 }, 'power2.out');
+        mv(fF.aF, H6 - .12, .12, { r: -150 }, { r: -40 }, 'power4.in');
+        mv(B.lan, H6 - .06, .06, { x: -150, y: -434 }, { x: -150, y: -434, r: -50 });
+        hit('boat', s, H6, ...P(-100, -280), 'เคร้ง!', 300, 520, '', -6);
+        burst(s, H6 + .02, ...P(-100, -300), '#ffcf6a');
+        tl.set(B.lan, { attr: { opacity: 0 } }, H6 + .02);
+        mv(r6.g, H6 + .02, .5, { x: -60, y: 110, sx: -.9, sy: .9, r: -10 }, { x: 40, y: 500, sx: -.9, sy: .9, r: -60 }, 'power2.in');
+        mv(fF.aF, H6 + .3, .3, { r: -40 }, { r: -30 }); mv(fF.pole, H6 + .3, .3, { r: 170 }, { r: 30 });
+        mv(fF.g, H6 + .5, .4, { x: -250, sx: .9, sy: .9 }, { x: -40, sx: .9, sy: .9 });
+
+        // --- beat 8: nobody on the tiller; the boat swerves at a bridge pillar; Tae dives and yanks it: ครูดดด! sparks
+        const H7 = S[14] - .7, sw = H6 + .6;
+        cam('boat', sw, .4, { scale: 1.5, transformOrigin: '400px 1000px' }, { scale: 1.05, transformOrigin: '540px 1000px' }, 'power2.out');
+        rockTo(sw, .4, 4); word(sw + .1, 'หักเลี้ยว!', 520, 420, 'xs', 6, .5);
+        mv(pillar, sw, H7 + .9 - sw, { x: 1500 }, { x: -400 }, 'none');
+        mv(tF.g, sw + .2, .05, { x: 40, sx: .9, sy: .9 }, { x: 40, sx: -.9, sy: .9 });
+        mv(tF.g, sw + .3, .5, { x: 40, sx: -.9, sy: .9 }, { x: -380, y: -40, sx: -.9, sy: .9, r: 70 }, 'power2.out');
+        mv(tF.aF, sw + .3, .3, { r: -20 }, { r: -100 });
+        mv(tF.g, sw + .8, .2, { x: -380, y: -40, sx: -.9, sy: .9, r: 70 }, { x: -380, sx: .9, sy: .9 }, 'power2.out');
+        mv(tF.aF, H7 - .2, .2, { r: -100 }, { r: -40 }, 'power3.in');
+        rockTo(H7 - .2, .25, -4);
+        hit('boat', s, H7, 1010, 1180, 'ครูดดด!', 380, 820, '', 4);
+        for (let k = 0; k < 4; k++) burst(s, H7 + k * .1, 1000 - k * 20, 1200 + (k % 2) * 40, '#ffb040');
+        shake('boat', H7 + .2, 16, 8);
+        rockTo(H7 + .25, .3, 0);
+
+        // --- beat 9: the boat tips stern-down; Mew slides to the stern; r5 hangs on the side in the water
+        tl.set(r5.g, { attr: { opacity: 1 } }, S[14] - .2);
+        mv(r5.g, S[14] - .2, .5, { x: -300, y: 330, sx: .9, sy: .9 }, { x: -300, y: 250, sx: .9, sy: .9 }, 'power2.out');
+        rockTo(S[14], .4, -6);
+        mv(mW.g, S[14] + .1, 1.6, { x: -130, sx: .95, sy: .7 }, { x: -300, y: -10, sx: .95, sy: .7, r: -6 }, 'power1.in');
+        mouthTo(mW.mouth, S[14] + .1, 'M10 8 Q15 20 20 8 Z');
+        cam('boat', S[14] - .1, E[14] - S[14] + .3, { scale: 1.05, transformOrigin: '540px 1000px' }, { scale: 1.6, transformOrigin: '300px 1150px' }, 'sine.inOut');
+        rockTo(E[14] + .2, .6, -3);
+        // --- beat 10: r5 grabs for her ankle, she kicks it away (miss by a finger), then the whistle: ปรี๊ดดด!
+        const K10 = S[15] - .8, WH = S[15] + .05;
+        mv(r5.aF, K10, .25, { r: -60 }, { r: -100 }, 'power3.out'); mv(r5.g, K10, .25, { x: -300, y: 250, sx: .9, sy: .9 }, { x: -300, y: 230, sx: .9, sy: .9, r: 10 });
+        mv(mW.lF, K10 + .15, .15, {}, { r: -60 }, 'power3.out'); mv(mW.lF, K10 + .3, .2, { r: -60 }, { r: 0 });
+        word(K10 + .2, 'เฉียด!', 40, 760, 'w xs', -6, .4);
+        mv(mW.aF, WH - .25, .2, { r: -30 }, { r: -150 }, 'power2.out');
+        mv(mW.hd, WH - .25, .2, { x: 2, y: -240 }, { x: 2, y: -240, r: -15 });
+        word(WH, 'ปรี๊ดดด!', 200, 520, 'w', -6, .9);
+        rings(s, WH, .9, ...P(-290, -200), '#fff', .25, 420);
+        cam('boat', WH - .1, .25, { scale: 1.6, transformOrigin: '300px 1150px' }, { scale: 1.9, transformOrigin: '320px 1020px' }, 'power3.out');
+        // --- beat 11: Khao Tang rockets down the boat, leaps over Mew and clamps the wrist: งับ!
+        const H8 = S[15] + 1.5;
+        cam('boat', WH + .45, .35, { scale: 1.9, transformOrigin: '320px 1020px' }, { scale: 1.15, transformOrigin: '400px 1100px' }, 'power2.out');
+        mv(dG.g, WH + .35, .25, { x: 330 }, { x: 330, sx: -1, sy: 1 });
+        for (let k = 0; k < 5; k++) mv(dG.g, WH + .6 + k * .12, .12, { x: 330 - k * 102, y: 0, sx: -1, sy: 1 }, { x: 330 - (k + 1) * 102, y: k % 2 ? 0 : -24, sx: -1, sy: 1 }, 'none');
+        mv(dG.g, WH + 1.2, H8 - WH - 1.2, { x: -180, y: 0, sx: -1, sy: 1 }, { x: -300, y: -60, sx: -1, sy: 1, r: 20 }, 'power2.out');
+        mv(dG.g, H8, .12, { x: -300, y: -60, sx: -1, sy: 1, r: 20 }, { x: -330, y: 60, sx: -1, sy: 1, r: 40 }, 'power2.in');
+        hit('boat', s, H8 + .1, ...P(-300, 120), 'งับ!', 160, 840, 'w', -8);
+        for (let k = 0; k < 4; k++) mv(dG.g, H8 + .25 + k * .1, .1, { x: -330, y: 60, sx: -1, sy: 1, r: k % 2 ? 20 : 50 }, { x: -330, y: 60, sx: -1, sy: 1, r: k % 2 ? 50 : 20 }, 'none');
+        mv(r5.g, H8 + .55, .5, { x: -300, y: 230, sx: .9, sy: .9, r: 10 }, { x: -320, y: 520, sx: .9, sy: .9, r: -20 }, 'power2.in');
+        splash(s, H8 + .8, ...P(-300, 70), .8);
+        mv(dG.g, H8 + .7, .2, { x: -330, y: 60, sx: -1, sy: 1, r: 20 }, { x: -260, y: 0, sx: 1, sy: 1 }, 'power2.out');
+        mv(dG.g, H8 + .9, .9, { x: -260, sx: 1, sy: 1 }, { x: 300, sx: 1, sy: 1 }, 'sine.inOut');
+        for (let k = 0; k < 8; k++) mv(dG.tail, H8 + .9 + k * .1, .1, { r: k % 2 ? 30 : -30 }, { r: k % 2 ? -30 : 30 }, 'none');
+        rockTo(H8 + .9, .6, 0);
+        mv(mW.aF, H8 + .3, .3, { r: -150 }, { r: -30 }); mv(mW.hd, H8 + .3, .3, { x: 2, y: -240, r: -15 }, { x: 2, y: -240 });
+        mv(mW.g, H8 + 1.0, .6, { x: -300, y: -10, sx: .95, sy: .7, r: -6 }, { x: -200, sx: .95, sy: .8 });
+        mouthTo(mW.mouth, H8 + .9, 'M10 12 Q15 14 20 11');
+
+        // --- beat 12: the last, biggest runner stands up on the canopy frame over Tae
+        const B12 = S[16] - 1.4, SM0 = S[16] - .5, H9 = E[16] + .35;
+        mv(tF.g, H8 + .2, 1.1, { x: -380, sx: .9, sy: .9 }, { x: -60, sx: .9, sy: .9 }, 'sine.inOut'); legs(tF, H8 + .2, 1.1, .16, 24);
+        tl.set(r7.g, { attr: { opacity: 1 } }, B12);
+        mv(r7.g, B12, .5, { x: 90, y: -300, sx: -1.05, sy: 1.05 }, { x: 90, y: -456, sx: -1.05, sy: 1.05 }, 'power2.out');
+        rockTo(B12 + .3, .2, 2); rockTo(B12 + .5, .4, 0);
+        mv(r7.aF, B12 + .5, .4, { r: -50 }, { r: 30 }); mv(r7.aB, B12 + .5, .4, { r: -60 }, { r: 20 });
+        cam('boat', B12 - .1, .5, { scale: 1.15, transformOrigin: '400px 1100px' }, { scale: 1.2, transformOrigin: '600px 800px' }, 'power2.out');
+        mv(tF.hd, B12 + .5, .3, { x: 4, y: -352 }, { x: 4, y: -352, r: -25 });
+
+        // --- beat 13: SLOW-MO flying elbow (wind-up, leap through hanging droplets, bridge lights behind), then โครม!!
+        tl.fromTo('#barT, #barB', { height: 0 }, { height: 150, duration: .3, immediateRender: false }, SM0);
+        cam('boat', SM0, .4, { scale: 1.2, transformOrigin: '600px 800px', filter: 'none' }, { scale: 1.35, transformOrigin: '600px 760px', filter: 'grayscale(1) sepia(.6) hue-rotate(170deg) saturate(2.2) contrast(1.25)' }, 'power2.out');
+        tl.set(drops, { attr: { opacity: 1 } }, SM0);
+        tl.fromTo(drops, { attr: { transform: T({ y: 0 }) } }, { attr: { transform: T({ y: 30 }) }, duration: H9 - SM0, ease: 'none', immediateRender: false }, SM0);
+        mv(tF.hd, SM0, .2, { x: 4, y: -352, r: -25 }, { x: 4, y: -352 });
+        mv(tF.g, SM0, .4, { x: -60, sx: .9, sy: .9 }, { x: -60, y: 10, sx: .9, sy: .78 }, 'sine.out');
+        mv(tF.g, SM0 + .45, H9 - SM0 - .45, { x: -60, y: 10, sx: .9, sy: .78 }, { x: 0, y: -400, sx: .9, sy: .9, r: -12 }, 'sine.out');
+        mv(tF.lF, SM0 + .45, H9 - SM0 - .45, { r: 0 }, { r: -80 }, 'sine.out'); mv(tF.lB, SM0 + .45, H9 - SM0 - .45, { r: 0 }, { r: 40 }, 'sine.out');
+        mv(tF.aF, SM0 + .45, H9 - SM0 - .55, { r: -40 }, { r: -150 }, 'sine.inOut');
+        mouthTo(tF.mouth, S[16], OPEN);
+        cam('boat', SM0 + .4, H9 - SM0 - .4, { scale: 1.35, transformOrigin: '600px 760px' }, { scale: 1.6, transformOrigin: '640px 640px' }, 'sine.inOut');
+        tl.to('#boat .cam', { filter: 'grayscale(0) sepia(0) hue-rotate(0deg) saturate(1) contrast(1)', duration: .05 }, H9);
+        tl.to('#barT, #barB', { height: 0, duration: .2 }, H9 + .05);
+        tl.set(drops, { attr: { opacity: 0 } }, H9);
+        mv(tF.aF, H9 - .1, .1, { r: -150 }, { r: -60 }, 'power4.in');
+        hit('boat', s, H9, ...P(110, -760), 'โครม!!', 300, 300, '', -8);
+        burst(s, H9 + .05, ...P(110, -760), '#FFD23F');
+        mouthTo(tF.mouth, E[16] + .5, SHUT);
+        // --- beat 14: both crash through the canopy; Tae lands on his back, r7 tumbles over the side: ตูม!
+        mv(B.cL, H9 + .05, .35, { r: 0 }, { r: 55 }, 'power2.in'); mv(B.cR, H9 + .05, .35, { r: 0 }, { r: -55 }, 'power2.in');
+        mv(r7.g, H9 + .02, .9, { x: 90, y: -456, sx: -1.05, sy: 1.05 }, { x: 300, y: 500, sx: -1.05, sy: 1.05, r: 220 }, 'power2.in');
+        mv(tF.g, H9 + .05, .5, { x: 0, y: -400, sx: .9, sy: .9, r: -12 }, { x: 220, y: -60, sx: .9, sy: .9, r: -90 }, 'power2.in');
+        mv(tF.lF, H9 + .05, .4, { r: -80 }, { r: -20 }); mv(tF.lB, H9 + .05, .4, { r: 40 }, { r: 10 });
+        word(H9 + .55, 'ตุ้บ!', 560, 900, 'w xs', 6, .35); shake('boat', H9 + .55, 12, 5); rockTo(H9 + .55, .15, 3); rockTo(H9 + .7, .5, 0);
+        const H10 = H9 + 1.0;
+        hit('boat', s, H10, ...P(300, 80), 'ตูม!', 520, 1000, 'w', 8);
+        splash(s, H10, ...P(260, 60), 1.6);
+        cam('boat', H9 + .3, .7, { scale: 1.6, transformOrigin: '640px 640px' }, { scale: 1.1, transformOrigin: '600px 1100px' }, 'power2.out');
+        tl.set(bubbles, { attr: { opacity: 1 } }, H10 + .5);
+        for (let k = 0; k < 5; k++) tl.fromTo(bubbles, { attr: { transform: T({ x: 0, y: 0 }) } }, { attr: { transform: T({ x: -4, y: -4 }) }, duration: .4, yoyo: true, repeat: 1, immediateRender: false }, H10 + .5 + k * .8);
+        tl.to(bubbles, { attr: { opacity: 0 }, duration: .4 }, t1 - .5);
+        // --- beat 15: silence; Tae flat on his back gives a thumbs-up, Mew giggles, Khao Tang licks his face
+        mv(tF.aF, E[17] - .2, .3, { r: -60 }, { r: -90 }, 'back.out(2)');
+        mouthTo(tF.mouth, E[17], 'M14 12 Q22 22 30 12');
+        mouthTo(mW.mouth, E[17] + .1, 'M9 9 Q15 20 21 9 Z');
+        for (let k = 0; k < 4; k++) mv(mW.g, E[17] + .1 + k * .2, .2, { x: -200, y: 0, sx: .95, sy: .8 }, { x: -200, y: k % 2 ? 0 : -10, sx: .95, sy: .8 }, 'sine.inOut');
+        mv(dG.g, E[17] - .4, .5, { x: 300, sx: 1, sy: 1 }, { x: -40, sx: -1, sy: 1 }, 'power1.out');
+        for (let k = 0; k < 4; k++) mv(dG.hd, E[17] + .2 + k * .15, .15, { r: k % 2 ? -20 : 10 }, { r: k % 2 ? 10 : -20 }, 'none');
+        word(E[17] + .3, 'แผล่บ', 520, 820, 'w xs', 6, .7);
+        cam('boat', E[17] - .3, t1 - E[17] + .3, { scale: 1.1, transformOrigin: '600px 1100px' }, { scale: 1.5, transformOrigin: '520px 1200px' }, 'sine.inOut');
+        show('boat', t0, t1); }
+
+      // ================= 18. engine off: drifting all night under the bridges, the sky turns =================
+      { const s = $('sDrift'), t0 = S[18] - .05, t1 = S[19] - .05;
+        el('rect', { width: 1080, height: 1920, fill: 'url(#gNight)' }, s);
+        const sky2 = el('rect', { width: 1080, height: 1920, fill: 'url(#gNavy)', opacity: 0 }, s);
+        const sky3 = el('rect', { width: 1080, height: 1920, fill: 'url(#gPurple)', opacity: 0 }, s);
+        const far = G(s); skyline(far, 1250, '#0b0f1c', 101, 220); const far2 = G(far, { x: 1180 }); skyline(far2, 1250, '#0b0f1c', 101, 220);
+        el('rect', { y: 1250, width: 1080, height: 670, fill: 'url(#gWater)' }, s);
+        const bt = G(s, { x: 560, y: 1330 });
+        const B = longtail(bt, { sx: .42, sy: .42 });
+        [-380, -200, 40].forEach(x => el('rect', { x, y: -200, width: 70, height: 200, rx: 30, fill: '#0c0e18' }, B.chars));
+        // foreground bridges slide past: Taksin (concrete deck) then Bhumibol (cable-stayed pylons)
+        const fg = G(s);
+        el('rect', { x: 200, y: 880, width: 1300, height: 70, fill: '#06080e' }, fg);
+        [380, 900, 1400].forEach(x => el('rect', { x: x - 50, y: 940, width: 100, height: 1000, fill: '#06080e' }, fg));
+        const bh = G(fg, { x: 2300 });
+        [0, 800].forEach(x => { el('path', { d: `M${x - 40} 1900 L${x - 10} 500 L${x + 10} 500 L${x + 40} 1900 Z`, fill: '#06080e' }, bh);
+          for (let i = 0; i < 8; i++) { el('line', { x1: x, y1: 540 + i * 30, x2: x - 120 - i * 60, y2: 1040, stroke: '#06080e', 'stroke-width': 4 }, bh);
+            el('line', { x1: x, y1: 540 + i * 30, x2: x + 120 + i * 60, y2: 1040, stroke: '#06080e', 'stroke-width': 4 }, bh); } });
+        el('rect', { x: -500, y: 1040, width: 1800, height: 50, fill: '#06080e' }, bh);
+        tl.fromTo(fg, { attr: { transform: T({ x: 600 }) } }, { attr: { transform: T({ x: -2900 }) }, duration: t1 - t0, ease: 'none', immediateRender: false }, t0);
+        tl.fromTo(far, { attr: { transform: T({ x: 0 }) } }, { attr: { transform: T({ x: -300 }) }, duration: t1 - t0, ease: 'none', immediateRender: false }, t0);
+        tl.to(sky2, { attr: { opacity: 1 }, duration: 1.2 }, t0 + .8); tl.to(sky3, { attr: { opacity: 1 }, duration: 1.4 }, t0 + 2);
+        word(t0 + .15, 'แชะ', 600, 900, 'w xs', 4, .6);
+        cam('drift', t0, t1 - t0, { scale: 1.15, transformOrigin: '560px 1300px' }, { scale: 1, transformOrigin: '560px 1300px' }, 'sine.out');
+        show('drift', t0, t1); }
+
+      // ================= 19-20. two-shot in the drifting boat =================
+      { const s = $('sTwo'), t0 = S[19] - .05, t1 = S[21] - .05;
+        el('rect', { width: 1080, height: 1920, fill: 'url(#gPurple)' }, s);
+        skyline(s, 1100, '#1a1530', 111, 160);
+        el('rect', { y: 1100, width: 1080, height: 820, fill: '#1a1a34' }, s);
+        for (let i = 0; i < 10; i++) el('rect', { x: rnd() * 1080, y: 1130 + rnd() * 300, width: 120 + rnd() * 200, height: 4, fill: '#d08aa0', opacity: .25 }, s);
+        const fl = G(s, { x: 0, y: 0 });
+        const tW = tae(fl, { x: 240, y: 1500, sx: 1.25, sy: 1.25 }, { helmetOn: true, armF: { r: -70 } });
+        const fW = fon(fl, { x: 700, y: 1520, sx: -1.25, sy: 1.25 }, { armF: { r: -10 }, pole: { r: -10 } });
+        const mT = mew(fl, { x: 560, y: 1500, sx: 1.25, sy: 1.25, r: 8 }, { whistle: true, bandage: true, armF: { r: -120 } });
+        dog(fl, { x: 520, y: 1470, sx: .8, sy: .8 });
+        // hull side across the frame (they sit low in the boat)
+        el('path', { d: 'M-40 1330 Q540 1360 1120 1320 L1120 1920 L-40 1920 Z', fill: '#4a2e1c' }, fl);
+        el('path', { d: 'M-40 1330 Q540 1360 1120 1320', stroke: '#e0b030', 'stroke-width': 10, fill: 'none' }, fl);
+        el('path', { d: 'M-40 1380 Q540 1410 1120 1370', stroke: '#c8352e', 'stroke-width': 12, fill: 'none' }, fl);
+        // Tae: helmet pushed up, tired grin
+        mouthTo(tW.mouth, 0, 'M14 12 Q22 22 30 12');
+        mouthTo(mT.mouth, S[19], 'M10 10 Q15 16 20 10 Z'); mouthTo(mT.mouth, E[19], 'M10 12 Q15 14 20 11');
+        for (let k = 0; k < 4; k++) mv(mT.aF, S[19] + k * .5, .5, { r: k % 2 ? -100 : -120 }, { r: k % 2 ? -120 : -100 }, 'sine.inOut');
+        mouthTo(tW.mouth, S[20], OPEN); mouthTo(tW.mouth, E[20], 'M14 12 Q22 22 30 12');
+        for (let k = 0; k < (t1 - t0) / .9; k++) mv(fl, t0 + k * .9, .9, { y: k % 2 ? 8 : -8 }, { y: k % 2 ? -8 : 8 }, 'sine.inOut');
+        cam('two', t0, S[20] - t0, { scale: 1.1, transformOrigin: '540px 1200px' }, { scale: 1.25, transformOrigin: '620px 1200px' }, 'sine.inOut');
+        cam('two', S[20] - .1, t1 - S[20], { scale: 1.25, transformOrigin: '620px 1200px' }, { scale: 1.35, transformOrigin: '300px 1150px' }, 'sine.inOut');
+        show('two', t0, t1); }
+
+      // ================= 21. engine on; over Tae's shoulder: the fort pier and the navy ship =================
+      { const s = $('sShip'), t0 = S[21] - .05, t1 = S[22] - .05;
+        el('rect', { width: 1080, height: 1920, fill: 'url(#gPreDawn)' }, s);
+        el('rect', { y: 1150, width: 1080, height: 770, fill: '#2a2440' }, s);
+        for (let i = 0; i < 12; i++) el('rect', { x: rnd() * 1080, y: 1170 + rnd() * 500, width: 100 + rnd() * 200, height: 4, fill: '#ffb070', opacity: .25 }, s);
+        // fort wall at left, the pier, the grey ship with deck lights
+        el('path', { d: 'M-20 1150 L-20 1000 L260 1000 L260 980 L300 980 L300 1150 Z', fill: '#1a1428' }, s);
+        const sh = G(s, { x: 700, y: 1150 });
+        el('path', { d: 'M-300 0 L-330 -90 L320 -90 L300 0 Z', fill: '#4a5060' }, sh);
+        el('path', { d: 'M-160 -90 L-140 -170 L80 -170 L100 -90 Z', fill: '#5a6070' }, sh);
+        el('rect', { x: -40, y: -260, width: 60, height: 90, fill: '#5a6070' }, sh); el('rect', { x: -14, y: -330, width: 8, height: 70, fill: '#5a6070' }, sh);
+        for (let i = 0; i < 12; i++) { el('circle', { cx: -280 + i * 50, cy: -96, r: 5, fill: '#ffe2a0' }, sh); el('circle', { cx: -280 + i * 50, cy: -96, r: 20, fill: 'url(#gGlow)' }, sh); }
+        const pr = G(s, { x: 0, y: 1150 });
+        el('rect', { x: 260, y: 40, width: 380, height: 26, fill: '#1a1428' }, pr);
+        for (let x = 280; x < 640; x += 60) el('rect', { x, y: 60, width: 12, height: 120, fill: '#1a1428' }, pr);
+        // Tae from behind (big, bottom left) at the tiller
+        const tB = tae(s, { x: 200, y: 2400, sx: -3, sy: 3 }, { helmetOn: true, armF: { r: -80 } });
+        cam('ship', t0, t1 - t0, { scale: 1, transformOrigin: '600px 1100px' }, { scale: 1.3, transformOrigin: '700px 1080px' }, 'power1.inOut');
+        tl.fromTo('#bFort', { opacity: 0, x: -40 }, { opacity: 1, x: 0, duration: .3, immediateRender: false }, t0 + .3);
+        tl.to('#bFort', { opacity: 0, duration: .2 }, t1 - .1);
+        word(t0 + .1, 'บรื้น…', 560, 1250, 'w xs', -4, .8);
+        show('ship', t0, t1); }
+
+      // ================= 22-25. under the pier: the growl, the hand, the pull, the bite =================
+      { const s = $('sPier'), t0 = S[22] - .05, t1 = S[26] - .05, WL = 1240;
+        el('rect', { width: 1080, height: 1920, fill: '#120e1e' }, s);
+        el('rect', { y: 700, width: 1080, height: 540, fill: 'url(#gPreDawn)', opacity: .5 }, s);
+        el('rect', { y: 0, width: 1080, height: 420, fill: '#0e0a16' }, s);
+        for (let x = -40; x < 1100; x += 70) el('rect', { x, y: 380, width: 60, height: 30, fill: '#1c1626' }, s);
+        for (let x = 60; x < 1080; x += 240) el('rect', { x, y: 400, width: 34, height: 1000, fill: '#1a1424' }, s);
+        el('rect', { y: WL, width: 1080, height: 680, fill: 'url(#gWater)' }, s);
+        const bt = G(s, { x: 560, y: 1280 });
+        const B = longtail(bt, { sx: .95, sy: .95 });
+        const tP = tae(B.chars, { x: -380, sx: .95, sy: .95 }, { helmetOn: true, armF: { r: -50 } });
+        const fP = fon(B.chars, { x: -170, sx: .95, sy: .95 }, { armF: { r: -30 }, pole: { r: 30 } });
+        const mP = mew(B.chars, { x: 60, sx: 1, sy: 1 }, { whistle: true, bandage: true });
+        const dP = dog(B.chars, { x: 220 });
+        // the zombie in the water (front of the hull, below the waterline at first)
+        const zw = G(s, { x: 680, y: 1700 });
+        const zH = G(zw);
+        el('circle', { cy: -40, r: 46, fill: ZSK }, zH); el('path', { d: 'M-46 -50 Q-40 -96 6 -92 Q-14 -70 -24 -40 Z', fill: '#3a3a38' }, zH);
+        el('circle', { cx: 20, cy: -50, r: 9, fill: '#fff' }, zH); el('path', { d: 'M4 -14 Q20 -2 36 -16', stroke: '#5a0a10', 'stroke-width': 7, fill: 'none' }, zH);
+        const zArm = G(zw); el('path', { d: 'M-20 0 L-60 -260 L-40 -264 L4 0 Z', fill: ZSK }, zArm);
+        el('path', { d: 'M-58 -258 L-80 -290 M-50 -262 L-56 -300 M-44 -262 L-30 -296', stroke: ZSK, 'stroke-width': 9, 'stroke-linecap': 'round' }, zArm);
+        el('rect', { y: WL + 30, width: 1080, height: 650, fill: '#070c18', opacity: .82 }, s);
+        // 22: Khao Tang stiffens and growls at the water
+        cam('pier', t0, S[23] - t0, { scale: 1.3, transformOrigin: '760px 1200px' }, { scale: 1.6, transformOrigin: '760px 1240px' }, 'sine.in');
+        mv(dP.hd, S[22] + .2, .3, {}, { r: 35 }); mv(dP.tail, S[22] + .2, .3, { r: -30 }, { r: 30 });
+        mouthTo(dP.mouth, S[22] + .5, 'M28 4 L50 -2 L46 14 Z');
+        word(S[22] + .6, 'แฮ่…', 640, 900, 'w xs', 4, 1.4);
+        mv(mP.hd, S[22] + 1.2, .3, { x: 2, y: -240 }, { x: 2, y: -240, r: 25 });
+        // 23: the pale hand bursts out and grabs Mew's lanyard: ซ่า!
+        const g1 = S[23] + .1;
+        mv(zw, g1, .25, { x: 680, y: 1700 }, { x: 680, y: 1330 }, 'power3.out');
+        splash(s, g1, 650, WL + 20, 1.2);
+        word(g1, 'ซ่า!', 380, 640, '', -8, .6); flash(g1, .5); shake('pier', g1, 18, 8);
+        tl.fromTo('#redv', { opacity: 0 }, { opacity: .9, duration: .15, yoyo: true, repeat: 3, immediateRender: false }, g1);
+        cam('pier', g1 - .05, .2, { scale: 1.6, transformOrigin: '760px 1240px' }, { scale: 2.1, transformOrigin: '660px 1000px' }, 'power4.out');
+        mv(mP.g, g1 + .3, 1.2, { x: 60, sx: 1, sy: 1 }, { x: 130, y: 40, sx: 1, sy: 1, r: 40 }, 'power2.in');
+        mv(zw, g1 + .3, 1.2, { x: 680, y: 1330 }, { x: 680, y: 1380 }, 'power2.in');
+        mouthTo(mP.mouth, g1 + .2, 'M8 8 Q15 22 22 8 Z');
+        // 24: Tae lunges across the boat and wraps an arm around her: ฮึบ!
+        cam('pier', S[24] - .4, .3, { scale: 2.1, transformOrigin: '660px 1000px' }, { scale: 1.35, transformOrigin: '600px 1100px' }, 'power2.out');
+        mv(tP.g, S[24] - .3, .35, { x: -380, sx: .95, sy: .95 }, { x: 40, y: -10, sx: .95, sy: .95, r: 30 }, 'power3.out');
+        mv(tP.aF, S[24] - .3, .35, { r: -50 }, { r: -100 });
+        mouthTo(tP.mouth, S[24], OPEN);
+        word(S[24] + .1, 'ฮึบ!', 300, 760, 'w', -6, .6); shake('pier', S[24] + .05, 12, 6);
+        // 25: he pulls her back; the head comes up with them; teeth close on his forearm; black + silence; กึก!
+        mv(mP.g, S[25] + .2, .5, { x: 130, y: 40, sx: 1, sy: 1, r: 40 }, { x: -60, sx: 1, sy: 1 }, 'power2.out');
+        mv(tP.g, S[25] + .2, .5, { x: 40, y: -10, sx: .95, sy: .95, r: 30 }, { x: -60, y: 0, sx: .95, sy: .95, r: -6 }, 'power2.out');
+        mv(tP.aF, S[25] + .2, .5, { r: -100 }, { r: -60 });
+        mv(zw, S[25] + .3, .6, { x: 680, y: 1380 }, { x: 600, y: 1240 }, 'power2.out');
+        mv(zH, S[25] + .9, .4, {}, { x: -40, y: -60, r: -20 }, 'power3.in');
+        cam('pier', S[25] + .2, E[25] - S[25] - .2, { scale: 1.35, transformOrigin: '600px 1100px' }, { scale: 2.2, transformOrigin: '560px 1080px' }, 'power2.in');
+        const BK = E[25];
+        tl.fromTo('#blk', { opacity: 0 }, { opacity: 1, duration: .02, immediateRender: false }, BK);
+        tl.to('#blk', { opacity: 0, duration: .02 }, BK + .55);
+        word(BK + .42, 'กึก!', 470, 900, 'xs red', 0, .3);
+        show('pier', t0, t1); }
+
+      // ================= 26. Tae hides the arm and smiles; the timer starts =================
+      { const s = $('sSmile'), t0 = S[26] - .05;
+        el('rect', { width: 1080, height: 1920, fill: 'url(#gPreDawn)' }, s);
+        el('rect', { y: 1250, width: 1080, height: 670, fill: '#2a2440' }, s);
+        const tS = tae(s, { x: 560, y: 1700, sx: 2.2, sy: 2.2 }, { helmetOn: true, armF: { r: 30 } });
+        tS.aF.setAttribute('opacity', 0);   // the bitten arm is behind his back
+        mouthTo(tS.mouth, 0, 'M14 12 Q22 22 30 12');
+        // Fon and Mew, backs to camera, staring at him
+        const fg = G(s); el('circle', { cx: 160, cy: 1500, r: 120, fill: '#0c0a14' }, fg); el('path', { d: 'M0 1620 Q160 1520 330 1620 L360 1920 L-20 1920 Z', fill: '#0c0a14' }, fg);
+        el('circle', { cx: 940, cy: 1600, r: 90, fill: '#0c0a14' }, fg); el('path', { d: 'M820 1700 Q940 1630 1060 1700 L1090 1920 L800 1920 Z', fill: '#0c0a14' }, fg);
+        cam('smile', t0, END - t0, { scale: 1, transformOrigin: '560px 900px' }, { scale: 1.15, transformOrigin: '560px 900px' }, 'sine.inOut');
+        show('smile', t0, S[27] - .05); }
+
+      // ================= 27. next =================
+      tl.fromTo('#next', { opacity: 0 }, { opacity: 1, duration: .3, immediateRender: false }, S[27] - .05);
+      tl.fromTo('#next .sr', { opacity: 0 }, { opacity: 1, duration: .3, immediateRender: false }, S[27]);
+      tl.fromTo('#next .pill', { opacity: 0, y: 10 }, { opacity: 1, y: 0, duration: .3, immediateRender: false }, S[27] + .1);
+      tl.fromTo('#next h1', { opacity: 0, scale: 1.5 }, { opacity: 1, scale: 1, duration: .25, ease: 'power3.out', immediateRender: false }, S[27] + .3);
+      shake('next', S[27] + .55, 14, 6);
+      tl.fromTo('#next .rl', { scaleX: 0 }, { scaleX: 1, duration: .4, immediateRender: false }, S[27] + .8);
+      tl.fromTo('#next .s1', { opacity: 0 }, { opacity: 1, duration: .3, immediateRender: false }, S[27] + 1.0);
+      tl.fromTo('#next .s2', { opacity: 0 }, { opacity: 1, duration: .3, immediateRender: false }, S[27] + 1.3);
+      tl.set({}, {}, END);
+
+      window.__timelines['main'] = tl;
+      tl.seek(0);
+    </script>
+  </body>
+</html>

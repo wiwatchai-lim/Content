@@ -1,0 +1,746 @@
+<!doctype html>
+<html lang="th">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=1080, height=1920" />
+    <!--
+      Zombie series "กรุงเทพฯ ไม่มีพรุ่งนี้" Z01 "วินคันสุดท้าย" (user, 2026-10-28). Pure zombie action, no eyewear/brand. Thai only.
+      ../template.html is the source: ../build.py inlines ../audio/timing.json (S = cue starts, E = cue ends, 1-based) -> index.html.
+      Everything is drawn in SVG by the script below; scenes switch on cue times, so re-timing the voice needs no edits here.
+      Scenes: monument 1 | win stand 2-5 | ride 6 (+ escape 20-21) | bus 7-8 | shout 9 | ramp 10 | roof fight + slow-mo 11-18
+      | map 19 | shop 22 | inside + radio 23-25 | arm 26 | hand 27 | next 28
+    -->
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/gsap.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@400;500;600;700;800;900&family=Anuphan:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <style>
+      * { margin: 0; padding: 0; box-sizing: border-box; }
+      html, body { width: 1080px; height: 1920px; overflow: hidden; background: #0b0a10; }
+      #root { position: relative; width: 1080px; height: 1920px; overflow: hidden; font-family: 'Anuphan', sans-serif; color: #fff; }
+      .full { position: absolute; left: 0; top: 0; width: 1080px; height: 1920px; }
+      .scene { opacity: 0; overflow: hidden; }
+      .cam { transform-origin: 540px 960px; }
+      svg { display: block; overflow: visible; }
+
+      .sub { position: absolute; left: 50px; right: 50px; top: 1600px; text-align: center; font-family: 'Prompt', sans-serif; font-weight: 700;
+             font-size: 58px; line-height: 1.3; opacity: 0; text-shadow: 0 4px 0 #000, 0 0 18px rgba(0,0,0,.9), 0 0 4px #000; }
+      .sub.y { color: #FFD23F; }
+      .sub.r span { display: inline-block; background: #D8343A; color: #fff; padding: 4px 26px 8px; border-radius: 10px; text-shadow: none;
+                    box-shadow: 0 6px 24px rgba(0,0,0,.45); }
+      .sub b { color: #9fe8ff; font-weight: 800; }
+
+      .chip { position: absolute; top: 150px; height: 86px; background: #EEE8DC; border-radius: 16px; color: #1d2433; display: flex; align-items: center;
+              gap: 14px; padding: 0 26px 0 20px; box-shadow: 0 8px 26px rgba(0,0,0,.45); }
+      .chip small { display: block; font-size: 20px; font-weight: 500; color: #555a63; line-height: 1; }
+      .chip b { display: block; font-family: 'Prompt'; font-size: 40px; font-weight: 700; line-height: 1.05; letter-spacing: .02em; }
+      #ep { left: auto; right: 56px; background: #D8343A; color: #fff; font: 800 34px 'Prompt'; padding: 0 26px; }
+
+      .badge { position: absolute; left: 60px; top: 1380px; background: rgba(12,12,18,.82); border-left: 10px solid #FFD23F; border-radius: 10px;
+               padding: 14px 26px; font: 600 38px 'Prompt'; color: #fff; opacity: 0; white-space: nowrap; }
+      .badge i { font-style: normal; color: #FFD23F; }
+
+      .fx { position: absolute; font: 900 150px/1 'Prompt'; color: #FFD23F; opacity: 0; white-space: nowrap;
+            -webkit-text-stroke: 10px #111; paint-order: stroke fill; text-shadow: 10px 10px 0 #D8343A; transform-origin: 50% 50%; }
+      .fx.w { color: #fff; text-shadow: 10px 10px 0 #2a6cd8; }
+      .fx.s { font-size: 96px; }
+
+      #title { position: absolute; left: 0; right: 0; top: 360px; text-align: center; opacity: 0; }
+      #title h1 { font: 900 112px/1.05 'Prompt'; color: #fff; -webkit-text-stroke: 8px #111; paint-order: stroke fill; text-shadow: 8px 8px 0 #D8343A; }
+      #title p { margin-top: 18px; display: inline-block; background: #FFD23F; color: #111; font: 800 44px 'Prompt'; padding: 6px 28px; border-radius: 8px; }
+
+      #flash { background: #fff; opacity: 0; }
+      #redv { background: radial-gradient(ellipse 70% 60% at 50% 50%, rgba(216,52,58,0) 40%, rgba(150,10,20,.85)); opacity: 0; }
+      #bars { pointer-events: none; }
+      #bars div { position: absolute; left: 0; width: 1080px; height: 0; background: #000; }
+
+      #next { background: radial-gradient(ellipse 80% 45% at 50% 42%, #2a1416, #0d0b0d 70%); }
+      #next .pill { position: absolute; left: 50%; top: 600px; transform: translateX(-50%); border: 2px solid #4a4a55; border-radius: 40px; padding: 8px 30px;
+                    font-size: 32px; font-weight: 600; color: #d6d6dc; white-space: nowrap; }
+      #next .pill:before { content: ''; display: inline-block; width: 12px; height: 12px; border-radius: 50%; background: #D8343A; margin-right: 12px; vertical-align: 4px; }
+      #next h1 { position: absolute; left: 40px; right: 40px; top: 700px; text-align: center; font: 900 120px/1.15 'Prompt'; color: #fff;
+                 -webkit-text-stroke: 8px #111; paint-order: stroke fill; text-shadow: 8px 8px 0 #D8343A; }
+      #next .rl { position: absolute; left: 400px; top: 1000px; width: 280px; height: 8px; background: #D8343A; border-radius: 4px; }
+      #next .s1 { position: absolute; left: 0; right: 0; top: 1040px; text-align: center; font: 700 40px 'Prompt'; color: #FFD23F; }
+      #next .s2 { position: absolute; left: 0; right: 0; top: 1110px; text-align: center; font-size: 34px; color: #c8c8d0; }
+      #next .sr { position: absolute; left: 0; right: 0; top: 300px; text-align: center; font: 800 46px 'Prompt'; color: #e05a5f; letter-spacing: .04em; }
+    </style>
+  </head>
+  <body>
+    <div id="root" data-composition-id="main" data-start="0" data-duration="@TOTAL@" data-width="1080" data-height="1920">
+      <svg width="0" height="0" style="position:absolute">
+        <defs>
+          <linearGradient id="gSun" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#2d1d4a" /><stop offset=".45" stop-color="#b8434a" /><stop offset=".62" stop-color="#ff8a3d" /><stop offset=".72" stop-color="#ffc06a" /></linearGradient>
+          <linearGradient id="gDusk" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#1e1838" /><stop offset=".5" stop-color="#6a2f55" /><stop offset=".72" stop-color="#e0683e" /></linearGradient>
+          <linearGradient id="gNight" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#120f22" /><stop offset=".7" stop-color="#3a2346" /></linearGradient>
+          <radialGradient id="gGlow"><stop offset="0" stop-color="#ffe2a0" stop-opacity=".9" /><stop offset="1" stop-color="#ffe2a0" stop-opacity="0" /></radialGradient>
+          <radialGradient id="gRadio"><stop offset="0" stop-color="#7dffb0" stop-opacity=".7" /><stop offset="1" stop-color="#7dffb0" stop-opacity="0" /></radialGradient>
+          <radialGradient id="gEye"><stop offset="0" stop-color="#fff" stop-opacity=".9" /><stop offset="1" stop-color="#fff" stop-opacity="0" /></radialGradient>
+          <clipPath id="cRoof"><rect x="-200" y="-400" width="1500" height="1580" /></clipPath>
+          <filter id="fBlur"><feGaussianBlur stdDeviation="5" /></filter>
+        </defs>
+      </svg>
+
+      <div id="mon" class="scene full" style="opacity:1"><div class="cam full"><svg class="full" viewBox="0 0 1080 1920" id="sMon"></svg></div></div>
+      <div id="stand" class="scene full"><div class="cam full"><svg class="full" viewBox="0 0 1080 1920" id="sStand"></svg></div></div>
+      <div id="ride" class="scene full"><div class="cam full"><svg class="full" viewBox="0 0 1080 1920" id="sRide"></svg></div></div>
+      <div id="bus" class="scene full"><div class="cam full"><svg class="full" viewBox="0 0 1080 1920" id="sBus"></svg></div></div>
+      <div id="shout" class="scene full"><div class="cam full"><svg class="full" viewBox="0 0 1080 1920" id="sShout"></svg></div></div>
+      <div id="ramp" class="scene full"><div class="cam full"><svg class="full" viewBox="0 0 1080 1920" id="sRamp"></svg></div></div>
+      <div id="roof" class="scene full"><div class="cam full"><svg class="full" viewBox="0 0 1080 1920" id="sRoof"></svg></div></div>
+      <div id="map" class="scene full"><div class="cam full"><svg class="full" viewBox="0 0 1080 1920" id="sMap"></svg></div></div>
+      <div id="shop" class="scene full"><div class="cam full"><svg class="full" viewBox="0 0 1080 1920" id="sShop"></svg></div></div>
+      <div id="inside" class="scene full"><div class="cam full"><svg class="full" viewBox="0 0 1080 1920" id="sIn"></svg></div></div>
+      <div id="arm" class="scene full"><div class="cam full"><svg class="full" viewBox="0 0 1080 1920" id="sArm"></svg></div></div>
+      <div id="hand" class="scene full"><div class="cam full"><svg class="full" viewBox="0 0 1080 1920" id="sHand"></svg></div></div>
+
+      <div id="redv" class="full"></div>
+      <div id="flash" class="full"></div>
+      <div id="bars" class="full"><div id="barT" style="top:0"></div><div id="barB" style="bottom:0"></div></div>
+      <div id="fxl" class="full"></div>
+
+      <div id="title"><h1>กรุงเทพฯ<br>ไม่มีพรุ่งนี้</h1><p>EP.1 วินคันสุดท้าย</p></div>
+      <div id="bTae" class="badge"><i>เต้</i> · วินมอไซค์ · อดีตนักมวย</div>
+      <div id="bFon" class="badge"><i>ฝน</i> · พยาบาลห้องฉุกเฉิน</div>
+
+      <div id="clock" class="chip" style="left:56px">
+        <svg viewBox="-24 -24 48 48" width="46" height="46"><circle r="19" fill="none" stroke="#1d2433" stroke-width="4" /><path d="M0 -10 L0 0 L8 6" fill="none" stroke="#1d2433" stroke-width="4" stroke-linecap="round" /></svg>
+        <div><small>วันที่ 1</small><b id="clockt">17:40</b></div>
+      </div>
+      <div id="ep" class="chip">EP.1</div>
+
+      <div id="subs"></div>
+
+      <div id="next" class="scene full">
+        <div class="sr">กรุงเทพฯ ไม่มีพรุ่งนี้</div>
+        <div class="pill">ตอนหน้า</div>
+        <h1>เซเว่น<br>ตีสอง</h1>
+        <div class="rl"></div>
+        <div class="s1">EP.2 เร็วๆ นี้</div>
+        <div class="s2">กดติดตาม แล้วไปรอดด้วยกัน</div>
+      </div>
+    </div>
+
+    <script>
+      const TIMING = /*TIMING*/;
+      const S = [0], E = [0]; TIMING.cues.forEach(c => { S[c.n] = c.start; E[c.n] = c.end; });
+      const END = TIMING.total;
+      let seed = 7; const rnd = () => (seed = (seed * 16807) % 2147483647) / 2147483647;
+      const NS = 'http://www.w3.org/2000/svg';
+      const el = (tag, a, p) => { const e = document.createElementNS(NS, tag); for (const k in a) e.setAttribute(k, a[k]); p && p.appendChild(e); return e; };
+      const $ = id => document.getElementById(id);
+      const T = o => `translate(${o.x ?? 0} ${o.y ?? 0}) rotate(${o.r ?? 0}) scale(${o.sx ?? 1} ${o.sy ?? 1})`;
+      const G = (p, o = {}) => el('g', { transform: T(o) }, p);
+      const piv = (p, x, y, o = {}) => G(G(p, { x, y }), o);   // inner group rotates around (x, y)
+
+      const SKIN = '#b97a4c', SKIN2 = '#d7a27a', ZSK = '#8fa088', RED = '#D8343A';
+
+      // ---------- characters (drawn facing right, origin at the feet) ----------
+      function tae(p, o, opt = {}) {
+        const g = G(p, o);
+        const aB = piv(g, -8, -292, { r: 12 });
+        el('path', { d: 'M-10 0 L10 0 L6 92 L-10 90 Z', fill: '#a56a40' }, aB);
+        el('circle', { cx: -2, cy: 98, r: 11, fill: '#a56a40' }, aB);
+        let lB, lF;
+        if (opt.sit) {
+          lB = piv(g, -6, -178); el('path', { d: 'M-16 -10 L16 -10 L72 2 L76 92 L54 94 L50 26 Z', fill: '#26314b' }, lB);
+          lF = piv(g, 8, -178); el('path', { d: 'M-14 -10 L16 -10 L82 4 L86 96 L62 98 L58 28 Z', fill: '#33426a' }, lF);
+          el('path', { d: 'M60 90 L104 92 Q110 106 98 106 L60 106 Z', fill: '#111' }, lF);
+        } else {
+          lB = piv(g, -10, -178); el('path', { d: 'M-14 0 L14 0 L6 86 L2 170 L-22 170 L-18 86 Z', fill: '#26314b' }, lB);
+          el('path', { d: 'M-24 160 L18 160 L18 178 L-26 178 Z', fill: '#111' }, lB);
+          lF = piv(g, 8, -178); el('path', { d: 'M-14 0 L14 0 L22 86 L28 170 L4 170 L-2 88 Z', fill: '#33426a' }, lF);
+          el('path', { d: 'M2 160 L48 162 Q54 178 44 178 L2 178 Z', fill: '#111' }, lF);
+        }
+        el('path', { d: 'M-36 -306 Q0 -318 36 -306 L30 -168 L-30 -168 Z', fill: '#f07a1e' }, g);
+        el('path', { d: 'M-7 -312 L7 -312 L6 -170 L-6 -170 Z', fill: '#22262f' }, g);
+        el('rect', { x: -33, y: -218, width: 66, height: 9, fill: '#ffe08a' }, g);
+        el('rect', { x: 12, y: -280, width: 18, height: 20, rx: 3, fill: '#fff' }, g);
+        el('text', { x: 21, y: -264, 'font-size': 14, 'font-weight': 800, 'text-anchor': 'middle', fill: '#111', 'font-family': 'Prompt' }, g).textContent = '12';
+        el('rect', { x: -8, y: -326, width: 16, height: 22, fill: SKIN }, g);
+        const hd = G(g, { x: 4, y: -352 });
+        el('circle', { r: 32, fill: SKIN }, hd);
+        el('path', { d: 'M-33 -2 Q-32 -42 4 -40 Q36 -38 33 -8 L20 -16 Q-2 -28 -22 -10 Z', fill: '#15161a' }, hd);
+        el('circle', { cx: -8, cy: 2, r: 7, fill: '#a56a40' }, hd);
+        el('circle', { cx: 20, cy: -4, r: 4, fill: '#111' }, hd);
+        el('path', { d: 'M12 -14 L28 -16', stroke: '#111', 'stroke-width': 4, 'stroke-linecap': 'round' }, hd);
+        const mouth = el('path', { d: 'M16 16 Q22 18 28 15', stroke: '#5a2a1a', 'stroke-width': 4, fill: 'none', 'stroke-linecap': 'round' }, hd);
+        let helmHead = null;
+        if (opt.helmetOn) { helmHead = G(hd);
+          el('path', { d: 'M-38 -8 Q-40 -50 4 -50 Q42 -48 40 -14 L40 -10 L-38 -8 Z', fill: '#c4262c' }, helmHead);
+          el('path', { d: 'M-30 -20 Q0 -44 30 -30', stroke: '#fff', 'stroke-width': 5, fill: 'none', opacity: .5 }, helmHead); }
+        const aF = piv(g, 14, -292, opt.armF || {});
+        el('path', { d: 'M-11 0 L11 0 L14 90 L-6 94 Z', fill: SKIN }, aF);
+        el('path', { d: 'M-14 -6 L14 -6 L13 30 L-13 30 Z', fill: '#22262f' }, aF);
+        el('circle', { cx: 4, cy: 100, r: 13, fill: SKIN }, aF);
+        let helm = null;
+        if (opt.helmet) { helm = G(aF, { x: 4, y: 130 });
+          el('line', { x1: 0, y1: -30, x2: 0, y2: -10, stroke: '#222', 'stroke-width': 4 }, helm);
+          el('path', { d: 'M-32 14 Q-34 -32 0 -32 Q34 -32 32 14 Z', fill: '#c4262c', stroke: '#111', 'stroke-width': 4 }, helm);
+          el('path', { d: 'M4 -10 L30 -10 L32 12 L6 12 Z', fill: '#1a1a1f' }, helm); }
+        return { g, aF, aB, lF, lB, hd, mouth, helm };
+      }
+      function fon(p, o, opt = {}) {
+        const g = G(p, o);
+        const aB = piv(g, -10, -290, { r: 8 }); el('path', { d: 'M-10 0 L10 0 L6 88 L-10 86 Z', fill: '#c48d66' }, aB);
+        const lB = piv(g, -10, -176); el('path', { d: 'M-14 0 L14 0 L8 168 L-16 168 Z', fill: '#1f7f74' }, lB);
+        el('path', { d: 'M-20 162 L18 162 L18 178 L-22 178 Z', fill: '#f2f2f2' }, lB);
+        const lF = piv(g, 8, -176); el('path', { d: 'M-14 0 L14 0 L22 168 L-2 168 Z', fill: '#23867a' }, lF);
+        el('path', { d: 'M-4 162 L38 162 Q44 178 34 178 L-4 178 Z', fill: '#f2f2f2' }, lF);
+        el('path', { d: 'M-34 -302 Q0 -314 34 -302 L32 -166 L-32 -166 Z', fill: '#2a9d8f' }, g);
+        el('path', { d: 'M-12 -306 L0 -280 L12 -306 Z', fill: '#1f7f74' }, g);
+        el('rect', { x: -8, y: -322, width: 16, height: 20, fill: SKIN2 }, g);
+        const hd = G(g, { x: 2, y: -346 });
+        el('circle', { cx: -30, cy: -18, r: 17, fill: '#1a1416' }, hd);
+        el('circle', { r: 30, fill: SKIN2 }, hd);
+        el('path', { d: 'M-31 6 Q-34 -38 2 -38 Q32 -36 30 -10 Q8 -24 -14 -16 L-20 18 Z', fill: '#1a1416' }, hd);
+        el('circle', { cx: 18, cy: -4, r: 3.8, fill: '#111' }, hd);
+        const mouth = el('path', { d: 'M14 15 Q20 17 25 14', stroke: '#7a3a2a', 'stroke-width': 4, fill: 'none', 'stroke-linecap': 'round' }, hd);
+        const aF = piv(g, 12, -290, opt.armF || { r: -20 });
+        el('path', { d: 'M-10 0 L10 0 L12 88 L-6 90 Z', fill: SKIN2 }, aF);
+        el('path', { d: 'M-13 -6 L13 -6 L12 26 L-12 26 Z', fill: '#2a9d8f' }, aF);
+        el('circle', { cx: 4, cy: 96, r: 12, fill: SKIN2 }, aF);
+        const pole = piv(aF, 4, 96, opt.pole || { r: 20 });
+        el('line', { x1: 0, y1: -230, x2: 0, y2: 130, stroke: '#c9ced6', 'stroke-width': 8, 'stroke-linecap': 'round' }, pole);
+        el('path', { d: 'M0 -230 Q22 -236 20 -214', stroke: '#c9ced6', 'stroke-width': 6, fill: 'none' }, pole);
+        el('rect', { x: 6, y: -214, width: 34, height: 52, rx: 10, fill: '#e8f4ff', opacity: .85, stroke: '#9fb2c8', 'stroke-width': 3 }, pole);
+        el('line', { x1: -44, y1: 130, x2: 44, y2: 130, stroke: '#9aa1ab', 'stroke-width': 8, 'stroke-linecap': 'round' }, pole);
+        el('circle', { cx: -44, cy: 138, r: 8, fill: '#333' }, pole); el('circle', { cx: 44, cy: 138, r: 8, fill: '#333' }, pole);
+        return { g, aF, aB, lF, lB, hd, mouth, pole };
+      }
+      const SHIRTS = ['#cfd3cf', '#5a6a8a', '#7a4a3a', '#3e5a4a', '#8a7a5a', '#6a3a5a'];
+      function zomb(p, o, opt = {}) {
+        const g = G(p, o);
+        const sh = opt.shirt || SHIRTS[Math.floor(rnd() * SHIRTS.length)];
+        const aB = piv(g, 16, -282, { r: opt.armR ?? -6 });
+        el('path', { d: 'M0 -9 L96 -10 L98 6 L0 10 Z', fill: '#768670' }, aB);
+        el('path', { d: 'M94 -12 L118 -14 M94 -2 L120 -2 M94 6 L116 10', stroke: '#768670', 'stroke-width': 6, 'stroke-linecap': 'round' }, aB);
+        if (!opt.noLegs) {
+          el('path', { d: 'M-24 -172 L2 -172 L-8 -84 L-20 0 L-44 0 L-30 -86 Z', fill: '#2d2a33' }, g);
+          el('path', { d: 'M-2 -172 L22 -172 L26 -84 L36 0 L12 0 L2 -84 Z', fill: '#3b3446' }, g);
+        }
+        el('path', { d: 'M-32 -292 Q8 -316 44 -284 L30 -164 L-30 -164 Z', fill: sh }, g);
+        el('path', { d: 'M-10 -170 L-2 -200 L8 -172 L20 -196 L28 -166 Z', fill: '#1a1418', opacity: .5 }, g);
+        el('path', { d: 'M8 -300 Q26 -296 34 -280 L26 -250 Q18 -270 4 -276 Z', fill: '#7a1418' }, g);
+        const hd = G(g, { x: 30, y: -318, r: 12 });
+        el('circle', { r: 30, fill: ZSK }, hd);
+        el('path', { d: 'M-30 -4 Q-26 -32 6 -32 Q-10 -20 -16 4 Z', fill: '#3a3a38' }, hd);
+        el('circle', { cx: 16, cy: -6, r: 10, fill: 'url(#gEye)' }, hd);
+        el('circle', { cx: 16, cy: -6, r: 5, fill: '#fff' }, hd);
+        el('path', { d: 'M8 12 Q18 20 28 10', stroke: '#5a0a10', 'stroke-width': 5, fill: 'none' }, hd);
+        el('path', { d: 'M14 16 L14 30', stroke: '#8a1018', 'stroke-width': 4 }, hd);
+        const aF = piv(g, 22, -276, { r: opt.armF ?? 4 });
+        el('path', { d: 'M0 -10 L100 -8 L100 8 L0 10 Z', fill: ZSK }, aF);
+        el('path', { d: 'M98 -10 L124 -12 M98 0 L126 0 M98 8 L122 12', stroke: ZSK, 'stroke-width': 6, 'stroke-linecap': 'round' }, aF);
+        return { g, aF, aB, hd };
+      }
+      function bike(p, o) {
+        const g = G(p, o);
+        [-95, 95].forEach(x => { const w = G(g, { x, y: -46 });
+          el('circle', { r: 46, fill: '#15161a' }, w); el('circle', { r: 30, fill: 'none', stroke: '#3a3d45', 'stroke-width': 4 }, w);
+          el('circle', { r: 12, fill: '#9aa0aa' }, w); });
+        el('line', { x1: 80, y1: -120, x2: 95, y2: -46, stroke: '#333', 'stroke-width': 9 }, g);
+        el('path', { d: 'M-118 -78 L-30 -98 L66 -90 L112 -70 L98 -52 L-96 -52 Z', fill: '#c4262c' }, g);
+        el('path', { d: 'M-100 -96 L10 -104 L12 -92 L-100 -84 Z', fill: '#111' }, g);
+        el('path', { d: 'M-40 -52 L40 -52 L30 -26 L-30 -26 Z', fill: '#2a2c32' }, g);
+        el('line', { x1: 70, y1: -122, x2: 108, y2: -136, stroke: '#222', 'stroke-width': 8, 'stroke-linecap': 'round' }, g);
+        el('circle', { cx: 112, cy: -92, r: 12, fill: '#ffe7a0' }, g);
+        return g;
+      }
+      function person(p, x, y, s, col, run, z) {
+        const g = G(p, { x, y, sx: s, sy: Math.abs(s) });
+        el('circle', { cx: 4, cy: -150, r: 18, fill: col }, g);
+        el('path', { d: run ? 'M-16 -128 L22 -128 L18 -60 L44 0 L28 4 L4 -50 L-16 4 L-32 0 L-10 -62 Z' : 'M-16 -128 L22 -128 L18 -60 L22 0 L8 0 L2 -50 L-6 0 L-20 0 L-14 -62 Z', fill: col }, g);
+        el('path', { d: run ? 'M18 -122 L46 -96 L40 -88 L14 -108 M-12 -122 L-40 -100 L-34 -92 L-8 -108' : 'M18 -122 L52 -116 L52 -106 L16 -108', stroke: col, 'stroke-width': 10, fill: 'none', 'stroke-linecap': 'round' }, g);
+        if (z) { el('circle', { cx: 12, cy: -154, r: 4, fill: '#fff' }, g); }
+        return g;
+      }
+      function car(p, x, y, s, col) {
+        const g = G(p, { x, y, sx: s, sy: s });
+        el('path', { d: 'M-130 -30 L-118 -70 L-70 -76 L-40 -118 L60 -118 L96 -76 L130 -66 L134 -30 Z', fill: col }, g);
+        el('path', { d: 'M-30 -108 L20 -108 L20 -80 L-56 -78 Z M30 -108 L56 -108 L82 -80 L30 -80 Z', fill: '#2a3140', opacity: .85 }, g);
+        [-80, 84].forEach(cx => { el('circle', { cx, cy: -26, r: 26, fill: '#141418' }, g); el('circle', { cx, cy: -26, r: 9, fill: '#888' }, g); });
+        return g;
+      }
+      function busBody(p, x, y, len, roofY) {
+        const g = G(p, { x, y });
+        el('rect', { x: 0, y: roofY, width: len, height: 330, rx: 18, fill: '#c8352e' }, g);
+        el('rect', { x: 0, y: roofY, width: len, height: 18, fill: '#a32a24' }, g);
+        el('rect', { x: 0, y: roofY + 190, width: len, height: 22, fill: '#f2efe6' }, g);
+        for (let i = 30; i < len - 100; i += 150) el('rect', { x: i, y: roofY + 42, width: 124, height: 120, rx: 8, fill: '#1c2230' }, g);
+        el('circle', { cx: 120, cy: roofY + 330, r: 48, fill: '#141418' }, g); el('circle', { cx: len - 160, cy: roofY + 330, r: 48, fill: '#141418' }, g);
+        return g;
+      }
+      function skyline(p, y, col, seedN, h = 260) {
+        const g = G(p); let x = -60; seed = seedN;
+        while (x < 1200) { const w = 70 + rnd() * 120, hh = 80 + rnd() * h;
+          el('rect', { x, y: y - hh, width: w, height: hh + 400, fill: col }, g);
+          if (rnd() > .5) el('rect', { x: x + w * .4, y: y - hh - 40, width: 6, height: 40, fill: col }, g);
+          x += w + 6; }
+        return g;
+      }
+      function zSil(p, x, y, s, col = '#120d16') { const g = person(p, x, y, s, col, false, true); return g; }
+
+      // ---------- timeline helpers ----------
+      window.__timelines = window.__timelines || {};
+      const tl = gsap.timeline({ paused: true });
+      const mv = (g, t, d, a, b, ease = 'power2.out') => tl.fromTo(g, { attr: { transform: T(a) } }, { attr: { transform: T(b) }, duration: d, ease, immediateRender: false }, t);
+      const show = (id, t0, t1, fade = 0) => { if (t0 > 0) tl.fromTo('#' + id, { opacity: 0 }, { opacity: 1, duration: fade || .01, immediateRender: false }, t0); tl.to('#' + id, { opacity: 0, duration: .01 }, t1); };
+      const cam = (id, t, d, a, b, ease = 'sine.inOut') => tl.fromTo('#' + id + ' .cam', a, { ...b, duration: d, ease, immediateRender: false }, t);
+      const shake = (id, t, amp = 22, n = 6) => { for (let i = 0; i < n; i++) tl.to('#' + id + ' .cam', { x: (i % 2 ? -1 : 1) * amp * (1 - i / n), y: (rnd() - .5) * amp, duration: .035 }, t + i * .035); tl.to('#' + id + ' .cam', { x: 0, y: 0, duration: .04 }, t + n * .035); };
+      const fxl = $('fxl');
+      const word = (t, txt, x, y, cls = '', rot = -8, hold = .55) => {
+        const d = document.createElement('div'); d.className = 'fx ' + cls; d.textContent = txt; d.style.left = x + 'px'; d.style.top = y + 'px'; fxl.appendChild(d);
+        tl.fromTo(d, { opacity: 0, scale: .2, rotation: rot - 14 }, { opacity: 1, scale: 1.15, rotation: rot, duration: .1, ease: 'back.out(3)', immediateRender: false }, t);
+        tl.to(d, { scale: 1, duration: .1 }, t + .1);
+        tl.to(d, { opacity: 0, scale: 1.3, duration: .2 }, t + hold);
+      };
+      const burst = (p, t, x, y, col = '#fff') => { const g = G(p, { x, y }); g.setAttribute('opacity', 0);
+        for (let i = 0; i < 14; i++) { const a = i / 14 * Math.PI * 2 + rnd() * .2, r1 = 50 + rnd() * 20, r2 = 150 + rnd() * 90;
+          el('path', { d: `M${Math.cos(a - .06) * r1} ${Math.sin(a - .06) * r1} L${Math.cos(a) * r2} ${Math.sin(a) * r2} L${Math.cos(a + .06) * r1} ${Math.sin(a + .06) * r1} Z`, fill: col }, g); }
+        tl.fromTo(g, { opacity: 1, attr: { transform: T({ x, y, sx: .4, sy: .4 }) } }, { attr: { transform: T({ x, y, sx: 1.2, sy: 1.2 }) }, duration: .18, immediateRender: false }, t);
+        tl.to(g, { opacity: 0, duration: .12 }, t + .18); };
+      const flash = (t, o = .85) => { tl.fromTo('#flash', { opacity: o }, { opacity: 0, duration: .16, immediateRender: false }, t); };
+      const hit = (scene, svg, t, x, y, txt, wx, wy, cls, rot) => { flash(t); burst(svg, t, x, y); shake(scene, t); word(t, txt, wx, wy, cls, rot); };
+      const speedLines = (p, n, col, dir = 1) => { const g = G(p);
+        for (let i = 0; i < n; i++) { const y = rnd() * 1920, w = 200 + rnd() * 500; el('rect', { x: rnd() * 1080, y, width: w, height: 3 + rnd() * 5, fill: col, opacity: .25 + rnd() * .4 }, g); }
+        return g; };
+
+      // ---------- subtitles ----------
+      const LINES = [null,
+        ['ห้าโมงสี่สิบ อนุสาวรีย์ชัยฯ<br>คนกำลังกัดคน', 'r'],
+        ['เต้ วินมอไซค์ อดีตนักมวย<br>กำลังจะเลิกงาน', ''],
+        ['ผู้โดยสารคนสุดท้าย วิ่งมา<br>เลือดเต็มคอ', ''],
+        ['เขาไม่ได้จะไปไหน<br>เขาจะกินเต้', 'r'],
+        ['ตุ้บ! หมวกกันน็อกใบเดียว<br>ลงกลางหัว', 'y'],
+        ['เต้บิดคันเร่ง<br>สวนทางคนที่วิ่งหนี', ''],
+        ['รถเมล์ติดยาว<br>บนหลังคา มีพยาบาลคนหนึ่ง', ''],
+        ['ในมือมีแค่เสาน้ำเกลือ<br>และมันกำลังปีนขึ้นมา', 'r'],
+        ['<b>เต้:</b> “พี่! รอแป๊บ! วินมาแล้ว!”', 'y'],
+        ['ล้อหน้ายกขึ้นกระบะท้ายรถ<br>ลอยขึ้นหลังคา', ''],
+        ['หมวกฟาดตัวแรก ตุ้บ!<br>ร่วงลงถนน', 'y'],
+        ['เข่าลอยใส่ตัวที่สอง<br>ล้มทับเพื่อนมัน', ''],
+        ['<b>ฝน:</b> “ตีที่หัว!<br>ที่อื่นมันไม่หยุด!”', 'y'],
+        ['<b>เต้:</b> “รู้แล้วพี่!<br>ผมต่อยแต่หัวมาสิบปี!”', ''],
+        ['ตัวหนึ่งพุ่งจากหน้าต่าง<br>คว้าข้อเท้าฝน', 'r'],
+        ['เสาน้ำเกลือ กระแทกลงกลางหน้า<br>เคร้ง!', 'y'],
+        ['อีกตัวกระโจนใส่หลังเต้…', 'r'],
+        ['เต้หมุนตัว ศอกกลับหลัง…<br>โป๊ก!', 'y'],
+        ['แต่เสียงดัง เรียกฝูงทั้งสี่แยก<br>มาหาพวกเขา', 'r'],
+        ['<b>เต้:</b> “พี่ฝน! ขึ้นรถ!<br>ค่าวินฟรี!”', ''],
+        ['กระโดดจากหลังคา ลงเบาะ<br>บิดหนีสุดคันเร่ง', ''],
+        ['ราชวิถี ร้านปิดประตูเหล็ก<br>พวกเขามุดเข้าไปได้ทัน', ''],
+        ['<b>ฝน:</b> “ฉันชื่อฝน<br>พยาบาลห้องฉุกเฉิน”', ''],
+        ['<b>เต้:</b> “เต้ครับ<br>วันนี้ปิดยอดพอดี”', ''],
+        ['วิทยุในร้านดังขึ้น:<br>“อย่าเข้าใกล้คนที่ถูกกัด…”', 'r'],
+        ['ฝนดึงแขนเสื้อขึ้น…<br>มีรอยข่วน เลือดซึม', 'r'],
+        ['เต้ค่อยๆ เอื้อมมือ…<br>ไปที่หมวกกันน็อก', 'r'],
+        null];
+      const subs = $('subs');
+      for (let n = 1; n < LINES.length; n++) { if (!LINES[n]) continue;
+        const d = document.createElement('div'); d.className = 'sub ' + LINES[n][1];
+        d.innerHTML = LINES[n][1] === 'r' ? `<span>${LINES[n][0]}</span>` : LINES[n][0]; subs.appendChild(d);
+        const off = Math.min(E[n] + .35, (S[n + 1] ?? END) - .05);
+        tl.fromTo(d, { opacity: 0, y: 14 }, { opacity: 1, y: 0, duration: .18, ease: 'power2.out', immediateRender: false }, S[n] - .05);
+        tl.to(d, { opacity: 0, duration: .1 }, off); }
+
+      // clock 17:40 -> 17:52, red on the last line
+      { const o = { v: 40 }; tl.fromTo(o, { v: 40 }, { v: 52.9, duration: E[27] - S[1], ease: 'none', immediateRender: false, onUpdate: () => $('clockt').textContent = '17:' + Math.floor(o.v) }, S[1]); }
+      tl.to('#clock', { backgroundColor: RED, duration: .3 }, S[27]); tl.to('#clockt', { color: '#fff', duration: .3 }, S[27]);
+      tl.to('#clock, #ep', { opacity: 0, duration: .3 }, S[28] - .2);
+
+      // ================= 1. monument at sunset =================
+      { const s = $('sMon');
+        el('rect', { width: 1080, height: 1920, fill: 'url(#gSun)' }, s);
+        el('circle', { cx: 760, cy: 1080, r: 130, fill: '#ffd98a' }, s);
+        skyline(s, 1150, '#4a2240', 3, 360);
+        skyline(s, 1260, '#2a1428', 9, 240);
+        const m = G(s, { x: 540, y: 1300 });
+        el('rect', { x: -130, y: -130, width: 260, height: 130, fill: '#1a0d1a' }, m);
+        el('rect', { x: -90, y: -170, width: 180, height: 44, fill: '#1a0d1a' }, m);
+        el('path', { d: 'M-34 -170 L34 -170 L18 -800 L0 -860 L-18 -800 Z', fill: '#1a0d1a' }, m);
+        [-140, 140].forEach(x => el('path', { d: `M${x - 18} -130 L${x + 18} -130 L${x + 12} -200 Q${x} -220 ${x - 12} -200 Z`, fill: '#1a0d1a' }, m));
+        el('rect', { y: 1300, width: 1080, height: 620, fill: '#160c16' }, s);
+        seed = 21;
+        const crowd = G(s);
+        for (let i = 0; i < 14; i++) { const y = 1420 + rnd() * 340, sc = .7 + (y - 1420) / 340 * .7, dir = rnd() > .5 ? 1 : -1;
+          const pg = G(crowd); const pp = person(pg, 0, 0, sc * dir, '#0c060c', true, false);
+          const x0 = rnd() * 1080; mv(pg, 0, S[2], { x: x0, y }, { x: x0 + dir * (300 + rnd() * 300), y }, 'none');
+          pp.setAttribute('transform', T({ sx: sc * dir, sy: sc })); }
+        // the biter, bent over a victim on the pavement
+        const b = G(s, { x: 330, y: 1620 });
+        el('path', { d: 'M-90 0 L60 0 L50 -30 L-80 -36 Z', fill: '#0c060c' }, b);
+        el('circle', { cx: -96, cy: -22, r: 22, fill: '#0c060c' }, b);
+        const z = G(b, { x: 10, y: -10 });
+        el('path', { d: 'M-20 0 L30 0 L40 -110 Q0 -150 -50 -120 L-30 -60 Z', fill: '#0c060c' }, z);
+        el('circle', { cx: -60, cy: -120, r: 26, fill: '#0c060c' }, z);
+        el('circle', { cx: -72, cy: -124, r: 5, fill: '#fff' }, z);
+        el('ellipse', { cx: -70, cy: -10, rx: 60, ry: 10, fill: '#8a1018', opacity: .8 }, b);
+        mv(z, 0, S[2], { x: 10, y: -10, r: 0 }, { x: 10, y: -10, r: -10 }, 'sine.inOut');
+        cam('mon', 0, S[2], { scale: 1, transformOrigin: '330px 1560px' }, { scale: 1.7 }, 'power1.in');
+        flash(0.02, .6);
+        show('mon', 0, S[2] - .02); }
+
+      // ================= 2-5. win stand: last passenger =================
+      { const s = $('sStand'), t0 = S[2] - .02;
+        el('rect', { width: 1080, height: 1920, fill: 'url(#gDusk)' }, s);
+        skyline(s, 1180, '#3a1c3a', 5, 300);
+        el('rect', { y: 1180, width: 1080, height: 740, fill: '#2a2230' }, s);
+        el('rect', { y: 1180, width: 1080, height: 26, fill: '#4a3e4a' }, s);
+        el('rect', { y: 1460, width: 1080, height: 460, fill: '#1c1820' }, s);
+        for (let x = 0; x < 1080; x += 180) el('rect', { x, y: 1600, width: 100, height: 12, fill: '#e8e0c8', opacity: .5 }, s);
+        // win sign
+        el('rect', { x: 110, y: 820, width: 12, height: 380, fill: '#333' }, s);
+        el('rect', { x: 40, y: 760, width: 260, height: 110, rx: 10, fill: '#f07a1e', stroke: '#111', 'stroke-width': 6 }, s);
+        el('text', { x: 170, y: 838, 'font-size': 64, 'font-weight': 800, 'text-anchor': 'middle', fill: '#111', 'font-family': 'Prompt' }, s).textContent = 'วิน';
+        bike(s, { x: 230, y: 1440 });
+        const tA = tae(s, { x: 470, y: 1440, sx: 1.25, sy: 1.25 }, { helmet: true, armF: { r: -30 } });
+        mv(tA.aF, t0, .4, { r: -30 }, { r: -30 });
+        const z = zomb(s, { x: 1300, y: 1440, sx: -1.3, sy: 1.3 }, { shirt: '#d9ddd9' });
+        // walk in, lurching
+        mv(z.g, S[3] - .1, E[3] - S[3] + .6, { x: 1300, y: 1440, sx: -1.3, sy: 1.3 }, { x: 860, y: 1440, sx: -1.3, sy: 1.3 }, 'power1.out');
+        tl.to(z.hd, { attr: { transform: T({ x: 30, y: -318, r: 26 }) }, duration: .3, yoyo: true, repeat: 5, ease: 'sine.inOut' }, S[3]);
+        mv(tA.hd, S[3] + .4, .25, { x: 4, y: -352 }, { x: 4, y: -352, r: 8 });
+        // line 4: snap zoom on its face, it lunges
+        cam('stand', S[4] - .1, .25, { scale: 1, transformOrigin: '540px 1100px' }, { scale: 2.3, transformOrigin: '800px 1000px' }, 'power3.out');
+        shake('stand', S[4] + .1, 14, 8);
+        mv(z.g, S[4] + .3, E[4] - S[4], { x: 860, y: 1440, sx: -1.3, sy: 1.3 }, { x: 700, y: 1440, sx: -1.3, sy: 1.3, r: 8 }, 'power2.in');
+        tl.to('#redv', { opacity: .7, duration: .2, yoyo: true, repeat: 1 }, S[4] + .2);
+        // line 5: helmet swing
+        cam('stand', S[5] - .25, .25, { scale: 2.3, transformOrigin: '800px 1000px' }, { scale: 1.25, transformOrigin: '620px 1100px' }, 'power2.out');
+        mv(tA.aF, S[5] - .25, .2, { r: -30 }, { r: -170 }, 'power2.in');
+        mv(tA.aF, S[5] - .05, .12, { r: -170 }, { r: 70 }, 'power4.in');
+        hit('stand', s, S[5] + .06, 760, 1040, 'ตุ้บ!', 560, 640, '', -10);
+        mv(z.g, S[5] + .08, .55, { x: 700, y: 1440, sx: -1.3, sy: 1.3, r: 8 }, { x: 1000, y: 1700, sx: -1.3, sy: 1.3, r: -95 }, 'power2.out');
+        mv(tA.aF, S[5] + .2, .5, { r: 70 }, { r: 20 });
+        tl.fromTo('#bTae', { opacity: 0, x: -40 }, { opacity: 1, x: 0, duration: .3, immediateRender: false }, S[2] + .2);
+        tl.to('#bTae', { opacity: 0, duration: .2 }, S[3] + .2);
+        show('stand', t0, S[6] - .05); }
+
+      // ================= 6 + 20-21. riding / escape (side scroll) =================
+      { const s = $('sRide');
+        el('rect', { width: 1080, height: 1920, fill: 'url(#gDusk)' }, s);
+        const far = G(s); skyline(far, 1080, '#3a1c3a', 11, 320); const far2 = G(far, { x: 1180 }); skyline(far2, 1080, '#3a1c3a', 11, 320);
+        const mid = G(s); seed = 31;
+        for (let k = 0; k < 2; k++) for (let i = 0; i < 6; i++) { const x = k * 1200 + i * 200;
+          el('rect', { x, y: 900, width: 190, height: 420, fill: ['#5a2a3a', '#4a2a4a', '#62344a'][i % 3] }, mid);
+          el('rect', { x: x + 20, y: 960, width: 150, height: 40, fill: '#f0c060', opacity: .5 }, mid);
+          el('rect', { x: x + 10, y: 1180, width: 170, height: 140, fill: '#2a1a24' }, mid); }
+        el('rect', { y: 1320, width: 1080, height: 600, fill: '#1c1820' }, s);
+        const road = G(s); for (let x = -200; x < 2400; x += 240) el('rect', { x, y: 1560, width: 140, height: 12, fill: '#e8e0c8', opacity: .55 }, road);
+        const crowd = G(s); seed = 41;
+        for (let i = 0; i < 12; i++) person(crowd, -200 + i * 190 + rnd() * 60, 1460 + rnd() * 60, -(1 + rnd() * .3), ['#2a1a28', '#3a2436', '#1e141c'][i % 3], true, false);
+        const hands = G(s); hands.setAttribute('opacity', 0);
+        for (let i = 0; i < 9; i++) { const x = -100 + i * 260; const a = G(hands, { x, y: 1560, sx: 1.4, sy: 1.4 });
+          el('circle', { cx: 0, cy: -150, r: 26, fill: ZSK }, a); el('circle', { cx: 10, cy: -156, r: 5, fill: '#fff' }, a);
+          el('path', { d: 'M-20 -120 L20 -120 L24 40 L-24 40 Z', fill: '#2d2a33' }, a);
+          el('path', { d: 'M10 -110 L110 -180 L118 -168 L22 -96 Z', fill: ZSK }, a); }
+        const rider = G(s, { x: 470, y: 1500 });
+        const bk = bike(rider, { x: 0, y: 0, sx: 1.3, sy: 1.3 });
+        const fR = fon(rider, { x: -110, y: -60, sx: 1.15, sy: 1.15 }, { armF: { r: -50 }, pole: { r: 70 } });
+        fR.g.setAttribute('opacity', 0);
+        const tR = tae(rider, { x: -10, y: -70, sx: 1.2, sy: 1.2, r: 8 }, { sit: true, helmetOn: true, armF: { r: -70 } });
+        speedLines(s, 40, '#fff');
+        const ride = (t0, t1, fast) => {
+          tl.fromTo(far, { attr: { transform: T({ x: 0 }) } }, { attr: { transform: T({ x: -500 * fast }) }, duration: t1 - t0, ease: 'none', immediateRender: false }, t0);
+          tl.fromTo(mid, { attr: { transform: T({ x: 0 }) } }, { attr: { transform: T({ x: -1200 }) }, duration: (t1 - t0), ease: 'none', immediateRender: false }, t0);
+          tl.fromTo(road, { attr: { transform: T({ x: 0 }) } }, { attr: { transform: T({ x: -960 * fast }) }, duration: t1 - t0, ease: 'none', immediateRender: false }, t0);
+          for (let k = 0; k < (t1 - t0) / .12; k++) tl.to(rider, { attr: { transform: T({ x: 470, y: 1500 + (k % 2 ? -5 : 4) }) }, duration: .12, ease: 'sine.inOut' }, t0 + k * .12);
+        };
+        const a0 = S[6] - .05, a1 = S[7] - .05; ride(a0, a1, 1.6);
+        tl.fromTo(crowd, { attr: { transform: T({ x: -400 }) } }, { attr: { transform: T({ x: 1400 }) }, duration: a1 - a0, ease: 'none', immediateRender: false }, a0);
+        cam('ride', a0, a1 - a0, { scale: 1.15, transformOrigin: '470px 1400px' }, { scale: 1 }, 'power2.out');
+        tl.fromTo('#title', { opacity: 0, scale: 1.6 }, { opacity: 1, scale: 1, duration: .25, ease: 'power3.out', immediateRender: false }, a0 + .1);
+        shake('ride', a0 + .3, 18, 6);
+        tl.to('#title', { opacity: 0, y: -30, duration: .3 }, a1 - .4);
+        show('ride', a0, a1);
+        // escape: Fon on the back, hands clawing up from the jam
+        const b0 = S[20] - .05, b1 = S[22] - .05; ride(b0, b1, 2.2);
+        tl.set(fR.g, { attr: { opacity: 1 } }, b0); tl.set(crowd, { attr: { opacity: 0 } }, b0);
+        tl.set(hands, { attr: { opacity: 1 } }, b0);
+        tl.fromTo(hands, { attr: { transform: T({ x: 0 }) } }, { attr: { transform: T({ x: -1500 }) }, duration: b1 - b0, ease: 'none', immediateRender: false }, b0);
+        mv(fR.aB, S[21], .2, { r: 8 }, { r: -60 });
+        cam('ride', b0, b1 - b0, { scale: 1.25, transformOrigin: '420px 1300px' }, { scale: 1.05 }, 'sine.out');
+        mv(tR.mouth, S[20], .1, {}, { sx: 1.2, sy: 2 });
+        word(S[21] + .3, 'บรื้นนน!', 160, 520, 'w s', -6, 1.2);
+        show('ride', b0, b1); }
+
+      // ================= 7-8. jammed bus, nurse on the roof =================
+      { const s = $('sBus'), t0 = S[7] - .05;
+        el('rect', { width: 1080, height: 1920, fill: 'url(#gDusk)' }, s);
+        skyline(s, 1000, '#3a1c3a', 15, 300);
+        el('rect', { y: 1000, width: 1080, height: 920, fill: '#221c26' }, s);
+        car(s, 120, 1300, 1, '#5a6a8a'); car(s, 960, 1300, 1, '#e0c040');
+        busBody(s, 120, 0, 900, 1010);
+        car(s, 60, 1700, 1.4, '#3e5a4a'); car(s, 1000, 1720, 1.4, '#8a3a3a');
+        const fB = fon(s, { x: 560, y: 1010, sx: -1.1, sy: 1.1 }, { armF: { r: -30 }, pole: { r: 30 } });
+        const zs = [[260, 1240], [700, 1250], [900, 1230]].map(([x, y], i) => zomb(s, { x, y: y + 120, sx: i ? -1 : 1, sy: 1 }, { armF: -70, armR: -80 }));
+        zs.forEach((z, i) => { const [x, y] = [[260, 1240], [700, 1250], [900, 1230]][i];
+          mv(z.g, S[8] - .3 + i * .2, E[8] - S[8] + .4, { x, y: y + 160, sx: i ? -1 : 1 }, { x, y: y - 30, sx: i ? -1 : 1 }, 'power1.inOut'); });
+        cam('bus', t0, E[7] - t0 + .2, { y: -520, scale: 1 }, { y: 0, scale: 1 }, 'power2.inOut');
+        cam('bus', S[8] - .1, E[8] - S[8] + .4, { y: 0, scale: 1, transformOrigin: '560px 900px' }, { y: 0, scale: 1.3, transformOrigin: '560px 900px' }, 'sine.in');
+        mv(fB.aF, S[8], .3, { r: -30 }, { r: -80 });
+        tl.fromTo('#bFon', { opacity: 0, x: -40 }, { opacity: 1, x: 0, duration: .3, immediateRender: false }, S[7] + 1.2);
+        tl.to('#bFon', { opacity: 0, duration: .2 }, S[8] + .3);
+        show('bus', t0, S[9] - .05); }
+
+      // ================= 9. Tae shouts =================
+      { const s = $('sShout'), t0 = S[9] - .05;
+        el('rect', { width: 1080, height: 1920, fill: '#f07a1e' }, s);
+        const sl = G(s, { x: 540, y: 900 }); seed = 51;
+        for (let i = 0; i < 40; i++) { const a = rnd() * Math.PI * 2, r1 = 360 + rnd() * 80, r2 = 1400;
+          el('path', { d: `M${Math.cos(a - .02) * r1} ${Math.sin(a - .02) * r1} L${Math.cos(a) * r2} ${Math.sin(a) * r2} L${Math.cos(a + .02) * r1} ${Math.sin(a + .02) * r1} Z`, fill: '#fff', opacity: .5 }, sl); }
+        const tS = tae(s, { x: 470, y: 2350, sx: 4, sy: 4 }, { helmetOn: true });
+        tS.mouth.setAttribute('d', 'M14 10 Q22 30 32 10 Z'); tS.mouth.setAttribute('fill', '#5a1a1a');
+        cam('shout', t0, E[9] - t0 + .3, { scale: 1.2, transformOrigin: '540px 900px' }, { scale: 1 }, 'power3.out');
+        shake('shout', S[9] + .4, 14, 8);
+        tl.fromTo(sl, { attr: { transform: T({ x: 540, y: 900, r: 0 }) } }, { attr: { transform: T({ x: 540, y: 900, r: 20 }) }, duration: 2, ease: 'none', immediateRender: false }, t0);
+        show('shout', t0, S[10] - .05); }
+
+      // ================= 10. ramp onto the bus =================
+      { const s = $('sRamp'), t0 = S[10] - .05;
+        el('rect', { width: 1080, height: 1920, fill: 'url(#gDusk)' }, s);
+        el('circle', { cx: 820, cy: 760, r: 90, fill: '#f4ead0', opacity: .8 }, s);
+        skyline(s, 1080, '#3a1c3a', 17, 280);
+        el('rect', { y: 1080, width: 1080, height: 840, fill: '#221c26' }, s);
+        busBody(s, 520, 0, 800, 1000);
+        // pickup with the tailgate down
+        const pk = G(s, { x: 150, y: 1420 });
+        el('path', { d: 'M-160 -40 L-160 -150 L40 -150 L40 -40 Z', fill: '#e8e8e8' }, pk);
+        el('path', { d: 'M40 -40 L40 -210 L140 -210 L200 -130 L220 -40 Z', fill: '#e8e8e8' }, pk);
+        el('path', { d: 'M60 -196 L130 -196 L178 -136 L60 -136 Z', fill: '#2a3140' }, pk);
+        el('path', { d: 'M-160 -150 L-290 -40 L-280 -32 L-160 -134 Z', fill: '#bbb' }, pk);
+        [-100, 150].forEach(cx => el('circle', { cx, cy: -36, r: 40, fill: '#141418' }, pk));
+        const rb = G(s, { x: -300, y: 1450 });
+        bike(rb, { sx: 1.1, sy: 1.1 }); tae(rb, { x: -10, y: -70, sx: 1, sy: 1, r: 8 }, { sit: true, helmetOn: true, armF: { r: -70 } });
+        const r0 = S[10] - .05, r1 = E[10];
+        mv(rb, r0, .5, { x: -300, y: 1450 }, { x: 30, y: 1410, r: -28 }, 'power1.in');
+        mv(rb, r0 + .5, (r1 - r0) - .5, { x: 30, y: 1410, r: -28 }, { x: 760, y: 1000, r: 6 }, 'power1.out');
+        tl.to(rb, { attr: { transform: T({ x: 420, y: 760, r: -10 }) }, duration: (r1 - r0 - .5) * .5, ease: 'power2.out' }, r0 + .5);
+        tl.to(rb, { attr: { transform: T({ x: 780, y: 1000, r: 0 }) }, duration: (r1 - r0 - .5) * .5, ease: 'power2.in' }, r0 + .5 + (r1 - r0 - .5) * .5);
+        word(r0 + .7, 'ฟิ้ว—', 120, 560, 'w', -12, .9);
+        hit('ramp', s, r1, 780, 980, 'โครม!', 420, 700, '', 6);
+        cam('ramp', r0, r1 - r0 + .4, { scale: 1.1, transformOrigin: '300px 1300px' }, { scale: 1.2, transformOrigin: '700px 1000px' }, 'sine.inOut');
+        show('ramp', t0, S[11] - .05); }
+
+      // ================= 11-18. bus-roof fight + slow-mo elbow =================
+      { const s = $('sRoof'), t0 = S[11] - .05, ROOF = 1180;
+        el('rect', { width: 1080, height: 1920, fill: 'url(#gDusk)' }, s);
+        el('circle', { cx: 860, cy: 620, r: 80, fill: '#f4ead0', opacity: .85 }, s);
+        skyline(s, 1100, '#3a1c3a', 19, 340);
+        skyline(s, 1200, '#2a1428', 23, 200);
+        // truck roof at the left for the slow-mo leap
+        el('rect', { x: -200, y: 960, width: 300, height: 600, fill: '#4a5a6a' }, s);
+        el('rect', { x: -200, y: 940, width: 310, height: 26, fill: '#3a4a5a' }, s);
+        el('rect', { y: 1500, width: 1080, height: 420, fill: '#1c1820' }, s);
+        const zBack = G(s);   // zombies climbing the far side / falling behind the bus
+        busBody(s, -100, 0, 1300, ROOF);
+        // hatch
+        el('rect', { x: 600, y: ROOF - 14, width: 130, height: 16, fill: '#7a1e1a' }, s);
+        const lid = G(s, { x: 600, y: ROOF - 14 }); el('rect', { x: 0, y: -10, width: 130, height: 12, fill: '#a32a24' }, lid);
+        const hatchClip = el('g', { 'clip-path': 'url(#cRoof)' }, s);
+        bike(s, { x: 140, y: ROOF, sx: 1.05, sy: 1.05, r: -4 });
+        const zB = zomb(s, { x: 500, y: ROOF + 300, sx: -1.1, sy: 1.1 }, { armF: -40, armR: -60, shirt: '#5a6a8a' });
+        const zC = zomb(hatchClip, { x: 665, y: ROOF + 420, sx: -1.1, sy: 1.1 }, { armF: -20, armR: -30, shirt: '#7a4a3a' });
+        const zA = zomb(s, { x: 960, y: ROOF + 200, sx: -1, sy: 1 }, { armF: -80, armR: -90 });
+        const tF = tae(s, { x: 360, y: ROOF, sx: 1.15, sy: 1.15 }, { helmet: true, armF: { r: -20 } });
+        const fF = fon(s, { x: 860, y: ROOF, sx: -1.1, sy: 1.1 }, { armF: { r: -20 }, pole: { r: 15 } });
+        // zombie D: arm out of the window under Fon
+        const dArm = G(s, { x: 900, y: ROOF + 110 }); dArm.setAttribute('opacity', 0);
+        el('path', { d: 'M0 0 L-60 -90 L-48 -98 L12 -10 Z', fill: ZSK }, dArm);
+        el('path', { d: 'M-56 -94 L-80 -110 M-52 -100 L-66 -124 M-60 -88 L-86 -94', stroke: ZSK, 'stroke-width': 7, 'stroke-linecap': 'round' }, dArm);
+        el('circle', { cx: 20, cy: 30, r: 34, fill: ZSK }, dArm); el('circle', { cx: 8, cy: 22, r: 6, fill: '#fff' }, dArm); el('circle', { cx: 30, cy: 22, r: 6, fill: '#fff' }, dArm);
+        // zombie E for the slow-mo leap (from the truck roof, behind Tae)
+        const zE = zomb(s, { x: 60, y: 940, sx: 1.15, sy: 1.15, r: 0 }, { armF: -30, armR: -40, shirt: '#3e5a4a' });
+        zE.g.setAttribute('opacity', 0);
+        const swoosh = el('path', { d: 'M300 900 Q200 960 250 1060', stroke: '#fff', 'stroke-width': 26, fill: 'none', 'stroke-linecap': 'round', opacity: 0, 'stroke-dasharray': 300, 'stroke-dashoffset': 300 }, s);
+        cam('roof', t0, .6, { scale: 1.15, transformOrigin: '540px 1100px', filter: 'none' }, { scale: 1 }, 'power2.out');
+        // zA: knocked off by the landing skid
+        mv(zA.g, t0, .5, { x: 960, y: ROOF + 60, sx: -1, sy: 1 }, { x: 1080, y: ROOF + 500, sx: -1, sy: 1, r: 40 }, 'power2.in');
+        // 11: helmet swing on zombie B
+        mv(zB.g, t0, .9, { x: 520, y: ROOF + 300, sx: -1.1, sy: 1.1 }, { x: 520, y: ROOF + 60, sx: -1.1, sy: 1.1 }, 'power1.out');
+        mv(tF.aF, S[11] + .2, .35, { r: -20 }, { r: -175 }, 'power2.in');
+        mv(tF.g, S[11] + .2, .5, { x: 360, y: ROOF, sx: 1.15, sy: 1.15 }, { x: 400, y: ROOF, sx: 1.15, sy: 1.15, r: 6 });
+        const h1 = S[11] + .75;
+        mv(tF.aF, h1 - .1, .1, { r: -175 }, { r: 60 }, 'power4.in');
+        hit('roof', s, h1, 560, ROOF - 220, 'ตุ้บ!', 470, 620, '', -10);
+        mv(zB.g, h1 + .02, .6, { x: 520, y: ROOF + 60, sx: -1.1, sy: 1.1 }, { x: 700, y: ROOF + 700, sx: -1.1, sy: 1.1, r: -120 }, 'power2.in');
+        mv(tF.aF, h1 + .3, .3, { r: 60 }, { r: -10 });
+        // 12: flying knee on zombie C out of the hatch
+        mv(lid, S[12] - .3, .2, { x: 600, y: ROOF - 14 }, { x: 600, y: ROOF - 14, r: -100 }, 'power2.out');
+        mv(zC.g, S[12] - .3, .5, { x: 665, y: ROOF + 420, sx: -1.1, sy: 1.1 }, { x: 665, y: ROOF + 90, sx: -1.1, sy: 1.1 }, 'power2.out');
+        const k1 = S[12] + .8;
+        mv(tF.g, S[12] + .1, .45, { x: 400, y: ROOF, sx: 1.15, sy: 1.15, r: 6 }, { x: 470, y: ROOF, sx: 1.15, sy: 1.15, r: 10 }, 'power1.in');
+        mv(tF.g, S[12] + .55, .25, { x: 470, y: ROOF, sx: 1.15, sy: 1.15, r: 10 }, { x: 560, y: ROOF - 110, sx: 1.15, sy: 1.15, r: -6 }, 'power2.out');
+        mv(tF.lF, S[12] + .55, .22, {}, { r: -100 }, 'power3.out');
+        mv(tF.lB, S[12] + .55, .22, {}, { r: 30 }, 'power3.out');
+        hit('roof', s, k1, 640, ROOF - 250, 'พลั่ก!', 560, 560, 'w', 8);
+        mv(zC.g, k1 + .02, .5, { x: 665, y: ROOF + 90, sx: -1.1, sy: 1.1 }, { x: 680, y: ROOF + 520, sx: -1.1, sy: 1.1, r: 30 }, 'power2.in');
+        mv(tF.g, k1 + .15, .3, { x: 560, y: ROOF - 110, sx: 1.15, sy: 1.15, r: -6 }, { x: 520, y: ROOF, sx: 1.15, sy: 1.15 }, 'power2.in');
+        mv(tF.lF, k1 + .15, .3, { r: -100 }, { r: 0 }); mv(tF.lB, k1 + .15, .3, { r: 30 }, { r: 0 });
+        // 13-14: banter punch-ins; Fon kicks the hatch shut without looking
+        cam('roof', S[13] - .1, .3, { scale: 1, transformOrigin: '540px 1100px' }, { scale: 1.7, transformOrigin: '860px 900px' }, 'power3.out');
+        tl.to(fF.mouth, { attr: { d: 'M12 10 Q20 28 28 10 Z', fill: '#5a1a1a' }, duration: .1 }, S[13]);
+        mv(fF.aF, S[13], .3, { r: -20 }, { r: -110 });
+        cam('roof', S[14] - .1, .3, { scale: 1.7, transformOrigin: '860px 900px' }, { scale: 1.7, transformOrigin: '520px 900px' }, 'power3.out');
+        tl.to(fF.mouth, { attr: { d: 'M14 15 Q20 17 25 14', fill: 'none' }, duration: .1 }, S[14]);
+        mv(fF.aF, S[14], .3, { r: -110 }, { r: -20 });
+        tl.to(tF.mouth, { attr: { d: 'M14 10 Q22 26 30 10 Z', fill: '#5a1a1a' }, duration: .1 }, S[14]);
+        for (let i = 0; i < 4; i++) mv(tF.aB, S[14] + i * .3, .15, { r: 12 }, { r: -40 }, 'sine.inOut');
+        mv(lid, S[14] + .8, .15, { x: 600, y: ROOF - 14, r: -100 }, { x: 600, y: ROOF - 14, r: 0 }, 'power3.in');
+        word(S[14] + .95, 'ปัง!', 560, 860, 'w s', 4, .5);
+        tl.to(tF.mouth, { attr: { d: 'M16 16 Q22 18 28 15', fill: 'none' }, duration: .1 }, E[14]);
+        // 15: zombie D grabs Fon's ankle out of the window
+        cam('roof', S[15] - .1, .3, { scale: 1.7, transformOrigin: '520px 900px' }, { scale: 1.45, transformOrigin: '860px 1200px' }, 'power3.out');
+        tl.set(dArm, { attr: { opacity: 1 } }, S[15]);
+        mv(dArm, S[15], .25, { x: 940, y: ROOF + 220, sx: .3, sy: .3 }, { x: 900, y: ROOF + 110 }, 'back.out(2)');
+        mv(fF.g, S[15] + .3, .25, { x: 860, y: ROOF, sx: -1.1, sy: 1.1 }, { x: 870, y: ROOF + 14, sx: -1.1, sy: 1.1, r: -12 });
+        mv(fF.lF, S[15] + .3, .25, {}, { r: 30 });
+        tl.fromTo('#redv', { opacity: 0 }, { opacity: .8, duration: .15, yoyo: true, repeat: 1, immediateRender: false }, S[15] + .3);
+        tl.fromTo('#roof .cam', { filter: 'blur(0px)' }, { filter: 'blur(6px)', duration: .07, yoyo: true, repeat: 1, immediateRender: false }, S[15] + .55);
+        // 16: IV-pole strike
+        mv(fF.aF, S[16] - .1, .3, { r: -20 }, { r: -150 }, 'power2.out');
+        mv(fF.pole, S[16] - .1, .3, { r: 15 }, { r: 170 }, 'power2.out');
+        const p1 = S[16] + .55;
+        mv(fF.aF, p1 - .12, .12, { r: -150 }, { r: 10 }, 'power4.in');
+        hit('roof', s, p1, 900, ROOF + 140, 'เคร้ง!', 580, 980, '', -6);
+        mv(dArm, p1 + .02, .35, { x: 900, y: ROOF + 110 }, { x: 960, y: ROOF + 260, sx: .4, sy: .4 }, 'power2.in');
+        tl.set(dArm, { attr: { opacity: 0 } }, p1 + .4);
+        mv(fF.g, p1 + .2, .3, { x: 870, y: ROOF + 14, sx: -1.1, sy: 1.1, r: -12 }, { x: 860, y: ROOF, sx: -1.1, sy: 1.1 });
+        mv(fF.lF, p1 + .2, .3, { r: 30 }, { r: 0 });
+        // 17-18: slow-mo leap from the truck roof, spinning back elbow
+        cam('roof', S[17] - .1, .35, { scale: 1.45, transformOrigin: '860px 1200px', filter: 'none' }, { scale: 1.3, transformOrigin: '360px 1000px', filter: 'grayscale(1) sepia(.9) hue-rotate(-40deg) saturate(2.6) contrast(1.25)' }, 'power2.out');
+        tl.fromTo('#barT, #barB', { height: 0 }, { height: 150, duration: .3, immediateRender: false }, S[17] - .1);
+        tl.set(zE.g, { attr: { opacity: 1 } }, S[17] - .1);
+        const e1 = E[18] - .25;
+        mv(zE.g, S[17] - .1, .25, { x: 60, y: 940, sx: 1.15, sy: 1.15 }, { x: 120, y: 860, sx: 1.15, sy: 1.15, r: 20 }, 'power2.out');
+        mv(zE.g, S[17] + .15, e1 - S[17] - .15, { x: 120, y: 860, sx: 1.15, sy: 1.15, r: 20 }, { x: 330, y: 1000, sx: 1.15, sy: 1.15, r: 35 }, 'none');
+        mv(tF.g, S[18], e1 - S[18] - .05, { x: 520, y: ROOF, sx: 1.15, sy: 1.15 }, { x: 470, y: ROOF, sx: -1.15, sy: 1.15, r: 4 }, 'sine.inOut');
+        mv(tF.aF, S[18], e1 - S[18] - .05, { r: -10 }, { r: -120 }, 'sine.in');
+        tl.fromTo(swoosh, { attr: { opacity: 0, 'stroke-dashoffset': 300 } }, { attr: { opacity: 1, 'stroke-dashoffset': 0 }, duration: e1 - S[18], ease: 'sine.in', immediateRender: false }, S[18]);
+        tl.to(swoosh, { attr: { opacity: 0 }, duration: .15 }, e1 + .1);
+        tl.to('#roof .cam', { filter: 'grayscale(0) sepia(0) hue-rotate(0deg) saturate(1) contrast(1)', duration: .05 }, e1);
+        tl.to('#barT, #barB', { height: 0, duration: .2 }, e1 + .05);
+        hit('roof', s, e1, 330, 940, 'โป๊ก!', 120, 560, '', -12);
+        mv(zE.g, e1 + .02, .6, { x: 330, y: 1000, sx: 1.15, sy: 1.15, r: 35 }, { x: -200, y: 1500, sx: 1.15, sy: 1.15, r: -160 }, 'power2.out');
+        mv(tF.aF, e1 + .1, .3, { r: -120 }, { r: -20 });
+        cam('roof', e1 + .05, .5, { scale: 1.3, transformOrigin: '360px 1000px' }, { scale: 1, transformOrigin: '540px 1100px' }, 'power2.out');
+        show('roof', t0, S[19] - .05); }
+
+      // ================= 19. map: the horde turns =================
+      { const s = $('sMap'), t0 = S[19] - .05, t1 = S[20] - .05;
+        el('rect', { width: 1080, height: 1920, fill: '#e9e2d2' }, s);
+        const c = G(s, { x: 540, y: 820 });
+        [[0, -1], [0, 1], [-1, 0], [1, 0]].forEach(([dx, dy]) => el('line', { x1: dx * 120, y1: dy * 120, x2: dx * 1200, y2: dy * 1200, stroke: '#b9b1a0', 'stroke-width': 110 }, c));
+        el('circle', { r: 210, fill: 'none', stroke: '#b9b1a0', 'stroke-width': 100 }, c);
+        el('circle', { r: 120, fill: '#cfe0c0' }, c); el('circle', { r: 20, fill: '#1d2433' }, c);
+        const dot = G(c, { x: 150, y: -150 });
+        const ring = el('circle', { r: 30, fill: 'none', stroke: RED, 'stroke-width': 8 }, dot);
+        el('circle', { r: 22, fill: RED, stroke: '#fff', 'stroke-width': 6 }, dot);
+        for (let k = 0; k < 4; k++) tl.fromTo(ring, { attr: { r: 30, opacity: 1 } }, { attr: { r: 160, opacity: 0 }, duration: .7, ease: 'none', immediateRender: false }, t0 + k * .55);
+        seed = 61;
+        [[0, -1], [0, 1], [-1, 0], [1, 0]].forEach(([dx, dy]) => { const h = G(c);
+          for (let i = 0; i < 40; i++) el('circle', { cx: dx * (700 + rnd() * 500) + (dy ? (rnd() - .5) * 90 : 0), cy: dy * (700 + rnd() * 500) + (dx ? (rnd() - .5) * 90 : 0), r: 14 + rnd() * 10, fill: '#2a1a24', opacity: .85 }, h);
+          mv(h, t0, t1 - t0 + .3, { x: 0, y: 0 }, { x: -dx * 520, y: -dy * 520 }, 'power1.in'); });
+        const lab = (x, y, t) => { const g = G(s, { x, y }); el('rect', { x: -10, y: -40, width: t.length * 30 + 30, height: 56, rx: 10, fill: '#1d2433' }, g);
+          el('text', { x: 6, y: 0, 'font-size': 34, 'font-weight': 700, fill: '#fff', 'font-family': 'Prompt' }, g).textContent = t; };
+        lab(380, 600, 'อนุสาวรีย์ชัยฯ'); lab(640, 1260, 'ราชวิถี');
+        cam('map', t0, t1 - t0, { scale: 1.2, transformOrigin: '690px 670px' }, { scale: .95 }, 'sine.out');
+        show('map', t0, t1); }
+
+      // ================= 22. shophouse, shutter slams =================
+      { const s = $('sShop'), t0 = S[22] - .05;
+        el('rect', { width: 1080, height: 1920, fill: 'url(#gNight)' }, s);
+        for (let i = 0; i < 4; i++) { const x = i * 270;
+          el('rect', { x, y: 500, width: 266, height: 1000, fill: ['#4a3a4a', '#3e3446', '#4a3a40', '#3a3448'][i] }, s);
+          el('rect', { x: x + 30, y: 560, width: 206, height: 200, fill: '#1a1622' }, s);
+          el('rect', { x: x + 20, y: 1050, width: 226, height: 450, fill: '#6a6a72' }, s);
+          for (let y = 1060; y < 1500; y += 22) el('line', { x1: x + 20, y1: y, x2: x + 246, y2: y, stroke: '#55555c', 'stroke-width': 4 }, s); }
+        el('rect', { x: 540, y: 1050, width: 226, height: 450, fill: '#0a080c' }, s);
+        const sh = G(s); el('rect', { x: 540, y: 600, width: 226, height: 450, fill: '#7a7a82' }, sh);
+        for (let y = 610; y < 1050; y += 22) el('line', { x1: 540, y1: y, x2: 766, y2: y, stroke: '#606068', 'stroke-width': 4 }, sh);
+        el('rect', { y: 1500, width: 1080, height: 420, fill: '#16121a' }, s);
+        const rb = G(s, { x: -200, y: 1500 }); bike(rb, { sx: .9, sy: .9 });
+        mv(sh, t0, .01, { y: 260 }, { y: 260 });
+        mv(rb, t0, 1.1, { x: -200, y: 1500 }, { x: 650, y: 1500, sx: .9, sy: .9 }, 'power2.out');
+        tl.to(rb, { attr: { opacity: 0 }, duration: .1 }, t0 + 1.1);
+        const sl = t0 + 1.5;
+        mv(sh, sl, .25, { y: 260 }, { y: 450 }, 'power3.in');
+        hit('shop', s, sl + .25, 650, 1500, 'แกร๊ง!', 300, 760, 'w', -4);
+        cam('shop', t0, S[23] - t0, { scale: 1.1, transformOrigin: '650px 1200px' }, { scale: 1 }, 'sine.out');
+        show('shop', t0, S[23] - .05); }
+
+      // ================= 23-25. inside the shop, the radio =================
+      { const s = $('sIn'), t0 = S[23] - .05;
+        el('rect', { width: 1080, height: 1920, fill: '#121018' }, s);
+        for (let i = 0; i < 9; i++) el('polygon', { points: `0,${700 + i * 70} 1080,${900 + i * 70} 1080,${918 + i * 70} 0,${716 + i * 70}`, fill: '#ffb070', opacity: .12 }, s);
+        el('rect', { x: 700, y: 520, width: 320, height: 16, fill: '#3a2e2a' }, s);
+        const radio = G(s, { x: 860, y: 520 });
+        const glow = el('circle', { cy: -50, r: 140, fill: 'url(#gRadio)', opacity: .3 }, radio);
+        el('rect', { x: -90, y: -110, width: 180, height: 110, rx: 14, fill: '#3a2a22' }, radio);
+        el('rect', { x: -70, y: -92, width: 80, height: 70, rx: 8, fill: '#1a1410' }, radio);
+        el('rect', { x: 22, y: -90, width: 54, height: 24, rx: 4, fill: '#7dffb0' }, radio);
+        const wave = G(radio, { x: -66, y: -56 });
+        const barsW = []; for (let i = 0; i < 8; i++) barsW.push(el('rect', { x: i * 9, y: -6, width: 6, height: 12, fill: '#7dffb0' }, wave));
+        el('rect', { y: 1450, width: 1080, height: 470, fill: '#1a161e' }, s);
+        // both sitting against the wall
+        const fS = fon(s, { x: 640, y: 1520, sx: -1.15, sy: 1.15 }, { armF: { r: -10 }, pole: { r: 0 } });
+        const tI = tae(s, { x: 340, y: 1520, sx: 1.15, sy: 1.15 }, { helmet: true, armF: { r: -40 } });
+        cam('inside', t0, S[25] - t0, { scale: 1.1, transformOrigin: '500px 1200px' }, { scale: 1.25, transformOrigin: '500px 1200px' }, 'sine.inOut');
+        for (let k = 0; k < 6; k++) { mv(tI.g, t0 + k * .6, .3, { x: 340, y: 1520, sx: 1.15, sy: 1.15 }, { x: 340, y: 1514, sx: 1.15, sy: 1.15 }, 'sine.inOut');
+          mv(tI.g, t0 + k * .6 + .3, .3, { x: 340, y: 1514, sx: 1.15, sy: 1.15 }, { x: 340, y: 1520, sx: 1.15, sy: 1.15 }, 'sine.inOut'); }
+        tl.to(glow, { attr: { opacity: 1 }, duration: .3 }, S[25] - .3);
+        cam('inside', S[25] - .2, .5, { scale: 1.25, transformOrigin: '500px 1200px' }, { scale: 2.6, transformOrigin: '860px 470px' }, 'power3.out');
+        barsW.forEach((b, i) => { for (let k = 0; k < (E[25] - S[25]) / .12; k++) tl.to(b, { attr: { height: 6 + ((i * 7 + k * 5) % 11) * 4, y: -3 - ((i * 7 + k * 5) % 11) * 2 }, duration: .1 }, S[25] + k * .12); });
+        show('inside', t0, S[26] - .05); }
+
+      // ================= 26. the scratch =================
+      { const s = $('sArm'), t0 = S[26] - .05;
+        el('rect', { width: 1080, height: 1920, fill: '#141018' }, s);
+        for (let i = 0; i < 6; i++) el('polygon', { points: `0,${600 + i * 160} 1080,${760 + i * 160} 1080,${800 + i * 160} 0,${640 + i * 160}`, fill: '#ffb070', opacity: .1 }, s);
+        const a = G(s, { x: 540, y: 960, r: -24 });
+        el('path', { d: 'M-700 -150 Q0 -190 700 -120 L700 130 Q0 180 -700 150 Z', fill: SKIN2 }, a);
+        el('path', { d: 'M260 -150 L700 -150 L700 150 L240 150 Q280 0 260 -150 Z', fill: '#2a9d8f' }, a);
+        const sc = [];
+        [-30, 10, 50].forEach((y, i) => sc.push(el('path', { d: `M-260 ${y - 50} Q-60 ${y - 20} 120 ${y + 20}`, stroke: '#a3121c', 'stroke-width': 10, fill: 'none', 'stroke-linecap': 'round', 'stroke-dasharray': 420, 'stroke-dashoffset': 420 }, a)));
+        sc.forEach((p, i) => tl.fromTo(p, { attr: { 'stroke-dashoffset': 420 } }, { attr: { 'stroke-dashoffset': 0 }, duration: .5, ease: 'power2.out', immediateRender: false }, S[26] + .6 + i * .15));
+        const drip = el('ellipse', { cx: -20, cy: 40, rx: 9, ry: 12, fill: '#a3121c' }, a);
+        mv(drip, S[26] + 1.4, 1.4, { x: 0, y: 0 }, { x: 0, y: 120 }, 'power1.in');
+        cam('arm', t0, S[27] - t0, { scale: 1.05 }, { scale: 1.3 }, 'sine.inOut');
+        show('arm', t0, S[27] - .05); }
+
+      // ================= 27. hand to the helmet =================
+      { const s = $('sHand'), t0 = S[27] - .05;
+        el('rect', { width: 1080, height: 1920, fill: '#100e14' }, s);
+        const f = G(s, { x: 760, y: 820 });
+        el('circle', { r: 300, fill: SKIN2 }, f);
+        el('path', { d: 'M-310 40 Q-320 -340 40 -330 Q320 -320 300 -60 Q100 -200 -100 -150 L-180 200 Z', fill: '#1a1416' }, f);
+        el('ellipse', { cx: -60, cy: -10, rx: 34, ry: 22, fill: '#fff' }, f); el('circle', { cx: -70, cy: -14, r: 16, fill: '#1a1416' }, f);
+        el('ellipse', { cx: 140, cy: -10, rx: 34, ry: 22, fill: '#fff' }, f); el('circle', { cx: 130, cy: -14, r: 16, fill: '#1a1416' }, f);
+        el('rect', { x: -1300, y: -60, width: 2600, height: 70, fill: '#ffb070', opacity: .18 }, f);
+        const hl = G(s, { x: 240, y: 1500 });
+        el('path', { d: 'M-130 50 Q-136 -110 0 -110 Q134 -110 130 50 Z', fill: '#c4262c', stroke: '#111', 'stroke-width': 8 }, hl);
+        el('path', { d: 'M20 -40 L124 -40 L128 40 L26 40 Z', fill: '#1a1a1f' }, hl);
+        const hand = G(s);
+        el('path', { d: 'M1100 1340 L560 1380 L560 1460 L1100 1440 Z', fill: SKIN }, hand);
+        el('path', { d: 'M560 1376 L470 1390 L466 1410 L560 1404 M560 1410 L456 1428 L454 1446 L560 1440 M560 1446 L470 1468 L470 1482 L562 1466', stroke: SKIN, 'stroke-width': 18, 'stroke-linecap': 'round' }, hand);
+        el('path', { d: 'M1100 1330 L860 1340 L860 1460 L1100 1450 Z', fill: '#f07a1e' }, hand);
+        mv(hand, t0, E[27] - t0 + .4, { x: 220 }, { x: -80 }, 'sine.inOut');
+        mv(f, t0, E[27] - t0 + .4, { x: 760, y: 820 }, { x: 760, y: 790 }, 'sine.inOut');
+        cam('hand', t0, S[28] - t0, { scale: 1 }, { scale: 1.15, transformOrigin: '540px 1100px' }, 'sine.in');
+        show('hand', t0, S[28] - .05); }
+
+      // ================= 28. next =================
+      tl.fromTo('#next', { opacity: 0 }, { opacity: 1, duration: .3, immediateRender: false }, S[28] - .05);
+      tl.fromTo('#next .sr', { opacity: 0 }, { opacity: 1, duration: .3, immediateRender: false }, S[28]);
+      tl.fromTo('#next .pill', { opacity: 0, y: 10 }, { opacity: 1, y: 0, duration: .3, immediateRender: false }, S[28] + .1);
+      tl.fromTo('#next h1', { opacity: 0, scale: 1.5 }, { opacity: 1, scale: 1, duration: .25, ease: 'power3.out', immediateRender: false }, S[28] + .3);
+      shake('next', S[28] + .55, 14, 6);
+      tl.fromTo('#next .rl', { scaleX: 0 }, { scaleX: 1, duration: .4, immediateRender: false }, S[28] + .8);
+      tl.fromTo('#next .s1', { opacity: 0 }, { opacity: 1, duration: .3, immediateRender: false }, S[28] + 1.0);
+      tl.fromTo('#next .s2', { opacity: 0 }, { opacity: 1, duration: .3, immediateRender: false }, S[28] + 1.3);
+      tl.set({}, {}, END);
+
+      window.__timelines['main'] = tl;
+      tl.seek(0);
+    </script>
+  </body>
+</html>

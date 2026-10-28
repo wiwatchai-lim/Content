@@ -1,0 +1,387 @@
+<!doctype html>
+<html lang="th">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=1080, height=1920" />
+    <!--
+      Story clip EP05 "ถ้ามันอยู่ในกระจก" (2026-10-27), follows EP04's end card. Same look as EP01–03. Thai only.
+      Voice = ../audio/voice.wav, cue + phrase times from ../audio/timing.json (mixed after render, see ../make.sh).
+      Science: a pinhole (fingers curled to a tiny hole) blocks the off-axis rays, so a blurry eye without glasses sees sharper
+      (short and long sight alike; an emergency trick, not a fix); staring at one point in dim light makes what is around it fade
+      (Troxler fading) and your own face warp in the mirror — the brain stops reporting what doesn't change; move the eyes and blink.
+      Includes a real Troxler test (stare at the centre dot ~14 s: the soft colour blobs fade). Keep the blobs static and soft-edged.
+      Scenes: door 0-9 | mirror (no glasses, blurred) 8.8-19.2 | pinhole card 19.2-38.6 | mirror through the pinhole: a towel 38.6-44.7
+      | stare, face warps 44.7-52.3 | Troxler card 52.3-68.7 | test screen 68.8-83.6 | mirror close-up: the reflection doesn't blink 83.6-89.6
+      | next 89.6-93.6 | TIMEOPTIC 93.6-96.25
+    -->
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/gsap.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@400;500;600;700&family=Anuphan:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <style>
+      * { margin: 0; padding: 0; box-sizing: border-box; }
+      html, body { width: 1080px; height: 1920px; overflow: hidden; background: #0a1124; }
+      #root { position: relative; width: 1080px; height: 1920px; overflow: hidden; font-family: 'Anuphan', sans-serif; color: #fff; }
+      .layer { position: absolute; }
+      .full { position: absolute; left: 0; top: 0; width: 1080px; height: 1920px; }
+      svg { display: block; overflow: visible; }
+
+      .sub { position: absolute; left: 50px; right: 50px; top: 1210px; text-align: center; font-family: 'Prompt', sans-serif; font-weight: 600;
+             font-size: 56px; line-height: 1.32; text-shadow: 0 3px 18px rgba(0,0,0,.75), 0 0 4px rgba(0,0,0,.6); }
+      .sub.y { color: #F5C84C; }
+      .sub.r span { display: inline-block; background: #D8343A; color: #fff; padding: 4px 26px 8px; border-radius: 10px; text-shadow: none;
+                    box-shadow: 0 6px 24px rgba(0,0,0,.35); }
+      .sub.dk { color: #1d2433; text-shadow: none; }
+
+      .chip { position: absolute; top: 170px; height: 86px; background: #EEE8DC; border-radius: 16px; color: #1d2433; display: flex; align-items: center;
+              gap: 14px; padding: 0 26px 0 20px; box-shadow: 0 8px 26px rgba(0,0,0,.35); }
+      .chip small { display: block; font-size: 20px; font-weight: 500; color: #555a63; line-height: 1; }
+      .chip b { display: block; font-family: 'Prompt'; font-size: 40px; font-weight: 700; line-height: 1.05; letter-spacing: .02em; }
+      #glass b { color: #D8343A; }
+
+      .card { position: absolute; left: 80px; top: 520px; width: 920px; height: 640px; background: #EEE8DC; border-radius: 22px; color: #1d2433;
+              border-left: 14px solid #C99A2E; box-shadow: 0 24px 60px rgba(0,0,0,.45); overflow: hidden; }
+      .card .ttl { position: absolute; left: 34px; top: 26px; font-size: 30px; font-weight: 600; color: #4a4f5a; }
+      .card .lbl { position: absolute; font-size: 28px; font-weight: 600; color: #1d2433; text-align: center; }
+      .badge { position: absolute; background: #EEE8DC; color: #1d2433; border-radius: 40px; padding: 10px 30px; font: 700 36px 'Prompt';
+               box-shadow: 0 10px 30px rgba(0,0,0,.4); display: flex; align-items: center; gap: 14px; }
+      .card .badge { box-shadow: none; border: 3px solid #1d2433; font-size: 28px; padding: 6px 22px; }
+
+      #test { background: #F3EFE6; color: #1d2433; }
+      #test h2 { position: absolute; left: 0; right: 0; top: 300px; text-align: center; font: 700 52px 'Prompt'; }
+      #test ol { position: absolute; left: 150px; top: 400px; list-style: none; font-size: 38px; font-weight: 600; line-height: 1.75; color: #4a4f5a; }
+      #test ol li b { display: inline-block; width: 52px; height: 52px; border-radius: 50%; background: #1d2433; color: #fff; text-align: center;
+                      font: 700 32px/52px 'Prompt'; margin-right: 20px; vertical-align: 4px; }
+      #test .bar { position: absolute; left: 240px; top: 1530px; width: 600px; height: 10px; border-radius: 5px; background: #ddd5c6; overflow: hidden; }
+      #test .bar i { position: absolute; inset: 0; background: #C99A2E; transform-origin: 0 50%; transform: scaleX(0); }
+
+      #next { background: radial-gradient(ellipse 80% 45% at 50% 42%, #23181c, #0d0d11 70%); }
+      #next .pill { position: absolute; left: 50%; top: 640px; transform: translateX(-50%); border: 2px solid #4a4a55; border-radius: 40px; padding: 8px 30px;
+                    font-size: 30px; font-weight: 600; color: #d6d6dc; }
+      #next .pill:before { content: ''; display: inline-block; width: 12px; height: 12px; border-radius: 50%; background: #D8343A; margin-right: 12px; vertical-align: 4px; }
+      #next h1 { position: absolute; left: 60px; right: 60px; top: 730px; text-align: center; font: 700 86px/1.3 'Prompt'; color: #f2f2f4; }
+      #next .rl { position: absolute; left: 400px; top: 990px; width: 280px; height: 6px; background: #D8343A; border-radius: 3px; }
+      #next .s1 { position: absolute; left: 0; right: 0; top: 1030px; text-align: center; font-size: 36px; font-weight: 600; color: #e05a5f; }
+      #next .s2 { position: absolute; left: 0; right: 0; top: 1100px; text-align: center; font-size: 32px; color: #c8c8d0; }
+      #end { background: radial-gradient(ellipse 80% 55% at 50% 48%, #1a4a36, #123A29 60%, #0d2b1e); }
+      #end img { position: absolute; left: 228px; top: 840px; width: 624px; }
+      /* without glasses the towel must read as a figure: darker, no stripes */
+      #mirB .towel * { fill: #5d6577; } #mirB .towel .stripe { display: none; }
+      #end p { position: absolute; left: 0; right: 0; top: 1000px; text-align: center; font-size: 46px; font-weight: 600; color: #FAFAFA; }
+    </style>
+  </head>
+  <body>
+    <div id="root" data-composition-id="main" data-start="0" data-duration="96.25" data-width="1080" data-height="1920">
+      <svg width="0" height="0" style="position:absolute">
+        <defs>
+          <linearGradient id="mirr" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#2a3650" /><stop offset="1" stop-color="#141b2a" /></linearGradient>
+          <radialGradient id="lampglow"><stop offset="0" stop-color="#f3e2b4" stop-opacity=".45" /><stop offset="1" stop-color="#f3e2b4" stop-opacity="0" /></radialGradient>
+          <radialGradient id="underglow" cx=".5" cy="0" r="1"><stop offset="0" stop-color="#f0d79a" stop-opacity=".28" /><stop offset="1" stop-color="#f0d79a" stop-opacity="0" /></radialGradient>
+          <clipPath id="mclip"><rect x="190" y="380" width="700" height="780" rx="14" /></clipPath>
+          <!-- very soft pastel blobs for the Troxler test (no hard edge anywhere) -->
+          <radialGradient id="bp"><stop offset="0" stop-color="#f2a3a6" stop-opacity=".8" /><stop offset=".5" stop-color="#f2a3a6" stop-opacity=".45" /><stop offset="1" stop-color="#f2a3a6" stop-opacity="0" /></radialGradient>
+          <radialGradient id="bb"><stop offset="0" stop-color="#9fc0f0" stop-opacity=".8" /><stop offset=".5" stop-color="#9fc0f0" stop-opacity=".45" /><stop offset="1" stop-color="#9fc0f0" stop-opacity="0" /></radialGradient>
+          <radialGradient id="bg"><stop offset="0" stop-color="#a9dca0" stop-opacity=".8" /><stop offset=".5" stop-color="#a9dca0" stop-opacity=".45" /><stop offset="1" stop-color="#a9dca0" stop-opacity="0" /></radialGradient>
+          <radialGradient id="by"><stop offset="0" stop-color="#f1cf7e" stop-opacity=".8" /><stop offset=".5" stop-color="#f1cf7e" stop-opacity=".45" /><stop offset="1" stop-color="#f1cf7e" stop-opacity="0" /></radialGradient>
+          <radialGradient id="bv"><stop offset="0" stop-color="#cdb0ec" stop-opacity=".8" /><stop offset=".5" stop-color="#cdb0ec" stop-opacity=".45" /><stop offset="1" stop-color="#cdb0ec" stop-opacity="0" /></radialGradient>
+        </defs>
+      </svg>
+
+      <!-- inside the bathroom, facing the door -->
+      <div id="door" class="clip full" data-start="0" data-duration="9.4" data-track-index="0">
+        <svg class="full" viewBox="0 0 1080 1920" width="1080" height="1920">
+          <rect width="1080" height="1920" fill="#161d29" />
+          <g id="dtiles" stroke="#1c2433" stroke-width="3"></g>
+          <rect y="1600" width="1080" height="320" fill="#1b2029" />
+          <rect x="300" y="1600" width="480" height="320" fill="url(#underglow)" />
+          <rect x="276" y="396" width="528" height="1204" fill="#232a36" />
+          <rect x="300" y="420" width="480" height="1170" fill="#33291f" />
+          <rect x="350" y="480" width="380" height="460" rx="8" fill="none" stroke="#43372a" stroke-width="8" />
+          <rect x="350" y="1030" width="380" height="490" rx="8" fill="none" stroke="#43372a" stroke-width="8" />
+          <rect x="300" y="1590" width="480" height="10" fill="#f0d79a" opacity=".8" />
+          <circle cx="720" cy="1060" r="30" fill="#8a8478" /><circle cx="712" cy="1052" r="8" fill="#b4ada0" />
+          <circle cx="720" cy="970" r="22" fill="#8a8478" />
+          <rect id="lockbar" x="712" y="950" width="16" height="40" rx="6" fill="#4a463f" />
+          <!-- a towel on the hook, the shape seen later in the mirror -->
+          <rect x="880" y="560" width="14" height="14" rx="4" fill="#5a5f6a" />
+        </svg>
+      </div>
+
+      <!-- the mirror over the sink: blurred copy (no glasses), sharp copy (through the pinhole), the pinhole mask, eyelids -->
+      <div id="mir" class="clip full" data-start="8.8" data-duration="80.8" data-track-index="1">
+        <div id="mirwrap" class="full">
+          <div id="mirB" class="full" style="filter:blur(12px)"></div>
+          <div id="mirS" class="full" style="clip-path:circle(0px at 540px 770px)"></div>
+          <div class="full" style="background:radial-gradient(ellipse 70% 55% at 50% 38%, rgba(0,0,0,0) 45%, rgba(0,0,0,.55))"></div>
+          <div id="pin" class="full" style="opacity:0"></div>
+        </div>
+        <div id="lidT" class="layer" style="left:0;top:0;width:1080px;height:960px;background:#000"></div>
+        <div id="lidB" class="layer" style="left:0;top:960px;width:1080px;height:1200px;background:#000"></div>
+      </div>
+
+      <!-- pinhole card -->
+      <div id="pincard" class="clip card" data-start="19.2" data-duration="19.4" data-track-index="2">
+        <div class="ttl" id="pttl">ไม่มีแว่น ภาพพร่า</div>
+        <svg class="layer" style="left:0;top:0" viewBox="0 0 906 640" width="906" height="640">
+          <g transform="translate(0 20)">
+            <circle cx="620" cy="280" r="150" fill="#fff" stroke="#2b2b2b" stroke-width="6" />
+            <path d="M680 143 A150 150 0 0 1 680 417" fill="none" stroke="#E0A030" stroke-width="10" />
+            <path d="M488 210 Q440 280 488 350" fill="#d9eef7" stroke="#2b2b2b" stroke-width="5" />
+            <ellipse cx="505" cy="280" rx="18" ry="55" fill="#9fd0e6" stroke="#2b2b2b" stroke-width="4" />
+            <circle cx="70" cy="280" r="14" fill="#F5C84C" stroke="#1d2433" stroke-width="4" />
+            <g id="wide">
+              <polygon points="70,280 505,225 505,335" fill="#F5C84C" opacity=".25" />
+              <path d="M70 280 L505 225 L766 307 M70 280 L505 335 L766 253" fill="none" stroke="#E0A030" stroke-width="5" stroke-linejoin="round" />
+            </g>
+            <rect id="blur" x="759" y="248" width="16" height="64" rx="8" fill="#D8343A" opacity=".75" />
+            <g id="narrow" opacity="0">
+              <path d="M70 280 L766 280" stroke="#E0A030" stroke-width="5" />
+              <circle cx="767" cy="280" r="8" fill="#D8343A" />
+            </g>
+            <g id="plate" opacity="0">
+              <rect x="390" y="110" width="20" height="162" rx="4" fill="#1d2433" /><rect x="390" y="288" width="20" height="162" rx="4" fill="#1d2433" />
+              <text x="400" y="96" text-anchor="middle" font-family="Anuphan" font-weight="600" font-size="24" fill="#1d2433">รูเล็กๆ</text>
+            </g>
+          </g>
+        </svg>
+        <div class="lbl" id="plab" style="left:40px;top:478px;width:826px">ไม่มีแว่น: แสงกระจาย → ภาพพร่า</div>
+        <div id="pb1" class="badge" style="left:60px;top:548px;opacity:0">สายตาสั้น ✓</div>
+        <div id="pb2" class="badge" style="left:290px;top:548px;opacity:0">สายตายาว ✓</div>
+        <div id="pb3" class="badge" style="left:520px;top:548px;opacity:0;background:#D8343A;color:#fff;border-color:#D8343A">ชั่วคราว ไม่ใช่แว่น</div>
+      </div>
+
+      <!-- Troxler card -->
+      <div id="trox" class="clip card" data-start="52.3" data-duration="16.4" data-track-index="3">
+        <div class="ttl" id="tttl">จ้องนิ่งๆ ในที่สลัว</div>
+        <svg class="layer" style="left:0;top:0" viewBox="0 0 906 640" width="906" height="640">
+          <rect x="50" y="90" width="430" height="460" rx="20" fill="#1d2433" />
+          <g id="tblobs">
+            <circle cx="150" cy="200" r="80" fill="url(#bp)" /><circle cx="380" cy="190" r="80" fill="url(#bb)" />
+            <circle cx="140" cy="450" r="80" fill="url(#bg)" /><circle cx="390" cy="460" r="80" fill="url(#bv)" />
+          </g>
+          <circle cx="265" cy="320" r="8" fill="#F5C84C" />
+          <g transform="translate(700 210)">
+            <path d="M-110 0 Q0 -70 110 0 Q0 70 -110 0 Z" fill="#fff" stroke="#1d2433" stroke-width="6" />
+            <circle id="tiris" cx="-30" r="30" fill="#1d2433" />
+            <path id="tlid" d="M-114 0 Q0 -74 114 0 Z" fill="#c08a64" transform="scale(1 0)" />
+          </g>
+        </svg>
+        <div class="lbl" id="tlab" style="left:510px;top:340px;width:370px;opacity:0">สมองหยุดรายงาน<br><span style="font-weight:500;color:#555a63">สิ่งที่ไม่เปลี่ยน</span></div>
+        <div class="lbl" id="tlab2" style="left:510px;top:340px;width:370px;opacity:0">กลอกตา + กะพริบ<br><span style="font-weight:500;color:#555a63">ทุกอย่างกลับมา</span></div>
+      </div>
+
+      <!-- Troxler test for the viewer: everything static except the thin bar -->
+      <div id="test" class="clip full" data-start="68.8" data-duration="14.8" data-track-index="4">
+        <h2>ลองเองตอนนี้</h2>
+        <ol>
+          <li id="st1"><b>1</b>จ้องจุดดำตรงกลาง</li>
+          <li id="st2"><b>2</b>ห้ามขยับตา พยายามไม่กะพริบ</li>
+          <li id="st3"><b>3</b>นิ่งไว้ราว 15 วินาที</li>
+        </ol>
+        <svg class="full" viewBox="0 0 1080 1920" width="1080" height="1920">
+          <circle cx="300" cy="900" r="190" fill="url(#bp)" /><circle cx="790" cy="890" r="190" fill="url(#bb)" />
+          <circle cx="310" cy="1290" r="190" fill="url(#bg)" /><circle cx="780" cy="1280" r="190" fill="url(#by)" />
+          <circle cx="545" cy="1090" r="9" fill="#1d2433" />
+        </svg>
+        <div class="bar"><i></i></div>
+      </div>
+
+      <!-- chips -->
+      <div id="clock" class="chip clip" data-start="0.3" data-duration="89.0" data-track-index="20" style="left:56px">
+        <svg viewBox="-24 -24 48 48" width="46" height="46"><circle r="19" fill="none" stroke="#1d2433" stroke-width="4" /><path d="M0 -10 L0 0 L8 6" fill="none" stroke="#1d2433" stroke-width="4" stroke-linecap="round" /></svg>
+        <div><small>เวลา</small><b id="clockt">06:20</b></div>
+      </div>
+      <div id="glass" class="chip clip" data-start="5.4" data-duration="83.9" data-track-index="21" style="left:322px">
+        <svg viewBox="0 0 64 30" width="62" height="30"><circle cx="15" cy="16" r="11" fill="none" stroke="#1d2433" stroke-width="4" /><circle cx="49" cy="16" r="11" fill="none" stroke="#1d2433" stroke-width="4" />
+          <path d="M26 14 Q32 9 38 14" fill="none" stroke="#1d2433" stroke-width="4" /><path d="M4 4 L60 28" stroke="#D8343A" stroke-width="4" stroke-linecap="round" /></svg>
+        <div><small>แว่นตา</small><b>หาย</b></div>
+      </div>
+
+      <!-- subtitles (cue + phrase times from ../audio/timing.json) -->
+      <div class="sub clip"   data-start="0.54"  data-duration="4.6"  data-track-index="30">หกโมงยี่สิบ<br>คุณวิ่งเข้าห้องน้ำ แล้วล็อกประตู</div>
+      <div class="sub clip"   data-start="5.45"  data-duration="3.2"  data-track-index="30">แว่นของคุณหล่นหายไประหว่างทาง</div>
+      <div class="sub clip"   data-start="8.96"  data-duration="5.05" data-track-index="30">ไฟในห้องน้ำสลัว<br>เหนืออ่างล้างหน้ามีกระจกบานหนึ่ง</div>
+      <div class="sub clip"   data-start="14.32" data-duration="2.0"  data-track-index="30">และข้างหลังเงาของคุณ</div>
+      <div class="sub r clip" data-start="16.38" data-duration="2.8"  data-track-index="30"><span>มีร่างพร่าๆ ยืนอยู่</span></div>
+      <div class="sub y clip" data-start="19.47" data-duration="2.6"  data-track-index="30">กฎข้อแรก ถ้าไม่มีแว่น</div>
+      <div class="sub y clip" data-start="22.13" data-duration="3.6"  data-track-index="30">ให้ทำรูเล็กๆ ด้วยนิ้ว<br>แล้วมองผ่านมัน</div>
+      <div class="sub y clip" data-start="25.83" data-duration="3.2"  data-track-index="30">รูเล็กๆ ตัดแสงที่กระเจิงออกไป</div>
+      <div class="sub clip"   data-start="29.07" data-duration="3.1"  data-track-index="30">ภาพที่ตกบนจอตาจึงคมขึ้น</div>
+      <div class="sub clip"   data-start="32.33" data-duration="2.05" data-track-index="30">ใช้ได้ทั้งคนสายตาสั้นและยาว</div>
+      <div class="sub y clip" data-start="34.45" data-duration="4.1"  data-track-index="30">แต่มันแค่ทางรอดชั่วคราว<br>ไม่ใช่แว่น</div>
+      <div class="sub clip"   data-start="39.03" data-duration="2.9"  data-track-index="30">คุณมองผ่านรูนิ้ว<br>ร่างนั้น</div>
+      <div class="sub y clip" data-start="41.97" data-duration="2.6"  data-track-index="30">คือผ้าเช็ดตัว<br>ที่แขวนอยู่หลังประตู</div>
+      <div class="sub clip"   data-start="44.8"  data-duration="3.25" data-track-index="30">คุณถอนหายใจ<br>แล้วจ้องหน้าตัวเองในกระจก</div>
+      <div class="sub clip"   data-start="48.24" data-duration="4.0"  data-track-index="30">ยิ่งจ้องนาน<br>หน้าในกระจกยิ่งบิดเบี้ยว</div>
+      <div class="sub y clip" data-start="52.59" data-duration="5.9"  data-track-index="30">กฎข้อสอง ในที่สลัว<br>ถ้าจ้องจุดเดียวนิ่งๆ ไม่ขยับตา</div>
+      <div class="sub y clip" data-start="58.7"  data-duration="5.4"  data-track-index="30">สิ่งรอบๆ จะค่อยๆ จางหาย<br>เพราะสมองหยุดรายงานสิ่งที่ไม่เปลี่ยน</div>
+      <div class="sub clip"   data-start="64.3"  data-duration="4.3"  data-track-index="30">แค่กลอกตา แล้วกะพริบตา<br>ทุกอย่างจะกลับมา</div>
+      <div class="sub dk clip" data-start="80.41" data-duration="3.0" data-track-index="30" style="top:1620px">วงสีรอบๆ จางหายไปใช่ไหม</div>
+      <div class="sub clip"   data-start="83.99" data-duration="1.75" data-track-index="30">คุณกะพริบตา</div>
+      <div class="sub clip"   data-start="85.84" data-duration="1.25" data-track-index="30">แต่เงาในกระจก</div>
+      <div class="sub r clip" data-start="87.14" data-duration="2.3"  data-track-index="30"><span>ไม่กะพริบตาม</span></div>
+
+      <div id="next" class="clip full" data-start="89.6" data-duration="4.0" data-track-index="40">
+        <div class="pill">ตอนต่อไป</div>
+        <h1>ถ้ามันออกมา<br>จากจอ</h1>
+        <div class="rl"></div>
+        <div class="s1">EP.6 เร็วๆ นี้</div>
+        <div class="s2">กดติดตาม แล้วไปรอดด้วยกัน</div>
+      </div>
+      <div id="end" class="clip full" data-start="93.6" data-duration="2.65" data-track-index="41">
+        <img src="assets/timeoptic-white-spaced.svg" alt="TIMEOPTIC" />
+        <p>ดูแลสายตา ให้มองเห็นในวันที่สำคัญ</p>
+      </div>
+    </div>
+
+    <script>
+      const NS = 'http://www.w3.org/2000/svg';
+      const el = (tag, attrs, parent) => { const e = document.createElementNS(NS, tag); for (const k in attrs) e.setAttribute(k, attrs[k]); parent && parent.appendChild(e); return e; };
+      const dt = document.getElementById('dtiles');
+      for (let x = 90; x < 1080; x += 90) el('line', { x1: x, y1: 0, x2: x, y2: 1600 }, dt);
+      for (let y = 90; y < 1600; y += 90) el('line', { x1: 0, y1: y, x2: 1080, y2: y }, dt);
+
+      // the mirror scene, drawn twice (blurred + sharp); classes, not ids, so tweens hit both copies
+      let tiles = '', mtiles = '';
+      for (let x = 60; x < 1080; x += 100) tiles += `<line x1="${x}" y1="0" x2="${x}" y2="1190" />`;
+      for (let y = 60; y < 1190; y += 100) tiles += `<line x1="0" y1="${y}" x2="1080" y2="${y}" />`;
+      for (let x = 230; x < 900; x += 120) mtiles += `<line x1="${x}" y1="380" x2="${x}" y2="1160" />`;
+      for (let y = 420; y < 1160; y += 120) mtiles += `<line x1="190" y1="${y}" x2="890" y2="${y}" />`;
+      const SCENE = `<svg class="full" viewBox="0 0 1080 1920" width="1080" height="1920">
+        <rect width="1080" height="1920" fill="#141c28" /><g stroke="#1b2433" stroke-width="3">${tiles}</g>
+        <ellipse cx="540" cy="320" rx="330" ry="170" fill="url(#lampglow)" /><rect x="430" y="300" width="220" height="26" rx="13" fill="#e9dcb8" opacity=".85" />
+        <rect x="170" y="360" width="740" height="820" rx="24" fill="#2a3142" /><rect x="190" y="380" width="700" height="780" rx="14" fill="url(#mirr)" />
+        <g clip-path="url(#mclip)">
+          <g stroke="#25304a" stroke-width="3">${mtiles}</g>
+          <rect x="620" y="470" width="250" height="700" fill="#2b3446" stroke="#3a4458" stroke-width="8" />
+          <circle cx="645" cy="850" r="14" fill="#565e70" />
+          <circle cx="745" cy="560" r="9" fill="#6a7284" />
+          <g class="towel"><ellipse cx="745" cy="612" rx="42" ry="50" fill="#b4bccb" />
+            <path d="M692 640 Q745 624 798 640 L812 1070 Q745 1086 678 1070 Z" fill="#b4bccb" />
+            <path class="stripe" d="M684 980 Q745 994 808 980 L809 1000 Q745 1014 683 1000 Z" fill="#8a95aa" /><path class="stripe" d="M682 1020 Q745 1034 810 1020 L810 1032 Q745 1046 682 1032 Z" fill="#8a95aa" />
+            <path class="stripe" d="M712 600 Q745 640 778 600" fill="none" stroke="#97a1b4" stroke-width="5" /></g>
+          <path d="M200 1170 Q220 960 420 930 Q620 960 640 1170 Z" fill="#2c3a52" />
+          <rect x="385" y="860" width="70" height="90" fill="#6a4f3f" />
+          <g class="faceg">
+            <ellipse cx="308" cy="790" rx="16" ry="28" fill="#6a4f3f" /><ellipse cx="532" cy="790" rx="16" ry="28" fill="#6a4f3f" />
+            <ellipse cx="420" cy="775" rx="112" ry="138" fill="#7a5a47" />
+            <path d="M306 770 Q296 625 420 618 Q544 625 534 770 Q522 694 420 684 Q318 694 306 770 Z" fill="#161b24" />
+            <path d="M350 735 Q378 724 402 732 M438 732 Q462 724 490 735" stroke="#1b1612" stroke-width="7" fill="none" stroke-linecap="round" />
+            <g class="eyeL"><ellipse class="ew" cx="378" cy="770" rx="25" ry="14" fill="#e6e1d8" /><circle class="pupil" cx="378" cy="770" r="9" fill="#141820" /></g>
+            <g class="eyeR"><ellipse class="ew" cx="462" cy="770" rx="25" ry="14" fill="#e6e1d8" /><circle class="pupil" cx="462" cy="770" r="9" fill="#141820" /></g>
+            <path d="M420 792 L408 838 L430 842" stroke="#5a4232" stroke-width="5" fill="none" stroke-linecap="round" />
+            <path class="mouth" d="M388 878 Q420 890 452 878" stroke="#3a2420" stroke-width="6" fill="none" stroke-linecap="round" />
+          </g>
+        </g>
+        <rect x="120" y="1190" width="840" height="70" rx="10" fill="#3a4250" /><rect x="160" y="1260" width="760" height="660" fill="#1a202b" />
+        <rect x="540" y="1270" width="2" height="640" fill="#141922" />
+        <ellipse cx="540" cy="1238" rx="250" ry="34" fill="#252c38" />
+        <path d="M520 1200 L520 1160 Q520 1140 540 1140 L580 1140 L580 1158 L548 1158 Q540 1158 540 1170 L540 1200 Z" fill="#8a8f98" />
+        <circle class="drip" cx="544" cy="1172" r="6" fill="#a9c3dc" opacity="0" />
+      </svg>`;
+      document.getElementById('mirB').innerHTML = SCENE;
+      document.getElementById('mirS').innerHTML = SCENE;
+
+      // pinhole: the sharp copy shows through a circle; the mask darkens the rest, with a ring of fingers at the edge
+      const mirS = document.getElementById('mirS'), pin = document.getElementById('pin');
+      // the hole is a pure function of time (keyframes [t, x, y, r]), applied on every timeline update, so any seek is exact
+      const K = [[0, 540, 770, 0], [38.7, 540, 770, 0], [39.5, 540, 770, 130], [40.8, 540, 770, 130], [41.8, 745, 800, 130], [42.0, 745, 800, 130],
+                 [43.2, 745, 830, 270], [44.6, 745, 830, 270], [45.2, 745, 830, 0], [83.6, 540, 960, 0], [83.601, 540, 960, 2000], [999, 540, 960, 2000]];
+      const ez = gsap.parseEase('power2.inOut'), H = { x: 540, y: 770, r: 0 };
+      const holeAt = t => { let i = 0; while (i < K.length - 2 && t >= K[i + 1][0]) i++;
+        const [t0, x0, y0, r0] = K[i], [t1, x1, y1, r1] = K[i + 1], e = ez(Math.min(1, Math.max(0, (t - t0) / (t1 - t0))));
+        H.x = x0 + (x1 - x0) * e; H.y = y0 + (y1 - y0) * e; H.r = r0 + (r1 - r0) * e; hole(); };
+      const hole = () => { const r = H.r;
+        mirS.style.clipPath = `circle(${r}px at ${H.x}px ${H.y}px)`;
+        pin.style.background = `radial-gradient(circle at ${H.x}px ${H.y}px, rgba(0,0,0,0) ${Math.max(0, r - 10)}px, #5a3d2c ${r + 2}px, #2a1d16 ${r + 26}px, rgba(0,0,0,.94) ${r + 70}px)`; };
+
+      window.__timelines = window.__timelines || {};
+      const tl = gsap.timeline({ paused: true, onUpdate: () => holeAt(tl.time()) });
+      document.querySelectorAll('.sub').forEach(s => tl.fromTo(s, { opacity: 0, y: 14 }, { opacity: 1, y: 0, duration: .25, ease: 'power2.out' }, parseFloat(s.dataset.start)));
+      const count = (target, from, to, t, d, fmt) => { const o = { v: from };
+        tl.fromTo(o, { v: from }, { v: to, duration: d, ease: 'none', onUpdate: () => target.textContent = fmt(o.v) }, t); };
+      count(document.getElementById('clockt'), 20, 26.9, 0.3, 89.0, v => '06:' + String(Math.floor(v)).padStart(2, '0'));
+
+      tl.set('#lidT', { y: -960 }, 0); tl.set('#lidB', { y: 960 }, 0);
+      // door: push in, lock turns
+      tl.fromTo('#door', { scale: 1.1, transformOrigin: '540px 1000px' }, { scale: 1, duration: 9, ease: 'sine.out' }, 0);
+      tl.fromTo('#lockbar', { rotation: 0, svgOrigin: '720 970' }, { rotation: 90, duration: .15, ease: 'power2.in' }, 3.9);
+      tl.fromTo('#glass', { opacity: 0, x: -20 }, { opacity: 1, x: 0, duration: .4, ease: 'back.out(2)' }, 5.4);
+      // mirror, blurred (no glasses)
+      tl.fromTo('#mir', { opacity: 0 }, { opacity: 1, duration: .5 }, 8.8);
+      tl.fromTo('#mirwrap', { scale: 1.12, transformOrigin: '540px 800px' }, { scale: 1, duration: 7, ease: 'sine.out' }, 8.8);
+      tl.to('#mirwrap', { scale: 1.08, transformOrigin: '745px 800px', duration: 2.6, ease: 'power2.out' }, 16.38);
+      tl.fromTo('.drip', { attr: { cy: 1172 }, opacity: 1 }, { attr: { cy: 1236 }, opacity: 0, duration: .35, ease: 'power2.in', repeat: 46, repeatDelay: 1.35 }, 9.35);
+      tl.to('#mir', { filter: 'blur(14px) brightness(.55)', duration: .5 }, 19.2);
+      // pinhole card
+      tl.fromTo('#pincard', { opacity: 0, y: 40 }, { opacity: 1, y: 0, duration: .4, ease: 'power2.out' }, 19.2);
+      tl.fromTo('#blur', { scaleY: .4, svgOrigin: '767 300' }, { scaleY: 1, duration: .6, ease: 'back.out(2)' }, 20.6);
+      tl.set('#pttl', { textContent: 'ไม่มีแว่น ภาพพร่า' }, 0); tl.set('#pttl', { textContent: 'มองผ่านรูเล็กๆ (pinhole)' }, 22.1);
+      tl.fromTo('#plate', { opacity: 0, y: -60 }, { opacity: 1, y: 0, duration: .5, ease: 'back.out(1.6)' }, 22.3);
+      tl.to('#wide', { opacity: .12, duration: .5 }, 26.0);
+      tl.fromTo('#narrow', { opacity: 0 }, { opacity: 1, duration: .5 }, 26.2);
+      tl.to('#blur', { scaleY: .12, duration: .6, ease: 'power2.inOut' }, 26.6);
+      tl.set('#plab', { textContent: 'ไม่มีแว่น: แสงกระจาย → ภาพพร่า' }, 0); tl.set('#plab', { textContent: 'รูเล็ก: เหลือแต่แสงตรง → ภาพคมขึ้น' }, 29.0);
+      tl.fromTo('#pb1', { opacity: 0, scale: .7 }, { opacity: 1, scale: 1, duration: .35, ease: 'back.out(2)' }, 32.4);
+      tl.fromTo('#pb2', { opacity: 0, scale: .7 }, { opacity: 1, scale: 1, duration: .35, ease: 'back.out(2)' }, 33.3);
+      tl.fromTo('#pb3', { opacity: 0, scale: .7 }, { opacity: 1, scale: 1, duration: .35, ease: 'back.out(2)' }, 35.5);
+      tl.to('#pincard', { opacity: 0, duration: .3 }, 38.3);
+      // through the pinhole: the shape is a towel
+      tl.set('#mir', { filter: 'blur(0px) brightness(1)' }, 38.6);
+      tl.set('#mirwrap', { scale: 1, transformOrigin: '540px 800px' }, 38.6);
+      tl.fromTo('#pin', { opacity: 0 }, { opacity: 1, duration: .5 }, 38.6);
+      tl.to('#pin', { opacity: 0, duration: .6 }, 44.6);
+      // stare: zoom on the reflection, the face warps
+      tl.fromTo('#mirwrap', { scale: 1 }, { scale: 1.7, transformOrigin: '420px 790px', duration: 7.5, ease: 'sine.inOut' }, 45.6);
+      tl.to('.faceg', { skewX: 5, scaleY: 1.07, svgOrigin: '420 775', duration: 3, ease: 'sine.inOut' }, 49.5);
+      tl.to('.eyeL', { scale: 1.35, svgOrigin: '378 770', duration: 3, ease: 'sine.inOut' }, 49.5);
+      tl.to('.eyeR', { scale: .75, svgOrigin: '462 770', duration: 3, ease: 'sine.inOut' }, 49.5);
+      tl.to('.mouth', { attr: { d: 'M378 884 Q420 912 462 870' }, duration: 3, ease: 'sine.inOut' }, 49.5);
+      tl.to('#mir', { filter: 'blur(14px) brightness(.55)', duration: .5 }, 52.3);
+      // Troxler card
+      tl.fromTo('#trox', { opacity: 0, y: 40 }, { opacity: 1, y: 0, duration: .4, ease: 'power2.out' }, 52.3);
+      tl.fromTo('#tblobs', { opacity: 1 }, { opacity: .06, duration: 5.5, ease: 'sine.in' }, 54.4);
+      tl.set('#tttl', { textContent: 'จ้องนิ่งๆ ในที่สลัว' }, 0); tl.set('#tttl', { textContent: 'ภาพจางเพราะจ้องนิ่ง (Troxler fading)' }, 58.7);
+      tl.fromTo('#tlab', { opacity: 0 }, { opacity: 1, duration: .3 }, 60.0);
+      tl.to('#tlab', { opacity: 0, duration: .3 }, 64.2);
+      tl.to('#tiris', { attr: { cx: 30 }, duration: .4, ease: 'power2.inOut', yoyo: true, repeat: 1 }, 64.4);
+      tl.to('#tlid', { attr: { transform: 'scale(1 1)' }, duration: .2, yoyo: true, repeat: 1, ease: 'sine.inOut' }, 65.7);
+      tl.to('#tblobs', { opacity: 1, duration: .3 }, 65.9);
+      tl.fromTo('#tlab2', { opacity: 0 }, { opacity: 1, duration: .3 }, 66.0);
+      tl.to('#trox', { opacity: 0, duration: .3 }, 68.4);
+      // test (static field; only the steps and the thin bar move)
+      tl.fromTo('#test', { opacity: 0 }, { opacity: 1, duration: .4 }, 68.8);
+      tl.fromTo('#st1', { opacity: .25 }, { opacity: 1, duration: .3 }, 69.4);
+      tl.fromTo('#st2', { opacity: .25 }, { opacity: 1, duration: .3 }, 70.6);
+      tl.fromTo('#st3', { opacity: .25 }, { opacity: 1, duration: .3 }, 72.2);
+      tl.fromTo('#test .bar i', { scaleX: 0 }, { scaleX: 1, duration: 13.4, ease: 'none' }, 69.4);
+      tl.to('#test', { opacity: 0, duration: .4 }, 83.2);
+      // close-up: you blink, the reflection doesn't
+      tl.set('#mir', { filter: 'blur(0px) brightness(1)' }, 83.6);
+      tl.set('#mirB', { opacity: 0 }, 83.6);
+      tl.set('.faceg, .eyeL, .eyeR', { skewX: 0, scale: 1, scaleY: 1 }, 83.6);
+      tl.set('.mouth', { attr: { d: 'M388 878 Q420 890 452 878' } }, 83.6);
+      tl.fromTo('#mirwrap', { scale: 2.4, x: 120, transformOrigin: '420px 770px' }, { scale: 2.7, duration: 6, ease: 'none' }, 83.6);
+      tl.to('#lidT', { y: 0, duration: .15, ease: 'power2.in' }, 84.15); tl.to('#lidB', { y: 0, duration: .15, ease: 'power2.in' }, 84.15);
+      tl.to('#lidT', { y: -960, duration: .22, ease: 'power2.out' }, 84.4); tl.to('#lidB', { y: 960, duration: .22, ease: 'power2.out' }, 84.4);
+      // slow blink: through the slit the reflection's eyes stay wide open, pupils grow
+      tl.to('#lidT', { y: -260, duration: .9, ease: 'sine.inOut' }, 85.9); tl.to('#lidB', { y: -120, duration: .9, ease: 'sine.inOut' }, 85.9);
+      tl.to('#mirS .pupil', { attr: { r: 13 }, duration: .8, ease: 'sine.inOut' }, 87.1);
+      tl.to('#mirS .ew', { attr: { ry: 17 }, fill: '#efe3dc', duration: .8 }, 87.1);
+      tl.to('#mirS .mouth', { attr: { d: 'M392 884 Q420 880 448 884' }, duration: .8, ease: 'sine.inOut' }, 87.1);
+      tl.to('#lidT', { y: -960, duration: .5, ease: 'sine.inOut' }, 88.2); tl.to('#lidB', { y: 960, duration: .5, ease: 'sine.inOut' }, 88.2);
+      tl.to('#mir', { opacity: 0, duration: .6 }, 89.0);
+      // next + end
+      tl.fromTo('#next', { opacity: 0 }, { opacity: 1, duration: .5 }, 89.6);
+      tl.fromTo('#next .pill', { opacity: 0, y: 10 }, { opacity: 1, y: 0, duration: .4 }, 89.8);
+      tl.fromTo('#next h1', { opacity: 0, y: 24, filter: 'blur(6px)' }, { opacity: 1, y: 0, filter: 'blur(0px)', duration: .7, ease: 'power2.out' }, 90.0);
+      tl.fromTo('#next .rl', { scaleX: 0 }, { scaleX: 1, duration: .5 }, 91.0);
+      tl.fromTo('#next .s1', { opacity: 0 }, { opacity: 1, duration: .4 }, 91.3);
+      tl.fromTo('#next .s2', { opacity: 0 }, { opacity: 1, duration: .4 }, 91.8);
+      tl.fromTo('#end', { opacity: 0 }, { opacity: 1, duration: .5 }, 93.6);
+      tl.fromTo('#end img', { opacity: 0, y: 20, scale: .96 }, { opacity: 1, y: 0, scale: 1, duration: .8, ease: 'power2.out' }, 93.8);
+      tl.fromTo('#end p', { opacity: 0, y: 20 }, { opacity: 1, y: 0, duration: .7, ease: 'power2.out' }, 94.3);
+
+      window.__timelines['main'] = tl;
+      tl.seek(0);
+    </script>
+  </body>
+</html>

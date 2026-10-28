@@ -1,0 +1,376 @@
+<!doctype html>
+<html lang="th">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=1080, height=1920" />
+    <!--
+      Story clip EP03 "ทางเดินในบ้าน" (user, 2026-10-26), follows EP02's end card ("ถ้ามันตามคุณไปถึงบ้าน"). Same look as EP01/02. Thai only.
+      Voice = ../audio/voice.wav, cue + phrase times from ../audio/timing.json (mixed after render, see ../make.sh).
+      Science: dark spots that move exactly with your gaze are afterimages (fade with slow blinks); a sudden shower of floaters or flashes
+      can mean a retinal tear → see an eye doctor now; each eye has a blind spot where the optic nerve leaves (the other eye fills it in).
+      Includes a real blind-spot test (close left eye, stare at the cross, bring the phone to ~20 cm: the red dot vanishes).
+      Scenes: house 0-8 | hallway + afterimage 8-21.6 | afterimage card 21.6-37 | warning card 37-48.4 | hallway, left eye shut 48.4-56.5
+      | blind-spot card 56.5-67.8 | test screen 67.8-82.4 | hallway, both eyes: the figure 82.4-89.6 | next 89.6-94 | TIMEOPTIC 93.9-96.94
+    -->
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/gsap.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@400;500;600;700&family=Anuphan:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <style>
+      * { margin: 0; padding: 0; box-sizing: border-box; }
+      html, body { width: 1080px; height: 1920px; overflow: hidden; background: #0a1124; }
+      #root { position: relative; width: 1080px; height: 1920px; overflow: hidden; font-family: 'Anuphan', sans-serif; color: #fff; }
+      .layer { position: absolute; }
+      .full { position: absolute; left: 0; top: 0; width: 1080px; height: 1920px; }
+      svg { display: block; overflow: visible; }
+
+      .sub { position: absolute; left: 50px; right: 50px; top: 1210px; text-align: center; font-family: 'Prompt', sans-serif; font-weight: 600;
+             font-size: 56px; line-height: 1.32; text-shadow: 0 3px 18px rgba(0,0,0,.75), 0 0 4px rgba(0,0,0,.6); }
+      .sub.y { color: #F5C84C; }
+      .sub.r span { display: inline-block; background: #D8343A; color: #fff; padding: 4px 26px 8px; border-radius: 10px; text-shadow: none;
+                    box-shadow: 0 6px 24px rgba(0,0,0,.35); }
+      .sub.dk { color: #1d2433; text-shadow: none; }
+
+      .chip { position: absolute; top: 170px; height: 86px; background: #EEE8DC; border-radius: 16px; color: #1d2433; display: flex; align-items: center;
+              gap: 14px; padding: 0 26px 0 20px; box-shadow: 0 8px 26px rgba(0,0,0,.35); }
+      .chip small { display: block; font-size: 20px; font-weight: 500; color: #555a63; line-height: 1; }
+      .chip b { display: block; font-family: 'Prompt'; font-size: 40px; font-weight: 700; line-height: 1.05; letter-spacing: .02em; }
+      #batt b { color: #6b6f78; }
+
+      .card { position: absolute; left: 80px; top: 520px; width: 920px; height: 640px; background: #EEE8DC; border-radius: 22px; color: #1d2433;
+              border-left: 14px solid #C99A2E; box-shadow: 0 24px 60px rgba(0,0,0,.45); overflow: hidden; }
+      .card .ttl { position: absolute; left: 34px; top: 26px; font-size: 30px; font-weight: 600; color: #4a4f5a; }
+      .card .lbl { position: absolute; font-size: 28px; font-weight: 600; color: #1d2433; text-align: center; }
+      .badge { position: absolute; background: #EEE8DC; color: #1d2433; border-radius: 40px; padding: 10px 30px; font: 700 36px 'Prompt';
+               box-shadow: 0 10px 30px rgba(0,0,0,.4); display: flex; align-items: center; gap: 14px; }
+
+      #test { background: #F3EFE6; color: #1d2433; }
+      #test h2 { position: absolute; left: 0; right: 0; top: 330px; text-align: center; font: 700 52px 'Prompt'; }
+      #test ol { position: absolute; left: 150px; top: 430px; list-style: none; font-size: 38px; font-weight: 600; line-height: 1.75; color: #4a4f5a; }
+      #test ol li b { display: inline-block; width: 52px; height: 52px; border-radius: 50%; background: #1d2433; color: #fff; text-align: center;
+                      font: 700 32px/52px 'Prompt'; margin-right: 20px; vertical-align: 4px; }
+      #test .bar { position: absolute; left: 240px; top: 1500px; width: 600px; height: 10px; border-radius: 5px; background: #ddd5c6; overflow: hidden; }
+      #test .bar i { position: absolute; inset: 0; background: #C99A2E; transform-origin: 0 50%; transform: scaleX(0); }
+
+      #next { background: radial-gradient(ellipse 80% 45% at 50% 42%, #23181c, #0d0d11 70%); }
+      #next .pill { position: absolute; left: 50%; top: 640px; transform: translateX(-50%); border: 2px solid #4a4a55; border-radius: 40px; padding: 8px 30px;
+                    font-size: 30px; font-weight: 600; color: #d6d6dc; }
+      #next .pill:before { content: ''; display: inline-block; width: 12px; height: 12px; border-radius: 50%; background: #D8343A; margin-right: 12px; vertical-align: 4px; }
+      #next h1 { position: absolute; left: 60px; right: 60px; top: 730px; text-align: center; font: 700 86px/1.3 'Prompt'; color: #f2f2f4; }
+      #next .rl { position: absolute; left: 400px; top: 990px; width: 280px; height: 6px; background: #D8343A; border-radius: 3px; }
+      #next .s1 { position: absolute; left: 0; right: 0; top: 1030px; text-align: center; font-size: 36px; font-weight: 600; color: #e05a5f; }
+      #next .s2 { position: absolute; left: 0; right: 0; top: 1100px; text-align: center; font-size: 32px; color: #c8c8d0; }
+      #end { background: radial-gradient(ellipse 80% 55% at 50% 48%, #1a4a36, #123A29 60%, #0d2b1e); }
+      #end img { position: absolute; left: 228px; top: 840px; width: 624px; }
+      #end p { position: absolute; left: 0; right: 0; top: 1000px; text-align: center; font-size: 46px; font-weight: 600; color: #FAFAFA; }
+    </style>
+  </head>
+  <body>
+    <div id="root" data-composition-id="main" data-start="0" data-duration="96.94" data-width="1080" data-height="1920">
+      <svg width="0" height="0" style="position:absolute">
+        <defs>
+          <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#070d22" /><stop offset=".55" stop-color="#14224a" /><stop offset="1" stop-color="#22355f" /></linearGradient>
+          <radialGradient id="moonglow"><stop offset="0" stop-color="#f6f1d8" stop-opacity=".55" /><stop offset="1" stop-color="#f6f1d8" stop-opacity="0" /></radialGradient>
+          <radialGradient id="glare"><stop offset="0" stop-color="#fff" /><stop offset=".25" stop-color="#fffbe6" stop-opacity=".9" /><stop offset="1" stop-color="#fffbe6" stop-opacity="0" /></radialGradient>
+          <radialGradient id="after"><stop offset="0" stop-color="#05060a" stop-opacity=".95" /><stop offset=".55" stop-color="#1a1030" stop-opacity=".75" /><stop offset=".8" stop-color="#20304a" stop-opacity=".3" /><stop offset="1" stop-color="#20304a" stop-opacity="0" /></radialGradient>
+          <linearGradient id="floor" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#151b28" /><stop offset="1" stop-color="#262a33" /></linearGradient>
+          <filter id="soft"><feGaussianBlur stdDeviation="6" /></filter>
+        </defs>
+      </svg>
+
+      <!-- house at night -->
+      <div id="house" class="clip full" data-start="0" data-duration="8.2" data-track-index="0">
+        <svg class="full" viewBox="0 0 1080 1920" width="1080" height="1920">
+          <rect width="1080" height="1100" fill="url(#sky)" />
+          <g id="stars"></g>
+          <circle cx="250" cy="380" r="170" fill="url(#moonglow)" /><circle cx="250" cy="380" r="54" fill="#f3edd2" />
+          <g id="far" fill="#16244a"></g>
+          <rect y="1060" width="1080" height="860" fill="#0d1619" />
+          <path d="M1080 1080 Q760 1110 700 1260 Q640 1420 300 1920 L700 1920 Q900 1500 980 1300 Q1020 1180 1080 1150 Z" fill="#23262b" />
+          <g id="bendLights" opacity="0"><circle cx="1040" cy="1100" r="7" fill="#fffbe6" /><circle cx="1062" cy="1104" r="7" fill="#fffbe6" /><circle cx="1050" cy="1102" r="50" fill="url(#glare)" opacity=".6" /></g>
+          <!-- house -->
+          <g transform="translate(130 760)">
+            <polygon points="-30,180 270,20 570,180" fill="#2a3448" />
+            <rect x="20" y="180" width="500" height="320" fill="#1c2434" />
+            <rect x="60" y="250" width="120" height="110" fill="#0b0f18" stroke="#2f3a50" stroke-width="8" />
+            <rect x="370" y="250" width="110" height="110" fill="#0b0f18" stroke="#2f3a50" stroke-width="8" />
+            <rect x="225" y="300" width="100" height="200" fill="#121722" stroke="#2f3a50" stroke-width="8" />
+            <circle cx="310" cy="400" r="6" fill="#565c69" />
+            <rect x="0" y="500" width="540" height="24" fill="#2a3040" />
+          </g>
+          <g transform="translate(-60 1280)">
+            <path d="M0 120 L10 70 Q20 50 60 46 L120 40 L170 0 Q185 -10 210 -10 L330 -10 Q355 -10 370 5 L410 44 L440 50 Q470 56 470 90 L470 120 Z" fill="#3b4a5e" />
+            <path d="M140 42 L180 8 L260 8 L260 42 Z" fill="#1a2433" /><path d="M272 8 L330 8 Q345 8 355 18 L382 42 L272 42 Z" fill="#1a2433" />
+            <circle cx="95" cy="122" r="36" fill="#0d1118" /><circle cx="380" cy="122" r="36" fill="#0d1118" />
+          </g>
+          <g id="near" fill="#050a16"></g>
+        </svg>
+      </div>
+
+      <!-- hallway (POV), with the afterimage, the closed eye and the figure -->
+      <div id="hall" class="clip full" data-start="8" data-duration="81.6" data-track-index="1">
+        <div id="hallw" class="full">
+          <svg class="full" viewBox="0 0 1080 1920" width="1080" height="1920">
+            <polygon points="0,0 1080,0 660,760 420,760" fill="#0d121c" />
+            <polygon points="0,0 420,760 420,1080 0,1920" fill="#141a27" />
+            <polygon points="1080,0 660,760 660,1080 1080,1920" fill="#111725" />
+            <polygon points="0,1920 1080,1920 660,1080 420,1080" fill="url(#floor)" />
+            <rect x="420" y="760" width="240" height="320" fill="#0b0f18" />
+            <rect x="480" y="840" width="120" height="240" fill="#151b28" stroke="#1f2636" stroke-width="5" />
+            <!-- moonlight from a window on the right wall -->
+            <polygon points="1080,520 860,560 860,960 1080,1060" fill="#3a4a6a" opacity=".55" />
+            <polygon points="860,1180 1040,1260 760,1500 560,1380" fill="#4a5a7a" opacity=".22" />
+            <!-- picture frames -->
+            <polygon points="150,560 300,640 300,860 150,880" fill="#0b0f18" stroke="#2a3245" stroke-width="6" />
+            <polygon points="330,700 380,730 380,830 330,840" fill="#0b0f18" stroke="#2a3245" stroke-width="4" />
+            <line x1="0" y1="1500" x2="420" y2="1060" stroke="#0a0e16" stroke-width="10" /><line x1="1080" y1="1500" x2="660" y2="1060" stroke="#0a0e16" stroke-width="10" />
+            <g id="ghost" opacity="0" filter="url(#soft)">
+              <ellipse cx="720" cy="900" rx="24" ry="30" fill="#aeb8cc" /><path d="M689 926 Q720 914 751 926 L763 1130 Q720 1142 677 1130 Z" fill="#aeb8cc" />
+            </g>
+          </svg>
+        </div>
+        <div id="dark0" class="full" style="background:#000"></div>
+        <!-- afterimage: two dark blobs (the two headlights), locked to the gaze -->
+        <div id="gazeGrp" class="layer" style="left:340px;top:760px;width:400px;height:300px">
+          <svg viewBox="0 0 400 300" width="400" height="300">
+            <g id="blobs" opacity="0"><circle cx="130" cy="150" r="95" fill="url(#after)" /><circle cx="270" cy="150" r="95" fill="url(#after)" /></g>
+            <g id="gz" opacity="0"><circle cx="200" cy="150" r="30" fill="none" stroke="#F5C84C" stroke-width="5" stroke-dasharray="8 8" /><circle cx="200" cy="150" r="6" fill="#F5C84C" /></g>
+          </svg>
+        </div>
+        <div id="lid" class="full" style="background:linear-gradient(90deg, #000 0%, #000 32%, rgba(0,0,0,.85) 45%, rgba(0,0,0,0) 62%);opacity:0"></div>
+      </div>
+
+      <!-- afterimage card -->
+      <div id="aftcard" class="clip card" data-start="21.6" data-duration="15.4" data-track-index="2">
+        <div class="ttl" id="attl">มันขยับตามสายตาเป๊ะๆ ไหม?</div>
+        <svg class="layer" style="left:0;top:0" viewBox="0 0 906 640" width="906" height="640">
+          <g transform="translate(300 330)">
+            <circle r="170" fill="#fff" stroke="#2b2b2b" stroke-width="6" />
+            <path d="M60 -158 A170 170 0 0 1 60 158" fill="none" stroke="#E0A030" stroke-width="10" />
+            <path d="M-150 -70 Q-205 0 -150 70" fill="#d9eef7" stroke="#2b2b2b" stroke-width="5" />
+            <ellipse cx="-118" cy="0" rx="20" ry="58" fill="#9fd0e6" stroke="#2b2b2b" stroke-width="4" />
+            <g id="patch"><circle cx="164" cy="-14" r="22" fill="#1d2433" /><circle cx="166" cy="20" r="22" fill="#1d2433" /></g>
+          </g>
+          <g id="moveRow" transform="translate(640 200)">
+            <rect x="-150" y="-80" width="300" height="200" rx="18" fill="#1d2433" />
+            <g id="mini"><circle cx="-22" cy="20" r="26" fill="url(#after)" /><circle cx="22" cy="20" r="26" fill="url(#after)" />
+              <circle cx="0" cy="20" r="6" fill="#F5C84C" /></g>
+          </g>
+          <g id="blink" transform="translate(640 470)" opacity="0">
+            <path d="M-90 0 Q0 -60 90 0 Q0 60 -90 0 Z" fill="#fff" stroke="#1d2433" stroke-width="6" />
+            <circle id="iris" r="26" fill="#1d2433" />
+            <path id="lidp" d="M-94 0 Q0 -64 94 0 Z" fill="#c08a64" transform="scale(1 0)" />
+          </g>
+        </svg>
+        <div class="lbl" id="alab" style="left:490px;top:330px;width:300px">ภาพติดตา<br><span style="font-weight:500;color:#555a63">อยู่ในตา ไม่ใช่ข้างนอก</span></div>
+      </div>
+
+      <!-- warning card -->
+      <div id="warn" class="clip card" data-start="37" data-duration="11.4" data-track-index="3" style="border-left-color:#D8343A">
+        <div class="ttl" style="color:#C0392B">⚠ สัญญาณอันตราย</div>
+        <svg class="layer" style="left:0;top:0" viewBox="0 0 906 640" width="906" height="640">
+          <g transform="translate(300 340)">
+            <circle r="190" fill="#fff" stroke="#2b2b2b" stroke-width="6" />
+            <path d="M60 -180 A190 190 0 0 1 60 180" fill="none" stroke="#E0A030" stroke-width="10" />
+            <path d="M-170 -80 Q-230 0 -170 80" fill="#d9eef7" stroke="#2b2b2b" stroke-width="5" />
+            <g id="floaters" stroke="#4a4f5a" stroke-width="5" fill="none" stroke-linecap="round" opacity="0"></g>
+            <path id="tear" d="M150 -110 L170 -80 L152 -60 L176 -30" fill="none" stroke="#D8343A" stroke-width="8" stroke-linecap="round" opacity="0" />
+          </g>
+          <path id="flash" d="M820 120 L770 220 L810 220 L760 330 L860 190 L815 190 L850 120 Z" fill="#F5C84C" stroke="#1d2433" stroke-width="4" opacity="0" />
+        </svg>
+        <div class="lbl" id="w1" style="left:560px;top:380px;width:320px;opacity:0;color:#C0392B">จอตาอาจฉีกขาด</div>
+        <div id="doc" class="badge" style="left:540px;top:450px;opacity:0;background:#D8343A;color:#fff;font-size:34px">
+          <svg viewBox="0 0 30 30" width="30" height="30"><path d="M11 2 H19 V11 H28 V19 H19 V28 H11 V19 H2 V11 H11 Z" fill="#fff" /></svg>หาหมอตาทันที</div>
+      </div>
+
+      <!-- blind-spot card -->
+      <div id="bscard" class="clip card" data-start="56.5" data-duration="11.3" data-track-index="4">
+        <div class="ttl" id="bttl">จุดบอดของตา</div>
+        <div id="bs1" class="layer" style="left:0;top:0;width:906px;height:640px">
+          <svg class="layer" style="left:0;top:0" viewBox="0 0 906 640" width="906" height="640">
+            <g transform="translate(330 330)">
+              <path d="M140 40 L420 70 L420 130 L130 100 Z" fill="#E0A030" stroke="#2b2b2b" stroke-width="5" />
+              <circle r="190" fill="#fff" stroke="#2b2b2b" stroke-width="6" />
+              <path d="M30 -188 A190 190 0 0 1 150 115" fill="none" stroke="#E7A27C" stroke-width="16" />
+              <path d="M-170 -80 Q-230 0 -170 80" fill="#d9eef7" stroke="#2b2b2b" stroke-width="5" />
+              <circle id="disc" cx="170" cy="78" r="26" fill="#1d2433" />
+              <circle id="discRing" cx="170" cy="78" r="48" fill="none" stroke="#D8343A" stroke-width="6" stroke-dasharray="10 8" />
+            </g>
+          </svg>
+          <div class="lbl" style="left:520px;top:500px;width:360px;text-align:left">จุดที่เส้นประสาทตาออก<br><span style="font-weight:500;color:#555a63">ไม่มีเซลล์รับภาพเลย</span></div>
+        </div>
+        <div id="bs2" class="layer" style="left:0;top:0;width:906px;height:640px;opacity:0">
+          <svg class="layer" style="left:0;top:0" viewBox="0 0 906 640" width="906" height="640">
+            <rect x="60" y="100" width="786" height="420" rx="20" fill="#1d2433" />
+            <g id="fig2"><ellipse cx="640" cy="260" rx="16" ry="20" fill="#aeb8cc" /><path d="M620 280 Q640 272 660 280 L668 400 L612 400 Z" fill="#aeb8cc" /></g>
+            <ellipse id="hole" cx="640" cy="320" rx="80" ry="110" fill="#000" opacity="0" />
+            <path d="M330 300 H370 M350 280 V320" stroke="#F5C84C" stroke-width="6" stroke-linecap="round" />
+          </svg>
+          <div class="lbl" style="left:60px;top:540px;width:786px;font-weight:500;color:#555a63">ภาพที่ตาขวาเห็น ตอนหลับตาซ้าย · ตาอีกข้างช่วยเติมให้ตอนลืมสองข้าง</div>
+        </div>
+      </div>
+
+      <!-- blind-spot test for the viewer -->
+      <div id="test" class="clip full" data-start="67.8" data-duration="14.6" data-track-index="5">
+        <h2>ลองเองตอนนี้</h2>
+        <ol>
+          <li id="st1"><b>1</b>ปิดตาซ้าย</li>
+          <li id="st2"><b>2</b>ตาขวาจ้องกากบาท ✚</li>
+          <li id="st3"><b>3</b>ค่อยๆ ขยับหน้าเข้าใกล้จอ<br><span style="margin-left:72px;font-size:30px;font-weight:500">ห่างจากจอราว 15–20 ซม.</span></li>
+        </ol>
+        <svg class="full" viewBox="0 0 1080 1920" width="1080" height="1920">
+          <path d="M110 1130 H210 M160 1080 V1180" stroke="#1d2433" stroke-width="16" stroke-linecap="round" />
+          <circle cx="940" cy="1130" r="40" fill="#D8343A" />
+        </svg>
+        <div class="bar"><i></i></div>
+      </div>
+
+      <!-- chips -->
+      <div id="clock" class="chip clip" data-start="0.3" data-duration="89.2" data-track-index="20" style="left:56px">
+        <svg viewBox="-24 -24 48 48" width="46" height="46"><circle r="19" fill="none" stroke="#1d2433" stroke-width="4" /><path d="M0 -10 L0 0 L8 6" fill="none" stroke="#1d2433" stroke-width="4" stroke-linecap="round" /></svg>
+        <div><small>เวลา</small><b id="clockt">03:05</b></div>
+      </div>
+      <div id="batt" class="chip clip" data-start="0.3" data-duration="89.2" data-track-index="21" style="left:322px">
+        <svg viewBox="0 0 56 30" width="56" height="30"><rect x="1.5" y="1.5" width="46" height="27" rx="6" fill="none" stroke="#6b6f78" stroke-width="3" /><rect x="50" y="9" width="5" height="12" rx="2" fill="#6b6f78" /></svg>
+        <div><small>แบตเตอรี่</small><b>หมด</b></div>
+      </div>
+
+      <!-- subtitles (cue + phrase times from ../audio/timing.json) -->
+      <div class="sub clip"   data-start="0.54"  data-duration="3.3"  data-track-index="30">ตีสามห้านาที คุณมาถึงบ้าน</div>
+      <div class="sub clip"   data-start="4.01"  data-duration="3.9"  data-track-index="30">ไฟสองดวงที่ตามมา<br>หายไปตรงหัวโค้ง</div>
+      <div class="sub clip"   data-start="8.05"  data-duration="3.75" data-track-index="30">คุณเปิดประตู<br>ทางเดินในบ้านมืดสนิท</div>
+      <div class="sub clip"   data-start="12.12" data-duration="3.0"  data-track-index="30">แล้วคุณก็เห็น<br>เงาดำก้อนหนึ่งลอยอยู่กลางทางเดิน</div>
+      <div class="sub clip"   data-start="15.27" data-duration="6.3"  data-track-index="30">คุณมองซ้าย มันลอยไปซ้าย<br>คุณมองขวา มันลอยไปขวา</div>
+      <div class="sub y clip" data-start="21.81" data-duration="5.65" data-track-index="30">กฎข้อแรก ถ้ามันขยับตามสายตาเป๊ะๆ<br>มันไม่ได้อยู่ข้างนอก</div>
+      <div class="sub r clip" data-start="27.53" data-duration="1.4"  data-track-index="30"><span>มันอยู่ในตาคุณ</span></div>
+      <div class="sub y clip" data-start="29.03" data-duration="3.4"  data-track-index="30">มันคือภาพติดตา<br>จากไฟจ้าที่คุณจ้องมาตลอดทาง</div>
+      <div class="sub clip"   data-start="32.47" data-duration="4.4"  data-track-index="30">กะพริบตาช้าๆ<br>แล้วมันจะจางไปเอง</div>
+      <div class="sub clip"   data-start="37.31" data-duration="1.6"  data-track-index="30">แต่มีอีกอย่างที่ต้องรู้</div>
+      <div class="sub y clip" data-start="38.98" data-duration="4.3"  data-track-index="30">ถ้าจู่ๆ เห็นจุดลอยเพิ่มขึ้นเยอะ<br>หรือเห็นแสงแวบๆ ที่หางตา</div>
+      <div class="sub r clip" data-start="43.44" data-duration="4.9"  data-track-index="30"><span>อาจเป็นสัญญาณจอตาฉีกขาด<br>ต้องไปหาหมอตาทันที</span></div>
+      <div class="sub clip"   data-start="48.69" data-duration="4.0"  data-track-index="30">เงาดำจางหายไปแล้ว<br>ปลายทางเดินว่างเปล่า</div>
+      <div class="sub clip"   data-start="52.84" data-duration="3.5"  data-track-index="30">คุณขยี้ตาซ้าย แล้วหลับมันไว้</div>
+      <div class="sub y clip" data-start="56.65" data-duration="4.65" data-track-index="30">กฎข้อสอง ตาทุกข้างมีจุดบอด<br>ตรงที่เส้นประสาทตาออกจากลูกตา</div>
+      <div class="sub y clip" data-start="61.45" data-duration="6.2"  data-track-index="30">ตอนหลับตาข้างเดียว<br>อะไรที่อยู่ตรงจุดบอด จะหายไปเฉยๆ</div>
+      <div class="sub dk clip" data-start="80.38" data-duration="1.9" data-track-index="30" style="top:1620px">จุดแดงหายไปใช่ไหม</div>
+      <div class="sub clip"   data-start="82.69" data-duration="2.3"  data-track-index="30">คุณลืมตาทั้งสองข้าง</div>
+      <div class="sub r clip" data-start="85.15" data-duration="4.3"  data-track-index="30"><span>และร่างนั้น<br>ยืนอยู่ปลายทางเดินมาตลอด</span></div>
+
+      <div id="next" class="clip full" data-start="89.6" data-duration="4.4" data-track-index="40">
+        <div class="pill">ตอนต่อไป</div>
+        <h1>ถ้าเช้าแล้ว<br>มันยังไม่ไป</h1>
+        <div class="rl"></div>
+        <div class="s1">EP.4 เร็วๆ นี้</div>
+        <div class="s2">กดติดตาม แล้วไปรอดด้วยกัน</div>
+      </div>
+      <div id="end" class="clip full" data-start="93.9" data-duration="3.04" data-track-index="41">
+        <img src="assets/timeoptic-white-spaced.svg" alt="TIMEOPTIC" />
+        <p>ดูแลสายตา ให้มองเห็นในวันที่สำคัญ</p>
+      </div>
+    </div>
+
+    <script>
+      let seed = 7; const rnd = () => (seed = (seed * 16807) % 2147483647) / 2147483647;
+      const NS = 'http://www.w3.org/2000/svg';
+      const el = (tag, attrs, parent) => { const e = document.createElementNS(NS, tag); for (const k in attrs) e.setAttribute(k, attrs[k]); parent && parent.appendChild(e); return e; };
+      const pine = (g, x, base, w, h) => {
+        el('rect', { x: x - w * .06, y: base - h * .12, width: w * .12, height: h * .14 }, g);
+        for (let i = 0; i < 4; i++) { const top = base - h + i * h * .2, bot = base - h * .1 - (3 - i) * h * .14, ww = w * (.45 + i * .18);
+          el('polygon', { points: `${x},${top} ${x + ww / 2},${bot} ${x - ww / 2},${bot}` }, g); }
+      };
+      const stars = document.getElementById('stars');
+      for (let i = 0; i < 80; i++) el('circle', { cx: rnd() * 1080, cy: rnd() * 900, r: .8 + rnd() * 2.2, fill: '#dfe6ff', opacity: .3 + rnd() * .6 }, stars);
+      const far = document.getElementById('far');
+      for (let x = -40; x < 1120; x += 38 + rnd() * 30) pine(far, x, 1080, 70 + rnd() * 40, 150 + rnd() * 120);
+      const near = document.getElementById('near');
+      [[-80, 2000, 380, 1300], [1120, 2000, 380, 1200]].forEach(([x, b, w, h]) => pine(near, x, b, w, h));
+      const fl = document.getElementById('floaters'); seed = 19;
+      for (let i = 0; i < 14; i++) { const x = -120 + rnd() * 240, y = -120 + rnd() * 240;
+        el('path', { d: `M${x} ${y} q${10 + rnd() * 20} ${-20 + rnd() * 40} ${25 + rnd() * 20} ${-10 + rnd() * 20} t${15 + rnd() * 20} ${-10 + rnd() * 20}` }, fl); }
+
+      window.__timelines = window.__timelines || {};
+      const tl = gsap.timeline({ paused: true });
+      document.querySelectorAll('.sub').forEach(s => tl.fromTo(s, { opacity: 0, y: 14 }, { opacity: 1, y: 0, duration: .25, ease: 'power2.out' }, parseFloat(s.dataset.start)));
+      const count = (target, from, to, t, d, fmt) => { const o = { v: from };
+        tl.fromTo(o, { v: from }, { v: to, duration: d, ease: 'none', onUpdate: () => target.textContent = fmt(o.v) }, t); };
+      count(document.getElementById('clockt'), 5, 9.9, 0.3, 89.2, v => '03:' + String(Math.floor(v)).padStart(2, '0'));
+
+      // house; the two lights vanish at the bend
+      tl.fromTo('#house', { scale: 1.08, transformOrigin: '540px 1000px' }, { scale: 1, duration: 8, ease: 'sine.out' }, 0);
+      tl.fromTo('#bendLights', { opacity: 0 }, { opacity: 1, duration: .5 }, 4.2);
+      tl.to('#bendLights', { x: 60, opacity: 0, duration: 1.2, ease: 'power1.in' }, 5.8);
+      // hallway: door opens from black
+      tl.fromTo('#dark0', { opacity: 1 }, { opacity: 0, duration: 1.2, ease: 'sine.inOut' }, 8.6);
+      tl.fromTo('#hallw', { scale: 1.15, transformOrigin: '540px 920px' }, { scale: 1, duration: 4, ease: 'sine.out' }, 8.2);
+      tl.fromTo('#blobs', { opacity: 0 }, { opacity: 1, duration: 1 }, 12.6);
+      tl.fromTo('#gz', { opacity: 0 }, { opacity: 1, duration: .4 }, 15.1);
+      tl.to('#gazeGrp', { x: -260, duration: .9, ease: 'power2.inOut' }, 15.4);
+      tl.to('#gazeGrp', { x: 260, duration: 1.3, ease: 'power2.inOut' }, 18.7);
+      tl.to('#gazeGrp', { x: 0, duration: .9, ease: 'power2.inOut' }, 20.4);
+      tl.to('#hall', { filter: 'blur(14px) brightness(.55)', duration: .5 }, 21.6);
+      // afterimage card
+      tl.fromTo('#aftcard', { opacity: 0, y: 40 }, { opacity: 1, y: 0, duration: .4, ease: 'power2.out' }, 21.6);
+      tl.fromTo('#mini', { x: 0 }, { x: -80, duration: .7, yoyo: true, repeat: 3, ease: 'power2.inOut' }, 23.4);
+      tl.set('#attl', { textContent: 'มันขยับตามสายตาเป๊ะๆ ไหม?' }, 0); tl.set('#attl', { textContent: 'ภาพติดตา (afterimage)' }, 29.0);
+      tl.fromTo('#patch', { scale: 1.6, opacity: 0, svgOrigin: '165 3' }, { scale: 1, opacity: 1, duration: .5, ease: 'back.out(2)' }, 29.2);
+      tl.to('#moveRow', { opacity: 0, duration: .3 }, 32.3);
+      tl.to('#alab', { opacity: 0, duration: .3 }, 32.3);
+      tl.fromTo('#blink', { opacity: 0 }, { opacity: 1, duration: .3 }, 32.5);
+      [33.2, 34.3, 35.4].forEach(t => tl.to('#lidp', { attr: { transform: 'scale(1 1)' }, duration: .25, yoyo: true, repeat: 1, ease: 'sine.inOut' }, t));
+      tl.to('#patch', { opacity: 0, duration: 3, ease: 'sine.in' }, 33.3);
+      tl.to('#aftcard', { opacity: 0, duration: .3 }, 36.7);
+      // warning card
+      tl.fromTo('#warn', { opacity: 0, y: 40 }, { opacity: 1, y: 0, duration: .4, ease: 'power2.out' }, 37.0);
+      tl.fromTo('#floaters path', { opacity: 0 }, { opacity: 1, duration: .2, stagger: .12 }, 39.0);
+      tl.set('#floaters', { opacity: 1 }, 39.0);
+      tl.to('#floaters', { x: 20, y: 14, duration: 2, yoyo: true, repeat: 1, ease: 'sine.inOut' }, 39.2);
+      tl.fromTo('#flash', { opacity: 0 }, { opacity: 1, duration: .08, yoyo: true, repeat: 5, repeatDelay: .2 }, 41.0);
+      tl.set('#flash', { opacity: 1 }, 42.4);
+      tl.fromTo('#tear', { opacity: 0 }, { opacity: 1, duration: .3 }, 43.5);
+      tl.fromTo('#w1', { opacity: 0 }, { opacity: 1, duration: .3 }, 43.6);
+      tl.fromTo('#doc', { opacity: 0, scale: .6 }, { opacity: 1, scale: 1, duration: .4, ease: 'back.out(2)' }, 45.9);
+      tl.to('#warn', { opacity: 0, duration: .3 }, 48.1);
+      // hallway again, blobs gone, left eye shut
+      tl.to('#hall', { filter: 'blur(0px) brightness(1)', duration: .5 }, 48.4);
+      tl.set('#blobs, #gz', { opacity: 0 }, 48.4);
+      tl.fromTo('#hallw', { scale: 1 }, { scale: 1.08, duration: 8, ease: 'none' }, 48.4);
+      tl.fromTo('#lid', { opacity: 0 }, { opacity: .6, duration: .2, yoyo: true, repeat: 3 }, 52.9);
+      tl.to('#lid', { opacity: 1, duration: .6 }, 54.8);
+      tl.to('#hall', { filter: 'blur(14px) brightness(.55)', duration: .5 }, 56.5);
+      // blind-spot card
+      tl.fromTo('#bscard', { opacity: 0, y: 40 }, { opacity: 1, y: 0, duration: .4, ease: 'power2.out' }, 56.5);
+      tl.fromTo('#discRing', { scale: 1.8, opacity: 0, svgOrigin: '170 78' }, { scale: 1, opacity: 1, duration: .5, ease: 'back.out(2)' }, 59.4);
+      tl.to('#bs1', { opacity: 0, duration: .3 }, 61.3);
+      tl.set('#bttl', { textContent: 'จุดบอดของตา' }, 0); tl.set('#bttl', { textContent: 'หลับตาข้างเดียว' }, 61.4);
+      tl.fromTo('#bs2', { opacity: 0 }, { opacity: 1, duration: .3 }, 61.45);
+      tl.fromTo('#hole', { opacity: 0 }, { opacity: 1, duration: .8 }, 64.3);
+      tl.to('#bscard', { opacity: 0, duration: .3 }, 67.5);
+      // test
+      tl.fromTo('#test', { opacity: 0 }, { opacity: 1, duration: .4 }, 67.8);
+      tl.fromTo('#st1', { opacity: .25 }, { opacity: 1, duration: .3 }, 69.5);
+      tl.fromTo('#st2', { opacity: .25 }, { opacity: 1, duration: .3 }, 71.0);
+      tl.fromTo('#st3', { opacity: .25 }, { opacity: 1, duration: .3 }, 72.4);
+      tl.fromTo('#test .bar i', { scaleX: 0 }, { scaleX: 1, duration: 6.5, ease: 'none' }, 74.0);
+      tl.to('#test', { opacity: 0, duration: .4 }, 82.0);
+      // both eyes open: the figure was there all along
+      tl.set('#hall', { filter: 'blur(0px) brightness(1)' }, 82.4);
+      tl.set('#lid', { opacity: 1 }, 82.4);
+      tl.set('#ghost', { opacity: .45 }, 82.4);
+      tl.to('#lid', { opacity: 0, duration: 1.2, ease: 'sine.inOut' }, 82.8);
+      tl.fromTo('#hallw', { scale: 1.08 }, { scale: 1.5, duration: 7, ease: 'power1.in' }, 82.4);
+      tl.to('#ghost', { opacity: .75, duration: 2 }, 85.2);
+      tl.to('#hall', { opacity: 0, duration: .6 }, 89.0);
+      // next + end
+      tl.fromTo('#next', { opacity: 0 }, { opacity: 1, duration: .5 }, 89.6);
+      tl.fromTo('#next .pill', { opacity: 0, y: 10 }, { opacity: 1, y: 0, duration: .4 }, 89.8);
+      tl.fromTo('#next h1', { opacity: 0, y: 24, filter: 'blur(6px)' }, { opacity: 1, y: 0, filter: 'blur(0px)', duration: .7, ease: 'power2.out' }, 90.0);
+      tl.fromTo('#next .rl', { scaleX: 0 }, { scaleX: 1, duration: .5 }, 91.0);
+      tl.fromTo('#next .s1', { opacity: 0 }, { opacity: 1, duration: .4 }, 91.3);
+      tl.fromTo('#next .s2', { opacity: 0 }, { opacity: 1, duration: .4 }, 91.8);
+      tl.fromTo('#end', { opacity: 0 }, { opacity: 1, duration: .5 }, 93.9);
+      tl.fromTo('#end img', { opacity: 0, y: 20, scale: .96 }, { opacity: 1, y: 0, scale: 1, duration: .8, ease: 'power2.out' }, 94.1);
+      tl.fromTo('#end p', { opacity: 0, y: 20 }, { opacity: 1, y: 0, duration: .7, ease: 'power2.out' }, 94.7);
+
+      window.__timelines['main'] = tl;
+      tl.seek(0);
+    </script>
+  </body>
+</html>

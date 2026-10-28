@@ -1,0 +1,525 @@
+<!doctype html>
+<html lang="th">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=1080, height=1920" />
+    <!--
+      Zombie series "กรุงเทพฯ ไม่มีพรุ่งนี้" Z03 "ขบวนสุดท้าย" (user, 2026-10-28). Pure zombie action, no eyewear/brand. Thai only.
+      ../template.html is the source: ../build.py inlines ../audio/timing.json (S = cue starts, E = cue ends, 1-based),
+      ../../_shared/cast.js at /*CAST*/ (characters + timeline helpers) -> index.html.
+      Everything is drawn in SVG by the script below; scenes switch on cue times, so re-timing the voice needs no edits here.
+      Scenes: hook 1 | city 2-3 | line (side view) 4 | carriages 5-16 (fight in side-section, lines 10-16 inside it)
+      | jump 16-17 | breather 17-19 | street looks up 20-21 | rail 22 | next 23
+    -->
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/gsap.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@400;500;600;700;800;900&family=Anuphan:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <style>
+      * { margin: 0; padding: 0; box-sizing: border-box; }
+      html, body { width: 1080px; height: 1920px; overflow: hidden; background: #0b0a10; }
+      #root { position: relative; width: 1080px; height: 1920px; overflow: hidden; font-family: 'Anuphan', sans-serif; color: #fff; }
+      .full { position: absolute; left: 0; top: 0; width: 1080px; height: 1920px; }
+      .scene { opacity: 0; overflow: hidden; }
+      .cam { transform-origin: 540px 960px; }
+      svg { display: block; overflow: visible; }
+
+      .sub { position: absolute; left: 50px; right: 50px; top: 1600px; text-align: center; font-family: 'Prompt', sans-serif; font-weight: 700;
+             font-size: 58px; line-height: 1.3; opacity: 0; text-shadow: 0 4px 0 #000, 0 0 18px rgba(0,0,0,.9), 0 0 4px #000; }
+      .sub.y { color: #FFD23F; }
+      .sub.r span { display: inline-block; background: #D8343A; color: #fff; padding: 4px 26px 8px; border-radius: 10px; text-shadow: none;
+                    box-shadow: 0 6px 24px rgba(0,0,0,.45); }
+      .sub b { color: #9fe8ff; font-weight: 800; }
+
+      .chip { position: absolute; top: 150px; height: 86px; background: #EEE8DC; border-radius: 16px; color: #1d2433; display: flex; align-items: center;
+              gap: 14px; padding: 0 26px 0 20px; box-shadow: 0 8px 26px rgba(0,0,0,.45); }
+      .chip small { display: block; font-size: 20px; font-weight: 500; color: #555a63; line-height: 1; }
+      .chip b { display: block; font-family: 'Prompt'; font-size: 40px; font-weight: 700; line-height: 1.05; letter-spacing: .02em; }
+      #ep { left: auto; right: 56px; background: #D8343A; color: #fff; font: 800 34px 'Prompt'; padding: 0 26px; }
+
+      .badge { position: absolute; left: 60px; top: 1380px; background: rgba(12,12,18,.82); border-left: 10px solid #FFD23F; border-radius: 10px;
+               padding: 14px 26px; font: 600 38px 'Prompt'; color: #fff; opacity: 0; white-space: nowrap; }
+      .badge i { font-style: normal; color: #FFD23F; }
+      #tag { position: absolute; left: 50%; top: 420px; transform: translateX(-50%); background: #D8343A; color: #fff; font: 800 50px 'Prompt';
+             padding: 10px 34px 14px; border-radius: 12px; opacity: 0; white-space: nowrap; box-shadow: 0 10px 30px rgba(0,0,0,.5); }
+
+      .fx { position: absolute; font: 900 150px/1 'Prompt'; color: #FFD23F; opacity: 0; white-space: nowrap;
+            -webkit-text-stroke: 10px #111; paint-order: stroke fill; text-shadow: 10px 10px 0 #D8343A; transform-origin: 50% 50%; }
+      .fx.w { color: #fff; text-shadow: 10px 10px 0 #2a6cd8; }
+      .fx.s { font-size: 96px; }
+
+      #title { position: absolute; left: 0; right: 0; top: 360px; text-align: center; opacity: 0; }
+      #title h1 { font: 900 112px/1.05 'Prompt'; color: #fff; -webkit-text-stroke: 8px #111; paint-order: stroke fill; text-shadow: 8px 8px 0 #D8343A; }
+      #title p { margin-top: 18px; display: inline-block; background: #FFD23F; color: #111; font: 800 44px 'Prompt'; padding: 6px 28px; border-radius: 8px; }
+
+      #flash { background: #fff; opacity: 0; }
+      #redv { background: radial-gradient(ellipse 70% 60% at 50% 50%, rgba(216,52,58,0) 40%, rgba(150,10,20,.85)); opacity: 0; }
+      #bars { pointer-events: none; }
+      #bars div { position: absolute; left: 0; width: 1080px; height: 0; background: #000; }
+
+      #next { background: radial-gradient(ellipse 80% 45% at 50% 42%, #2a1416, #0d0b0d 70%); }
+      #next .pill { position: absolute; left: 50%; top: 600px; transform: translateX(-50%); border: 2px solid #4a4a55; border-radius: 40px; padding: 8px 30px;
+                    font-size: 32px; font-weight: 600; color: #d6d6dc; white-space: nowrap; }
+      #next .pill:before { content: ''; display: inline-block; width: 12px; height: 12px; border-radius: 50%; background: #D8343A; margin-right: 12px; vertical-align: 4px; }
+      #next h1 { position: absolute; left: 40px; right: 40px; top: 700px; text-align: center; font: 900 120px/1.15 'Prompt'; color: #fff;
+                 -webkit-text-stroke: 8px #111; paint-order: stroke fill; text-shadow: 8px 8px 0 #D8343A; }
+      #next .rl { position: absolute; left: 400px; top: 1000px; width: 280px; height: 8px; background: #D8343A; border-radius: 4px; }
+      #next .s1 { position: absolute; left: 0; right: 0; top: 1040px; text-align: center; font: 700 40px 'Prompt'; color: #FFD23F; }
+      #next .s2 { position: absolute; left: 0; right: 0; top: 1110px; text-align: center; font-size: 34px; color: #c8c8d0; }
+      #next .sr { position: absolute; left: 0; right: 0; top: 300px; text-align: center; font: 800 46px 'Prompt'; color: #e05a5f; letter-spacing: .04em; }
+    </style>
+  </head>
+  <body>
+    <div id="root" data-composition-id="main" data-start="0" data-duration="@TOTAL@" data-width="1080" data-height="1920">
+      <svg width="0" height="0" style="position:absolute">
+        <defs>
+          <linearGradient id="gNight" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#0a0c1c" /><stop offset=".7" stop-color="#2a2048" /></linearGradient>
+          <radialGradient id="gGlow"><stop offset="0" stop-color="#ffb070" stop-opacity=".9" /><stop offset="1" stop-color="#ffb070" stop-opacity="0" /></radialGradient>
+          <radialGradient id="gEye"><stop offset="0" stop-color="#fff" stop-opacity=".9" /><stop offset="1" stop-color="#fff" stop-opacity="0" /></radialGradient>
+        </defs>
+      </svg>
+
+      <div id="hook" class="scene full" style="opacity:1"><div class="cam full"><svg class="full" viewBox="0 0 1080 1920" id="sHook"></svg></div></div>
+      <div id="city" class="scene full"><div class="cam full"><svg class="full" viewBox="0 0 1080 1920" id="sCity"></svg></div></div>
+      <div id="line" class="scene full"><div class="cam full"><svg class="full" viewBox="0 0 1080 1920" id="sLine"></svg></div></div>
+      <div id="car" class="scene full"><div class="cam full"><svg class="full" viewBox="0 0 1080 1920" id="sCar"></svg></div></div>
+      <div id="jump" class="scene full"><div class="cam full"><svg class="full" viewBox="0 0 1080 1920" id="sJump"></svg></div></div>
+      <div id="rest" class="scene full"><div class="cam full"><svg class="full" viewBox="0 0 1080 1920" id="sRest"></svg></div></div>
+      <div id="below" class="scene full"><div class="cam full"><svg class="full" viewBox="0 0 1080 1920" id="sBelow"></svg></div></div>
+      <div id="rail" class="scene full"><div class="cam full"><svg class="full" viewBox="0 0 1080 1920" id="sRail"></svg></div></div>
+
+      <div id="redv" class="full"></div>
+      <div id="flash" class="full"></div>
+      <div id="bars" class="full"><div id="barT" style="top:0"></div><div id="barB" style="bottom:0"></div></div>
+      <div id="fxl" class="full"></div>
+
+      <div id="clock" class="chip" style="left:56px">
+        <svg viewBox="-24 -24 48 48" width="46" height="46"><circle r="19" fill="none" stroke="#1d2433" stroke-width="4" /><path d="M0 -10 L0 0 L8 6" fill="none" stroke="#1d2433" stroke-width="4" stroke-linecap="round" /></svg>
+        <div><small>วันที่ 2</small><b id="clockt">02:31</b></div>
+      </div>
+      <div id="ep" class="chip">EP.3</div>
+
+      <div id="subs"></div>
+
+      <div id="next" class="scene full">
+        <div class="sr">กรุงเทพฯ ไม่มีพรุ่งนี้</div>
+        <div class="pill">ตอนหน้า</div>
+        <h1>ชั้น 9</h1>
+        <div class="rl"></div>
+        <div class="s1">EP.4 เร็วๆ นี้</div>
+        <div class="s2">กดติดตาม แล้วไปรอดด้วยกัน</div>
+      </div>
+    </div>
+
+    <script>
+      const TIMING = /*TIMING*/;
+      const S = [0], E = [0]; TIMING.cues.forEach(c => { S[c.n] = c.start; E[c.n] = c.end; });
+      const END = TIMING.total;
+      let seed = 7; const rnd = () => (seed = (seed * 16807) % 2147483647) / 2147483647;
+      const NS = 'http://www.w3.org/2000/svg';
+      const el = (tag, a, p) => { const e = document.createElementNS(NS, tag); for (const k in a) e.setAttribute(k, a[k]); p && p.appendChild(e); return e; };
+      const $ = id => document.getElementById(id);
+      const T = o => `translate(${o.x ?? 0} ${o.y ?? 0}) rotate(${o.r ?? 0}) scale(${o.sx ?? 1} ${o.sy ?? 1})`;
+      const G = (p, o = {}) => el('g', { transform: T(o) }, p);
+      const piv = (p, x, y, o = {}) => G(G(p, { x, y }), o);   // inner group rotates around (x, y)
+
+/*CAST*/
+
+      // ---------- shared episode helpers (from Z02): state-tracked moves so every tween starts where the last one ended ----------
+      const ST = new Map();
+      const put = (g, o) => { ST.set(g, o); g.setAttribute('transform', T(o)); return g; };
+      const go = (g, t, d, b, ease = 'power2.out') => { const a = ST.get(g) || {}; const n = { ...a, ...b }; mv(g, t, d, a, n, ease); ST.set(g, n); };
+      const CS = {};   // camera state per scene
+      const cg = (id, t, d, b, ease = 'sine.inOut') => { const a = CS[id] || { scale: 1, transformOrigin: '540px 960px' }; const n = { ...a, ...b }; cam(id, t, d, a, n, ease); CS[id] = n; };
+      const MS = new Map();   // mouth shapes
+      const say = (m, t, d) => { const a = MS.get(m) || m.getAttribute('d'); tl.fromTo(m, { attr: { d: a } }, { attr: { d }, duration: .08, immediateRender: false }, t); MS.set(m, d); };
+      const talk = (m, t0, t1, open, shut) => { for (let t = t0; t < t1 - .12; t += .2) { say(m, t, open); say(m, t + .1, shut); } };
+      const TM = { n: 'M16 16 Q22 18 28 15', o: 'M14 10 Q22 28 30 10 Z', g: 'M12 10 Q22 26 32 9 Z' };   // Tae: neutral / shout / grin
+      const FM = { n: 'M14 15 Q20 17 25 14', o: 'M12 10 Q20 28 28 10 Z', g: 'M12 11 Q20 22 28 10 Z' };
+      const mouthFill = m => { m.setAttribute('fill', '#5a1a1a'); return m; };
+      const appear = (g, t, on = 1) => tl.set(g, { attr: { opacity: on } }, t);
+
+      const MM = { n: 'M10 12 Q15 14 20 11', o: 'M9 8 Q15 22 21 8 Z' };
+
+      // fight beats (the same formulas are in audio/ambience.py); lines 10-16 sit inside the fight
+      const H = {
+        slam: S[1] + .15,
+        pin: S[10] - 2.2, helm: S[10] - 1.0,
+        kick: S[11] - 2.0, elbow: S[11] - .8,
+        bar: S[12] - 1.7, knee: S[12] - .7,
+        dom1: S[13] - 2.5, dom2: S[13] - 2.2, teeth: S[13] - 1.2, duck: E[13] + .25,
+        swing: S[14] - .45,
+        door1: S[15] - 1.8, door2: S[15] - 1.2, lever: E[15] + .1,
+        trip: S[16] - .9, land: S[17] - .35,
+      };
+      H.slowA = H.duck + .45;
+
+      // ---------- subtitles ----------
+      const LINES = [null,
+        ['<b>เต้:</b> “อย่าหายใจดัง…<br>มันฟังอยู่”', 'r'],
+        ['ตีสองครึ่ง<br>ข้างล่างเต็มไปด้วยพวกมัน', ''],
+        ['ฝนบอก โรงพยาบาล<br>อยู่อีกฝั่งของราง', ''],
+        ['ทางเดียวที่ไม่มีพวกมัน…<br>คือข้างบน', 'y'],
+        ['รถไฟฟ้าขบวนนี้<br>จอดค้างตั้งแต่เย็น', ''],
+        ['<b>มิว:</b> “ในรถ…<br>มีคนนั่งอยู่”', 'r'],
+        ['<b>ฝน:</b> “ไม่ใช่คนแล้วจ้ะหนู”', 'r'],
+        ['โฮ่ง! โฮ่ง!', 'r'],
+        ['<b>เต้:</b> “โอเค…<br>ป้ายหน้า โรงพยาบาลครับ”', 'y'],
+        ['<b>ฝน:</b> “ตีหัว!<br>ที่อื่นไม่หยุด!”', 'y'],
+        ['<b>เต้:</b> “ขอโทษพี่<br>ไม่ได้ลุกให้คนแก่!”', ''],
+        ['ตู้สอง… ยังมีอีก', 'r'],
+        ['<b>ฝน:</b> “ก้มลง!”', 'r'],
+        ['<b>เต้:</b> “บัตรรถไฟฟ้าหักอีก<br>ซวยซ้ำ!”', ''],
+        ['ประตูฉุกเฉิน…<br>ดึงคันโยก!', 'y'],
+        ['<b>เต้:</b> “โดด!”', 'r'],
+        ['ทุกคนยังอยู่ครบ…<br>มิว ข้าวตัง ฝน', ''],
+        ['<b>มิว:</b> “พี่เต้ เลือดออก”', ''],
+        ['<b>เต้:</b> “เลือดมัน<br>ไม่ใช่ของพี่”', ''],
+        ['แล้วเสียงข้างล่าง…<br>ก็เงียบไป', ''],
+        ['ทั้งถนน…<br>เงยหน้าขึ้นมามองเรา', 'r'],
+        ['ทางเดียวที่เหลือ…<br>คือรางนี้', 'y'],
+        null];
+      const subs = $('subs');
+      for (let n = 1; n < LINES.length; n++) { if (!LINES[n]) continue;
+        const d = document.createElement('div'); d.className = 'sub ' + LINES[n][1];
+        d.innerHTML = LINES[n][1] === 'r' ? `<span>${LINES[n][0]}</span>` : LINES[n][0]; subs.appendChild(d);
+        const off = Math.min(E[n] + .35, (S[n + 1] ?? END) - .05);
+        tl.fromTo(d, { opacity: 0, y: 14 }, { opacity: 1, y: 0, duration: .18, ease: 'power2.out', immediateRender: false }, S[n] - .05);
+        tl.to(d, { opacity: 0, duration: .1 }, off); }
+
+      // clock 02:31 -> 02:33
+      { const o = { v: 31 }; tl.fromTo(o, { v: 31 }, { v: 33.9, duration: E[22] - S[1], ease: 'none', immediateRender: false, onUpdate: () => $('clockt').textContent = '02:' + Math.floor(o.v) }, S[1]); }
+      tl.to('#clock, #ep', { opacity: 0, duration: .3 }, S[23] - .2);
+
+      const flicker = (sel, t0, t1, seedN) => { seed = seedN; for (let t = t0; t < t1; t += .25 + rnd() * .9) { tl.to(sel, { opacity: .55, duration: .04 }, t); tl.to(sel, { opacity: 1, duration: .05 }, t + .06 + rnd() * .08); } };
+      const NIGHT = '#0c1024';
+
+      // ================= 1. hook: a face slams the window =================
+      { const s = $('sHook'), t1 = S[2] - .05;
+        el('rect', { width: 1080, height: 1920, fill: '#05060c' }, s);
+        el('rect', { x: 120, y: 360, width: 860, height: 1000, rx: 60, fill: '#0e1430', stroke: '#2a2f3c', 'stroke-width': 30 }, s);
+        seed = 3; for (let i = 0; i < 40; i++) el('circle', { cx: 160 + rnd() * 780, cy: 900 + rnd() * 400, r: 2 + rnd() * 4, fill: ['#ffcf6a', '#ff7a5a', '#fff'][i % 3], opacity: .6 }, s);
+        const face = G(s); face.setAttribute('opacity', 0);
+        el('ellipse', { cx: 700, cy: 800, rx: 230, ry: 260, fill: ZSK, opacity: .95 }, face);
+        el('ellipse', { cx: 630, cy: 760, rx: 34, ry: 22, fill: '#fff' }, face); el('ellipse', { cx: 780, cy: 760, rx: 34, ry: 22, fill: '#fff' }, face);
+        el('circle', { cx: 630, cy: 760, r: 60, fill: 'url(#gEye)' }, face); el('circle', { cx: 780, cy: 760, r: 60, fill: 'url(#gEye)' }, face);
+        el('path', { d: 'M600 920 Q700 990 810 910 Q700 940 600 920 Z', fill: '#3a0a10' }, face);
+        el('path', { d: 'M640 925 L650 960 M700 935 L700 975 M760 925 L752 962', stroke: '#8a1018', 'stroke-width': 8 }, face);
+        [[430, 640, -20], [950, 620, 18]].forEach(([x, y, r]) => { const h = G(face, { x, y, r });
+          el('ellipse', { rx: 70, ry: 90, fill: ZSK, opacity: .9 }, h);
+          [-44, -15, 15, 44].forEach(dx => el('rect', { x: dx - 12, y: -170, width: 24, height: 100, rx: 12, fill: ZSK, opacity: .9 }, h)); });
+        el('rect', { x: 120, y: 360, width: 860, height: 1000, rx: 60, fill: '#fff', opacity: .05 }, s);
+        // Tae in the foreground, hand over his mouth
+        const tH = tae(s, { x: 260, y: 2380, sx: 4.2, sy: 4.2 }, { helmet: false, armF: { r: -168 } });
+        tl.set(face, { attr: { opacity: 1 } }, H.slam);
+        tl.fromTo(face, { attr: { transform: T({ x: 700, y: 800, sx: .6, sy: .6 }) } }, { attr: { transform: T({ x: 0, y: 0 }) }, duration: .1, ease: 'power3.in', immediateRender: false }, H.slam - .1);
+        hit('hook', s, H.slam, 700, 820, 'ปึ้ง!', 520, 420, 'w', -8);
+        cam('hook', 0, t1, { scale: 1.06, transformOrigin: '540px 900px' }, { scale: 1.18 }, 'sine.in');
+        flicker('#hook .cam', H.slam + .6, t1, 5);
+        show('hook', 0, t1); }
+
+      // ================= 2-3. the city from the station stairs =================
+      { const s = $('sCity'), t0 = S[2] - .05, t1 = S[4] - .05;
+        el('rect', { width: 1080, height: 1920, fill: 'url(#gNight)' }, s);
+        el('circle', { cx: 860, cy: 420, r: 70, fill: '#e8e2c4', opacity: .8 }, s);
+        skyline(s, 1000, '#1c1a34', 13, 360);
+        const m = G(s, { x: 300, y: 1060 });
+        el('path', { d: 'M-22 0 L22 0 L12 -420 L0 -460 L-12 -420 Z', fill: '#100e20' }, m); el('rect', { x: -70, y: -60, width: 140, height: 60, fill: '#100e20' }, m);
+        el('rect', { y: 1000, width: 1080, height: 920, fill: '#141225' }, s);
+        // burning bus
+        const bus = G(s, { x: 640, y: 1300 }); el('rect', { x: -170, y: -110, width: 340, height: 110, rx: 12, fill: '#4a1a18' }, bus);
+        const fire = G(bus); [[-110, 90], [-20, 130], [80, 100]].forEach(([x, h]) => el('path', { d: `M${x - 50} -110 Q${x - 40} ${-110 - h} ${x} ${-110 - h * 1.3} Q${x + 30} ${-110 - h * .8} ${x + 50} -110 Z`, fill: '#ff8a2a', opacity: .9 }, fire));
+        el('circle', { cx: 0, cy: -160, r: 260, fill: 'url(#gGlow)', opacity: .5 }, bus);
+        for (let k = 0; k < (t1 - t0) / .15; k++) tl.to(fire, { attr: { transform: T({ sx: 1 + (k % 2 ? .08 : -.05), sy: 1 + (k % 3) * .06 }) }, duration: .15 }, t0 + k * .15);
+        // swarm: eye dots drifting toward the fire
+        seed = 17; const sw = G(s);
+        for (let i = 0; i < 140; i++) { const x = rnd() * 1080, y = 1140 + rnd() * 700, g = G(sw, { x, y });
+          el('circle', { r: 9 + (y - 1140) / 70, fill: '#07060e' }, g); el('circle', { cx: -3, cy: -3, r: 2.2, fill: '#fff' }, g); el('circle', { cx: 4, cy: -3, r: 2.2, fill: '#fff' }, g);
+          mv(g, t0, t1 - t0, { x, y }, { x: x + (640 - x) * .12, y: y + (1300 - y) * .08 }, 'none'); }
+        // viaduct + station stairs with four small figures climbing
+        el('rect', { x: -40, y: 860, width: 1160, height: 70, fill: '#2c2f42' }, s);
+        [80, 420, 760, 1040].forEach(x => el('rect', { x: x - 26, y: 930, width: 52, height: 400, fill: '#23253a' }, s));
+        const st = G(s, { x: 820, y: 1500 });
+        for (let i = 0; i < 12; i++) el('rect', { x: i * -28, y: -i * 48, width: 120, height: 48, fill: '#3a3d55' }, st);
+        const climb = G(st); [['#f07a1e', 0], ['#2a9d8f', 40], ['#f5a8c8', 75], ['#9a6232', 100]].forEach(([c, d]) => { const p = person(climb, -d, -20, .55, c, false, false); });
+        mv(climb, t0, t1 - t0, { x: 0, y: 0 }, { x: -250, y: -430 }, 'none');
+        cam('city', t0, t1 - t0, { scale: 1.25, transformOrigin: '640px 1200px' }, { scale: 1 }, 'power1.out');
+        show('city', t0, t1); }
+
+      // ================= 4. side view of the line: train stuck, hospital far right =================
+      { const s = $('sLine'), t0 = S[4] - .05, t1 = S[5] - .05;
+        el('rect', { width: 1080, height: 1920, fill: 'url(#gNight)' }, s);
+        const w = G(s);
+        skyline(w, 1050, '#1c1a34', 23, 300); const w2 = G(w, { x: 1150 }); skyline(w2, 1050, '#1c1a34', 29, 300);
+        el('rect', { x: -100, y: 1050, width: 2600, height: 900, fill: '#141225' }, w);
+        el('rect', { x: -100, y: 1100, width: 2600, height: 60, fill: '#2c2f42' }, w);
+        for (let x = 0; x < 2400; x += 360) el('rect', { x: x - 30, y: 1160, width: 60, height: 800, fill: '#23253a' }, w);
+        const tr = G(w, { x: 120, y: 1100 });
+        for (let i = 0; i < 4; i++) { el('rect', { x: i * 250, y: -170, width: 240, height: 170, rx: 26, fill: '#d7dbe2' }, tr);
+          el('rect', { x: i * 250 + 20, y: -140, width: 200, height: 60, rx: 8, fill: '#2a3550' }, tr);
+          el('rect', { x: i * 250, y: -56, width: 240, height: 14, fill: '#2a6cd8' }, tr); }
+        const hosp = G(w, { x: 1900, y: 1050 });
+        el('rect', { x: -160, y: -520, width: 320, height: 520, fill: '#2a2c48' }, hosp);
+        for (let r = 0; r < 6; r++) for (let c = 0; c < 4; c++) el('rect', { x: -130 + c * 70, y: -480 + r * 70, width: 40, height: 40, fill: '#3a3d5c' }, hosp);
+        el('circle', { cy: -600, r: 120, fill: 'url(#gGlow)', opacity: .3 }, hosp);
+        el('path', { d: 'M-24 -660 L24 -660 L24 -624 L60 -624 L60 -576 L24 -576 L24 -540 L-24 -540 L-24 -576 L-60 -576 L-60 -624 L-24 -624 Z', fill: RED }, hosp);
+        const arrow = el('path', { d: 'M1150 1020 Q1500 900 1820 760', stroke: '#FFD23F', 'stroke-width': 10, fill: 'none', 'stroke-dasharray': '24 20', 'stroke-dashoffset': 600, opacity: .9 }, w);
+        mv(w, t0, t1 - t0, { x: 0 }, { x: -1000 }, 'power1.inOut');
+        tl.fromTo(arrow, { attr: { 'stroke-dashoffset': 600 } }, { attr: { 'stroke-dashoffset': 0 }, duration: t1 - t0, ease: 'none', immediateRender: false }, t0);
+        show('line', t0, t1); }
+
+      // ================= 5-16. the carriages (side-section) =================
+      { const s = $('sCar'), t0 = S[5] - .05, t1 = S[16] + .9, FL = 1400;
+        el('rect', { width: 1080, height: 1920, fill: 'url(#gNight)' }, s);
+        el('circle', { cx: 860, cy: 360, r: 60, fill: '#e8e2c4', opacity: .8 }, s);
+        skyline(s, 820, '#1c1a34', 71, 380);
+        el('rect', { x: -40, y: 760, width: 1160, height: 70, rx: 30, fill: '#c9ced6' }, s);   // train roof
+        const w = G(s);                                // world: car 1 x 0-1300, car 2 x 1320-2620, car 3 behind the glass door at 2620
+        const lights = G(w);
+        el('rect', { x: -200, y: 820, width: 3100, height: 600, fill: '#2b3040' }, w);
+        el('rect', { x: -200, y: 820, width: 3100, height: 40, fill: '#e8ecf2' }, w);
+        for (let x = -100; x < 2700; x += 260) { el('rect', { x, y: 950, width: 210, height: 170, rx: 14, fill: NIGHT }, w);
+          seed = Math.round(x) + 900; for (let i = 0; i < 6; i++) el('circle', { cx: x + 20 + rnd() * 170, cy: 1040 + rnd() * 70, r: 3, fill: '#ffcf6a', opacity: .6 }, w); }
+        el('rect', { x: -200, y: 1240, width: 3100, height: 60, rx: 10, fill: '#3a6ab8' }, w);   // bench back
+        el('rect', { x: -200, y: 1290, width: 3100, height: 40, rx: 8, fill: '#2a5a9a' }, w);
+        el('rect', { x: -200, y: FL, width: 3100, height: 40, fill: '#5a6070' }, w);
+        el('rect', { x: -200, y: FL + 40, width: 3100, height: 600, fill: '#101219' }, w);
+        // gangway between car 1 and 2, emergency door + lever, glass door to car 3
+        el('rect', { x: 1290, y: 860, width: 40, height: 540, fill: '#1a1c26' }, w);
+        el('rect', { x: 2400, y: 880, width: 150, height: 520, rx: 10, fill: '#3a4052', stroke: '#c9ced6', 'stroke-width': 6 }, w);
+        const lever = G(w, { x: 2575, y: 1080 }); el('rect', { x: -12, y: -50, width: 24, height: 60, rx: 6, fill: RED }, lever);
+        el('circle', { cx: 2575, cy: 1030, r: 50, fill: RED, opacity: .18 }, w);
+        const door3 = G(w, { x: 2620, y: 860 }); el('rect', { width: 120, height: 540, fill: '#1c2a3a', stroke: '#c9ced6', 'stroke-width': 8 }, door3);
+        const ghosts = G(door3); ghosts.setAttribute('opacity', 0);
+        for (let i = 0; i < 5; i++) { el('circle', { cx: 30 + (i % 3) * 30, cy: 160 + i * 60, r: 24, fill: '#0b0d14' }, ghosts); el('circle', { cx: 38 + (i % 3) * 30, cy: 156 + i * 60, r: 4, fill: '#fff' }, ghosts); }
+        for (let x = 150; x < 2600; x += 330) el('line', { x1: x, y1: 860, x2: x, y2: FL, stroke: '#c9ced6', 'stroke-width': 10 }, w);
+        el('line', { x1: -200, y1: 880, x2: 2900, y2: 880, stroke: '#c9ced6', 'stroke-width': 8 }, w);
+        const straps = []; for (let x = 40; x < 2600; x += 110) { const g = piv(w, x, 880); el('line', { x1: 0, y1: 0, x2: 0, y2: 60, stroke: '#9aa1ab', 'stroke-width': 4 }, g); el('circle', { cy: 76, r: 16, fill: 'none', stroke: '#e8e8e8', 'stroke-width': 6 }, g); straps.push({ x, g }); }
+        straps.forEach((st, i) => { for (let k = 0; k < 3; k++) mv(st.g, t0 + k * 2 + i * .07, 1, { r: -6 }, { r: 6 }, 'sine.inOut'); });
+        // seated zombies (heads down) and their standing doubles
+        const sitZ = (x, sh, flip = -1) => { const g = G(w, { x, y: 1454, sx: flip * 1.05, sy: 1.05 }); const z = zomb(g, {}, { noLegs: true, shirt: sh, armF: 70, armR: 80 });
+          el('path', { d: 'M-24 -170 L60 -170 L70 -150 L70 -54 L48 -54 L46 -146 L-24 -146 Z', fill: '#2d2a33' }, g); z.hd.setAttribute('transform', T({ x: 30, y: -318, r: 48 })); return { g, z }; };
+        const Z1s = sitZ(700, '#cfd3cf'), Z2s = sitZ(900, '#5a6a8a'), Z3s = sitZ(1060, '#8a8a8a');
+        el('circle', { cx: -6, cy: -330, r: 14, fill: '#e8e8e8' }, Z3s.z.hd);   // the old one: white hair
+        const stand = (x, sh, flip = -1, o = {}) => { const z = zomb(w, { x, y: FL, sx: flip * 1.1, sy: 1.1 }, { shirt: sh, armF: o.armF ?? -10, armR: o.armR ?? -20 }); z.g.setAttribute('opacity', 0); put(z.g, { x, y: FL, sx: flip * 1.1, sy: 1.1 }); return z; };
+        const Z1 = stand(700, '#cfd3cf'), Z2 = stand(900, '#5a6a8a'), Z3 = stand(1060, '#8a8a8a');
+        el('circle', { cx: -6, cy: -330, r: 14, fill: '#e8e8e8' }, Z3.hd);
+        const R1 = stand(1700, '#7a4a3a', -1, { armF: -30, armR: -10 });
+        const Z4 = stand(1820, '#3e5a4a'), Z5 = stand(1960, '#6a3a5a'), Z6 = stand(2230, '#8a7a5a');
+        const R2 = stand(2420, '#5a6a8a', -1, { armF: -30, armR: -10 });
+        [Z4, Z5, Z6].forEach(z => z.g.setAttribute('opacity', 1));
+        const spill = [0, 1, 2].map(i => stand(2700 + i * 60, SHIRTS[i]));
+        // heroes
+        const mewC = mew(w, { x: 120, y: FL, sx: 1.1, sy: 1.1 }, { armF: { r: -60 }, bandage: false }); put(mewC.g, { x: 120, y: FL, sx: 1.1, sy: 1.1 });
+        const dg = dog(w, { x: 150, y: FL - 150, sx: .6, sy: .6 }); put(dg.g, { x: 150, y: FL - 150, sx: .6, sy: .6 });
+        const fonC = fon(w, { x: 260, y: FL, sx: 1.1, sy: 1.1 }, { armF: { r: -20 }, pole: { r: 10 } }); put(fonC.g, { x: 260, y: FL, sx: 1.1, sy: 1.1 });
+        const taeC = tae(w, { x: 420, y: FL, sx: 1.1, sy: 1.1 }, { helmet: true, armF: { r: -20 } }); put(taeC.g, { x: 420, y: FL, sx: 1.1, sy: 1.1 });
+        put(mewC.hd, { x: 2, y: -240 }); put(lever, { x: 2575, y: 1080 });
+        [taeC.aF, taeC.lF, taeC.lB, taeC.aB, fonC.aF, fonC.pole, fonC.lF, mewC.aF, dg.hd, dg.tail].forEach(g => put(g, {}));
+        put(taeC.aF, { r: -20 }); put(fonC.aF, { r: -20 }); put(fonC.pole, { r: 10 }); put(mewC.aF, { r: -60 }); put(dg.tail, { r: -30 });
+        const card = G(w); card.setAttribute('opacity', 0);
+        const walk = (c, t, d, x, extra = {}) => { go(c.g, t, d, { x, ...extra }, 'sine.inOut'); if (c.lF) for (let k = 0; k < d / .3; k++) { go(c.lF, t + k * .3, .15, { r: 18 }, 'sine.inOut'); go(c.lF, t + k * .3 + .15, .15, { r: -12 }, 'sine.inOut'); } if (c.lF) go(c.lF, t + d, .1, { r: 0 }); };
+        // camera: pan the world per car
+        put(w, { x: 0 });
+        cg('car', t0, .01, { scale: 1.12, transformOrigin: '400px 1200px' });
+        cg('car', t0 + .02, S[6] - t0, { scale: 1 }, 'sine.out');
+        flicker('#car .cam', t0 + .3, t1, 9);
+        // 6: Mew peeks out; 7: one head snaps up; 8: the dog barks
+        go(mewC.g, S[6], .4, { x: 160 }); go(mewC.hd, S[6], .3, { x: 2, y: -240, r: -8 });
+        cg('car', S[7] - .1, .25, { scale: 2.0, transformOrigin: '1060px 1100px' }, 'power3.out');
+        tl.to(Z3s.z.hd, { attr: { transform: T({ x: 30, y: -318, r: 0 }) }, duration: .12, ease: 'power3.out' }, S[7] + .2);
+        tl.fromTo('#redv', { opacity: 0 }, { opacity: .6, duration: .15, yoyo: true, repeat: 1, immediateRender: false }, S[7] + .2);
+        cg('car', S[8] - .1, .3, { scale: 1.6, transformOrigin: '160px 1250px' }, 'power3.out');
+        [S[8] + .1, S[8] + .7].forEach(t => { tl.to(dg.mouth, { attr: { d: 'M28 2 L48 -2 L46 14 L28 10 Z' }, duration: .05 }, t); tl.to(dg.mouth, { attr: { d: 'M30 6 L46 8' }, duration: .05 }, t + .2); word(t, 'โฮ่ง!', 80, 700, 'w s', -8, .4); });
+        // 9: buckle up, Fon steps forward
+        cg('car', S[9] - .1, .4, { scale: 1, transformOrigin: '540px 1200px' }, 'power2.out');
+        go(taeC.aF, S[9], .3, { r: -150 }); go(taeC.aF, S[9] + .5, .3, { r: -20 });
+        walk(fonC, S[9] + .3, .8, 520);
+        go(fonC.pole, S[9] + .8, .3, { r: -80 });
+        // --- B1 pin + helmet (car 1) ---
+        appear(Z1s.g, H.pin - .45, 0); appear(Z1.g, H.pin - .45);
+        go(Z1.g, H.pin - .45, .4, { x: 620 }, 'power2.in');
+        go(fonC.pole, H.pin - .15, .15, { r: -95 }, 'power3.in');
+        hit('car', s, H.pin, 600, 1150, 'เคร้ง!', 520, 640, '', -6);
+        go(Z1.g, H.pin, .2, { x: 680, r: -6 });
+        walk(taeC, H.pin + .05, .4, 540);
+        go(taeC.aF, H.helm - .35, .25, { r: -175 }, 'power2.in'); go(taeC.aF, H.helm - .1, .1, { r: 60 }, 'power4.in');
+        hit('car', s, H.helm, 660, 1000, 'ตุ้บ!', 200, 600, 'w', 8);
+        go(Z1.g, H.helm, .5, { x: 760, y: FL + 40, r: -90 }, 'power2.in');
+        go(taeC.aF, H.helm + .3, .3, { r: -20 }); go(fonC.pole, H.helm + .3, .3, { r: 10 });
+        tl.to(fonC.mouth, { attr: { d: FM.o }, duration: .05 }, S[10]); tl.to(fonC.mouth, { attr: { d: FM.n }, duration: .05 }, E[10]);
+        // --- B3 bar kick, B4 elbow + the priority-seat joke ---
+        appear(Z2s.g, H.kick - 1.0, 0); appear(Z2.g, H.kick - 1.0); appear(Z3s.g, H.kick - .9, 0); appear(Z3.g, H.kick - .9);
+        go(Z2.g, H.kick - 1.0, .6, { x: 820 }, 'power1.inOut'); go(Z3.g, H.kick - .9, .6, { x: 980 }, 'power1.inOut');
+        walk(taeC, H.kick - .9, .4, 680);
+        go(taeC.g, H.kick - .4, .25, { y: FL - 120 }, 'power2.out'); go(taeC.aF, H.kick - .4, .2, { r: -175 });
+        go(taeC.lF, H.kick - .2, .15, { r: -95 }, 'power3.out'); go(taeC.lB, H.kick - .2, .15, { r: -70 }, 'power3.out');
+        hit('car', s, H.kick, 800, 1130, 'โครม!', 560, 600, '', -8);
+        go(Z2.g, H.kick, .4, { x: 940, y: FL - 20, r: 30 }, 'power2.out');
+        go(Z3.g, H.kick - .1, .4, { x: 740 }, 'power1.in');
+        go(taeC.g, H.elbow - .25, .2, { y: FL }, 'power2.in'); go(taeC.lF, H.elbow - .25, .2, { r: 0 }); go(taeC.lB, H.elbow - .25, .2, { r: 0 });
+        go(taeC.aF, H.elbow - .2, .2, { r: -100 });
+        hit('car', s, H.elbow, 740, 1110, 'ป้าก!', 200, 700, 'w', -6);
+        go(Z3.g, H.elbow, .4, { x: 760, y: FL + 40, r: 80 }, 'power2.in');
+        go(taeC.aF, H.elbow + .3, .3, { r: -20 });
+        tl.to(taeC.mouth, { attr: { d: TM.g }, duration: .05 }, S[11]); tl.to(taeC.mouth, { attr: { d: TM.n }, duration: .05 }, E[11]);
+        // --- B5-7 runner through the gangway ---
+        go(w, H.bar - 1.4, 1.0, { x: -420 }, 'power2.inOut');
+        appear(R1.g, H.bar - 1.3);
+        go(R1.g, H.bar - 1.3, .01, { x: 1600, r: 16 });
+        go(R1.g, H.bar - 1.25, 1.2, { x: 1000 }, 'power1.in');
+        walk(fonC, H.bar - 1.3, .5, 900); go(fonC.aF, H.bar - .5, .3, { r: -90 }); go(fonC.pole, H.bar - .5, .3, { r: -90 });
+        walk(mewC, H.bar - 1.3, .6, 760); go(mewC.g, H.bar - .6, .2, { y: FL - 50 }); walk(dg, H.bar - 1.3, .6, 790, { y: FL - 200 });
+        hit('car', s, H.bar, 1010, 1080, 'เปรี้ยง!', 620, 600, '', -10);
+        go(R1.g, H.bar, .45, { x: 830, y: FL - 260, r: -200 }, 'power2.out'); go(R1.g, H.bar + .45, .2, { x: 780, y: FL, r: -270 }, 'power2.in');
+        walk(taeC, H.bar + .1, .3, 700);
+        go(taeC.g, H.knee - .2, .2, { x: 740, y: FL - 60 }); go(taeC.lF, H.knee - .2, .18, { r: -100 }, 'power3.out');
+        hit('car', s, H.knee, 790, 1250, 'ตุ้บ!', 300, 650, 'w', 8);
+        go(R1.g, H.knee, .3, { x: 820, y: FL + 60, r: -300 });
+        go(taeC.g, H.knee + .2, .2, { y: FL }); go(taeC.lF, H.knee + .2, .2, { r: 0 }); go(fonC.pole, H.knee + .2, .3, { r: 10 }); go(fonC.aF, H.knee + .2, .3, { r: -20 });
+        // --- car 2: strap domino, teeth on the pole, duck + pole swing ---
+        go(w, S[12] - .1, 1.6, { x: -1150 }, 'power2.inOut');
+        walk(taeC, S[12], 1.4, 1620); walk(fonC, S[12] + .1, 1.4, 1460); walk(mewC, S[12] + .2, 1.2, 1330); walk(dg, S[12] + .2, 1.2, 1370, { y: FL - 200 });
+        go(mewC.g, S[12] + 1.5, .2, { y: FL - 60 });
+        go(taeC.aB, H.dom1 - .4, .3, { r: -150 });
+        hit('car', s, H.dom1, 1800, 1020, 'โครม!', 520, 560, '', -8);
+        go(Z4.g, H.dom1, .35, { x: 1940, r: 50 }, 'power2.in'); go(Z4.g, H.dom1 + .35, .3, { x: 2000, y: FL + 50, r: 90 });
+        hit('car', s, H.dom2, 1960, 1100, 'โครม!', 600, 760, 'w s', 8);
+        go(Z5.g, H.dom2, .5, { x: 2060, y: FL + 40, r: 85 }, 'power2.in'); go(taeC.aB, H.dom2 + .1, .3, { r: 12 });
+        go(Z6.g, H.teeth - .6, .5, { x: 1560 }, 'power2.in');
+        walk(fonC, H.teeth - .6, .3, 1480);
+        go(fonC.pole, H.teeth - .2, .15, { r: -60 });
+        word(H.teeth, 'กึก!', 640, 720, 'w s', 6, .45); shake('car', H.teeth, 10, 4);
+        tl.to(fonC.mouth, { attr: { d: FM.o }, duration: .05 }, S[13]); tl.to(fonC.mouth, { attr: { d: FM.n }, duration: .05 }, E[13] + .3);
+        go(taeC.g, S[13] + .1, .2, { y: FL + 70, sy: .85 });
+        go(fonC.aF, H.duck - .25, .2, { r: -150 }); go(fonC.pole, H.duck - .25, .2, { r: -150 });
+        go(fonC.aF, H.duck - .05, .1, { r: 20 }, 'power4.in'); go(fonC.pole, H.duck - .05, .1, { r: 80 }, 'power4.in');
+        hit('car', s, H.duck, 1600, 1000, 'เคร้ง!', 260, 600, '', -6);
+        go(Z6.g, H.duck, .5, { x: 1720, y: FL + 40, r: 95 }, 'power2.in');
+        go(taeC.g, H.duck + .2, .2, { y: FL, sy: 1.1 });
+        // --- slow-mo: a runner vaults the seats toward Mew; the dog bites; helmet swing ---
+        const sA = H.slowA, sB = H.swing;
+        cg('car', sA - .1, .35, { scale: 1.4, transformOrigin: '420px 1150px', filter: 'grayscale(1) sepia(.9) hue-rotate(-40deg) saturate(2.6) contrast(1.25)' }, 'power2.out');
+        tl.fromTo('#barT, #barB', { height: 0 }, { height: 150, duration: .3, immediateRender: false }, sA - .1);
+        appear(R2.g, sA - .1);
+        go(R2.g, sA - .1, .01, { x: 2100, y: FL - 220, r: 30 });
+        go(R2.g, sA, sB - sA, { x: 1560, y: FL - 260, r: 40 }, 'none');
+        go(dg.g, sA + .3, (sB - sA) * .6, { x: 1520, y: FL - 300, r: -30 }, 'power1.out');
+        go(dg.hd, sA + .3, .3, { r: -20 });
+        go(taeC.g, sA + .2, sB - sA - .3, { x: 1560 }, 'sine.inOut');
+        go(taeC.aF, sA + .2, sB - sA - .4, { r: -175 }, 'sine.in'); go(taeC.aF, sB - .1, .1, { r: 70 }, 'power4.in');
+        tl.to('#car .cam', { filter: 'grayscale(0) sepia(0) hue-rotate(0deg) saturate(1) contrast(1)', duration: .05 }, sB);
+        tl.to('#barT, #barB', { height: 0, duration: .2 }, sB + .05);
+        hit('car', s, sB, 1560, 1050, 'ปั้ก!!', 160, 560, '', -10);
+        go(R2.g, sB, .55, { x: 2100, y: FL + 60, r: 160 }, 'power2.out');
+        go(dg.g, sB + .05, .4, { x: 1400, y: FL, r: 0, sx: .6, sy: .6 }, 'power2.in');
+        cg('car', sB + .05, .4, { scale: 1, transformOrigin: '540px 1200px', filter: 'grayscale(0) sepia(0) hue-rotate(0deg) saturate(1) contrast(1)' }, 'power2.out');
+        // 14: on his back, snapped transit card
+        go(taeC.g, S[14] - .3, .3, { y: FL - 20, r: -80 }, 'power2.in'); go(taeC.aF, S[14] - .3, .3, { r: -140 });
+        el('rect', { x: -40, y: -26, width: 36, height: 52, rx: 6, fill: '#2a6cd8', transform: 'rotate(-14)' }, card); el('rect', { x: 6, y: -26, width: 36, height: 52, rx: 6, fill: '#2a6cd8', transform: 'rotate(18)' }, card);
+        put(card, { x: 1560, y: 1150 }); appear(card, S[14]); go(card, S[14], .3, { x: 1560, y: 1080, sx: 1.6, sy: 1.6 }, 'back.out(2)'); appear(card, E[14] + .2, 0);
+        tl.to(taeC.mouth, { attr: { d: TM.o }, duration: .05 }, S[14]); tl.to(taeC.mouth, { attr: { d: TM.n }, duration: .05 }, E[14]);
+        // car 3 doors open by themselves; Tae holds the connecting door with his back; Fon pulls the lever
+        go(taeC.g, E[14] + .1, .3, { x: 1560, y: FL, r: 0 }); go(taeC.aF, E[14] + .1, .3, { r: -20 });
+        go(w, E[14] + .2, .8, { x: -1640 }, 'power2.inOut');
+        appear(ghosts, E[14] + .5);
+        walk(taeC, E[14] + .4, .7, 2560, { sx: -1.1 }); walk(fonC, E[14] + .5, .7, 2380); walk(mewC, E[14] + .5, .7, 2260, { y: FL }); walk(dg, E[14] + .5, .7, 2200, { y: FL - 200 });
+        [H.door1, H.door2].forEach(t => { shake('car', t, 12, 5); word(t, 'ปึ้ง!', 580, t === H.door1 ? 640 : 760, 'w s', t === H.door1 ? -6 : 8, .4); go(taeC.g, t, .08, { x: 2545 }); go(taeC.g, t + .08, .15, { x: 2560 }); });
+        go(fonC.aF, S[15] + .2, .3, { r: -150 });
+        go(lever, H.lever, .1, { x: 2575, y: 1080, r: 70 }, 'power3.in');
+        word(H.lever, 'แกร๊ก!', 520, 820, '', 6, .5); flash(H.lever, .3);
+        tl.fromTo('#car .cam', { filter: 'brightness(1)' }, { filter: 'brightness(1.5)', duration: .1, yoyo: true, repeat: 1, immediateRender: false }, H.lever);
+        // they spill in and trip over the bodies
+        walk(taeC, H.trip - .5, .3, 2440, { sx: 1.1 });
+        spill.forEach((z, i) => { appear(z.g, H.trip - .3 + i * .12); go(z.g, H.trip - .3 + i * .12, .01, { x: 2620 }); go(z.g, H.trip - .28 + i * .12, .35, { x: 2500 - i * 40 }, 'power1.in');
+          go(z.g, H.trip + .07 + i * .12, .3, { x: 2400 - i * 70, y: FL + 50, r: -90 }, 'power2.in'); word(H.trip + .1 + i * .15, 'ตุ้บ', 300 + i * 160, 820 - i * 60, 'w s', -8 + i * 8, .3); });
+        tl.to(taeC.mouth, { attr: { d: TM.o }, duration: .05 }, S[16]);
+        show('car', t0, t1); }
+
+      // ================= 16-17. the jump (slow-mo, city lights) =================
+      { const s = $('sJump'), t0 = S[16] + .9, t1 = S[17] - .05;
+        el('rect', { width: 1080, height: 1920, fill: 'url(#gNight)' }, s);
+        seed = 41; for (let i = 0; i < 120; i++) el('circle', { cx: rnd() * 1080, cy: 900 + rnd() * 900, r: 2 + rnd() * 5, fill: ['#ffcf6a', '#ff7a5a', '#fff', '#9fc4ff'][i % 4], opacity: .7 }, s);
+        el('rect', { x: -40, y: 1430, width: 1160, height: 80, fill: '#2c2f42' }, s);
+        el('rect', { x: -40, y: 1420, width: 1160, height: 14, fill: '#9aa1ab' }, s);
+        el('rect', { x: 700, y: 800, width: 500, height: 500, rx: 30, fill: '#d7dbe2' }, s);
+        el('rect', { x: 730, y: 860, width: 140, height: 380, fill: '#06070d' }, s);
+        const grp = G(s);
+        const tJ = tae(grp, { x: 0, y: 0, sx: 1, sy: 1, r: -12 }, { helmet: true, armF: { r: -150 } });
+        const fJ = fon(grp, { x: 170, y: 40, sx: 1, sy: 1, r: -8 }, { armF: { r: -110 }, pole: { r: 60 } });
+        const mJ = mew(grp, { x: 230, y: -20, sx: .9, sy: .9, r: 10 }, { armF: { r: -120 } });
+        const dJ = dog(grp, { x: 360, y: -80, sx: .7, sy: .7, r: -10 });
+        mv(grp, t0, t1 - t0 - .35, { x: 640, y: 1100 }, { x: 260, y: 1250 }, 'sine.out');
+        mv(grp, t1 - .35, .25, { x: 260, y: 1250 }, { x: 220, y: 1420 }, 'power2.in');
+        tl.fromTo('#jump .cam', { filter: 'saturate(.4) contrast(1.2)' }, { filter: 'saturate(1) contrast(1)', duration: .1, immediateRender: false }, H.land - .05);
+        word(t0 + .2, 'ฟึ่บ!', 120, 560, 'w', -8, 1.0);
+        hit('jump', s, H.land, 300, 1420, 'ตุ้บ!', 520, 640, '', 6);
+        cam('jump', t0, t1 - t0, { scale: 1.1, transformOrigin: '500px 1200px', rotation: -3 }, { scale: 1.25, rotation: 2 }, 'sine.inOut');
+        show('jump', t0, t1); }
+
+      // ================= 17-19. breather on the rail edge =================
+      { const s = $('sRest'), t0 = S[17] - .05, t1 = S[20] - .05;
+        el('rect', { width: 1080, height: 1920, fill: 'url(#gNight)' }, s);
+        el('circle', { cx: 840, cy: 520, r: 70, fill: '#e8e2c4', opacity: .85 }, s);
+        skyline(s, 1200, '#1c1a34', 37, 380);
+        el('rect', { x: -40, y: 1330, width: 1160, height: 120, fill: '#2c2f42' }, s);
+        el('rect', { x: -40, y: 1320, width: 1160, height: 16, fill: '#9aa1ab' }, s);
+        el('rect', { y: 1450, width: 1080, height: 470, fill: '#0c0b16' }, s);
+        const tR = tae(s, { x: 360, y: 1420, sx: 1.2, sy: 1.2 }, { sit: true, helmet: true, armF: { r: -10 } });
+        el('path', { d: 'M28 -350 L40 -340', stroke: '#8a1018', 'stroke-width': 7, 'stroke-linecap': 'round' }, tR.g);   // blood on the cheek
+        const mR = mew(s, { x: 600, y: 1440, sx: 1.15, sy: 1.15 }, { armF: { r: 0 } }); put(mR.aF, {});
+        const fR = fon(s, { x: 820, y: 1440, sx: -1.15, sy: 1.15 }, { armF: { r: -20 }, pole: { r: 80 } });
+        const dR = dog(s, { x: 960, y: 1440, sx: -1, sy: 1 }); put(dR.tail, { r: -30 }); put(dR.hd, {});
+        for (let k = 0; k < (t1 - t0) / .25; k++) go(dR.tail, t0 + k * .25, .12, { r: k % 2 ? -30 : 20 }, 'sine.inOut');
+        go(mR.g, S[18] - .2, .4, { x: 520, y: 1440, sx: -1.15, sy: 1.15 });
+        go(mR.aF, S[18], .4, { r: -110 });
+        for (let k = 0; k < 3; k++) go(mR.aF, S[18] + .5 + k * .4, .2, { r: k % 2 ? -110 : -95 });
+        tl.to(tR.mouth, { attr: { d: TM.g }, duration: .05 }, S[19]); tl.to(tR.mouth, { attr: { d: TM.n }, duration: .05 }, E[19]);
+        go(dR.hd, S[17] + 1, .2, { r: 20 }); go(dR.hd, S[17] + 1.4, .2, { r: 0 });
+        cam('rest', t0, t1 - t0, { scale: 1.15, transformOrigin: '600px 1250px' }, { scale: 1.3 }, 'sine.inOut');
+        show('rest', t0, t1); }
+
+      // ================= 20-21. the street below looks up =================
+      { const s = $('sBelow'), t0 = S[20] - .05, t1 = S[22] - .05;
+        el('rect', { width: 1080, height: 1920, fill: '#0a0912' }, s);
+        el('rect', { x: -40, y: 0, width: 1160, height: 260, fill: '#2c2f42' }, s);
+        el('rect', { x: -40, y: 250, width: 1160, height: 16, fill: '#9aa1ab' }, s);
+        for (let x = 0; x < 1080; x += 200) el('rect', { x: x + 40, y: 1000, width: 100, height: 14, fill: '#e8e0c8', opacity: .15 }, s);
+        seed = 53; const eyes = [];
+        for (let i = 0; i < 260; i++) { const x = rnd() * 1080, y = 380 + rnd() * 1400, r = 8 + (y - 380) / 90, g = G(s, { x, y });
+          el('circle', { r: r * 2.2, fill: '#050409' }, g);
+          const e = G(g); e.setAttribute('opacity', 0); el('circle', { cx: -r * .6, cy: -r * .4, r: r * .32, fill: '#fff' }, e); el('circle', { cx: r * .6, cy: -r * .4, r: r * .32, fill: '#fff' }, e);
+          eyes.push({ e, y }); }
+        const w0 = S[21] - .2;
+        eyes.forEach(o => appear(o.e, w0 + (o.y - 380) / 1400 * 1.8));
+        cam('below', t0, .01, { y: -200, scale: 1 }, { y: -200, scale: 1 });
+        cam('below', t0 + .02, t1 - t0 - .02, { y: -200, scale: 1 }, { y: 0, scale: 1.08, transformOrigin: '540px 900px' }, 'sine.inOut');
+        show('below', t0, t1); }
+
+      // ================= 22. four small figures on the rail =================
+      { const s = $('sRail'), t0 = S[22] - .05, t1 = S[23] - .05;
+        el('rect', { width: 1080, height: 1920, fill: 'url(#gNight)' }, s);
+        skyline(s, 1000, '#1c1a34', 61, 300);
+        el('path', { d: 'M-200 1920 L520 980 L560 980 L1280 1920 Z', fill: '#2c2f42' }, s);
+        el('path', { d: 'M250 1920 L534 980 M830 1920 L546 980', stroke: '#9aa1ab', 'stroke-width': 8 }, s);
+        for (let i = 0; i < 18; i++) { const k = Math.pow(i / 18, 2), y = 1920 - (1920 - 980) * (1 - k) * 0 - i * i * 2.9; }
+        el('circle', { cx: 540, cy: 900, r: 160, fill: 'url(#gGlow)', opacity: .35 }, s);
+        el('path', { d: 'M532 880 L548 880 L548 892 L560 892 L560 908 L548 908 L548 920 L532 920 L532 908 L520 908 L520 892 L532 892 Z', fill: RED }, s);
+        [[480, 1600, '#f07a1e', 1], [560, 1600, '#2a9d8f', 1], [620, 1620, '#f5a8c8', .75]].forEach(([x, y, c, sc]) => person(s, x, y, sc * .9, c, false, false));
+        dog(s, { x: 680, y: 1620, sx: .5, sy: .5 });
+        cam('rail', t0, t1 - t0 + .2, { scale: 1.35, transformOrigin: '560px 1500px' }, { scale: 1 }, 'power1.out');
+        show('rail', t0, t1); }
+
+      // ================= 23. next =================
+      tl.fromTo('#next', { opacity: 0 }, { opacity: 1, duration: .3, immediateRender: false }, S[23] - .05);
+      tl.fromTo('#next .sr', { opacity: 0 }, { opacity: 1, duration: .3, immediateRender: false }, S[23]);
+      tl.fromTo('#next .pill', { opacity: 0, y: 10 }, { opacity: 1, y: 0, duration: .3, immediateRender: false }, S[23] + .1);
+      tl.fromTo('#next h1', { opacity: 0, scale: 1.5 }, { opacity: 1, scale: 1, duration: .25, ease: 'power3.out', immediateRender: false }, S[23] + .3);
+      tl.fromTo('#next .rl', { scaleX: 0 }, { scaleX: 1, duration: .4, immediateRender: false }, S[23] + .8);
+      tl.fromTo('#next .s1', { opacity: 0 }, { opacity: 1, duration: .3, immediateRender: false }, S[23] + 1.0);
+      tl.fromTo('#next .s2', { opacity: 0 }, { opacity: 1, duration: .3, immediateRender: false }, S[23] + 1.3);
+      tl.set({}, {}, END);
+
+      window.__timelines['main'] = tl;
+      tl.seek(0);
+    </script>
+  </body>
+</html>

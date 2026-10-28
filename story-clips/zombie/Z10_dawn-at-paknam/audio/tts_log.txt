@@ -1,0 +1,6 @@
+Traceback (most recent call last):
+  File "C:\timeoptic-content\story-clips\zombie\Z10_dawn-at-paknam\audio\tts_all.py", line 44, in <module>
+    pcm = base64.b64decode(r['candidates'][0]['content']['parts'][0]['inlineData']['data'])
+                           ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^
+KeyError: 'content'
+exit 1

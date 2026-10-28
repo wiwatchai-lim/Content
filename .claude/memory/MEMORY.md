@@ -1,3 +1,4 @@
 - [Gemini TTS Sulafat](gemini-tts-sulafat.md) — preferred clip voice, key in GEMINI_API_KEY, script + mix recipe
 - [Vana Nava clip pending voice](vananava-clip-pending-voice.md) — rendered 2026-09-29, needs make-vo.sh after TTS quota reset
-- [Story clips are Thai](story-clips-thai.md) — story-clips/ series: Thai VO+subs exception, EP01+EP02 done 2026-10-26, EP3 teased
+- [Story clips are Thai](story-clips-thai.md) — story-clips/eyesight/ series: Thai VO+subs exception, EP01–EP10 done = season 1 (2026-10-28)
+- [Zombie series](zombie-series.md) — story-clips/zombie/ pure zombie action, no eyewear; all 10 EPs rendered, shared pipeline

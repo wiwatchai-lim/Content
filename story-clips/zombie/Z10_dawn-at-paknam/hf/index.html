@@ -1,0 +1,1157 @@
+<!doctype html>
+<html lang="th">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=1080, height=1920" />
+    <!--
+      Zombie series "กรุงเทพฯ ไม่มีพรุ่งนี้" Z10 "รุ่งเช้าที่ปากน้ำ" (season finale) (user, 2026-10-28). Pure zombie action, no eyewear/brand. Thai only.
+      ../template.html is the source: ../build.py inlines ../audio/timing.json (S = cue starts, E = cue ends, 1-based),
+      ../../_shared/cast.js at // Shared cast + timeline helpers for the zombie series (from Z01). Inlined by each episode's build.py at /*CAST*/.
+// Needs in scope: el, G, piv, T, rnd, seed, $ (defined in the episode template) and gsap.
+      const SKIN = '#b97a4c', SKIN2 = '#d7a27a', ZSK = '#8fa088', RED = '#D8343A';
+
+      // ---------- characters (drawn facing right, origin at the feet) ----------
+      function tae(p, o, opt = {}) {
+        const g = G(p, o);
+        const aB = piv(g, -8, -292, { r: 12 });
+        el('path', { d: 'M-10 0 L10 0 L6 92 L-10 90 Z', fill: '#a56a40' }, aB);
+        el('circle', { cx: -2, cy: 98, r: 11, fill: '#a56a40' }, aB);
+        let lB, lF;
+        if (opt.sit) {
+          lB = piv(g, -6, -178); el('path', { d: 'M-16 -10 L16 -10 L72 2 L76 92 L54 94 L50 26 Z', fill: '#26314b' }, lB);
+          lF = piv(g, 8, -178); el('path', { d: 'M-14 -10 L16 -10 L82 4 L86 96 L62 98 L58 28 Z', fill: '#33426a' }, lF);
+          el('path', { d: 'M60 90 L104 92 Q110 106 98 106 L60 106 Z', fill: '#111' }, lF);
+        } else {
+          lB = piv(g, -10, -178); el('path', { d: 'M-14 0 L14 0 L6 86 L2 170 L-22 170 L-18 86 Z', fill: '#26314b' }, lB);
+          el('path', { d: 'M-24 160 L18 160 L18 178 L-26 178 Z', fill: '#111' }, lB);
+          lF = piv(g, 8, -178); el('path', { d: 'M-14 0 L14 0 L22 86 L28 170 L4 170 L-2 88 Z', fill: '#33426a' }, lF);
+          el('path', { d: 'M2 160 L48 162 Q54 178 44 178 L2 178 Z', fill: '#111' }, lF);
+        }
+        el('path', { d: 'M-36 -306 Q0 -318 36 -306 L30 -168 L-30 -168 Z', fill: '#f07a1e' }, g);
+        el('path', { d: 'M-7 -312 L7 -312 L6 -170 L-6 -170 Z', fill: '#22262f' }, g);
+        el('rect', { x: -33, y: -218, width: 66, height: 9, fill: '#ffe08a' }, g);
+        el('rect', { x: 12, y: -280, width: 18, height: 20, rx: 3, fill: '#fff' }, g);
+        el('text', { x: 21, y: -264, 'font-size': 14, 'font-weight': 800, 'text-anchor': 'middle', fill: '#111', 'font-family': 'Prompt' }, g).textContent = '12';
+        el('rect', { x: -8, y: -326, width: 16, height: 22, fill: SKIN }, g);
+        const hd = G(g, { x: 4, y: -352 });
+        el('circle', { r: 32, fill: SKIN }, hd);
+        el('path', { d: 'M-33 -2 Q-32 -42 4 -40 Q36 -38 33 -8 L20 -16 Q-2 -28 -22 -10 Z', fill: '#15161a' }, hd);
+        el('circle', { cx: -8, cy: 2, r: 7, fill: '#a56a40' }, hd);
+        el('circle', { cx: 20, cy: -4, r: 4, fill: '#111' }, hd);
+        el('path', { d: 'M12 -14 L28 -16', stroke: '#111', 'stroke-width': 4, 'stroke-linecap': 'round' }, hd);
+        const mouth = el('path', { d: 'M16 16 Q22 18 28 15', stroke: '#5a2a1a', 'stroke-width': 4, fill: 'none', 'stroke-linecap': 'round' }, hd);
+        let helmHead = null;
+        if (opt.helmetOn) { helmHead = G(hd);
+          el('path', { d: 'M-38 -8 Q-40 -50 4 -50 Q42 -48 40 -14 L40 -10 L-38 -8 Z', fill: '#c4262c' }, helmHead);
+          el('path', { d: 'M-30 -20 Q0 -44 30 -30', stroke: '#fff', 'stroke-width': 5, fill: 'none', opacity: .5 }, helmHead); }
+        const aF = piv(g, 14, -292, opt.armF || {});
+        el('path', { d: 'M-11 0 L11 0 L14 90 L-6 94 Z', fill: SKIN }, aF);
+        el('path', { d: 'M-14 -6 L14 -6 L13 30 L-13 30 Z', fill: '#22262f' }, aF);
+        el('circle', { cx: 4, cy: 100, r: 13, fill: SKIN }, aF);
+        let helm = null;
+        if (opt.helmet) { helm = G(aF, { x: 4, y: 130 });
+          el('line', { x1: 0, y1: -30, x2: 0, y2: -10, stroke: '#222', 'stroke-width': 4 }, helm);
+          el('path', { d: 'M-32 14 Q-34 -32 0 -32 Q34 -32 32 14 Z', fill: '#c4262c', stroke: '#111', 'stroke-width': 4 }, helm);
+          el('path', { d: 'M4 -10 L30 -10 L32 12 L6 12 Z', fill: '#1a1a1f' }, helm); }
+        return { g, aF, aB, lF, lB, hd, mouth, helm };
+      }
+      function fon(p, o, opt = {}) {
+        const g = G(p, o);
+        const aB = piv(g, -10, -290, { r: 8 }); el('path', { d: 'M-10 0 L10 0 L6 88 L-10 86 Z', fill: '#c48d66' }, aB);
+        const lB = piv(g, -10, -176); el('path', { d: 'M-14 0 L14 0 L8 168 L-16 168 Z', fill: '#1f7f74' }, lB);
+        el('path', { d: 'M-20 162 L18 162 L18 178 L-22 178 Z', fill: '#f2f2f2' }, lB);
+        const lF = piv(g, 8, -176); el('path', { d: 'M-14 0 L14 0 L22 168 L-2 168 Z', fill: '#23867a' }, lF);
+        el('path', { d: 'M-4 162 L38 162 Q44 178 34 178 L-4 178 Z', fill: '#f2f2f2' }, lF);
+        el('path', { d: 'M-34 -302 Q0 -314 34 -302 L32 -166 L-32 -166 Z', fill: '#2a9d8f' }, g);
+        el('path', { d: 'M-12 -306 L0 -280 L12 -306 Z', fill: '#1f7f74' }, g);
+        el('rect', { x: -8, y: -322, width: 16, height: 20, fill: SKIN2 }, g);
+        const hd = G(g, { x: 2, y: -346 });
+        el('circle', { cx: -30, cy: -18, r: 17, fill: '#1a1416' }, hd);
+        el('circle', { r: 30, fill: SKIN2 }, hd);
+        el('path', { d: 'M-31 6 Q-34 -38 2 -38 Q32 -36 30 -10 Q8 -24 -14 -16 L-20 18 Z', fill: '#1a1416' }, hd);
+        el('circle', { cx: 18, cy: -4, r: 3.8, fill: '#111' }, hd);
+        const mouth = el('path', { d: 'M14 15 Q20 17 25 14', stroke: '#7a3a2a', 'stroke-width': 4, fill: 'none', 'stroke-linecap': 'round' }, hd);
+        const aF = piv(g, 12, -290, opt.armF || { r: -20 });
+        el('path', { d: 'M-10 0 L10 0 L12 88 L-6 90 Z', fill: SKIN2 }, aF);
+        el('path', { d: 'M-13 -6 L13 -6 L12 26 L-12 26 Z', fill: '#2a9d8f' }, aF);
+        el('circle', { cx: 4, cy: 96, r: 12, fill: SKIN2 }, aF);
+        const pole = piv(aF, 4, 96, opt.pole || { r: 20 });
+        el('line', { x1: 0, y1: -230, x2: 0, y2: 130, stroke: '#c9ced6', 'stroke-width': 8, 'stroke-linecap': 'round' }, pole);
+        el('path', { d: 'M0 -230 Q22 -236 20 -214', stroke: '#c9ced6', 'stroke-width': 6, fill: 'none' }, pole);
+        el('rect', { x: 6, y: -214, width: 34, height: 52, rx: 10, fill: '#e8f4ff', opacity: .85, stroke: '#9fb2c8', 'stroke-width': 3 }, pole);
+        el('line', { x1: -44, y1: 130, x2: 44, y2: 130, stroke: '#9aa1ab', 'stroke-width': 8, 'stroke-linecap': 'round' }, pole);
+        el('circle', { cx: -44, cy: 138, r: 8, fill: '#333' }, pole); el('circle', { cx: 44, cy: 138, r: 8, fill: '#333' }, pole);
+        return { g, aF, aB, lF, lB, hd, mouth, pole };
+      }
+      const SHIRTS = ['#cfd3cf', '#5a6a8a', '#7a4a3a', '#3e5a4a', '#8a7a5a', '#6a3a5a'];
+      function zomb(p, o, opt = {}) {
+        const g = G(p, o);
+        const sh = opt.shirt || SHIRTS[Math.floor(rnd() * SHIRTS.length)];
+        const aB = piv(g, 16, -282, { r: opt.armR ?? -6 });
+        el('path', { d: 'M0 -9 L96 -10 L98 6 L0 10 Z', fill: '#768670' }, aB);
+        el('path', { d: 'M94 -12 L118 -14 M94 -2 L120 -2 M94 6 L116 10', stroke: '#768670', 'stroke-width': 6, 'stroke-linecap': 'round' }, aB);
+        if (!opt.noLegs) {
+          el('path', { d: 'M-24 -172 L2 -172 L-8 -84 L-20 0 L-44 0 L-30 -86 Z', fill: '#2d2a33' }, g);
+          el('path', { d: 'M-2 -172 L22 -172 L26 -84 L36 0 L12 0 L2 -84 Z', fill: '#3b3446' }, g);
+        }
+        el('path', { d: 'M-32 -292 Q8 -316 44 -284 L30 -164 L-30 -164 Z', fill: sh }, g);
+        el('path', { d: 'M-10 -170 L-2 -200 L8 -172 L20 -196 L28 -166 Z', fill: '#1a1418', opacity: .5 }, g);
+        el('path', { d: 'M8 -300 Q26 -296 34 -280 L26 -250 Q18 -270 4 -276 Z', fill: '#7a1418' }, g);
+        const hd = G(g, { x: 30, y: -318, r: 12 });
+        el('circle', { r: 30, fill: ZSK }, hd);
+        el('path', { d: 'M-30 -4 Q-26 -32 6 -32 Q-10 -20 -16 4 Z', fill: '#3a3a38' }, hd);
+        el('circle', { cx: 16, cy: -6, r: 10, fill: 'url(#gEye)' }, hd);
+        el('circle', { cx: 16, cy: -6, r: 5, fill: '#fff' }, hd);
+        el('path', { d: 'M8 12 Q18 20 28 10', stroke: '#5a0a10', 'stroke-width': 5, fill: 'none' }, hd);
+        el('path', { d: 'M14 16 L14 30', stroke: '#8a1018', 'stroke-width': 4 }, hd);
+        const aF = piv(g, 22, -276, { r: opt.armF ?? 4 });
+        el('path', { d: 'M0 -10 L100 -8 L100 8 L0 10 Z', fill: ZSK }, aF);
+        el('path', { d: 'M98 -10 L124 -12 M98 0 L126 0 M98 8 L122 12', stroke: ZSK, 'stroke-width': 6, 'stroke-linecap': 'round' }, aF);
+        return { g, aF, aB, hd };
+      }
+      function bike(p, o) {
+        const g = G(p, o);
+        [-95, 95].forEach(x => { const w = G(g, { x, y: -46 });
+          el('circle', { r: 46, fill: '#15161a' }, w); el('circle', { r: 30, fill: 'none', stroke: '#3a3d45', 'stroke-width': 4 }, w);
+          el('circle', { r: 12, fill: '#9aa0aa' }, w); });
+        el('line', { x1: 80, y1: -120, x2: 95, y2: -46, stroke: '#333', 'stroke-width': 9 }, g);
+        el('path', { d: 'M-118 -78 L-30 -98 L66 -90 L112 -70 L98 -52 L-96 -52 Z', fill: '#c4262c' }, g);
+        el('path', { d: 'M-100 -96 L10 -104 L12 -92 L-100 -84 Z', fill: '#111' }, g);
+        el('path', { d: 'M-40 -52 L40 -52 L30 -26 L-30 -26 Z', fill: '#2a2c32' }, g);
+        el('line', { x1: 70, y1: -122, x2: 108, y2: -136, stroke: '#222', 'stroke-width': 8, 'stroke-linecap': 'round' }, g);
+        el('circle', { cx: 112, cy: -92, r: 12, fill: '#ffe7a0' }, g);
+        return g;
+      }
+      function person(p, x, y, s, col, run, z) {
+        const g = G(p, { x, y, sx: s, sy: Math.abs(s) });
+        el('circle', { cx: 4, cy: -150, r: 18, fill: col }, g);
+        el('path', { d: run ? 'M-16 -128 L22 -128 L18 -60 L44 0 L28 4 L4 -50 L-16 4 L-32 0 L-10 -62 Z' : 'M-16 -128 L22 -128 L18 -60 L22 0 L8 0 L2 -50 L-6 0 L-20 0 L-14 -62 Z', fill: col }, g);
+        el('path', { d: run ? 'M18 -122 L46 -96 L40 -88 L14 -108 M-12 -122 L-40 -100 L-34 -92 L-8 -108' : 'M18 -122 L52 -116 L52 -106 L16 -108', stroke: col, 'stroke-width': 10, fill: 'none', 'stroke-linecap': 'round' }, g);
+        if (z) { el('circle', { cx: 12, cy: -154, r: 4, fill: '#fff' }, g); }
+        return g;
+      }
+      function car(p, x, y, s, col) {
+        const g = G(p, { x, y, sx: s, sy: s });
+        el('path', { d: 'M-130 -30 L-118 -70 L-70 -76 L-40 -118 L60 -118 L96 -76 L130 -66 L134 -30 Z', fill: col }, g);
+        el('path', { d: 'M-30 -108 L20 -108 L20 -80 L-56 -78 Z M30 -108 L56 -108 L82 -80 L30 -80 Z', fill: '#2a3140', opacity: .85 }, g);
+        [-80, 84].forEach(cx => { el('circle', { cx, cy: -26, r: 26, fill: '#141418' }, g); el('circle', { cx, cy: -26, r: 9, fill: '#888' }, g); });
+        return g;
+      }
+      function busBody(p, x, y, len, roofY) {
+        const g = G(p, { x, y });
+        el('rect', { x: 0, y: roofY, width: len, height: 330, rx: 18, fill: '#c8352e' }, g);
+        el('rect', { x: 0, y: roofY, width: len, height: 18, fill: '#a32a24' }, g);
+        el('rect', { x: 0, y: roofY + 190, width: len, height: 22, fill: '#f2efe6' }, g);
+        for (let i = 30; i < len - 100; i += 150) el('rect', { x: i, y: roofY + 42, width: 124, height: 120, rx: 8, fill: '#1c2230' }, g);
+        el('circle', { cx: 120, cy: roofY + 330, r: 48, fill: '#141418' }, g); el('circle', { cx: len - 160, cy: roofY + 330, r: 48, fill: '#141418' }, g);
+        return g;
+      }
+      function skyline(p, y, col, seedN, h = 260) {
+        const g = G(p); let x = -60; seed = seedN;
+        while (x < 1200) { const w = 70 + rnd() * 120, hh = 80 + rnd() * h;
+          el('rect', { x, y: y - hh, width: w, height: hh + 400, fill: col }, g);
+          if (rnd() > .5) el('rect', { x: x + w * .4, y: y - hh - 40, width: 6, height: 40, fill: col }, g);
+          x += w + 6; }
+        return g;
+      }
+      function zSil(p, x, y, s, col = '#120d16') { const g = person(p, x, y, s, col, false, true); return g; }
+
+      // ---------- timeline helpers ----------
+      window.__timelines = window.__timelines || {};
+      const tl = gsap.timeline({ paused: true });
+      const mv = (g, t, d, a, b, ease = 'power2.out') => tl.fromTo(g, { attr: { transform: T(a) } }, { attr: { transform: T(b) }, duration: d, ease, immediateRender: false }, t);
+      const show = (id, t0, t1, fade = 0) => { if (t0 > 0) tl.fromTo('#' + id, { opacity: 0 }, { opacity: 1, duration: fade || .01, immediateRender: false }, t0); tl.to('#' + id, { opacity: 0, duration: .01 }, t1); };
+      const cam = (id, t, d, a, b, ease = 'sine.inOut') => tl.fromTo('#' + id + ' .cam', a, { ...b, duration: d, ease, immediateRender: false }, t);
+      const shake = (id, t, amp = 22, n = 6) => { FXLOG.push({ t: +t.toFixed(3), kind: 'shake', amp }); for (let i = 0; i < n; i++) tl.to('#' + id + ' .cam', { x: (i % 2 ? -1 : 1) * amp * (1 - i / n), y: (rnd() - .5) * amp, duration: .035 }, t + i * .035); tl.to('#' + id + ' .cam', { x: 0, y: 0, duration: .04 }, t + n * .035); };
+      const fxl = $('fxl');
+      const FXLOG = window.__fx = [];   // every SFX word / hit, read by _shared/fxlog.py -> audio/fx.json for the sound bed
+      const word = (t, txt, x, y, cls = '', rot = -8, hold = .55) => {
+        FXLOG.push({ t: +t.toFixed(3), kind: 'word', txt });
+        const d = document.createElement('div'); d.className = 'fx ' + cls; d.textContent = txt; d.style.left = x + 'px'; d.style.top = y + 'px'; fxl.appendChild(d);
+        tl.fromTo(d, { opacity: 0, scale: .2, rotation: rot - 14 }, { opacity: 1, scale: 1.15, rotation: rot, duration: .1, ease: 'back.out(3)', immediateRender: false }, t);
+        tl.to(d, { scale: 1, duration: .1 }, t + .1);
+        tl.to(d, { opacity: 0, scale: 1.3, duration: .2 }, t + hold);
+      };
+      const burst = (p, t, x, y, col = '#fff') => { const g = G(p, { x, y }); g.setAttribute('opacity', 0);
+        for (let i = 0; i < 14; i++) { const a = i / 14 * Math.PI * 2 + rnd() * .2, r1 = 50 + rnd() * 20, r2 = 150 + rnd() * 90;
+          el('path', { d: `M${Math.cos(a - .06) * r1} ${Math.sin(a - .06) * r1} L${Math.cos(a) * r2} ${Math.sin(a) * r2} L${Math.cos(a + .06) * r1} ${Math.sin(a + .06) * r1} Z`, fill: col }, g); }
+        tl.fromTo(g, { opacity: 1, attr: { transform: T({ x, y, sx: .4, sy: .4 }) } }, { attr: { transform: T({ x, y, sx: 1.2, sy: 1.2 }) }, duration: .18, immediateRender: false }, t);
+        tl.to(g, { opacity: 0, duration: .12 }, t + .18); };
+      const flash = (t, o = .85) => { tl.fromTo('#flash', { opacity: o }, { opacity: 0, duration: .16, immediateRender: false }, t); };
+      const hit = (scene, svg, t, x, y, txt, wx, wy, cls, rot) => { FXLOG.push({ t: +t.toFixed(3), kind: 'hit', txt }); flash(t); burst(svg, t, x, y); shake(scene, t); word(t, txt, wx, wy, cls, rot); };
+      const speedLines = (p, n, col, dir = 1) => { const g = G(p);
+        for (let i = 0; i < n; i++) { const y = rnd() * 1920, w = 200 + rnd() * 500; el('rect', { x: rnd() * 1080, y, width: w, height: 3 + rnd() * 5, fill: col, opacity: .25 + rnd() * .4 }, g); }
+        return g; };
+
+
+      // ---------- cast added for Z02-Z10 (same conventions: facing right, origin at the feet, flip with sx: -s) ----------
+      // มิว (10): ~70% of an adult; opt.bandage puts the Z04 bandage on her forearm (drawn on the front arm so it stays visible). opt.whistle = ลุงชาญ's whistle (Z08+).
+      function mew(p, o, opt = {}) {
+        const g = G(p, o);
+        const aB = piv(g, -8, -196, { r: 10 }); el('path', { d: 'M-7 0 L7 0 L5 62 L-7 60 Z', fill: SKIN2 }, aB);
+        const lB = piv(g, -7, -118); el('path', { d: 'M-9 0 L9 0 L6 112 L-10 112 Z', fill: SKIN2 }, lB);
+        el('path', { d: 'M-14 106 L12 106 L12 118 L-16 118 Z', fill: '#e85a8a' }, lB);
+        const lF = piv(g, 6, -118); el('path', { d: 'M-9 0 L9 0 L14 112 L-2 112 Z', fill: SKIN2 }, lF);
+        el('path', { d: 'M-4 106 L24 106 Q28 118 20 118 L-4 118 Z', fill: '#e85a8a' }, lF);
+        el('path', { d: 'M-26 -150 L26 -150 L32 -112 L-32 -112 Z', fill: '#3a4a8a' }, g);
+        el('path', { d: 'M-24 -206 Q0 -214 24 -206 L24 -148 L-24 -148 Z', fill: '#f5a8c8' }, g);
+        el('rect', { x: -40, y: -204, width: 18, height: 54, rx: 6, fill: '#f0c040' }, g);
+        if (opt.whistle) { el('path', { d: 'M-10 -206 L0 -178 L10 -206', stroke: '#c0392b', 'stroke-width': 3, fill: 'none' }, g);
+          el('rect', { x: -6, y: -182, width: 12, height: 8, rx: 2, fill: '#c9ced6' }, g); }
+        el('rect', { x: -5, y: -218, width: 10, height: 14, fill: SKIN2 }, g);
+        const hd = G(g, { x: 2, y: -240 });
+        el('circle', { cx: -26, cy: 0, r: 10, fill: '#1a1416' }, hd); el('circle', { cx: 24, cy: -2, r: 9, fill: '#1a1416' }, hd);
+        el('circle', { r: 25, fill: SKIN2 }, hd);
+        el('path', { d: 'M-26 2 Q-28 -32 2 -32 Q28 -30 26 -4 Q4 -18 -16 -10 Z', fill: '#1a1416' }, hd);
+        el('circle', { cx: 14, cy: -2, r: 3.5, fill: '#111' }, hd);
+        const mouth = el('path', { d: 'M10 12 Q15 14 20 11', stroke: '#7a3a2a', 'stroke-width': 3, fill: 'none', 'stroke-linecap': 'round' }, hd);
+        const aF = piv(g, 10, -196, opt.armF || {}); el('path', { d: 'M-7 0 L7 0 L9 62 L-5 64 Z', fill: SKIN2 }, aF);
+        el('circle', { cx: 2, cy: 68, r: 8, fill: SKIN2 }, aF);
+        if (opt.bandage) el('rect', { x: -8, y: 30, width: 18, height: 20, rx: 3, fill: '#f4f4f0', stroke: '#c9c4b8', 'stroke-width': 2 }, aF);
+        return { g, aF, aB, lF, lB, hd, mouth };
+      }
+      // ข้าวตัง: small brown dog with a red collar. tail and hd are pivot groups (wag: mv(d.tail, t, .1, {r:-30}, {r:20})); bark = change mouth d.
+      function dog(p, o) {
+        const g = G(p, o);
+        [-30, 26].forEach(x => el('rect', { x: x - 6, y: -40, width: 12, height: 40, rx: 4, fill: '#7a4a28' }, g));
+        const tail = piv(g, -44, -58, { r: -30 }); el('path', { d: 'M0 0 Q-20 -24 -14 -46', stroke: '#9a6232', 'stroke-width': 10, fill: 'none', 'stroke-linecap': 'round' }, tail);
+        el('ellipse', { cx: 0, cy: -56, rx: 50, ry: 24, fill: '#9a6232' }, g);
+        [-18, 36].forEach(x => el('rect', { x: x - 6, y: -42, width: 12, height: 42, rx: 4, fill: '#8a5428' }, g));
+        const hd = piv(g, 40, -70);
+        el('circle', { cx: 10, cy: -14, r: 22, fill: '#9a6232' }, hd);
+        el('path', { d: 'M26 -10 L48 -6 L46 6 L24 4 Z', fill: '#b07444' }, hd);
+        el('circle', { cx: 48, cy: -4, r: 5, fill: '#111' }, hd);
+        el('path', { d: 'M-4 -30 L-14 -4 L4 -14 Z', fill: '#5a3418' }, hd);
+        el('circle', { cx: 18, cy: -20, r: 3.5, fill: '#111' }, hd);
+        const mouth = el('path', { d: 'M30 6 L46 8', stroke: '#3a1a10', 'stroke-width': 3, fill: 'none' }, hd);
+        el('rect', { x: -2, y: -2, width: 20, height: 6, rx: 3, fill: '#d8343a' }, hd);
+        return { g, tail, hd, mouth };
+      }
+      // ลุงชาญ (61): security guard, navy cap, light-blue uniform, grey moustache, whistle; krabong staff in the front hand (staff pivots at the hand).
+      function chan(p, o, opt = {}) {
+        const g = G(p, o);
+        const aB = piv(g, -8, -290, { r: 10 }); el('path', { d: 'M-10 0 L10 0 L6 88 L-10 86 Z', fill: '#a8723f' }, aB);
+        const lB = piv(g, -10, -176); el('path', { d: 'M-14 0 L14 0 L6 168 L-18 168 Z', fill: '#1f2a44' }, lB);
+        el('path', { d: 'M-22 160 L16 160 L16 178 L-24 178 Z', fill: '#0d0d10' }, lB);
+        const lF = piv(g, 8, -176); el('path', { d: 'M-14 0 L14 0 L22 168 L-2 168 Z', fill: '#26324f' }, lF);
+        el('path', { d: 'M-2 160 L44 162 Q50 178 40 178 L-2 178 Z', fill: '#0d0d10' }, lF);
+        el('path', { d: 'M-36 -304 Q0 -316 36 -304 L32 -168 L-32 -168 Z', fill: '#9cc3e0' }, g);
+        el('rect', { x: -32, y: -180, width: 64, height: 14, fill: '#111' }, g);
+        el('rect', { x: 10, y: -280, width: 18, height: 12, fill: '#c99a2e' }, g);
+        el('path', { d: 'M-36 -300 L-44 -276 L-30 -270 Z M36 -300 L44 -276 L30 -270 Z', fill: '#1f2a44' }, g);
+        el('rect', { x: -8, y: -324, width: 16, height: 22, fill: '#b98050' }, g);
+        const hd = G(g, { x: 4, y: -350 });
+        el('circle', { r: 31, fill: '#b98050' }, hd);
+        el('path', { d: 'M-30 -4 Q-30 -14 -22 -18 L-22 6 Z', fill: '#d0d0d0' }, hd);
+        el('circle', { cx: 19, cy: -4, r: 3.8, fill: '#111' }, hd);
+        el('path', { d: 'M10 -14 L28 -14', stroke: '#e0e0e0', 'stroke-width': 4 }, hd);
+        el('path', { d: 'M8 10 Q20 4 32 10 L30 14 Q20 10 10 14 Z', fill: '#e0e0e0' }, hd);
+        const mouth = el('path', { d: 'M14 20 Q21 22 27 19', stroke: '#5a2a1a', 'stroke-width': 3.5, fill: 'none', 'stroke-linecap': 'round' }, hd);
+        el('path', { d: 'M-34 -10 Q-34 -46 2 -46 Q34 -46 34 -14 Z', fill: '#1f2a44' }, hd);
+        el('path', { d: 'M20 -16 L54 -12 L52 -6 L20 -8 Z', fill: '#141c30' }, hd);
+        const aF = piv(g, 12, -290, opt.armF || { r: -20 });
+        el('path', { d: 'M-11 0 L11 0 L13 88 L-6 90 Z', fill: '#b98050' }, aF);
+        el('path', { d: 'M-14 -6 L14 -6 L13 34 L-13 34 Z', fill: '#9cc3e0' }, aF);
+        el('circle', { cx: 4, cy: 96, r: 12, fill: '#b98050' }, aF);
+        const staff = piv(aF, 4, 96, opt.staff || { r: 10 });
+        el('line', { x1: 0, y1: -260, x2: 0, y2: 160, stroke: '#7a5228', 'stroke-width': 11, 'stroke-linecap': 'round' }, staff);
+        el('line', { x1: 0, y1: -260, x2: 0, y2: -230, stroke: '#3a2410', 'stroke-width': 13 }, staff);
+        el('line', { x1: 0, y1: 130, x2: 0, y2: 160, stroke: '#3a2410', 'stroke-width': 13 }, staff);
+        const whistle = el('rect', { x: 20, y: -300, width: 14, height: 9, rx: 2, fill: '#c9ced6' }, g);
+        return { g, aF, aB, lF, lB, hd, mouth, staff, whistle };
+      }
+      // เสี่ยเปา (human, Z05 sting / Z06): heavy gang boss, loud flower shirt, gold chain + gold tooth, slick hair, golf club (club pivots at the hand).
+      function pao(p, o, opt = {}) {
+        const g = G(p, o);
+        const aB = piv(g, -14, -292, { r: 12 }); el('path', { d: 'M-12 0 L12 0 L8 90 L-12 88 Z', fill: '#c48a5a' }, aB);
+        const lB = piv(g, -12, -176); el('path', { d: 'M-18 0 L18 0 L8 168 L-20 168 Z', fill: '#222' }, lB);
+        el('path', { d: 'M-24 160 L16 160 L16 178 L-26 178 Z', fill: '#5a3a1a' }, lB);
+        const lF = piv(g, 10, -176); el('path', { d: 'M-18 0 L18 0 L24 168 L-4 168 Z', fill: '#2a2a2a' }, lF);
+        el('path', { d: 'M-4 160 L46 162 Q52 178 42 178 L-4 178 Z', fill: '#5a3a1a' }, lF);
+        el('path', { d: 'M-50 -300 Q0 -320 50 -300 L56 -200 Q0 -150 -56 -200 Z', fill: '#e0503a' }, g);
+        [[-30, -280, '#ffd23f'], [10, -290, '#3ac0a0'], [34, -250, '#fff'], [-20, -230, '#3ac0a0'], [20, -215, '#ffd23f'], [-40, -200, '#fff'], [0, -255, '#fff']]
+          .forEach(([cx, cy, f]) => el('circle', { cx, cy, r: 9, fill: f }, g));
+        el('path', { d: 'M-22 -306 Q2 -270 26 -306', stroke: '#e8c040', 'stroke-width': 8, fill: 'none' }, g);
+        el('rect', { x: -10, y: -326, width: 20, height: 22, fill: '#c48a5a' }, g);
+        const hd = G(g, { x: 4, y: -352 });
+        el('circle', { r: 34, fill: '#c48a5a' }, hd);
+        el('path', { d: 'M-34 -4 Q-34 -44 4 -42 Q36 -40 34 -14 Q0 -30 -20 -16 Z', fill: '#0d0d0d' }, hd);
+        el('circle', { cx: 20, cy: -4, r: 3.8, fill: '#111' }, hd);
+        el('path', { d: 'M10 -14 L30 -12', stroke: '#111', 'stroke-width': 5 }, hd);
+        const mouth = el('path', { d: 'M12 16 Q22 22 32 14', stroke: '#5a2a1a', 'stroke-width': 4, fill: 'none', 'stroke-linecap': 'round' }, hd);
+        el('rect', { x: 26, y: 12, width: 8, height: 5, fill: '#e8c040' }, hd);
+        const aF = piv(g, 18, -292, opt.armF || { r: -10 });
+        el('path', { d: 'M-12 0 L12 0 L14 90 L-6 92 Z', fill: '#c48a5a' }, aF);
+        el('path', { d: 'M-15 -6 L15 -6 L14 30 L-14 30 Z', fill: '#e0503a' }, aF);
+        el('circle', { cx: 4, cy: 98, r: 13, fill: '#c48a5a' }, aF);
+        const club = piv(aF, 4, 98, opt.club || { r: 0 });
+        el('line', { x1: 0, y1: -20, x2: 0, y2: 200, stroke: '#c9ced6', 'stroke-width': 6 }, club);
+        el('path', { d: 'M-4 196 L34 196 L36 212 L-6 210 Z', fill: '#9aa1ab' }, club);
+        return { g, aF, aB, lF, lB, hd, mouth, club };
+      }
+      // gang member (Z06): human in a black tank top; same body as zomb() but normal skin and eyes.
+      function thug(p, o, opt = {}) {
+        const z = zomb(p, o, { shirt: '#151515', armF: opt.armF ?? 60, armR: opt.armR ?? 70 });
+        const c = z.hd.querySelectorAll('circle');
+        c[0].setAttribute('fill', '#c48a5a'); z.g.querySelectorAll('path').forEach(pth => { const f = pth.getAttribute('fill'); if (f === '#7a1418' || f === '#768670') pth.setAttribute('fill', f === '#7a1418' ? '#151515' : '#a8743f'); }); c[1].setAttribute('opacity', 0); c[2].setAttribute('r', 3.8); c[2].setAttribute('fill', '#111');
+        z.g.querySelectorAll('path').forEach(pth => { if (pth.getAttribute('fill') === ZSK || pth.getAttribute('stroke') === ZSK) { pth.getAttribute('fill') === ZSK && pth.setAttribute('fill', '#c48a5a'); pth.getAttribute('stroke') === ZSK && pth.setAttribute('stroke', '#c48a5a'); } });
+        return z;
+      }
+      // brute zombie (Z05; brute เสี่ยเปา in Z10 with opt.pao: white car-door armour, gold chain, slick hair, golf club fused to the hand). Use sx/sy ~1.5-2.2.
+      function brute(p, o, opt = {}) {
+        const g = G(p, o);
+        const aB = piv(g, -30, -300, { r: opt.armR ?? 20 });
+        el('path', { d: 'M-22 0 L22 0 L18 150 L-24 146 Z', fill: '#6f7f6a' }, aB); el('circle', { cx: -2, cy: 160, r: 26, fill: '#6f7f6a' }, aB);
+        el('path', { d: 'M-50 -176 L-4 -176 L-14 0 L-60 0 Z', fill: '#2a2630' }, g);
+        el('path', { d: 'M4 -176 L50 -176 L58 0 L14 0 Z', fill: '#352f3e' }, g);
+        el('path', { d: 'M-70 -330 Q0 -370 72 -330 L62 -170 L-62 -170 Z', fill: opt.pao ? '#a03a2a' : '#4a4038' }, g);
+        if (opt.pao) el('path', { d: 'M-30 -340 Q4 -290 36 -340', stroke: '#e8c040', 'stroke-width': 10, fill: 'none' }, g);
+        const door = G(g, { x: 0, y: -260 });
+        el('path', { d: 'M-60 -60 L56 -66 L60 70 L-58 74 Z', fill: opt.pao ? '#e8e8e8' : '#3a6a9a', stroke: '#222', 'stroke-width': 6 }, door);
+        el('path', { d: 'M-46 -54 L42 -58 L44 -10 L-46 -6 Z', fill: '#1c2230', opacity: .8 }, door);
+        el('rect', { x: 30, y: 14, width: 22, height: 8, fill: '#888' }, door);
+        el('path', { d: 'M-70 -320 L60 -180', stroke: '#888', 'stroke-width': 8, 'stroke-dasharray': '14 6' }, g);
+        const hd = G(g, { x: 20, y: -372, r: 10 });
+        el('circle', { r: 40, fill: '#7f8f78' }, hd);
+        if (opt.pao) el('path', { d: 'M-40 -4 Q-40 -50 4 -48 Q40 -46 38 -18 Q0 -34 -24 -18 Z', fill: '#0d0d0d' }, hd);
+        el('circle', { cx: 20, cy: -8, r: 13, fill: 'url(#gEye)' }, hd); el('circle', { cx: 20, cy: -8, r: 6.5, fill: '#fff' }, hd);
+        el('path', { d: 'M6 16 Q22 28 36 14', stroke: '#5a0a10', 'stroke-width': 7, fill: 'none' }, hd);
+        const aF = piv(g, 40, -300, { r: opt.armF ?? -10 });
+        el('path', { d: 'M-22 0 L22 0 L18 150 L-24 146 Z', fill: '#7f8f78' }, aF); el('circle', { cx: -2, cy: 160, r: 28, fill: '#7f8f78' }, aF);
+        let club = null;
+        if (opt.pao) { club = piv(aF, -2, 160, { r: 0 });
+          el('line', { x1: 0, y1: 0, x2: 0, y2: 260, stroke: '#c9ced6', 'stroke-width': 9 }, club);
+          el('path', { d: 'M-6 254 L46 254 L48 274 L-8 272 Z', fill: '#9aa1ab' }, club); }
+        return { g, aF, aB, hd, door, club };
+      }
+      // night runner = zomb() leaning forward: zomb(p, { x, y, sx, sy, r: 18 }, { armF: -20, armR: -10 }).
+ (characters + timeline helpers) -> index.html.
+      Everything is drawn in SVG by the script below; scenes switch on cue times, so re-timing the voice needs no edits here.
+      Scenes: forearm 1 | pier wide 2 | run 3 | gangway 4 | Tae stops 5 | container 6-7 | the brute 8-9 | pier fight 10-21 (slow-mo knee 20)
+      | breather 22 | two-shot 23-24 | Mew's blood 25 | zero 26 | eyes 27 | season 2 card 28
+    -->
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/gsap.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@400;500;600;700;800;900&family=Anuphan:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <style>
+      * { margin: 0; padding: 0; box-sizing: border-box; }
+      html, body { width: 1080px; height: 1920px; overflow: hidden; background: #0b0a10; }
+      #root { position: relative; width: 1080px; height: 1920px; overflow: hidden; font-family: 'Anuphan', sans-serif; color: #fff; }
+      .full { position: absolute; left: 0; top: 0; width: 1080px; height: 1920px; }
+      .scene { opacity: 0; overflow: hidden; }
+      .cam { transform-origin: 540px 960px; }
+      svg { display: block; overflow: visible; }
+
+      .sub { position: absolute; left: 50px; right: 50px; top: 1600px; text-align: center; font-family: 'Prompt', sans-serif; font-weight: 700;
+             font-size: 58px; line-height: 1.3; opacity: 0; text-shadow: 0 4px 0 #000, 0 0 18px rgba(0,0,0,.9), 0 0 4px #000; }
+      .sub.y { color: #FFD23F; }
+      .sub.r span { display: inline-block; background: #D8343A; color: #fff; padding: 4px 26px 8px; border-radius: 10px; text-shadow: none;
+                    box-shadow: 0 6px 24px rgba(0,0,0,.45); }
+      .sub b { color: #9fe8ff; font-weight: 800; }
+
+      .chip { position: absolute; top: 150px; height: 86px; background: #EEE8DC; border-radius: 16px; color: #1d2433; display: flex; align-items: center;
+              gap: 14px; padding: 0 26px 0 20px; box-shadow: 0 8px 26px rgba(0,0,0,.45); }
+      .chip small { display: block; font-size: 20px; font-weight: 500; color: #555a63; line-height: 1; }
+      .chip b { display: block; font-family: 'Prompt'; font-size: 40px; font-weight: 700; line-height: 1.05; letter-spacing: .02em; }
+      #ep { left: auto; right: 56px; background: #D8343A; color: #fff; font: 800 34px 'Prompt'; padding: 0 26px; }
+
+      .badge { position: absolute; left: 60px; top: 1380px; background: rgba(12,12,18,.82); border-left: 10px solid #FFD23F; border-radius: 10px;
+               padding: 14px 26px; font: 600 38px 'Prompt'; color: #fff; opacity: 0; white-space: nowrap; }
+      .badge i { font-style: normal; color: #FFD23F; }
+      #tag { position: absolute; left: 50%; top: 420px; transform: translateX(-50%); background: #D8343A; color: #fff; font: 800 50px 'Prompt';
+             padding: 10px 34px 14px; border-radius: 12px; opacity: 0; white-space: nowrap; box-shadow: 0 10px 30px rgba(0,0,0,.5); }
+
+      .fx { position: absolute; font: 900 150px/1 'Prompt'; color: #FFD23F; opacity: 0; white-space: nowrap;
+            -webkit-text-stroke: 10px #111; paint-order: stroke fill; text-shadow: 10px 10px 0 #D8343A; transform-origin: 50% 50%; }
+      .fx.w { color: #fff; text-shadow: 10px 10px 0 #2a6cd8; }
+      .fx.s { font-size: 96px; }
+
+      #title { position: absolute; left: 0; right: 0; top: 360px; text-align: center; opacity: 0; }
+      #title h1 { font: 900 112px/1.05 'Prompt'; color: #fff; -webkit-text-stroke: 8px #111; paint-order: stroke fill; text-shadow: 8px 8px 0 #D8343A; }
+      #title p { margin-top: 18px; display: inline-block; background: #FFD23F; color: #111; font: 800 44px 'Prompt'; padding: 6px 28px; border-radius: 8px; }
+
+      #flash { background: #fff; opacity: 0; }
+      #redv { background: radial-gradient(ellipse 70% 60% at 50% 50%, rgba(216,52,58,0) 40%, rgba(150,10,20,.85)); opacity: 0; }
+      #bars { pointer-events: none; }
+      #bars div { position: absolute; left: 0; width: 1080px; height: 0; background: #000; }
+
+      #next { background: radial-gradient(ellipse 80% 45% at 50% 42%, #2a1416, #0d0b0d 70%); }
+      #next .pill { position: absolute; left: 50%; top: 600px; transform: translateX(-50%); border: 2px solid #4a4a55; border-radius: 40px; padding: 8px 30px;
+                    font-size: 32px; font-weight: 600; color: #d6d6dc; white-space: nowrap; }
+      #next .pill:before { content: ''; display: inline-block; width: 12px; height: 12px; border-radius: 50%; background: #D8343A; margin-right: 12px; vertical-align: 4px; }
+      #next h1 { position: absolute; left: 40px; right: 40px; top: 700px; text-align: center; font: 900 120px/1.15 'Prompt'; color: #fff;
+                 -webkit-text-stroke: 8px #111; paint-order: stroke fill; text-shadow: 8px 8px 0 #D8343A; }
+      #next .rl { position: absolute; left: 400px; top: 1000px; width: 280px; height: 8px; background: #D8343A; border-radius: 4px; }
+      #next .s1 { position: absolute; left: 0; right: 0; top: 1040px; text-align: center; font: 700 40px 'Prompt'; color: #FFD23F; }
+      #next .s2 { position: absolute; left: 0; right: 0; top: 1110px; text-align: center; font-size: 34px; color: #c8c8d0; }
+      #next .sr { position: absolute; left: 0; right: 0; top: 300px; text-align: center; font: 800 46px 'Prompt'; color: #e05a5f; letter-spacing: .04em; }
+    </style>
+  </head>
+  <body>
+    <div id="root" data-composition-id="main" data-start="0" data-duration="117.89" data-width="1080" data-height="1920">
+      <svg width="0" height="0" style="position:absolute">
+        <defs>
+          <linearGradient id="gNight" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#0a0c1c" /><stop offset=".7" stop-color="#2a2048" /></linearGradient>
+          <radialGradient id="gGlow"><stop offset="0" stop-color="#ffb070" stop-opacity=".9" /><stop offset="1" stop-color="#ffb070" stop-opacity="0" /></radialGradient>
+          <radialGradient id="gFire"><stop offset="0" stop-color="#ffb347" stop-opacity=".95" /><stop offset=".5" stop-color="#ff6a2a" stop-opacity=".45" /><stop offset="1" stop-color="#ff6a2a" stop-opacity="0" /></radialGradient>
+          <radialGradient id="gEye"><stop offset="0" stop-color="#fff" stop-opacity=".9" /><stop offset="1" stop-color="#fff" stop-opacity="0" /></radialGradient>
+        </defs>
+      </svg>
+
+      <div id="arm" class="scene full" style="opacity:1"><div class="cam full"><svg class="full" viewBox="0 0 1080 1920" id="sArm"></svg></div></div>
+      <div id="pier" class="scene full"><div class="cam full"><svg class="full" viewBox="0 0 1080 1920" id="sPier"></svg></div></div>
+      <div id="run" class="scene full"><div class="cam full"><svg class="full" viewBox="0 0 1080 1920" id="sRun"></svg></div></div>
+      <div id="gang" class="scene full"><div class="cam full"><svg class="full" viewBox="0 0 1080 1920" id="sGang"></svg></div></div>
+      <div id="stop" class="scene full"><div class="cam full"><svg class="full" viewBox="0 0 1080 1920" id="sStop"></svg></div></div>
+      <div id="cont" class="scene full"><div class="cam full"><svg class="full" viewBox="0 0 1080 1920" id="sCont"></svg></div></div>
+      <div id="brute" class="scene full"><div class="cam full"><svg class="full" viewBox="0 0 1080 1920" id="sBrute"></svg></div></div>
+      <div id="fight" class="scene full"><div class="cam full"><svg class="full" viewBox="0 0 1080 1920" id="sFight"></svg></div></div>
+      <div id="rest" class="scene full"><div class="cam full"><svg class="full" viewBox="0 0 1080 1920" id="sRest"></svg></div></div>
+      <div id="two" class="scene full"><div class="cam full"><svg class="full" viewBox="0 0 1080 1920" id="sTwo"></svg></div></div>
+      <div id="blood" class="scene full"><div class="cam full"><svg class="full" viewBox="0 0 1080 1920" id="sBlood"></svg></div></div>
+      <div id="eyes" class="scene full"><div class="cam full"><svg class="full" viewBox="0 0 1080 1920" id="sEyes"></svg></div></div>
+
+      <div id="redv" class="full"></div>
+      <div id="flash" class="full"></div>
+      <div id="bars" class="full"><div id="barT" style="top:0"></div><div id="barB" style="bottom:0"></div></div>
+      <div id="fxl" class="full"></div>
+
+      <div id="clock" class="chip" style="left:56px">
+        <svg viewBox="-24 -24 48 48" width="46" height="46"><circle r="19" fill="none" stroke="#1d2433" stroke-width="4" /><path d="M0 -10 L0 0 L8 6" fill="none" stroke="#1d2433" stroke-width="4" stroke-linecap="round" /></svg>
+        <div><small id="clockd">วันที่ 3</small><b id="clockt">05:54</b></div>
+      </div>
+      <div id="ep" class="chip">EP.10</div>
+      <div id="bite" class="chip" style="left:56px;top:250px;background:#D8343A;color:#fff"><svg viewBox="-24 -24 48 48" width="40" height="40"><circle r="19" fill="none" stroke="#fff" stroke-width="4" /><path d="M0 -10 L0 0 L8 6" fill="none" stroke="#fff" stroke-width="4" stroke-linecap="round" /></svg><div><small style="color:#ffd6d6">ถูกกัด</small><b id="bitet">02:41</b></div></div>
+
+      <div id="subs"></div>
+
+      <div id="next" class="scene full" style="background:#0b0a10">
+        <svg class="full" viewBox="0 0 1080 1920" id="sCard"></svg>
+        <div class="sr" style="top:260px">กรุงเทพฯ ไม่มีพรุ่งนี้</div>
+        <div class="pill" style="top:360px">ซีซั่น 2</div>
+        <h1 style="top:450px">เรือลำนั้น</h1>
+        <div class="rl" style="top:640px"></div>
+        <div class="s1" style="top:680px">เร็วๆ นี้</div>
+        <div id="radio" class="s2" style="top:1560px;color:#ff8a8a;font:700 44px Prompt">&nbsp;</div>
+      </div>
+    </div>
+
+    <script>
+      const TIMING = {"total": 117.89, "cues": [{"n": 1, "start": 0.5, "end": 4.28}, {"n": 2, "start": 4.5, "end": 7.88}, {"n": 3, "start": 8.5, "end": 10.22}, {"n": 4, "start": 11.5, "end": 13.69}, {"n": 5, "start": 15.5, "end": 17.44}, {"n": 6, "start": 19.5, "end": 21.72}, {"n": 7, "start": 22.5, "end": 24.85}, {"n": 8, "start": 25.5, "end": 28.7}, {"n": 9, "start": 29.5, "end": 31.97}, {"n": 10, "start": 32.5, "end": 34.9}, {"n": 11, "start": 37.5, "end": 39.86}, {"n": 12, "start": 42.5, "end": 45.34}, {"n": 13, "start": 47.5, "end": 49.48}, {"n": 14, "start": 52.5, "end": 55.27}, {"n": 15, "start": 56.5, "end": 59.37}, {"n": 16, "start": 60.5, "end": 63.19}, {"n": 17, "start": 64.5, "end": 66.33}, {"n": 18, "start": 67.5, "end": 70.16}, {"n": 19, "start": 71.5, "end": 73.47}, {"n": 20, "start": 75.5, "end": 77.92}, {"n": 21, "start": 80.5, "end": 83.04}, {"n": 22, "start": 86.5, "end": 88.34}, {"n": 23, "start": 90.5, "end": 93.61}, {"n": 24, "start": 95.5, "end": 97.43}, {"n": 25, "start": 99.5, "end": 101.43}, {"n": 26, "start": 104.5, "end": 105.07}, {"n": 27, "start": 107.5, "end": 109.07}, {"n": 28, "start": 111.5, "end": 113.39}]};
+      const S = [0], E = [0]; TIMING.cues.forEach(c => { S[c.n] = c.start; E[c.n] = c.end; });
+      const END = TIMING.total;
+      let seed = 7; const rnd = () => (seed = (seed * 16807) % 2147483647) / 2147483647;
+      const NS = 'http://www.w3.org/2000/svg';
+      const el = (tag, a, p) => { const e = document.createElementNS(NS, tag); for (const k in a) e.setAttribute(k, a[k]); p && p.appendChild(e); return e; };
+      const $ = id => document.getElementById(id);
+      const T = o => `translate(${o.x ?? 0} ${o.y ?? 0}) rotate(${o.r ?? 0}) scale(${o.sx ?? 1} ${o.sy ?? 1})`;
+      const G = (p, o = {}) => el('g', { transform: T(o) }, p);
+      const piv = (p, x, y, o = {}) => G(G(p, { x, y }), o);   // inner group rotates around (x, y)
+
+// Shared cast + timeline helpers for the zombie series (from Z01). Inlined by each episode's build.py at /*CAST*/.
+// Needs in scope: el, G, piv, T, rnd, seed, $ (defined in the episode template) and gsap.
+      const SKIN = '#b97a4c', SKIN2 = '#d7a27a', ZSK = '#8fa088', RED = '#D8343A';
+
+      // ---------- characters (drawn facing right, origin at the feet) ----------
+      function tae(p, o, opt = {}) {
+        const g = G(p, o);
+        const aB = piv(g, -8, -292, { r: 12 });
+        el('path', { d: 'M-10 0 L10 0 L6 92 L-10 90 Z', fill: '#a56a40' }, aB);
+        el('circle', { cx: -2, cy: 98, r: 11, fill: '#a56a40' }, aB);
+        let lB, lF;
+        if (opt.sit) {
+          lB = piv(g, -6, -178); el('path', { d: 'M-16 -10 L16 -10 L72 2 L76 92 L54 94 L50 26 Z', fill: '#26314b' }, lB);
+          lF = piv(g, 8, -178); el('path', { d: 'M-14 -10 L16 -10 L82 4 L86 96 L62 98 L58 28 Z', fill: '#33426a' }, lF);
+          el('path', { d: 'M60 90 L104 92 Q110 106 98 106 L60 106 Z', fill: '#111' }, lF);
+        } else {
+          lB = piv(g, -10, -178); el('path', { d: 'M-14 0 L14 0 L6 86 L2 170 L-22 170 L-18 86 Z', fill: '#26314b' }, lB);
+          el('path', { d: 'M-24 160 L18 160 L18 178 L-26 178 Z', fill: '#111' }, lB);
+          lF = piv(g, 8, -178); el('path', { d: 'M-14 0 L14 0 L22 86 L28 170 L4 170 L-2 88 Z', fill: '#33426a' }, lF);
+          el('path', { d: 'M2 160 L48 162 Q54 178 44 178 L2 178 Z', fill: '#111' }, lF);
+        }
+        el('path', { d: 'M-36 -306 Q0 -318 36 -306 L30 -168 L-30 -168 Z', fill: '#f07a1e' }, g);
+        el('path', { d: 'M-7 -312 L7 -312 L6 -170 L-6 -170 Z', fill: '#22262f' }, g);
+        el('rect', { x: -33, y: -218, width: 66, height: 9, fill: '#ffe08a' }, g);
+        el('rect', { x: 12, y: -280, width: 18, height: 20, rx: 3, fill: '#fff' }, g);
+        el('text', { x: 21, y: -264, 'font-size': 14, 'font-weight': 800, 'text-anchor': 'middle', fill: '#111', 'font-family': 'Prompt' }, g).textContent = '12';
+        el('rect', { x: -8, y: -326, width: 16, height: 22, fill: SKIN }, g);
+        const hd = G(g, { x: 4, y: -352 });
+        el('circle', { r: 32, fill: SKIN }, hd);
+        el('path', { d: 'M-33 -2 Q-32 -42 4 -40 Q36 -38 33 -8 L20 -16 Q-2 -28 -22 -10 Z', fill: '#15161a' }, hd);
+        el('circle', { cx: -8, cy: 2, r: 7, fill: '#a56a40' }, hd);
+        el('circle', { cx: 20, cy: -4, r: 4, fill: '#111' }, hd);
+        el('path', { d: 'M12 -14 L28 -16', stroke: '#111', 'stroke-width': 4, 'stroke-linecap': 'round' }, hd);
+        const mouth = el('path', { d: 'M16 16 Q22 18 28 15', stroke: '#5a2a1a', 'stroke-width': 4, fill: 'none', 'stroke-linecap': 'round' }, hd);
+        let helmHead = null;
+        if (opt.helmetOn) { helmHead = G(hd);
+          el('path', { d: 'M-38 -8 Q-40 -50 4 -50 Q42 -48 40 -14 L40 -10 L-38 -8 Z', fill: '#c4262c' }, helmHead);
+          el('path', { d: 'M-30 -20 Q0 -44 30 -30', stroke: '#fff', 'stroke-width': 5, fill: 'none', opacity: .5 }, helmHead); }
+        const aF = piv(g, 14, -292, opt.armF || {});
+        el('path', { d: 'M-11 0 L11 0 L14 90 L-6 94 Z', fill: SKIN }, aF);
+        el('path', { d: 'M-14 -6 L14 -6 L13 30 L-13 30 Z', fill: '#22262f' }, aF);
+        el('circle', { cx: 4, cy: 100, r: 13, fill: SKIN }, aF);
+        let helm = null;
+        if (opt.helmet) { helm = G(aF, { x: 4, y: 130 });
+          el('line', { x1: 0, y1: -30, x2: 0, y2: -10, stroke: '#222', 'stroke-width': 4 }, helm);
+          el('path', { d: 'M-32 14 Q-34 -32 0 -32 Q34 -32 32 14 Z', fill: '#c4262c', stroke: '#111', 'stroke-width': 4 }, helm);
+          el('path', { d: 'M4 -10 L30 -10 L32 12 L6 12 Z', fill: '#1a1a1f' }, helm); }
+        return { g, aF, aB, lF, lB, hd, mouth, helm };
+      }
+      function fon(p, o, opt = {}) {
+        const g = G(p, o);
+        const aB = piv(g, -10, -290, { r: 8 }); el('path', { d: 'M-10 0 L10 0 L6 88 L-10 86 Z', fill: '#c48d66' }, aB);
+        const lB = piv(g, -10, -176); el('path', { d: 'M-14 0 L14 0 L8 168 L-16 168 Z', fill: '#1f7f74' }, lB);
+        el('path', { d: 'M-20 162 L18 162 L18 178 L-22 178 Z', fill: '#f2f2f2' }, lB);
+        const lF = piv(g, 8, -176); el('path', { d: 'M-14 0 L14 0 L22 168 L-2 168 Z', fill: '#23867a' }, lF);
+        el('path', { d: 'M-4 162 L38 162 Q44 178 34 178 L-4 178 Z', fill: '#f2f2f2' }, lF);
+        el('path', { d: 'M-34 -302 Q0 -314 34 -302 L32 -166 L-32 -166 Z', fill: '#2a9d8f' }, g);
+        el('path', { d: 'M-12 -306 L0 -280 L12 -306 Z', fill: '#1f7f74' }, g);
+        el('rect', { x: -8, y: -322, width: 16, height: 20, fill: SKIN2 }, g);
+        const hd = G(g, { x: 2, y: -346 });
+        el('circle', { cx: -30, cy: -18, r: 17, fill: '#1a1416' }, hd);
+        el('circle', { r: 30, fill: SKIN2 }, hd);
+        el('path', { d: 'M-31 6 Q-34 -38 2 -38 Q32 -36 30 -10 Q8 -24 -14 -16 L-20 18 Z', fill: '#1a1416' }, hd);
+        el('circle', { cx: 18, cy: -4, r: 3.8, fill: '#111' }, hd);
+        const mouth = el('path', { d: 'M14 15 Q20 17 25 14', stroke: '#7a3a2a', 'stroke-width': 4, fill: 'none', 'stroke-linecap': 'round' }, hd);
+        const aF = piv(g, 12, -290, opt.armF || { r: -20 });
+        el('path', { d: 'M-10 0 L10 0 L12 88 L-6 90 Z', fill: SKIN2 }, aF);
+        el('path', { d: 'M-13 -6 L13 -6 L12 26 L-12 26 Z', fill: '#2a9d8f' }, aF);
+        el('circle', { cx: 4, cy: 96, r: 12, fill: SKIN2 }, aF);
+        const pole = piv(aF, 4, 96, opt.pole || { r: 20 });
+        el('line', { x1: 0, y1: -230, x2: 0, y2: 130, stroke: '#c9ced6', 'stroke-width': 8, 'stroke-linecap': 'round' }, pole);
+        el('path', { d: 'M0 -230 Q22 -236 20 -214', stroke: '#c9ced6', 'stroke-width': 6, fill: 'none' }, pole);
+        el('rect', { x: 6, y: -214, width: 34, height: 52, rx: 10, fill: '#e8f4ff', opacity: .85, stroke: '#9fb2c8', 'stroke-width': 3 }, pole);
+        el('line', { x1: -44, y1: 130, x2: 44, y2: 130, stroke: '#9aa1ab', 'stroke-width': 8, 'stroke-linecap': 'round' }, pole);
+        el('circle', { cx: -44, cy: 138, r: 8, fill: '#333' }, pole); el('circle', { cx: 44, cy: 138, r: 8, fill: '#333' }, pole);
+        return { g, aF, aB, lF, lB, hd, mouth, pole };
+      }
+      const SHIRTS = ['#cfd3cf', '#5a6a8a', '#7a4a3a', '#3e5a4a', '#8a7a5a', '#6a3a5a'];
+      function zomb(p, o, opt = {}) {
+        const g = G(p, o);
+        const sh = opt.shirt || SHIRTS[Math.floor(rnd() * SHIRTS.length)];
+        const aB = piv(g, 16, -282, { r: opt.armR ?? -6 });
+        el('path', { d: 'M0 -9 L96 -10 L98 6 L0 10 Z', fill: '#768670' }, aB);
+        el('path', { d: 'M94 -12 L118 -14 M94 -2 L120 -2 M94 6 L116 10', stroke: '#768670', 'stroke-width': 6, 'stroke-linecap': 'round' }, aB);
+        if (!opt.noLegs) {
+          el('path', { d: 'M-24 -172 L2 -172 L-8 -84 L-20 0 L-44 0 L-30 -86 Z', fill: '#2d2a33' }, g);
+          el('path', { d: 'M-2 -172 L22 -172 L26 -84 L36 0 L12 0 L2 -84 Z', fill: '#3b3446' }, g);
+        }
+        el('path', { d: 'M-32 -292 Q8 -316 44 -284 L30 -164 L-30 -164 Z', fill: sh }, g);
+        el('path', { d: 'M-10 -170 L-2 -200 L8 -172 L20 -196 L28 -166 Z', fill: '#1a1418', opacity: .5 }, g);
+        el('path', { d: 'M8 -300 Q26 -296 34 -280 L26 -250 Q18 -270 4 -276 Z', fill: '#7a1418' }, g);
+        const hd = G(g, { x: 30, y: -318, r: 12 });
+        el('circle', { r: 30, fill: ZSK }, hd);
+        el('path', { d: 'M-30 -4 Q-26 -32 6 -32 Q-10 -20 -16 4 Z', fill: '#3a3a38' }, hd);
+        el('circle', { cx: 16, cy: -6, r: 10, fill: 'url(#gEye)' }, hd);
+        el('circle', { cx: 16, cy: -6, r: 5, fill: '#fff' }, hd);
+        el('path', { d: 'M8 12 Q18 20 28 10', stroke: '#5a0a10', 'stroke-width': 5, fill: 'none' }, hd);
+        el('path', { d: 'M14 16 L14 30', stroke: '#8a1018', 'stroke-width': 4 }, hd);
+        const aF = piv(g, 22, -276, { r: opt.armF ?? 4 });
+        el('path', { d: 'M0 -10 L100 -8 L100 8 L0 10 Z', fill: ZSK }, aF);
+        el('path', { d: 'M98 -10 L124 -12 M98 0 L126 0 M98 8 L122 12', stroke: ZSK, 'stroke-width': 6, 'stroke-linecap': 'round' }, aF);
+        return { g, aF, aB, hd };
+      }
+      function bike(p, o) {
+        const g = G(p, o);
+        [-95, 95].forEach(x => { const w = G(g, { x, y: -46 });
+          el('circle', { r: 46, fill: '#15161a' }, w); el('circle', { r: 30, fill: 'none', stroke: '#3a3d45', 'stroke-width': 4 }, w);
+          el('circle', { r: 12, fill: '#9aa0aa' }, w); });
+        el('line', { x1: 80, y1: -120, x2: 95, y2: -46, stroke: '#333', 'stroke-width': 9 }, g);
+        el('path', { d: 'M-118 -78 L-30 -98 L66 -90 L112 -70 L98 -52 L-96 -52 Z', fill: '#c4262c' }, g);
+        el('path', { d: 'M-100 -96 L10 -104 L12 -92 L-100 -84 Z', fill: '#111' }, g);
+        el('path', { d: 'M-40 -52 L40 -52 L30 -26 L-30 -26 Z', fill: '#2a2c32' }, g);
+        el('line', { x1: 70, y1: -122, x2: 108, y2: -136, stroke: '#222', 'stroke-width': 8, 'stroke-linecap': 'round' }, g);
+        el('circle', { cx: 112, cy: -92, r: 12, fill: '#ffe7a0' }, g);
+        return g;
+      }
+      function person(p, x, y, s, col, run, z) {
+        const g = G(p, { x, y, sx: s, sy: Math.abs(s) });
+        el('circle', { cx: 4, cy: -150, r: 18, fill: col }, g);
+        el('path', { d: run ? 'M-16 -128 L22 -128 L18 -60 L44 0 L28 4 L4 -50 L-16 4 L-32 0 L-10 -62 Z' : 'M-16 -128 L22 -128 L18 -60 L22 0 L8 0 L2 -50 L-6 0 L-20 0 L-14 -62 Z', fill: col }, g);
+        el('path', { d: run ? 'M18 -122 L46 -96 L40 -88 L14 -108 M-12 -122 L-40 -100 L-34 -92 L-8 -108' : 'M18 -122 L52 -116 L52 -106 L16 -108', stroke: col, 'stroke-width': 10, fill: 'none', 'stroke-linecap': 'round' }, g);
+        if (z) { el('circle', { cx: 12, cy: -154, r: 4, fill: '#fff' }, g); }
+        return g;
+      }
+      function car(p, x, y, s, col) {
+        const g = G(p, { x, y, sx: s, sy: s });
+        el('path', { d: 'M-130 -30 L-118 -70 L-70 -76 L-40 -118 L60 -118 L96 -76 L130 -66 L134 -30 Z', fill: col }, g);
+        el('path', { d: 'M-30 -108 L20 -108 L20 -80 L-56 -78 Z M30 -108 L56 -108 L82 -80 L30 -80 Z', fill: '#2a3140', opacity: .85 }, g);
+        [-80, 84].forEach(cx => { el('circle', { cx, cy: -26, r: 26, fill: '#141418' }, g); el('circle', { cx, cy: -26, r: 9, fill: '#888' }, g); });
+        return g;
+      }
+      function busBody(p, x, y, len, roofY) {
+        const g = G(p, { x, y });
+        el('rect', { x: 0, y: roofY, width: len, height: 330, rx: 18, fill: '#c8352e' }, g);
+        el('rect', { x: 0, y: roofY, width: len, height: 18, fill: '#a32a24' }, g);
+        el('rect', { x: 0, y: roofY + 190, width: len, height: 22, fill: '#f2efe6' }, g);
+        for (let i = 30; i < len - 100; i += 150) el('rect', { x: i, y: roofY + 42, width: 124, height: 120, rx: 8, fill: '#1c2230' }, g);
+        el('circle', { cx: 120, cy: roofY + 330, r: 48, fill: '#141418' }, g); el('circle', { cx: len - 160, cy: roofY + 330, r: 48, fill: '#141418' }, g);
+        return g;
+      }
+      function skyline(p, y, col, seedN, h = 260) {
+        const g = G(p); let x = -60; seed = seedN;
+        while (x < 1200) { const w = 70 + rnd() * 120, hh = 80 + rnd() * h;
+          el('rect', { x, y: y - hh, width: w, height: hh + 400, fill: col }, g);
+          if (rnd() > .5) el('rect', { x: x + w * .4, y: y - hh - 40, width: 6, height: 40, fill: col }, g);
+          x += w + 6; }
+        return g;
+      }
+      function zSil(p, x, y, s, col = '#120d16') { const g = person(p, x, y, s, col, false, true); return g; }
+
+      // ---------- timeline helpers ----------
+      window.__timelines = window.__timelines || {};
+      const tl = gsap.timeline({ paused: true });
+      const mv = (g, t, d, a, b, ease = 'power2.out') => tl.fromTo(g, { attr: { transform: T(a) } }, { attr: { transform: T(b) }, duration: d, ease, immediateRender: false }, t);
+      const show = (id, t0, t1, fade = 0) => { if (t0 > 0) tl.fromTo('#' + id, { opacity: 0 }, { opacity: 1, duration: fade || .01, immediateRender: false }, t0); tl.to('#' + id, { opacity: 0, duration: .01 }, t1); };
+      const cam = (id, t, d, a, b, ease = 'sine.inOut') => tl.fromTo('#' + id + ' .cam', a, { ...b, duration: d, ease, immediateRender: false }, t);
+      const shake = (id, t, amp = 22, n = 6) => { FXLOG.push({ t: +t.toFixed(3), kind: 'shake', amp }); for (let i = 0; i < n; i++) tl.to('#' + id + ' .cam', { x: (i % 2 ? -1 : 1) * amp * (1 - i / n), y: (rnd() - .5) * amp, duration: .035 }, t + i * .035); tl.to('#' + id + ' .cam', { x: 0, y: 0, duration: .04 }, t + n * .035); };
+      const fxl = $('fxl');
+      const FXLOG = window.__fx = [];   // every SFX word / hit, read by _shared/fxlog.py -> audio/fx.json for the sound bed
+      const word = (t, txt, x, y, cls = '', rot = -8, hold = .55) => {
+        FXLOG.push({ t: +t.toFixed(3), kind: 'word', txt });
+        const d = document.createElement('div'); d.className = 'fx ' + cls; d.textContent = txt; d.style.left = x + 'px'; d.style.top = y + 'px'; fxl.appendChild(d);
+        tl.fromTo(d, { opacity: 0, scale: .2, rotation: rot - 14 }, { opacity: 1, scale: 1.15, rotation: rot, duration: .1, ease: 'back.out(3)', immediateRender: false }, t);
+        tl.to(d, { scale: 1, duration: .1 }, t + .1);
+        tl.to(d, { opacity: 0, scale: 1.3, duration: .2 }, t + hold);
+      };
+      const burst = (p, t, x, y, col = '#fff') => { const g = G(p, { x, y }); g.setAttribute('opacity', 0);
+        for (let i = 0; i < 14; i++) { const a = i / 14 * Math.PI * 2 + rnd() * .2, r1 = 50 + rnd() * 20, r2 = 150 + rnd() * 90;
+          el('path', { d: `M${Math.cos(a - .06) * r1} ${Math.sin(a - .06) * r1} L${Math.cos(a) * r2} ${Math.sin(a) * r2} L${Math.cos(a + .06) * r1} ${Math.sin(a + .06) * r1} Z`, fill: col }, g); }
+        tl.fromTo(g, { opacity: 1, attr: { transform: T({ x, y, sx: .4, sy: .4 }) } }, { attr: { transform: T({ x, y, sx: 1.2, sy: 1.2 }) }, duration: .18, immediateRender: false }, t);
+        tl.to(g, { opacity: 0, duration: .12 }, t + .18); };
+      const flash = (t, o = .85) => { tl.fromTo('#flash', { opacity: o }, { opacity: 0, duration: .16, immediateRender: false }, t); };
+      const hit = (scene, svg, t, x, y, txt, wx, wy, cls, rot) => { FXLOG.push({ t: +t.toFixed(3), kind: 'hit', txt }); flash(t); burst(svg, t, x, y); shake(scene, t); word(t, txt, wx, wy, cls, rot); };
+      const speedLines = (p, n, col, dir = 1) => { const g = G(p);
+        for (let i = 0; i < n; i++) { const y = rnd() * 1920, w = 200 + rnd() * 500; el('rect', { x: rnd() * 1080, y, width: w, height: 3 + rnd() * 5, fill: col, opacity: .25 + rnd() * .4 }, g); }
+        return g; };
+
+
+      // ---------- cast added for Z02-Z10 (same conventions: facing right, origin at the feet, flip with sx: -s) ----------
+      // มิว (10): ~70% of an adult; opt.bandage puts the Z04 bandage on her forearm (drawn on the front arm so it stays visible). opt.whistle = ลุงชาญ's whistle (Z08+).
+      function mew(p, o, opt = {}) {
+        const g = G(p, o);
+        const aB = piv(g, -8, -196, { r: 10 }); el('path', { d: 'M-7 0 L7 0 L5 62 L-7 60 Z', fill: SKIN2 }, aB);
+        const lB = piv(g, -7, -118); el('path', { d: 'M-9 0 L9 0 L6 112 L-10 112 Z', fill: SKIN2 }, lB);
+        el('path', { d: 'M-14 106 L12 106 L12 118 L-16 118 Z', fill: '#e85a8a' }, lB);
+        const lF = piv(g, 6, -118); el('path', { d: 'M-9 0 L9 0 L14 112 L-2 112 Z', fill: SKIN2 }, lF);
+        el('path', { d: 'M-4 106 L24 106 Q28 118 20 118 L-4 118 Z', fill: '#e85a8a' }, lF);
+        el('path', { d: 'M-26 -150 L26 -150 L32 -112 L-32 -112 Z', fill: '#3a4a8a' }, g);
+        el('path', { d: 'M-24 -206 Q0 -214 24 -206 L24 -148 L-24 -148 Z', fill: '#f5a8c8' }, g);
+        el('rect', { x: -40, y: -204, width: 18, height: 54, rx: 6, fill: '#f0c040' }, g);
+        if (opt.whistle) { el('path', { d: 'M-10 -206 L0 -178 L10 -206', stroke: '#c0392b', 'stroke-width': 3, fill: 'none' }, g);
+          el('rect', { x: -6, y: -182, width: 12, height: 8, rx: 2, fill: '#c9ced6' }, g); }
+        el('rect', { x: -5, y: -218, width: 10, height: 14, fill: SKIN2 }, g);
+        const hd = G(g, { x: 2, y: -240 });
+        el('circle', { cx: -26, cy: 0, r: 10, fill: '#1a1416' }, hd); el('circle', { cx: 24, cy: -2, r: 9, fill: '#1a1416' }, hd);
+        el('circle', { r: 25, fill: SKIN2 }, hd);
+        el('path', { d: 'M-26 2 Q-28 -32 2 -32 Q28 -30 26 -4 Q4 -18 -16 -10 Z', fill: '#1a1416' }, hd);
+        el('circle', { cx: 14, cy: -2, r: 3.5, fill: '#111' }, hd);
+        const mouth = el('path', { d: 'M10 12 Q15 14 20 11', stroke: '#7a3a2a', 'stroke-width': 3, fill: 'none', 'stroke-linecap': 'round' }, hd);
+        const aF = piv(g, 10, -196, opt.armF || {}); el('path', { d: 'M-7 0 L7 0 L9 62 L-5 64 Z', fill: SKIN2 }, aF);
+        el('circle', { cx: 2, cy: 68, r: 8, fill: SKIN2 }, aF);
+        if (opt.bandage) el('rect', { x: -8, y: 30, width: 18, height: 20, rx: 3, fill: '#f4f4f0', stroke: '#c9c4b8', 'stroke-width': 2 }, aF);
+        return { g, aF, aB, lF, lB, hd, mouth };
+      }
+      // ข้าวตัง: small brown dog with a red collar. tail and hd are pivot groups (wag: mv(d.tail, t, .1, {r:-30}, {r:20})); bark = change mouth d.
+      function dog(p, o) {
+        const g = G(p, o);
+        [-30, 26].forEach(x => el('rect', { x: x - 6, y: -40, width: 12, height: 40, rx: 4, fill: '#7a4a28' }, g));
+        const tail = piv(g, -44, -58, { r: -30 }); el('path', { d: 'M0 0 Q-20 -24 -14 -46', stroke: '#9a6232', 'stroke-width': 10, fill: 'none', 'stroke-linecap': 'round' }, tail);
+        el('ellipse', { cx: 0, cy: -56, rx: 50, ry: 24, fill: '#9a6232' }, g);
+        [-18, 36].forEach(x => el('rect', { x: x - 6, y: -42, width: 12, height: 42, rx: 4, fill: '#8a5428' }, g));
+        const hd = piv(g, 40, -70);
+        el('circle', { cx: 10, cy: -14, r: 22, fill: '#9a6232' }, hd);
+        el('path', { d: 'M26 -10 L48 -6 L46 6 L24 4 Z', fill: '#b07444' }, hd);
+        el('circle', { cx: 48, cy: -4, r: 5, fill: '#111' }, hd);
+        el('path', { d: 'M-4 -30 L-14 -4 L4 -14 Z', fill: '#5a3418' }, hd);
+        el('circle', { cx: 18, cy: -20, r: 3.5, fill: '#111' }, hd);
+        const mouth = el('path', { d: 'M30 6 L46 8', stroke: '#3a1a10', 'stroke-width': 3, fill: 'none' }, hd);
+        el('rect', { x: -2, y: -2, width: 20, height: 6, rx: 3, fill: '#d8343a' }, hd);
+        return { g, tail, hd, mouth };
+      }
+      // ลุงชาญ (61): security guard, navy cap, light-blue uniform, grey moustache, whistle; krabong staff in the front hand (staff pivots at the hand).
+      function chan(p, o, opt = {}) {
+        const g = G(p, o);
+        const aB = piv(g, -8, -290, { r: 10 }); el('path', { d: 'M-10 0 L10 0 L6 88 L-10 86 Z', fill: '#a8723f' }, aB);
+        const lB = piv(g, -10, -176); el('path', { d: 'M-14 0 L14 0 L6 168 L-18 168 Z', fill: '#1f2a44' }, lB);
+        el('path', { d: 'M-22 160 L16 160 L16 178 L-24 178 Z', fill: '#0d0d10' }, lB);
+        const lF = piv(g, 8, -176); el('path', { d: 'M-14 0 L14 0 L22 168 L-2 168 Z', fill: '#26324f' }, lF);
+        el('path', { d: 'M-2 160 L44 162 Q50 178 40 178 L-2 178 Z', fill: '#0d0d10' }, lF);
+        el('path', { d: 'M-36 -304 Q0 -316 36 -304 L32 -168 L-32 -168 Z', fill: '#9cc3e0' }, g);
+        el('rect', { x: -32, y: -180, width: 64, height: 14, fill: '#111' }, g);
+        el('rect', { x: 10, y: -280, width: 18, height: 12, fill: '#c99a2e' }, g);
+        el('path', { d: 'M-36 -300 L-44 -276 L-30 -270 Z M36 -300 L44 -276 L30 -270 Z', fill: '#1f2a44' }, g);
+        el('rect', { x: -8, y: -324, width: 16, height: 22, fill: '#b98050' }, g);
+        const hd = G(g, { x: 4, y: -350 });
+        el('circle', { r: 31, fill: '#b98050' }, hd);
+        el('path', { d: 'M-30 -4 Q-30 -14 -22 -18 L-22 6 Z', fill: '#d0d0d0' }, hd);
+        el('circle', { cx: 19, cy: -4, r: 3.8, fill: '#111' }, hd);
+        el('path', { d: 'M10 -14 L28 -14', stroke: '#e0e0e0', 'stroke-width': 4 }, hd);
+        el('path', { d: 'M8 10 Q20 4 32 10 L30 14 Q20 10 10 14 Z', fill: '#e0e0e0' }, hd);
+        const mouth = el('path', { d: 'M14 20 Q21 22 27 19', stroke: '#5a2a1a', 'stroke-width': 3.5, fill: 'none', 'stroke-linecap': 'round' }, hd);
+        el('path', { d: 'M-34 -10 Q-34 -46 2 -46 Q34 -46 34 -14 Z', fill: '#1f2a44' }, hd);
+        el('path', { d: 'M20 -16 L54 -12 L52 -6 L20 -8 Z', fill: '#141c30' }, hd);
+        const aF = piv(g, 12, -290, opt.armF || { r: -20 });
+        el('path', { d: 'M-11 0 L11 0 L13 88 L-6 90 Z', fill: '#b98050' }, aF);
+        el('path', { d: 'M-14 -6 L14 -6 L13 34 L-13 34 Z', fill: '#9cc3e0' }, aF);
+        el('circle', { cx: 4, cy: 96, r: 12, fill: '#b98050' }, aF);
+        const staff = piv(aF, 4, 96, opt.staff || { r: 10 });
+        el('line', { x1: 0, y1: -260, x2: 0, y2: 160, stroke: '#7a5228', 'stroke-width': 11, 'stroke-linecap': 'round' }, staff);
+        el('line', { x1: 0, y1: -260, x2: 0, y2: -230, stroke: '#3a2410', 'stroke-width': 13 }, staff);
+        el('line', { x1: 0, y1: 130, x2: 0, y2: 160, stroke: '#3a2410', 'stroke-width': 13 }, staff);
+        const whistle = el('rect', { x: 20, y: -300, width: 14, height: 9, rx: 2, fill: '#c9ced6' }, g);
+        return { g, aF, aB, lF, lB, hd, mouth, staff, whistle };
+      }
+      // เสี่ยเปา (human, Z05 sting / Z06): heavy gang boss, loud flower shirt, gold chain + gold tooth, slick hair, golf club (club pivots at the hand).
+      function pao(p, o, opt = {}) {
+        const g = G(p, o);
+        const aB = piv(g, -14, -292, { r: 12 }); el('path', { d: 'M-12 0 L12 0 L8 90 L-12 88 Z', fill: '#c48a5a' }, aB);
+        const lB = piv(g, -12, -176); el('path', { d: 'M-18 0 L18 0 L8 168 L-20 168 Z', fill: '#222' }, lB);
+        el('path', { d: 'M-24 160 L16 160 L16 178 L-26 178 Z', fill: '#5a3a1a' }, lB);
+        const lF = piv(g, 10, -176); el('path', { d: 'M-18 0 L18 0 L24 168 L-4 168 Z', fill: '#2a2a2a' }, lF);
+        el('path', { d: 'M-4 160 L46 162 Q52 178 42 178 L-4 178 Z', fill: '#5a3a1a' }, lF);
+        el('path', { d: 'M-50 -300 Q0 -320 50 -300 L56 -200 Q0 -150 -56 -200 Z', fill: '#e0503a' }, g);
+        [[-30, -280, '#ffd23f'], [10, -290, '#3ac0a0'], [34, -250, '#fff'], [-20, -230, '#3ac0a0'], [20, -215, '#ffd23f'], [-40, -200, '#fff'], [0, -255, '#fff']]
+          .forEach(([cx, cy, f]) => el('circle', { cx, cy, r: 9, fill: f }, g));
+        el('path', { d: 'M-22 -306 Q2 -270 26 -306', stroke: '#e8c040', 'stroke-width': 8, fill: 'none' }, g);
+        el('rect', { x: -10, y: -326, width: 20, height: 22, fill: '#c48a5a' }, g);
+        const hd = G(g, { x: 4, y: -352 });
+        el('circle', { r: 34, fill: '#c48a5a' }, hd);
+        el('path', { d: 'M-34 -4 Q-34 -44 4 -42 Q36 -40 34 -14 Q0 -30 -20 -16 Z', fill: '#0d0d0d' }, hd);
+        el('circle', { cx: 20, cy: -4, r: 3.8, fill: '#111' }, hd);
+        el('path', { d: 'M10 -14 L30 -12', stroke: '#111', 'stroke-width': 5 }, hd);
+        const mouth = el('path', { d: 'M12 16 Q22 22 32 14', stroke: '#5a2a1a', 'stroke-width': 4, fill: 'none', 'stroke-linecap': 'round' }, hd);
+        el('rect', { x: 26, y: 12, width: 8, height: 5, fill: '#e8c040' }, hd);
+        const aF = piv(g, 18, -292, opt.armF || { r: -10 });
+        el('path', { d: 'M-12 0 L12 0 L14 90 L-6 92 Z', fill: '#c48a5a' }, aF);
+        el('path', { d: 'M-15 -6 L15 -6 L14 30 L-14 30 Z', fill: '#e0503a' }, aF);
+        el('circle', { cx: 4, cy: 98, r: 13, fill: '#c48a5a' }, aF);
+        const club = piv(aF, 4, 98, opt.club || { r: 0 });
+        el('line', { x1: 0, y1: -20, x2: 0, y2: 200, stroke: '#c9ced6', 'stroke-width': 6 }, club);
+        el('path', { d: 'M-4 196 L34 196 L36 212 L-6 210 Z', fill: '#9aa1ab' }, club);
+        return { g, aF, aB, lF, lB, hd, mouth, club };
+      }
+      // gang member (Z06): human in a black tank top; same body as zomb() but normal skin and eyes.
+      function thug(p, o, opt = {}) {
+        const z = zomb(p, o, { shirt: '#151515', armF: opt.armF ?? 60, armR: opt.armR ?? 70 });
+        const c = z.hd.querySelectorAll('circle');
+        c[0].setAttribute('fill', '#c48a5a'); z.g.querySelectorAll('path').forEach(pth => { const f = pth.getAttribute('fill'); if (f === '#7a1418' || f === '#768670') pth.setAttribute('fill', f === '#7a1418' ? '#151515' : '#a8743f'); }); c[1].setAttribute('opacity', 0); c[2].setAttribute('r', 3.8); c[2].setAttribute('fill', '#111');
+        z.g.querySelectorAll('path').forEach(pth => { if (pth.getAttribute('fill') === ZSK || pth.getAttribute('stroke') === ZSK) { pth.getAttribute('fill') === ZSK && pth.setAttribute('fill', '#c48a5a'); pth.getAttribute('stroke') === ZSK && pth.setAttribute('stroke', '#c48a5a'); } });
+        return z;
+      }
+      // brute zombie (Z05; brute เสี่ยเปา in Z10 with opt.pao: white car-door armour, gold chain, slick hair, golf club fused to the hand). Use sx/sy ~1.5-2.2.
+      function brute(p, o, opt = {}) {
+        const g = G(p, o);
+        const aB = piv(g, -30, -300, { r: opt.armR ?? 20 });
+        el('path', { d: 'M-22 0 L22 0 L18 150 L-24 146 Z', fill: '#6f7f6a' }, aB); el('circle', { cx: -2, cy: 160, r: 26, fill: '#6f7f6a' }, aB);
+        el('path', { d: 'M-50 -176 L-4 -176 L-14 0 L-60 0 Z', fill: '#2a2630' }, g);
+        el('path', { d: 'M4 -176 L50 -176 L58 0 L14 0 Z', fill: '#352f3e' }, g);
+        el('path', { d: 'M-70 -330 Q0 -370 72 -330 L62 -170 L-62 -170 Z', fill: opt.pao ? '#a03a2a' : '#4a4038' }, g);
+        if (opt.pao) el('path', { d: 'M-30 -340 Q4 -290 36 -340', stroke: '#e8c040', 'stroke-width': 10, fill: 'none' }, g);
+        const door = G(g, { x: 0, y: -260 });
+        el('path', { d: 'M-60 -60 L56 -66 L60 70 L-58 74 Z', fill: opt.pao ? '#e8e8e8' : '#3a6a9a', stroke: '#222', 'stroke-width': 6 }, door);
+        el('path', { d: 'M-46 -54 L42 -58 L44 -10 L-46 -6 Z', fill: '#1c2230', opacity: .8 }, door);
+        el('rect', { x: 30, y: 14, width: 22, height: 8, fill: '#888' }, door);
+        el('path', { d: 'M-70 -320 L60 -180', stroke: '#888', 'stroke-width': 8, 'stroke-dasharray': '14 6' }, g);
+        const hd = G(g, { x: 20, y: -372, r: 10 });
+        el('circle', { r: 40, fill: '#7f8f78' }, hd);
+        if (opt.pao) el('path', { d: 'M-40 -4 Q-40 -50 4 -48 Q40 -46 38 -18 Q0 -34 -24 -18 Z', fill: '#0d0d0d' }, hd);
+        el('circle', { cx: 20, cy: -8, r: 13, fill: 'url(#gEye)' }, hd); el('circle', { cx: 20, cy: -8, r: 6.5, fill: '#fff' }, hd);
+        el('path', { d: 'M6 16 Q22 28 36 14', stroke: '#5a0a10', 'stroke-width': 7, fill: 'none' }, hd);
+        const aF = piv(g, 40, -300, { r: opt.armF ?? -10 });
+        el('path', { d: 'M-22 0 L22 0 L18 150 L-24 146 Z', fill: '#7f8f78' }, aF); el('circle', { cx: -2, cy: 160, r: 28, fill: '#7f8f78' }, aF);
+        let club = null;
+        if (opt.pao) { club = piv(aF, -2, 160, { r: 0 });
+          el('line', { x1: 0, y1: 0, x2: 0, y2: 260, stroke: '#c9ced6', 'stroke-width': 9 }, club);
+          el('path', { d: 'M-6 254 L46 254 L48 274 L-8 272 Z', fill: '#9aa1ab' }, club); }
+        return { g, aF, aB, hd, door, club };
+      }
+      // night runner = zomb() leaning forward: zomb(p, { x, y, sx, sy, r: 18 }, { armF: -20, armR: -10 }).
+
+
+      // ---------- shared episode helpers (from Z02): state-tracked moves so every tween starts where the last one ended ----------
+      const ST = new Map();
+      const put = (g, o) => { ST.set(g, o); g.setAttribute('transform', T(o)); return g; };
+      const go = (g, t, d, b, ease = 'power2.out') => { const a = ST.get(g) || {}; const n = { ...a, ...b }; mv(g, t, d, a, n, ease); ST.set(g, n); };
+      const CS = {};   // camera state per scene
+      const cg = (id, t, d, b, ease = 'sine.inOut') => { const a = CS[id] || { scale: 1, transformOrigin: '540px 960px' }; const n = { ...a, ...b }; cam(id, t, d, a, n, ease); CS[id] = n; };
+      const MS = new Map();   // mouth shapes
+      const say = (m, t, d) => { const a = MS.get(m) || m.getAttribute('d'); tl.fromTo(m, { attr: { d: a } }, { attr: { d }, duration: .08, immediateRender: false }, t); MS.set(m, d); };
+      const talk = (m, t0, t1, open, shut) => { for (let t = t0; t < t1 - .12; t += .2) { say(m, t, open); say(m, t + .1, shut); } };
+      const TM = { n: 'M16 16 Q22 18 28 15', o: 'M14 10 Q22 28 30 10 Z', g: 'M12 10 Q22 26 32 9 Z' };   // Tae: neutral / shout / grin
+      const FM = { n: 'M14 15 Q20 17 25 14', o: 'M12 10 Q20 28 28 10 Z', g: 'M12 11 Q20 22 28 10 Z' };
+      const mouthFill = m => { m.setAttribute('fill', '#5a1a1a'); return m; };
+      const appear = (g, t, on = 1) => tl.set(g, { attr: { opacity: on } }, t);
+
+      const MM = { n: 'M10 12 Q15 14 20 11', o: 'M9 8 Q15 22 21 8 Z' };
+
+      // rotate in place, keeping the group's own translate (head groups sit at an offset)
+      const base = g => g.__b || (g.__b = (m => m ? { x: +m[1], y: +m[2] } : { x: 0, y: 0 })((g.getAttribute('transform') || '').match(/translate\(([-\d.]+)[ ,]+([-\d.]+)\)/)));
+      const rot = (g, t, d, r, ease = 'power2.out') => tl.to(g, { attr: { transform: T({ ...base(g), r }) }, duration: d, ease }, t);
+
+      // fight beats (the same formulas are in audio/ambience.py)
+      const H = {
+        burst: S[8] + .3,
+        teep: S[11] - 1.3, knee1: S[11] - .75, elb1: S[11] - .2, whiff: S[12] - 1.4, club: S[12] - .3,
+        block: S[13] - 1.0, drum: S[14] - 1.7, fist: S[14] - .8, back: S[14] + .2,
+        skull: S[17] - 1.1, scoop: S[17] + .2, whistle: S[18] + .15, chomp: S[18] + 1.5,
+        loop: S[19] - .9, lever: E[19] + .2, knee: S[21] - .5, splash: S[21] + 1.4, chain: S[21] + 2.8,
+      };
+      H.slow0 = S[20] - .3;
+
+      // ---------- subtitles ----------
+      const LINES = [null,
+        ['สองนาทีสี่สิบวิ…<br>ก่อนเต้จะไม่ใช่เต้', 'r'],
+        ['ป้อมพระจุลฯ<br>ตีห้าห้าสิบสี่ วันที่สาม', 'y'],
+        ['<b>ฝน:</b> “วิ่งไปที่สะพานเรือ!<br>อย่าหยุด!”', 'y'],
+        ['<b>ทหาร:</b> “หยุด!<br>คนถูกกัดห้ามขึ้นเรือ!”', 'r'],
+        ['<b>เต้:</b> “ผมไม่ขึ้นหรอก…<br>พาน้องขึ้นไป”', ''],
+        ['ข้าวตังหันไปเห่า<br>ใส่ตู้คอนเทนเนอร์', 'r'],
+        ['<b>มิว:</b> “เขาบอกว่า…<br>เจอกันที่ท่าเรือ”', 'r'],
+        ['ประตูตู้ปลิวออก…<br>เสี่ยเปามาตามนัด', 'r'],
+        ['สูงสามเมตร<br>ใส่ประตูรถเป็นเกราะ', 'r'],
+        ['<b>เต้:</b> “เสี่ย…<br>มาทวงหนี้ถึงปากน้ำเลยเหรอ”', ''],
+        ['<b>เต้:</b> “เข่า! ศอก!<br>…ไม่สะเทือนเลยว่ะ”', ''],
+        ['ไม้กอล์ฟฟาดทีเดียว<br>เต้ลอยไปชนถังน้ำมัน', 'r'],
+        ['<b>ฝน:</b> “ข้อพับเข่า!<br>ตรงนั้นไม่มีเกราะ!”', 'y'],
+        ['เสาน้ำเกลือฟาดเข้าข้อพับ…<br>มันทรุดลง', ''],
+        ['มือเต้เริ่มสั่น…<br>เส้นสีเทาวิ่งขึ้นคอ', 'r'],
+        ['<b>เต้:</b> “ยังก่อน…<br>ขอต่อยให้จบยกนี้ก่อน”', 'y'],
+        ['เสี่ยเปาคว้าตัวมิวขึ้นมา', 'r'],
+        ['มิวเป่านกหวีด…<br>ข้าวตังงับมือที่โดนกัด!', 'y'],
+        ['<b>เต้:</b> “เสี่ย…<br>ขึ้นเรือผิดลำแล้ว!”', ''],
+        ['พระอาทิตย์โผล่…<br>เข่าลอยครั้งสุดท้าย', 'y'],
+        ['ตุ้มถ่วงร่วง…<br>ลากเสี่ยเปาจมลงทะเล', ''],
+        ['เงียบ…<br>เหลือแต่เสียงคลื่น', ''],
+        ['<b>เต้:</b> “ฝน… ถ้าผมเปลี่ยน<br>ตีหัวผมแรงๆ นะ”', 'r'],
+        ['<b>ฝน:</b> “หุบปาก…<br>นายจะไม่เป็นอะไร”', ''],
+        ['<b>มิว:</b> “เลือดหนูกันได้…<br>ใช่ไหมพี่ฝน”', 'y'],
+        ['ศูนย์…', 'r'],
+        ['แล้วเต้… ลืมตา', 'r'],
+        null];
+      const subs = $('subs');
+      for (let n = 1; n < LINES.length; n++) { if (!LINES[n]) continue;
+        const d = document.createElement('div'); d.className = 'sub ' + LINES[n][1];
+        d.innerHTML = LINES[n][1] === 'r' ? `<span>${LINES[n][0]}</span>` : LINES[n][0]; subs.appendChild(d);
+        const off = Math.min(E[n] + .35, (S[n + 1] ?? END) - .05);
+        tl.fromTo(d, { opacity: 0, y: 14 }, { opacity: 1, y: 0, duration: .18, ease: 'power2.out', immediateRender: false }, S[n] - .05);
+        tl.to(d, { opacity: 0, duration: .1 }, off); }
+
+      // clock 05:54 -> 06:14; bite timer 02:41 -> 00:00 at line 26 (compressed by the cuts)
+      { const o = { v: 54 }; tl.fromTo(o, { v: 54 }, { v: 74.9, duration: E[27] - S[1], ease: 'none', immediateRender: false,
+          onUpdate: () => { const m = Math.floor(o.v); $('clockt').textContent = (m >= 60 ? '06:' + String(m - 60).padStart(2, '0') : '05:' + m); } }, S[1]); }
+      { const o = { v: 161 }; tl.fromTo(o, { v: 161 }, { v: 0, duration: S[26] + .3 - S[1], ease: 'power1.in', immediateRender: false,
+          onUpdate: () => { const v = Math.max(0, Math.ceil(o.v)); $('bitet').textContent = '0' + Math.floor(v / 60) + ':' + String(v % 60).padStart(2, '0'); } }, S[1]); }
+      for (let t = S[1]; t < S[26]; t += 1.0) tl.fromTo('#bite', { scale: 1.06 }, { scale: 1, duration: .3, immediateRender: false }, t);
+      [0, .35, .7, 1.05].forEach((d, i) => tl.to('#bite', { opacity: i % 2 ? 1 : .2, duration: .05 }, S[26] + .4 + d));
+      tl.to('#bite', { opacity: 0, duration: .2 }, S[26] + 1.5);
+      tl.to('#clock, #ep', { opacity: 0, duration: .3 }, S[26] + .2);
+
+      // pier props
+      const NBG = 'url(#gNight)';
+      const dawnSky = (p, k = 0) => { const g = G(p);
+        el('rect', { width: 1080, height: 1920, fill: k ? '#f2b45a' : '#2a1f48' }, g);
+        el('rect', { y: 700, width: 1080, height: 500, fill: k ? '#ffd27a' : '#6a3a5a', opacity: .9 }, g);
+        el('rect', { y: 1080, width: 1080, height: 40, fill: k ? '#fff2c0' : '#e0683e', opacity: .9 }, g); return g; };
+      const ship = (p, x, y, s = 1) => { const g = G(p, { x, y, sx: s, sy: s });
+        el('path', { d: 'M-260 0 L260 0 L220 70 L-230 70 Z', fill: '#5a6470' }, g); el('rect', { x: -120, y: -90, width: 200, height: 90, fill: '#6a7480' }, g);
+        el('rect', { x: -40, y: -160, width: 70, height: 70, fill: '#6a7480' }, g); el('line', { x1: 0, y1: -160, x2: 0, y2: -240, stroke: '#5a6470', 'stroke-width': 8 }, g);
+        for (let i = 0; i < 8; i++) el('circle', { cx: -200 + i * 55, cy: 20, r: 6, fill: '#ffe2a0' }, g); return g; };
+      const veins = (c, op) => { const g = G(c.g); g.setAttribute('opacity', op);
+        ['M-4 -304 Q-8 -316 -2 -328', 'M6 -305 Q12 -318 9 -330', 'M22 -344 Q28 -352 24 -362'].forEach(d => el('path', { d, stroke: '#6f7f6a', 'stroke-width': 2.5, fill: 'none' }, g)); return g; };   // neck + one on the cheek
+
+      // ================= 1. the forearm =================
+      { const s = $('sArm'), t1 = S[2] - .05;
+        el('rect', { width: 1080, height: 1920, fill: '#120e1a' }, s);
+        const a = G(s, { x: 540, y: 960, r: -18 });
+        el('path', { d: 'M-700 -150 Q0 -190 700 -120 L700 130 Q0 180 -700 150 Z', fill: SKIN }, a);
+        el('rect', { x: 120, y: -170, width: 120, height: 330, fill: '#2a9d8f' }, a);
+        el('ellipse', { cx: -60, cy: 0, rx: 90, ry: 50, fill: '#5a1418' }, a);
+        const vein = el('path', { d: 'M-20 10 Q-200 -40 -360 20 Q-480 60 -640 0', stroke: '#6f7f6a', 'stroke-width': 10, fill: 'none', 'stroke-dasharray': 800, 'stroke-dashoffset': 800 }, a);
+        tl.fromTo(vein, { attr: { 'stroke-dashoffset': 800 } }, { attr: { 'stroke-dashoffset': 200 }, duration: t1, ease: 'sine.inOut', immediateRender: false }, 0);
+        [S[1] + .1, S[1] + 1.1, S[1] + 2.1].forEach(t => word(t, 'ตึก…', 120 + (t % 2) * 200, 600, 'w s', 0, .5));
+        cam('arm', 0, t1, { scale: 1.2, transformOrigin: '400px 960px' }, { scale: 1.5, transformOrigin: '300px 960px' }, 'sine.inOut');
+        show('arm', 0, t1); }
+
+      // ================= 2. the pier at first light =================
+      { const s = $('sPier'), t0 = S[2] - .05, t1 = S[3] - .05;
+        dawnSky(s);
+        el('rect', { y: 1120, width: 1080, height: 800, fill: '#1c2a44' }, s);
+        ship(s, 860, 1120, 1);
+        el('rect', { x: -40, y: 1240, width: 900, height: 60, fill: '#5a5a62' }, s);
+        for (let x = 0; x < 900; x += 120) el('rect', { x, y: 1300, width: 30, height: 300, fill: '#3a3a42' }, s);
+        const can = G(s, { x: 120, y: 1240 }); el('rect', { x: -40, y: -40, width: 80, height: 40, fill: '#1a1620' }, can); el('rect', { x: 10, y: -64, width: 140, height: 26, rx: 12, fill: '#1a1620', transform: 'rotate(-12)' }, can);
+        const boat = G(s); el('path', { d: 'M-200 0 L200 0 Q240 -20 260 -60 L180 30 L-180 30 Z', fill: '#7a4a2a' }, boat); put(boat, { x: -300, y: 1360 });
+        go(boat, t0, 1.6, { x: 380 }, 'power2.out'); go(boat, t0 + 1.6, .15, { x: 372, r: -2 }); go(boat, t0 + 1.75, .2, { x: 380, r: 0 });
+        word(t0 + .3, 'ปู๊นนน…', 560, 760, 'w s', 0, 1.6);
+        cam('pier', t0, t1 - t0, { y: 140, scale: 1.1 }, { y: 0, scale: 1 }, 'sine.out');
+        show('pier', t0, t1); }
+
+      // ================= 3. running up the pier =================
+      { const s = $('sRun'), t0 = S[3] - .05, t1 = S[4] - .05, FL = 1400;
+        dawnSky(s);
+        el('rect', { y: 1120, width: 1080, height: 800, fill: '#1c2a44' }, s);
+        const deck = G(s); for (let i = 0; i < 12; i++) el('rect', { x: i * 200 - 100, y: FL, width: 196, height: 520, fill: i % 2 ? '#5a5a62' : '#55555d' }, deck);
+        for (let i = 0; i < 8; i++) el('rect', { x: i * 300, y: FL - 70, width: 50, height: 70, rx: 12, fill: '#2a2a30' }, deck);
+        go(deck, t0, t1 - t0, { x: -900 }, 'none');
+        const g = G(s); put(g, {});
+        const fR = fon(g, { x: 760, y: FL, sx: 1, sy: 1 }, { armF: { r: -40 }, pole: { r: 60 } });
+        const mR = mew(g, { x: 600, y: FL, sx: 1, sy: 1 }, { armF: { r: -80 }, bandage: true, whistle: true });
+        dog(g, { x: 640, y: FL - 150, sx: .45, sy: .45 });
+        const tR = tae(g, { x: 380, y: FL, sx: 1, sy: 1 }, { helmetOn: true, armF: { r: -30 } }); veins(tR, .4);
+        [fR, mR, tR].forEach((c, i) => { for (let k = 0; t0 + k * .26 < t1; k++) mv(c.lF, t0 + k * .26 + i * .08, .13, { r: k % 2 ? -30 : 30 }, { r: k % 2 ? 30 : -30 }, 'none'); });
+        for (let k = 0; t0 + k * .13 < t1; k++) tl.to(g, { attr: { transform: T({ y: k % 2 ? -6 : 4 }) }, duration: .13 }, t0 + k * .13);
+        rot(tR.hd, S[3] + 1.2, .15, 20); rot(tR.hd, S[3] + 1.45, .2, 0);
+        show('run', t0, t1); }
+
+      // ================= 4. the gangway: rifles up =================
+      { const s = $('sGang'), t0 = S[4] - .05, t1 = S[5] - .05;
+        dawnSky(s);
+        el('path', { d: 'M-40 1920 L1120 600 L1120 760 L-40 1920 Z', fill: '#5a6470' }, s);
+        el('path', { d: 'M-40 1920 L1120 600', stroke: '#9aa1ab', 'stroke-width': 10 }, s);
+        const sold = (x, y, s2) => { const g = G(s, { x, y, sx: s2, sy: Math.abs(s2) });
+          el('path', { d: 'M-34 -300 L34 -300 L30 -160 L-30 -160 Z', fill: '#3a4a3a' }, g); el('rect', { x: -26, y: -160, width: 22, height: 160, fill: '#2a3a2a' }, g); el('rect', { x: 4, y: -160, width: 22, height: 160, fill: '#2a3a2a' }, g);
+          el('circle', { cy: -336, r: 30, fill: '#c48a5a' }, g); el('path', { d: 'M-36 -330 Q-36 -376 0 -376 Q36 -376 36 -330 Z', fill: '#4a5a3a' }, g);
+          const gun = G(g, { x: -10, y: -250, r: -20 }); el('rect', { x: -120, y: -8, width: 150, height: 16, fill: '#151515' }, gun); return { g, gun }; };
+        const s1 = sold(780, 960, -1.2), s2 = sold(940, 840, -1.0);
+        [s1, s2].forEach((o, i) => { put(o.gun, { x: -10, y: -250, r: 40 }); go(o.gun, S[4] + .1 + i * .15, .2, { r: -10 }, 'power3.out'); });
+        const mega = G(s, { x: 640, y: 720 }); el('path', { d: 'M0 -20 L80 -50 L80 50 L0 20 Z', fill: '#EEE8DC' }, mega); put(mega, { x: 640, y: 720, sx: .2, sy: .2 });
+        go(mega, S[4], .2, { sx: 1, sy: 1 }, 'back.out(3)');
+        cam('gang', t0, t1 - t0, { scale: 1, transformOrigin: '800px 900px' }, { scale: 1.2 }, 'sine.in');
+        show('gang', t0, t1); }
+
+      // ================= 5. Tae stops =================
+      { const s = $('sStop'), t0 = S[5] - .05, t1 = S[6] - .05, FL = 1500;
+        dawnSky(s); el('rect', { y: 1120, width: 1080, height: 800, fill: '#1c2a44' }, s); el('rect', { y: FL, width: 1080, height: 420, fill: '#5a5a62' }, s);
+        ship(s, 820, 1120, .8);
+        const tS = tae(s, { x: 420, y: FL, sx: 1.5, sy: 1.5 }, { helmet: true, armF: { r: -70 } }); veins(tS, .5);
+        const mS = mew(s, { x: 620, y: FL, sx: 1.4, sy: 1.4 }, { bandage: true, whistle: true }); put(mS.g, { x: 620, y: FL, sx: 1.4, sy: 1.4 });
+        const fS = fon(s, { x: 860, y: FL, sx: -1.4, sy: 1.4 }, { pole: { r: 10 } });
+        go(mS.g, S[5] + .6, .8, { x: 740 }, 'power2.out');
+        cam('stop', t0, t1 - t0, { scale: 1.15, transformOrigin: '500px 1200px' }, { scale: 1.3 }, 'sine.inOut');
+        show('stop', t0, t1); }
+
+      // ================= 6-7. the dog, the blue container, Mew =================
+      { const s = $('sCont'), t0 = S[6] - .05, t1 = S[8] - .05, FL = 1500;
+        dawnSky(s); el('rect', { y: 1120, width: 1080, height: 800, fill: '#1c2a44' }, s); el('rect', { y: FL, width: 1080, height: 420, fill: '#5a5a62' }, s);
+        const box = G(s); el('rect', { x: 120, y: 900, width: 620, height: 600, fill: '#2a6cd8' }, box);
+        for (let x = 140; x < 740; x += 40) el('line', { x1: x, y1: 910, x2: x, y2: 1490, stroke: '#2058b0', 'stroke-width': 8 }, box);
+        el('rect', { x: 600, y: 920, width: 120, height: 560, fill: '#2a62c0', stroke: '#1a4a90', 'stroke-width': 6 }, box); put(box, {});
+        const dC = dog(s, { x: 860, y: FL, sx: -.9, sy: .9 });
+        [S[6] + .2, S[6] + .7].forEach(t => { tl.to(dC.mouth, { attr: { d: 'M28 2 L48 -2 L46 14 L28 10 Z' }, duration: .05 }, t); tl.to(dC.mouth, { attr: { d: 'M30 6 L46 8' }, duration: .05 }, t + .2); word(t, 'โฮ่ง!', 640, 760, 'w s', 6, .4); });
+        [S[6] + 1.4, S[6] + 2.0, S[7] + .4, S[7] + 1.2].forEach((t, i) => { go(box, t, .06, { x: i % 2 ? -8 : 8 }); go(box, t + .06, .1, { x: 0 }); word(t, 'ปึง…', 240 + (i % 2) * 220, 720 + i * 50, 'w s', -6 + i * 4, .4); });
+        const mC = mew(s, { x: 960, y: FL + 300, sx: -2.2, sy: 2.2 }, { bandage: true, whistle: true }); mC.g.setAttribute('opacity', 0);
+        appear(mC.g, S[7] - .05);
+        cam('cont', t0, S[7] - t0, { scale: 1.2, transformOrigin: '800px 1300px' }, { scale: 1, transformOrigin: '540px 1200px' }, 'power2.out');
+        cam('cont', S[7] - .05, t1 - S[7], { scale: 1.4, transformOrigin: '900px 1300px' }, { scale: 1.6, transformOrigin: '900px 1300px' }, 'sine.inOut');
+        show('cont', t0, t1); }
+
+      // ================= 8-9. the brute steps out =================
+      { const s = $('sBrute'), t0 = S[8] - .05, t1 = S[10] - .05, FL = 1560;
+        dawnSky(s); el('rect', { y: 1120, width: 1080, height: 800, fill: '#1c2a44' }, s); el('rect', { y: FL, width: 1080, height: 360, fill: '#5a5a62' }, s);
+        el('rect', { x: -60, y: 760, width: 760, height: 800, fill: '#2a6cd8' }, s); el('rect', { x: 400, y: 800, width: 280, height: 760, fill: '#06060b' }, s);
+        const door = G(s); el('rect', { x: -120, y: -380, width: 240, height: 760, fill: '#2a62c0', stroke: '#1a4a90', 'stroke-width': 8 }, door); put(door, { x: 540, y: 1180 });
+        const B = brute(s, { x: 540, y: FL, sx: 2.2, sy: 2.2 }, { pao: true, armF: -20 }); put(B.g, { x: 540, y: FL, sx: 2.2, sy: 2.2 }); B.g.setAttribute('opacity', 0);
+        const tag = G(s); tag.setAttribute('opacity', 0); el('rect', { x: -130, y: -36, width: 260, height: 64, rx: 10, fill: RED }, tag);
+        el('text', { y: 12, 'font-size': 40, 'font-weight': 800, fill: '#fff', 'font-family': 'Prompt', 'text-anchor': 'middle' }, tag).textContent = 'เสี่ยเปา'; put(tag, { x: 760, y: 560, r: -6 });
+        go(door, H.burst, .9, { x: 1300, y: 1300, r: 540 }, 'power2.out');
+        hit('brute', s, H.burst, 540, 1180, 'โครม!!', 280, 420, '', -8);
+        appear(B.g, H.burst + .1);
+        [0, 1, 2].forEach(i => { go(B.g, H.burst + .4 + i * .7, .3, { x: 560 + i * 30 }, 'power2.out'); shake('brute', H.burst + .7 + i * .7, 16, 4); });
+        appear(tag, S[9] - .2);
+        cam('brute', t0, S[9] - t0, { scale: 1.1, transformOrigin: '540px 1300px' }, { scale: 1, transformOrigin: '540px 1300px' }, 'power2.out');
+        cam('brute', S[9] - .1, t1 - S[9], { y: -600, scale: 1.6, transformOrigin: '600px 1500px' }, { y: 300, scale: 1.6 }, 'sine.inOut');
+        show('brute', t0, t1); }
+
+      // ================= 10-21. the pier fight =================
+      { const s = $('sFight'), t0 = S[10] - .05, t1 = S[22] - .05, FL = 1460, EDGE = 960;
+        const night = dawnSky(s); const day = dawnSky(s, 1); day.setAttribute('opacity', 0);
+        const sun = el('circle', { cx: 980, cy: 1180, r: 120, fill: '#fff2c0', opacity: 0 }, s);
+        el('rect', { y: 1120, width: 1080, height: 800, fill: '#1c2a44' }, s);
+        ship(s, 1000, 1100, .6);
+        el('rect', { x: -40, y: FL, width: EDGE + 40, height: 460, fill: '#5a5a62' }, s);
+        el('rect', { x: -60, y: 960, width: 300, height: 500, fill: '#2a6cd8' }, s);
+        // crane + hook chain + counterweight at the pier edge
+        el('rect', { x: EDGE - 70, y: 700, width: 30, height: 760, fill: '#c9a227' }, s); el('rect', { x: EDGE - 280, y: 690, width: 420, height: 26, fill: '#c9a227' }, s);
+        const cw = G(s); el('rect', { x: -60, y: 0, width: 120, height: 140, fill: '#8a8a90' }, cw); put(cw, { x: EDGE + 90, y: 760 });
+        const cwLine = el('line', { x1: EDGE + 90, y1: 716, x2: EDGE + 90, y2: 760, stroke: '#333', 'stroke-width': 6 }, s);
+        const lever = G(s); el('rect', { x: -10, y: -70, width: 20, height: 70, fill: RED }, lever); put(lever, { x: EDGE - 120, y: FL, r: -30 });
+        const drums = [0, 1].map(i => { const d = G(s); el('rect', { x: -44, y: -120, width: 88, height: 120, rx: 10, fill: i ? '#3a6a3a' : '#8a3a2a' }, d); put(d, { x: 120 + i * 100, y: FL }); return d; });
+        // cast
+        const B = brute(s, { x: 640, y: FL, sx: -1.8, sy: 1.8 }, { pao: true, armF: -20 }); put(B.g, { x: 640, y: FL, sx: -1.8, sy: 1.8 }); put(B.aF, { r: -20 }); put(B.aB, { r: 20 }); put(B.hd, { x: 20, y: -372, r: 10 });
+        const tF = tae(s, { x: 360, y: FL, sx: 1.1, sy: 1.1 }, { helmetOn: true, armF: { r: -80 } }); put(tF.g, { x: 360, y: FL, sx: 1.1, sy: 1.1 }); put(tF.aF, { r: -80 }); put(tF.lF, {}); put(tF.lB, {}); put(tF.aB, { r: 12 });
+        const vF = veins(tF, .5);
+        const fF = fon(s, { x: 180, y: FL, sx: 1.05, sy: 1.05 }, { armF: { r: -20 }, pole: { r: 10 } }); put(fF.g, { x: 180, y: FL, sx: 1.05, sy: 1.05 }); put(fF.aF, { r: -20 }); put(fF.pole, { r: 10 });
+        const mF = mew(s, { x: 60, y: FL, sx: 1, sy: 1 }, { bandage: true, whistle: true, armF: { r: -30 } }); put(mF.g, { x: 60, y: FL, sx: 1, sy: 1 }); put(mF.aF, { r: -30 });
+        const dF = dog(s, { x: 120, y: FL, sx: .6, sy: .6 }); put(dF.g, { x: 120, y: FL, sx: .6, sy: .6 });
+        const chainL = el('path', { d: 'M0 0', stroke: '#888', 'stroke-width': 8, 'stroke-dasharray': '14 6', fill: 'none', opacity: 0 }, s);
+        const gold = G(s); el('path', { d: 'M-50 0 Q0 30 50 0', stroke: '#e8c040', 'stroke-width': 10, fill: 'none' }, gold); gold.setAttribute('opacity', 0);
+        cg('fight', t0, .01, { scale: 1.05, transformOrigin: '540px 1300px' });
+        // 10: Tae steps between, guard up
+        go(tF.g, S[10] + .2, .5, { x: 420 }); go(tF.aF, S[10] + .4, .3, { r: -150 }); go(tF.aB, S[10] + .4, .3, { r: -150 });
+        tl.to(tF.mouth, { attr: { d: TM.g }, duration: .05 }, S[10]); tl.to(tF.mouth, { attr: { d: TM.n }, duration: .05 }, E[10]);
+        // b1: teep, knee, elbow — all on the car door
+        go(tF.lF, H.teep - .12, .12, { r: -95 }, 'power3.out'); hit('fight', s, H.teep, 560, FL - 330, 'ปั้ก!', 520, 560, 'w', -6); go(tF.lF, H.teep + .2, .15, { r: 0 });
+        go(tF.g, H.knee1 - .15, .15, { x: 470, y: FL - 50 }); go(tF.lF, H.knee1 - .12, .12, { r: -110 }, 'power3.out');
+        word(H.knee1, 'เคร้ง!', 600, 700, '', 6, .35); flash(H.knee1, .4); shake('fight', H.knee1, 10, 4);
+        go(tF.g, H.knee1 + .2, .15, { y: FL }); go(tF.lF, H.knee1 + .2, .15, { r: 0 });
+        go(tF.aF, H.elb1 - .12, .12, { r: -60 }, 'power3.out'); word(H.elb1, 'เคร้ง!', 360, 820, 'w s', -6, .35); shake('fight', H.elb1, 10, 4);
+        go(tF.aF, H.elb1 + .3, .2, { r: -150 }); go(tF.g, H.elb1 + .2, .3, { x: 420 });
+        tl.to(tF.mouth, { attr: { d: TM.o }, duration: .05 }, S[11]); tl.to(tF.mouth, { attr: { d: TM.n }, duration: .05 }, E[11]);
+        // b2-3: the driver whistles over the helmet; the backswing sends Tae into the drums
+        go(B.aF, H.whiff - .5, .4, { r: -170 }, 'power2.in'); go(B.aF, H.whiff - .1, .2, { r: 60 }, 'power3.in');
+        go(tF.g, H.whiff - .15, .12, { y: FL + 70, sy: .85 }); word(H.whiff, 'ฟิ้ว!', 480, 620, 'w s', -8, .4);
+        go(tF.g, H.whiff + .3, .15, { y: FL, sy: 1.1 });
+        go(B.aF, H.club - .15, .15, { r: -120 }, 'power3.in');
+        hit('fight', s, H.club, 440, FL - 300, 'โครม!', 300, 560, '', -10);
+        go(tF.g, H.club, .45, { x: 200, y: FL - 200, r: -60 }, 'power2.out'); go(tF.g, H.club + .45, .2, { x: 170, y: FL, r: -90 }, 'power2.in');
+        drums.forEach((d, i) => { go(d, H.club + .6, .8, { x: 260 + i * 160, r: 180 + i * 90 }, 'power2.out'); word(H.club + .7 + i * .2, 'เคร้ง', 120 + i * 260, 900, 'w s', 4, .3); });
+        // b4: the finishing blow — Fon's pole blocks it
+        go(B.g, H.block - .8, .5, { x: 360 }); go(B.aF, H.block - .5, .3, { r: -180 }, 'power2.out');
+        go(fF.g, H.block - .7, .5, { x: 250 }); go(fF.aF, H.block - .3, .2, { r: -160 }); go(fF.pole, H.block - .3, .2, { r: -80 });
+        hit('fight', s, H.block, 300, FL - 520, 'เคร้ง!!', 180, 520, '', -6);
+        go(B.aF, H.block, .15, { r: -150 });
+        tl.to(fF.mouth, { attr: { d: FM.o }, duration: .05 }, S[13]); tl.to(fF.mouth, { attr: { d: FM.n }, duration: .05 }, E[13]);
+        // b6-7: drum into the shins; the fist cracks the concrete; the pole into the back of the knee
+        go(tF.g, H.drum - .6, .4, { x: 220, y: FL, r: 0 }); go(tF.lF, H.drum - .1, .1, { r: -90 }, 'power3.out');
+        go(drums[0], H.drum, .3, { x: 340, r: 360 }, 'power2.in'); word(H.drum + .3, 'ตึง!', 420, 760, 'w', -6, .4); shake('fight', H.drum + .3, 12, 4); go(tF.lF, H.drum + .3, .2, { r: 0 });
+        go(B.aB, H.fist - .2, .2, { r: 100 }, 'power3.in'); hit('fight', s, H.fist, 300, FL - 10, 'ตูม!', 120, 820, '', 6);
+        go(fF.g, H.fist - .3, .5, { x: 470, y: FL + 30, sy: .8 }, 'power2.out');
+        go(fF.aF, H.back - .2, .15, { r: -170 }); go(fF.pole, H.back - .2, .15, { r: -170 }); go(fF.aF, H.back - .05, .08, { r: 20 }, 'power4.in'); go(fF.pole, H.back - .05, .08, { r: 90 }, 'power4.in');
+        hit('fight', s, H.back, 420, FL - 120, 'ปั้ก!', 560, 760, 'w', -8);
+        go(B.g, H.back, .35, { y: FL + 160, r: 8 }, 'power2.in'); shake('fight', H.back + .35, 22, 6);
+        go(fF.g, H.back + .4, .4, { x: 560, sy: 1.05 }); go(fF.aF, H.back + .4, .3, { r: -20 }); go(fF.pole, H.back + .4, .3, { r: 10 });
+        // 15-16: his hand shakes, the veins climb
+        cg('fight', S[15] - .1, .4, { scale: 1.8, transformOrigin: '240px 1100px' }, 'power2.out');
+        tl.to(vF, { attr: { opacity: 1 }, duration: 2 }, S[15]);
+        for (let k = 0; k < 12; k++) go(tF.aF, S[15] + k * .1, .05, { r: -40 + (k % 2 ? 6 : -6) });
+        tl.to(tF.mouth, { attr: { d: TM.g }, duration: .05 }, S[16]); tl.to(tF.mouth, { attr: { d: TM.n }, duration: .05 }, E[16]);
+        cg('fight', E[16] + .1, .4, { scale: 1.05, transformOrigin: '540px 1300px' }, 'power2.out');
+        // b9: up the drum, onto the knee, elbow on the skull
+        go(tF.g, H.skull - .8, .3, { x: 300, y: FL - 120 }, 'power2.out'); go(tF.g, H.skull - .5, .3, { x: 330, y: FL - 420 }, 'power2.out');
+        go(tF.aF, H.skull - .15, .12, { r: -40 }, 'power3.in');
+        hit('fight', s, H.skull, 360, FL - 640, 'ปั้ก!!', 480, 520, '', -10);
+        go(tF.g, H.skull + .2, .4, { x: 240, y: FL }, 'power2.in');
+        // b10: the free hand scoops Mew
+        go(B.g, H.scoop - .4, .3, { y: FL, r: 0 }, 'power2.out');
+        go(B.aB, H.scoop - .2, .3, { r: -60 });
+        go(mF.g, H.scoop, .5, { x: 300, y: FL - 520, r: -10 }, 'power2.out');
+        tl.to(mF.mouth, { attr: { d: MM.o }, duration: .05 }, H.scoop + .2);
+        // b11: the whistle; the dog bites the black hand; Mew drops, Fon catches
+        go(mF.aF, H.whistle - .2, .2, { r: -150 });
+        word(H.whistle, 'ปรี๊ดดด!', 120, 560, 'w', -6, 1.0);
+        go(B.hd, H.whistle + .1, .2, { x: 20, y: -372, r: -30 });
+        go(dF.g, H.chomp - .6, .6, { x: 320, y: FL - 380, r: -30 }, 'power2.out');
+        word(H.chomp, 'งับ!', 420, 700, '', 6, .5); flash(H.chomp, .4); shake('fight', H.chomp, 12, 4);
+        go(mF.g, H.chomp + .2, .4, { x: 520, y: FL, r: 0 }, 'power2.in'); go(fF.g, H.chomp, .4, { x: 560 }); go(fF.aF, H.chomp + .1, .2, { r: -90 });
+        go(dF.g, H.chomp + .4, .4, { x: 470, y: FL, r: 0 }, 'power2.in');
+        go(B.hd, H.chomp + .4, .3, { x: 20, y: -372, r: 10 });
+        // b12: the crane hook, the chain wrapped round the car door
+        go(tF.g, H.loop - .7, .5, { x: 860, y: FL - 200 }, 'power1.out'); go(tF.g, H.loop - .2, .4, { x: 760, y: FL }, 'power1.in');
+        tl.set(chainL, { attr: { opacity: 1, d: `M${EDGE + 90} 900 L640 ${FL - 520} L700 ${FL - 380} L600 ${FL - 380}` } }, H.loop);
+        word(H.loop, 'กริ๊ง กร๊าง!', 520, 760, 'w s', 6, .7);
+        go(tF.aF, S[19] + .1, .2, { r: -100 }); tl.to(tF.mouth, { attr: { d: TM.o }, duration: .05 }, S[19]); tl.to(tF.mouth, { attr: { d: TM.n }, duration: .05 }, E[19]);
+        // b13-14: the brake lever; the counterweight drops, the chain snaps taut; he digs in
+        go(fF.g, S[19] + .3, .6, { x: EDGE - 170 }); go(lever, H.lever, .1, { r: 40 }, 'power3.in'); word(H.lever, 'แกร๊ก!', 600, 1000, 'w s', 6, .4);
+        go(cw, H.lever + .1, .6, { y: 980 }, 'power2.in');
+        tl.set(cwLine, { attr: { y2: 980 } }, H.lever + .7);
+        go(B.g, H.lever + .6, .6, { x: 700 }, 'power2.out'); word(H.lever + 1.0, 'โฮก!', 560, 600, '', -6, .6); shake('fight', H.lever + .7, 14, 6);
+        // b15: SLOW-MO — the sun breaks; the flying knee in silhouette
+        cg('fight', H.slow0 - .1, .4, { scale: 1.3, transformOrigin: '760px 1100px', filter: 'saturate(1.4) contrast(1.15)' }, 'power2.out');
+        tl.fromTo('#barT, #barB', { height: 0 }, { height: 150, duration: .3, immediateRender: false }, H.slow0 - .1);
+        tl.to(day, { attr: { opacity: 1 }, duration: H.knee - H.slow0 }, H.slow0); tl.to(sun, { attr: { opacity: 1, cy: 1060 }, duration: H.knee - H.slow0 }, H.slow0);
+        go(tF.g, H.slow0, (H.knee - H.slow0) * .4, { x: 560 }, 'none');
+        go(tF.g, H.slow0 + (H.knee - H.slow0) * .4, (H.knee - H.slow0) * .6, { x: 680, y: FL - 470, r: -8 }, 'sine.out');
+        go(tF.lF, H.slow0 + (H.knee - H.slow0) * .5, (H.knee - H.slow0) * .5, { r: -110 }, 'sine.in'); go(tF.lB, H.slow0 + (H.knee - H.slow0) * .5, .3, { r: 40 });
+        tl.to('#barT, #barB', { height: 0, duration: .2 }, H.knee + .05);
+        CS.fight = { ...CS.fight, filter: 'saturate(1) contrast(1)' };
+        hit('fight', s, H.knee, 740, FL - 680, 'โครม!!!', 260, 460, '', -8);
+        // b16: the chain whips him off the edge with the counterweight
+        go(B.g, H.knee + .05, .9, { x: EDGE + 160, y: FL + 600, r: 60 }, 'power2.in');
+        go(cw, H.knee + .2, .7, { y: 1500 }, 'power2.in'); tl.set(chainL, { attr: { opacity: 0 } }, H.knee + .4);
+        go(tF.g, H.knee + .2, .5, { x: 760, y: FL, r: 0 }, 'power2.in'); go(tF.lF, H.knee + .3, .3, { r: 0 }); go(tF.lB, H.knee + .3, .3, { r: 0 });
+        const splash = G(s, { x: EDGE + 130, y: 1500 }); splash.setAttribute('opacity', 0);
+        [[-90, 200], [-30, 320], [30, 360], [90, 240]].forEach(([dx, h]) => el('path', { d: `M${dx - 40} 0 L${dx} ${-h} L${dx + 40} 0 Z`, fill: '#e8f4ff' }, splash));
+        appear(splash, H.splash); tl.fromTo(splash, { attr: { transform: T({ x: EDGE + 130, y: 1500, sy: .2 }) } }, { attr: { transform: T({ x: EDGE + 130, y: 1500, sy: 1 }) }, duration: .3, immediateRender: false }, H.splash);
+        tl.to(splash, { attr: { opacity: 0 }, duration: .8 }, H.splash + .5);
+        hit('fight', s, H.splash, EDGE + 130, 1400, 'ตูม!!', 520, 760, '', 6);
+        cg('fight', H.splash, .6, { scale: 1.05, transformOrigin: '540px 1300px' }, 'power2.out');
+        // b17: the gold chain slides to Mew's feet
+        appear(gold, H.chain - .4); put(gold, { x: 800, y: FL - 10 }); go(gold, H.chain - .4, .5, { x: 560 }, 'power2.out'); word(H.chain + .1, 'ชิ้ง', 600, 1180, 'w s', 0, .4);
+        show('fight', t0, t1); }
+
+      // ================= 22. breather: the sun, the bollard =================
+      { const s = $('sRest'), t0 = S[22] - .05, t1 = S[23] - .05, FL = 1500;
+        dawnSky(s, 1); el('circle', { cx: 820, cy: 1050, r: 140, fill: '#fff2c0' }, s);
+        el('rect', { y: 1120, width: 1080, height: 800, fill: '#2a4a6a' }, s); el('rect', { y: FL, width: 1080, height: 420, fill: '#6a6a72' }, s);
+        ship(s, 980, 1120, .7);
+        el('rect', { x: 330, y: FL - 90, width: 80, height: 90, rx: 18, fill: '#2a2a30' }, s);
+        const tR = tae(s, { x: 450, y: FL, sx: 1.2, sy: 1.2 }, { sit: true, helmet: true, armF: { r: -150 } }); veins(tR, 1);
+        fon(s, { x: 640, y: FL, sx: -1.2, sy: 1.2 }, { pole: { r: 10 } });
+        const mR = mew(s, { x: 1100, y: FL, sx: -1.15, sy: 1.15 }, { bandage: true, whistle: true }); put(mR.g, { x: 1100, y: FL, sx: -1.15, sy: 1.15 });
+        go(mR.g, t0 + .3, 1.6, { x: 800 }, 'power2.out');
+        cam('rest', t0, t1 - t0, { scale: 1, transformOrigin: '540px 1300px' }, { scale: 1.2 }, 'sine.inOut');
+        show('rest', t0, t1); }
+
+      // ================= 23-24. the two-shot =================
+      { const s = $('sTwo'), t0 = S[23] - .05, t1 = S[25] - .05;
+        el('rect', { width: 1080, height: 1920, fill: '#f2b45a' }, s); el('rect', { y: 1200, width: 1080, height: 720, fill: '#c88a3a' }, s);
+        const tT = tae(s, { x: 340, y: 2350, sx: 3.2, sy: 3.2 }, { helmet: false }); veins(tT, 1);
+        const fT = fon(s, { x: 820, y: 2350, sx: -3.2, sy: 3.2 }, { armF: { r: -110 }, pole: { r: 90 } }); fT.pole.setAttribute('opacity', 0);
+        tl.to(tT.mouth, { attr: { d: TM.g }, duration: .05 }, S[23] + .2);
+        tl.to(fT.mouth, { attr: { d: FM.o }, duration: .05 }, S[24]); tl.to(fT.mouth, { attr: { d: FM.n }, duration: .05 }, E[24]);
+        cam('two', t0, t1 - t0, { scale: 1, transformOrigin: '540px 1000px' }, { scale: 1.15 }, 'sine.inOut');
+        show('two', t0, t1); }
+
+      // ================= 25. Mew's blood on the bite =================
+      { const s = $('sBlood'), t0 = S[25] - .05, t1 = S[26] - .05;
+        el('rect', { width: 1080, height: 1920, fill: '#3a2a1a' }, s);
+        const a1 = G(s, { x: 540, y: 1000, r: -10 }); el('path', { d: 'M-700 -120 Q0 -150 700 -100 L700 110 Q0 150 -700 130 Z', fill: SKIN }, a1); el('ellipse', { cx: 40, cy: 0, rx: 90, ry: 50, fill: '#5a1418' }, a1);
+        const a2 = G(s); el('path', { d: 'M0 -70 Q300 -90 700 -60 L700 70 Q300 90 0 80 Z', fill: SKIN2 }, a2); el('rect', { x: 40, y: -40, width: 120, height: 80, fill: '#c0392b', opacity: .6 }, a2);
+        const band = el('rect', { x: 20, y: -60, width: 160, height: 120, rx: 8, fill: '#f4f4f0' }, a2);
+        put(a2, { x: 1200, y: 760, r: 10 });
+        go(a2, S[25] + .3, .6, { x: 600, y: 760 }, 'power2.out');
+        tl.to(band, { attr: { opacity: 0 }, duration: .1 }, S[25] + 1.0); word(S[25] + 1.0, 'แควก!', 200, 600, 'w s', -6, .4);
+        go(a2, S[25] + 1.6, .6, { x: 540, y: 980, r: -8 }, 'power2.inOut');
+        cam('blood', t0, t1 - t0, { scale: 1.1, transformOrigin: '600px 980px' }, { scale: 1.4 }, 'sine.inOut');
+        show('blood', t0, t1); }
+
+      // ================= 26-27. zero; the eyes =================
+      { const s = $('sEyes'), t0 = S[26] - .05, t1 = S[28] - .05;
+        el('rect', { width: 1080, height: 1920, fill: '#120e14' }, s);
+        const tZ = tae(s, { x: 540, y: 2900, sx: 5, sy: 5 }, { helmet: false }); veins(tZ, 1);
+        rot(tZ.hd, t0, 1.2, 30, 'power2.in');
+        const face = G(s); face.setAttribute('opacity', 0);
+        el('rect', { width: 1080, height: 1920, fill: '#120e14' }, face);
+        el('rect', { x: 0, y: 760, width: 1080, height: 400, fill: SKIN }, face);
+        const lids = [300, 780].map(x => { const g = G(face, { x, y: 960 }); el('ellipse', { rx: 120, ry: 60, fill: '#f4f0e8' }, g); el('circle', { r: 48, fill: '#3a2a1a' }, g);
+          const lid = el('rect', { x: -130, y: -70, width: 260, height: 140, fill: SKIN }, g);
+          const lash = el('path', { d: 'M-110 0 Q0 30 110 0', stroke: '#3a2416', 'stroke-width': 8, fill: 'none' }, g); tl.set(lash, { attr: { opacity: 0 } }, E[27] + .4); return lid; });
+        tl.set(face, { attr: { opacity: 1 } }, S[27] - .05);
+        lids.forEach(l => tl.to(l, { attr: { height: 0 }, duration: .12, ease: 'power3.in' }, E[27] + .4));
+        tl.set('#eyes .cam', { opacity: 0 }, E[27] + .55);
+        cam('eyes', S[27] - .05, E[27] - S[27] + .5, { scale: 1 }, { scale: 1.15, transformOrigin: '540px 960px' }, 'sine.in');
+        show('eyes', t0, t1); }
+
+      // ================= 28. season 2 card with the radio line =================
+      { const s = $('sCard');
+        el('rect', { width: 1080, height: 1920, fill: '#0b0a10' }, s);
+        el('rect', { y: 1000, width: 1080, height: 300, fill: '#f2b45a', opacity: .8 }, s); el('rect', { y: 1260, width: 1080, height: 660, fill: '#1c2a44' }, s);
+        el('circle', { cx: 540, cy: 1250, r: 120, fill: '#fff2c0' }, s);
+        const sh = ship(s, 540, 1250, 1.3); sh.querySelectorAll('*').forEach(e => { if (e.getAttribute('fill') && e.getAttribute('fill') !== 'none') e.setAttribute('fill', '#0b0a10'); if (e.getAttribute('stroke')) e.setAttribute('stroke', '#0b0a10'); });
+        el('path', { d: 'M380 1760 Q540 1820 700 1760', stroke: '#e8c040', 'stroke-width': 14, fill: 'none' }, s);
+        const txt = 'ยืนยัน… พบตัวเด็กแล้ว';
+        const typer = { v: 0 }; tl.fromTo(typer, { v: 0 }, { v: txt.length, duration: E[28] - S[28], ease: 'none', immediateRender: false, onUpdate: () => $('radio').textContent = 'วิทยุ: ' + txt.slice(0, Math.round(typer.v)) }, S[28]);
+        tl.fromTo('#next', { opacity: 0 }, { opacity: 1, duration: .8, immediateRender: false }, S[28] - .1);
+        tl.fromTo('#next .sr', { opacity: 0 }, { opacity: 1, duration: .4, immediateRender: false }, E[28] + .1);
+        tl.fromTo('#next .pill', { opacity: 0 }, { opacity: 1, duration: .4, immediateRender: false }, E[28] + .3);
+        tl.fromTo('#next h1', { opacity: 0, scale: 1.4 }, { opacity: 1, scale: 1, duration: .3, ease: 'power3.out', immediateRender: false }, E[28] + .5);
+        tl.fromTo('#next .rl', { scaleX: 0 }, { scaleX: 1, duration: .4, immediateRender: false }, E[28] + .9);
+        tl.fromTo('#next .s1', { opacity: 0 }, { opacity: 1, duration: .3, immediateRender: false }, E[28] + 1.1);
+        tl.fromTo('#sCard', { scale: 1 }, { scale: 1.08, duration: END - S[28], ease: 'none', immediateRender: false }, S[28]); }
+
+      tl.set({}, {}, END);
+      window.__timelines['main'] = tl;
+      tl.seek(0);
+    </script>
+  </body>
+</html>

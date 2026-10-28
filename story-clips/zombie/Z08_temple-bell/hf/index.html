@@ -1,0 +1,1146 @@
+<!doctype html>
+<html lang="th">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=1080, height=1920" />
+    <!--
+      Zombie series "กรุงเทพฯ ไม่มีพรุ่งนี้" Z08 "ระฆังวัด" (user, 2026-10-28). Pure zombie action, no eyewear/brand. Thai only.
+      ../template.html is the source: ../build.py inlines ../audio/timing.json (S = cue starts, E = cue ends, 1-based),
+      ../../_shared/cast.js at // Shared cast + timeline helpers for the zombie series (from Z01). Inlined by each episode's build.py at /*CAST*/.
+// Needs in scope: el, G, piv, T, rnd, seed, $ (defined in the episode template) and gsap.
+      const SKIN = '#b97a4c', SKIN2 = '#d7a27a', ZSK = '#8fa088', RED = '#D8343A';
+
+      // ---------- characters (drawn facing right, origin at the feet) ----------
+      function tae(p, o, opt = {}) {
+        const g = G(p, o);
+        const aB = piv(g, -8, -292, { r: 12 });
+        el('path', { d: 'M-10 0 L10 0 L6 92 L-10 90 Z', fill: '#a56a40' }, aB);
+        el('circle', { cx: -2, cy: 98, r: 11, fill: '#a56a40' }, aB);
+        let lB, lF;
+        if (opt.sit) {
+          lB = piv(g, -6, -178); el('path', { d: 'M-16 -10 L16 -10 L72 2 L76 92 L54 94 L50 26 Z', fill: '#26314b' }, lB);
+          lF = piv(g, 8, -178); el('path', { d: 'M-14 -10 L16 -10 L82 4 L86 96 L62 98 L58 28 Z', fill: '#33426a' }, lF);
+          el('path', { d: 'M60 90 L104 92 Q110 106 98 106 L60 106 Z', fill: '#111' }, lF);
+        } else {
+          lB = piv(g, -10, -178); el('path', { d: 'M-14 0 L14 0 L6 86 L2 170 L-22 170 L-18 86 Z', fill: '#26314b' }, lB);
+          el('path', { d: 'M-24 160 L18 160 L18 178 L-26 178 Z', fill: '#111' }, lB);
+          lF = piv(g, 8, -178); el('path', { d: 'M-14 0 L14 0 L22 86 L28 170 L4 170 L-2 88 Z', fill: '#33426a' }, lF);
+          el('path', { d: 'M2 160 L48 162 Q54 178 44 178 L2 178 Z', fill: '#111' }, lF);
+        }
+        el('path', { d: 'M-36 -306 Q0 -318 36 -306 L30 -168 L-30 -168 Z', fill: '#f07a1e' }, g);
+        el('path', { d: 'M-7 -312 L7 -312 L6 -170 L-6 -170 Z', fill: '#22262f' }, g);
+        el('rect', { x: -33, y: -218, width: 66, height: 9, fill: '#ffe08a' }, g);
+        el('rect', { x: 12, y: -280, width: 18, height: 20, rx: 3, fill: '#fff' }, g);
+        el('text', { x: 21, y: -264, 'font-size': 14, 'font-weight': 800, 'text-anchor': 'middle', fill: '#111', 'font-family': 'Prompt' }, g).textContent = '12';
+        el('rect', { x: -8, y: -326, width: 16, height: 22, fill: SKIN }, g);
+        const hd = G(g, { x: 4, y: -352 });
+        el('circle', { r: 32, fill: SKIN }, hd);
+        el('path', { d: 'M-33 -2 Q-32 -42 4 -40 Q36 -38 33 -8 L20 -16 Q-2 -28 -22 -10 Z', fill: '#15161a' }, hd);
+        el('circle', { cx: -8, cy: 2, r: 7, fill: '#a56a40' }, hd);
+        el('circle', { cx: 20, cy: -4, r: 4, fill: '#111' }, hd);
+        el('path', { d: 'M12 -14 L28 -16', stroke: '#111', 'stroke-width': 4, 'stroke-linecap': 'round' }, hd);
+        const mouth = el('path', { d: 'M16 16 Q22 18 28 15', stroke: '#5a2a1a', 'stroke-width': 4, fill: 'none', 'stroke-linecap': 'round' }, hd);
+        let helmHead = null;
+        if (opt.helmetOn) { helmHead = G(hd);
+          el('path', { d: 'M-38 -8 Q-40 -50 4 -50 Q42 -48 40 -14 L40 -10 L-38 -8 Z', fill: '#c4262c' }, helmHead);
+          el('path', { d: 'M-30 -20 Q0 -44 30 -30', stroke: '#fff', 'stroke-width': 5, fill: 'none', opacity: .5 }, helmHead); }
+        const aF = piv(g, 14, -292, opt.armF || {});
+        el('path', { d: 'M-11 0 L11 0 L14 90 L-6 94 Z', fill: SKIN }, aF);
+        el('path', { d: 'M-14 -6 L14 -6 L13 30 L-13 30 Z', fill: '#22262f' }, aF);
+        el('circle', { cx: 4, cy: 100, r: 13, fill: SKIN }, aF);
+        let helm = null;
+        if (opt.helmet) { helm = G(aF, { x: 4, y: 130 });
+          el('line', { x1: 0, y1: -30, x2: 0, y2: -10, stroke: '#222', 'stroke-width': 4 }, helm);
+          el('path', { d: 'M-32 14 Q-34 -32 0 -32 Q34 -32 32 14 Z', fill: '#c4262c', stroke: '#111', 'stroke-width': 4 }, helm);
+          el('path', { d: 'M4 -10 L30 -10 L32 12 L6 12 Z', fill: '#1a1a1f' }, helm); }
+        return { g, aF, aB, lF, lB, hd, mouth, helm };
+      }
+      function fon(p, o, opt = {}) {
+        const g = G(p, o);
+        const aB = piv(g, -10, -290, { r: 8 }); el('path', { d: 'M-10 0 L10 0 L6 88 L-10 86 Z', fill: '#c48d66' }, aB);
+        const lB = piv(g, -10, -176); el('path', { d: 'M-14 0 L14 0 L8 168 L-16 168 Z', fill: '#1f7f74' }, lB);
+        el('path', { d: 'M-20 162 L18 162 L18 178 L-22 178 Z', fill: '#f2f2f2' }, lB);
+        const lF = piv(g, 8, -176); el('path', { d: 'M-14 0 L14 0 L22 168 L-2 168 Z', fill: '#23867a' }, lF);
+        el('path', { d: 'M-4 162 L38 162 Q44 178 34 178 L-4 178 Z', fill: '#f2f2f2' }, lF);
+        el('path', { d: 'M-34 -302 Q0 -314 34 -302 L32 -166 L-32 -166 Z', fill: '#2a9d8f' }, g);
+        el('path', { d: 'M-12 -306 L0 -280 L12 -306 Z', fill: '#1f7f74' }, g);
+        el('rect', { x: -8, y: -322, width: 16, height: 20, fill: SKIN2 }, g);
+        const hd = G(g, { x: 2, y: -346 });
+        el('circle', { cx: -30, cy: -18, r: 17, fill: '#1a1416' }, hd);
+        el('circle', { r: 30, fill: SKIN2 }, hd);
+        el('path', { d: 'M-31 6 Q-34 -38 2 -38 Q32 -36 30 -10 Q8 -24 -14 -16 L-20 18 Z', fill: '#1a1416' }, hd);
+        el('circle', { cx: 18, cy: -4, r: 3.8, fill: '#111' }, hd);
+        const mouth = el('path', { d: 'M14 15 Q20 17 25 14', stroke: '#7a3a2a', 'stroke-width': 4, fill: 'none', 'stroke-linecap': 'round' }, hd);
+        const aF = piv(g, 12, -290, opt.armF || { r: -20 });
+        el('path', { d: 'M-10 0 L10 0 L12 88 L-6 90 Z', fill: SKIN2 }, aF);
+        el('path', { d: 'M-13 -6 L13 -6 L12 26 L-12 26 Z', fill: '#2a9d8f' }, aF);
+        el('circle', { cx: 4, cy: 96, r: 12, fill: SKIN2 }, aF);
+        const pole = piv(aF, 4, 96, opt.pole || { r: 20 });
+        el('line', { x1: 0, y1: -230, x2: 0, y2: 130, stroke: '#c9ced6', 'stroke-width': 8, 'stroke-linecap': 'round' }, pole);
+        el('path', { d: 'M0 -230 Q22 -236 20 -214', stroke: '#c9ced6', 'stroke-width': 6, fill: 'none' }, pole);
+        el('rect', { x: 6, y: -214, width: 34, height: 52, rx: 10, fill: '#e8f4ff', opacity: .85, stroke: '#9fb2c8', 'stroke-width': 3 }, pole);
+        el('line', { x1: -44, y1: 130, x2: 44, y2: 130, stroke: '#9aa1ab', 'stroke-width': 8, 'stroke-linecap': 'round' }, pole);
+        el('circle', { cx: -44, cy: 138, r: 8, fill: '#333' }, pole); el('circle', { cx: 44, cy: 138, r: 8, fill: '#333' }, pole);
+        return { g, aF, aB, lF, lB, hd, mouth, pole };
+      }
+      const SHIRTS = ['#cfd3cf', '#5a6a8a', '#7a4a3a', '#3e5a4a', '#8a7a5a', '#6a3a5a'];
+      function zomb(p, o, opt = {}) {
+        const g = G(p, o);
+        const sh = opt.shirt || SHIRTS[Math.floor(rnd() * SHIRTS.length)];
+        const aB = piv(g, 16, -282, { r: opt.armR ?? -6 });
+        el('path', { d: 'M0 -9 L96 -10 L98 6 L0 10 Z', fill: '#768670' }, aB);
+        el('path', { d: 'M94 -12 L118 -14 M94 -2 L120 -2 M94 6 L116 10', stroke: '#768670', 'stroke-width': 6, 'stroke-linecap': 'round' }, aB);
+        if (!opt.noLegs) {
+          el('path', { d: 'M-24 -172 L2 -172 L-8 -84 L-20 0 L-44 0 L-30 -86 Z', fill: '#2d2a33' }, g);
+          el('path', { d: 'M-2 -172 L22 -172 L26 -84 L36 0 L12 0 L2 -84 Z', fill: '#3b3446' }, g);
+        }
+        el('path', { d: 'M-32 -292 Q8 -316 44 -284 L30 -164 L-30 -164 Z', fill: sh }, g);
+        el('path', { d: 'M-10 -170 L-2 -200 L8 -172 L20 -196 L28 -166 Z', fill: '#1a1418', opacity: .5 }, g);
+        el('path', { d: 'M8 -300 Q26 -296 34 -280 L26 -250 Q18 -270 4 -276 Z', fill: '#7a1418' }, g);
+        const hd = G(g, { x: 30, y: -318, r: 12 });
+        el('circle', { r: 30, fill: ZSK }, hd);
+        el('path', { d: 'M-30 -4 Q-26 -32 6 -32 Q-10 -20 -16 4 Z', fill: '#3a3a38' }, hd);
+        el('circle', { cx: 16, cy: -6, r: 10, fill: 'url(#gEye)' }, hd);
+        el('circle', { cx: 16, cy: -6, r: 5, fill: '#fff' }, hd);
+        el('path', { d: 'M8 12 Q18 20 28 10', stroke: '#5a0a10', 'stroke-width': 5, fill: 'none' }, hd);
+        el('path', { d: 'M14 16 L14 30', stroke: '#8a1018', 'stroke-width': 4 }, hd);
+        const aF = piv(g, 22, -276, { r: opt.armF ?? 4 });
+        el('path', { d: 'M0 -10 L100 -8 L100 8 L0 10 Z', fill: ZSK }, aF);
+        el('path', { d: 'M98 -10 L124 -12 M98 0 L126 0 M98 8 L122 12', stroke: ZSK, 'stroke-width': 6, 'stroke-linecap': 'round' }, aF);
+        return { g, aF, aB, hd };
+      }
+      function bike(p, o) {
+        const g = G(p, o);
+        [-95, 95].forEach(x => { const w = G(g, { x, y: -46 });
+          el('circle', { r: 46, fill: '#15161a' }, w); el('circle', { r: 30, fill: 'none', stroke: '#3a3d45', 'stroke-width': 4 }, w);
+          el('circle', { r: 12, fill: '#9aa0aa' }, w); });
+        el('line', { x1: 80, y1: -120, x2: 95, y2: -46, stroke: '#333', 'stroke-width': 9 }, g);
+        el('path', { d: 'M-118 -78 L-30 -98 L66 -90 L112 -70 L98 -52 L-96 -52 Z', fill: '#c4262c' }, g);
+        el('path', { d: 'M-100 -96 L10 -104 L12 -92 L-100 -84 Z', fill: '#111' }, g);
+        el('path', { d: 'M-40 -52 L40 -52 L30 -26 L-30 -26 Z', fill: '#2a2c32' }, g);
+        el('line', { x1: 70, y1: -122, x2: 108, y2: -136, stroke: '#222', 'stroke-width': 8, 'stroke-linecap': 'round' }, g);
+        el('circle', { cx: 112, cy: -92, r: 12, fill: '#ffe7a0' }, g);
+        return g;
+      }
+      function person(p, x, y, s, col, run, z) {
+        const g = G(p, { x, y, sx: s, sy: Math.abs(s) });
+        el('circle', { cx: 4, cy: -150, r: 18, fill: col }, g);
+        el('path', { d: run ? 'M-16 -128 L22 -128 L18 -60 L44 0 L28 4 L4 -50 L-16 4 L-32 0 L-10 -62 Z' : 'M-16 -128 L22 -128 L18 -60 L22 0 L8 0 L2 -50 L-6 0 L-20 0 L-14 -62 Z', fill: col }, g);
+        el('path', { d: run ? 'M18 -122 L46 -96 L40 -88 L14 -108 M-12 -122 L-40 -100 L-34 -92 L-8 -108' : 'M18 -122 L52 -116 L52 -106 L16 -108', stroke: col, 'stroke-width': 10, fill: 'none', 'stroke-linecap': 'round' }, g);
+        if (z) { el('circle', { cx: 12, cy: -154, r: 4, fill: '#fff' }, g); }
+        return g;
+      }
+      function car(p, x, y, s, col) {
+        const g = G(p, { x, y, sx: s, sy: s });
+        el('path', { d: 'M-130 -30 L-118 -70 L-70 -76 L-40 -118 L60 -118 L96 -76 L130 -66 L134 -30 Z', fill: col }, g);
+        el('path', { d: 'M-30 -108 L20 -108 L20 -80 L-56 -78 Z M30 -108 L56 -108 L82 -80 L30 -80 Z', fill: '#2a3140', opacity: .85 }, g);
+        [-80, 84].forEach(cx => { el('circle', { cx, cy: -26, r: 26, fill: '#141418' }, g); el('circle', { cx, cy: -26, r: 9, fill: '#888' }, g); });
+        return g;
+      }
+      function busBody(p, x, y, len, roofY) {
+        const g = G(p, { x, y });
+        el('rect', { x: 0, y: roofY, width: len, height: 330, rx: 18, fill: '#c8352e' }, g);
+        el('rect', { x: 0, y: roofY, width: len, height: 18, fill: '#a32a24' }, g);
+        el('rect', { x: 0, y: roofY + 190, width: len, height: 22, fill: '#f2efe6' }, g);
+        for (let i = 30; i < len - 100; i += 150) el('rect', { x: i, y: roofY + 42, width: 124, height: 120, rx: 8, fill: '#1c2230' }, g);
+        el('circle', { cx: 120, cy: roofY + 330, r: 48, fill: '#141418' }, g); el('circle', { cx: len - 160, cy: roofY + 330, r: 48, fill: '#141418' }, g);
+        return g;
+      }
+      function skyline(p, y, col, seedN, h = 260) {
+        const g = G(p); let x = -60; seed = seedN;
+        while (x < 1200) { const w = 70 + rnd() * 120, hh = 80 + rnd() * h;
+          el('rect', { x, y: y - hh, width: w, height: hh + 400, fill: col }, g);
+          if (rnd() > .5) el('rect', { x: x + w * .4, y: y - hh - 40, width: 6, height: 40, fill: col }, g);
+          x += w + 6; }
+        return g;
+      }
+      function zSil(p, x, y, s, col = '#120d16') { const g = person(p, x, y, s, col, false, true); return g; }
+
+      // ---------- timeline helpers ----------
+      window.__timelines = window.__timelines || {};
+      const tl = gsap.timeline({ paused: true });
+      const mv = (g, t, d, a, b, ease = 'power2.out') => tl.fromTo(g, { attr: { transform: T(a) } }, { attr: { transform: T(b) }, duration: d, ease, immediateRender: false }, t);
+      const show = (id, t0, t1, fade = 0) => { if (t0 > 0) tl.fromTo('#' + id, { opacity: 0 }, { opacity: 1, duration: fade || .01, immediateRender: false }, t0); tl.to('#' + id, { opacity: 0, duration: .01 }, t1); };
+      const cam = (id, t, d, a, b, ease = 'sine.inOut') => tl.fromTo('#' + id + ' .cam', a, { ...b, duration: d, ease, immediateRender: false }, t);
+      const shake = (id, t, amp = 22, n = 6) => { FXLOG.push({ t: +t.toFixed(3), kind: 'shake', amp }); for (let i = 0; i < n; i++) tl.to('#' + id + ' .cam', { x: (i % 2 ? -1 : 1) * amp * (1 - i / n), y: (rnd() - .5) * amp, duration: .035 }, t + i * .035); tl.to('#' + id + ' .cam', { x: 0, y: 0, duration: .04 }, t + n * .035); };
+      const fxl = $('fxl');
+      const FXLOG = window.__fx = [];   // every SFX word / hit, read by _shared/fxlog.py -> audio/fx.json for the sound bed
+      const word = (t, txt, x, y, cls = '', rot = -8, hold = .55) => {
+        FXLOG.push({ t: +t.toFixed(3), kind: 'word', txt });
+        const d = document.createElement('div'); d.className = 'fx ' + cls; d.textContent = txt; d.style.left = x + 'px'; d.style.top = y + 'px'; fxl.appendChild(d);
+        tl.fromTo(d, { opacity: 0, scale: .2, rotation: rot - 14 }, { opacity: 1, scale: 1.15, rotation: rot, duration: .1, ease: 'back.out(3)', immediateRender: false }, t);
+        tl.to(d, { scale: 1, duration: .1 }, t + .1);
+        tl.to(d, { opacity: 0, scale: 1.3, duration: .2 }, t + hold);
+      };
+      const burst = (p, t, x, y, col = '#fff') => { const g = G(p, { x, y }); g.setAttribute('opacity', 0);
+        for (let i = 0; i < 14; i++) { const a = i / 14 * Math.PI * 2 + rnd() * .2, r1 = 50 + rnd() * 20, r2 = 150 + rnd() * 90;
+          el('path', { d: `M${Math.cos(a - .06) * r1} ${Math.sin(a - .06) * r1} L${Math.cos(a) * r2} ${Math.sin(a) * r2} L${Math.cos(a + .06) * r1} ${Math.sin(a + .06) * r1} Z`, fill: col }, g); }
+        tl.fromTo(g, { opacity: 1, attr: { transform: T({ x, y, sx: .4, sy: .4 }) } }, { attr: { transform: T({ x, y, sx: 1.2, sy: 1.2 }) }, duration: .18, immediateRender: false }, t);
+        tl.to(g, { opacity: 0, duration: .12 }, t + .18); };
+      const flash = (t, o = .85) => { tl.fromTo('#flash', { opacity: o }, { opacity: 0, duration: .16, immediateRender: false }, t); };
+      const hit = (scene, svg, t, x, y, txt, wx, wy, cls, rot) => { FXLOG.push({ t: +t.toFixed(3), kind: 'hit', txt }); flash(t); burst(svg, t, x, y); shake(scene, t); word(t, txt, wx, wy, cls, rot); };
+      const speedLines = (p, n, col, dir = 1) => { const g = G(p);
+        for (let i = 0; i < n; i++) { const y = rnd() * 1920, w = 200 + rnd() * 500; el('rect', { x: rnd() * 1080, y, width: w, height: 3 + rnd() * 5, fill: col, opacity: .25 + rnd() * .4 }, g); }
+        return g; };
+
+
+      // ---------- cast added for Z02-Z10 (same conventions: facing right, origin at the feet, flip with sx: -s) ----------
+      // มิว (10): ~70% of an adult; opt.bandage puts the Z04 bandage on her forearm (drawn on the front arm so it stays visible). opt.whistle = ลุงชาญ's whistle (Z08+).
+      function mew(p, o, opt = {}) {
+        const g = G(p, o);
+        const aB = piv(g, -8, -196, { r: 10 }); el('path', { d: 'M-7 0 L7 0 L5 62 L-7 60 Z', fill: SKIN2 }, aB);
+        const lB = piv(g, -7, -118); el('path', { d: 'M-9 0 L9 0 L6 112 L-10 112 Z', fill: SKIN2 }, lB);
+        el('path', { d: 'M-14 106 L12 106 L12 118 L-16 118 Z', fill: '#e85a8a' }, lB);
+        const lF = piv(g, 6, -118); el('path', { d: 'M-9 0 L9 0 L14 112 L-2 112 Z', fill: SKIN2 }, lF);
+        el('path', { d: 'M-4 106 L24 106 Q28 118 20 118 L-4 118 Z', fill: '#e85a8a' }, lF);
+        el('path', { d: 'M-26 -150 L26 -150 L32 -112 L-32 -112 Z', fill: '#3a4a8a' }, g);
+        el('path', { d: 'M-24 -206 Q0 -214 24 -206 L24 -148 L-24 -148 Z', fill: '#f5a8c8' }, g);
+        el('rect', { x: -40, y: -204, width: 18, height: 54, rx: 6, fill: '#f0c040' }, g);
+        if (opt.whistle) { el('path', { d: 'M-10 -206 L0 -178 L10 -206', stroke: '#c0392b', 'stroke-width': 3, fill: 'none' }, g);
+          el('rect', { x: -6, y: -182, width: 12, height: 8, rx: 2, fill: '#c9ced6' }, g); }
+        el('rect', { x: -5, y: -218, width: 10, height: 14, fill: SKIN2 }, g);
+        const hd = G(g, { x: 2, y: -240 });
+        el('circle', { cx: -26, cy: 0, r: 10, fill: '#1a1416' }, hd); el('circle', { cx: 24, cy: -2, r: 9, fill: '#1a1416' }, hd);
+        el('circle', { r: 25, fill: SKIN2 }, hd);
+        el('path', { d: 'M-26 2 Q-28 -32 2 -32 Q28 -30 26 -4 Q4 -18 -16 -10 Z', fill: '#1a1416' }, hd);
+        el('circle', { cx: 14, cy: -2, r: 3.5, fill: '#111' }, hd);
+        const mouth = el('path', { d: 'M10 12 Q15 14 20 11', stroke: '#7a3a2a', 'stroke-width': 3, fill: 'none', 'stroke-linecap': 'round' }, hd);
+        const aF = piv(g, 10, -196, opt.armF || {}); el('path', { d: 'M-7 0 L7 0 L9 62 L-5 64 Z', fill: SKIN2 }, aF);
+        el('circle', { cx: 2, cy: 68, r: 8, fill: SKIN2 }, aF);
+        if (opt.bandage) el('rect', { x: -8, y: 30, width: 18, height: 20, rx: 3, fill: '#f4f4f0', stroke: '#c9c4b8', 'stroke-width': 2 }, aF);
+        return { g, aF, aB, lF, lB, hd, mouth };
+      }
+      // ข้าวตัง: small brown dog with a red collar. tail and hd are pivot groups (wag: mv(d.tail, t, .1, {r:-30}, {r:20})); bark = change mouth d.
+      function dog(p, o) {
+        const g = G(p, o);
+        [-30, 26].forEach(x => el('rect', { x: x - 6, y: -40, width: 12, height: 40, rx: 4, fill: '#7a4a28' }, g));
+        const tail = piv(g, -44, -58, { r: -30 }); el('path', { d: 'M0 0 Q-20 -24 -14 -46', stroke: '#9a6232', 'stroke-width': 10, fill: 'none', 'stroke-linecap': 'round' }, tail);
+        el('ellipse', { cx: 0, cy: -56, rx: 50, ry: 24, fill: '#9a6232' }, g);
+        [-18, 36].forEach(x => el('rect', { x: x - 6, y: -42, width: 12, height: 42, rx: 4, fill: '#8a5428' }, g));
+        const hd = piv(g, 40, -70);
+        el('circle', { cx: 10, cy: -14, r: 22, fill: '#9a6232' }, hd);
+        el('path', { d: 'M26 -10 L48 -6 L46 6 L24 4 Z', fill: '#b07444' }, hd);
+        el('circle', { cx: 48, cy: -4, r: 5, fill: '#111' }, hd);
+        el('path', { d: 'M-4 -30 L-14 -4 L4 -14 Z', fill: '#5a3418' }, hd);
+        el('circle', { cx: 18, cy: -20, r: 3.5, fill: '#111' }, hd);
+        const mouth = el('path', { d: 'M30 6 L46 8', stroke: '#3a1a10', 'stroke-width': 3, fill: 'none' }, hd);
+        el('rect', { x: -2, y: -2, width: 20, height: 6, rx: 3, fill: '#d8343a' }, hd);
+        return { g, tail, hd, mouth };
+      }
+      // ลุงชาญ (61): security guard, navy cap, light-blue uniform, grey moustache, whistle; krabong staff in the front hand (staff pivots at the hand).
+      function chan(p, o, opt = {}) {
+        const g = G(p, o);
+        const aB = piv(g, -8, -290, { r: 10 }); el('path', { d: 'M-10 0 L10 0 L6 88 L-10 86 Z', fill: '#a8723f' }, aB);
+        const lB = piv(g, -10, -176); el('path', { d: 'M-14 0 L14 0 L6 168 L-18 168 Z', fill: '#1f2a44' }, lB);
+        el('path', { d: 'M-22 160 L16 160 L16 178 L-24 178 Z', fill: '#0d0d10' }, lB);
+        const lF = piv(g, 8, -176); el('path', { d: 'M-14 0 L14 0 L22 168 L-2 168 Z', fill: '#26324f' }, lF);
+        el('path', { d: 'M-2 160 L44 162 Q50 178 40 178 L-2 178 Z', fill: '#0d0d10' }, lF);
+        el('path', { d: 'M-36 -304 Q0 -316 36 -304 L32 -168 L-32 -168 Z', fill: '#9cc3e0' }, g);
+        el('rect', { x: -32, y: -180, width: 64, height: 14, fill: '#111' }, g);
+        el('rect', { x: 10, y: -280, width: 18, height: 12, fill: '#c99a2e' }, g);
+        el('path', { d: 'M-36 -300 L-44 -276 L-30 -270 Z M36 -300 L44 -276 L30 -270 Z', fill: '#1f2a44' }, g);
+        el('rect', { x: -8, y: -324, width: 16, height: 22, fill: '#b98050' }, g);
+        const hd = G(g, { x: 4, y: -350 });
+        el('circle', { r: 31, fill: '#b98050' }, hd);
+        el('path', { d: 'M-30 -4 Q-30 -14 -22 -18 L-22 6 Z', fill: '#d0d0d0' }, hd);
+        el('circle', { cx: 19, cy: -4, r: 3.8, fill: '#111' }, hd);
+        el('path', { d: 'M10 -14 L28 -14', stroke: '#e0e0e0', 'stroke-width': 4 }, hd);
+        el('path', { d: 'M8 10 Q20 4 32 10 L30 14 Q20 10 10 14 Z', fill: '#e0e0e0' }, hd);
+        const mouth = el('path', { d: 'M14 20 Q21 22 27 19', stroke: '#5a2a1a', 'stroke-width': 3.5, fill: 'none', 'stroke-linecap': 'round' }, hd);
+        el('path', { d: 'M-34 -10 Q-34 -46 2 -46 Q34 -46 34 -14 Z', fill: '#1f2a44' }, hd);
+        el('path', { d: 'M20 -16 L54 -12 L52 -6 L20 -8 Z', fill: '#141c30' }, hd);
+        const aF = piv(g, 12, -290, opt.armF || { r: -20 });
+        el('path', { d: 'M-11 0 L11 0 L13 88 L-6 90 Z', fill: '#b98050' }, aF);
+        el('path', { d: 'M-14 -6 L14 -6 L13 34 L-13 34 Z', fill: '#9cc3e0' }, aF);
+        el('circle', { cx: 4, cy: 96, r: 12, fill: '#b98050' }, aF);
+        const staff = piv(aF, 4, 96, opt.staff || { r: 10 });
+        el('line', { x1: 0, y1: -260, x2: 0, y2: 160, stroke: '#7a5228', 'stroke-width': 11, 'stroke-linecap': 'round' }, staff);
+        el('line', { x1: 0, y1: -260, x2: 0, y2: -230, stroke: '#3a2410', 'stroke-width': 13 }, staff);
+        el('line', { x1: 0, y1: 130, x2: 0, y2: 160, stroke: '#3a2410', 'stroke-width': 13 }, staff);
+        const whistle = el('rect', { x: 20, y: -300, width: 14, height: 9, rx: 2, fill: '#c9ced6' }, g);
+        return { g, aF, aB, lF, lB, hd, mouth, staff, whistle };
+      }
+      // เสี่ยเปา (human, Z05 sting / Z06): heavy gang boss, loud flower shirt, gold chain + gold tooth, slick hair, golf club (club pivots at the hand).
+      function pao(p, o, opt = {}) {
+        const g = G(p, o);
+        const aB = piv(g, -14, -292, { r: 12 }); el('path', { d: 'M-12 0 L12 0 L8 90 L-12 88 Z', fill: '#c48a5a' }, aB);
+        const lB = piv(g, -12, -176); el('path', { d: 'M-18 0 L18 0 L8 168 L-20 168 Z', fill: '#222' }, lB);
+        el('path', { d: 'M-24 160 L16 160 L16 178 L-26 178 Z', fill: '#5a3a1a' }, lB);
+        const lF = piv(g, 10, -176); el('path', { d: 'M-18 0 L18 0 L24 168 L-4 168 Z', fill: '#2a2a2a' }, lF);
+        el('path', { d: 'M-4 160 L46 162 Q52 178 42 178 L-4 178 Z', fill: '#5a3a1a' }, lF);
+        el('path', { d: 'M-50 -300 Q0 -320 50 -300 L56 -200 Q0 -150 -56 -200 Z', fill: '#e0503a' }, g);
+        [[-30, -280, '#ffd23f'], [10, -290, '#3ac0a0'], [34, -250, '#fff'], [-20, -230, '#3ac0a0'], [20, -215, '#ffd23f'], [-40, -200, '#fff'], [0, -255, '#fff']]
+          .forEach(([cx, cy, f]) => el('circle', { cx, cy, r: 9, fill: f }, g));
+        el('path', { d: 'M-22 -306 Q2 -270 26 -306', stroke: '#e8c040', 'stroke-width': 8, fill: 'none' }, g);
+        el('rect', { x: -10, y: -326, width: 20, height: 22, fill: '#c48a5a' }, g);
+        const hd = G(g, { x: 4, y: -352 });
+        el('circle', { r: 34, fill: '#c48a5a' }, hd);
+        el('path', { d: 'M-34 -4 Q-34 -44 4 -42 Q36 -40 34 -14 Q0 -30 -20 -16 Z', fill: '#0d0d0d' }, hd);
+        el('circle', { cx: 20, cy: -4, r: 3.8, fill: '#111' }, hd);
+        el('path', { d: 'M10 -14 L30 -12', stroke: '#111', 'stroke-width': 5 }, hd);
+        const mouth = el('path', { d: 'M12 16 Q22 22 32 14', stroke: '#5a2a1a', 'stroke-width': 4, fill: 'none', 'stroke-linecap': 'round' }, hd);
+        el('rect', { x: 26, y: 12, width: 8, height: 5, fill: '#e8c040' }, hd);
+        const aF = piv(g, 18, -292, opt.armF || { r: -10 });
+        el('path', { d: 'M-12 0 L12 0 L14 90 L-6 92 Z', fill: '#c48a5a' }, aF);
+        el('path', { d: 'M-15 -6 L15 -6 L14 30 L-14 30 Z', fill: '#e0503a' }, aF);
+        el('circle', { cx: 4, cy: 98, r: 13, fill: '#c48a5a' }, aF);
+        const club = piv(aF, 4, 98, opt.club || { r: 0 });
+        el('line', { x1: 0, y1: -20, x2: 0, y2: 200, stroke: '#c9ced6', 'stroke-width': 6 }, club);
+        el('path', { d: 'M-4 196 L34 196 L36 212 L-6 210 Z', fill: '#9aa1ab' }, club);
+        return { g, aF, aB, lF, lB, hd, mouth, club };
+      }
+      // gang member (Z06): human in a black tank top; same body as zomb() but normal skin and eyes.
+      function thug(p, o, opt = {}) {
+        const z = zomb(p, o, { shirt: '#151515', armF: opt.armF ?? 60, armR: opt.armR ?? 70 });
+        const c = z.hd.querySelectorAll('circle');
+        c[0].setAttribute('fill', '#c48a5a'); z.g.querySelectorAll('path').forEach(pth => { const f = pth.getAttribute('fill'); if (f === '#7a1418' || f === '#768670') pth.setAttribute('fill', f === '#7a1418' ? '#151515' : '#a8743f'); }); c[1].setAttribute('opacity', 0); c[2].setAttribute('r', 3.8); c[2].setAttribute('fill', '#111');
+        z.g.querySelectorAll('path').forEach(pth => { if (pth.getAttribute('fill') === ZSK || pth.getAttribute('stroke') === ZSK) { pth.getAttribute('fill') === ZSK && pth.setAttribute('fill', '#c48a5a'); pth.getAttribute('stroke') === ZSK && pth.setAttribute('stroke', '#c48a5a'); } });
+        return z;
+      }
+      // brute zombie (Z05; brute เสี่ยเปา in Z10 with opt.pao: white car-door armour, gold chain, slick hair, golf club fused to the hand). Use sx/sy ~1.5-2.2.
+      function brute(p, o, opt = {}) {
+        const g = G(p, o);
+        const aB = piv(g, -30, -300, { r: opt.armR ?? 20 });
+        el('path', { d: 'M-22 0 L22 0 L18 150 L-24 146 Z', fill: '#6f7f6a' }, aB); el('circle', { cx: -2, cy: 160, r: 26, fill: '#6f7f6a' }, aB);
+        el('path', { d: 'M-50 -176 L-4 -176 L-14 0 L-60 0 Z', fill: '#2a2630' }, g);
+        el('path', { d: 'M4 -176 L50 -176 L58 0 L14 0 Z', fill: '#352f3e' }, g);
+        el('path', { d: 'M-70 -330 Q0 -370 72 -330 L62 -170 L-62 -170 Z', fill: opt.pao ? '#a03a2a' : '#4a4038' }, g);
+        if (opt.pao) el('path', { d: 'M-30 -340 Q4 -290 36 -340', stroke: '#e8c040', 'stroke-width': 10, fill: 'none' }, g);
+        const door = G(g, { x: 0, y: -260 });
+        el('path', { d: 'M-60 -60 L56 -66 L60 70 L-58 74 Z', fill: opt.pao ? '#e8e8e8' : '#3a6a9a', stroke: '#222', 'stroke-width': 6 }, door);
+        el('path', { d: 'M-46 -54 L42 -58 L44 -10 L-46 -6 Z', fill: '#1c2230', opacity: .8 }, door);
+        el('rect', { x: 30, y: 14, width: 22, height: 8, fill: '#888' }, door);
+        el('path', { d: 'M-70 -320 L60 -180', stroke: '#888', 'stroke-width': 8, 'stroke-dasharray': '14 6' }, g);
+        const hd = G(g, { x: 20, y: -372, r: 10 });
+        el('circle', { r: 40, fill: '#7f8f78' }, hd);
+        if (opt.pao) el('path', { d: 'M-40 -4 Q-40 -50 4 -48 Q40 -46 38 -18 Q0 -34 -24 -18 Z', fill: '#0d0d0d' }, hd);
+        el('circle', { cx: 20, cy: -8, r: 13, fill: 'url(#gEye)' }, hd); el('circle', { cx: 20, cy: -8, r: 6.5, fill: '#fff' }, hd);
+        el('path', { d: 'M6 16 Q22 28 36 14', stroke: '#5a0a10', 'stroke-width': 7, fill: 'none' }, hd);
+        const aF = piv(g, 40, -300, { r: opt.armF ?? -10 });
+        el('path', { d: 'M-22 0 L22 0 L18 150 L-24 146 Z', fill: '#7f8f78' }, aF); el('circle', { cx: -2, cy: 160, r: 28, fill: '#7f8f78' }, aF);
+        let club = null;
+        if (opt.pao) { club = piv(aF, -2, 160, { r: 0 });
+          el('line', { x1: 0, y1: 0, x2: 0, y2: 260, stroke: '#c9ced6', 'stroke-width': 9 }, club);
+          el('path', { d: 'M-6 254 L46 254 L48 274 L-8 272 Z', fill: '#9aa1ab' }, club); }
+        return { g, aF, aB, hd, door, club };
+      }
+      // night runner = zomb() leaning forward: zomb(p, { x, y, sx, sy, r: 18 }, { armF: -20, armR: -10 }).
+ (characters + timeline helpers) -> index.html.
+      Everything is drawn in SVG by the script below; scenes switch on cue times, so re-timing the voice needs no edits here.
+      Scenes: dog on the wall 1-2 | temple gate 3 | horde under the glow 4 | gate + wall walk 5-6 | wall fight 7-12 (slow-mo bite 11)
+      | back gate + the bite + the whistle 13-17 | split 18 | the bell from the boat 19-20 | smile 21 | silence 22 | next 23
+    -->
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/gsap.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@400;500;600;700;800;900&family=Anuphan:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <style>
+      * { margin: 0; padding: 0; box-sizing: border-box; }
+      html, body { width: 1080px; height: 1920px; overflow: hidden; background: #0b0a10; }
+      #root { position: relative; width: 1080px; height: 1920px; overflow: hidden; font-family: 'Anuphan', sans-serif; color: #fff; }
+      .full { position: absolute; left: 0; top: 0; width: 1080px; height: 1920px; }
+      .scene { opacity: 0; overflow: hidden; }
+      .cam { transform-origin: 540px 960px; }
+      svg { display: block; overflow: visible; }
+
+      .sub { position: absolute; left: 50px; right: 50px; top: 1600px; text-align: center; font-family: 'Prompt', sans-serif; font-weight: 700;
+             font-size: 58px; line-height: 1.3; opacity: 0; text-shadow: 0 4px 0 #000, 0 0 18px rgba(0,0,0,.9), 0 0 4px #000; }
+      .sub.y { color: #FFD23F; }
+      .sub.r span { display: inline-block; background: #D8343A; color: #fff; padding: 4px 26px 8px; border-radius: 10px; text-shadow: none;
+                    box-shadow: 0 6px 24px rgba(0,0,0,.45); }
+      .sub b { color: #9fe8ff; font-weight: 800; }
+
+      .chip { position: absolute; top: 150px; height: 86px; background: #EEE8DC; border-radius: 16px; color: #1d2433; display: flex; align-items: center;
+              gap: 14px; padding: 0 26px 0 20px; box-shadow: 0 8px 26px rgba(0,0,0,.45); }
+      .chip small { display: block; font-size: 20px; font-weight: 500; color: #555a63; line-height: 1; }
+      .chip b { display: block; font-family: 'Prompt'; font-size: 40px; font-weight: 700; line-height: 1.05; letter-spacing: .02em; }
+      #ep { left: auto; right: 56px; background: #D8343A; color: #fff; font: 800 34px 'Prompt'; padding: 0 26px; }
+
+      .badge { position: absolute; left: 60px; top: 1380px; background: rgba(12,12,18,.82); border-left: 10px solid #FFD23F; border-radius: 10px;
+               padding: 14px 26px; font: 600 38px 'Prompt'; color: #fff; opacity: 0; white-space: nowrap; }
+      .badge i { font-style: normal; color: #FFD23F; }
+      #tag { position: absolute; left: 50%; top: 420px; transform: translateX(-50%); background: #D8343A; color: #fff; font: 800 50px 'Prompt';
+             padding: 10px 34px 14px; border-radius: 12px; opacity: 0; white-space: nowrap; box-shadow: 0 10px 30px rgba(0,0,0,.5); }
+
+      .fx { position: absolute; font: 900 150px/1 'Prompt'; color: #FFD23F; opacity: 0; white-space: nowrap;
+            -webkit-text-stroke: 10px #111; paint-order: stroke fill; text-shadow: 10px 10px 0 #D8343A; transform-origin: 50% 50%; }
+      .fx.w { color: #fff; text-shadow: 10px 10px 0 #2a6cd8; }
+      .fx.s { font-size: 96px; }
+
+      #title { position: absolute; left: 0; right: 0; top: 360px; text-align: center; opacity: 0; }
+      #title h1 { font: 900 112px/1.05 'Prompt'; color: #fff; -webkit-text-stroke: 8px #111; paint-order: stroke fill; text-shadow: 8px 8px 0 #D8343A; }
+      #title p { margin-top: 18px; display: inline-block; background: #FFD23F; color: #111; font: 800 44px 'Prompt'; padding: 6px 28px; border-radius: 8px; }
+
+      #flash { background: #fff; opacity: 0; }
+      #redv { background: radial-gradient(ellipse 70% 60% at 50% 50%, rgba(216,52,58,0) 40%, rgba(150,10,20,.85)); opacity: 0; }
+      #bars { pointer-events: none; }
+      #bars div { position: absolute; left: 0; width: 1080px; height: 0; background: #000; }
+
+      #next { background: radial-gradient(ellipse 80% 45% at 50% 42%, #2a1416, #0d0b0d 70%); }
+      #next .pill { position: absolute; left: 50%; top: 600px; transform: translateX(-50%); border: 2px solid #4a4a55; border-radius: 40px; padding: 8px 30px;
+                    font-size: 32px; font-weight: 600; color: #d6d6dc; white-space: nowrap; }
+      #next .pill:before { content: ''; display: inline-block; width: 12px; height: 12px; border-radius: 50%; background: #D8343A; margin-right: 12px; vertical-align: 4px; }
+      #next h1 { position: absolute; left: 40px; right: 40px; top: 700px; text-align: center; font: 900 120px/1.15 'Prompt'; color: #fff;
+                 -webkit-text-stroke: 8px #111; paint-order: stroke fill; text-shadow: 8px 8px 0 #D8343A; }
+      #next .rl { position: absolute; left: 400px; top: 1000px; width: 280px; height: 8px; background: #D8343A; border-radius: 4px; }
+      #next .s1 { position: absolute; left: 0; right: 0; top: 1040px; text-align: center; font: 700 40px 'Prompt'; color: #FFD23F; }
+      #next .s2 { position: absolute; left: 0; right: 0; top: 1110px; text-align: center; font-size: 34px; color: #c8c8d0; }
+      #next .sr { position: absolute; left: 0; right: 0; top: 300px; text-align: center; font: 800 46px 'Prompt'; color: #e05a5f; letter-spacing: .04em; }
+    </style>
+  </head>
+  <body>
+    <div id="root" data-composition-id="main" data-start="0" data-duration="96.62" data-width="1080" data-height="1920">
+      <svg width="0" height="0" style="position:absolute">
+        <defs>
+          <linearGradient id="gNight" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#0a0c1c" /><stop offset=".7" stop-color="#2a2048" /></linearGradient>
+          <radialGradient id="gGlow"><stop offset="0" stop-color="#ffb070" stop-opacity=".9" /><stop offset="1" stop-color="#ffb070" stop-opacity="0" /></radialGradient>
+          <radialGradient id="gFire"><stop offset="0" stop-color="#ffb347" stop-opacity=".95" /><stop offset=".5" stop-color="#ff6a2a" stop-opacity=".45" /><stop offset="1" stop-color="#ff6a2a" stop-opacity="0" /></radialGradient>
+          <radialGradient id="gEye"><stop offset="0" stop-color="#fff" stop-opacity=".9" /><stop offset="1" stop-color="#fff" stop-opacity="0" /></radialGradient>
+        </defs>
+      </svg>
+
+      <div id="dogw" class="scene full" style="opacity:1"><div class="cam full"><svg class="full" viewBox="0 0 1080 1920" id="sDogw"></svg></div></div>
+      <div id="temple" class="scene full"><div class="cam full"><svg class="full" viewBox="0 0 1080 1920" id="sTemple"></svg></div></div>
+      <div id="glow" class="scene full"><div class="cam full"><svg class="full" viewBox="0 0 1080 1920" id="sGlow"></svg></div></div>
+      <div id="gate" class="scene full"><div class="cam full"><svg class="full" viewBox="0 0 1080 1920" id="sGate"></svg></div></div>
+      <div id="fight" class="scene full"><div class="cam full"><svg class="full" viewBox="0 0 1080 1920" id="sFight"></svg></div></div>
+      <div id="talk" class="scene full"><div class="cam full"><svg class="full" viewBox="0 0 1080 1920" id="sTalk"></svg></div></div>
+      <div id="split" class="scene full"><div class="cam full"><svg class="full" viewBox="0 0 1080 1920" id="sSplit"></svg></div></div>
+      <div id="bell" class="scene full"><div class="cam full"><svg class="full" viewBox="0 0 1080 1920" id="sBell"></svg></div></div>
+      <div id="smile" class="scene full"><div class="cam full"><svg class="full" viewBox="0 0 1080 1920" id="sSmile"></svg></div></div>
+
+      <div id="redv" class="full"></div>
+      <div id="flash" class="full"></div>
+      <div id="bars" class="full"><div id="barT" style="top:0"></div><div id="barB" style="bottom:0"></div></div>
+      <div id="fxl" class="full"></div>
+
+      <div id="clock" class="chip" style="left:56px">
+        <svg viewBox="-24 -24 48 48" width="46" height="46"><circle r="19" fill="none" stroke="#1d2433" stroke-width="4" /><path d="M0 -10 L0 0 L8 6" fill="none" stroke="#1d2433" stroke-width="4" stroke-linecap="round" /></svg>
+        <div><small id="clockd">วันที่ 3</small><b id="clockt">00:41</b></div>
+      </div>
+      <div id="ep" class="chip">EP.8</div>
+
+      <div id="subs"></div>
+
+      <div id="next" class="scene full">
+        <div class="sr">กรุงเทพฯ ไม่มีพรุ่งนี้</div>
+        <div class="pill">ตอนหน้า</div>
+        <h1>เจ้าพระยา</h1>
+        <div class="rl"></div>
+        <div class="s1">EP.9 เร็วๆ นี้</div>
+        <div class="s2">กดติดตาม แล้วไปรอดด้วยกัน</div>
+      </div>
+    </div>
+
+    <script>
+      const TIMING = {"total": 96.62, "cues": [{"n": 1, "start": 0.5, "end": 1.67}, {"n": 2, "start": 2.31, "end": 2.9}, {"n": 3, "start": 4.01, "end": 6.55}, {"n": 4, "start": 7.41, "end": 10.2}, {"n": 5, "start": 11.62, "end": 13.19}, {"n": 6, "start": 14.62, "end": 18.55}, {"n": 7, "start": 19.62, "end": 21.13}, {"n": 8, "start": 26.03, "end": 27.34}, {"n": 9, "start": 32.04, "end": 34.33}, {"n": 10, "start": 38.54, "end": 39.62}, {"n": 11, "start": 44.05, "end": 44.84}, {"n": 12, "start": 50.05, "end": 51.77}, {"n": 13, "start": 54.56, "end": 56.81}, {"n": 14, "start": 58.56, "end": 60.28}, {"n": 15, "start": 62.06, "end": 63.51}, {"n": 16, "start": 65.07, "end": 69.13}, {"n": 17, "start": 70.87, "end": 72.98}, {"n": 18, "start": 74.38, "end": 76.02}, {"n": 19, "start": 77.69, "end": 79.74}, {"n": 20, "start": 81.09, "end": 83.81}, {"n": 21, "start": 85.49, "end": 86.41}, {"n": 22, "start": 88.1, "end": 89.35}, {"n": 23, "start": 92.6, "end": 94.42}]};
+      const S = [0], E = [0]; TIMING.cues.forEach(c => { S[c.n] = c.start; E[c.n] = c.end; });
+      const END = TIMING.total;
+      let seed = 7; const rnd = () => (seed = (seed * 16807) % 2147483647) / 2147483647;
+      const NS = 'http://www.w3.org/2000/svg';
+      const el = (tag, a, p) => { const e = document.createElementNS(NS, tag); for (const k in a) e.setAttribute(k, a[k]); p && p.appendChild(e); return e; };
+      const $ = id => document.getElementById(id);
+      const T = o => `translate(${o.x ?? 0} ${o.y ?? 0}) rotate(${o.r ?? 0}) scale(${o.sx ?? 1} ${o.sy ?? 1})`;
+      const G = (p, o = {}) => el('g', { transform: T(o) }, p);
+      const piv = (p, x, y, o = {}) => G(G(p, { x, y }), o);   // inner group rotates around (x, y)
+
+// Shared cast + timeline helpers for the zombie series (from Z01). Inlined by each episode's build.py at /*CAST*/.
+// Needs in scope: el, G, piv, T, rnd, seed, $ (defined in the episode template) and gsap.
+      const SKIN = '#b97a4c', SKIN2 = '#d7a27a', ZSK = '#8fa088', RED = '#D8343A';
+
+      // ---------- characters (drawn facing right, origin at the feet) ----------
+      function tae(p, o, opt = {}) {
+        const g = G(p, o);
+        const aB = piv(g, -8, -292, { r: 12 });
+        el('path', { d: 'M-10 0 L10 0 L6 92 L-10 90 Z', fill: '#a56a40' }, aB);
+        el('circle', { cx: -2, cy: 98, r: 11, fill: '#a56a40' }, aB);
+        let lB, lF;
+        if (opt.sit) {
+          lB = piv(g, -6, -178); el('path', { d: 'M-16 -10 L16 -10 L72 2 L76 92 L54 94 L50 26 Z', fill: '#26314b' }, lB);
+          lF = piv(g, 8, -178); el('path', { d: 'M-14 -10 L16 -10 L82 4 L86 96 L62 98 L58 28 Z', fill: '#33426a' }, lF);
+          el('path', { d: 'M60 90 L104 92 Q110 106 98 106 L60 106 Z', fill: '#111' }, lF);
+        } else {
+          lB = piv(g, -10, -178); el('path', { d: 'M-14 0 L14 0 L6 86 L2 170 L-22 170 L-18 86 Z', fill: '#26314b' }, lB);
+          el('path', { d: 'M-24 160 L18 160 L18 178 L-26 178 Z', fill: '#111' }, lB);
+          lF = piv(g, 8, -178); el('path', { d: 'M-14 0 L14 0 L22 86 L28 170 L4 170 L-2 88 Z', fill: '#33426a' }, lF);
+          el('path', { d: 'M2 160 L48 162 Q54 178 44 178 L2 178 Z', fill: '#111' }, lF);
+        }
+        el('path', { d: 'M-36 -306 Q0 -318 36 -306 L30 -168 L-30 -168 Z', fill: '#f07a1e' }, g);
+        el('path', { d: 'M-7 -312 L7 -312 L6 -170 L-6 -170 Z', fill: '#22262f' }, g);
+        el('rect', { x: -33, y: -218, width: 66, height: 9, fill: '#ffe08a' }, g);
+        el('rect', { x: 12, y: -280, width: 18, height: 20, rx: 3, fill: '#fff' }, g);
+        el('text', { x: 21, y: -264, 'font-size': 14, 'font-weight': 800, 'text-anchor': 'middle', fill: '#111', 'font-family': 'Prompt' }, g).textContent = '12';
+        el('rect', { x: -8, y: -326, width: 16, height: 22, fill: SKIN }, g);
+        const hd = G(g, { x: 4, y: -352 });
+        el('circle', { r: 32, fill: SKIN }, hd);
+        el('path', { d: 'M-33 -2 Q-32 -42 4 -40 Q36 -38 33 -8 L20 -16 Q-2 -28 -22 -10 Z', fill: '#15161a' }, hd);
+        el('circle', { cx: -8, cy: 2, r: 7, fill: '#a56a40' }, hd);
+        el('circle', { cx: 20, cy: -4, r: 4, fill: '#111' }, hd);
+        el('path', { d: 'M12 -14 L28 -16', stroke: '#111', 'stroke-width': 4, 'stroke-linecap': 'round' }, hd);
+        const mouth = el('path', { d: 'M16 16 Q22 18 28 15', stroke: '#5a2a1a', 'stroke-width': 4, fill: 'none', 'stroke-linecap': 'round' }, hd);
+        let helmHead = null;
+        if (opt.helmetOn) { helmHead = G(hd);
+          el('path', { d: 'M-38 -8 Q-40 -50 4 -50 Q42 -48 40 -14 L40 -10 L-38 -8 Z', fill: '#c4262c' }, helmHead);
+          el('path', { d: 'M-30 -20 Q0 -44 30 -30', stroke: '#fff', 'stroke-width': 5, fill: 'none', opacity: .5 }, helmHead); }
+        const aF = piv(g, 14, -292, opt.armF || {});
+        el('path', { d: 'M-11 0 L11 0 L14 90 L-6 94 Z', fill: SKIN }, aF);
+        el('path', { d: 'M-14 -6 L14 -6 L13 30 L-13 30 Z', fill: '#22262f' }, aF);
+        el('circle', { cx: 4, cy: 100, r: 13, fill: SKIN }, aF);
+        let helm = null;
+        if (opt.helmet) { helm = G(aF, { x: 4, y: 130 });
+          el('line', { x1: 0, y1: -30, x2: 0, y2: -10, stroke: '#222', 'stroke-width': 4 }, helm);
+          el('path', { d: 'M-32 14 Q-34 -32 0 -32 Q34 -32 32 14 Z', fill: '#c4262c', stroke: '#111', 'stroke-width': 4 }, helm);
+          el('path', { d: 'M4 -10 L30 -10 L32 12 L6 12 Z', fill: '#1a1a1f' }, helm); }
+        return { g, aF, aB, lF, lB, hd, mouth, helm };
+      }
+      function fon(p, o, opt = {}) {
+        const g = G(p, o);
+        const aB = piv(g, -10, -290, { r: 8 }); el('path', { d: 'M-10 0 L10 0 L6 88 L-10 86 Z', fill: '#c48d66' }, aB);
+        const lB = piv(g, -10, -176); el('path', { d: 'M-14 0 L14 0 L8 168 L-16 168 Z', fill: '#1f7f74' }, lB);
+        el('path', { d: 'M-20 162 L18 162 L18 178 L-22 178 Z', fill: '#f2f2f2' }, lB);
+        const lF = piv(g, 8, -176); el('path', { d: 'M-14 0 L14 0 L22 168 L-2 168 Z', fill: '#23867a' }, lF);
+        el('path', { d: 'M-4 162 L38 162 Q44 178 34 178 L-4 178 Z', fill: '#f2f2f2' }, lF);
+        el('path', { d: 'M-34 -302 Q0 -314 34 -302 L32 -166 L-32 -166 Z', fill: '#2a9d8f' }, g);
+        el('path', { d: 'M-12 -306 L0 -280 L12 -306 Z', fill: '#1f7f74' }, g);
+        el('rect', { x: -8, y: -322, width: 16, height: 20, fill: SKIN2 }, g);
+        const hd = G(g, { x: 2, y: -346 });
+        el('circle', { cx: -30, cy: -18, r: 17, fill: '#1a1416' }, hd);
+        el('circle', { r: 30, fill: SKIN2 }, hd);
+        el('path', { d: 'M-31 6 Q-34 -38 2 -38 Q32 -36 30 -10 Q8 -24 -14 -16 L-20 18 Z', fill: '#1a1416' }, hd);
+        el('circle', { cx: 18, cy: -4, r: 3.8, fill: '#111' }, hd);
+        const mouth = el('path', { d: 'M14 15 Q20 17 25 14', stroke: '#7a3a2a', 'stroke-width': 4, fill: 'none', 'stroke-linecap': 'round' }, hd);
+        const aF = piv(g, 12, -290, opt.armF || { r: -20 });
+        el('path', { d: 'M-10 0 L10 0 L12 88 L-6 90 Z', fill: SKIN2 }, aF);
+        el('path', { d: 'M-13 -6 L13 -6 L12 26 L-12 26 Z', fill: '#2a9d8f' }, aF);
+        el('circle', { cx: 4, cy: 96, r: 12, fill: SKIN2 }, aF);
+        const pole = piv(aF, 4, 96, opt.pole || { r: 20 });
+        el('line', { x1: 0, y1: -230, x2: 0, y2: 130, stroke: '#c9ced6', 'stroke-width': 8, 'stroke-linecap': 'round' }, pole);
+        el('path', { d: 'M0 -230 Q22 -236 20 -214', stroke: '#c9ced6', 'stroke-width': 6, fill: 'none' }, pole);
+        el('rect', { x: 6, y: -214, width: 34, height: 52, rx: 10, fill: '#e8f4ff', opacity: .85, stroke: '#9fb2c8', 'stroke-width': 3 }, pole);
+        el('line', { x1: -44, y1: 130, x2: 44, y2: 130, stroke: '#9aa1ab', 'stroke-width': 8, 'stroke-linecap': 'round' }, pole);
+        el('circle', { cx: -44, cy: 138, r: 8, fill: '#333' }, pole); el('circle', { cx: 44, cy: 138, r: 8, fill: '#333' }, pole);
+        return { g, aF, aB, lF, lB, hd, mouth, pole };
+      }
+      const SHIRTS = ['#cfd3cf', '#5a6a8a', '#7a4a3a', '#3e5a4a', '#8a7a5a', '#6a3a5a'];
+      function zomb(p, o, opt = {}) {
+        const g = G(p, o);
+        const sh = opt.shirt || SHIRTS[Math.floor(rnd() * SHIRTS.length)];
+        const aB = piv(g, 16, -282, { r: opt.armR ?? -6 });
+        el('path', { d: 'M0 -9 L96 -10 L98 6 L0 10 Z', fill: '#768670' }, aB);
+        el('path', { d: 'M94 -12 L118 -14 M94 -2 L120 -2 M94 6 L116 10', stroke: '#768670', 'stroke-width': 6, 'stroke-linecap': 'round' }, aB);
+        if (!opt.noLegs) {
+          el('path', { d: 'M-24 -172 L2 -172 L-8 -84 L-20 0 L-44 0 L-30 -86 Z', fill: '#2d2a33' }, g);
+          el('path', { d: 'M-2 -172 L22 -172 L26 -84 L36 0 L12 0 L2 -84 Z', fill: '#3b3446' }, g);
+        }
+        el('path', { d: 'M-32 -292 Q8 -316 44 -284 L30 -164 L-30 -164 Z', fill: sh }, g);
+        el('path', { d: 'M-10 -170 L-2 -200 L8 -172 L20 -196 L28 -166 Z', fill: '#1a1418', opacity: .5 }, g);
+        el('path', { d: 'M8 -300 Q26 -296 34 -280 L26 -250 Q18 -270 4 -276 Z', fill: '#7a1418' }, g);
+        const hd = G(g, { x: 30, y: -318, r: 12 });
+        el('circle', { r: 30, fill: ZSK }, hd);
+        el('path', { d: 'M-30 -4 Q-26 -32 6 -32 Q-10 -20 -16 4 Z', fill: '#3a3a38' }, hd);
+        el('circle', { cx: 16, cy: -6, r: 10, fill: 'url(#gEye)' }, hd);
+        el('circle', { cx: 16, cy: -6, r: 5, fill: '#fff' }, hd);
+        el('path', { d: 'M8 12 Q18 20 28 10', stroke: '#5a0a10', 'stroke-width': 5, fill: 'none' }, hd);
+        el('path', { d: 'M14 16 L14 30', stroke: '#8a1018', 'stroke-width': 4 }, hd);
+        const aF = piv(g, 22, -276, { r: opt.armF ?? 4 });
+        el('path', { d: 'M0 -10 L100 -8 L100 8 L0 10 Z', fill: ZSK }, aF);
+        el('path', { d: 'M98 -10 L124 -12 M98 0 L126 0 M98 8 L122 12', stroke: ZSK, 'stroke-width': 6, 'stroke-linecap': 'round' }, aF);
+        return { g, aF, aB, hd };
+      }
+      function bike(p, o) {
+        const g = G(p, o);
+        [-95, 95].forEach(x => { const w = G(g, { x, y: -46 });
+          el('circle', { r: 46, fill: '#15161a' }, w); el('circle', { r: 30, fill: 'none', stroke: '#3a3d45', 'stroke-width': 4 }, w);
+          el('circle', { r: 12, fill: '#9aa0aa' }, w); });
+        el('line', { x1: 80, y1: -120, x2: 95, y2: -46, stroke: '#333', 'stroke-width': 9 }, g);
+        el('path', { d: 'M-118 -78 L-30 -98 L66 -90 L112 -70 L98 -52 L-96 -52 Z', fill: '#c4262c' }, g);
+        el('path', { d: 'M-100 -96 L10 -104 L12 -92 L-100 -84 Z', fill: '#111' }, g);
+        el('path', { d: 'M-40 -52 L40 -52 L30 -26 L-30 -26 Z', fill: '#2a2c32' }, g);
+        el('line', { x1: 70, y1: -122, x2: 108, y2: -136, stroke: '#222', 'stroke-width': 8, 'stroke-linecap': 'round' }, g);
+        el('circle', { cx: 112, cy: -92, r: 12, fill: '#ffe7a0' }, g);
+        return g;
+      }
+      function person(p, x, y, s, col, run, z) {
+        const g = G(p, { x, y, sx: s, sy: Math.abs(s) });
+        el('circle', { cx: 4, cy: -150, r: 18, fill: col }, g);
+        el('path', { d: run ? 'M-16 -128 L22 -128 L18 -60 L44 0 L28 4 L4 -50 L-16 4 L-32 0 L-10 -62 Z' : 'M-16 -128 L22 -128 L18 -60 L22 0 L8 0 L2 -50 L-6 0 L-20 0 L-14 -62 Z', fill: col }, g);
+        el('path', { d: run ? 'M18 -122 L46 -96 L40 -88 L14 -108 M-12 -122 L-40 -100 L-34 -92 L-8 -108' : 'M18 -122 L52 -116 L52 -106 L16 -108', stroke: col, 'stroke-width': 10, fill: 'none', 'stroke-linecap': 'round' }, g);
+        if (z) { el('circle', { cx: 12, cy: -154, r: 4, fill: '#fff' }, g); }
+        return g;
+      }
+      function car(p, x, y, s, col) {
+        const g = G(p, { x, y, sx: s, sy: s });
+        el('path', { d: 'M-130 -30 L-118 -70 L-70 -76 L-40 -118 L60 -118 L96 -76 L130 -66 L134 -30 Z', fill: col }, g);
+        el('path', { d: 'M-30 -108 L20 -108 L20 -80 L-56 -78 Z M30 -108 L56 -108 L82 -80 L30 -80 Z', fill: '#2a3140', opacity: .85 }, g);
+        [-80, 84].forEach(cx => { el('circle', { cx, cy: -26, r: 26, fill: '#141418' }, g); el('circle', { cx, cy: -26, r: 9, fill: '#888' }, g); });
+        return g;
+      }
+      function busBody(p, x, y, len, roofY) {
+        const g = G(p, { x, y });
+        el('rect', { x: 0, y: roofY, width: len, height: 330, rx: 18, fill: '#c8352e' }, g);
+        el('rect', { x: 0, y: roofY, width: len, height: 18, fill: '#a32a24' }, g);
+        el('rect', { x: 0, y: roofY + 190, width: len, height: 22, fill: '#f2efe6' }, g);
+        for (let i = 30; i < len - 100; i += 150) el('rect', { x: i, y: roofY + 42, width: 124, height: 120, rx: 8, fill: '#1c2230' }, g);
+        el('circle', { cx: 120, cy: roofY + 330, r: 48, fill: '#141418' }, g); el('circle', { cx: len - 160, cy: roofY + 330, r: 48, fill: '#141418' }, g);
+        return g;
+      }
+      function skyline(p, y, col, seedN, h = 260) {
+        const g = G(p); let x = -60; seed = seedN;
+        while (x < 1200) { const w = 70 + rnd() * 120, hh = 80 + rnd() * h;
+          el('rect', { x, y: y - hh, width: w, height: hh + 400, fill: col }, g);
+          if (rnd() > .5) el('rect', { x: x + w * .4, y: y - hh - 40, width: 6, height: 40, fill: col }, g);
+          x += w + 6; }
+        return g;
+      }
+      function zSil(p, x, y, s, col = '#120d16') { const g = person(p, x, y, s, col, false, true); return g; }
+
+      // ---------- timeline helpers ----------
+      window.__timelines = window.__timelines || {};
+      const tl = gsap.timeline({ paused: true });
+      const mv = (g, t, d, a, b, ease = 'power2.out') => tl.fromTo(g, { attr: { transform: T(a) } }, { attr: { transform: T(b) }, duration: d, ease, immediateRender: false }, t);
+      const show = (id, t0, t1, fade = 0) => { if (t0 > 0) tl.fromTo('#' + id, { opacity: 0 }, { opacity: 1, duration: fade || .01, immediateRender: false }, t0); tl.to('#' + id, { opacity: 0, duration: .01 }, t1); };
+      const cam = (id, t, d, a, b, ease = 'sine.inOut') => tl.fromTo('#' + id + ' .cam', a, { ...b, duration: d, ease, immediateRender: false }, t);
+      const shake = (id, t, amp = 22, n = 6) => { FXLOG.push({ t: +t.toFixed(3), kind: 'shake', amp }); for (let i = 0; i < n; i++) tl.to('#' + id + ' .cam', { x: (i % 2 ? -1 : 1) * amp * (1 - i / n), y: (rnd() - .5) * amp, duration: .035 }, t + i * .035); tl.to('#' + id + ' .cam', { x: 0, y: 0, duration: .04 }, t + n * .035); };
+      const fxl = $('fxl');
+      const FXLOG = window.__fx = [];   // every SFX word / hit, read by _shared/fxlog.py -> audio/fx.json for the sound bed
+      const word = (t, txt, x, y, cls = '', rot = -8, hold = .55) => {
+        FXLOG.push({ t: +t.toFixed(3), kind: 'word', txt });
+        const d = document.createElement('div'); d.className = 'fx ' + cls; d.textContent = txt; d.style.left = x + 'px'; d.style.top = y + 'px'; fxl.appendChild(d);
+        tl.fromTo(d, { opacity: 0, scale: .2, rotation: rot - 14 }, { opacity: 1, scale: 1.15, rotation: rot, duration: .1, ease: 'back.out(3)', immediateRender: false }, t);
+        tl.to(d, { scale: 1, duration: .1 }, t + .1);
+        tl.to(d, { opacity: 0, scale: 1.3, duration: .2 }, t + hold);
+      };
+      const burst = (p, t, x, y, col = '#fff') => { const g = G(p, { x, y }); g.setAttribute('opacity', 0);
+        for (let i = 0; i < 14; i++) { const a = i / 14 * Math.PI * 2 + rnd() * .2, r1 = 50 + rnd() * 20, r2 = 150 + rnd() * 90;
+          el('path', { d: `M${Math.cos(a - .06) * r1} ${Math.sin(a - .06) * r1} L${Math.cos(a) * r2} ${Math.sin(a) * r2} L${Math.cos(a + .06) * r1} ${Math.sin(a + .06) * r1} Z`, fill: col }, g); }
+        tl.fromTo(g, { opacity: 1, attr: { transform: T({ x, y, sx: .4, sy: .4 }) } }, { attr: { transform: T({ x, y, sx: 1.2, sy: 1.2 }) }, duration: .18, immediateRender: false }, t);
+        tl.to(g, { opacity: 0, duration: .12 }, t + .18); };
+      const flash = (t, o = .85) => { tl.fromTo('#flash', { opacity: o }, { opacity: 0, duration: .16, immediateRender: false }, t); };
+      const hit = (scene, svg, t, x, y, txt, wx, wy, cls, rot) => { FXLOG.push({ t: +t.toFixed(3), kind: 'hit', txt }); flash(t); burst(svg, t, x, y); shake(scene, t); word(t, txt, wx, wy, cls, rot); };
+      const speedLines = (p, n, col, dir = 1) => { const g = G(p);
+        for (let i = 0; i < n; i++) { const y = rnd() * 1920, w = 200 + rnd() * 500; el('rect', { x: rnd() * 1080, y, width: w, height: 3 + rnd() * 5, fill: col, opacity: .25 + rnd() * .4 }, g); }
+        return g; };
+
+
+      // ---------- cast added for Z02-Z10 (same conventions: facing right, origin at the feet, flip with sx: -s) ----------
+      // มิว (10): ~70% of an adult; opt.bandage puts the Z04 bandage on her forearm (drawn on the front arm so it stays visible). opt.whistle = ลุงชาญ's whistle (Z08+).
+      function mew(p, o, opt = {}) {
+        const g = G(p, o);
+        const aB = piv(g, -8, -196, { r: 10 }); el('path', { d: 'M-7 0 L7 0 L5 62 L-7 60 Z', fill: SKIN2 }, aB);
+        const lB = piv(g, -7, -118); el('path', { d: 'M-9 0 L9 0 L6 112 L-10 112 Z', fill: SKIN2 }, lB);
+        el('path', { d: 'M-14 106 L12 106 L12 118 L-16 118 Z', fill: '#e85a8a' }, lB);
+        const lF = piv(g, 6, -118); el('path', { d: 'M-9 0 L9 0 L14 112 L-2 112 Z', fill: SKIN2 }, lF);
+        el('path', { d: 'M-4 106 L24 106 Q28 118 20 118 L-4 118 Z', fill: '#e85a8a' }, lF);
+        el('path', { d: 'M-26 -150 L26 -150 L32 -112 L-32 -112 Z', fill: '#3a4a8a' }, g);
+        el('path', { d: 'M-24 -206 Q0 -214 24 -206 L24 -148 L-24 -148 Z', fill: '#f5a8c8' }, g);
+        el('rect', { x: -40, y: -204, width: 18, height: 54, rx: 6, fill: '#f0c040' }, g);
+        if (opt.whistle) { el('path', { d: 'M-10 -206 L0 -178 L10 -206', stroke: '#c0392b', 'stroke-width': 3, fill: 'none' }, g);
+          el('rect', { x: -6, y: -182, width: 12, height: 8, rx: 2, fill: '#c9ced6' }, g); }
+        el('rect', { x: -5, y: -218, width: 10, height: 14, fill: SKIN2 }, g);
+        const hd = G(g, { x: 2, y: -240 });
+        el('circle', { cx: -26, cy: 0, r: 10, fill: '#1a1416' }, hd); el('circle', { cx: 24, cy: -2, r: 9, fill: '#1a1416' }, hd);
+        el('circle', { r: 25, fill: SKIN2 }, hd);
+        el('path', { d: 'M-26 2 Q-28 -32 2 -32 Q28 -30 26 -4 Q4 -18 -16 -10 Z', fill: '#1a1416' }, hd);
+        el('circle', { cx: 14, cy: -2, r: 3.5, fill: '#111' }, hd);
+        const mouth = el('path', { d: 'M10 12 Q15 14 20 11', stroke: '#7a3a2a', 'stroke-width': 3, fill: 'none', 'stroke-linecap': 'round' }, hd);
+        const aF = piv(g, 10, -196, opt.armF || {}); el('path', { d: 'M-7 0 L7 0 L9 62 L-5 64 Z', fill: SKIN2 }, aF);
+        el('circle', { cx: 2, cy: 68, r: 8, fill: SKIN2 }, aF);
+        if (opt.bandage) el('rect', { x: -8, y: 30, width: 18, height: 20, rx: 3, fill: '#f4f4f0', stroke: '#c9c4b8', 'stroke-width': 2 }, aF);
+        return { g, aF, aB, lF, lB, hd, mouth };
+      }
+      // ข้าวตัง: small brown dog with a red collar. tail and hd are pivot groups (wag: mv(d.tail, t, .1, {r:-30}, {r:20})); bark = change mouth d.
+      function dog(p, o) {
+        const g = G(p, o);
+        [-30, 26].forEach(x => el('rect', { x: x - 6, y: -40, width: 12, height: 40, rx: 4, fill: '#7a4a28' }, g));
+        const tail = piv(g, -44, -58, { r: -30 }); el('path', { d: 'M0 0 Q-20 -24 -14 -46', stroke: '#9a6232', 'stroke-width': 10, fill: 'none', 'stroke-linecap': 'round' }, tail);
+        el('ellipse', { cx: 0, cy: -56, rx: 50, ry: 24, fill: '#9a6232' }, g);
+        [-18, 36].forEach(x => el('rect', { x: x - 6, y: -42, width: 12, height: 42, rx: 4, fill: '#8a5428' }, g));
+        const hd = piv(g, 40, -70);
+        el('circle', { cx: 10, cy: -14, r: 22, fill: '#9a6232' }, hd);
+        el('path', { d: 'M26 -10 L48 -6 L46 6 L24 4 Z', fill: '#b07444' }, hd);
+        el('circle', { cx: 48, cy: -4, r: 5, fill: '#111' }, hd);
+        el('path', { d: 'M-4 -30 L-14 -4 L4 -14 Z', fill: '#5a3418' }, hd);
+        el('circle', { cx: 18, cy: -20, r: 3.5, fill: '#111' }, hd);
+        const mouth = el('path', { d: 'M30 6 L46 8', stroke: '#3a1a10', 'stroke-width': 3, fill: 'none' }, hd);
+        el('rect', { x: -2, y: -2, width: 20, height: 6, rx: 3, fill: '#d8343a' }, hd);
+        return { g, tail, hd, mouth };
+      }
+      // ลุงชาญ (61): security guard, navy cap, light-blue uniform, grey moustache, whistle; krabong staff in the front hand (staff pivots at the hand).
+      function chan(p, o, opt = {}) {
+        const g = G(p, o);
+        const aB = piv(g, -8, -290, { r: 10 }); el('path', { d: 'M-10 0 L10 0 L6 88 L-10 86 Z', fill: '#a8723f' }, aB);
+        const lB = piv(g, -10, -176); el('path', { d: 'M-14 0 L14 0 L6 168 L-18 168 Z', fill: '#1f2a44' }, lB);
+        el('path', { d: 'M-22 160 L16 160 L16 178 L-24 178 Z', fill: '#0d0d10' }, lB);
+        const lF = piv(g, 8, -176); el('path', { d: 'M-14 0 L14 0 L22 168 L-2 168 Z', fill: '#26324f' }, lF);
+        el('path', { d: 'M-2 160 L44 162 Q50 178 40 178 L-2 178 Z', fill: '#0d0d10' }, lF);
+        el('path', { d: 'M-36 -304 Q0 -316 36 -304 L32 -168 L-32 -168 Z', fill: '#9cc3e0' }, g);
+        el('rect', { x: -32, y: -180, width: 64, height: 14, fill: '#111' }, g);
+        el('rect', { x: 10, y: -280, width: 18, height: 12, fill: '#c99a2e' }, g);
+        el('path', { d: 'M-36 -300 L-44 -276 L-30 -270 Z M36 -300 L44 -276 L30 -270 Z', fill: '#1f2a44' }, g);
+        el('rect', { x: -8, y: -324, width: 16, height: 22, fill: '#b98050' }, g);
+        const hd = G(g, { x: 4, y: -350 });
+        el('circle', { r: 31, fill: '#b98050' }, hd);
+        el('path', { d: 'M-30 -4 Q-30 -14 -22 -18 L-22 6 Z', fill: '#d0d0d0' }, hd);
+        el('circle', { cx: 19, cy: -4, r: 3.8, fill: '#111' }, hd);
+        el('path', { d: 'M10 -14 L28 -14', stroke: '#e0e0e0', 'stroke-width': 4 }, hd);
+        el('path', { d: 'M8 10 Q20 4 32 10 L30 14 Q20 10 10 14 Z', fill: '#e0e0e0' }, hd);
+        const mouth = el('path', { d: 'M14 20 Q21 22 27 19', stroke: '#5a2a1a', 'stroke-width': 3.5, fill: 'none', 'stroke-linecap': 'round' }, hd);
+        el('path', { d: 'M-34 -10 Q-34 -46 2 -46 Q34 -46 34 -14 Z', fill: '#1f2a44' }, hd);
+        el('path', { d: 'M20 -16 L54 -12 L52 -6 L20 -8 Z', fill: '#141c30' }, hd);
+        const aF = piv(g, 12, -290, opt.armF || { r: -20 });
+        el('path', { d: 'M-11 0 L11 0 L13 88 L-6 90 Z', fill: '#b98050' }, aF);
+        el('path', { d: 'M-14 -6 L14 -6 L13 34 L-13 34 Z', fill: '#9cc3e0' }, aF);
+        el('circle', { cx: 4, cy: 96, r: 12, fill: '#b98050' }, aF);
+        const staff = piv(aF, 4, 96, opt.staff || { r: 10 });
+        el('line', { x1: 0, y1: -260, x2: 0, y2: 160, stroke: '#7a5228', 'stroke-width': 11, 'stroke-linecap': 'round' }, staff);
+        el('line', { x1: 0, y1: -260, x2: 0, y2: -230, stroke: '#3a2410', 'stroke-width': 13 }, staff);
+        el('line', { x1: 0, y1: 130, x2: 0, y2: 160, stroke: '#3a2410', 'stroke-width': 13 }, staff);
+        const whistle = el('rect', { x: 20, y: -300, width: 14, height: 9, rx: 2, fill: '#c9ced6' }, g);
+        return { g, aF, aB, lF, lB, hd, mouth, staff, whistle };
+      }
+      // เสี่ยเปา (human, Z05 sting / Z06): heavy gang boss, loud flower shirt, gold chain + gold tooth, slick hair, golf club (club pivots at the hand).
+      function pao(p, o, opt = {}) {
+        const g = G(p, o);
+        const aB = piv(g, -14, -292, { r: 12 }); el('path', { d: 'M-12 0 L12 0 L8 90 L-12 88 Z', fill: '#c48a5a' }, aB);
+        const lB = piv(g, -12, -176); el('path', { d: 'M-18 0 L18 0 L8 168 L-20 168 Z', fill: '#222' }, lB);
+        el('path', { d: 'M-24 160 L16 160 L16 178 L-26 178 Z', fill: '#5a3a1a' }, lB);
+        const lF = piv(g, 10, -176); el('path', { d: 'M-18 0 L18 0 L24 168 L-4 168 Z', fill: '#2a2a2a' }, lF);
+        el('path', { d: 'M-4 160 L46 162 Q52 178 42 178 L-4 178 Z', fill: '#5a3a1a' }, lF);
+        el('path', { d: 'M-50 -300 Q0 -320 50 -300 L56 -200 Q0 -150 -56 -200 Z', fill: '#e0503a' }, g);
+        [[-30, -280, '#ffd23f'], [10, -290, '#3ac0a0'], [34, -250, '#fff'], [-20, -230, '#3ac0a0'], [20, -215, '#ffd23f'], [-40, -200, '#fff'], [0, -255, '#fff']]
+          .forEach(([cx, cy, f]) => el('circle', { cx, cy, r: 9, fill: f }, g));
+        el('path', { d: 'M-22 -306 Q2 -270 26 -306', stroke: '#e8c040', 'stroke-width': 8, fill: 'none' }, g);
+        el('rect', { x: -10, y: -326, width: 20, height: 22, fill: '#c48a5a' }, g);
+        const hd = G(g, { x: 4, y: -352 });
+        el('circle', { r: 34, fill: '#c48a5a' }, hd);
+        el('path', { d: 'M-34 -4 Q-34 -44 4 -42 Q36 -40 34 -14 Q0 -30 -20 -16 Z', fill: '#0d0d0d' }, hd);
+        el('circle', { cx: 20, cy: -4, r: 3.8, fill: '#111' }, hd);
+        el('path', { d: 'M10 -14 L30 -12', stroke: '#111', 'stroke-width': 5 }, hd);
+        const mouth = el('path', { d: 'M12 16 Q22 22 32 14', stroke: '#5a2a1a', 'stroke-width': 4, fill: 'none', 'stroke-linecap': 'round' }, hd);
+        el('rect', { x: 26, y: 12, width: 8, height: 5, fill: '#e8c040' }, hd);
+        const aF = piv(g, 18, -292, opt.armF || { r: -10 });
+        el('path', { d: 'M-12 0 L12 0 L14 90 L-6 92 Z', fill: '#c48a5a' }, aF);
+        el('path', { d: 'M-15 -6 L15 -6 L14 30 L-14 30 Z', fill: '#e0503a' }, aF);
+        el('circle', { cx: 4, cy: 98, r: 13, fill: '#c48a5a' }, aF);
+        const club = piv(aF, 4, 98, opt.club || { r: 0 });
+        el('line', { x1: 0, y1: -20, x2: 0, y2: 200, stroke: '#c9ced6', 'stroke-width': 6 }, club);
+        el('path', { d: 'M-4 196 L34 196 L36 212 L-6 210 Z', fill: '#9aa1ab' }, club);
+        return { g, aF, aB, lF, lB, hd, mouth, club };
+      }
+      // gang member (Z06): human in a black tank top; same body as zomb() but normal skin and eyes.
+      function thug(p, o, opt = {}) {
+        const z = zomb(p, o, { shirt: '#151515', armF: opt.armF ?? 60, armR: opt.armR ?? 70 });
+        const c = z.hd.querySelectorAll('circle');
+        c[0].setAttribute('fill', '#c48a5a'); z.g.querySelectorAll('path').forEach(pth => { const f = pth.getAttribute('fill'); if (f === '#7a1418' || f === '#768670') pth.setAttribute('fill', f === '#7a1418' ? '#151515' : '#a8743f'); }); c[1].setAttribute('opacity', 0); c[2].setAttribute('r', 3.8); c[2].setAttribute('fill', '#111');
+        z.g.querySelectorAll('path').forEach(pth => { if (pth.getAttribute('fill') === ZSK || pth.getAttribute('stroke') === ZSK) { pth.getAttribute('fill') === ZSK && pth.setAttribute('fill', '#c48a5a'); pth.getAttribute('stroke') === ZSK && pth.setAttribute('stroke', '#c48a5a'); } });
+        return z;
+      }
+      // brute zombie (Z05; brute เสี่ยเปา in Z10 with opt.pao: white car-door armour, gold chain, slick hair, golf club fused to the hand). Use sx/sy ~1.5-2.2.
+      function brute(p, o, opt = {}) {
+        const g = G(p, o);
+        const aB = piv(g, -30, -300, { r: opt.armR ?? 20 });
+        el('path', { d: 'M-22 0 L22 0 L18 150 L-24 146 Z', fill: '#6f7f6a' }, aB); el('circle', { cx: -2, cy: 160, r: 26, fill: '#6f7f6a' }, aB);
+        el('path', { d: 'M-50 -176 L-4 -176 L-14 0 L-60 0 Z', fill: '#2a2630' }, g);
+        el('path', { d: 'M4 -176 L50 -176 L58 0 L14 0 Z', fill: '#352f3e' }, g);
+        el('path', { d: 'M-70 -330 Q0 -370 72 -330 L62 -170 L-62 -170 Z', fill: opt.pao ? '#a03a2a' : '#4a4038' }, g);
+        if (opt.pao) el('path', { d: 'M-30 -340 Q4 -290 36 -340', stroke: '#e8c040', 'stroke-width': 10, fill: 'none' }, g);
+        const door = G(g, { x: 0, y: -260 });
+        el('path', { d: 'M-60 -60 L56 -66 L60 70 L-58 74 Z', fill: opt.pao ? '#e8e8e8' : '#3a6a9a', stroke: '#222', 'stroke-width': 6 }, door);
+        el('path', { d: 'M-46 -54 L42 -58 L44 -10 L-46 -6 Z', fill: '#1c2230', opacity: .8 }, door);
+        el('rect', { x: 30, y: 14, width: 22, height: 8, fill: '#888' }, door);
+        el('path', { d: 'M-70 -320 L60 -180', stroke: '#888', 'stroke-width': 8, 'stroke-dasharray': '14 6' }, g);
+        const hd = G(g, { x: 20, y: -372, r: 10 });
+        el('circle', { r: 40, fill: '#7f8f78' }, hd);
+        if (opt.pao) el('path', { d: 'M-40 -4 Q-40 -50 4 -48 Q40 -46 38 -18 Q0 -34 -24 -18 Z', fill: '#0d0d0d' }, hd);
+        el('circle', { cx: 20, cy: -8, r: 13, fill: 'url(#gEye)' }, hd); el('circle', { cx: 20, cy: -8, r: 6.5, fill: '#fff' }, hd);
+        el('path', { d: 'M6 16 Q22 28 36 14', stroke: '#5a0a10', 'stroke-width': 7, fill: 'none' }, hd);
+        const aF = piv(g, 40, -300, { r: opt.armF ?? -10 });
+        el('path', { d: 'M-22 0 L22 0 L18 150 L-24 146 Z', fill: '#7f8f78' }, aF); el('circle', { cx: -2, cy: 160, r: 28, fill: '#7f8f78' }, aF);
+        let club = null;
+        if (opt.pao) { club = piv(aF, -2, 160, { r: 0 });
+          el('line', { x1: 0, y1: 0, x2: 0, y2: 260, stroke: '#c9ced6', 'stroke-width': 9 }, club);
+          el('path', { d: 'M-6 254 L46 254 L48 274 L-8 272 Z', fill: '#9aa1ab' }, club); }
+        return { g, aF, aB, hd, door, club };
+      }
+      // night runner = zomb() leaning forward: zomb(p, { x, y, sx, sy, r: 18 }, { armF: -20, armR: -10 }).
+
+
+      // ---------- shared episode helpers (from Z02): state-tracked moves so every tween starts where the last one ended ----------
+      const ST = new Map();
+      const put = (g, o) => { ST.set(g, o); g.setAttribute('transform', T(o)); return g; };
+      const go = (g, t, d, b, ease = 'power2.out') => { const a = ST.get(g) || {}; const n = { ...a, ...b }; mv(g, t, d, a, n, ease); ST.set(g, n); };
+      const CS = {};   // camera state per scene
+      const cg = (id, t, d, b, ease = 'sine.inOut') => { const a = CS[id] || { scale: 1, transformOrigin: '540px 960px' }; const n = { ...a, ...b }; cam(id, t, d, a, n, ease); CS[id] = n; };
+      const MS = new Map();   // mouth shapes
+      const say = (m, t, d) => { const a = MS.get(m) || m.getAttribute('d'); tl.fromTo(m, { attr: { d: a } }, { attr: { d }, duration: .08, immediateRender: false }, t); MS.set(m, d); };
+      const talk = (m, t0, t1, open, shut) => { for (let t = t0; t < t1 - .12; t += .2) { say(m, t, open); say(m, t + .1, shut); } };
+      const TM = { n: 'M16 16 Q22 18 28 15', o: 'M14 10 Q22 28 30 10 Z', g: 'M12 10 Q22 26 32 9 Z' };   // Tae: neutral / shout / grin
+      const FM = { n: 'M14 15 Q20 17 25 14', o: 'M12 10 Q20 28 28 10 Z', g: 'M12 11 Q20 22 28 10 Z' };
+      const mouthFill = m => { m.setAttribute('fill', '#5a1a1a'); return m; };
+      const appear = (g, t, on = 1) => tl.set(g, { attr: { opacity: on } }, t);
+
+      const MM = { n: 'M10 12 Q15 14 20 11', o: 'M9 8 Q15 22 21 8 Z' };
+
+      // rotate in place, keeping the group's own translate (head groups sit at an offset)
+      const base = g => g.__b || (g.__b = (m => m ? { x: +m[1], y: +m[2] } : { x: 0, y: 0 })((g.getAttribute('transform') || '').match(/translate\(([-\d.]+)[ ,]+([-\d.]+)\)/)));
+      const rot = (g, t, d, r, ease = 'power2.out') => tl.to(g, { attr: { transform: T({ ...base(g), r }) }, duration: d, ease }, t);
+
+      // fight beats (the same formulas are in audio/ambience.py)
+      const H = {
+        jab1: S[7] + 1.4, jab2: S[7] + 2.0, sweep: S[7] + 2.7, teep: S[7] + 4.3,
+        leap: S[8] + 1.1, pole: S[8] + 2.0, down: S[8] + 2.8, grab: S[8] + 4.0,
+        helm: E[9] + .25, haul: E[9] + .9, bark: E[9] + 1.6, bite: E[9] + 2.5, fin: E[9] + 3.1,
+        gate: S[10] + .3, burst: S[10] + 1.1, fig: S[10] + 2.6, fig2: S[10] + 3.3,
+        sm0: S[11] - 1.3, chomp: S[11] - .2, head: S[11] + 1.5, cart: S[11] + 3.0,
+      };
+      H.sm1 = H.head - .1;
+      const BELLS = [S[19] + .05, S[19] + .8, S[19] + 1.55, S[20] + .4, S[20] + 1.6, S[21] - .2, S[22] - 1.2];   // the last one rings silent
+
+      // ---------- subtitles ----------
+      const LINES = [null,
+        ['โฮ่ง! โฮ่ง!', 'y'],
+        ['<b>มิว:</b> “ข้าวตัง!”', 'y'],
+        ['มันวิ่งนำทางมา…<br>ถึงวัดริมคลอง', ''],
+        ['แต่ไฟจากจตุจักร<br>ลากฝูงมันตามมาด้วย', 'r'],
+        ['<b>ลุงชาญ:</b> “ปิดประตู!<br>ขึ้นกำแพง!”', 'y'],
+        ['<b>เต้:</b> “ห้าคนกับหมาหนึ่งตัว<br>สู้ทั้งเมือง… ยุติธรรมดี”', ''],
+        ['มันปีนข้ามศพกันขึ้นมา!', 'r'],
+        ['<b>ฝน:</b> “ฝั่งซ้าย! ตัววิ่ง!”', 'y'],
+        ['<b>เต้:</b> “บุญยังไม่ทันทำ<br>ต้องมาต่อยในวัดอีก!”', ''],
+        ['ประตูจะพังแล้ว!', 'r'],
+        ['<b>มิว:</b> “ลุง!!”', 'r'],
+        ['<b>ลุงชาญ:</b> “ไม่เป็นไร…<br>แค่ถลอก”', ''],
+        ['ประตูหลังมีเรือ…<br>ไปทางคลองได้', ''],
+        ['<b>ลุงชาญ:</b> “เต้…<br>ลุงโดนกัดแล้ว”', 'r'],
+        ['<b>ลุงชาญ:</b> “เสียงดัง<br>เรียกมันได้ใช่ไหม”', 'y'],
+        ['<b>ลุงชาญ:</b> “ลุงเฝ้าห้างมาสามสิบปี<br>คืนนี้ขอเฝ้าพวกหนู”', 'y'],
+        ['<b>ลุงชาญ:</b> “มิว…<br>เป่านกหวีดนี้แทนลุงนะ”', ''],
+        ['ไป! อย่าหันกลับมา!', 'r'],
+        ['เป๊ง… เป๊ง… เป๊ง…', 'y'],
+        ['ทั้งฝูงหันหลัง…<br>เดินไปหาเสียงระฆัง', ''],
+        ['ลุงชาญยิ้ม', ''],
+        ['แล้วระฆังก็เงียบ', 'r'],
+        null];
+      const subs = $('subs');
+      for (let n = 1; n < LINES.length; n++) { if (!LINES[n]) continue;
+        const d = document.createElement('div'); d.className = 'sub ' + LINES[n][1];
+        d.innerHTML = LINES[n][1] === 'r' ? `<span>${LINES[n][0]}</span>` : LINES[n][0]; subs.appendChild(d);
+        const off = Math.min(E[n] + .35, (S[n + 1] ?? END) - .05);
+        tl.fromTo(d, { opacity: 0, y: 14 }, { opacity: 1, y: 0, duration: .18, ease: 'power2.out', immediateRender: false }, S[n] - .05);
+        tl.to(d, { opacity: 0, duration: .1 }, off); }
+
+      // clock 00:41 -> 00:53
+      { const o = { v: 41 }; tl.fromTo(o, { v: 41 }, { v: 53.9, duration: E[22] - S[1], ease: 'none', immediateRender: false, onUpdate: () => $('clockt').textContent = '00:' + Math.floor(o.v) }, S[1]); }
+      tl.to('#clock, #ep', { opacity: 0, duration: .3 }, S[23] - .2);
+
+      // temple props
+      const wallSeg = (p, x, y, w, h) => { const g = G(p); el('rect', { x, y, width: w, height: h, fill: '#e8e2d2' }, g); el('rect', { x: x - 6, y: y - 20, width: w + 12, height: 24, fill: '#b9442e' }, g); return g; };
+      const roofT = (p, x, y, w, col = '#b9442e') => { const g = G(p, { x, y });
+        el('path', { d: `M${-w / 2} 0 L${-w / 2 + 40} -60 L${w / 2 - 40} -60 L${w / 2} 0 Z`, fill: col }, g);
+        el('path', { d: `M${-w / 2 + 60} -60 L${-w / 2 + 100} -130 L${w / 2 - 100} -130 L${w / 2 - 60} -60 Z`, fill: '#c9a227' }, g);
+        el('path', { d: `M${-w / 2} 0 Q${-w / 2 - 20} -20 ${-w / 2 - 30} -50 M${w / 2} 0 Q${w / 2 + 20} -20 ${w / 2 + 30} -50`, stroke: '#c9a227', 'stroke-width': 8, fill: 'none' }, g); return g; };
+      const tower = (p, x, y, s = 1) => { const g = G(p, { x, y, sx: s, sy: s });
+        el('rect', { x: -70, y: -360, width: 140, height: 360, fill: '#e8e2d2' }, g);
+        el('rect', { x: -90, y: -380, width: 180, height: 24, fill: '#b9442e' }, g);
+        el('path', { d: 'M-110 -380 L0 -520 L110 -380 Z', fill: '#b9442e' }, g); el('path', { d: 'M0 -520 L0 -580', stroke: '#c9a227', 'stroke-width': 8 }, g);
+        const bell = G(g, { x: 0, y: -350 }); el('path', { d: 'M-34 0 Q-36 70 -50 90 L50 90 Q36 70 34 0 Q0 -16 -34 0 Z', fill: '#c9a227' }, bell);
+        return { g, bell }; };
+      const NBG = 'url(#gNight)';
+
+      // ================= 1-2. a bark; a small dog on the white wall =================
+      { const s = $('sDogw'), t1 = S[3] - .05;
+        el('rect', { width: 1080, height: 1920, fill: '#05050a' }, s);
+        const lit = G(s); lit.setAttribute('opacity', 0);
+        el('rect', { width: 1080, height: 1920, fill: NBG }, lit);
+        el('circle', { cx: 620, cy: 820, r: 220, fill: '#e8e2c4', opacity: .9 }, lit);
+        wallSeg(lit, -40, 1180, 1160, 740);
+        const d1 = dog(lit, { x: 560, y: 1162, sx: 1.6, sy: 1.6 }); put(d1.tail, { r: -30 });
+        d1.g.querySelectorAll('*').forEach(e => { if (e.getAttribute('fill') && e.getAttribute('fill') !== 'none') e.setAttribute('fill', '#0e0a10'); if (e.getAttribute('stroke')) e.setAttribute('stroke', '#0e0a10'); });
+        tl.fromTo(lit, { attr: { opacity: 0 } }, { attr: { opacity: 1 }, duration: .25, immediateRender: false }, S[1] + .1);
+        [S[1] + .05, S[1] + .6].forEach((t, i) => word(t, 'โฮ่ง!', 120 + i * 480, 560 + i * 120, 'w', -8 + i * 14, .5));
+        for (let k = 0; k < 8; k++) go(d1.tail, S[1] + k * .18, .09, { r: k % 2 ? -30 : 20 }, 'sine.inOut');
+        cam('dogw', 0, .01, { scale: 1.3, transformOrigin: '600px 1100px' }, { scale: 1.3 });
+        cam('dogw', S[1] + .1, .3, { scale: 1.3, transformOrigin: '600px 1100px' }, { scale: 1.9, transformOrigin: '620px 1080px' }, 'power3.out');
+        cam('dogw', S[2] - .1, t1 - S[2], { scale: 1.9, transformOrigin: '620px 1080px' }, { scale: 1.2 }, 'power2.out');
+        show('dogw', 0, t1); }
+
+      // ================= 3. through the temple gate =================
+      { const s = $('sTemple'), t0 = S[3] - .05, t1 = S[4] - .05;
+        el('rect', { width: 1080, height: 1920, fill: NBG }, s);
+        el('circle', { cx: 860, cy: 420, r: 64, fill: '#e8e2c4', opacity: .85 }, s);
+        roofT(s, 420, 1000, 620); el('rect', { x: 170, y: 1000, width: 500, height: 280, fill: '#e8e2d2' }, s);
+        tower(s, 860, 1180, 1);
+        wallSeg(s, -40, 1180, 1160, 740);
+        const gate = G(s, { x: 540, y: 1180 }); el('rect', { x: -120, y: 0, width: 240, height: 300, fill: '#06060b' }, gate);
+        const dl = G(gate, { x: -120 }); el('rect', { width: 120, height: 300, fill: '#7a4a2a', stroke: '#4a2a14', 'stroke-width': 6 }, dl);
+        const dr = G(gate, { x: 120 }); el('rect', { x: -120, width: 120, height: 300, fill: '#7a4a2a', stroke: '#4a2a14', 'stroke-width': 6 }, dr);
+        put(dl, { x: -120, sx: .3 }); put(dr, { x: 120, sx: .3 });
+        const grp = G(s); put(grp, { x: -700, y: 1480 });
+        [[0, c => tae(c, { x: 0, y: 0, sx: .8, sy: .8 }, { helmet: true })], [-120, c => fon(c, { x: 0, y: 0, sx: .8, sy: .8 }, { pole: { r: 10 } })],
+         [-230, c => mew(c, { x: 0, y: 0, sx: .8, sy: .8 }, { bandage: true, armF: { r: -80 } })], [-340, c => chan(c, { x: 0, y: 0, sx: .8, sy: .8 }, { staff: { r: 40 } })]].forEach(([x, f]) => f(G(grp, { x })));
+        dog(G(grp, { x: -205, y: -150 }), { sx: .45, sy: .45 });
+        go(grp, t0, t1 - t0 - .3, { x: 600 }, 'power1.inOut');
+        go(dl, t1 - .9, .3, { x: -120, sx: 1 }); go(dr, t1 - .9, .3, { x: 120, sx: 1 });
+        cam('temple', t0, t1 - t0, { scale: 1.2, transformOrigin: '540px 1300px' }, { scale: 1 }, 'sine.out');
+        show('temple', t0, t1); }
+
+      // ================= 4. the glow of Chatuchak, the river of them =================
+      { const s = $('sGlow'), t0 = S[4] - .05, t1 = S[5] - .05;
+        el('rect', { width: 1080, height: 1920, fill: '#0a0812' }, s);
+        el('circle', { cx: 300, cy: 700, r: 700, fill: 'url(#gFire)', opacity: .7 }, s);
+        skyline(s, 820, '#151220', 111, 300);
+        el('path', { d: 'M380 820 L700 820 L1300 1920 L-200 1920 Z', fill: '#1a1620' }, s);
+        const river = G(s); seed = 121;
+        for (let i = 0; i < 160; i++) { const k = rnd(), y = 840 + k * k * 1080, sc = .3 + k * k * 1.6, x = 540 + (rnd() - .5) * (300 + k * k * 1300);
+          const g = G(river, { x, y, sx: sc, sy: sc }); el('circle', { r: 26, fill: '#07060c' }, g); el('circle', { cx: -7, cy: -6, r: 3.5, fill: '#fff' }, g); el('circle', { cx: 7, cy: -6, r: 3.5, fill: '#fff' }, g); }
+        go(river, t0, t1 - t0, { y: 120 }, 'none');
+        word(S[4] + .6, 'อืออออ…', 300, 560, 'w s', 0, 2.2);
+        cam('glow', t0, t1 - t0, { y: 300, scale: 1.1 }, { y: -120, scale: 1.1 }, 'sine.inOut');
+        show('glow', t0, t1); }
+
+      // ================= 5-6. bar the gate, up the wall =================
+      { const s = $('sGate'), t0 = S[5] - .05, t1 = S[7] - .05, FL = 1500;
+        el('rect', { width: 1080, height: 1920, fill: NBG }, s);
+        el('circle', { cx: 900, cy: 400, r: 300, fill: 'url(#gFire)', opacity: .35 }, s);
+        wallSeg(s, -40, 880, 1160, 620);
+        el('rect', { x: 330, y: 1000, width: 420, height: 500, fill: '#7a4a2a', stroke: '#4a2a14', 'stroke-width': 8 }, s);
+        el('line', { x1: 540, y1: 1000, x2: 540, y2: 1500, stroke: '#4a2a14', 'stroke-width': 8 }, s);
+        const bar = G(s); el('rect', { x: -260, y: -22, width: 520, height: 44, rx: 8, fill: '#5a3418' }, bar); put(bar, { x: 540, y: 1100, r: -70 });
+        el('rect', { y: FL, width: 1080, height: 420, fill: '#2a2630' }, s);
+        const cG = chan(s, { x: 220, y: FL, sx: 1.2, sy: 1.2 }, { armF: { r: -120 }, staff: { r: 40 } }); put(cG.aF, { r: -120 });
+        const tG = tae(s, { x: 860, y: FL, sx: -1.2, sy: 1.2 }, { helmet: true, armF: { r: -20 } }); put(tG.aF, { r: -20 }); put(tG.aB, { r: 12 });
+        go(bar, S[5] + .5, .2, { r: 0, y: 1250 }, 'power3.in'); go(cG.aF, S[5] + .5, .2, { r: -30 }, 'power3.in');
+        word(S[5] + .7, 'ปึง!', 520, 640, '', -6, .5); shake('gate', S[5] + .7, 14, 5); flash(S[5] + .7, .3);
+        // 6: Tae counts on his fingers for the joke
+        cg('gate', S[6] - .1, .4, { scale: 1.6, transformOrigin: '860px 1050px' }, 'power2.out');
+        tl.to(tG.mouth, { attr: { d: TM.g }, duration: .05 }, S[6]);
+        [0, 1, 2, 3, 4].forEach(i => { go(tG.aF, S[6] + .2 + i * .45, .15, { r: -150 + i * 6 }); word(S[6] + .2 + i * .45, String(i + 1), 520 + (i % 3) * 120, 600, 'w s', 0, .3); });
+        tl.to(tG.mouth, { attr: { d: TM.n }, duration: .05 }, E[6] + .2);
+        cg('gate', E[6] + .1, .4, { scale: 1, transformOrigin: '540px 1200px' }, 'power2.out');
+        show('gate', t0, t1); }
+
+      // ================= 7-12. the wall fight =================
+      { const s = $('sFight'), t0 = S[7] - .05, t1 = S[13] - .05, WT = 1150, WX0 = 520, WX1 = 840, FL = 1520;
+        el('rect', { width: 1080, height: 1920, fill: NBG }, s);
+        el('circle', { cx: 980, cy: 600, r: 500, fill: 'url(#gFire)', opacity: .35 }, s);
+        roofT(s, 220, 980, 420); el('rect', { x: 40, y: 980, width: 360, height: 540, fill: '#e8e2d2' }, s);
+        const tw = tower(s, 160, FL - 0, .8);
+        el('rect', { y: FL, width: WX0, height: 400, fill: '#3a3438' }, s);                        // courtyard tiles
+        el('rect', { x: WX1, y: FL + 60, width: 400, height: 400, fill: '#1a1620' }, s);           // street outside
+        // the horde + the ramp of bodies outside
+        const out = G(s); seed = 131;
+        for (let i = 0; i < 40; i++) { const x = WX1 + 10 + rnd() * 300, y = FL + 60 - rnd() * (WT + 40 - (x - WX1) * .9 > FL ? 0 : 1) * 0 - rnd() * (FL - WT - 60) * (1 - (x - WX1) / 400);
+          const g = G(out, { x, y }); el('circle', { r: 30, fill: '#07060c' }, g); el('circle', { cx: -8, cy: -6, r: 4, fill: '#fff' }, g); el('circle', { cx: 8, cy: -6, r: 4, fill: '#fff' }, g); }
+        // the wall block with the gate in it
+        el('rect', { x: WX0, y: WT, width: WX1 - WX0, height: FL - WT + 60, fill: '#e8e2d2' }, s);
+        el('rect', { x: WX0 - 8, y: WT - 22, width: WX1 - WX0 + 16, height: 26, fill: '#b9442e' }, s);
+        const gL = G(s, { x: WX0 + 40, y: 1300 }); el('rect', { width: 120, height: FL - 1300 + 60, fill: '#7a4a2a', stroke: '#4a2a14', 'stroke-width': 6 }, gL);
+        const gR = G(s, { x: WX1 - 40, y: 1300 }); el('rect', { x: -120, width: 120, height: FL - 1300 + 60, fill: '#7a4a2a', stroke: '#4a2a14', 'stroke-width': 6 }, gR);
+        put(gL, { x: WX0 + 40, y: 1300 }); put(gR, { x: WX1 - 40, y: 1300 });
+        // heads popping over the wall top (climbers)
+        const climbers = [0, 1, 2].map(i => { const z = zomb(s, { x: WX1 + 60 + i * 60, y: WT + 330, sx: -1, sy: 1 }, { armF: -70, armR: -80, noLegs: true }); put(z.g, { x: WX1 + 60 + i * 60, y: WT + 330, sx: -1, sy: 1 }); return z; });
+        const dom = [0, 1, 2].map(i => { const z = zomb(s, { x: WX1 + 80 + i * 70, y: WT + 380 + i * 60, sx: -1, sy: 1 }, { armF: -70, armR: -80, noLegs: true }); put(z.g, { x: WX1 + 80 + i * 70, y: WT + 380 + i * 60, sx: -1, sy: 1 }); z.g.setAttribute('opacity', 0); return z; });
+        // cast
+        const cF = chan(s, { x: 770, y: WT, sx: 1.05, sy: 1.05 }, { armF: { r: -30 }, staff: { r: 70 } }); put(cF.g, { x: 770, y: WT, sx: 1.05, sy: 1.05 }); put(cF.aF, { r: -30 }); put(cF.staff, { r: 70 });
+        const tF = tae(s, { x: 610, y: WT, sx: 1.05, sy: 1.05 }, { helmet: true, armF: { r: -20 } }); put(tF.g, { x: 610, y: WT, sx: 1.05, sy: 1.05 }); put(tF.aF, { r: -20 }); put(tF.lF, {});
+        const fF = fon(s, { x: 380, y: FL, sx: 1.05, sy: 1.05 }, { armF: { r: -20 }, pole: { r: 10 } }); put(fF.g, { x: 380, y: FL, sx: 1.05, sy: 1.05 }); put(fF.aF, { r: -20 }); put(fF.pole, { r: 10 });
+        const mF = mew(s, { x: 120, y: FL, sx: 1, sy: 1 }, { armF: { r: -30 }, bandage: true }); put(mF.g, { x: 120, y: FL, sx: 1, sy: 1 });
+        const dF = dog(s, { x: 210, y: FL, sx: .6, sy: .6 }); put(dF.g, { x: 210, y: FL, sx: .6, sy: .6 });
+        const R1 = zomb(s, { x: 1000, y: WT + 200, sx: -1.05, sy: 1.05, r: 30 }, { armF: -30, armR: -20, shirt: '#7a4a3a' }); put(R1.g, { x: 1000, y: WT + 200, sx: -1.05, sy: 1.05, r: 30 }); R1.g.setAttribute('opacity', 0);
+        const R2 = zomb(s, { x: -150, y: FL, sx: 1.05, sy: 1.05, r: 30 }, { armF: -20, armR: -10, shirt: '#3e5a4a' }); put(R2.g, { x: -150, y: FL, sx: 1.05, sy: 1.05, r: 30 });
+        const inG = [0, 1, 2, 3].map(i => { const z = zomb(s, { x: WX0 + 140, y: FL, sx: -1, sy: 1 }, { armF: -10, armR: -20, shirt: SHIRTS[i + 1] }); put(z.g, { x: WX0 + 140, y: FL, sx: -1, sy: 1 }); z.g.setAttribute('opacity', 0); return z; });
+        const R3 = zomb(s, { x: WX0 + 160, y: FL, sx: -1.05, sy: 1.05, r: 20 }, { armF: -30, armR: -20, shirt: '#5a6a8a' }); put(R3.g, { x: WX0 + 160, y: FL, sx: -1.05, sy: 1.05, r: 20 }); R3.g.setAttribute('opacity', 0);
+        const cart = G(s); el('rect', { x: -110, y: -120, width: 220, height: 100, rx: 8, fill: '#8a5a2a' }, cart); [-70, 70].forEach(x => el('circle', { cx: x, cy: -20, r: 26, fill: '#3a2a1a' }, cart)); put(cart, { x: 200, y: FL });
+        cg('fight', t0, .01, { scale: 1.05, transformOrigin: '540px 1300px' });
+        // b1: heads come over the top
+        climbers.forEach((z, i) => go(z.g, S[7] + .2 + i * .3, .6, { y: WT + 150 }, 'power2.out'));
+        // b2: jab, jab, sweep
+        [[H.jab1, 0, 'ป๊อก!'], [H.jab2, 1, 'ป๊อก!'], [H.sweep, 2, 'ฟาด!']].forEach(([t, i, w]) => {
+          go(cF.staff, t - .15, .12, { r: i < 2 ? 100 : 140 }, 'power3.in'); go(cF.aF, t - .15, .12, { r: i < 2 ? -60 : 10 }, 'power3.in');
+          hit('fight', s, t, WX1 + 60 + i * 60, WT - 30, w, 560 + (i % 2) * 120, 520 + i * 90, i === 2 ? '' : 'w s', -8 + i * 8);
+          go(climbers[i].g, t, .4, { y: WT + 500, r: -30 }, 'power2.in'); go(cF.staff, t + .15, .2, { r: 70 }); go(cF.aF, t + .15, .2, { r: -30 }); });
+        // b3: Tae's teep, three go down like dominoes
+        dom.forEach((z, i) => { appear(z.g, H.teep - 1.0); go(z.g, H.teep - 1.0, .6, { y: WT + 160 + i * 60 }, 'power2.out'); });
+        go(tF.g, H.teep - .4, .3, { x: 700 }); go(tF.lF, H.teep - .12, .12, { r: -95 }, 'power3.out');
+        dom.forEach((z, i) => { word(H.teep + i * .2, 'ตุ้บ!', 600 + i * 100, 560 + i * 110, i ? 'w s' : '', -8 + i * 8, .35); if (!i) { flash(H.teep, .6); shake('fight', H.teep, 16, 5); } go(z.g, H.teep + i * .2, .4, { y: WT + 600, r: -40 }, 'power2.in'); });
+        go(tF.lF, H.teep + .3, .2, { r: 0 }); go(tF.g, H.teep + .5, .3, { x: 610 });
+        // b4-5: the runner leaps the wall; Fon meets it mid-air, then finishes it
+        appear(R1.g, H.leap - .8); go(R1.g, H.leap - .8, .7, { x: WX1 + 30, y: WT }, 'power1.in');
+        go(R1.g, H.leap - .1, .55, { x: 450, y: FL - 300, r: -20 }, 'power1.out');
+        go(fF.aF, H.pole - .25, .2, { r: -150 }); go(fF.pole, H.pole - .25, .2, { r: -100 });
+        go(fF.aF, H.pole - .05, .08, { r: 0 }, 'power4.in'); go(fF.pole, H.pole - .05, .08, { r: 0 }, 'power4.in');
+        hit('fight', s, H.pole, 450, FL - 300, 'เคร้ง!', 140, 640, '', -8);
+        go(R1.g, H.pole, .4, { x: 470, y: FL + 10, r: -95 }, 'power2.in');
+        go(fF.aF, H.down - .2, .15, { r: -170 }); go(fF.pole, H.down - .2, .15, { r: -170 });
+        go(fF.aF, H.down - .05, .08, { r: 20 }, 'power4.in'); go(fF.pole, H.down - .05, .08, { r: 100 }, 'power4.in');
+        hit('fight', s, H.down, 480, FL - 20, 'ตุ้บ!', 300, 760, 'w', 6);
+        go(fF.aF, H.down + .3, .3, { r: -20 }); go(fF.pole, H.down + .3, .3, { r: 10 }); appear(R1.g, H.down + 1.0, 0);
+        // b6-7: two hands grab Tae's ankle — upside down over the horde — helmet down, Chan hauls him back
+        const hands = G(s); hands.setAttribute('opacity', 0); [0, 1].forEach(i => el('path', { d: `M${WX1 + 30 + i * 40} ${WT + 260} L${WX1 + 20 + i * 30} ${WT + 40}`, stroke: ZSK, 'stroke-width': 18, 'stroke-linecap': 'round' }, hands));
+        appear(hands, H.grab - .2);
+        go(tF.g, H.grab, .45, { x: WX1 - 10, y: WT + 20, r: 160 }, 'power2.in');
+        appear(hands, H.grab + .4, 0);
+        const hz = zomb(s, { x: WX1 + 120, y: WT + 560, sx: -1, sy: 1 }, { armF: -80, armR: -70, noLegs: true }); put(hz.g, { x: WX1 + 120, y: WT + 560, sx: -1, sy: 1 }); hz.g.setAttribute('opacity', 0);
+        appear(hz.g, H.grab + .4); go(hz.g, H.grab + .4, .5, { y: WT + 470 }, 'power2.out');
+        cg('fight', S[9] - .2, .4, { scale: 1.7, transformOrigin: '880px 1350px' }, 'power2.out');
+        tl.to(tF.mouth, { attr: { d: TM.o }, duration: .05 }, S[9]); tl.to(tF.mouth, { attr: { d: TM.n }, duration: .05 }, E[9]);
+        go(tF.aF, H.helm - .3, .2, { r: -170 }); go(tF.aF, H.helm - .08, .08, { r: 20 }, 'power4.in');
+        hit('fight', s, H.helm, WX1 + 110, WT + 330, 'เคร้ง!', 560, 860, '', -6);
+        go(hz.g, H.helm, .4, { y: WT + 800, r: 30 }, 'power2.in');
+        go(cF.g, H.haul - .4, .3, { x: WX1 - 90 }); go(cF.aB, H.haul - .2, .2, { r: 60 });
+        go(tF.g, H.haul, .35, { x: 640, y: WT, r: 0 }, 'back.out(1.5)'); word(H.haul, 'ฮึบ!', 380, 720, 'w s', -6, .4);
+        cg('fight', H.haul + .1, .4, { scale: 1.05, transformOrigin: '540px 1300px' }, 'power2.out'); go(cF.g, H.haul + .3, .3, { x: 770 }); go(cF.aB, H.haul + .3, .2, { r: 10 });
+        // b8: the dog's save — a runner over the far corner toward Mew
+        go(R2.g, H.bark - .6, 1.0, { x: 30, r: 30 }, 'power1.in');
+        tl.to(dF.mouth, { attr: { d: 'M28 2 L48 -2 L46 14 L28 10 Z' }, duration: .05 }, H.bark); tl.to(dF.mouth, { attr: { d: 'M30 6 L46 8' }, duration: .05 }, H.bark + .3);
+        word(H.bark, 'โฮ่ง!', 60, 760, 'w s', -8, .4);
+        go(dF.g, H.bark + .3, .5, { x: 60, sx: -.6, y: FL }, 'power2.in');
+        word(H.bite, 'งับ!', 140, 900, '', 6, .4); go(R2.g, H.bite, .35, { x: 20, y: FL + 10, r: -80 }, 'power2.in');
+        go(fF.g, H.bite - .3, .4, { x: 160, sx: -1.05 }); go(fF.aF, H.fin - .2, .15, { r: -170 }); go(fF.pole, H.fin - .2, .15, { r: -170 });
+        go(fF.aF, H.fin - .05, .08, { r: 20 }, 'power4.in'); go(fF.pole, H.fin - .05, .08, { r: 100 }, 'power4.in');
+        hit('fight', s, H.fin, 60, FL - 20, 'ตุ้บ!', 80, 680, 'w', -6);
+        go(fF.aF, H.fin + .3, .3, { r: -20 }); go(fF.pole, H.fin + .3, .3, { r: 10 }); go(fF.g, H.fin + .5, .5, { x: 300, sx: 1.05 }); go(dF.g, H.fin + .5, .4, { x: 200, sx: .6 });
+        // b9: the gate buckles, then bursts
+        [H.gate, H.gate + .4].forEach(t => { go(gL.firstChild ? gL : gL, t, .08, { x: WX0 + 30 }); go(gL, t + .08, .1, { x: WX0 + 40 }); shake('fight', t, 8, 4); });
+        word(H.gate, 'แคร่ก…', 600, 1200, 'w s', 6, .6);
+        go(gL, H.burst, .2, { x: WX0 + 40, sx: .25 }, 'power4.out'); go(gR, H.burst, .2, { x: WX1 - 40, sx: .25 }, 'power4.out');
+        hit('fight', s, H.burst, WX0 + 160, 1400, 'โครม!', 280, 900, '', -8);
+        inG.forEach((z, i) => { appear(z.g, H.burst); go(z.g, H.burst, .8 + i * .15, { x: WX0 - 40 - i * 70 }, 'power1.out'); });
+        // b10: Chan drops into the gap, staff in a figure-eight — four down
+        go(cF.g, H.fig - .7, .45, { x: 420, y: FL }, 'power2.in');
+        for (let k = 0; k < 4; k++) go(cF.staff, H.fig - .25 + k * .17, .17, { r: 70 + (k + 1) * 180 }, 'none');
+        word(H.fig - .2, 'วืดวืดวืด', 560, 560, 'w s', 0, .7);
+        inG.forEach((z, i) => go(z.g, H.fig + .1 + i * .12, .35, { y: FL + 10, r: -90 + (i % 2) * 180, x: WX0 - 40 - i * 70 + 30 }, 'power2.in'));
+        hit('fight', s, H.fig2, 400, FL - 300, 'ฟาด!', 520, 680, '', 6);
+        // b11: slow-mo — a runner dives at Mew; Chan steps between; the bite
+        cg('fight', H.sm0 - .1, .35, { scale: 1.6, transformOrigin: '260px 1300px', filter: 'grayscale(1) sepia(.9) hue-rotate(-40deg) saturate(2.6) contrast(1.25)' }, 'power2.out');
+        tl.fromTo('#barT, #barB', { height: 0 }, { height: 150, duration: .3, immediateRender: false }, H.sm0 - .1);
+        appear(R3.g, H.sm0); go(R3.g, H.sm0, H.chomp - H.sm0, { x: 260, y: FL - 200, r: 50 }, 'none');
+        go(cF.g, H.sm0 + .2, H.chomp - H.sm0 - .3, { x: 200, sx: -1.05 }, 'sine.inOut'); go(cF.aB, H.sm0 + .4, .6, { r: -100 }, 'sine.inOut');
+        word(H.chomp, 'งับ', 300, 820, 'w s', -6, .6);
+        tl.to(mF.mouth, { attr: { d: MM.o }, duration: .05 }, S[11]); tl.to(mF.mouth, { attr: { d: MM.n }, duration: .05 }, E[11] + .3);
+        tl.to('#fight .cam', { filter: 'grayscale(0) sepia(0) hue-rotate(0deg) saturate(1) contrast(1)', duration: .05 }, H.sm1);
+        tl.to('#barT, #barB', { height: 0, duration: .2 }, H.sm1 + .05);
+        hit('fight', s, H.head, 240, FL - 360, 'โครม!', 300, 600, '', -8);
+        go(R3.g, H.head, .45, { x: 420, y: FL + 10, r: -100 }, 'power2.out');
+        go(cF.staff, H.head + .1, .2, { r: 120 }); go(cF.aB, H.head + .1, .3, { r: 10 });
+        CS.fight = { ...CS.fight, filter: 'grayscale(0) sepia(0) hue-rotate(0deg) saturate(1) contrast(1)' };
+        cg('fight', H.head + .1, .4, { scale: 1.05, transformOrigin: '540px 1300px' }, 'power2.out');
+        // b12: Tae + Fon drag the cart against the gate
+        go(tF.g, H.cart - 1.4, .5, { x: 560, y: FL }, 'power2.in'); go(cart, H.cart - .8, .8, { x: 640 }, 'power1.inOut'); go(fF.g, H.cart - .9, .8, { x: 500 });
+        word(H.cart - .6, 'ครืดดด…', 380, 1000, 'w s', 0, .6); word(H.cart, 'ปึง!', 560, 760, '', 6, .4); shake('fight', H.cart, 12, 5);
+        // 12: Chan pulls his sleeve down, smiles; Tae's doubt
+        cg('fight', S[12] - .2, .5, { scale: 1.8, transformOrigin: '280px 1050px' }, 'power2.out');
+        go(cF.aB, S[12] + .2, .3, { r: 30 }); tl.to(cF.mouth, { attr: { d: 'M12 18 Q21 26 30 17' }, duration: .1 }, S[12] + .4);
+        show('fight', t0, t1); }
+
+      // ================= 13-17. back gate, the bite, the whistle =================
+      { const s = $('sTalk'), t0 = S[13] - .05, t1 = S[18] - .05, FL = 1500;
+        el('rect', { width: 1080, height: 1920, fill: NBG }, s);
+        const wide = G(s);
+        roofT(wide, 300, 900, 560); el('rect', { x: 60, y: 900, width: 480, height: 600, fill: '#e8e2d2' }, wide);
+        wallSeg(wide, 560, 1150, 600, 350);
+        el('rect', { x: 760, y: 1250, width: 160, height: 250, fill: '#06060b' }, wide);
+        el('rect', { y: FL, width: 1080, height: 420, fill: '#2a2630' }, wide);
+        el('rect', { x: 600, y: 1640, width: 480, height: 280, fill: '#1a2a3a' }, wide);
+        const boat = G(wide, { x: 860, y: 1700 }); el('path', { d: 'M-200 0 L200 0 Q240 -20 260 -60 L180 30 L-180 30 Z', fill: '#7a4a2a' }, boat);
+        const fW = fon(wide, { x: 700, y: FL, sx: 1, sy: 1 }, { armF: { r: -100 }, pole: { r: 10 } });
+        // close two-shot: Chan shows Tae the bite
+        const close = G(s); close.setAttribute('opacity', 0);
+        el('rect', { width: 1080, height: 1920, fill: '#141220' }, close);
+        tower(close, 860, 1500, 1.3);
+        const cC = chan(close, { x: 380, y: 1900, sx: 2.2, sy: 2.2 }, { armF: { r: -10 }, staff: { r: 20 } });
+        const tC = tae(close, { x: 900, y: 1900, sx: -2.2, sy: 2.2 }, { helmet: true, armF: { r: -10 } });
+        const armB = G(close); armB.setAttribute('opacity', 0);
+        el('path', { d: 'M420 1300 Q560 1280 760 1330 L760 1410 Q560 1380 420 1390 Z', fill: '#b98050' }, armB);   // his forearm held out to Tae at chest height
+        el('circle', { cx: 770, cy: 1370, r: 38, fill: '#b98050' }, armB);
+        el('ellipse', { cx: 600, cy: 1345, rx: 56, ry: 26, fill: '#5a1418' }, armB);
+        [[-20, 1], [20, -1], [50, 1]].forEach(([dx, sg]) => el('path', { d: `M${600 + dx} 1345 q${24 * sg} 30 ${48 * sg} 22 q16 24 40 30`, stroke: '#6f7f6a', 'stroke-width': 6, fill: 'none' }, armB));
+        // kneel: the whistle
+        const kneel = G(s); kneel.setAttribute('opacity', 0);
+        el('rect', { width: 1080, height: 1920, fill: '#141220' }, kneel);
+        const cK = chan(kneel, { x: 430, y: 1700, sx: 1.6, sy: 1.6, r: 8 }, { armF: { r: -70 }, staff: { r: 80 } });
+        rot(cK.hd, S[17], .4, 16); cK.whistle.setAttribute('opacity', 0);   // he leans in, head bowed to her
+        const mK = mew(kneel, { x: 700, y: 1720, sx: -1.6, sy: 1.6 }, { armF: { r: -40 }, bandage: true });
+        const wh = G(kneel); el('path', { d: 'M-30 -40 L0 20 L30 -40', stroke: '#c0392b', 'stroke-width': 5, fill: 'none' }, wh); el('rect', { x: -12, y: 14, width: 24, height: 16, rx: 3, fill: '#c9ced6' }, wh);
+        put(wh, { x: 520, y: 1150 });
+        // 13 wide
+        cam('talk', t0, S[14] - t0, { scale: 1.1, transformOrigin: '800px 1500px' }, { scale: 1.3, transformOrigin: '800px 1500px' }, 'sine.inOut');
+        word(S[13] + .5, 'ประตูหลัง →', 600, 1080, 'w s', 0, 2.0);
+        // 14-16 close
+        tl.set(close, { attr: { opacity: 1 } }, S[14] - .05);
+        appear(armB, S[14] + .6); tl.fromTo(armB, { attr: { transform: T({ y: 300 }) } }, { attr: { transform: T({}) }, duration: .4, ease: 'power2.out', immediateRender: false }, S[14] + .6);
+        appear(armB, S[15] - .1, 0);
+        rot(cC.hd, S[15] + .3, .6, -25, 'sine.inOut');
+        rot(cC.hd, S[16] - .1, .5, 0, 'sine.inOut');
+        tl.to(cC.mouth, { attr: { d: 'M12 18 Q21 26 30 17' }, duration: .2 }, S[16] + 2.5);
+        cam('talk', S[14] - .05, S[17] - S[14], { scale: 1, transformOrigin: '540px 1100px' }, { scale: 1.25, transformOrigin: '420px 1000px' }, 'sine.inOut');
+        // 17 kneel
+        tl.set(kneel, { attr: { opacity: 1 } }, S[17] - .05);
+        go(wh, S[17] + .3, 1.0, { x: 696, y: 1420 }, 'sine.inOut');   // onto her neck
+        cam('talk', S[17] - .05, t1 - S[17], { scale: 1.2, transformOrigin: '600px 1250px' }, { scale: 1.45, transformOrigin: '640px 1250px' }, 'sine.inOut');
+        show('talk', t0, t1); }
+
+      // ================= 18. split: go / the tower =================
+      { const s = $('sSplit'), t0 = S[18] - .05, t1 = S[19] - .05;
+        el('rect', { width: 1080, height: 1920, fill: '#141220' }, s);
+        const L = G(s); el('rect', { width: 536, height: 1920, fill: '#1a1a2a' }, L);
+        el('rect', { x: 140, y: 900, width: 220, height: 600, fill: '#06060b' }, L);
+        const gL = G(L); put(gL, { x: 0 });
+        tae(gL, { x: 300, y: 1500, sx: -1, sy: 1 }, { helmet: true, armF: { r: -70 } });
+        mew(gL, { x: 430, y: 1500, sx: 1, sy: 1 }, { armF: { r: -110 }, bandage: true, whistle: true });
+        go(gL, t0, t1 - t0, { x: -200 }, 'power1.in');
+        const R = G(s, { x: 544 }); el('rect', { width: 536, height: 1920, fill: '#201a28' }, R);
+        for (let i = 0; i < 10; i++) el('rect', { x: 60 + i * 40, y: 1500 - i * 50, width: 240, height: 50, fill: '#e8e2d2' }, R);
+        const cS = G(R); put(cS, { x: 0 });
+        chan(cS, { x: 120, y: 1500, sx: 1, sy: 1 }, { armF: { r: -150 }, staff: { r: 100 } });
+        go(cS, t0, t1 - t0, { x: 240, y: -260 }, 'none');
+        el('rect', { x: 536, width: 8, height: 1920, fill: '#000' }, s);
+        show('split', t0, t1); }
+
+      // ================= 19-20, 22. the bell, seen from the boat =================
+      { const s = $('sBell'), t1 = S[23] - .05;
+        el('rect', { width: 1080, height: 1920, fill: NBG }, s);
+        el('circle', { cx: 860, cy: 340, r: 60, fill: '#e8e2c4', opacity: .8 }, s);
+        const tw = tower(s, 700, 1180, 1.1);
+        const ch = chan(tw.g, { x: 60, y: -380, sx: .5, sy: .5 }, { armF: { r: -150 }, staff: { r: 100 } });
+        wallSeg(s, -40, 1180, 1160, 200);
+        const horde = G(s); seed = 151;
+        for (let i = 0; i < 50; i++) { const x = rnd() * 1080, y = 1250 + rnd() * 120, g = G(horde, { x, y }); el('circle', { r: 16, fill: '#07060c' }, g); el('circle', { cx: -4, cy: -3, r: 2.4, fill: '#fff' }, g); el('circle', { cx: 4, cy: -3, r: 2.4, fill: '#fff' }, g); }
+        el('rect', { y: 1380, width: 1080, height: 540, fill: '#14223a' }, s);
+        for (let i = 0; i < 6; i++) el('path', { d: `M${i * 200} ${1500 + i * 30} q50 -14 100 0 t100 0`, stroke: '#3a5a7a', 'stroke-width': 4, fill: 'none' }, s);
+        const boat = G(s, { x: 540, y: 1700 }); el('path', { d: 'M-360 0 L360 0 Q420 -30 440 -90 L320 50 L-320 50 Z', fill: '#7a4a2a' }, boat);
+        person(boat, -140, 0, .8, '#f07a1e', false, false); person(boat, -40, 0, .8, '#2a9d8f', false, false); person(boat, 50, 0, .6, '#f5a8c8', false, false); dog(boat, { x: 130, y: 0, sx: .5, sy: .5 });
+        const rings = [0, 1, 2].map(() => el('circle', { cx: 700, cy: 820, r: 30, fill: 'none', stroke: '#c9a227', 'stroke-width': 6, opacity: 0 }, s));
+        put(tw.bell, { x: 0, y: -350 });
+        BELLS.forEach((t, i) => { const silent = i === BELLS.length - 1;
+          go(tw.bell, t, .15, { r: i % 2 ? -14 : 14 }, 'power2.out'); go(tw.bell, t + .4, .6, { r: 0 }, 'sine.inOut');
+          if (!silent) { const r = rings[i % 3]; tl.fromTo(r, { attr: { r: 30, opacity: .9 } }, { attr: { r: 700, opacity: 0 }, duration: 1.4, ease: 'power1.out', immediateRender: false }, t); word(t, 'เป๊ง…', 560 + (i % 2) * 100, 560 + (i % 3) * 90, 'w s', i % 2 ? 6 : -6, .7); } });
+        go(horde, S[20] - .2, t1 - S[20], { x: 260 }, 'power1.inOut');
+        show('bell', S[19] - .05, S[21] - .05); show('bell', S[22] - .05, t1);
+        cam('bell', S[19] - .05, S[21] - S[19], { scale: 1.1, transformOrigin: '600px 1200px' }, { scale: 1 }, 'sine.out');
+        cam('bell', S[22] - .05, t1 - S[22], { scale: 1 }, { scale: .9, transformOrigin: '600px 1200px' }, 'sine.inOut'); }
+
+      // ================= 21. Lung Chan smiles =================
+      { const s = $('sSmile'), t0 = S[21] - .05, t1 = S[22] - .05;
+        el('rect', { width: 1080, height: 1920, fill: '#141220' }, s);
+        el('circle', { cx: 300, cy: 700, r: 600, fill: 'url(#gFire)', opacity: .25 }, s);
+        const c = chan(s, { x: 500, y: 2500, sx: 4.4, sy: 4.4 }, { armF: { r: -10 }, staff: { r: 20 } });
+        tl.to(c.mouth, { attr: { d: 'M12 18 Q21 26 30 17' }, duration: .4 }, t0 + .4);
+        rot(c.hd, t0, .8, 14, 'sine.out');
+        cam('smile', t0, t1 - t0, { scale: 1, transformOrigin: '540px 1000px' }, { scale: 1.12 }, 'sine.inOut');
+        show('smile', t0, t1); }
+
+      // ================= 23. next =================
+      tl.fromTo('#next', { opacity: 0 }, { opacity: 1, duration: .3, immediateRender: false }, S[23] - .05);
+      tl.fromTo('#next .sr', { opacity: 0 }, { opacity: 1, duration: .3, immediateRender: false }, S[23]);
+      tl.fromTo('#next .pill', { opacity: 0, y: 10 }, { opacity: 1, y: 0, duration: .3, immediateRender: false }, S[23] + .1);
+      tl.fromTo('#next h1', { opacity: 0, scale: 1.5 }, { opacity: 1, scale: 1, duration: .25, ease: 'power3.out', immediateRender: false }, S[23] + .3);
+      tl.fromTo('#next .rl', { scaleX: 0 }, { scaleX: 1, duration: .4, immediateRender: false }, S[23] + .8);
+      tl.fromTo('#next .s1', { opacity: 0 }, { opacity: 1, duration: .3, immediateRender: false }, S[23] + 1.0);
+      tl.fromTo('#next .s2', { opacity: 0 }, { opacity: 1, duration: .3, immediateRender: false }, S[23] + 1.3);
+      tl.set({}, {}, END);
+
+      window.__timelines['main'] = tl;
+      tl.seek(0);
+    </script>
+  </body>
+</html>

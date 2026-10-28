@@ -1,0 +1,508 @@
+<!doctype html>
+<html lang="th">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=1080, height=1920" />
+    <!--
+      Zombie series "กรุงเทพฯ ไม่มีพรุ่งนี้" Z08 "ระฆังวัด" (user, 2026-10-28). Pure zombie action, no eyewear/brand. Thai only.
+      ../template.html is the source: ../build.py inlines ../audio/timing.json (S = cue starts, E = cue ends, 1-based),
+      ../../_shared/cast.js at /*CAST*/ (characters + timeline helpers) -> index.html.
+      Everything is drawn in SVG by the script below; scenes switch on cue times, so re-timing the voice needs no edits here.
+      Scenes: dog on the wall 1-2 | temple gate 3 | horde under the glow 4 | gate + wall walk 5-6 | wall fight 7-12 (slow-mo bite 11)
+      | back gate + the bite + the whistle 13-17 | split 18 | the bell from the boat 19-20 | smile 21 | silence 22 | next 23
+    -->
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/gsap.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@400;500;600;700;800;900&family=Anuphan:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <style>
+      * { margin: 0; padding: 0; box-sizing: border-box; }
+      html, body { width: 1080px; height: 1920px; overflow: hidden; background: #0b0a10; }
+      #root { position: relative; width: 1080px; height: 1920px; overflow: hidden; font-family: 'Anuphan', sans-serif; color: #fff; }
+      .full { position: absolute; left: 0; top: 0; width: 1080px; height: 1920px; }
+      .scene { opacity: 0; overflow: hidden; }
+      .cam { transform-origin: 540px 960px; }
+      svg { display: block; overflow: visible; }
+
+      .sub { position: absolute; left: 50px; right: 50px; top: 1600px; text-align: center; font-family: 'Prompt', sans-serif; font-weight: 700;
+             font-size: 58px; line-height: 1.3; opacity: 0; text-shadow: 0 4px 0 #000, 0 0 18px rgba(0,0,0,.9), 0 0 4px #000; }
+      .sub.y { color: #FFD23F; }
+      .sub.r span { display: inline-block; background: #D8343A; color: #fff; padding: 4px 26px 8px; border-radius: 10px; text-shadow: none;
+                    box-shadow: 0 6px 24px rgba(0,0,0,.45); }
+      .sub b { color: #9fe8ff; font-weight: 800; }
+
+      .chip { position: absolute; top: 150px; height: 86px; background: #EEE8DC; border-radius: 16px; color: #1d2433; display: flex; align-items: center;
+              gap: 14px; padding: 0 26px 0 20px; box-shadow: 0 8px 26px rgba(0,0,0,.45); }
+      .chip small { display: block; font-size: 20px; font-weight: 500; color: #555a63; line-height: 1; }
+      .chip b { display: block; font-family: 'Prompt'; font-size: 40px; font-weight: 700; line-height: 1.05; letter-spacing: .02em; }
+      #ep { left: auto; right: 56px; background: #D8343A; color: #fff; font: 800 34px 'Prompt'; padding: 0 26px; }
+
+      .badge { position: absolute; left: 60px; top: 1380px; background: rgba(12,12,18,.82); border-left: 10px solid #FFD23F; border-radius: 10px;
+               padding: 14px 26px; font: 600 38px 'Prompt'; color: #fff; opacity: 0; white-space: nowrap; }
+      .badge i { font-style: normal; color: #FFD23F; }
+      #tag { position: absolute; left: 50%; top: 420px; transform: translateX(-50%); background: #D8343A; color: #fff; font: 800 50px 'Prompt';
+             padding: 10px 34px 14px; border-radius: 12px; opacity: 0; white-space: nowrap; box-shadow: 0 10px 30px rgba(0,0,0,.5); }
+
+      .fx { position: absolute; font: 900 150px/1 'Prompt'; color: #FFD23F; opacity: 0; white-space: nowrap;
+            -webkit-text-stroke: 10px #111; paint-order: stroke fill; text-shadow: 10px 10px 0 #D8343A; transform-origin: 50% 50%; }
+      .fx.w { color: #fff; text-shadow: 10px 10px 0 #2a6cd8; }
+      .fx.s { font-size: 96px; }
+
+      #title { position: absolute; left: 0; right: 0; top: 360px; text-align: center; opacity: 0; }
+      #title h1 { font: 900 112px/1.05 'Prompt'; color: #fff; -webkit-text-stroke: 8px #111; paint-order: stroke fill; text-shadow: 8px 8px 0 #D8343A; }
+      #title p { margin-top: 18px; display: inline-block; background: #FFD23F; color: #111; font: 800 44px 'Prompt'; padding: 6px 28px; border-radius: 8px; }
+
+      #flash { background: #fff; opacity: 0; }
+      #redv { background: radial-gradient(ellipse 70% 60% at 50% 50%, rgba(216,52,58,0) 40%, rgba(150,10,20,.85)); opacity: 0; }
+      #bars { pointer-events: none; }
+      #bars div { position: absolute; left: 0; width: 1080px; height: 0; background: #000; }
+
+      #next { background: radial-gradient(ellipse 80% 45% at 50% 42%, #2a1416, #0d0b0d 70%); }
+      #next .pill { position: absolute; left: 50%; top: 600px; transform: translateX(-50%); border: 2px solid #4a4a55; border-radius: 40px; padding: 8px 30px;
+                    font-size: 32px; font-weight: 600; color: #d6d6dc; white-space: nowrap; }
+      #next .pill:before { content: ''; display: inline-block; width: 12px; height: 12px; border-radius: 50%; background: #D8343A; margin-right: 12px; vertical-align: 4px; }
+      #next h1 { position: absolute; left: 40px; right: 40px; top: 700px; text-align: center; font: 900 120px/1.15 'Prompt'; color: #fff;
+                 -webkit-text-stroke: 8px #111; paint-order: stroke fill; text-shadow: 8px 8px 0 #D8343A; }
+      #next .rl { position: absolute; left: 400px; top: 1000px; width: 280px; height: 8px; background: #D8343A; border-radius: 4px; }
+      #next .s1 { position: absolute; left: 0; right: 0; top: 1040px; text-align: center; font: 700 40px 'Prompt'; color: #FFD23F; }
+      #next .s2 { position: absolute; left: 0; right: 0; top: 1110px; text-align: center; font-size: 34px; color: #c8c8d0; }
+      #next .sr { position: absolute; left: 0; right: 0; top: 300px; text-align: center; font: 800 46px 'Prompt'; color: #e05a5f; letter-spacing: .04em; }
+    </style>
+  </head>
+  <body>
+    <div id="root" data-composition-id="main" data-start="0" data-duration="@TOTAL@" data-width="1080" data-height="1920">
+      <svg width="0" height="0" style="position:absolute">
+        <defs>
+          <linearGradient id="gNight" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#0a0c1c" /><stop offset=".7" stop-color="#2a2048" /></linearGradient>
+          <radialGradient id="gGlow"><stop offset="0" stop-color="#ffb070" stop-opacity=".9" /><stop offset="1" stop-color="#ffb070" stop-opacity="0" /></radialGradient>
+          <radialGradient id="gFire"><stop offset="0" stop-color="#ffb347" stop-opacity=".95" /><stop offset=".5" stop-color="#ff6a2a" stop-opacity=".45" /><stop offset="1" stop-color="#ff6a2a" stop-opacity="0" /></radialGradient>
+          <radialGradient id="gEye"><stop offset="0" stop-color="#fff" stop-opacity=".9" /><stop offset="1" stop-color="#fff" stop-opacity="0" /></radialGradient>
+        </defs>
+      </svg>
+
+      <div id="dogw" class="scene full" style="opacity:1"><div class="cam full"><svg class="full" viewBox="0 0 1080 1920" id="sDogw"></svg></div></div>
+      <div id="temple" class="scene full"><div class="cam full"><svg class="full" viewBox="0 0 1080 1920" id="sTemple"></svg></div></div>
+      <div id="glow" class="scene full"><div class="cam full"><svg class="full" viewBox="0 0 1080 1920" id="sGlow"></svg></div></div>
+      <div id="gate" class="scene full"><div class="cam full"><svg class="full" viewBox="0 0 1080 1920" id="sGate"></svg></div></div>
+      <div id="fight" class="scene full"><div class="cam full"><svg class="full" viewBox="0 0 1080 1920" id="sFight"></svg></div></div>
+      <div id="talk" class="scene full"><div class="cam full"><svg class="full" viewBox="0 0 1080 1920" id="sTalk"></svg></div></div>
+      <div id="split" class="scene full"><div class="cam full"><svg class="full" viewBox="0 0 1080 1920" id="sSplit"></svg></div></div>
+      <div id="bell" class="scene full"><div class="cam full"><svg class="full" viewBox="0 0 1080 1920" id="sBell"></svg></div></div>
+      <div id="smile" class="scene full"><div class="cam full"><svg class="full" viewBox="0 0 1080 1920" id="sSmile"></svg></div></div>
+
+      <div id="redv" class="full"></div>
+      <div id="flash" class="full"></div>
+      <div id="bars" class="full"><div id="barT" style="top:0"></div><div id="barB" style="bottom:0"></div></div>
+      <div id="fxl" class="full"></div>
+
+      <div id="clock" class="chip" style="left:56px">
+        <svg viewBox="-24 -24 48 48" width="46" height="46"><circle r="19" fill="none" stroke="#1d2433" stroke-width="4" /><path d="M0 -10 L0 0 L8 6" fill="none" stroke="#1d2433" stroke-width="4" stroke-linecap="round" /></svg>
+        <div><small id="clockd">วันที่ 3</small><b id="clockt">00:41</b></div>
+      </div>
+      <div id="ep" class="chip">EP.8</div>
+
+      <div id="subs"></div>
+
+      <div id="next" class="scene full">
+        <div class="sr">กรุงเทพฯ ไม่มีพรุ่งนี้</div>
+        <div class="pill">ตอนหน้า</div>
+        <h1>เจ้าพระยา</h1>
+        <div class="rl"></div>
+        <div class="s1">EP.9 เร็วๆ นี้</div>
+        <div class="s2">กดติดตาม แล้วไปรอดด้วยกัน</div>
+      </div>
+    </div>
+
+    <script>
+      const TIMING = /*TIMING*/;
+      const S = [0], E = [0]; TIMING.cues.forEach(c => { S[c.n] = c.start; E[c.n] = c.end; });
+      const END = TIMING.total;
+      let seed = 7; const rnd = () => (seed = (seed * 16807) % 2147483647) / 2147483647;
+      const NS = 'http://www.w3.org/2000/svg';
+      const el = (tag, a, p) => { const e = document.createElementNS(NS, tag); for (const k in a) e.setAttribute(k, a[k]); p && p.appendChild(e); return e; };
+      const $ = id => document.getElementById(id);
+      const T = o => `translate(${o.x ?? 0} ${o.y ?? 0}) rotate(${o.r ?? 0}) scale(${o.sx ?? 1} ${o.sy ?? 1})`;
+      const G = (p, o = {}) => el('g', { transform: T(o) }, p);
+      const piv = (p, x, y, o = {}) => G(G(p, { x, y }), o);   // inner group rotates around (x, y)
+
+/*CAST*/
+
+      // ---------- shared episode helpers (from Z02): state-tracked moves so every tween starts where the last one ended ----------
+      const ST = new Map();
+      const put = (g, o) => { ST.set(g, o); g.setAttribute('transform', T(o)); return g; };
+      const go = (g, t, d, b, ease = 'power2.out') => { const a = ST.get(g) || {}; const n = { ...a, ...b }; mv(g, t, d, a, n, ease); ST.set(g, n); };
+      const CS = {};   // camera state per scene
+      const cg = (id, t, d, b, ease = 'sine.inOut') => { const a = CS[id] || { scale: 1, transformOrigin: '540px 960px' }; const n = { ...a, ...b }; cam(id, t, d, a, n, ease); CS[id] = n; };
+      const MS = new Map();   // mouth shapes
+      const say = (m, t, d) => { const a = MS.get(m) || m.getAttribute('d'); tl.fromTo(m, { attr: { d: a } }, { attr: { d }, duration: .08, immediateRender: false }, t); MS.set(m, d); };
+      const talk = (m, t0, t1, open, shut) => { for (let t = t0; t < t1 - .12; t += .2) { say(m, t, open); say(m, t + .1, shut); } };
+      const TM = { n: 'M16 16 Q22 18 28 15', o: 'M14 10 Q22 28 30 10 Z', g: 'M12 10 Q22 26 32 9 Z' };   // Tae: neutral / shout / grin
+      const FM = { n: 'M14 15 Q20 17 25 14', o: 'M12 10 Q20 28 28 10 Z', g: 'M12 11 Q20 22 28 10 Z' };
+      const mouthFill = m => { m.setAttribute('fill', '#5a1a1a'); return m; };
+      const appear = (g, t, on = 1) => tl.set(g, { attr: { opacity: on } }, t);
+
+      const MM = { n: 'M10 12 Q15 14 20 11', o: 'M9 8 Q15 22 21 8 Z' };
+
+      // rotate in place, keeping the group's own translate (head groups sit at an offset)
+      const base = g => g.__b || (g.__b = (m => m ? { x: +m[1], y: +m[2] } : { x: 0, y: 0 })((g.getAttribute('transform') || '').match(/translate\(([-\d.]+)[ ,]+([-\d.]+)\)/)));
+      const rot = (g, t, d, r, ease = 'power2.out') => tl.to(g, { attr: { transform: T({ ...base(g), r }) }, duration: d, ease }, t);
+
+      // fight beats (the same formulas are in audio/ambience.py)
+      const H = {
+        jab1: S[7] + 1.4, jab2: S[7] + 2.0, sweep: S[7] + 2.7, teep: S[7] + 4.3,
+        leap: S[8] + 1.1, pole: S[8] + 2.0, down: S[8] + 2.8, grab: S[8] + 4.0,
+        helm: E[9] + .25, haul: E[9] + .9, bark: E[9] + 1.6, bite: E[9] + 2.5, fin: E[9] + 3.1,
+        gate: S[10] + .3, burst: S[10] + 1.1, fig: S[10] + 2.6, fig2: S[10] + 3.3,
+        sm0: S[11] - 1.3, chomp: S[11] - .2, head: S[11] + 1.5, cart: S[11] + 3.0,
+      };
+      H.sm1 = H.head - .1;
+      const BELLS = [S[19] + .05, S[19] + .8, S[19] + 1.55, S[20] + .4, S[20] + 1.6, S[21] - .2, S[22] - 1.2];   // the last one rings silent
+
+      // ---------- subtitles ----------
+      const LINES = [null,
+        ['โฮ่ง! โฮ่ง!', 'y'],
+        ['<b>มิว:</b> “ข้าวตัง!”', 'y'],
+        ['มันวิ่งนำทางมา…<br>ถึงวัดริมคลอง', ''],
+        ['แต่ไฟจากจตุจักร<br>ลากฝูงมันตามมาด้วย', 'r'],
+        ['<b>ลุงชาญ:</b> “ปิดประตู!<br>ขึ้นกำแพง!”', 'y'],
+        ['<b>เต้:</b> “ห้าคนกับหมาหนึ่งตัว<br>สู้ทั้งเมือง… ยุติธรรมดี”', ''],
+        ['มันปีนข้ามศพกันขึ้นมา!', 'r'],
+        ['<b>ฝน:</b> “ฝั่งซ้าย! ตัววิ่ง!”', 'y'],
+        ['<b>เต้:</b> “บุญยังไม่ทันทำ<br>ต้องมาต่อยในวัดอีก!”', ''],
+        ['ประตูจะพังแล้ว!', 'r'],
+        ['<b>มิว:</b> “ลุง!!”', 'r'],
+        ['<b>ลุงชาญ:</b> “ไม่เป็นไร…<br>แค่ถลอก”', ''],
+        ['ประตูหลังมีเรือ…<br>ไปทางคลองได้', ''],
+        ['<b>ลุงชาญ:</b> “เต้…<br>ลุงโดนกัดแล้ว”', 'r'],
+        ['<b>ลุงชาญ:</b> “เสียงดัง<br>เรียกมันได้ใช่ไหม”', 'y'],
+        ['<b>ลุงชาญ:</b> “ลุงเฝ้าห้างมาสามสิบปี<br>คืนนี้ขอเฝ้าพวกหนู”', 'y'],
+        ['<b>ลุงชาญ:</b> “มิว…<br>เป่านกหวีดนี้แทนลุงนะ”', ''],
+        ['ไป! อย่าหันกลับมา!', 'r'],
+        ['เป๊ง… เป๊ง… เป๊ง…', 'y'],
+        ['ทั้งฝูงหันหลัง…<br>เดินไปหาเสียงระฆัง', ''],
+        ['ลุงชาญยิ้ม', ''],
+        ['แล้วระฆังก็เงียบ', 'r'],
+        null];
+      const subs = $('subs');
+      for (let n = 1; n < LINES.length; n++) { if (!LINES[n]) continue;
+        const d = document.createElement('div'); d.className = 'sub ' + LINES[n][1];
+        d.innerHTML = LINES[n][1] === 'r' ? `<span>${LINES[n][0]}</span>` : LINES[n][0]; subs.appendChild(d);
+        const off = Math.min(E[n] + .35, (S[n + 1] ?? END) - .05);
+        tl.fromTo(d, { opacity: 0, y: 14 }, { opacity: 1, y: 0, duration: .18, ease: 'power2.out', immediateRender: false }, S[n] - .05);
+        tl.to(d, { opacity: 0, duration: .1 }, off); }
+
+      // clock 00:41 -> 00:53
+      { const o = { v: 41 }; tl.fromTo(o, { v: 41 }, { v: 53.9, duration: E[22] - S[1], ease: 'none', immediateRender: false, onUpdate: () => $('clockt').textContent = '00:' + Math.floor(o.v) }, S[1]); }
+      tl.to('#clock, #ep', { opacity: 0, duration: .3 }, S[23] - .2);
+
+      // temple props
+      const wallSeg = (p, x, y, w, h) => { const g = G(p); el('rect', { x, y, width: w, height: h, fill: '#e8e2d2' }, g); el('rect', { x: x - 6, y: y - 20, width: w + 12, height: 24, fill: '#b9442e' }, g); return g; };
+      const roofT = (p, x, y, w, col = '#b9442e') => { const g = G(p, { x, y });
+        el('path', { d: `M${-w / 2} 0 L${-w / 2 + 40} -60 L${w / 2 - 40} -60 L${w / 2} 0 Z`, fill: col }, g);
+        el('path', { d: `M${-w / 2 + 60} -60 L${-w / 2 + 100} -130 L${w / 2 - 100} -130 L${w / 2 - 60} -60 Z`, fill: '#c9a227' }, g);
+        el('path', { d: `M${-w / 2} 0 Q${-w / 2 - 20} -20 ${-w / 2 - 30} -50 M${w / 2} 0 Q${w / 2 + 20} -20 ${w / 2 + 30} -50`, stroke: '#c9a227', 'stroke-width': 8, fill: 'none' }, g); return g; };
+      const tower = (p, x, y, s = 1) => { const g = G(p, { x, y, sx: s, sy: s });
+        el('rect', { x: -70, y: -360, width: 140, height: 360, fill: '#e8e2d2' }, g);
+        el('rect', { x: -90, y: -380, width: 180, height: 24, fill: '#b9442e' }, g);
+        el('path', { d: 'M-110 -380 L0 -520 L110 -380 Z', fill: '#b9442e' }, g); el('path', { d: 'M0 -520 L0 -580', stroke: '#c9a227', 'stroke-width': 8 }, g);
+        const bell = G(g, { x: 0, y: -350 }); el('path', { d: 'M-34 0 Q-36 70 -50 90 L50 90 Q36 70 34 0 Q0 -16 -34 0 Z', fill: '#c9a227' }, bell);
+        return { g, bell }; };
+      const NBG = 'url(#gNight)';
+
+      // ================= 1-2. a bark; a small dog on the white wall =================
+      { const s = $('sDogw'), t1 = S[3] - .05;
+        el('rect', { width: 1080, height: 1920, fill: '#05050a' }, s);
+        const lit = G(s); lit.setAttribute('opacity', 0);
+        el('rect', { width: 1080, height: 1920, fill: NBG }, lit);
+        el('circle', { cx: 620, cy: 820, r: 220, fill: '#e8e2c4', opacity: .9 }, lit);
+        wallSeg(lit, -40, 1180, 1160, 740);
+        const d1 = dog(lit, { x: 560, y: 1162, sx: 1.6, sy: 1.6 }); put(d1.tail, { r: -30 });
+        d1.g.querySelectorAll('*').forEach(e => { if (e.getAttribute('fill') && e.getAttribute('fill') !== 'none') e.setAttribute('fill', '#0e0a10'); if (e.getAttribute('stroke')) e.setAttribute('stroke', '#0e0a10'); });
+        tl.fromTo(lit, { attr: { opacity: 0 } }, { attr: { opacity: 1 }, duration: .25, immediateRender: false }, S[1] + .1);
+        [S[1] + .05, S[1] + .6].forEach((t, i) => word(t, 'โฮ่ง!', 120 + i * 480, 560 + i * 120, 'w', -8 + i * 14, .5));
+        for (let k = 0; k < 8; k++) go(d1.tail, S[1] + k * .18, .09, { r: k % 2 ? -30 : 20 }, 'sine.inOut');
+        cam('dogw', 0, .01, { scale: 1.3, transformOrigin: '600px 1100px' }, { scale: 1.3 });
+        cam('dogw', S[1] + .1, .3, { scale: 1.3, transformOrigin: '600px 1100px' }, { scale: 1.9, transformOrigin: '620px 1080px' }, 'power3.out');
+        cam('dogw', S[2] - .1, t1 - S[2], { scale: 1.9, transformOrigin: '620px 1080px' }, { scale: 1.2 }, 'power2.out');
+        show('dogw', 0, t1); }
+
+      // ================= 3. through the temple gate =================
+      { const s = $('sTemple'), t0 = S[3] - .05, t1 = S[4] - .05;
+        el('rect', { width: 1080, height: 1920, fill: NBG }, s);
+        el('circle', { cx: 860, cy: 420, r: 64, fill: '#e8e2c4', opacity: .85 }, s);
+        roofT(s, 420, 1000, 620); el('rect', { x: 170, y: 1000, width: 500, height: 280, fill: '#e8e2d2' }, s);
+        tower(s, 860, 1180, 1);
+        wallSeg(s, -40, 1180, 1160, 740);
+        const gate = G(s, { x: 540, y: 1180 }); el('rect', { x: -120, y: 0, width: 240, height: 300, fill: '#06060b' }, gate);
+        const dl = G(gate, { x: -120 }); el('rect', { width: 120, height: 300, fill: '#7a4a2a', stroke: '#4a2a14', 'stroke-width': 6 }, dl);
+        const dr = G(gate, { x: 120 }); el('rect', { x: -120, width: 120, height: 300, fill: '#7a4a2a', stroke: '#4a2a14', 'stroke-width': 6 }, dr);
+        put(dl, { x: -120, sx: .3 }); put(dr, { x: 120, sx: .3 });
+        const grp = G(s); put(grp, { x: -700, y: 1480 });
+        [[0, c => tae(c, { x: 0, y: 0, sx: .8, sy: .8 }, { helmet: true })], [-120, c => fon(c, { x: 0, y: 0, sx: .8, sy: .8 }, { pole: { r: 10 } })],
+         [-230, c => mew(c, { x: 0, y: 0, sx: .8, sy: .8 }, { bandage: true, armF: { r: -80 } })], [-340, c => chan(c, { x: 0, y: 0, sx: .8, sy: .8 }, { staff: { r: 40 } })]].forEach(([x, f]) => f(G(grp, { x })));
+        dog(G(grp, { x: -205, y: -150 }), { sx: .45, sy: .45 });
+        go(grp, t0, t1 - t0 - .3, { x: 600 }, 'power1.inOut');
+        go(dl, t1 - .9, .3, { x: -120, sx: 1 }); go(dr, t1 - .9, .3, { x: 120, sx: 1 });
+        cam('temple', t0, t1 - t0, { scale: 1.2, transformOrigin: '540px 1300px' }, { scale: 1 }, 'sine.out');
+        show('temple', t0, t1); }
+
+      // ================= 4. the glow of Chatuchak, the river of them =================
+      { const s = $('sGlow'), t0 = S[4] - .05, t1 = S[5] - .05;
+        el('rect', { width: 1080, height: 1920, fill: '#0a0812' }, s);
+        el('circle', { cx: 300, cy: 700, r: 700, fill: 'url(#gFire)', opacity: .7 }, s);
+        skyline(s, 820, '#151220', 111, 300);
+        el('path', { d: 'M380 820 L700 820 L1300 1920 L-200 1920 Z', fill: '#1a1620' }, s);
+        const river = G(s); seed = 121;
+        for (let i = 0; i < 160; i++) { const k = rnd(), y = 840 + k * k * 1080, sc = .3 + k * k * 1.6, x = 540 + (rnd() - .5) * (300 + k * k * 1300);
+          const g = G(river, { x, y, sx: sc, sy: sc }); el('circle', { r: 26, fill: '#07060c' }, g); el('circle', { cx: -7, cy: -6, r: 3.5, fill: '#fff' }, g); el('circle', { cx: 7, cy: -6, r: 3.5, fill: '#fff' }, g); }
+        go(river, t0, t1 - t0, { y: 120 }, 'none');
+        word(S[4] + .6, 'อืออออ…', 300, 560, 'w s', 0, 2.2);
+        cam('glow', t0, t1 - t0, { y: 300, scale: 1.1 }, { y: -120, scale: 1.1 }, 'sine.inOut');
+        show('glow', t0, t1); }
+
+      // ================= 5-6. bar the gate, up the wall =================
+      { const s = $('sGate'), t0 = S[5] - .05, t1 = S[7] - .05, FL = 1500;
+        el('rect', { width: 1080, height: 1920, fill: NBG }, s);
+        el('circle', { cx: 900, cy: 400, r: 300, fill: 'url(#gFire)', opacity: .35 }, s);
+        wallSeg(s, -40, 880, 1160, 620);
+        el('rect', { x: 330, y: 1000, width: 420, height: 500, fill: '#7a4a2a', stroke: '#4a2a14', 'stroke-width': 8 }, s);
+        el('line', { x1: 540, y1: 1000, x2: 540, y2: 1500, stroke: '#4a2a14', 'stroke-width': 8 }, s);
+        const bar = G(s); el('rect', { x: -260, y: -22, width: 520, height: 44, rx: 8, fill: '#5a3418' }, bar); put(bar, { x: 540, y: 1100, r: -70 });
+        el('rect', { y: FL, width: 1080, height: 420, fill: '#2a2630' }, s);
+        const cG = chan(s, { x: 220, y: FL, sx: 1.2, sy: 1.2 }, { armF: { r: -120 }, staff: { r: 40 } }); put(cG.aF, { r: -120 });
+        const tG = tae(s, { x: 860, y: FL, sx: -1.2, sy: 1.2 }, { helmet: true, armF: { r: -20 } }); put(tG.aF, { r: -20 }); put(tG.aB, { r: 12 });
+        go(bar, S[5] + .5, .2, { r: 0, y: 1250 }, 'power3.in'); go(cG.aF, S[5] + .5, .2, { r: -30 }, 'power3.in');
+        word(S[5] + .7, 'ปึง!', 520, 640, '', -6, .5); shake('gate', S[5] + .7, 14, 5); flash(S[5] + .7, .3);
+        // 6: Tae counts on his fingers for the joke
+        cg('gate', S[6] - .1, .4, { scale: 1.6, transformOrigin: '860px 1050px' }, 'power2.out');
+        tl.to(tG.mouth, { attr: { d: TM.g }, duration: .05 }, S[6]);
+        [0, 1, 2, 3, 4].forEach(i => { go(tG.aF, S[6] + .2 + i * .45, .15, { r: -150 + i * 6 }); word(S[6] + .2 + i * .45, String(i + 1), 520 + (i % 3) * 120, 600, 'w s', 0, .3); });
+        tl.to(tG.mouth, { attr: { d: TM.n }, duration: .05 }, E[6] + .2);
+        cg('gate', E[6] + .1, .4, { scale: 1, transformOrigin: '540px 1200px' }, 'power2.out');
+        show('gate', t0, t1); }
+
+      // ================= 7-12. the wall fight =================
+      { const s = $('sFight'), t0 = S[7] - .05, t1 = S[13] - .05, WT = 1150, WX0 = 520, WX1 = 840, FL = 1520;
+        el('rect', { width: 1080, height: 1920, fill: NBG }, s);
+        el('circle', { cx: 980, cy: 600, r: 500, fill: 'url(#gFire)', opacity: .35 }, s);
+        roofT(s, 220, 980, 420); el('rect', { x: 40, y: 980, width: 360, height: 540, fill: '#e8e2d2' }, s);
+        const tw = tower(s, 160, FL - 0, .8);
+        el('rect', { y: FL, width: WX0, height: 400, fill: '#3a3438' }, s);                        // courtyard tiles
+        el('rect', { x: WX1, y: FL + 60, width: 400, height: 400, fill: '#1a1620' }, s);           // street outside
+        // the horde + the ramp of bodies outside
+        const out = G(s); seed = 131;
+        for (let i = 0; i < 40; i++) { const x = WX1 + 10 + rnd() * 300, y = FL + 60 - rnd() * (WT + 40 - (x - WX1) * .9 > FL ? 0 : 1) * 0 - rnd() * (FL - WT - 60) * (1 - (x - WX1) / 400);
+          const g = G(out, { x, y }); el('circle', { r: 30, fill: '#07060c' }, g); el('circle', { cx: -8, cy: -6, r: 4, fill: '#fff' }, g); el('circle', { cx: 8, cy: -6, r: 4, fill: '#fff' }, g); }
+        // the wall block with the gate in it
+        el('rect', { x: WX0, y: WT, width: WX1 - WX0, height: FL - WT + 60, fill: '#e8e2d2' }, s);
+        el('rect', { x: WX0 - 8, y: WT - 22, width: WX1 - WX0 + 16, height: 26, fill: '#b9442e' }, s);
+        const gL = G(s, { x: WX0 + 40, y: 1300 }); el('rect', { width: 120, height: FL - 1300 + 60, fill: '#7a4a2a', stroke: '#4a2a14', 'stroke-width': 6 }, gL);
+        const gR = G(s, { x: WX1 - 40, y: 1300 }); el('rect', { x: -120, width: 120, height: FL - 1300 + 60, fill: '#7a4a2a', stroke: '#4a2a14', 'stroke-width': 6 }, gR);
+        put(gL, { x: WX0 + 40, y: 1300 }); put(gR, { x: WX1 - 40, y: 1300 });
+        // heads popping over the wall top (climbers)
+        const climbers = [0, 1, 2].map(i => { const z = zomb(s, { x: WX1 + 60 + i * 60, y: WT + 330, sx: -1, sy: 1 }, { armF: -70, armR: -80, noLegs: true }); put(z.g, { x: WX1 + 60 + i * 60, y: WT + 330, sx: -1, sy: 1 }); return z; });
+        const dom = [0, 1, 2].map(i => { const z = zomb(s, { x: WX1 + 80 + i * 70, y: WT + 380 + i * 60, sx: -1, sy: 1 }, { armF: -70, armR: -80, noLegs: true }); put(z.g, { x: WX1 + 80 + i * 70, y: WT + 380 + i * 60, sx: -1, sy: 1 }); z.g.setAttribute('opacity', 0); return z; });
+        // cast
+        const cF = chan(s, { x: 770, y: WT, sx: 1.05, sy: 1.05 }, { armF: { r: -30 }, staff: { r: 70 } }); put(cF.g, { x: 770, y: WT, sx: 1.05, sy: 1.05 }); put(cF.aF, { r: -30 }); put(cF.staff, { r: 70 });
+        const tF = tae(s, { x: 610, y: WT, sx: 1.05, sy: 1.05 }, { helmet: true, armF: { r: -20 } }); put(tF.g, { x: 610, y: WT, sx: 1.05, sy: 1.05 }); put(tF.aF, { r: -20 }); put(tF.lF, {});
+        const fF = fon(s, { x: 380, y: FL, sx: 1.05, sy: 1.05 }, { armF: { r: -20 }, pole: { r: 10 } }); put(fF.g, { x: 380, y: FL, sx: 1.05, sy: 1.05 }); put(fF.aF, { r: -20 }); put(fF.pole, { r: 10 });
+        const mF = mew(s, { x: 120, y: FL, sx: 1, sy: 1 }, { armF: { r: -30 }, bandage: true }); put(mF.g, { x: 120, y: FL, sx: 1, sy: 1 });
+        const dF = dog(s, { x: 210, y: FL, sx: .6, sy: .6 }); put(dF.g, { x: 210, y: FL, sx: .6, sy: .6 });
+        const R1 = zomb(s, { x: 1000, y: WT + 200, sx: -1.05, sy: 1.05, r: 30 }, { armF: -30, armR: -20, shirt: '#7a4a3a' }); put(R1.g, { x: 1000, y: WT + 200, sx: -1.05, sy: 1.05, r: 30 }); R1.g.setAttribute('opacity', 0);
+        const R2 = zomb(s, { x: -150, y: FL, sx: 1.05, sy: 1.05, r: 30 }, { armF: -20, armR: -10, shirt: '#3e5a4a' }); put(R2.g, { x: -150, y: FL, sx: 1.05, sy: 1.05, r: 30 });
+        const inG = [0, 1, 2, 3].map(i => { const z = zomb(s, { x: WX0 + 140, y: FL, sx: -1, sy: 1 }, { armF: -10, armR: -20, shirt: SHIRTS[i + 1] }); put(z.g, { x: WX0 + 140, y: FL, sx: -1, sy: 1 }); z.g.setAttribute('opacity', 0); return z; });
+        const R3 = zomb(s, { x: WX0 + 160, y: FL, sx: -1.05, sy: 1.05, r: 20 }, { armF: -30, armR: -20, shirt: '#5a6a8a' }); put(R3.g, { x: WX0 + 160, y: FL, sx: -1.05, sy: 1.05, r: 20 }); R3.g.setAttribute('opacity', 0);
+        const cart = G(s); el('rect', { x: -110, y: -120, width: 220, height: 100, rx: 8, fill: '#8a5a2a' }, cart); [-70, 70].forEach(x => el('circle', { cx: x, cy: -20, r: 26, fill: '#3a2a1a' }, cart)); put(cart, { x: 200, y: FL });
+        cg('fight', t0, .01, { scale: 1.05, transformOrigin: '540px 1300px' });
+        // b1: heads come over the top
+        climbers.forEach((z, i) => go(z.g, S[7] + .2 + i * .3, .6, { y: WT + 150 }, 'power2.out'));
+        // b2: jab, jab, sweep
+        [[H.jab1, 0, 'ป๊อก!'], [H.jab2, 1, 'ป๊อก!'], [H.sweep, 2, 'ฟาด!']].forEach(([t, i, w]) => {
+          go(cF.staff, t - .15, .12, { r: i < 2 ? 100 : 140 }, 'power3.in'); go(cF.aF, t - .15, .12, { r: i < 2 ? -60 : 10 }, 'power3.in');
+          hit('fight', s, t, WX1 + 60 + i * 60, WT - 30, w, 560 + (i % 2) * 120, 520 + i * 90, i === 2 ? '' : 'w s', -8 + i * 8);
+          go(climbers[i].g, t, .4, { y: WT + 500, r: -30 }, 'power2.in'); go(cF.staff, t + .15, .2, { r: 70 }); go(cF.aF, t + .15, .2, { r: -30 }); });
+        // b3: Tae's teep, three go down like dominoes
+        dom.forEach((z, i) => { appear(z.g, H.teep - 1.0); go(z.g, H.teep - 1.0, .6, { y: WT + 160 + i * 60 }, 'power2.out'); });
+        go(tF.g, H.teep - .4, .3, { x: 700 }); go(tF.lF, H.teep - .12, .12, { r: -95 }, 'power3.out');
+        dom.forEach((z, i) => { word(H.teep + i * .2, 'ตุ้บ!', 600 + i * 100, 560 + i * 110, i ? 'w s' : '', -8 + i * 8, .35); if (!i) { flash(H.teep, .6); shake('fight', H.teep, 16, 5); } go(z.g, H.teep + i * .2, .4, { y: WT + 600, r: -40 }, 'power2.in'); });
+        go(tF.lF, H.teep + .3, .2, { r: 0 }); go(tF.g, H.teep + .5, .3, { x: 610 });
+        // b4-5: the runner leaps the wall; Fon meets it mid-air, then finishes it
+        appear(R1.g, H.leap - .8); go(R1.g, H.leap - .8, .7, { x: WX1 + 30, y: WT }, 'power1.in');
+        go(R1.g, H.leap - .1, .55, { x: 450, y: FL - 300, r: -20 }, 'power1.out');
+        go(fF.aF, H.pole - .25, .2, { r: -150 }); go(fF.pole, H.pole - .25, .2, { r: -100 });
+        go(fF.aF, H.pole - .05, .08, { r: 0 }, 'power4.in'); go(fF.pole, H.pole - .05, .08, { r: 0 }, 'power4.in');
+        hit('fight', s, H.pole, 450, FL - 300, 'เคร้ง!', 140, 640, '', -8);
+        go(R1.g, H.pole, .4, { x: 470, y: FL + 10, r: -95 }, 'power2.in');
+        go(fF.aF, H.down - .2, .15, { r: -170 }); go(fF.pole, H.down - .2, .15, { r: -170 });
+        go(fF.aF, H.down - .05, .08, { r: 20 }, 'power4.in'); go(fF.pole, H.down - .05, .08, { r: 100 }, 'power4.in');
+        hit('fight', s, H.down, 480, FL - 20, 'ตุ้บ!', 300, 760, 'w', 6);
+        go(fF.aF, H.down + .3, .3, { r: -20 }); go(fF.pole, H.down + .3, .3, { r: 10 }); appear(R1.g, H.down + 1.0, 0);
+        // b6-7: two hands grab Tae's ankle — upside down over the horde — helmet down, Chan hauls him back
+        const hands = G(s); hands.setAttribute('opacity', 0); [0, 1].forEach(i => el('path', { d: `M${WX1 + 30 + i * 40} ${WT + 260} L${WX1 + 20 + i * 30} ${WT + 40}`, stroke: ZSK, 'stroke-width': 18, 'stroke-linecap': 'round' }, hands));
+        appear(hands, H.grab - .2);
+        go(tF.g, H.grab, .45, { x: WX1 - 10, y: WT + 20, r: 160 }, 'power2.in');
+        appear(hands, H.grab + .4, 0);
+        const hz = zomb(s, { x: WX1 + 120, y: WT + 560, sx: -1, sy: 1 }, { armF: -80, armR: -70, noLegs: true }); put(hz.g, { x: WX1 + 120, y: WT + 560, sx: -1, sy: 1 }); hz.g.setAttribute('opacity', 0);
+        appear(hz.g, H.grab + .4); go(hz.g, H.grab + .4, .5, { y: WT + 470 }, 'power2.out');
+        cg('fight', S[9] - .2, .4, { scale: 1.7, transformOrigin: '880px 1350px' }, 'power2.out');
+        tl.to(tF.mouth, { attr: { d: TM.o }, duration: .05 }, S[9]); tl.to(tF.mouth, { attr: { d: TM.n }, duration: .05 }, E[9]);
+        go(tF.aF, H.helm - .3, .2, { r: -170 }); go(tF.aF, H.helm - .08, .08, { r: 20 }, 'power4.in');
+        hit('fight', s, H.helm, WX1 + 110, WT + 330, 'เคร้ง!', 560, 860, '', -6);
+        go(hz.g, H.helm, .4, { y: WT + 800, r: 30 }, 'power2.in');
+        go(cF.g, H.haul - .4, .3, { x: WX1 - 90 }); go(cF.aB, H.haul - .2, .2, { r: 60 });
+        go(tF.g, H.haul, .35, { x: 640, y: WT, r: 0 }, 'back.out(1.5)'); word(H.haul, 'ฮึบ!', 380, 720, 'w s', -6, .4);
+        cg('fight', H.haul + .1, .4, { scale: 1.05, transformOrigin: '540px 1300px' }, 'power2.out'); go(cF.g, H.haul + .3, .3, { x: 770 }); go(cF.aB, H.haul + .3, .2, { r: 10 });
+        // b8: the dog's save — a runner over the far corner toward Mew
+        go(R2.g, H.bark - .6, 1.0, { x: 30, r: 30 }, 'power1.in');
+        tl.to(dF.mouth, { attr: { d: 'M28 2 L48 -2 L46 14 L28 10 Z' }, duration: .05 }, H.bark); tl.to(dF.mouth, { attr: { d: 'M30 6 L46 8' }, duration: .05 }, H.bark + .3);
+        word(H.bark, 'โฮ่ง!', 60, 760, 'w s', -8, .4);
+        go(dF.g, H.bark + .3, .5, { x: 60, sx: -.6, y: FL }, 'power2.in');
+        word(H.bite, 'งับ!', 140, 900, '', 6, .4); go(R2.g, H.bite, .35, { x: 20, y: FL + 10, r: -80 }, 'power2.in');
+        go(fF.g, H.bite - .3, .4, { x: 160, sx: -1.05 }); go(fF.aF, H.fin - .2, .15, { r: -170 }); go(fF.pole, H.fin - .2, .15, { r: -170 });
+        go(fF.aF, H.fin - .05, .08, { r: 20 }, 'power4.in'); go(fF.pole, H.fin - .05, .08, { r: 100 }, 'power4.in');
+        hit('fight', s, H.fin, 60, FL - 20, 'ตุ้บ!', 80, 680, 'w', -6);
+        go(fF.aF, H.fin + .3, .3, { r: -20 }); go(fF.pole, H.fin + .3, .3, { r: 10 }); go(fF.g, H.fin + .5, .5, { x: 300, sx: 1.05 }); go(dF.g, H.fin + .5, .4, { x: 200, sx: .6 });
+        // b9: the gate buckles, then bursts
+        [H.gate, H.gate + .4].forEach(t => { go(gL.firstChild ? gL : gL, t, .08, { x: WX0 + 30 }); go(gL, t + .08, .1, { x: WX0 + 40 }); shake('fight', t, 8, 4); });
+        word(H.gate, 'แคร่ก…', 600, 1200, 'w s', 6, .6);
+        go(gL, H.burst, .2, { x: WX0 + 40, sx: .25 }, 'power4.out'); go(gR, H.burst, .2, { x: WX1 - 40, sx: .25 }, 'power4.out');
+        hit('fight', s, H.burst, WX0 + 160, 1400, 'โครม!', 280, 900, '', -8);
+        inG.forEach((z, i) => { appear(z.g, H.burst); go(z.g, H.burst, .8 + i * .15, { x: WX0 - 40 - i * 70 }, 'power1.out'); });
+        // b10: Chan drops into the gap, staff in a figure-eight — four down
+        go(cF.g, H.fig - .7, .45, { x: 420, y: FL }, 'power2.in');
+        for (let k = 0; k < 4; k++) go(cF.staff, H.fig - .25 + k * .17, .17, { r: 70 + (k + 1) * 180 }, 'none');
+        word(H.fig - .2, 'วืดวืดวืด', 560, 560, 'w s', 0, .7);
+        inG.forEach((z, i) => go(z.g, H.fig + .1 + i * .12, .35, { y: FL + 10, r: -90 + (i % 2) * 180, x: WX0 - 40 - i * 70 + 30 }, 'power2.in'));
+        hit('fight', s, H.fig2, 400, FL - 300, 'ฟาด!', 520, 680, '', 6);
+        // b11: slow-mo — a runner dives at Mew; Chan steps between; the bite
+        cg('fight', H.sm0 - .1, .35, { scale: 1.6, transformOrigin: '260px 1300px', filter: 'grayscale(1) sepia(.9) hue-rotate(-40deg) saturate(2.6) contrast(1.25)' }, 'power2.out');
+        tl.fromTo('#barT, #barB', { height: 0 }, { height: 150, duration: .3, immediateRender: false }, H.sm0 - .1);
+        appear(R3.g, H.sm0); go(R3.g, H.sm0, H.chomp - H.sm0, { x: 260, y: FL - 200, r: 50 }, 'none');
+        go(cF.g, H.sm0 + .2, H.chomp - H.sm0 - .3, { x: 200, sx: -1.05 }, 'sine.inOut'); go(cF.aB, H.sm0 + .4, .6, { r: -100 }, 'sine.inOut');
+        word(H.chomp, 'งับ', 300, 820, 'w s', -6, .6);
+        tl.to(mF.mouth, { attr: { d: MM.o }, duration: .05 }, S[11]); tl.to(mF.mouth, { attr: { d: MM.n }, duration: .05 }, E[11] + .3);
+        tl.to('#fight .cam', { filter: 'grayscale(0) sepia(0) hue-rotate(0deg) saturate(1) contrast(1)', duration: .05 }, H.sm1);
+        tl.to('#barT, #barB', { height: 0, duration: .2 }, H.sm1 + .05);
+        hit('fight', s, H.head, 240, FL - 360, 'โครม!', 300, 600, '', -8);
+        go(R3.g, H.head, .45, { x: 420, y: FL + 10, r: -100 }, 'power2.out');
+        go(cF.staff, H.head + .1, .2, { r: 120 }); go(cF.aB, H.head + .1, .3, { r: 10 });
+        CS.fight = { ...CS.fight, filter: 'grayscale(0) sepia(0) hue-rotate(0deg) saturate(1) contrast(1)' };
+        cg('fight', H.head + .1, .4, { scale: 1.05, transformOrigin: '540px 1300px' }, 'power2.out');
+        // b12: Tae + Fon drag the cart against the gate
+        go(tF.g, H.cart - 1.4, .5, { x: 560, y: FL }, 'power2.in'); go(cart, H.cart - .8, .8, { x: 640 }, 'power1.inOut'); go(fF.g, H.cart - .9, .8, { x: 500 });
+        word(H.cart - .6, 'ครืดดด…', 380, 1000, 'w s', 0, .6); word(H.cart, 'ปึง!', 560, 760, '', 6, .4); shake('fight', H.cart, 12, 5);
+        // 12: Chan pulls his sleeve down, smiles; Tae's doubt
+        cg('fight', S[12] - .2, .5, { scale: 1.8, transformOrigin: '280px 1050px' }, 'power2.out');
+        go(cF.aB, S[12] + .2, .3, { r: 30 }); tl.to(cF.mouth, { attr: { d: 'M12 18 Q21 26 30 17' }, duration: .1 }, S[12] + .4);
+        show('fight', t0, t1); }
+
+      // ================= 13-17. back gate, the bite, the whistle =================
+      { const s = $('sTalk'), t0 = S[13] - .05, t1 = S[18] - .05, FL = 1500;
+        el('rect', { width: 1080, height: 1920, fill: NBG }, s);
+        const wide = G(s);
+        roofT(wide, 300, 900, 560); el('rect', { x: 60, y: 900, width: 480, height: 600, fill: '#e8e2d2' }, wide);
+        wallSeg(wide, 560, 1150, 600, 350);
+        el('rect', { x: 760, y: 1250, width: 160, height: 250, fill: '#06060b' }, wide);
+        el('rect', { y: FL, width: 1080, height: 420, fill: '#2a2630' }, wide);
+        el('rect', { x: 600, y: 1640, width: 480, height: 280, fill: '#1a2a3a' }, wide);
+        const boat = G(wide, { x: 860, y: 1700 }); el('path', { d: 'M-200 0 L200 0 Q240 -20 260 -60 L180 30 L-180 30 Z', fill: '#7a4a2a' }, boat);
+        const fW = fon(wide, { x: 700, y: FL, sx: 1, sy: 1 }, { armF: { r: -100 }, pole: { r: 10 } });
+        // close two-shot: Chan shows Tae the bite
+        const close = G(s); close.setAttribute('opacity', 0);
+        el('rect', { width: 1080, height: 1920, fill: '#141220' }, close);
+        tower(close, 860, 1500, 1.3);
+        const cC = chan(close, { x: 380, y: 1900, sx: 2.2, sy: 2.2 }, { armF: { r: -10 }, staff: { r: 20 } });
+        const tC = tae(close, { x: 900, y: 1900, sx: -2.2, sy: 2.2 }, { helmet: true, armF: { r: -10 } });
+        const armB = G(close); armB.setAttribute('opacity', 0);
+        el('path', { d: 'M420 1300 Q560 1280 760 1330 L760 1410 Q560 1380 420 1390 Z', fill: '#b98050' }, armB);   // his forearm held out to Tae at chest height
+        el('circle', { cx: 770, cy: 1370, r: 38, fill: '#b98050' }, armB);
+        el('ellipse', { cx: 600, cy: 1345, rx: 56, ry: 26, fill: '#5a1418' }, armB);
+        [[-20, 1], [20, -1], [50, 1]].forEach(([dx, sg]) => el('path', { d: `M${600 + dx} 1345 q${24 * sg} 30 ${48 * sg} 22 q16 24 40 30`, stroke: '#6f7f6a', 'stroke-width': 6, fill: 'none' }, armB));
+        // kneel: the whistle
+        const kneel = G(s); kneel.setAttribute('opacity', 0);
+        el('rect', { width: 1080, height: 1920, fill: '#141220' }, kneel);
+        const cK = chan(kneel, { x: 430, y: 1700, sx: 1.6, sy: 1.6, r: 8 }, { armF: { r: -70 }, staff: { r: 80 } });
+        rot(cK.hd, S[17], .4, 16); cK.whistle.setAttribute('opacity', 0);   // he leans in, head bowed to her
+        const mK = mew(kneel, { x: 700, y: 1720, sx: -1.6, sy: 1.6 }, { armF: { r: -40 }, bandage: true });
+        const wh = G(kneel); el('path', { d: 'M-30 -40 L0 20 L30 -40', stroke: '#c0392b', 'stroke-width': 5, fill: 'none' }, wh); el('rect', { x: -12, y: 14, width: 24, height: 16, rx: 3, fill: '#c9ced6' }, wh);
+        put(wh, { x: 520, y: 1150 });
+        // 13 wide
+        cam('talk', t0, S[14] - t0, { scale: 1.1, transformOrigin: '800px 1500px' }, { scale: 1.3, transformOrigin: '800px 1500px' }, 'sine.inOut');
+        word(S[13] + .5, 'ประตูหลัง →', 600, 1080, 'w s', 0, 2.0);
+        // 14-16 close
+        tl.set(close, { attr: { opacity: 1 } }, S[14] - .05);
+        appear(armB, S[14] + .6); tl.fromTo(armB, { attr: { transform: T({ y: 300 }) } }, { attr: { transform: T({}) }, duration: .4, ease: 'power2.out', immediateRender: false }, S[14] + .6);
+        appear(armB, S[15] - .1, 0);
+        rot(cC.hd, S[15] + .3, .6, -25, 'sine.inOut');
+        rot(cC.hd, S[16] - .1, .5, 0, 'sine.inOut');
+        tl.to(cC.mouth, { attr: { d: 'M12 18 Q21 26 30 17' }, duration: .2 }, S[16] + 2.5);
+        cam('talk', S[14] - .05, S[17] - S[14], { scale: 1, transformOrigin: '540px 1100px' }, { scale: 1.25, transformOrigin: '420px 1000px' }, 'sine.inOut');
+        // 17 kneel
+        tl.set(kneel, { attr: { opacity: 1 } }, S[17] - .05);
+        go(wh, S[17] + .3, 1.0, { x: 696, y: 1420 }, 'sine.inOut');   // onto her neck
+        cam('talk', S[17] - .05, t1 - S[17], { scale: 1.2, transformOrigin: '600px 1250px' }, { scale: 1.45, transformOrigin: '640px 1250px' }, 'sine.inOut');
+        show('talk', t0, t1); }
+
+      // ================= 18. split: go / the tower =================
+      { const s = $('sSplit'), t0 = S[18] - .05, t1 = S[19] - .05;
+        el('rect', { width: 1080, height: 1920, fill: '#141220' }, s);
+        const L = G(s); el('rect', { width: 536, height: 1920, fill: '#1a1a2a' }, L);
+        el('rect', { x: 140, y: 900, width: 220, height: 600, fill: '#06060b' }, L);
+        const gL = G(L); put(gL, { x: 0 });
+        tae(gL, { x: 300, y: 1500, sx: -1, sy: 1 }, { helmet: true, armF: { r: -70 } });
+        mew(gL, { x: 430, y: 1500, sx: 1, sy: 1 }, { armF: { r: -110 }, bandage: true, whistle: true });
+        go(gL, t0, t1 - t0, { x: -200 }, 'power1.in');
+        const R = G(s, { x: 544 }); el('rect', { width: 536, height: 1920, fill: '#201a28' }, R);
+        for (let i = 0; i < 10; i++) el('rect', { x: 60 + i * 40, y: 1500 - i * 50, width: 240, height: 50, fill: '#e8e2d2' }, R);
+        const cS = G(R); put(cS, { x: 0 });
+        chan(cS, { x: 120, y: 1500, sx: 1, sy: 1 }, { armF: { r: -150 }, staff: { r: 100 } });
+        go(cS, t0, t1 - t0, { x: 240, y: -260 }, 'none');
+        el('rect', { x: 536, width: 8, height: 1920, fill: '#000' }, s);
+        show('split', t0, t1); }
+
+      // ================= 19-20, 22. the bell, seen from the boat =================
+      { const s = $('sBell'), t1 = S[23] - .05;
+        el('rect', { width: 1080, height: 1920, fill: NBG }, s);
+        el('circle', { cx: 860, cy: 340, r: 60, fill: '#e8e2c4', opacity: .8 }, s);
+        const tw = tower(s, 700, 1180, 1.1);
+        const ch = chan(tw.g, { x: 60, y: -380, sx: .5, sy: .5 }, { armF: { r: -150 }, staff: { r: 100 } });
+        wallSeg(s, -40, 1180, 1160, 200);
+        const horde = G(s); seed = 151;
+        for (let i = 0; i < 50; i++) { const x = rnd() * 1080, y = 1250 + rnd() * 120, g = G(horde, { x, y }); el('circle', { r: 16, fill: '#07060c' }, g); el('circle', { cx: -4, cy: -3, r: 2.4, fill: '#fff' }, g); el('circle', { cx: 4, cy: -3, r: 2.4, fill: '#fff' }, g); }
+        el('rect', { y: 1380, width: 1080, height: 540, fill: '#14223a' }, s);
+        for (let i = 0; i < 6; i++) el('path', { d: `M${i * 200} ${1500 + i * 30} q50 -14 100 0 t100 0`, stroke: '#3a5a7a', 'stroke-width': 4, fill: 'none' }, s);
+        const boat = G(s, { x: 540, y: 1700 }); el('path', { d: 'M-360 0 L360 0 Q420 -30 440 -90 L320 50 L-320 50 Z', fill: '#7a4a2a' }, boat);
+        person(boat, -140, 0, .8, '#f07a1e', false, false); person(boat, -40, 0, .8, '#2a9d8f', false, false); person(boat, 50, 0, .6, '#f5a8c8', false, false); dog(boat, { x: 130, y: 0, sx: .5, sy: .5 });
+        const rings = [0, 1, 2].map(() => el('circle', { cx: 700, cy: 820, r: 30, fill: 'none', stroke: '#c9a227', 'stroke-width': 6, opacity: 0 }, s));
+        put(tw.bell, { x: 0, y: -350 });
+        BELLS.forEach((t, i) => { const silent = i === BELLS.length - 1;
+          go(tw.bell, t, .15, { r: i % 2 ? -14 : 14 }, 'power2.out'); go(tw.bell, t + .4, .6, { r: 0 }, 'sine.inOut');
+          if (!silent) { const r = rings[i % 3]; tl.fromTo(r, { attr: { r: 30, opacity: .9 } }, { attr: { r: 700, opacity: 0 }, duration: 1.4, ease: 'power1.out', immediateRender: false }, t); word(t, 'เป๊ง…', 560 + (i % 2) * 100, 560 + (i % 3) * 90, 'w s', i % 2 ? 6 : -6, .7); } });
+        go(horde, S[20] - .2, t1 - S[20], { x: 260 }, 'power1.inOut');
+        show('bell', S[19] - .05, S[21] - .05); show('bell', S[22] - .05, t1);
+        cam('bell', S[19] - .05, S[21] - S[19], { scale: 1.1, transformOrigin: '600px 1200px' }, { scale: 1 }, 'sine.out');
+        cam('bell', S[22] - .05, t1 - S[22], { scale: 1 }, { scale: .9, transformOrigin: '600px 1200px' }, 'sine.inOut'); }
+
+      // ================= 21. Lung Chan smiles =================
+      { const s = $('sSmile'), t0 = S[21] - .05, t1 = S[22] - .05;
+        el('rect', { width: 1080, height: 1920, fill: '#141220' }, s);
+        el('circle', { cx: 300, cy: 700, r: 600, fill: 'url(#gFire)', opacity: .25 }, s);
+        const c = chan(s, { x: 500, y: 2500, sx: 4.4, sy: 4.4 }, { armF: { r: -10 }, staff: { r: 20 } });
+        tl.to(c.mouth, { attr: { d: 'M12 18 Q21 26 30 17' }, duration: .4 }, t0 + .4);
+        rot(c.hd, t0, .8, 14, 'sine.out');
+        cam('smile', t0, t1 - t0, { scale: 1, transformOrigin: '540px 1000px' }, { scale: 1.12 }, 'sine.inOut');
+        show('smile', t0, t1); }
+
+      // ================= 23. next =================
+      tl.fromTo('#next', { opacity: 0 }, { opacity: 1, duration: .3, immediateRender: false }, S[23] - .05);
+      tl.fromTo('#next .sr', { opacity: 0 }, { opacity: 1, duration: .3, immediateRender: false }, S[23]);
+      tl.fromTo('#next .pill', { opacity: 0, y: 10 }, { opacity: 1, y: 0, duration: .3, immediateRender: false }, S[23] + .1);
+      tl.fromTo('#next h1', { opacity: 0, scale: 1.5 }, { opacity: 1, scale: 1, duration: .25, ease: 'power3.out', immediateRender: false }, S[23] + .3);
+      tl.fromTo('#next .rl', { scaleX: 0 }, { scaleX: 1, duration: .4, immediateRender: false }, S[23] + .8);
+      tl.fromTo('#next .s1', { opacity: 0 }, { opacity: 1, duration: .3, immediateRender: false }, S[23] + 1.0);
+      tl.fromTo('#next .s2', { opacity: 0 }, { opacity: 1, duration: .3, immediateRender: false }, S[23] + 1.3);
+      tl.set({}, {}, END);
+
+      window.__timelines['main'] = tl;
+      tl.seek(0);
+    </script>
+  </body>
+</html>
