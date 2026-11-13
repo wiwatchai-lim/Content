@@ -39,6 +39,7 @@ codex exec -m gpt-5.6-luna -c model_reasoning_effort="low" -C <โฟลเด�
 - เช็กรายชื่อโมเดลที่บัญชีมีได้จาก `~/.codex/models_cache.json`
 
 **ข้อควรรู้จากรอบแรก (2026-09-16):**
+- ถ้าสั่ง `codex exec` จากสคริปต์/พื้นหลัง ต้องต่อท้าย `< /dev/null` ไม่งั้นค้างที่ "Reading additional input from stdin..." และถ้าไป kill ทีหลัง Codex จะได้ EOF แล้ววาดต่อ = เสียโควตาซ้ำ (เจอ 2026-11-13)
 - แม้ส่ง `-s workspace-write` ไป แซนด์บ็อกซ์ยังขึ้นเป็น `read-only` — Codex **เซฟไฟล์ลงโปรเจกต์ไม่ได้** ต้องไปก๊อปเอาเองจาก `~/.codex/generated_images/<session-id>/` (Windows: `%USERPROFILE%\.codex\generated_images\`) เลือกไฟล์ใหม่ล่าสุด
 - Codex รายงานว่า "ภาพยังมีพื้นหลัง" ทั้งที่ตรวจแล้วมี alpha โปร่งจริง — **อย่าเชื่อรายงาน ให้เปิดไฟล์ตรวจเอง** (วางบนพื้นขาวและพื้นเข้มดูว่ามีฝ้าไหม)
 - ถ้าได้ภาพพื้นทึบมาจริง ๆ ตัดพื้นด้วย `npm run cutout -- data/models <ไฟล์>` (สั่งใน prompt ให้พื้นหลังเป็นสีเรียบสีเดียวจะตัดได้สะอาด) ไม่ต้องใช้ Python

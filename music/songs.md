@@ -6,10 +6,10 @@ Mood is a first guess from the title and the analysis; update it after a clip is
 
 | File | BPM | Length | Mood guess | Used for (date, kit, TikTok start) |
 |---|---|---|---|---|
-| Block Beat.m4a | 95.7 | 2:15 | boom-bap hip hop, heavy bass, street | |
+| Block Beat.m4a | 95.7 | 2:15 | boom-bap hip hop, heavy bass, street | 2026-11-11 ferrari-varilux (user footage), 0:06.2 |
 | Echoes of What Could've Been.m4a | 92.3 | 0:57 | wistful, emotional | 2026-09-28 huahin-anantara (bed under voice), 0:00; 2026-09-29 huahin-marriott (bed), 0:00 |
 | Green Glass Walls.m4a | 125.6 | 0:43 | bright indie, outdoor, fresh | 2026-09-25 tb1670f, 0:19 |
-| Iron Riot Protocol.m4a | 86.1 | 1:00 | aggressive, rock/industrial | |
+| Iron Riot Protocol.m4a | 86.1 | 1:00 | aggressive, rock/industrial | 2026-11-11 brand-battle-th (map battle, 60 s), 0:00 |
 | Kabut Senja.m4a | 161.5 | 0:32 | dreamy dusk, fast feel | 2026-10-14 bolon-sunset, 0:16.0 |
 | Late Night Loops.m4a | 80.7 | 2:19 | lofi, dark, chill night | |
 | Neon Show.m4a | 96.0 | 0:40 | city pop, bright | 2026-09-25 bj3185-b10, 0:17.5 |

@@ -1,0 +1,564 @@
+<!doctype html>
+<html lang="th">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=1080, height=1920" />
+    <!--
+      Story clip EP11 "หนึ่งปีต่อมา" — season 2 opener (2026-10-30), pays off EP10's "เจอกันปีหน้า". Same look as EP01-10. Thai only.
+      Voice = ../audio/voice.wav, cue + phrase times from ../audio/timing.json (mixed after render, see ../make.sh).
+      Science: most glaucoma has no pain, takes side vision first, the centre stays sharp and the brain fills the gap. Lost vision can't be restored;
+      found early, treatment slows it. Doctor checks pressure, optic nerve, visual field. Side-vision test for the viewer (rough only, can't clear anyone).
+      Scenes: street 0-5.6 | waiting room 5.2-10 | clinic room 9.6-100.4 (under everything) | inside the machine 14.4-19 | printout 18.95-26.2
+      | glaucoma card 26.2-36.4 | slow-it card 36.4-42.4 | side-vision test 42.4-68.6 | checks card 68.6-76 | who card 76-82 | re-check in the room 82-92
+      | printout: head and shoulders 92-98.5 | inside the machine again 98.5-100.5 | next 100.4-103.6 | TIMEOPTIC 103.4-106.17
+    -->
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/gsap.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@400;500;600;700&family=Anuphan:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <style>
+      * { margin: 0; padding: 0; box-sizing: border-box; }
+      html, body { width: 1080px; height: 1920px; overflow: hidden; background: #0a1124; }
+      #root { position: relative; width: 1080px; height: 1920px; overflow: hidden; font-family: 'Anuphan', sans-serif; color: #fff; }
+      .layer { position: absolute; }
+      .full { position: absolute; left: 0; top: 0; width: 1080px; height: 1920px; }
+      svg { display: block; overflow: visible; }
+
+      .sub { position: absolute; left: 50px; right: 50px; top: 1210px; text-align: center; font-family: 'Prompt', sans-serif; font-weight: 600;
+             font-size: 56px; line-height: 1.32; text-shadow: 0 3px 18px rgba(0,0,0,.75), 0 0 4px rgba(0,0,0,.6); }
+      .sub.y { color: #F5C84C; }
+      .sub.r span { display: inline-block; background: #D8343A; color: #fff; padding: 4px 26px 8px; border-radius: 10px; text-shadow: none;
+                    box-shadow: 0 6px 24px rgba(0,0,0,.35); }
+      .sub.dk { color: #1d2433; text-shadow: none; top: 1620px; font-size: 50px; }
+
+      .chip { position: absolute; top: 170px; height: 86px; background: #EEE8DC; border-radius: 16px; color: #1d2433; display: flex; align-items: center;
+              gap: 14px; padding: 0 26px 0 20px; box-shadow: 0 8px 26px rgba(0,0,0,.35); }
+      .chip small { display: block; font-size: 20px; font-weight: 500; color: #555a63; line-height: 1; }
+      .chip b { display: block; font-family: 'Prompt'; font-size: 40px; font-weight: 700; line-height: 1.05; letter-spacing: .02em; }
+      #epb { position: absolute; right: 56px; top: 186px; height: 54px; padding: 0 22px; border-radius: 27px; background: rgba(216,52,58,.92);
+             font: 600 26px/54px 'Prompt'; color: #fff; }
+
+      .card { position: absolute; left: 80px; top: 520px; width: 920px; height: 640px; background: #EEE8DC; border-radius: 22px; color: #1d2433;
+              border-left: 14px solid #C99A2E; box-shadow: 0 24px 60px rgba(0,0,0,.45); overflow: hidden; }
+      .card .ttl { position: absolute; left: 34px; top: 26px; font-size: 30px; font-weight: 600; color: #4a4f5a; }
+      .card .lbl { position: absolute; font-size: 28px; font-weight: 600; color: #1d2433; text-align: center; }
+      .row3 { position: absolute; left: 40px; width: 826px; height: 140px; background: #fff; border: 3px solid #e2dacb; border-radius: 16px; }
+      .row3 .t { position: absolute; left: 170px; top: 0; font: 600 40px/134px 'Prompt'; color: #1d2433; white-space: nowrap; }
+      .ok { position: absolute; left: 80px; height: 76px; padding: 0 30px; border-radius: 38px; background: #2f8a57; color: #fff; font: 600 36px/76px 'Prompt'; white-space: nowrap; }
+      .pill2 { position: absolute; top: 1090px; height: 64px; padding: 0 26px; border-radius: 32px; background: #1d2433; color: #fff; font: 600 30px/64px 'Prompt'; white-space: nowrap; }
+
+      #test { background: #F3EFE6; color: #1d2433; }
+      #test h2 { position: absolute; left: 0; right: 0; top: 300px; text-align: center; font: 700 52px 'Prompt'; }
+      #test ol { position: absolute; left: 100px; top: 395px; list-style: none; font-size: 34px; font-weight: 600; line-height: 1.75; color: #4a4f5a; white-space: nowrap; }
+      #test ol li b { display: inline-block; width: 50px; height: 50px; border-radius: 50%; background: #1d2433; color: #fff; text-align: center;
+                      font: 700 30px/50px 'Prompt'; margin-right: 18px; }
+      #test .bar { position: absolute; left: 240px; top: 1330px; width: 600px; height: 10px; border-radius: 5px; background: #ddd5c6; overflow: hidden; }
+      #test .bar i { position: absolute; inset: 0; background: #C99A2E; transform-origin: 0 50%; transform: scaleX(0); }
+      #test .note { position: absolute; left: 0; right: 0; top: 1420px; text-align: center; font-size: 30px; font-weight: 500; color: #7a7f88; }
+      #test .warn { position: absolute; left: 0; right: 0; top: 1190px; text-align: center; font: 700 44px 'Prompt'; color: #C0392B; }
+
+      #next { background: radial-gradient(ellipse 80% 45% at 50% 42%, #23181c, #0d0d11 70%); }
+      #next .np { position: absolute; left: 50%; top: 640px; transform: translateX(-50%); border: 2px solid #4a4a55; border-radius: 40px; padding: 8px 30px;
+                  font-size: 30px; font-weight: 600; color: #d6d6dc; white-space: nowrap; }
+      #next .np:before { content: ''; display: inline-block; width: 12px; height: 12px; border-radius: 50%; background: #D8343A; margin-right: 12px; vertical-align: 4px; }
+      #next h1 { position: absolute; left: 60px; right: 60px; top: 760px; text-align: center; font: 700 96px/1.3 'Prompt'; color: #f2f2f4; }
+      #next .rl { position: absolute; left: 400px; top: 930px; width: 280px; height: 6px; background: #D8343A; border-radius: 3px; }
+      #next .s1 { position: absolute; left: 0; right: 0; top: 970px; text-align: center; font-size: 36px; font-weight: 600; color: #e05a5f; }
+      #end { background: radial-gradient(ellipse 80% 55% at 50% 48%, #1a4a36, #123A29 60%, #0d2b1e); }
+      #end img { position: absolute; left: 228px; top: 820px; width: 624px; }
+      #end p { position: absolute; left: 0; right: 0; top: 980px; text-align: center; font-size: 46px; font-weight: 600; line-height: 1.45; color: #FAFAFA; }
+    </style>
+  </head>
+  <body>
+    <div id="root" data-composition-id="main" data-start="0" data-duration="106.17" data-width="1080" data-height="1920">
+      <svg width="0" height="0" style="position:absolute">
+        <defs>
+          <linearGradient id="skyN" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#070c22" /><stop offset=".7" stop-color="#16214c" /><stop offset="1" stop-color="#2a2a52" /></linearGradient>
+          <linearGradient id="subfade" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#0a0f18" stop-opacity="0" /><stop offset=".35" stop-color="#0a0f18" stop-opacity=".6" /><stop offset="1" stop-color="#0a0f18" stop-opacity=".7" /></linearGradient>
+          <radialGradient id="glow"><stop offset="0" stop-color="#eaf4ff" stop-opacity=".75" /><stop offset=".4" stop-color="#bcd6ea" stop-opacity=".25" /><stop offset="1" stop-color="#bcd6ea" stop-opacity="0" /></radialGradient>
+          <radialGradient id="domeG" cx=".5" cy=".5" r=".5"><stop offset="0" stop-color="#d9d5c6" /><stop offset=".55" stop-color="#a9a696" /><stop offset=".9" stop-color="#5d5b50" /><stop offset="1" stop-color="#2a2925" /></radialGradient>
+          <filter id="soft"><feGaussianBlur stdDeviation="10" /></filter>
+          <filter id="soft2"><feGaussianBlur stdDeviation="2.5" /></filter>
+          <filter id="fh"><feGaussianBlur stdDeviation="34" /></filter>
+          <clipPath id="sc"><rect x="40" y="90" width="826" height="400" rx="14" /></clipPath>
+          <mask id="hole" maskUnits="userSpaceOnUse" x="0" y="0" width="906" height="640">
+            <rect width="906" height="640" fill="#fff" />
+            <circle id="holeC" cx="453" cy="290" r="620" fill="#000" filter="url(#fh)" />
+          </mask>
+        </defs>
+      </svg>
+
+      <!-- ===== clinic room, side view (under everything from 9.6 on) ===== -->
+      <div id="room" class="clip full" data-start="9.6" data-duration="90.8" data-track-index="0" style="background:#141c24">
+        <div id="roomw" class="full">
+          <svg class="full" viewBox="0 0 1080 1920" width="1080" height="1920">
+            <rect width="1080" height="1320" fill="#2b3a44" />
+            <rect y="1320" width="1080" height="600" fill="#1a2329" />
+            <g stroke="#141c22" stroke-width="4"><line x1="0" y1="1420" x2="1080" y2="1420" /><line x1="0" y1="1560" x2="1080" y2="1560" /><line x1="0" y1="1740" x2="1080" y2="1740" /></g>
+            <!-- tube light -->
+            <rect x="300" y="70" width="480" height="26" rx="13" fill="#eaf4ff" />
+            <ellipse id="rglow" cx="540" cy="120" rx="760" ry="620" fill="url(#glow)" opacity=".55" />
+            <!-- wall chart, dark window -->
+            <rect x="560" y="300" width="180" height="250" rx="8" fill="#e9e6dc" /><g id="chart" fill="#1d2433"></g>
+            <rect x="60" y="300" width="300" height="240" fill="#0b1224" stroke="#141c22" stroke-width="14" /><line x1="210" y1="300" x2="210" y2="540" stroke="#141c22" stroke-width="10" />
+            <!-- table + visual-field machine -->
+            <rect x="40" y="980" width="500" height="28" fill="#3a2d22" /><rect x="70" y="1008" width="24" height="340" fill="#2b2119" /><rect x="480" y="1008" width="24" height="340" fill="#2b2119" />
+            <path d="M90 980 L90 720 Q90 620 200 620 Q330 620 368 720 L368 980 Z" fill="#dcdad0" />
+            <path d="M368 720 L368 980 L344 980 L344 730 Z" fill="#1d2433" />
+            <circle id="mlight" cx="150" cy="700" r="9" fill="#F5C84C" />
+            <rect x="120" y="880" width="170" height="50" rx="6" fill="#1d2433" opacity=".85" />
+            <path d="M330 880 Q380 880 400 900" stroke="#555a63" stroke-width="7" fill="none" />
+            <!-- you, in profile, chin on the rest -->
+            <g id="you">
+              <rect x="540" y="1090" width="60" height="260" rx="18" fill="#1c2438" />
+              <path d="M520 800 Q590 762 660 806 L690 1120 L510 1120 Z" fill="#2f5d8a" />
+              <path d="M556 830 L470 950" stroke="#28507a" stroke-width="42" stroke-linecap="round" /><circle cx="460" cy="962" r="22" fill="#a87a5a" />
+              <rect x="504" y="730" width="52" height="86" fill="#96694b" transform="rotate(-18 530 770)" />
+              <ellipse cx="462" cy="700" rx="72" ry="86" fill="#a87a5a" />
+              <path d="M400 660 Q470 590 550 640 Q570 690 548 760 Q522 730 516 690 Q470 650 410 668 Z" fill="#15100c" />
+              <path d="M392 690 L380 720 L398 726" fill="#a87a5a" />
+            </g>
+            <!-- the doctor, standing -->
+            <g id="doc" transform="translate(70 0)">
+              <rect x="780" y="1150" width="56" height="200" rx="16" fill="#26262e" /><rect x="850" y="1150" width="56" height="200" rx="16" fill="#26262e" />
+              <path d="M745 720 Q838 680 930 722 L960 1200 L725 1200 Z" fill="#f0f1ee" />
+              <path d="M838 720 L838 1190" stroke="#c9ccc6" stroke-width="4" />
+              <g id="docH">
+                <rect x="808" y="640" width="56" height="84" fill="#b08355" />
+                <ellipse cx="830" cy="584" rx="78" ry="94" fill="#c0926a" />
+                <path d="M760 546 Q820 470 900 530 Q918 570 906 630 Q888 600 880 566 Q838 530 770 552 Z" fill="#2a2522" />
+                <circle cx="772" cy="586" r="20" fill="#cfe4f2" fill-opacity=".3" stroke="#1d2433" stroke-width="5" /><path d="M790 582 L860 590" stroke="#1d2433" stroke-width="5" />
+                <path d="M748 590 L738 618 L754 622" fill="#c0926a" />
+              </g>
+              <g id="armClip"><path d="M770 760 L700 930" stroke="#dfe1dc" stroke-width="46" stroke-linecap="round" /><rect x="630" y="860" width="100" height="130" rx="4" fill="#c9a96a" /><rect x="640" y="872" width="80" height="108" fill="#fff" /></g>
+              <g id="armPaper" opacity="0"><path d="M770 760 L680 690" stroke="#dfe1dc" stroke-width="46" stroke-linecap="round" /><rect x="610" y="560" width="120" height="170" fill="#fff" stroke="#c9ccc6" stroke-width="3" /><circle cx="670" cy="640" r="44" fill="#d6d6d0" /><ellipse cx="648" cy="640" rx="16" ry="20" fill="#1d2433" /></g>
+            </g>
+            <rect y="1080" width="1080" height="840" fill="url(#subfade)" /><rect y="1160" width="1080" height="760" fill="#0a0f18" opacity=".5" />
+          </svg>
+        </div>
+        <div id="ok1" class="ok" style="top:310px;opacity:0">ความดันตา ปกติ ✓</div>
+        <div id="ok2" class="ok" style="top:400px;opacity:0">ขั้วประสาทตา ปกติ ✓</div>
+      </div>
+
+      <!-- ===== street: the clinic is the only lit front ===== -->
+      <div id="ext" class="clip full" data-start="0" data-duration="5.6" data-track-index="1" style="background:#070c22">
+        <div id="extw" class="full">
+          <svg class="full" viewBox="0 0 1080 1920" width="1080" height="1920">
+            <rect x="-200" width="1480" height="1100" fill="url(#skyN)" />
+            <g id="stars" fill="#dfe6ff"></g>
+            <rect x="-200" y="1060" width="1480" height="860" fill="#0d1218" />
+            <polygon points="420,1060 660,1060 1000,1920 80,1920" fill="#1b2026" />
+            <!-- dark shophouses -->
+            <rect x="-120" y="540" width="370" height="520" fill="#0e1424" /><rect x="830" y="500" width="370" height="560" fill="#0e1424" />
+            <g fill="#141b30"><rect x="-60" y="620" width="110" height="130" /><rect x="90" y="620" width="110" height="130" /><rect x="880" y="590" width="110" height="130" /><rect x="1030" y="590" width="110" height="130" /></g>
+            <!-- the clinic -->
+            <rect x="250" y="460" width="580" height="600" fill="#1b2433" />
+            <rect x="290" y="500" width="500" height="120" rx="8" fill="#eaf4ff" />
+            <text x="540" y="582" text-anchor="middle" font-family="Prompt" font-weight="700" font-size="68" fill="#123A29">คลินิกตา</text>
+            <rect x="290" y="670" width="500" height="390" fill="#cfe0ea" />
+            <line x1="540" y1="670" x2="540" y2="1060" stroke="#1b2433" stroke-width="10" />
+            <g fill="#8fa4b0"><rect x="330" y="760" width="170" height="16" /><rect x="580" y="760" width="170" height="16" /></g>
+            <ellipse cx="540" cy="860" rx="420" ry="420" fill="url(#glow)" opacity=".7" />
+            <polygon points="290,1060 790,1060 960,1420 120,1420" fill="#cfe0ea" opacity=".14" />
+            <!-- you, from behind -->
+            <g id="walker" transform="translate(540 1740) scale(1.2)">
+              <g transform="translate(-70 -350)">
+                <rect id="legA" x="38" y="210" width="28" height="140" rx="12" fill="#1c2438" />
+                <rect id="legB" x="74" y="210" width="28" height="140" rx="12" fill="#1c2438" />
+                <rect x="22" y="90" width="96" height="140" rx="34" fill="#2f5d8a" />
+                <rect x="10" y="100" width="22" height="110" rx="11" fill="#28507a" /><rect x="108" y="100" width="22" height="110" rx="11" fill="#28507a" />
+                <rect x="58" y="70" width="24" height="26" fill="#a87a5a" />
+                <circle cx="70" cy="48" r="40" fill="#15100c" />
+              </g>
+            </g>
+          </svg>
+        </div>
+      </div>
+
+      <!-- ===== waiting room: lights going off, one by one ===== -->
+      <div id="wait" class="clip full" data-start="5.2" data-duration="4.8" data-track-index="2" style="background:#141c24">
+        <div id="waitw" class="full">
+          <svg class="full" viewBox="0 0 1080 1920" width="1080" height="1920">
+            <rect width="1080" height="1320" fill="#2b3a44" />
+            <rect y="1320" width="1080" height="600" fill="#1a2329" />
+            <rect id="w1" x="60" y="90" width="260" height="24" rx="12" fill="#eaf4ff" /><rect id="w2" x="410" y="90" width="260" height="24" rx="12" fill="#eaf4ff" /><rect id="w3" x="760" y="90" width="260" height="24" rx="12" fill="#eaf4ff" />
+            <ellipse id="wg1" cx="190" cy="120" rx="360" ry="560" fill="url(#glow)" opacity=".5" /><ellipse id="wg3" cx="890" cy="120" rx="360" ry="560" fill="url(#glow)" opacity=".5" /><ellipse id="wg2" cx="540" cy="120" rx="460" ry="720" fill="url(#glow)" opacity=".6" />
+            <!-- wall clock: half past seven -->
+            <circle cx="540" cy="430" r="96" fill="#e9e6dc" stroke="#1d2433" stroke-width="10" />
+            <line x1="540" y1="430" x2="540" y2="360" stroke="#1d2433" stroke-width="8" transform="rotate(180 540 430)" stroke-linecap="round" /><line x1="540" y1="430" x2="540" y2="376" stroke="#1d2433" stroke-width="10" transform="rotate(225 540 430)" stroke-linecap="round" />
+            <!-- a row of empty chairs, you in the last one -->
+            <g id="chairs"></g>
+            <g transform="translate(790 760)">
+              <rect x="-12" y="0" width="150" height="20" fill="#2f5d8a" opacity="0" />
+              <path d="M6 120 Q70 84 134 120 L150 340 L-10 340 Z" fill="#2f5d8a" />
+              <rect x="50" y="70" width="40" height="56" fill="#96694b" />
+              <circle cx="70" cy="30" r="58" fill="#15100c" />
+              <path d="M22 340 L22 510 M118 340 L118 510" stroke="#1c2438" stroke-width="44" stroke-linecap="round" />
+            </g>
+            <rect y="1080" width="1080" height="840" fill="url(#subfade)" />
+          </svg>
+        </div>
+      </div>
+
+      <!-- ===== inside the machine, POV ===== -->
+      <div id="dome" class="clip full" data-start="14.4" data-duration="4.6" data-track-index="3" style="background:#0d0d0b">
+        <svg class="full" viewBox="0 0 1080 1920" width="1080" height="1920">
+          <circle cx="540" cy="680" r="620" fill="url(#domeG)" />
+          <g fill="none" stroke="#8d8b7c" stroke-width="2" opacity=".5"><circle cx="540" cy="680" r="150" /><circle cx="540" cy="680" r="300" /><circle cx="540" cy="680" r="450" /></g>
+          <circle cx="540" cy="680" r="12" fill="#F5C84C" />
+          <rect id="domeL" x="-120" y="60" width="500" height="1240" fill="#000" opacity="0" filter="url(#fh)" />
+          <g id="dots" fill="#fffef2"></g>
+          <rect y="1080" width="1080" height="840" fill="url(#subfade)" />
+        </svg>
+        <svg class="layer" style="left:440px;top:1500px" viewBox="0 0 200 200" width="200" height="200">
+          <circle cx="100" cy="100" r="74" fill="#1d2433" stroke="#3a4252" stroke-width="8" />
+          <circle id="btn" cx="100" cy="100" r="50" fill="#D8343A" />
+        </svg>
+      </div>
+
+      <!-- ===== the printout ===== -->
+      <div id="print" class="clip full" data-start="18.95" data-duration="7.3" data-track-index="4" style="background:#10171d">
+        <svg class="full" viewBox="0 0 1080 1920" width="1080" height="1920">
+          <g id="paperA"></g>
+        </svg>
+        <div id="pa" class="pill2" style="left:200px">ไม่เจ็บ</div>
+        <div id="pb" class="pill2" style="left:440px">ไม่ปวด</div>
+        <div id="pc" class="pill2" style="left:680px">ไม่รู้สึก</div>
+      </div>
+
+      <!-- glaucoma card: the sides close in, then the brain fills them -->
+      <div id="gcard" class="clip card" data-start="26.2" data-duration="10.2" data-track-index="5">
+        <div class="ttl" id="gttl">ต้อหิน</div>
+        <svg class="layer" style="left:0;top:0" viewBox="0 0 906 640" width="906" height="640">
+          <g clip-path="url(#sc)">
+            <rect x="40" y="90" width="826" height="240" fill="#a9c4d8" /><rect x="40" y="330" width="826" height="160" fill="#7d8a72" />
+            <polygon points="400,330 506,330 700,490 206,490" fill="#b9b3a4" />
+            <rect x="90" y="220" width="170" height="120" fill="#c9a07a" /><polygon points="70,220 175,170 280,220" fill="#8d5a3e" />
+            <rect x="660" y="210" width="160" height="130" fill="#d9cfa8" /><polygon points="640,210 740,160 840,210" fill="#6f4a35" />
+            <g id="glassesSign"><circle cx="453" cy="250" r="44" fill="#fff" stroke="#1d2433" stroke-width="5" /><rect x="430" y="240" width="46" height="8" fill="#1d2433" /><rect x="430" y="256" width="30" height="8" fill="#1d2433" /><rect x="447" y="294" width="12" height="40" fill="#555a63" /></g>
+            <!-- a person on the left: what the sides lose first -->
+            <g id="gman"><ellipse cx="165" cy="350" rx="26" ry="30" fill="#7b4d32" /><path d="M126 480 L134 396 Q165 376 196 396 L204 480 Z" fill="#b8323a" /></g>
+            <rect id="gdark" x="40" y="90" width="826" height="400" fill="#07090c" mask="url(#hole)" />
+            <g id="gmark" opacity="0"><circle cx="165" cy="410" r="84" fill="none" stroke="#C0392B" stroke-width="5" stroke-dasharray="14 10" /></g>
+          </g>
+          <rect x="40" y="90" width="826" height="400" rx="14" fill="none" stroke="#d6cfc0" stroke-width="4" />
+        </svg>
+        <div class="lbl" id="gl1" style="left:0;top:520px;width:906px;font-size:32px;color:#C0392B">ด้านข้างค่อยๆ หายไปก่อน</div>
+        <div class="lbl" id="gl2" style="left:0;top:520px;width:906px;font-size:32px;color:#2f8a57;opacity:0">ตรงกลางยังชัด จึงไม่ทันสังเกต</div>
+        <div class="lbl" id="gl3" style="left:0;top:520px;width:906px;font-size:32px;color:#9a6b10;opacity:0">สมองเติมภาพให้ · ตรงวงแดงไม่มีคนแล้ว</div>
+      </div>
+
+      <!-- slow-it card -->
+      <div id="rcard" class="clip card" data-start="36.4" data-duration="6.0" data-track-index="6">
+        <div class="ttl">เจอเร็ว ช่วยให้เหลือภาพไว้ได้มากกว่า</div>
+        <svg class="layer" style="left:0;top:0" viewBox="0 0 906 640" width="906" height="640">
+          <line x1="110" y1="500" x2="830" y2="500" stroke="#1d2433" stroke-width="5" /><line x1="110" y1="120" x2="110" y2="500" stroke="#1d2433" stroke-width="5" />
+          <path id="lineR" d="M120 170 Q420 200 610 330 T820 470" fill="none" stroke="#C0392B" stroke-width="9" stroke-linecap="round" stroke-dasharray="800" stroke-dashoffset="800" />
+          <path id="lineG" d="M420 212 Q620 240 820 270" fill="none" stroke="#2f8a57" stroke-width="9" stroke-linecap="round" stroke-dasharray="420" stroke-dashoffset="420" />
+          <circle id="startG" cx="420" cy="212" r="13" fill="#2f8a57" opacity="0" />
+        </svg>
+        <div class="lbl" style="left:124px;top:96px;width:300px;text-align:left;font-size:26px;color:#555a63">ภาพที่เหลือ</div>
+        <div class="lbl" style="left:620px;top:516px;width:210px;text-align:right;font-size:26px;color:#555a63">ปีที่ผ่านไป →</div>
+        <div class="lbl" id="rl1" style="left:560px;top:400px;width:280px;font-size:28px;color:#C0392B;opacity:0;text-align:left">ไม่รักษา</div>
+        <div class="lbl" id="rl2" style="left:440px;top:150px;width:400px;font-size:28px;color:#2f8a57;opacity:0;text-align:left">เจอเร็ว + รักษา = ชะลอ</div>
+        <div class="lbl" style="left:0;top:574px;width:906px;font-size:24px;font-weight:500;color:#7a7f88">ภาพประกอบคร่าวๆ ไม่ใช่ข้อมูลจริง</div>
+      </div>
+
+      <!-- side-vision test for the viewer -->
+      <div id="test" class="clip full" data-start="42.4" data-duration="26.2" data-track-index="7">
+        <h2 id="testh">ลองเองตอนนี้</h2>
+        <ol>
+          <li id="st1"><b>1</b>ปิดตาข้างหนึ่ง มองจุดกลางจอ</li>
+          <li id="st2"><b>2</b>ยื่นมือไปด้านข้าง กระดิกนิ้ว เลื่อนเข้ามา</li>
+          <li id="st3"><b>3</b>หยุดตรงที่เริ่มเห็นนิ้ว ตาไม่ขยับ</li>
+        </ol>
+        <svg class="full" viewBox="0 0 1080 1920" width="1080" height="1920">
+          <!-- which eye is covered -->
+          <g id="eyeL" transform="translate(440 680)"><path d="M-46 0 Q0 -30 46 0 Q0 30 -46 0 Z" fill="#fff" stroke="#1d2433" stroke-width="5" /><circle r="15" fill="#1d2433" /></g>
+          <g id="eyeLc" transform="translate(440 680)" opacity="0"><path d="M-46 0 Q0 26 46 0" fill="none" stroke="#1d2433" stroke-width="6" stroke-linecap="round" /></g>
+          <g id="eyeR" transform="translate(640 680)" opacity="0"><path d="M-46 0 Q0 -30 46 0 Q0 30 -46 0 Z" fill="#fff" stroke="#1d2433" stroke-width="5" /><circle r="15" fill="#1d2433" /></g>
+          <g id="eyeRc" transform="translate(640 680)"><path d="M-46 0 Q0 26 46 0" fill="none" stroke="#1d2433" stroke-width="6" stroke-linecap="round" /></g>
+          <!-- the dot to stare at -->
+          <circle cx="540" cy="930" r="74" fill="none" stroke="#C99A2E" stroke-width="4" opacity=".6" />
+          <circle cx="540" cy="930" r="20" fill="#D8343A" />
+          <!-- a hand sliding in from the side -->
+          <g id="tHand" transform="translate(-120 930)">
+            <rect x="-260" y="-44" width="260" height="88" rx="30" fill="#c99a78" />
+            <g id="tFing"><rect x="-14" y="-16" width="110" height="32" rx="16" fill="#c99a78" stroke="#a97d5c" stroke-width="2" /></g>
+          </g>
+        </svg>
+        <div id="warn1" class="warn" style="opacity:0">เห็นต่างกันมาก → ไปตรวจ</div>
+        <div id="warn2" class="warn" style="opacity:0">ระยะแรก ตรวจเองไม่เจอ</div>
+        <div class="bar"><i></i></div>
+        <div class="note" id="n1">ทำช้าๆ ไม่ทัน กดหยุดคลิปไว้ก่อนได้</div>
+        <div class="note" id="n2" style="opacity:0">ลองคร่าวๆ เท่านั้น ไม่ใช่การตรวจตา</div>
+      </div>
+
+      <!-- checks card -->
+      <div id="ccard" class="clip card" data-start="68.6" data-duration="7.4" data-track-index="8">
+        <div class="ttl">หมอตรวจ 3 อย่าง</div>
+        <div class="row3" id="c1" style="top:90px"><div class="t">วัดความดันตา</div>
+          <svg class="layer" style="left:30px;top:18px" viewBox="-50 -50 100 100" width="100" height="100"><path d="M-40 16 A42 42 0 1 1 40 16" fill="none" stroke="#1d2433" stroke-width="8" stroke-linecap="round" /><line id="needle" x1="0" y1="0" x2="-22" y2="-22" stroke="#C0392B" stroke-width="7" stroke-linecap="round" /><circle r="7" fill="#1d2433" /></svg></div>
+        <div class="row3" id="c2" style="top:255px"><div class="t">ดูขั้วประสาทตา</div>
+          <svg class="layer" style="left:30px;top:18px" viewBox="-50 -50 100 100" width="100" height="100"><circle r="44" fill="#d9734d" /><circle cx="14" r="20" fill="#f6dfa6" /><circle cx="14" r="9" fill="#fff" /><path d="M14 -8 Q-10 -30 -30 -24 M14 8 Q-10 30 -30 24" stroke="#8e2b1c" stroke-width="4" fill="none" /></svg></div>
+        <div class="row3" id="c3" style="top:420px"><div class="t">ตรวจลานสายตา</div>
+          <svg class="layer" style="left:30px;top:18px" viewBox="-50 -50 100 100" width="100" height="100"><circle r="44" fill="#1d2433" /><g fill="#F5C84C"><circle r="5" /><circle cx="-24" cy="-16" r="4" /><circle cx="22" cy="-24" r="4" /><circle cx="26" cy="14" r="4" /><circle cx="-16" cy="24" r="4" /></g></svg></div>
+        <div class="lbl" style="left:0;top:578px;width:906px;font-size:24px;font-weight:500;color:#7a7f88">กับจักษุแพทย์</div>
+      </div>
+
+      <!-- who card -->
+      <div id="wcard" class="clip card" data-start="76" data-duration="6.0" data-track-index="9">
+        <div class="ttl">ยิ่งควรตรวจ ถ้า</div>
+        <div class="row3" id="w_1" style="top:90px"><div class="t">อายุเกิน 40</div>
+          <svg class="layer" style="left:30px;top:18px" viewBox="-50 -50 100 100" width="100" height="100"><circle r="44" fill="#C99A2E" /><text y="15" text-anchor="middle" font-family="Prompt" font-weight="700" font-size="42" fill="#fff">40+</text></svg></div>
+        <div class="row3" id="w_2" style="top:255px"><div class="t">คนในบ้านเป็นต้อหิน</div>
+          <svg class="layer" style="left:30px;top:18px" viewBox="-50 -50 100 100" width="100" height="100"><g fill="#2f5d8a"><circle cx="-20" cy="-18" r="15" /><path d="M-42 40 Q-42 2 -20 2 Q2 2 2 40 Z" /></g><g fill="#2f8a57"><circle cx="24" cy="-6" r="12" /><path d="M6 40 Q6 12 24 12 Q42 12 42 40 Z" /></g></svg></div>
+        <div class="row3" id="w_3" style="top:420px"><div class="t">สายตาสั้นมาก</div>
+          <svg class="layer" style="left:30px;top:18px" viewBox="-50 -50 100 100" width="100" height="100"><g fill="none" stroke="#3a2a1e" stroke-width="7"><circle cx="-23" cy="0" r="20" fill="#d9eef7" /><circle cx="23" cy="0" r="20" fill="#d9eef7" /><path d="M-3 -4 Q0 -8 3 -4" /></g></svg></div>
+      </div>
+
+      <!-- ===== the printout again: it has a head and shoulders ===== -->
+      <div id="print2" class="clip full" data-start="92" data-duration="6.5" data-track-index="10" style="background:#10171d">
+        <div id="print2w" class="full">
+          <svg class="full" viewBox="0 0 1080 1920" width="1080" height="1920">
+            <g id="paperB"></g>
+          </svg>
+        </div>
+        <div class="full" style="top:1170px;height:750px;background:linear-gradient(#10171d00,#10171d 40px)"></div>
+      </div>
+
+      <!-- ===== inside the machine again: it was there ===== -->
+      <div id="dome2" class="clip full" data-start="98.5" data-duration="2.0" data-track-index="11" style="background:#0d0d0b">
+        <svg class="full" viewBox="0 0 1080 1920" width="1080" height="1920">
+          <circle cx="540" cy="680" r="620" fill="url(#domeG)" />
+          <g fill="none" stroke="#8d8b7c" stroke-width="2" opacity=".5"><circle cx="540" cy="680" r="150" /><circle cx="540" cy="680" r="300" /><circle cx="540" cy="680" r="450" /></g>
+          <circle cx="540" cy="680" r="12" fill="#F5C84C" />
+          <g id="fig" opacity="0" filter="url(#soft2)">
+            <circle cx="170" cy="520" r="96" fill="#07080a" />
+            <path d="M-40 1240 L-30 790 Q10 640 170 630 Q330 640 370 790 L380 1240 Z" fill="#07080a" />
+            <circle cx="140" cy="510" r="11" fill="#c9d0dc" /><circle cx="200" cy="510" r="11" fill="#c9d0dc" />
+          </g>
+          <rect y="1080" width="1080" height="840" fill="url(#subfade)" />
+        </svg>
+        <div id="d2dark" class="full" style="background:#000;opacity:0"></div>
+      </div>
+
+      <!-- chips -->
+      <div id="clock" class="chip clip" data-start="0.3" data-duration="100" data-track-index="20" style="left:56px">
+        <svg viewBox="-24 -24 48 48" width="46" height="46"><circle r="19" fill="none" stroke="#1d2433" stroke-width="4" /><path d="M0 -10 L0 0 L8 6" fill="none" stroke="#1d2433" stroke-width="4" stroke-linecap="round" /></svg>
+        <div><small>เวลา</small><b id="clockt">19:30</b></div>
+      </div>
+      <div id="closec" class="chip clip" data-start="0.3" data-duration="100" data-track-index="21" style="left:322px">
+        <svg viewBox="-24 -24 48 48" width="46" height="46"><rect x="-18" y="-16" width="36" height="32" rx="4" fill="none" stroke="#C99A2E" stroke-width="4" /><path d="M-10 -2 L10 -2" stroke="#C99A2E" stroke-width="4" stroke-linecap="round" /></svg>
+        <div><small>คลินิกปิดในอีก</small><b id="closet">30 นาที</b></div>
+      </div>
+      <div id="epb" class="clip" data-start="0.3" data-duration="9.0" data-track-index="22">EP.11 · ซีซั่น 2</div>
+
+      <!-- subtitles (cue + phrase times from ../audio/timing.json) -->
+      <div class="sub clip"    data-start="0.54"  data-duration="1.5"  data-track-index="30">หนึ่งปีผ่านไป</div>
+      <div class="sub clip"    data-start="2.1"   data-duration="2.75" data-track-index="30">คุณกลับมาตรวจตา<br>ตามที่สัญญาไว้</div>
+      <div class="sub clip"    data-start="5.38"  data-duration="2.4"  data-track-index="30">ทุ่มครึ่ง คลินิกกำลังจะปิด</div>
+      <div class="sub y clip"  data-start="7.82"  data-duration="1.75" data-track-index="30">คุณคือคนไข้คนสุดท้าย</div>
+      <div class="sub clip"    data-start="9.85"  data-duration="2.05" data-track-index="30">หมอให้มองจุดตรงกลางเครื่อง</div>
+      <div class="sub y clip"  data-start="11.94" data-duration="2.1"  data-track-index="30">เห็นแสงตรงไหน<br>ให้กดปุ่ม</div>
+      <div class="sub clip"    data-start="14.54" data-duration="1.6"  data-track-index="30">แสงวาบขึ้นทีละจุด</div>
+      <div class="sub r clip"  data-start="16.19" data-duration="2.2"  data-track-index="30"><span>แต่ทางซ้าย<br>คุณไม่เห็นอะไรเลย</span></div>
+      <div class="sub clip"    data-start="18.99" data-duration="1.3"  data-track-index="30">ผลที่ออกมา</div>
+      <div class="sub r clip"  data-start="20.3"  data-duration="2.0"  data-track-index="30"><span>มีรอยดำ อยู่ด้านซ้าย</span></div>
+      <div class="sub clip"    data-start="22.69" data-duration="2.85" data-track-index="30">คุณไม่เจ็บ ไม่ปวด<br>ไม่รู้สึกอะไรเลย</div>
+      <div class="sub y clip"  data-start="26.25" data-duration="3.7"  data-track-index="30">กฎข้อแรก ต้อหิน<br>ขโมยภาพจากด้านข้างก่อน</div>
+      <div class="sub clip"    data-start="30.24" data-duration="1.45" data-track-index="30">ต้อหินส่วนใหญ่ไม่เจ็บ</div>
+      <div class="sub y clip"  data-start="31.73" data-duration="1.4"  data-track-index="30">ภาพตรงกลางยังชัด</div>
+      <div class="sub clip"    data-start="33.17" data-duration="3.1"  data-track-index="30">สมองก็เติมส่วนที่หายให้<br>จนเราไม่รู้ตัว</div>
+      <div class="sub r clip"  data-start="36.68" data-duration="2.8"  data-track-index="30"><span>ส่วนที่หายไปแล้ว<br>เอากลับคืนไม่ได้</span></div>
+      <div class="sub y clip"  data-start="39.52" data-duration="2.4"  data-track-index="30">แต่ถ้าเจอเร็ว<br>รักษาเพื่อชะลอได้</div>
+      <div class="sub dk clip" data-start="42.64" data-duration="3.75" data-track-index="30">ลองเองตอนนี้<br>ปิดตาข้างหนึ่ง มองจุดกลางจอ</div>
+      <div class="sub dk clip" data-start="46.74" data-duration="3.75" data-track-index="30">ยื่นมือไปด้านข้าง กระดิกนิ้ว<br>แล้วค่อยๆ เลื่อนเข้ามา</div>
+      <div class="sub dk clip" data-start="50.81" data-duration="8.7"  data-track-index="30">หยุดตรงที่เริ่มเห็นนิ้ว<br>โดยที่ตายังไม่ขยับ</div>
+      <div class="sub dk clip" data-start="59.65" data-duration="3.65" data-track-index="30">แล้วสลับตา ถ้าสองข้างเห็นต่างกันมาก<br>ให้ไปตรวจ</div>
+      <div class="sub dk clip" data-start="63.7"  data-duration="4.4"  data-track-index="30">แต่ถึงเห็นเท่ากัน ก็ยังเป็นได้<br>เพราะระยะแรก ตรวจเองไม่เจอ</div>
+      <div class="sub y clip"  data-start="68.93" data-duration="2.35" data-track-index="30">กฎข้อสอง<br>ต้อหินต้องให้หมอตรวจ</div>
+      <div class="sub clip"    data-start="71.6"  data-duration="4.2"  data-track-index="30">วัดความดันตา ดูขั้วประสาทตา<br>และตรวจลานสายตา</div>
+      <div class="sub clip"    data-start="76.21" data-duration="2.9"  data-track-index="30">อายุเกินสี่สิบ<br>มีคนในบ้านเป็นต้อหิน</div>
+      <div class="sub clip"    data-start="79.19" data-duration="1.4"  data-track-index="30">หรือสายตาสั้นมาก</div>
+      <div class="sub y clip"  data-start="80.63" data-duration="1.0"  data-track-index="30">ยิ่งควรตรวจ</div>
+      <div class="sub clip"    data-start="82.27" data-duration="2.7"  data-track-index="30">หมอตรวจคุณซ้ำทุกอย่าง<br>แล้วเงยหน้าขึ้นมา</div>
+      <div class="sub clip"    data-start="85.47" data-duration="2.4"  data-track-index="30">ความดันปกติ เส้นประสาทปกติ</div>
+      <div class="sub y clip"  data-start="87.91" data-duration="1.25" data-track-index="30">ตาคุณไม่ได้เป็นอะไรเลย</div>
+      <div class="sub clip"    data-start="89.77" data-duration="1.75" data-track-index="30">หมอหยิบผลตรวจขึ้นมาดูอีกครั้ง</div>
+      <div class="sub clip"    data-start="92.04" data-duration="1.05" data-track-index="30">รอยดำนั้น</div>
+      <div class="sub r clip"  data-start="93.15" data-duration="1.35" data-track-index="30"><span>มีหัว มีไหล่</span></div>
+      <div class="sub clip"    data-start="94.89" data-duration="1.55" data-track-index="30">มันคือเงาของอะไรบางอย่าง</div>
+      <div class="sub r clip"  data-start="96.53" data-duration="1.85" data-track-index="30"><span>ที่ยืนบังแสงอยู่ทางซ้ายของคุณ</span></div>
+      <div class="sub r clip"  data-start="98.66" data-duration="1.5"  data-track-index="30"><span>ตลอดการตรวจ</span></div>
+
+      <div id="next" class="clip full" data-start="100.4" data-duration="3.2" data-track-index="40">
+        <div class="np">ตอนต่อไป · EP.12</div>
+        <h1>ถ้าโลกเริ่มขุ่น</h1>
+        <div class="rl"></div>
+        <div class="s1">กดติดตาม แล้วรอดไปด้วยกัน</div>
+      </div>
+      <div id="end" class="clip full" data-start="103.4" data-duration="2.77" data-track-index="41">
+        <img src="assets/timeoptic-white-spaced.svg" alt="TIMEOPTIC" />
+        <p>ตรวจตาปีละครั้ง<br>ก่อนภาพจะหายไปโดยไม่รู้ตัว</p>
+      </div>
+    </div>
+
+    <script>
+      let seed = 11; const rnd = () => (seed = (seed * 16807) % 2147483647) / 2147483647;
+      const NS = 'http://www.w3.org/2000/svg';
+      const el = (tag, attrs, parent) => { const e = document.createElementNS(NS, tag); for (const k in attrs) e.setAttribute(k, attrs[k]); parent && parent.appendChild(e); return e; };
+      for (let i = 0; i < 70; i++) el('circle', { cx: -100 + rnd() * 1280, cy: rnd() * 440, r: .8 + rnd() * 2, opacity: .3 + rnd() * .6 }, document.getElementById('stars'));
+      // wall chart: rows of E shapes, smaller each row
+      const ch = document.getElementById('chart');
+      [[1, 44], [2, 28], [3, 18], [4, 12]].forEach(([n, s], r) => { const y = 330 + r * 54;
+        for (let i = 0; i < n; i++) el('rect', { x: 650 + (i - (n - 1) / 2) * s * 1.5 - s / 2, y, width: s, height: s, fill: '#1d2433' }, ch); });
+      // waiting-room chairs
+      const cs = document.getElementById('chairs');
+      for (let i = 0; i < 4; i++) { const x = 90 + i * 240;
+        el('rect', { x, y: 900, width: 180, height: 24, rx: 8, fill: '#44545f' }, cs); el('rect', { x: x + 6, y: 760, width: 168, height: 140, rx: 12, fill: '#526470' }, cs);
+        el('rect', { x: x + 20, y: 924, width: 14, height: 200, fill: '#1c262c' }, cs); el('rect', { x: x + 146, y: 924, width: 14, height: 200, fill: '#1c262c' }, cs); }
+      // the machine's lights: only on the right / top, never on the left (keep times in sync with ambience.py)
+      const DOTS = [[820, 520, 14.7], [640, 300, 15.4], [900, 820, 16.1], [700, 980, 16.9], [980, 620, 17.6], [560, 420, 18.3]];
+      const dg = document.getElementById('dots');
+      DOTS.forEach(([x, y], i) => el('circle', { id: 'dt' + i, cx: x, cy: y, r: 13, opacity: 0 }, dg));
+      // a visual-field printout: a grid of grey dots in a circle, with dark cells for the patch and the figure
+      const paper = (id, cls) => { const g = document.getElementById(id);
+        el('rect', { x: 170, y: 280, width: 740, height: 900, fill: '#f6f4ec' }, g);
+        const t = el('text', { x: 540, y: 355, 'text-anchor': 'middle', 'font-family': 'Prompt', 'font-weight': 700, 'font-size': 44, fill: '#1d2433' }, g); t.textContent = 'ผลตรวจลานสายตา';
+        for (const yy of [385, 405]) el('rect', { x: 250, y: yy, width: yy === 385 ? 580 : 380, height: 8, fill: '#c9c6ba' }, g);
+        const lab = el('text', { x: 200, y: 475, 'font-family': 'Prompt', 'font-weight': 600, 'font-size': 30, fill: '#7a7f88' }, g); lab.textContent = 'ซ้าย';
+        const lab2 = el('text', { x: 880, y: 475, 'text-anchor': 'end', 'font-family': 'Prompt', 'font-weight': 600, 'font-size': 30, fill: '#7a7f88' }, g); lab2.textContent = 'ขวา';
+        const cx = 540, cy = 770, R = 300, c = 20;
+        for (let j = -15; j <= 15; j++) for (let i = -15; i <= 15; i++) { const x = cx + i * c, y = cy + j * c; if (i * i + j * j > 225) continue;
+          el('circle', { cx: x, cy: y, r: 3.2, fill: '#a6a496' }, g);
+          // patch = soft blob on the left; figure = head + shoulders in the same place
+          const blob = ((i + 8) ** 2 / 34 + (j - 1) ** 2 / 90) < 1 + rnd() * .15;
+          const head = ((i + 7) ** 2 + (j + 6) ** 2) <= 12 || (j >= -3 && j <= -2 && Math.abs(i + 7) <= 1);
+          const sh = j >= -1 && j <= 10 && Math.abs(i + 7) <= Math.min(5.5, 2 + (j + 1) * 1.4);
+          if (blob || head || sh) { const r = el('rect', { x: x - c / 2, y: y - c / 2, width: c + .5, height: c + .5, fill: '#14161a', opacity: 0, class: cls + (blob ? ' blob' : '') + (head ? ' hd' : '') + (sh ? ' sh' : '') + ((head || sh) ? ' fg' : '') }, g); }
+        }
+        el('line', { x1: cx, y1: cy - R, x2: cx, y2: cy + R, stroke: '#a6a496', 'stroke-width': 2 }, g); el('line', { x1: cx - R, y1: cy, x2: cx + R, y2: cy, stroke: '#a6a496', 'stroke-width': 2 }, g);
+      };
+      paper('paperA', 'cA'); paper('paperB', 'cB');
+
+      window.__timelines = window.__timelines || {};
+      const tl = gsap.timeline({ paused: true });
+      document.querySelectorAll('.sub').forEach(s => tl.fromTo(s, { opacity: 0, y: 14 }, { opacity: 1, y: 0, duration: .25, ease: 'power2.out' }, parseFloat(s.dataset.start)));
+      // clock 19:30 -> 19:58; closes at 20:00
+      const ck = document.getElementById('clockt'), ct = document.getElementById('closet');
+      const showT = v => { const m = Math.min(59, Math.floor(v)); ck.textContent = '19:' + String(m).padStart(2, '0'); ct.textContent = (60 - m) + ' นาที'; };
+      const ckO = { v: 30 };
+      tl.fromTo(ckO, { v: 30 }, { v: 58.9, duration: 100, ease: 'none', onUpdate: () => showT(ckO.v) }, 0.3);
+      tl.set('#closet', { color: '#1d2433' }, 0); tl.set('#closet', { color: '#C0392B' }, 92.0);
+
+      // ---- street
+      tl.fromTo('#extw', { scale: 1.04, transformOrigin: '540px 860px' }, { scale: 1.18, duration: 5.6, ease: 'sine.inOut' }, 0);
+      tl.fromTo('#walker', { attr: { transform: 'translate(540 1740) scale(1.2)' } }, { attr: { transform: 'translate(540 1160) scale(.5)' }, duration: 4.7, ease: 'none' }, 0.2);
+      for (let t = 0.3; t < 4.8; t += .5) { tl.to('#legA', { attr: { height: 116 }, duration: .25, yoyo: true, repeat: 1, ease: 'sine.inOut' }, t);
+        tl.to('#legB', { attr: { height: 116 }, duration: .25, yoyo: true, repeat: 1, ease: 'sine.inOut' }, t + .25); }
+      // ---- waiting room
+      tl.fromTo('#wait', { opacity: 0 }, { opacity: 1, duration: .4 }, 5.2);
+      tl.fromTo('#waitw', { scale: 1.0, transformOrigin: '540px 600px' }, { scale: 1.08, duration: 4.8, ease: 'sine.inOut' }, 5.2);
+      tl.set('#w1, #wg1', { opacity: .08 }, 7.0); tl.set('#w2, #wg2', { opacity: .08 }, 7.8);
+      tl.to('#wait', { opacity: 0, duration: .3 }, 9.65);
+      // ---- clinic room
+      tl.fromTo('#roomw', { scale: 1.0, transformOrigin: '260px 800px' }, { scale: 1.1, duration: 4.8, ease: 'sine.inOut' }, 9.6);
+      tl.to('#mlight', { opacity: .3, duration: .3, yoyo: true, repeat: 8, ease: 'sine.inOut' }, 9.8);
+      // ---- inside the machine
+      tl.fromTo('#dome', { opacity: 0 }, { opacity: 1, duration: .3 }, 14.4);
+      DOTS.forEach(([, , t], i) => { tl.fromTo('#dt' + i, { opacity: 0 }, { opacity: 1, duration: .08 }, t); tl.to('#dt' + i, { opacity: 0, duration: .25 }, t + .3);
+        tl.to('#btn', { attr: { r: 40 }, duration: .07, yoyo: true, repeat: 1 }, t + .3); });
+      tl.fromTo('#domeL', { opacity: 0 }, { opacity: .55, duration: 1.2 }, 16.2);
+      // ---- printout: the patch prints in
+      tl.fromTo('#print', { opacity: 0 }, { opacity: 1, duration: .25 }, 18.95);
+      tl.fromTo('#paperA', { y: 520 }, { y: 0, duration: 1.4, ease: 'power1.out' }, 19.0);
+      tl.fromTo('.cA.blob', { opacity: 0 }, { opacity: .95, duration: .2, stagger: .012 }, 20.3);
+      tl.fromTo('#pa', { opacity: 0, y: 12 }, { opacity: 1, y: 0, duration: .25 }, 22.7);
+      tl.fromTo('#pb', { opacity: 0, y: 12 }, { opacity: 1, y: 0, duration: .25 }, 23.6);
+      tl.fromTo('#pc', { opacity: 0, y: 12 }, { opacity: 1, y: 0, duration: .25 }, 24.4);
+      // ---- glaucoma card (the room behind is blurred)
+      tl.set('#room', { filter: 'blur(14px) brightness(.55)' }, 26.2);
+      tl.fromTo('#gcard', { opacity: 0, y: 40 }, { opacity: 1, y: 0, duration: .4, ease: 'power2.out' }, 26.2);
+      tl.to('#holeC', { attr: { r: 215 }, duration: 3.3, ease: 'sine.inOut' }, 27.0);
+      tl.to('#gl1', { opacity: 0, duration: .2 }, 31.6); tl.to('#gl2', { opacity: 1, duration: .25 }, 31.7);
+      // the brain "fills it in": the dark goes, the view looks whole, but the person is gone
+      tl.set('#gman', { opacity: 0 }, 33.2);
+      tl.to('#gdark', { opacity: 0, duration: .9, ease: 'sine.inOut' }, 33.2);
+      tl.to('#gl2', { opacity: 0, duration: .2 }, 33.2); tl.to('#gl3', { opacity: 1, duration: .25 }, 33.3);
+      tl.fromTo('#gmark', { opacity: 0 }, { opacity: 1, duration: .3 }, 34.3);
+      tl.to('#gcard', { opacity: 0, duration: .3 }, 36.1);
+      // ---- slow-it card
+      tl.fromTo('#rcard', { opacity: 0, y: 40 }, { opacity: 1, y: 0, duration: .4, ease: 'power2.out' }, 36.4);
+      tl.to('#lineR', { attr: { 'stroke-dashoffset': 0 }, duration: 2.8, ease: 'none' }, 36.8);
+      tl.to('#rl1', { opacity: 1, duration: .25 }, 39.0);
+      tl.to('#startG', { opacity: 1, duration: .2 }, 39.5);
+      tl.to('#lineG', { attr: { 'stroke-dashoffset': 0 }, duration: 1.4, ease: 'none' }, 39.6);
+      tl.to('#rl2', { opacity: 1, duration: .25 }, 40.6);
+      tl.to('#rcard', { opacity: 0, duration: .3 }, 42.1);
+      // ---- side-vision test
+      tl.fromTo('#test', { opacity: 0 }, { opacity: 1, duration: .4 }, 42.4);
+      tl.fromTo('#st2, #st3', { opacity: .25 }, { opacity: .25, duration: .1 }, 42.4);
+      tl.to('#st2', { opacity: 1, duration: .3 }, 46.7); tl.to('#st3', { opacity: 1, duration: .3 }, 50.8);
+      tl.to('#tHand', { attr: { transform: 'translate(60 930)' }, duration: 1.3, ease: 'sine.out' }, 46.8);
+      tl.to('#tHand', { attr: { transform: 'translate(170 930)' }, duration: 7.5, ease: 'none' }, 49.2);
+      for (let t = 47.4; t < 59.4; t += .4) tl.to('#tFing', { rotation: -16, svgOrigin: '0 0', duration: .2, yoyo: true, repeat: 1, ease: 'sine.inOut' }, t);
+      tl.fromTo('#test .bar i', { scaleX: 0 }, { scaleX: 1, duration: 6.0, ease: 'none' }, 53.6);
+      // swap eyes
+      tl.set('#eyeL', { opacity: 0 }, 59.6); tl.set('#eyeLc', { opacity: 1 }, 59.6); tl.set('#eyeR', { opacity: 1 }, 59.6); tl.set('#eyeRc', { opacity: 0 }, 59.6);
+      tl.set('#testh', { textContent: 'ลองเองตอนนี้' }, 0); tl.set('#testh', { textContent: 'สลับตา แล้วเทียบกัน' }, 59.6);
+      tl.to('#test ol', { opacity: .3, duration: .3 }, 59.6);
+      tl.to('#tHand', { attr: { transform: 'translate(-120 930)' }, duration: .5, ease: 'sine.in' }, 59.6);
+      tl.fromTo('#warn1', { opacity: 0, y: 10 }, { opacity: 1, y: 0, duration: .3 }, 60.8);
+      tl.to('#n1', { opacity: 0, duration: .3 }, 59.6); tl.fromTo('#n2', { opacity: 0 }, { opacity: 1, duration: .3 }, 59.7);
+      tl.to('#warn1', { opacity: 0, duration: .2 }, 65.8); tl.fromTo('#warn2', { opacity: 0, y: 10 }, { opacity: 1, y: 0, duration: .3 }, 66.0);
+      tl.to('#test', { opacity: 0, duration: .3 }, 68.3);
+      // ---- checks card
+      tl.fromTo('#ccard', { opacity: 0, y: 40 }, { opacity: 1, y: 0, duration: .4, ease: 'power2.out' }, 68.6);
+      tl.fromTo('#c1, #c2, #c3', { opacity: .3 }, { opacity: .3, duration: .1 }, 68.6);
+      tl.to('#c1', { opacity: 1, duration: .3 }, 71.6); tl.to('#needle', { attr: { x2: 20, y2: -24 }, duration: .7, ease: 'back.out(2)' }, 71.7);
+      tl.to('#c2', { opacity: 1, duration: .3 }, 72.98); tl.to('#c3', { opacity: 1, duration: .3 }, 74.53);
+      tl.to('#ccard', { opacity: 0, duration: .3 }, 75.7);
+      // ---- who card
+      tl.fromTo('#wcard', { opacity: 0, y: 40 }, { opacity: 1, y: 0, duration: .4, ease: 'power2.out' }, 76.0);
+      tl.fromTo('#w_1, #w_2, #w_3', { opacity: .3 }, { opacity: .3, duration: .1 }, 76.0);
+      tl.to('#w_1', { opacity: 1, duration: .3 }, 76.2); tl.to('#w_2', { opacity: 1, duration: .3 }, 77.46); tl.to('#w_3', { opacity: 1, duration: .3 }, 79.17);
+      tl.to('#wcard', { opacity: 0, duration: .3 }, 81.75);
+      // ---- back in the room: the re-check
+      tl.set('#room', { filter: 'blur(0px) brightness(1)' }, 82.0);
+      tl.set('#roomw', { scale: 1.0, transformOrigin: '700px 800px' }, 82.0);
+      tl.to('#roomw', { scale: 1.12, duration: 9.8, ease: 'none' }, 82.0);
+      tl.set('#docH', { rotation: 12, svgOrigin: '830 700' }, 82.0);
+      tl.to('#docH', { rotation: 0, svgOrigin: '830 700', duration: .7, ease: 'power2.out' }, 83.85);
+      tl.fromTo('#ok1', { opacity: 0, x: -20 }, { opacity: 1, x: 0, duration: .3, ease: 'power2.out' }, 85.45);
+      tl.fromTo('#ok2', { opacity: 0, x: -20 }, { opacity: 1, x: 0, duration: .3, ease: 'power2.out' }, 86.6);
+      tl.to('#ok1, #ok2', { opacity: 0, duration: .3 }, 89.5);
+      tl.set('#armClip', { opacity: 1 }, 0); tl.set('#armClip', { opacity: 0 }, 89.8);
+      tl.set('#armPaper', { opacity: 0 }, 0); tl.set('#armPaper', { opacity: 1 }, 89.8);
+      tl.to('#rglow', { opacity: .3, duration: 1.2 }, 89.8);
+      // ---- printout: head and shoulders
+      tl.fromTo('#print2', { opacity: 0 }, { opacity: 1, duration: .25 }, 92.0);
+      tl.fromTo('#print2w', { scale: 1.0, transformOrigin: '380px 450px' }, { scale: 1.22, duration: 6.5, ease: 'sine.inOut' }, 92.0);
+      tl.fromTo('.cB.blob', { opacity: .95 }, { opacity: .95, duration: .1 }, 92.0);
+      tl.to('.cB.blob:not(.fg)', { opacity: 0, duration: .15, stagger: .004 }, 93.0);
+      tl.to('.cB.hd', { opacity: 1, duration: .15, stagger: .012 }, 93.1);
+      tl.to('.cB.sh', { opacity: 1, duration: .15, stagger: .006 }, 93.6);
+      tl.to('#print2', { opacity: 0, duration: .25 }, 98.25);
+      // ---- inside the machine again
+      tl.fromTo('#dome2', { opacity: 0 }, { opacity: 1, duration: .25 }, 98.5);
+      tl.fromTo('#fig', { opacity: 0 }, { opacity: 1, duration: 1.3, ease: 'power1.in' }, 98.7);
+      tl.to('#fig', { x: 50, duration: 1.4, ease: 'none' }, 98.7);
+      tl.fromTo('#d2dark', { opacity: 0 }, { opacity: 1, duration: .1 }, 100.2);
+      // ---- next + end
+      tl.fromTo('#next', { opacity: 0 }, { opacity: 1, duration: .4 }, 100.4);
+      tl.fromTo('#next .np', { opacity: 0, y: 10 }, { opacity: 1, y: 0, duration: .4 }, 100.6);
+      tl.fromTo('#next h1', { opacity: 0, y: 24, filter: 'blur(6px)' }, { opacity: 1, y: 0, filter: 'blur(0px)', duration: .7, ease: 'power2.out' }, 101.6);
+      tl.fromTo('#next .rl', { scaleX: 0 }, { scaleX: 1, duration: .5 }, 102.2);
+      tl.fromTo('#next .s1', { opacity: 0 }, { opacity: 1, duration: .4 }, 102.6);
+      tl.fromTo('#end', { opacity: 0 }, { opacity: 1, duration: .5 }, 103.4);
+      tl.fromTo('#end img', { opacity: 0, y: 20, scale: .96 }, { opacity: 1, y: 0, scale: 1, duration: .8, ease: 'power2.out' }, 103.5);
+      tl.fromTo('#end p', { opacity: 0, y: 20 }, { opacity: 1, y: 0, duration: .7, ease: 'power2.out' }, 104.0);
+
+      window.__timelines['main'] = tl;
+      tl.seek(0);
+    </script>
+  </body>
+</html>

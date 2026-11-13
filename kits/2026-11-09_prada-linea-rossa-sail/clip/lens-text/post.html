@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8">
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../../../brand/tokens.css">
+<style>
+  html, body { margin: 0; background: transparent; }
+  body { position: relative; width: 1080px; height: 1920px; overflow: hidden; font-family: var(--to-font-body); color: var(--to-snow); }
+  body > [data-layer] { position: absolute; box-sizing: border-box; }
+  .brand { left: calc(50% - 120px); top: 150px; width: 240px; display: flex; justify-content: center; filter: drop-shadow(0 2px 10px rgba(0,0,0,.5)); }
+  .brand img { height: 96px; }
+  .lens { left: 0; right: 0; top: 1300px; text-align: center; text-shadow: 0 2px 16px rgba(0,0,0,.6), 0 0 4px rgba(0,0,0,.4); }
+  .lens .eyebrow { font-size: 26px; font-weight: 600; letter-spacing: var(--to-track-eyebrow); text-transform: uppercase; color: rgba(250,250,250,.85); }
+  .lens h1 { margin: 12px 0 0; font-family: var(--to-font-display); font-weight: 800; font-size: 76px; line-height: 1; letter-spacing: var(--to-track-display); }
+  .lens .sub { margin-top: 14px; font-size: 32px; font-weight: 500; letter-spacing: .05em; }
+</style></head>
+<body data-width="1080" data-height="1920">
+  <div class="brand" data-layer="brand"><img src="../../../../brand/partner-logos/essilor-white.svg" alt=""></div>
+  <div class="lens" data-layer="lens">
+    <div class="eyebrow">Prescription sun lenses</div>
+    <h1>Everyday Plus 1.5</h1>
+    <div class="sub">Clear + Mirrors · Progressive</div>
+  </div>
+</body></html>

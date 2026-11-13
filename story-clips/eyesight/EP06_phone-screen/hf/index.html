@@ -6,7 +6,7 @@
     <!--
       Story clip EP06 "ถ้ามันออกมาจากจอ" (user, 2026-10-27), follows EP05 (the reflection that didn't blink). Same look as EP01-03. Thai only.
       Voice = ../audio/voice.wav, cue + phrase times from ../audio/timing.json (mixed after render, see ../make.sh).
-      Science: staring at a screen you blink about a third as often (~15/min -> ~5/min), the eye surface dries and burns -> blink fully on purpose;
+      Science: staring at a screen you blink half as often or less (~15/min normally), the eye surface dries and burns -> blink fully on purpose;
       20-20-20: every 20 min look ~6 m away for 20 s so the focusing muscle relaxes; no full-bright screen in a pitch-dark room.
       Includes a real eye break for the viewer (ring counts 20 -> 0 at x2 speed, the label says so).
       Scenes: room 0-7.2 | phone POV 7.2-15.5 | blink card 15.5-34.9 | 20-20-20 card 34.9-44.7 | eye-break screen 44.7-61.4
@@ -156,8 +156,9 @@
         <div class="lbl" style="left:40px;top:335px;width:373px;color:#555a63">ปกติ</div>
         <div class="lbl" style="left:493px;top:335px;width:373px;color:#555a63">ตอนจ้องจอ</div>
         <div class="num" id="nA" style="left:40px;top:410px;width:373px">0</div>
-        <div class="num" id="nB" style="left:493px;top:410px;width:373px;color:#C0392B">0</div>
-        <div class="lbl" style="left:40px;top:555px;width:826px;font-weight:500;color:#555a63">ครั้ง / นาที (ราวๆ)</div>
+        <div class="num" id="nB" style="left:493px;top:436px;width:373px;color:#C0392B;font-size:64px;opacity:0">ครึ่งเดียว</div>
+        <div class="lbl" style="left:40px;top:555px;width:373px;font-weight:500;color:#555a63">ครั้ง / นาที (ราวๆ)</div>
+        <div class="lbl" id="nBs" style="left:493px;top:555px;width:373px;font-weight:500;color:#555a63;opacity:0">หรือน้อยกว่านั้น</div>
       </div>
 
       <!-- 20-20-20 card -->
@@ -179,8 +180,8 @@
               <path d="M60 -180 A190 190 0 0 1 60 180" fill="none" stroke="#E0A030" stroke-width="10" />
             </g>
           </svg>
-          <div class="lbl" id="ml1" style="left:540px;top:250px;width:340px;color:#C0392B">มองใกล้นานๆ<br><span style="font-weight:500;color:#555a63">กล้ามเนื้อเพ่งค้าง</span></div>
-          <div class="lbl" id="ml2" style="left:540px;top:250px;width:340px;opacity:0;color:#2f8a57">มองไกล<br><span style="font-weight:500;color:#555a63">กล้ามเนื้อคลายตัว</span></div>
+          <div class="lbl" id="ml1" style="left:540px;top:250px;width:340px;color:#C0392B">มองใกล้นานๆ<br><span style="font-weight:500;color:#555a63">ตาเพ่งนาน ล้าง่าย</span></div>
+          <div class="lbl" id="ml2" style="left:540px;top:250px;width:340px;opacity:0;color:#2f8a57">มองไกล<br><span style="font-weight:500;color:#555a63">ช่วยลดอาการล้าตา</span></div>
         </div>
       </div>
 
@@ -259,13 +260,13 @@
       <div class="sub clip"   data-start="3.75"  data-duration="3.45" data-track-index="30">คุณนั่งไถมือถือในห้องมืด<br>มาสามชั่วโมง</div>
       <div class="sub clip"   data-start="7.43"  data-duration="3.55" data-track-index="30">ค้นหาอยู่ประโยคเดียว<br>ทำยังไงให้มันไป</div>
       <div class="sub clip"   data-start="11.19" data-duration="4.1"  data-track-index="30">ตาคุณเริ่มแสบ แห้ง<br>เหมือนมีทรายอยู่ในตา</div>
-      <div class="sub y clip" data-start="15.68" data-duration="5.9"  data-track-index="30">กฎข้อแรก ตอนจ้องจอ คุณกะพริบตาน้อยลง<br>เหลือราวหนึ่งในสาม</div>
-      <div class="sub clip"   data-start="21.8"  data-duration="3.9"  data-track-index="30">ปกติเรากะพริบตา<br>นาทีละราวสิบห้าครั้ง</div>
-      <div class="sub y clip" data-start="25.76" data-duration="2.5"  data-track-index="30">แต่ตอนจ้องจอ เหลือแค่ห้า</div>
+      <div class="sub y clip" data-start="15.68" data-duration="4.7"  data-track-index="30">กฎข้อแรก ตอนจ้องจอ<br>คุณกะพริบตาน้อยลงมาก</div>
+      <div class="sub clip"   data-start="20.74" data-duration="3.7"  data-track-index="30">ปกติเรากะพริบตา<br>นาทีละราวสิบห้าครั้ง</div>
+      <div class="sub y clip" data-start="24.5"  data-duration="3.7"  data-track-index="30">แต่ตอนจ้องจอ อาจเหลือครึ่งเดียว<br>หรือน้อยกว่านั้น</div>
       <div class="sub clip"   data-start="28.46" data-duration="2.4"  data-track-index="30">ผิวตาแห้ง เลยแสบ</div>
       <div class="sub y clip" data-start="30.94" data-duration="3.75" data-track-index="30">ให้ตั้งใจกะพริบตา<br>ช้าๆ ให้สุด</div>
       <div class="sub y clip" data-start="35.15" data-duration="6.0"  data-track-index="30">กฎข้อสอง ทุกยี่สิบนาที<br>มองไกลหกเมตร นานยี่สิบวินาที</div>
-      <div class="sub clip"   data-start="41.39" data-duration="3.1"  data-track-index="30">กล้ามเนื้อที่ใช้เพ่งใกล้<br>จะได้คลายตัว</div>
+      <div class="sub clip"   data-start="41.39" data-duration="2.9"  data-track-index="30">จะช่วยลดอาการล้าตาได้</div>
       <div class="sub dk clip" data-start="44.89" data-duration="5.0" data-track-index="30" style="top:1620px">ลองเลยตอนนี้</div>
       <div class="sub dk clip" data-start="60.36" data-duration="1.0" data-track-index="30" style="top:1620px">ดีมาก</div>
       <div class="sub clip"   data-start="61.64" data-duration="2.95" data-track-index="30">และอย่าเปิดจอสว่างเต็มที่<br>ในห้องมืดสนิท</div>
@@ -322,10 +323,10 @@
       // blink card: normal eye blinks ~every 4 s (scaled), the screen eye almost never
       tl.fromTo('#blcard', { opacity: 0, y: 40 }, { opacity: 1, y: 0, duration: .4, ease: 'power2.out' }, 15.5);
       for (let t = 16.4; t < 31; t += 1.25) tl.to('#lidA', { attr: { transform: 'scale(1 1)' }, duration: .12, yoyo: true, repeat: 1, ease: 'sine.inOut' }, t);
-      [19.6, 23.4, 27.2].forEach(t => tl.to('#lidB', { attr: { transform: 'scale(1 1)' }, duration: .12, yoyo: true, repeat: 1, ease: 'sine.inOut' }, t));
-      count(document.getElementById('nA'), 0, 15, 21.9, 2.2, v => String(Math.round(v)), 'power1.out');
-      count(document.getElementById('nB'), 0, 5, 25.9, 1.4, v => String(Math.round(v)), 'power1.out');
-      tl.fromTo('#nB', { scale: 1.4 }, { scale: 1, duration: .5, ease: 'back.out(2)' }, 27.3);
+      [18.9, 21.4, 23.9, 26.4].forEach(t => tl.to('#lidB', { attr: { transform: 'scale(1 1)' }, duration: .12, yoyo: true, repeat: 1, ease: 'sine.inOut' }, t));
+      count(document.getElementById('nA'), 0, 15, 22.6, 1.6, v => String(Math.round(v)), 'power1.out');
+      tl.fromTo('#nB', { opacity: 0, scale: 1.4 }, { opacity: 1, scale: 1, duration: .5, ease: 'back.out(2)' }, 25.8);
+      tl.fromTo('#nBs', { opacity: 0 }, { opacity: 1, duration: .3 }, 26.9);
       tl.set('#bltl', { textContent: 'กะพริบตา ต่อนาที' }, 0); tl.set('#bltl', { textContent: 'ผิวตาแห้ง → แสบ' }, 28.5);
       tl.fromTo('#veins', { opacity: 0 }, { opacity: 1, duration: .8 }, 28.6);
       // slow full blinks fix it
@@ -340,9 +341,9 @@
       tl.to('#t1', { opacity: 0, duration: .3 }, 41.2);
       tl.set('#tttl', { textContent: 'กฎ 20-20-20' }, 0); tl.set('#tttl', { textContent: 'ทำไมต้องมองไกล' }, 41.4);
       tl.fromTo('#t2', { opacity: 0 }, { opacity: 1, duration: .3 }, 41.4);
-      tl.to('#lens', { attr: { rx: 16 }, duration: 1.2, ease: 'sine.inOut' }, 43.3);
-      tl.to('#musU, #musD', { stroke: '#2f8a57', duration: 1.2 }, 43.3);
-      tl.to('#ml1', { opacity: 0, duration: .3 }, 43.3); tl.fromTo('#ml2', { opacity: 0 }, { opacity: 1, duration: .3 }, 43.5);
+      tl.to('#lens', { attr: { rx: 16 }, duration: 1.2, ease: 'sine.inOut' }, 41.9);
+      tl.to('#musU, #musD', { stroke: '#2f8a57', duration: 1.2 }, 41.9);
+      tl.to('#ml1', { opacity: 0, duration: .3 }, 41.9); tl.fromTo('#ml2', { opacity: 0 }, { opacity: 1, duration: .3 }, 42.1);
       tl.to('#tcard', { opacity: 0, duration: .3 }, 44.4);
       // eye break: ring 20 -> 0 over 10.4 s
       tl.fromTo('#brk', { opacity: 0 }, { opacity: 1, duration: .4 }, 44.7);

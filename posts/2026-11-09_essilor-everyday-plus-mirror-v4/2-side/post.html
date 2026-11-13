@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>essilor-everyday-plus-mirror-v2 2-side</title>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../../brand/tokens.css">
+<style>
+  html, body { margin: 0; background: transparent; }
+  body { position: relative; width: 1080px; height: 1080px; overflow: hidden; font-family: var(--to-font-body); color: var(--to-snow); }
+  body > [data-layer] { position: absolute; box-sizing: border-box; }
+  .scene { inset: 0; width: 1080px; height: 1080px; object-fit: cover; }
+  .shade { inset: 0; background: linear-gradient(180deg, rgba(8,12,24,.82) 0%, rgba(8,12,24,.45) 24%, rgba(8,12,24,0) 38%, rgba(8,12,24,0) 70%, rgba(8,12,24,.85) 100%); }
+  .brand { left: var(--to-margin); top: 58px; height: 62px; }
+  .title { left: var(--to-margin); top: 150px; width: 940px; text-shadow: 0 2px 14px rgba(0,0,0,.45); }
+  .title .eyebrow { font-size: 18px; font-weight: 600; letter-spacing: var(--to-track-eyebrow); text-transform: uppercase; color: var(--to-peach); }
+  .title h1 { margin: 10px 0 0; font-family: var(--to-font-display); font-weight: 800; font-size: 66px; line-height: 1; letter-spacing: var(--to-track-display); }
+  .title .sub { margin-top: 10px; font-family: var(--to-font-display); font-weight: 500; font-size: 30px; color: rgba(250,250,250,.92); }
+  .ring { left: 825px; top: 410px; width: 300px; height: 300px; border: 2px solid rgba(250,250,250,.9); border-radius: 50%; box-shadow: 0 0 0 6px rgba(250,250,250,.12); }
+  .tag { left: 800px; top: 400px; padding: 9px 16px; background: var(--to-snow); color: var(--to-black); font-size: 16px; font-weight: 700; letter-spacing: .14em; text-transform: uppercase; }
+  .ftag { left: 400px; top: 455px; padding: 8px 14px; border: 1.5px solid var(--to-snow); background: rgba(8,12,24,.55); color: var(--to-snow); font-size: 16px; font-weight: 700; letter-spacing: .14em; text-transform: uppercase; }
+  .chips { left: 0; right: 0; bottom: 126px; display: flex; justify-content: center; gap: 12px; }
+  .chips span { padding: 10px 18px; border: 1.5px solid rgba(250,250,250,.75); font-size: 17px; font-weight: 600; letter-spacing: .08em; text-transform: uppercase; }
+  .logo { left: calc(50% - 82px); bottom: 56px; width: 164px; }
+</style>
+</head>
+<body data-width="1080" data-height="1080">
+  <img class="scene" data-layer="scene" src="layers/scene.png" alt="">
+  <div class="shade" data-layer="shade"></div>
+  <img class="brand" data-layer="brand" src="../../../brand/partner-logos/essilor-white.svg" alt="">
+  <div class="title" data-layer="title">
+    <div class="eyebrow">Customer's own frame · New lenses</div>
+    <h1>Essilor Everyday Plus 1.5</h1>
+    <div class="sub">(RX) Clear + Mirrors Progressive</div>
+  </div>
+  <div class="ftag" data-layer="frame-tag">Customer's frame</div>
+  <div class="chips" data-layer="chips"><span>Prescription</span><span>Progressive</span><span>Blue mirror</span></div>
+  <img class="logo" data-layer="logo" src="../../../brand/logo/timeoptic-white-spaced.svg" alt="">
+</body>
+</html>

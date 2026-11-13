@@ -1,0 +1,4 @@
+- scenes/front.png, side.png, back.png: Codex image_gen 2026-11-09, real cutouts from layers/ attached with -i (prompts.sh). Back view adds dark-red top pads that the real frame does not have.
+- v2 (prompts-v2.sh): side-v2.png (whole pair on the deck, temple tip bends down a bit more than the real one), back-v2.png (red pads fixed). Posts use v2.
+- v3 (prompts-v3.sh): side-v3.png, temple tip on the deck, far temple hidden. Post 2 uses v3. Line art removed and spaced TIME OPTIC logo on all 3 (user 2026-11-09).
+- v4 (prompts-v4.sh): front-v4.png, temples hidden behind the front (v1 had blue temple hooks poking out). Post 1 uses v4.

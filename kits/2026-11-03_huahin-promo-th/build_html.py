@@ -1,0 +1,106 @@
+# Write hf/index.html from audio/timing.json: background video, Thai subtitles on the voice cues, moving wordmark, end card.
+import json, os, sys
+BG = sys.argv[1] if len(sys.argv) > 1 else 'bg.mp4'   # v2: bg-v2.mp4
+D0 = os.path.dirname(os.path.abspath(__file__))
+T = json.load(open(f'{D0}/audio/timing.json'))
+SUBS = [
+ 'อยู่<b>หัวหิน</b> แต่ยังต้องทนใส่แว่น<br>ที่<b>มองอะไรก็ไม่ชัด</b>อยู่เหรอ?!',
+ 'เอาจริงนะ แว่นตาเนี่ย<br>เป็นของที่เราใช้<b>แทบทุกวัน</b>',
+ 'ตื่นมาก็ใส่ ทำงานก็ใส่<br>ขับรถก็ใส่',
+ 'บางคนใส่จนแทบจะเป็น<br><b>อวัยวะที่ 33</b> ไปแล้ว!',
+ 'แต่รู้ไหมว่า แว่นที่ดี<br>ไม่ได้มีแค่ใส่แล้วมองเห็นชัดนะ',
+ 'มันต้อง<b>ใส่สบาย</b> <b>เข้ากับรูปหน้า</b><br>น้ำหนักไม่กดจมูก',
+ 'และที่สำคัญคือต้องได้<br><b>เลนส์ที่เหมาะกับสายตา</b>ของเราด้วย',
+ 'เพราะฉะนั้น ถ้ากำลังมองหา<br>ร้านแว่นดีๆ ใน<b>หัวหิน</b>',
+ 'อยากให้ลองแวะมาที่<br><b>ไทม์ ออฟติก</b>',
+ 'ร้านแว่นที่พร้อม<br><b>ดูแลเรื่องสายตา</b>ของคุณ',
+ 'ไม่ว่าจะกำลังหาแว่นสายตา แว่นใส่ทำงาน<br>หรืออยาก<b>เปลี่ยนลุค</b>ให้ตัวเองดูดีขึ้น',
+ 'เพราะเราเชื่อว่า <b>แว่นที่ใช่</b><br>ไม่ใช่แค่ทำให้คุณมองเห็นชัด<br>แต่ต้องทำให้คุณ<b>ใส่แล้วมั่นใจ</b>ด้วย',
+ 'ใครอยู่หัวหิน หรือแวะมาเที่ยวหัวหิน<br>แล้วกำลังมองหา<b>แว่นคู่ใหม่</b>',
+ 'จำชื่อร้านนี้ไว้เลยนะ<br><b>ไทม์ ออฟติก</b>',
+ 'แว่นคู่ใหม่ของคุณ<br><b>อาจอยู่ใกล้กว่าที่คิด!</b>',
+ 'แวะมาดูแลสายตากันได้<br>แล้วเจอกันที่<b>ไทม์ ออฟติก</b>นะครับ!',
+]
+D = 62.0
+cues = [[c['start'], c['end']] for c in T['cues']]
+subs = '\n'.join(f'        <div id="s{i+1}" class="sub">{t}</div>' for i, t in enumerate(SUBS))
+CSS = """
+      * { margin: 0; padding: 0; box-sizing: border-box; }
+      html, body { width: 1080px; height: 1920px; overflow: hidden; background: #111; }
+      #root { position: relative; width: 1080px; height: 1920px; overflow: hidden; font-family: 'Prompt', sans-serif; color: #fff; }
+      .layer { position: absolute; }
+      #bg { left: 0; top: 0; width: 1080px; height: 1920px; object-fit: cover; }
+      #shade { inset: 0; background: linear-gradient(to bottom, rgba(0,0,0,.28) 0%, rgba(0,0,0,0) 14%, rgba(0,0,0,0) 56%, rgba(0,0,0,.45) 70%, rgba(0,0,0,.45) 82%, rgba(0,0,0,0) 94%); }
+      #mark { left: 0; right: 0; top: 96px; display: flex; justify-content: center; }
+      #mark img { width: 330px; opacity: .92; filter: drop-shadow(0 2px 10px rgba(0,0,0,.45)); }
+      .sub { position: absolute; left: 50px; right: 50px; top: 1240px; text-align: center; font-weight: 600; font-size: 58px; line-height: 1.34;
+             text-shadow: 0 3px 18px rgba(0,0,0,.8), 0 0 4px rgba(0,0,0,.65); opacity: 0; }
+      .sub b { color: #F5C84C; font-weight: 700; }
+      #s1 { font-size: 70px; top: 1200px; }
+      #s11 { font-size: 52px; }
+      #s12 { font-size: 54px; top: 1210px; }
+      #endshade { inset: 0; background: linear-gradient(to bottom, rgba(10,24,18,0) 35%, rgba(10,24,18,.75) 55%, rgba(10,24,18,.92) 100%); opacity: 0; }
+      #end { inset: 0; }
+      #end .brand { position: absolute; left: 0; right: 0; top: 1180px; display: flex; flex-direction: column; align-items: center; }
+      #end img { width: 640px; }
+      #rule { width: 120px; height: 3px; margin-top: 40px; background: #EFCF9C; }
+      #tag { margin-top: 34px; font-size: 48px; font-weight: 600; color: #FAFAFA; }
+      #tag2 { margin-top: 14px; font-family: 'Inter', sans-serif; font-size: 34px; font-weight: 500; letter-spacing: .3em; color: #EFCF9C; }
+"""
+JS = """
+      window.__timelines = window.__timelines || {};
+      const tl = gsap.timeline({ paused: true });
+      const CUES = %s;
+      CUES.forEach(([a, b], i) => {
+        const id = '#s' + (i + 1), out = i + 1 < CUES.length ? Math.min(b + 0.25, CUES[i + 1][0] - 0.05) : 59.5;
+        tl.fromTo(id, { opacity: 0, y: 18, scale: 0.96 }, { opacity: 1, y: 0, scale: 1, duration: 0.25, ease: 'back.out(2)' }, Math.max(0, a - 0.08));
+        tl.to(id, { opacity: 0, duration: 0.12, ease: 'power1.in' }, out - 0.12);
+      });
+      tl.fromTo('#s1 b', { scale: 1.2 }, { scale: 1, duration: 0.45, ease: 'back.out(2.2)' }, 0.25);
+      // wordmark: slow drift, fades before the end card
+      tl.fromTo('#mark', { opacity: 0, y: -12 }, { opacity: 1, y: 0, duration: 0.8, ease: 'power2.out' }, 0.2);
+      tl.fromTo('#mark img', { x: -26, scale: 0.98 }, { x: 26, scale: 1.03, duration: 59, ease: 'sine.inOut' }, 0);
+      tl.to('#mark', { opacity: 0, duration: 0.4 }, 59.1);
+      // end card
+      tl.to('#endshade', { opacity: 1, duration: 0.6, ease: 'power1.inOut' }, 59.4);
+      tl.fromTo('#end img', { opacity: 0, y: 20, filter: 'blur(8px)' }, { opacity: 1, y: 0, filter: 'blur(0px)', duration: 0.7, ease: 'power2.out' }, 59.6);
+      tl.fromTo('#rule', { scaleX: 0 }, { scaleX: 1, duration: 0.5, ease: 'power2.out' }, 60.0);
+      tl.fromTo(['#tag', '#tag2'], { opacity: 0, y: 14 }, { opacity: 1, y: 0, duration: 0.6, stagger: 0.15, ease: 'power2.out' }, 60.2);
+      window.__timelines['main'] = tl;
+      tl.seek(0);
+""" % json.dumps(cues)
+html = f'''<!doctype html>
+<html lang="th">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=1080, height=1920" />
+    <!-- Hua Hin shop promo, Thai voice (user's script, 2026-11-03). Generated by ../build_html.py; edit that, not this file.
+         Footage: 11 AI clips cut to the voice by ../build_bg.py (assets/bg.mp4). Voice: Gemini 3.1 flash TTS "Puck". -->
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/gsap.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@500;600;700&family=Inter:wght@400;500&display=swap" rel="stylesheet" />
+    <style>{CSS}    </style>
+  </head>
+  <body>
+    <div id="root" data-composition-id="main" data-start="0" data-duration="{D}" data-width="1080" data-height="1920">
+      <video id="bg" class="clip layer" data-start="0" data-duration="{D}" data-track-index="0" src="assets/{BG}" muted playsinline></video>
+      <div id="shade" class="clip layer" data-start="0" data-duration="{D}" data-track-index="1"></div>
+      <div id="mark" class="clip layer" data-start="0" data-duration="59.6" data-track-index="2"><img src="assets/timeoptic-white-spaced.svg" alt="TIMEOPTIC" /></div>
+      <div id="subs" class="clip layer" data-start="0" data-duration="{D}" data-track-index="3" style="inset:0">
+{subs}
+      </div>
+      <div id="endshade" class="clip layer" data-start="59.4" data-duration="{round(D-59.4, 2)}" data-track-index="4"></div>
+      <div id="end" class="clip layer" data-start="59.6" data-duration="{round(D-59.6, 2)}" data-track-index="5">
+        <div class="brand">
+          <img src="assets/timeoptic-white-spaced.svg" alt="TIMEOPTIC" />
+          <div id="rule"></div>
+          <div id="tag">ร้านแว่นของคนหัวหิน</div>
+          <div id="tag2">HUA HIN</div>
+        </div>
+      </div>
+    </div>
+    <script>{JS}    </script>
+  </body>
+</html>
+'''
+open(f'{D0}/hf/index.html', 'w', encoding='utf-8').write(html)
+print('hf/index.html')

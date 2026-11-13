@@ -2,13 +2,15 @@
 import json, os, subprocess, wave, numpy as np
 D = os.path.dirname(os.path.abspath(__file__)); TEMPO = 1.08; SR = 48000
 GAP = {5: .5, 8: .6, 10: .5, 11: 10.6, 12: .6, 13: .7, 14: .6, 15: .6, 16: .5, 17: 1.6}  # 11: the viewer looks far away while the ring counts 20 -> 0 (x2)  # pause before line n (default .3)
+AT = {6: 20.7, 7: 28.42, 10: 44.85}  # fix 2026-10-31: new lines 5, 6, 9 keep the rest of the cue times
 os.makedirs(f'{D}/fast', exist_ok=True)
 t, out, cues = .5, [], []
 for n in range(1, 18):
     src, dst = f'{D}/{n:02d}.wav', f'{D}/fast/{n:02d}.wav'
-    subprocess.run(['ffmpeg', '-y', '-loglevel', 'error', '-i', src, '-af', f'atempo={TEMPO}', '-ar', str(SR), '-ac', '1', dst], check=True)
+    subprocess.run(['ffmpeg', '-y', '-loglevel', 'error', '-i', src, '-af', f'atempo={1.12 if n == 6 else TEMPO}', '-ar', str(SR), '-ac', '1', dst], check=True)
     with wave.open(dst) as w: y = np.frombuffer(w.readframes(w.getnframes()), np.int16)
     if n > 1: t += GAP.get(n, .3)
+    t = AT.get(n, t)
     cues.append({'n': n, 'start': round(t, 2), 'end': round(t + len(y)/SR, 2)})
     out.append((t, y)); t += len(y)/SR
 total = round(t + 3.6, 2)

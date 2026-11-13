@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>prada-linea-rossa 1-front</title>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../../brand/tokens.css">
+<style>
+  html, body { margin: 0; background: transparent; }
+  body { position: relative; width: 1080px; height: 1080px; overflow: hidden; font-family: var(--to-font-body); color: var(--to-snow); }
+  body > [data-layer] { position: absolute; box-sizing: border-box; }
+  .scene { inset: 0; width: 1080px; height: 1080px; object-fit: cover; }
+  .shade { inset: 0; background: linear-gradient(180deg, rgba(8,12,24,.55) 0%, rgba(8,12,24,0) 22%, rgba(8,12,24,0) 78%, rgba(8,12,24,.6) 100%); }
+  .partners { left: 0; right: 0; top: 58px; display: flex; justify-content: center; align-items: center; gap: 28px; }
+  .partners .prada { height: 30px; filter: invert(1); }
+  .partners .x { width: 1px; height: 44px; background: rgba(250,250,250,.6); transform: rotate(18deg); }
+  .partners .ess { height: 70px; }
+  .spec { left: 0; right: 0; bottom: 118px; text-align: center; font-size: 17px; font-weight: 500; letter-spacing: var(--to-track-eyebrow); text-transform: uppercase; color: rgba(250,250,250,.85); }
+  .logo { left: calc(50% - 82px); bottom: 56px; width: 164px; }
+</style>
+</head>
+<body data-width="1080" data-height="1080">
+  <img class="scene" data-layer="scene" src="layers/scene.png" alt="">
+  <div class="shade" data-layer="shade"></div>
+  <div class="partners" data-layer="partners"><img class="prada" src="../../../brand/partner-logos/prada.svg" alt=""><span class="x"></span><img class="ess" src="../../../brand/partner-logos/essilor-white.svg" alt=""></div>
+  <div class="spec" data-layer="spec">Prescription sun · Progressive</div>
+  <img class="logo" data-layer="logo" src="../../../brand/logo/timeoptic-white-spaced.svg" alt="">
+</body>
+</html>

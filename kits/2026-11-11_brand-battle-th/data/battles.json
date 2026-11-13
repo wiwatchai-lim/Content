@@ -1,0 +1,559 @@
+{
+ "seed": 17,
+ "champion": "Ferrari",
+ "start": [
+  [
+   "Mae Hong Son",
+   "Coach"
+  ],
+  [
+   "Chumphon",
+   "Ferrari"
+  ],
+  [
+   "Nakhon Si Thammarat",
+   "BOSS"
+  ],
+  [
+   "Phuket",
+   "BOSS"
+  ],
+  [
+   "Phangnga",
+   "BOSS"
+  ],
+  [
+   "Ranong",
+   "BOSS"
+  ],
+  [
+   "Surat Thani",
+   "BOSS"
+  ],
+  [
+   "Krabi",
+   "BOSS"
+  ],
+  [
+   "Phatthalung",
+   "Bolon"
+  ],
+  [
+   "Satun",
+   "Bolon"
+  ],
+  [
+   "Songkhla",
+   "Bolon"
+  ],
+  [
+   "Trang",
+   "Bolon"
+  ],
+  [
+   "Yala",
+   "Bolon"
+  ],
+  [
+   "Chiang Rai",
+   "Coach"
+  ],
+  [
+   "Chiang Mai",
+   "Coach"
+  ],
+  [
+   "Lampang",
+   "Coach"
+  ],
+  [
+   "Lamphun",
+   "Coach"
+  ],
+  [
+   "Nan",
+   "Timberland"
+  ],
+  [
+   "Phayao",
+   "Timberland"
+  ],
+  [
+   "Phrae",
+   "Timberland"
+  ],
+  [
+   "Phitsanulok",
+   "Timberland"
+  ],
+  [
+   "Sukhothai",
+   "Coach"
+  ],
+  [
+   "Uttaradit",
+   "Timberland"
+  ],
+  [
+   "Kanchanaburi",
+   "Ferrari"
+  ],
+  [
+   "Kamphaeng Phet",
+   "Paul Hueman"
+  ],
+  [
+   "Phichit",
+   "Paul Hueman"
+  ],
+  [
+   "Phetchabun",
+   "Timberland"
+  ],
+  [
+   "Suphan Buri",
+   "Ferrari"
+  ],
+  [
+   "Tak",
+   "Coach"
+  ],
+  [
+   "Uthai Thani",
+   "Paul Hueman"
+  ],
+  [
+   "Ang Thong",
+   "Ferrari"
+  ],
+  [
+   "Chai Nat",
+   "Paul Hueman"
+  ],
+  [
+   "Lop Buri",
+   "Paul Hueman"
+  ],
+  [
+   "Nakhon Nayok",
+   "Ray-Ban"
+  ],
+  [
+   "Prachin Buri",
+   "Ray-Ban"
+  ],
+  [
+   "Nakhon Sawan",
+   "Paul Hueman"
+  ],
+  [
+   "Phra Nakhon Si Ayutthaya",
+   "Oakley"
+  ],
+  [
+   "Pathum Thani",
+   "Oakley"
+  ],
+  [
+   "Sing Buri",
+   "Paul Hueman"
+  ],
+  [
+   "Saraburi",
+   "Paul Hueman"
+  ],
+  [
+   "Bangkok Metropolis",
+   "Oakley"
+  ],
+  [
+   "Nonthaburi",
+   "Oakley"
+  ],
+  [
+   "Nakhon Pathom",
+   "Oakley"
+  ],
+  [
+   "Phetchaburi",
+   "Ferrari"
+  ],
+  [
+   "Prachuap Khiri Khan",
+   "Ferrari"
+  ],
+  [
+   "Ratchaburi",
+   "Ferrari"
+  ],
+  [
+   "Samut Prakan",
+   "Oakley"
+  ],
+  [
+   "Samut Sakhon",
+   "Oakley"
+  ],
+  [
+   "Samut Songkhram",
+   "Ferrari"
+  ],
+  [
+   "Si Sa Ket",
+   "Vogue"
+  ],
+  [
+   "Ubon Ratchathani",
+   "Vogue"
+  ],
+  [
+   "Amnat Charoen",
+   "Vogue"
+  ],
+  [
+   "Yasothon",
+   "Vogue"
+  ],
+  [
+   "Chon Buri",
+   "Ray-Ban"
+  ],
+  [
+   "Chachoengsao",
+   "Ray-Ban"
+  ],
+  [
+   "Chanthaburi",
+   "Ray-Ban"
+  ],
+  [
+   "Sa Kaeo",
+   "Ray-Ban"
+  ],
+  [
+   "Rayong",
+   "Ray-Ban"
+  ],
+  [
+   "Trat",
+   "Ray-Ban"
+  ],
+  [
+   "Buri Ram",
+   "Ray-Ban"
+  ],
+  [
+   "Chaiyaphum",
+   "Timberland"
+  ],
+  [
+   "Khon Kaen",
+   "Prada"
+  ],
+  [
+   "Kalasin",
+   "Vogue"
+  ],
+  [
+   "Maha Sarakham",
+   "Vogue"
+  ],
+  [
+   "Nakhon Ratchasima",
+   "Ray-Ban"
+  ],
+  [
+   "Roi Et",
+   "Vogue"
+  ],
+  [
+   "Surin",
+   "Vogue"
+  ],
+  [
+   "Loei",
+   "Timberland"
+  ],
+  [
+   "Nong Khai",
+   "Prada"
+  ],
+  [
+   "Sakon Nakhon",
+   "Prada"
+  ],
+  [
+   "Udon Thani",
+   "Prada"
+  ],
+  [
+   "Nong Bua Lam Phu",
+   "Prada"
+  ],
+  [
+   "Nakhon Phanom",
+   "Prada"
+  ],
+  [
+   "Mukdahan",
+   "Vogue"
+  ],
+  [
+   "Narathiwat",
+   "Bolon"
+  ],
+  [
+   "Pattani",
+   "Bolon"
+  ],
+  [
+   "Bueng Kan",
+   "Prada"
+  ]
+ ],
+ "battles": [
+  {
+   "attacker": "Paul Hueman",
+   "defender": "Coach",
+   "dice": [
+    [
+     2,
+     2,
+     4
+    ],
+    [
+     5,
+     2,
+     3
+    ]
+   ],
+   "power": [
+    1.1,
+    1.1
+   ],
+   "total": [
+    8.8,
+    11
+   ],
+   "winner": "Coach",
+   "provinces_taken": 8,
+   "upset": false
+  },
+  {
+   "attacker": "Coach",
+   "defender": "Ray-Ban",
+   "dice": [
+    [
+     4,
+     4,
+     4
+    ],
+    [
+     3,
+     1,
+     1
+    ]
+   ],
+   "power": [
+    1.2,
+    1.1
+   ],
+   "total": [
+    14.4,
+    5.5
+   ],
+   "winner": "Coach",
+   "provinces_taken": 10,
+   "upset": false
+  },
+  {
+   "attacker": "Timberland",
+   "defender": "Coach",
+   "dice": [
+    [
+     3,
+     4,
+     4
+    ],
+    [
+     1,
+     2,
+     5
+    ]
+   ],
+   "power": [
+    1.1,
+    1.4
+   ],
+   "total": [
+    12.1,
+    11.2
+   ],
+   "winner": "Timberland",
+   "provinces_taken": 25,
+   "upset": true
+  },
+  {
+   "attacker": "Oakley",
+   "defender": "Timberland",
+   "dice": [
+    [
+     2,
+     1,
+     5
+    ],
+    [
+     2,
+     3,
+     5
+    ]
+   ],
+   "power": [
+    1.1,
+    1.5
+   ],
+   "total": [
+    8.8,
+    15
+   ],
+   "winner": "Timberland",
+   "provinces_taken": 7,
+   "upset": false
+  },
+  {
+   "attacker": "Ferrari",
+   "defender": "Timberland",
+   "dice": [
+    [
+     2,
+     5,
+     6
+    ],
+    [
+     3,
+     2,
+     2
+    ]
+   ],
+   "power": [
+    1.1,
+    1.6
+   ],
+   "total": [
+    14.3,
+    11.2
+   ],
+   "winner": "Ferrari",
+   "provinces_taken": 40,
+   "upset": true
+  },
+  {
+   "attacker": "BOSS",
+   "defender": "Ferrari",
+   "dice": [
+    [
+     5,
+     1,
+     3
+    ],
+    [
+     6,
+     4,
+     6
+    ]
+   ],
+   "power": [
+    1.1,
+    1.8
+   ],
+   "total": [
+    9.9,
+    28.8
+   ],
+   "winner": "Ferrari",
+   "provinces_taken": 6,
+   "upset": false
+  },
+  {
+   "attacker": "Ferrari",
+   "defender": "Vogue",
+   "dice": [
+    [
+     6,
+     2,
+     1
+    ],
+    [
+     5,
+     1,
+     3
+    ]
+   ],
+   "power": [
+    1.9,
+    1.1
+   ],
+   "total": [
+    17.1,
+    9.9
+   ],
+   "winner": "Ferrari",
+   "provinces_taken": 9,
+   "upset": false
+  },
+  {
+   "attacker": "Bolon",
+   "defender": "Ferrari",
+   "dice": [
+    [
+     4,
+     5,
+     5
+    ],
+    [
+     5,
+     3,
+     1
+    ]
+   ],
+   "power": [
+    1.1,
+    2
+   ],
+   "total": [
+    15.4,
+    18
+   ],
+   "winner": "Ferrari",
+   "provinces_taken": 7,
+   "upset": false
+  },
+  {
+   "attacker": "Prada",
+   "defender": "Ferrari",
+   "dice": [
+    [
+     4,
+     1,
+     6
+    ],
+    [
+     1,
+     4,
+     1
+    ]
+   ],
+   "power": [
+    1.1,
+    2.1
+   ],
+   "total": [
+    12.1,
+    12.6
+   ],
+   "winner": "Ferrari",
+   "provinces_taken": 7,
+   "upset": false
+  }
+ ]
+}

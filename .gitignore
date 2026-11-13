@@ -21,3 +21,7 @@ kits/**/codex/wan/
 Thumbs.db
 desktop.ini
 .DS_Store
+
+# Over GitHub 100 MB limit (re-render from the kit)
+kits/2026-11-05_huahin-uv-th/export/huahin-uv_th.mp4
+kits/2026-11-05_huahin-uv-th/export/huahin-uv_th_v2.mp4

@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>prada-rx-sun</title>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../brand/tokens.css">
+<style>
+  /* Structure from 3-detail-split: full front view up top, a big detail crop bleeding off one edge below, short info block in the free corner */
+  html, body { margin: 0; background: transparent; }
+  body { position: relative; width: 1080px; height: 1080px; overflow: hidden; font-family: var(--to-font-body); color: var(--to-black); }
+  body > [data-layer] { position: absolute; box-sizing: border-box; }
+
+  .background { inset: 0; background:
+      radial-gradient(ellipse 620px 360px at 560px 500px, rgba(120, 175, 205, .22), transparent 70%),
+      linear-gradient(180deg, #FAFAFA 0%, #ECE9E3 100%); }
+  .lineart { right: 40px; top: 28px; width: 300px; opacity: .6; filter: drop-shadow(0 1px 1px rgba(33,33,33,.16)); }
+  .logo { left: var(--to-margin); top: var(--to-margin); width: var(--to-logo-width); }
+
+  .title { left: var(--to-margin); top: 150px; width: 700px; }
+  .title .eyebrow { font-size: 17px; font-weight: 600; letter-spacing: var(--to-track-eyebrow); color: var(--to-green); text-transform: uppercase; }
+  .title h1 { margin: 14px 0 0; font-family: var(--to-font-display); font-weight: 800; font-size: 62px; line-height: 1.02; letter-spacing: var(--to-track-display); }
+  .title h1 span { color: var(--to-green); }
+
+  .front { left: 330px; top: 330px; width: 680px; filter: drop-shadow(0 22px 18px rgba(0,0,0,.18)); }
+  .rule { left: var(--to-margin); top: 360px; width: 64px; height: 4px; background: var(--to-peach); }
+  .side { left: 170px; top: 628px; width: 1000px; filter: drop-shadow(0 26px 20px rgba(0,0,0,.18)); }
+
+  .info { left: var(--to-margin); top: 384px; width: 240px; }
+  .info p { margin: 0 0 14px; font-size: 18px; line-height: 1.35; color: #4a4a4a; }
+  .info b { display: block; font-family: var(--to-font-display); font-weight: 700; font-size: 20px; color: var(--to-black); }
+
+  .cta { left: var(--to-margin); bottom: var(--to-margin); font-family: var(--to-font-display); font-weight: 700; font-size: 22px; color: var(--to-green); }
+</style>
+</head>
+<body data-width="1080" data-height="1080">
+  <div class="background" data-layer="background"></div>
+  <img class="lineart" data-layer="lineart" src="../../brand/store-lineart.png" alt="">
+  <img class="logo" data-layer="logo" src="../../brand/logo/timeoptic.svg" alt="">
+  <div class="title" data-layer="title">
+    <div class="eyebrow">Bring your own frame</div>
+    <h1>Your sunglasses.<br><span>Your prescription.</span></h1>
+  </div>
+  <img class="front" data-layer="front" src="layers/front.png" alt="">
+  <div class="rule" data-layer="rule"></div>
+  <div class="info" data-layer="info">
+    <p><b>Progressive lenses</b>near to far, in one lens</p>
+    <p><b>Blue mirror finish</b>fitted to the original frame</p>
+    <p><b>Essilor Everyday Plus</b>1.5 index lenses</p>
+  </div>
+  <img class="side" data-layer="side" src="layers/side.png" alt="">
+  <div class="cta" data-layer="cta">Message us to make yours →</div>
+</body>
+</html>

@@ -1,0 +1,247 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=1080, height=1920" />
+    <!--
+      Ferrari × Varilux — the user's AI footage (assets/source.mp4, 720x1280, 13.7 s, 8 shots) re-cut on the beat and dressed
+      in the beat-clip style: Ferrari wordmark top-left, letter type, white TIMEOPTIC wordmark (dark footage).
+      Cut to "Block Beat" (95.7 BPM), from 6.24 s in the song so the drop (8.75 s) lands on beat 4. 21 beats = 13.17 s.
+        beats 0-4    hook: frame 0 slams in on the temple shield, then the box
+        beats 4-8    drop: front on carbon, FERRARI × VARILUX; hard cuts temple / pouch / shield / car
+        beats 8-12   flat lay with the Varilux card: THE LENS · PROGRESSIVE
+        beats 12-16  garage bench, carbon curve: FERRARI FRAME + VARILUX LENS
+        beats 16-18  gloved hand on the pedestal
+        beats 18-21  veil, TIMEOPTIC wordmark rises to the centre, shine
+      Shot map (source s): 0-1.83 flat lay | 1.83-3.37 pouch | 3.37-5.12 box | 5.12-7.0 bench+car | 7.0-8.71 front carbon
+                           8.71-10.62 shield 3/4 | 10.62-12.15 carbon curve | 12.15-13.7 pedestal
+    -->
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/gsap.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;700;800;900&family=Inter:wght@400;500&family=Playfair+Display:ital,wght@1,500&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="assets/tokens.css" />
+    <style>
+      * { margin: 0; padding: 0; box-sizing: border-box; }
+      html, body { width: 1080px; height: 1920px; overflow: hidden; background: #0d0d0f; }
+      #root { position: relative; width: 1080px; height: 1920px; overflow: hidden; font-family: var(--to-font-display); color: #fff; background: #0d0d0f; }
+      .layer { position: absolute; }
+      #punch { position: absolute; inset: 0; transform-origin: 50% 50%; }
+      .shot { position: absolute; left: 0; top: 0; width: 1080px; height: 1920px; object-fit: cover; transform-origin: 0 0; }
+      #veil { inset: 0; opacity: 0; background: radial-gradient(ellipse 80% 45% at 50% 50%, rgba(10, 10, 12, .4), rgba(10, 10, 12, .85)); }
+      #sheen { left: -600px; top: -200px; width: 360px; height: 2320px; transform: rotate(16deg); opacity: 0;
+               background: linear-gradient(90deg, rgba(255, 210, 31, 0), rgba(255, 230, 120, .45) 50%, rgba(255, 210, 31, 0)); }
+      #topshade { left: 0; top: 0; width: 1080px; height: 720px; background: linear-gradient(180deg, rgba(8, 8, 10, .7) 0%, rgba(8, 8, 10, .4) 55%, rgba(8, 8, 10, 0) 100%); }
+      #botshade { left: 0; top: 1050px; width: 1080px; height: 870px; background: linear-gradient(0deg, rgba(8, 8, 10, .65) 0%, rgba(8, 8, 10, .4) 50%, rgba(8, 8, 10, 0) 100%); }
+      #flash { inset: 0; background: #fff8d8; opacity: 0; }
+      #stripe { left: 0; top: 0; width: 1080px; height: 1920px; opacity: 0;
+                background: linear-gradient(105deg, rgba(255, 210, 31, 0) 40%, rgba(255, 210, 31, .9) 40%, rgba(255, 210, 31, .9) 46%, rgba(255, 210, 31, 0) 46%); }
+
+      .type { position: absolute; left: 0; right: 0; text-align: center; white-space: nowrap; }
+      .type .ch, .type .w { display: inline-block; will-change: transform; }
+      .shade { text-shadow: 0 4px 24px rgba(0, 0, 0, .7), 0 1px 3px rgba(0, 0, 0, .55); }
+      .kicker { font-weight: 700; font-size: 32px; letter-spacing: .38em; color: #FFE27A; }
+      .mega { font-weight: 900; font-size: 150px; line-height: 1; letter-spacing: .02em; color: #fff; }
+      .mega.md { font-size: 104px; }
+      .mega.sm { font-size: 84px; }
+      .yel { color: #FFD21F; }
+      .serif { font-family: 'Playfair Display', Georgia, serif; font-style: italic; font-weight: 500; font-size: 54px; color: #fff3cf; }
+      .x { font-weight: 500; font-size: 64px; color: #FFD21F; }
+
+      #blogo { left: 64px; top: 64px; width: 230px; height: 51px; filter: brightness(0) invert(1) drop-shadow(0 2px 8px rgba(0, 0, 0, .5)); }
+      #logo { left: 384px; top: 1415px; width: 312px; height: 48px; transform-origin: 50% 50%; }
+      #logo b { position: absolute; top: 0; height: 48px; background: url(assets/timeoptic-mono.svg) no-repeat; background-size: 300px 47.6px; filter: brightness(0) invert(1); }
+      #logo .shine { position: absolute; inset: 0; -webkit-mask: url(assets/timeoptic-mono.svg) center / 100% no-repeat; mask: url(assets/timeoptic-mono.svg) center / 100% no-repeat; overflow: hidden; }
+      #logo .shine i { position: absolute; top: 0; bottom: 0; left: 0; width: 80px; transform: translateX(-90px); background: linear-gradient(100deg, transparent, rgba(255, 220, 90, .95), transparent); }
+      #rule { left: 465px; top: 1062px; width: 150px; height: 4px; background: #FFD21F; transform-origin: center; border-radius: 2px; }
+    </style>
+  </head>
+  <body>
+    <div id="root" data-composition-id="main" data-start="0" data-duration="13.17" data-width="1080" data-height="1920">
+      <div id="cam" class="layer" style="inset:0"><div id="punch">
+        <video id="s1" class="shot clip" data-start="0" data-duration="1.254" data-media-start="8.75" data-track-index="1" src="assets/source.mp4" muted playsinline></video>
+        <video id="s2" class="shot clip" data-start="1.254" data-duration="1.254" data-media-start="3.45" data-track-index="2" src="assets/source.mp4" muted playsinline></video>
+        <video id="s3" class="shot clip" data-start="2.508" data-duration="1.254" data-media-start="7.05" data-track-index="3" src="assets/source.mp4" muted playsinline></video>
+        <video id="s4" class="shot clip" data-start="3.762" data-duration="0.627" data-media-start="8.05" data-track-index="4" src="assets/source.mp4" muted playsinline></video>
+        <video id="s5" class="shot clip" data-start="4.389" data-duration="0.627" data-media-start="2.0" data-track-index="5" src="assets/source.mp4" muted playsinline></video>
+        <video id="s6" class="shot clip" data-start="5.016" data-duration="0.627" data-media-start="9.9" data-track-index="6" src="assets/source.mp4" muted playsinline></video>
+        <video id="s7" class="shot clip" data-start="5.643" data-duration="0.627" data-media-start="5.2" data-track-index="7" src="assets/source.mp4" muted playsinline></video>
+        <video id="s8" class="shot clip" data-start="6.27" data-duration="1.254" data-media-start="0.1" data-track-index="8" src="assets/source.mp4" muted playsinline></video>
+        <video id="s9" class="shot clip" data-start="7.524" data-duration="1.254" data-media-start="5.75" data-track-index="9" src="assets/source.mp4" muted playsinline></video>
+        <video id="s10" class="shot clip" data-start="8.778" data-duration="1.254" data-media-start="10.66" data-track-index="10" src="assets/source.mp4" muted playsinline></video>
+        <video id="s11" class="shot clip" data-start="10.032" data-duration="1.254" data-media-start="12.2" data-track-index="11" src="assets/source.mp4" muted playsinline></video>
+        <video id="s12" class="shot clip" data-start="11.286" data-duration="1.884" data-media-start="8.72" data-track-index="12" src="assets/source.mp4" muted playsinline></video>
+        <div id="sheen" class="layer"></div>
+        <div id="topshade" class="layer"></div>
+        <div id="botshade" class="layer"></div>
+        <div id="veil" class="layer"></div>
+      </div></div>
+      <div id="stripe" class="clip layer" data-start="2.3" data-duration="0.6" data-track-index="13"></div>
+
+      <!-- hook -->
+      <div id="t0" class="clip layer" data-start="0" data-duration="2.508" data-track-index="14" style="inset:0">
+        <div class="type kicker shade split" style="top:300px">NEW IN STORE</div>
+        <div class="type serif shade words" style="top:1250px">fresh out of the box</div>
+      </div>
+      <!-- drop -->
+      <div id="t1" class="clip layer" data-start="2.508" data-duration="2.508" data-track-index="15" style="inset:0">
+        <div class="type mega yel shade split" style="top:290px">FERRARI</div>
+        <div class="type x shade split" style="top:452px">×</div>
+        <div class="type mega md shade split" style="top:1230px">VARILUX</div>
+        <div class="type kicker shade split" style="top:1355px">BY ESSILOR</div>
+      </div>
+      <!-- lens -->
+      <div id="t2" class="clip layer" data-start="5.016" data-duration="3.762" data-track-index="16" style="inset:0">
+        <div class="type kicker shade split" style="top:286px">THE LENS</div>
+        <div class="type mega md yel shade split" style="top:366px;font-size:94px">PROGRESSIVE</div>
+        <div class="type serif shade words" style="top:492px">near, mid and far in one lens</div>
+      </div>
+      <!-- the pair -->
+      <div id="t3" class="clip layer" data-start="7.524" data-duration="2.508" data-track-index="17" style="inset:0">
+        <div class="type mega sm yel shade split" style="top:1170px">FERRARI FRAME</div>
+        <div class="type mega sm shade split" style="top:1268px">+ VARILUX LENS</div>
+      </div>
+      <!-- pedestal -->
+      <div id="t4" class="clip layer" data-start="10.032" data-duration="1.254" data-track-index="18" style="inset:0">
+        <div class="type serif shade words" style="top:330px">fitted to your eyes</div>
+      </div>
+      <!-- end -->
+      <div id="t5" class="clip layer" data-start="11.286" data-duration="1.884" data-track-index="19" style="inset:0">
+        <div class="type serif shade words" style="top:1110px">Find yours at <b>Time</b> <b>Optic</b></div>
+      </div>
+
+      <img id="blogo" class="clip layer" data-start="0" data-duration="13.17" data-track-index="20" src="assets/ferrari.svg" alt="Ferrari" width="230" height="51" />
+      <div id="rule" class="clip layer" data-start="11.286" data-duration="1.884" data-track-index="21"></div>
+      <div id="logo" class="clip layer" data-start="0" data-duration="13.17" data-track-index="22" aria-label="TIMEOPTIC"><div class="shine"><i></i></div></div>
+      <div id="flash" class="clip layer" data-start="0" data-duration="13.17" data-track-index="23"></div>
+    </div>
+
+    <script>
+      window.__timelines = window.__timelines || {};
+      const tl = gsap.timeline({ paused: true });
+
+      const BPM = 95.7;                // "Block Beat", grid from 6.24 s in the song
+      const B = 60 / BPM;
+      const b = (n) => n * B;
+
+      document.querySelectorAll('.split').forEach((el) => {
+        const text = el.textContent; el.textContent = '';
+        for (const c of text) {
+          if (c === ' ') { el.append(' '); continue; }
+          const s = document.createElement('span'); s.className = 'ch'; s.textContent = c; el.append(s);
+        }
+      });
+      document.querySelectorAll('.words').forEach((el) => {
+        const nodes = [...el.childNodes]; el.textContent = '';
+        nodes.forEach((n) => {
+          if (n.nodeType === 1) { const s = document.createElement('span'); s.className = 'w'; s.append(n); el.append(s, ' '); return; }
+          n.textContent.split(' ').filter(Boolean).forEach((w) => { const s = document.createElement('span'); s.className = 'w'; s.textContent = w; el.append(s, ' '); });
+        });
+      });
+
+      // white TIMEOPTIC wordmark, letter slices with a small gap between TIME and OPTIC
+      const LETTERS = [[0, 282], [310, 392], [438, 834], [876, 1134], [1170, 1498], [1540, 1784], [1808, 2078], [2112, 2164], [2214, 2520]];
+      const logo = document.getElementById('logo'), k = 300 / 2520;
+      const LOGO_GAP = 12;
+      LETTERS.forEach(([x0, x1], n) => {
+        const el = document.createElement('b');
+        el.style.cssText = `left:${x0 * k + (n >= 4 ? LOGO_GAP : 0)}px;width:${(x1 - x0) * k + 1}px;background-position:${-x0 * k}px 0;`;
+        logo.insertBefore(el, logo.firstChild);
+      });
+
+      // ---------- helpers ----------
+      const q = (id, n) => `#${id} .type:nth-child(${n})`;
+      const frame = (px, py, s, cx = 540, cy = 960) => ({
+        x: Math.min(0, Math.max(1080 - 1080 * s, cx - px * s)),
+        y: Math.min(0, Math.max(1920 - 1920 * s, cy - py * s)), scale: s,
+      });
+      const bounceIn = (sel, at, stagger = 0.035) => tl.from(`${sel} .ch`, { scale: 0, y: 50, rotation: (i) => (i % 2 ? 12 : -12), opacity: 0, duration: 0.5, ease: 'back.out(3)', stagger }, at);
+      const hop = (sel, at) => tl.to(`${sel} .ch`, { keyframes: { y: [0, -18, 0] }, duration: B * 0.7, ease: 'sine.inOut', stagger: 0.025 }, at);
+      const bounceOut = (sel, at) => tl.to(`${sel} .ch`, { scale: 0, y: -30, opacity: 0, duration: 0.25, ease: 'back.in(2)', stagger: 0.012 }, at);
+      const letterFade = (sel, at, stagger = 0.04) => tl.from(`${sel} .ch`, { opacity: 0, y: 16, duration: 0.45, ease: 'power2.out', stagger }, at);
+      const wordsGlide = (sel, at, from = 60) => tl.from(`${sel} .w`, { x: from, opacity: 0, duration: 0.55, ease: 'power3.out', stagger: 0.07 }, at);
+      const slideUp = (sel, at) => tl.from(`${sel} .ch`, { yPercent: 110, opacity: 0, duration: 0.35, ease: 'expo.out', stagger: 0.02 }, at);
+      const punch = (at, s = 1.08, d = 0.22) => tl.fromTo('#punch', { scale: s }, { scale: 1, duration: d, ease: 'power3.out', immediateRender: false }, at);
+      const sheen = (at) => { tl.fromTo('#sheen', { x: 0, opacity: 1 }, { x: 1900, opacity: 1, duration: 0.6, ease: 'power2.inOut', immediateRender: false }, at); tl.set('#sheen', { opacity: 0 }, at + 0.6); };
+
+      // ---------- shots (points in the 1080x1920 frame) ----------
+      // shield 3/4 (450, 990); front carbon centre (540, 930), right temple shield (960, 840); pouch glasses (450, 900); flat lay glasses (525, 1035)
+      gsap.set('#s1', frame(450, 990, 2.1));
+      tl.fromTo('#s1', frame(450, 990, 2.1), { ...frame(450, 990, 1.85), duration: b(2), ease: 'power2.out', immediateRender: false }, 0);
+      tl.fromTo('#s2', frame(540, 900, 1.15), { ...frame(540, 900, 1.25), duration: b(2), ease: 'none', immediateRender: false }, b(2));
+      // drop: front on carbon, push in
+      tl.fromTo('#s3', frame(540, 930, 1.0), { ...frame(540, 930, 1.1), duration: b(2), ease: 'sine.out', immediateRender: false }, b(4));
+      // hard cuts, one detail per beat
+      tl.fromTo('#s4', { ...frame(900, 860, 2.2), x: '-=90' }, { ...frame(900, 860, 2.0), duration: B, ease: 'expo.out', immediateRender: false }, b(6));
+      tl.fromTo('#s5', frame(450, 900, 1.5), { ...frame(450, 900, 1.4), duration: B, ease: 'power2.out', immediateRender: false }, b(7));
+      tl.fromTo('#s6', { ...frame(450, 990, 1.25), y: '+=100', filter: 'blur(8px)' }, { ...frame(450, 990, 1.2), filter: 'blur(0px)', duration: 0.3, ease: 'expo.out', immediateRender: false }, b(8));
+      tl.fromTo('#s7', frame(540, 700, 1.0), { ...frame(540, 700, 1.08), duration: B, ease: 'none', immediateRender: false }, b(9));
+      // flat lay with the Varilux card, slow pull back
+      tl.fromTo('#s8', frame(560, 1150, 1.3), { ...frame(560, 1150, 1.12), duration: b(2), ease: 'power2.out', immediateRender: false }, b(10));
+      tl.fromTo('#s9', frame(700, 1000, 1.0), { ...frame(700, 1000, 1.08), duration: b(2), ease: 'none', immediateRender: false }, b(12));
+      tl.fromTo('#s10', { ...frame(540, 1000, 1.15), x: '+=80' }, { ...frame(540, 1000, 1.05), duration: b(2), ease: 'power3.out', immediateRender: false }, b(14));
+      tl.fromTo('#s11', frame(540, 1050, 1.0), { ...frame(540, 1050, 1.06), duration: b(2), ease: 'none', immediateRender: false }, b(16));
+      // end: the shield shot softens under the veil
+      tl.fromTo('#s12', frame(540, 960, 1.1), { ...frame(540, 960, 1.0), duration: b(3), ease: 'power2.out', immediateRender: false }, b(18));
+      tl.fromTo('#veil', { opacity: 0 }, { opacity: 1, duration: B * 1.1, ease: 'sine.inOut', immediateRender: false }, b(18));
+      tl.fromTo('#s12', { filter: 'blur(0px)' }, { filter: 'blur(6px)', duration: B * 1.1, ease: 'sine.inOut', immediateRender: false }, b(18));
+
+      // ---------- hook: frame 0 slams in ----------
+      tl.fromTo('#punch', { scale: 1.35, filter: 'blur(18px)' }, { scale: 1, filter: 'blur(0px)', duration: 0.15, ease: 'power3.out', immediateRender: false }, 0);
+      tl.fromTo('#flash', { opacity: 0.8 }, { opacity: 0, duration: 0.3, ease: 'power2.out', immediateRender: false }, 0);
+      tl.to('#punch', { keyframes: { x: [0, -16, 12, -7, 4, 0], y: [0, 8, -6, 3, 0, 0] }, duration: 0.3, ease: 'none' }, 0.12);
+      sheen(0.3);
+      punch(b(1), 1.04, B * 0.8); punch(b(2)); punch(b(3), 1.04, B * 0.8);
+      // yellow stripe wipe into the drop
+      tl.fromTo('#stripe', { x: -1400, opacity: 1 }, { x: 1400, duration: 0.45, ease: 'power3.inOut', immediateRender: false }, b(4) - 0.2);
+      tl.fromTo('#flash', { opacity: 0.6 }, { opacity: 0, duration: 0.4, ease: 'power2.out', immediateRender: false }, b(4));
+      punch(b(4), 1.14, 0.3);
+      tl.to('#punch', { keyframes: { x: [0, 14, -10, 5, 0] }, duration: 0.24, ease: 'none' }, b(4) + 0.05);
+      punch(b(5), 1.03, B * 0.8);
+      [6, 7, 8, 9].forEach((n) => punch(b(n), 1.1, 0.25));
+      punch(b(10), 1.06, 0.3); punch(b(12), 1.08, 0.3); punch(b(14), 1.08, 0.3); punch(b(16), 1.05, 0.3);
+      sheen(b(11)); sheen(b(16) + 0.2);
+
+      // ---------- type ----------
+      letterFade(q('t0', 1), 0.2, 0.03);
+      wordsGlide(q('t0', 2), b(2) + 0.05, -60);
+      tl.to(`${q('t0', 1)} .ch, ${q('t0', 2)} .w`, { opacity: 0, duration: 0.18, stagger: 0.01 }, b(4) - 0.22);
+
+      bounceIn(q('t1', 1), b(4) + 0.06);
+      tl.from(`${q('t1', 2)} .ch`, { scale: 0, rotation: 180, duration: 0.4, ease: 'back.out(3)' }, b(4) + 0.4);
+      bounceIn(q('t1', 3), b(5));
+      letterFade(q('t1', 4), b(5) + 0.3, 0.03);
+      hop(q('t1', 1), b(6)); hop(q('t1', 3), b(7));
+      bounceOut(`${q('t1', 1)}, ${q('t1', 2)}, ${q('t1', 3)}, ${q('t1', 4)}`, b(8) - 0.28);
+
+      letterFade(q('t2', 1), b(8), 0.03);
+      slideUp(q('t2', 2), b(8) + 0.1);
+      hop(q('t2', 2), b(10));
+      wordsGlide(q('t2', 3), b(10) + 0.1, 60);
+      hop(q('t2', 2), b(11));
+      tl.to(`${q('t2', 1)} .ch, ${q('t2', 2)} .ch`, { y: -40, opacity: 0, duration: 0.22, ease: 'power2.in', stagger: 0.01 }, b(12) - 0.25);
+      tl.to(`${q('t2', 3)} .w`, { opacity: 0, x: 40, duration: 0.2, stagger: 0.03 }, b(12) - 0.25);
+
+      bounceIn(q('t3', 1), b(12) + 0.05, 0.025);
+      bounceIn(q('t3', 2), b(13), 0.025);
+      hop(q('t3', 1), b(14)); hop(q('t3', 2), b(15));
+      bounceOut(`${q('t3', 1)}, ${q('t3', 2)}`, b(16) - 0.28);
+
+      wordsGlide(q('t4', 1), b(16) + 0.05, -60);
+      tl.to(`${q('t4', 1)} .w`, { opacity: 0, y: -20, duration: 0.2, stagger: 0.03 }, b(18) - 0.25);
+
+      wordsGlide(q('t5', 1), b(19), 60);
+
+      // ---------- brand ----------
+      tl.from('#blogo', { opacity: 0, x: -30, duration: 0.4, ease: 'power2.out' }, 0.1);
+      tl.from('#logo b', { y: -30, opacity: 0, duration: 0.6, ease: 'power2.out', stagger: B / 6 }, b(1));
+      tl.fromTo('#logo .shine i', { x: -90 }, { x: 320, duration: B * 1.5, ease: 'power2.inOut' }, b(2));
+      tl.to('#logo', { y: 960 - 24 - 1415 - 40, scale: 2.7, duration: B * 1.1, ease: 'expo.out' }, b(18));
+      tl.to('#logo', { scale: 2.85, duration: b(3) - B * 1.1, ease: 'none' }, b(18) + B * 1.1);
+      tl.from('#rule', { scaleX: 0, duration: B, ease: 'power3.out' }, b(18) + 0.4);
+      [19, 20].forEach((n) => tl.to('#logo b', { keyframes: { y: [0, -10, 0] }, duration: B * 0.8, ease: 'sine.inOut', stagger: 0.03 }, b(n)));
+      tl.fromTo('#logo .shine i', { x: -90 }, { x: 320, duration: B * 1.3, ease: 'power2.inOut', immediateRender: false }, b(19) + 0.2);
+
+      window.__timelines['main'] = tl;
+      tl.seek(0);
+    </script>
+  </body>
+</html>

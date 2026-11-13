@@ -58,11 +58,14 @@ HyperFrames renders need system FFmpeg/ffprobe on PATH: `winget install --id Gya
    Verify each repo and file name on Hugging Face before downloading; if a name changed, keep the file names above or update the node inputs in `tools/wan.py`.
 5. Test: `python tools/wan.py posts/_example/export/post.png "slow camera push in" tmp/wan-test.mp4 --seconds 2 --steps 8`. On a card with 6 GB keep `--size 480x848`; with more VRAM a bigger size is fine.
 
+6. Free local text-to-image (same ComfyUI): `tools/flux.py` uses FLUX.1 schnell GGUF — download the 4 files listed at the top of that script into `~/ComfyUI/models` (~10.7 GB). Test: `python tools/flux.py "a pencil sketch of a cat" tmp/flux-test.png`.
+
 When steps 1–7 are done (and 8, or it was skipped with a reason), tell the user in Thai that setup is done and they can say "สุ่มแว่น".
 
 ## Notes
 - Default job (policy since 2026-09-18): `.claude/skills/frame-kit/SKILL.md` — random frame + photos, cutout layers, style profile and Codex prompts in `kits/`. The user no longer wants finished posts; `.claude/skills/daily-post/SKILL.md` is kept only for when they explicitly ask for one.
 - Clips: glasses beat clips = `.claude/skills/beat-clip/SKILL.md`; 15-second eye-break / close-your-eyes clips (person or nature look) = `.claude/skills/eye-break-clip/SKILL.md`.
+- Free FLUX redraw of a ChatGPT/Codex picture ("เอาให้เหมือน ChatGPT") = `.claude/skills/flux-like-chatgpt/SKILL.md`.
 - Carousels (multi-slide posts) live in `carousel/` — line-art styles in `carousel/styles/`, one kit per carousel in `carousel/kits/` (copy `_template`); see `carousel/README.md`.
 - `tmp/` is scratch space (Codex writes its text replies there); it can be empty.
 - House rules from the original machine: every post and clip is English-only; posts carry `brand/store-lineart.png` faint at the top right, clips do not (user, 2026-09-25) but carry the moving TIMEOPTIC wordmark, the frame brand's logo at the top left (`brand/partner-logos/`) and the glasses from several angles with detail punch-ins, on backgrounds calm enough that the glasses stand out; cutout glasses in clips get a lens layer so they don't look empty. Ask for the price/promo each time a promo clip is made (there is no price file). Images for clips are generated text-free; text lives in the HTML layer. Music is added later by the user.

@@ -34,3 +34,4 @@ Each episode's end card teases the next one.
 | 08 | `EP08_in-your-eyes` | chemical in the eye = rinse 15 min + doctor, don't rub grit, one eye misjudges depth (viewer pen test) |
 | 09 | `EP09_fog-road` | low beams in fog, fog makes things look farther, halos = uncorrected sight/astigmatism, astigmatism dial (viewer test) |
 | 10 | `EP10_last-night` | presbyopia from ~40, yearly eye exam, near point (viewer finger test); season 1 finale |
+| 11 | `EP11_one-year-later` | glaucoma takes side vision first with no pain, lost vision can't return, doctor's 3 checks, side-vision test (viewer, can't clear anyone); season 2 opener; teases EP12 "ถ้าโลกเริ่มขุ่น" (cataract) |
