@@ -25,3 +25,6 @@ desktop.ini
 # Over GitHub 100 MB limit (re-render from the kit)
 kits/2026-11-05_huahin-uv-th/export/huahin-uv_th.mp4
 kits/2026-11-05_huahin-uv-th/export/huahin-uv_th_v2.mp4
+
+# FLUX seed outputs (re-make with carousel/stories/gen.sh, seeds are fixed)
+carousel/kits/**/raw/
