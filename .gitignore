@@ -28,3 +28,6 @@ kits/2026-11-05_huahin-uv-th/export/huahin-uv_th_v2.mp4
 
 # FLUX seed outputs (re-make with carousel/stories/gen.sh, seeds are fixed)
 carousel/kits/**/raw/
+
+# Reels rebuilt by carousel/stories/reel.sh (carry the user's music)
+carousel/kits/**/export/reel.mp4
