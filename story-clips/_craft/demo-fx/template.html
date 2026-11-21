@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="th">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=1920, height=1080" />
+    <!-- fx.js + sound.py test scene (story-clips/_craft): rain/fog/lightning street, flickering shop + ghost warp, impact/speed lines,
+         memory flashback (boil + film + petals), dawn rays + dust, iris out. Sound = audio/bed.py with the real SFX library. -->
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/gsap.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@600;800&display=swap" rel="stylesheet" />
+    <style>
+      * { margin: 0; padding: 0; box-sizing: border-box; }
+      html, body { width: 1920px; height: 1080px; overflow: hidden; background: #000; }
+      #root { position: relative; width: 1920px; height: 1080px; overflow: hidden; }
+      .scene { position: absolute; inset: 0; overflow: hidden; opacity: 0; }
+      svg { display: block; overflow: visible; }
+      #lab div { position: absolute; left: 0; top: 0; white-space: nowrap; }
+      #lab { position: absolute; left: 40px; top: 30px; font: 600 34px Prompt; color: #fff; -webkit-text-stroke: 6px #000; paint-order: stroke fill; z-index: 60; }
+      .vig { position: absolute; inset: 0; background: radial-gradient(ellipse at 50% 48%, rgba(0,0,0,0) 45%, rgba(0,0,0,.6) 100%); z-index: 30; pointer-events: none; }
+      #bam { position: absolute; left: 1180px; top: 170px; font: 800 150px Prompt; color: #ffe14a; -webkit-text-stroke: 12px #000; paint-order: stroke fill; transform: rotate(-12deg); opacity: 0; z-index: 35; }
+    </style>
+  </head>
+  <body>
+    <div id="root" data-composition-id="main" data-start="0" data-duration="25" data-width="1920" data-height="1080">
+      <svg width="0" height="0" style="position:absolute"><defs><radialGradient id="gGhost"><stop offset="0" stop-color="#bff3ff" stop-opacity=".55" /><stop offset="1" stop-color="#bff3ff" stop-opacity="0" /></radialGradient></defs></svg>
+      <div id="street" class="scene" style="opacity:1"><div class="cam">
+        <div class="layer bg" id="stBg" style="--d:.8"><img src="assets/ext.png" /></div>
+        <div class="layer" style="--d:1"><svg width="1920" height="1080" viewBox="0 0 1920 1080" id="stCh"></svg></div>
+        <div class="layer" style="--d:1.25"><svg width="1920" height="1080" viewBox="0 0 1920 1080" id="stFx"></svg></div></div></div>
+      <div id="shop" class="scene"><div class="cam">
+        <div class="layer bg" id="shBg" style="--d:.8"><img src="assets/shop.png" /></div>
+        <div class="layer" style="--d:.95"><svg width="1920" height="1080" viewBox="0 0 1920 1080" id="shMid"></svg></div>
+        <div class="layer" id="shChL" style="--d:1"><svg width="1920" height="1080" viewBox="0 0 1920 1080" id="shCh"></svg></div></div></div>
+      <div id="mem" class="scene"><div class="cam">
+        <div class="layer bg" id="meBg" style="--d:.8"><img src="assets/shop.png" /></div>
+        <div class="layer" id="meChL" style="--d:1"><svg width="1920" height="1080" viewBox="0 0 1920 1080" id="meCh"></svg></div></div></div>
+      <div id="dawnS" class="scene"><div class="cam">
+        <div class="layer bg" id="daBg" style="--d:.8"><img src="assets/shop.png" /></div>
+        <div class="layer" style="--d:.95"><svg width="1920" height="1080" viewBox="0 0 1920 1080" id="daMid"></svg></div>
+        <div class="layer" style="--d:1"><svg width="1920" height="1080" viewBox="0 0 1920 1080" id="daCh"></svg></div></div></div>
+      <div id="bam">ตึง!</div>
+      <div class="vig"></div>
+      <div id="lab"></div>
+    </div>
+    <script>
+      window.__timelines = window.__timelines || {};
+      const tl = gsap.timeline({ paused: true });
+      /*RIG*/
+      /*FX*/
+      const R = Rig(tl, { seed: 4 }), X = FX(tl, { seed: 9 }), F = R.F, $ = id => document.getElementById(id);
+      let labPrev = null; const lab = (t, s) => { const d = document.createElement('div'); d.textContent = s; d.style.opacity = 0; $('lab').appendChild(d);
+        tl.set(d, { opacity: 1 }, t); if (labPrev) tl.set(labPrev, { opacity: 0 }, t); labPrev = d; };
+      const CUES = window.__cues = {};   // times the sound bed reads (via fxlog-like dump) — kept in sync by hand in audio/bed.py
+
+      // ---- 1. rainy night street (0–5.5): rain 3 depths, fog, lightning, walk with footsteps ----
+      lab(0, '1 rain · fog · lightning · walk');
+      const c1 = R.cam('#street'); c1.set(0, { px: 900, py: 600, s: 1.08 }).move(0, 5.5, { px: 700, py: 640, s: 1.2 }, 'sine.inOut');
+      X.grade('#stBg', 0, 'night');
+      X.fog($('stCh'), 0, 5.5, { y: 820, op: .55 });
+      const t1 = R.puppet($('stCh'), { x: 1500, y: 960, s: .42 }, R.LOOKS.ton); R.breathe(t1, 0, 6); R.blinks(t1, 0, 6);
+      R.walk(t1, .4, 4.4, { x: 760, y: 930, s: .38 }, { step: .5 });
+      X.particles($('stFx'), 'rain', 0, 5.6, { angle: 10 });
+      X.lightning(2.2, '#stBg', { back: X.GRADES.night });
+      R.dip(5.2, .6, 'street', 'shop');
+
+      // ---- 2. shop: flicker, ghost appears with warp (5.5–11) ----
+      lab(5.5, '2 flicker · ghost appear + warp');
+      const c2 = R.cam('#shop'); c2.set(5.5, { px: 960, py: 600, s: 1.1 }).drift(5.5, 11, 4);
+      const lamp = R.el('circle', { cx: 1450, cy: 120, r: 280, fill: 'url(#gGhost)' }, $('shMid')); lamp.setAttribute('style', 'mix-blend-mode:screen');
+      X.flicker('#shBg', 5.8, 10.5, { lo: .45 }); X.flicker(lamp, 5.8, 10.5, { lo: .1 });
+      X.particles($('shMid'), 'dust', 5.5, 11, { box: [1100, 60, 700, 700], n: 40 });
+      const t2 = R.puppet($('shCh'), { x: 480, y: 1050, s: .86 }, R.LOOKS.ton), j2 = R.puppet($('shCh'), { x: 1440, y: 1040, s: .86 }, R.LOOKS.jan);
+      R.breathe(t2, 5.5, 11); R.blinks(t2, 5.5, 11, [[8, 11]]); R.breathe(j2, 5.5, 11); R.blinks(j2, 7, 11);
+      R.look(t2, 6.6, .8, 0); R.appear(j2, 7.2); X.ghostWarp('#shChL', 7.2, 8.8, 16);
+      c2.move(7.2, 1.4, { px: 1300, py: 640, s: 1.35 }, 'power2.inOut');
+      // ---- 3. impact + speed lines + comic text (9–11) ----
+      lab(9.0, '3 impact frame · speed lines · shake');
+      c2.set(9.0, { px: 480, py: 640, s: 1.6 }); R.emote(t2, 9.0, 'shock'); X.impact(9.0, 480, 560, $('shMid')); c2.shake(9.0, .5, 16);
+      tl.fromTo('#bam', { opacity: 0, scale: 1.6 }, { opacity: 1, scale: 1, duration: 3 * F, ease: 'power3.out', immediateRender: false }, 9.0); tl.to('#bam', { opacity: 0, duration: .3 }, 10.4);
+      X.glitch('#shop', 10.85, .3); R.cut(11.1, 'shop', 'mem');
+
+      // ---- 4. memory flashback: sepia + boil + film + petals (11.1–17) ----
+      lab(11.1, '4 memory: sepia · line boil · film · petals');
+      const c3 = R.cam('#mem'); c3.set(11.1, { px: 960, py: 600, s: 1.15 }).move(11.1, 5.9, { px: 1100, py: 620, s: 1.3 });
+      X.grade('#meBg', 11.1, 'memory'); tl.set('#meBg', { '--blur': 3 }, 11.1);
+      const jm = R.puppet($('meCh'), { x: 900, y: 1040, s: .86 }, { ...R.LOOKS.jan, ghost: false, skin: '#f1dcc3', hairCol: '#2b2420', shawl: '#b98a6a', top: '#efe5cf' });
+      const cm = R.puppet($('meCh'), { x: 1250, y: 1050, s: .55 }, { ...R.LOOKS.ton, hairCol: '#2b2420', top: '#5a7aa0', glasses: null });
+      R.breathe(jm, 11, 17); R.blinks(jm, 11, 17); R.breathe(cm, 11, 17); R.blinks(cm, 11, 17);
+      R.emote(jm, 11.6, 'tender'); R.look(cm, 11.4, -.7, -.3); R.emote(cm, 12.2, 'joy'); R.wave(cm, 13.4, 3);
+      X.boil('#meChL svg', 11.1, 17, 2);
+      X.film(11.1, 17, { grain: .22, weave: '#mem' });
+      X.particles($('meCh'), 'petals', 11.1, 17, { n: 14 });
+      R.dip(16.6, 1.0, 'mem', 'dawnS', '#fff');
+
+      // ---- 5. dawn: rays + dust, birds; iris out (17.1–25) ----
+      lab(17.1, '5 dawn grade · god rays · dust · iris out');
+      const c4 = R.cam('#dawnS'); c4.set(17.1, { px: 1000, py: 600, s: 1.25 }).move(17.1, 6, { px: 1000, py: 600, s: 1.1 }, 'sine.out');
+      X.grade('#daBg', 17.1, 'night'); X.grade('#daBg', 17.4, 'dawn', 3);
+      X.rays($('daMid'), 17.4, 25, { x: 1350, angle: 28, op: .85 }); X.particles($('daMid'), 'dust', 17.4, 25, { box: [1100, 0, 800, 900], n: 45 });
+      const t4 = R.puppet($('daCh'), { x: 820, y: 1050, s: .86 }, R.LOOKS.ton); R.breathe(t4, 17, 25); R.blinks(t4, 17, 25);
+      R.emote(t4, 18.4, 'happy'); R.look(t4, 19.6, .6, -.4); R.emote(t4, 20.8, 'tender');
+      X.iris('#dawnS', 23.2, 1.4, 820, 640, 'out');
+
+      tl.set({}, {}, 25);
+      window.__timelines['main'] = tl; tl.seek(0);
+    </script>
+  </body>
+</html>

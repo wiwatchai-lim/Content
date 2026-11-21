@@ -31,3 +31,9 @@ carousel/kits/**/raw/
 
 # Reels rebuilt by carousel/stories/reel.sh (carry the user's music)
 carousel/kits/**/export/reel.mp4
+
+# Story-clip check frames (re-make with hyperframes snapshot)
+story-clips/**/snap/
+story-clips/**/snap2/
+# Over GitHub 100 MB limit (re-render with make.sh)
+story-clips/night-optic/EP01_golden-frames/export/EP01_golden-frames_th.mp4

@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="th">
+<head>
+<meta charset="utf-8">
+<title>EP01 รถเมล์คันถัดไป</title>
+<link href="https://fonts.googleapis.com/css2?family=Sriracha&family=Cormorant+Garamond:ital@1&display=swap" rel="stylesheet">
+<style>
+  :root { --paper: 239, 232, 218; --ink: #3a332c; --brown: #6b5440; }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html, body { width: 1080px; height: 1920px; overflow: hidden; background: rgb(var(--paper)); }
+  .stage { position: absolute; inset: 0; overflow: hidden; }
+
+  /* picture + things that live inside it move together (slow push toward the road) */
+  .cam { position: absolute; inset: 0; transform-origin: 75% 38%;
+         animation: cam 20s cubic-bezier(.45,0,.55,1) both; }
+  @keyframes cam { 0% { transform: scale(1.03); } 30% { transform: scale(1.05); }
+                   65% { transform: scale(1.10) translateX(-10px); } 100% { transform: scale(1.17) translateX(-24px); } }
+  .cam img { position: absolute; left: 50%; top: 0; height: 1920px; transform: translateX(-50%); }
+
+  /* streetlamp breathing + far headlights appearing in scene 3 */
+  .glow { position: absolute; border-radius: 50%; pointer-events: none; }
+  .lamp { left: 168px; top: 610px; width: 150px; height: 150px;
+          background: radial-gradient(rgba(255,226,170,.55), rgba(255,226,170,0) 65%);
+          animation: lamp 3.2s ease-in-out infinite alternate; }
+  @keyframes lamp { from { opacity: .55; } to { opacity: .9; } }
+  .head { width: 120px; height: 120px; top: 1004px;
+          background: radial-gradient(rgba(255,214,120,1) 0, rgba(255,200,110,.75) 14%, rgba(255,214,140,0) 60%);
+          animation: head 20s linear both; }
+  .head.l { left: 846px; } .head.r { left: 960px; }
+  @keyframes head { 0%, 68% { opacity: 0; transform: scale(.6); } 88%, 100% { opacity: 1; transform: scale(1.1); } }
+
+  /* pencil rain, two depths; each loop moves exactly one tile so it repeats seamlessly */
+  .rain { position: absolute; inset: -40px; background-repeat: repeat; }
+  .rain.far  { background-image: url(rain-far.png);  animation: fall 1.2s linear infinite; opacity: .8; }
+  .rain.near { background-image: url(rain-near.png); animation: fall .6s linear infinite; opacity: .7; }
+  @keyframes fall { from { background-position: 0 0; } to { background-position: -65px 540px; } }
+
+  /* paper wash at the top for the words, grain + vignette */
+  .wash { position: absolute; left: 0; right: 0; top: 0; height: 820px;
+          background: linear-gradient(rgba(var(--paper),.96) 0, rgba(var(--paper),.92) 420px, rgba(var(--paper),0) 820px); }
+  .vig { position: absolute; inset: 0; box-shadow: inset 0 0 220px rgba(70,55,40,.35); }
+
+  .lines { position: absolute; left: 0; right: 0; top: 175px; text-align: center;
+           font-family: 'Sriracha', cursive; color: var(--ink);
+           text-shadow: 0 0 18px rgb(var(--paper)), 0 0 6px rgb(var(--paper)); }
+  .line { font-size: 54px; line-height: 1.5; white-space: nowrap; opacity: 0; }
+  .line + .line { margin-top: 30px; color: var(--brown); }
+  .a { animation: inA 20s ease-out both; }
+  .b { animation: inB 20s ease-out both; }
+  @keyframes inA { 0%, 5% { opacity: 0; transform: translateY(14px); filter: blur(4px); }
+                   14%, 92% { opacity: 1; transform: none; filter: none; } 98%, 100% { opacity: 0; } }
+  @keyframes inB { 0%, 33% { opacity: 0; transform: translateY(14px); filter: blur(4px); }
+                   43%, 92% { opacity: 1; transform: none; filter: none; } 98%, 100% { opacity: 0; } }
+  .tag { margin-top: 60px; font-family: 'Cormorant Garamond', serif; font-style: italic; font-size: 34px;
+         letter-spacing: 6px; color: #8a7560; opacity: 0; animation: tag 20s ease-out both; }
+  @keyframes tag { 0%, 68% { opacity: 0; } 78%, 92% { opacity: .85; } 98%, 100% { opacity: 0; } }
+
+  .fade { position: absolute; inset: 0; background: rgb(var(--paper)); animation: fade 20s linear both; }
+  @keyframes fade { 0% { opacity: 1; } 4% { opacity: 0; } 95% { opacity: 0; } 100% { opacity: 1; } }
+</style>
+</head>
+<body data-width="1080" data-height="1920" data-duration="20" data-fps="30">
+<div class="stage">
+  <div class="cam">
+    <img src="img/scene.png" alt="">
+    <div class="glow lamp"></div>
+    <div class="glow head l"></div>
+    <div class="glow head r"></div>
+  </div>
+  <div class="rain far"></div>
+  <div class="rain near"></div>
+  <div class="wash"></div>
+  <div class="vig"></div>
+  <div class="lines">
+    <p class="line a">ทุกคนขึ้นรถไปกันหมดแล้ว<br>เหลือแต่เราที่ยังยืนรออยู่ตรงนี้</p>
+    <p class="line b">ก็เพราะคันของเรายังมาไม่ถึง<br>ไม่ได้แปลว่าเราตกรถสักหน่อย</p>
+  </div>
+  <div class="fade"></div>
+</div>
+</body>
+</html>

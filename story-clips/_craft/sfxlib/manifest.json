@@ -1,0 +1,832 @@
+{
+ "footsteps-wooden-floor": {
+  "file": "foley/footsteps-wooden-floor.wav",
+  "query": "footsteps wooden floor",
+  "category": "foley",
+  "duration": 4.01,
+  "title": "Footsteps on Wooden Floor.aif",
+  "creator": "ftpalad",
+  "license": "cc0",
+  "source": "https://freesound.org/people/ftpalad/sounds/119914"
+ },
+ "footsteps-gravel": {
+  "file": "foley/footsteps-gravel.wav",
+  "query": "footsteps gravel",
+  "category": "foley",
+  "duration": 5.16,
+  "title": "Footsteps Gravel Running-Stop",
+  "creator": "KikeVilaplana",
+  "license": "cc0",
+  "source": "https://freesound.org/people/KikeVilaplana/sounds/436525"
+ },
+ "footsteps-running": {
+  "file": "foley/footsteps-running.wav",
+  "query": "footsteps running",
+  "category": "foley",
+  "duration": 8.0,
+  "title": "Footsteps running on the floor.mp3",
+  "creator": "Caitlin_100",
+  "license": "cc0",
+  "source": "https://freesound.org/people/Caitlin_100/sounds/365617"
+ },
+ "door-creak": {
+  "file": "foley/door-creak.wav",
+  "query": "door creak",
+  "category": "foley",
+  "duration": 1.27,
+  "title": "Door - Creak 02.wav",
+  "creator": "JarredGibb",
+  "license": "cc0",
+  "source": "https://freesound.org/people/JarredGibb/sounds/219492"
+ },
+ "door-knock": {
+  "file": "foley/door-knock.wav",
+  "query": "door knock",
+  "category": "foley",
+  "duration": 1.18,
+  "title": "Door knocking (Angry).wav",
+  "creator": "Macif",
+  "license": "cc0",
+  "source": "https://freesound.org/people/Macif/sounds/194365"
+ },
+ "door-close": {
+  "file": "foley/door-close.wav",
+  "query": "door close",
+  "category": "foley",
+  "duration": 1.09,
+  "title": "Door closing, door closed",
+  "creator": "steinhyrningur",
+  "license": "cc0",
+  "source": "https://freesound.org/people/steinhyrningur/sounds/466864"
+ },
+ "door-slam": {
+  "file": "foley/door-slam.wav",
+  "query": "door slam",
+  "category": "foley",
+  "duration": 8.0,
+  "title": "Door Slammed",
+  "creator": "altfuture",
+  "license": "cc0",
+  "source": "https://freesound.org/people/altfuture/sounds/174643"
+ },
+ "key-lock-click": {
+  "file": "foley/key-lock-click.wav",
+  "query": "key lock click",
+  "category": "foley",
+  "duration": 1.45,
+  "title": "Car locking from the inside",
+  "creator": "Caitlin_100",
+  "license": "cc0",
+  "source": "https://freesound.org/people/Caitlin_100/sounds/384404"
+ },
+ "paper-rustle": {
+  "file": "foley/paper-rustle.wav",
+  "query": "paper rustle",
+  "category": "foley",
+  "duration": 0.92,
+  "title": "Paper Rustle",
+  "creator": "BenjaminNelan",
+  "license": "cc0",
+  "source": "https://freesound.org/people/BenjaminNelan/sounds/353125"
+ },
+ "page-turn": {
+  "file": "foley/page-turn.wav",
+  "query": "page turn",
+  "category": "foley",
+  "duration": 1.54,
+  "title": "Page Turn",
+  "creator": "davidbain",
+  "license": "cc0",
+  "source": "https://freesound.org/people/davidbain/sounds/136778"
+ },
+ "pen-writing": {
+  "file": "foley/pen-writing.wav",
+  "query": "pen writing",
+  "category": "foley",
+  "duration": 7.89,
+  "title": "pen write scribble dlugopis pisanie.MP3",
+  "creator": "blarz",
+  "license": "cc0",
+  "source": "https://freesound.org/people/blarz/sounds/208314"
+ },
+ "cloth-rustle": {
+  "file": "foley/cloth-rustle.wav",
+  "query": "cloth rustle",
+  "category": "foley",
+  "duration": 8.0,
+  "title": "Clothing rustles",
+  "creator": "trettfilms",
+  "license": "cc0",
+  "source": "https://freesound.org/people/trettfilms/sounds/128233"
+ },
+ "glasses-put-on-table": {
+  "file": "foley/glasses-put-on-table.wav",
+  "query": "glasses put on table",
+  "category": "foley",
+  "duration": 0.4,
+  "title": "BottlePut.flac",
+  "creator": "qubodup",
+  "license": "cc0",
+  "source": "https://freesound.org/people/qubodup/sounds/184285"
+ },
+ "drawer-open": {
+  "file": "foley/drawer-open.wav",
+  "query": "drawer open",
+  "category": "foley",
+  "duration": 0.58,
+  "title": "drawer. open",
+  "creator": "mitchanary",
+  "license": "cc0",
+  "source": "https://freesound.org/people/mitchanary/sounds/506147"
+ },
+ "chair-creak": {
+  "file": "foley/chair-creak.wav",
+  "query": "chair creak",
+  "category": "foley",
+  "duration": 8.0,
+  "title": "Chair creaking back and forth 01.wav",
+  "creator": "unkleceeg",
+  "license": "cc0",
+  "source": "https://freesound.org/people/unkleceeg/sounds/276473"
+ },
+ "cup-on-table": {
+  "file": "foley/cup-on-table.wav",
+  "query": "cup on table",
+  "category": "foley",
+  "duration": 4.1,
+  "title": "Set cup on Table FF314.aif",
+  "creator": "martinimeniscus",
+  "license": "cc0",
+  "source": "https://freesound.org/people/martinimeniscus/sounds/199446"
+ },
+ "pour-water": {
+  "file": "foley/pour-water.wav",
+  "query": "pour water",
+  "category": "foley",
+  "duration": 7.49,
+  "title": "Pouring Water",
+  "creator": "runirasmussen",
+  "license": "cc0",
+  "source": "https://freesound.org/people/runirasmussen/sounds/172377"
+ },
+ "match-strike": {
+  "file": "foley/match-strike.wav",
+  "query": "match strike",
+  "category": "foley",
+  "duration": 2.92,
+  "title": "Match - Strike and Light 02.wav",
+  "creator": "JarredGibb",
+  "license": "cc0",
+  "source": "https://freesound.org/people/JarredGibb/sounds/248236"
+ },
+ "light-switch": {
+  "file": "foley/light-switch.wav",
+  "query": "light switch",
+  "category": "foley",
+  "duration": 3.66,
+  "title": "Light Switch Click On and Off",
+  "creator": "SomeoneCool15",
+  "license": "cc0",
+  "source": "https://freesound.org/people/SomeoneCool15/sounds/423512"
+ },
+ "shop-door-bell": {
+  "file": "objects/shop-door-bell.wav",
+  "query": "shop door bell",
+  "category": "objects",
+  "duration": 6.95,
+  "title": "Shop door bell.wav",
+  "creator": "775noise",
+  "license": "cc0",
+  "source": "https://freesound.org/people/775noise/sounds/494565"
+ },
+ "wind-chime": {
+  "file": "objects/wind-chime.wav",
+  "query": "wind chime",
+  "category": "objects",
+  "duration": 2.07,
+  "title": "Wind Chime (G-003) +.wav",
+  "creator": "GnoteSoundz",
+  "license": "cc0",
+  "source": "https://freesound.org/people/GnoteSoundz/sounds/169855"
+ },
+ "clock-ticking": {
+  "file": "objects/clock-ticking.wav",
+  "query": "clock ticking",
+  "category": "objects",
+  "duration": 5.2,
+  "title": "Clock ticking",
+  "creator": "olver",
+  "license": "cc0",
+  "source": "https://freesound.org/people/olver/sounds/130388"
+ },
+ "old-phone-ring": {
+  "file": "objects/old-phone-ring.wav",
+  "query": "old phone ring",
+  "category": "objects",
+  "duration": 8.0,
+  "title": "Old Phone Ringing",
+  "creator": "BennettFilmTeacher",
+  "license": "cc0",
+  "source": "https://freesound.org/people/BennettFilmTeacher/sounds/610191"
+ },
+ "radio-static": {
+  "file": "objects/radio-static.wav",
+  "query": "radio static",
+  "category": "objects",
+  "duration": 6.51,
+  "title": "FM Radio Static",
+  "creator": "caculo",
+  "license": "cc0",
+  "source": "https://freesound.org/people/caculo/sounds/347039"
+ },
+ "grinding-machine": {
+  "file": "objects/grinding-machine.wav",
+  "query": "grinding machine",
+  "category": "objects",
+  "duration": 5.7,
+  "title": "Coffee_machine.wav",
+  "creator": "tpd",
+  "license": "cc0",
+  "source": "https://freesound.org/people/tpd/sounds/263901"
+ },
+ "camera-shutter": {
+  "file": "objects/camera-shutter.wav",
+  "query": "camera shutter",
+  "category": "objects",
+  "duration": 1.13,
+  "title": "Camera Shutter Click",
+  "creator": "Kodack",
+  "license": "cc0",
+  "source": "https://freesound.org/people/Kodack/sounds/271010"
+ },
+ "bicycle-bell": {
+  "file": "objects/bicycle-bell.wav",
+  "query": "bicycle bell",
+  "category": "objects",
+  "duration": 2.39,
+  "title": "Bicycle Bell Ringing",
+  "creator": "Kinoton",
+  "license": "cc0",
+  "source": "https://freesound.org/people/Kinoton/sounds/431320"
+ },
+ "motorbike-pass": {
+  "file": "objects/motorbike-pass.wav",
+  "query": "motorbike pass",
+  "category": "objects",
+  "duration": 8.0,
+  "title": "MOTORCYCLE - 2",
+  "creator": "SamuelGremaud",
+  "license": "cc0",
+  "source": "https://freesound.org/people/SamuelGremaud/sounds/545760"
+ },
+ "car-pass-by": {
+  "file": "objects/car-pass-by.wav",
+  "query": "car pass by",
+  "category": "objects",
+  "duration": 5.16,
+  "title": "Car passing by.wav",
+  "creator": "hinzebeat",
+  "license": "cc0",
+  "source": "https://freesound.org/people/hinzebeat/sounds/171447"
+ },
+ "glass-shatter": {
+  "file": "objects/glass-shatter.wav",
+  "query": "glass shatter",
+  "category": "objects",
+  "duration": 3.3,
+  "title": "Glass Shattering and Falling",
+  "creator": "221Beimesche",
+  "license": "cc0",
+  "source": "https://freesound.org/people/221Beimesche/sounds/336425"
+ },
+ "coin-drop": {
+  "file": "objects/coin-drop.wav",
+  "query": "coin drop",
+  "category": "objects",
+  "duration": 1.28,
+  "title": "coin drop on concrete",
+  "creator": "PetervH",
+  "license": "cc0",
+  "source": "https://freesound.org/people/PetervH/sounds/324760"
+ },
+ "night-crickets": {
+  "file": "ambience/night-crickets.wav",
+  "query": "night crickets",
+  "category": "ambience",
+  "duration": 40.0,
+  "title": "Night Crickets Ambiance",
+  "creator": "nick121087",
+  "license": "cc0",
+  "source": "https://freesound.org/people/nick121087/sounds/476887"
+ },
+ "rain-on-roof": {
+  "file": "ambience/rain-on-roof.wav",
+  "query": "rain on roof",
+  "category": "ambience",
+  "duration": 24.37,
+  "title": "Raining on roof",
+  "creator": "Duasun",
+  "license": "cc0",
+  "source": "https://freesound.org/people/Duasun/sounds/468024"
+ },
+ "thunder": {
+  "file": "ambience/thunder.wav",
+  "query": "thunder",
+  "category": "ambience",
+  "duration": 27.55,
+  "title": "Thunder",
+  "creator": "Fission9",
+  "license": "cc0",
+  "source": "https://freesound.org/people/Fission9/sounds/465314"
+ },
+ "wind-howling": {
+  "file": "ambience/wind-howling.wav",
+  "query": "wind howling",
+  "category": "ambience",
+  "duration": 40.0,
+  "title": "Wind Howling thru window crack.mp3",
+  "creator": "DAVESTALKER",
+  "license": "cc0",
+  "source": "https://freesound.org/people/DAVESTALKER/sounds/331527"
+ },
+ "room-tone": {
+  "file": "ambience/room-tone.wav",
+  "query": "room tone",
+  "category": "ambience",
+  "duration": 40.0,
+  "title": "Room Tone Apartment Small Bachelor",
+  "creator": "leonelmail",
+  "license": "cc0",
+  "source": "https://freesound.org/people/leonelmail/sounds/329568"
+ },
+ "city-street-ambience": {
+  "file": "ambience/city-street-ambience.wav",
+  "query": "city street ambience",
+  "category": "ambience",
+  "duration": 16.3,
+  "title": "City Street Ambience Daytime w/ Ambulance Siren Doppler [Florence - Italy] 02",
+  "creator": "Skjor1",
+  "license": "cc0",
+  "source": "https://freesound.org/people/Skjor1/sounds/321753"
+ },
+ "forest-night": {
+  "file": "ambience/forest-night.wav",
+  "query": "forest night",
+  "category": "ambience",
+  "duration": 21.14,
+  "title": "Forest Night Ambience",
+  "creator": "EminYILDIRIM",
+  "license": "cc0",
+  "source": "https://freesound.org/people/EminYILDIRIM/sounds/595875"
+ },
+ "ocean-waves": {
+  "file": "ambience/ocean-waves.wav",
+  "query": "ocean waves",
+  "category": "ambience",
+  "duration": 40.0,
+  "title": "Gentle ocean waves fizzing bubbles.WAV",
+  "creator": "jackmichaelking",
+  "license": "cc0",
+  "source": "https://freesound.org/people/jackmichaelking/sounds/518669"
+ },
+ "market-crowd": {
+  "file": "ambience/market-crowd.wav",
+  "query": "market crowd",
+  "category": "ambience",
+  "duration": 18.0,
+  "title": "People 01.wav",
+  "creator": "VKProduktion",
+  "license": "cc0",
+  "source": "https://freesound.org/people/VKProduktion/sounds/244946"
+ },
+ "temple-bell": {
+  "file": "ambience/temple-bell.wav",
+  "query": "temple bell",
+  "category": "ambience",
+  "duration": 33.89,
+  "title": "Temple bells",
+  "creator": "zachrau",
+  "license": "cc0",
+  "source": "https://freesound.org/people/zachrau/sounds/232440"
+ },
+ "dog-barking-distant": {
+  "file": "ambience/dog-barking-distant.wav",
+  "query": "dog barking distant",
+  "category": "ambience",
+  "duration": 29.85,
+  "title": "Small dog barking.wav",
+  "creator": "Wax_vibe",
+  "license": "cc0",
+  "source": "https://freesound.org/people/Wax_vibe/sounds/635877"
+ },
+ "rooster-crow": {
+  "file": "ambience/rooster-crow.wav",
+  "query": "rooster crow",
+  "category": "ambience",
+  "duration": 2.55,
+  "title": "Rooster crow",
+  "creator": "jsbarrett",
+  "license": "cc0",
+  "source": "https://freesound.org/people/jsbarrett/sounds/200339"
+ },
+ "heartbeat": {
+  "file": "body/heartbeat.wav",
+  "query": "heartbeat",
+  "category": "body",
+  "duration": 3.59,
+  "title": "Four Heartbeats HQ_BeatSmith.wav",
+  "creator": "Lunardrive",
+  "license": "cc0",
+  "source": "https://freesound.org/people/Lunardrive/sounds/22416"
+ },
+ "gasp": {
+  "file": "body/gasp.wav",
+  "query": "gasp",
+  "category": "body",
+  "duration": 0.36,
+  "title": "Male Gasp 1.wav",
+  "creator": "jawbutch",
+  "license": "cc0",
+  "source": "https://freesound.org/people/jawbutch/sounds/344407"
+ },
+ "breath-scared": {
+  "file": "body/breath-scared.wav",
+  "query": "breath scared",
+  "category": "body",
+  "duration": 6.44,
+  "title": "Male_Breath_Scared_Frozen_Loop_Stereo.wav",
+  "creator": "Nox_Sound",
+  "license": "cc0",
+  "source": "https://freesound.org/people/Nox_Sound/sounds/554906"
+ },
+ "sigh": {
+  "file": "body/sigh.wav",
+  "query": "sigh",
+  "category": "body",
+  "duration": 5.06,
+  "title": "Sigh, male",
+  "creator": "giddster",
+  "license": "cc0",
+  "source": "https://freesound.org/people/giddster/sounds/336539"
+ },
+ "whisper": {
+  "file": "body/whisper.wav",
+  "query": "whisper",
+  "category": "body",
+  "duration": 3.09,
+  "title": "Creepy Whispering",
+  "creator": "RaspberryTickle",
+  "license": "cc0",
+  "source": "https://freesound.org/people/RaspberryTickle/sounds/234044"
+ },
+ "footstep-creak": {
+  "file": "body/footstep-creak.wav",
+  "query": "footstep creak",
+  "category": "body",
+  "duration": 5.62,
+  "title": "Creaking Wood 4 Steps",
+  "creator": "Rudmer_Rotteveel",
+  "license": "cc0",
+  "source": "https://freesound.org/people/Rudmer_Rotteveel/sounds/502507"
+ },
+ "swallow": {
+  "file": "body/swallow.wav",
+  "query": "swallow",
+  "category": "body",
+  "duration": 3.24,
+  "title": "swallow water.wav",
+  "creator": "anagar",
+  "license": "cc0",
+  "source": "https://freesound.org/people/anagar/sounds/267932"
+ },
+ "cartoon-boing": {
+  "file": "cartoon/cartoon-boing.wav",
+  "query": "cartoon boing",
+  "category": "cartoon",
+  "duration": 0.51,
+  "title": "Cartoon Boing.wav",
+  "creator": "reelworldstudio",
+  "license": "cc0",
+  "source": "https://freesound.org/people/reelworldstudio/sounds/161122"
+ },
+ "slide-whistle": {
+  "file": "cartoon/slide-whistle.wav",
+  "query": "slide whistle",
+  "category": "cartoon",
+  "duration": 5.3,
+  "title": "SLIDE WHISTLE - 1",
+  "creator": "SamuelGremaud",
+  "license": "cc0",
+  "source": "https://freesound.org/people/SamuelGremaud/sounds/517633"
+ },
+ "cartoon-pop": {
+  "file": "cartoon/cartoon-pop.wav",
+  "query": "cartoon pop",
+  "category": "cartoon",
+  "duration": 3.03,
+  "title": "Pop!.aif",
+  "creator": "oldedgar",
+  "license": "cc0",
+  "source": "https://freesound.org/people/oldedgar/sounds/97978"
+ },
+ "bonk": {
+  "file": "cartoon/bonk.wav",
+  "query": "bonk",
+  "category": "cartoon",
+  "duration": 1.05,
+  "title": "Nl-bonke af",
+  "creator": "Marcel coenders",
+  "license": "cc0",
+  "source": "https://commons.wikimedia.org/w/index.php?curid=164215423"
+ },
+ "zip-whoosh-cartoon": {
+  "file": "cartoon/zip-whoosh-cartoon.wav",
+  "query": "zip whoosh cartoon",
+  "category": "cartoon",
+  "duration": 6.67,
+  "title": "zip in and out marti cartoon 2.C.clip.wav",
+  "creator": "martian",
+  "license": "cc0",
+  "source": "https://freesound.org/people/martian/sounds/181803"
+ },
+ "cartoon-spring": {
+  "file": "cartoon/cartoon-spring.wav",
+  "query": "cartoon spring",
+  "category": "cartoon",
+  "duration": 0.38,
+  "title": "Boing Spring Mouth harp downward 1.wav",
+  "creator": "pan14",
+  "license": "cc0",
+  "source": "https://freesound.org/people/pan14/sounds/334031"
+ },
+ "squeak-toy": {
+  "file": "cartoon/squeak-toy.wav",
+  "query": "squeak toy",
+  "category": "cartoon",
+  "duration": 8.0,
+  "title": "squeak-toy-squeeze_full01.flac",
+  "creator": "Aiyumi",
+  "license": "cc0",
+  "source": "https://freesound.org/people/Aiyumi/sounds/245083"
+ },
+ "cartoon-run": {
+  "file": "cartoon/cartoon-run.wav",
+  "query": "cartoon run",
+  "category": "cartoon",
+  "duration": 4.73,
+  "title": "Funny Running Footsteps Slip into Glass Bottles and Crash.wav",
+  "creator": "WannyManny",
+  "license": "cc0",
+  "source": "https://freesound.org/people/WannyManny/sounds/609936"
+ },
+ "whoosh": {
+  "file": "design/whoosh.wav",
+  "query": "whoosh",
+  "category": "design",
+  "duration": 1.61,
+  "title": "Deep Whoosh #1",
+  "creator": "Kinoton",
+  "license": "cc0",
+  "source": "https://freesound.org/people/Kinoton/sounds/351256"
+ },
+ "swoosh-fast": {
+  "file": "design/swoosh-fast.wav",
+  "query": "swoosh fast",
+  "category": "design",
+  "duration": 0.33,
+  "title": "swosh-08.flac - 'stick cutting air'",
+  "creator": "qubodup",
+  "license": "cc0",
+  "source": "https://freesound.org/people/qubodup/sounds/59995"
+ },
+ "impact-boom": {
+  "file": "design/impact-boom.wav",
+  "query": "impact boom",
+  "category": "design",
+  "duration": 7.17,
+  "title": "Cinematic Impact Boom Metalic",
+  "creator": "EminYILDIRIM",
+  "license": "cc0",
+  "source": "https://freesound.org/people/EminYILDIRIM/sounds/535413"
+ },
+ "sub-drop": {
+  "file": "design/sub-drop.wav",
+  "query": "sub drop",
+  "category": "design",
+  "duration": 1.98,
+  "title": "SUB A# 2 secs.wav",
+  "creator": "uzerx",
+  "license": "cc0",
+  "source": "https://freesound.org/people/uzerx/sounds/63138"
+ },
+ "riser-tension": {
+  "file": "design/riser-tension.wav",
+  "query": "riser tension",
+  "category": "design",
+  "duration": 5.87,
+  "title": "rise-crash.wav",
+  "creator": "soneproject",
+  "license": "cc0",
+  "source": "https://freesound.org/people/soneproject/sounds/334522"
+ },
+ "reverse-cymbal": {
+  "file": "design/reverse-cymbal.wav",
+  "query": "reverse cymbal",
+  "category": "design",
+  "duration": 6.12,
+  "title": "Reverse Mapex Ride.mp3",
+  "creator": "MarcusGraham325",
+  "license": "cc0",
+  "source": "https://freesound.org/people/MarcusGraham325/sounds/240712"
+ },
+ "magic-sparkle": {
+  "file": "design/magic-sparkle.wav",
+  "query": "magic sparkle",
+  "category": "design",
+  "duration": 1.95,
+  "title": "GLEAM-GLOW-SFX-CHIME.wav",
+  "creator": "newagesoup",
+  "license": "cc0",
+  "source": "https://freesound.org/people/newagesoup/sounds/351408"
+ },
+ "shimmer": {
+  "file": "design/shimmer.wav",
+  "query": "shimmer",
+  "category": "design",
+  "duration": 3.41,
+  "title": "Shimmer",
+  "creator": "adh.dreaming",
+  "license": "cc0",
+  "source": "https://freesound.org/people/adh.dreaming/sounds/632344"
+ },
+ "stinger-horror": {
+  "file": "design/stinger-horror.wav",
+  "query": "stinger horror",
+  "category": "design",
+  "duration": 1.87,
+  "title": "Stinger 3.wav",
+  "creator": "AudioPapkin",
+  "license": "cc0",
+  "source": "https://freesound.org/people/AudioPapkin/sounds/441342"
+ },
+ "chime-soft": {
+  "file": "design/chime-soft.wav",
+  "query": "chime soft",
+  "category": "design",
+  "duration": 4.51,
+  "title": "Magic Wings - Soft",
+  "creator": "angelkunev",
+  "license": "cc0",
+  "source": "https://freesound.org/people/angelkunev/sounds/561287"
+ },
+ "tape-stop": {
+  "file": "design/tape-stop.wav",
+  "query": "tape stop",
+  "category": "design",
+  "duration": 4.56,
+  "title": "Keyfall + Tape stop effect",
+  "creator": "trader_one",
+  "license": "cc0",
+  "source": "https://freesound.org/people/trader_one/sounds/685354"
+ },
+ "glitch": {
+  "file": "design/glitch.wav",
+  "query": "glitch",
+  "category": "design",
+  "duration": 8.0,
+  "title": "glitch sound 1",
+  "creator": "dotY21",
+  "license": "cc0",
+  "source": "https://freesound.org/people/dotY21/sounds/277053"
+ },
+ "ghost-whoosh": {
+  "file": "design/ghost-whoosh.wav",
+  "query": "spooky whoosh",
+  "category": "design",
+  "duration": 2.48,
+  "title": "blowing.wav",
+  "creator": "helhel",
+  "license": "cc0",
+  "source": "https://freesound.org/people/helhel/sounds/346237"
+ },
+ "typewriter": {
+  "file": "objects/typewriter.wav",
+  "query": "typewriter typing",
+  "category": "objects",
+  "duration": 2.76,
+  "title": "Typewriter bell & carriage reset",
+  "creator": "knufds",
+  "license": "cc0",
+  "source": "https://freesound.org/people/knufds/sounds/345955"
+ },
+ "clock-chime": {
+  "file": "objects/clock-chime.wav",
+  "query": "grandfather clock chime",
+  "category": "objects",
+  "duration": 8.0,
+  "title": "MorfarsKlocka5.wav",
+  "creator": "mawiks",
+  "license": "cc0",
+  "source": "https://freesound.org/people/mawiks/sounds/54636"
+ },
+ "eerie-ambience": {
+  "file": "ambience/eerie-ambience.wav",
+  "query": "dark ambient drone",
+  "category": "ambience",
+  "duration": 29.14,
+  "title": "Action music loop with dark ambient drones",
+  "creator": "burning-mir",
+  "license": "cc0",
+  "source": "https://freesound.org/people/burning-mir/sounds/155139"
+ },
+ "morning-birds": {
+  "file": "ambience/morning-birds.wav",
+  "query": "birds chirping morning",
+  "category": "ambience",
+  "duration": 30.54,
+  "title": "bird chirps3.wav",
+  "creator": "keweldog",
+  "license": "cc0",
+  "source": "https://freesound.org/people/keweldog/sounds/182796"
+ },
+ "canal-water-lapping": {
+  "file": "ambience/canal-water-lapping.wav",
+  "query": "river water flowing",
+  "category": "ambience",
+  "duration": 31.7,
+  "title": "fish in river.WAV",
+  "creator": "13FPanska_Krug_Antonin",
+  "license": "cc0",
+  "source": "https://freesound.org/people/13FPanska_Krug_Antonin/sounds/378300"
+ },
+ "horror-drone": {
+  "file": "ambience/horror-drone.wav",
+  "query": "low dark drone",
+  "category": "ambience",
+  "duration": 11.78,
+  "title": "Mechanical Synth Swell.wav",
+  "creator": "Stereo Surgeon",
+  "license": "cc0",
+  "source": "https://freesound.org/people/Stereo%20Surgeon/sounds/261210"
+ },
+ "letter-unfold": {
+  "file": "foley/letter-unfold.wav",
+  "query": "paper unfolding",
+  "category": "foley",
+  "duration": 5.82,
+  "title": "Paper Unfolding Quickly",
+  "creator": "coolernow123",
+  "license": "cc0",
+  "source": "https://freesound.org/people/coolernow123/sounds/547980"
+ },
+ "electric-buzz": {
+  "file": "objects/electric-buzz.wav",
+  "query": "electric hum buzz",
+  "category": "objects",
+  "duration": 1.91,
+  "title": "Electricity Sound",
+  "creator": "NachtmahrTV",
+  "license": "cc0",
+  "source": "https://freesound.org/people/NachtmahrTV/sounds/556717"
+ },
+ "light-flicker": {
+  "file": "objects/light-flicker.wav",
+  "query": "fluorescent light flicker",
+  "category": "objects",
+  "duration": 5.45,
+  "title": "fluorescent light flickering 1.wav",
+  "creator": "TemperMode",
+  "license": "cc0",
+  "source": "https://freesound.org/people/TemperMode/sounds/484157"
+ },
+ "floor-creak": {
+  "file": "foley/floor-creak.wav",
+  "query": "wooden floor creak",
+  "category": "foley",
+  "duration": 2.95,
+  "title": "creaking floor OWI.wav",
+  "creator": "miekyj",
+  "license": "cc0",
+  "source": "https://freesound.org/people/miekyj/sounds/326460"
+ },
+ "kids-playing": {
+  "file": "ambience/kids-playing.wav",
+  "query": "kids playing distant",
+  "category": "ambience",
+  "duration": 27.42,
+  "title": "kids playing soccer in front of opera or courtyard +distant traffic Marseille, France1 MS.wav",
+  "creator": "kyles",
+  "license": "cc0",
+  "source": "https://freesound.org/people/kyles/sounds/451031"
+ },
+ "crowd-laugh": {
+  "file": "body/crowd-laugh.wav",
+  "query": "crowd laughter",
+  "category": "body",
+  "duration": 1.98,
+  "title": "Crowd laugh.wav",
+  "creator": "deleted_user_2104797",
+  "license": "cc0",
+  "source": "https://freesound.org/people/deleted_user_2104797/sounds/324894"
+ }
+}

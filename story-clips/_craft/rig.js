@@ -1,0 +1,360 @@
+// ============================================================================================================
+// rig.js — shared character + camera rig for the 2D story clips (HyperFrames + GSAP, seek-safe, deterministic).
+// The theory behind every number here is in story-clips/_craft/GUIDE.md. Inline this file into a composition
+// (build.py replaces /*RIG*/) after `const tl = gsap.timeline({ paused: true })` exists.
+//
+//   const R = Rig(tl, { seed: 7 });
+//   const ton = R.puppet(svg, { x: 400, y: 1040, s: .85 }, R.LOOKS.ton);
+//   R.walk(ton, 1.0, 3.2, { x: 900 });              // walk cycle to x=900 (front-facing "storybook" walk)
+//   R.look(ton, 3.4, .8, 0);                        // eyes lead, head follows .1 s later, body .25 s later
+//   R.emote(ton, 4.0, 'shock');                     // anticipation → stretch → hold, with brows/eyes/mouth/arms
+//   R.talk(ton, 5.0, ENV[7], TEXT[7]);              // lip-sync from the line's loudness envelope + Thai vowels
+//   R.blinks(ton, 0, 20);  R.breathe(ton, 0, 20);   // moving holds — never let a character freeze
+//   const cam = R.cam('#shop');  cam.set(0, { px: 960, py: 540, s: 1 });  cam.move(3, 2, { px: 1300, py: 600, s: 1.4 });
+//
+// RULE: author each puppet / camera in chronological order. Every helper remembers the last value it wrote, and
+// tweens from it (fromTo with immediateRender:false), so the timeline renders the same at any seek position.
+// ============================================================================================================
+function Rig(tl, opt = {}) {
+  const NS = 'http://www.w3.org/2000/svg';
+  let seed = opt.seed || 7; const rnd = () => (seed = (seed * 16807) % 2147483647) / 2147483647;
+  const el = (tag, a, p) => { const e = document.createElementNS(NS, tag); for (const k in a) e.setAttribute(k, a[k]); p && p.appendChild(e); return e; };
+  const INK = opt.ink || '#241c18';
+  const FPS = 24, F = 1 / FPS;                       // animate thinking in 24 fps "frames"; F = one frame
+
+  // ---------------- joints ----------------
+  // A joint = static outer <g> translated to the pivot + inner <g> that we animate (translate/rotate/scale about the pivot).
+  const str = v => `translate(${v.x.toFixed(2)} ${v.y.toFixed(2)}) rotate(${v.r.toFixed(2)}) scale(${v.sx.toFixed(4)} ${v.sy.toFixed(4)})`;
+  function joint(P, name, parent, x, y, init = {}) {
+    const o = el('g', { transform: `translate(${x} ${y})` }, parent);
+    const v = { x: 0, y: 0, r: 0, sx: 1, sy: 1, ...init };
+    const i = el('g', { transform: str(v) }, o);
+    P.j[name] = { el: i, v }; return i;
+  }
+  // move a joint: to = partial {x,y,r,sx,sy}. from = the last authored value.
+  function mv(P, name, t, dur, to, ease = 'sine.inOut') {
+    const j = P.j[name]; if (!j) return;
+    const from = { ...j.v }; Object.assign(j.v, to);
+    if (dur <= 0) { tl.set(j.el, { attr: { transform: str(j.v) } }, t); return; }
+    tl.fromTo(j.el, { attr: { transform: str(from) } }, { attr: { transform: str(j.v) }, duration: dur, ease, immediateRender: false }, t);
+  }
+  // opacity switch inside a set (eyes / mouth / brows states)
+  function swap(group, t, key) { for (const k in group) tl.set(group[k], { opacity: k === key ? 1 : 0 }, t); }
+
+  // ---------------- looks (character designs) ----------------
+  const LOOKS = {
+    ton: { skin: '#f3e1cb', hair: 'messy', hairCol: '#1f1b22', top: '#4f6b58', inner: '#efe7d6', legs: '#2b2a33', shoes: '#1b1a1f', glasses: 'round' },
+    jan: { skin: '#eef2ef', hair: 'bun', hairCol: '#d5dcdf', top: '#efe5cf', dress: true, shawl: '#9fb4b6', glasses: 'gold', ghost: true, hunch: 4, eyeCol: '#3b3540' },
+    chan: { skin: '#ecd3b8', hair: 'bald', hairCol: '#c9c9c9', top: '#7a5a3e', inner: '#e8e2d4', legs: '#3b3630', shoes: '#2a201a', moustache: true },
+  };
+
+  // ---------------- puppet ----------------
+  // Unit puppet: feet at (0,0), ~520 px tall at s=1. Hierarchy:
+  //   root(pos) > bob > [legL, legR] , torso(hip pivot) > [armL > foreL, armR > foreR, head(neck pivot) > [hair, face > [eyes(pupils), browL, browR, mouth]]]
+  function puppet(p, o, look = LOOKS.ton) {
+    const L = { skin: '#f3e1cb', hairCol: '#222', top: '#567', inner: '#eee', legs: '#333', shoes: '#111', eyeCol: INK, ...look };
+    const P = { j: {}, L, mouthNow: 'rest', eyeNow: 'dot', baseX: o.x, baseY: o.y, s: o.s || 1, facing: 0 };
+    const rootO = el('g', {}, p); P.g = rootO;
+    const root = joint(P, 'root', rootO, 0, 0, { x: o.x, y: o.y, sx: P.s, sy: P.s });
+    if (L.ghost) { const gl = el('ellipse', { cx: 0, cy: -260, rx: 260, ry: 330, fill: 'url(#gGhost)' }, root); P.glow = gl; }
+    else el('ellipse', { cx: 0, cy: 4, rx: 70, ry: 12, fill: '#000', opacity: .28 }, root);
+    const bob = joint(P, 'bob', root, 0, 0);
+    // legs (hidden under a dress)
+    if (!L.dress) ['L', 'R'].forEach(s => { const sg = s === 'L' ? -1 : 1; const lg = joint(P, 'leg' + s, bob, sg * 24, -120);
+      el('path', { d: `M0 0 L${sg * 3} 108`, stroke: L.legs, 'stroke-width': 17, 'stroke-linecap': 'round' }, lg);
+      el('ellipse', { cx: sg * 8, cy: 116, rx: 22, ry: 10, fill: L.shoes }, lg); });
+    const torso = joint(P, 'torso', bob, 0, -120, { r: L.hunch || 0 });
+    const W = L.dress ? 96 : 74;
+    if (L.dress) {
+      el('path', { d: 'M-58 -180 Q-70 -80 -96 110 Q0 130 96 110 Q70 -80 58 -180 Q0 -202 -58 -180 Z', fill: L.top, stroke: INK, 'stroke-width': 5 }, torso);
+      for (let i = 0; i < 11; i++) el('circle', { cx: -84 + i * 16.8, cy: 98, r: 5, fill: 'none', stroke: '#c7b38c', 'stroke-width': 2.5 }, torso);
+      if (L.shawl) el('path', { d: 'M-60 -176 Q-110 -80 -84 20 L84 20 Q110 -80 60 -176', fill: L.shawl, opacity: .55 }, torso);
+    } else {
+      el('path', { d: `M-${W} 0 Q-${W + 10} -150 -52 -176 Q0 -196 52 -176 Q${W + 10} -150 ${W} 0 Z`, fill: L.top, stroke: INK, 'stroke-width': 5 }, torso);
+      el('path', { d: 'M-26 -184 L0 -60 L26 -184 Z', fill: L.inner, stroke: INK, 'stroke-width': 4 }, torso);
+    }
+    P.torsoEl = torso;
+    const sleeve = L.shawl || L.top;
+    ['L', 'R'].forEach(s => { const sg = s === 'L' ? -1 : 1;
+      const up = joint(P, 'arm' + s, torso, sg * (L.dress ? 50 : 60), -160);
+      el('path', { d: `M0 0 Q${sg * 6} 36 ${sg * 4} 72`, stroke: INK, 'stroke-width': 34, fill: 'none', 'stroke-linecap': 'round' }, up);
+      el('path', { d: `M0 0 Q${sg * 6} 36 ${sg * 4} 72`, stroke: sleeve, 'stroke-width': 25, fill: 'none', 'stroke-linecap': 'round' }, up);
+      const fo = joint(P, 'fore' + s, up, sg * 4, 72);
+      el('path', { d: `M0 0 L0 62`, stroke: INK, 'stroke-width': 31, 'stroke-linecap': 'round' }, fo);
+      el('path', { d: `M0 0 L0 62`, stroke: sleeve, 'stroke-width': 22, 'stroke-linecap': 'round' }, fo);
+      el('circle', { cx: 0, cy: 72, r: 15, fill: L.skin, stroke: INK, 'stroke-width': 4 }, fo);
+      P['hand' + s] = joint(P, 'hand' + s, fo, 0, 72);  // anything held goes in here
+    });
+    // head: pivot at the neck so tilts swing from the base
+    const head = joint(P, 'head', torso, 0, -186);
+    const HC = -96;                                      // head centre relative to the neck pivot
+    if (L.hair === 'bun') el('circle', { cx: 0, cy: HC - 108, r: 40, fill: L.hairCol, stroke: INK, 'stroke-width': 4.5 }, head);
+    el('circle', { cx: 0, cy: HC, r: 104, fill: L.skin, stroke: INK, 'stroke-width': 5 }, head);
+    const hair = joint(P, 'hair', head, 0, HC);
+    if (L.hair === 'messy') {
+      el('path', { d: 'M-110 10 Q-122 -70 -70 -104 Q-20 -138 40 -118 Q100 -104 114 -40 Q120 0 108 22 Q96 -18 74 -40 Q60 -10 30 -44 Q10 -12 -18 -46 Q-40 -12 -64 -42 Q-84 -10 -110 10 Z', fill: L.hairCol, stroke: INK, 'stroke-width': 4 }, hair);
+      P.tuft = joint(P, 'tuft', hair, -4, -122);
+      el('path', { d: 'M-16 4 Q-4 -30 22 -22 Q4 -14 4 4 Z', fill: L.hairCol }, P.tuft);
+    } else if (L.hair === 'bun') {
+      el('path', { d: 'M-102 6 Q-108 -66 -52 -92 Q0 -110 52 -92 Q108 -66 102 6 Q86 -40 40 -60 Q0 -68 -40 -60 Q-86 -40 -102 6 Z', fill: L.hairCol, stroke: INK, 'stroke-width': 4 }, hair);
+    } else if (L.hair === 'bald') {
+      el('path', { d: 'M-104 12 Q-112 -40 -84 -66 Q-72 -20 -64 -8 Z M104 12 Q112 -40 84 -66 Q72 -20 64 -8 Z', fill: L.hairCol, stroke: INK, 'stroke-width': 4 }, hair);
+    }
+    const face = joint(P, 'face', head, 0, HC);
+    ['L', 'R'].forEach(s => el('ellipse', { cx: (s === 'L' ? -1 : 1) * 58, cy: 38, rx: 16, ry: 9, fill: '#f0a99a', opacity: .45 }, face));
+    P.blush = el('g', { opacity: 0 }, face); ['L', 'R'].forEach(s => el('ellipse', { cx: (s === 'L' ? -1 : 1) * 56, cy: 36, rx: 22, ry: 11, fill: '#ff7f7f', opacity: .5 }, P.blush));
+    // eyes: lids (blink = scaleY), pupils (look), states (dot / wide / smile / closed / sad)
+    const lids = joint(P, 'lids', face, 0, 12);
+    const pup = joint(P, 'pupils', lids, 0, 0);
+    const E = {}; const ex = 38;
+    E.dot = el('g', {}, pup); [-1, 1].forEach(sg => el('ellipse', { cx: ex * sg, cy: 0, rx: 7.5, ry: 10.5, fill: L.eyeCol }, E.dot));
+    E.wide = el('g', { opacity: 0 }, lids); [-1, 1].forEach(sg => el('circle', { cx: ex * sg, cy: 0, r: 15, fill: '#fff', stroke: L.eyeCol, 'stroke-width': 3.5 }, E.wide));
+    E.widePup = el('g', { opacity: 0 }, pup); [-1, 1].forEach(sg => el('circle', { cx: ex * sg, cy: 1, r: 5, fill: L.eyeCol }, E.widePup));
+    E.smile = el('g', { opacity: 0 }, lids); [-1, 1].forEach(sg => el('path', { d: `M${ex * sg - 12} 3 Q${ex * sg} -9 ${ex * sg + 12} 3`, stroke: L.eyeCol, 'stroke-width': 4.5, fill: 'none', 'stroke-linecap': 'round' }, E.smile));
+    E.closed = el('g', { opacity: 0 }, lids); [-1, 1].forEach(sg => el('path', { d: `M${ex * sg - 12} 0 Q${ex * sg} 7 ${ex * sg + 12} 0`, stroke: L.eyeCol, 'stroke-width': 4.5, fill: 'none', 'stroke-linecap': 'round' }, E.closed));
+    P.eyes = E;
+    // brows (emotion is mostly brows)
+    ['L', 'R'].forEach(s => { const sg = s === 'L' ? -1 : 1; const b = joint(P, 'brow' + s, face, sg * 38, -26);
+      el('path', { d: 'M-14 0 Q0 -5 14 0', stroke: L.hair === 'bald' ? L.hairCol : INK, 'stroke-width': 5.5, fill: 'none', 'stroke-linecap': 'round' }, b); });
+    if (L.glasses) { const gc = L.glasses === 'gold' ? '#c8922e' : '#1a1a1a';
+      const gG = el('g', {}, face); P.glasses = gG;
+      [-1, 1].forEach(sg => el('circle', { cx: ex * sg, cy: 12, r: 30, fill: 'rgba(220,240,255,.14)', stroke: gc, 'stroke-width': 5.5 }, gG));
+      el('path', { d: 'M-8 8 Q0 2 8 8', stroke: gc, 'stroke-width': 5, fill: 'none' }, gG); }
+    if (L.moustache) el('path', { d: 'M-32 40 Q0 30 32 40 Q16 50 0 44 Q-16 50 -32 40 Z', fill: L.hairCol, stroke: INK, 'stroke-width': 3 }, face);
+    // mouth: viseme set (rest / M / A / E / O / U) + expressions (smile / grin / frown / wail)
+    const mo = el('g', { transform: 'translate(0 60)' }, face); const M = {}; const MC = '#3a1f1c';
+    const ln = d => ({ d, stroke: INK, 'stroke-width': 4, fill: 'none', 'stroke-linecap': 'round' });
+    M.rest = el('path', ln('M-10 0 Q0 3 10 0'), mo);
+    M.M = el('path', ln('M-11 1 L11 1'), mo);
+    M.A = el('path', { d: 'M-13 -4 Q0 -7 13 -4 Q11 16 0 18 Q-11 16 -13 -4 Z', fill: MC }, mo);
+    M.E = el('path', { d: 'M-17 -3 Q0 -6 17 -3 Q12 9 0 10 Q-12 9 -17 -3 Z', fill: MC }, mo);
+    M.O = el('ellipse', { cx: 0, cy: 3, rx: 9, ry: 12, fill: MC }, mo);
+    M.U = el('ellipse', { cx: 0, cy: 2, rx: 6, ry: 6, fill: MC }, mo);
+    M.smile = el('path', ln('M-16 -3 Q0 11 16 -3'), mo);
+    M.grin = el('path', { d: 'M-18 -4 Q0 -2 18 -4 Q12 16 0 17 Q-12 16 -18 -4 Z', fill: MC }, mo);
+    M.frown = el('path', ln('M-13 6 Q0 -5 13 6'), mo);
+    M.wail = el('path', { d: 'M-15 10 Q0 -10 15 10 Q0 16 -15 10 Z', fill: MC }, mo);
+    for (const k in M) M[k].setAttribute('opacity', k === 'rest' ? 1 : 0);
+    P.mouth = M; P.restMouth = 'rest';
+    P.H = 520; return P;
+  }
+
+  // ---------------- face helpers ----------------
+  function mouth(P, t, k) { if (!P.mouth[k]) return; swap(P.mouth, t, k); P.mouthNow = k; }
+  function eyes(P, t, k) {   // dot | wide | smile | closed
+    const E = P.eyes; const on = { dot: [E.dot], wide: [E.wide, E.widePup], smile: [E.smile], closed: [E.closed] }[k];
+    [E.dot, E.wide, E.widePup, E.smile, E.closed].forEach(g => tl.set(g, { opacity: on.includes(g) ? 1 : 0 }, t)); P.eyeNow = k;
+  }
+  function brows(P, t, dur, kind) {  // neutral | up | sad | angry | worried | skeptic
+    const B = { neutral: [{ y: 0, r: 0 }, { y: 0, r: 0 }], up: [{ y: -12, r: 0 }, { y: -12, r: 0 }], sad: [{ y: -4, r: -14 }, { y: -4, r: 14 }],
+      angry: [{ y: 4, r: 16 }, { y: 4, r: -16 }], worried: [{ y: -10, r: -12 }, { y: -10, r: 12 }], skeptic: [{ y: -12, r: -6 }, { y: 3, r: 4 }] }[kind];
+    mv(P, 'browL', t, dur, B[0], 'power2.out'); mv(P, 'browR', t, dur, B[1], 'power2.out');
+  }
+  function blink(P, t) {          // close 2 frames, closed 1, open 3 (~.25 s)
+    const j = P.j.lids; const sy = j.v.sy;
+    tl.fromTo(j.el, { attr: { transform: str({ ...j.v }) } }, { attr: { transform: str({ ...j.v, sy: .08 }) }, duration: 2 * F, ease: 'power2.in', immediateRender: false }, t);
+    tl.fromTo(j.el, { attr: { transform: str({ ...j.v, sy: .08 }) } }, { attr: { transform: str({ ...j.v, sy }) }, duration: 3 * F, ease: 'power2.out', immediateRender: false }, t + 3 * F);
+  }
+  // natural blinking: every 2–5 s, ~15% doubles; `avoid` = list of [t0,t1] windows (shock stares, closed-eye moments)
+  function blinks(P, t0, t1, avoid = []) {
+    for (let t = t0 + .6 + rnd() * 1.4; t < t1 - .4; t += 2 + rnd() * 3) {
+      if (avoid.some(([a, b]) => t > a - .3 && t < b + .1)) continue;
+      blink(P, t); if (rnd() < .15) blink(P, t + .32);
+    }
+  }
+  function breathe(P, t0, t1, amt = .014, per = 3.2) {    // a moving hold: chest rises, shoulders follow 2 frames later
+    const n = Math.max(1, Math.floor((t1 - t0) / per));
+    const j = P.j.torso; const base = { ...j.v };
+    tl.fromTo(j.el, { attr: { transform: str(base) } }, { attr: { transform: str({ ...base, sy: base.sy * (1 + amt) }) }, duration: per / 2, yoyo: true, repeat: n * 2 - 1, ease: 'sine.inOut', immediateRender: false }, t0);
+    if (P.L.ghost) { const b = P.j.bob; tl.fromTo(b.el, { attr: { transform: str(b.v) } }, { attr: { transform: str({ ...b.v, y: b.v.y - 10 }) }, duration: 1.6, yoyo: true, repeat: Math.max(1, Math.floor((t1 - t0) / 1.6)), ease: 'sine.inOut', immediateRender: false }, t0); }
+  }
+
+  // ---------------- looking: eyes lead, head follows, body last ----------------
+  // dx, dy in -1..1 (screen direction). Big turns blink on the way (the brain hides the eye travel).
+  function look(P, t, dx, dy = 0, o = {}) {
+    const big = Math.abs(dx - P.facing) > .6;
+    if (big && o.blink !== false) blink(P, t);
+    mv(P, 'pupils', t, 3 * F, { x: dx * 7, y: dy * 5 }, 'power2.out');
+    mv(P, 'face', t + 2 * F, 8 * F, { x: dx * 20, y: dy * 10 }, 'power2.inOut');      // fake 3/4 turn: features slide
+    mv(P, 'hair', t + 3 * F, 9 * F, { x: -dx * 5 }, 'power2.inOut');                  // hair lags (overlap)
+    mv(P, 'head', t + 2 * F, 9 * F, { r: dx * 4 + (o.tilt || 0) }, 'power2.inOut');
+    if (o.body !== false) mv(P, 'torso', t + 6 * F, 12 * F, { r: dx * 2.5 + (P.L.hunch || 0) }, 'sine.inOut');
+    P.facing = dx;
+  }
+
+  // ---------------- arms ----------------
+  // up = upper-arm swing out from the body (deg), bend = forearm fold (deg, + = toward the chest), wrist optional.
+  const sideSign = s => (s === 'L' ? 1 : -1);
+  function arm(P, side, t, dur, up, bend, ease = 'power2.inOut') {
+    const sg = sideSign(side);
+    mv(P, 'arm' + side, t, dur, { r: sg * up }, ease);
+    mv(P, 'fore' + side, t + 2 * F, dur, { r: -sg * bend }, ease);   // forearm overlaps the upper arm by 2 frames
+  }
+  const POSES = {   // [L up, L bend, R up, R bend]
+    idle: [8, 4, 8, 4], open: [28, -10, 28, -10], shrug: [30, -95, 30, -95], chest: [8, 4, -18, 140], chin: [8, 4, -26, 172],
+    point: [8, 4, 92, 0], wave: [8, 4, 150, 25], cover: [-4, 160, -4, 160], hug: [22, 118, 22, 118], hips: [38, 92, 38, 92],
+    reach: [8, 4, 60, 10], fistsUp: [40, 140, 40, 140], behind: [-14, -20, -14, -20],
+  };
+  function pose(P, t, name, dur = 10 * F, ease = 'back.out(1.6)') {
+    const p = POSES[name]; arm(P, 'L', t, dur, p[0], p[1], ease); arm(P, 'R', t, dur, p[2], p[3], ease);
+  }
+  function wave(P, t, n = 3) {      // hand oscillates at the elbow, 5 frames per swing
+    pose(P, t, 'wave', 8 * F); const j = P.j.foreR; const base = j.v.r;
+    for (let i = 0; i < n * 2; i++) mv(P, 'foreR', t + 8 * F + i * 5 * F, 5 * F, { r: base + (i % 2 ? 0 : 28) }, 'sine.inOut');
+  }
+
+  // ---------------- whole-body acting ----------------
+  // anticipation → action → overshoot → settle, on the bob joint (squash & stretch keeps the volume: sx = 1/sqrt(sy)).
+  function squash(P, t, amt = .9, hold = 3 * F) {
+    const sv = a => ({ sy: a, sx: 1 / Math.sqrt(a) });
+    mv(P, 'bob', t, 3 * F, sv(amt), 'power2.in');
+    mv(P, 'bob', t + 3 * F + hold, 3 * F, sv(1), 'power2.out');
+  }
+  function jolt(P, t, h = 26) {      // startle: squash 3f → shoot up with stretch 4f → land with a small squash → settle
+    const b = P.j.bob, y0 = b.v.y;
+    mv(P, 'bob', t, 3 * F, { sy: .88, sx: 1.06, y: y0 + 6 }, 'power2.in');
+    mv(P, 'bob', t + 3 * F, 4 * F, { sy: 1.1, sx: .95, y: y0 - h }, 'power3.out');
+    mv(P, 'bob', t + 7 * F, 5 * F, { sy: .95, sx: 1.03, y: y0 }, 'power2.in');
+    mv(P, 'bob', t + 12 * F, 6 * F, { sy: 1, sx: 1, y: y0 }, 'sine.out');
+  }
+  function nod(P, t, n = 2) { const r0 = P.j.head.v.r; for (let i = 0; i < n; i++) { mv(P, 'head', t + i * 9 * F, 4 * F, { y: 6, r: r0 }, 'sine.inOut'); mv(P, 'head', t + i * 9 * F + 4 * F, 5 * F, { y: 0, r: r0 }, 'sine.inOut'); } }
+  function shake(P, t, n = 3) { const r0 = P.j.head.v.r; for (let i = 0; i < n; i++) mv(P, 'head', t + i * 6 * F, 6 * F, { r: r0 + (i % 2 ? -7 : 7) }, 'sine.inOut'); mv(P, 'head', t + n * 6 * F, 6 * F, { r: r0 }, 'sine.out'); }
+  function lean(P, t, dur, deg) { mv(P, 'torso', t, dur, { r: deg + (P.L.hunch || 0) }, 'sine.inOut'); }
+
+  // emote = one call that sets a believable whole-body state, with the right order (eyes/brows first, then body).
+  function emote(P, t, kind) {
+    const k = kind;
+    if (k === 'neutral') { eyes(P, t, 'dot'); brows(P, t, 6 * F, 'neutral'); mouth(P, t, 'rest'); P.restMouth = 'rest'; pose(P, t + 2 * F, 'idle', 12 * F, 'sine.inOut'); lean(P, t, 12 * F, 0); tl.to(P.blush, { opacity: 0, duration: .3 }, t); }
+    if (k === 'happy') { brows(P, t, 6 * F, 'up'); eyes(P, t + 2 * F, 'smile'); mouth(P, t + 2 * F, 'smile'); P.restMouth = 'smile'; squash(P, t + 2 * F, .95); mv(P, 'head', t + 3 * F, 10 * F, { r: 5 }, 'back.out(2)'); }
+    if (k === 'joy') { brows(P, t, 5 * F, 'up'); eyes(P, t + 2 * F, 'smile'); mouth(P, t + 2 * F, 'grin'); P.restMouth = 'grin'; jolt(P, t, 18); pose(P, t + 3 * F, 'fistsUp', 8 * F); }
+    if (k === 'sad') { brows(P, t, 10 * F, 'sad'); tl.set(P.j.lids.el, {}, t); mv(P, 'lids', t + 4 * F, 12 * F, { sy: .62 }, 'sine.inOut'); mouth(P, t + 6 * F, 'frown'); P.restMouth = 'frown';
+      mv(P, 'head', t + 6 * F, 18 * F, { y: 8, r: -3 }, 'sine.inOut'); lean(P, t + 8 * F, 20 * F, 5); pose(P, t + 10 * F, 'idle', 18 * F, 'sine.inOut'); }
+    if (k === 'shock') { eyes(P, t, 'wide'); brows(P, t, 3 * F, 'up'); mouth(P, t + 1 * F, 'O'); P.restMouth = 'O'; jolt(P, t, 30); pose(P, t + 2 * F, 'open', 6 * F, 'power3.out'); mv(P, 'tuft', t + 3 * F, 6 * F, { r: -25, y: -8 }, 'back.out(3)'); }
+    if (k === 'fear') { eyes(P, t, 'wide'); brows(P, t, 4 * F, 'worried'); mouth(P, t + 2 * F, 'E'); P.restMouth = 'E'; lean(P, t + 2 * F, 8 * F, -7); pose(P, t + 3 * F, 'cover', 8 * F, 'power3.out'); squash(P, t, .94, 8 * F); }
+    if (k === 'angry') { eyes(P, t, 'dot'); brows(P, t, 4 * F, 'angry'); mouth(P, t + 2 * F, 'frown'); P.restMouth = 'frown'; lean(P, t + 2 * F, 8 * F, 6); pose(P, t + 2 * F, 'hips', 10 * F); }
+    if (k === 'think') { mv(P, 'pupils', t, 4 * F, { x: 6, y: -5 }, 'power2.out'); brows(P, t + 2 * F, 8 * F, 'skeptic'); mouth(P, t + 4 * F, 'M'); P.restMouth = 'M'; mv(P, 'head', t + 4 * F, 14 * F, { r: 6 }, 'sine.inOut'); pose(P, t + 4 * F, 'chin', 14 * F, 'sine.inOut'); }
+    if (k === 'shy') { mv(P, 'pupils', t, 4 * F, { x: -4, y: 5 }, 'power2.out'); tl.to(P.blush, { opacity: 1, duration: .4 }, t + 2 * F); mouth(P, t + 2 * F, 'smile'); P.restMouth = 'smile'; mv(P, 'head', t + 3 * F, 14 * F, { r: -7, y: 4 }, 'sine.inOut'); pose(P, t + 4 * F, 'behind', 14 * F, 'sine.inOut'); }
+    if (k === 'tender') { brows(P, t, 10 * F, 'sad'); eyes(P, t + 4 * F, 'smile'); mouth(P, t + 4 * F, 'smile'); P.restMouth = 'smile'; mv(P, 'head', t + 4 * F, 20 * F, { r: 6 }, 'sine.inOut'); pose(P, t + 6 * F, 'chest', 18 * F, 'sine.inOut'); }
+  }
+
+  // ---------------- lip-sync ----------------
+  // env = per-frame loudness (24 fps, 0..1) from _craft/visemes.py; text = the spoken Thai line (for vowel shapes).
+  // Mouth leads the sound by 1 frame; min hold 2 frames; closes (M) on stops before a pause; returns to the rest mouth.
+  const VOW = { 'า': 'A', 'ะ': 'A', 'ั': 'A', 'ำ': 'A', 'ไ': 'A', 'ใ': 'A', 'ิ': 'E', 'ี': 'E', 'ึ': 'E', 'ื': 'E', 'เ': 'E', 'แ': 'E', 'ุ': 'U', 'ู': 'U', 'โ': 'O', 'อ': 'O', 'ว': 'O' };
+  function talk(P, t0, env, text = '', o = {}) {
+    const vs = [...text].map(c => VOW[c]).filter(Boolean); if (!vs.length) vs.push('A', 'E', 'O');
+    let vi = 0, cur = null, held = 0, wasOpen = false; const keys = [];
+    for (let i = 0; i < env.length; i++) {
+      const a = env[i], nxt = env[i + 1] ?? 0;
+      let k;
+      if (a < .14) k = (wasOpen && nxt < .14) ? 'M' : (a < .06 ? 'rest' : 'U');
+      else { if (!wasOpen) { vi++; } k = vs[vi % vs.length]; if (a < .35 && k === 'A') k = 'E'; if (a > .75 && k === 'U') k = 'O'; }
+      wasOpen = a >= .14;
+      if (k !== cur && held >= 2) { keys.push([i, k]); cur = k; held = 0; } else if (cur === null) { keys.push([i, k]); cur = k; }
+      held++;
+    }
+    keys.forEach(([i, k]) => { if (k === 'rest') k = P.restMouth === 'rest' ? 'rest' : 'M'; swap(P.mouth, t0 + (i - 1) * F, k); });
+    swap(P.mouth, t0 + env.length * F, P.restMouth); P.mouthNow = P.restMouth;
+    // talking heads move: small head accents on loud peaks (not on every syllable)
+    if (o.head !== false) { let last = -99; for (let i = 1; i < env.length - 1; i++) if (env[i] > .8 && env[i] >= env[i - 1] && env[i] >= env[i + 1] && i - last > 14) {
+      const r0 = P.j.head.v.r; mv(P, 'head', t0 + (i - 2) * F, 3 * F, { r: r0 + (rnd() < .5 ? 2.5 : -2.5), y: 2 }, 'power2.out'); mv(P, 'head', t0 + (i + 1) * F, 8 * F, { r: r0, y: 0 }, 'sine.inOut'); last = i; } }
+  }
+  // listener: nods / blinks while someone else speaks (the listener sells the line)
+  function listen(P, t0, t1) { for (let t = t0 + .8; t < t1 - .6; t += 1.6 + rnd() * 1.4) { if (rnd() < .5) nod(P, t, 1); else blink(P, t); } }
+
+  // ---------------- walking ----------------
+  // Front-facing storybook walk: alternate leg lifts, body bob (down on contact, up on passing), counter-swinging arms,
+  // head counter-rotates a little, hair/tuft lags. step = seconds per step (0.5 normal, 0.42 brisk, 0.65 elderly/tired).
+  function walk(P, t0, t1, to, o = {}) {
+    const step = o.step || .5, lift = o.lift ?? 14, swing = o.swing ?? 14, bobA = o.bob ?? 7;
+    const R = P.j.root; const from = { ...R.v };
+    const dest = { ...R.v, x: to.x ?? R.v.x, y: to.y ?? R.v.y, sx: (to.s ?? R.v.sx), sy: (to.s ?? R.v.sy) };
+    const dur = t1 - t0; const n = Math.max(1, Math.round(dur / step)); const st = dur / n;
+    // anticipation: a tiny lean into the direction before the first step
+    const dir = Math.sign(dest.x - from.x) || 1;
+    lean(P, t0 - 4 * F, 4 * F, dir * 3);
+    tl.fromTo(R.el, { attr: { transform: str(from) } }, { attr: { transform: str(dest) }, duration: dur, ease: 'none', immediateRender: false }, t0);
+    Object.assign(R.v, dest);
+    for (let i = 0; i < n; i++) {
+      const t = t0 + i * st, s = i % 2 ? 'R' : 'L', other = i % 2 ? 'L' : 'R';
+      if (!P.L.dress) { mv(P, 'leg' + s, t, st / 2, { y: -lift, r: (s === 'L' ? -1 : 1) * 5 }, 'sine.out'); mv(P, 'leg' + s, t + st / 2, st / 2, { y: 0, r: 0 }, 'sine.in'); }
+      mv(P, 'bob', t, st * .2, { y: bobA * .5 }, 'sine.out');            // contact/down
+      mv(P, 'bob', t + st * .2, st * .3, { y: -bobA }, 'sine.inOut');     // passing/up
+      mv(P, 'bob', t + st * .5, st * .5, { y: 0 }, 'sine.in');
+      mv(P, 'arm' + s, t, st, { r: sideSign(s) * (8 - swing) }, 'sine.inOut');     // arm opposite the lifted leg swings back
+      mv(P, 'arm' + other, t, st, { r: sideSign(other) * (8 + swing * .6) }, 'sine.inOut');
+      mv(P, 'head', t + 2 * F, st, { r: (s === 'L' ? 1 : -1) * 1.6 }, 'sine.inOut');
+      if (P.j.tuft) mv(P, 'tuft', t + 3 * F, st, { r: (s === 'L' ? -1 : 1) * 8 }, 'sine.inOut');
+    }
+    // settle: feet down, small overshoot, arms back to idle
+    lean(P, t1, 6 * F, -dir * 2); lean(P, t1 + 6 * F, 8 * F, 0);
+    mv(P, 'bob', t1, 4 * F, { y: 4, sy: .97, sx: 1.015 }, 'power2.out'); mv(P, 'bob', t1 + 4 * F, 6 * F, { y: 0, sy: 1, sx: 1 }, 'sine.out');
+    mv(P, 'head', t1 + 2 * F, 8 * F, { r: 0 }, 'back.out(2)'); if (P.j.tuft) mv(P, 'tuft', t1 + 3 * F, 10 * F, { r: 0 }, 'back.out(3)');
+    pose(P, t1 + 2 * F, 'idle', 10 * F, 'sine.out');
+  }
+  // ghosts glide: no steps, a slow arc and a trailing hem
+  function glide(P, t0, t1, to) {
+    const R = P.j.root; const from = { ...R.v }; Object.assign(R.v, { x: to.x ?? R.v.x, y: to.y ?? R.v.y });
+    tl.fromTo(R.el, { attr: { transform: str(from) } }, { attr: { transform: str(R.v) }, duration: t1 - t0, ease: 'sine.inOut', immediateRender: false }, t0);
+    lean(P, t0, (t1 - t0) * .3, Math.sign(R.v.x - from.x) * -4); lean(P, t0 + (t1 - t0) * .6, (t1 - t0) * .4, 0);
+  }
+  function place(P, t, to) { mv(P, 'root', t, 0, { x: to.x ?? P.j.root.v.x, y: to.y ?? P.j.root.v.y, ...(to.s ? { sx: to.s, sy: to.s } : {}) }); }
+  function fade(P, t, dur, op) { tl.to(P.g, { opacity: op, duration: dur, ease: 'sine.inOut' }, t); }
+  function appear(P, t) {   // ghost entrance: flicker in (two false starts, then a slow rise)
+    tl.set(P.g, { opacity: 0 }, 0);
+    tl.to(P.g, { opacity: .5, duration: 6 * F }, t); tl.to(P.g, { opacity: .1, duration: 2 * F }, t + 8 * F);
+    tl.to(P.g, { opacity: .7, duration: 3 * F }, t + 12 * F); tl.to(P.g, { opacity: .2, duration: 2 * F }, t + 16 * F);
+    tl.to(P.g, { opacity: .93, duration: 1.2 }, t + 20 * F);
+  }
+
+  // ---------------- camera ----------------
+  // Scene markup: <div class="scene" id="s"><div class="cam"><div class="layer" style="--d:.75">bg</div>
+  //   <div class="layer" style="--d:1">characters</div><div class="layer" style="--d:1.3">foreground</div></div></div>
+  // --d = depth: layers move/scale by camera * d (parallax). Background layers are oversized by RIG_CSS so pans never show an edge.
+  function cam(sel) {
+    const node = document.querySelector(sel + ' .cam'); const C = { px: 960, py: 540, s: 1, rot: 0 };
+    const vars = c => { const mx = (c.s - 1) * 960, my = (c.s - 1) * 540;
+      return { '--s': c.s, '--x': Math.max(-mx, Math.min(mx, -(c.px - 960) * c.s)), '--y': Math.max(-my, Math.min(my, -(c.py - 540) * c.s)), '--rot': c.rot }; };
+    const api = {
+      set(t, c) { Object.assign(C, c); tl.set(node, vars(C), t); return api; },
+      // move: ease guide — 'sine.inOut' slow drifts, 'power2.inOut' motivated moves, 'power3.out' snap-zooms, 'expo.inOut' whip
+      move(t, dur, c, ease = 'sine.inOut') { const f = vars(C); Object.assign(C, c); tl.fromTo(node, f, { ...vars(C), duration: dur, ease, immediateRender: false }, t); return api; },
+      // handheld-ish shake that decays; amp px, freq Hz
+      shake(t, dur, amp = 14, freq = 18) { const n = Math.round(dur * freq); for (let i = 0; i <= n; i++) { const k = 1 - i / n;
+        tl.set(node, { '--shx': i === n ? 0 : (rnd() - .5) * 2 * amp * k, '--shy': i === n ? 0 : (rnd() - .5) * 2 * amp * k }, t + i / freq); } return api; },
+      // slow breathing drift so a "still" camera is never dead (two sines at a 1.3 ratio = organic Lissajous)
+      drift(t0, t1, amp = 6) { const n = Math.floor((t1 - t0) / 4); if (n < 1) return api;
+        tl.fromTo(node, { '--dx': -amp }, { '--dx': amp, duration: 2, yoyo: true, repeat: n * 2 - 1, ease: 'sine.inOut', immediateRender: false }, t0);
+        tl.fromTo(node, { '--dy': -amp * .6 }, { '--dy': amp * .6, duration: 2.6, yoyo: true, repeat: Math.floor((t1 - t0) / 2.6) - 1, ease: 'sine.inOut', immediateRender: false }, t0); return api; },
+      // rack focus: blur one layer, sharpen another (layer = CSS selector)
+      rack(t, dur, blurSel, sharpSel, px = 10) { tl.fromTo(blurSel, { '--blur': 0 }, { '--blur': px, duration: dur, ease: 'power2.inOut', immediateRender: false }, t);
+        if (sharpSel) tl.fromTo(sharpSel, { '--blur': px }, { '--blur': 0, duration: dur, ease: 'power2.inOut', immediateRender: false }, t); return api; },
+      // dolly zoom (vertigo): background layer grows while the camera pulls back on the subject
+      vertigo(t, dur, bgSel, amt = .35) { tl.fromTo(bgSel, { '--zs': 1 }, { '--zs': 1 + amt, duration: dur, ease: 'sine.inOut', immediateRender: false }, t);
+        return api.move(t, dur, { s: Math.max(1, C.s - amt * .6) }, 'sine.inOut'); },
+      state: () => ({ ...C }),
+    };
+    return api;
+  }
+  // transitions between scene divs (opacity on whole scenes)
+  function cut(t, outId, inId) { if (outId) tl.set('#' + outId, { opacity: 0 }, t); if (inId) tl.set('#' + inId, { opacity: 1 }, t); }
+  function dissolve(t, dur, outId, inId) { if (inId) tl.fromTo('#' + inId, { opacity: 0 }, { opacity: 1, duration: dur, ease: 'none', immediateRender: false }, t); if (outId) tl.to('#' + outId, { opacity: 0, duration: dur, ease: 'none' }, t); }
+  function dip(t, dur, outId, inId, color = '#000') {     // dip to black/white: out → colour → in (time passes)
+    const d = document.getElementById('__dip') || (() => { const x = document.createElement('div'); x.id = '__dip'; x.style.cssText = `position:absolute;inset:0;opacity:0;z-index:50;pointer-events:none`; document.querySelector('[data-composition-id]').appendChild(x); return x; })();
+    tl.set(d, { backgroundColor: color }, t);
+    tl.fromTo(d, { opacity: 0 }, { opacity: 1, duration: dur / 2, ease: 'sine.in', immediateRender: false }, t);
+    cut(t + dur / 2, outId, inId);
+    tl.fromTo(d, { opacity: 1 }, { opacity: 0, duration: dur / 2, ease: 'sine.out', immediateRender: false }, t + dur / 2);
+  }
+
+  return { F, FPS, rnd, el, LOOKS, POSES, puppet, joint, mv, mouth, eyes, brows, blink, blinks, breathe, look, arm, pose, wave, squash, jolt, nod, shake, lean, emote, talk, listen, walk, glide, place, fade, appear, cam, cut, dissolve, dip };
+}
+// CSS the camera/layers need — paste into <style> (build.py replaces /*RIG_CSS*/)
+const RIG_CSS = `
+.cam{position:absolute;inset:0;--s:1;--x:0;--y:0;--rot:0;--shx:0;--shy:0;--dx:0;--dy:0;
+  transform:translate(calc((var(--shx) + var(--dx))*1px),calc((var(--shy) + var(--dy))*1px)) rotate(calc(var(--rot)*1deg));transform-origin:960px 540px}
+.layer{position:absolute;inset:0;--d:1;--zs:1;--blur:0;transform-origin:960px 540px;
+  transform:translate(calc(var(--x)*var(--d)*1px),calc(var(--y)*var(--d)*1px)) scale(calc((1 + (var(--s) - 1)*var(--d))*var(--zs)));filter:blur(calc(var(--blur)*1px))}
+.layer.bg img{position:absolute;left:-6%;top:-6%;width:112%;height:112%;object-fit:cover}
+`;
+(() => { const s = document.createElement('style'); s.textContent = RIG_CSS; document.head.appendChild(s); })();

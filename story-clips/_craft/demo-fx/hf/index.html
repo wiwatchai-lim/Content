@@ -1,0 +1,635 @@
+<!doctype html>
+<html lang="th">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=1920, height=1080" />
+    <!-- fx.js + sound.py test scene (story-clips/_craft): rain/fog/lightning street, flickering shop + ghost warp, impact/speed lines,
+         memory flashback (boil + film + petals), dawn rays + dust, iris out. Sound = audio/bed.py with the real SFX library. -->
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/gsap.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@600;800&display=swap" rel="stylesheet" />
+    <style>
+      * { margin: 0; padding: 0; box-sizing: border-box; }
+      html, body { width: 1920px; height: 1080px; overflow: hidden; background: #000; }
+      #root { position: relative; width: 1920px; height: 1080px; overflow: hidden; }
+      .scene { position: absolute; inset: 0; overflow: hidden; opacity: 0; }
+      svg { display: block; overflow: visible; }
+      #lab div { position: absolute; left: 0; top: 0; white-space: nowrap; }
+      #lab { position: absolute; left: 40px; top: 30px; font: 600 34px Prompt; color: #fff; -webkit-text-stroke: 6px #000; paint-order: stroke fill; z-index: 60; }
+      .vig { position: absolute; inset: 0; background: radial-gradient(ellipse at 50% 48%, rgba(0,0,0,0) 45%, rgba(0,0,0,.6) 100%); z-index: 30; pointer-events: none; }
+      #bam { position: absolute; left: 1180px; top: 170px; font: 800 150px Prompt; color: #ffe14a; -webkit-text-stroke: 12px #000; paint-order: stroke fill; transform: rotate(-12deg); opacity: 0; z-index: 35; }
+    </style>
+  </head>
+  <body>
+    <div id="root" data-composition-id="main" data-start="0" data-duration="25" data-width="1920" data-height="1080">
+      <svg width="0" height="0" style="position:absolute"><defs><radialGradient id="gGhost"><stop offset="0" stop-color="#bff3ff" stop-opacity=".55" /><stop offset="1" stop-color="#bff3ff" stop-opacity="0" /></radialGradient></defs></svg>
+      <div id="street" class="scene" style="opacity:1"><div class="cam">
+        <div class="layer bg" id="stBg" style="--d:.8"><img src="assets/ext.png" /></div>
+        <div class="layer" style="--d:1"><svg width="1920" height="1080" viewBox="0 0 1920 1080" id="stCh"></svg></div>
+        <div class="layer" style="--d:1.25"><svg width="1920" height="1080" viewBox="0 0 1920 1080" id="stFx"></svg></div></div></div>
+      <div id="shop" class="scene"><div class="cam">
+        <div class="layer bg" id="shBg" style="--d:.8"><img src="assets/shop.png" /></div>
+        <div class="layer" style="--d:.95"><svg width="1920" height="1080" viewBox="0 0 1920 1080" id="shMid"></svg></div>
+        <div class="layer" id="shChL" style="--d:1"><svg width="1920" height="1080" viewBox="0 0 1920 1080" id="shCh"></svg></div></div></div>
+      <div id="mem" class="scene"><div class="cam">
+        <div class="layer bg" id="meBg" style="--d:.8"><img src="assets/shop.png" /></div>
+        <div class="layer" id="meChL" style="--d:1"><svg width="1920" height="1080" viewBox="0 0 1920 1080" id="meCh"></svg></div></div></div>
+      <div id="dawnS" class="scene"><div class="cam">
+        <div class="layer bg" id="daBg" style="--d:.8"><img src="assets/shop.png" /></div>
+        <div class="layer" style="--d:.95"><svg width="1920" height="1080" viewBox="0 0 1920 1080" id="daMid"></svg></div>
+        <div class="layer" style="--d:1"><svg width="1920" height="1080" viewBox="0 0 1920 1080" id="daCh"></svg></div></div></div>
+      <div id="bam">ตึง!</div>
+      <div class="vig"></div>
+      <div id="lab"></div>
+    </div>
+    <script>
+      window.__timelines = window.__timelines || {};
+      const tl = gsap.timeline({ paused: true });
+      // ============================================================================================================
+// rig.js — shared character + camera rig for the 2D story clips (HyperFrames + GSAP, seek-safe, deterministic).
+// The theory behind every number here is in story-clips/_craft/GUIDE.md. Inline this file into a composition
+// (build.py replaces /*RIG*/) after `const tl = gsap.timeline({ paused: true })` exists.
+//
+//   const R = Rig(tl, { seed: 7 });
+//   const ton = R.puppet(svg, { x: 400, y: 1040, s: .85 }, R.LOOKS.ton);
+//   R.walk(ton, 1.0, 3.2, { x: 900 });              // walk cycle to x=900 (front-facing "storybook" walk)
+//   R.look(ton, 3.4, .8, 0);                        // eyes lead, head follows .1 s later, body .25 s later
+//   R.emote(ton, 4.0, 'shock');                     // anticipation → stretch → hold, with brows/eyes/mouth/arms
+//   R.talk(ton, 5.0, ENV[7], TEXT[7]);              // lip-sync from the line's loudness envelope + Thai vowels
+//   R.blinks(ton, 0, 20);  R.breathe(ton, 0, 20);   // moving holds — never let a character freeze
+//   const cam = R.cam('#shop');  cam.set(0, { px: 960, py: 540, s: 1 });  cam.move(3, 2, { px: 1300, py: 600, s: 1.4 });
+//
+// RULE: author each puppet / camera in chronological order. Every helper remembers the last value it wrote, and
+// tweens from it (fromTo with immediateRender:false), so the timeline renders the same at any seek position.
+// ============================================================================================================
+function Rig(tl, opt = {}) {
+  const NS = 'http://www.w3.org/2000/svg';
+  let seed = opt.seed || 7; const rnd = () => (seed = (seed * 16807) % 2147483647) / 2147483647;
+  const el = (tag, a, p) => { const e = document.createElementNS(NS, tag); for (const k in a) e.setAttribute(k, a[k]); p && p.appendChild(e); return e; };
+  const INK = opt.ink || '#241c18';
+  const FPS = 24, F = 1 / FPS;                       // animate thinking in 24 fps "frames"; F = one frame
+
+  // ---------------- joints ----------------
+  // A joint = static outer <g> translated to the pivot + inner <g> that we animate (translate/rotate/scale about the pivot).
+  const str = v => `translate(${v.x.toFixed(2)} ${v.y.toFixed(2)}) rotate(${v.r.toFixed(2)}) scale(${v.sx.toFixed(4)} ${v.sy.toFixed(4)})`;
+  function joint(P, name, parent, x, y, init = {}) {
+    const o = el('g', { transform: `translate(${x} ${y})` }, parent);
+    const v = { x: 0, y: 0, r: 0, sx: 1, sy: 1, ...init };
+    const i = el('g', { transform: str(v) }, o);
+    P.j[name] = { el: i, v }; return i;
+  }
+  // move a joint: to = partial {x,y,r,sx,sy}. from = the last authored value.
+  function mv(P, name, t, dur, to, ease = 'sine.inOut') {
+    const j = P.j[name]; if (!j) return;
+    const from = { ...j.v }; Object.assign(j.v, to);
+    if (dur <= 0) { tl.set(j.el, { attr: { transform: str(j.v) } }, t); return; }
+    tl.fromTo(j.el, { attr: { transform: str(from) } }, { attr: { transform: str(j.v) }, duration: dur, ease, immediateRender: false }, t);
+  }
+  // opacity switch inside a set (eyes / mouth / brows states)
+  function swap(group, t, key) { for (const k in group) tl.set(group[k], { opacity: k === key ? 1 : 0 }, t); }
+
+  // ---------------- looks (character designs) ----------------
+  const LOOKS = {
+    ton: { skin: '#f3e1cb', hair: 'messy', hairCol: '#1f1b22', top: '#4f6b58', inner: '#efe7d6', legs: '#2b2a33', shoes: '#1b1a1f', glasses: 'round' },
+    jan: { skin: '#eef2ef', hair: 'bun', hairCol: '#d5dcdf', top: '#efe5cf', dress: true, shawl: '#9fb4b6', glasses: 'gold', ghost: true, hunch: 4, eyeCol: '#3b3540' },
+    chan: { skin: '#ecd3b8', hair: 'bald', hairCol: '#c9c9c9', top: '#7a5a3e', inner: '#e8e2d4', legs: '#3b3630', shoes: '#2a201a', moustache: true },
+  };
+
+  // ---------------- puppet ----------------
+  // Unit puppet: feet at (0,0), ~520 px tall at s=1. Hierarchy:
+  //   root(pos) > bob > [legL, legR] , torso(hip pivot) > [armL > foreL, armR > foreR, head(neck pivot) > [hair, face > [eyes(pupils), browL, browR, mouth]]]
+  function puppet(p, o, look = LOOKS.ton) {
+    const L = { skin: '#f3e1cb', hairCol: '#222', top: '#567', inner: '#eee', legs: '#333', shoes: '#111', eyeCol: INK, ...look };
+    const P = { j: {}, L, mouthNow: 'rest', eyeNow: 'dot', baseX: o.x, baseY: o.y, s: o.s || 1, facing: 0 };
+    const rootO = el('g', {}, p); P.g = rootO;
+    const root = joint(P, 'root', rootO, 0, 0, { x: o.x, y: o.y, sx: P.s, sy: P.s });
+    if (L.ghost) { const gl = el('ellipse', { cx: 0, cy: -260, rx: 260, ry: 330, fill: 'url(#gGhost)' }, root); P.glow = gl; }
+    else el('ellipse', { cx: 0, cy: 4, rx: 70, ry: 12, fill: '#000', opacity: .28 }, root);
+    const bob = joint(P, 'bob', root, 0, 0);
+    // legs (hidden under a dress)
+    if (!L.dress) ['L', 'R'].forEach(s => { const sg = s === 'L' ? -1 : 1; const lg = joint(P, 'leg' + s, bob, sg * 24, -120);
+      el('path', { d: `M0 0 L${sg * 3} 108`, stroke: L.legs, 'stroke-width': 17, 'stroke-linecap': 'round' }, lg);
+      el('ellipse', { cx: sg * 8, cy: 116, rx: 22, ry: 10, fill: L.shoes }, lg); });
+    const torso = joint(P, 'torso', bob, 0, -120, { r: L.hunch || 0 });
+    const W = L.dress ? 96 : 74;
+    if (L.dress) {
+      el('path', { d: 'M-58 -180 Q-70 -80 -96 110 Q0 130 96 110 Q70 -80 58 -180 Q0 -202 -58 -180 Z', fill: L.top, stroke: INK, 'stroke-width': 5 }, torso);
+      for (let i = 0; i < 11; i++) el('circle', { cx: -84 + i * 16.8, cy: 98, r: 5, fill: 'none', stroke: '#c7b38c', 'stroke-width': 2.5 }, torso);
+      if (L.shawl) el('path', { d: 'M-60 -176 Q-110 -80 -84 20 L84 20 Q110 -80 60 -176', fill: L.shawl, opacity: .55 }, torso);
+    } else {
+      el('path', { d: `M-${W} 0 Q-${W + 10} -150 -52 -176 Q0 -196 52 -176 Q${W + 10} -150 ${W} 0 Z`, fill: L.top, stroke: INK, 'stroke-width': 5 }, torso);
+      el('path', { d: 'M-26 -184 L0 -60 L26 -184 Z', fill: L.inner, stroke: INK, 'stroke-width': 4 }, torso);
+    }
+    P.torsoEl = torso;
+    const sleeve = L.shawl || L.top;
+    ['L', 'R'].forEach(s => { const sg = s === 'L' ? -1 : 1;
+      const up = joint(P, 'arm' + s, torso, sg * (L.dress ? 50 : 60), -160);
+      el('path', { d: `M0 0 Q${sg * 6} 36 ${sg * 4} 72`, stroke: INK, 'stroke-width': 34, fill: 'none', 'stroke-linecap': 'round' }, up);
+      el('path', { d: `M0 0 Q${sg * 6} 36 ${sg * 4} 72`, stroke: sleeve, 'stroke-width': 25, fill: 'none', 'stroke-linecap': 'round' }, up);
+      const fo = joint(P, 'fore' + s, up, sg * 4, 72);
+      el('path', { d: `M0 0 L0 62`, stroke: INK, 'stroke-width': 31, 'stroke-linecap': 'round' }, fo);
+      el('path', { d: `M0 0 L0 62`, stroke: sleeve, 'stroke-width': 22, 'stroke-linecap': 'round' }, fo);
+      el('circle', { cx: 0, cy: 72, r: 15, fill: L.skin, stroke: INK, 'stroke-width': 4 }, fo);
+      P['hand' + s] = joint(P, 'hand' + s, fo, 0, 72);  // anything held goes in here
+    });
+    // head: pivot at the neck so tilts swing from the base
+    const head = joint(P, 'head', torso, 0, -186);
+    const HC = -96;                                      // head centre relative to the neck pivot
+    if (L.hair === 'bun') el('circle', { cx: 0, cy: HC - 108, r: 40, fill: L.hairCol, stroke: INK, 'stroke-width': 4.5 }, head);
+    el('circle', { cx: 0, cy: HC, r: 104, fill: L.skin, stroke: INK, 'stroke-width': 5 }, head);
+    const hair = joint(P, 'hair', head, 0, HC);
+    if (L.hair === 'messy') {
+      el('path', { d: 'M-110 10 Q-122 -70 -70 -104 Q-20 -138 40 -118 Q100 -104 114 -40 Q120 0 108 22 Q96 -18 74 -40 Q60 -10 30 -44 Q10 -12 -18 -46 Q-40 -12 -64 -42 Q-84 -10 -110 10 Z', fill: L.hairCol, stroke: INK, 'stroke-width': 4 }, hair);
+      P.tuft = joint(P, 'tuft', hair, -4, -122);
+      el('path', { d: 'M-16 4 Q-4 -30 22 -22 Q4 -14 4 4 Z', fill: L.hairCol }, P.tuft);
+    } else if (L.hair === 'bun') {
+      el('path', { d: 'M-102 6 Q-108 -66 -52 -92 Q0 -110 52 -92 Q108 -66 102 6 Q86 -40 40 -60 Q0 -68 -40 -60 Q-86 -40 -102 6 Z', fill: L.hairCol, stroke: INK, 'stroke-width': 4 }, hair);
+    } else if (L.hair === 'bald') {
+      el('path', { d: 'M-104 12 Q-112 -40 -84 -66 Q-72 -20 -64 -8 Z M104 12 Q112 -40 84 -66 Q72 -20 64 -8 Z', fill: L.hairCol, stroke: INK, 'stroke-width': 4 }, hair);
+    }
+    const face = joint(P, 'face', head, 0, HC);
+    ['L', 'R'].forEach(s => el('ellipse', { cx: (s === 'L' ? -1 : 1) * 58, cy: 38, rx: 16, ry: 9, fill: '#f0a99a', opacity: .45 }, face));
+    P.blush = el('g', { opacity: 0 }, face); ['L', 'R'].forEach(s => el('ellipse', { cx: (s === 'L' ? -1 : 1) * 56, cy: 36, rx: 22, ry: 11, fill: '#ff7f7f', opacity: .5 }, P.blush));
+    // eyes: lids (blink = scaleY), pupils (look), states (dot / wide / smile / closed / sad)
+    const lids = joint(P, 'lids', face, 0, 12);
+    const pup = joint(P, 'pupils', lids, 0, 0);
+    const E = {}; const ex = 38;
+    E.dot = el('g', {}, pup); [-1, 1].forEach(sg => el('ellipse', { cx: ex * sg, cy: 0, rx: 7.5, ry: 10.5, fill: L.eyeCol }, E.dot));
+    E.wide = el('g', { opacity: 0 }, lids); [-1, 1].forEach(sg => el('circle', { cx: ex * sg, cy: 0, r: 15, fill: '#fff', stroke: L.eyeCol, 'stroke-width': 3.5 }, E.wide));
+    E.widePup = el('g', { opacity: 0 }, pup); [-1, 1].forEach(sg => el('circle', { cx: ex * sg, cy: 1, r: 5, fill: L.eyeCol }, E.widePup));
+    E.smile = el('g', { opacity: 0 }, lids); [-1, 1].forEach(sg => el('path', { d: `M${ex * sg - 12} 3 Q${ex * sg} -9 ${ex * sg + 12} 3`, stroke: L.eyeCol, 'stroke-width': 4.5, fill: 'none', 'stroke-linecap': 'round' }, E.smile));
+    E.closed = el('g', { opacity: 0 }, lids); [-1, 1].forEach(sg => el('path', { d: `M${ex * sg - 12} 0 Q${ex * sg} 7 ${ex * sg + 12} 0`, stroke: L.eyeCol, 'stroke-width': 4.5, fill: 'none', 'stroke-linecap': 'round' }, E.closed));
+    P.eyes = E;
+    // brows (emotion is mostly brows)
+    ['L', 'R'].forEach(s => { const sg = s === 'L' ? -1 : 1; const b = joint(P, 'brow' + s, face, sg * 38, -26);
+      el('path', { d: 'M-14 0 Q0 -5 14 0', stroke: L.hair === 'bald' ? L.hairCol : INK, 'stroke-width': 5.5, fill: 'none', 'stroke-linecap': 'round' }, b); });
+    if (L.glasses) { const gc = L.glasses === 'gold' ? '#c8922e' : '#1a1a1a';
+      const gG = el('g', {}, face); P.glasses = gG;
+      [-1, 1].forEach(sg => el('circle', { cx: ex * sg, cy: 12, r: 30, fill: 'rgba(220,240,255,.14)', stroke: gc, 'stroke-width': 5.5 }, gG));
+      el('path', { d: 'M-8 8 Q0 2 8 8', stroke: gc, 'stroke-width': 5, fill: 'none' }, gG); }
+    if (L.moustache) el('path', { d: 'M-32 40 Q0 30 32 40 Q16 50 0 44 Q-16 50 -32 40 Z', fill: L.hairCol, stroke: INK, 'stroke-width': 3 }, face);
+    // mouth: viseme set (rest / M / A / E / O / U) + expressions (smile / grin / frown / wail)
+    const mo = el('g', { transform: 'translate(0 60)' }, face); const M = {}; const MC = '#3a1f1c';
+    const ln = d => ({ d, stroke: INK, 'stroke-width': 4, fill: 'none', 'stroke-linecap': 'round' });
+    M.rest = el('path', ln('M-10 0 Q0 3 10 0'), mo);
+    M.M = el('path', ln('M-11 1 L11 1'), mo);
+    M.A = el('path', { d: 'M-13 -4 Q0 -7 13 -4 Q11 16 0 18 Q-11 16 -13 -4 Z', fill: MC }, mo);
+    M.E = el('path', { d: 'M-17 -3 Q0 -6 17 -3 Q12 9 0 10 Q-12 9 -17 -3 Z', fill: MC }, mo);
+    M.O = el('ellipse', { cx: 0, cy: 3, rx: 9, ry: 12, fill: MC }, mo);
+    M.U = el('ellipse', { cx: 0, cy: 2, rx: 6, ry: 6, fill: MC }, mo);
+    M.smile = el('path', ln('M-16 -3 Q0 11 16 -3'), mo);
+    M.grin = el('path', { d: 'M-18 -4 Q0 -2 18 -4 Q12 16 0 17 Q-12 16 -18 -4 Z', fill: MC }, mo);
+    M.frown = el('path', ln('M-13 6 Q0 -5 13 6'), mo);
+    M.wail = el('path', { d: 'M-15 10 Q0 -10 15 10 Q0 16 -15 10 Z', fill: MC }, mo);
+    for (const k in M) M[k].setAttribute('opacity', k === 'rest' ? 1 : 0);
+    P.mouth = M; P.restMouth = 'rest';
+    P.H = 520; return P;
+  }
+
+  // ---------------- face helpers ----------------
+  function mouth(P, t, k) { if (!P.mouth[k]) return; swap(P.mouth, t, k); P.mouthNow = k; }
+  function eyes(P, t, k) {   // dot | wide | smile | closed
+    const E = P.eyes; const on = { dot: [E.dot], wide: [E.wide, E.widePup], smile: [E.smile], closed: [E.closed] }[k];
+    [E.dot, E.wide, E.widePup, E.smile, E.closed].forEach(g => tl.set(g, { opacity: on.includes(g) ? 1 : 0 }, t)); P.eyeNow = k;
+  }
+  function brows(P, t, dur, kind) {  // neutral | up | sad | angry | worried | skeptic
+    const B = { neutral: [{ y: 0, r: 0 }, { y: 0, r: 0 }], up: [{ y: -12, r: 0 }, { y: -12, r: 0 }], sad: [{ y: -4, r: -14 }, { y: -4, r: 14 }],
+      angry: [{ y: 4, r: 16 }, { y: 4, r: -16 }], worried: [{ y: -10, r: -12 }, { y: -10, r: 12 }], skeptic: [{ y: -12, r: -6 }, { y: 3, r: 4 }] }[kind];
+    mv(P, 'browL', t, dur, B[0], 'power2.out'); mv(P, 'browR', t, dur, B[1], 'power2.out');
+  }
+  function blink(P, t) {          // close 2 frames, closed 1, open 3 (~.25 s)
+    const j = P.j.lids; const sy = j.v.sy;
+    tl.fromTo(j.el, { attr: { transform: str({ ...j.v }) } }, { attr: { transform: str({ ...j.v, sy: .08 }) }, duration: 2 * F, ease: 'power2.in', immediateRender: false }, t);
+    tl.fromTo(j.el, { attr: { transform: str({ ...j.v, sy: .08 }) } }, { attr: { transform: str({ ...j.v, sy }) }, duration: 3 * F, ease: 'power2.out', immediateRender: false }, t + 3 * F);
+  }
+  // natural blinking: every 2–5 s, ~15% doubles; `avoid` = list of [t0,t1] windows (shock stares, closed-eye moments)
+  function blinks(P, t0, t1, avoid = []) {
+    for (let t = t0 + .6 + rnd() * 1.4; t < t1 - .4; t += 2 + rnd() * 3) {
+      if (avoid.some(([a, b]) => t > a - .3 && t < b + .1)) continue;
+      blink(P, t); if (rnd() < .15) blink(P, t + .32);
+    }
+  }
+  function breathe(P, t0, t1, amt = .014, per = 3.2) {    // a moving hold: chest rises, shoulders follow 2 frames later
+    const n = Math.max(1, Math.floor((t1 - t0) / per));
+    const j = P.j.torso; const base = { ...j.v };
+    tl.fromTo(j.el, { attr: { transform: str(base) } }, { attr: { transform: str({ ...base, sy: base.sy * (1 + amt) }) }, duration: per / 2, yoyo: true, repeat: n * 2 - 1, ease: 'sine.inOut', immediateRender: false }, t0);
+    if (P.L.ghost) { const b = P.j.bob; tl.fromTo(b.el, { attr: { transform: str(b.v) } }, { attr: { transform: str({ ...b.v, y: b.v.y - 10 }) }, duration: 1.6, yoyo: true, repeat: Math.max(1, Math.floor((t1 - t0) / 1.6)), ease: 'sine.inOut', immediateRender: false }, t0); }
+  }
+
+  // ---------------- looking: eyes lead, head follows, body last ----------------
+  // dx, dy in -1..1 (screen direction). Big turns blink on the way (the brain hides the eye travel).
+  function look(P, t, dx, dy = 0, o = {}) {
+    const big = Math.abs(dx - P.facing) > .6;
+    if (big && o.blink !== false) blink(P, t);
+    mv(P, 'pupils', t, 3 * F, { x: dx * 7, y: dy * 5 }, 'power2.out');
+    mv(P, 'face', t + 2 * F, 8 * F, { x: dx * 20, y: dy * 10 }, 'power2.inOut');      // fake 3/4 turn: features slide
+    mv(P, 'hair', t + 3 * F, 9 * F, { x: -dx * 5 }, 'power2.inOut');                  // hair lags (overlap)
+    mv(P, 'head', t + 2 * F, 9 * F, { r: dx * 4 + (o.tilt || 0) }, 'power2.inOut');
+    if (o.body !== false) mv(P, 'torso', t + 6 * F, 12 * F, { r: dx * 2.5 + (P.L.hunch || 0) }, 'sine.inOut');
+    P.facing = dx;
+  }
+
+  // ---------------- arms ----------------
+  // up = upper-arm swing out from the body (deg), bend = forearm fold (deg, + = toward the chest), wrist optional.
+  const sideSign = s => (s === 'L' ? 1 : -1);
+  function arm(P, side, t, dur, up, bend, ease = 'power2.inOut') {
+    const sg = sideSign(side);
+    mv(P, 'arm' + side, t, dur, { r: sg * up }, ease);
+    mv(P, 'fore' + side, t + 2 * F, dur, { r: -sg * bend }, ease);   // forearm overlaps the upper arm by 2 frames
+  }
+  const POSES = {   // [L up, L bend, R up, R bend]
+    idle: [8, 4, 8, 4], open: [28, -10, 28, -10], shrug: [30, -95, 30, -95], chest: [8, 4, -18, 140], chin: [8, 4, -26, 172],
+    point: [8, 4, 92, 0], wave: [8, 4, 150, 25], cover: [-4, 160, -4, 160], hug: [22, 118, 22, 118], hips: [38, 92, 38, 92],
+    reach: [8, 4, 60, 10], fistsUp: [40, 140, 40, 140], behind: [-14, -20, -14, -20],
+  };
+  function pose(P, t, name, dur = 10 * F, ease = 'back.out(1.6)') {
+    const p = POSES[name]; arm(P, 'L', t, dur, p[0], p[1], ease); arm(P, 'R', t, dur, p[2], p[3], ease);
+  }
+  function wave(P, t, n = 3) {      // hand oscillates at the elbow, 5 frames per swing
+    pose(P, t, 'wave', 8 * F); const j = P.j.foreR; const base = j.v.r;
+    for (let i = 0; i < n * 2; i++) mv(P, 'foreR', t + 8 * F + i * 5 * F, 5 * F, { r: base + (i % 2 ? 0 : 28) }, 'sine.inOut');
+  }
+
+  // ---------------- whole-body acting ----------------
+  // anticipation → action → overshoot → settle, on the bob joint (squash & stretch keeps the volume: sx = 1/sqrt(sy)).
+  function squash(P, t, amt = .9, hold = 3 * F) {
+    const sv = a => ({ sy: a, sx: 1 / Math.sqrt(a) });
+    mv(P, 'bob', t, 3 * F, sv(amt), 'power2.in');
+    mv(P, 'bob', t + 3 * F + hold, 3 * F, sv(1), 'power2.out');
+  }
+  function jolt(P, t, h = 26) {      // startle: squash 3f → shoot up with stretch 4f → land with a small squash → settle
+    const b = P.j.bob, y0 = b.v.y;
+    mv(P, 'bob', t, 3 * F, { sy: .88, sx: 1.06, y: y0 + 6 }, 'power2.in');
+    mv(P, 'bob', t + 3 * F, 4 * F, { sy: 1.1, sx: .95, y: y0 - h }, 'power3.out');
+    mv(P, 'bob', t + 7 * F, 5 * F, { sy: .95, sx: 1.03, y: y0 }, 'power2.in');
+    mv(P, 'bob', t + 12 * F, 6 * F, { sy: 1, sx: 1, y: y0 }, 'sine.out');
+  }
+  function nod(P, t, n = 2) { const r0 = P.j.head.v.r; for (let i = 0; i < n; i++) { mv(P, 'head', t + i * 9 * F, 4 * F, { y: 6, r: r0 }, 'sine.inOut'); mv(P, 'head', t + i * 9 * F + 4 * F, 5 * F, { y: 0, r: r0 }, 'sine.inOut'); } }
+  function shake(P, t, n = 3) { const r0 = P.j.head.v.r; for (let i = 0; i < n; i++) mv(P, 'head', t + i * 6 * F, 6 * F, { r: r0 + (i % 2 ? -7 : 7) }, 'sine.inOut'); mv(P, 'head', t + n * 6 * F, 6 * F, { r: r0 }, 'sine.out'); }
+  function lean(P, t, dur, deg) { mv(P, 'torso', t, dur, { r: deg + (P.L.hunch || 0) }, 'sine.inOut'); }
+
+  // emote = one call that sets a believable whole-body state, with the right order (eyes/brows first, then body).
+  function emote(P, t, kind) {
+    const k = kind;
+    if (k === 'neutral') { eyes(P, t, 'dot'); brows(P, t, 6 * F, 'neutral'); mouth(P, t, 'rest'); P.restMouth = 'rest'; pose(P, t + 2 * F, 'idle', 12 * F, 'sine.inOut'); lean(P, t, 12 * F, 0); tl.to(P.blush, { opacity: 0, duration: .3 }, t); }
+    if (k === 'happy') { brows(P, t, 6 * F, 'up'); eyes(P, t + 2 * F, 'smile'); mouth(P, t + 2 * F, 'smile'); P.restMouth = 'smile'; squash(P, t + 2 * F, .95); mv(P, 'head', t + 3 * F, 10 * F, { r: 5 }, 'back.out(2)'); }
+    if (k === 'joy') { brows(P, t, 5 * F, 'up'); eyes(P, t + 2 * F, 'smile'); mouth(P, t + 2 * F, 'grin'); P.restMouth = 'grin'; jolt(P, t, 18); pose(P, t + 3 * F, 'fistsUp', 8 * F); }
+    if (k === 'sad') { brows(P, t, 10 * F, 'sad'); tl.set(P.j.lids.el, {}, t); mv(P, 'lids', t + 4 * F, 12 * F, { sy: .62 }, 'sine.inOut'); mouth(P, t + 6 * F, 'frown'); P.restMouth = 'frown';
+      mv(P, 'head', t + 6 * F, 18 * F, { y: 8, r: -3 }, 'sine.inOut'); lean(P, t + 8 * F, 20 * F, 5); pose(P, t + 10 * F, 'idle', 18 * F, 'sine.inOut'); }
+    if (k === 'shock') { eyes(P, t, 'wide'); brows(P, t, 3 * F, 'up'); mouth(P, t + 1 * F, 'O'); P.restMouth = 'O'; jolt(P, t, 30); pose(P, t + 2 * F, 'open', 6 * F, 'power3.out'); mv(P, 'tuft', t + 3 * F, 6 * F, { r: -25, y: -8 }, 'back.out(3)'); }
+    if (k === 'fear') { eyes(P, t, 'wide'); brows(P, t, 4 * F, 'worried'); mouth(P, t + 2 * F, 'E'); P.restMouth = 'E'; lean(P, t + 2 * F, 8 * F, -7); pose(P, t + 3 * F, 'cover', 8 * F, 'power3.out'); squash(P, t, .94, 8 * F); }
+    if (k === 'angry') { eyes(P, t, 'dot'); brows(P, t, 4 * F, 'angry'); mouth(P, t + 2 * F, 'frown'); P.restMouth = 'frown'; lean(P, t + 2 * F, 8 * F, 6); pose(P, t + 2 * F, 'hips', 10 * F); }
+    if (k === 'think') { mv(P, 'pupils', t, 4 * F, { x: 6, y: -5 }, 'power2.out'); brows(P, t + 2 * F, 8 * F, 'skeptic'); mouth(P, t + 4 * F, 'M'); P.restMouth = 'M'; mv(P, 'head', t + 4 * F, 14 * F, { r: 6 }, 'sine.inOut'); pose(P, t + 4 * F, 'chin', 14 * F, 'sine.inOut'); }
+    if (k === 'shy') { mv(P, 'pupils', t, 4 * F, { x: -4, y: 5 }, 'power2.out'); tl.to(P.blush, { opacity: 1, duration: .4 }, t + 2 * F); mouth(P, t + 2 * F, 'smile'); P.restMouth = 'smile'; mv(P, 'head', t + 3 * F, 14 * F, { r: -7, y: 4 }, 'sine.inOut'); pose(P, t + 4 * F, 'behind', 14 * F, 'sine.inOut'); }
+    if (k === 'tender') { brows(P, t, 10 * F, 'sad'); eyes(P, t + 4 * F, 'smile'); mouth(P, t + 4 * F, 'smile'); P.restMouth = 'smile'; mv(P, 'head', t + 4 * F, 20 * F, { r: 6 }, 'sine.inOut'); pose(P, t + 6 * F, 'chest', 18 * F, 'sine.inOut'); }
+  }
+
+  // ---------------- lip-sync ----------------
+  // env = per-frame loudness (24 fps, 0..1) from _craft/visemes.py; text = the spoken Thai line (for vowel shapes).
+  // Mouth leads the sound by 1 frame; min hold 2 frames; closes (M) on stops before a pause; returns to the rest mouth.
+  const VOW = { 'า': 'A', 'ะ': 'A', 'ั': 'A', 'ำ': 'A', 'ไ': 'A', 'ใ': 'A', 'ิ': 'E', 'ี': 'E', 'ึ': 'E', 'ื': 'E', 'เ': 'E', 'แ': 'E', 'ุ': 'U', 'ู': 'U', 'โ': 'O', 'อ': 'O', 'ว': 'O' };
+  function talk(P, t0, env, text = '', o = {}) {
+    const vs = [...text].map(c => VOW[c]).filter(Boolean); if (!vs.length) vs.push('A', 'E', 'O');
+    let vi = 0, cur = null, held = 0, wasOpen = false; const keys = [];
+    for (let i = 0; i < env.length; i++) {
+      const a = env[i], nxt = env[i + 1] ?? 0;
+      let k;
+      if (a < .14) k = (wasOpen && nxt < .14) ? 'M' : (a < .06 ? 'rest' : 'U');
+      else { if (!wasOpen) { vi++; } k = vs[vi % vs.length]; if (a < .35 && k === 'A') k = 'E'; if (a > .75 && k === 'U') k = 'O'; }
+      wasOpen = a >= .14;
+      if (k !== cur && held >= 2) { keys.push([i, k]); cur = k; held = 0; } else if (cur === null) { keys.push([i, k]); cur = k; }
+      held++;
+    }
+    keys.forEach(([i, k]) => { if (k === 'rest') k = P.restMouth === 'rest' ? 'rest' : 'M'; swap(P.mouth, t0 + (i - 1) * F, k); });
+    swap(P.mouth, t0 + env.length * F, P.restMouth); P.mouthNow = P.restMouth;
+    // talking heads move: small head accents on loud peaks (not on every syllable)
+    if (o.head !== false) { let last = -99; for (let i = 1; i < env.length - 1; i++) if (env[i] > .8 && env[i] >= env[i - 1] && env[i] >= env[i + 1] && i - last > 14) {
+      const r0 = P.j.head.v.r; mv(P, 'head', t0 + (i - 2) * F, 3 * F, { r: r0 + (rnd() < .5 ? 2.5 : -2.5), y: 2 }, 'power2.out'); mv(P, 'head', t0 + (i + 1) * F, 8 * F, { r: r0, y: 0 }, 'sine.inOut'); last = i; } }
+  }
+  // listener: nods / blinks while someone else speaks (the listener sells the line)
+  function listen(P, t0, t1) { for (let t = t0 + .8; t < t1 - .6; t += 1.6 + rnd() * 1.4) { if (rnd() < .5) nod(P, t, 1); else blink(P, t); } }
+
+  // ---------------- walking ----------------
+  // Front-facing storybook walk: alternate leg lifts, body bob (down on contact, up on passing), counter-swinging arms,
+  // head counter-rotates a little, hair/tuft lags. step = seconds per step (0.5 normal, 0.42 brisk, 0.65 elderly/tired).
+  function walk(P, t0, t1, to, o = {}) {
+    const step = o.step || .5, lift = o.lift ?? 14, swing = o.swing ?? 14, bobA = o.bob ?? 7;
+    const R = P.j.root; const from = { ...R.v };
+    const dest = { ...R.v, x: to.x ?? R.v.x, y: to.y ?? R.v.y, sx: (to.s ?? R.v.sx), sy: (to.s ?? R.v.sy) };
+    const dur = t1 - t0; const n = Math.max(1, Math.round(dur / step)); const st = dur / n;
+    // anticipation: a tiny lean into the direction before the first step
+    const dir = Math.sign(dest.x - from.x) || 1;
+    lean(P, t0 - 4 * F, 4 * F, dir * 3);
+    tl.fromTo(R.el, { attr: { transform: str(from) } }, { attr: { transform: str(dest) }, duration: dur, ease: 'none', immediateRender: false }, t0);
+    Object.assign(R.v, dest);
+    for (let i = 0; i < n; i++) {
+      const t = t0 + i * st, s = i % 2 ? 'R' : 'L', other = i % 2 ? 'L' : 'R';
+      if (!P.L.dress) { mv(P, 'leg' + s, t, st / 2, { y: -lift, r: (s === 'L' ? -1 : 1) * 5 }, 'sine.out'); mv(P, 'leg' + s, t + st / 2, st / 2, { y: 0, r: 0 }, 'sine.in'); }
+      mv(P, 'bob', t, st * .2, { y: bobA * .5 }, 'sine.out');            // contact/down
+      mv(P, 'bob', t + st * .2, st * .3, { y: -bobA }, 'sine.inOut');     // passing/up
+      mv(P, 'bob', t + st * .5, st * .5, { y: 0 }, 'sine.in');
+      mv(P, 'arm' + s, t, st, { r: sideSign(s) * (8 - swing) }, 'sine.inOut');     // arm opposite the lifted leg swings back
+      mv(P, 'arm' + other, t, st, { r: sideSign(other) * (8 + swing * .6) }, 'sine.inOut');
+      mv(P, 'head', t + 2 * F, st, { r: (s === 'L' ? 1 : -1) * 1.6 }, 'sine.inOut');
+      if (P.j.tuft) mv(P, 'tuft', t + 3 * F, st, { r: (s === 'L' ? -1 : 1) * 8 }, 'sine.inOut');
+    }
+    // settle: feet down, small overshoot, arms back to idle
+    lean(P, t1, 6 * F, -dir * 2); lean(P, t1 + 6 * F, 8 * F, 0);
+    mv(P, 'bob', t1, 4 * F, { y: 4, sy: .97, sx: 1.015 }, 'power2.out'); mv(P, 'bob', t1 + 4 * F, 6 * F, { y: 0, sy: 1, sx: 1 }, 'sine.out');
+    mv(P, 'head', t1 + 2 * F, 8 * F, { r: 0 }, 'back.out(2)'); if (P.j.tuft) mv(P, 'tuft', t1 + 3 * F, 10 * F, { r: 0 }, 'back.out(3)');
+    pose(P, t1 + 2 * F, 'idle', 10 * F, 'sine.out');
+  }
+  // ghosts glide: no steps, a slow arc and a trailing hem
+  function glide(P, t0, t1, to) {
+    const R = P.j.root; const from = { ...R.v }; Object.assign(R.v, { x: to.x ?? R.v.x, y: to.y ?? R.v.y });
+    tl.fromTo(R.el, { attr: { transform: str(from) } }, { attr: { transform: str(R.v) }, duration: t1 - t0, ease: 'sine.inOut', immediateRender: false }, t0);
+    lean(P, t0, (t1 - t0) * .3, Math.sign(R.v.x - from.x) * -4); lean(P, t0 + (t1 - t0) * .6, (t1 - t0) * .4, 0);
+  }
+  function place(P, t, to) { mv(P, 'root', t, 0, { x: to.x ?? P.j.root.v.x, y: to.y ?? P.j.root.v.y, ...(to.s ? { sx: to.s, sy: to.s } : {}) }); }
+  function fade(P, t, dur, op) { tl.to(P.g, { opacity: op, duration: dur, ease: 'sine.inOut' }, t); }
+  function appear(P, t) {   // ghost entrance: flicker in (two false starts, then a slow rise)
+    tl.set(P.g, { opacity: 0 }, 0);
+    tl.to(P.g, { opacity: .5, duration: 6 * F }, t); tl.to(P.g, { opacity: .1, duration: 2 * F }, t + 8 * F);
+    tl.to(P.g, { opacity: .7, duration: 3 * F }, t + 12 * F); tl.to(P.g, { opacity: .2, duration: 2 * F }, t + 16 * F);
+    tl.to(P.g, { opacity: .93, duration: 1.2 }, t + 20 * F);
+  }
+
+  // ---------------- camera ----------------
+  // Scene markup: <div class="scene" id="s"><div class="cam"><div class="layer" style="--d:.75">bg</div>
+  //   <div class="layer" style="--d:1">characters</div><div class="layer" style="--d:1.3">foreground</div></div></div>
+  // --d = depth: layers move/scale by camera * d (parallax). Background layers are oversized by RIG_CSS so pans never show an edge.
+  function cam(sel) {
+    const node = document.querySelector(sel + ' .cam'); const C = { px: 960, py: 540, s: 1, rot: 0 };
+    const vars = c => { const mx = (c.s - 1) * 960, my = (c.s - 1) * 540;
+      return { '--s': c.s, '--x': Math.max(-mx, Math.min(mx, -(c.px - 960) * c.s)), '--y': Math.max(-my, Math.min(my, -(c.py - 540) * c.s)), '--rot': c.rot }; };
+    const api = {
+      set(t, c) { Object.assign(C, c); tl.set(node, vars(C), t); return api; },
+      // move: ease guide — 'sine.inOut' slow drifts, 'power2.inOut' motivated moves, 'power3.out' snap-zooms, 'expo.inOut' whip
+      move(t, dur, c, ease = 'sine.inOut') { const f = vars(C); Object.assign(C, c); tl.fromTo(node, f, { ...vars(C), duration: dur, ease, immediateRender: false }, t); return api; },
+      // handheld-ish shake that decays; amp px, freq Hz
+      shake(t, dur, amp = 14, freq = 18) { const n = Math.round(dur * freq); for (let i = 0; i <= n; i++) { const k = 1 - i / n;
+        tl.set(node, { '--shx': i === n ? 0 : (rnd() - .5) * 2 * amp * k, '--shy': i === n ? 0 : (rnd() - .5) * 2 * amp * k }, t + i / freq); } return api; },
+      // slow breathing drift so a "still" camera is never dead (two sines at a 1.3 ratio = organic Lissajous)
+      drift(t0, t1, amp = 6) { const n = Math.floor((t1 - t0) / 4); if (n < 1) return api;
+        tl.fromTo(node, { '--dx': -amp }, { '--dx': amp, duration: 2, yoyo: true, repeat: n * 2 - 1, ease: 'sine.inOut', immediateRender: false }, t0);
+        tl.fromTo(node, { '--dy': -amp * .6 }, { '--dy': amp * .6, duration: 2.6, yoyo: true, repeat: Math.floor((t1 - t0) / 2.6) - 1, ease: 'sine.inOut', immediateRender: false }, t0); return api; },
+      // rack focus: blur one layer, sharpen another (layer = CSS selector)
+      rack(t, dur, blurSel, sharpSel, px = 10) { tl.fromTo(blurSel, { '--blur': 0 }, { '--blur': px, duration: dur, ease: 'power2.inOut', immediateRender: false }, t);
+        if (sharpSel) tl.fromTo(sharpSel, { '--blur': px }, { '--blur': 0, duration: dur, ease: 'power2.inOut', immediateRender: false }, t); return api; },
+      // dolly zoom (vertigo): background layer grows while the camera pulls back on the subject
+      vertigo(t, dur, bgSel, amt = .35) { tl.fromTo(bgSel, { '--zs': 1 }, { '--zs': 1 + amt, duration: dur, ease: 'sine.inOut', immediateRender: false }, t);
+        return api.move(t, dur, { s: Math.max(1, C.s - amt * .6) }, 'sine.inOut'); },
+      state: () => ({ ...C }),
+    };
+    return api;
+  }
+  // transitions between scene divs (opacity on whole scenes)
+  function cut(t, outId, inId) { if (outId) tl.set('#' + outId, { opacity: 0 }, t); if (inId) tl.set('#' + inId, { opacity: 1 }, t); }
+  function dissolve(t, dur, outId, inId) { if (inId) tl.fromTo('#' + inId, { opacity: 0 }, { opacity: 1, duration: dur, ease: 'none', immediateRender: false }, t); if (outId) tl.to('#' + outId, { opacity: 0, duration: dur, ease: 'none' }, t); }
+  function dip(t, dur, outId, inId, color = '#000') {     // dip to black/white: out → colour → in (time passes)
+    const d = document.getElementById('__dip') || (() => { const x = document.createElement('div'); x.id = '__dip'; x.style.cssText = `position:absolute;inset:0;opacity:0;z-index:50;pointer-events:none`; document.querySelector('[data-composition-id]').appendChild(x); return x; })();
+    tl.set(d, { backgroundColor: color }, t);
+    tl.fromTo(d, { opacity: 0 }, { opacity: 1, duration: dur / 2, ease: 'sine.in', immediateRender: false }, t);
+    cut(t + dur / 2, outId, inId);
+    tl.fromTo(d, { opacity: 1 }, { opacity: 0, duration: dur / 2, ease: 'sine.out', immediateRender: false }, t + dur / 2);
+  }
+
+  return { F, FPS, rnd, el, LOOKS, POSES, puppet, joint, mv, mouth, eyes, brows, blink, blinks, breathe, look, arm, pose, wave, squash, jolt, nod, shake, lean, emote, talk, listen, walk, glide, place, fade, appear, cam, cut, dissolve, dip };
+}
+// CSS the camera/layers need — paste into <style> (build.py replaces /*RIG_CSS*/)
+const RIG_CSS = `
+.cam{position:absolute;inset:0;--s:1;--x:0;--y:0;--rot:0;--shx:0;--shy:0;--dx:0;--dy:0;
+  transform:translate(calc((var(--shx) + var(--dx))*1px),calc((var(--shy) + var(--dy))*1px)) rotate(calc(var(--rot)*1deg));transform-origin:960px 540px}
+.layer{position:absolute;inset:0;--d:1;--zs:1;--blur:0;transform-origin:960px 540px;
+  transform:translate(calc(var(--x)*var(--d)*1px),calc(var(--y)*var(--d)*1px)) scale(calc((1 + (var(--s) - 1)*var(--d))*var(--zs)));filter:blur(calc(var(--blur)*1px))}
+.layer.bg img{position:absolute;left:-6%;top:-6%;width:112%;height:112%;object-fit:cover}
+`;
+(() => { const s = document.createElement('style'); s.textContent = RIG_CSS; document.head.appendChild(s); })();
+
+      // ============================================================================================================
+// fx.js — visual effects for the 2D story clips (seek-safe GSAP, deterministic). Theory: _craft/STYLES.md + FX.md.
+// Inline after rig.js (build.py replaces /*FX*/). Needs `tl` (paused timeline).
+//   const X = FX(tl, { seed: 3 });
+//   X.boil('#chars svg', 0, 20)                  hand-drawn line boil (3 displacement states, on twos/threes)
+//   X.particles(svg, 'dust'|'rain'|'snow'|'fireflies'|'embers'|'petals'|'leaves', t0, t1, { box, n, ... })
+//   X.sparks(svg, t, x, y)   X.lightning(t)   X.impact(t, x, y)   X.speedLines(svg, t0, t1, x, y)
+//   X.rays(svg, t0, t1, { x, angle })   X.fog(svg, t0, t1)   X.flicker(sel, t0, t1)   X.glitch(sel, t, dur)
+//   X.grade(sel, t, 'night'|'dawn'|'memory'|'horror'|'noir'|'warm'|'cold'|'none', dur)   X.film(t0, t1)
+//   X.iris(sel, t, dur, x, y, 'in'|'out')   X.wipe(sel, t, dur, 'left'|'right'|'up'|'down', 'in'|'out')   X.ghostWarp(sel, t0, t1)
+// Every effect is built at setup time from a seeded random, so any seek renders the same frame.
+// ============================================================================================================
+function FX(tl, opt = {}) {
+  const NS = 'http://www.w3.org/2000/svg', F = 1 / 24;
+  let seed = opt.seed || 3; const rnd = () => (seed = (seed * 16807) % 2147483647) / 2147483647;
+  const el = (tag, a, p) => { const e = document.createElementNS(NS, tag); for (const k in a) e.setAttribute(k, a[k]); p && p.appendChild(e); return e; };
+  const root = document.querySelector('[data-composition-id]');
+  const q = s => typeof s === 'string' ? document.querySelectorAll(s) : [s];
+
+  // ---------- shared SVG filter defs ----------
+  const defsSvg = el('svg', { width: 0, height: 0, style: 'position:absolute' }); root.prepend(defsSvg); const defs = el('defs', {}, defsSvg);
+  function filt(id, inner) { const f = el('filter', { id, x: '-10%', y: '-10%', width: '120%', height: '120%' }, defs); f.innerHTML = inner; return f; }
+  // line boil: 3 noise seeds; scale 2–4 = subtle hand-drawn, 6–10 = nervous / horror
+  const BOIL = opt.boil ?? 2.6;
+  for (let i = 0; i < 3; i++) filt('fxBoil' + i, `<feTurbulence type="fractalNoise" baseFrequency="0.035" numOctaves="2" seed="${i * 7 + 1}" result="n"/><feDisplacementMap in="SourceGraphic" in2="n" scale="${BOIL}" xChannelSelector="R" yChannelSelector="G"/>`);
+  filt('fxRough', `<feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="1" seed="4" result="n"/><feDisplacementMap in="SourceGraphic" in2="n" scale="3"/>`);
+  filt('fxGlow', `<feGaussianBlur stdDeviation="8" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>`);
+  filt('fxSoft', `<feGaussianBlur stdDeviation="14"/>`);
+  filt('fxWarp', `<feTurbulence id="fxWarpN" type="fractalNoise" baseFrequency="0.012 0.04" numOctaves="2" seed="9" result="n"/><feDisplacementMap in="SourceGraphic" in2="n" scale="0" id="fxWarpD" xChannelSelector="R" yChannelSelector="G"/>`);
+  filt('fxRGB', `<feColorMatrix in="SourceGraphic" type="matrix" values="1 0 0 0 0  0 0 0 0 0  0 0 0 0 0  0 0 0 1 0" result="r"/><feOffset in="r" dx="-6" result="r2"/>
+    <feColorMatrix in="SourceGraphic" type="matrix" values="0 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 1 0" result="gb"/><feOffset in="gb" dx="6" result="gb2"/><feBlend in="r2" in2="gb2" mode="screen"/>`);
+  filt('fxPoster', `<feComponentTransfer><feFuncR type="discrete" tableValues="0 .25 .5 .75 1"/><feFuncG type="discrete" tableValues="0 .25 .5 .75 1"/><feFuncB type="discrete" tableValues="0 .25 .5 .75 1"/></feComponentTransfer>`);
+  const grad = (id, stops, type = 'radialGradient') => { const g = el(type, { id }, defs); stops.forEach(([o, c, a]) => el('stop', { offset: o, 'stop-color': c, 'stop-opacity': a }, g)); };
+  grad('fxDot', [[0, '#fff', 1], [1, '#fff', 0]]); grad('fxFly', [[0, '#fffbd0', 1], [.4, '#d9ff6a', .6], [1, '#9cff3a', 0]]);
+  grad('fxEmber', [[0, '#fff2b0', 1], [.5, '#ff8a2a', .8], [1, '#ff3a00', 0]]); grad('fxFog', [[0, '#c8d6e8', .5], [1, '#c8d6e8', 0]]);
+  const ray = el('linearGradient', { id: 'fxRay', x1: 0, y1: 0, x2: 0, y2: 1 }, defs); el('stop', { offset: 0, 'stop-color': '#fff3d6', 'stop-opacity': .45 }, ray); el('stop', { offset: 1, 'stop-color': '#fff3d6', 'stop-opacity': 0 }, ray);
+
+  // ---------- line boil (hand-drawn wobble). on = frames per state: 2 ("on twos", lively) or 3 (calmer) ----------
+  function boil(sel, t0, t1, on = 3) { const els = [...q(sel)]; let i = 0;
+    for (let t = t0; t < t1; t += on * F, i++) els.forEach(e => tl.set(e, { attr: { filter: `url(#fxBoil${i % 3})` } }, t));
+    els.forEach(e => tl.set(e, { attr: { filter: 'none' } }, t1)); }
+
+  // ---------- particles ----------
+  // box = [x, y, w, h] where they live. Each particle gets its own finite tween(s) so seeking is exact.
+  function particles(svg, kind, t0, t1, o = {}) {
+    const box = o.box || [0, 0, 1920, 1080], [bx, by, bw, bh] = box, dur = t1 - t0, g = el('g', { opacity: 0, 'pointer-events': 'none' }, svg);
+    tl.to(g, { opacity: 1, duration: .6 }, t0); tl.to(g, { opacity: 0, duration: .6 }, t1 - .6);
+    const N = o.n ?? { dust: 40, rain: 160, snow: 90, fireflies: 22, embers: 45, petals: 18, leaves: 14 }[kind];
+    for (let i = 0; i < N; i++) {
+      const x = bx + rnd() * bw, y = by + rnd() * bh, ph = rnd();
+      if (kind === 'dust') {      // motes floating in a light beam: slow random drift, twinkle
+        const c = el('circle', { cx: x, cy: y, r: .8 + rnd() * 2.2, fill: 'url(#fxDot)', opacity: .2 + rnd() * .5 }, g);
+        tl.fromTo(c, { attr: { cx: x, cy: y } }, { attr: { cx: x + (rnd() - .5) * 160, cy: y + (rnd() - .3) * 120 }, duration: dur, ease: 'sine.inOut', immediateRender: false }, t0);
+        tl.fromTo(c, { opacity: .1 }, { opacity: .7, duration: 1.5 + rnd() * 2, yoyo: true, repeat: Math.floor(dur / 2), ease: 'sine.inOut', immediateRender: false }, t0 + ph);
+      } else if (kind === 'rain') {   // three depths: near = long, fast, bright; far = short, slow, dim
+        const z = rnd(), len = 30 + z * 60, sp = .35 + (1 - z) * .45, ang = o.angle ?? 12, dx = Math.tan(ang * Math.PI / 180) * (bh + len);
+        const l = el('line', { x1: 0, y1: 0, x2: -Math.tan(ang * Math.PI / 180) * len, y2: -len, stroke: '#cfe0ff', 'stroke-width': .8 + z * 1.6, opacity: .15 + z * .4, 'stroke-linecap': 'round' }, g);
+        for (let t = t0 + ph * sp; t < t1; t += sp) tl.fromTo(l, { attr: { transform: `translate(${x} ${by - len})` } }, { attr: { transform: `translate(${x + dx} ${by + bh})` }, duration: sp, ease: 'none', immediateRender: false }, t);
+      } else if (kind === 'snow') {
+        const r = 1.5 + rnd() * 4, c = el('circle', { r, fill: '#fff', opacity: .4 + rnd() * .5 }, g), sp = 5 + rnd() * 6;
+        for (let t = t0 - ph * sp; t < t1; t += sp) tl.fromTo(c, { attr: { transform: `translate(${x} ${by - 10})` } }, { attr: { transform: `translate(${x + (rnd() - .5) * 200} ${by + bh + 10})` }, duration: sp, ease: 'none', immediateRender: false }, Math.max(0, t));
+      } else if (kind === 'fireflies') {
+        const c = el('circle', { cx: 0, cy: 0, r: 9, fill: 'url(#fxFly)' }, g); let px = x, py = y;
+        for (let t = t0; t < t1; t += 2.2) { const nx = Math.min(bx + bw, Math.max(bx, px + (rnd() - .5) * 220)), ny = Math.min(by + bh, Math.max(by, py + (rnd() - .5) * 160));
+          tl.fromTo(c, { attr: { transform: `translate(${px} ${py})` } }, { attr: { transform: `translate(${nx} ${ny})` }, duration: 2.2, ease: 'sine.inOut', immediateRender: false }, t); px = nx; py = ny; }
+        tl.fromTo(c, { opacity: 0 }, { opacity: 1, duration: .7 + rnd(), yoyo: true, repeat: Math.floor(dur), ease: 'sine.inOut', immediateRender: false }, t0 + ph * 2);
+      } else if (kind === 'embers') {
+        const c = el('circle', { r: 2 + rnd() * 4, fill: 'url(#fxEmber)' }, g), sp = 2.5 + rnd() * 3;
+        for (let t = t0 - ph * sp; t < t1; t += sp) tl.fromTo(c, { attr: { transform: `translate(${x} ${by + bh})` }, opacity: 1 }, { attr: { transform: `translate(${x + (rnd() - .5) * 240} ${by})` }, opacity: 0, duration: sp, ease: 'power1.out', immediateRender: false }, Math.max(0, t));
+      } else if (kind === 'petals' || kind === 'leaves') {
+        const p = el('g', {}, g); const col = o.color || (kind === 'petals' ? '#fff6f0' : ['#c98a2e', '#a8642a', '#d8b04a'][i % 3]);
+        el('path', { d: kind === 'petals' ? 'M0 -9 Q7 0 0 9 Q-7 0 0 -9 Z' : 'M0 -12 Q10 0 0 12 Q-10 0 0 -12 Z M0 -12 L0 12', fill: col, stroke: kind === 'leaves' ? '#5a3a1a' : 'none', 'stroke-width': 1 }, p);
+        const sp = 5 + rnd() * 4;
+        for (let t = t0 - ph * sp; t < t1; t += sp) { const x1 = x + 150 + rnd() * 250;
+          tl.fromTo(p, { attr: { transform: `translate(${x} ${by - 20}) rotate(0) scale(1 1)` } }, { attr: { transform: `translate(${x1} ${by + bh + 20}) rotate(${360 + rnd() * 360}) scale(1 ${(rnd() * .6 + .3).toFixed(2)})` }, duration: sp, ease: 'none', immediateRender: false }, Math.max(0, t)); }
+      }
+    }
+    return g;
+  }
+  function sparks(svg, t, x, y, n = 18, col = '#ffe39a') {
+    for (let i = 0; i < n; i++) { const a = -Math.PI * rnd(), d = 60 + rnd() * 160, c = el('circle', { cx: x, cy: y, r: 1.5 + rnd() * 3, fill: col, opacity: 0 }, svg);
+      tl.fromTo(c, { attr: { cx: x, cy: y }, opacity: 1 }, { attr: { cx: x + Math.cos(a) * d, cy: y + Math.sin(a) * d + 80 }, opacity: 0, duration: .4 + rnd() * .3, ease: 'power2.out', immediateRender: false }, t + rnd() * .08); }
+  }
+
+  // ---------- light ----------
+  function overlay(color, z = 40, blend = 'normal') { const d = document.createElement('div'); d.style.cssText = `position:absolute;inset:0;background:${color};opacity:0;z-index:${z};pointer-events:none;mix-blend-mode:${blend}`; root.appendChild(d); return d; }
+  const flashW = overlay('#fff', 45), flashB = overlay('#000', 44), tint = overlay('#7fa8ff', 43, 'screen');
+  function lightning(t, scene, o = {}) {   // o.back = the scene's grade to return to   // flash–dark–flash, bluish; thunder ~0.3–2 s later in the sound
+    [[0, .4], [2, 0], [4, .3], [6, 0], [9, .14], [13, 0]].forEach(([f, o]) => tl.set(flashW, { opacity: o }, t + f * F));   // the scene itself brightens; the white is only a kiss
+    tl.set(tint, { opacity: .5 }, t); tl.to(tint, { opacity: 0, duration: .6 }, t + 6 * F);
+    if (scene) { const back = o.back || 'none'; [[0, 'brightness(2.1) contrast(1.15) saturate(.6)'], [2, back], [4, 'brightness(1.8) contrast(1.1) saturate(.7)'], [6, back], [9, 'brightness(1.35)'], [13, back]].forEach(([f, v]) => tl.set(scene, { filter: v }, t + f * F)); }
+  }
+  function impact(t, x = 960, y = 540, svg) {   // 1 F white, 1 F inverted, speed lines burst — pair with cam.shake + a hit sound
+    tl.set(flashW, { opacity: 1 }, t); tl.set(flashW, { opacity: 0 }, t + F);
+    tl.set(root, { filter: 'invert(1)' }, t + F); tl.set(root, { filter: 'none' }, t + 2 * F);
+    if (svg) speedLines(svg, t, t + 8 * F, x, y, 40);
+  }
+  function speedLines(svg, t0, t1, x, y, n = 60, col = '#fff') {   // anime focus lines, redrawn every 2 frames
+    const g = el('g', { opacity: 0 }, svg); const sets = [];
+    for (let k = 0; k < 3; k++) { const s = el('g', { opacity: 0 }, g); sets.push(s);
+      for (let i = 0; i < n; i++) { const a = rnd() * Math.PI * 2, r0 = 260 + rnd() * 220, r1 = 1400, w = 2 + rnd() * 10;
+        el('path', { d: `M${x + Math.cos(a - .004 * w) * r1} ${y + Math.sin(a - .004 * w) * r1} L${x + Math.cos(a) * r0} ${y + Math.sin(a) * r0} L${x + Math.cos(a + .004 * w) * r1} ${y + Math.sin(a + .004 * w) * r1} Z`, fill: col, opacity: .75 }, s); } }
+    tl.set(g, { opacity: 1 }, t0); tl.set(g, { opacity: 0 }, t1);
+    let i = 0; for (let t = t0; t < t1; t += 2 * F, i++) sets.forEach((s, k) => tl.set(s, { opacity: k === i % 3 ? 1 : 0 }, t));
+  }
+  function rays(svg, t0, t1, o = {}) {   // god rays from a window/lamp; slow shimmer
+    const x = o.x ?? 1400, ang = o.angle ?? 25, n = o.n ?? 5, g = el('g', { opacity: 0, style: 'mix-blend-mode:screen', filter: 'url(#fxSoft)' }, svg);
+    for (let i = 0; i < n; i++) { const w = 60 + rnd() * 140, r = el('rect', { x: x + i * 110 - w / 2, y: -200, width: w, height: 1700, fill: 'url(#fxRay)', transform: `rotate(${ang} ${x} -200)` }, g);
+      tl.fromTo(r, { opacity: .4 }, { opacity: 1, duration: 2 + rnd() * 2, yoyo: true, repeat: Math.max(1, Math.floor((t1 - t0) / 3)), ease: 'sine.inOut', immediateRender: false }, t0 + rnd()); }
+    tl.to(g, { opacity: o.op ?? .8, duration: 1.2 }, t0); tl.to(g, { opacity: 0, duration: 1 }, t1 - 1); return g;
+  }
+  function fog(svg, t0, t1, o = {}) {   // layered drifting fog banks (lower = denser)
+    const g = el('g', { opacity: 0 }, svg);
+    for (let i = 0; i < (o.n ?? 7); i++) { const y = (o.y ?? 760) + rnd() * 260, x = rnd() * 1920, e = el('ellipse', { cx: x, cy: y, rx: 500 + rnd() * 400, ry: 70 + rnd() * 60, fill: 'url(#fxFog)', opacity: .5 + rnd() * .4 }, g);
+      const dx = (rnd() < .5 ? -1 : 1) * (150 + rnd() * 250); tl.fromTo(e, { attr: { cx: x } }, { attr: { cx: x + dx }, duration: t1 - t0, ease: 'none', immediateRender: false }, t0); }
+    tl.to(g, { opacity: o.op ?? .7, duration: 1.5 }, t0); tl.to(g, { opacity: 0, duration: 1.5 }, t1 - 1.5); return g;
+  }
+  function flicker(sel, t0, t1, o = {}) {   // a failing bulb: mostly on, irregular dips, sometimes a double blink
+    const lo = o.lo ?? .35; for (let t = t0 + rnd(); t < t1; t += .4 + rnd() * 1.6) { tl.set(sel, { opacity: lo }, t); tl.set(sel, { opacity: 1 }, t + (1 + Math.floor(rnd() * 3)) * F);
+      if (rnd() < .3) { tl.set(sel, { opacity: lo }, t + 4 * F); tl.set(sel, { opacity: 1 }, t + 6 * F); } }
+  }
+
+  // ---------- distortion ----------
+  function glitch(sel, t, dur = .4) {   // RGB split + horizontal jitter, on random frames
+    for (let k = 0; k < dur / F; k++) { const tt = t + k * F, on = rnd() < .6;
+      tl.set(sel, { filter: on ? 'url(#fxRGB)' : 'none', x: on ? (rnd() - .5) * 30 : 0 }, tt); }
+    tl.set(sel, { filter: 'none', x: 0 }, t + dur);
+  }
+  function ghostWarp(sel, t0, t1, amt = 14) {   // heat-haze / ghostly ripple: displacement scale breathes
+    tl.set(sel, { filter: 'url(#fxWarp)' }, t0); const d = defs.querySelector('#fxWarpD'), n = defs.querySelector('#fxWarpN');
+    tl.fromTo(d, { attr: { scale: 0 } }, { attr: { scale: amt }, duration: 1, ease: 'sine.inOut', immediateRender: false }, t0);
+    tl.fromTo(n, { attr: { baseFrequency: '0.012 0.04' } }, { attr: { baseFrequency: '0.016 0.06' }, duration: t1 - t0, ease: 'none', immediateRender: false }, t0);
+    tl.to(d, { attr: { scale: 0 }, duration: .6 }, t1 - .6); tl.set(sel, { filter: 'none' }, t1);
+  }
+
+  // ---------- grading ----------
+  const GRADES = { none: 'none', night: 'brightness(.62) saturate(.7) hue-rotate(-12deg) contrast(1.08)', dawn: 'brightness(1.1) saturate(.85) contrast(.95) sepia(.12)',
+    memory: 'sepia(.65) saturate(.8) brightness(1.05) contrast(.9) blur(.4px)', horror: 'saturate(.45) hue-rotate(40deg) brightness(.75) contrast(1.25)',
+    noir: 'grayscale(1) contrast(1.45) brightness(.9)', warm: 'saturate(1.15) sepia(.18) brightness(1.04)', cold: 'saturate(.8) hue-rotate(-18deg) brightness(.95)',
+    poster: 'url(#fxPoster) saturate(1.3)' };
+  function grade(sel, t, name, dur = 0) { if (dur) tl.to(sel, { filter: GRADES[name], duration: dur, ease: 'sine.inOut' }, t); else tl.set(sel, { filter: GRADES[name] }, t); }
+
+  // ---------- film look ----------
+  function film(t0, t1, o = {}) {   // grain (re-seeded on twos), scratches, dust specks, gate weave, optional letterbox
+    const s = el('svg', { viewBox: '0 0 1920 1080', style: 'position:absolute;inset:0;width:1920px;height:1080px;z-index:41;pointer-events:none;mix-blend-mode:overlay', opacity: o.grain ?? .12 }); root.appendChild(s);
+    const gr = []; for (let k = 0; k < 4; k++) { const f = el('filter', { id: 'fxGrain' + k }, defs); f.innerHTML = `<feTurbulence type="fractalNoise" baseFrequency=".85" numOctaves="2" seed="${k * 13 + 2}"/>`;
+      gr.push(el('rect', { width: 1920, height: 1080, filter: `url(#fxGrain${k})`, opacity: 0 }, s)); }
+    let i = 0; for (let t = t0; t < t1; t += 2 * F, i++) gr.forEach((r, k) => tl.set(r, { attr: { opacity: k === i % 4 ? 1 : 0 } }, t));
+    if (o.scratches !== false) { const sc = el('svg', { viewBox: '0 0 1920 1080', style: 'position:absolute;inset:0;width:1920px;height:1080px;z-index:42;pointer-events:none' }); root.appendChild(sc);
+      for (let t = t0; t < t1; t += F) { if (rnd() > .12) continue; const x = rnd() * 1920, l = el('line', { x1: x, y1: 0, x2: x + (rnd() - .5) * 8, y2: 1080, stroke: rnd() < .5 ? '#fff' : '#000', 'stroke-width': 1 + rnd() * 1.5, opacity: 0 }, sc);
+        tl.set(l, { attr: { opacity: .35 } }, t); tl.set(l, { attr: { opacity: 0 } }, t + F);
+        if (rnd() < .5) { const d = el('circle', { cx: rnd() * 1920, cy: rnd() * 1080, r: 1 + rnd() * 3, fill: '#111', opacity: 0 }, sc); tl.set(d, { attr: { opacity: .6 } }, t); tl.set(d, { attr: { opacity: 0 } }, t + F); } } }
+    if (o.weave) for (let t = t0; t < t1; t += 2 * F) tl.set(o.weave, { y: (rnd() - .5) * 2.4, x: (rnd() - .5) * 1.2 }, t);
+    if (o.letterbox) { const h = o.letterbox; ['top', 'bottom'].forEach(side => { const b = document.createElement('div'); b.style.cssText = `position:absolute;left:0;right:0;${side}:0;height:${h}px;background:#000;z-index:46;transform:scaleY(0);transform-origin:${side}`; root.appendChild(b);
+      tl.to(b, { scaleY: 1, duration: .8, ease: 'power2.inOut' }, t0); }); }
+  }
+
+  // ---------- shape transitions ----------
+  function iris(sel, t, dur, x = 960, y = 540, dir = 'out') {   // circle closes (out) / opens (in) on a point — classic cartoon ending
+    const big = 'circle(1400px at ' + x + 'px ' + y + 'px)', small = 'circle(0px at ' + x + 'px ' + y + 'px)';
+    tl.fromTo(sel, { clipPath: dir === 'out' ? big : small }, { clipPath: dir === 'out' ? small : big, duration: dur, ease: dir === 'out' ? 'power2.in' : 'power2.out', immediateRender: false }, t);
+  }
+  function wipe(sel, t, dur, from = 'left', dir = 'in') {
+    const full = 'inset(0% 0% 0% 0%)', hid = { left: 'inset(0% 100% 0% 0%)', right: 'inset(0% 0% 0% 100%)', up: 'inset(100% 0% 0% 0%)', down: 'inset(0% 0% 100% 0%)' }[from];
+    tl.fromTo(sel, { clipPath: dir === 'in' ? hid : full }, { clipPath: dir === 'in' ? full : hid, duration: dur, ease: 'power2.inOut', immediateRender: false }, t);
+  }
+  return { F, rnd, boil, particles, sparks, lightning, impact, speedLines, rays, fog, flicker, glitch, ghostWarp, grade, GRADES, film, iris, wipe, overlay };
+}
+
+      const R = Rig(tl, { seed: 4 }), X = FX(tl, { seed: 9 }), F = R.F, $ = id => document.getElementById(id);
+      let labPrev = null; const lab = (t, s) => { const d = document.createElement('div'); d.textContent = s; d.style.opacity = 0; $('lab').appendChild(d);
+        tl.set(d, { opacity: 1 }, t); if (labPrev) tl.set(labPrev, { opacity: 0 }, t); labPrev = d; };
+      const CUES = window.__cues = {};   // times the sound bed reads (via fxlog-like dump) — kept in sync by hand in audio/bed.py
+
+      // ---- 1. rainy night street (0–5.5): rain 3 depths, fog, lightning, walk with footsteps ----
+      lab(0, '1 rain · fog · lightning · walk');
+      const c1 = R.cam('#street'); c1.set(0, { px: 900, py: 600, s: 1.08 }).move(0, 5.5, { px: 700, py: 640, s: 1.2 }, 'sine.inOut');
+      X.grade('#stBg', 0, 'night');
+      X.fog($('stCh'), 0, 5.5, { y: 820, op: .55 });
+      const t1 = R.puppet($('stCh'), { x: 1500, y: 960, s: .42 }, R.LOOKS.ton); R.breathe(t1, 0, 6); R.blinks(t1, 0, 6);
+      R.walk(t1, .4, 4.4, { x: 760, y: 930, s: .38 }, { step: .5 });
+      X.particles($('stFx'), 'rain', 0, 5.6, { angle: 10 });
+      X.lightning(2.2, '#stBg', { back: X.GRADES.night });
+      R.dip(5.2, .6, 'street', 'shop');
+
+      // ---- 2. shop: flicker, ghost appears with warp (5.5–11) ----
+      lab(5.5, '2 flicker · ghost appear + warp');
+      const c2 = R.cam('#shop'); c2.set(5.5, { px: 960, py: 600, s: 1.1 }).drift(5.5, 11, 4);
+      const lamp = R.el('circle', { cx: 1450, cy: 120, r: 280, fill: 'url(#gGhost)' }, $('shMid')); lamp.setAttribute('style', 'mix-blend-mode:screen');
+      X.flicker('#shBg', 5.8, 10.5, { lo: .45 }); X.flicker(lamp, 5.8, 10.5, { lo: .1 });
+      X.particles($('shMid'), 'dust', 5.5, 11, { box: [1100, 60, 700, 700], n: 40 });
+      const t2 = R.puppet($('shCh'), { x: 480, y: 1050, s: .86 }, R.LOOKS.ton), j2 = R.puppet($('shCh'), { x: 1440, y: 1040, s: .86 }, R.LOOKS.jan);
+      R.breathe(t2, 5.5, 11); R.blinks(t2, 5.5, 11, [[8, 11]]); R.breathe(j2, 5.5, 11); R.blinks(j2, 7, 11);
+      R.look(t2, 6.6, .8, 0); R.appear(j2, 7.2); X.ghostWarp('#shChL', 7.2, 8.8, 16);
+      c2.move(7.2, 1.4, { px: 1300, py: 640, s: 1.35 }, 'power2.inOut');
+      // ---- 3. impact + speed lines + comic text (9–11) ----
+      lab(9.0, '3 impact frame · speed lines · shake');
+      c2.set(9.0, { px: 480, py: 640, s: 1.6 }); R.emote(t2, 9.0, 'shock'); X.impact(9.0, 480, 560, $('shMid')); c2.shake(9.0, .5, 16);
+      tl.fromTo('#bam', { opacity: 0, scale: 1.6 }, { opacity: 1, scale: 1, duration: 3 * F, ease: 'power3.out', immediateRender: false }, 9.0); tl.to('#bam', { opacity: 0, duration: .3 }, 10.4);
+      X.glitch('#shop', 10.85, .3); R.cut(11.1, 'shop', 'mem');
+
+      // ---- 4. memory flashback: sepia + boil + film + petals (11.1–17) ----
+      lab(11.1, '4 memory: sepia · line boil · film · petals');
+      const c3 = R.cam('#mem'); c3.set(11.1, { px: 960, py: 600, s: 1.15 }).move(11.1, 5.9, { px: 1100, py: 620, s: 1.3 });
+      X.grade('#meBg', 11.1, 'memory'); tl.set('#meBg', { '--blur': 3 }, 11.1);
+      const jm = R.puppet($('meCh'), { x: 900, y: 1040, s: .86 }, { ...R.LOOKS.jan, ghost: false, skin: '#f1dcc3', hairCol: '#2b2420', shawl: '#b98a6a', top: '#efe5cf' });
+      const cm = R.puppet($('meCh'), { x: 1250, y: 1050, s: .55 }, { ...R.LOOKS.ton, hairCol: '#2b2420', top: '#5a7aa0', glasses: null });
+      R.breathe(jm, 11, 17); R.blinks(jm, 11, 17); R.breathe(cm, 11, 17); R.blinks(cm, 11, 17);
+      R.emote(jm, 11.6, 'tender'); R.look(cm, 11.4, -.7, -.3); R.emote(cm, 12.2, 'joy'); R.wave(cm, 13.4, 3);
+      X.boil('#meChL svg', 11.1, 17, 2);
+      X.film(11.1, 17, { grain: .22, weave: '#mem' });
+      X.particles($('meCh'), 'petals', 11.1, 17, { n: 14 });
+      R.dip(16.6, 1.0, 'mem', 'dawnS', '#fff');
+
+      // ---- 5. dawn: rays + dust, birds; iris out (17.1–25) ----
+      lab(17.1, '5 dawn grade · god rays · dust · iris out');
+      const c4 = R.cam('#dawnS'); c4.set(17.1, { px: 1000, py: 600, s: 1.25 }).move(17.1, 6, { px: 1000, py: 600, s: 1.1 }, 'sine.out');
+      X.grade('#daBg', 17.1, 'night'); X.grade('#daBg', 17.4, 'dawn', 3);
+      X.rays($('daMid'), 17.4, 25, { x: 1350, angle: 28, op: .85 }); X.particles($('daMid'), 'dust', 17.4, 25, { box: [1100, 0, 800, 900], n: 45 });
+      const t4 = R.puppet($('daCh'), { x: 820, y: 1050, s: .86 }, R.LOOKS.ton); R.breathe(t4, 17, 25); R.blinks(t4, 17, 25);
+      R.emote(t4, 18.4, 'happy'); R.look(t4, 19.6, .6, -.4); R.emote(t4, 20.8, 'tender');
+      X.iris('#dawnS', 23.2, 1.4, 820, 640, 'out');
+
+      tl.set({}, {}, 25);
+      window.__timelines['main'] = tl; tl.seek(0);
+    </script>
+  </body>
+</html>

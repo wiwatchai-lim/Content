@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="th">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=1920, height=1080" />
+    <!-- rig.js test scene (story-clips/_craft): walk, eyes-lead look, ghost appear, shock + vertigo + shake, shot/reverse-shot
+         with lip-sync from env.json, listener reactions, gestures, rack focus. Build: python build.py; snapshot hf/. -->
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/gsap.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@600&display=swap" rel="stylesheet" />
+    <style>
+      * { margin: 0; padding: 0; box-sizing: border-box; }
+      html, body { width: 1920px; height: 1080px; overflow: hidden; background: #000; }
+      #root { position: relative; width: 1920px; height: 1080px; overflow: hidden; }
+      .scene { position: absolute; inset: 0; overflow: hidden; }
+      svg { display: block; overflow: visible; }
+      #lab div { position: absolute; left: 0; top: 0; white-space: nowrap; }
+      #lab { position: absolute; left: 40px; top: 30px; font: 600 34px Prompt; color: #fff; -webkit-text-stroke: 6px #000; paint-order: stroke fill; }
+      .sub { position: absolute; left: 0; right: 0; top: 960px; text-align: center; font: 600 46px Prompt; color: #fff; -webkit-text-stroke: 9px #000; paint-order: stroke fill; opacity: 0; }
+    </style>
+  </head>
+  <body>
+    <div id="root" data-composition-id="main" data-start="0" data-duration="23" data-width="1920" data-height="1080">
+      <svg width="0" height="0" style="position:absolute"><defs><radialGradient id="gGhost"><stop offset="0" stop-color="#bff3ff" stop-opacity=".55" /><stop offset="1" stop-color="#bff3ff" stop-opacity="0" /></radialGradient></defs></svg>
+      <div id="shop" class="scene">
+        <div class="cam">
+          <div class="layer bg" id="bgL" style="--d:.8"><img src="assets/shop.png" /></div>
+          <div class="layer" id="chL" style="--d:1"><svg width="1920" height="1080" viewBox="0 0 1920 1080" id="sv"></svg></div>
+        </div>
+      </div>
+      <div id="lab"></div>
+      <div class="sub" id="sub6"></div><div class="sub" id="sub7"></div>
+    </div>
+    <script>
+      const ENV = /*ENV*/;
+      window.__timelines = window.__timelines || {};
+      const tl = gsap.timeline({ paused: true });
+      /*RIG*/
+      const R = Rig(tl, { seed: 5 });
+      const sv = document.getElementById('sv');
+      const jan = R.puppet(sv, { x: 1450, y: 1040, s: .86 }, R.LOOKS.jan);
+      const ton = R.puppet(sv, { x: -150, y: 1050, s: .86 }, R.LOOKS.ton);
+      const cam = R.cam('#shop');
+      const L6 = 'พ่อหนุ่ม… ร้านเปิดอยู่ไหมจ๊ะ', L7 = 'ปิดแล้วครับยาย… เอ่อ ยายเข้ามาได้ยังไงครับ';
+      const T6 = 7.6, T7 = 10.9, D6 = ENV['6'].length / 24, D7 = ENV['7'].length / 24;
+      let labPrev = null; const lab = (t, s) => { const d = document.createElement('div'); d.textContent = s; d.style.opacity = 0; document.getElementById('lab').appendChild(d);
+        tl.set(d, { opacity: 1 }, t); if (labPrev) tl.set(labPrev, { opacity: 0 }, t); labPrev = d; };
+
+      // 1. establishing wide + drift; Ton walks in (anticipation lean, bob, counter-swing, settle)
+      lab(0, '1 establishing wide · walk cycle'); cam.set(0, { px: 960, py: 560, s: 1.05 }).drift(0, 23, 5);
+      R.breathe(ton, 0, 23); R.blinks(ton, 0, 23, [[6.2, 7.6]]); R.blinks(jan, 4, 23); R.breathe(jan, 4, 23);
+      R.walk(ton, .6, 3.4, { x: 560 });
+      // 2. eyes lead → head → body; she appears (flicker); slow push on his reaction
+      lab(3.7, '2 eyes lead the head · ghost appears');
+      R.look(ton, 3.8, .8, 0);
+      R.appear(jan, 4.2);
+      cam.move(4.6, 1.6, { px: 640, py: 620, s: 1.45 }, 'sine.inOut');
+      // 3. shock: anticipation squash → jolt → hold; vertigo + shake
+      lab(6.2, '3 shock: squash → stretch → hold · vertigo · shake');
+      R.emote(ton, 6.25, 'shock'); cam.vertigo(6.25, 1.0, '#bgL', .25).shake(6.3, .5, 10);
+      // 4. reverse shot: her medium close-up, she talks (lip-sync from loudness + Thai vowels)
+      lab(7.4, '4 cut: her MCU · lip-sync');
+      tl.set('#bgL', { '--zs': 1 }, 7.4); cam.set(7.4, { px: 1450, py: 690, s: 1.85 });
+      R.look(jan, 7.4, -.6, 0, { body: false });
+      R.talk(jan, T6, ENV['6'], L6);
+      // 5. two-shot, he answers (fear → neutral), she listens (nods)
+      lab(10.6, '5 two-shot · he talks · she listens');
+      cam.set(10.6, { px: 1000, py: 640, s: 1.12 }).move(10.6, D7 + .6, { px: 1000, py: 640, s: 1.2 });
+      R.emote(ton, 10.7, 'fear'); R.emote(ton, 12.2, 'neutral'); R.pose(ton, 12.3, 'shrug', 10 * R.F);
+      R.talk(ton, T7, ENV['7'], L7); R.listen(jan, T7, T7 + D7);
+      // 6. gestures + emotions
+      lab(15.2, '6 think · tender · wave · happy');
+      R.emote(ton, 15.3, 'think'); R.emote(jan, 15.6, 'happy');
+      R.emote(ton, 17.0, 'tender'); R.wave(jan, 17.4, 3);
+      // 7. rack focus to the characters, slow push to the end
+      lab(19.2, '7 rack focus · push');
+      cam.rack(19.2, .8, '#bgL', null, 9).move(19.2, 3.6, { px: 1000, py: 600, s: 1.3 }, 'sine.inOut');
+      R.emote(ton, 19.6, 'happy'); R.look(ton, 20.2, .5, 0);
+
+      [[6, T6, D6, L6], [7, T7, D7, L7]].forEach(([n, t, d, s]) => { const e = document.getElementById('sub' + n); e.textContent = s;
+        tl.set(e, { opacity: 1 }, t - .05); tl.set(e, { opacity: 0 }, t + d + .3); });
+      tl.set({}, {}, 23);
+      window.__timelines['main'] = tl; tl.seek(0);
+    </script>
+  </body>
+</html>

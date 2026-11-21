@@ -1,0 +1,21 @@
+* { margin: 0; padding: 0; box-sizing: border-box; }
+:root { --paper: 239, 232, 218; }
+body { width: 1080px; height: 1080px; overflow: hidden; background: rgb(var(--paper)); position: relative; }
+body > [data-layer] { position: absolute; inset: 0; }
+.art img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: 50% var(--py, 100%);
+           transform: scale(var(--z, 1.03)); transform-origin: 50% 100%; }
+.wash { background: linear-gradient(rgba(var(--paper),.96) 0, rgba(var(--paper),.9) var(--w1, 360px), rgba(var(--paper),0) var(--w2, 560px)); }
+.vig { box-shadow: inset 0 0 160px rgba(70,55,40,.34); }
+.text { text-align: center; color: #3a332c; text-shadow: 0 0 18px rgb(var(--paper)), 0 0 6px rgb(var(--paper));
+        display: flex; flex-direction: column; align-items: center; padding-top: 62px; }
+.ep, .who, .brand { font-family: 'Cormorant Garamond', serif; font-style: italic; font-weight: 500; color: #8a7560; letter-spacing: 8px; }
+.ep { font-size: 30px; }
+h1 { font: 400 var(--h1, 96px)/1.25 'Sriracha', cursive; font-weight: 400; margin-top: 10px; white-space: nowrap; }
+.hook { margin-top: 18px; font: 400 40px/1.4 'Sriracha', cursive; color: #6b5440; }
+.who { font-size: 38px; letter-spacing: 5px; }
+.line { margin-top: 14px; font: 400 var(--fs, 58px)/1.45 'Sriracha', cursive; white-space: nowrap; }
+.big { margin-top: 30px; font: 400 var(--fs, 72px)/1.4 'Sriracha', cursive; white-space: nowrap; }
+.brand { margin-top: 26px; font-size: 34px; color: #6b5440; }
+.sub { margin-top: 10px; font: 400 28px/1.3 'Sriracha', cursive; color: #8a7560; }
+.help { margin-top: 10px; font: 400 26px/1.3 'Sriracha', cursive; color: #6b5440; }
+.page { position: absolute; bottom: 30px; right: 40px; font: 400 28px/1 'Sriracha', cursive; color: #8a7560; opacity: .8; }

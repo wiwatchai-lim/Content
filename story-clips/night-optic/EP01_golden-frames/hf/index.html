@@ -1,0 +1,452 @@
+<!doctype html>
+<html lang="th">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=1920, height=1080" />
+    <!--
+      "ร้านแว่นตีสอง" EP01 "แว่นกรอบทองของยายจันทร์" (2026-11-21). Thai storytelling cartoon, 16:9, our own characters and story
+      (format inspired by a TikTok the user sent; nothing copied). Painted backgrounds = local FLUX (bg/gen.sh), characters = SVG below.
+      build.py inlines audio/timing.json (S = cue starts, E = cue ends, 1-based) -> hf/index.html.
+      Scenes: night exterior 1-2 | shop at night 3-10 (glasses close-up 8) | workbench 11-13 | shop at dawn 14-20 (letter 15-16)
+      | ledger 21-23 | morning exterior 24-25 (photo 26) | end card 27
+    -->
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/gsap.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@500;600;700;800&family=Charmonman:wght@400;700&family=Sriracha&display=swap" rel="stylesheet" />
+    <style>
+      * { margin: 0; padding: 0; box-sizing: border-box; }
+      html, body { width: 1920px; height: 1080px; overflow: hidden; background: #07070a; }
+      #root { position: relative; width: 1920px; height: 1080px; overflow: hidden; font-family: 'Prompt', sans-serif; color: #fff; }
+      .full { position: absolute; left: 0; top: 0; width: 1920px; height: 1080px; }
+      .scene { opacity: 0; overflow: hidden; }
+      .cam { transform-origin: 960px 540px; }
+      .bg { position: absolute; left: 0; top: 0; width: 1920px; height: 1080px; object-fit: cover; }
+      svg { display: block; overflow: visible; }
+
+      #subs .sub { position: absolute; left: 120px; right: 120px; top: 958px; text-align: center; font: 600 46px/1.3 'Prompt', sans-serif;
+                   opacity: 0; color: #fff; -webkit-text-stroke: 9px #000; paint-order: stroke fill; letter-spacing: .01em; }
+      #subs .sub.g { color: #d6f3f6; }
+      #subs .sub.l { color: #ffe3a3; }
+      #subs .sub.o { color: #f3d9c0; }
+
+      .vig { background: radial-gradient(ellipse at 50% 48%, rgba(0,0,0,0) 45%, rgba(0,0,0,.55) 100%); pointer-events: none; }
+      #grain { opacity: .07; mix-blend-mode: overlay; }
+
+      #title { opacity: 0; }
+      #title .t1 { position: absolute; left: 0; right: 0; top: 330px; text-align: center; font: 800 128px 'Prompt'; letter-spacing: .04em;
+                   color: #f6e6c4; text-shadow: 0 0 40px rgba(255,190,90,.45), 0 6px 0 #000; }
+      #title .t2 { position: absolute; left: 0; right: 0; top: 500px; text-align: center; font: 600 44px 'Prompt'; color: #e9d8b8;
+                   text-shadow: 0 3px 10px #000; letter-spacing: .03em; }
+      #title .rule { position: absolute; left: 760px; width: 400px; top: 485px; height: 3px; background: #d9a648; transform-origin: 50% 50%; }
+
+      .paper { position: absolute; background: #efe0b8; border-radius: 6px; box-shadow: 0 30px 70px rgba(0,0,0,.6), inset 0 0 90px rgba(140,95,30,.35); }
+      #letter { left: 520px; top: 120px; width: 880px; height: 780px; transform: rotate(-2deg); padding: 80px 90px;
+                font: 400 50px/1.75 'Charmonman', cursive; color: #2b3a6a; }
+      #letter .w { opacity: 0; }
+      #letter .date { font-size: 34px; text-align: right; color: #4a5a85; margin-bottom: 24px; }
+      #letter .sign { margin-top: 30px; text-align: right; }
+      #page { left: 470px; top: 70px; width: 980px; height: 880px; transform: rotate(1.5deg); padding: 70px 80px;
+              background: repeating-linear-gradient(#efe0b8 0 74px, #c9b48a 74px 76px); font: 400 38px/76px 'Sriracha', cursive; color: #4b3a2a; }
+      #page .row { display: flex; gap: 26px; white-space: nowrap; opacity: .62; }
+      #page .row span:first-child { width: 230px; }
+      #page .row.last { opacity: 1; color: #2a1d12; }
+      #page .row.last .w { opacity: 0; }
+      #paid { position: absolute; left: 600px; top: 640px; font: 700 76px 'Charmonman', cursive; color: #1d3fb0; opacity: 0;
+              transform: rotate(-8deg); text-shadow: 0 0 16px rgba(60,110,255,.45); }
+      #photo { left: 640px; top: 120px; width: 640px; height: 800px; background: #f4ead6; padding: 36px 36px 120px; transform: rotate(3deg); }
+      #photo .pic { width: 100%; height: 100%; background: #6d5a44; overflow: hidden; filter: sepia(.9) contrast(1.05); }
+      #photo .cap { position: absolute; left: 0; right: 0; bottom: 30px; text-align: center; font: 400 40px 'Charmonman', cursive; color: #5a4632; }
+
+      #end .t1 { position: absolute; left: 0; right: 0; top: 340px; text-align: center; font: 800 120px 'Prompt'; color: #f6e6c4;
+                 text-shadow: 0 0 40px rgba(255,190,90,.45), 0 6px 0 #000; opacity: 0; }
+      #end .t2 { position: absolute; left: 0; right: 0; top: 520px; text-align: center; font: 600 52px 'Prompt'; color: #d9a648; opacity: 0; }
+      #end .t3 { position: absolute; left: 0; right: 0; top: 600px; text-align: center; font: 500 38px 'Prompt'; color: #cfc4ae; opacity: 0; }
+      #dawn { background: linear-gradient(115deg, rgba(120,170,230,.0) 0%, rgba(150,190,240,.32) 55%, rgba(255,214,160,.38) 100%); mix-blend-mode: screen; }
+      .ray { position: absolute; top: -200px; width: 160px; height: 1500px; background: linear-gradient(rgba(255,236,200,.28), rgba(255,236,200,0));
+             transform: rotate(28deg); transform-origin: 50% 0; filter: blur(14px); }
+    </style>
+  </head>
+  <body>
+    <div id="root" data-composition-id="main" data-start="0" data-duration="161.07" data-width="1920" data-height="1080">
+      <svg width="0" height="0" style="position:absolute">
+        <defs>
+          <radialGradient id="gGhost"><stop offset="0" stop-color="#bff3ff" stop-opacity=".55" /><stop offset="1" stop-color="#bff3ff" stop-opacity="0" /></radialGradient>
+          <radialGradient id="gLamp"><stop offset="0" stop-color="#ffc56b" stop-opacity=".55" /><stop offset="1" stop-color="#ffc56b" stop-opacity="0" /></radialGradient>
+          <radialGradient id="gSpark"><stop offset="0" stop-color="#fff6c8" /><stop offset="1" stop-color="#ffb040" stop-opacity="0" /></radialGradient>
+          <linearGradient id="gGold" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#f7d47a" /><stop offset=".5" stop-color="#c8922e" /><stop offset="1" stop-color="#f2c75c" /></linearGradient>
+          <filter id="fSoft"><feGaussianBlur stdDeviation="6" /></filter>
+        </defs>
+      </svg>
+
+      <div id="ext" class="scene full" style="opacity:1"><div class="cam full"><img class="bg" src="assets/ext.png" /><svg class="full" viewBox="0 0 1920 1080" id="sExt"></svg></div></div>
+      <div id="shop" class="scene full"><div class="cam full"><img class="bg" id="shopImg" src="assets/shop.png" /><div id="shopDark" class="full" style="background:#050812;opacity:0"></div><div id="dawn" class="full" style="opacity:0"><div class="ray" style="left:1300px"></div><div class="ray" style="left:1520px;width:110px"></div><div class="ray" style="left:1700px;width:200px"></div></div><svg class="full" viewBox="0 0 1920 1080" id="sShop"></svg></div></div>
+      <div id="glass" class="scene full"><div class="cam full"><img class="bg" src="assets/shop.png" style="filter:blur(14px) brightness(.45)" /><svg class="full" viewBox="0 0 1920 1080" id="sGlass"></svg></div></div>
+      <div id="bench" class="scene full"><div class="cam full"><img class="bg" src="assets/bench.png" /><div id="flick" class="full" style="background:#000;opacity:0"></div><svg class="full" viewBox="0 0 1920 1080" id="sBench"></svg></div></div>
+      <div id="letterS" class="scene full"><div class="cam full"><img class="bg" src="assets/shop.png" style="filter:blur(16px) brightness(.55) saturate(.7)" />
+        <div id="letter" class="paper"><div class="date">๑๒ ธันวาคม ๒๕๑๘</div><div id="letterBody"></div><div class="sign w">ลูกชาญ</div></div>
+        <svg class="full" viewBox="0 0 1920 1080" id="sLetter"></svg></div></div>
+      <div id="ledgerS" class="scene full"><div class="cam full"><img class="bg" src="assets/ledger.png" style="filter:blur(5px) brightness(.7)" />
+        <div id="page" class="paper"><div id="rows"></div><div id="paid">จ่ายแล้ว</div></div></div></div>
+      <div id="day" class="scene full"><div class="cam full"><img class="bg" id="dayImg" src="assets/day.png" /><svg class="full" viewBox="0 0 1920 1080" id="sDay"></svg></div></div>
+      <div id="photoS" class="scene full"><div class="cam full"><img class="bg" src="assets/day.png" style="filter:blur(16px) brightness(.6)" />
+        <div id="photo" class="paper"><div class="pic"><svg viewBox="0 0 568 644" width="568" height="644" id="sPhoto"></svg></div><div class="cap">แม่ ๒๕๑๗</div></div></div></div>
+      <div id="end" class="scene full"><div class="cam full"><img class="bg" src="assets/shop.png" style="filter:blur(10px) brightness(.28)" /><svg class="full" viewBox="0 0 1920 1080" id="sEnd"></svg>
+        <div class="t1">ร้านแว่นตีสอง</div><div class="t2">EP.2</div><div class="t3">ลูกค้าคนต่อไป…</div></div></div>
+
+      <div id="title" class="full"><div class="t1">ร้านแว่นตีสอง</div><div class="rule"></div><div class="t2">EP.1 แว่นกรอบทองของยายจันทร์</div></div>
+      <div class="full vig"></div>
+      <svg id="grain" class="full" viewBox="0 0 1920 1080"><filter id="fn"><feTurbulence type="fractalNoise" baseFrequency=".9" numOctaves="2" seed="3" /></filter><rect width="1920" height="1080" filter="url(#fn)" /></svg>
+      <div id="fade" class="full" style="background:#000;opacity:0"></div>
+      <div id="subs"></div>
+    </div>
+
+    <script>
+      const TIMING = {"total": 161.07, "cues": [{"n": 1, "start": 2.2, "end": 7.77}, {"n": 2, "start": 8.32, "end": 14.41}, {"n": 3, "start": 16.01, "end": 20.23}, {"n": 4, "start": 20.78, "end": 23.92}, {"n": 5, "start": 25.12, "end": 31.85}, {"n": 6, "start": 32.4, "end": 34.76}, {"n": 7, "start": 35.31, "end": 39.24}, {"n": 8, "start": 40.14, "end": 45.32}, {"n": 9, "start": 45.87, "end": 50.19}, {"n": 10, "start": 50.74, "end": 55.27}, {"n": 11, "start": 56.87, "end": 61.93}, {"n": 12, "start": 62.48, "end": 66.61}, {"n": 13, "start": 67.61, "end": 71.1}, {"n": 14, "start": 72.9, "end": 77.64}, {"n": 15, "start": 78.54, "end": 83.98}, {"n": 16, "start": 84.58, "end": 89.61}, {"n": 17, "start": 90.41, "end": 94.26}, {"n": 18, "start": 94.81, "end": 99.92}, {"n": 19, "start": 101.32, "end": 106.49}, {"n": 20, "start": 107.89, "end": 111.82}, {"n": 21, "start": 113.62, "end": 119.25}, {"n": 22, "start": 120.05, "end": 125.68}, {"n": 23, "start": 126.88, "end": 131.21}, {"n": 24, "start": 133.21, "end": 139.22}, {"n": 25, "start": 139.77, "end": 143.72}, {"n": 26, "start": 144.92, "end": 149.55}, {"n": 27, "start": 151.75, "end": 157.07}]};
+      const S = [0], E = [0]; TIMING.cues.forEach(c => { S[c.n] = c.start; E[c.n] = c.end; });
+      const END = TIMING.total;
+      let seed = 11; const rnd = () => (seed = (seed * 16807) % 2147483647) / 2147483647;
+      const NS = 'http://www.w3.org/2000/svg';
+      const el = (tag, a, p) => { const e = document.createElementNS(NS, tag); for (const k in a) e.setAttribute(k, a[k]); p && p.appendChild(e); return e; };
+      const $ = id => document.getElementById(id);
+      const T = o => `translate(${o.x ?? 0} ${o.y ?? 0}) rotate(${o.r ?? 0}) scale(${o.sx ?? o.s ?? 1} ${o.sy ?? o.s ?? 1})`;
+      const G = (p, o = {}) => el('g', { transform: T(o) }, p);
+      window.__timelines = window.__timelines || {};
+      const tl = gsap.timeline({ paused: true });
+      const INK = '#241c18';
+
+      // ---------- timeline helpers ----------
+      function show(id, t0, t1, fi = .6, fo = .6) {
+        tl.fromTo('#' + id, { opacity: 0 }, { opacity: 1, duration: fi, ease: 'none', immediateRender: false }, t0);
+        if (t1 != null) tl.to('#' + id, { opacity: 0, duration: fo, ease: 'none' }, t1);
+      }
+      function cam(id, t0, dur, from, to, ease = 'sine.inOut') {
+        tl.fromTo(`#${id} .cam`, from, { ...to, duration: dur, ease, immediateRender: false }, t0);
+      }
+      function F(px, py, sc) { const mx = (sc - 1) * 960, my = (sc - 1) * 540;
+        return { scale: sc, x: Math.max(-mx, Math.min(mx, -(px - 960) * sc)), y: Math.max(-my, Math.min(my, -(py - 540) * sc)) }; }
+      function talk(c, t0, t1) {
+        for (let t = t0; t < t1 - .05; t += .1 + rnd() * .06) { const o = rnd() > .35; tl.set(c.mo, { opacity: o ? 1 : 0 }, t); tl.set(c.mc, { opacity: o ? 0 : 1 }, t); }
+        tl.set(c.mo, { opacity: 0 }, t1); tl.set(c.mc, { opacity: 1 }, t1);
+      }
+      function blink(c, t0, t1) {
+        for (let t = t0 + .8 + rnd() * 1.5; t < t1 - .3; t += 2.4 + rnd() * 2.2) {
+          tl.set(c.eyes, { attr: { transform: 'scale(1 .1)' } }, t); tl.set(c.eyes, { attr: { transform: 'scale(1 1)' } }, t + .13);
+        }
+      }
+      function breathe(c, t0, t1, amt = .012, per = 1.8) {
+        const n = Math.max(1, Math.floor((t1 - t0) / per));
+        tl.fromTo(c.torso, { attr: { transform: 'scale(1 1)' } }, { attr: { transform: `scale(1 ${1 + amt})` }, duration: per / 2, yoyo: true, repeat: n * 2 - 1, ease: 'sine.inOut', immediateRender: false }, t0);
+      }
+      function face(c, t, which) {  // swap expression layers: eyes 'n' | 'w' (wide) | 's' (soft/closed smile); mouth stays on talk()
+        for (const k in c.eye) tl.set(c.eye[k], { opacity: k === which ? 1 : 0 }, t);
+      }
+      function mouthShape(c, t, which) { for (const k in c.mouth) tl.set(c.mouth[k], { opacity: k === which ? 1 : 0 }, t); c.mc = c.mouth[which]; }
+
+      // ---------- characters (origin = between the feet, ~520 px tall at scale 1) ----------
+      function eyeSet(g, x, y, kind, col = INK) {   // returns groups n / w / s
+        const out = {};
+        out.n = G(g); [-1, 1].forEach(sg => el('ellipse', { cx: x * sg, cy: y, rx: 7.5, ry: 10.5, fill: col }, out.n));
+        out.w = G(g); [-1, 1].forEach(sg => { el('circle', { cx: x * sg, cy: y, r: 13, fill: '#fff', stroke: col, 'stroke-width': 3.5 }, out.w); el('circle', { cx: x * sg, cy: y + 1, r: 5.5, fill: col }, out.w); });
+        out.s = G(g); [-1, 1].forEach(sg => el('path', { d: `M${x * sg - 12} ${y + 3} Q${x * sg} ${y - 9} ${x * sg + 12} ${y + 3}`, stroke: col, 'stroke-width': 4.5, fill: 'none', 'stroke-linecap': 'round' }, out.s));
+        out.d = G(g); [-1, 1].forEach(sg => { el('ellipse', { cx: x * sg, cy: y + 2, rx: 7.5, ry: 8.5, fill: col }, out.d); el('path', { d: `M${x * sg - 14} ${y - 13} L${x * sg + 12} ${y - 9 - sg * 3}`, stroke: col, 'stroke-width': 4, 'stroke-linecap': 'round' }, out.d); });
+        for (const k in out) out[k].setAttribute('opacity', k === kind ? 1 : 0);
+        return out;
+      }
+      function mouthSet(g, y, col = INK) {
+        const m = {};
+        m.f = el('path', { d: `M-10 ${y} Q0 ${y + 3} 10 ${y}`, stroke: col, 'stroke-width': 4, fill: 'none', 'stroke-linecap': 'round' }, g);
+        m.sm = el('path', { d: `M-15 ${y - 3} Q0 ${y + 11} 15 ${y - 3}`, stroke: col, 'stroke-width': 4, fill: 'none', 'stroke-linecap': 'round', opacity: 0 }, g);
+        m.o = el('ellipse', { cx: 0, cy: y + 2, rx: 8, ry: 10, fill: '#3a1f1c', opacity: 0 }, g);
+        const mo = el('ellipse', { cx: 0, cy: y + 3, rx: 11, ry: 9, fill: '#3a1f1c', opacity: 0 }, g);
+        return { m, mo };
+      }
+
+      // Ton (ต้น), the narrator: round head, messy dark hair, round black glasses, moss cardigan over a cream tee.
+      function ton(p, o, opt = {}) {
+        const g = G(p, o);
+        el('ellipse', { cx: 0, cy: 4, rx: 70, ry: 12, fill: '#000', opacity: .28 }, g);
+        [-1, 1].forEach(s => { el('path', { d: `M${s * 24} -118 L${s * 27} -10`, stroke: '#2b2a33', 'stroke-width': 17, 'stroke-linecap': 'round' }, g);
+          el('ellipse', { cx: s * 32, cy: -4, rx: 22, ry: 10, fill: '#1b1a1f' }, g); });
+        const torso = G(g, { y: -120 }); const tb = G(torso, { y: 0 });
+        el('path', { d: 'M-74 0 Q-84 -150 -52 -176 Q0 -196 52 -176 Q84 -150 74 0 Z', fill: '#4f6b58', stroke: INK, 'stroke-width': 5 }, tb);
+        el('path', { d: 'M-26 -184 L0 -60 L26 -184 Z', fill: '#efe7d6', stroke: INK, 'stroke-width': 4 }, tb);
+        [[-12, -40], [-12, -80]].forEach(([x, y]) => el('circle', { cx: x + 12, cy: y, r: 4.5, fill: '#d8c79f' }, tb));
+        const arm = s => { const a = G(tb, { x: s * 60, y: -160 }); el('path', { d: `M0 0 Q${s * 18} 70 ${s * 8} 140`, stroke: '#4f6b58', 'stroke-width': 26, fill: 'none', 'stroke-linecap': 'round' }, a);
+          el('path', { d: `M0 0 Q${s * 18} 70 ${s * 8} 140`, stroke: INK, 'stroke-width': 32, fill: 'none', 'stroke-linecap': 'round', opacity: .0 }, a);
+          el('circle', { cx: s * 8, cy: 146, r: 15, fill: '#f1dcc3', stroke: INK, 'stroke-width': 4 }, a); return a; };
+        const armL = arm(-1), armR = arm(1);
+        const head = G(g, { y: -400 });
+        el('circle', { cx: 0, cy: 0, r: 104, fill: '#f3e1cb', stroke: INK, 'stroke-width': 5 }, head);
+        el('ellipse', { cx: -58, cy: 38, rx: 16, ry: 9, fill: '#f0a99a', opacity: .45 }, head); el('ellipse', { cx: 58, cy: 38, rx: 16, ry: 9, fill: '#f0a99a', opacity: .45 }, head);
+        el('path', { d: 'M-110 10 Q-122 -70 -70 -104 Q-20 -138 40 -118 Q100 -104 114 -40 Q120 0 108 22 Q96 -18 74 -40 Q60 -10 30 -44 Q10 -12 -18 -46 Q-40 -12 -64 -42 Q-84 -10 -110 10 Z', fill: '#1f1b22', stroke: INK, 'stroke-width': 4 }, head);
+        el('path', { d: 'M-20 -120 Q-8 -150 16 -142 Q0 -134 -2 -118 Z', fill: '#1f1b22' }, head);
+        const eyes = G(head, { y: 12 }); const eye = eyeSet(eyes, 38, 0, opt.eye || 'n');
+        el('circle', { cx: -38, cy: 12, r: 30, fill: 'rgba(220,240,255,.14)', stroke: '#1a1a1a', 'stroke-width': 5.5 }, head);
+        el('circle', { cx: 38, cy: 12, r: 30, fill: 'rgba(220,240,255,.14)', stroke: '#1a1a1a', 'stroke-width': 5.5 }, head);
+        el('path', { d: 'M-8 8 Q0 2 8 8', stroke: '#1a1a1a', 'stroke-width': 5, fill: 'none' }, head);
+        const { m, mo } = mouthSet(head, 62);
+        return { g, head, torso: tb, armL, armR, eyes, eye, mouth: m, mc: m.f, mo };
+      }
+
+      // Grandma Jan (ยายจันทร์): pale, softly glowing, silver bun, cream lace dress, small and a little hunched.
+      function jan(p, o, opt = {}) {
+        const g = G(p, o);
+        el('ellipse', { cx: 0, cy: -260, rx: 260, ry: 330, fill: 'url(#gGhost)' }, g);
+        const body = G(g); const torso = G(body);
+        el('path', { d: 'M-58 -300 Q-70 -200 -96 -10 Q0 10 96 -10 Q70 -200 58 -300 Q0 -322 -58 -300 Z', fill: '#efe5cf', stroke: INK, 'stroke-width': 5 }, torso);
+        for (let i = 0; i < 11; i++) el('circle', { cx: -84 + i * 16.8, cy: -22, r: 5, fill: 'none', stroke: '#c7b38c', 'stroke-width': 2.5 }, torso);
+        el('path', { d: 'M-50 -290 Q0 -250 50 -290', stroke: '#c7b38c', 'stroke-width': 3, fill: 'none' }, torso);
+        el('path', { d: 'M-60 -296 Q-110 -200 -84 -100 L84 -100 Q110 -200 60 -296', fill: '#9fb4b6', opacity: .55 }, torso);   // shawl
+        const arm = s => { const a = G(torso, { x: s * 50, y: -280 }); el('path', { d: `M0 0 Q${s * 22} 80 ${s * 4} 150`, stroke: '#9fb4b6', 'stroke-width': 24, fill: 'none', 'stroke-linecap': 'round' }, a);
+          el('circle', { cx: s * 4, cy: 156, r: 14, fill: '#eef2ef', stroke: INK, 'stroke-width': 4 }, a); return a; };
+        const armL = arm(-1), armR = arm(1);
+        const head = G(g, { x: 8, y: -392, r: 4 });
+        el('circle', { cx: 0, cy: -108, r: 40, fill: '#cfd6da', stroke: INK, 'stroke-width': 4.5 }, head);   // bun
+        el('circle', { cx: 0, cy: 0, r: 96, fill: '#eef2ef', stroke: INK, 'stroke-width': 5 }, head);
+        el('path', { d: 'M-98 6 Q-104 -66 -50 -90 Q0 -108 50 -90 Q104 -66 98 6 Q84 -40 40 -58 Q0 -66 -40 -58 Q-84 -40 -98 6 Z', fill: '#d5dcdf', stroke: INK, 'stroke-width': 4 }, head);
+        el('path', { d: 'M-70 -34 Q-30 -70 0 -66 M70 -34 Q30 -70 0 -66', stroke: '#aeb8bd', 'stroke-width': 3, fill: 'none' }, head);
+        el('ellipse', { cx: -54, cy: 40, rx: 15, ry: 8, fill: '#f2b0a8', opacity: .4 }, head); el('ellipse', { cx: 54, cy: 40, rx: 15, ry: 8, fill: '#f2b0a8', opacity: .4 }, head);
+        const eyes = G(head, { y: 14 }); const eye = eyeSet(eyes, 36, 0, opt.eye || 's', '#3b3540');
+        el('path', { d: 'M-58 26 Q-50 32 -42 28 M42 28 Q50 32 58 26', stroke: '#9aa3a8', 'stroke-width': 3, fill: 'none' }, head);
+        const specs = G(head); el('circle', { cx: -36, cy: 14, r: 27, fill: 'rgba(255,245,210,.12)', stroke: 'url(#gGold)', 'stroke-width': 6 }, specs);
+        el('circle', { cx: 36, cy: 14, r: 27, fill: 'rgba(255,245,210,.12)', stroke: 'url(#gGold)', 'stroke-width': 6 }, specs);
+        el('path', { d: 'M-9 10 Q0 4 9 10', stroke: '#c8922e', 'stroke-width': 5, fill: 'none' }, specs); specs.setAttribute('opacity', opt.specs ? 1 : 0);
+        const { m, mo } = mouthSet(head, 58, '#4a3f46');
+        return { g, head, torso, body, armL, armR, eyes, eye, mouth: m, mc: m.f, mo, specs };
+      }
+
+      // Chan (ชาญ), the son, now ~70: grey side hair, moustache, brown jacket, cane.
+      function chan(p, o, opt = {}) {
+        const g = G(p, o);
+        el('ellipse', { cx: 0, cy: 4, rx: 70, ry: 12, fill: '#000', opacity: .28 }, g);
+        [-1, 1].forEach(s => { el('path', { d: `M${s * 24} -118 L${s * 26} -10`, stroke: '#3b3630', 'stroke-width': 17, 'stroke-linecap': 'round' }, g); el('ellipse', { cx: s * 32, cy: -4, rx: 22, ry: 10, fill: '#2a201a' }, g); });
+        el('path', { d: 'M-110 -2 L-96 -250', stroke: '#5a3a22', 'stroke-width': 9, 'stroke-linecap': 'round' }, g);
+        const torso = G(g, { y: -120 }); const tb = G(torso);
+        el('path', { d: 'M-76 0 Q-86 -150 -54 -176 Q0 -194 54 -176 Q86 -150 76 0 Z', fill: '#7a5a3e', stroke: INK, 'stroke-width': 5 }, tb);
+        el('path', { d: 'M-22 -182 L0 -120 L22 -182 Z', fill: '#e8e2d4', stroke: INK, 'stroke-width': 4 }, tb);
+        const arm = s => { const a = G(tb, { x: s * 62, y: -160 }); el('path', { d: `M0 0 Q${s * 18} 70 ${s * 8} 140`, stroke: '#7a5a3e', 'stroke-width': 26, fill: 'none', 'stroke-linecap': 'round' }, a);
+          el('circle', { cx: s * 8, cy: 146, r: 15, fill: '#e9cfb2', stroke: INK, 'stroke-width': 4 }, a); return a; };
+        const armL = arm(-1), armR = arm(1);
+        const head = G(g, { y: -398 });
+        el('circle', { cx: 0, cy: 0, r: 100, fill: '#ecd3b8', stroke: INK, 'stroke-width': 5 }, head);
+        el('path', { d: 'M-100 12 Q-108 -40 -80 -64 Q-70 -20 -62 -8 Z M100 12 Q108 -40 80 -64 Q70 -20 62 -8 Z', fill: '#c9c9c9', stroke: INK, 'stroke-width': 4 }, head);
+        el('path', { d: 'M-60 -40 Q-30 -48 -8 -40 M60 -40 Q30 -48 8 -40', stroke: '#c9c9c9', 'stroke-width': 7, 'stroke-linecap': 'round' }, head);
+        const eyes = G(head, { y: 6 }); const eye = eyeSet(eyes, 36, 0, 'n');
+        el('path', { d: 'M-32 40 Q0 30 32 40 Q16 50 0 44 Q-16 50 -32 40 Z', fill: '#bdbdbd', stroke: INK, 'stroke-width': 3 }, head);
+        const { m, mo } = mouthSet(head, 62);
+        const photo = G(armR, { x: 10, y: 120, r: -8 }); el('rect', { x: -34, y: -24, width: 68, height: 84, fill: '#f4ead6', stroke: INK, 'stroke-width': 3 }, photo);
+        el('rect', { x: -26, y: -16, width: 52, height: 58, fill: '#8a7254' }, photo);
+        return { g, head, torso: tb, armL, armR, eyes, eye, mouth: m, mc: m.f, mo };
+      }
+
+      function goldSpecs(p, o, cracked) {
+        const g = G(p, o);
+        [-1, 1].forEach(s => {
+          el('circle', { cx: s * 150, cy: 0, r: 120, fill: 'rgba(230,245,255,.16)', stroke: 'url(#gGold)', 'stroke-width': 18 }, g);
+          el('path', { d: `M${s * 150 - 60} -70 Q${s * 150 - 20} -96 ${s * 150 + 40} -88`, stroke: '#fff', 'stroke-width': 8, opacity: .35, fill: 'none', 'stroke-linecap': 'round' }, g);
+        });
+        el('path', { d: 'M-34 -14 Q0 -40 34 -14', stroke: 'url(#gGold)', 'stroke-width': 16, fill: 'none' }, g);
+        el('path', { d: 'M-268 -26 L-420 -60 M268 -26 L420 -60', stroke: 'url(#gGold)', 'stroke-width': 12, 'stroke-linecap': 'round' }, g);
+        const cr = G(g);
+        [[-150, 0], [150, 0]].forEach(([cx]) => {
+          const d = [`M${cx - 20} -10 L${cx - 90} -70`, `M${cx - 20} -10 L${cx + 60} -96`, `M${cx - 20} -10 L${cx + 104} 30`, `M${cx - 20} -10 L${cx - 40} 112`, `M${cx - 20} -10 L${cx - 110} 40`,
+                     `M${cx - 62} -44 L${cx - 30} -60`, `M${cx + 40} 18 L${cx + 30} 60`].join(' ');
+          el('path', { d, stroke: '#ffffff', 'stroke-width': 3.5, opacity: .8, fill: 'none' }, cr);
+        });
+        cr.setAttribute('opacity', cracked ? 1 : 0);
+        return { g, cr };
+      }
+      function jasmine(p, x, y, s) { const g = G(p, { x, y, s }); for (let i = 0; i < 5; i++) el('ellipse', { cx: 0, cy: -9, rx: 5, ry: 10, fill: '#fffdf4', transform: `rotate(${i * 72})` }, g); el('circle', { r: 3.5, fill: '#f4d77a' }, g); return g; }
+
+      // =================== 0-2. night exterior + title ===================
+      { const s = $('sExt'), t1 = S[3] - .3;
+        const fog = el('ellipse', { cx: 1300, cy: 820, rx: 900, ry: 120, fill: '#9fb6d6', opacity: .08, filter: 'url(#fSoft)' }, s);
+        tl.fromTo(fog, { attr: { cx: 1500 } }, { attr: { cx: 900 }, duration: t1, ease: 'none', immediateRender: false }, 0);
+        const lamp = el('circle', { cx: 1188, cy: 330, r: 160, fill: 'url(#gLamp)' }, s);
+        const t = ton(s, { x: 1180, y: 1000, s: .42 }, { eye: 'n' });
+        tl.fromTo(t.g, { attr: { transform: T({ x: 1180, y: 1000, s: .42 }) } }, { attr: { transform: T({ x: 560, y: 930, s: .36 }) }, duration: E[2] - .4, ease: 'none', immediateRender: false }, .3);
+        tl.to(t.g, { opacity: 0, duration: .5 }, E[2] - .3);
+        breathe(t, 0, t1); blink(t, 0, t1);
+        tl.fromTo('#title', { opacity: 0 }, { opacity: 1, duration: 1, immediateRender: false }, .2);
+        tl.fromTo('#title .rule', { scaleX: 0 }, { scaleX: 1, duration: .9, ease: 'power2.out', immediateRender: false }, .5);
+        tl.to('#title', { opacity: 0, duration: .9 }, S[1] + 1.6);
+        cam('ext', 0, t1 + .6, F(960, 540, 1.02), F(640, 700, 1.32));
+        tl.fromTo('#fade', { opacity: 1 }, { opacity: 0, duration: 1.2, immediateRender: false }, 0);
+        tl.to('#ext', { opacity: 0, duration: .6 }, t1); }
+
+      // =================== 3-10 shop at night, 14-20 shop at dawn ===================
+      let tonS, janS;
+      { const s = $('sShop'), t0 = S[3] - .3, tN = S[11] - .4, tD = S[14] - .7, t1 = S[21] - .6;
+        const lampG = el('circle', { cx: 1450, cy: 120, r: 260, fill: 'url(#gLamp)' }, s);
+        tl.fromTo(lampG, { attr: { opacity: .7 } }, { attr: { opacity: 1 }, duration: .7, yoyo: true, repeat: 60, ease: 'sine.inOut', immediateRender: false }, t0);
+        show('shop', t0, null, .6);
+        tonS = ton(s, { x: 470, y: 1050, s: .86 }, { eye: 'n' });
+        janS = jan(s, { x: 1440, y: 1040, s: .86 }, { eye: 's' });
+        tl.set(janS.g, { opacity: 0 }, 0);
+        breathe(tonS, t0, t1); blink(tonS, t0, t1); breathe(janS, t0, t1, .01, 2.2);
+        tl.fromTo(janS.body, { attr: { transform: 'translate(0 0)' } }, { attr: { transform: 'translate(0 -10)' }, duration: 1.6, yoyo: true, repeat: 70, ease: 'sine.inOut', immediateRender: false }, t0);
+        // 3: the bell — Ton jumps, eyes wide; 4: he looks to the door side (camera drifts right, room darker)
+        face(tonS, 0, 'n'); mouthShape(tonS, 0, 'f');
+        tl.to(tonS.g, { attr: { transform: T({ x: 470, y: 1028, s: .86 }) }, duration: .12, yoyo: true, repeat: 1, ease: 'power2.out' }, S[3] + 1.7);
+        face(tonS, S[3] + 1.7, 'w'); mouthShape(tonS, S[3] + 1.7, 'o');
+        cam('shop', t0, S[5] - t0, F(800, 600, 1.12), F(900, 560, 1.05));
+        tl.fromTo('#sShop', { x: 0 }, { x: 6, duration: .05, yoyo: true, repeat: 7, ease: 'none', immediateRender: false }, S[3] + 1.7);
+        tl.fromTo('#shopDark', { opacity: 0 }, { opacity: .35, duration: 2, immediateRender: false }, S[4]);
+        // 5: grandma fades in with a flicker
+        tl.to(janS.g, { opacity: .55, duration: .5 }, S[5] + .2); tl.to(janS.g, { opacity: .15, duration: .12 }, S[5] + .75);
+        tl.to(janS.g, { opacity: .93, duration: 1.4 }, S[5] + .9);
+        cam('shop', S[5], E[5] - S[5] + .4, F(1100, 620, 1.05), F(1350, 650, 1.45));
+        // 6: she speaks (close on her); 7: two-shot, Ton speaks
+        face(janS, S[6] - .2, 'n'); talk(janS, S[6] + .05, E[6]);
+        cam('shop', S[6] - .25, E[6] - S[6] + .3, F(1440, 690, 1.8), F(1440, 690, 1.9));
+        cam('shop', S[7] - .3, E[7] - S[7] + .3, F(960, 650, 1.12), F(960, 660, 1.16));
+        mouthShape(tonS, S[7] - .3, 'f'); talk(tonS, S[7], E[7]);
+        // 9: close on grandma; 10: close on Ton, eyes soften
+        face(janS, S[9] - .3, 's'); talk(janS, S[9] + .05, E[9]);
+        cam('shop', S[9] - .3, E[9] - S[9] + .3, F(1440, 700, 2.0), F(1440, 700, 2.15));
+        tl.to('#shopDark', { opacity: .15, duration: 1.5 }, S[9]);
+        face(tonS, S[10] - .3, 'n'); mouthShape(tonS, S[10] - .3, 'f');
+        cam('shop', S[10] - .3, E[10] - S[10] + .7, F(470, 700, 1.9), F(470, 700, 2.05));
+        face(tonS, S[10] + 1.6, 's');
+        // hide the shop while the workbench plays, then come back at dawn
+        tl.to('#shop', { opacity: 0, duration: .6 }, tN);
+        // ---- dawn ----
+        tl.set('#shopDark', { opacity: 0 }, tD - .1); tl.set('#dawn', { opacity: 1 }, tD - .1);
+        tl.set('#shopImg', { filter: 'brightness(1.12) saturate(.85) contrast(.95)' }, tD - .1); tl.set(lampG, { attr: { opacity: 0 } }, tD - .1);
+        tl.set(janS.specs, { attr: { opacity: 1 } }, tD - .1); face(janS, tD - .1, 's'); mouthShape(janS, tD - .1, 'sm');
+        tl.set(tonS.g, { attr: { transform: T({ x: 640, y: 1050, s: .86 }) } }, tD - .1); face(tonS, tD - .1, 's'); mouthShape(tonS, tD - .1, 'sm');
+        tl.set(janS.g, { attr: { transform: T({ x: 1240, y: 1040, s: .86 }) }, opacity: .93 }, tD - .1);
+        show('shop', tD, null, .7);
+        cam('shop', tD, E[14] - tD + .3, F(1240, 690, 1.5), F(1240, 690, 1.75));
+        // 17: she hugs the letter (both hands in, a paper between); eyes closed smile
+        const hug = G(janS.torso, { x: 0, y: -170, r: -6 }); el('rect', { x: -46, y: -34, width: 92, height: 70, fill: '#efe0b8', stroke: INK, 'stroke-width': 3 }, hug); hug.setAttribute('opacity', 0);
+        tl.set(hug, { attr: { opacity: 1 } }, S[17] - .4);
+        tl.set(janS.armL, { attr: { transform: T({ x: -50, y: -280, r: -38 }) } }, S[17] - .4); tl.set(janS.armR, { attr: { transform: T({ x: 50, y: -280, r: 38 }) } }, S[17] - .4);
+        cam('shop', S[17] - .4, E[17] - S[17] + .5, F(1240, 760, 1.9), F(1240, 760, 2.05));
+        tl.fromTo(janS.head, { attr: { transform: T({ x: 8, y: -392, r: 4 }) } }, { attr: { transform: T({ x: 8, y: -392, r: -6 }) }, duration: 1.2, yoyo: true, repeat: 1, ease: 'sine.inOut', immediateRender: false }, S[17]);
+        // 18: she thanks him (two-shot)
+        tl.set(hug, { attr: { opacity: 0 } }, S[18] - .3); tl.set(janS.armL, { attr: { transform: T({ x: -50, y: -280 }) } }, S[18] - .3); tl.set(janS.armR, { attr: { transform: T({ x: 50, y: -280 }) } }, S[18] - .3);
+        mouthShape(janS, S[18] - .3, 'f'); talk(janS, S[18], E[18]); mouthShape(janS, E[18], 'sm');
+        cam('shop', S[18] - .3, E[18] - S[18] + .4, F(940, 650, 1.25), F(940, 650, 1.3));
+        // 19: Ton bends down… looks up: she is gone
+        tl.to(tonS.g, { attr: { transform: T({ x: 640, y: 1250, s: .86 }) }, duration: .5, ease: 'power2.inOut' }, S[19] + .2);
+        tl.set(janS.g, { opacity: 0 }, S[19] + 1.6);
+        tl.to(tonS.g, { attr: { transform: T({ x: 640, y: 1050, s: .86 }) }, duration: .4, ease: 'power2.out' }, S[19] + 1.75);
+        face(tonS, S[19] + 2.0, 'w'); mouthShape(tonS, S[19] + 2.0, 'o');
+        cam('shop', S[19] - .3, E[19] - S[19] + .3, F(900, 650, 1.3), F(900, 640, 1.22));
+        // 20: empty shop, jasmine drifting, slow pan
+        for (let i = 0; i < 9; i++) { const j = jasmine(s, 900 + rnd() * 900, -40, .9 + rnd() * .8); const t = S[20] - .6 + i * .45;
+          tl.fromTo(j, { attr: { transform: T({ x: 900 + i * 110, y: -40, s: 1.2, r: 0 }) }, opacity: 0 }, { attr: { transform: T({ x: 700 + i * 100 + rnd() * 200, y: 1100, s: 1.2, r: 360 }) }, opacity: 1, duration: 5.5, ease: 'none', immediateRender: false }, t); }
+        cam('shop', S[20] - .4, t1 - S[20] + 1.2, F(900, 600, 1.22), F(1300, 560, 1.1), 'sine.out');
+        tl.to('#shop', { opacity: 0, duration: .7 }, t1); }
+
+      // =================== 8. the cracked gold glasses ===================
+      { const s = $('sGlass'), t0 = S[8] - .35, t1 = S[9] - .35;
+        const hand = G(s, { x: 960, y: 640 });   // two pale fingertips pinching the bridge
+        const gs = goldSpecs(s, { x: 960, y: 520, s: 1 }, true);
+        el('ellipse', { cx: 960, cy: 520, rx: 700, ry: 420, fill: 'url(#gGhost)', opacity: .35 }, s).parentNode.insertBefore(s.lastChild, s.firstChild);
+        tl.fromTo(gs.g, { attr: { transform: T({ x: 960, y: 640, s: .8, r: -4 }) } }, { attr: { transform: T({ x: 960, y: 500, s: 1.02, r: 2 }) }, duration: t1 - t0 + .5, ease: 'sine.out', immediateRender: false }, t0);
+        tl.fromTo(hand, { attr: { transform: 'translate(960 640)' } }, { attr: { transform: 'translate(960 500)' }, duration: t1 - t0 + .5, ease: 'sine.out', immediateRender: false }, t0);
+        show('glass', t0, t1, .4, .45); }
+
+      // =================== 11-13 workbench through the night ===================
+      { const s = $('sBench'), t0 = S[11] - .4, t1 = S[14] - .7;
+        const t = ton(s, { x: 1560, y: 1290, s: 1.15 }, { eye: 'n' });
+        tl.set(t.armL, { attr: { transform: T({ x: -60, y: -160, r: 35 }) } }, 0);
+        breathe(t, t0, t1); blink(t, t0, t1);
+        const sp = G(s); const lensGlow = el('circle', { cx: 560, cy: 560, r: 90, fill: 'url(#gSpark)', opacity: 0 }, sp);
+        const sparks = []; for (let i = 0; i < 26; i++) sparks.push(el('circle', { cx: 560, cy: 560, r: 2 + rnd() * 3, fill: '#ffe39a', opacity: 0 }, sp));
+        const tS = S[12] - .2;
+        tl.to(lensGlow, { attr: { opacity: 1 }, duration: .3 }, tS); tl.to(lensGlow, { attr: { opacity: 0 }, duration: .6 }, E[13]);
+        sparks.forEach((c, i) => { for (let k = 0; k < 4; k++) { const t = tS + (i * .23 + k * 1.3) % (E[13] - tS - .4); const a = -Math.PI * (.15 + rnd() * .7), d = 70 + rnd() * 140;
+          tl.fromTo(c, { attr: { cx: 560, cy: 560, opacity: 1 } }, { attr: { cx: 560 + Math.cos(a) * d * (rnd() > .5 ? 1 : -1), cy: 560 + Math.sin(a) * d + 60, opacity: 0 }, duration: .55, ease: 'power1.out', immediateRender: false }, t); } });
+        // lamp flicker with the machine (12)
+        [0, .9, 1.25, 2.6, 2.75, 3.6].forEach((d, i) => { tl.set('#flick', { opacity: i % 2 ? 0 : .32 }, S[12] + d); tl.set('#flick', { opacity: 0 }, S[12] + d + .08); });
+        // the night passes: a wall clock spins from 2 to 5
+        const ck = G(s, { x: 1640, y: 210 }); el('circle', { r: 92, fill: '#efe3c8', stroke: '#5a3b22', 'stroke-width': 12 }, ck);
+        for (let i = 0; i < 12; i++) el('rect', { x: -3, y: -82, width: 6, height: i % 3 ? 12 : 20, fill: '#3a2a1a', transform: `rotate(${i * 30})` }, ck);
+        const hh = el('rect', { x: -5, y: -48, width: 10, height: 52, rx: 4, fill: '#2a1d12' }, ck), mh = el('rect', { x: -3.5, y: -72, width: 7, height: 76, rx: 3, fill: '#2a1d12' }, ck);
+        el('circle', { r: 8, fill: '#c8922e' }, ck);
+        tl.fromTo(hh, { attr: { transform: 'rotate(60)' } }, { attr: { transform: 'rotate(150)' }, duration: S[13] + 1 - S[11], ease: 'sine.inOut', immediateRender: false }, S[11]);
+        tl.fromTo(mh, { attr: { transform: 'rotate(0)' } }, { attr: { transform: 'rotate(1080)' }, duration: S[13] + 1 - S[11], ease: 'sine.inOut', immediateRender: false }, S[11]);
+        cam('bench', t0, S[12] - t0, F(960, 540, 1.05), F(700, 600, 1.3));
+        cam('bench', S[12] - .1, E[12] - S[12] + .3, F(700, 600, 1.3), F(560, 620, 1.55));
+        cam('bench', S[13] - .3, t1 - S[13] + 1, F(1500, 600, 1.15), F(1500, 600, 1.22));
+        tl.to(t.armR, { attr: { transform: T({ x: 60, y: -160, r: -50 }) }, duration: .5 }, S[13] + .4);
+        face(t, S[13] + .4, 's');
+        show('bench', t0, t1, .6, .7); }
+
+      // =================== 15-16 the letter ===================
+      { const t0 = S[15] - .35, t1 = S[17] - .45;
+        const body = $('letterBody'); const lines = ['แม่ครับ', 'ผมได้งานแล้ว', 'ปีใหม่นี้', 'ผมจะกลับบ้าน'];
+        const words = []; lines.forEach(l => { const d = document.createElement('div'); l.split(' ').forEach(w => { const sp = document.createElement('span'); sp.className = 'w'; sp.textContent = w + ' '; d.appendChild(sp); words.push(sp); }); body.appendChild(d); });
+        tl.set('#letter .date', { opacity: .85 }, 0);
+        words.forEach((w, i) => tl.to(w, { opacity: 1, duration: .5 }, S[16] + .1 + i * (E[16] - S[16] - .2) / words.length));
+        tl.to('#letter .sign', { opacity: 1, duration: .6 }, E[16] - .2);
+        tl.fromTo('#letter', { y: 120, rotation: -6 }, { y: 0, rotation: -2, duration: 1.3, ease: 'power2.out', immediateRender: false }, t0);
+        cam('letterS', t0, t1 - t0 + .5, { scale: 1, x: 0, y: 0 }, { scale: 1.12, x: 0, y: -10 });
+        show('letterS', t0, t1, .5, .5); }
+
+      // =================== 21-23 grandpa's ledger ===================
+      { const t0 = S[21] - .6, t1 = S[24] - .6;
+        const rows = $('rows');
+        const old = [['๓ มี.ค. ๑๙', 'นายเจริญ  แว่นสายตา', '๓๕ บ.'], ['๙ มี.ค. ๑๙', 'ครูสมศรี  เปลี่ยนเลนส์', '๒๐ บ.'], ['๒๑ เม.ย. ๑๙', 'ตี๋ร้านทอง  ซ่อมขาแว่น', '๕ บ.'],
+                     ['๒ พ.ค. ๑๙', 'ลุงเปลี่ยน  แว่นอ่านหนังสือ', '๓๐ บ.']];
+        old.forEach(r => { const d = document.createElement('div'); d.className = 'row'; r.forEach(c => { const sp = document.createElement('span'); sp.textContent = c; d.appendChild(sp); }); rows.appendChild(d); });
+        const last = document.createElement('div'); last.className = 'row last';
+        const parts = ['๑๘ พ.ค. ๑๙', 'คุณยายจันทร์', 'แว่นกรอบทอง', 'ยังไม่มารับ']; const ws = parts.map(p => { const sp = document.createElement('span'); sp.className = 'w'; sp.textContent = p; last.appendChild(sp); return sp; });
+        rows.appendChild(last);
+        ws.forEach((w, i) => tl.to(w, { opacity: 1, duration: .45 }, S[22] + .1 + i * (E[22] - S[22] - .3) / ws.length));
+        tl.fromTo('#paid', { opacity: 0, scale: 1.6 }, { opacity: 1, scale: 1, duration: .35, ease: 'back.out(2)', immediateRender: false }, E[23] - 1.0);
+        cam('ledgerS', t0, S[22] - t0, { scale: 1.0, x: 0, y: 40 }, { scale: 1.12, x: 0, y: -40 });
+        cam('ledgerS', S[22] - .2, E[23] - S[22] + .8, F(900, 470, 1.3), F(920, 520, 1.45));
+        show('ledgerS', t0, t1, .7, .6); }
+
+      // =================== 24-25 morning exterior: the old man; 26 the photo ===================
+      { const s = $('sDay'), t0 = S[24] - .6, t1 = S[27] - .5;
+        const tn = ton(s, { x: 1010, y: 960, s: .46 }, { eye: 'n' }); face(tn, 0, 'n');
+        const c = chan(s, { x: 1800, y: 1010, s: .5 });
+        tl.fromTo(c.g, { attr: { transform: T({ x: 1800, y: 1010, s: .5 }) } }, { attr: { transform: T({ x: 1250, y: 965, s: .46 }) }, duration: E[24] - S[24] + .4, ease: 'none', immediateRender: false }, S[24] - .4);
+        breathe(tn, t0, t1); blink(tn, t0, t1); blink(c, t0, t1);
+        cam('day', t0, E[24] - t0 + .3, F(1300, 640, 1.1), F(1150, 700, 1.25));
+        cam('day', S[25] - .4, E[25] - S[25] + .6, F(1130, 760, 2.2), F(1130, 760, 2.3));
+        talk(c, S[25], E[25]);
+        face(tn, S[25] + .3, 'w');
+        show('day', t0, t1);
+        // the photo (26)
+        const p = $('sPhoto'); el('rect', { width: 568, height: 644, fill: '#7a654a' }, p); el('rect', { y: 430, width: 568, height: 214, fill: '#5e4c37' }, p);
+        const jp = jan(p, { x: 284, y: 700, s: .95 }, { eye: 's', specs: true }); jp.g.firstChild.setAttribute('opacity', 0); jp.mouth.f.setAttribute('opacity', 0); jp.mouth.sm.setAttribute('opacity', 1);
+        tl.fromTo('#photo', { y: 160, rotation: 8 }, { y: 0, rotation: 3, duration: 1.2, ease: 'power2.out', immediateRender: false }, S[26] - .4);
+        cam('photoS', S[26] - .4, E[26] - S[26] + 1.5, { scale: 1, x: 0, y: 0 }, { scale: 1.28, x: 0, y: 120 });
+        show('photoS', S[26] - .4, t1, .5, .6); }
+
+      // =================== 27 end card ===================
+      { const t0 = S[27] - .5; const s = $('sEnd');
+        const ck = G(s, { x: 960, y: 820, s: .9 }); el('circle', { r: 70, fill: 'none', stroke: '#d9a648', 'stroke-width': 6 }, ck);
+        el('rect', { x: -4, y: -40, width: 8, height: 44, rx: 3, fill: '#d9a648', transform: 'rotate(60)' }, ck);
+        const mh = el('rect', { x: -3, y: -58, width: 6, height: 62, rx: 3, fill: '#d9a648' }, ck);
+        tl.fromTo(mh, { attr: { transform: 'rotate(-60)' } }, { attr: { transform: 'rotate(-6)' }, duration: END - t0, ease: 'none', immediateRender: false }, t0);
+        show('end', t0, null, .8);
+        tl.fromTo('#end .t1', { opacity: 0, scale: 1.15 }, { opacity: 1, scale: 1, duration: .9, ease: 'power2.out', immediateRender: false }, t0 + .3);
+        tl.to('#end .t2', { opacity: 1, duration: .6 }, E[27] - .4);
+        tl.to('#end .t3', { opacity: 1, duration: .6 }, E[27] + .2);
+        cam('end', t0, END - t0, { scale: 1.0 }, { scale: 1.06 }, 'none');
+        tl.to('#fade', { opacity: 1, duration: .8 }, END - .8); }
+
+      // =================== subtitles ===================
+      const TXT = ["ร้านแว่นของปู่… ปิดมาสิบปี จนคืนที่ผมย้ายเข้ามาอยู่", "ตึกแถวไม้ริมคลอง กลิ่นฝุ่น กับตู้กระจกที่เต็มไปด้วยแว่นเก่า", "คืนแรก ตีสองตรง… กระดิ่งหน้าร้านดังขึ้น", "ทั้งที่ประตูเหล็ก ผมล็อกเองกับมือ", "หน้าตู้กระจก มีคุณยายคนหนึ่งยืนอยู่ ผมมวยสีเงิน ชุดลูกไม้สีครีม", "พ่อหนุ่ม… ร้านเปิดอยู่ไหมจ๊ะ", "ปิดแล้วครับยาย… เอ่อ ยายเข้ามาได้ยังไงครับ", "ยายไม่ตอบ แค่ยื่นแว่นกรอบทองให้ เลนส์ร้าวทั้งสองข้าง", "ยายอ่านจดหมายไม่ออกมาหลายปีแล้ว… ช่วยยายหน่อยนะ", "ผมควรจะกลัว… แต่มือยายสั่น เหมือนมือยายของผมเอง", "ผมเปิดลิ้นชักของปู่ เครื่องมือยังอยู่ครบ เหมือนรอใครสักคน", "ผมฝนเลนส์ใหม่ทั้งคืน ไฟในร้านกะพริบตามเสียงเครื่อง", "พอใส่เลนส์ข้างสุดท้ายเสร็จ นาฬิกาบอกตีห้า", "ยายสวมแว่น… แล้วยิ้ม เหมือนเด็กเห็นทะเลครั้งแรก", "ยายคลี่จดหมายกระดาษสีเหลือง ลายมือเอียงๆ ตัวเล็กๆ", "แม่ครับ ผมได้งานแล้ว ปีใหม่นี้ผมจะกลับบ้าน", "ยายอ่านซ้ำสามรอบ แล้วกอดจดหมายไว้แน่น", "ขอบใจนะพ่อหนุ่ม… ค่าแว่น ยายฝากไว้ในสมุดของปู่แล้ว", "ผมก้มลงหยิบผ้าเช็ดแว่น… พอเงยหน้าขึ้นมา ร้านว่างเปล่า", "เหลือแต่กลิ่นดอกมะลิ กับประตูเหล็กที่ยังล็อกอยู่", "ผมเปิดสมุดบัญชีของปู่ หน้าสุดท้าย ลายมือปู่เขียนไว้ว่า", "คุณยายจันทร์ แว่นกรอบทอง ยังไม่ได้มารับ ปีสองห้าหนึ่งเก้า", "ใต้บรรทัดนั้น มีหมึกสีใหม่เอี่ยม… จ่ายแล้ว", "สายวันนั้น มีชายแก่คนหนึ่งเดินเข้าร้าน ในมือถือรูปถ่ายเก่าๆ", "ผมตามหาบ้านของแม่มาสี่สิบปี… ใช่ที่นี่ไหมครับ", "ในรูป… คือคุณยายผมมวยสีเงิน ใส่แว่นกรอบทอง", "ร้านแว่นตีสอง… ลูกค้าคนต่อไป มาก่อนตีสองด้วยซ้ำ"];
+      const KIND = { 6: 'g', 9: 'g', 18: 'g', 16: 'l', 22: 'l', 25: 'o' };
+      const subs = $('subs');
+      TXT.forEach((txt, i) => { const n = i + 1; const d = document.createElement('div'); d.className = 'sub ' + (KIND[n] || '');
+        d.textContent = (KIND[n] === 'g' || KIND[n] === 'o') ? `“${txt}”` : txt; subs.appendChild(d);
+        tl.fromTo(d, { opacity: 0 }, { opacity: 1, duration: .15, immediateRender: false }, S[n] - .05);
+        tl.to(d, { opacity: 0, duration: .15 }, Math.min(E[n] + .35, (S[n + 1] ?? END) - .2)); });
+
+      // film grain wobble
+      for (let t = 0; t < END; t += .12) tl.set('#grain', { x: (rnd() - .5) * 40, y: (rnd() - .5) * 40 }, t);
+
+      tl.set({}, {}, END);
+      window.__timelines['main'] = tl;
+      tl.seek(0);
+    </script>
+  </body>
+</html>

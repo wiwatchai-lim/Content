@@ -1,0 +1,445 @@
+<!doctype html>
+<html lang="th">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=1920, height=1080" />
+    <!-- rig.js test scene (story-clips/_craft): walk, eyes-lead look, ghost appear, shock + vertigo + shake, shot/reverse-shot
+         with lip-sync from env.json, listener reactions, gestures, rack focus. Build: python build.py; snapshot hf/. -->
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/gsap.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@600&display=swap" rel="stylesheet" />
+    <style>
+      * { margin: 0; padding: 0; box-sizing: border-box; }
+      html, body { width: 1920px; height: 1080px; overflow: hidden; background: #000; }
+      #root { position: relative; width: 1920px; height: 1080px; overflow: hidden; }
+      .scene { position: absolute; inset: 0; overflow: hidden; }
+      svg { display: block; overflow: visible; }
+      #lab div { position: absolute; left: 0; top: 0; white-space: nowrap; }
+      #lab { position: absolute; left: 40px; top: 30px; font: 600 34px Prompt; color: #fff; -webkit-text-stroke: 6px #000; paint-order: stroke fill; }
+      .sub { position: absolute; left: 0; right: 0; top: 960px; text-align: center; font: 600 46px Prompt; color: #fff; -webkit-text-stroke: 9px #000; paint-order: stroke fill; opacity: 0; }
+    </style>
+  </head>
+  <body>
+    <div id="root" data-composition-id="main" data-start="0" data-duration="23" data-width="1920" data-height="1080">
+      <svg width="0" height="0" style="position:absolute"><defs><radialGradient id="gGhost"><stop offset="0" stop-color="#bff3ff" stop-opacity=".55" /><stop offset="1" stop-color="#bff3ff" stop-opacity="0" /></radialGradient></defs></svg>
+      <div id="shop" class="scene">
+        <div class="cam">
+          <div class="layer bg" id="bgL" style="--d:.8"><img src="assets/shop.png" /></div>
+          <div class="layer" id="chL" style="--d:1"><svg width="1920" height="1080" viewBox="0 0 1920 1080" id="sv"></svg></div>
+        </div>
+      </div>
+      <div id="lab"></div>
+      <div class="sub" id="sub6"></div><div class="sub" id="sub7"></div>
+    </div>
+    <script>
+      const ENV = {"1": [0.25, 0.7, 0.97, 1.0, 1.0, 0.98, 0.94, 0.92, 0.95, 0.96, 0.92, 0.88, 0.88, 0.72, 0.43, 0.37, 0.57, 0.74, 0.66, 0.35, 0.08, 0.0, 0.22, 0.7, 0.97, 1.0, 0.96, 0.86, 0.77, 0.67, 0.54, 0.4, 0.27, 0.13, 0.03, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.23, 0.71, 0.89, 0.58, 0.16, 0.0, 0.0, 0.19, 0.6, 0.84, 0.83, 0.76, 0.73, 0.76, 0.8, 0.61, 0.2, 0.0, 0.0, 0.0, 0.18, 0.61, 0.91, 0.94, 0.87, 0.78, 0.72, 0.67, 0.59, 0.46, 0.33, 0.19, 0.05, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.12, 0.49, 0.85, 0.92, 0.83, 0.62, 0.37, 0.27, 0.29, 0.46, 0.75, 0.88, 0.81, 0.64, 0.54, 0.62, 0.64, 0.7, 0.68, 0.32, 0.04, 0.04, 0.12, 0.36, 0.69, 0.8, 0.78, 0.82, 0.87, 0.85, 0.77, 0.76, 0.79, 0.63, 0.35, 0.22, 0.23, 0.45, 0.77, 0.92, 0.94, 0.91, 0.84, 0.84, 0.87, 0.79, 0.64, 0.5, 0.37, 0.21, 0.06], "2": [0.65, 0.84, 0.53, 0.14, 0.0, 0.0, 0.05, 0.17, 0.32, 0.5, 0.71, 0.85, 0.88, 0.85, 0.87, 0.91, 0.9, 0.88, 0.86, 0.88, 0.91, 0.9, 0.85, 0.83, 0.93, 0.97, 0.93, 0.85, 0.69, 0.43, 0.28, 0.32, 0.43, 0.64, 0.85, 0.9, 0.9, 0.89, 0.83, 0.74, 0.63, 0.54, 0.43, 0.23, 0.06, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.11, 0.47, 0.86, 0.98, 0.89, 0.78, 0.67, 0.43, 0.13, 0.02, 0.11, 0.41, 0.82, 0.97, 0.88, 0.77, 0.65, 0.48, 0.33, 0.2, 0.06, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.17, 0.55, 0.59, 0.21, 0.0, 0.0, 0.0, 0.14, 0.53, 0.89, 1.0, 0.92, 0.59, 0.17, 0.0, 0.2, 0.64, 0.85, 0.57, 0.16, 0.08, 0.4, 0.81, 0.73, 0.25, 0.01, 0.0, 0.0, 0.0, 0.01, 0.24, 0.61, 0.51, 0.14, 0.0, 0.02, 0.29, 0.75, 0.93, 0.87, 0.74, 0.66, 0.59, 0.51, 0.72, 0.87, 0.85, 0.93, 0.99, 0.95, 0.9, 0.92, 0.94, 0.9, 0.88, 0.74, 0.38, 0.08, 0.0, 0.18, 0.59, 0.78, 0.65, 0.51, 0.42, 0.28, 0.12], "3": [0.13, 0.38, 0.55, 0.7, 0.9, 0.95, 0.9, 0.88, 0.9, 0.94, 0.97, 0.95, 0.93, 0.9, 0.81, 0.61, 0.3, 0.07, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.25, 0.74, 0.99, 0.98, 0.94, 0.81, 0.7, 0.73, 0.87, 0.91, 0.78, 0.63, 0.5, 0.26, 0.05, 0.1, 0.45, 0.85, 0.98, 0.91, 0.82, 0.73, 0.63, 0.53, 0.39, 0.18, 0.03, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.11, 0.46, 0.86, 1.0, 0.93, 0.87, 0.91, 0.9, 0.82, 0.75, 0.75, 0.85, 0.94, 0.98, 0.99, 0.97, 0.92, 0.91, 0.94, 0.91, 0.89, 0.91, 0.89, 0.88, 0.91, 0.88, 0.82, 0.75, 0.59, 0.34, 0.15, 0.18, 0.41, 0.74, 0.94, 0.91, 0.84, 0.76, 0.6, 0.42, 0.24, 0.07], "4": [0.13, 0.48, 0.78, 0.9, 0.81, 0.53, 0.27, 0.21, 0.4, 0.7, 0.63, 0.21, 0.0, 0.19, 0.62, 0.9, 0.68, 0.21, 0.0, 0.21, 0.67, 0.93, 0.92, 0.94, 0.97, 0.95, 0.78, 0.42, 0.1, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.06, 0.21, 0.45, 0.58, 0.55, 0.7, 0.83, 0.85, 0.92, 0.98, 0.97, 0.69, 0.22, 0.0, 0.0, 0.13, 0.51, 0.88, 0.98, 0.92, 0.85, 0.76, 0.63, 0.51, 0.57, 0.53, 0.19, 0.0, 0.08, 0.38, 0.78, 0.95, 0.92, 0.84, 0.72, 0.58, 0.45, 0.28, 0.09], "5": [0.57, 0.91, 0.99, 0.97, 0.95, 0.87, 0.55, 0.16, 0.0, 0.25, 0.75, 0.99, 0.88, 0.55, 0.15, 0.13, 0.48, 0.8, 0.87, 0.58, 0.17, 0.01, 0.26, 0.75, 0.88, 0.51, 0.13, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.23, 0.72, 0.98, 0.97, 0.72, 0.27, 0.02, 0.06, 0.35, 0.76, 0.96, 0.95, 0.95, 0.96, 0.91, 0.86, 0.71, 0.42, 0.28, 0.31, 0.47, 0.78, 0.96, 0.98, 0.95, 0.89, 0.79, 0.73, 0.66, 0.64, 0.79, 0.9, 0.93, 0.95, 0.91, 0.87, 0.88, 0.77, 0.57, 0.44, 0.34, 0.2, 0.06, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.05, 0.17, 0.42, 0.77, 0.9, 0.84, 0.83, 0.85, 0.9, 0.97, 0.99, 0.96, 0.83, 0.62, 0.54, 0.63, 0.7, 0.7, 0.76, 0.85, 0.9, 0.93, 0.93, 0.87, 0.82, 0.74, 0.63, 0.47, 0.24, 0.05, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.1, 0.28, 0.5, 0.67, 0.44, 0.1, 0.0, 0.17, 0.6, 0.92, 0.82, 0.39, 0.07, 0.03, 0.3, 0.75, 0.93, 0.86, 0.83, 0.84, 0.76, 0.57, 0.54, 0.64, 0.63, 0.39, 0.11, 0.04, 0.19, 0.39, 0.62, 0.83, 0.86, 0.78, 0.73, 0.65, 0.53, 0.38, 0.2], "6": [0.06, 0.28, 0.65, 0.92, 1.0, 1.0, 0.98, 0.93, 0.85, 0.73, 0.57, 0.45, 0.3, 0.1, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.14, 0.49, 0.76, 0.84, 0.82, 0.83, 0.85, 0.71, 0.36, 0.08, 0.03, 0.32, 0.77, 0.94, 0.8, 0.48, 0.14, 0.0, 0.12, 0.44, 0.68, 0.65, 0.58, 0.65, 0.71, 0.51, 0.23, 0.14, 0.27, 0.58, 0.74, 0.67, 0.46, 0.15], "7": [0.65, 0.89, 0.63, 0.19, 0.0, 0.19, 0.62, 0.92, 0.73, 0.35, 0.21, 0.21, 0.46, 0.81, 0.67, 0.21, 0.0, 0.0, 0.25, 0.75, 1.0, 1.0, 0.99, 0.95, 0.92, 0.9, 0.85, 0.69, 0.39, 0.1, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.14, 0.5, 0.82, 0.92, 0.93, 0.91, 0.9, 0.87, 0.84, 0.81, 0.8, 0.77, 0.72, 0.62, 0.35, 0.09, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.17, 0.58, 0.91, 0.98, 0.92, 0.87, 0.69, 0.4, 0.21, 0.16, 0.29, 0.57, 0.84, 0.97, 0.96, 0.91, 0.89, 0.93, 0.96, 0.95, 0.93, 0.88, 0.87, 0.88, 0.86, 0.7, 0.39, 0.15, 0.1, 0.22, 0.44, 0.69, 0.66, 0.3], "8": [0.33, 0.73, 0.96, 1.0, 0.99, 0.97, 0.95, 0.95, 0.98, 0.92, 0.6, 0.17, 0.0, 0.25, 0.75, 0.96, 0.84, 0.7, 0.57, 0.45, 0.27, 0.08, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.04, 0.2, 0.45, 0.71, 0.9, 0.87, 0.72, 0.75, 0.91, 0.98, 0.97, 0.92, 0.9, 0.93, 0.97, 0.96, 0.85, 0.53, 0.15, 0.04, 0.23, 0.61, 0.85, 0.75, 0.43, 0.12, 0.0, 0.1, 0.29, 0.46, 0.7, 0.89, 0.85, 0.67, 0.44, 0.25, 0.18, 0.22, 0.45, 0.8, 0.95, 0.93, 0.86, 0.73, 0.52, 0.26, 0.06, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.2, 0.65, 0.95, 1.0, 0.98, 0.91, 0.82, 0.77, 0.81, 0.87, 0.85, 0.81, 0.81, 0.71, 0.5, 0.4, 0.49, 0.73, 0.89, 0.81, 0.7, 0.7, 0.71, 0.7, 0.61, 0.36, 0.16, 0.05, 0.04, 0.22, 0.47, 0.58, 0.67, 0.83, 0.87, 0.8, 0.7, 0.55, 0.39, 0.23, 0.07], "9": [0.36, 0.74, 0.95, 0.98, 0.94, 0.94, 0.85, 0.54, 0.15, 0.14, 0.51, 0.82, 0.85, 0.77, 0.58, 0.29, 0.13, 0.26, 0.63, 0.66, 0.23, 0.0, 0.0, 0.21, 0.65, 0.87, 0.77, 0.68, 0.69, 0.76, 0.89, 0.98, 0.92, 0.8, 0.76, 0.72, 0.75, 0.9, 0.91, 0.63, 0.22, 0.02, 0.1, 0.42, 0.79, 0.94, 0.93, 0.83, 0.65, 0.55, 0.58, 0.43, 0.13, 0.0, 0.18, 0.61, 0.91, 0.9, 0.85, 0.89, 0.97, 0.98, 0.93, 0.88, 0.83, 0.81, 0.78, 0.61, 0.29, 0.06, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.08, 0.22, 0.32, 0.47, 0.49, 0.48, 0.77, 0.98, 0.94, 0.77, 0.7, 0.85, 0.88, 0.81, 0.82, 0.85, 0.85, 0.79, 0.67, 0.58, 0.63, 0.75, 0.82, 0.86, 0.65, 0.21], "10": [0.24, 0.58, 0.76, 0.67, 0.38, 0.1, 0.0, 0.06, 0.38, 0.81, 0.98, 0.85, 0.76, 0.73, 0.46, 0.11, 0.0, 0.18, 0.61, 0.92, 0.95, 0.88, 0.83, 0.75, 0.64, 0.47, 0.22, 0.04, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.25, 0.75, 0.98, 0.94, 0.92, 0.95, 0.99, 0.98, 0.93, 0.84, 0.86, 0.91, 0.87, 0.84, 0.75, 0.58, 0.48, 0.54, 0.65, 0.58, 0.43, 0.29, 0.14, 0.03, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.21, 0.65, 0.89, 0.84, 0.77, 0.84, 0.95, 0.98, 0.97, 0.96, 0.86, 0.8, 0.89, 0.87, 0.77, 0.76, 0.63, 0.33, 0.14, 0.17, 0.32, 0.49, 0.44, 0.18, 0.02, 0.03, 0.24, 0.55, 0.63, 0.43, 0.14, 0.0, 0.15, 0.53, 0.82, 0.85, 0.77, 0.71, 0.64, 0.51, 0.39, 0.24], "11": [0.18, 0.53, 0.69, 0.46, 0.13, 0.0, 0.25, 0.75, 0.97, 0.88, 0.59, 0.22, 0.06, 0.19, 0.55, 0.81, 0.83, 0.68, 0.48, 0.31, 0.29, 0.47, 0.61, 0.46, 0.15, 0.0, 0.0, 0.07, 0.27, 0.48, 0.48, 0.27, 0.07, 0.0, 0.0, 0.24, 0.72, 0.93, 0.85, 0.73, 0.56, 0.38, 0.2, 0.05, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.13, 0.38, 0.61, 0.86, 1.0, 1.0, 1.0, 1.0, 1.0, 0.99, 0.95, 0.9, 0.87, 0.9, 0.91, 0.89, 0.88, 0.84, 0.61, 0.26, 0.04, 0.07, 0.24, 0.45, 0.71, 0.87, 0.68, 0.26, 0.02, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.17, 0.54, 0.74, 0.68, 0.62, 0.63, 0.72, 0.9, 0.97, 0.92, 0.75, 0.4, 0.1, 0.05, 0.19, 0.43, 0.69, 0.74, 0.6, 0.5, 0.51, 0.39, 0.13, 0.0, 0.0, 0.0, 0.19, 0.64, 0.88, 0.78, 0.6, 0.43, 0.28, 0.12], "12": [0.42, 0.61, 0.59, 0.38, 0.14, 0.02, 0.0, 0.25, 0.73, 0.87, 0.77, 0.82, 0.92, 0.97, 0.99, 0.98, 0.95, 0.91, 0.88, 0.84, 0.72, 0.48, 0.19, 0.03, 0.12, 0.41, 0.67, 0.82, 0.75, 0.55, 0.46, 0.58, 0.84, 0.92, 0.88, 0.82, 0.69, 0.52, 0.3, 0.09, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.1, 0.45, 0.85, 0.98, 0.93, 0.9, 0.91, 0.89, 0.85, 0.81, 0.79, 0.76, 0.77, 0.77, 0.56, 0.18, 0.05, 0.26, 0.63, 0.78, 0.48, 0.12, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.18, 0.57, 0.82, 0.84, 0.8, 0.67, 0.5, 0.45, 0.54, 0.57, 0.42, 0.21, 0.06, 0.06, 0.21, 0.34, 0.53, 0.84, 1.0, 0.98, 0.89, 0.7, 0.39], "13": [0.07, 0.36, 0.72, 0.8, 0.62, 0.64, 0.84, 0.88, 0.8, 0.83, 0.94, 0.98, 0.95, 0.84, 0.6, 0.4, 0.37, 0.42, 0.57, 0.8, 0.92, 0.78, 0.54, 0.54, 0.51, 0.19, 0.0, 0.1, 0.34, 0.56, 0.69, 0.8, 0.87, 0.77, 0.58, 0.61, 0.83, 0.68, 0.22, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.19, 0.63, 0.94, 1.0, 1.0, 0.93, 0.61, 0.18, 0.0, 0.23, 0.69, 0.92, 0.9, 0.9, 0.83, 0.8, 0.89, 0.85, 0.52, 0.15, 0.0, 0.0, 0.15, 0.53, 0.82, 0.77, 0.65, 0.58, 0.51, 0.61, 0.83, 0.96, 0.98, 0.94, 0.82, 0.6, 0.31], "14": [0.48, 0.82, 0.97, 0.99, 0.97, 0.96, 0.92, 0.81, 0.66, 0.58, 0.66, 0.84, 0.89, 0.78, 0.7, 0.72, 0.78, 0.85, 0.93, 0.96, 0.92, 0.86, 0.8, 0.71, 0.6, 0.46, 0.26, 0.07, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.23, 0.71, 0.98, 1.0, 1.0, 0.97, 0.87, 0.8, 0.87, 0.97, 0.99, 0.99, 0.99, 0.97, 0.94, 0.9, 0.74, 0.4, 0.1, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.12, 0.48, 0.84, 0.96, 0.91, 0.87, 0.91, 0.93, 0.94, 0.93, 0.65, 0.2, 0.0, 0.0, 0.0, 0.04, 0.27, 0.62, 0.76, 0.74, 0.76, 0.71, 0.51, 0.4, 0.48, 0.63, 0.82, 0.9, 0.87, 0.85, 0.8, 0.71, 0.48, 0.15, 0.02, 0.14, 0.31, 0.48, 0.72, 0.81, 0.79, 0.82, 0.84, 0.86, 0.93, 0.95, 0.89, 0.8, 0.67, 0.47, 0.24], "15": [0.23, 0.7, 0.97, 0.99, 0.98, 0.95, 0.9, 0.63, 0.2, 0.0, 0.09, 0.28, 0.37, 0.51, 0.82, 0.97, 0.91, 0.68, 0.3, 0.06, 0.15, 0.54, 0.79, 0.55, 0.15, 0.0, 0.22, 0.68, 0.92, 0.86, 0.76, 0.71, 0.68, 0.45, 0.13, 0.19, 0.63, 0.94, 0.97, 0.93, 0.94, 0.88, 0.75, 0.54, 0.34, 0.28, 0.3, 0.45, 0.58, 0.64, 0.69, 0.7, 0.76, 0.83, 0.85, 0.84, 0.79, 0.66, 0.51, 0.47, 0.54, 0.65, 0.62, 0.35, 0.08, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.22, 0.7, 0.97, 0.99, 0.98, 0.98, 0.99, 0.98, 0.98, 0.96, 0.91, 0.76, 0.58, 0.47, 0.49, 0.74, 0.93, 0.89, 0.79, 0.52, 0.16, 0.0, 0.19, 0.59, 0.82, 0.85, 0.85, 0.81, 0.77, 0.74, 0.7, 0.65, 0.45, 0.14, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.24, 0.74, 0.97, 0.93, 0.88, 0.82, 0.79, 0.6, 0.2, 0.0, 0.04, 0.29, 0.66, 0.81, 0.77, 0.55, 0.18], "16": [0.51, 0.88, 1.0, 1.0, 1.0, 0.86, 0.56, 0.26, 0.17, 0.33, 0.49, 0.64, 0.87, 0.83, 0.47, 0.12, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.06, 0.21, 0.48, 0.78, 0.84, 0.8, 0.83, 0.91, 0.98, 0.99, 0.99, 0.99, 0.98, 0.93, 0.87, 0.84, 0.81, 0.8, 0.79, 0.79, 0.78, 0.77, 0.76, 0.76, 0.79, 0.79, 0.7, 0.44, 0.13, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.23, 0.72, 0.97, 0.97, 0.96, 0.94, 0.91, 0.89, 0.86, 0.81, 0.78, 0.83, 0.86, 0.84, 0.82, 0.83, 0.85, 0.85, 0.82, 0.59, 0.19, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.05, 0.19, 0.47, 0.76, 0.83, 0.8, 0.71, 0.51, 0.4, 0.55, 0.63, 0.33, 0.05, 0.0, 0.23, 0.64, 0.73, 0.45, 0.13, 0.0, 0.0, 0.15, 0.52, 0.83, 0.92, 0.9, 0.84, 0.8, 0.77, 0.67, 0.49, 0.32, 0.16], "17": [0.5, 0.86, 0.98, 0.97, 0.94, 0.92, 0.8, 0.51, 0.19, 0.22, 0.61, 0.85, 0.82, 0.74, 0.66, 0.64, 0.72, 0.83, 0.92, 0.92, 0.93, 0.97, 0.94, 0.84, 0.79, 0.84, 0.85, 0.67, 0.5, 0.52, 0.59, 0.63, 0.78, 0.94, 0.97, 0.93, 0.87, 0.8, 0.7, 0.46, 0.14, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.23, 0.72, 0.98, 0.96, 0.67, 0.21, 0.0, 0.0, 0.23, 0.72, 0.92, 0.77, 0.53, 0.27, 0.06, 0.0, 0.11, 0.45, 0.73, 0.54, 0.15, 0.0, 0.0, 0.21, 0.63, 0.79, 0.65, 0.54, 0.56, 0.61, 0.66, 0.77, 0.86, 0.88, 0.91, 0.97, 0.97, 0.94, 0.87, 0.76, 0.57, 0.31, 0.1], "18": [0.27, 0.53, 0.67, 0.69, 0.4, 0.08, 0.0, 0.0, 0.21, 0.67, 0.94, 0.94, 0.9, 0.87, 0.89, 0.91, 0.72, 0.37, 0.21, 0.29, 0.54, 0.86, 1.0, 1.0, 1.0, 0.95, 0.84, 0.68, 0.49, 0.25, 0.06, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.13, 0.4, 0.63, 0.83, 0.95, 0.97, 0.92, 0.86, 0.88, 0.93, 0.94, 0.92, 0.87, 0.81, 0.68, 0.48, 0.25, 0.06, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.15, 0.53, 0.85, 0.96, 0.95, 0.95, 0.89, 0.62, 0.3, 0.37, 0.53, 0.52, 0.7, 0.78, 0.58, 0.28, 0.06, 0.0, 0.2, 0.63, 0.91, 0.98, 1.0, 0.99, 0.91, 0.78, 0.76, 0.89, 0.93, 0.85, 0.67, 0.32, 0.06, 0.0, 0.15, 0.38, 0.48, 0.56, 0.55, 0.3, 0.07, 0.0, 0.24, 0.72, 0.95, 0.83, 0.66, 0.59, 0.66, 0.72, 0.67, 0.62, 0.58, 0.54, 0.55, 0.57, 0.5, 0.29], "19": [0.09, 0.42, 0.81, 0.9, 0.7, 0.36, 0.08, 0.0, 0.24, 0.73, 0.97, 0.96, 0.98, 1.0, 1.0, 0.98, 0.96, 0.92, 0.82, 0.72, 0.54, 0.19, 0.0, 0.0, 0.08, 0.29, 0.55, 0.8, 0.92, 0.79, 0.54, 0.4, 0.41, 0.52, 0.66, 0.53, 0.18, 0.0, 0.0, 0.18, 0.61, 0.9, 0.91, 0.86, 0.81, 0.76, 0.68, 0.51, 0.27, 0.07, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.07, 0.25, 0.56, 0.87, 1.0, 1.0, 0.98, 0.97, 0.94, 0.89, 0.86, 0.91, 0.94, 0.91, 0.89, 0.81, 0.54, 0.22, 0.09, 0.14, 0.41, 0.81, 1.0, 0.99, 0.93, 0.84, 0.76, 0.65, 0.49, 0.33, 0.19, 0.07, 0.01, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.03, 0.3, 0.75, 0.97, 0.96, 0.88, 0.82, 0.83, 0.88, 0.9, 0.9, 0.92, 0.93, 0.91, 0.86, 0.6, 0.19, 0.0, 0.18, 0.58, 0.8, 0.71, 0.57, 0.46, 0.37, 0.32, 0.24, 0.08], "20": [0.24, 0.74, 0.99, 0.99, 0.93, 0.64, 0.2, 0.0, 0.25, 0.66, 0.57, 0.16, 0.0, 0.09, 0.42, 0.83, 0.94, 0.85, 0.76, 0.68, 0.68, 0.82, 0.78, 0.47, 0.13, 0.0, 0.0, 0.2, 0.64, 0.89, 0.88, 0.84, 0.83, 0.82, 0.76, 0.53, 0.17, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.1, 0.45, 0.79, 0.62, 0.19, 0.0, 0.0, 0.16, 0.56, 0.85, 0.66, 0.21, 0.0, 0.05, 0.34, 0.74, 0.87, 0.89, 0.93, 0.92, 0.87, 0.72, 0.42, 0.11, 0.0, 0.0, 0.0, 0.05, 0.35, 0.76, 0.94, 0.94, 0.88, 0.83, 0.83, 0.83, 0.8, 0.57, 0.19, 0.0, 0.0, 0.0, 0.2, 0.63, 0.88, 0.83, 0.7, 0.54, 0.31, 0.08], "21": [0.26, 0.59, 0.86, 0.92, 0.84, 0.53, 0.15, 0.0, 0.25, 0.75, 1.0, 0.91, 0.71, 0.54, 0.5, 0.56, 0.71, 0.89, 0.98, 0.97, 0.86, 0.54, 0.16, 0.02, 0.23, 0.64, 0.92, 0.83, 0.58, 0.49, 0.59, 0.75, 0.84, 0.62, 0.36, 0.33, 0.35, 0.4, 0.48, 0.57, 0.51, 0.23, 0.04, 0.0, 0.25, 0.74, 0.93, 0.85, 0.74, 0.6, 0.42, 0.21, 0.05, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.24, 0.73, 0.99, 0.99, 0.97, 0.88, 0.74, 0.69, 0.78, 0.64, 0.22, 0.0, 0.1, 0.32, 0.5, 0.6, 0.67, 0.65, 0.59, 0.57, 0.59, 0.62, 0.66, 0.56, 0.27, 0.04, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.23, 0.7, 0.97, 0.98, 0.98, 0.98, 0.99, 1.0, 0.98, 0.91, 0.62, 0.19, 0.0, 0.14, 0.53, 0.87, 0.92, 0.81, 0.6, 0.3, 0.07, 0.0, 0.0, 0.09, 0.36, 0.63, 0.69, 0.65, 0.67, 0.73, 0.8, 0.83, 0.82, 0.84, 0.86, 0.83, 0.77, 0.7, 0.62, 0.48, 0.26, 0.06], "22": [0.24, 0.58, 0.89, 1.0, 0.99, 0.98, 0.96, 0.91, 0.87, 0.85, 0.6, 0.19, 0.0, 0.12, 0.49, 0.82, 0.84, 0.77, 0.74, 0.72, 0.71, 0.65, 0.42, 0.13, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.2, 0.65, 0.95, 0.99, 0.99, 1.0, 0.85, 0.45, 0.1, 0.13, 0.46, 0.75, 0.8, 0.66, 0.44, 0.22, 0.05, 0.0, 0.11, 0.33, 0.43, 0.53, 0.7, 0.77, 0.74, 0.71, 0.7, 0.66, 0.59, 0.42, 0.18, 0.03, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.22, 0.7, 0.93, 0.87, 0.84, 0.9, 0.96, 0.95, 0.92, 0.94, 0.95, 0.93, 0.89, 0.79, 0.64, 0.59, 0.68, 0.7, 0.49, 0.16, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.14, 0.53, 0.87, 0.91, 0.82, 0.7, 0.57, 0.6, 0.73, 0.73, 0.63, 0.6, 0.58, 0.45, 0.46, 0.67, 0.86, 0.92, 0.95, 0.96, 0.86, 0.71, 0.52, 0.26, 0.06, 0.0, 0.13, 0.47, 0.75, 0.76, 0.71, 0.66, 0.6, 0.51, 0.36, 0.18], "23": [0.43, 0.83, 0.97, 0.97, 0.95, 0.9, 0.89, 0.86, 0.72, 0.52, 0.4, 0.42, 0.5, 0.58, 0.49, 0.18, 0.0, 0.0, 0.22, 0.64, 0.82, 0.75, 0.72, 0.73, 0.72, 0.7, 0.6, 0.32, 0.07, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.21, 0.67, 0.96, 1.0, 1.0, 1.0, 1.0, 0.86, 0.48, 0.11, 0.0, 0.07, 0.29, 0.51, 0.67, 0.77, 0.75, 0.72, 0.83, 0.95, 0.96, 0.88, 0.72, 0.42, 0.12, 0.0, 0.0, 0.16, 0.53, 0.77, 0.74, 0.61, 0.44, 0.2, 0.04, 0.03, 0.23, 0.57, 0.71, 0.62, 0.47, 0.27, 0.09, 0.01, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.16, 0.58, 0.85, 0.76, 0.55, 0.39, 0.35, 0.44, 0.57, 0.64, 0.62, 0.57, 0.51, 0.45, 0.47, 0.51, 0.36, 0.11], "24": [0.12, 0.42, 0.72, 0.87, 0.77, 0.6, 0.63, 0.8, 0.91, 0.95, 0.93, 0.9, 0.88, 0.84, 0.82, 0.79, 0.77, 0.75, 0.73, 0.58, 0.26, 0.04, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.25, 0.74, 1.0, 0.97, 0.81, 0.59, 0.52, 0.63, 0.85, 0.93, 0.66, 0.21, 0.0, 0.14, 0.52, 0.84, 0.83, 0.69, 0.44, 0.19, 0.11, 0.13, 0.38, 0.79, 0.96, 0.95, 0.93, 0.86, 0.73, 0.65, 0.66, 0.76, 0.89, 0.89, 0.83, 0.7, 0.49, 0.35, 0.37, 0.46, 0.62, 0.87, 0.97, 0.91, 0.91, 0.87, 0.72, 0.56, 0.46, 0.45, 0.49, 0.56, 0.57, 0.37, 0.1, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.23, 0.71, 0.98, 1.0, 1.0, 1.0, 0.99, 0.97, 0.91, 0.72, 0.4, 0.21, 0.3, 0.36, 0.43, 0.5, 0.49, 0.64, 0.77, 0.82, 0.77, 0.45, 0.17, 0.38, 0.82, 0.92, 0.58, 0.17, 0.0, 0.13, 0.4, 0.52, 0.52, 0.55, 0.5, 0.33, 0.13, 0.02, 0.0, 0.18, 0.56, 0.64, 0.29, 0.04, 0.0, 0.0, 0.22, 0.6, 0.64, 0.47, 0.36, 0.2, 0.05], "25": [0.09, 0.41, 0.77, 0.87, 0.81, 0.57, 0.18, 0.0, 0.25, 0.72, 0.93, 0.91, 0.9, 0.79, 0.58, 0.53, 0.63, 0.67, 0.66, 0.75, 0.88, 0.92, 0.93, 0.98, 0.93, 0.7, 0.47, 0.44, 0.55, 0.71, 0.87, 0.96, 0.98, 0.99, 0.99, 0.97, 0.94, 0.85, 0.73, 0.67, 0.69, 0.74, 0.64, 0.5, 0.52, 0.66, 0.68, 0.38, 0.08, 0.0, 0.0, 0.18, 0.6, 0.84, 0.74, 0.58, 0.46, 0.35, 0.23, 0.1, 0.02, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.02, 0.17, 0.45, 0.69, 0.9, 0.9, 0.59, 0.24, 0.09, 0.15, 0.4, 0.78, 0.99, 1.0, 1.0, 1.0, 0.97, 0.92, 0.83, 0.54, 0.16, 0.07, 0.23, 0.41, 0.59, 0.67, 0.48], "26": [0.25, 0.74, 0.99, 0.97, 0.95, 0.93, 0.89, 0.89, 0.96, 0.98, 0.94, 0.88, 0.73, 0.41, 0.11, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.1, 0.31, 0.56, 0.85, 0.87, 0.56, 0.39, 0.38, 0.51, 0.82, 0.99, 0.96, 0.94, 0.95, 0.92, 0.91, 0.88, 0.7, 0.36, 0.17, 0.3, 0.52, 0.69, 0.73, 0.75, 0.84, 0.93, 0.96, 0.93, 0.83, 0.67, 0.63, 0.66, 0.62, 0.55, 0.62, 0.8, 0.91, 0.91, 0.87, 0.79, 0.7, 0.56, 0.39, 0.19, 0.05, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.11, 0.4, 0.69, 0.86, 0.9, 0.78, 0.66, 0.64, 0.74, 0.9, 0.92, 0.88, 0.86, 0.6, 0.18, 0.0, 0.19, 0.62, 0.83, 0.69, 0.46, 0.23, 0.06, 0.0, 0.0, 0.13, 0.36, 0.49, 0.63, 0.7, 0.61, 0.49, 0.39, 0.29, 0.16], "27": [0.26, 0.57, 0.87, 0.95, 0.86, 0.84, 0.89, 0.9, 0.9, 0.96, 1.0, 0.99, 0.82, 0.43, 0.09, 0.0, 0.25, 0.72, 0.87, 0.77, 0.69, 0.63, 0.71, 0.85, 0.87, 0.7, 0.48, 0.34, 0.33, 0.4, 0.42, 0.29, 0.09, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.14, 0.54, 0.89, 0.9, 0.56, 0.15, 0.0, 0.16, 0.44, 0.59, 0.7, 0.81, 0.78, 0.57, 0.25, 0.12, 0.26, 0.54, 0.82, 0.89, 0.61, 0.19, 0.0, 0.23, 0.69, 0.85, 0.63, 0.34, 0.09, 0.0, 0.0, 0.22, 0.6, 0.68, 0.55, 0.46, 0.34, 0.17, 0.04, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.23, 0.71, 0.98, 0.96, 0.72, 0.3, 0.04, 0.0, 0.23, 0.66, 0.81, 0.67, 0.51, 0.29, 0.08, 0.0, 0.21, 0.65, 0.87, 0.84, 0.74, 0.61, 0.61, 0.74, 0.83, 0.67, 0.44, 0.41, 0.55, 0.73, 0.9, 0.85, 0.62, 0.61, 0.72, 0.67, 0.51, 0.4, 0.37, 0.31, 0.18]};
+      window.__timelines = window.__timelines || {};
+      const tl = gsap.timeline({ paused: true });
+      // ============================================================================================================
+// rig.js — shared character + camera rig for the 2D story clips (HyperFrames + GSAP, seek-safe, deterministic).
+// The theory behind every number here is in story-clips/_craft/GUIDE.md. Inline this file into a composition
+// (build.py replaces /*RIG*/) after `const tl = gsap.timeline({ paused: true })` exists.
+//
+//   const R = Rig(tl, { seed: 7 });
+//   const ton = R.puppet(svg, { x: 400, y: 1040, s: .85 }, R.LOOKS.ton);
+//   R.walk(ton, 1.0, 3.2, { x: 900 });              // walk cycle to x=900 (front-facing "storybook" walk)
+//   R.look(ton, 3.4, .8, 0);                        // eyes lead, head follows .1 s later, body .25 s later
+//   R.emote(ton, 4.0, 'shock');                     // anticipation → stretch → hold, with brows/eyes/mouth/arms
+//   R.talk(ton, 5.0, ENV[7], TEXT[7]);              // lip-sync from the line's loudness envelope + Thai vowels
+//   R.blinks(ton, 0, 20);  R.breathe(ton, 0, 20);   // moving holds — never let a character freeze
+//   const cam = R.cam('#shop');  cam.set(0, { px: 960, py: 540, s: 1 });  cam.move(3, 2, { px: 1300, py: 600, s: 1.4 });
+//
+// RULE: author each puppet / camera in chronological order. Every helper remembers the last value it wrote, and
+// tweens from it (fromTo with immediateRender:false), so the timeline renders the same at any seek position.
+// ============================================================================================================
+function Rig(tl, opt = {}) {
+  const NS = 'http://www.w3.org/2000/svg';
+  let seed = opt.seed || 7; const rnd = () => (seed = (seed * 16807) % 2147483647) / 2147483647;
+  const el = (tag, a, p) => { const e = document.createElementNS(NS, tag); for (const k in a) e.setAttribute(k, a[k]); p && p.appendChild(e); return e; };
+  const INK = opt.ink || '#241c18';
+  const FPS = 24, F = 1 / FPS;                       // animate thinking in 24 fps "frames"; F = one frame
+
+  // ---------------- joints ----------------
+  // A joint = static outer <g> translated to the pivot + inner <g> that we animate (translate/rotate/scale about the pivot).
+  const str = v => `translate(${v.x.toFixed(2)} ${v.y.toFixed(2)}) rotate(${v.r.toFixed(2)}) scale(${v.sx.toFixed(4)} ${v.sy.toFixed(4)})`;
+  function joint(P, name, parent, x, y, init = {}) {
+    const o = el('g', { transform: `translate(${x} ${y})` }, parent);
+    const v = { x: 0, y: 0, r: 0, sx: 1, sy: 1, ...init };
+    const i = el('g', { transform: str(v) }, o);
+    P.j[name] = { el: i, v }; return i;
+  }
+  // move a joint: to = partial {x,y,r,sx,sy}. from = the last authored value.
+  function mv(P, name, t, dur, to, ease = 'sine.inOut') {
+    const j = P.j[name]; if (!j) return;
+    const from = { ...j.v }; Object.assign(j.v, to);
+    if (dur <= 0) { tl.set(j.el, { attr: { transform: str(j.v) } }, t); return; }
+    tl.fromTo(j.el, { attr: { transform: str(from) } }, { attr: { transform: str(j.v) }, duration: dur, ease, immediateRender: false }, t);
+  }
+  // opacity switch inside a set (eyes / mouth / brows states)
+  function swap(group, t, key) { for (const k in group) tl.set(group[k], { opacity: k === key ? 1 : 0 }, t); }
+
+  // ---------------- looks (character designs) ----------------
+  const LOOKS = {
+    ton: { skin: '#f3e1cb', hair: 'messy', hairCol: '#1f1b22', top: '#4f6b58', inner: '#efe7d6', legs: '#2b2a33', shoes: '#1b1a1f', glasses: 'round' },
+    jan: { skin: '#eef2ef', hair: 'bun', hairCol: '#d5dcdf', top: '#efe5cf', dress: true, shawl: '#9fb4b6', glasses: 'gold', ghost: true, hunch: 4, eyeCol: '#3b3540' },
+    chan: { skin: '#ecd3b8', hair: 'bald', hairCol: '#c9c9c9', top: '#7a5a3e', inner: '#e8e2d4', legs: '#3b3630', shoes: '#2a201a', moustache: true },
+  };
+
+  // ---------------- puppet ----------------
+  // Unit puppet: feet at (0,0), ~520 px tall at s=1. Hierarchy:
+  //   root(pos) > bob > [legL, legR] , torso(hip pivot) > [armL > foreL, armR > foreR, head(neck pivot) > [hair, face > [eyes(pupils), browL, browR, mouth]]]
+  function puppet(p, o, look = LOOKS.ton) {
+    const L = { skin: '#f3e1cb', hairCol: '#222', top: '#567', inner: '#eee', legs: '#333', shoes: '#111', eyeCol: INK, ...look };
+    const P = { j: {}, L, mouthNow: 'rest', eyeNow: 'dot', baseX: o.x, baseY: o.y, s: o.s || 1, facing: 0 };
+    const rootO = el('g', {}, p); P.g = rootO;
+    const root = joint(P, 'root', rootO, 0, 0, { x: o.x, y: o.y, sx: P.s, sy: P.s });
+    if (L.ghost) { const gl = el('ellipse', { cx: 0, cy: -260, rx: 260, ry: 330, fill: 'url(#gGhost)' }, root); P.glow = gl; }
+    else el('ellipse', { cx: 0, cy: 4, rx: 70, ry: 12, fill: '#000', opacity: .28 }, root);
+    const bob = joint(P, 'bob', root, 0, 0);
+    // legs (hidden under a dress)
+    if (!L.dress) ['L', 'R'].forEach(s => { const sg = s === 'L' ? -1 : 1; const lg = joint(P, 'leg' + s, bob, sg * 24, -120);
+      el('path', { d: `M0 0 L${sg * 3} 108`, stroke: L.legs, 'stroke-width': 17, 'stroke-linecap': 'round' }, lg);
+      el('ellipse', { cx: sg * 8, cy: 116, rx: 22, ry: 10, fill: L.shoes }, lg); });
+    const torso = joint(P, 'torso', bob, 0, -120, { r: L.hunch || 0 });
+    const W = L.dress ? 96 : 74;
+    if (L.dress) {
+      el('path', { d: 'M-58 -180 Q-70 -80 -96 110 Q0 130 96 110 Q70 -80 58 -180 Q0 -202 -58 -180 Z', fill: L.top, stroke: INK, 'stroke-width': 5 }, torso);
+      for (let i = 0; i < 11; i++) el('circle', { cx: -84 + i * 16.8, cy: 98, r: 5, fill: 'none', stroke: '#c7b38c', 'stroke-width': 2.5 }, torso);
+      if (L.shawl) el('path', { d: 'M-60 -176 Q-110 -80 -84 20 L84 20 Q110 -80 60 -176', fill: L.shawl, opacity: .55 }, torso);
+    } else {
+      el('path', { d: `M-${W} 0 Q-${W + 10} -150 -52 -176 Q0 -196 52 -176 Q${W + 10} -150 ${W} 0 Z`, fill: L.top, stroke: INK, 'stroke-width': 5 }, torso);
+      el('path', { d: 'M-26 -184 L0 -60 L26 -184 Z', fill: L.inner, stroke: INK, 'stroke-width': 4 }, torso);
+    }
+    P.torsoEl = torso;
+    const sleeve = L.shawl || L.top;
+    ['L', 'R'].forEach(s => { const sg = s === 'L' ? -1 : 1;
+      const up = joint(P, 'arm' + s, torso, sg * (L.dress ? 50 : 60), -160);
+      el('path', { d: `M0 0 Q${sg * 6} 36 ${sg * 4} 72`, stroke: INK, 'stroke-width': 34, fill: 'none', 'stroke-linecap': 'round' }, up);
+      el('path', { d: `M0 0 Q${sg * 6} 36 ${sg * 4} 72`, stroke: sleeve, 'stroke-width': 25, fill: 'none', 'stroke-linecap': 'round' }, up);
+      const fo = joint(P, 'fore' + s, up, sg * 4, 72);
+      el('path', { d: `M0 0 L0 62`, stroke: INK, 'stroke-width': 31, 'stroke-linecap': 'round' }, fo);
+      el('path', { d: `M0 0 L0 62`, stroke: sleeve, 'stroke-width': 22, 'stroke-linecap': 'round' }, fo);
+      el('circle', { cx: 0, cy: 72, r: 15, fill: L.skin, stroke: INK, 'stroke-width': 4 }, fo);
+      P['hand' + s] = joint(P, 'hand' + s, fo, 0, 72);  // anything held goes in here
+    });
+    // head: pivot at the neck so tilts swing from the base
+    const head = joint(P, 'head', torso, 0, -186);
+    const HC = -96;                                      // head centre relative to the neck pivot
+    if (L.hair === 'bun') el('circle', { cx: 0, cy: HC - 108, r: 40, fill: L.hairCol, stroke: INK, 'stroke-width': 4.5 }, head);
+    el('circle', { cx: 0, cy: HC, r: 104, fill: L.skin, stroke: INK, 'stroke-width': 5 }, head);
+    const hair = joint(P, 'hair', head, 0, HC);
+    if (L.hair === 'messy') {
+      el('path', { d: 'M-110 10 Q-122 -70 -70 -104 Q-20 -138 40 -118 Q100 -104 114 -40 Q120 0 108 22 Q96 -18 74 -40 Q60 -10 30 -44 Q10 -12 -18 -46 Q-40 -12 -64 -42 Q-84 -10 -110 10 Z', fill: L.hairCol, stroke: INK, 'stroke-width': 4 }, hair);
+      P.tuft = joint(P, 'tuft', hair, -4, -122);
+      el('path', { d: 'M-16 4 Q-4 -30 22 -22 Q4 -14 4 4 Z', fill: L.hairCol }, P.tuft);
+    } else if (L.hair === 'bun') {
+      el('path', { d: 'M-102 6 Q-108 -66 -52 -92 Q0 -110 52 -92 Q108 -66 102 6 Q86 -40 40 -60 Q0 -68 -40 -60 Q-86 -40 -102 6 Z', fill: L.hairCol, stroke: INK, 'stroke-width': 4 }, hair);
+    } else if (L.hair === 'bald') {
+      el('path', { d: 'M-104 12 Q-112 -40 -84 -66 Q-72 -20 -64 -8 Z M104 12 Q112 -40 84 -66 Q72 -20 64 -8 Z', fill: L.hairCol, stroke: INK, 'stroke-width': 4 }, hair);
+    }
+    const face = joint(P, 'face', head, 0, HC);
+    ['L', 'R'].forEach(s => el('ellipse', { cx: (s === 'L' ? -1 : 1) * 58, cy: 38, rx: 16, ry: 9, fill: '#f0a99a', opacity: .45 }, face));
+    P.blush = el('g', { opacity: 0 }, face); ['L', 'R'].forEach(s => el('ellipse', { cx: (s === 'L' ? -1 : 1) * 56, cy: 36, rx: 22, ry: 11, fill: '#ff7f7f', opacity: .5 }, P.blush));
+    // eyes: lids (blink = scaleY), pupils (look), states (dot / wide / smile / closed / sad)
+    const lids = joint(P, 'lids', face, 0, 12);
+    const pup = joint(P, 'pupils', lids, 0, 0);
+    const E = {}; const ex = 38;
+    E.dot = el('g', {}, pup); [-1, 1].forEach(sg => el('ellipse', { cx: ex * sg, cy: 0, rx: 7.5, ry: 10.5, fill: L.eyeCol }, E.dot));
+    E.wide = el('g', { opacity: 0 }, lids); [-1, 1].forEach(sg => el('circle', { cx: ex * sg, cy: 0, r: 15, fill: '#fff', stroke: L.eyeCol, 'stroke-width': 3.5 }, E.wide));
+    E.widePup = el('g', { opacity: 0 }, pup); [-1, 1].forEach(sg => el('circle', { cx: ex * sg, cy: 1, r: 5, fill: L.eyeCol }, E.widePup));
+    E.smile = el('g', { opacity: 0 }, lids); [-1, 1].forEach(sg => el('path', { d: `M${ex * sg - 12} 3 Q${ex * sg} -9 ${ex * sg + 12} 3`, stroke: L.eyeCol, 'stroke-width': 4.5, fill: 'none', 'stroke-linecap': 'round' }, E.smile));
+    E.closed = el('g', { opacity: 0 }, lids); [-1, 1].forEach(sg => el('path', { d: `M${ex * sg - 12} 0 Q${ex * sg} 7 ${ex * sg + 12} 0`, stroke: L.eyeCol, 'stroke-width': 4.5, fill: 'none', 'stroke-linecap': 'round' }, E.closed));
+    P.eyes = E;
+    // brows (emotion is mostly brows)
+    ['L', 'R'].forEach(s => { const sg = s === 'L' ? -1 : 1; const b = joint(P, 'brow' + s, face, sg * 38, -26);
+      el('path', { d: 'M-14 0 Q0 -5 14 0', stroke: L.hair === 'bald' ? L.hairCol : INK, 'stroke-width': 5.5, fill: 'none', 'stroke-linecap': 'round' }, b); });
+    if (L.glasses) { const gc = L.glasses === 'gold' ? '#c8922e' : '#1a1a1a';
+      const gG = el('g', {}, face); P.glasses = gG;
+      [-1, 1].forEach(sg => el('circle', { cx: ex * sg, cy: 12, r: 30, fill: 'rgba(220,240,255,.14)', stroke: gc, 'stroke-width': 5.5 }, gG));
+      el('path', { d: 'M-8 8 Q0 2 8 8', stroke: gc, 'stroke-width': 5, fill: 'none' }, gG); }
+    if (L.moustache) el('path', { d: 'M-32 40 Q0 30 32 40 Q16 50 0 44 Q-16 50 -32 40 Z', fill: L.hairCol, stroke: INK, 'stroke-width': 3 }, face);
+    // mouth: viseme set (rest / M / A / E / O / U) + expressions (smile / grin / frown / wail)
+    const mo = el('g', { transform: 'translate(0 60)' }, face); const M = {}; const MC = '#3a1f1c';
+    const ln = d => ({ d, stroke: INK, 'stroke-width': 4, fill: 'none', 'stroke-linecap': 'round' });
+    M.rest = el('path', ln('M-10 0 Q0 3 10 0'), mo);
+    M.M = el('path', ln('M-11 1 L11 1'), mo);
+    M.A = el('path', { d: 'M-13 -4 Q0 -7 13 -4 Q11 16 0 18 Q-11 16 -13 -4 Z', fill: MC }, mo);
+    M.E = el('path', { d: 'M-17 -3 Q0 -6 17 -3 Q12 9 0 10 Q-12 9 -17 -3 Z', fill: MC }, mo);
+    M.O = el('ellipse', { cx: 0, cy: 3, rx: 9, ry: 12, fill: MC }, mo);
+    M.U = el('ellipse', { cx: 0, cy: 2, rx: 6, ry: 6, fill: MC }, mo);
+    M.smile = el('path', ln('M-16 -3 Q0 11 16 -3'), mo);
+    M.grin = el('path', { d: 'M-18 -4 Q0 -2 18 -4 Q12 16 0 17 Q-12 16 -18 -4 Z', fill: MC }, mo);
+    M.frown = el('path', ln('M-13 6 Q0 -5 13 6'), mo);
+    M.wail = el('path', { d: 'M-15 10 Q0 -10 15 10 Q0 16 -15 10 Z', fill: MC }, mo);
+    for (const k in M) M[k].setAttribute('opacity', k === 'rest' ? 1 : 0);
+    P.mouth = M; P.restMouth = 'rest';
+    P.H = 520; return P;
+  }
+
+  // ---------------- face helpers ----------------
+  function mouth(P, t, k) { if (!P.mouth[k]) return; swap(P.mouth, t, k); P.mouthNow = k; }
+  function eyes(P, t, k) {   // dot | wide | smile | closed
+    const E = P.eyes; const on = { dot: [E.dot], wide: [E.wide, E.widePup], smile: [E.smile], closed: [E.closed] }[k];
+    [E.dot, E.wide, E.widePup, E.smile, E.closed].forEach(g => tl.set(g, { opacity: on.includes(g) ? 1 : 0 }, t)); P.eyeNow = k;
+  }
+  function brows(P, t, dur, kind) {  // neutral | up | sad | angry | worried | skeptic
+    const B = { neutral: [{ y: 0, r: 0 }, { y: 0, r: 0 }], up: [{ y: -12, r: 0 }, { y: -12, r: 0 }], sad: [{ y: -4, r: -14 }, { y: -4, r: 14 }],
+      angry: [{ y: 4, r: 16 }, { y: 4, r: -16 }], worried: [{ y: -10, r: -12 }, { y: -10, r: 12 }], skeptic: [{ y: -12, r: -6 }, { y: 3, r: 4 }] }[kind];
+    mv(P, 'browL', t, dur, B[0], 'power2.out'); mv(P, 'browR', t, dur, B[1], 'power2.out');
+  }
+  function blink(P, t) {          // close 2 frames, closed 1, open 3 (~.25 s)
+    const j = P.j.lids; const sy = j.v.sy;
+    tl.fromTo(j.el, { attr: { transform: str({ ...j.v }) } }, { attr: { transform: str({ ...j.v, sy: .08 }) }, duration: 2 * F, ease: 'power2.in', immediateRender: false }, t);
+    tl.fromTo(j.el, { attr: { transform: str({ ...j.v, sy: .08 }) } }, { attr: { transform: str({ ...j.v, sy }) }, duration: 3 * F, ease: 'power2.out', immediateRender: false }, t + 3 * F);
+  }
+  // natural blinking: every 2–5 s, ~15% doubles; `avoid` = list of [t0,t1] windows (shock stares, closed-eye moments)
+  function blinks(P, t0, t1, avoid = []) {
+    for (let t = t0 + .6 + rnd() * 1.4; t < t1 - .4; t += 2 + rnd() * 3) {
+      if (avoid.some(([a, b]) => t > a - .3 && t < b + .1)) continue;
+      blink(P, t); if (rnd() < .15) blink(P, t + .32);
+    }
+  }
+  function breathe(P, t0, t1, amt = .014, per = 3.2) {    // a moving hold: chest rises, shoulders follow 2 frames later
+    const n = Math.max(1, Math.floor((t1 - t0) / per));
+    const j = P.j.torso; const base = { ...j.v };
+    tl.fromTo(j.el, { attr: { transform: str(base) } }, { attr: { transform: str({ ...base, sy: base.sy * (1 + amt) }) }, duration: per / 2, yoyo: true, repeat: n * 2 - 1, ease: 'sine.inOut', immediateRender: false }, t0);
+    if (P.L.ghost) { const b = P.j.bob; tl.fromTo(b.el, { attr: { transform: str(b.v) } }, { attr: { transform: str({ ...b.v, y: b.v.y - 10 }) }, duration: 1.6, yoyo: true, repeat: Math.max(1, Math.floor((t1 - t0) / 1.6)), ease: 'sine.inOut', immediateRender: false }, t0); }
+  }
+
+  // ---------------- looking: eyes lead, head follows, body last ----------------
+  // dx, dy in -1..1 (screen direction). Big turns blink on the way (the brain hides the eye travel).
+  function look(P, t, dx, dy = 0, o = {}) {
+    const big = Math.abs(dx - P.facing) > .6;
+    if (big && o.blink !== false) blink(P, t);
+    mv(P, 'pupils', t, 3 * F, { x: dx * 7, y: dy * 5 }, 'power2.out');
+    mv(P, 'face', t + 2 * F, 8 * F, { x: dx * 20, y: dy * 10 }, 'power2.inOut');      // fake 3/4 turn: features slide
+    mv(P, 'hair', t + 3 * F, 9 * F, { x: -dx * 5 }, 'power2.inOut');                  // hair lags (overlap)
+    mv(P, 'head', t + 2 * F, 9 * F, { r: dx * 4 + (o.tilt || 0) }, 'power2.inOut');
+    if (o.body !== false) mv(P, 'torso', t + 6 * F, 12 * F, { r: dx * 2.5 + (P.L.hunch || 0) }, 'sine.inOut');
+    P.facing = dx;
+  }
+
+  // ---------------- arms ----------------
+  // up = upper-arm swing out from the body (deg), bend = forearm fold (deg, + = toward the chest), wrist optional.
+  const sideSign = s => (s === 'L' ? 1 : -1);
+  function arm(P, side, t, dur, up, bend, ease = 'power2.inOut') {
+    const sg = sideSign(side);
+    mv(P, 'arm' + side, t, dur, { r: sg * up }, ease);
+    mv(P, 'fore' + side, t + 2 * F, dur, { r: -sg * bend }, ease);   // forearm overlaps the upper arm by 2 frames
+  }
+  const POSES = {   // [L up, L bend, R up, R bend]
+    idle: [8, 4, 8, 4], open: [28, -10, 28, -10], shrug: [30, -95, 30, -95], chest: [8, 4, -18, 140], chin: [8, 4, -26, 172],
+    point: [8, 4, 92, 0], wave: [8, 4, 150, 25], cover: [-4, 160, -4, 160], hug: [22, 118, 22, 118], hips: [38, 92, 38, 92],
+    reach: [8, 4, 60, 10], fistsUp: [40, 140, 40, 140], behind: [-14, -20, -14, -20],
+  };
+  function pose(P, t, name, dur = 10 * F, ease = 'back.out(1.6)') {
+    const p = POSES[name]; arm(P, 'L', t, dur, p[0], p[1], ease); arm(P, 'R', t, dur, p[2], p[3], ease);
+  }
+  function wave(P, t, n = 3) {      // hand oscillates at the elbow, 5 frames per swing
+    pose(P, t, 'wave', 8 * F); const j = P.j.foreR; const base = j.v.r;
+    for (let i = 0; i < n * 2; i++) mv(P, 'foreR', t + 8 * F + i * 5 * F, 5 * F, { r: base + (i % 2 ? 0 : 28) }, 'sine.inOut');
+  }
+
+  // ---------------- whole-body acting ----------------
+  // anticipation → action → overshoot → settle, on the bob joint (squash & stretch keeps the volume: sx = 1/sqrt(sy)).
+  function squash(P, t, amt = .9, hold = 3 * F) {
+    const sv = a => ({ sy: a, sx: 1 / Math.sqrt(a) });
+    mv(P, 'bob', t, 3 * F, sv(amt), 'power2.in');
+    mv(P, 'bob', t + 3 * F + hold, 3 * F, sv(1), 'power2.out');
+  }
+  function jolt(P, t, h = 26) {      // startle: squash 3f → shoot up with stretch 4f → land with a small squash → settle
+    const b = P.j.bob, y0 = b.v.y;
+    mv(P, 'bob', t, 3 * F, { sy: .88, sx: 1.06, y: y0 + 6 }, 'power2.in');
+    mv(P, 'bob', t + 3 * F, 4 * F, { sy: 1.1, sx: .95, y: y0 - h }, 'power3.out');
+    mv(P, 'bob', t + 7 * F, 5 * F, { sy: .95, sx: 1.03, y: y0 }, 'power2.in');
+    mv(P, 'bob', t + 12 * F, 6 * F, { sy: 1, sx: 1, y: y0 }, 'sine.out');
+  }
+  function nod(P, t, n = 2) { const r0 = P.j.head.v.r; for (let i = 0; i < n; i++) { mv(P, 'head', t + i * 9 * F, 4 * F, { y: 6, r: r0 }, 'sine.inOut'); mv(P, 'head', t + i * 9 * F + 4 * F, 5 * F, { y: 0, r: r0 }, 'sine.inOut'); } }
+  function shake(P, t, n = 3) { const r0 = P.j.head.v.r; for (let i = 0; i < n; i++) mv(P, 'head', t + i * 6 * F, 6 * F, { r: r0 + (i % 2 ? -7 : 7) }, 'sine.inOut'); mv(P, 'head', t + n * 6 * F, 6 * F, { r: r0 }, 'sine.out'); }
+  function lean(P, t, dur, deg) { mv(P, 'torso', t, dur, { r: deg + (P.L.hunch || 0) }, 'sine.inOut'); }
+
+  // emote = one call that sets a believable whole-body state, with the right order (eyes/brows first, then body).
+  function emote(P, t, kind) {
+    const k = kind;
+    if (k === 'neutral') { eyes(P, t, 'dot'); brows(P, t, 6 * F, 'neutral'); mouth(P, t, 'rest'); P.restMouth = 'rest'; pose(P, t + 2 * F, 'idle', 12 * F, 'sine.inOut'); lean(P, t, 12 * F, 0); tl.to(P.blush, { opacity: 0, duration: .3 }, t); }
+    if (k === 'happy') { brows(P, t, 6 * F, 'up'); eyes(P, t + 2 * F, 'smile'); mouth(P, t + 2 * F, 'smile'); P.restMouth = 'smile'; squash(P, t + 2 * F, .95); mv(P, 'head', t + 3 * F, 10 * F, { r: 5 }, 'back.out(2)'); }
+    if (k === 'joy') { brows(P, t, 5 * F, 'up'); eyes(P, t + 2 * F, 'smile'); mouth(P, t + 2 * F, 'grin'); P.restMouth = 'grin'; jolt(P, t, 18); pose(P, t + 3 * F, 'fistsUp', 8 * F); }
+    if (k === 'sad') { brows(P, t, 10 * F, 'sad'); tl.set(P.j.lids.el, {}, t); mv(P, 'lids', t + 4 * F, 12 * F, { sy: .62 }, 'sine.inOut'); mouth(P, t + 6 * F, 'frown'); P.restMouth = 'frown';
+      mv(P, 'head', t + 6 * F, 18 * F, { y: 8, r: -3 }, 'sine.inOut'); lean(P, t + 8 * F, 20 * F, 5); pose(P, t + 10 * F, 'idle', 18 * F, 'sine.inOut'); }
+    if (k === 'shock') { eyes(P, t, 'wide'); brows(P, t, 3 * F, 'up'); mouth(P, t + 1 * F, 'O'); P.restMouth = 'O'; jolt(P, t, 30); pose(P, t + 2 * F, 'open', 6 * F, 'power3.out'); mv(P, 'tuft', t + 3 * F, 6 * F, { r: -25, y: -8 }, 'back.out(3)'); }
+    if (k === 'fear') { eyes(P, t, 'wide'); brows(P, t, 4 * F, 'worried'); mouth(P, t + 2 * F, 'E'); P.restMouth = 'E'; lean(P, t + 2 * F, 8 * F, -7); pose(P, t + 3 * F, 'cover', 8 * F, 'power3.out'); squash(P, t, .94, 8 * F); }
+    if (k === 'angry') { eyes(P, t, 'dot'); brows(P, t, 4 * F, 'angry'); mouth(P, t + 2 * F, 'frown'); P.restMouth = 'frown'; lean(P, t + 2 * F, 8 * F, 6); pose(P, t + 2 * F, 'hips', 10 * F); }
+    if (k === 'think') { mv(P, 'pupils', t, 4 * F, { x: 6, y: -5 }, 'power2.out'); brows(P, t + 2 * F, 8 * F, 'skeptic'); mouth(P, t + 4 * F, 'M'); P.restMouth = 'M'; mv(P, 'head', t + 4 * F, 14 * F, { r: 6 }, 'sine.inOut'); pose(P, t + 4 * F, 'chin', 14 * F, 'sine.inOut'); }
+    if (k === 'shy') { mv(P, 'pupils', t, 4 * F, { x: -4, y: 5 }, 'power2.out'); tl.to(P.blush, { opacity: 1, duration: .4 }, t + 2 * F); mouth(P, t + 2 * F, 'smile'); P.restMouth = 'smile'; mv(P, 'head', t + 3 * F, 14 * F, { r: -7, y: 4 }, 'sine.inOut'); pose(P, t + 4 * F, 'behind', 14 * F, 'sine.inOut'); }
+    if (k === 'tender') { brows(P, t, 10 * F, 'sad'); eyes(P, t + 4 * F, 'smile'); mouth(P, t + 4 * F, 'smile'); P.restMouth = 'smile'; mv(P, 'head', t + 4 * F, 20 * F, { r: 6 }, 'sine.inOut'); pose(P, t + 6 * F, 'chest', 18 * F, 'sine.inOut'); }
+  }
+
+  // ---------------- lip-sync ----------------
+  // env = per-frame loudness (24 fps, 0..1) from _craft/visemes.py; text = the spoken Thai line (for vowel shapes).
+  // Mouth leads the sound by 1 frame; min hold 2 frames; closes (M) on stops before a pause; returns to the rest mouth.
+  const VOW = { 'า': 'A', 'ะ': 'A', 'ั': 'A', 'ำ': 'A', 'ไ': 'A', 'ใ': 'A', 'ิ': 'E', 'ี': 'E', 'ึ': 'E', 'ื': 'E', 'เ': 'E', 'แ': 'E', 'ุ': 'U', 'ู': 'U', 'โ': 'O', 'อ': 'O', 'ว': 'O' };
+  function talk(P, t0, env, text = '', o = {}) {
+    const vs = [...text].map(c => VOW[c]).filter(Boolean); if (!vs.length) vs.push('A', 'E', 'O');
+    let vi = 0, cur = null, held = 0, wasOpen = false; const keys = [];
+    for (let i = 0; i < env.length; i++) {
+      const a = env[i], nxt = env[i + 1] ?? 0;
+      let k;
+      if (a < .14) k = (wasOpen && nxt < .14) ? 'M' : (a < .06 ? 'rest' : 'U');
+      else { if (!wasOpen) { vi++; } k = vs[vi % vs.length]; if (a < .35 && k === 'A') k = 'E'; if (a > .75 && k === 'U') k = 'O'; }
+      wasOpen = a >= .14;
+      if (k !== cur && held >= 2) { keys.push([i, k]); cur = k; held = 0; } else if (cur === null) { keys.push([i, k]); cur = k; }
+      held++;
+    }
+    keys.forEach(([i, k]) => { if (k === 'rest') k = P.restMouth === 'rest' ? 'rest' : 'M'; swap(P.mouth, t0 + (i - 1) * F, k); });
+    swap(P.mouth, t0 + env.length * F, P.restMouth); P.mouthNow = P.restMouth;
+    // talking heads move: small head accents on loud peaks (not on every syllable)
+    if (o.head !== false) { let last = -99; for (let i = 1; i < env.length - 1; i++) if (env[i] > .8 && env[i] >= env[i - 1] && env[i] >= env[i + 1] && i - last > 14) {
+      const r0 = P.j.head.v.r; mv(P, 'head', t0 + (i - 2) * F, 3 * F, { r: r0 + (rnd() < .5 ? 2.5 : -2.5), y: 2 }, 'power2.out'); mv(P, 'head', t0 + (i + 1) * F, 8 * F, { r: r0, y: 0 }, 'sine.inOut'); last = i; } }
+  }
+  // listener: nods / blinks while someone else speaks (the listener sells the line)
+  function listen(P, t0, t1) { for (let t = t0 + .8; t < t1 - .6; t += 1.6 + rnd() * 1.4) { if (rnd() < .5) nod(P, t, 1); else blink(P, t); } }
+
+  // ---------------- walking ----------------
+  // Front-facing storybook walk: alternate leg lifts, body bob (down on contact, up on passing), counter-swinging arms,
+  // head counter-rotates a little, hair/tuft lags. step = seconds per step (0.5 normal, 0.42 brisk, 0.65 elderly/tired).
+  function walk(P, t0, t1, to, o = {}) {
+    const step = o.step || .5, lift = o.lift ?? 14, swing = o.swing ?? 14, bobA = o.bob ?? 7;
+    const R = P.j.root; const from = { ...R.v };
+    const dest = { ...R.v, x: to.x ?? R.v.x, y: to.y ?? R.v.y, sx: (to.s ?? R.v.sx), sy: (to.s ?? R.v.sy) };
+    const dur = t1 - t0; const n = Math.max(1, Math.round(dur / step)); const st = dur / n;
+    // anticipation: a tiny lean into the direction before the first step
+    const dir = Math.sign(dest.x - from.x) || 1;
+    lean(P, t0 - 4 * F, 4 * F, dir * 3);
+    tl.fromTo(R.el, { attr: { transform: str(from) } }, { attr: { transform: str(dest) }, duration: dur, ease: 'none', immediateRender: false }, t0);
+    Object.assign(R.v, dest);
+    for (let i = 0; i < n; i++) {
+      const t = t0 + i * st, s = i % 2 ? 'R' : 'L', other = i % 2 ? 'L' : 'R';
+      if (!P.L.dress) { mv(P, 'leg' + s, t, st / 2, { y: -lift, r: (s === 'L' ? -1 : 1) * 5 }, 'sine.out'); mv(P, 'leg' + s, t + st / 2, st / 2, { y: 0, r: 0 }, 'sine.in'); }
+      mv(P, 'bob', t, st * .2, { y: bobA * .5 }, 'sine.out');            // contact/down
+      mv(P, 'bob', t + st * .2, st * .3, { y: -bobA }, 'sine.inOut');     // passing/up
+      mv(P, 'bob', t + st * .5, st * .5, { y: 0 }, 'sine.in');
+      mv(P, 'arm' + s, t, st, { r: sideSign(s) * (8 - swing) }, 'sine.inOut');     // arm opposite the lifted leg swings back
+      mv(P, 'arm' + other, t, st, { r: sideSign(other) * (8 + swing * .6) }, 'sine.inOut');
+      mv(P, 'head', t + 2 * F, st, { r: (s === 'L' ? 1 : -1) * 1.6 }, 'sine.inOut');
+      if (P.j.tuft) mv(P, 'tuft', t + 3 * F, st, { r: (s === 'L' ? -1 : 1) * 8 }, 'sine.inOut');
+    }
+    // settle: feet down, small overshoot, arms back to idle
+    lean(P, t1, 6 * F, -dir * 2); lean(P, t1 + 6 * F, 8 * F, 0);
+    mv(P, 'bob', t1, 4 * F, { y: 4, sy: .97, sx: 1.015 }, 'power2.out'); mv(P, 'bob', t1 + 4 * F, 6 * F, { y: 0, sy: 1, sx: 1 }, 'sine.out');
+    mv(P, 'head', t1 + 2 * F, 8 * F, { r: 0 }, 'back.out(2)'); if (P.j.tuft) mv(P, 'tuft', t1 + 3 * F, 10 * F, { r: 0 }, 'back.out(3)');
+    pose(P, t1 + 2 * F, 'idle', 10 * F, 'sine.out');
+  }
+  // ghosts glide: no steps, a slow arc and a trailing hem
+  function glide(P, t0, t1, to) {
+    const R = P.j.root; const from = { ...R.v }; Object.assign(R.v, { x: to.x ?? R.v.x, y: to.y ?? R.v.y });
+    tl.fromTo(R.el, { attr: { transform: str(from) } }, { attr: { transform: str(R.v) }, duration: t1 - t0, ease: 'sine.inOut', immediateRender: false }, t0);
+    lean(P, t0, (t1 - t0) * .3, Math.sign(R.v.x - from.x) * -4); lean(P, t0 + (t1 - t0) * .6, (t1 - t0) * .4, 0);
+  }
+  function place(P, t, to) { mv(P, 'root', t, 0, { x: to.x ?? P.j.root.v.x, y: to.y ?? P.j.root.v.y, ...(to.s ? { sx: to.s, sy: to.s } : {}) }); }
+  function fade(P, t, dur, op) { tl.to(P.g, { opacity: op, duration: dur, ease: 'sine.inOut' }, t); }
+  function appear(P, t) {   // ghost entrance: flicker in (two false starts, then a slow rise)
+    tl.set(P.g, { opacity: 0 }, 0);
+    tl.to(P.g, { opacity: .5, duration: 6 * F }, t); tl.to(P.g, { opacity: .1, duration: 2 * F }, t + 8 * F);
+    tl.to(P.g, { opacity: .7, duration: 3 * F }, t + 12 * F); tl.to(P.g, { opacity: .2, duration: 2 * F }, t + 16 * F);
+    tl.to(P.g, { opacity: .93, duration: 1.2 }, t + 20 * F);
+  }
+
+  // ---------------- camera ----------------
+  // Scene markup: <div class="scene" id="s"><div class="cam"><div class="layer" style="--d:.75">bg</div>
+  //   <div class="layer" style="--d:1">characters</div><div class="layer" style="--d:1.3">foreground</div></div></div>
+  // --d = depth: layers move/scale by camera * d (parallax). Background layers are oversized by RIG_CSS so pans never show an edge.
+  function cam(sel) {
+    const node = document.querySelector(sel + ' .cam'); const C = { px: 960, py: 540, s: 1, rot: 0 };
+    const vars = c => { const mx = (c.s - 1) * 960, my = (c.s - 1) * 540;
+      return { '--s': c.s, '--x': Math.max(-mx, Math.min(mx, -(c.px - 960) * c.s)), '--y': Math.max(-my, Math.min(my, -(c.py - 540) * c.s)), '--rot': c.rot }; };
+    const api = {
+      set(t, c) { Object.assign(C, c); tl.set(node, vars(C), t); return api; },
+      // move: ease guide — 'sine.inOut' slow drifts, 'power2.inOut' motivated moves, 'power3.out' snap-zooms, 'expo.inOut' whip
+      move(t, dur, c, ease = 'sine.inOut') { const f = vars(C); Object.assign(C, c); tl.fromTo(node, f, { ...vars(C), duration: dur, ease, immediateRender: false }, t); return api; },
+      // handheld-ish shake that decays; amp px, freq Hz
+      shake(t, dur, amp = 14, freq = 18) { const n = Math.round(dur * freq); for (let i = 0; i <= n; i++) { const k = 1 - i / n;
+        tl.set(node, { '--shx': i === n ? 0 : (rnd() - .5) * 2 * amp * k, '--shy': i === n ? 0 : (rnd() - .5) * 2 * amp * k }, t + i / freq); } return api; },
+      // slow breathing drift so a "still" camera is never dead (two sines at a 1.3 ratio = organic Lissajous)
+      drift(t0, t1, amp = 6) { const n = Math.floor((t1 - t0) / 4); if (n < 1) return api;
+        tl.fromTo(node, { '--dx': -amp }, { '--dx': amp, duration: 2, yoyo: true, repeat: n * 2 - 1, ease: 'sine.inOut', immediateRender: false }, t0);
+        tl.fromTo(node, { '--dy': -amp * .6 }, { '--dy': amp * .6, duration: 2.6, yoyo: true, repeat: Math.floor((t1 - t0) / 2.6) - 1, ease: 'sine.inOut', immediateRender: false }, t0); return api; },
+      // rack focus: blur one layer, sharpen another (layer = CSS selector)
+      rack(t, dur, blurSel, sharpSel, px = 10) { tl.fromTo(blurSel, { '--blur': 0 }, { '--blur': px, duration: dur, ease: 'power2.inOut', immediateRender: false }, t);
+        if (sharpSel) tl.fromTo(sharpSel, { '--blur': px }, { '--blur': 0, duration: dur, ease: 'power2.inOut', immediateRender: false }, t); return api; },
+      // dolly zoom (vertigo): background layer grows while the camera pulls back on the subject
+      vertigo(t, dur, bgSel, amt = .35) { tl.fromTo(bgSel, { '--zs': 1 }, { '--zs': 1 + amt, duration: dur, ease: 'sine.inOut', immediateRender: false }, t);
+        return api.move(t, dur, { s: Math.max(1, C.s - amt * .6) }, 'sine.inOut'); },
+      state: () => ({ ...C }),
+    };
+    return api;
+  }
+  // transitions between scene divs (opacity on whole scenes)
+  function cut(t, outId, inId) { if (outId) tl.set('#' + outId, { opacity: 0 }, t); if (inId) tl.set('#' + inId, { opacity: 1 }, t); }
+  function dissolve(t, dur, outId, inId) { if (inId) tl.fromTo('#' + inId, { opacity: 0 }, { opacity: 1, duration: dur, ease: 'none', immediateRender: false }, t); if (outId) tl.to('#' + outId, { opacity: 0, duration: dur, ease: 'none' }, t); }
+  function dip(t, dur, outId, inId, color = '#000') {     // dip to black/white: out → colour → in (time passes)
+    const d = document.getElementById('__dip') || (() => { const x = document.createElement('div'); x.id = '__dip'; x.style.cssText = `position:absolute;inset:0;opacity:0;z-index:50;pointer-events:none`; document.querySelector('[data-composition-id]').appendChild(x); return x; })();
+    tl.set(d, { backgroundColor: color }, t);
+    tl.fromTo(d, { opacity: 0 }, { opacity: 1, duration: dur / 2, ease: 'sine.in', immediateRender: false }, t);
+    cut(t + dur / 2, outId, inId);
+    tl.fromTo(d, { opacity: 1 }, { opacity: 0, duration: dur / 2, ease: 'sine.out', immediateRender: false }, t + dur / 2);
+  }
+
+  return { F, FPS, rnd, el, LOOKS, POSES, puppet, joint, mv, mouth, eyes, brows, blink, blinks, breathe, look, arm, pose, wave, squash, jolt, nod, shake, lean, emote, talk, listen, walk, glide, place, fade, appear, cam, cut, dissolve, dip };
+}
+// CSS the camera/layers need — paste into <style> (build.py replaces /*RIG_CSS*/)
+const RIG_CSS = `
+.cam{position:absolute;inset:0;--s:1;--x:0;--y:0;--rot:0;--shx:0;--shy:0;--dx:0;--dy:0;
+  transform:translate(calc((var(--shx) + var(--dx))*1px),calc((var(--shy) + var(--dy))*1px)) rotate(calc(var(--rot)*1deg));transform-origin:960px 540px}
+.layer{position:absolute;inset:0;--d:1;--zs:1;--blur:0;transform-origin:960px 540px;
+  transform:translate(calc(var(--x)*var(--d)*1px),calc(var(--y)*var(--d)*1px)) scale(calc((1 + (var(--s) - 1)*var(--d))*var(--zs)));filter:blur(calc(var(--blur)*1px))}
+.layer.bg img{position:absolute;left:-6%;top:-6%;width:112%;height:112%;object-fit:cover}
+`;
+(() => { const s = document.createElement('style'); s.textContent = RIG_CSS; document.head.appendChild(s); })();
+
+      const R = Rig(tl, { seed: 5 });
+      const sv = document.getElementById('sv');
+      const jan = R.puppet(sv, { x: 1450, y: 1040, s: .86 }, R.LOOKS.jan);
+      const ton = R.puppet(sv, { x: -150, y: 1050, s: .86 }, R.LOOKS.ton);
+      const cam = R.cam('#shop');
+      const L6 = 'พ่อหนุ่ม… ร้านเปิดอยู่ไหมจ๊ะ', L7 = 'ปิดแล้วครับยาย… เอ่อ ยายเข้ามาได้ยังไงครับ';
+      const T6 = 7.6, T7 = 10.9, D6 = ENV['6'].length / 24, D7 = ENV['7'].length / 24;
+      let labPrev = null; const lab = (t, s) => { const d = document.createElement('div'); d.textContent = s; d.style.opacity = 0; document.getElementById('lab').appendChild(d);
+        tl.set(d, { opacity: 1 }, t); if (labPrev) tl.set(labPrev, { opacity: 0 }, t); labPrev = d; };
+
+      // 1. establishing wide + drift; Ton walks in (anticipation lean, bob, counter-swing, settle)
+      lab(0, '1 establishing wide · walk cycle'); cam.set(0, { px: 960, py: 560, s: 1.05 }).drift(0, 23, 5);
+      R.breathe(ton, 0, 23); R.blinks(ton, 0, 23, [[6.2, 7.6]]); R.blinks(jan, 4, 23); R.breathe(jan, 4, 23);
+      R.walk(ton, .6, 3.4, { x: 560 });
+      // 2. eyes lead → head → body; she appears (flicker); slow push on his reaction
+      lab(3.7, '2 eyes lead the head · ghost appears');
+      R.look(ton, 3.8, .8, 0);
+      R.appear(jan, 4.2);
+      cam.move(4.6, 1.6, { px: 640, py: 620, s: 1.45 }, 'sine.inOut');
+      // 3. shock: anticipation squash → jolt → hold; vertigo + shake
+      lab(6.2, '3 shock: squash → stretch → hold · vertigo · shake');
+      R.emote(ton, 6.25, 'shock'); cam.vertigo(6.25, 1.0, '#bgL', .25).shake(6.3, .5, 10);
+      // 4. reverse shot: her medium close-up, she talks (lip-sync from loudness + Thai vowels)
+      lab(7.4, '4 cut: her MCU · lip-sync');
+      tl.set('#bgL', { '--zs': 1 }, 7.4); cam.set(7.4, { px: 1450, py: 690, s: 1.85 });
+      R.look(jan, 7.4, -.6, 0, { body: false });
+      R.talk(jan, T6, ENV['6'], L6);
+      // 5. two-shot, he answers (fear → neutral), she listens (nods)
+      lab(10.6, '5 two-shot · he talks · she listens');
+      cam.set(10.6, { px: 1000, py: 640, s: 1.12 }).move(10.6, D7 + .6, { px: 1000, py: 640, s: 1.2 });
+      R.emote(ton, 10.7, 'fear'); R.emote(ton, 12.2, 'neutral'); R.pose(ton, 12.3, 'shrug', 10 * R.F);
+      R.talk(ton, T7, ENV['7'], L7); R.listen(jan, T7, T7 + D7);
+      // 6. gestures + emotions
+      lab(15.2, '6 think · tender · wave · happy');
+      R.emote(ton, 15.3, 'think'); R.emote(jan, 15.6, 'happy');
+      R.emote(ton, 17.0, 'tender'); R.wave(jan, 17.4, 3);
+      // 7. rack focus to the characters, slow push to the end
+      lab(19.2, '7 rack focus · push');
+      cam.rack(19.2, .8, '#bgL', null, 9).move(19.2, 3.6, { px: 1000, py: 600, s: 1.3 }, 'sine.inOut');
+      R.emote(ton, 19.6, 'happy'); R.look(ton, 20.2, .5, 0);
+
+      [[6, T6, D6, L6], [7, T7, D7, L7]].forEach(([n, t, d, s]) => { const e = document.getElementById('sub' + n); e.textContent = s;
+        tl.set(e, { opacity: 1 }, t - .05); tl.set(e, { opacity: 0 }, t + d + .3); });
+      tl.set({}, {}, 23);
+      window.__timelines['main'] = tl; tl.seek(0);
+    </script>
+  </body>
+</html>
