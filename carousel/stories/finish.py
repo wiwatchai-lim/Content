@@ -12,7 +12,7 @@ for box in a.sig:
     paper = ring[ring.sum(1) >= np.percentile(ring.sum(1), 75)].mean(0)  # brightest = paper
     im[y0:y1, x0:x1] = paper
 S = int(round(w / a.scale)); ox = (S - w) // 2; oy = S - h
-paper = np.median(im[:40].reshape(-1, 3), axis=0)
+top = im[:40].reshape(-1, 3); paper = top[top.sum(1) >= np.percentile(top.sum(1), 60)].mean(0)  # brightest = paper (leaves at the top edge pulled the median dark)
 can = np.empty((S, S, 3), np.float32); can[:] = paper
 f = 90; alpha = np.ones((h, w), np.float32)
 r = np.clip(np.arange(w) / f, 0, 1); alpha *= np.minimum(r, r[::-1])[None, :]
