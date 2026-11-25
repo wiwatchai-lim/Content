@@ -1,0 +1,537 @@
+[
+ {
+  "key": "LevinSimons1997",
+  "title": "Failure to detect changes to attended objects in motion pictures",
+  "authors": "Daniel T. Levin, Daniel J. Simons",
+  "year": 1997,
+  "url": "https://link.springer.com/article/10.3758/BF03214339",
+  "doi_isbn": "10.3758/BF03214339",
+  "source_type": "empirical",
+  "tier": "A",
+  "key_findings": [
+   "Per Smith 2012 (full text read): a short film of two women talking at a dinner table contained nine deliberate continuity errors (e.g. a scarf or plate changing colour across a cut); on first free viewing no viewer reported anything odd; on a second viewing with instructions to look for changes, viewers found on average 2 of 9, mostly those nearest the actors' faces.",
+   "Per Simons & Levin 1998 and Smith 2012 (full texts read): when one actor was replaced by a different actor across a cut (matched exit/entrance), only 33% of 40 participants reported the change, even though the actor was the centre of attention."
+  ],
+  "practical_applications": [
+   "Small prop/colour slips far from faces in a single viewing are usually missed; spend continuity effort on what sits near faces and on what the story points at.",
+   "Spatiotemporal continuity (position, movement direction) does much of the work of making a cut feel continuous."
+  ],
+  "limitations": [
+   "Original paper not read (publisher page only); findings are as reported by later papers by the same authors and by Smith 2012.",
+   "Lab clips viewed once; does not model rewatching, pausing, or comment-section crowds on social video."
+  ],
+  "license": "copyrighted",
+  "access_status": "bibliographic",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-25",
+  "modules": ["M38"]
+ },
+ {
+  "key": "SimonsLevin1997",
+  "title": "Change blindness",
+  "authors": "Daniel J. Simons, Daniel T. Levin",
+  "year": 1997,
+  "url": "https://home.cs.colorado.edu/~mozer/Teaching/syllabi/3702/readings/SimonsLevin1997.pdf",
+  "doi_isbn": "",
+  "source_type": "review",
+  "tier": "A",
+  "key_findings": [
+   "Trends in Cognitive Sciences 1(7), Oct 1997. Unless a change produces a localisable transient, people generally do not detect it.",
+   "Box 3 'Insights from film makers': because scenes are shot out of order, 'almost every movie - in fact, almost every cut - has some continuity mistake', yet most of the time people are blind to these changes.",
+   "Same box: filmmakers are still justified in removing glaring errors because if one viewer notices, media and the internet publicise it and others then hunt for the error instead of watching the film.",
+   "Quotes Dmytryk: a mismatch far from the viewer's centre of interest (e.g. an arm when the viewer watches the actor's eyes) is 'ignored nine times out of ten'; quotes Kuleshov: good montage hides minor costume defects, bad montage makes the blunder 'leap to the eye'.",
+   "Viewers encode scene gist (the action, a few traits of the actor); changes that keep the gist are rarely detected; schema-inconsistent objects are more likely to be noticed."
+  ],
+  "practical_applications": [
+   "Prioritise continuity of gist-level facts (who, where, what action, character identity markers) over background details.",
+   "Expect viral audiences to find errors once one person points them out: fix anything a pause-frame would show near faces/hands/products."
+  ],
+  "limitations": [
+   "Narrative review, 1997; filmmaker quotes are craft lore, not data.",
+   "Course-hosted copy of the published article."
+  ],
+  "license": "copyrighted",
+  "access_status": "full_text",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-25",
+  "modules": ["M38"]
+ },
+ {
+  "key": "SimonsLevin1998",
+  "title": "Failure to detect changes to people during a real-world interaction",
+  "authors": "Daniel J. Simons, Daniel T. Levin",
+  "year": 1998,
+  "url": "https://gwern.net/doc/psychology/cognitive-bias/illusion-of-depth/1998-simons.pdf",
+  "doi_isbn": "",
+  "source_type": "empirical",
+  "tier": "A",
+  "key_findings": [
+   "Psychonomic Bulletin & Review 5(4), 644-649. An experimenter asking a pedestrian for directions was swapped for a different person while a door was carried between them; only about half of pedestrians detected the change.",
+   "Detection depended on social group: pedestrians from the experimenters' own social group noticed; those from a different group mostly did not.",
+   "Summarises Levin & Simons 1997: only 33% of 40 participants noticed an actor swap in a motion picture.",
+   "Conclusion: provided the meaning of the scene is unchanged, changes to attended objects can escape detection."
+  ],
+  "practical_applications": [
+   "Identity is carried by category-level cues (role, outfit type, silhouette) for most viewers; give recurring characters strong, simple category markers.",
+   "Audiences close to a character (fans, in-group) encode more detail: long-running series audiences are less forgiving than one-off viewers."
+  ],
+  "limitations": [
+   "Small field samples; DOI not shown on the PDF copy, left empty.",
+   "Real-world interaction, not edited film."
+  ],
+  "license": "copyrighted",
+  "access_status": "full_text",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-25",
+  "modules": ["M38"]
+ },
+ {
+  "key": "SimonsRensink2005",
+  "title": "Change blindness: Past, present, and future",
+  "authors": "Daniel J. Simons, Ronald A. Rensink",
+  "year": 2005,
+  "url": "https://www.cs.ubc.ca/~rensink/publications/download/S&R-TICS-05a.pdf",
+  "doi_isbn": "",
+  "source_type": "review",
+  "tier": "A",
+  "key_findings": [
+   "Trends in Cognitive Sciences 9(1), Jan 2005. Change blindness is a general failure to retain and/or compare information from moment to moment, not an artefact of lab disruptions.",
+   "Effects are stronger when changes are unexpected; most observers do not notice an actor replaced during a camera position change.",
+   "'Change blindness blindness': most people firmly believe they would notice such large changes (cites Levin et al. 2000).",
+   "Warns against over-inference: failing to detect a change does not prove the visual representation is absent or sparse (some studies show accurate visual memory for fixated objects, e.g. Hollingworth & Henderson 2002)."
+  ],
+  "practical_applications": [
+   "Creators overestimate what viewers will notice; don't overspend on invisible background continuity.",
+   "But memory for fixated, story-relevant objects can be good: hero props and character markers must stay exact."
+  ],
+  "limitations": [
+   "Opinion/review article; does not quantify film-specific error tolerance."
+  ],
+  "license": "copyrighted",
+  "access_status": "full_text",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-25",
+  "modules": ["M38"]
+ },
+ {
+  "key": "SmithHenderson2008",
+  "title": "Edit Blindness: The relationship between attention and global change blindness in dynamic scenes",
+  "authors": "Tim J. Smith, John M. Henderson",
+  "year": 2008,
+  "url": "https://bop.unibe.ch/JEMR/article/view/2264",
+  "doi_isbn": "10.16910/jemr.2.2.6",
+  "source_type": "empirical",
+  "tier": "A",
+  "key_findings": [
+   "Journal of Eye Movement Research 2(2):6. Viewers asked to detect edits in excerpts of seven feature films while eye-tracked.",
+   "Overall 15.8% of edits were missed even when viewers were explicitly looking for them.",
+   "Within-scene cuts (25.1% missed) and match-action cuts (32.4% missed) produced more edit blindness than between-scene cuts (9.4%) and gaze-match cuts (10.9%).",
+   "Blinks coincided with very few missed cuts (about 1%); most edit blindness is attributed to attention being absorbed by the narrative, not to blinks/saccades.",
+   "Cut detection time averaged 489 ms."
+  ],
+  "practical_applications": [
+   "Cut on action and keep spatial continuity within a scene to make cuts invisible; between-scene jumps are noticed and should be signalled deliberately.",
+   "In 2D puppet/AI clips, a match-action cut is a cheap way to hide a change of generated image."
+  ],
+  "limitations": [
+   "Small sample of films and participants; viewers were instructed to detect edits, so free-viewing blindness is likely higher."
+  ],
+  "license": "CC BY 4.0",
+  "access_status": "full_text",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-25",
+  "modules": ["M38"]
+ },
+ {
+  "key": "Smith2012",
+  "title": "The Attentional Theory of Cinematic Continuity",
+  "authors": "Tim J. Smith",
+  "year": 2012,
+  "url": "https://ualresearchonline.arts.ac.uk/id/eprint/21187/",
+  "doi_isbn": "10.3167/proj.2012.060102",
+  "source_type": "review",
+  "tier": "A",
+  "key_findings": [
+   "Projections 6(1), 1-27 (author manuscript dated 2011 read). Continuity is the intended outcome of the continuity editing rules, not the style itself.",
+   "Over 90% of surveyed Hollywood shots adhere to continuity editing rules (citing Bordwell et al. 1985; Levin & Wang 2009).",
+   "AToCC: perceptual expectations can be matched across cuts without a coherent representation of the depicted space; attention (largely on faces and moving characters) decides what must match.",
+   "Explains match-action, matched exit/entrance, shot/reverse-shot, the 180-degree rule and POV editing in attentional terms; crossing the 180-degree line reverses screen direction.",
+   "Reports Levin & Simons' nine-error dinner scene (2 of 9 detected on a primed second viewing)."
+  ],
+  "practical_applications": [
+   "Match what attention will be on at the cut (face, hand, moving object, screen direction); the rest can drift.",
+   "Use the 180-degree rule and consistent screen direction as cheap continuity anchors for 2D series."
+  ],
+  "limitations": [
+   "Theory paper; author manuscript may differ from the published version."
+  ],
+  "license": "copyrighted (repository copy)",
+  "access_status": "full_text",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-25",
+  "modules": ["M38"]
+ },
+ {
+  "key": "MaglianoZacks2011",
+  "title": "The impact of continuity editing in narrative film on event segmentation",
+  "authors": "Joseph P. Magliano, Jeffrey M. Zacks",
+  "year": 2011,
+  "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC3208769",
+  "doi_isbn": "",
+  "source_type": "empirical",
+  "tier": "A",
+  "key_findings": [
+   "Per search summary: Cognitive Science 35(8), 1489-1517. Edits classified as continuous in space/time/action; discontinuous in space or time but continuous in action; or discontinuous in action.",
+   "Per search summary: action discontinuities had the largest effect on where viewers perceive event boundaries; space/time discontinuities had minor effects; edits produced transient increases in early visual brain areas (fMRI)."
+  ],
+  "practical_applications": [
+   "Viewers chunk a story by action; a jump in location/time inside the same action reads as continuous, while breaking the action reads as a new event."
+  ],
+  "limitations": [
+   "Full text blocked (PMC bot check); only a search summary was available, so findings are as stated by that summary."
+  ],
+  "license": "unknown (author manuscript on PMC)",
+  "access_status": "search_summary",
+  "verification_status": "unverified",
+  "date_accessed": "2026-11-25",
+  "modules": ["M38"]
+ },
+ {
+  "key": "IATSE856_2024",
+  "title": "Continuity Job Descriptions 2024 - Script Supervisor",
+  "authors": "IATSE Local 856",
+  "year": 2024,
+  "url": "https://iatse856.com/wp-content/uploads/2023/07/Continuity-Job-Descriptions-2024.pdf",
+  "doi_isbn": "",
+  "source_type": "docs",
+  "tier": "C",
+  "key_findings": [
+   "Script supervisor duties: prepare the script, verify actors' lines, time takes, note deviations from the script, take and keep continuity photos, keep detailed notes of action, positions, camera angles and progression, note coverage, list pickups.",
+   "Sends continuity notes with a complete lined script to the editor after each shooting day; gives production a daily report (set-ups, picture time, scenes and pages shot)."
+  ],
+  "practical_applications": [
+   "The two classic outputs map to a small studio: a per-shot continuity log (what each shot shows) and a per-day/per-episode report (what was made, what changed)."
+  ],
+  "limitations": [
+   "Union job description (Canada); one page; describes duties, not methods."
+  ],
+  "license": "unknown",
+  "access_status": "full_text",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-25",
+  "modules": ["M38"]
+ },
+ {
+  "key": "VassarScriptSup2016",
+  "title": "What IS a script supervisor? (script supervision handout and forms)",
+  "authors": "Vassar College Film department page (author not named)",
+  "year": 2016,
+  "url": "https://pages.vassar.edu/film-majors/files/2016/03/script-super-docs.pdf",
+  "doi_isbn": "",
+  "source_type": "course",
+  "tier": "D",
+  "key_findings": [
+   "Films are shot out of sequence, so the script supervisor makes hair, make-up, costume and lighting match across scenes shot weeks apart; photos taken after the first take are the main memory aid.",
+   "Breakdown data per scene: scene number, location, action summary, time of day, page count (in 1/8 pages), cast, extras, props, costumes.",
+   "Continuity sheets per take record take number, lens, stop, filter, timings and action catchwords; delivered to the editor.",
+   "Continuous actions (smoking, drinking, eating) are the hardest to match.",
+   "Workflow: pre-production (breakdown, continuity report, wardrobe & prop summary), production (shot notes, daily reports), post (marked-up script, chronological scene report)."
+  ],
+  "practical_applications": [
+   "Template fields for a per-episode continuity breakdown; flag 'progressive' states (a drink level, a wound, dirt) as high-risk."
+  ],
+  "limitations": [
+   "Practitioner handout hosted by a college page; author not stated; craft advice, not research."
+  ],
+  "license": "unknown",
+  "access_status": "full_text",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-25",
+  "modules": ["M38"]
+ },
+ {
+  "key": "Macdonald2018",
+  "title": "Tablets of Stone or DNA? TV series bibles",
+  "authors": "Ian W. Macdonald",
+  "year": 2018,
+  "url": "https://eprints.whiterose.ac.uk/id/eprint/125213/",
+  "doi_isbn": "10.1386/josc.9.1.3_1",
+  "source_type": "empirical",
+  "tier": "A",
+  "key_findings": [
+   "Journal of Screenwriting 9(1), 3-23 (accepted manuscript read). Professional UK TV writers define 'Bible' vaguely; lengths range from 3-10 pages to 50-60 pages (House of Cards season bible) or 79 pages (The Wire selling bible).",
+   "Bible types include selling bible, season bible (development tool, with wall chart of character/storyline grid) and a later production bible that codifies 'case law' to keep long-running series consistent; it can become a database of 'fictional facts' and a human 'walking bible'.",
+   "A bible is 'less a tablet of stone, and more like a DNA code'; it is never fixed, so one must ask 'which version?'.",
+   "Common contents: premise, place/settings, locations (cost), character biographies, rationale, structure & style, research, production detail (case law such as where people live, what they drink), and episode storylines."
+  ],
+  "practical_applications": [
+   "Keep two layers: a short stable 'DNA' (premise, rules, tone) and a growing case-law log of facts established on screen.",
+   "Version the bible and note which episode introduced each fact."
+  ],
+  "limitations": [
+   "Interviews with seven UK writers and a sample of UK bibles; mostly UK practice."
+  ],
+  "license": "copyrighted (accepted manuscript, self-archived)",
+  "access_status": "full_text",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-25",
+  "modules": ["M16", "M38"]
+ },
+ {
+  "key": "ZwaanRadvansky1998",
+  "title": "Situation models in language comprehension and memory",
+  "authors": "Rolf A. Zwaan, Gabriel A. Radvansky",
+  "year": 1998,
+  "url": "https://cs.uky.edu/~sgware/reading/papers/zwaan1998situation.pdf",
+  "doi_isbn": "",
+  "source_type": "review",
+  "tier": "A",
+  "key_findings": [
+   "Psychological Bulletin 123(2), 162-185. Readers build situation models indexed on at least five dimensions: time, space, causation, intentionality (goals) and protagonist.",
+   "Readers track protagonists and properties associated with them: an action inconsistent with an earlier trait (a vegetarian ordering a hamburger) raises reading time compared with a control (citing Albrecht & O'Brien).",
+   "Calls for treating situation models as multidimensional."
+  ],
+  "practical_applications": [
+   "Use the five dimensions as the backbone of a continuity check: when/where/why/what goal/who for every scene.",
+   "Character trait contradictions are noticed even when not on screen recently; log traits, not only looks."
+  ],
+  "limitations": [
+   "Mostly text-reading experiments; transfer to short video is plausible but not directly tested here."
+  ],
+  "license": "copyrighted (course-hosted copy)",
+  "access_status": "full_text",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-25",
+  "modules": ["M16", "M38"]
+ },
+ {
+  "key": "Ye2023",
+  "title": "IP-Adapter: Text Compatible Image Prompt Adapter for Text-to-Image Diffusion Models",
+  "authors": "Hu Ye, Jun Zhang, Sibo Liu, Xiao Han, Wei Yang",
+  "year": 2023,
+  "url": "https://arxiv.org/abs/2308.06721",
+  "doi_isbn": "arXiv:2308.06721",
+  "source_type": "empirical",
+  "tier": "B",
+  "key_findings": [
+   "Lightweight adapter (~22M parameters) adds image-prompt capability to a frozen text-to-image diffusion model via decoupled cross-attention for text and image features.",
+   "Image prompt can be combined with a text prompt; transfers to custom models fine-tuned from the same base and works with existing controllable-generation tools."
+  ],
+  "practical_applications": [
+   "Tool class 'reference-image conditioning': steer a new image toward a character/style reference without training."
+  ],
+  "limitations": [
+   "Abstract only; arXiv preprint; consistency of identity across many images is not quantified in the abstract."
+  ],
+  "license": "arXiv non-exclusive",
+  "access_status": "abstract",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-25",
+  "modules": ["M38"]
+ },
+ {
+  "key": "DiffusersIPAdapterDocs",
+  "title": "IP-Adapter (Diffusers documentation, v0.43)",
+  "authors": "Hugging Face",
+  "year": null,
+  "url": "https://huggingface.co/docs/diffusers/using-diffusers/ip_adapter",
+  "doi_isbn": "",
+  "source_type": "docs",
+  "tier": "C",
+  "key_findings": [
+   "set_ip_adapter_scale: 1.0 = full strength; 0.5 usually balances text and image prompts.",
+   "Variants: Plus (more reference detail), Plus-Face, FaceID (InsightFace identity embeddings instead of CLIP).",
+   "Masks can assign different reference images to different regions (e.g. two characters in one frame).",
+   "Can be combined with ControlNet (pose/depth) for structure, InstantStyle (layer-selective scale) for style vs layout, and multiple IP-Adapters (face + style); image embeddings can be precomputed and saved for reuse.",
+   "Available for Flux and SD3 as well as SD/SDXL."
+  ],
+  "practical_applications": [
+   "Save the reference embedding of a master character image once and reuse it every episode; use masks for two-character scenes."
+  ],
+  "limitations": [
+   "Vendor library docs; no quantitative consistency guarantees."
+  ],
+  "license": "Apache-2.0 (docs repo) - assumed, unverified",
+  "access_status": "full_text",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-25",
+  "modules": ["M38"]
+ },
+ {
+  "key": "DiffusersReproDocs",
+  "title": "Reproducibility (Diffusers documentation, v0.43)",
+  "authors": "Hugging Face",
+  "year": null,
+  "url": "https://huggingface.co/docs/diffusers/using-diffusers/reusing_seeds",
+  "doi_isbn": "",
+  "source_type": "docs",
+  "tier": "C",
+  "key_findings": [
+   "Use a torch Generator with manual_seed for repeatable outputs; a CPU Generator is more stable across machines; a GPU Generator can diverge from CPU results.",
+   "A Generator's state is consumed on use; reseed before each call to get the same result again.",
+   "enable_full_determinism() turns on deterministic algorithms (slower).",
+   "Reproducibility is not guaranteed even with an identical seed."
+  ],
+  "practical_applications": [
+   "Log seed + model + sampler + steps + size + prompt for every kept image; a seed alone does not reproduce an image if anything else changes."
+  ],
+  "limitations": [
+   "Library-specific (Diffusers/PyTorch); ComfyUI and hosted tools behave differently."
+  ],
+  "license": "Apache-2.0 (docs repo) - assumed, unverified",
+  "access_status": "full_text",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-25",
+  "modules": ["M38"]
+ },
+ {
+  "key": "Ruiz2023",
+  "title": "DreamBooth: Fine Tuning Text-to-Image Diffusion Models for Subject-Driven Generation",
+  "authors": "Nataniel Ruiz, Yuanzhen Li, Varun Jampani, Yael Pritch, Michael Rubinstein, Kfir Aberman",
+  "year": 2023,
+  "url": "https://arxiv.org/abs/2208.12242",
+  "doi_isbn": "arXiv:2208.12242",
+  "source_type": "empirical",
+  "tier": "A",
+  "key_findings": [
+   "Fine-tunes a text-to-image model on a few images of a subject, binding a unique identifier token to it (CVPR 2023).",
+   "Class-specific prior preservation loss lets the model render the subject in new scenes, poses, views and lighting while keeping key features."
+  ],
+  "practical_applications": [
+   "Tool class 'subject fine-tuning': strongest identity lock when a character must appear in hundreds of images; costs training time per character."
+  ],
+  "limitations": [
+   "Abstract only; needs GPU training per subject; style drift and overfitting not covered in abstract."
+  ],
+  "license": "arXiv non-exclusive",
+  "access_status": "abstract",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-25",
+  "modules": ["M38"]
+ },
+ {
+  "key": "Hu2021",
+  "title": "LoRA: Low-Rank Adaptation of Large Language Models",
+  "authors": "Edward J. Hu, Yelong Shen, Phillip Wallis, Zeyuan Allen-Zhu, Yuanzhi Li, Shean Wang, Lu Wang, Weizhu Chen",
+  "year": 2021,
+  "url": "https://arxiv.org/abs/2106.09685",
+  "doi_isbn": "arXiv:2106.09685",
+  "source_type": "empirical",
+  "tier": "A",
+  "key_findings": [
+   "Freezes pretrained weights and trains small low-rank matrices per layer; on GPT-3 175B cuts trainable parameters ~10,000x and GPU memory ~3x versus full fine-tuning with comparable quality and no extra inference latency."
+  ],
+  "practical_applications": [
+   "The same low-rank idea is what image-model 'character LoRAs' use: a small file per character/style that can be loaded on demand."
+  ],
+  "limitations": [
+   "Paper is about language models; its use for image diffusion is community/tool practice, not shown in this paper."
+  ],
+  "license": "arXiv non-exclusive",
+  "access_status": "abstract",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-25",
+  "modules": ["M38"]
+ },
+ {
+  "key": "Tewel2024",
+  "title": "Training-Free Consistent Text-to-Image Generation (ConsiStory)",
+  "authors": "Yoad Tewel, Omri Kaduri, Rinon Gal, Yoni Kasten, Lior Wolf, Gal Chechik, Yuval Atzmon",
+  "year": 2024,
+  "url": "https://arxiv.org/abs/2402.03286",
+  "doi_isbn": "arXiv:2402.03286",
+  "source_type": "empirical",
+  "tier": "A",
+  "key_findings": [
+   "SIGGRAPH 2024 (TOG). Generates a consistent subject across a batch of images by sharing internal activations (subject-driven shared attention, feature injection) with no optimisation step.",
+   "Claims state-of-the-art subject consistency and text alignment versus baselines; prior methods need per-subject optimisation or large-scale pre-training and struggle with multi-subject scenes."
+  ],
+  "practical_applications": [
+   "Tool class 'batch-shared attention': generate all frames of one episode in one batch to keep the subject aligned."
+  ],
+  "limitations": [
+   "Abstract only; consistency holds within a batch, not necessarily across separate sessions/episodes."
+  ],
+  "license": "arXiv non-exclusive",
+  "access_status": "abstract",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-25",
+  "modules": ["M38"]
+ },
+ {
+  "key": "BFL2025Kontext",
+  "title": "FLUX.1 Kontext: Flow Matching for In-Context Image Generation and Editing in Latent Space",
+  "authors": "Black Forest Labs (S. Batifol, A. Blattmann, P. Esser, R. Rombach, A. Sauer et al.)",
+  "year": 2025,
+  "url": "https://arxiv.org/abs/2506.15742",
+  "doi_isbn": "arXiv:2506.15742",
+  "source_type": "empirical",
+  "tier": "B",
+  "key_findings": [
+   "One flow-matching model for generation and editing with text + image context via sequence concatenation.",
+   "Claims better preservation of objects and characters over multiple edit turns than other editing models; introduces KontextBench (1,026 image-prompt pairs incl. a character-reference category)."
+  ],
+  "practical_applications": [
+   "Tool class 'in-context editing': edit the previous approved frame (new pose/place) instead of regenerating from text, to keep identity."
+  ],
+  "limitations": [
+   "Vendor-authored preprint, abstract only; benchmark built by the same vendor."
+  ],
+  "license": "arXiv non-exclusive",
+  "access_status": "abstract",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-25",
+  "modules": ["M38"]
+ },
+ {
+  "key": "OpenAIImageDocs",
+  "title": "Image generation guide (OpenAI API docs)",
+  "authors": "OpenAI",
+  "year": null,
+  "url": "https://developers.openai.com/api/docs/guides/image-generation",
+  "doi_isbn": "",
+  "source_type": "docs",
+  "tier": "C",
+  "key_findings": [
+   "One or more images can be used as references to generate a new image; in edits the first image is edited and others serve as references.",
+   "Masking with GPT Image is prompt-based and may not follow the mask shape precisely.",
+   "input_fidelity controls how strongly input-image details are preserved; for gpt-image-2 it cannot be changed and all inputs are processed at high fidelity.",
+   "Stated limitation: 'the model may occasionally struggle to maintain visual consistency for recurring characters'; also text placement and precise layout."
+  ],
+  "practical_applications": [
+   "When using Codex/GPT image generation, always attach the approved master image(s) as reference and still QC identity markers by eye."
+  ],
+  "limitations": [
+   "Vendor docs change often; read on 2026-11-25."
+  ],
+  "license": "copyrighted",
+  "access_status": "full_text",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-25",
+  "modules": ["M38"]
+ },
+ {
+  "key": "RunwayGen4",
+  "title": "Introducing Runway Gen-4",
+  "authors": "Runway",
+  "year": null,
+  "url": "https://runway.com/research/introducing-runway-gen-4",
+  "doi_isbn": "",
+  "source_type": "docs",
+  "tier": "C",
+  "key_findings": [
+   "Vendor claims Gen-4 can 'precisely generate consistent characters, locations and objects across scenes' from 'a single reference image', without fine-tuning."
+  ],
+  "practical_applications": [
+   "Represents the 'reference-image video model' class; plan to feed the same master reference to every shot."
+  ],
+  "limitations": [
+   "Marketing claim, no independent evaluation; page undated."
+  ],
+  "license": "copyrighted",
+  "access_status": "publisher_page",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-25",
+  "modules": ["M38"]
+ }
+]

@@ -1,0 +1,3068 @@
+[
+ {
+  "id": "anime_painterly_bg",
+  "name": "Anime painterly background",
+  "name_th": "ฉากหลังอนิเมะแบบวาดสี",
+  "family": "comic_animation",
+  "historical_background": "Hand-painted backgrounds for Japanese TV and film animation were traditionally made in opaque poster colour on paper and photographed under cels; since the 2000s most are painted digitally while keeping the brushy, opaque look. (Artistic overview; no history page opened.)",
+  "visual_characteristics": "Detailed, lush environments behind simpler cel characters: towering cumulus skies, sunlit streets, overgrown greenery, glowing windows.",
+  "line_characteristics": "Almost no outlines in the background; edges are painted, crisp on architecture and soft on foliage and clouds.",
+  "shape_language": "Big readable masses (sky, hill, building) broken into many small leaf and cloud clusters; perspective-correct man-made forms.",
+  "color_characteristics": "Saturated but natural: deep cerulean skies, warm cream highlights, cool blue-violet shadows; strong warm/cool temperature shifts.",
+  "lighting_characteristics": "Clear sun direction, bright rim on clouds, soft bounce, light shafts and lens bloom; time of day drives the whole palette.",
+  "texture_characteristics": "Gouache-like opaque strokes, soft gradients in sky, small dry-brush flecks on foliage; no grain or photo texture.",
+  "composition_characteristics": "Wide establishing shots, low horizon to show sky, strong leading lines of streets or rails, room left for a character.",
+  "emotional_characteristics": "Nostalgic, hopeful, summery, quietly lonely or wonder-filled.",
+  "use_cases": [
+   "story clip establishing shots",
+   "carousel backgrounds",
+   "seasonal posts",
+   "Reel title cards"
+  ],
+  "time_optic_fit": "Good for story-clip backdrops (e.g. the shop street at dusk) and calm carousel backgrounds; never for the product itself. A real frame cutout can sit on such a background only if lighting direction is matched.",
+  "common_mistakes": [
+   "characters rendered in the same painterly detail so they sink into the background",
+   "over-saturated sky that kills the subject",
+   "random lens flares",
+   "melted, non-perspective buildings"
+  ],
+  "prompt_template": "Hand-painted animation background of {subject} in {setting}, opaque gouache-like brushwork, crisp painted architecture, soft clustered foliage, towering clouds, {palette}, {lighting}, {composition}, no characters unless stated, no text.",
+  "prompt_example": "Hand-painted animation background of a small corner eyewear shop with a glowing window in a narrow Bangkok soi, opaque gouache-like brushwork, crisp painted shutters, soft clustered potted plants, towering pink clouds, warm cream and cerulean with Phthalo green shop sign shape (no letters), golden hour light from the left, low horizon with leading lines of the street, no characters, no text.",
+  "avoid_phrases": [
+   "any studio or brand name",
+   "any living artist's name",
+   "titles of copyrighted films, games or series",
+   "anime screenshot",
+   "trending on art sites"
+  ],
+  "flux_notes": "FLUX schnell produces convincing painterly skies and streets; it tends to add stray signage text (say 'no text, blank signs') and sometimes adds characters.",
+  "palette_suggestions": [
+   "pal.summer_sky_cerulean",
+   "pal.dusk_peach_violet",
+   "pal.brand_timeoptic"
+  ],
+  "lighting_ids": [
+   "golden_hour",
+   "volumetric_god_rays",
+   "sunset_rim_warm_cool",
+   "dappled_foliage"
+  ],
+  "composition_ids": [
+   "low_horizon",
+   "leading_lines",
+   "layered_depth",
+   "negative_space"
+  ],
+  "emotion_ids": [
+   "nostalgia.nostalgia",
+   "hope.hope",
+   "awe.childlike_wonder",
+   "visual.peaceful_solitude"
+  ],
+  "reference_sources": [
+   {
+    "key_or_url": "Artistic",
+    "accessed": "practitioner craft, no source opened"
+   },
+   {
+    "key_or_url": "Block2008",
+    "accessed": "bibliographic"
+   }
+  ],
+  "evidence": "craft"
+ },
+ {
+  "id": "chibi_kawaii",
+  "name": "Chibi / kawaii",
+  "name_th": "ชิบิ / คาวาอี้",
+  "family": "comic_animation",
+  "historical_background": "Kawaii ('cute') aesthetics became a mainstream Japanese visual culture from the 1970s onward, and 'chibi' super-deformed proportions (very large head, tiny body) became a standard comic and merchandise convention. (Artistic overview; no history page opened.)",
+  "visual_characteristics": "Characters 2–3 heads tall, oversized heads and eyes, tiny hands and feet, rosy cheeks, simple expressions; props shrunk to toy-like scale.",
+  "line_characteristics": "Clean rounded outlines of even or gently tapered weight, often slightly thicker outer contour.",
+  "shape_language": "Circles and soft rounded rectangles; no sharp angles; bean-shaped bodies.",
+  "color_characteristics": "Pastels and candy colours with a few saturated accents; white highlights in eyes; pink blush.",
+  "lighting_characteristics": "Flat or one-step cel shading, soft glow, sparkle effects.",
+  "texture_characteristics": "Smooth flat fills, sometimes subtle paper or soft airbrush gradient.",
+  "composition_characteristics": "Centered single character or a tight cluster, generous negative space, stickers and icons around.",
+  "emotional_characteristics": "Cute, playful, comforting, harmless.",
+  "use_cases": [
+   "sticker sets",
+   "light-hearted carousels",
+   "kids' eyewear promos",
+   "reaction stickers in Reels"
+  ],
+  "time_optic_fit": "Fits kids' frames and playful tips (e.g. 'clean your lenses'); a chibi character can wear a simplified frame icon, but real product shots must stay the real photo next to it.",
+  "common_mistakes": [
+   "adult proportions with just big eyes",
+   "too many sparkles",
+   "hands with five detailed fingers drawn badly",
+   "drawing a real frame model in chibi form and implying it is the product"
+  ],
+  "prompt_template": "Cute chibi character of {subject}, 2.5 heads tall, oversized head and eyes, tiny hands, rounded clean outlines, flat cel colour with soft blush, {setting}, {palette}, {lighting}, {composition}, plain background, no text.",
+  "prompt_example": "Cute chibi optometrist girl holding a giant pair of round glasses, 2.5 heads tall, oversized head and sparkly eyes, tiny hands, rounded clean outlines, flat cel colour with soft blush, standing in a tiny toy-like shop, pastel peach and snow with Phthalo green accent, soft even light, centered with negative space, plain background, no text.",
+  "avoid_phrases": [
+   "any studio or brand name",
+   "any living artist's name",
+   "titles of copyrighted films, games or series",
+   "realistic anatomy",
+   "photorealistic"
+  ],
+  "flux_notes": "FLUX handles chibi proportions well; it tends toward glossy 3D-looking shading unless 'flat cel colour, 2D' is stated.",
+  "palette_suggestions": [
+   "pal.pastel_candy",
+   "pal.peach_snow_soft",
+   "pal.brand_timeoptic"
+  ],
+  "lighting_ids": [
+   "flat_cartoon_cel",
+   "high_key",
+   "storybook_soft_glow"
+  ],
+  "composition_ids": [
+   "center",
+   "negative_space",
+   "odd_grouping"
+  ],
+  "emotion_ids": [
+   "joy.amusement",
+   "love.affection",
+   "joy.happiness",
+   "awe.childlike_wonder"
+  ],
+  "reference_sources": [
+   {
+    "key_or_url": "Artistic",
+    "accessed": "practitioner craft, no source opened"
+   }
+  ],
+  "evidence": "craft"
+ },
+ {
+  "id": "western_cartoon_rubberhose",
+  "name": "Rubber-hose cartoon (1920s–30s)",
+  "name_th": "การ์ตูนแขนสายยาง ยุค 1920–30",
+  "family": "comic_animation",
+  "historical_background": "Rubber-hose animation was the dominant style of American cartoons of the 1920s and early 1930s: bendy, boneless limbs, pie-cut eyes, white gloves; it is credited to animator Bill Nolan in silent-era shorts and faded by the mid-1930s as studios moved to more realistic movement (Cartoon Brew).",
+  "visual_characteristics": "Bouncy black-and-white (or limited colour) characters with noodle arms, round bodies, pie-cut eyes, white gloves and big shoes; everything squashes and stretches.",
+  "line_characteristics": "Bold, smooth ink lines of fairly even weight; limbs drawn as single flowing curves with no elbows or knees.",
+  "shape_language": "Circles and tubes; bodies like balls or pears; props alive with faces.",
+  "color_characteristics": "Black, white and greys, or faded early two-strip-like colour (muted red, teal, cream); aged-film feel.",
+  "lighting_characteristics": "Flat lighting, small drop shadows under feet, no modelled shading.",
+  "texture_characteristics": "Film grain, gate weave, slight vignette, paper-cel flatness.",
+  "composition_characteristics": "Stage-like side view, characters centred, simple repeating backgrounds, iris-in/out framing.",
+  "emotional_characteristics": "Jaunty, mischievous, nostalgic, slapstick.",
+  "use_cases": [
+   "retro fun Reels",
+   "mascot animations",
+   "holiday greetings",
+   "short gag loops"
+  ],
+  "time_optic_fit": "Good for a retro mascot or gag about lost glasses; keep product out of the cartoon or place the real cutout beside it. Strongly vintage, so use sparingly.",
+  "common_mistakes": [
+   "adding modern gradients",
+   "elbows and fingers drawn realistically",
+   "copying a known 1930s character",
+   "too-clean digital lines with no film texture"
+  ],
+  "prompt_template": "1920s–30s rubber-hose cartoon of {subject}, boneless noodle limbs, pie-cut eyes, white gloves, bold even ink lines, {setting}, {palette}, {lighting}, {composition}, film grain and slight vignette, no text.",
+  "prompt_example": "1920s–30s rubber-hose cartoon of a cheerful pair of glasses with tiny noodle legs dancing on a shop counter, boneless limbs, pie-cut eyes, white gloves, bold even ink lines, simple shop backdrop, black white and warm cream, flat light with drop shadow, centered stage view with iris vignette, film grain, no text.",
+  "avoid_phrases": [
+   "any studio or brand name",
+   "any living artist's name",
+   "titles of copyrighted films, games or series",
+   "names of 1930s cartoon characters"
+  ],
+  "flux_notes": "FLUX gets the look roughly but often adds modern shading or invents known mascots; name traits (pie-cut eyes, noodle limbs) rather than eras alone.",
+  "palette_suggestions": [
+   "pal.monochrome_film",
+   "pal.faded_twostrip",
+   "pal.cream_black_vintage"
+  ],
+  "lighting_ids": [
+   "flat_cartoon_cel",
+   "spotlight_theatrical"
+  ],
+  "composition_ids": [
+   "center",
+   "vignette_tunnel",
+   "repetition_rhythm"
+  ],
+  "emotion_ids": [
+   "joy.mischief",
+   "joy.amusement",
+   "nostalgia.nostalgia"
+  ],
+  "reference_sources": [
+   {
+    "key_or_url": "https://www.cartoonbrew.com/cartoon-study/the-rubber-hose-classics-that-inspired-the-cuphead-show-213700.html",
+    "accessed": "page opened 2026-11-24 (Cartoon Brew)"
+   }
+  ],
+  "evidence": "documented_history"
+ },
+ {
+  "id": "modern_cartoon_tv",
+  "name": "Modern TV cartoon",
+  "name_th": "การ์ตูนทีวียุคใหม่",
+  "family": "comic_animation",
+  "historical_background": "Contemporary TV animation (roughly 2000s onward) favours flat colour, thick simple outlines and graphic shapes designed for fast digital (vector/puppet) production. (Artistic overview; no history page opened.)",
+  "visual_characteristics": "Simplified characters with geometric heads, dot or bean eyes, flat colour, expressive poses; clean flat backgrounds.",
+  "line_characteristics": "Uniform or slightly varying outlines, often coloured lines; very few interior lines.",
+  "shape_language": "Strong geometric shapes: squares for stubborn characters, circles for friendly, triangles for villains.",
+  "color_characteristics": "Bright flat palette, limited per scene, one shadow tone per colour.",
+  "lighting_characteristics": "Flat lighting or a single hard cel shadow; occasional rim for drama.",
+  "texture_characteristics": "Clean vector fills, optional subtle grain overlay.",
+  "composition_characteristics": "Clear staging, characters mid-shot, background simplified to support silhouette readability.",
+  "emotional_characteristics": "Funny, energetic, friendly, sometimes absurd.",
+  "use_cases": [
+   "ร้านแว่นตีสอง story clips",
+   "explainer Reels",
+   "carousels with characters",
+   "mascot posts"
+  ],
+  "time_optic_fit": "Very good fit for the 16:9 story clips and rig.js puppets; product appears as a simplified prop in the story, and as a real photo only in a separate end card.",
+  "common_mistakes": [
+   "inconsistent line weight between shots",
+   "too many colours",
+   "off-model faces between frames",
+   "busy backgrounds"
+  ],
+  "prompt_template": "Modern flat TV cartoon of {subject}, geometric character design, simple dot eyes, flat colours with one cel shadow, clean outlines, {setting}, {palette}, {lighting}, {composition}, no text.",
+  "prompt_example": "Modern flat TV cartoon of a sleepy shop owner at 2 a.m. polishing a lens behind the counter, geometric character design, simple dot eyes, flat colours with one cel shadow, clean outlines, small eyewear shop interior with display shelves, Phthalo green and Raisin black with peach lamp glow, practical lamp light, medium shot rule of thirds, no text.",
+  "avoid_phrases": [
+   "any studio or brand name",
+   "any living artist's name",
+   "titles of copyrighted films, games or series"
+  ],
+  "flux_notes": "FLUX does clean flat cartoons well; keep prompts short and state 'flat 2D vector'. Character consistency across shots is poor — use rig puppets for continuity.",
+  "palette_suggestions": [
+   "pal.brand_timeoptic",
+   "pal.night_shop_teal_peach",
+   "pal.bright_primary_flat"
+  ],
+  "lighting_ids": [
+   "flat_cartoon_cel",
+   "practical_lamp",
+   "neon_night"
+  ],
+  "composition_ids": [
+   "rule_of_thirds",
+   "center",
+   "over_shoulder"
+  ],
+  "emotion_ids": [
+   "joy.amusement",
+   "performance.storyteller_warmth",
+   "low.drowsy",
+   "cognitive.curiosity"
+  ],
+  "reference_sources": [
+   {
+    "key_or_url": "Artistic",
+    "accessed": "practitioner craft, no source opened"
+   },
+   {
+    "key_or_url": "Block2008",
+    "accessed": "bibliographic"
+   }
+  ],
+  "evidence": "craft"
+ },
+ {
+  "id": "webtoon_digital",
+  "name": "Webtoon digital comic",
+  "name_th": "เว็บตูน",
+  "family": "comic_animation",
+  "historical_background": "Vertical-scroll digital comics developed on Korean web portals in the 2000s and spread globally via mobile apps; the format replaced the page with a long strip read by scrolling. (Artistic overview; no history page opened.)",
+  "visual_characteristics": "Full-colour digital panels stacked vertically, soft-shaded attractive characters, lots of space between panels, speech bubbles.",
+  "line_characteristics": "Clean thin digital lines, slightly tapered; lighter line than print manga.",
+  "shape_language": "Elongated, stylish proportions; rounded faces; simple background shapes or blurred photo-like backgrounds.",
+  "color_characteristics": "Soft colour with airbrush gradients, glow overlays, pastel or moody filters per scene.",
+  "lighting_characteristics": "Soft cel shading plus overlay glow, coloured rim light, bloom.",
+  "texture_characteristics": "Smooth digital, gradient overlays, occasional texture brushes.",
+  "composition_characteristics": "Vertical flow, one beat per panel, white gutters as pacing, close-ups for emotion.",
+  "emotional_characteristics": "Romantic, dramatic, relatable, slice-of-life.",
+  "use_cases": [
+   "9:16 Reels story frames",
+   "multi-slide carousels",
+   "relationship stories",
+   "Slowly Growing style variants"
+  ],
+  "time_optic_fit": "Good for vertical story Reels and carousels; panels can include a simplified frame, the real product only in a final photo panel.",
+  "common_mistakes": [
+   "horizontal page layouts in a vertical format",
+   "text baked into the image",
+   "over-glowing everything",
+   "inconsistent faces"
+  ],
+  "prompt_template": "Vertical webtoon panel of {subject}, clean thin digital lines, soft cel shading with airbrush gradients and gentle glow, {setting}, {palette}, {lighting}, {composition}, empty speech area, no text.",
+  "prompt_example": "Vertical webtoon panel of a young woman trying on round glasses in a mirror and smiling shyly, clean thin digital lines, soft cel shading with airbrush gradients and gentle glow, bright eyewear shop with wooden shelves, snow and timberwolf with peach accents, soft window light, close-up over the shoulder into the mirror, empty speech area at top, no text.",
+  "avoid_phrases": [
+   "any studio or brand name",
+   "any living artist's name",
+   "titles of copyrighted films, games or series",
+   "speech bubble with words"
+  ],
+  "flux_notes": "FLUX makes attractive webtoon-like faces; it often adds bubble text — keep bubbles out and add them in HTML.",
+  "palette_suggestions": [
+   "pal.pastel_romance",
+   "pal.peach_snow_soft",
+   "pal.brand_timeoptic"
+  ],
+  "lighting_ids": [
+   "two_tone_anime_shade",
+   "window_side",
+   "screen_glow_face"
+  ],
+  "composition_ids": [
+   "over_shoulder",
+   "frame_within_frame",
+   "negative_space"
+  ],
+  "emotion_ids": [
+   "love.romantic",
+   "selfconscious.shyness",
+   "joy.contentment"
+  ],
+  "reference_sources": [
+   {
+    "key_or_url": "Artistic",
+    "accessed": "practitioner craft, no source opened"
+   },
+   {
+    "key_or_url": "McCloud1993",
+    "accessed": "bibliographic"
+   }
+  ],
+  "evidence": "craft"
+ },
+ {
+  "id": "graphic_novel_noir",
+  "name": "Graphic-novel noir",
+  "name_th": "นิยายภาพแนวนัวร์",
+  "family": "comic_animation",
+  "historical_background": "Noir comics adapt the hard-boiled crime fiction and 1940s film noir look: heavy black spotting, stark contrast and limited colour. (Artistic overview; comics grammar per McCloud1993, bibliographic.)",
+  "visual_characteristics": "High-contrast ink drawings dominated by solid blacks, rain, cigarette smoke, slatted shadows, hard faces.",
+  "line_characteristics": "Heavy brush inks, bold silhouettes, little hatching; shapes defined by black masses rather than lines.",
+  "shape_language": "Angular, sharp shapes; tall verticals of buildings; harsh triangles of light.",
+  "color_characteristics": "Black and white, sometimes one spot colour (red, yellow, or brand green).",
+  "lighting_characteristics": "Hard single sources, venetian-blind shadows, streetlights, underlight; deep cast shadows.",
+  "texture_characteristics": "Flat ink, occasional splatter or dry brush; no gradients.",
+  "composition_characteristics": "Dramatic angles, tilted frames, tight close-ups, silhouettes in doorways.",
+  "emotional_characteristics": "Tense, mysterious, moody, cynical.",
+  "use_cases": [
+   "mystery story clips",
+   "night-optic dramatic beats",
+   "teaser posts"
+  ],
+  "time_optic_fit": "Good for a mystery/drama episode or a teaser ('who stole the glasses?'); one brand-green spot colour ties it to Time Optic. Not for product ads.",
+  "common_mistakes": [
+   "grey mush instead of solid blacks",
+   "too many mid-tones",
+   "spot colour used everywhere",
+   "unreadable silhouettes"
+  ],
+  "prompt_template": "Graphic-novel noir panel of {subject}, heavy brush ink, solid black masses, stark white highlights, {setting}, black and white with one spot colour {palette}, {lighting}, {composition}, no text.",
+  "prompt_example": "Graphic-novel noir panel of a detective holding up a pair of glasses under a streetlight, heavy brush ink, solid black masses, stark white highlights, rainy alley beside a closed shop, black and white with one spot colour Phthalo green on the glasses, venetian-blind hard light, low-angle diagonal composition, no text.",
+  "avoid_phrases": [
+   "any studio or brand name",
+   "any living artist's name",
+   "titles of copyrighted films, games or series",
+   "names of crime comics"
+  ],
+  "flux_notes": "FLUX does high-contrast ink fairly well; spot colour often leaks into other areas. Untested at scale here.",
+  "palette_suggestions": [
+   "pal.noir_bw_spot_green",
+   "pal.noir_bw_spot_red"
+  ],
+  "lighting_ids": [
+   "noir_venetian",
+   "streetlight_sodium",
+   "under_light_horror",
+   "chiaroscuro"
+  ],
+  "composition_ids": [
+   "diagonal",
+   "figure_ground",
+   "frame_within_frame"
+  ],
+  "emotion_ids": [
+   "fear.quiet_menace",
+   "visual.mystery",
+   "stance.suspicion"
+  ],
+  "reference_sources": [
+   {
+    "key_or_url": "McCloud1993",
+    "accessed": "bibliographic"
+   },
+   {
+    "key_or_url": "Artistic",
+    "accessed": "practitioner craft, no source opened"
+   }
+  ],
+  "evidence": "craft"
+ },
+ {
+  "id": "editorial_conceptual",
+  "name": "Editorial conceptual illustration",
+  "name_th": "ภาพประกอบเชิงแนวคิด (บทบรรณาธิการ)",
+  "family": "illustration",
+  "historical_background": "Conceptual editorial illustration, common in magazines and newspapers, communicates an idea through visual metaphor rather than literal depiction. (Artistic overview; no history page opened.)",
+  "visual_characteristics": "A single clever visual metaphor: glasses as windows, lenses as moons, a head opening like a drawer; simplified figures and objects.",
+  "line_characteristics": "Clean or slightly textured lines; often no lines, just shapes.",
+  "shape_language": "Simplified geometric shapes, surreal scale shifts, visual puns.",
+  "color_characteristics": "Limited palette of 3–5 colours, bold contrast between metaphor and ground.",
+  "lighting_characteristics": "Flat or soft graphic shading; light used symbolically.",
+  "texture_characteristics": "Grainy riso-like or brush textures over flat shapes.",
+  "composition_characteristics": "Strong central idea, lots of negative space, room for a headline.",
+  "emotional_characteristics": "Thoughtful, witty, intriguing.",
+  "use_cases": [
+   "educational carousels",
+   "eye-health tip covers",
+   "article headers",
+   "quote images"
+  ],
+  "time_optic_fit": "Excellent for eye-health topics (blue light, myopia, UV) as metaphors; product stays out or as real photo on another slide.",
+  "common_mistakes": [
+   "literal rather than metaphorical images",
+   "two competing metaphors",
+   "clutter",
+   "clichés like lightbulbs everywhere"
+  ],
+  "prompt_template": "Conceptual editorial illustration showing {subject} as a visual metaphor, simplified shapes, limited palette {palette}, textured flat colour, {setting}, {lighting}, {composition}, generous negative space for a headline, no text.",
+  "prompt_example": "Conceptual editorial illustration showing a child's eye as a tiny window looking out at a vast screen-lit city, simplified shapes, limited palette Phthalo green, peach and snow, textured flat colour, minimal room, soft graphic light, centered with generous negative space for a headline, no text.",
+  "avoid_phrases": [
+   "any studio or brand name",
+   "any living artist's name",
+   "titles of copyrighted films, games or series",
+   "clip art"
+  ],
+  "flux_notes": "FLUX can make metaphors if they are described concretely (objects + relationship); abstract instructions like 'visual metaphor for X' alone give generic results.",
+  "palette_suggestions": [
+   "pal.brand_timeoptic",
+   "pal.editorial_limited_3",
+   "pal.mustard_teal_cream"
+  ],
+  "lighting_ids": [
+   "flat_cartoon_cel",
+   "high_key"
+  ],
+  "composition_ids": [
+   "negative_space",
+   "center",
+   "scale_contrast"
+  ],
+  "emotion_ids": [
+   "cognitive.curiosity",
+   "cognitive.interest",
+   "stance.dry_irony"
+  ],
+  "reference_sources": [
+   {
+    "key_or_url": "Artistic",
+    "accessed": "practitioner craft, no source opened"
+   }
+  ],
+  "evidence": "craft"
+ },
+ {
+  "id": "children_book_crayon",
+  "name": "Children's book crayon",
+  "name_th": "ภาพหนังสือเด็กสีเทียน",
+  "family": "illustration",
+  "historical_background": "Wax crayon and oil pastel have long been used in picture books for their childlike, tactile mark-making. (Artistic overview; no history page opened.)",
+  "visual_characteristics": "Naive, joyful drawings with waxy strokes, visible paper tooth, simple figures and big suns.",
+  "line_characteristics": "Wobbly, uneven crayon lines with broken edges where the paper grain shows.",
+  "shape_language": "Simple, chunky, slightly lopsided shapes; childlike proportions.",
+  "color_characteristics": "Bright primaries and secondaries, layered waxy colour with white paper showing through.",
+  "lighting_characteristics": "Implied light only; flat colour, maybe a scribbled sun.",
+  "texture_characteristics": "Heavy waxy grain, scribble fills, sgraffito scratches.",
+  "composition_characteristics": "Simple horizon, big central subject, playful scattered elements.",
+  "emotional_characteristics": "Innocent, joyful, warm, sincere.",
+  "use_cases": [
+   "kids' eye-check campaigns",
+   "back-to-school posts",
+   "family stories"
+  ],
+  "time_optic_fit": "Good for children's eye-test or kids' frames campaigns; real kids' frame photo shown separately or as a cutout on the crayon page.",
+  "common_mistakes": [
+   "too polished to feel childlike",
+   "digital smooth gradients",
+   "creepy faces",
+   "perfect symmetry"
+  ],
+  "prompt_template": "Children's picture book illustration of {subject} in wax crayon, wobbly uneven lines, scribble fills with paper grain showing, chunky simple shapes, {setting}, {palette}, {lighting}, {composition}, white paper background, no text.",
+  "prompt_example": "Children's picture book illustration of a small boy reading the eye chart at an eye test in wax crayon, wobbly uneven lines, scribble fills with paper grain showing, chunky simple shapes, cheerful shop room, bright primaries with green, implied soft light, centered subject, white paper background, no text.",
+  "avoid_phrases": [
+   "any studio or brand name",
+   "any living artist's name",
+   "titles of copyrighted films, games or series"
+  ],
+  "flux_notes": "FLUX imitates crayon texture reasonably; tends to make it too neat — add 'drawn by a child-like hand, uneven'.",
+  "palette_suggestions": [
+   "pal.primary_crayon",
+   "pal.sunny_kids"
+  ],
+  "lighting_ids": [
+   "flat_cartoon_cel",
+   "high_key"
+  ],
+  "composition_ids": [
+   "center",
+   "low_horizon"
+  ],
+  "emotion_ids": [
+   "joy.happiness",
+   "awe.childlike_wonder",
+   "love.tenderness"
+  ],
+  "reference_sources": [
+   {
+    "key_or_url": "Artistic",
+    "accessed": "practitioner craft, no source opened"
+   }
+  ],
+  "evidence": "craft"
+ },
+ {
+  "id": "line_art_minimal",
+  "name": "Minimal line art",
+  "name_th": "ลายเส้นมินิมอล",
+  "family": "illustration",
+  "historical_background": "Minimal line drawing descends from contour drawing traditions; in modern branding it is used for clean, elegant spot illustrations. (Artistic overview.)",
+  "visual_characteristics": "Sparse single-weight lines describing people, objects or faces with lots of white space; may have one flat colour shape behind.",
+  "line_characteristics": "Thin, uniform, confident lines; few strokes; open contours.",
+  "shape_language": "Simplified, elegant shapes; implied rather than closed forms.",
+  "color_characteristics": "Monochrome line on light ground, optional single accent blob.",
+  "lighting_characteristics": "None; form implied by line.",
+  "texture_characteristics": "Clean vector or fine pen on smooth paper.",
+  "composition_characteristics": "Lots of negative space; subject small or centred.",
+  "emotional_characteristics": "Calm, elegant, modern, quiet.",
+  "use_cases": [
+   "dialogue quote images",
+   "carousel covers",
+   "brand line-art accents",
+   "IG 1:1 quotes"
+  ],
+  "time_optic_fit": "Core house style: brand/store-lineart.png and the dialogue carousels already use it. Simple glasses shapes may be drawn, but never presented as a specific stocked model.",
+  "common_mistakes": [
+   "too many lines",
+   "variable sketchy weight",
+   "filled shading",
+   "accent blob too big"
+  ],
+  "prompt_template": "Minimal line art of {subject}, thin uniform single-weight black line, few strokes, open contours, {setting}, lots of white space, {palette}, {composition}, no shading, lighting: {lighting}, no text.",
+  "prompt_example": "Minimal line art of two faceless figures sitting at a café table, one adjusting her glasses, thin uniform single-weight black line, few strokes, open contours, implied table only, lots of white space, raisin line on snow with one peach circle behind, centered with negative space, no shading, no text.",
+  "avoid_phrases": [
+   "any studio or brand name",
+   "any living artist's name",
+   "titles of copyrighted films, games or series",
+   "sketchy",
+   "shaded"
+  ],
+  "flux_notes": "FLUX does clean line art well; sometimes adds grey shading or a texture — say 'pure line, no shading'.",
+  "palette_suggestions": [
+   "pal.brand_timeoptic",
+   "pal.ink_on_snow",
+   "pal.peach_accent_line"
+  ],
+  "lighting_ids": [
+   "flat_cartoon_cel"
+  ],
+  "composition_ids": [
+   "negative_space",
+   "center",
+   "subject_isolation"
+  ],
+  "emotion_ids": [
+   "calm.serenity",
+   "love.tenderness",
+   "visual.peaceful_solitude"
+  ],
+  "reference_sources": [
+   {
+    "key_or_url": "Artistic",
+    "accessed": "practitioner craft, no source opened"
+   }
+  ],
+  "evidence": "craft"
+ },
+ {
+  "id": "one_line_drawing",
+  "name": "Continuous one-line drawing",
+  "name_th": "ภาพลายเส้นเดียวต่อเนื่อง",
+  "family": "illustration",
+  "historical_background": "Continuous-line drawing, where the pen never lifts, is a long-standing drawing exercise and decorative style widely used in modern branding. (Artistic overview.)",
+  "visual_characteristics": "A single unbroken line looping into faces, hands, glasses or objects.",
+  "line_characteristics": "One continuous stroke of even weight, loops and overlaps visible.",
+  "shape_language": "Flowing organic forms, simplified profiles.",
+  "color_characteristics": "One line colour on a plain ground, sometimes a soft colour shape.",
+  "lighting_characteristics": "None.",
+  "texture_characteristics": "Clean vector or ink.",
+  "composition_characteristics": "Centred or offset with large negative space.",
+  "emotional_characteristics": "Elegant, fluid, thoughtful.",
+  "use_cases": [
+   "logo-like spot art",
+   "quote images",
+   "minimal promo backgrounds"
+  ],
+  "time_optic_fit": "Good as decorative art (a face wearing glasses in one line). A one-line glasses shape is fine as an icon, not as product depiction.",
+  "common_mistakes": [
+   "broken lines (not continuous)",
+   "too complex to read",
+   "line wobble"
+  ],
+  "prompt_template": "Continuous one-line drawing of {subject}, single unbroken even line with visible loops, {setting} implied, {palette}, {composition}, plain background, lighting: {lighting}, no text.",
+  "prompt_example": "Continuous one-line drawing of a woman's profile wearing cat-eye glasses, single unbroken even line with visible loops, no setting, Phthalo green line on snow with soft peach shape, offset left with negative space, plain background, no text.",
+  "avoid_phrases": [
+   "any studio or brand name",
+   "any living artist's name",
+   "titles of copyrighted films, games or series"
+  ],
+  "flux_notes": "FLUX often breaks the line into several strokes; results look 'one-line style' rather than truly continuous. Vector-trace if exactness matters.",
+  "palette_suggestions": [
+   "pal.brand_timeoptic",
+   "pal.ink_on_snow"
+  ],
+  "lighting_ids": [
+   "flat_cartoon_cel"
+  ],
+  "composition_ids": [
+   "negative_space",
+   "rule_of_thirds"
+  ],
+  "emotion_ids": [
+   "calm.serenity",
+   "love.romantic"
+  ],
+  "reference_sources": [
+   {
+    "key_or_url": "Artistic",
+    "accessed": "practitioner craft, no source opened"
+   }
+  ],
+  "evidence": "craft"
+ },
+ {
+  "id": "sketchnote_doodle",
+  "name": "Sketchnote doodle",
+  "name_th": "สเก็ตช์โน้ต / ดูเดิล",
+  "family": "illustration",
+  "historical_background": "Sketchnoting — visual note-taking mixing drawings, arrows and lettering — became popular in the 2000s–2010s as a learning and meeting-capture method. (Artistic overview.)",
+  "visual_characteristics": "Hand-drawn icons, arrows, frames, banners and little characters arranged like notebook notes.",
+  "line_characteristics": "Marker lines of medium weight, slightly wobbly; arrows and containers.",
+  "shape_language": "Simple icons, speech bubbles, banners, boxes.",
+  "color_characteristics": "Black marker with 1–2 highlight colours (grey shadow, one accent).",
+  "lighting_characteristics": "Flat, sometimes grey marker drop shadow.",
+  "texture_characteristics": "Marker on paper, slight bleed.",
+  "composition_characteristics": "Structured: flow, arrows, numbered steps; grid or path layout.",
+  "emotional_characteristics": "Friendly, explanatory, approachable.",
+  "use_cases": [
+   "how-to carousels",
+   "eye-care tip sheets",
+   "process explainers"
+  ],
+  "time_optic_fit": "Good for tips like 'how to choose frames for your face shape' — draw icons only; letters must be added in HTML (Thai/English).",
+  "common_mistakes": [
+   "AI-generated pseudo letters",
+   "overcrowding",
+   "no hierarchy"
+  ],
+  "prompt_template": "Sketchnote doodle page about {subject}, hand-drawn marker icons, arrows, empty banners and boxes, slight wobble, black line with one accent {palette}, {composition}, {setting}, empty boxes for text, lighting: {lighting}, no letters.",
+  "prompt_example": "Sketchnote doodle page about caring for your glasses: icons of a microfiber cloth, a case, water drop and a sun, hand-drawn marker icons, arrows, empty banners and boxes, slight wobble, black line with one Phthalo green accent and grey shadow, z-pattern flow, plain paper, empty boxes for text, no letters.",
+  "avoid_phrases": [
+   "any studio or brand name",
+   "any living artist's name",
+   "titles of copyrighted films, games or series",
+   "handwritten text",
+   "words"
+  ],
+  "flux_notes": "FLUX will add fake handwriting unless told 'no letters, empty boxes'; still check for scribble text.",
+  "palette_suggestions": [
+   "pal.marker_black_green",
+   "pal.brand_timeoptic"
+  ],
+  "lighting_ids": [
+   "flat_cartoon_cel"
+  ],
+  "composition_ids": [
+   "z_pattern",
+   "flatlay_grid",
+   "repetition_rhythm"
+  ],
+  "emotion_ids": [
+   "cognitive.interest",
+   "care.encouragement",
+   "performance.trusted_expert"
+  ],
+  "reference_sources": [
+   {
+    "key_or_url": "Artistic",
+    "accessed": "practitioner craft, no source opened"
+   }
+  ],
+  "evidence": "craft"
+ },
+ {
+  "id": "technical_blueprint",
+  "name": "Technical blueprint",
+  "name_th": "แบบพิมพ์เขียว",
+  "family": "illustration",
+  "historical_background": "Blueprints were produced by the cyanotype process (white lines on Prussian blue) from the 19th century until diazo prints and CAD replaced them; the look survives as a design shorthand for engineering. (Artistic overview; no history page opened.)",
+  "visual_characteristics": "White technical line drawings on blue: orthographic views, dimension lines, callouts, grid.",
+  "line_characteristics": "Thin precise ruled lines, dashed hidden lines, dimension arrows.",
+  "shape_language": "Geometric, orthographic, exact.",
+  "color_characteristics": "Prussian/cyan blue ground with white or pale cyan lines.",
+  "lighting_characteristics": "None.",
+  "texture_characteristics": "Slight paper fibre, faded print mottle.",
+  "composition_characteristics": "Multiple views on a grid, title block area, symmetric layouts.",
+  "emotional_characteristics": "Precise, expert, engineered, trustworthy.",
+  "use_cases": [
+   "frame anatomy explainers",
+   "lens technology posts",
+   "craftsmanship stories"
+  ],
+  "time_optic_fit": "Strong for 'anatomy of a frame' or lens-coating explainers. If a specific stocked frame is shown, trace from its real photo (vector-trace), do not let the model invent parts.",
+  "common_mistakes": [
+   "fake dimension numbers or text",
+   "perspective views mixed with orthographic",
+   "inaccurate hinge details claimed as real"
+  ],
+  "prompt_template": "Technical blueprint drawing of {subject}, white precise ruled lines on Prussian blue, orthographic front and side views, dashed hidden lines, dimension arrows without numbers, faint grid, {composition}, {palette}, setting: {setting}, lighting: {lighting}, no text.",
+  "prompt_example": "Technical blueprint drawing of a generic round metal eyeglass frame, white precise ruled lines on Prussian blue, orthographic front and side views, dashed hidden lines, dimension arrows without numbers, faint grid, symmetric centered layout, Prussian blue and white, no text.",
+  "avoid_phrases": [
+   "any studio or brand name",
+   "any living artist's name",
+   "titles of copyrighted films, games or series",
+   "dimension numbers",
+   "labels"
+  ],
+  "flux_notes": "FLUX makes convincing blueprint looks but invents unreadable labels; geometry is approximate.",
+  "palette_suggestions": [
+   "pal.blueprint_prussian",
+   "pal.brand_green_blueprint"
+  ],
+  "lighting_ids": [
+   "flat_cartoon_cel"
+  ],
+  "composition_ids": [
+   "symmetry",
+   "flatlay_grid",
+   "center"
+  ],
+  "emotion_ids": [
+   "performance.trusted_expert",
+   "cognitive.interest"
+  ],
+  "reference_sources": [
+   {
+    "key_or_url": "Artistic",
+    "accessed": "practitioner craft, no source opened"
+   }
+  ],
+  "evidence": "craft"
+ },
+ {
+  "id": "botanical_scientific",
+  "name": "Scientific botanical illustration",
+  "name_th": "ภาพพฤกษศาสตร์เชิงวิทยาศาสตร์",
+  "family": "illustration",
+  "historical_background": "Scientific botanical illustration grew from printed herbals and naturalists' plates of the early modern period, prioritising accurate identification (whole plant, dissected parts) over expression. (Artistic overview; Met essay on botanical imagery found but fetch failed, not read.)",
+  "visual_characteristics": "Precise plant specimens on white: stems, leaves, flowers, roots and dissected parts arranged as a plate.",
+  "line_characteristics": "Fine, accurate contour lines, stippling or hatching for form.",
+  "shape_language": "Natural organic forms, exact proportions.",
+  "color_characteristics": "Naturalistic watercolour, subtle and true to specimen.",
+  "lighting_characteristics": "Even, soft light from upper left, minimal cast shadow.",
+  "texture_characteristics": "Smooth watercolour on hot-press paper, fine stipple.",
+  "composition_characteristics": "Plate layout, centred specimen, parts arranged around.",
+  "emotional_characteristics": "Calm, curious, scholarly.",
+  "use_cases": [
+   "natural-material frame stories (wood, acetate from cotton)",
+   "seasonal decorative posts"
+  ],
+  "time_optic_fit": "Niche: nice for sustainability/natural acetate topics or as decorative borders. No product depiction.",
+  "common_mistakes": [
+   "invented botanically impossible plants",
+   "too stylised",
+   "fake Latin labels"
+  ],
+  "prompt_template": "Scientific botanical illustration plate of {subject}, precise fine contour lines and stipple, naturalistic watercolour, specimen and dissected parts arranged on white, {lighting}, {palette}, {composition}, no labels, setting: {setting}, no text.",
+  "prompt_example": "Scientific botanical illustration plate of a cotton plant with open boll, seeds and leaf (the raw source of cellulose acetate), precise fine contour lines and stipple, naturalistic watercolour, arranged on white, soft light from upper left, natural greens and creams, centered plate layout, no labels, no text.",
+  "avoid_phrases": [
+   "any studio or brand name",
+   "any living artist's name",
+   "titles of copyrighted films, games or series",
+   "labels",
+   "Latin names"
+  ],
+  "flux_notes": "FLUX produces attractive plates; botanical accuracy is not reliable — check against a real specimen if the topic is factual.",
+  "palette_suggestions": [
+   "pal.botanical_natural",
+   "pal.cream_paper_green"
+  ],
+  "lighting_ids": [
+   "overcast_soft",
+   "north_window"
+  ],
+  "composition_ids": [
+   "center",
+   "flatlay_grid",
+   "negative_space"
+  ],
+  "emotion_ids": [
+   "cognitive.curiosity",
+   "calm.serenity"
+  ],
+  "reference_sources": [
+   {
+    "key_or_url": "Artistic",
+    "accessed": "practitioner craft, no source opened"
+   }
+  ],
+  "evidence": "craft"
+ },
+ {
+  "id": "fashion_illustration",
+  "name": "Fashion illustration",
+  "name_th": "ภาพประกอบแฟชั่น",
+  "family": "illustration",
+  "historical_background": "Fashion illustration, from early 20th-century fashion plates to magazine croquis, exaggerates elongated figures and gesture to sell attitude and garment. (Artistic overview.)",
+  "visual_characteristics": "Elongated figures (9+ heads), confident gestural strokes, garment and accessory emphasis, loose wash colour.",
+  "line_characteristics": "Expressive, tapered ink or marker lines, lost-and-found edges.",
+  "shape_language": "Long verticals, S-curve poses, angular stylish shapes.",
+  "color_characteristics": "Loose marker/watercolour wash, often limited palette with one bold accent.",
+  "lighting_characteristics": "Implied, minimal shading.",
+  "texture_characteristics": "Marker streaks, watercolour blooms, paper white.",
+  "composition_characteristics": "Full figure vertical, lots of white space.",
+  "emotional_characteristics": "Chic, confident, aspirational.",
+  "use_cases": [
+   "style guide posts",
+   "seasonal trend carousels",
+   "lookbook covers"
+  ],
+  "time_optic_fit": "Good for 'which frame fits your style' carousels: draw outfit and attitude, show glasses as a simple accessory, place real frame photos beside. Never present an illustrated frame as a stocked model.",
+  "common_mistakes": [
+   "realistic proportions (loses fashion feel)",
+   "overworked faces",
+   "deformed hands",
+   "detailed fake brand logos"
+  ],
+  "prompt_template": "Fashion illustration of {subject}, elongated figure, confident tapered ink strokes, loose marker and watercolour wash, {setting}, {palette}, {lighting}, {composition}, lots of white paper, no text.",
+  "prompt_example": "Fashion illustration of a stylish woman in a trench coat wearing oversized sunglasses, elongated figure, confident tapered ink strokes, loose marker and watercolour wash, no background, timberwolf and raisin with peach accent, implied light, full-figure vertical with s-curve pose, lots of white paper, no text.",
+  "avoid_phrases": [
+   "any studio or brand name",
+   "any living artist's name",
+   "titles of copyrighted films, games or series",
+   "designer brand names"
+  ],
+  "flux_notes": "FLUX does fashion sketches well; hands often weak — crop or pose hands out.",
+  "palette_suggestions": [
+   "pal.neutral_chic",
+   "pal.brand_timeoptic"
+  ],
+  "lighting_ids": [
+   "high_key",
+   "flat_cartoon_cel"
+  ],
+  "composition_ids": [
+   "s_curve_flow",
+   "negative_space",
+   "subject_isolation"
+  ],
+  "emotion_ids": [
+   "will.confidence",
+   "love.flirtation"
+  ],
+  "reference_sources": [
+   {
+    "key_or_url": "Artistic",
+    "accessed": "practitioner craft, no source opened"
+   }
+  ],
+  "evidence": "craft"
+ },
+ {
+  "id": "tattoo_flash",
+  "name": "Tattoo flash",
+  "name_th": "ลายสักแฟลช",
+  "family": "illustration",
+  "historical_background": "Tattoo 'flash' sheets of ready-to-apply designs became standard in Western tattoo shops in the 20th century, with bold outlines and a limited palette in the 'traditional' style. (Artistic overview.)",
+  "visual_characteristics": "Sheet of bold icon-like designs: roses, swallows, daggers, banners, eyes; solid colour and black shading.",
+  "line_characteristics": "Very bold, even black outlines; whip-shading.",
+  "shape_language": "Iconic, symmetrical motifs; banners and hearts.",
+  "color_characteristics": "Red, yellow, green, black on aged paper.",
+  "lighting_characteristics": "Flat; shading in black gradients.",
+  "texture_characteristics": "Aged paper, slight stains.",
+  "composition_characteristics": "Grid of separate motifs or one central emblem.",
+  "emotional_characteristics": "Rebellious, bold, nostalgic.",
+  "use_cases": [
+   "edgy sunglasses promos",
+   "sticker designs",
+   "men's frames campaigns"
+  ],
+  "time_optic_fit": "Limited: could make a glasses-with-swallows emblem for a sunglasses campaign. Use sparingly; brand is calm.",
+  "common_mistakes": [
+   "fake lettering on banners",
+   "thin lines (loses tattoo feel)",
+   "too many colours"
+  ],
+  "prompt_template": "Traditional tattoo flash design of {subject}, very bold even black outlines, whip shading, flat {palette}, iconic emblem, {composition}, aged paper background, empty banner, setting: {setting}, lighting: {lighting}, no text.",
+  "prompt_example": "Traditional tattoo flash design of aviator sunglasses with two swallows and a rose, very bold even black outlines, whip shading, flat red yellow green and black, iconic emblem, centered symmetrical, aged paper background, empty banner, no text.",
+  "avoid_phrases": [
+   "any studio or brand name",
+   "any living artist's name",
+   "titles of copyrighted films, games or series",
+   "lettering"
+  ],
+  "flux_notes": "FLUX does the look well; puts text in banners — say 'empty banner'.",
+  "palette_suggestions": [
+   "pal.tattoo_traditional",
+   "pal.cream_black_vintage"
+  ],
+  "lighting_ids": [
+   "flat_cartoon_cel"
+  ],
+  "composition_ids": [
+   "symmetry",
+   "center",
+   "flatlay_grid"
+  ],
+  "emotion_ids": [
+   "will.confidence",
+   "nostalgia.nostalgia"
+  ],
+  "reference_sources": [
+   {
+    "key_or_url": "Artistic",
+    "accessed": "practitioner craft, no source opened"
+   }
+  ],
+  "evidence": "craft"
+ },
+ {
+  "id": "pixel_art",
+  "name": "Pixel art",
+  "name_th": "พิกเซลอาร์ต",
+  "family": "digital",
+  "historical_background": "Pixel art grew from the hardware limits of 1970s–90s computers and consoles, where every pixel and palette entry was placed by hand; it is now a deliberate retro aesthetic. Tate dates 'digital art' as a term to the early 1980s.",
+  "visual_characteristics": "Low-resolution images built from visible square pixels, limited palette, crisp edges, dithering.",
+  "line_characteristics": "1-pixel outlines (often coloured), no anti-aliasing.",
+  "shape_language": "Blocky simplified forms, readable silhouettes at small sizes.",
+  "color_characteristics": "Restricted palette (8–32 colours), hue-shifted ramps.",
+  "lighting_characteristics": "Stepped shading ramps, dithered gradients, pixel highlights.",
+  "texture_characteristics": "Dithering patterns, hard pixel grid.",
+  "composition_characteristics": "Game-like side view or top-down; tiles.",
+  "emotional_characteristics": "Nostalgic, playful, gamey.",
+  "use_cases": [
+   "gamified posts",
+   "retro animated loops",
+   "quiz carousels"
+  ],
+  "time_optic_fit": "Playful for 'level up your vision' style posts; real frames shown as photo in another slide.",
+  "common_mistakes": [
+   "mixed pixel sizes",
+   "blurry upscaled pixels",
+   "anti-aliased smooth edges",
+   "too many colours"
+  ],
+  "prompt_template": "Pixel art of {subject}, crisp square pixels on a consistent grid, limited {palette} (16 colours), 1-pixel outlines, dithered shading, {setting}, {lighting}, {composition}, no text.",
+  "prompt_example": "Pixel art of a tiny eyewear shop with shelves of glasses and a shopkeeper at the counter, crisp square pixels on a consistent grid, limited 16-colour palette of greens, peach and dark grey, 1-pixel outlines, dithered shading, side-view game scene, warm practical lamp, centered, no text.",
+  "avoid_phrases": [
+   "any studio or brand name",
+   "any living artist's name",
+   "titles of copyrighted films, games or series",
+   "names of game consoles or games"
+  ],
+  "flux_notes": "FLUX produces 'pixel-ish' images with inconsistent pixel sizes; downscale with nearest-neighbour and re-quantise the palette for true pixel art.",
+  "palette_suggestions": [
+   "pal.retro_16",
+   "pal.brand_timeoptic_pixel"
+  ],
+  "lighting_ids": [
+   "flat_cartoon_cel",
+   "practical_lamp"
+  ],
+  "composition_ids": [
+   "center",
+   "repetition_rhythm"
+  ],
+  "emotion_ids": [
+   "nostalgia.nostalgia",
+   "joy.amusement"
+  ],
+  "reference_sources": [
+   {
+    "key_or_url": "https://www.tate.org.uk/art/art-terms/d/digital-art",
+    "accessed": "page opened 2026-11-24 (Tate Art Terms)"
+   },
+   {
+    "key_or_url": "Artistic",
+    "accessed": "practitioner craft, no source opened"
+   }
+  ],
+  "evidence": "mixed"
+ },
+ {
+  "id": "low_poly",
+  "name": "Low poly",
+  "name_th": "โลว์โพลี",
+  "family": "3d",
+  "historical_background": "Low-polygon modelling was a necessity of early real-time 3D graphics; since the 2010s it is used deliberately as a faceted, geometric aesthetic. (Artistic overview.)",
+  "visual_characteristics": "Objects and landscapes built from visible flat triangles, each facet one colour.",
+  "line_characteristics": "No outlines; facet edges form the lines.",
+  "shape_language": "Triangular, faceted, crystalline.",
+  "color_characteristics": "Gradient across facets, often pastel or sunset ramps.",
+  "lighting_characteristics": "Flat-shaded facets catch a single directional light.",
+  "texture_characteristics": "Clean flat facets, no texture.",
+  "composition_characteristics": "Isolated objects or wide stylised landscapes.",
+  "emotional_characteristics": "Modern, calm, playful, techy.",
+  "use_cases": [
+   "tech/lens explainers",
+   "abstract backgrounds"
+  ],
+  "time_optic_fit": "Niche: abstract faceted backgrounds or a 'lens technology' visual. Never model the product in low-poly.",
+  "common_mistakes": [
+   "smooth shading that hides facets",
+   "random noise",
+   "too many polygons"
+  ],
+  "prompt_template": "Low-poly 3D render of {subject}, visible flat-shaded triangular facets, no texture, {setting}, {palette}, {lighting}, {composition}, no text.",
+  "prompt_example": "Low-poly 3D render of a mountain landscape at sunrise seen through a giant floating lens shape, visible flat-shaded triangular facets, no texture, pastel valley, peach to green gradient, low golden directional light, low horizon, no text.",
+  "avoid_phrases": [
+   "any studio or brand name",
+   "any living artist's name",
+   "titles of copyrighted films, games or series"
+  ],
+  "flux_notes": "FLUX does low-poly fairly well; facets can be uneven.",
+  "palette_suggestions": [
+   "pal.sunset_ramp",
+   "pal.brand_timeoptic"
+  ],
+  "lighting_ids": [
+   "golden_hour",
+   "global_illumination_interior"
+  ],
+  "composition_ids": [
+   "low_horizon",
+   "center"
+  ],
+  "emotion_ids": [
+   "calm.serenity",
+   "cognitive.interest"
+  ],
+  "reference_sources": [
+   {
+    "key_or_url": "Artistic",
+    "accessed": "practitioner craft, no source opened"
+   }
+  ],
+  "evidence": "craft"
+ },
+ {
+  "id": "digital_painting_painterly",
+  "name": "Painterly digital painting",
+  "name_th": "ภาพวาดดิจิทัลแบบสีน้ำมัน",
+  "family": "digital",
+  "historical_background": "Digital painting with pressure-sensitive tablets imitates traditional brushwork; Tate notes 'digital art' as a term from the early 1980s when paint programs appeared.",
+  "visual_characteristics": "Visible brushstrokes, painterly edges, rich colour; illustrative realism.",
+  "line_characteristics": "Mostly lineless; edges controlled (hard, soft, lost).",
+  "shape_language": "Simplified big shapes with detail at focal point.",
+  "color_characteristics": "Rich, harmonious, temperature-shifted colour.",
+  "lighting_characteristics": "Strong value design, warm/cool light and shadow.",
+  "texture_characteristics": "Brush texture, canvas or chalk brushes.",
+  "composition_characteristics": "Classical focal hierarchy, value grouping.",
+  "emotional_characteristics": "Warm, cinematic, emotive.",
+  "use_cases": [
+   "story keyframes",
+   "carousel art",
+   "Reel backgrounds"
+  ],
+  "time_optic_fit": "Good for story art; product shown only as real photo composite.",
+  "common_mistakes": [
+   "overrendered everywhere",
+   "muddy colours",
+   "plastic airbrush look"
+  ],
+  "prompt_template": "Painterly digital painting of {subject}, visible confident brushstrokes, controlled hard and soft edges, detail only at focal point, {setting}, {palette}, {lighting}, {composition}, no text.",
+  "prompt_example": "Painterly digital painting of an elderly man smiling as he tries reading glasses at a shop counter, visible confident brushstrokes, controlled hard and soft edges, detail only on his face, warm shop interior, peach, olive and deep green, warm window side light, rule of thirds, no text.",
+  "avoid_phrases": [
+   "any studio or brand name",
+   "any living artist's name",
+   "titles of copyrighted films, games or series",
+   "trending",
+   "masterpiece"
+  ],
+  "flux_notes": "FLUX schnell makes smooth-ish paintings; add 'visible brushstrokes, canvas texture'.",
+  "palette_suggestions": [
+   "pal.warm_interior",
+   "pal.brand_timeoptic"
+  ],
+  "lighting_ids": [
+   "window_side",
+   "rembrandt",
+   "golden_hour"
+  ],
+  "composition_ids": [
+   "rule_of_thirds",
+   "layered_depth"
+  ],
+  "emotion_ids": [
+   "joy.contentment",
+   "love.tenderness",
+   "nostalgia.nostalgia"
+  ],
+  "reference_sources": [
+   {
+    "key_or_url": "https://www.tate.org.uk/art/art-terms/d/digital-art",
+    "accessed": "page opened 2026-11-24 (Tate Art Terms)"
+   },
+   {
+    "key_or_url": "Gurney2010",
+    "accessed": "bibliographic"
+   }
+  ],
+  "evidence": "mixed"
+ },
+ {
+  "id": "concept_art_fantasy",
+  "name": "Fantasy concept art",
+  "name_th": "คอนเซ็ปต์อาร์ตแฟนตาซี",
+  "family": "digital",
+  "historical_background": "Concept art is the visual development work for films and games, exploring worlds, characters and props before production. (Artistic overview.)",
+  "visual_characteristics": "Epic fantasy environments or characters: castles, forests, magic glows, ornate details.",
+  "line_characteristics": "Painterly, lineless; sometimes sketch lines underneath.",
+  "shape_language": "Dramatic silhouettes, ornate organic forms.",
+  "color_characteristics": "Atmospheric palettes with magical accent glow.",
+  "lighting_characteristics": "Volumetric rays, magical light sources, atmosphere.",
+  "texture_characteristics": "Painterly brushes, photo-bashed textures.",
+  "composition_characteristics": "Epic scale, small figure vs vast world.",
+  "emotional_characteristics": "Awe, adventure, wonder.",
+  "use_cases": [
+   "fantasy story clips",
+   "Halloween / special events"
+  ],
+  "time_optic_fit": "Rarely fits an eyewear shop; possible for story-clip fantasy episodes ('magic glasses').",
+  "common_mistakes": [
+   "generic clichés",
+   "cluttered detail",
+   "no focal point"
+  ],
+  "prompt_template": "Fantasy concept art of {subject}, painterly lineless rendering, epic scale, {setting}, {palette}, {lighting}, {composition}, atmospheric depth, no text.",
+  "prompt_example": "Fantasy concept art of a pair of glowing enchanted spectacles resting on an ancient stone pedestal in a forest ruin, painterly lineless rendering, epic scale, misty forest temple, deep greens with gold glow, volumetric god rays, small figure approaching for scale, layered depth, no text.",
+  "avoid_phrases": [
+   "any studio or brand name",
+   "any living artist's name",
+   "titles of copyrighted films, games or series",
+   "names of fantasy franchises"
+  ],
+  "flux_notes": "FLUX does fantasy well; it often makes the glasses unrealistic — fine here, since it is fiction.",
+  "palette_suggestions": [
+   "pal.forest_magic_gold",
+   "pal.misty_teal"
+  ],
+  "lighting_ids": [
+   "volumetric_god_rays",
+   "fog_atmospheric",
+   "moonlight_blue"
+  ],
+  "composition_ids": [
+   "scale_contrast",
+   "layered_depth",
+   "leading_lines"
+  ],
+  "emotion_ids": [
+   "awe.awe",
+   "visual.majesty",
+   "awe.childlike_wonder"
+  ],
+  "reference_sources": [
+   {
+    "key_or_url": "Artistic",
+    "accessed": "practitioner craft, no source opened"
+   }
+  ],
+  "evidence": "craft"
+ },
+ {
+  "id": "concept_art_scifi",
+  "name": "Sci-fi concept art",
+  "name_th": "คอนเซ็ปต์อาร์ตไซไฟ",
+  "family": "digital",
+  "historical_background": "Science-fiction concept art designs future vehicles, cities and tech for film and games. (Artistic overview.)",
+  "visual_characteristics": "Futuristic environments, sleek machines, hard-surface detail, holograms.",
+  "line_characteristics": "Clean hard edges; mechanical detailing.",
+  "shape_language": "Hard-surface geometric shapes, panels and greebles.",
+  "color_characteristics": "Cool palettes with neon accents.",
+  "lighting_characteristics": "Emissive lights, rim light, haze.",
+  "texture_characteristics": "Painterly or render-like metal and glass.",
+  "composition_characteristics": "Wide, epic; strong perspective.",
+  "emotional_characteristics": "Awe, curiosity, futuristic.",
+  "use_cases": [
+   "future-of-eyewear posts",
+   "smart glasses topics"
+  ],
+  "time_optic_fit": "Fits 'future of vision' themes; real product never redesigned into sci-fi.",
+  "common_mistakes": [
+   "generic neon clutter",
+   "unreadable silhouettes"
+  ],
+  "prompt_template": "Sci-fi concept art of {subject}, hard-surface design, clean panels and emissive accents, {setting}, {palette}, {lighting}, {composition}, atmospheric haze, no text.",
+  "prompt_example": "Sci-fi concept art of a futuristic optical clinic where a holographic lens scan floats before a patient, hard-surface design, clean panels and emissive accents, white clinic module, cool white and teal with green accents, soft emissive light, symmetrical central perspective, no text.",
+  "avoid_phrases": [
+   "any studio or brand name",
+   "any living artist's name",
+   "titles of copyrighted films, games or series",
+   "names of sci-fi franchises"
+  ],
+  "flux_notes": "FLUX makes good sci-fi images; holograms may include fake text.",
+  "palette_suggestions": [
+   "pal.clinical_teal",
+   "pal.brand_timeoptic"
+  ],
+  "lighting_ids": [
+   "rim_only",
+   "screen_glow_face",
+   "fog_atmospheric"
+  ],
+  "composition_ids": [
+   "symmetry",
+   "leading_lines",
+   "scale_contrast"
+  ],
+  "emotion_ids": [
+   "cognitive.curiosity",
+   "awe.awe"
+  ],
+  "reference_sources": [
+   {
+    "key_or_url": "Artistic",
+    "accessed": "practitioner craft, no source opened"
+   }
+  ],
+  "evidence": "craft"
+ },
+ {
+  "id": "matte_painting",
+  "name": "Matte painting",
+  "name_th": "แมตต์เพนติ้ง",
+  "family": "digital",
+  "historical_background": "Matte painting began as painted glass placed in front of the camera; Norman Dawn is credited as the first cinematographer to use glass shots, in 1907, to 'restore' crumbling mission buildings, later combining them with matte shots (American Cinematographer). Digital matte painting continues the practice.",
+  "visual_characteristics": "Photoreal wide environments extending a set or location; seamless blending of painting and photo.",
+  "line_characteristics": "No lines; photographic edges.",
+  "shape_language": "Realistic architecture and landscape.",
+  "color_characteristics": "Natural, matched to plate photography.",
+  "lighting_characteristics": "Consistent, physically plausible light matching the plate.",
+  "texture_characteristics": "Photographic; painted detail hidden.",
+  "composition_characteristics": "Wide establishing shots, horizon extension.",
+  "emotional_characteristics": "Awe, scale, immersion.",
+  "use_cases": [
+   "establishing shots for story clips",
+   "backgrounds for real-photo composites"
+  ],
+  "time_optic_fit": "Useful for building a believable background for real product/person photos; frame photo stays unaltered and composited on top.",
+  "common_mistakes": [
+   "light mismatch with the composited plate",
+   "scale errors",
+   "repeated cloned textures"
+  ],
+  "prompt_template": "Photoreal matte painting of {setting} featuring {subject}, seamless photographic detail, consistent physically plausible light, {palette}, {lighting}, {composition}, wide establishing view, no text.",
+  "prompt_example": "Photoreal matte painting of a seaside Hua Hin street at sunset featuring a small eyewear shop front with empty sign, seamless photographic detail, consistent physically plausible light, warm peach and teal, golden hour from the right, low horizon wide establishing view, no text.",
+  "avoid_phrases": [
+   "any studio or brand name",
+   "any living artist's name",
+   "titles of copyrighted films, games or series"
+  ],
+  "flux_notes": "FLUX does photoreal wide scenes well; it may add fake sign text.",
+  "palette_suggestions": [
+   "pal.natural_plate",
+   "pal.sunset_peach_teal"
+  ],
+  "lighting_ids": [
+   "golden_hour",
+   "overcast_soft",
+   "fog_atmospheric"
+  ],
+  "composition_ids": [
+   "low_horizon",
+   "layered_depth",
+   "leading_lines"
+  ],
+  "emotion_ids": [
+   "awe.awe",
+   "visual.majesty"
+  ],
+  "reference_sources": [
+   {
+    "key_or_url": "https://theasc.com/article/wrap-shot-the-spoilers-1914/",
+    "accessed": "page opened 2026-11-24 (American Cinematographer)"
+   }
+  ],
+  "evidence": "documented_history"
+ },
+ {
+  "id": "isometric_3d",
+  "name": "Isometric 3D",
+  "name_th": "ไอโซเมตริก 3D",
+  "family": "3d",
+  "historical_background": "Isometric projection — parallel projection with equal axes — has a long history in technical drawing and became a common look in games and infographics. (Artistic overview.)",
+  "visual_characteristics": "Miniature diorama scenes seen from a fixed 30° angle, cute rendered rooms or buildings.",
+  "line_characteristics": "No outlines or thin edges; parallel lines never converge.",
+  "shape_language": "Blocky, cube-based miniatures.",
+  "color_characteristics": "Bright, soft pastel or brand colours.",
+  "lighting_characteristics": "Soft global illumination, gentle shadows.",
+  "texture_characteristics": "Smooth matte surfaces.",
+  "composition_characteristics": "Isolated diorama centred on plain ground.",
+  "emotional_characteristics": "Cheerful, organised, explanatory.",
+  "use_cases": [
+   "shop tour infographics",
+   "process explainers",
+   "store map posts"
+  ],
+  "time_optic_fit": "Good for 'our store' or service process explainers; frames shown as tiny generic props.",
+  "common_mistakes": [
+   "perspective distortion breaks isometry",
+   "too much clutter",
+   "fake text on signs"
+  ],
+  "prompt_template": "Isometric 3D diorama of {subject}, true isometric angle without perspective, soft matte materials, {setting}, {palette}, {lighting}, {composition}, plain background, no text.",
+  "prompt_example": "Isometric 3D diorama of a cosy eyewear shop with display wall, eye-test corner and counter, true isometric angle without perspective, soft matte materials, cut-away room, Phthalo green walls, timberwolf floor, peach accents, soft global illumination, centered on snow ground, no text.",
+  "avoid_phrases": [
+   "any studio or brand name",
+   "any living artist's name",
+   "titles of copyrighted films, games or series"
+  ],
+  "flux_notes": "FLUX does isometric rooms well but sometimes adds perspective.",
+  "palette_suggestions": [
+   "pal.brand_timeoptic",
+   "pal.pastel_soft"
+  ],
+  "lighting_ids": [
+   "global_illumination_interior",
+   "ambient_occlusion_only"
+  ],
+  "composition_ids": [
+   "center",
+   "negative_space"
+  ],
+  "emotion_ids": [
+   "joy.contentment",
+   "cognitive.interest"
+  ],
+  "reference_sources": [
+   {
+    "key_or_url": "Artistic",
+    "accessed": "practitioner craft, no source opened"
+   }
+  ],
+  "evidence": "craft"
+ },
+ {
+  "id": "flat_vector",
+  "name": "Flat vector",
+  "name_th": "แฟลตเวกเตอร์",
+  "family": "digital",
+  "historical_background": "Flat design spread in UI and illustration in the early 2010s, dropping skeuomorphic texture for flat colour and simple shapes. (Artistic overview.)",
+  "visual_characteristics": "Flat colour shapes, no gradients or few, simple icons and scenes.",
+  "line_characteristics": "No outlines or uniform outlines.",
+  "shape_language": "Geometric, simplified.",
+  "color_characteristics": "Limited flat palette.",
+  "lighting_characteristics": "None or flat shadow shapes.",
+  "texture_characteristics": "None; clean.",
+  "composition_characteristics": "Grid-friendly, icons and spot scenes.",
+  "emotional_characteristics": "Clear, modern, friendly.",
+  "use_cases": [
+   "icons",
+   "carousel infographics",
+   "price/promo cards"
+  ],
+  "time_optic_fit": "Good for icons and infographics in brand colours; product stays as real photo.",
+  "common_mistakes": [
+   "drop shadows and gradients that break flatness",
+   "too many colours"
+  ],
+  "prompt_template": "Flat vector illustration of {subject}, flat colour shapes, no gradients, simple geometric forms, {setting}, {palette}, {composition}, lighting: {lighting}, no text.",
+  "prompt_example": "Flat vector illustration of a hand holding glasses next to an eye chart and a lens icon, flat colour shapes, no gradients, simple geometric forms, plain backdrop, Phthalo green, peach, snow and raisin, centered with negative space, no text.",
+  "avoid_phrases": [
+   "any studio or brand name",
+   "any living artist's name",
+   "titles of copyrighted films, games or series"
+  ],
+  "flux_notes": "FLUX does flat vector well; export PNG and trace if a real vector is needed.",
+  "palette_suggestions": [
+   "pal.brand_timeoptic"
+  ],
+  "lighting_ids": [
+   "flat_cartoon_cel"
+  ],
+  "composition_ids": [
+   "center",
+   "flatlay_grid",
+   "negative_space"
+  ],
+  "emotion_ids": [
+   "cognitive.interest",
+   "joy.contentment"
+  ],
+  "reference_sources": [
+   {
+    "key_or_url": "Artistic",
+    "accessed": "practitioner craft, no source opened"
+   }
+  ],
+  "evidence": "craft"
+ },
+ {
+  "id": "flat_illustration_corporate",
+  "name": "Corporate flat illustration",
+  "name_th": "ภาพประกอบองค์กรแบบแฟลต",
+  "family": "digital",
+  "historical_background": "A late-2010s corporate tech illustration style with exaggerated limbs, small heads and flat colour, widely used on websites. (Artistic overview.)",
+  "visual_characteristics": "People with long limbs, tiny heads, flat colours, workplace props.",
+  "line_characteristics": "No outlines.",
+  "shape_language": "Rounded, exaggerated bodies.",
+  "color_characteristics": "Flat bright palette, often purple/blue/coral.",
+  "lighting_characteristics": "None.",
+  "texture_characteristics": "Clean.",
+  "composition_characteristics": "Spot scenes, people interacting with oversized objects.",
+  "emotional_characteristics": "Friendly, generic, inclusive.",
+  "use_cases": [
+   "service explanation posts",
+   "web banners"
+  ],
+  "time_optic_fit": "Works for service explainers, but can feel generic; recolour in brand palette.",
+  "common_mistakes": [
+   "generic look without identity",
+   "faceless people feel cold"
+  ],
+  "prompt_template": "Corporate flat illustration of {subject}, people with long limbs and small heads, flat colour, oversized props, {setting}, {palette}, {composition}, lighting: {lighting}, no text.",
+  "prompt_example": "Corporate flat illustration of two people choosing glasses from an oversized frame display, people with long limbs and small heads, flat colour, oversized props, plain backdrop, Phthalo green, peach and timberwolf, centered, no text.",
+  "avoid_phrases": [
+   "any studio or brand name",
+   "any living artist's name",
+   "titles of copyrighted films, games or series"
+  ],
+  "flux_notes": "FLUX reproduces this style easily.",
+  "palette_suggestions": [
+   "pal.brand_timeoptic"
+  ],
+  "lighting_ids": [
+   "flat_cartoon_cel"
+  ],
+  "composition_ids": [
+   "center",
+   "scale_contrast"
+  ],
+  "emotion_ids": [
+   "joy.contentment",
+   "care.reassurance"
+  ],
+  "reference_sources": [
+   {
+    "key_or_url": "Artistic",
+    "accessed": "practitioner craft, no source opened"
+   }
+  ],
+  "evidence": "craft"
+ },
+ {
+  "id": "gradient_glassmorphism",
+  "name": "Gradient glassmorphism",
+  "name_th": "กลาสมอร์ฟิซึม",
+  "family": "digital",
+  "historical_background": "Glassmorphism, a UI trend popular around 2020, uses frosted translucent panels over colourful blurred gradients. (Artistic overview.)",
+  "visual_characteristics": "Frosted glass cards, blurred colour blobs, soft shadows.",
+  "line_characteristics": "Thin light borders on glass panels.",
+  "shape_language": "Rounded rectangles, orbs.",
+  "color_characteristics": "Vivid gradient blobs behind neutral frosted panels.",
+  "lighting_characteristics": "Soft diffused glow.",
+  "texture_characteristics": "Frosted blur, subtle noise.",
+  "composition_characteristics": "Layered panels, UI-like.",
+  "emotional_characteristics": "Modern, techy, calm.",
+  "use_cases": [
+   "promo backgrounds",
+   "price cards",
+   "app-like posts"
+  ],
+  "time_optic_fit": "Good as background for HTML-rendered text and price cards; real product photo composited.",
+  "common_mistakes": [
+   "unreadable text contrast (check WCAG)",
+   "too many blobs"
+  ],
+  "prompt_template": "Abstract glassmorphism background with {subject}, frosted translucent rounded panels, blurred {palette} gradient blobs, soft glow, {composition}, setting: {setting}, lighting: {lighting}, no text.",
+  "prompt_example": "Abstract glassmorphism background with three empty frosted cards, frosted translucent rounded panels, blurred Phthalo green and peach gradient blobs, soft glow, centered layered depth, no text.",
+  "avoid_phrases": [
+   "any studio or brand name",
+   "any living artist's name",
+   "titles of copyrighted films, games or series"
+  ],
+  "flux_notes": "FLUX does nice gradient blobs; frosted panels are often uneven — HTML/CSS backdrop-filter is more reliable.",
+  "palette_suggestions": [
+   "pal.brand_timeoptic",
+   "pal.aurora_gradient"
+  ],
+  "lighting_ids": [
+   "storybook_soft_glow"
+  ],
+  "composition_ids": [
+   "layered_depth",
+   "center"
+  ],
+  "emotion_ids": [
+   "calm.serenity",
+   "cognitive.interest"
+  ],
+  "reference_sources": [
+   {
+    "key_or_url": "Artistic",
+    "accessed": "practitioner craft, no source opened"
+   }
+  ],
+  "evidence": "craft"
+ },
+ {
+  "id": "claymation",
+  "name": "Claymation",
+  "name_th": "เคลย์แอนิเมชัน",
+  "family": "3d",
+  "historical_background": "Clay animation is a form of stop-motion in which plasticine figures are re-posed by hand and photographed one frame at a time. Its charm comes from the visible handling marks that frame-by-frame sculpting leaves behind. (Artistic overview; no history page opened.)",
+  "visual_characteristics": "Plasticine characters and props with fingerprints, soft lumpy rounded forms, miniature hand-built sets, tiny real-world scale.",
+  "line_characteristics": "No drawn lines; edges are soft rounded clay with occasional sculpting-tool grooves.",
+  "shape_language": "Chunky, rounded, slightly lopsided forms; big heads, simple limbs; nothing perfectly symmetrical.",
+  "color_characteristics": "Saturated but slightly chalky clay colours; matte surfaces; colour comes from the material, not paint gradients.",
+  "lighting_characteristics": "Miniature studio lighting: soft key with gentle fill, small hard shadows, shallow depth of field revealing miniature scale.",
+  "texture_characteristics": "Fingerprints, tool marks, slight dust and seams; matte, not glossy.",
+  "composition_characteristics": "Miniature sets shot close; macro-like depth of field; centred characters with simple backdrops.",
+  "emotional_characteristics": "Warm, handmade, comic, endearing.",
+  "use_cases": [
+   "kids' campaigns",
+   "fun story clips",
+   "mascot posts",
+   "holiday greetings"
+  ],
+  "time_optic_fit": "Fun for kids' eye-test or 'clean your glasses' gags with clay characters wearing simple clay glasses. A real frame can appear only as the real photo composited into the clay set with matched light, never sculpted from imagination.",
+  "common_mistakes": [
+   "surfaces too smooth so it reads as CGI",
+   "glossy plastic instead of matte clay",
+   "uncanny realistic faces",
+   "clay copy of a real frame presented as the product"
+  ],
+  "prompt_template": "Claymation stop-motion scene of {subject}, plasticine with visible fingerprints and tool marks, chunky rounded handmade forms, miniature set of {setting}, {palette}, {lighting}, shallow depth of field showing miniature scale, {composition}, matte clay, no text.",
+  "prompt_example": "Claymation stop-motion scene of a clay owl optometrist holding an eye chart for a nervous clay mouse, plasticine with visible fingerprints and tool marks, chunky rounded handmade forms, miniature set of a tiny eyewear shop with clay shelves, muted Phthalo green, peach and cream, soft key light with small hard shadows, shallow depth of field showing miniature scale, centered, matte clay, no text.",
+  "avoid_phrases": [
+   "any studio or brand name",
+   "any living artist's name",
+   "titles of copyrighted films, games or series",
+   "names of clay-animation films or characters"
+  ],
+  "flux_notes": "FLUX schnell produces convincing clay looks; it tends to make surfaces too clean — 'visible fingerprints, tool marks' helps. Character consistency between images is weak.",
+  "palette_suggestions": [
+   "pal.clay_warm",
+   "pal.brand_timeoptic"
+  ],
+  "lighting_ids": [
+   "key_fill_soft",
+   "practical_lamp",
+   "storybook_soft_glow"
+  ],
+  "composition_ids": [
+   "center",
+   "subject_isolation",
+   "odd_grouping"
+  ],
+  "emotion_ids": [
+   "joy.amusement",
+   "love.affection",
+   "fear.nervousness"
+  ],
+  "reference_sources": [
+   {
+    "key_or_url": "Artistic",
+    "accessed": "practitioner craft, no source opened"
+   }
+  ],
+  "evidence": "craft"
+ },
+ {
+  "id": "stop_motion_felt",
+  "name": "Felt stop-motion",
+  "name_th": "สต็อปโมชันผ้าสักหลาด",
+  "family": "3d",
+  "historical_background": "Felt, wool and fabric puppets are a softer branch of stop-motion, animated frame by frame on miniature sets. The material's fuzz and stitches read as handmade and cosy. (Artistic overview; no history page opened.)",
+  "visual_characteristics": "Needle-felted or sewn characters with fuzzy outlines, button eyes, stitched seams, fabric sets.",
+  "line_characteristics": "No lines; stitched seams and blanket-stitch edges act as lines.",
+  "shape_language": "Soft, simple, pillowy shapes; slightly irregular.",
+  "color_characteristics": "Muted, warm wool colours: oatmeal, moss, rust, dusty pink; low saturation.",
+  "lighting_characteristics": "Soft warm studio light, gentle shadows, shallow depth of field.",
+  "texture_characteristics": "Fuzzy fibres catching rim light, stitches, woven fabric grain.",
+  "composition_characteristics": "Miniature sets shot close; cosy interiors.",
+  "emotional_characteristics": "Cosy, gentle, nostalgic, safe.",
+  "use_cases": [
+   "cosy seasonal posts",
+   "bedtime-story clips",
+   "rainy-season posts"
+  ],
+  "time_optic_fit": "Good for cosy, slow content (reading at night with glasses). Product only as a real photo composite.",
+  "common_mistakes": [
+   "plastic or clay look instead of fibres",
+   "hard sharp edges",
+   "over-saturated colours"
+  ],
+  "prompt_template": "Felt stop-motion scene of {subject}, needle-felted wool with fuzzy fibres and visible stitches, button eyes, miniature fabric set of {setting}, {palette}, {lighting}, shallow depth of field, {composition}, no text.",
+  "prompt_example": "Felt stop-motion scene of a felt cat wearing tiny round wire glasses reading a book beside a felt lamp, needle-felted wool with fuzzy fibres and visible stitches, button eyes, miniature fabric set of a cosy bedroom, muted moss green, oatmeal and peach, warm practical lamp glow, shallow depth of field, rule of thirds, no text.",
+  "avoid_phrases": [
+   "any studio or brand name",
+   "any living artist's name",
+   "titles of copyrighted films, games or series"
+  ],
+  "flux_notes": "FLUX does felt textures convincingly in tests reported by users; untested in this project.",
+  "palette_suggestions": [
+   "pal.felt_cozy",
+   "pal.oatmeal_moss"
+  ],
+  "lighting_ids": [
+   "practical_lamp",
+   "storybook_soft_glow",
+   "rim_only"
+  ],
+  "composition_ids": [
+   "rule_of_thirds",
+   "subject_isolation"
+  ],
+  "emotion_ids": [
+   "visual.coziness",
+   "love.tenderness",
+   "low.drowsy"
+  ],
+  "reference_sources": [
+   {
+    "key_or_url": "Artistic",
+    "accessed": "practitioner craft, no source opened"
+   }
+  ],
+  "evidence": "craft"
+ },
+ {
+  "id": "toy_3d_render",
+  "name": "Toy 3D render",
+  "name_th": "เรนเดอร์ 3D แบบของเล่น",
+  "family": "3d",
+  "historical_background": "Glossy 'designer toy' and vinyl-figure renders became a common branding and icon look once accessible 3D tools spread in the 2010s. They borrow from collectible vinyl toys. (Artistic overview; no history page opened.)",
+  "visual_characteristics": "Shiny vinyl or soft-touch plastic characters and objects, chubby proportions, isolated on a soft seamless backdrop.",
+  "line_characteristics": "No lines.",
+  "shape_language": "Rounded, chubby, simplified; bevelled edges.",
+  "color_characteristics": "Bright saturated plastic colours, often pastel with one strong accent.",
+  "lighting_characteristics": "Soft studio key and fill, clear glossy highlights, soft contact shadows.",
+  "texture_characteristics": "Glossy or satin plastic, light subsurface glow.",
+  "composition_characteristics": "Isolated hero object centred with negative space.",
+  "emotional_characteristics": "Playful, fun, collectable.",
+  "use_cases": [
+   "3D icons",
+   "emoji-like stickers",
+   "promo badges"
+  ],
+  "time_optic_fit": "Fine for icons (a 3D eye, a 3D lens icon). Never turn a stocked frame into a toy and present it as the product.",
+  "common_mistakes": [
+   "toy version of a real frame used as product",
+   "over-saturated",
+   "too many objects"
+  ],
+  "prompt_template": "Toy-like 3D render of {subject}, glossy vinyl plastic, chubby rounded bevelled forms, {palette}, {lighting}, soft contact shadow, {composition}, seamless studio backdrop, setting: {setting}, no text.",
+  "prompt_example": "Toy-like 3D render of a cute eyeball character wearing tiny round glasses, glossy vinyl plastic, chubby rounded bevelled forms, peach body with Phthalo green accents, soft studio key and fill, soft contact shadow, centered with negative space, seamless snow backdrop, no text.",
+  "avoid_phrases": [
+   "any studio or brand name",
+   "any living artist's name",
+   "titles of copyrighted films, games or series"
+  ],
+  "flux_notes": "FLUX does toy renders well and consistently; glasses on characters are usually simplified, which is fine for icons.",
+  "palette_suggestions": [
+   "pal.brand_timeoptic",
+   "pal.candy_plastic"
+  ],
+  "lighting_ids": [
+   "product_softbox",
+   "key_fill_soft"
+  ],
+  "composition_ids": [
+   "center",
+   "subject_isolation",
+   "negative_space"
+  ],
+  "emotion_ids": [
+   "joy.amusement",
+   "joy.happiness"
+  ],
+  "reference_sources": [
+   {
+    "key_or_url": "Artistic",
+    "accessed": "practitioner craft, no source opened"
+   }
+  ],
+  "evidence": "craft"
+ },
+ {
+  "id": "stylized_3d_animation",
+  "name": "Stylized 3D animation",
+  "name_th": "แอนิเมชัน 3D แบบสไตไลซ์",
+  "family": "3d",
+  "historical_background": "Feature-length computer-animated films since the mid-1990s established a look of caricatured, appealing characters rendered with physically plausible light and materials. The style marries cartoon proportions with cinematic lighting. (Artistic overview; no history page opened.)",
+  "visual_characteristics": "Appealing stylised characters with large expressive eyes, soft skin, exaggerated proportions, detailed but simplified environments.",
+  "line_characteristics": "No lines; silhouettes designed for readability.",
+  "shape_language": "Exaggerated proportions: big heads and hands, shape-based design (round = friendly, square = sturdy).",
+  "color_characteristics": "Rich warm colour scripts, saturated but harmonious.",
+  "lighting_characteristics": "Cinematic key/fill/rim, subsurface scattering on skin, soft bounce.",
+  "texture_characteristics": "Soft realistic materials, slightly simplified textures.",
+  "composition_characteristics": "Cinematic shot grammar: establishing, medium, close-up; shallow depth of field.",
+  "emotional_characteristics": "Heartwarming, funny, emotional.",
+  "use_cases": [
+   "character story clips",
+   "mascot ads",
+   "family campaigns"
+  ],
+  "time_optic_fit": "Good for story clips about family moments. Glasses on characters are props; real product appears as photo in an end card.",
+  "common_mistakes": [
+   "uncanny semi-realism",
+   "naming film studios as a shortcut",
+   "inconsistent characters across shots"
+  ],
+  "prompt_template": "Stylized 3D animated film still of {subject}, appealing exaggerated proportions, expressive eyes, soft subsurface skin, {setting}, {palette}, {lighting}, shallow depth of field, {composition}, no text.",
+  "prompt_example": "Stylized 3D animated film still of a grandmother squinting at her phone while her grandson offers her new reading glasses, appealing exaggerated proportions, expressive eyes, soft subsurface skin, warm Thai living room, warm peach and green, soft window side light, shallow depth of field, medium shot rule of thirds, no text.",
+  "avoid_phrases": [
+   "any studio or brand name",
+   "any living artist's name",
+   "titles of copyrighted films, games or series",
+   "Pixar",
+   "Disney",
+   "DreamWorks",
+   "Illumination"
+  ],
+  "flux_notes": "FLUX does generic stylized 3D well; it converges on one 'default' look, so describe proportions and materials.",
+  "palette_suggestions": [
+   "pal.warm_interior",
+   "pal.brand_timeoptic"
+  ],
+  "lighting_ids": [
+   "window_side",
+   "three_point",
+   "bounce_fill_warm"
+  ],
+  "composition_ids": [
+   "rule_of_thirds",
+   "over_shoulder",
+   "triangular"
+  ],
+  "emotion_ids": [
+   "love.tenderness",
+   "joy.amusement",
+   "care.empathy"
+  ],
+  "reference_sources": [
+   {
+    "key_or_url": "Block2008",
+    "accessed": "bibliographic"
+   },
+   {
+    "key_or_url": "Artistic",
+    "accessed": "practitioner craft, no source opened"
+   }
+  ],
+  "evidence": "craft"
+ },
+ {
+  "id": "cel_shaded_3d",
+  "name": "Cel-shaded 3D",
+  "name_th": "3D เซลเชด",
+  "family": "3d",
+  "historical_background": "Cel shading (toon shading) renders 3D models with quantised colour bands and outlines so they resemble 2D animation; it became prominent in games around 2000. It lets 3D camera moves keep a hand-drawn feel. (Artistic overview; no history page opened.)",
+  "visual_characteristics": "3D characters and sets with flat colour bands, hard shadow terminators, ink-like outlines.",
+  "line_characteristics": "Uniform or depth-varying outlines from silhouette and crease detection.",
+  "shape_language": "Stylised, graphic 3D forms.",
+  "color_characteristics": "Flat bands, 2–3 tones per material, bright palette.",
+  "lighting_characteristics": "Two-tone shading with a hard terminator, optional rim band.",
+  "texture_characteristics": "Flat, no texture or painted texture.",
+  "composition_characteristics": "Dynamic camera moves, low angles, action framing.",
+  "emotional_characteristics": "Energetic, stylish, youthful.",
+  "use_cases": [
+   "action story shots",
+   "game-like Reels",
+   "sports sunglasses spots"
+  ],
+  "time_optic_fit": "Moderate: sporty sunglasses mood scenes. The product itself is never cel-shaded.",
+  "common_mistakes": [
+   "soft gradients breaking the toon look",
+   "outlines missing on some objects"
+  ],
+  "prompt_template": "Cel-shaded 3D render of {subject}, flat two-tone shading with hard terminator, ink-like uniform outlines, {setting}, {palette}, {lighting}, {composition}, no text.",
+  "prompt_example": "Cel-shaded 3D render of a skateboarder mid-jump wearing sporty wrap sunglasses, flat two-tone shading with hard terminator, ink-like uniform outlines, sunny city plaza, bright teal and peach, hard midday sun, low-angle diagonal, no text.",
+  "avoid_phrases": [
+   "any studio or brand name",
+   "any living artist's name",
+   "titles of copyrighted films, games or series",
+   "names of cel-shaded games"
+  ],
+  "flux_notes": "FLUX often drifts to plain 2D illustration; 'cel-shaded 3D render, toon shader' helps somewhat. Untested here.",
+  "palette_suggestions": [
+   "pal.bright_primary_flat",
+   "pal.teal_peach"
+  ],
+  "lighting_ids": [
+   "two_tone_anime_shade",
+   "midday_hard",
+   "rim_only"
+  ],
+  "composition_ids": [
+   "diagonal",
+   "dominant_foreground",
+   "scale_contrast"
+  ],
+  "emotion_ids": [
+   "hope.excitement",
+   "will.confidence"
+  ],
+  "reference_sources": [
+   {
+    "key_or_url": "Artistic",
+    "accessed": "practitioner craft, no source opened"
+   }
+  ],
+  "evidence": "craft"
+ },
+ {
+  "id": "voxel",
+  "name": "Voxel art",
+  "name_th": "วอกเซลอาร์ต",
+  "family": "3d",
+  "historical_background": "Voxel art builds scenes from uniform 3D cubes, the volumetric equivalent of pixels; block-building games made the look widely familiar. (Artistic overview; no history page opened.)",
+  "visual_characteristics": "Dioramas and characters made from visible equal-size cubes.",
+  "line_characteristics": "No lines; cube edges form a grid.",
+  "shape_language": "Cubes only; stepped silhouettes.",
+  "color_characteristics": "Limited bright palette, one colour per cube.",
+  "lighting_characteristics": "Soft ambient occlusion, a sun with soft shadows.",
+  "texture_characteristics": "Clean matte cubes.",
+  "composition_characteristics": "Isometric or three-quarter diorama on plain ground.",
+  "emotional_characteristics": "Playful, nostalgic, constructive.",
+  "use_cases": [
+   "playful diorama posts",
+   "gamified quizzes"
+  ],
+  "time_optic_fit": "Niche: a block-built shop diorama for fun posts. No product.",
+  "common_mistakes": [
+   "mixed cube sizes",
+   "smooth curves"
+  ],
+  "prompt_template": "Voxel art diorama of {subject}, built entirely from uniform equal-size cubes, {setting}, {palette}, {lighting}, {composition}, plain ground, no text.",
+  "prompt_example": "Voxel art diorama of a small eyewear shop on a street corner with a tree, built entirely from uniform equal-size cubes, tiny cube shelves in the window, Phthalo green, peach and grey, soft ambient occlusion with soft sun, isometric centered, plain ground, no text.",
+  "avoid_phrases": [
+   "any studio or brand name",
+   "any living artist's name",
+   "titles of copyrighted films, games or series",
+   "names of block-building games"
+  ],
+  "flux_notes": "FLUX makes voxel-like images, cube sizes sometimes vary.",
+  "palette_suggestions": [
+   "pal.brand_timeoptic",
+   "pal.retro_16"
+  ],
+  "lighting_ids": [
+   "ambient_occlusion_only",
+   "midday_hard"
+  ],
+  "composition_ids": [
+   "center",
+   "negative_space"
+  ],
+  "emotion_ids": [
+   "joy.amusement",
+   "nostalgia.nostalgia"
+  ],
+  "reference_sources": [
+   {
+    "key_or_url": "Artistic",
+    "accessed": "practitioner craft, no source opened"
+   }
+  ],
+  "evidence": "craft"
+ },
+ {
+  "id": "paper_craft_3d",
+  "name": "Paper craft 3D",
+  "name_th": "งานกระดาษ 3D",
+  "family": "3d",
+  "historical_background": "Paper-craft looks imitate folded, scored and layered paper models; they draw on paper engineering traditions such as pop-up books. (Artistic overview; no history page opened.)",
+  "visual_characteristics": "Folded paper objects and dioramas with crisp creases, layered cut shapes and real paper shadows.",
+  "line_characteristics": "Crisp paper edges and fold creases act as lines.",
+  "shape_language": "Faceted folded forms, layered silhouettes.",
+  "color_characteristics": "Pastel or muted coloured papers, matte.",
+  "lighting_characteristics": "Soft directional light raking across folds, small soft shadows between layers.",
+  "texture_characteristics": "Paper fibre, slight edge fuzz, card thickness visible.",
+  "composition_characteristics": "Diorama or layered stage, depth by stacking.",
+  "emotional_characteristics": "Gentle, handmade, charming.",
+  "use_cases": [
+   "seasonal posts",
+   "carousel covers",
+   "kids' content"
+  ],
+  "time_optic_fit": "Nice seasonal backgrounds (Songkran, New Year) with space for a real frame cutout.",
+  "common_mistakes": [
+   "plastic look",
+   "impossible folds",
+   "too glossy"
+  ],
+  "prompt_template": "Paper craft 3D diorama of {subject}, folded and layered coloured paper with crisp creases and visible fibre, {setting}, {palette}, {lighting} raking across folds, {composition}, no text.",
+  "prompt_example": "Paper craft 3D diorama of a tiny shop street at New Year with paper lanterns and an empty display window, folded and layered coloured paper with crisp creases and visible fibre, pastel peach and green papers, soft side light raking across folds, layered depth centered, no text.",
+  "avoid_phrases": [
+   "any studio or brand name",
+   "any living artist's name",
+   "titles of copyrighted films, games or series"
+  ],
+  "flux_notes": "FLUX does paper craft nicely; may add paper text.",
+  "palette_suggestions": [
+   "pal.pastel_soft",
+   "pal.brand_timeoptic"
+  ],
+  "lighting_ids": [
+   "window_side",
+   "cross_light"
+  ],
+  "composition_ids": [
+   "layered_depth",
+   "center"
+  ],
+  "emotion_ids": [
+   "visual.coziness",
+   "joy.contentment"
+  ],
+  "reference_sources": [
+   {
+    "key_or_url": "Artistic",
+    "accessed": "practitioner craft, no source opened"
+   }
+  ],
+  "evidence": "craft"
+ },
+ {
+  "id": "architectural_visualization",
+  "name": "Architectural visualization",
+  "name_th": "ภาพจำลองสถาปัตยกรรม",
+  "family": "3d",
+  "historical_background": "Architectural visualisation renders unbuilt or planned buildings for clients and planning, today with physically based renderers. Conventions include straight verticals and idealised daylight. (Artistic overview; no history page opened.)",
+  "visual_characteristics": "Photoreal building exteriors with idealised light, landscaping and glass reflections.",
+  "line_characteristics": "No lines; clean architectural edges.",
+  "shape_language": "Clean architectural geometry, rectilinear.",
+  "color_characteristics": "Natural, slightly idealised; warm interior glow at dusk.",
+  "lighting_characteristics": "Golden hour, blue hour or overcast; physically based sky lighting.",
+  "texture_characteristics": "Realistic materials: timber, concrete, glass.",
+  "composition_characteristics": "Two-point perspective with corrected (vertical) verticals, eye-level camera.",
+  "emotional_characteristics": "Aspirational, calm, confident.",
+  "use_cases": [
+   "new branch teasers",
+   "renovation posts"
+  ],
+  "time_optic_fit": "Useful for a planned shop or renovation teaser; always label as a render, never as a photo of the real store.",
+  "common_mistakes": [
+   "converging verticals",
+   "fake people",
+   "presenting a render as the real store"
+  ],
+  "prompt_template": "Architectural visualization of {subject}, photoreal physically based materials, straight corrected verticals, two-point perspective at eye level, {setting}, {palette}, {lighting}, {composition}, no text.",
+  "prompt_example": "Architectural visualization of a modern small eyewear shop façade with vertical wood slats and large glass windows glowing inside, photoreal physically based materials, straight corrected verticals, two-point perspective at eye level, tropical Thai street, Phthalo green and warm timber, blue hour with warm interior glow, rule of thirds, no text.",
+  "avoid_phrases": [
+   "any studio or brand name",
+   "any living artist's name",
+   "titles of copyrighted films, games or series"
+  ],
+  "flux_notes": "FLUX makes attractive arch-viz; verticals sometimes tilt and signs gain fake text.",
+  "palette_suggestions": [
+   "pal.brand_timeoptic",
+   "pal.blue_hour_warm"
+  ],
+  "lighting_ids": [
+   "blue_hour",
+   "golden_hour",
+   "overcast_soft"
+  ],
+  "composition_ids": [
+   "rule_of_thirds",
+   "leading_lines"
+  ],
+  "emotion_ids": [
+   "hope.hope",
+   "calm.serenity"
+  ],
+  "reference_sources": [
+   {
+    "key_or_url": "Artistic",
+    "accessed": "practitioner craft, no source opened"
+   }
+  ],
+  "evidence": "craft"
+ },
+ {
+  "id": "interior_render",
+  "name": "Interior render",
+  "name_th": "ภาพเรนเดอร์ภายใน",
+  "family": "3d",
+  "historical_background": "Interior visualisation renders rooms with global illumination for design presentation and marketing. It aims at calm, idealised spaces. (Artistic overview; no history page opened.)",
+  "visual_characteristics": "Photoreal interiors, tidy and empty, soft daylight.",
+  "line_characteristics": "No lines.",
+  "shape_language": "Clean furniture forms, rectilinear and rounded mix.",
+  "color_characteristics": "Natural neutrals with one or two accent colours.",
+  "lighting_characteristics": "Window daylight with global illumination, soft shadows, practical lamps.",
+  "texture_characteristics": "Realistic materials: oak, linen, plaster, brass.",
+  "composition_characteristics": "One- or two-point perspective, straight verticals.",
+  "emotional_characteristics": "Calm, aspirational, orderly.",
+  "use_cases": [
+   "empty shop backgrounds for composites",
+   "store concept posts"
+  ],
+  "time_optic_fit": "Good empty-shop background to composite real frame cutouts or real staff photos; match light direction.",
+  "common_mistakes": [
+   "over-bright blown windows",
+   "plastic materials",
+   "fake brand signage"
+  ],
+  "prompt_template": "Photoreal interior render of {subject}, physically based materials, {setting}, {palette}, {lighting}, global illumination, straight verticals, {composition}, no people, no text.",
+  "prompt_example": "Photoreal interior render of an empty boutique eyewear shop with oak shelves and deep green walls, physically based materials, quiet morning, Phthalo green, oak and snow, soft window side light, global illumination, straight verticals, one-point perspective, no people, no text.",
+  "avoid_phrases": [
+   "any studio or brand name",
+   "any living artist's name",
+   "titles of copyrighted films, games or series"
+  ],
+  "flux_notes": "FLUX is good at interiors; check shelves for melted objects and signs for fake text.",
+  "palette_suggestions": [
+   "pal.brand_timeoptic",
+   "pal.oak_green"
+  ],
+  "lighting_ids": [
+   "global_illumination_interior",
+   "window_side",
+   "practical_lamp"
+  ],
+  "composition_ids": [
+   "symmetry",
+   "leading_lines",
+   "negative_space"
+  ],
+  "emotion_ids": [
+   "calm.serenity",
+   "visual.coziness"
+  ],
+  "reference_sources": [
+   {
+    "key_or_url": "Artistic",
+    "accessed": "practitioner craft, no source opened"
+   }
+  ],
+  "evidence": "craft"
+ },
+ {
+  "id": "photoreal_product",
+  "name": "Photoreal product (studio)",
+  "name_th": "ภาพสินค้าสตูดิโอเสมือนจริง",
+  "family": "photography",
+  "historical_background": "Studio product photography developed with commercial catalogues and advertising, using controlled light (softboxes, strip lights, flags, gradient sweeps) to show form and material. For eyewear, reflections in lenses and on polished acetate are the main technical problem. (Craft overview; no history page opened.)",
+  "visual_characteristics": "Sharp, clean product on a seamless sweep or simple plinth, true colour, controlled reflections, soft contact shadow.",
+  "line_characteristics": "Crisp product edges; clean highlight lines along rims and temples (strip lights).",
+  "shape_language": "The real product's geometry only; props simple (blocks, stones, acrylic).",
+  "color_characteristics": "Neutral or brand backgrounds (Timberwolf, Snow, Phthalo); accurate product colour (colour-checked).",
+  "lighting_characteristics": "Large softbox key, strip lights for edge highlights, black flags to shape reflections, gradient sweep; lens reflections controlled or removed.",
+  "texture_characteristics": "True materials: acetate depth and tortoiseshell pattern, brushed or polished metal, lens clarity.",
+  "composition_characteristics": "Centred hero or thirds, three-quarter angle with temples open, generous negative space for HTML text.",
+  "emotional_characteristics": "Trustworthy, premium, precise.",
+  "use_cases": [
+   "product posts",
+   "ads",
+   "catalogue",
+   "kit backgrounds"
+  ],
+  "time_optic_fit": "Highest priority style. Real-product rule: the frame is never generated or redrawn. Use the shop's real frame photo/cutout; generate only the empty scene (text-free) and composite the cutout in the HTML layer, or pass the photo to Codex with -i as an unchanged reference. Reject any output where shape, colour, hinge, temple logo, lens tint or proportions changed. Use AI only for the empty set or background; photograph or cut out the real frame (frame-kit cutouts) and composite with matched shadow and light direction.",
+  "common_mistakes": [
+   "letting AI generate or 'improve' the frame",
+   "invented logos or engravings",
+   "wrong lens tint or missing nose pads",
+   "melted hinges or asymmetric temples",
+   "background light direction not matching the cutout"
+  ],
+  "prompt_template": "Empty studio product set for compositing {subject}: {setting}, {palette} seamless sweep, {lighting} — large overhead softbox, two strip lights, black flags, soft contact shadow area — {composition}, 100mm macro lens look, f/8–f/11, focus stacked sharpness, no product generated, no text. Real-product rule: the frame is never generated or redrawn. Use the shop's real frame photo/cutout; generate only the empty scene (text-free) and composite the cutout in the HTML layer, or pass the photo to Codex with -i as an unchanged reference. Reject any output where shape, colour, hinge, temple logo, lens tint or proportions changed.",
+  "prompt_example": "Empty studio product set for compositing the shop's real tortoiseshell acetate frame: matte stone plinth, Timberwolf to Snow seamless sweep, large overhead softbox, two strip lights, black flags, soft contact shadow area on the plinth, centered with negative space above for text, 100mm macro lens look, f/8, no product generated, no text. The real frame cutout is composited unchanged in the HTML layer.",
+  "avoid_phrases": [
+   "any studio or brand name",
+   "any living artist's name",
+   "titles of copyrighted films, games or series",
+   "redesign the frame",
+   "concept eyewear",
+   "new frame design",
+   "brand logo"
+  ],
+  "flux_notes": "FLUX invents plausible but wrong frames; use it only for empty backgrounds (or img2img at low denoise on the background layer, never on the product).",
+  "palette_suggestions": [
+   "pal.brand_timeoptic",
+   "pal.studio_neutral",
+   "pal.phthalo_sweep"
+  ],
+  "lighting_ids": [
+   "product_softbox",
+   "product_gradient_sweep",
+   "eyewear_lens_reflection_control",
+   "product_backlit_glass"
+  ],
+  "composition_ids": [
+   "center",
+   "negative_space",
+   "rule_of_thirds",
+   "subject_isolation"
+  ],
+  "emotion_ids": [
+   "performance.trusted_expert",
+   "will.confidence",
+   "awe.admiration"
+  ],
+  "reference_sources": [
+   {
+    "key_or_url": "Artistic",
+    "accessed": "practitioner craft, no source opened"
+   }
+  ],
+  "evidence": "craft"
+ },
+ {
+  "id": "photoreal_lifestyle",
+  "name": "Photoreal lifestyle",
+  "name_th": "ภาพไลฟ์สไตล์เสมือนจริง",
+  "family": "photography",
+  "historical_background": "Lifestyle photography shows products in believable everyday use, with natural light and candid moments, and became standard in social media marketing. (Craft overview; no history page opened.)",
+  "visual_characteristics": "Natural-looking people in real places, candid expressions, product in context.",
+  "line_characteristics": "Natural photographic edges.",
+  "shape_language": "Real-world forms.",
+  "color_characteristics": "Warm natural colour, gentle grade.",
+  "lighting_characteristics": "Window light, golden hour, open shade; reflector fill.",
+  "texture_characteristics": "Photographic skin and fabric detail, light grain.",
+  "composition_characteristics": "Candid framing, thirds, environmental context, shallow depth of field.",
+  "emotional_characteristics": "Relatable, warm, aspirational.",
+  "use_cases": [
+   "lifestyle ads",
+   "social posts",
+   "promo scenes"
+  ],
+  "time_optic_fit": "Fits promo images, but glasses on an AI face are generated, so either shoot real people in real frames, or give Codex the real frame photo with -i and check every detail. Real-product rule: the frame is never generated or redrawn. Use the shop's real frame photo/cutout; generate only the empty scene (text-free) and composite the cutout in the HTML layer, or pass the photo to Codex with -i as an unchanged reference. Reject any output where shape, colour, hinge, temple logo, lens tint or proportions changed.",
+  "common_mistakes": [
+   "AI frames that differ from the stocked model",
+   "uncanny hands",
+   "lens glare covering eyes",
+   "over-retouched skin"
+  ],
+  "prompt_template": "Lifestyle photograph of {subject} in {setting}, 50mm lens, f/2, eye-level, {lighting}, {palette}, {composition}, candid moment, natural skin texture, no text. If eyewear appears: the exact frame from the attached reference photo, unchanged. Real-product rule: the frame is never generated or redrawn. Use the shop's real frame photo/cutout; generate only the empty scene (text-free) and composite the cutout in the HTML layer, or pass the photo to Codex with -i as an unchanged reference. Reject any output where shape, colour, hinge, temple logo, lens tint or proportions changed.",
+  "prompt_example": "Lifestyle photograph of a young Thai woman laughing over coffee in a bright café, 50mm lens, f/2, eye-level, soft window side light, warm neutrals with green plants, rule of thirds, candid moment, natural skin texture, no text, wearing the exact round frame from the attached photo, unchanged in shape and colour.",
+  "avoid_phrases": [
+   "any studio or brand name",
+   "any living artist's name",
+   "titles of copyrighted films, games or series",
+   "generic glasses",
+   "designer sunglasses"
+  ],
+  "flux_notes": "FLUX invents glasses and cannot take a reference; use Codex with -i for any image where the product appears, FLUX only for product-free scenes.",
+  "palette_suggestions": [
+   "pal.warm_natural",
+   "pal.brand_timeoptic"
+  ],
+  "lighting_ids": [
+   "window_side",
+   "golden_hour",
+   "overcast_soft",
+   "bounce_fill_warm"
+  ],
+  "composition_ids": [
+   "rule_of_thirds",
+   "layered_depth",
+   "over_shoulder"
+  ],
+  "emotion_ids": [
+   "joy.happiness",
+   "joy.contentment",
+   "will.confidence"
+  ],
+  "reference_sources": [
+   {
+    "key_or_url": "Artistic",
+    "accessed": "practitioner craft, no source opened"
+   }
+  ],
+  "evidence": "craft"
+ },
+ {
+  "id": "cinematic_realism",
+  "name": "Cinematic realism",
+  "name_th": "ภาพสมจริงแบบภาพยนตร์",
+  "family": "photography",
+  "historical_background": "Cinematic realism borrows film-production grammar — widescreen aspect, motivated lighting, shallow focus and colour grading — for stills and short video. (Craft overview; shot grammar per Block2008, bibliographic.)",
+  "visual_characteristics": "Film-still images with widescreen framing, graded colour, depth and atmosphere.",
+  "line_characteristics": "Natural photographic edges; anamorphic oval bokeh and soft flare.",
+  "shape_language": "Real-world forms; strong silhouettes.",
+  "color_characteristics": "Graded: muted or complementary (teal/orange, green/peach), controlled saturation.",
+  "lighting_characteristics": "Motivated practicals, contrast ratios 4:1 or more, haze, rim separation.",
+  "texture_characteristics": "Fine film grain, halation.",
+  "composition_characteristics": "Widescreen 2.39:1 or 16:9, thirds, foreground framing, depth layers.",
+  "emotional_characteristics": "Dramatic, intimate, immersive.",
+  "use_cases": [
+   "story clips",
+   "promo scenes",
+   "Reel hooks"
+  ],
+  "time_optic_fit": "Good for promo scenes and clip keyframes; product composited from real photos or generated with -i reference and checked.",
+  "common_mistakes": [
+   "over-grading orange skin",
+   "random flares",
+   "fake anamorphic look on phone-style framing"
+  ],
+  "prompt_template": "Cinematic film still of {subject} in {setting}, 2.39:1 anamorphic, 35mm lens, f/2.8, {lighting}, {palette} colour grade, {composition}, light haze, fine film grain, no text.",
+  "prompt_example": "Cinematic film still of an optician holding a lens up to a desk lamp in a dark shop at 2 a.m., 2.39:1 anamorphic, 35mm lens, f/2.8, practical lamp key with cool window fill, teal and peach colour grade, rule of thirds with shelves in foreground, light haze, fine film grain, no text.",
+  "avoid_phrases": [
+   "any studio or brand name",
+   "any living artist's name",
+   "titles of copyrighted films, games or series",
+   "names of films or directors"
+  ],
+  "flux_notes": "FLUX does cinematic stills well; avoid 'movie still from X'.",
+  "palette_suggestions": [
+   "pal.teal_peach_cinema",
+   "pal.brand_timeoptic"
+  ],
+  "lighting_ids": [
+   "practical_lamp",
+   "low_key",
+   "rim_only",
+   "fog_atmospheric"
+  ],
+  "composition_ids": [
+   "rule_of_thirds",
+   "layered_depth",
+   "frame_within_frame"
+  ],
+  "emotion_ids": [
+   "visual.mystery",
+   "calm.serenity",
+   "will.determination"
+  ],
+  "reference_sources": [
+   {
+    "key_or_url": "Block2008",
+    "accessed": "bibliographic"
+   },
+   {
+    "key_or_url": "Artistic",
+    "accessed": "practitioner craft, no source opened"
+   }
+  ],
+  "evidence": "craft"
+ },
+ {
+  "id": "film_noir_photo",
+  "name": "Film noir photography",
+  "name_th": "ภาพถ่ายแนวฟิล์มนัวร์",
+  "family": "photography",
+  "historical_background": "Film noir names a cycle of 1940s–50s American crime films known for low-key, high-contrast black-and-white cinematography. Its hard light, shadows from blinds and wet streets became a lasting photographic look. (Craft overview; no history page opened.)",
+  "visual_characteristics": "Black-and-white photographs with deep blacks, hard shadows, smoke, rain-slick streets.",
+  "line_characteristics": "Hard shadow edges, silhouettes.",
+  "shape_language": "Angular shadows, verticals.",
+  "color_characteristics": "Monochrome, high contrast.",
+  "lighting_characteristics": "Hard single key, venetian-blind patterns, streetlights, low key.",
+  "texture_characteristics": "Silver grain.",
+  "composition_characteristics": "Dutch angles, frames within frames, deep shadow areas.",
+  "emotional_characteristics": "Mysterious, tense, seductive.",
+  "use_cases": [
+   "mystery teasers",
+   "dramatic story frames"
+  ],
+  "time_optic_fit": "Moody teasers; product shown in a separate clean shot, or the real frame photographed in hard light (not generated).",
+  "common_mistakes": [
+   "grey low-contrast mush",
+   "colour leaks",
+   "too-modern props"
+  ],
+  "prompt_template": "Black-and-white film noir photograph of {subject} in {setting}, 40mm lens, hard single key light, {lighting}, deep blacks, {composition}, silver grain, palette: {palette}, no text.",
+  "prompt_example": "Black-and-white film noir photograph of a man in a hat holding up a pair of glasses in a shop doorway at night, 40mm lens, hard single key light, venetian-blind shadow stripes, deep blacks, frame within frame, silver grain, no text.",
+  "avoid_phrases": [
+   "any studio or brand name",
+   "any living artist's name",
+   "titles of copyrighted films, games or series",
+   "names of noir films or actors"
+  ],
+  "flux_notes": "FLUX does noir B&W well.",
+  "palette_suggestions": [
+   "pal.noir_bw",
+   "pal.noir_bw_spot_green"
+  ],
+  "lighting_ids": [
+   "noir_venetian",
+   "low_key",
+   "streetlight_sodium",
+   "chiaroscuro"
+  ],
+  "composition_ids": [
+   "frame_within_frame",
+   "diagonal",
+   "figure_ground"
+  ],
+  "emotion_ids": [
+   "visual.mystery",
+   "fear.quiet_menace",
+   "stance.suspicion"
+  ],
+  "reference_sources": [
+   {
+    "key_or_url": "Artistic",
+    "accessed": "practitioner craft, no source opened"
+   }
+  ],
+  "evidence": "craft"
+ },
+ {
+  "id": "analog_film_35mm",
+  "name": "Analog 35mm film",
+  "name_th": "ฟิล์ม 35 มม.",
+  "family": "photography",
+  "historical_background": "35mm still film, introduced to still cameras in the early 20th century, was the dominant amateur and photojournalism format until digital; its grain, halation and colour response are now emulated. (Craft overview; no history page opened.)",
+  "visual_characteristics": "Casual photographs with film grain, slight softness, warm or cool colour shifts.",
+  "line_characteristics": "Soft photographic edges.",
+  "shape_language": "Natural.",
+  "color_characteristics": "Film-like colour: warm highlights, lifted blacks, slight green or magenta cast.",
+  "lighting_characteristics": "Natural daylight, flash at night.",
+  "texture_characteristics": "Visible grain, halation around highlights, slight vignette.",
+  "composition_characteristics": "Snapshot framing, 3:2.",
+  "emotional_characteristics": "Nostalgic, authentic, warm.",
+  "use_cases": [
+   "nostalgic posts",
+   "lifestyle carousels"
+  ],
+  "time_optic_fit": "Good grade for lifestyle photos of real customers/staff. Apply as a grade to real photos rather than generating products.",
+  "common_mistakes": [
+   "fake light leaks everywhere",
+   "overdone grain"
+  ],
+  "prompt_template": "35mm film photograph of {subject} in {setting}, 35mm lens, f/4, {lighting}, {palette} film colour, {composition}, visible grain, slight halation, 3:2 frame, no text.",
+  "prompt_example": "35mm film photograph of two friends laughing outside a seaside shop, 35mm lens, f/4, afternoon sun, warm film colour with lifted blacks, snapshot rule of thirds, visible grain, slight halation, 3:2 frame, no text.",
+  "avoid_phrases": [
+   "any studio or brand name",
+   "any living artist's name",
+   "titles of copyrighted films, games or series",
+   "film stock brand names"
+  ],
+  "flux_notes": "FLUX emulates film look reasonably.",
+  "palette_suggestions": [
+   "pal.film_warm",
+   "pal.faded_summer"
+  ],
+  "lighting_ids": [
+   "golden_hour",
+   "midday_hard"
+  ],
+  "composition_ids": [
+   "rule_of_thirds"
+  ],
+  "emotion_ids": [
+   "nostalgia.nostalgia",
+   "joy.happiness"
+  ],
+  "reference_sources": [
+   {
+    "key_or_url": "Artistic",
+    "accessed": "practitioner craft, no source opened"
+   }
+  ],
+  "evidence": "craft"
+ },
+ {
+  "id": "polaroid_instant",
+  "name": "Instant film (Polaroid-style)",
+  "name_th": "ภาพฟิล์มอินสแตนท์",
+  "family": "photography",
+  "historical_background": "Instant photography, which develops a print in the camera within minutes, became popular from the mid-20th century; the square print with a wide bottom border is the iconic format. (Craft overview; no history page opened.)",
+  "visual_characteristics": "Square photo with white border, soft focus, washed colours, flash.",
+  "line_characteristics": "Soft edges.",
+  "shape_language": "Natural.",
+  "color_characteristics": "Washed, low contrast, cyan or warm shifts.",
+  "lighting_characteristics": "Direct on-camera flash or bright daylight.",
+  "texture_characteristics": "Soft, chemical imperfections.",
+  "composition_characteristics": "Square, central subject.",
+  "emotional_characteristics": "Nostalgic, intimate, playful.",
+  "use_cases": [
+   "memory posts",
+   "customer snapshots"
+  ],
+  "time_optic_fit": "Good frame for real customer photos (border in HTML). Do not generate the product.",
+  "common_mistakes": [
+   "fake brand logo on border",
+   "too sharp"
+  ],
+  "prompt_template": "Instant film photograph of {subject} in {setting}, square format, direct flash, {palette} washed colours, {composition}, soft focus, white border, lighting: {lighting}, no text.",
+  "prompt_example": "Instant film photograph of a happy customer holding up her new glasses case in a shop, square format, direct flash, washed warm colours, centered, soft focus, white border, no text.",
+  "avoid_phrases": [
+   "any studio or brand name",
+   "any living artist's name",
+   "titles of copyrighted films, games or series",
+   "Polaroid"
+  ],
+  "flux_notes": "FLUX makes instant-film looks, may add text on the border.",
+  "palette_suggestions": [
+   "pal.instant_washed"
+  ],
+  "lighting_ids": [
+   "high_key",
+   "midday_hard"
+  ],
+  "composition_ids": [
+   "center"
+  ],
+  "emotion_ids": [
+   "nostalgia.nostalgia",
+   "joy.happiness"
+  ],
+  "reference_sources": [
+   {
+    "key_or_url": "Artistic",
+    "accessed": "practitioner craft, no source opened"
+   }
+  ],
+  "evidence": "craft"
+ },
+ {
+  "id": "documentary_photo",
+  "name": "Documentary photography",
+  "name_th": "ภาพถ่ายสารคดี",
+  "family": "photography",
+  "historical_background": "Tate describes documentary photography as a style offering a straightforward and accurate representation of people, places, objects and events. Until the mid-20th century it recorded world events; from 1949 photographers reinvented it as social documentary aimed at exposing injustice (Tate Art Terms).",
+  "visual_characteristics": "Real, unposed moments; natural light; truthful detail.",
+  "line_characteristics": "Natural.",
+  "shape_language": "Natural.",
+  "color_characteristics": "Natural colour or B&W.",
+  "lighting_characteristics": "Available light.",
+  "texture_characteristics": "Grain, realism.",
+  "composition_characteristics": "Context-rich, eye-level.",
+  "emotional_characteristics": "Honest, empathetic.",
+  "use_cases": [
+   "staff stories",
+   "community posts",
+   "behind-the-scenes"
+  ],
+  "time_optic_fit": "Best done with real photos of staff and customers — AI-generated 'documentary' images would mislead. Use AI only for clearly illustrative content.",
+  "common_mistakes": [
+   "staged AI images presented as real",
+   "over-processing"
+  ],
+  "prompt_template": "Documentary photograph of {subject} in {setting}, 35mm lens, available {lighting}, {palette}, {composition}, unposed, natural grain, no text.",
+  "prompt_example": "Documentary photograph of an optician repairing a frame at a workbench, 35mm lens, available window light, natural colours, eye-level rule of thirds, unposed, natural grain, no text. (Prefer a real photo of the real staff.)",
+  "avoid_phrases": [
+   "any studio or brand name",
+   "any living artist's name",
+   "titles of copyrighted films, games or series"
+  ],
+  "flux_notes": "FLUX can imitate the look; do not use it for real-world claims.",
+  "palette_suggestions": [
+   "pal.natural_documentary",
+   "pal.noir_bw"
+  ],
+  "lighting_ids": [
+   "window_side",
+   "overcast_soft"
+  ],
+  "composition_ids": [
+   "rule_of_thirds",
+   "layered_depth"
+  ],
+  "emotion_ids": [
+   "care.empathy",
+   "cognitive.interest"
+  ],
+  "reference_sources": [
+   {
+    "key_or_url": "https://www.tate.org.uk/art/art-terms/d/documentary-photography",
+    "accessed": "page opened 2026-11-24 (Tate Art Terms)"
+   }
+  ],
+  "evidence": "documented_history"
+ },
+ {
+  "id": "fashion_editorial_photo",
+  "name": "Fashion editorial photography",
+  "name_th": "ภาพถ่ายแฟชั่นเอดิทอเรียล",
+  "family": "photography",
+  "historical_background": "Fashion editorial photography tells a styled story across a magazine spread, favouring mood, attitude and bold styling over plain product display. (Craft overview; no history page opened.)",
+  "visual_characteristics": "Styled models with strong poses, bold styling, graphic sets or striking locations.",
+  "line_characteristics": "Clean photographic edges; strong silhouettes and pose lines.",
+  "shape_language": "Angular poses, graphic set shapes, S-curves.",
+  "color_characteristics": "Curated palette per story: monochrome, colour-blocked or muted.",
+  "lighting_characteristics": "Beauty dish, hard sun, coloured gels, large softboxes; controlled glasses glare.",
+  "texture_characteristics": "Retouched but real skin, fabric detail.",
+  "composition_characteristics": "Bold crops, negative space, off-centre placement.",
+  "emotional_characteristics": "Confident, aspirational, edgy.",
+  "use_cases": [
+   "lookbook posts",
+   "campaign hero images",
+   "carousel covers"
+  ],
+  "time_optic_fit": "Good for campaign heroes with real models wearing real stocked frames (shoot or Codex -i). Real-product rule: the frame is never generated or redrawn. Use the shop's real frame photo/cutout; generate only the empty scene (text-free) and composite the cutout in the HTML layer, or pass the photo to Codex with -i as an unchanged reference. Reject any output where shape, colour, hinge, temple logo, lens tint or proportions changed.",
+  "common_mistakes": [
+   "AI glasses that differ from the stocked model",
+   "lens glare hiding eyes",
+   "awkward hands",
+   "plastic skin"
+  ],
+  "prompt_template": "Fashion editorial photograph of {subject} in {setting}, 85mm lens, f/4, {lighting}, {palette} styling, {composition}, bold pose, controlled lens reflections, no text. Eyewear: exact frame from the attached reference photo, unchanged. Real-product rule: the frame is never generated or redrawn. Use the shop's real frame photo/cutout; generate only the empty scene (text-free) and composite the cutout in the HTML layer, or pass the photo to Codex with -i as an unchanged reference. Reject any output where shape, colour, hinge, temple logo, lens tint or proportions changed.",
+  "prompt_example": "Fashion editorial photograph of a Thai model in a cream suit leaning on a concrete wall, 85mm lens, f/4, hard late-afternoon sun with sharp shadow, Timberwolf and Phthalo green styling, off-centre with negative space, bold pose, controlled lens reflections, no text, wearing the exact black square frame from the attached photo, unchanged.",
+  "avoid_phrases": [
+   "any studio or brand name",
+   "any living artist's name",
+   "titles of copyrighted films, games or series",
+   "names of fashion magazines or houses"
+  ],
+  "flux_notes": "FLUX makes convincing editorial images but invents glasses; product shots need Codex with -i or a real shoot.",
+  "palette_suggestions": [
+   "pal.neutral_chic",
+   "pal.brand_timeoptic"
+  ],
+  "lighting_ids": [
+   "butterfly",
+   "midday_hard",
+   "stage_colour_gels",
+   "eyewear_lens_reflection_control"
+  ],
+  "composition_ids": [
+   "negative_space",
+   "asymmetrical_balance",
+   "s_curve_flow"
+  ],
+  "emotion_ids": [
+   "will.confidence",
+   "love.flirtation",
+   "awe.admiration"
+  ],
+  "reference_sources": [
+   {
+    "key_or_url": "Artistic",
+    "accessed": "practitioner craft, no source opened"
+   }
+  ],
+  "evidence": "craft"
+ },
+ {
+  "id": "luxury_commercial",
+  "name": "Luxury commercial",
+  "name_th": "ภาพโฆษณาสินค้าหรู",
+  "family": "photography",
+  "historical_background": "Luxury advertising photography uses restraint — dark or rich backgrounds, precise rim and edge light, premium materials and space — to signal value. It shares studio techniques with product photography but stresses mood. (Craft overview; no history page opened.)",
+  "visual_characteristics": "Single hero product on dark or rich surfaces (black marble, velvet, brushed metal), precise highlights, lots of space.",
+  "line_characteristics": "Thin, precise highlight lines tracing rims and temples.",
+  "shape_language": "Minimal elegant props: plinths, slabs, drapes; strong geometry.",
+  "color_characteristics": "Deep restrained palettes: black, Phthalo green, gold/peach accents.",
+  "lighting_characteristics": "Low-key: strip lights for edge highlights, rim light, small spot, backlit glass glow; flags for deep blacks.",
+  "texture_characteristics": "Polished stone, velvet, satin, brushed metal; flawless.",
+  "composition_characteristics": "Centred hero or golden ratio placement, large negative space for text.",
+  "emotional_characteristics": "Premium, exclusive, calm, desirable.",
+  "use_cases": [
+   "premium frame ads",
+   "titanium/handmade collection launches",
+   "promo images"
+  ],
+  "time_optic_fit": "Key style for premium frames. Real-product rule: the frame is never generated or redrawn. Use the shop's real frame photo/cutout; generate only the empty scene (text-free) and composite the cutout in the HTML layer, or pass the photo to Codex with -i as an unchanged reference. Reject any output where shape, colour, hinge, temple logo, lens tint or proportions changed. Generate only the empty luxurious set; composite the real frame cutout and add highlights/shadows in compositing that match, never repainting the frame.",
+  "common_mistakes": [
+   "AI regenerating the frame",
+   "fake gold logos",
+   "busy props",
+   "crushed blacks hiding the frame edges",
+   "mismatched reflections"
+  ],
+  "prompt_template": "Empty luxury commercial set for compositing {subject}: {setting}, {palette}, low-key {lighting} with strip-light edge highlights and soft rim, deep controlled blacks, {composition}, 100mm lens, f/8, empty space where the product will be placed, no product generated, no text. Real-product rule: the frame is never generated or redrawn. Use the shop's real frame photo/cutout; generate only the empty scene (text-free) and composite the cutout in the HTML layer, or pass the photo to Codex with -i as an unchanged reference. Reject any output where shape, colour, hinge, temple logo, lens tint or proportions changed.",
+  "prompt_example": "Empty luxury commercial set for compositing the shop's real titanium frame: polished black marble slab with a soft reflection plane and a fold of deep green velvet behind, Phthalo green, black and peach-gold accent, low-key with two strip-light edge highlights and soft rim from behind, deep controlled blacks, centered with large negative space above, 100mm lens, f/8, empty space on the slab, no product generated, no text. Real frame cutout composited unchanged.",
+  "avoid_phrases": [
+   "any studio or brand name",
+   "any living artist's name",
+   "titles of copyrighted films, games or series",
+   "luxury brand names",
+   "redesign",
+   "gold logo"
+  ],
+  "flux_notes": "FLUX makes good dark luxury sets; it often places an invented object in the centre — say 'empty slab, no objects'.",
+  "palette_suggestions": [
+   "pal.luxury_black_green_gold",
+   "pal.brand_timeoptic"
+  ],
+  "lighting_ids": [
+   "low_key",
+   "jewelry_specular",
+   "rim_only",
+   "product_backlit_glass",
+   "eyewear_lens_reflection_control"
+  ],
+  "composition_ids": [
+   "center",
+   "golden_ratio",
+   "negative_space",
+   "subject_isolation"
+  ],
+  "emotion_ids": [
+   "awe.admiration",
+   "will.confidence",
+   "visual.majesty"
+  ],
+  "reference_sources": [
+   {
+    "key_or_url": "Artistic",
+    "accessed": "practitioner craft, no source opened"
+   }
+  ],
+  "evidence": "craft"
+ },
+ {
+  "id": "macro_photography",
+  "name": "Macro photography",
+  "name_th": "ภาพถ่ายมาโคร",
+  "family": "photography",
+  "historical_background": "Macro photography reproduces subjects at or near life size (1:1) on the sensor, revealing detail invisible at normal distance; it needs special lenses, small apertures or focus stacking because depth of field is extremely thin. (Craft overview; no history page opened.)",
+  "visual_characteristics": "Extreme close-ups of textures: acetate layers, hinge screws, lens coating reflections, engraved temples.",
+  "line_characteristics": "Ultra-sharp detail in a thin focal plane, soft falloff.",
+  "shape_language": "Abstracted forms from real details.",
+  "color_characteristics": "True material colour; coating reflections (green/blue/purple) as accents.",
+  "lighting_characteristics": "Diffused ring or softbox light, raking light for texture, controlled reflections.",
+  "texture_characteristics": "Real material micro-texture: acetate pattern depth, brushed titanium, rivets.",
+  "composition_characteristics": "Tight crops, diagonal lines of temples, shallow depth of field.",
+  "emotional_characteristics": "Precise, crafted, intimate, expert.",
+  "use_cases": [
+   "craftsmanship posts",
+   "lens coating explainers",
+   "detail punch-ins in clips"
+  ],
+  "time_optic_fit": "Very valuable — but only of the real frame. Shoot the real product macro (phone macro mode or 100mm macro) or crop from frame-kit photos. Never generate macro detail of a stocked frame: invented hinges/logos would misrepresent it. Real-product rule: the frame is never generated or redrawn. Use the shop's real frame photo/cutout; generate only the empty scene (text-free) and composite the cutout in the HTML layer, or pass the photo to Codex with -i as an unchanged reference. Reject any output where shape, colour, hinge, temple logo, lens tint or proportions changed.",
+  "common_mistakes": [
+   "AI-generated product detail",
+   "focus on the wrong part",
+   "dust and fingerprints",
+   "over-sharpening halos"
+  ],
+  "prompt_template": "Macro photograph (real product only) of {subject}: 100mm macro lens 1:1, f/8–f/11 or focus stack, {lighting} (diffused softbox plus raking light), {palette} background, {composition}, shallow depth of field. For AI, generate only abstract non-product macro textures. Real-product rule: the frame is never generated or redrawn. Use the shop's real frame photo/cutout; generate only the empty scene (text-free) and composite the cutout in the HTML layer, or pass the photo to Codex with -i as an unchanged reference. Reject any output where shape, colour, hinge, temple logo, lens tint or proportions changed., setting: {setting}",
+  "prompt_example": "Macro photograph of the real tortoiseshell frame's hinge and temple core wire: 100mm macro lens 1:1, focus stack of 8 frames at f/8, diffused softbox plus low raking light from the left, Timberwolf background, diagonal composition, shallow depth of field. Shot with a camera from the real stock, not generated.",
+  "avoid_phrases": [
+   "any studio or brand name",
+   "any living artist's name",
+   "titles of copyrighted films, games or series",
+   "generated hinge",
+   "invented logo"
+  ],
+  "flux_notes": "FLUX can produce beautiful abstract macro textures (water droplets, fabric) but its eyewear details are invented; never use it for product macro.",
+  "palette_suggestions": [
+   "pal.studio_neutral",
+   "pal.brand_timeoptic"
+  ],
+  "lighting_ids": [
+   "product_softbox",
+   "cross_light",
+   "eyewear_lens_reflection_control",
+   "jewelry_specular"
+  ],
+  "composition_ids": [
+   "diagonal",
+   "subject_isolation",
+   "dominant_foreground"
+  ],
+  "emotion_ids": [
+   "cognitive.curiosity",
+   "awe.admiration",
+   "performance.trusted_expert"
+  ],
+  "reference_sources": [
+   {
+    "key_or_url": "Artistic",
+    "accessed": "practitioner craft, no source opened"
+   }
+  ],
+  "evidence": "craft"
+ },
+ {
+  "id": "double_exposure",
+  "name": "Double exposure",
+  "name_th": "ภาพซ้อน (ดับเบิลเอ็กซ์โพเชอร์)",
+  "family": "photography",
+  "historical_background": "Multiple exposure overlays two images in one frame, originally by exposing film twice; combining photographs was also central to photomontage, which Tate dates to Dadaists around 1915 and later Surrealists (Tate Art Terms — photomontage; the page does not discuss double exposure itself). Today it is mostly a digital blend.",
+  "visual_characteristics": "A silhouette (often a profile) filled with a second image such as a landscape, city or forest.",
+  "line_characteristics": "Silhouette edges define the main shape; second image flows inside.",
+  "shape_language": "Strong profile silhouettes, organic inner forms.",
+  "color_characteristics": "Often desaturated or duotone, light background.",
+  "lighting_characteristics": "Bright background, inner image with its own light.",
+  "texture_characteristics": "Photographic blends, soft transitions.",
+  "composition_characteristics": "Central profile, negative space.",
+  "emotional_characteristics": "Dreamy, reflective, poetic.",
+  "use_cases": [
+   "reflective quote images",
+   "eye-health awareness",
+   "brand storytelling"
+  ],
+  "time_optic_fit": "Good for 'what your eyes see' themes (profile filled with Hua Hin sea). Real product can be overlaid separately in HTML.",
+  "common_mistakes": [
+   "muddy overlaps",
+   "two images fighting",
+   "faces losing their profile"
+  ],
+  "prompt_template": "Double exposure image of {subject} silhouette filled with {setting}, clean profile edge, {palette} duotone, {lighting}, {composition}, white background, no text.",
+  "prompt_example": "Double exposure image of a woman's profile wearing round glasses, silhouette filled with a calm Hua Hin seascape at dawn, clean profile edge, Phthalo green and peach duotone, soft dawn light, centered with negative space, white background, no text.",
+  "avoid_phrases": [
+   "any studio or brand name",
+   "any living artist's name",
+   "titles of copyrighted films, games or series"
+  ],
+  "flux_notes": "FLUX handles double exposure well when the two images are named concretely.",
+  "palette_suggestions": [
+   "pal.duotone_green_peach",
+   "pal.brand_timeoptic"
+  ],
+  "lighting_ids": [
+   "high_key",
+   "golden_hour"
+  ],
+  "composition_ids": [
+   "center",
+   "negative_space",
+   "figure_ground"
+  ],
+  "emotion_ids": [
+   "nostalgia.longing",
+   "calm.serenity",
+   "visual.peaceful_solitude"
+  ],
+  "reference_sources": [
+   {
+    "key_or_url": "https://www.tate.org.uk/art/art-terms/p/photomontage",
+    "accessed": "page opened 2026-11-24 (Tate Art Terms)"
+   }
+  ],
+  "evidence": "mixed"
+ },
+ {
+  "id": "vaporwave_retro",
+  "name": "Vaporwave",
+  "name_th": "เวเปอร์เวฟ",
+  "family": "genre",
+  "historical_background": "Vaporwave emerged around 2010–2011 as an online music micro-genre spread on platforms such as SoundCloud and Bandcamp, with a matching visual aesthetic: neon dreamscapes, pink and teal gradients, Greek busts, palm trees, 3D shapes, VHS grain and wide all-caps type (AIGA Eye on Design).",
+  "visual_characteristics": "Surreal collages of marble busts, palm trees, checkered floors, grids, sunsets and early-internet windows.",
+  "line_characteristics": "Clean digital edges, retro UI frames.",
+  "shape_language": "Geometric primitives, grids, classical sculpture.",
+  "color_characteristics": "Pastel pink, teal, purple gradients.",
+  "lighting_characteristics": "Flat or glowing, neon.",
+  "texture_characteristics": "VHS noise, scanlines, glitch.",
+  "composition_characteristics": "Collage, central symmetrical.",
+  "emotional_characteristics": "Nostalgic, ironic, dreamy.",
+  "use_cases": [
+   "playful throwback posts",
+   "meme content"
+  ],
+  "time_optic_fit": "Weak fit for a calm brand; occasional playful throwback only.",
+  "common_mistakes": [
+   "text-heavy fake Japanese",
+   "random clutter"
+  ],
+  "prompt_template": "Vaporwave collage of {subject}, marble bust, palm trees, checkered floor, pastel pink and teal gradient {palette}, VHS scanlines, {lighting}, {composition}, setting: {setting}, no text.",
+  "prompt_example": "Vaporwave collage of retro sunglasses floating above a checkered floor with a marble bust and palm trees, pastel pink and teal gradient, VHS scanlines, soft neon glow, centered symmetrical, no text.",
+  "avoid_phrases": [
+   "any studio or brand name",
+   "any living artist's name",
+   "titles of copyrighted films, games or series"
+  ],
+  "flux_notes": "FLUX does vaporwave easily but adds fake text.",
+  "palette_suggestions": [
+   "pal.vaporwave_pink_teal"
+  ],
+  "lighting_ids": [
+   "neon_night",
+   "stage_colour_gels"
+  ],
+  "composition_ids": [
+   "symmetry",
+   "center"
+  ],
+  "emotion_ids": [
+   "nostalgia.nostalgia",
+   "stance.dry_irony"
+  ],
+  "reference_sources": [
+   {
+    "key_or_url": "https://eyeondesign.aiga.org/vaporwave-is-dead-long-live-vaporwave/",
+    "accessed": "page opened 2026-11-24 (AIGA Eye on Design)"
+   }
+  ],
+  "evidence": "documented_history"
+ },
+ {
+  "id": "synthwave",
+  "name": "Synthwave / outrun",
+  "name_th": "ซินธ์เวฟ",
+  "family": "genre",
+  "historical_background": "Synthwave is a retro-futurist music and visual style, popular from the late 2000s–2010s, that recalls 1980s film and game graphics: neon grids, chrome type and sunsets. (Craft overview; no history page opened.)",
+  "visual_characteristics": "Neon wireframe grids, striped sunsets, palm silhouettes, sports cars, chrome.",
+  "line_characteristics": "Glowing neon lines.",
+  "shape_language": "Grids, horizons, triangles.",
+  "color_characteristics": "Magenta, cyan, purple, orange sunset gradients.",
+  "lighting_characteristics": "Neon glow, sunset backlight.",
+  "texture_characteristics": "Glow, scanlines, grain.",
+  "composition_characteristics": "Low horizon, central vanishing point.",
+  "emotional_characteristics": "Nostalgic, energetic, cool.",
+  "use_cases": [
+   "sunglasses night promos",
+   "music Reels"
+  ],
+  "time_optic_fit": "Fun for sunglasses Reels backgrounds; product composited real.",
+  "common_mistakes": [
+   "fake chrome text",
+   "too many elements"
+  ],
+  "prompt_template": "Synthwave scene of {subject}, neon wireframe grid, striped sunset, {palette}, {lighting}, {composition}, glow, setting: {setting}, no text.",
+  "prompt_example": "Synthwave scene of an empty highway toward a striped sunset with palm silhouettes, neon wireframe grid, magenta and cyan, sunset backlight, low horizon central vanishing point, glow, no text.",
+  "avoid_phrases": [
+   "any studio or brand name",
+   "any living artist's name",
+   "titles of copyrighted films, games or series"
+  ],
+  "flux_notes": "FLUX does synthwave well.",
+  "palette_suggestions": [
+   "pal.synthwave_magenta_cyan"
+  ],
+  "lighting_ids": [
+   "neon_night",
+   "sunset_rim_warm_cool"
+  ],
+  "composition_ids": [
+   "low_horizon",
+   "leading_lines",
+   "symmetry"
+  ],
+  "emotion_ids": [
+   "nostalgia.nostalgia",
+   "hope.excitement"
+  ],
+  "reference_sources": [
+   {
+    "key_or_url": "Artistic",
+    "accessed": "practitioner craft, no source opened"
+   }
+  ],
+  "evidence": "craft"
+ },
+ {
+  "id": "cyberpunk_neon",
+  "name": "Cyberpunk neon",
+  "name_th": "ไซเบอร์พังก์นีออน",
+  "family": "genre",
+  "historical_background": "Cyberpunk is a science-fiction subgenre of the 1980s about high technology and low life in dense cities; its visual shorthand became rain-soaked neon streets. (Craft overview; sf-encyclopedia page fetch failed, not read.)",
+  "visual_characteristics": "Dense night cities, neon signs, rain, holograms, wires.",
+  "line_characteristics": "Hard edges, neon tubes.",
+  "shape_language": "Vertical towers, dense clutter.",
+  "color_characteristics": "Magenta, cyan, acid green on black.",
+  "lighting_characteristics": "Neon, wet reflections, screen glow.",
+  "texture_characteristics": "Rain, haze, grime.",
+  "composition_characteristics": "Vertical depth, leading lines.",
+  "emotional_characteristics": "Edgy, mysterious, energetic.",
+  "use_cases": [
+   "night promos",
+   "blue-light screen topics"
+  ],
+  "time_optic_fit": "Useful for blue-light/screen-time topics; keep product real.",
+  "common_mistakes": [
+   "fake signage text",
+   "overcrowding"
+  ],
+  "prompt_template": "Cyberpunk night scene of {subject} in {setting}, neon signs without letters, rain reflections, {palette}, {lighting}, {composition}, haze, no text.",
+  "prompt_example": "Cyberpunk night scene of a young man staring at a glowing phone on a rain-soaked street, neon signs without letters, rain reflections, magenta and cyan, screen glow on face, leading lines down the street, haze, no text.",
+  "avoid_phrases": [
+   "any studio or brand name",
+   "any living artist's name",
+   "titles of copyrighted films, games or series",
+   "names of cyberpunk games or films"
+  ],
+  "flux_notes": "FLUX does cyberpunk well; adds fake neon text.",
+  "palette_suggestions": [
+   "pal.cyberpunk_magenta_cyan"
+  ],
+  "lighting_ids": [
+   "neon_night",
+   "screen_glow_face",
+   "fog_atmospheric"
+  ],
+  "composition_ids": [
+   "leading_lines",
+   "layered_depth"
+  ],
+  "emotion_ids": [
+   "visual.mystery",
+   "fear.anxiety"
+  ],
+  "reference_sources": [
+   {
+    "key_or_url": "Artistic",
+    "accessed": "practitioner craft, no source opened"
+   }
+  ],
+  "evidence": "craft"
+ },
+ {
+  "id": "steampunk",
+  "name": "Steampunk",
+  "name_th": "สตีมพังก์",
+  "family": "genre",
+  "historical_background": "Steampunk imagines Victorian-era technology — brass, gears, steam — as retro-futurism; the term dates from the late 1980s. (Craft overview; sf-encyclopedia page fetch failed, not read.)",
+  "visual_characteristics": "Brass gears, goggles, rivets, leather, steam machines.",
+  "line_characteristics": "Ornate mechanical lines.",
+  "shape_language": "Gears, circles, ornate curves.",
+  "color_characteristics": "Brass, copper, sepia, leather brown.",
+  "lighting_characteristics": "Warm lamp and gaslight.",
+  "texture_characteristics": "Patina, leather, rivets.",
+  "composition_characteristics": "Ornate detailed scenes.",
+  "emotional_characteristics": "Adventurous, whimsical.",
+  "use_cases": [
+   "fun vintage posts",
+   "Halloween costume ideas"
+  ],
+  "time_optic_fit": "Niche; goggles themes. Product real.",
+  "common_mistakes": [
+   "clutter",
+   "gears for no reason"
+  ],
+  "prompt_template": "Steampunk scene of {subject}, brass gears, rivets, leather, {setting}, {palette}, {lighting}, {composition}, no text.",
+  "prompt_example": "Steampunk scene of a brass optician's workshop with a giant lens-grinding machine, brass gears, rivets, leather, Victorian workshop, brass and sepia, warm gaslight, centered, no text.",
+  "avoid_phrases": [
+   "any studio or brand name",
+   "any living artist's name",
+   "titles of copyrighted films, games or series"
+  ],
+  "flux_notes": "FLUX does steampunk fine.",
+  "palette_suggestions": [
+   "pal.brass_sepia"
+  ],
+  "lighting_ids": [
+   "practical_lamp",
+   "candle_fire"
+  ],
+  "composition_ids": [
+   "center",
+   "layered_depth"
+  ],
+  "emotion_ids": [
+   "cognitive.curiosity",
+   "awe.childlike_wonder"
+  ],
+  "reference_sources": [
+   {
+    "key_or_url": "Artistic",
+    "accessed": "practitioner craft, no source opened"
+   }
+  ],
+  "evidence": "craft"
+ },
+ {
+  "id": "dark_fantasy_gothic",
+  "name": "Dark fantasy gothic",
+  "name_th": "แฟนตาซีมืดแบบโกธิก",
+  "family": "genre",
+  "historical_background": "Gothic dark fantasy draws on Gothic architecture and Gothic fiction: ruins, cathedrals, mist, moonlight. (Craft overview; no history page opened.)",
+  "visual_characteristics": "Gothic architecture, mist, ravens, candles, moonlight.",
+  "line_characteristics": "Sharp pointed arches.",
+  "shape_language": "Pointed verticals, spikes.",
+  "color_characteristics": "Desaturated blues, blacks, crimson accents.",
+  "lighting_characteristics": "Moonlight, candlelight, fog.",
+  "texture_characteristics": "Stone, mist, decay.",
+  "composition_characteristics": "Tall verticals, low angles.",
+  "emotional_characteristics": "Dark, eerie, majestic.",
+  "use_cases": [
+   "Halloween posts",
+   "spooky story clips"
+  ],
+  "time_optic_fit": "Halloween only.",
+  "common_mistakes": [
+   "gore",
+   "overly dark mud"
+  ],
+  "prompt_template": "Dark gothic fantasy scene of {subject} in {setting}, pointed arches, mist, {palette}, {lighting}, {composition}, no text.",
+  "prompt_example": "Dark gothic fantasy scene of an antique pair of spectacles on a candlelit lectern in a ruined cathedral, pointed arches, mist, desaturated blue with crimson accent, moonlight and candle, low angle, no text.",
+  "avoid_phrases": [
+   "any studio or brand name",
+   "any living artist's name",
+   "titles of copyrighted films, games or series"
+  ],
+  "flux_notes": "FLUX does gothic scenes well.",
+  "palette_suggestions": [
+   "pal.gothic_blue_crimson"
+  ],
+  "lighting_ids": [
+   "moonlight_blue",
+   "candle_fire",
+   "fog_atmospheric"
+  ],
+  "composition_ids": [
+   "symmetry",
+   "vignette_tunnel"
+  ],
+  "emotion_ids": [
+   "performance.eerie_calm",
+   "fear.dread",
+   "visual.majesty"
+  ],
+  "reference_sources": [
+   {
+    "key_or_url": "Artistic",
+    "accessed": "practitioner craft, no source opened"
+   }
+  ],
+  "evidence": "craft"
+ },
+ {
+  "id": "solarpunk",
+  "name": "Solarpunk",
+  "name_th": "โซลาร์พังก์",
+  "family": "genre",
+  "historical_background": "Solarpunk is an optimistic eco-futurist genre and aesthetic imagining sustainable cities with renewable energy and abundant greenery; the term is usually traced to a 2008 blog post and spread in the 2010s. (Search-result snippets only; sf-encyclopedia page fetch failed, not read.)",
+  "visual_characteristics": "Green cities, solar panels, vertical gardens, art-nouveau curves, bright daylight.",
+  "line_characteristics": "Organic flowing lines.",
+  "shape_language": "Curves, leaves, domes.",
+  "color_characteristics": "Fresh greens, gold sun, white.",
+  "lighting_characteristics": "Bright sun, dappled light.",
+  "texture_characteristics": "Plants, glass, wood.",
+  "composition_characteristics": "Wide utopian views.",
+  "emotional_characteristics": "Hopeful, optimistic, calm.",
+  "use_cases": [
+   "sustainability posts",
+   "eco frame stories"
+  ],
+  "time_optic_fit": "Good for eco/bio-acetate themes; product real.",
+  "common_mistakes": [
+   "dystopian elements",
+   "clutter"
+  ],
+  "prompt_template": "Solarpunk scene of {subject} in {setting}, vertical gardens, solar panels, {palette}, {lighting}, {composition}, no text.",
+  "prompt_example": "Solarpunk scene of an eyewear shop in a green city street with vertical gardens and solar panels, fresh greens and gold, dappled sunlight, low horizon wide view, no text.",
+  "avoid_phrases": [
+   "any studio or brand name",
+   "any living artist's name",
+   "titles of copyrighted films, games or series"
+  ],
+  "flux_notes": "FLUX handles solarpunk well.",
+  "palette_suggestions": [
+   "pal.solarpunk_green_gold",
+   "pal.brand_timeoptic"
+  ],
+  "lighting_ids": [
+   "dappled_foliage",
+   "golden_hour"
+  ],
+  "composition_ids": [
+   "low_horizon",
+   "layered_depth"
+  ],
+  "emotion_ids": [
+   "hope.hope",
+   "calm.serenity"
+  ],
+  "reference_sources": [
+   {
+    "key_or_url": "https://sf-encyclopedia.com/entry/solarpunk",
+    "accessed": "search-result snippet only (page fetch returned HTTP 429); not read"
+   }
+  ],
+  "evidence": "mixed"
+ }
+]

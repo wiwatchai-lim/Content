@@ -1,0 +1,2500 @@
+[
+ {
+  "id": "joy_elated",
+  "label_en": "Elated joy",
+  "label_th": "ดีใจสุดขีด",
+  "category": "emotion",
+  "intent": "celebrate a sudden good outcome",
+  "body_cues": {
+   "head": "tilted back",
+   "head_orientation_gaze": "up / toward the sky or the partner",
+   "shoulders": "raised, free",
+   "spine_torso": "stretched tall, chest open",
+   "arms": "both raised above shoulders, symmetrical, pumping up-down",
+   "hands": "open or fists",
+   "weight": "up on toes, light",
+   "legs_feet": "small jumps or bouncing knees",
+   "distance": "moves toward the partner",
+   "tempo_quality": "fast, rhythmic, re-starting (Laban: free flow, light, rising)"
+  },
+  "silhouette_check": "Arms above the head form a clear V/Y shape; very readable.",
+  "readability": {
+   "static_image": "high",
+   "in_motion": "high",
+   "confusable_with": [
+    "panic_fear (also symmetrical, energetic arms)",
+    "surprise_startle"
+   ],
+   "disambiguate_with": "Arms go UP and OUT and the body rises/advances; fear arms come in or forward and the body retreats."
+  },
+  "cultural_caveats": "Large public jumping is fine for youth/sport contexts; an older Thai character in a formal scene would usually contain it (craft judgement, unverified).",
+  "rig_hint": "R.emote(P,t,'joy') = jolt + fistsUp",
+  "ai_prompt_phrase": "jumping with both arms raised high, head thrown back, bouncing with joy",
+  "evidence": {
+   "basis": "research",
+   "note": "Dael: joy 90% classified, symmetrical up-down repetitive arm action; Kleinsmith: head back, arms raised; Melzer: jumping, rhythmic, spreading, rising."
+  },
+  "source_keys": [
+   "Dael2012",
+   "Kleinsmith2013",
+   "Melzer2019",
+   "Atkinson2004",
+   "Dittrich1996"
+  ],
+  "test_status": "untested"
+ },
+ {
+  "id": "contentment_pleasure",
+  "label_en": "Contentment / quiet pleasure",
+  "label_th": "สุขใจเงียบ ๆ",
+  "category": "emotion",
+  "intent": "savour something pleasant",
+  "body_cues": {
+   "head": "slightly up, eyes-closed feel",
+   "head_orientation_gaze": "averted upward or to the side, not at anyone",
+   "shoulders": "dropped, loose",
+   "spine_torso": "upright but relaxed, slight lean back",
+   "arms": "one arm moving, asymmetrical (e.g. one hand on a warm cup)",
+   "hands": "soft, open",
+   "weight": "settled, even",
+   "legs_feet": "relaxed stance or seated",
+   "distance": "any",
+   "tempo_quality": "slow, smooth, continuous"
+  },
+  "silhouette_check": "Head tilted up and away reads only if the profile is clear - use 3/4 or side view.",
+  "readability": {
+   "static_image": "medium",
+   "in_motion": "medium",
+   "confusable_with": [
+    "relief",
+    "sadness_low (both low arousal)"
+   ],
+   "disambiguate_with": "Head UP and chest open (sadness: head down, chest closed); add a warm prop (tea, sun, breeze)."
+  },
+  "cultural_caveats": "None specific.",
+  "rig_hint": "R.emote 'tender' minus the sad brows; R.lean(P,t,dur,-3)",
+  "ai_prompt_phrase": "eyes closed, face tilted up toward the sun, relaxed shoulders, holding a warm cup",
+  "evidence": {
+   "basis": "research",
+   "note": "Dael cluster 9: head tilted up and averted + asymmetrical arm action was fairly prototypical of pleasure (but used in only 40% of pleasure portrayals)."
+  },
+  "source_keys": [
+   "Dael2012"
+  ],
+  "test_status": "untested"
+ },
+ {
+  "id": "amusement_laugh",
+  "label_en": "Amusement / laughing",
+  "label_th": "ขำ หัวเราะ",
+  "category": "emotion",
+  "intent": "react to something funny",
+  "body_cues": {
+   "head": "straight, bobbing with laughter",
+   "head_orientation_gaze": "toward the person who made the joke",
+   "shoulders": "bouncing",
+   "spine_torso": "folds forward on big laughs, rocks back",
+   "arms": "touching self (belly, knee) or the other person's arm",
+   "hands": "touching / fiddling",
+   "weight": "shifting",
+   "legs_feet": "may stamp one foot",
+   "distance": "close, social-personal",
+   "tempo_quality": "discontinuous: bursts with short holds in between"
+  },
+  "silhouette_check": "Forward fold with hand on belly reads well in side view.",
+  "readability": {
+   "static_image": "medium",
+   "in_motion": "high",
+   "confusable_with": [
+    "grief_despair (sobbing: shaking shoulders + forward fold looks similar)"
+   ],
+   "disambiguate_with": "Head oriented to the partner and open chest between bursts; context line or laugh SFX."
+  },
+  "cultural_caveats": "Touching a peer's arm is fine; touching an elder or monk is not (general Thai etiquette, unverified detail).",
+  "rig_hint": "R.squash repeated + small R.nod; hand pose 'chest' low",
+  "ai_prompt_phrase": "laughing hard, bending forward, one hand on belly, other hand touching friend's arm",
+  "evidence": {
+   "basis": "research",
+   "note": "Dael: amusement 70% classified; touching/manipulation and discontinuous movements with holds, head straight toward interlocutor."
+  },
+  "source_keys": [
+   "Dael2012"
+  ],
+  "test_status": "untested"
+ },
+ {
+  "id": "pride_triumph",
+  "label_en": "Pride / triumph",
+  "label_th": "ภูมิใจ ชนะ",
+  "category": "emotion",
+  "intent": "show success",
+  "body_cues": {
+   "head": "tilted back slightly, chin up",
+   "head_orientation_gaze": "forward/up, toward audience",
+   "shoulders": "back and down",
+   "spine_torso": "chest expanded, torso pushed out",
+   "arms": "raised above head or out from the body",
+   "hands": "fists",
+   "weight": "planted, grounded",
+   "legs_feet": "wide stance",
+   "distance": "takes space",
+   "tempo_quality": "stroke-and-hold: a quick rise, then a held pose"
+  },
+  "silhouette_check": "Arms-out V with chest forward is the strongest silhouette in the library.",
+  "readability": {
+   "static_image": "high",
+   "in_motion": "high",
+   "confusable_with": [
+    "joy_elated",
+    "frustration (also arms up/out)"
+   ],
+   "disambiguate_with": "Fists and a HELD pose = triumph; frustration adds hands to head or a downward hit."
+  },
+  "cultural_caveats": "Big pride displays can read as boastful in Thai settings that value modesty (kreng jai) - use for sport/achievement, not for social one-upmanship (cultural inference, unverified).",
+  "rig_hint": "R.pose(P,t,'fistsUp'); R.lean(P,t,dur,-4); head r up",
+  "ai_prompt_phrase": "victory pose, arms raised in fists, chest out, chin up",
+  "evidence": {
+   "basis": "research",
+   "note": "Tracy & Matsumoto: head back, arms raised, fists, chest expanded after winning in sighted AND congenitally blind athletes; hands on hips not reliably shown."
+  },
+  "source_keys": [
+   "TracyMatsumoto2008",
+   "Aviezer2012",
+   "WitkowerTracy2019"
+  ],
+  "test_status": "untested"
+ },
+ {
+  "id": "pride_quiet",
+  "label_en": "Quiet pride / satisfaction",
+  "label_th": "ภูมิใจเงียบ ๆ",
+  "category": "emotion",
+  "intent": "pleased with own work, not showing off",
+  "body_cues": {
+   "head": "level or slightly up",
+   "head_orientation_gaze": "looks at the finished object",
+   "shoulders": "back, relaxed",
+   "spine_torso": "upright, chest a little open",
+   "arms": "one hand on the object or both arms loosely folded",
+   "hands": "relaxed",
+   "weight": "even",
+   "legs_feet": "still",
+   "distance": "near the object",
+   "tempo_quality": "slow settle into a still pose"
+  },
+  "silhouette_check": "Needs the object in frame to read.",
+  "readability": {
+   "static_image": "medium",
+   "in_motion": "medium",
+   "confusable_with": [
+    "contentment_pleasure",
+    "disgust (crossed arms)"
+   ],
+   "disambiguate_with": "Head slightly back (pride) vs forward/turned away (disgust); look at the object."
+  },
+  "cultural_caveats": "Modest version suits Thai social norms better than pride_triumph (craft judgement).",
+  "rig_hint": "R.lean -2; R.look toward object; pose 'idle'",
+  "ai_prompt_phrase": "standing back to admire finished work, small satisfied posture, arms loosely folded",
+  "evidence": {
+   "basis": "mixed",
+   "note": "Head-back pride cue from research; the small, object-directed version is craft."
+  },
+  "source_keys": [
+   "TracyMatsumoto2008",
+   "Kleinsmith2013"
+  ],
+  "test_status": "untested"
+ },
+ {
+  "id": "relief",
+  "label_en": "Relief",
+  "label_th": "โล่งใจ",
+  "category": "emotion",
+  "intent": "tension released after a threat passes",
+  "body_cues": {
+   "head": "drops then lifts",
+   "head_orientation_gaze": "up or closed-eyes feel",
+   "shoulders": "visibly drop on the exhale",
+   "spine_torso": "deflates then straightens",
+   "arms": "fall to the sides or hand to chest",
+   "hands": "open, loose",
+   "weight": "sinks then settles",
+   "legs_feet": "may lean on something",
+   "distance": "any",
+   "tempo_quality": "one big slow exhale: stillness -> sink -> settle"
+  },
+  "silhouette_check": "A shoulder drop is small - show it in MS/MCU, not wide.",
+  "readability": {
+   "static_image": "low",
+   "in_motion": "medium",
+   "confusable_with": [
+    "sadness_low (Dael grouped sadness and relief together: arms resting)"
+   ],
+   "disambiguate_with": "Sequence matters: show the tense state first, then the drop; add an exhale SFX and lift the head at the end."
+  },
+  "cultural_caveats": "None specific.",
+  "rig_hint": "R.squash(P,t,.94,8F) then R.emote 'happy'; hand pose 'chest'",
+  "ai_prompt_phrase": "shoulders dropping with a long exhale, hand on chest, head lifting with a relieved smile",
+  "evidence": {
+   "basis": "mixed",
+   "note": "Dael: relief (50%) shared the 'arms resting' cluster with sadness - so relief needs temporal context; exhale/head lift are craft."
+  },
+  "source_keys": [
+   "Dael2012"
+  ],
+  "test_status": "untested"
+ },
+ {
+  "id": "interest_curious",
+  "label_en": "Interest / curiosity",
+  "label_th": "สนใจ อยากรู้",
+  "category": "emotion",
+  "intent": "approach to learn more",
+  "body_cues": {
+   "head": "tilted slightly to one side",
+   "head_orientation_gaze": "locked on the object",
+   "shoulders": "neutral",
+   "spine_torso": "leaning forward",
+   "arms": "one arm active (reaching, pointing), the other at the side",
+   "hands": "one hand reaching or at chin",
+   "weight": "on the front foot",
+   "legs_feet": "one step forward",
+   "distance": "approaching the object",
+   "tempo_quality": "small, quick adjustments then stillness"
+  },
+  "silhouette_check": "Forward lean is visible in side or 3/4 view only.",
+  "readability": {
+   "static_image": "medium",
+   "in_motion": "medium",
+   "confusable_with": [
+    "irritation_cold_anger (same Dael cluster: trunk forward + one-arm action)"
+   ],
+   "disambiguate_with": "Open, rounded shape and a reach toward the object; irritation is angular with a closed hand and turns toward a person."
+  },
+  "cultural_caveats": "None specific.",
+  "rig_hint": "R.lean(P,t,dur,5); R.pose 'reach'; R.look with tilt",
+  "ai_prompt_phrase": "leaning in with head tilted, reaching toward the object with curiosity",
+  "evidence": {
+   "basis": "research",
+   "note": "Dael cluster 1 (arms at side, trunk forward, one-arm asymmetric action) grouped 30% of interest AND irritation portrayals; head tilt is craft."
+  },
+  "source_keys": [
+   "Dael2012",
+   "Kleinsmith2013"
+  ],
+  "test_status": "untested"
+ },
+ {
+  "id": "sadness_low",
+  "label_en": "Sadness",
+  "label_th": "เศร้า",
+  "category": "emotion",
+  "intent": "loss, disappointment",
+  "body_cues": {
+   "head": "dropped forward",
+   "head_orientation_gaze": "down, at the floor",
+   "shoulders": "slumped forward",
+   "spine_torso": "collapsed, rounded",
+   "arms": "hanging straight down, close to the body, or touching the upper body",
+   "hands": "limp",
+   "weight": "heavy, passive (Laban: passive weight)",
+   "legs_feet": "feet close together, little movement",
+   "distance": "apart from others",
+   "tempo_quality": "slow, smooth, sinking"
+  },
+  "silhouette_check": "Rounded C-curve of the spine with arms down is highly readable even from far.",
+  "readability": {
+   "static_image": "high",
+   "in_motion": "high",
+   "confusable_with": [
+    "grief_despair",
+    "defeat",
+    "tired_exhausted",
+    "relief"
+   ],
+   "disambiguate_with": "Sadness = slow + passive + head down; despair adds hands to face/head; tiredness adds yawning/rubbing."
+  },
+  "cultural_caveats": "Cross-culturally the best-agreed body expression (Japanese/Sri Lankan/American observers, Kleinsmith survey); no Thai data.",
+  "rig_hint": "R.emote(P,t,'sad'); walk step .6-.7 s",
+  "ai_prompt_phrase": "slumped shoulders, head hanging down, arms limp at the sides, slow heavy steps",
+  "evidence": {
+   "basis": "research",
+   "note": "Coulson: some sadness postures >90%; Kleinsmith: arms straight down close to body is the core; Melzer: passive weight, sinking, head dropping; Pollick: slow, smooth."
+  },
+  "source_keys": [
+   "Kleinsmith2013",
+   "Coulson2004",
+   "Melzer2019",
+   "Pollick2001",
+   "Wallbott1998"
+  ],
+  "test_status": "untested"
+ },
+ {
+  "id": "grief_despair",
+  "label_en": "Despair / grief",
+  "label_th": "สิ้นหวัง โศก",
+  "category": "emotion",
+  "intent": "overwhelmed by loss",
+  "body_cues": {
+   "head": "in hands or thrown back",
+   "head_orientation_gaze": "covered or away",
+   "shoulders": "shaking or hunched",
+   "spine_torso": "folding over, rocking",
+   "arms": "hands to face or head, or hugging self",
+   "hands": "covering the face",
+   "weight": "collapsing - may sink to knees or sit",
+   "legs_feet": "knees bend",
+   "distance": "alone",
+   "tempo_quality": "slow with sudden bursts (sobs)"
+  },
+  "silhouette_check": "Kneeling with face in hands is a classic readable shape.",
+  "readability": {
+   "static_image": "medium",
+   "in_motion": "medium",
+   "confusable_with": [
+    "sadness_low",
+    "anxiety_worry",
+    "amusement_laugh (shaking shoulders)"
+   ],
+   "disambiguate_with": "Covered face + collapse to the floor; sound design (sobs) and context carry the rest."
+  },
+  "cultural_caveats": "When sitting on the floor, mind feet direction. Seated or lying: keep the soles pointed away from other characters, elders and any Buddha image (ThailandFoundation2024).",
+  "rig_hint": "R.pose(P,t,'cover'); R.squash .9 held; R.lean 8",
+  "ai_prompt_phrase": "sinking to the knees, face buried in both hands, shoulders shaking",
+  "evidence": {
+   "basis": "mixed",
+   "note": "Dael: despair had an indistinct body pattern shared with anxiety, and sadness was confused with despair - so the recognisable 'face in hands' version is a craft convention."
+  },
+  "source_keys": [
+   "Dael2012",
+   "deGelder2009"
+  ],
+  "test_status": "untested"
+ },
+ {
+  "id": "shame",
+  "label_en": "Shame",
+  "label_th": "อับอาย ละอาย",
+  "category": "emotion",
+  "intent": "feel exposed after failure or wrongdoing",
+  "body_cues": {
+   "head": "lowered",
+   "head_orientation_gaze": "down and away from others",
+   "shoulders": "slumped",
+   "spine_torso": "chest narrowed, body made small",
+   "arms": "close to the body",
+   "hands": "together or hidden",
+   "weight": "pulled back",
+   "legs_feet": "feet together",
+   "distance": "moves away / turns the back partly",
+   "tempo_quality": "slow, contracting"
+  },
+  "silhouette_check": "Narrow chest + dropped shoulders reads in silhouette; head down alone does not.",
+  "readability": {
+   "static_image": "medium",
+   "in_motion": "medium",
+   "confusable_with": [
+    "sadness_low",
+    "embarrassment",
+    "status_low"
+   ],
+   "disambiguate_with": "Add a cause in frame (broken object, onlookers); shame turns away from the onlookers."
+  },
+  "cultural_caveats": "Tracy & Matsumoto found shame display stronger in less individualistic cultures; showing it is not 'over-acting' for a Thai audience (inference).",
+  "rig_hint": "R.lean 6; R.pose 'behind'; head y+8",
+  "ai_prompt_phrase": "shoulders slumped, chest caved in, turning away from the others, head bowed",
+  "evidence": {
+   "basis": "research",
+   "note": "Tracy & Matsumoto: only shoulders slumped and chest narrowed increased after losing; head-down was coded but not significant in their photos."
+  },
+  "source_keys": [
+   "TracyMatsumoto2008",
+   "WitkowerTracy2019",
+   "Wallbott1998"
+  ],
+  "test_status": "untested"
+ },
+ {
+  "id": "embarrassment",
+  "label_en": "Embarrassment",
+  "label_th": "เขิน อาย",
+  "category": "emotion",
+  "intent": "minor social slip, wants it to pass",
+  "body_cues": {
+   "head": "lowered and turned to the side",
+   "head_orientation_gaze": "down-away, then a quick look back",
+   "shoulders": "rising slightly",
+   "spine_torso": "small twist away",
+   "arms": "one hand to the face, neck or back of head",
+   "hands": "touching face/neck/hair",
+   "weight": "shifting",
+   "legs_feet": "toes turned in, one foot rubbing the other",
+   "distance": "small step back",
+   "tempo_quality": "small, fidgety, intermittent"
+  },
+  "silhouette_check": "Hand to the back of the head is a readable cartoon convention.",
+  "readability": {
+   "static_image": "medium",
+   "in_motion": "medium",
+   "confusable_with": [
+    "shame",
+    "shy_approach"
+   ],
+   "disambiguate_with": "Embarrassment keeps a half-smile and glances back; shame stays turned away."
+  },
+  "cultural_caveats": "Scratching your own head is fine; Never touch or pat another character's head, even a child's (ThailandFoundation2024).",
+  "rig_hint": "R.emote(P,t,'shy') (blush + 'behind')",
+  "ai_prompt_phrase": "embarrassed, rubbing the back of the neck, looking down and to the side",
+  "evidence": {
+   "basis": "mixed",
+   "note": "Embarrassment is among the body-expressed emotions reviewed by Witkower & Tracy (abstract only); the specific cues here are craft conventions."
+  },
+  "source_keys": [
+   "WitkowerTracy2019"
+  ],
+  "test_status": "untested"
+ },
+ {
+  "id": "hot_anger",
+  "label_en": "Hot anger / rage",
+  "label_th": "โกรธจัด",
+  "category": "emotion",
+  "intent": "attack or confront",
+  "body_cues": {
+   "head": "forward, slightly down",
+   "head_orientation_gaze": "locked on the target",
+   "shoulders": "raised, squared",
+   "spine_torso": "leaning forward, advancing",
+   "arms": "bent, tense; may stab forward or strike down",
+   "hands": "fists or a pointing finger",
+   "weight": "pushed forward, strong (Laban: strong weight)",
+   "legs_feet": "steps toward the target, stamp",
+   "distance": "closes into personal space",
+   "tempo_quality": "fast, sudden, direct, jerky"
+  },
+  "silhouette_check": "Forward diagonal lean with angular elbows; angular shapes read as threat.",
+  "readability": {
+   "static_image": "high",
+   "in_motion": "high",
+   "confusable_with": [
+    "determination",
+    "frustration"
+   ],
+   "disambiguate_with": "Anger is aimed AT someone (direction + approach); frustration is aimed at nothing."
+  },
+  "cultural_caveats": "Pointing a finger at someone's face is very confrontational; pointing with the foot is a grave insult in Thai culture - avoid unless the story needs it (ThailandFoundation2024 on feet).",
+  "rig_hint": "R.emote(P,t,'angry') (lean 6 + 'hips'); add R.pose 'point'",
+  "ai_prompt_phrase": "storming forward, leaning in, fists clenched, sharp jerky movements",
+  "evidence": {
+   "basis": "research",
+   "note": "Dael: hot anger homogeneously expressed by frontal lean/movement (70% classified); Melzer: strong, sudden, advancing, direct; Pollick: fast, jerky; Coulson: some anger postures >90%; Aronoff (via Kleinsmith): angular = threat."
+  },
+  "source_keys": [
+   "Dael2012",
+   "Melzer2019",
+   "Pollick2001",
+   "Coulson2004",
+   "Kleinsmith2013"
+  ],
+  "test_status": "untested"
+ },
+ {
+  "id": "irritation_cold_anger",
+  "label_en": "Irritation / cold anger",
+  "label_th": "หงุดหงิด โกรธเงียบ",
+  "category": "emotion",
+  "intent": "controlled displeasure",
+  "body_cues": {
+   "head": "still, slightly down",
+   "head_orientation_gaze": "fixed stare or pointedly away",
+   "shoulders": "tight, slightly raised",
+   "spine_torso": "upright, rigid",
+   "arms": "crossed, or one arm making a small sharp gesture",
+   "hands": "drumming fingers, tapping",
+   "weight": "locked",
+   "legs_feet": "foot tapping",
+   "distance": "holds distance",
+   "tempo_quality": "mostly still with small repetitive actions"
+  },
+  "silhouette_check": "Crossed arms read; the 'cold' quality depends on stillness - check in motion.",
+  "readability": {
+   "static_image": "low",
+   "in_motion": "medium",
+   "confusable_with": [
+    "interest_curious",
+    "disgust",
+    "pride_quiet"
+   ],
+   "disambiguate_with": "Add the irritant (noise, late friend) and a repetitive tap; head straight, not tilted."
+  },
+  "cultural_caveats": "Open displays of anger are often softened in Thai interaction; cold, smiling irritation may be the more 'Thai-real' version (unverified cultural observation).",
+  "rig_hint": "R.pose 'hug' (arms crossed approximation) + small repeated mv on foreR",
+  "ai_prompt_phrase": "arms crossed, tapping foot, tight shoulders, staring flatly",
+  "evidence": {
+   "basis": "mixed",
+   "note": "Dael: irritation only 30% classified and shared a cluster with interest; tapping/crossed arms are craft."
+  },
+  "source_keys": [
+   "Dael2012"
+  ],
+  "test_status": "untested"
+ },
+ {
+  "id": "frustration",
+  "label_en": "Frustration",
+  "label_th": "หัวเสีย ขัดใจ",
+  "category": "emotion",
+  "intent": "blocked from a goal",
+  "body_cues": {
+   "head": "thrown back or dropped into hands",
+   "head_orientation_gaze": "up at the sky or down at the problem",
+   "shoulders": "up/back, tense",
+   "spine_torso": "twists, jerky",
+   "arms": "raised and extended laterally, then dropping",
+   "hands": "hands to head, or a downward slap on the thigh/table",
+   "weight": "stomps",
+   "legs_feet": "stamp, kick at nothing",
+   "distance": "turns away from the obstacle, then back",
+   "tempo_quality": "bursts then sags"
+  },
+  "silhouette_check": "Hands on top of the head is a readable shape.",
+  "readability": {
+   "static_image": "medium",
+   "in_motion": "high",
+   "confusable_with": [
+    "pride_triumph (Kleinsmith: both had shoulders up/back and arms raised laterally)",
+    "hot_anger"
+   ],
+   "disambiguate_with": "Hands to the head or a downward hit; triumph holds the arms up with fists."
+  },
+  "cultural_caveats": "Hands on own head are fine. Never touch or pat another character's head, even a child's (ThailandFoundation2024).",
+  "rig_hint": "R.pose 'fistsUp' then 'cover' then R.squash",
+  "ai_prompt_phrase": "throwing hands up then grabbing own head in frustration",
+  "evidence": {
+   "basis": "research",
+   "note": "Kleinsmith (Wii non-acted postures): frustrated and triumphant both shoulders up/back, arms raised laterally - arousal separated better than valence."
+  },
+  "source_keys": [
+   "Kleinsmith2013"
+  ],
+  "test_status": "untested"
+ },
+ {
+  "id": "panic_fear",
+  "label_en": "Panic / fear",
+  "label_th": "กลัว ตกใจกลัว",
+  "category": "emotion",
+  "intent": "escape a threat",
+  "body_cues": {
+   "head": "pulled back, may duck",
+   "head_orientation_gaze": "toward the threat, ready to look away",
+   "shoulders": "raised, hunched",
+   "spine_torso": "leaning back, contracted, may twist laterally",
+   "arms": "pulled in or raised in front as a shield",
+   "hands": "open, fingers spread, in front of the body",
+   "weight": "backwards, bound (Laban: bound flow)",
+   "legs_feet": "stepping back, knees bent",
+   "distance": "increasing distance from the threat",
+   "tempo_quality": "fast retreat then frozen"
+  },
+  "silhouette_check": "Leaning back with hands up in front reads in side view.",
+  "readability": {
+   "static_image": "medium",
+   "in_motion": "high",
+   "confusable_with": [
+    "joy_elated (Dael: panic fear confused with elated joy 30%)",
+    "surprise_startle"
+   ],
+   "disambiguate_with": "Fear moves BACK and CONDENSES; joy moves UP and SPREADS. Show the threat or the character's head orientation toward it."
+  },
+  "cultural_caveats": "None specific.",
+  "rig_hint": "R.emote(P,t,'fear') (lean -7 + 'cover' + squash)",
+  "ai_prompt_phrase": "recoiling backward, hands raised in front, shoulders hunched, stepping away",
+  "evidence": {
+   "basis": "research",
+   "note": "Melzer: retreating, condensing, bound flow, backwards, enclosing; Dael: backward lean, upward gaze, lateral trunk lean, symmetrical arm action with knee movement."
+  },
+  "source_keys": [
+   "Melzer2019",
+   "Dael2012",
+   "Kleinsmith2013"
+  ],
+  "test_status": "untested"
+ },
+ {
+  "id": "anxiety_worry",
+  "label_en": "Anxiety / worry",
+  "label_th": "กังวล",
+  "category": "emotion",
+  "intent": "anticipate something bad",
+  "body_cues": {
+   "head": "slightly down, small movements",
+   "head_orientation_gaze": "flicking between the worry and nowhere",
+   "shoulders": "raised, tense",
+   "spine_torso": "slightly contracted, may lean back",
+   "arms": "close to body",
+   "hands": "self-touch: wringing hands, rubbing arm, touching neck",
+   "weight": "shifting from foot to foot",
+   "legs_feet": "fidgeting feet",
+   "distance": "keeps a little distance",
+   "tempo_quality": "small, repetitive, restless"
+  },
+  "silhouette_check": "Hand-wringing at chest height reads in MS.",
+  "readability": {
+   "static_image": "low",
+   "in_motion": "medium",
+   "confusable_with": [
+    "grief_despair (Dael: shared pattern)",
+    "waiting_impatient"
+   ],
+   "disambiguate_with": "Repetitive self-touch + glances toward the source of worry (phone, door, letter)."
+  },
+  "cultural_caveats": "None specific. This is Mint's home emotion in Slowly Growing - keep it subtle and consistent.",
+  "rig_hint": "R.pose 'chest' both hands (needs a 'wring' pose); R.breathe faster",
+  "ai_prompt_phrase": "anxious, wringing hands, shoulders tense, shifting weight from foot to foot",
+  "evidence": {
+   "basis": "mixed",
+   "note": "Dael: anxiety split between the despair cluster and the panic-fear cluster (backward lean, upward gaze, lateral trunk lean); self-touch fidgeting is craft."
+  },
+  "source_keys": [
+   "Dael2012"
+  ],
+  "test_status": "untested"
+ },
+ {
+  "id": "surprise_startle",
+  "label_en": "Surprise / startle",
+  "label_th": "ประหลาดใจ สะดุ้ง",
+  "category": "emotion",
+  "intent": "react to the unexpected",
+  "body_cues": {
+   "head": "jerks up/back",
+   "head_orientation_gaze": "snaps to the source",
+   "shoulders": "jump up",
+   "spine_torso": "straightens suddenly",
+   "arms": "fly up/out briefly",
+   "hands": "open, fingers spread",
+   "weight": "pops up then back",
+   "legs_feet": "small step back or jump",
+   "distance": "brief increase",
+   "tempo_quality": "very fast onset, then a hold (freeze)"
+  },
+  "silhouette_check": "Stretched vertical shape; reads best as a change from the previous pose (needs motion or a before/after pair).",
+  "readability": {
+   "static_image": "low",
+   "in_motion": "high",
+   "confusable_with": [
+    "joy_elated (Coulson: happiness and surprise close)",
+    "panic_fear"
+   ],
+   "disambiguate_with": "After the hold, the next pose tells valence: lean in + smile = pleasant surprise; retreat = fear."
+  },
+  "cultural_caveats": "None specific.",
+  "rig_hint": "R.emote(P,t,'shock') = jolt + 'open'",
+  "ai_prompt_phrase": "startled, jumping slightly with arms flung open, body stiff",
+  "evidence": {
+   "basis": "research",
+   "note": "De Meijer (via Kleinsmith): surprise = straight trunk and legs, backward stepping, fast movement; Coulson: happiness and surprise confused."
+  },
+  "source_keys": [
+   "Kleinsmith2013",
+   "Coulson2004"
+  ],
+  "test_status": "untested"
+ },
+ {
+  "id": "disgust",
+  "label_en": "Disgust",
+  "label_th": "รังเกียจ ขยะแขยง",
+  "category": "emotion",
+  "intent": "reject something offensive",
+  "body_cues": {
+   "head": "pulled back and turned away, slightly forward-down",
+   "head_orientation_gaze": "away from the object",
+   "shoulders": "raised on the near side",
+   "spine_torso": "turns/twists away",
+   "arms": "crossed, or one hand pushing away",
+   "hands": "palm out toward the object, or covering nose/mouth",
+   "weight": "away from the object",
+   "legs_feet": "step back",
+   "distance": "distance from the object",
+   "tempo_quality": "quick recoil then hold"
+  },
+  "silhouette_check": "Reads only with the object in frame.",
+  "readability": {
+   "static_image": "low",
+   "in_motion": "medium",
+   "confusable_with": [
+    "irritation_cold_anger",
+    "pride_quiet (crossed arms)"
+   ],
+   "disambiguate_with": "Object + covering the nose/mouth + turn-away; Coulson found disgust postures often unreadable alone."
+  },
+  "cultural_caveats": "None specific.",
+  "rig_hint": "R.lean -5 + R.look away + pose 'cover' (one hand) ",
+  "ai_prompt_phrase": "recoiling from the smell, turning away, hand covering nose",
+  "evidence": {
+   "basis": "research",
+   "note": "Coulson: many disgust postures 0% agreement; Wallbott (via Kleinsmith): crossed arms + head forward for disgust vs head back for pride; Dittrich included disgust in dance."
+  },
+  "source_keys": [
+   "Coulson2004",
+   "Kleinsmith2013",
+   "Wallbott1998"
+  ],
+  "test_status": "untested"
+ },
+ {
+  "id": "tender_affection",
+  "label_en": "Tenderness / affection",
+  "label_th": "อ่อนโยน รักใคร่",
+  "category": "emotion",
+  "intent": "care for someone",
+  "body_cues": {
+   "head": "tilted toward the other",
+   "head_orientation_gaze": "on the other character",
+   "shoulders": "soft, lowered",
+   "spine_torso": "leaning toward, rounded",
+   "arms": "open or curved around the other",
+   "hands": "soft, may rest on the other's shoulder/back",
+   "weight": "toward the other",
+   "legs_feet": "relaxed",
+   "distance": "personal to intimate",
+   "tempo_quality": "slow, smooth, continuous"
+  },
+  "silhouette_check": "Rounded shapes and an inward lean; two characters' silhouettes should touch or nearly touch.",
+  "readability": {
+   "static_image": "medium",
+   "in_motion": "medium",
+   "confusable_with": [
+    "comfort_consoling"
+   ],
+   "disambiguate_with": "Mutual lean and soft tempo; no tension in the hands."
+  },
+  "cultural_caveats": "Touch shoulder/arm/back, not the head. Never touch or pat another character's head, even a child's (ThailandFoundation2024).",
+  "rig_hint": "R.emote(P,t,'tender') (head tilt + 'chest')",
+  "ai_prompt_phrase": "leaning gently toward each other, heads tilted, soft rounded posture",
+  "evidence": {
+   "basis": "mixed",
+   "note": "Rounded postures read as warm (Aronoff via Kleinsmith); the rest is craft."
+  },
+  "source_keys": [
+   "Kleinsmith2013"
+  ],
+  "test_status": "untested"
+ },
+ {
+  "id": "loneliness",
+  "label_en": "Loneliness",
+  "label_th": "เหงา",
+  "category": "emotion",
+  "intent": "longing for connection",
+  "body_cues": {
+   "head": "slightly down or looking out",
+   "head_orientation_gaze": "toward a window, a phone, other people far away",
+   "shoulders": "slightly rounded",
+   "spine_torso": "curled, small",
+   "arms": "wrapped around self or knees",
+   "hands": "holding own arms",
+   "weight": "still, sinking",
+   "legs_feet": "knees pulled up when seated",
+   "distance": "large distance from others; small in frame",
+   "tempo_quality": "very slow, long holds"
+  },
+  "silhouette_check": "Small figure + lots of negative space carries most of it (staging, not pose).",
+  "readability": {
+   "static_image": "medium",
+   "in_motion": "medium",
+   "confusable_with": [
+    "sadness_low",
+    "tired_exhausted"
+   ],
+   "disambiguate_with": "The direction of the head (toward others or the outside) separates longing from plain sadness."
+  },
+  "cultural_caveats": "Seated hugging knees: Seated or lying: keep the soles pointed away from other characters, elders and any Buddha image (ThailandFoundation2024).",
+  "rig_hint": "R.pose 'hug'; small R.breathe; cam wide",
+  "ai_prompt_phrase": "sitting alone hugging knees, looking out the window, small in a large empty room",
+  "evidence": {
+   "basis": "craft",
+   "note": "Distance as relationship dial from proxemics (Sorokowska2017); the rest is staging craft."
+  },
+  "source_keys": [
+   "Sorokowska2017",
+   "Lasseter1987"
+  ],
+  "test_status": "untested"
+ },
+ {
+  "id": "tired_exhausted",
+  "label_en": "Tiredness / exhaustion",
+  "label_th": "เหนื่อย หมดแรง",
+  "category": "emotion",
+  "intent": "no energy left",
+  "body_cues": {
+   "head": "heavy, nodding",
+   "head_orientation_gaze": "unfocused, down",
+   "shoulders": "dropped",
+   "spine_torso": "slumped, leaning on something",
+   "arms": "dangling, or propping the head",
+   "hands": "rubbing eyes or neck",
+   "weight": "dragging, leaning",
+   "legs_feet": "shuffling, feet barely lifted",
+   "distance": "any",
+   "tempo_quality": "slow with occasional 'catch' (nodding off and jerking awake)"
+  },
+  "silhouette_check": "Leaning on a wall/table plus a dropped head; props help.",
+  "readability": {
+   "static_image": "medium",
+   "in_motion": "high",
+   "confusable_with": [
+    "sadness_low",
+    "boredom"
+   ],
+   "disambiguate_with": "Yawn, eye-rub, or nodding-off loop; sadness has no physical-fatigue actions."
+  },
+  "cultural_caveats": "None specific.",
+  "rig_hint": "walk step .65-.7 s, bob 5 px; R.pose 'chin'",
+  "ai_prompt_phrase": "exhausted, shuffling with slumped shoulders, rubbing eyes, dragging feet",
+  "evidence": {
+   "basis": "mixed",
+   "note": "Slow gait carries low energy (Roether: speed is a key gait feature); fatigue actions are craft."
+  },
+  "source_keys": [
+   "Roether2009",
+   "Pollick2001"
+  ],
+  "test_status": "untested"
+ },
+ {
+  "id": "boredom",
+  "label_en": "Boredom",
+  "label_th": "เบื่อ",
+  "category": "emotion",
+  "intent": "nothing engaging",
+  "body_cues": {
+   "head": "propped on one hand, tilting",
+   "head_orientation_gaze": "wandering, at nothing",
+   "shoulders": "slumped",
+   "spine_torso": "sliding down in the seat",
+   "arms": "one propping the head, one idle",
+   "hands": "drumming, doodling",
+   "weight": "sinking",
+   "legs_feet": "legs stretched, swinging",
+   "distance": "any",
+   "tempo_quality": "slow, repetitive, aimless"
+  },
+  "silhouette_check": "Head on hand at a table reads clearly.",
+  "readability": {
+   "static_image": "medium",
+   "in_motion": "medium",
+   "confusable_with": [
+    "tired_exhausted",
+    "thinking"
+   ],
+   "disambiguate_with": "Aimless repetitive actions (spinning a pen) and a wandering head orientation."
+  },
+  "cultural_caveats": "Seated with legs stretched: Seated or lying: keep the soles pointed away from other characters, elders and any Buddha image (ThailandFoundation2024).",
+  "rig_hint": "R.pose 'chin' + slow R.look drifts",
+  "ai_prompt_phrase": "bored, chin propped on hand, slumped, idly spinning a pen",
+  "evidence": {
+   "basis": "craft",
+   "note": "Not covered by the research read this session."
+  },
+  "source_keys": [
+   "Lasseter1987"
+  ],
+  "test_status": "untested"
+ },
+ {
+  "id": "hope_anticipation",
+  "label_en": "Hope / anticipation",
+  "label_th": "ความหวัง ตั้งตารอ",
+  "category": "emotion",
+  "intent": "wait for a good outcome",
+  "body_cues": {
+   "head": "lifted",
+   "head_orientation_gaze": "toward the expected thing (door, results, sky)",
+   "shoulders": "slightly raised",
+   "spine_torso": "upright, rising onto toes",
+   "arms": "close to the chest",
+   "hands": "clasped together at the chest",
+   "weight": "forward, up on toes",
+   "legs_feet": "small bounces or stillness",
+   "distance": "facing the expected thing",
+   "tempo_quality": "contained energy: still with small rises"
+  },
+  "silhouette_check": "Clasped hands at chest + lifted head read in MS.",
+  "readability": {
+   "static_image": "medium",
+   "in_motion": "medium",
+   "confusable_with": [
+    "wai_peer (hands together at chest)",
+    "anxiety_worry"
+   ],
+   "disambiguate_with": "Hope looks UP and toward the thing; a wai is directed at a person with a head bow. Do not let 'hope hands' look like a wai to a Thai viewer unless intended."
+  },
+  "cultural_caveats": "Clasped hands at the chest can be read by Thai viewers as a wai or a prayer - choose fingers interlaced (hope) vs palms flat together (wai/prayer) on purpose.",
+  "rig_hint": "R.pose 'chest' both hands (needs 'clasp'); R.look up",
+  "ai_prompt_phrase": "hands clasped at chest, rising on tiptoes, looking hopefully at the door",
+  "evidence": {
+   "basis": "craft",
+   "note": "Rising/up components linked to happiness (Melzer); rest craft."
+  },
+  "source_keys": [
+   "Melzer2019",
+   "AnumanRajadhon_wai"
+  ],
+  "test_status": "untested"
+ },
+ {
+  "id": "determination",
+  "label_en": "Determination",
+  "label_th": "มุ่งมั่น",
+  "category": "emotion",
+  "intent": "commit to a hard task",
+  "body_cues": {
+   "head": "level, chin slightly down",
+   "head_orientation_gaze": "straight at the goal",
+   "shoulders": "squared, set",
+   "spine_torso": "upright, slight forward lean",
+   "arms": "bent, ready; may roll up sleeves",
+   "hands": "fists or gripping a tool",
+   "weight": "grounded, forward",
+   "legs_feet": "planted, wide",
+   "distance": "moves toward the goal",
+   "tempo_quality": "steady, direct, strong but not sudden"
+  },
+  "silhouette_check": "Squared front view with a slight forward lean; clear but can look like anger.",
+  "readability": {
+   "static_image": "medium",
+   "in_motion": "high",
+   "confusable_with": [
+    "hot_anger"
+   ],
+   "disambiguate_with": "Directed at a task or goal, not at a person; steady not jerky tempo; no approach toward another character."
+  },
+  "cultural_caveats": "None specific.",
+  "rig_hint": "R.lean 4; pose 'fistsUp' small; walk .42 s",
+  "ai_prompt_phrase": "determined, rolling up sleeves, squared shoulders, striding toward the goal",
+  "evidence": {
+   "basis": "mixed",
+   "note": "Strong + direct components (Melzer anger set) minus 'sudden' and minus the person-target: craft derivation."
+  },
+  "source_keys": [
+   "Melzer2019",
+   "Pollick2001"
+  ],
+  "test_status": "untested"
+ },
+ {
+  "id": "calm_serene",
+  "label_en": "Calm / serenity",
+  "label_th": "สงบ",
+  "category": "emotion",
+  "intent": "at peace",
+  "body_cues": {
+   "head": "level, balanced",
+   "head_orientation_gaze": "soft, forward or closed-eyes feel",
+   "shoulders": "dropped, even",
+   "spine_torso": "upright, long, balanced",
+   "arms": "resting symmetrically",
+   "hands": "open, still",
+   "weight": "centred",
+   "legs_feet": "still",
+   "distance": "any",
+   "tempo_quality": "very slow, breathing visible"
+  },
+  "silhouette_check": "Symmetry and verticality; risk of looking 'frozen' - add breathing.",
+  "readability": {
+   "static_image": "medium",
+   "in_motion": "medium",
+   "confusable_with": [
+    "boredom",
+    "contentment_pleasure"
+   ],
+   "disambiguate_with": "Upright and balanced (boredom slumps); slow visible breath."
+  },
+  "cultural_caveats": "Meditation-like seated posture: keep it respectful, do not pair with jokes about Buddhist practice (cultural sensitivity, craft).",
+  "rig_hint": "R.breathe 3.5 s; pose 'idle'",
+  "ai_prompt_phrase": "sitting upright and still, shoulders relaxed, breathing slowly, peaceful",
+  "evidence": {
+   "basis": "craft",
+   "note": "Not directly studied in sources read; derived from low-arousal / balance conventions."
+  },
+  "source_keys": [
+   "Lasseter1987"
+  ],
+  "test_status": "untested"
+ },
+ {
+  "id": "thinking",
+  "label_en": "Thinking / pondering",
+  "label_th": "คิด ไตร่ตรอง",
+  "category": "cognitive",
+  "intent": "work something out",
+  "body_cues": {
+   "head": "tilted, slightly up",
+   "head_orientation_gaze": "up and to the side, away from everyone",
+   "shoulders": "neutral",
+   "spine_torso": "still, slight lean back",
+   "arms": "one arm across the body supporting the other",
+   "hands": "hand at chin",
+   "weight": "on one leg",
+   "legs_feet": "still or slow pacing",
+   "distance": "any",
+   "tempo_quality": "slow, with a hold"
+  },
+  "silhouette_check": "Hand-to-chin is the most readable thinking shape.",
+  "readability": {
+   "static_image": "high",
+   "in_motion": "medium",
+   "confusable_with": [
+    "boredom",
+    "confusion"
+   ],
+   "disambiguate_with": "Head orientation up/away with a hold; then a change (idea) resolves it."
+  },
+  "cultural_caveats": "None specific.",
+  "rig_hint": "R.emote(P,t,'think') (pupils up + chin pose + head tilt)",
+  "ai_prompt_phrase": "thinking, hand on chin, head tilted, looking up to the side",
+  "evidence": {
+   "basis": "craft",
+   "note": "Convention; Lasseter: the thought process must be visible before the action."
+  },
+  "source_keys": [
+   "Lasseter1987",
+   "Hooks2023"
+  ],
+  "test_status": "untested"
+ },
+ {
+  "id": "confusion",
+  "label_en": "Confusion",
+  "label_th": "งง สับสน",
+  "category": "cognitive",
+  "intent": "cannot make sense of something",
+  "body_cues": {
+   "head": "tilted strongly, may tilt the other way",
+   "head_orientation_gaze": "between two things",
+   "shoulders": "one raised or both up",
+   "spine_torso": "slight lean back",
+   "arms": "small shrug, palms up",
+   "hands": "scratching own head, or palms up",
+   "weight": "shifting",
+   "legs_feet": "one step back",
+   "distance": "any",
+   "tempo_quality": "start-stop, hesitant"
+  },
+  "silhouette_check": "Head tilt + scratch reads; a shrug reads well in front view.",
+  "readability": {
+   "static_image": "medium",
+   "in_motion": "high",
+   "confusable_with": [
+    "thinking",
+    "embarrassment (hand to head)"
+   ],
+   "disambiguate_with": "Look back and forth between two objects; a question-mark shrug."
+  },
+  "cultural_caveats": "Scratching own head fine. Never touch or pat another character's head, even a child's (ThailandFoundation2024).",
+  "rig_hint": "R.pose 'shrug'; R.look alternating; head tilt",
+  "ai_prompt_phrase": "confused, scratching head, head tilted, looking from one thing to the other",
+  "evidence": {
+   "basis": "craft",
+   "note": "Convention."
+  },
+  "source_keys": [
+   "Lasseter1987"
+  ],
+  "test_status": "untested"
+ },
+ {
+  "id": "realization_aha",
+  "label_en": "Realisation / 'aha'",
+  "label_th": "นึกออก",
+  "category": "cognitive",
+  "intent": "an idea arrives",
+  "body_cues": {
+   "head": "snaps up",
+   "head_orientation_gaze": "up then straight at the partner/object",
+   "shoulders": "lift",
+   "spine_torso": "straightens suddenly",
+   "arms": "one hand flies up",
+   "hands": "index finger up, or a snap",
+   "weight": "pops up",
+   "legs_feet": "small hop",
+   "distance": "turns toward the partner",
+   "tempo_quality": "freeze -> sudden pop -> hold"
+  },
+  "silhouette_check": "Finger up reads clearly in front or 3/4.",
+  "readability": {
+   "static_image": "high",
+   "in_motion": "high",
+   "confusable_with": [
+    "surprise_startle",
+    "pointing_deictic"
+   ],
+   "disambiguate_with": "Preceded by a thinking hold; the finger points UP (idea), not at someone."
+  },
+  "cultural_caveats": "Raising a finger at a senior to interrupt may read as rude in hierarchy-sensitive scenes (craft judgement, unverified).",
+  "rig_hint": "R.jolt small; R.arm('R',t,dur,150,10)",
+  "ai_prompt_phrase": "eyes widening with an idea, finger raised, body straightening",
+  "evidence": {
+   "basis": "craft",
+   "note": "Anticipation (hold) then action - Disney principle."
+  },
+  "source_keys": [
+   "Lasseter1987"
+  ],
+  "test_status": "untested"
+ },
+ {
+  "id": "concentration",
+  "label_en": "Concentration / focus",
+  "label_th": "จดจ่อ",
+  "category": "cognitive",
+  "intent": "absorbed in a task",
+  "body_cues": {
+   "head": "forward, toward the task",
+   "head_orientation_gaze": "fixed on the task",
+   "shoulders": "forward, slightly raised",
+   "spine_torso": "hunched toward the work",
+   "arms": "close in, working",
+   "hands": "precise small movements",
+   "weight": "forward, stable",
+   "legs_feet": "still",
+   "distance": "very close to the task",
+   "tempo_quality": "still with tiny precise actions"
+  },
+  "silhouette_check": "Hunch toward a task looks like defeat in silhouette unless the task is visible.",
+  "readability": {
+   "static_image": "medium",
+   "in_motion": "medium",
+   "confusable_with": [
+    "defeat (Kleinsmith: both had shoulders slumped forward, arms down/diagonal)"
+   ],
+   "disambiguate_with": "Show the task and the head orientation toward it; hands active, not limp."
+  },
+  "cultural_caveats": "None specific.",
+  "rig_hint": "R.lean 6; small hand mv loops",
+  "ai_prompt_phrase": "leaning in, absorbed, working carefully on a small object",
+  "evidence": {
+   "basis": "research",
+   "note": "Kleinsmith (Wii): concentrating vs defeated share slumped shoulders and arms down - disambiguate with task/hands."
+  },
+  "source_keys": [
+   "Kleinsmith2013"
+  ],
+  "test_status": "untested"
+ },
+ {
+  "id": "defeat",
+  "label_en": "Defeat / giving up",
+  "label_th": "ยอมแพ้ หมดหวัง",
+  "category": "emotion",
+  "intent": "accept loss",
+  "body_cues": {
+   "head": "dropped",
+   "head_orientation_gaze": "down",
+   "shoulders": "slumped forward",
+   "spine_torso": "collapsed forward",
+   "arms": "hanging down and diagonally across the body",
+   "hands": "limp, may drop an object",
+   "weight": "heavy",
+   "legs_feet": "may sit down abruptly",
+   "distance": "turns away from the goal",
+   "tempo_quality": "slow, with a final drop"
+  },
+  "silhouette_check": "Collapsed forward shape; needs context (lost game, rejected paper).",
+  "readability": {
+   "static_image": "medium",
+   "in_motion": "medium",
+   "confusable_with": [
+    "sadness_low",
+    "concentration",
+    "shame"
+   ],
+   "disambiguate_with": "Something drops (object, shoulders, body to a seat) at the moment of giving up; then stillness."
+  },
+  "cultural_caveats": "None specific.",
+  "rig_hint": "R.emote 'sad' + R.squash .9; drop prop",
+  "ai_prompt_phrase": "shoulders slumping forward, arms hanging, letting the paper fall, sinking onto a bench",
+  "evidence": {
+   "basis": "research",
+   "note": "Kleinsmith (Wii defeated) + Tracy (losing: slumped shoulders, narrowed chest)."
+  },
+  "source_keys": [
+   "Kleinsmith2013",
+   "TracyMatsumoto2008"
+  ],
+  "test_status": "untested"
+ },
+ {
+  "id": "listening_engaged",
+  "label_en": "Engaged listening",
+  "label_th": "ตั้งใจฟัง",
+  "category": "social",
+  "intent": "show the speaker they are heard",
+  "body_cues": {
+   "head": "small nods, slight tilt",
+   "head_orientation_gaze": "toward the speaker",
+   "shoulders": "relaxed",
+   "spine_torso": "oriented toward the speaker, slight lean in",
+   "arms": "still, open",
+   "hands": "still, may hold a cup",
+   "weight": "toward the speaker",
+   "legs_feet": "pointed toward the speaker",
+   "distance": "personal distance",
+   "tempo_quality": "mostly still, nods on the speaker's key words"
+  },
+  "silhouette_check": "Body and head turned toward the speaker is visible even for faceless characters.",
+  "readability": {
+   "static_image": "medium",
+   "in_motion": "high",
+   "confusable_with": [
+    "ignoring_cold_shoulder (when orientation is wrong)"
+   ],
+   "disambiguate_with": "Keep the listener's head/body pointed at the speaker; nod on stressed words."
+  },
+  "cultural_caveats": "Listening to an elder: slightly lowered head and stillness are polite (craft, consistent with ThailandFoundation2024).",
+  "rig_hint": "R.listen(P,t0,t1); R.nod",
+  "ai_prompt_phrase": "listening attentively, turned toward the friend, nodding gently",
+  "evidence": {
+   "basis": "mixed",
+   "note": "Orientation as attention cue (Langton); amusement/engagement head toward interlocutor (Dael); nods are craft."
+  },
+  "source_keys": [
+   "Langton2000",
+   "Dael2012",
+   "Sorokowska2017"
+  ],
+  "test_status": "untested"
+ },
+ {
+  "id": "ignoring_cold_shoulder",
+  "label_en": "Ignoring / cold shoulder",
+  "label_th": "เมิน ไม่สนใจ",
+  "category": "social",
+  "intent": "deny attention",
+  "body_cues": {
+   "head": "turned away",
+   "head_orientation_gaze": "pointedly away from the other",
+   "shoulders": "turned, one shoulder toward the other",
+   "spine_torso": "body angled away",
+   "arms": "crossed or busy with something else",
+   "hands": "busy (phone, book)",
+   "weight": "away",
+   "legs_feet": "pointed away",
+   "distance": "keeps or increases distance",
+   "tempo_quality": "still, deliberate"
+  },
+  "silhouette_check": "Back or shoulder to the other character reads immediately.",
+  "readability": {
+   "static_image": "high",
+   "in_motion": "high",
+   "confusable_with": [
+    "shame (also turns away)"
+   ],
+   "disambiguate_with": "Ignoring is upright and busy; shame is collapsed."
+  },
+  "cultural_caveats": "None specific.",
+  "rig_hint": "R.turn away; R.look away with body",
+  "ai_prompt_phrase": "turning her back on him, arms crossed, looking at her phone",
+  "evidence": {
+   "basis": "research",
+   "note": "Head and body orientation signal the direction of attention (Langton; Emery)."
+  },
+  "source_keys": [
+   "Langton2000",
+   "Emery2000"
+  ],
+  "test_status": "untested"
+ },
+ {
+  "id": "attention_offscreen",
+  "label_en": "Look at something (off-screen or object)",
+  "label_th": "หันไปมอง",
+  "category": "social",
+  "intent": "direct the viewer's attention",
+  "body_cues": {
+   "head": "turns toward the target",
+   "head_orientation_gaze": "at the target",
+   "shoulders": "follow the head",
+   "spine_torso": "turns last",
+   "arms": "may point",
+   "hands": "pointing or open hand toward the target",
+   "weight": "shifts toward",
+   "legs_feet": "turn",
+   "distance": "n/a",
+   "tempo_quality": "head first, body follows (eyes-head-body order)"
+  },
+  "silhouette_check": "Head turn must be large enough to read without eyes - exaggerate the angle.",
+  "readability": {
+   "static_image": "high",
+   "in_motion": "high",
+   "confusable_with": [],
+   "disambiguate_with": "Add pointing or a body turn for a stronger cue; viewers' attention follows automatically."
+  },
+  "cultural_caveats": "Point with the hand, never the foot (ThailandFoundation2024).",
+  "rig_hint": "R.look(P,t,dx,dy,{body}); R.pose 'point'",
+  "ai_prompt_phrase": "turning head and body to look at the product on the table, hand gesturing toward it",
+  "evidence": {
+   "basis": "research",
+   "note": "Gaze, head orientation and pointing all cue attention and trigger reflexive orienting (Langton)."
+  },
+  "source_keys": [
+   "Langton2000",
+   "Emery2000"
+  ],
+  "test_status": "untested"
+ },
+ {
+  "id": "pointing_deictic",
+  "label_en": "Pointing",
+  "label_th": "ชี้",
+  "category": "gesture",
+  "intent": "indicate a thing or place",
+  "body_cues": {
+   "head": "toward the target",
+   "head_orientation_gaze": "at the target",
+   "shoulders": "one raised",
+   "spine_torso": "turned toward the target",
+   "arms": "one arm extended",
+   "hands": "index finger or open hand",
+   "weight": "toward the target",
+   "legs_feet": "neutral",
+   "distance": "n/a",
+   "tempo_quality": "preparation -> stroke on the stressed word -> brief hold -> retraction"
+  },
+  "silhouette_check": "Extended arm away from the body reads in silhouette.",
+  "readability": {
+   "static_image": "high",
+   "in_motion": "high",
+   "confusable_with": [
+    "realization_aha",
+    "hot_anger (pointing at a person)"
+   ],
+   "disambiguate_with": "Point at things/places; pointing at a person's face reads as accusation."
+  },
+  "cultural_caveats": "Never point with the foot. Pointing a finger at an elder or at a Buddha image is impolite in Thailand; an open hand is the safer default (general etiquette guidance; finger-pointing detail unverified).",
+  "rig_hint": "R.pose 'point'",
+  "ai_prompt_phrase": "pointing with an open hand toward the shop sign",
+  "evidence": {
+   "basis": "research",
+   "note": "Deictic gesture type (McNeill via ShattuckHufnagelRen); stroke aligns with pitch accent."
+  },
+  "source_keys": [
+   "McNeill1992",
+   "ShattuckHufnagelRen2018",
+   "Langton2000",
+   "ThailandFoundation2024"
+  ],
+  "test_status": "untested"
+ },
+ {
+  "id": "explaining_iconic",
+  "label_en": "Explaining with shape/action (iconic)",
+  "label_th": "อธิบายด้วยมือ",
+  "category": "gesture",
+  "intent": "show size, shape or action while talking",
+  "body_cues": {
+   "head": "toward the listener between gestures",
+   "head_orientation_gaze": "alternates listener / gesture space",
+   "shoulders": "free",
+   "spine_torso": "upright, open",
+   "arms": "hands in front of the torso drawing the shape",
+   "hands": "shaping the object/action",
+   "weight": "neutral",
+   "legs_feet": "neutral",
+   "distance": "personal",
+   "tempo_quality": "stroke on the stressed syllable; one gesture per idea"
+  },
+  "silhouette_check": "Gesture space in front of the body, not hidden behind it.",
+  "readability": {
+   "static_image": "medium",
+   "in_motion": "high",
+   "confusable_with": [],
+   "disambiguate_with": "Gesture should ADD information not in the words (size, direction, action)."
+  },
+  "cultural_caveats": "None specific.",
+  "rig_hint": "R.pose 'open'/'reach' timed to TTS stress; R.arm custom",
+  "ai_prompt_phrase": "explaining with hands, showing how big the fish was",
+  "evidence": {
+   "basis": "research",
+   "note": "Hostetter meta-analysis: gestures help comprehension, more for motor actions and when not redundant; strokes align with pitch accents."
+  },
+  "source_keys": [
+   "Hostetter2011",
+   "ShattuckHufnagelRen2018",
+   "McNeill1992"
+  ],
+  "test_status": "untested"
+ },
+ {
+  "id": "emphasis_beat",
+  "label_en": "Emphasis (beat gesture)",
+  "label_th": "เน้นคำ",
+  "category": "gesture",
+  "intent": "stress a key word",
+  "body_cues": {
+   "head": "small nod on the stress",
+   "head_orientation_gaze": "listener",
+   "shoulders": "neutral",
+   "spine_torso": "neutral",
+   "arms": "small down-flick",
+   "hands": "loose hand flick",
+   "weight": "neutral",
+   "legs_feet": "neutral",
+   "distance": "any",
+   "tempo_quality": "brief flick on the stressed syllable, then rest"
+  },
+  "silhouette_check": "Small - only visible in MS/MCU.",
+  "readability": {
+   "static_image": "low",
+   "in_motion": "medium",
+   "confusable_with": [],
+   "disambiguate_with": "Use once or twice per line maximum; constant beats look nervous."
+  },
+  "cultural_caveats": "Thai is tonal; aligning beats to Thai prominence is untested (gap).",
+  "rig_hint": "R.nod 1 + small arm flick on stressed syllable",
+  "ai_prompt_phrase": "talking with a small emphatic hand flick on the key word",
+  "evidence": {
+   "basis": "research",
+   "note": "McNeill beats; strokes of non-referential gestures align with pitch-accented syllables (English)."
+  },
+  "source_keys": [
+   "ShattuckHufnagelRen2018",
+   "McNeill1992"
+  ],
+  "test_status": "untested"
+ },
+ {
+  "id": "metaphoric_weighing",
+  "label_en": "Weighing options (metaphoric)",
+  "label_th": "ชั่งใจ",
+  "category": "gesture",
+  "intent": "present two ideas as objects",
+  "body_cues": {
+   "head": "tilts side to side",
+   "head_orientation_gaze": "between the two hands",
+   "shoulders": "alternating",
+   "spine_torso": "slight sway",
+   "arms": "both forearms out, palms up",
+   "hands": "palms up, moving up/down like scales",
+   "weight": "shifts side to side",
+   "legs_feet": "neutral",
+   "distance": "any",
+   "tempo_quality": "slow alternation"
+  },
+  "silhouette_check": "Two palms up at waist height read in front view.",
+  "readability": {
+   "static_image": "medium",
+   "in_motion": "high",
+   "confusable_with": [
+    "confusion"
+   ],
+   "disambiguate_with": "Hands as scale pans while saying 'this ... or that'."
+  },
+  "cultural_caveats": "None specific.",
+  "rig_hint": "R.pose 'shrug' variant with alternating arm heights",
+  "ai_prompt_phrase": "weighing two options, palms up, tilting head side to side",
+  "evidence": {
+   "basis": "research",
+   "note": "Metaphoric gestures present abstract ideas as objects (McNeill via secondary)."
+  },
+  "source_keys": [
+   "McNeill1992",
+   "ShattuckHufnagelRen2018"
+  ],
+  "test_status": "untested"
+ },
+ {
+  "id": "greeting_wave_casual",
+  "label_en": "Casual wave (peers, Western style)",
+  "label_th": "โบกมือทักทาย",
+  "category": "social",
+  "intent": "greet a friend informally",
+  "body_cues": {
+   "head": "up, slight tilt",
+   "head_orientation_gaze": "toward the friend",
+   "shoulders": "one raised",
+   "spine_torso": "upright, open",
+   "arms": "one arm raised",
+   "hands": "open palm, side-to-side",
+   "weight": "light",
+   "legs_feet": "may step forward",
+   "distance": "social to personal",
+   "tempo_quality": "bright, rhythmic"
+  },
+  "silhouette_check": "Raised arm reads from far.",
+  "readability": {
+   "static_image": "high",
+   "in_motion": "high",
+   "confusable_with": [],
+   "disambiguate_with": "Good for friends of equal status and for kids; replace with a wai for elders/customers in Thai settings."
+  },
+  "cultural_caveats": "In Thai settings a wai is expected for elders, teachers, customers; a wave to a senior looks overly casual.",
+  "rig_hint": "R.wave(P,t,3)",
+  "ai_prompt_phrase": "waving hello with a big smile",
+  "evidence": {
+   "basis": "cultural_norm",
+   "note": "Universal enough among peers; Thai hierarchy rule from AnumanRajadhon_wai."
+  },
+  "source_keys": [
+   "AnumanRajadhon_wai",
+   "ThailandFoundation2024"
+  ],
+  "test_status": "untested"
+ },
+ {
+  "id": "wai_peer",
+  "label_en": "Wai between equals / everyday",
+  "label_th": "ไหว้ทั่วไป",
+  "category": "thai_etiquette",
+  "intent": "greet, thank or take leave politely",
+  "body_cues": {
+   "head": "slight bow",
+   "head_orientation_gaze": "toward the other, lowered with the bow",
+   "shoulders": "relaxed",
+   "spine_torso": "upright with a slight bow from the neck/upper back",
+   "arms": "upper arms close to the body, elbows in",
+   "hands": "palms together, fingers slightly toward each other (budding lotus), at chest level",
+   "weight": "even",
+   "legs_feet": "standing feet together",
+   "distance": "social to personal",
+   "tempo_quality": "slow and graceful up and down, never sharp"
+  },
+  "silhouette_check": "Joined hands at the chest are visible in front and 3/4 view; side view hides the hands.",
+  "readability": {
+   "static_image": "high",
+   "in_motion": "medium",
+   "confusable_with": [
+    "hope_anticipation (clasped hands)",
+    "apology_thai"
+   ],
+   "disambiguate_with": "Palms flat together + head bow toward a person = wai."
+  },
+  "cultural_caveats": "Junior initiates; between intimates less strict. Hands touch the body between face and chest; higher = more respect.",
+  "rig_hint": "MISSING in rig.js POSES - add 'wai' (both forearms bent ~150, hands meeting at sternum) + R.nod 1",
+  "ai_prompt_phrase": "Thai wai greeting, palms pressed together at chest level, slight bow of the head",
+  "evidence": {
+   "basis": "cultural_norm",
+   "note": "Primary description by Anuman Rajadhon; everyday chest-level form per Thailand Foundation."
+  },
+  "source_keys": [
+   "AnumanRajadhon_wai",
+   "ThailandFoundation2024"
+  ],
+  "test_status": "untested"
+ },
+ {
+  "id": "wai_respect_elder",
+  "label_en": "Respectful wai to an elder/teacher",
+  "label_th": "ไหว้ผู้ใหญ่",
+  "category": "thai_etiquette",
+  "intent": "show high respect",
+  "body_cues": {
+   "head": "deeper bow, head meets the hands",
+   "head_orientation_gaze": "lowered",
+   "shoulders": "slightly forward",
+   "spine_torso": "bows from the waist",
+   "arms": "elbows in",
+   "hands": "budding-lotus hands raised high (thumbs near the nose/forehead as respect rises)",
+   "weight": "slightly forward",
+   "legs_feet": "feet together",
+   "distance": "junior approaches, stays lower than a seated elder",
+   "tempo_quality": "slow, held at the bottom of the bow"
+  },
+  "silhouette_check": "Hand height relative to the face carries the status - frame MS so the hands and face area are visible.",
+  "readability": {
+   "static_image": "high",
+   "in_motion": "medium",
+   "confusable_with": [
+    "wai_peer"
+   ],
+   "disambiguate_with": "Height of hands + depth of bow; the elder responds lower (rap_wai)."
+  },
+  "cultural_caveats": "Junior initiates; in front of a seated elder the standing junior stoops; never stand towering over a seated elder.",
+  "rig_hint": "Needs 'wai' pose + R.lean 15-20 + head down",
+  "ai_prompt_phrase": "young person giving a deep respectful wai to an elderly woman, hands raised to the face, bowing",
+  "evidence": {
+   "basis": "cultural_norm",
+   "note": "Anuman Rajadhon; Thailand Foundation."
+  },
+  "source_keys": [
+   "AnumanRajadhon_wai",
+   "ThailandFoundation2024"
+  ],
+  "test_status": "untested"
+ },
+ {
+  "id": "rap_wai_response",
+  "label_en": "Senior receiving a wai (rap wai)",
+  "label_th": "รับไหว้",
+  "category": "thai_etiquette",
+  "intent": "acknowledge a junior's respect",
+  "body_cues": {
+   "head": "small nod",
+   "head_orientation_gaze": "toward the junior, warm",
+   "shoulders": "relaxed",
+   "spine_torso": "upright",
+   "arms": "chest-level wai, or one hand raised sideways",
+   "hands": "hands at or below the chest",
+   "weight": "settled",
+   "legs_feet": "still",
+   "distance": "stays put; the junior comes to them",
+   "tempo_quality": "small, calm, unhurried"
+  },
+  "silhouette_check": "Readable only when the junior's wai is also in frame (status pair).",
+  "readability": {
+   "static_image": "medium",
+   "in_motion": "medium",
+   "confusable_with": [
+    "wai_peer"
+   ],
+   "disambiguate_with": "Return lower and smaller than the junior's wai; a nod alone is acceptable for a senior to a child."
+  },
+  "cultural_caveats": "Monks do not return a layperson's wai - show a serene acknowledgement instead.",
+  "rig_hint": "R.nod 1 or small 'wai' at chest",
+  "ai_prompt_phrase": "elderly man nodding kindly and returning a small chest-level wai",
+  "evidence": {
+   "basis": "cultural_norm",
+   "note": "Anuman Rajadhon."
+  },
+  "source_keys": [
+   "AnumanRajadhon_wai"
+  ],
+  "test_status": "untested"
+ },
+ {
+  "id": "krap_prostration",
+  "label_en": "Krap / prostration (Buddha, parents, ceremonies)",
+  "label_th": "กราบ",
+  "category": "thai_etiquette",
+  "intent": "highest reverence",
+  "body_cues": {
+   "head": "forehead to the floor between the hands",
+   "head_orientation_gaze": "down",
+   "shoulders": "low",
+   "spine_torso": "kneeling, bowing to the floor, back curved",
+   "arms": "palms flat on the floor",
+   "hands": "flat on the floor, budding lotus between bows",
+   "weight": "kneeling, sitting back on heels (women: toes flat)",
+   "legs_feet": "kneeling",
+   "distance": "facing the revered person/image",
+   "tempo_quality": "slow, graceful, three times for the Triple Gems"
+  },
+  "silhouette_check": "Side view shows the kneeling bow most clearly.",
+  "readability": {
+   "static_image": "high",
+   "in_motion": "medium",
+   "confusable_with": [
+    "grief_despair (kneeling, head down)"
+   ],
+   "disambiguate_with": "Hands placed flat and symmetrical, a calm repeated rhythm, a revered target in frame."
+  },
+  "cultural_caveats": "Sacred gesture - never use for comedy; to the Buddha it is done three times; mop krap (once, crouched) for parents/teachers.",
+  "rig_hint": "No rig support; would need a kneeling side-view puppet",
+  "ai_prompt_phrase": "kneeling and bowing with forehead to the floor before a Buddha image, respectful",
+  "evidence": {
+   "basis": "cultural_norm",
+   "note": "Detailed movement description by Anuman Rajadhon."
+  },
+  "source_keys": [
+   "AnumanRajadhon_wai"
+  ],
+  "test_status": "untested"
+ },
+ {
+  "id": "passing_elders_lowered",
+  "label_en": "Passing in front of seated elders",
+  "label_th": "เดินผ่านผู้ใหญ่",
+  "category": "thai_etiquette",
+  "intent": "pass without towering over",
+  "body_cues": {
+   "head": "bowed",
+   "head_orientation_gaze": "down",
+   "shoulders": "lowered",
+   "spine_torso": "stooping forward",
+   "arms": "one arm hanging forward/down, or hands together",
+   "hands": "down",
+   "weight": "lowered, knees bent",
+   "legs_feet": "small quick steps, or moving on the knees past monks",
+   "distance": "passes close but low",
+   "tempo_quality": "smooth, quick, quiet"
+  },
+  "silhouette_check": "Stooped walking silhouette next to a seated figure reads well in a wide shot.",
+  "readability": {
+   "static_image": "medium",
+   "in_motion": "high",
+   "confusable_with": [
+    "sneaking (also low)"
+   ],
+   "disambiguate_with": "The seated elder in frame explains the stoop."
+  },
+  "cultural_caveats": "Do not position the body above an elder's head; bow the head when walking past elders (ThailandFoundation2024).",
+  "rig_hint": "walk with R.lean 15, step .45 s, bob 3 px",
+  "ai_prompt_phrase": "young man stooping low and walking quietly past seated grandparents",
+  "evidence": {
+   "basis": "cultural_norm",
+   "note": "Thailand Foundation; Anuman Rajadhon (stooping before a seated respected person)."
+  },
+  "source_keys": [
+   "ThailandFoundation2024",
+   "AnumanRajadhon_wai"
+  ],
+  "test_status": "untested"
+ },
+ {
+  "id": "sitting_floor_polite",
+  "label_en": "Polite floor sitting",
+  "label_th": "นั่งพับเพียบ",
+  "category": "thai_etiquette",
+  "intent": "sit respectfully near elders, monks or a shrine",
+  "body_cues": {
+   "head": "slightly lowered",
+   "head_orientation_gaze": "toward the elder/monk",
+   "shoulders": "relaxed",
+   "spine_torso": "upright, slight side lean",
+   "arms": "one hand resting on the floor or lap",
+   "hands": "relaxed, may hold a wai when addressing",
+   "weight": "on one hip",
+   "legs_feet": "both legs folded to one side, feet tucked behind, soles away from others",
+   "distance": "lower than the elder",
+   "tempo_quality": "still"
+  },
+  "silhouette_check": "Side-folded legs are clearest in 3/4 view.",
+  "readability": {
+   "static_image": "medium",
+   "in_motion": "low",
+   "confusable_with": [],
+   "disambiguate_with": "Feet tucked away from others and the shrine is the key detail."
+  },
+  "cultural_caveats": "Seated or lying: keep the soles pointed away from other characters, elders and any Buddha image (ThailandFoundation2024). Side-sitting (phap phiap) is the traditional polite posture (AnumanRajadhon_wai).",
+  "rig_hint": "No rig support for sitting; needs a seated puppet",
+  "ai_prompt_phrase": "sitting politely on the floor with legs folded to one side, feet tucked behind",
+  "evidence": {
+   "basis": "cultural_norm",
+   "note": "Anuman Rajadhon (nang phap phiap); Thailand Foundation (feet)."
+  },
+  "source_keys": [
+   "AnumanRajadhon_wai",
+   "ThailandFoundation2024"
+  ],
+  "test_status": "untested"
+ },
+ {
+  "id": "apology_thai",
+  "label_en": "Apology",
+  "label_th": "ขอโทษ",
+  "category": "social",
+  "intent": "ask forgiveness",
+  "body_cues": {
+   "head": "bowed",
+   "head_orientation_gaze": "down, then up to check",
+   "shoulders": "lowered, forward",
+   "spine_torso": "slight bow, contracted",
+   "arms": "close to the body",
+   "hands": "wai at chest/face height (Thai) or hands together",
+   "weight": "back on the heels",
+   "legs_feet": "feet together",
+   "distance": "steps closer, then stays slightly lower",
+   "tempo_quality": "slow, then still"
+  },
+  "silhouette_check": "Bow + joined hands is readable.",
+  "readability": {
+   "static_image": "medium",
+   "in_motion": "high",
+   "confusable_with": [
+    "shame",
+    "wai_peer"
+   ],
+   "disambiguate_with": "Context line + the other character's reaction."
+  },
+  "cultural_caveats": "Asking pardon or a favour is accompanied by a wai in Thai etiquette (AnumanRajadhon_wai); junior wais first.",
+  "rig_hint": "needs 'wai' + R.lean 10",
+  "ai_prompt_phrase": "apologising with a wai and a bowed head",
+  "evidence": {
+   "basis": "cultural_norm",
+   "note": "Anuman Rajadhon: one makes a wai when asking pardon or a favour."
+  },
+  "source_keys": [
+   "AnumanRajadhon_wai"
+  ],
+  "test_status": "untested"
+ },
+ {
+  "id": "thanks_receiving",
+  "label_en": "Thanking / receiving from a senior",
+  "label_th": "รับของ ขอบคุณ",
+  "category": "thai_etiquette",
+  "intent": "receive politely",
+  "body_cues": {
+   "head": "slight bow",
+   "head_orientation_gaze": "toward the giver",
+   "shoulders": "slightly forward",
+   "spine_torso": "slight bow",
+   "arms": "both hands forward to receive",
+   "hands": "wai before or after receiving; receive with both hands",
+   "weight": "slightly forward",
+   "legs_feet": "neutral",
+   "distance": "approaches the giver",
+   "tempo_quality": "unhurried"
+  },
+  "silhouette_check": "Two hands meeting the object read in side view.",
+  "readability": {
+   "static_image": "medium",
+   "in_motion": "high",
+   "confusable_with": [],
+   "disambiguate_with": "The wai either before or after the object passes."
+  },
+  "cultural_caveats": "A wai before/after receiving from a senior is polite (AnumanRajadhon_wai). Receiving with both hands is common practice (not confirmed in sources read).",
+  "rig_hint": "needs 'wai'; R.pose 'reach' both arms",
+  "ai_prompt_phrase": "receiving a gift with both hands, then giving a small wai",
+  "evidence": {
+   "basis": "cultural_norm",
+   "note": "Anuman Rajadhon for the wai; two-handed receiving unverified."
+  },
+  "source_keys": [
+   "AnumanRajadhon_wai"
+  ],
+  "test_status": "untested"
+ },
+ {
+  "id": "comfort_consoling",
+  "label_en": "Comforting someone",
+  "label_th": "ปลอบใจ",
+  "category": "social",
+  "intent": "support a sad friend",
+  "body_cues": {
+   "head": "tilted toward the friend",
+   "head_orientation_gaze": "on the friend",
+   "shoulders": "soft",
+   "spine_torso": "leaning in, lowering to the friend's level",
+   "arms": "around the friend's shoulders or one hand on the back",
+   "hands": "open, gentle on the shoulder/back/hand",
+   "weight": "toward the friend",
+   "legs_feet": "may crouch/sit beside",
+   "distance": "personal to intimate",
+   "tempo_quality": "slow, small soothing pats"
+  },
+  "silhouette_check": "Two silhouettes merging, the comforter curved over the other.",
+  "readability": {
+   "static_image": "medium",
+   "in_motion": "high",
+   "confusable_with": [
+    "tender_affection"
+   ],
+   "disambiguate_with": "The receiver is in a sadness pose; the comforter mirrors height (sits/crouches down)."
+  },
+  "cultural_caveats": "Touch back/shoulder/hand, never the head. Never touch or pat another character's head, even a child's (ThailandFoundation2024). Cross-gender touch among non-family adults is more reserved in traditional settings (unverified).",
+  "rig_hint": "R.emote 'tender'; R.pose 'hug'; lower via place y",
+  "ai_prompt_phrase": "sitting beside a sad friend, arm around her shoulders, head tilted toward her",
+  "evidence": {
+   "basis": "mixed",
+   "note": "Proxemics (intimate distance for close relations); touch conventions are craft + cultural norms."
+  },
+  "source_keys": [
+   "Sorokowska2017",
+   "ThailandFoundation2024"
+  ],
+  "test_status": "untested"
+ },
+ {
+  "id": "hug",
+  "label_en": "Hug",
+  "label_th": "กอด",
+  "category": "social",
+  "intent": "affection or reunion",
+  "body_cues": {
+   "head": "beside the other's head",
+   "head_orientation_gaze": "closed-eyes feel / away",
+   "shoulders": "wrapped",
+   "spine_torso": "pressed together",
+   "arms": "wrapped around the other",
+   "hands": "on the back",
+   "weight": "into the other",
+   "legs_feet": "step in",
+   "distance": "intimate (~30 cm or less)",
+   "tempo_quality": "quick approach, slow long hold"
+  },
+  "silhouette_check": "Two silhouettes become one shape.",
+  "readability": {
+   "static_image": "high",
+   "in_motion": "high",
+   "confusable_with": [
+    "comfort_consoling"
+   ],
+   "disambiguate_with": "Speed of approach tells joy (run in) vs comfort (slow)."
+  },
+  "cultural_caveats": "Public hugs between non-family adults are more reserved in traditional Thai settings; fine for family, kids, close friends (unverified cultural observation).",
+  "rig_hint": "R.pose 'hug' on both characters with place() overlap",
+  "ai_prompt_phrase": "two friends hugging tightly",
+  "evidence": {
+   "basis": "mixed",
+   "note": "Intimate distance ~32 cm mean (Sorokowska); rest craft."
+  },
+  "source_keys": [
+   "Sorokowska2017"
+  ],
+  "test_status": "untested"
+ },
+ {
+  "id": "whisper_secret",
+  "label_en": "Sharing a secret",
+  "label_th": "กระซิบ",
+  "category": "social",
+  "intent": "exclude others, intimacy",
+  "body_cues": {
+   "head": "close to the other's ear",
+   "head_orientation_gaze": "glances around first",
+   "shoulders": "hunched together",
+   "spine_torso": "leaning in",
+   "arms": "one hand screening the mouth side",
+   "hands": "cupped beside the mouth",
+   "weight": "toward the other",
+   "legs_feet": "close",
+   "distance": "intimate",
+   "tempo_quality": "glance -> lean -> hold"
+  },
+  "silhouette_check": "Two heads close + a cupped hand.",
+  "readability": {
+   "static_image": "medium",
+   "in_motion": "high",
+   "confusable_with": [],
+   "disambiguate_with": "A glance around before leaning in tells 'secret'."
+  },
+  "cultural_caveats": "Whispering near an elder's head: don't lean over a seated elder (ThailandFoundation2024).",
+  "rig_hint": "R.look around, R.lean 10 toward the other; arm cupped",
+  "ai_prompt_phrase": "leaning in to whisper, hand cupped beside the mouth, glancing around",
+  "evidence": {
+   "basis": "mixed",
+   "note": "Intimate distance zone (Hall via Sorokowska); craft."
+  },
+  "source_keys": [
+   "Sorokowska2017",
+   "Hall1966"
+  ],
+  "test_status": "untested"
+ },
+ {
+  "id": "invitation_offer",
+  "label_en": "Invitation / offering",
+  "label_th": "เชิญ ยื่นให้",
+  "category": "social",
+  "intent": "invite someone in or offer an object",
+  "body_cues": {
+   "head": "slight tilt, slight bow for formality",
+   "head_orientation_gaze": "toward the guest, then toward the place/object",
+   "shoulders": "open",
+   "spine_torso": "slightly turned to make way",
+   "arms": "one arm extended low toward the place",
+   "hands": "palm up, open",
+   "weight": "back a little to give space",
+   "legs_feet": "step aside",
+   "distance": "opens space",
+   "tempo_quality": "smooth, generous arc"
+  },
+  "silhouette_check": "Open palm-up arm extended toward a door or seat.",
+  "readability": {
+   "static_image": "high",
+   "in_motion": "high",
+   "confusable_with": [
+    "pointing_deictic"
+   ],
+   "disambiguate_with": "Palm UP and the body steps aside - invitation; finger point - direction."
+  },
+  "cultural_caveats": "Offering to a senior: use both hands or the right hand supported by the left (common practice, unverified).",
+  "rig_hint": "R.pose 'reach' with palm up; R.place step aside",
+  "ai_prompt_phrase": "gesturing with an open palm to invite the customer to sit",
+  "evidence": {
+   "basis": "mixed",
+   "note": "Palm-up open hand = offer is a convention; open hand safer than finger-pointing in Thai context."
+  },
+  "source_keys": [
+   "ThailandFoundation2024",
+   "Lasseter1987"
+  ],
+  "test_status": "untested"
+ },
+ {
+  "id": "refusing_no",
+  "label_en": "Refusing / 'no thanks'",
+  "label_th": "ปฏิเสธ",
+  "category": "social",
+  "intent": "decline",
+  "body_cues": {
+   "head": "small shake",
+   "head_orientation_gaze": "toward the other, then away",
+   "shoulders": "slightly raised",
+   "spine_torso": "slight lean back",
+   "arms": "forearm raised",
+   "hands": "palm out, small side-to-side wave",
+   "weight": "back",
+   "legs_feet": "small step back",
+   "distance": "keeps distance",
+   "tempo_quality": "small, polite, quick"
+  },
+  "silhouette_check": "Palm-out hand in front of the chest reads in front view.",
+  "readability": {
+   "static_image": "medium",
+   "in_motion": "high",
+   "confusable_with": [
+    "disgust (palm out)"
+   ],
+   "disambiguate_with": "A smile/soft head tilt keeps it polite; disgust adds turning away."
+  },
+  "cultural_caveats": "Direct refusal is often softened in Thai interaction (smile, kreng jai) - a big 'stop' palm can feel harsh (unverified cultural observation).",
+  "rig_hint": "R.shake(P,t,2); small arm raise",
+  "ai_prompt_phrase": "politely declining with a small palm-out wave and a slight head shake",
+  "evidence": {
+   "basis": "craft",
+   "note": "Convention."
+  },
+  "source_keys": [
+   "Lasseter1987"
+  ],
+  "test_status": "untested"
+ },
+ {
+  "id": "status_high",
+  "label_en": "High status / dominance",
+  "label_th": "มีอำนาจ เหนือกว่า",
+  "category": "social",
+  "intent": "control the space",
+  "body_cues": {
+   "head": "level or slightly raised, steady",
+   "head_orientation_gaze": "direct at the other, holds it",
+   "shoulders": "down and back, still",
+   "spine_torso": "upright, expanded",
+   "arms": "away from the body or hands behind the back",
+   "hands": "still, relaxed",
+   "weight": "settled, centred",
+   "legs_feet": "wide stance",
+   "distance": "takes space; lets others come to them",
+   "tempo_quality": "slow, few movements"
+  },
+  "silhouette_check": "Larger silhouette; place higher in frame or bigger in the two-shot.",
+  "readability": {
+   "static_image": "medium",
+   "in_motion": "high",
+   "confusable_with": [
+    "pride_triumph"
+   ],
+   "disambiguate_with": "Stillness + space; pride celebrates, status just holds."
+  },
+  "cultural_caveats": "In Thai hierarchy, status is also shown by others lowering themselves around the senior (see passing_elders_lowered).",
+  "rig_hint": "R.lean -2; pose 'behind'; cam slightly low angle",
+  "ai_prompt_phrase": "standing tall and still with hands behind the back, taking up space",
+  "evidence": {
+   "basis": "mixed",
+   "note": "Expansion/space as status is a craft rule (Hooks: status transactions); head tilt direction is contested (Mignault2003)."
+  },
+  "source_keys": [
+   "Hooks2023",
+   "Mignault2003",
+   "Emery2000"
+  ],
+  "test_status": "untested"
+ },
+ {
+  "id": "status_low",
+  "label_en": "Low status / submission",
+  "label_th": "ต่ำต้อย ยอม",
+  "category": "social",
+  "intent": "defer, avoid conflict",
+  "body_cues": {
+   "head": "lowered",
+   "head_orientation_gaze": "down or brief glances up",
+   "shoulders": "raised, forward",
+   "spine_torso": "contracted, small",
+   "arms": "close to the body",
+   "hands": "together in front, fiddling",
+   "weight": "back",
+   "legs_feet": "feet together",
+   "distance": "keeps lower and further",
+   "tempo_quality": "more small movements, quick"
+  },
+  "silhouette_check": "Smaller silhouette; lower in frame.",
+  "readability": {
+   "static_image": "medium",
+   "in_motion": "high",
+   "confusable_with": [
+    "shame",
+    "shy_approach"
+   ],
+   "disambiguate_with": "Low status still engages (glances, nods); shame withdraws."
+  },
+  "cultural_caveats": "In Thai settings, lowered posture before seniors is politeness, not weakness - don't play it as pathetic unless intended.",
+  "rig_hint": "R.lean 6; pose 'chest' both hands; R.squash .95 held",
+  "ai_prompt_phrase": "head lowered, shoulders hunched forward, hands together, standing small",
+  "evidence": {
+   "basis": "mixed",
+   "note": "Hooks status; Tracy shows contraction with losing; cultural reading from Thai etiquette sources."
+  },
+  "source_keys": [
+   "Hooks2023",
+   "TracyMatsumoto2008",
+   "ThailandFoundation2024"
+  ],
+  "test_status": "untested"
+ },
+ {
+  "id": "shy_approach",
+  "label_en": "Shy approach",
+  "label_th": "เขินเข้าหา",
+  "category": "social",
+  "intent": "want to approach but hesitant",
+  "body_cues": {
+   "head": "lowered, tilted",
+   "head_orientation_gaze": "glances at the other then away",
+   "shoulders": "slightly raised",
+   "spine_torso": "slight twist",
+   "arms": "behind the back or holding something to the chest",
+   "hands": "behind the back",
+   "weight": "forward then back",
+   "legs_feet": "step - stop - step, toes turned in",
+   "distance": "approaches in stages",
+   "tempo_quality": "hesitant, start-stop"
+  },
+  "silhouette_check": "Hands behind back + head tilt reads.",
+  "readability": {
+   "static_image": "medium",
+   "in_motion": "high",
+   "confusable_with": [
+    "embarrassment",
+    "status_low"
+   ],
+   "disambiguate_with": "The stop-start approach rhythm is the cue - needs motion or a sequence of frames."
+  },
+  "cultural_caveats": "None specific.",
+  "rig_hint": "R.emote(P,t,'shy') (pose 'behind' + head tilt)",
+  "ai_prompt_phrase": "shyly approaching with hands behind her back, head tilted, glancing up",
+  "evidence": {
+   "basis": "craft",
+   "note": "Convention."
+  },
+  "source_keys": [
+   "Lasseter1987"
+  ],
+  "test_status": "untested"
+ },
+ {
+  "id": "standoff_conflict",
+  "label_en": "Standoff / confrontation (two characters)",
+  "label_th": "เผชิญหน้า",
+  "category": "social",
+  "intent": "conflict between two characters",
+  "body_cues": {
+   "head": "forward",
+   "head_orientation_gaze": "locked on each other",
+   "shoulders": "squared",
+   "spine_torso": "both leaning in",
+   "arms": "tense; one may point",
+   "hands": "fists or pointing",
+   "weight": "forward",
+   "legs_feet": "planted",
+   "distance": "closing into personal space",
+   "tempo_quality": "still tension, then sudden moves"
+  },
+  "silhouette_check": "Profile two-shot, mirrored diagonals pointing at each other.",
+  "readability": {
+   "static_image": "high",
+   "in_motion": "high",
+   "confusable_with": [],
+   "disambiguate_with": "Who leans in and who leans back shows who is winning; the distance shrinking shows escalation."
+  },
+  "cultural_caveats": "Feet/sole toward the other is an added insult in Thai culture - use only on purpose.",
+  "rig_hint": "two puppets, R.lean 6 both, cam two-shot",
+  "ai_prompt_phrase": "two people facing off, leaning toward each other, tense",
+  "evidence": {
+   "basis": "mixed",
+   "note": "Forward lean = anger (Dael); distance as relationship (Sorokowska); staging craft."
+  },
+  "source_keys": [
+   "Dael2012",
+   "Sorokowska2017"
+  ],
+  "test_status": "untested"
+ },
+ {
+  "id": "reconcile",
+  "label_en": "Reconciliation",
+  "label_th": "คืนดี",
+  "category": "social",
+  "intent": "repair after conflict",
+  "body_cues": {
+   "head": "lifts slowly",
+   "head_orientation_gaze": "glances, then holds on the other",
+   "shoulders": "lowering, relaxing",
+   "spine_torso": "turns toward the other",
+   "arms": "one reaches out",
+   "hands": "open hand offered",
+   "weight": "toward",
+   "legs_feet": "a step closer",
+   "distance": "distance closes slowly",
+   "tempo_quality": "slow, tentative then warm"
+  },
+  "silhouette_check": "The gap between the two silhouettes shrinking over the shot.",
+  "readability": {
+   "static_image": "medium",
+   "in_motion": "high",
+   "confusable_with": [
+    "shy_approach"
+   ],
+   "disambiguate_with": "Start from the standoff spacing and close it; mirror postures at the end."
+  },
+  "cultural_caveats": "A wai can be part of an apology/reconciliation to a senior.",
+  "rig_hint": "R.place move closer over 2-3 s; pose 'reach'",
+  "ai_prompt_phrase": "two friends stepping closer, one offering an open hand",
+  "evidence": {
+   "basis": "craft",
+   "note": "Proxemics as relationship dial (Sorokowska); mirroring is craft (not researched this session)."
+  },
+  "source_keys": [
+   "Sorokowska2017"
+  ],
+  "test_status": "untested"
+ },
+ {
+  "id": "waiting_impatient",
+  "label_en": "Impatient waiting",
+  "label_th": "รอนานหงุดหงิด",
+  "category": "social",
+  "intent": "show time pressure",
+  "body_cues": {
+   "head": "turns to check",
+   "head_orientation_gaze": "at the watch/phone/door repeatedly",
+   "shoulders": "tight",
+   "spine_torso": "upright",
+   "arms": "crossed, or one checking the watch",
+   "hands": "tapping",
+   "weight": "shifting",
+   "legs_feet": "foot tapping",
+   "distance": "any",
+   "tempo_quality": "repetitive checks, getting faster"
+  },
+  "silhouette_check": "Checking-the-watch arm reads.",
+  "readability": {
+   "static_image": "medium",
+   "in_motion": "high",
+   "confusable_with": [
+    "anxiety_worry",
+    "irritation_cold_anger"
+   ],
+   "disambiguate_with": "Repeated look at a clock/door + tapping that speeds up."
+  },
+  "cultural_caveats": "None specific.",
+  "rig_hint": "repeated R.look to a prop; foot mv loop",
+  "ai_prompt_phrase": "waiting impatiently, checking watch, tapping foot",
+  "evidence": {
+   "basis": "craft",
+   "note": "Convention."
+  },
+  "source_keys": [
+   "Lasseter1987"
+  ],
+  "test_status": "untested"
+ },
+ {
+  "id": "sneaking",
+  "label_en": "Sneaking",
+  "label_th": "ย่อง",
+  "category": "action",
+  "intent": "avoid being noticed",
+  "body_cues": {
+   "head": "low, turning",
+   "head_orientation_gaze": "scanning around",
+   "shoulders": "hunched",
+   "spine_torso": "crouched forward",
+   "arms": "bent, close",
+   "hands": "fingers spread for balance",
+   "weight": "low, on the toes",
+   "legs_feet": "long careful steps, high knees",
+   "distance": "keeps away from others",
+   "tempo_quality": "slow with sudden freezes"
+  },
+  "silhouette_check": "Crouched profile with a raised knee is a classic readable shape.",
+  "readability": {
+   "static_image": "high",
+   "in_motion": "high",
+   "confusable_with": [
+    "passing_elders_lowered"
+   ],
+   "disambiguate_with": "Scanning head + freezes = sneaking; the polite stoop is smooth and faces down."
+  },
+  "cultural_caveats": "None specific.",
+  "rig_hint": "R.walkSide with long step, low body (see GUIDE walk notes)",
+  "ai_prompt_phrase": "tiptoeing in a crouch, looking around",
+  "evidence": {
+   "basis": "craft",
+   "note": "Convention."
+  },
+  "source_keys": [
+   "Lasseter1987"
+  ],
+  "test_status": "untested"
+ },
+ {
+  "id": "gait_happy",
+  "label_en": "Happy walk",
+  "label_th": "เดินอารมณ์ดี",
+  "category": "gait",
+  "intent": "show mood on an entrance",
+  "body_cues": {
+   "head": "up",
+   "head_orientation_gaze": "forward, looking around",
+   "shoulders": "relaxed",
+   "spine_torso": "upright",
+   "arms": "bigger arm swing",
+   "hands": "loose",
+   "weight": "bouncy",
+   "legs_feet": "quick light steps",
+   "distance": "n/a",
+   "tempo_quality": "faster than neutral, springy"
+  },
+  "silhouette_check": "Head up + bounce.",
+  "readability": {
+   "static_image": "medium",
+   "in_motion": "high",
+   "confusable_with": [
+    "gait_angry (both fast)"
+   ],
+   "disambiguate_with": "Springy, loose and head up vs heavy, stamping."
+  },
+  "cultural_caveats": "None specific.",
+  "rig_hint": "R.walk step .42 s, bob 8-9 px, swing 16-18",
+  "ai_prompt_phrase": "walking happily with a bounce in her step",
+  "evidence": {
+   "basis": "research",
+   "note": "Gait emotion is perceived from a few features incl. speed (Roether); fast = high activation (Pollick)."
+  },
+  "source_keys": [
+   "Roether2009",
+   "Pollick2001",
+   "Kleinsmith2013"
+  ],
+  "test_status": "untested"
+ },
+ {
+  "id": "gait_sad",
+  "label_en": "Sad walk",
+  "label_th": "เดินเศร้า",
+  "category": "gait",
+  "intent": "show mood on an entrance",
+  "body_cues": {
+   "head": "down",
+   "head_orientation_gaze": "at the ground",
+   "shoulders": "slumped",
+   "spine_torso": "forward-rounded",
+   "arms": "small arm swing, close to body",
+   "hands": "limp",
+   "weight": "heavy",
+   "legs_feet": "slow shuffling steps",
+   "distance": "n/a",
+   "tempo_quality": "slow, smooth"
+  },
+  "silhouette_check": "Head down + small swing.",
+  "readability": {
+   "static_image": "high",
+   "in_motion": "high",
+   "confusable_with": [
+    "tired_exhausted"
+   ],
+   "disambiguate_with": "Sadness is slow but smooth; tiredness adds stumbles/drag."
+  },
+  "cultural_caveats": "None specific.",
+  "rig_hint": "R.walk step .65-.7 s, bob 5 px, swing 8-10",
+  "ai_prompt_phrase": "walking slowly with head down and shoulders slumped",
+  "evidence": {
+   "basis": "research",
+   "note": "Roether (speed, posture features); Pollick (slow, smooth = sad)."
+  },
+  "source_keys": [
+   "Roether2009",
+   "Pollick2001"
+  ],
+  "test_status": "untested"
+ },
+ {
+  "id": "gait_angry",
+  "label_en": "Angry walk",
+  "label_th": "เดินโกรธ",
+  "category": "gait",
+  "intent": "show mood on an entrance",
+  "body_cues": {
+   "head": "forward, down",
+   "head_orientation_gaze": "locked ahead",
+   "shoulders": "squared",
+   "spine_torso": "forward lean",
+   "arms": "stiff, strong swing",
+   "hands": "fists",
+   "weight": "heavy, stamping",
+   "legs_feet": "fast heavy steps",
+   "distance": "n/a",
+   "tempo_quality": "fast, jerky, heavy"
+  },
+  "silhouette_check": "Forward lean + fists.",
+  "readability": {
+   "static_image": "high",
+   "in_motion": "high",
+   "confusable_with": [
+    "gait_happy",
+    "determination"
+   ],
+   "disambiguate_with": "Heavy stamping and forward lean vs light bounce."
+  },
+  "cultural_caveats": "None specific.",
+  "rig_hint": "R.walk step .4 s, bob 4 px (heavy, low), swing 14, R.lean 6",
+  "ai_prompt_phrase": "storming along with heavy steps and clenched fists",
+  "evidence": {
+   "basis": "research",
+   "note": "Roether; Melzer (strong, sudden, advancing)."
+  },
+  "source_keys": [
+   "Roether2009",
+   "Melzer2019"
+  ],
+  "test_status": "untested"
+ },
+ {
+  "id": "gait_fearful",
+  "label_en": "Fearful walk",
+  "label_th": "เดินกลัว ๆ",
+  "category": "gait",
+  "intent": "move through a threatening place",
+  "body_cues": {
+   "head": "pulled in, turning",
+   "head_orientation_gaze": "scanning, glancing back",
+   "shoulders": "raised",
+   "spine_torso": "contracted, leaning back",
+   "arms": "close to the body",
+   "hands": "held near the chest",
+   "weight": "bound, careful",
+   "legs_feet": "short hesitant steps, may back up",
+   "distance": "keeps close to walls/companions",
+   "tempo_quality": "slow and tense with sudden fast moves"
+  },
+  "silhouette_check": "Hunched, arms in.",
+  "readability": {
+   "static_image": "medium",
+   "in_motion": "high",
+   "confusable_with": [
+    "sneaking"
+   ],
+   "disambiguate_with": "Glancing back + recoiling at sounds; sneaking is purposeful."
+  },
+  "cultural_caveats": "None specific.",
+  "rig_hint": "R.walk step .55 s, bob 3 px, swing 4; frequent R.look back",
+  "ai_prompt_phrase": "walking nervously, arms close, glancing over the shoulder",
+  "evidence": {
+   "basis": "research",
+   "note": "Roether (fear gait); Melzer (condensing, bound flow, retreating)."
+  },
+  "source_keys": [
+   "Roether2009",
+   "Melzer2019"
+  ],
+  "test_status": "untested"
+ }
+]

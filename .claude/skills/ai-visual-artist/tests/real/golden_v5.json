@@ -1,0 +1,149 @@
+{
+ "file": "tests/real/golden_v5.png",
+ "width": 896,
+ "height": 1120,
+ "aspect": 0.8,
+ "value": {
+  "mean_L": 0.31,
+  "rms_contrast": 0.129,
+  "key": "low",
+  "clipped_highlights_pct": 0.0,
+  "crushed_shadows_pct": 0.36,
+  "notan_3_pct": [
+   89.3,
+   7.2,
+   3.5
+  ]
+ },
+ "color": {
+  "dominant": [
+   {
+    "hex": "#443120",
+    "share_pct": 45.7,
+    "oklch": [
+     0.33,
+     0.038,
+     62.9
+    ]
+   },
+   {
+    "hex": "#221E18",
+    "share_pct": 26.5,
+    "oklch": [
+     0.237,
+     0.012,
+     71.0
+    ]
+   },
+   {
+    "hex": "#13100F",
+    "share_pct": 16.5,
+    "oklch": [
+     0.177,
+     0.005,
+     40.8
+    ]
+   },
+   {
+    "hex": "#595445",
+    "share_pct": 5.1,
+    "oklch": [
+     0.447,
+     0.025,
+     92.9
+    ]
+   },
+   {
+    "hex": "#D68138",
+    "share_pct": 4.6,
+    "oklch": [
+     0.682,
+     0.135,
+     58.1
+    ]
+   },
+   {
+    "hex": "#EAB769",
+    "share_pct": 1.6,
+    "oklch": [
+     0.809,
+     0.113,
+     76.6
+    ]
+   }
+  ],
+  "mean_chroma": 0.034,
+  "hue_spread_deg": 18.5,
+  "harmony_guess": "monochromatic/analogous",
+  "warm_pct": 6.2,
+  "cool_pct": 0,
+  "proportion_top3_pct": [
+   45.7,
+   26.5,
+   16.5
+  ],
+  "proportion_note": "close to a 60-30-10 split"
+ },
+ "saliency_peaks": [
+  {
+   "x": 0.373,
+   "y": 0.711,
+   "strength": 0.885,
+   "nearest_guide_dist": {
+    "thirds": 0.059,
+    "phi": 0.093,
+    "centre": 0.246
+   }
+  },
+  {
+   "x": 0.564,
+   "y": 0.72,
+   "strength": 0.794,
+   "nearest_guide_dist": {
+    "thirds": 0.116,
+    "phi": 0.115,
+    "centre": 0.229
+   }
+  },
+  {
+   "x": 0.224,
+   "y": 0.726,
+   "strength": 0.619,
+   "nearest_guide_dist": {
+    "thirds": 0.124,
+    "phi": 0.191,
+    "centre": 0.357
+   }
+  }
+ ],
+ "balance": {
+  "weight_centre": [
+   0.455,
+   0.645
+  ],
+  "offset_from_centre": 0.152,
+  "reading": "asymmetrical"
+ },
+ "sharpness": {
+  "overall": 301.1,
+  "focal": 2628.0,
+  "background": 225.2,
+  "focal_vs_background": 11.67
+ },
+ "edge_density_thirds": {
+  "rows_top_mid_bottom": [
+   0.0022,
+   0.007,
+   0.0263
+  ],
+  "cols_left_mid_right": [
+   0.0083,
+   0.02,
+   0.0073
+  ]
+ },
+ "technical": {
+  "noise_sigma_est": 0.99
+ },
+ "overlay": "tests/real/golden_v5_ov.png"
+}

@@ -1,0 +1,149 @@
+{
+ "file": "tests/real/golden_v4-1.png",
+ "width": 896,
+ "height": 1120,
+ "aspect": 0.8,
+ "value": {
+  "mean_L": 0.35,
+  "rms_contrast": 0.148,
+  "key": "low",
+  "clipped_highlights_pct": 0.0,
+  "crushed_shadows_pct": 0.08,
+  "notan_3_pct": [
+   78.4,
+   17.0,
+   4.6
+  ]
+ },
+ "color": {
+  "dominant": [
+   {
+    "hex": "#4C351F",
+    "share_pct": 45.2,
+    "oklch": [
+     0.349,
+     0.048,
+     62.7
+    ]
+   },
+   {
+    "hex": "#1D1915",
+    "share_pct": 35.0,
+    "oklch": [
+     0.216,
+     0.009,
+     63.3
+    ]
+   },
+   {
+    "hex": "#E59648",
+    "share_pct": 6.2,
+    "oklch": [
+     0.739,
+     0.132,
+     63.0
+    ]
+   },
+   {
+    "hex": "#3D666F",
+    "share_pct": 5.6,
+    "oklch": [
+     0.485,
+     0.048,
+     211.5
+    ]
+   },
+   {
+    "hex": "#855527",
+    "share_pct": 5.5,
+    "oklch": [
+     0.494,
+     0.088,
+     62.4
+    ]
+   },
+   {
+    "hex": "#6F9F9F",
+    "share_pct": 2.4,
+    "oklch": [
+     0.669,
+     0.051,
+     196.1
+    ]
+   }
+  ],
+  "mean_chroma": 0.043,
+  "hue_spread_deg": 149.1,
+  "harmony_guess": "contrasting (complementary/triadic-like)",
+  "warm_pct": 56.9,
+  "cool_pct": 8.0,
+  "proportion_top3_pct": [
+   45.2,
+   35.0,
+   6.2
+  ],
+  "proportion_note": "close to a 60-30-10 split"
+ },
+ "saliency_peaks": [
+  {
+   "x": 0.27,
+   "y": 0.245,
+   "strength": 0.98,
+   "nearest_guide_dist": {
+    "thirds": 0.109,
+    "phi": 0.177,
+    "centre": 0.343
+   }
+  },
+  {
+   "x": 0.369,
+   "y": 0.711,
+   "strength": 0.829,
+   "nearest_guide_dist": {
+    "thirds": 0.057,
+    "phi": 0.094,
+    "centre": 0.248
+   }
+  },
+  {
+   "x": 0.564,
+   "y": 0.72,
+   "strength": 0.748,
+   "nearest_guide_dist": {
+    "thirds": 0.116,
+    "phi": 0.115,
+    "centre": 0.229
+   }
+  }
+ ],
+ "balance": {
+  "weight_centre": [
+   0.413,
+   0.571
+  ],
+  "offset_from_centre": 0.112,
+  "reading": "asymmetrical"
+ },
+ "sharpness": {
+  "overall": 333.2,
+  "focal": 61.5,
+  "background": 342.0,
+  "focal_vs_background": 0.18
+ },
+ "edge_density_thirds": {
+  "rows_top_mid_bottom": [
+   0.0118,
+   0.0095,
+   0.0271
+  ],
+  "cols_left_mid_right": [
+   0.0178,
+   0.0233,
+   0.0073
+  ]
+ },
+ "technical": {
+  "noise_sigma_est": 0.99
+ },
+ "overlay": "tests/real/golden_v4-1_ov.png"
+}

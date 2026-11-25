@@ -1,0 +1,619 @@
+{
+ "_meta": {
+  "task": "form",
+  "batch": "VA1",
+  "date": "2026-11-25",
+  "note": "Distinct entries only; all untested. Values in Munsell N and OKLab L (L* = 116*L - 16 for neutrals). Rules labelled in VALUE_AND_NOTAN.md / EDGE_CONTROL.md / SHAPE_LANGUAGE.md."
+ },
+ "tonal_compositions": [
+  {
+   "id": "tc_dark_subject_light_ground",
+   "name": "Dark subject on light ground, focal at max contrast",
+   "purpose": "Make a dark product (black/tortoise acetate) read instantly as a silhouette.",
+   "how": "Ground N8-N9 (OKLab L 0.83-0.95), subject N1-N3 (L <= 0.40); the darkest dark of the frame touches the lightest light only at the hero edge (e.g. top rim against white); shadow under the frame N6, soft; no other dark object larger than 5% of the frame.",
+   "limits": "Light metal or clear frames vanish on a light ground; flat if the subject has no internal highlight (add one specular).",
+   "use_for": [
+    "product shot",
+    "frame-kit hero",
+    "IG 1:1 promo"
+   ],
+   "source_keys": [
+    "ConwayLivingstone2007",
+    "Wagemans2008_Silhouette",
+    "Gurney2019_ValueGrouping"
+   ],
+   "test_status": "untested"
+  },
+  {
+   "id": "tc_light_subject_dark_ground",
+   "name": "Light subject on dark ground",
+   "purpose": "Make silver/gold metal, clear or light acetate frames glow.",
+   "how": "Ground N1-N3 (L <= 0.40), subject highlights N8-N9.5; rim or edge light defines the silhouette; keep ground one value group (no bright props); low key overall.",
+   "limits": "Dark frames disappear; reflections on lenses must be controlled (dark environment helps).",
+   "use_for": [
+    "product shot",
+    "luxury promo",
+    "night clip"
+   ],
+   "source_keys": [
+    "Reinhard2002",
+    "ConwayLivingstone2007"
+   ],
+   "test_status": "untested"
+  },
+  {
+   "id": "tc_mid_ground_full_subject",
+   "name": "Subject with both lights and darks on a mid-grey ground",
+   "purpose": "Separate a subject that contains both extremes (tortoiseshell + clear lens, face with dark frame) from the ground.",
+   "how": "Ground N5 +/- 0.5 (L 0.53-0.62); subject spans N1 to N9 so both its darks and lights separate from the ground; ground stays one flat or gently graded value.",
+   "limits": "Mid grey can feel dull; needs colour or texture interest elsewhere.",
+   "use_for": [
+    "catalogue",
+    "studio portrait with glasses"
+   ],
+   "source_keys": [
+    "Munsell_Value",
+    "Kingdom2004"
+   ],
+   "test_status": "untested"
+  },
+  {
+   "id": "tc_spotlight_pool_low_key",
+   "name": "Low key with one light pool",
+   "purpose": "Drama, intimacy, night-shop mood with an unmistakable focal point.",
+   "how": "70%+ of area N1-N3; one pool of light (soft falloff) covering 10-20% of frame lands on the focal object; brightest highlight (N9+) inside the pool only; mean L < 0.38.",
+   "limits": "Crushed shadows lose detail (keep <= 2% at L near 0 unless graphic); story needs one readable silhouette outside the pool if two characters.",
+   "use_for": [
+    "night-optic story",
+    "promo cinematic",
+    "chiaroscuro product"
+   ],
+   "source_keys": [
+    "DiPaolaRiebeEnns2010",
+    "Reinhard2002"
+   ],
+   "test_status": "untested"
+  },
+  {
+   "id": "tc_high_key_dark_accent",
+   "name": "High key with a single dark accent",
+   "purpose": "Airy, gentle, hopeful images where the one dark shape is the story.",
+   "how": "Mean L > 0.72; 85-95% light group; the dark group (2-10%) is the focal figure/object; p2 <= 0.45 so a real accent exists; text sits on the empty light area.",
+   "limits": "If the accent is too faint (thumb32 rms < 0.08) the image reads as washed out (observed on light charcoal slides).",
+   "use_for": [
+    "Slowly Growing charcoal carousel",
+    "quote images",
+    "eye-break clip end card"
+   ],
+   "source_keys": [
+    "Gurney2019_ValueGrouping",
+    "GreeneOliva2009"
+   ],
+   "test_status": "untested"
+  },
+  {
+   "id": "tc_backlit_two_value",
+   "name": "Backlit two-value silhouette",
+   "purpose": "Read pure gesture and shape; mystery, nostalgia, sunset.",
+   "how": "Background N8-N9.5 (sky/window), subject N0.5-N2 with no fill; silhouette must carry identity (arms off the body, glasses in profile or 3/4 so the frame shows); only a thin rim allowed inside the shape.",
+   "limits": "No product detail survives - use as story/emotion frame, not as the product hero; overlaps merge silhouettes.",
+   "use_for": [
+    "story clip",
+    "Mint & Tao emotional beat",
+    "promo opener"
+   ],
+   "source_keys": [
+    "Wagemans2008_Silhouette",
+    "SinhaEtAl2006"
+   ],
+   "test_status": "untested"
+  },
+  {
+   "id": "tc_diagonal_light_dark_split",
+   "name": "Two masses split on a diagonal, focal on the boundary",
+   "purpose": "Dynamic composition with a natural focal line where light meets dark.",
+   "how": "One large light mass and one large dark mass divided by a diagonal (window light, shadow edge); the focal object straddles the boundary so it gets counterchange (light part on dark, dark part on light).",
+   "limits": "Boundary must not cut through a face/frame awkwardly; two equal masses feel static - make one ~60%.",
+   "use_for": [
+    "promo scene",
+    "story establishing shot"
+   ],
+   "source_keys": [
+    "PublicDomainReview-Dow",
+    "Gurney2019_ValueGrouping"
+   ],
+   "test_status": "untested"
+  },
+  {
+   "id": "tc_dark_frame_vignette",
+   "name": "Dark foreground frame around a lit middle",
+   "purpose": "Push depth and point the eye inward (doorway, foliage, shop shelf in foreground).",
+   "how": "Foreground framing shapes N1-N3, soft-edged and low detail; middle ground lit N6-N8 holds the subject; value step frame->subject >= 0.25 L.",
+   "limits": "Heavy frames feel claustrophobic; in 9:16 keep the subject inside the UI safe zone.",
+   "use_for": [
+    "story clip",
+    "promo cinematic",
+    "IG Reel"
+   ],
+   "source_keys": [
+    "OlivaTorralba2006",
+    "MamassianGoutcher2001"
+   ],
+   "test_status": "untested"
+  },
+  {
+   "id": "tc_atmospheric_recession",
+   "name": "Three planes stepping lighter into distance",
+   "purpose": "Daytime depth with aerial perspective.",
+   "how": "Foreground darkest and highest contrast (N2-N4 with accents), middle ground N5-N6, background N7-N8 with lowest contrast; each plane one value group; the subject in the plane with the highest contrast.",
+   "limits": "Fails at night or indoors without haze; avoid putting the subject in the far plane.",
+   "use_for": [
+    "beach/Hua Hin promo",
+    "story wide shot",
+    "eye-break nature clip"
+   ],
+   "source_keys": [
+    "OlivaTorralba2006",
+    "SchynsOliva1994"
+   ],
+   "test_status": "untested"
+  },
+  {
+   "id": "tc_reverse_recession_night",
+   "name": "Light foreground against dark distance",
+   "purpose": "Night or interior scenes where light falls near the camera.",
+   "how": "Foreground lit N7-N8 (lamp, shop counter), background falls to N1-N3; subject in the lit plane; distant lights as tiny N9 accents (keep them small to avoid competing).",
+   "limits": "Distant bright signs steal focus - blur or dim them.",
+   "use_for": [
+    "night-optic story",
+    "evening shop promo"
+   ],
+   "source_keys": [
+    "Reinhard2002",
+    "Rosenholtz2007"
+   ],
+   "test_status": "untested"
+  },
+  {
+   "id": "tc_compressed_mid_key",
+   "name": "Compressed mid-key (fog / soft charcoal) with one full-range spot",
+   "purpose": "Soft memory or dream mood that still has a focal point.",
+   "how": "Whole image within N4-N7 (L p2-p98 span 0.30-0.45) except the focal area, which alone gets N2 and N9 accents; edges soft everywhere except focal.",
+   "limits": "Without the full-range spot it reads as a failed exposure; poor at thumbnail size if the spot is small.",
+   "use_for": [
+    "flashback story frame",
+    "eye-break clip",
+    "mood carousel cover"
+   ],
+   "source_keys": [
+    "GrahamField2008",
+    "Livingstone2000"
+   ],
+   "test_status": "untested"
+  },
+  {
+   "id": "tc_counterchange_figure",
+   "name": "Counterchange along a figure",
+   "purpose": "Keep a long figure readable against a ground that changes value (wall then window).",
+   "how": "Where the ground is light the figure edge is dark, where the ground is dark the figure edge is light (rim, lit sleeve); plan the switch points in the notan sketch.",
+   "limits": "Needs planned lighting; random switching looks noisy.",
+   "use_for": [
+    "story clip",
+    "fashion-style promo"
+   ],
+   "source_keys": [
+    "PublicDomainReview-Dow",
+    "Kingdom2004"
+   ],
+   "test_status": "untested"
+  },
+  {
+   "id": "tc_text_band_plan",
+   "name": "Reserved one-value text band",
+   "purpose": "Give the HTML text layer a calm, single-value ground in posts and carousels.",
+   "how": "Reserve the top third (house style) or a band as one value group with edge density <= 0.03; text value contrasts with the band at >= 4.5:1 (body) / 3:1 (large) per WCAG; image values carry the story elsewhere.",
+   "limits": "Strict bands can look templated; scrims must match the image key.",
+   "use_for": [
+    "carousel",
+    "IG post",
+    "Reel cover"
+   ],
+   "source_keys": [
+    "Rosenholtz2007",
+    "W3C_WCAG21"
+   ],
+   "test_status": "untested"
+  }
+ ],
+ "edge_control_examples": [
+  {
+   "id": "ec_single_hard_edge_focal",
+   "name": "One hard, max-contrast edge at the focal point",
+   "purpose": "Anchor the eye with the strongest found edge.",
+   "how": "Pick one edge (e.g. upper rim of the frame against skin/ground) to be the only edge that is both sharp (<= 2 px transition at 1080 px) and max delta-L; everything else firm/soft.",
+   "limits": "Rule of thumb, untested; competing faces/text can still win attention.",
+   "use_for": [
+    "product shot",
+    "promo",
+    "clip punch-in"
+   ],
+   "source_keys": [
+    "TatlerBaddeleyGilchrist2005",
+    "DiPaolaRiebeEnns2013"
+   ],
+   "test_status": "untested"
+  },
+  {
+   "id": "ec_shadow_welding_lost",
+   "name": "Lose shadow-side edges into a dark ground",
+   "purpose": "Unify masses and calm the image by merging shadow side with background.",
+   "how": "Where the shadow side of a form meets a ground of similar value (delta-L < 0.05), drop the edge (no outline, no rim); keep the lit side firm.",
+   "limits": "Never lose edges of the identity parts (hand holding glasses, the frame itself).",
+   "use_for": [
+    "chiaroscuro product",
+    "charcoal story",
+    "night clip"
+   ],
+   "source_keys": [
+    "Gurney2019_ValueGrouping",
+    "Proko_Edges"
+   ],
+   "test_status": "untested"
+  },
+  {
+   "id": "ec_rim_found_edge",
+   "name": "Rim light to find an edge against a dark ground",
+   "purpose": "Separate a dark subject from a dark background without lifting the whole value.",
+   "how": "Back/side light producing a thin N8-N9 rim on the silhouette at the focal side; rim width 1-4 px at 1080 px; leave the far side lost.",
+   "limits": "Rim on every edge looks cut out; reflections on lenses may increase.",
+   "use_for": [
+    "low-key product",
+    "night story",
+    "promo cinematic"
+   ],
+   "source_keys": [
+    "Kingdom2004",
+    "ConwayLivingstone2007"
+   ],
+   "test_status": "untested"
+  },
+  {
+   "id": "ec_depth_of_field_falloff",
+   "name": "Photographic depth-of-field falloff",
+   "purpose": "Make the subject sharpest and the rest progressively simpler.",
+   "how": "Prompt '85mm, f/1.8, shallow depth of field, the glasses in razor-sharp focus'; or HTML: background layer blur 1-3 px at 1080 px with a radial mask growing from the focal point.",
+   "limits": "Too much blur reads fake or hides context; blur on line art looks wrong (use line weight/lightness instead).",
+   "use_for": [
+    "product photo",
+    "promo cinematic",
+    "beat clip"
+   ],
+   "source_keys": [
+    "DiPaolaRiebeEnns2010",
+    "Rosenholtz2016"
+   ],
+   "test_status": "untested"
+  },
+  {
+   "id": "ec_lens_x_junction",
+   "name": "Background lines continue through the lens (X-junctions)",
+   "purpose": "Make empty cutout lenses read as glass.",
+   "how": "Lines and edges behind the lens (table edge, window frame) continue through it with a small value/tint shift and slight offset; add one soft reflection band; never leave the lens fully transparent with no change.",
+   "limits": "Strong mirror coatings break continuity on purpose - then the reflection carries the read.",
+   "use_for": [
+    "frame-kit cutouts",
+    "beat clip lens layer",
+    "line-art glasses"
+   ],
+   "source_keys": [
+    "SayimCavanagh2011"
+   ],
+   "test_status": "untested"
+  },
+  {
+   "id": "ec_line_weight_ladder",
+   "name": "Line-weight ladder for pencil/charcoal line art",
+   "purpose": "Give line art depth and hierarchy without shading.",
+   "how": "At 1080 px: silhouette 3-5 px, interior creases 1.5-2.5 px, texture/hatching 0.75-1.2 px; thicker on the shadow/under side (light upper-left), thinner with distance and high curvature; max:min <= 4:1.",
+   "limits": "Derived from graphics method + expert observation, not a perception test; uniform weight is right for vector/ligne-claire styles.",
+   "use_for": [
+    "Slowly Growing carousel",
+    "SVG rig puppets",
+    "dialogue quote images"
+   ],
+   "source_keys": [
+    "GoodwinVollickHertzmann2007",
+    "Hertzmann2021_LineThickness"
+   ],
+   "test_status": "untested"
+  },
+  {
+   "id": "ec_t_junction_overlap",
+   "name": "Clean T-junctions at overlaps, tapered free ends",
+   "purpose": "Make depth order unambiguous in line drawings.",
+   "how": "The farther line stops exactly at the nearer contour (no gap, no crossing); free line ends taper; contours end where a smooth form turns away; avoid tangents (shift shapes to overlap or separate clearly).",
+   "limits": "AI line art often crosses or gaps lines - check at 100%.",
+   "use_for": [
+    "line-art carousel",
+    "rig drawings",
+    "comic panels"
+   ],
+   "source_keys": [
+    "SayimCavanagh2011",
+    "Hertzmann2021_LineThickness"
+   ],
+   "test_status": "untested"
+  },
+  {
+   "id": "ec_no_shadow_outlines",
+   "name": "Draw contours and creases, never shadow borders",
+   "purpose": "Keep line art readable and avoid false object boundaries.",
+   "how": "Lines only on occluding contours and creases (the lines most artists agree on); shadows are tone/hatching without an outline; interior lines only where shading changes fast.",
+   "limits": "Graphic styles (cel shading) can outline shadow shapes deliberately as a style.",
+   "use_for": [
+    "charcoal carousel",
+    "FLUX line-art prompts"
+   ],
+   "source_keys": [
+    "Cole2008",
+    "SayimCavanagh2011"
+   ],
+   "test_status": "untested"
+  },
+  {
+   "id": "ec_broken_line_light_side",
+   "name": "Broken/lifted line on the light side",
+   "purpose": "Suggest light hitting a form in pure line art.",
+   "how": "Interrupt the contour (gaps 2-6% of the contour length) or thin it to near-zero where light hits (upper-left); keep the shadow-side contour continuous and heavier.",
+   "limits": "Gaps at joints/fingers read as errors; keep gaps on smooth long contours.",
+   "use_for": [
+    "pencil carousel",
+    "quote images"
+   ],
+   "source_keys": [
+    "Hertzmann2021_LineThickness",
+    "MamassianGoutcher2001"
+   ],
+   "test_status": "untested"
+  },
+  {
+   "id": "ec_background_line_lightness",
+   "name": "Background lines lighter, not just thinner",
+   "purpose": "Push line-art backgrounds back while keeping place information.",
+   "how": "Draw scene lines in a lighter grey (e.g. ink at 40-60% opacity) and fewer of them; figures in full INK; place is still readable from structural lines.",
+   "limits": "Too faint backgrounds look unfinished at thumbnail size.",
+   "use_for": [
+    "Slowly Growing",
+    "dialogue images",
+    "SVG rig scenes"
+   ],
+   "source_keys": [
+    "Walther2011",
+    "Rosenholtz2007"
+   ],
+   "test_status": "untested"
+  },
+  {
+   "id": "ec_cutout_feather_contact",
+   "name": "Feathered cutout edge + contact shadow",
+   "purpose": "Avoid the pasted 'sticker' look when compositing real frame cutouts.",
+   "how": "Feather cutout edge 0.5-1 px, match blur to the background plane at that depth, add a contact shadow darkest at touching points; keep the frame's own detail sharp.",
+   "limits": "Over-feathering softens the product - the frame must stay the sharpest object.",
+   "use_for": [
+    "frame-kit composite",
+    "beat clip",
+    "IG post"
+   ],
+   "source_keys": [
+    "Kingdom2004",
+    "ConwayLivingstone2007"
+   ],
+   "test_status": "untested"
+  }
+ ],
+ "shape_language_examples": [
+  {
+   "id": "sl_round_dominant_friendly",
+   "name": "Round-dominant design for warmth",
+   "purpose": "Make characters, mascots and calm promo layouts read friendly and safe at a glance.",
+   "how": "Primary shapes rounded (circle/ellipse/soft rectangle), corners radius >= 15% of the shape's short side; angular shapes only as small accents; strongest at glance-speed viewing.",
+   "limits": "Effect is moderate (g ~0.39) and smaller for experts and spatial designs; can feel childish if overused.",
+   "use_for": [
+    "mascot",
+    "Slowly Growing",
+    "eye-break clip",
+    "promo layout"
+   ],
+   "source_keys": [
+    "Chuquichambi2022",
+    "PalumboRutaBertamini2015",
+    "BarNeta2006"
+   ],
+   "test_status": "untested"
+  },
+  {
+   "id": "sl_angular_accent_energy",
+   "name": "Angular accent for energy/tension",
+   "purpose": "Add energy, alertness or conflict without implying danger by default.",
+   "how": "Introduce triangles/diagonals/sharp corners on 10-20% of shapes (action lines, a pointed scarf end, a diagonal shelf); keep the hero shape cleaner.",
+   "limits": "Evidence links angularity to negative association implicitly, not to avoidance; context decides.",
+   "use_for": [
+    "beat clip",
+    "brand battle map",
+    "story conflict beat"
+   ],
+   "source_keys": [
+    "Bertamini2016",
+    "PalumboRutaBertamini2015"
+   ],
+   "test_status": "untested"
+  },
+  {
+   "id": "sl_big_medium_small",
+   "name": "Big-medium-small shape hierarchy",
+   "purpose": "Make a character or prop readable at thumbnail size and interesting up close.",
+   "how": "One primary mass (~60%), secondary pieces (~30%), tertiary details (~10%); test at 32/64 px that only the primary reads, at 256 px secondary.",
+   "limits": "Ratios are craft, not measured; product frames must keep their true shape.",
+   "use_for": [
+    "character design",
+    "mascot",
+    "environment props"
+   ],
+   "source_keys": [
+    "Bancroft_CreatingCharacters",
+    "GreeneOliva2009"
+   ],
+   "test_status": "untested"
+  },
+  {
+   "id": "sl_duo_silhouette_contrast",
+   "name": "Duo with contrasting primary silhouettes (Mint & Tao)",
+   "purpose": "Tell two faceless characters with identical heads apart by body shape alone.",
+   "how": "Mint = short, round, bundled mass (oversized sweater); Tao = tall, narrow vertical rectangle (long coat) + scarf line; plus value contrast (light vs charcoal); check: height-normalised silhouette IoU < 0.75 and aspect ratios differing >= 15%.",
+   "limits": "Thresholds derived, untested; seasonal costume changes must keep the primary shapes.",
+   "use_for": [
+    "Slowly Growing carousel",
+    "story clips",
+    "IG Reels"
+   ],
+   "source_keys": [
+    "Wagemans2008_Silhouette",
+    "SinhaEtAl2006"
+   ],
+   "test_status": "untested"
+  },
+  {
+   "id": "sl_shape_echo_product",
+   "name": "Echo the frame shape in the setting",
+   "purpose": "Tie the scene to the product for unity.",
+   "how": "Repeat the frame's dominant shape 2-3 times in the scene at different scales (round frame -> round window, pebbles, lamp); keep the frame distinct by value and sharpness.",
+   "limits": "Too many echoes camouflage the product.",
+   "use_for": [
+    "promo cinematic",
+    "Codex scene prompts"
+   ],
+   "source_keys": [
+    "Wagemans2012",
+    "Julesz1981"
+   ],
+   "test_status": "untested"
+  },
+  {
+   "id": "sl_pattern_break_focal",
+   "name": "Break the shape pattern at the focal point",
+   "purpose": "Use pop-out: the odd shape gets looked at.",
+   "how": "Repeat one shape family across the field (five round frames, round shelves) and place one different shape (a square frame) at the focal spot.",
+   "limits": "Only works if the repetition is clear; too many odd ones cancel out.",
+   "use_for": [
+    "shelf product shot",
+    "carousel cover",
+    "beat clip transition"
+   ],
+   "source_keys": [
+    "Julesz1981",
+    "Wagemans2012"
+   ],
+   "test_status": "untested"
+  },
+  {
+   "id": "sl_organic_vs_geometric_contrast",
+   "name": "Geometric product on organic setting (or the reverse)",
+   "purpose": "Separate the hero by shape family contrast.",
+   "how": "Square/rectangular titanium frame on leaves, sand or fabric; or organic tortoiseshell on a hard geometric counter; keep values distinct too.",
+   "limits": "If values match, shape contrast alone may not separate at thumbnail size.",
+   "use_for": [
+    "product shot",
+    "Hua Hin beach promo"
+   ],
+   "source_keys": [
+    "Chuquichambi2022",
+    "Julesz1981"
+   ],
+   "test_status": "untested"
+  },
+  {
+   "id": "sl_line_of_action_faceless",
+   "name": "Line of action carries emotion for faceless figures",
+   "purpose": "Express emotion without faces.",
+   "how": "Choose one C/S/I curve per figure: C curling in = sad/anxious, C leaning forward = caring/interested, I upright = calm/confident, S = relaxed/playful; two figures' lines facing each other = connection; prompt with actions, not 'dynamic pose'.",
+   "limits": "Craft convention; mannequin prompts default to stiff I poses.",
+   "use_for": [
+    "Slowly Growing",
+    "story clips",
+    "dialogue images"
+   ],
+   "source_keys": [
+    "ThomasJohnston1981"
+   ],
+   "test_status": "untested"
+  },
+  {
+   "id": "sl_negative_space_relationship",
+   "name": "Negative space between figures as emotional distance",
+   "purpose": "Show closeness or distance through the gap shape.",
+   "how": "Design the gap between characters as a clear shape: narrow wedge = closeness, wide empty field = distance; arms off the body to open silhouettes; keep the top-third text zone as one clean negative shape.",
+   "limits": "Craft convention; text zone must not create slivers along the frame edge.",
+   "use_for": [
+    "Slowly Growing",
+    "dialogue images",
+    "carousel"
+   ],
+   "source_keys": [
+    "Vecera2002",
+    "PublicDomainReview-Dow"
+   ],
+   "test_status": "untested"
+  },
+  {
+   "id": "sl_frame_shape_mood",
+   "name": "Frame shape as mood cue (round = warm, square = competent)",
+   "purpose": "Match frame choice and copy tone to the intended impression.",
+   "how": "Round/oval frames with soft settings and warm copy; square/rectangular frames with structured settings and 'sharp/professional' copy; rimless for a natural, trustworthy look.",
+   "limits": "Evidence is weak (N=39) for shape, medium for rimless; face-shape matching has no evidence found - present as style advice only.",
+   "use_for": [
+    "frame-kit style profile",
+    "captions",
+    "promo copy"
+   ],
+   "source_keys": [
+    "OkamuraUra2017",
+    "LederForsterGerger2011"
+   ],
+   "test_status": "untested"
+  },
+  {
+   "id": "sl_logo_single_primary",
+   "name": "Logo/mascot as one primary silhouette",
+   "purpose": "Keep marks recognisable at favicon/clip-corner size.",
+   "how": "One primary shape with clean negative space; test filled black at 32 px; no detail that disappears below 64 px; never alter partner logos.",
+   "limits": "Curvature has no reliable effect on symbolic designs - choose by brand fit, not 'science'.",
+   "use_for": [
+    "logo usage",
+    "mascot sticker",
+    "clip corner logo"
+   ],
+   "source_keys": [
+    "Chuquichambi2022",
+    "SinhaEtAl2006"
+   ],
+   "test_status": "untested"
+  },
+  {
+   "id": "sl_pose_exaggeration_small_screen",
+   "name": "Push pose exaggeration for phone-size reading",
+   "purpose": "Make body-language beats readable in a 1:1 grid or 9:16 Reel.",
+   "how": "Exaggerate the key pose ~20-30% beyond natural (deeper slump, wider arms, bigger lean) and simplify the silhouette around it; hold the pose long enough in clips.",
+   "limits": "Over-exaggeration breaks the calm Slowly Growing tone - keep within the series' gesture range.",
+   "use_for": [
+    "story clips",
+    "Slowly Growing",
+    "night-optic"
+   ],
+   "source_keys": [
+    "ConwayLivingstone2007",
+    "ThomasJohnston1981"
+   ],
+   "test_status": "untested"
+  }
+ ]
+}

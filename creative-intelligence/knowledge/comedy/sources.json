@@ -1,0 +1,884 @@
+[
+ {
+  "key": "Morreall2024SEP",
+  "title": "Philosophy of Humor (Stanford Encyclopedia of Philosophy, substantive revision 2024)",
+  "authors": "John Morreall",
+  "year": 2024,
+  "url": "https://plato.stanford.edu/entries/humor/",
+  "doi_isbn": "",
+  "source_type": "encyclopedia",
+  "tier": "B",
+  "key_findings": [
+   "Three classic theories: superiority (Plato, Aristotle, Hobbes), relief (Shaftesbury, Spencer, Freud), incongruity (Beattie, Kant, Schopenhauer); incongruity is dominant in philosophy and psychology today.",
+   "Superiority is neither necessary nor sufficient (Hutcheson): people laugh at wordplay and their own mistakes without feeling superior.",
+   "Relief theory's hydraulic 'nervous energy' model is outdated; few scholars defend it.",
+   "Incongruity alone is not sufficient: violated expectations can also produce fear, disgust or anger; refinements add resolution (Shultz, Suls) and enjoyment of incongruity (Clark, Martin).",
+   "Author proposes humour as play; laughter as a play signal derived from the primate relaxed open-mouth display.",
+   "Ethics: humour is objectionable when it treats as a joke something that should be taken seriously; stereotype jokes keep stereotypes in circulation."
+  ],
+  "practical_applications": [
+   "Use incongruity + a safe 'play frame' as the base model for wholesome jokes.",
+   "Treat superiority/aggression as a risk lever, not a default."
+  ],
+  "limitations": [
+   "Philosophical overview, not empirical; final ~1% of page not read."
+  ],
+  "license": "copyrighted (SEP)",
+  "access_status": "full_text",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M31"
+  ]
+ },
+ {
+  "key": "McGrawWarren2010",
+  "title": "Benign Violations: Making Immoral Behavior Funny",
+  "authors": "A. Peter McGraw, Caleb Warren",
+  "year": 2010,
+  "url": "https://leeds-faculty.colorado.edu/mcgrawp/pdf/mcgraw.warren.2010.pdf",
+  "doi_isbn": "10.1177/0956797610376073",
+  "source_type": "empirical",
+  "tier": "A",
+  "key_findings": [
+   "Psychological Science 21(8):1141-1149. Five experiments: benign moral violations elicit laughter/amusement in addition to disgust.",
+   "Three conditions make a violation benign: an alternative norm that makes it acceptable, weak commitment to the violated norm, psychological distance.",
+   "Perceiving the behaviour as both wrong and not wrong partially mediated displays of amusement (Study 2, Sobel t = 2.1).",
+   "Examples: harmless vs harmful version of the same disgusting act - amused 61% vs 28% (Study 3, N=36); church raffling a Hummer - non-churchgoers amused 92% vs churchgoers 62% (Study 4, N=39 in that comparison)."
+  ],
+  "practical_applications": [
+   "Joke check: is there a violation? is it clearly benign for THIS audience?",
+   "Lower commitment/raise distance (fictional characters, small stakes) to keep a joke benign."
+  ],
+  "limitations": [
+   "Small US student samples (N = 36-80 per study), self-reported amusement or coded smiles; written by the theory's proponents."
+  ],
+  "license": "copyrighted",
+  "access_status": "full_text",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M31"
+  ]
+ },
+ {
+  "key": "WarrenMcGraw2016",
+  "title": "Differentiating What Is Humorous From What Is Not",
+  "authors": "Caleb Warren, A. Peter McGraw",
+  "year": 2016,
+  "url": "https://leeds-faculty.colorado.edu/mcgrawp/pdf/warren.mcgraw.2016.pdf",
+  "doi_isbn": "10.1037/pspi0000041",
+  "source_type": "empirical",
+  "tier": "A",
+  "key_findings": [
+   "JPSP 110(3):407-430 (online Dec 2015). Incongruity is defined in at least 4 ways in the literature: surprise, juxtaposition, atypicality, violation - and none alone separates humorous from non-humorous experiences well.",
+   "Six studies (entertainment, consumer products, social interaction): a benign violation - something that threatens well-being, identity or normative beliefs but simultaneously seems okay - differentiates humorous from non-humorous experiences better than common incongruity conceptualisations.",
+   "Main gain: fewer false predictions that joyous, amazing or tragic situations would be funny."
+  ],
+  "practical_applications": [
+   "Incongruity alone can just confuse; add a 'mild threat that is OK' for laughs."
+  ],
+  "limitations": [
+   "Authored by the theory's proponents; mostly US online/student samples."
+  ],
+  "license": "copyrighted",
+  "access_status": "full_text",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M31"
+  ]
+ },
+ {
+  "key": "McGrawEtAl2012",
+  "title": "Too Close for Comfort, or Too Far to Care? Finding Humor in Distant Tragedies and Close Mishaps",
+  "authors": "A. Peter McGraw, Caleb Warren, Lawrence E. Williams, Bridget Leonard",
+  "year": 2012,
+  "url": "https://leeds-faculty.colorado.edu/mcgrawp/pdf/mcgraw.warren.williams.leonard.2012.pdf",
+  "doi_isbn": "10.1177/0956797612443831",
+  "source_type": "empirical",
+  "tier": "A",
+  "key_findings": [
+   "Psychological Science (OnlineFirst 31 Aug 2012). Five studies: tragedies (severe violations) are funnier when temporally, socially, hypothetically or spatially distant; mishaps (mild violations) are funnier when psychologically close.",
+   "Study 2 (N=87): 99% said being hit by a car would be funnier if it happened 5 years ago than yesterday; only 18% said so for stubbing a toe.",
+   "Interpretation: distance reduces threat for tragedies; closeness keeps some threat for mishaps."
+  ],
+  "practical_applications": [
+   "Small everyday mishaps (spilled coffee, lost glasses) can be joked about up close; real suffering needs distance or no joke."
+  ],
+  "limitations": [
+   "Mostly US MTurk/student samples; hypothetical or recalled events.",
+   "The 'rise then fall over time' (comedic sweet spot) finding is NOT in this paper - it is McGrawWilliamsWarren2014 (Hurricane Sandy). Corrected 2026-11-25."
+  ],
+  "license": "copyrighted",
+  "access_status": "full_text",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M31"
+  ]
+ },
+ {
+  "key": "EarleywineMankoff",
+  "title": "Are Benign Violations Necessary for Humor? (commentary/extension)",
+  "authors": "Mitch Earleywine, Robert Mankoff",
+  "year": null,
+  "url": "https://www.albany.edu/~me888931/earleywinemankoffbenignviolationsextension.pdf",
+  "doi_isbn": "",
+  "source_type": "empirical",
+  "tier": "B",
+  "key_findings": [
+   "As summarized in search results: BVT is one of few models claiming necessary and sufficient conditions; the necessity question is treated as open; results suggest BVT can extend beyond moral content."
+  ],
+  "practical_applications": [
+   "Treat BVT as a useful checklist, not a proven law."
+  ],
+  "limitations": [
+   "Only a search snippet seen; publication venue and year unconfirmed."
+  ],
+  "license": "unknown",
+  "access_status": "search_summary",
+  "verification_status": "unverified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M31"
+  ]
+ },
+ {
+  "key": "KantNorman2019",
+  "title": "You Must Be Joking! Benign Violations, Power Asymmetry, and Humor in a Broader Social Context",
+  "authors": "Kant, Norman",
+  "year": 2019,
+  "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC6593112/",
+  "doi_isbn": "",
+  "source_type": "review",
+  "tier": "A",
+  "key_findings": [
+   "As summarized in search results: some jokes whose violations are not seen as benign are still found funny; BVT does not explain why people disagree about whether something is funny; argues for power asymmetry and social context."
+  ],
+  "practical_applications": [
+   "Who is joking about whom matters: a shop joking about customers is not the same as a customer joking about themself."
+  ],
+  "limitations": [
+   "Full text blocked by captcha; content from search snippet; author first names and year from listing, not confirmed."
+  ],
+  "license": "CC BY (Frontiers, likely)",
+  "access_status": "search_summary",
+  "verification_status": "unverified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M31"
+  ]
+ },
+ {
+  "key": "Suls1972",
+  "title": "A two-stage model for the appreciation of jokes and cartoons: an information-processing analysis",
+  "authors": "Jerry M. Suls",
+  "year": 1972,
+  "url": "https://link.springer.com/doi/10.1007/978-1-4612-5572-7_3",
+  "doi_isbn": "",
+  "source_type": "primary_text",
+  "tier": "A",
+  "key_findings": [
+   "In Goldstein & McGhee (eds.) The Psychology of Humor. Stage 1: the ending does not follow from the setup (incongruity); stage 2: the listener finds a cognitive rule that makes the ending fit (resolution).",
+   "Became the standard reference for cognitive/neuro humour studies (per Encyclopedia of Humor Studies summary)."
+  ],
+  "practical_applications": [
+   "Every joke needs a findable rule: the audience must be able to 'get it' within the medium's time."
+  ],
+  "limitations": [
+   "Bibliographic + encyclopedia summary only; resolution need not remove incongruity fully (Ritchie)."
+  ],
+  "license": "copyrighted",
+  "access_status": "bibliographic",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M31"
+  ]
+ },
+ {
+  "key": "Ritchie2009",
+  "title": "Variants of Incongruity Resolution",
+  "authors": "Graeme Ritchie",
+  "year": 2009,
+  "url": "https://www.degruyterbrill.com/document/doi/10.1515/JLT.2009.017/pdf",
+  "doi_isbn": "10.1515/JLT.2009.017",
+  "source_type": "review",
+  "tier": "A",
+  "key_findings": [
+   "Snippet: traditional incongruity-resolution is highly sequential and typically assumes full resolution; Suls and Shultz were highly influential."
+  ],
+  "practical_applications": [
+   "Allow partial resolution (absurd humour) but know it is riskier for broad audiences."
+  ],
+  "limitations": [
+   "Search snippet only."
+  ],
+  "license": "copyrighted",
+  "access_status": "search_summary",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M31"
+  ]
+ },
+ {
+  "key": "MartinEtAl2003",
+  "title": "Individual differences in uses of humor and their relation to psychological well-being: Development of the Humor Styles Questionnaire",
+  "authors": "Rod A. Martin, Patricia Puhlik-Doris, Gwen Larsen, Jeanette Gray, Kelly Weir",
+  "year": 2003,
+  "url": "https://humorstudies.org/ISHS%20Test%20Bank/TestCat_HSQ.htm",
+  "doi_isbn": "",
+  "source_type": "empirical",
+  "tier": "A",
+  "key_findings": [
+   "Journal of Research in Personality 37:48-75. HSQ: 32 items, 7-point scale, four styles: affiliative, self-enhancing (adaptive), aggressive, self-defeating (maladaptive).",
+   "Adaptive styles relate to extraversion, openness, self-esteem; maladaptive to aggression and neuroticism (secondary summary)."
+  ],
+  "practical_applications": [
+   "Give wholesome characters affiliative + self-enhancing humour; avoid self-defeating as a running gag for a lead."
+  ],
+  "limitations": [
+   "Read via test-bank listing and secondary summaries; translated versions show reliability issues."
+  ],
+  "license": "copyrighted",
+  "access_status": "search_summary",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M31"
+  ]
+ },
+ {
+  "key": "MartinFord2018",
+  "title": "The Psychology of Humor: An Integrative Approach (2nd ed.)",
+  "authors": "Rod A. Martin, Thomas E. Ford",
+  "year": 2018,
+  "url": "https://shop.elsevier.com/books/the-psychology-of-humor/martin/978-0-12-812143-6",
+  "doi_isbn": "ISBN 9780128121436",
+  "source_type": "textbook",
+  "tier": "A",
+  "key_findings": [
+   "Standard textbook: definitions and theories, cognition, personality, physiology, social functions, development, health, applications in therapy/education/work."
+  ],
+  "practical_applications": [
+   "Reference text for future deep-dives (not read this session)."
+  ],
+  "limitations": [
+   "Publisher page only."
+  ],
+  "license": "copyrighted",
+  "access_status": "publisher_page",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M31"
+  ]
+ },
+ {
+  "key": "JiangLiHou2019",
+  "title": "Cultural Differences in Humor Perception, Usage, and Implications",
+  "authors": "Tonglin Jiang, Hao Li, Yubo Hou",
+  "year": 2019,
+  "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC6361813/",
+  "doi_isbn": "10.3389/fpsyg.2019.00123",
+  "source_type": "review",
+  "tier": "A",
+  "key_findings": [
+   "Westerners treat humour as a desirable trait; Easterners (mostly Chinese samples) are more ambivalent, partly via Confucian devaluation.",
+   "Easterners use humour less for coping (Chinese, Japanese, Singaporean students); reportedly less aggressive and more affiliative humour, depending on collectivism/harmony.",
+   "Adaptive vs maladaptive HSQ pattern holds East and West but strength varies.",
+   "Thailand not covered; most Eastern data are Chinese samples; mainly correlational surveys."
+  ],
+  "practical_applications": [
+   "For Thai/Asian audiences favour affiliative, harmony-keeping humour; be careful with aggressive teasing in brand voice."
+  ],
+  "limitations": [
+   "Does not include Thailand; generalising East Asia to Thailand is DERIVED."
+  ],
+  "license": "CC BY 4.0",
+  "access_status": "full_text",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M31"
+  ]
+ },
+ {
+  "key": "GervaisWilson2005",
+  "title": "The evolution and functions of laughter and humor: a synthetic approach",
+  "authors": "Matthew Gervais, David Sloan Wilson",
+  "year": 2005,
+  "url": "https://pubmed.ncbi.nlm.nih.gov/16519138/",
+  "doi_isbn": "10.1086/498281",
+  "source_type": "review",
+  "tier": "A",
+  "key_findings": [
+   "Quarterly Review of Biology 80(4):395-430. Distinguishes Duchenne (spontaneous, stimulus-driven) from non-Duchenne (volitional, strategic) laughter.",
+   "Duchenne laughter hypothesised as a medium for playful emotional contagion; non-Duchenne co-opted for many functions incl. derision and embarrassment."
+  ],
+  "practical_applications": [
+   "In TTS/animation, a warm genuine laugh and a polite social laugh are different acts; direct them separately."
+  ],
+  "limitations": [
+   "Evolutionary hypotheses; abstract-level reading."
+  ],
+  "license": "copyrighted",
+  "access_status": "abstract",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M31"
+  ]
+ },
+ {
+  "key": "PickeringEtAl2009",
+  "title": "Prosodic markers of saliency in humorous narratives",
+  "authors": "Lucy Pickering, Salvatore Attardo, et al.",
+  "year": 2009,
+  "url": "https://pure.psu.edu/en/publications/prosodic-markers-of-saliency-in-humorous-narratives/",
+  "doi_isbn": "",
+  "source_type": "empirical",
+  "tier": "A",
+  "key_findings": [
+   "Acoustic measures: punchlines are not louder than preceding text, are delivered at lower pitch and more slowly, often with laughing/smiling voice, and are NOT preceded by significant pauses.",
+   "Folk belief 'it's all about the pause' was untested before and largely unsupported for told narratives."
+  ],
+  "practical_applications": [
+   "For TTS punchlines: slightly lower and slower, smile in the voice; do not insert a long dramatic pause by default."
+  ],
+  "limitations": [
+   "Author list from listing; small corpora of narrated jokes; abstract-level."
+  ],
+  "license": "copyrighted",
+  "access_status": "abstract",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M31"
+  ]
+ },
+ {
+  "key": "AttardoEtAl2011_2013",
+  "title": "Prosodic/multimodal markers of humor in conversation (Attardo, Pickering & Baker 2011; Attardo, Pickering, Lomotey & Menjo 2013)",
+  "authors": "Salvatore Attardo, Lucy Pickering, et al.",
+  "year": 2013,
+  "url": "https://www.degruyterbrill.com/document/doi/10.1075/bct.78.12att/html",
+  "doi_isbn": "",
+  "source_type": "empirical",
+  "tier": "A",
+  "key_findings": [
+   "As summarized in search results: in conversation, humorous turns show no higher pitch, volume or speed and no significant pauses; smiling/laughter accompany humour.",
+   "2013 dyadic study: lower-pitch punchline effect did NOT replicate; smiling seems to set up the humorous frame before the joke."
+  ],
+  "practical_applications": [
+   "Signal the play frame early (smile voice, playful face) rather than relying on a pause before the line."
+  ],
+  "limitations": [
+   "Two papers merged under one key; exact titles/venues not confirmed; search summary only."
+  ],
+  "license": "copyrighted",
+  "access_status": "search_summary",
+  "verification_status": "unverified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M31"
+  ]
+ },
+ {
+  "key": "MaEtAl2026",
+  "title": "Timing is Everything: Temporal Scaffolding of Semantic Surprise in Humor",
+  "authors": "Yuxi Ma, et al.",
+  "year": 2026,
+  "url": "https://escholarship.org/uc/item/58t1w6r7",
+  "doi_isbn": "",
+  "source_type": "empirical",
+  "tier": "B",
+  "key_findings": [
+   "828 professional Chinese stand-up performances: temporal features (pause patterns, punchline timing) outweighed semantic incongruity in predicting audience appreciation.",
+   "Proposes 'dual prediction violation': a content surprise and a rhythm break together; example of a ~1.5 s pause before a distant punchline."
+  ],
+  "practical_applications": [
+   "In performed/edited comedy, establish a rhythm then break it on the punch; contrasts with conversation findings above."
+  ],
+  "limitations": [
+   "Conference paper (CogSci 2026), search summary only; stand-up genre, Chinese language."
+  ],
+  "license": "unknown",
+  "access_status": "search_summary",
+  "verification_status": "unverified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M31"
+  ]
+ },
+ {
+  "key": "Eisend2009",
+  "title": "A meta-analysis of humor in advertising",
+  "authors": "Martin Eisend",
+  "year": 2009,
+  "url": "https://link.springer.com/article/10.1007/s11747-008-0096-y",
+  "doi_isbn": "10.1007/s11747-008-0096-y",
+  "source_type": "meta-analysis",
+  "tier": "S",
+  "key_findings": [
+   "Meta-analysis of 369 correlations: humour enhances attitude toward the ad, attention and positive affect, and purchase intention; it reduces source credibility; no evidence it raises liking of the advertiser. Also raises brand attitude (ABR)."
+  ],
+  "practical_applications": [
+   "Use humour for stopping power and liking; never as the vehicle for medical/expert credibility claims."
+  ],
+  "limitations": [
+   "Abstract-level; effect sizes not read; mostly Western ad studies.",
+   "Spot-check 2026-11-25: \"liking\" narrowed to attitude toward the ad (no effect on liking of the advertiser).",
+   "Spot-check U3 2026-11-25 applied."
+  ],
+  "license": "copyrighted",
+  "access_status": "abstract",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M31"
+  ]
+ },
+ {
+  "key": "Eisend2011",
+  "title": "How humor in advertising works: A meta-analytic test of alternative models",
+  "authors": "Martin Eisend",
+  "year": 2011,
+  "url": "https://link.springer.com/doi/10.1007/s11002-010-9116-z",
+  "doi_isbn": "10.1007/s11002-010-9116-z",
+  "source_type": "meta-analysis",
+  "tier": "S",
+  "key_findings": [
+   "Marketing Letters 22(2):115-132. Tests how earlier explanations of humour effects may be integrated (findings not read)."
+  ],
+  "practical_applications": [
+   "Pending: read to know whether humour works via affect transfer or via cognition."
+  ],
+  "limitations": [
+   "Bibliographic only."
+  ],
+  "license": "copyrighted",
+  "access_status": "bibliographic",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M31"
+  ]
+ },
+ {
+  "key": "WeinbergerGulas1992",
+  "title": "The Impact of Humor in Advertising: A Review",
+  "authors": "Marc G. Weinberger, Charles S. Gulas",
+  "year": 1992,
+  "url": "https://corescholar.libraries.wright.edu/marketing/12",
+  "doi_isbn": "10.1080/00913367.1992.10673384",
+  "source_type": "review",
+  "tier": "A",
+  "key_findings": [
+   "Journal of Advertising 21(4):35-59. Humour does not guarantee better ads; effect depends on objectives, audience, situation and humour type.",
+   "Cited later as: humour attracts attention and raises likability but does not reliably improve comprehension or persuasion."
+  ],
+  "practical_applications": [
+   "Decide the job first (attention? liking? understanding?) before adding a joke."
+  ],
+  "limitations": [
+   "Abstract + secondary citation; 2019 update by the same authors not read."
+  ],
+  "license": "copyrighted",
+  "access_status": "abstract",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M31"
+  ]
+ },
+ {
+  "key": "HatzithomasEtAl2011",
+  "title": "Humor and cultural values in print advertising: a cross-cultural study",
+  "authors": "Leonidas Hatzithomas, Yorgos Zotos, Christina Boutsouki",
+  "year": 2011,
+  "url": "https://doi.org/10.1108/02651331111107107",
+  "doi_isbn": "10.1108/02651331111107107",
+  "source_type": "empirical",
+  "tier": "A",
+  "key_findings": [
+   "12,351 UK and Greek magazine ads (3,828 humorous). Higher uncertainty-avoidance Greece leaned to informative humour.",
+   "Suggests individualistic/low-UA audiences prefer humour-dominant messages; collectivistic/high-UA audiences use humour as a vehicle for required information."
+  ],
+  "practical_applications": [
+   "For Thai (collectivist, Hofstede-high UA) audiences, DERIVED: let humour carry the information rather than replace it."
+  ],
+  "limitations": [
+   "Content analysis of ad supply, not audience response; Thailand not studied; search summary."
+  ],
+  "license": "copyrighted",
+  "access_status": "search_summary",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M31"
+  ]
+ },
+ {
+  "key": "FraustinoMa2015",
+  "title": "CDC's Use of Social Media and Humor in a Risk Campaign — 'Preparedness 101: Zombie Apocalypse'",
+  "authors": "Julia Daisy Fraustino, Liang Ma",
+  "year": 2015,
+  "url": "https://collaborate.umb.edu/en/publications/cdcs-use-of-social-media-and-humor-in-a-risk-campaignpreparedness/",
+  "doi_isbn": "",
+  "source_type": "empirical",
+  "tier": "A",
+  "key_findings": [
+   "Journal of Applied Communication Research 43(2):222-241. Campaign met reach goals, but in the experiment students shown the comical zombie version reported weaker intentions to take protective action; authors: a light tone can trivialise perceived importance."
+  ],
+  "practical_applications": [
+   "Health-related calls to action (eye exams, UV protection) should not be wrapped in a joke that makes the risk feel unreal."
+  ],
+  "limitations": [
+   "Student sample; search summary; other studies (e.g. measles/MMR humour) found humour reduced reactance — mixed field."
+  ],
+  "license": "copyrighted",
+  "access_status": "search_summary",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M31"
+  ]
+ },
+ {
+  "key": "HSPH_MatchHumor",
+  "title": "Lessons learned: match your humor to your message",
+  "authors": "Harvard T.H. Chan School of Public Health, Health Communication",
+  "year": null,
+  "url": "https://hsph.harvard.edu/health-communication/news/lessons-learned-match-your-humor-to-your-message/",
+  "doi_isbn": "",
+  "source_type": "docs",
+  "tier": "C",
+  "key_findings": [
+   "Harvard Chan Center for Health Communication 'Lessons Learned' (3 Sep 2024) summarising a Health Communication study (DOI 10.1080/10410236.2023.2218532): 882 participants saw COVID memes paired with prevention- or promotion-focused messages.",
+   "Prevention messages (avoid a bad behaviour) were shared/engaged with more when paired with inoffensive humour that points out something unexpected.",
+   "Promotion messages (adopt a good behaviour) were shared more with AGGRESSIVE humour that makes fun of people who don't adopt the behaviour - explained by psychological-distance 'fit'.",
+   "Outcome = self-reported intention to share/engage, not behaviour change."
+  ],
+  "practical_applications": [
+   "Use gentle surprise humour, not mockery, around health topics."
+  ],
+  "limitations": [
+   "Institutional blog summarising one study; original paper not read. Earlier entry wrongly said 'playful > aggressive' - corrected 2026-11-25."
+  ],
+  "license": "copyrighted",
+  "access_status": "full_text",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M31"
+  ]
+ },
+ {
+  "key": "Schmidt1994",
+  "title": "Effects of humor on sentence memory",
+  "authors": "Stephen R. Schmidt",
+  "year": 1994,
+  "url": "https://acnpsearch.tweb-dev.unibo.it/singlejournalindex/38673615",
+  "doi_isbn": "",
+  "source_type": "empirical",
+  "tier": "A",
+  "key_findings": [
+   "JEP: Learning, Memory, and Cognition. Humorous sentences better remembered than non-humorous versions in free and cued recall.",
+   "Later work: advantage appears in mixed lists, not pure lists (distinctiveness); Schmidt & Williams 2001 argued against pure distinctiveness/rehearsal — mechanism contested."
+  ],
+  "practical_applications": [
+   "One funny slide among plain ones is memorable; a whole feed of jokes loses the advantage (DERIVED from mixed-list finding)."
+  ],
+  "limitations": [
+   "Search summary; lab sentences, not ads."
+  ],
+  "license": "copyrighted",
+  "access_status": "search_summary",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M31"
+  ]
+ },
+ {
+  "key": "KaoLevyGoodman2016",
+  "title": "A Computational Model of Linguistic Humor in Puns",
+  "authors": "Kao, Levy, Goodman",
+  "year": 2016,
+  "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC5042108",
+  "doi_isbn": "",
+  "source_type": "empirical",
+  "tier": "A",
+  "key_findings": [
+   "Cognitive Science 40(5):1270-1285. Two information-theoretic measures from a noisy-channel model of sentence processing: ambiguity (both meanings active) and distinctiveness (each meaning supported by different words).",
+   "435 sentences (phonetic puns with identical or near homophones, plus matched non-puns, from 'Pun of the Day'); funniness rated by MTurk participants (100 raters for the 195 identical-homophone sentences).",
+   "Both measures correlate with funniness; ambiguity separates puns from non-puns, distinctiveness separates exceptionally funny puns from mediocre ones."
+  ],
+  "practical_applications": [
+   "A good pun needs BOTH meanings supported by different words in the line; Thai homophone puns can be checked the same way (DERIVED)."
+  ],
+  "limitations": [
+   "English homophone puns only; read via Europe PMC full-text XML."
+  ],
+  "license": "CC BY (PMC author manuscript, unconfirmed)",
+  "access_status": "full_text",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M31"
+  ]
+ },
+ {
+  "key": "Siriwatananawin2013",
+  "title": "Spoonerism: a Creative Way of Communication in Thai",
+  "authors": "Wirat Siriwatananawin (Silpakorn University)",
+  "year": 2013,
+  "url": "https://papers.iafor.org/submissionacas2013_0319",
+  "doi_isbn": "",
+  "source_type": "empirical",
+  "tier": "B",
+  "key_findings": [
+   "Search summary: Thai spoonerism (คำผวน) is both a speech error and intentional wordplay; used for taboo avoidance in polite register; describes the 'Luu' secret spoonerist language (often gossipy, impolite casual talk)."
+  ],
+  "practical_applications": [
+   "คำผวน is a native Thai humour device, but swaps often surface hidden rude/sexual readings — every คำผวน must be checked in both directions."
+  ],
+  "limitations": [
+   "Conference paper; PDF returned 403; only search summary."
+  ],
+  "license": "unknown",
+  "access_status": "search_summary",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M31"
+  ]
+ },
+ {
+  "key": "PhumathonDuangloy_Kampuan",
+  "title": "สุนทรียะคำผวน: เพศ พฤติกรรมการสมสู่ การสร้างคำใหม่และการสื่อสาร (Aesthetic of Spoonerism: Sex, Behavior of Sexual Intercourse, Word Formation and Communication)",
+  "authors": "Mallika Phumathon (มัลลิกา ภูมะธน), Dirak Duangloy (ดิเรก ด้วงลอย), Nakhon Sawan Rajabhat University",
+  "year": 2021,
+  "url": "https://so04.tci-thaijo.org/index.php/jidir/article/download/256568/173933",
+  "doi_isbn": "",
+  "source_type": "review",
+  "tier": "B",
+  "key_findings": [
+   "Journal of Interdisciplinary Innovation Review 4(2), Jul-Dec 2021 (TCI). Academic article built from documents, prior research and conversations with colleagues skilled at คำผวน - not an empirical study.",
+   "Summarised functions of คำผวน: (1) creates new words, (2) a communication tool, (3) a linguistic trick, (4) avoids impolite words / makes them polite, (5) creates humour and language entertainment; methods: swapping vowels and final consonants, multi-syllable swaps, selective tone shifts.",
+   "Discusses classical examples (e.g. Sunthorn Phu) and the large share of คำผวน that resolve to sexual meanings; the author notes that frequent sexual spoonerisms at work start to feel excessive ('ผวนจนเกินงาม')."
+  ],
+  "practical_applications": [
+   "Confirms that sexual double meaning is a central register of คำผวน — red line for a wholesome brand."
+  ],
+  "limitations": [
+   "Essay-style academic article with personal observation; no audience data."
+  ],
+  "license": "unknown (open on ThaiJo)",
+  "access_status": "full_text",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M31"
+  ]
+ },
+ {
+  "key": "SenchantichaiKadsantier2019",
+  "title": "An Analysis of Linguistic Humor in the Humorous Scenes of Pee Mak Phra Kanong",
+  "authors": "Senchantichai, Kadsantier",
+  "year": 2019,
+  "url": "https://so03.tci-thaijo.org/index.php/Humanties-up/article/download/221884/152930",
+  "doi_isbn": "",
+  "source_type": "empirical",
+  "tier": "A",
+  "key_findings": [
+   "Trends of Humanities and Social Sciences Research 7(2):106-124 (Univ. of Phayao). Pee Mak Phra Kanong has 76 humorous scenes (identified by the producers, GDH); every fifth scene was analysed - 15 scenes, 16 humour instances.",
+   "Techniques (Berger 1997 + Pinit-Phuwadol 1998): analogy 4 (25%), pun 3 (18.75%), loanwords 3 (18.75%); ridicule, slang, explanation, mispronunciation, facetiousness, over-literalness 1 each (6.25%).",
+   "Analogy worked best combined with pun and exaggeration; slang, explanation and mispronunciation are outside Berger's taxonomy but drew laughs - Thai-specific categories needed.",
+   "Spoonerism appears only in the literature review (as phonological deviation); it was not among the techniques found in the sampled scenes. Most humour came from conversations of the added supporting characters."
+  ],
+  "practical_applications": [
+   "Thai mainstream comedy leans on wordplay and analogy — fits Mint & Tao dialogue."
+  ],
+  "limitations": [
+   "One film, 15 scenes, analysis of the producers' intended humour - not audience response."
+  ],
+  "license": "unknown",
+  "access_status": "full_text",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M31"
+  ]
+ },
+ {
+  "key": "Wangsomchok_ThaiSitcom",
+  "title": "A Linguistic Strategies to Express Humor in Thai Context",
+  "authors": "Chantima Wangsomchok (Suan Sunandha Rajabhat University)",
+  "year": 2016,
+  "url": "https://www.ijssh.org/vol6/691-H023.pdf",
+  "doi_isbn": "",
+  "source_type": "empirical",
+  "tier": "B",
+  "key_findings": [
+   "International Journal of Social Science and Humanity 6(6), June 2016. Data: five Thai situation comedies; frameworks: speech acts, Grice's cooperative principle, implicature.",
+   "Six categories of humour-related speech acts: boasting, expressing condescension, threatening, blaming, teasing and satire.",
+   "Humour in Thai sitcoms is closely associated with superiority and aggression created by the speaker; humour also arises from non-observance of Gricean maxims (violating or flouting)."
+  ],
+  "practical_applications": [
+   "Mainstream Thai sitcom humour is often put-down based; a wholesome brand should consciously NOT copy that default."
+  ],
+  "limitations": [
+   "Qualitative analysis of scripted TV; no audience measure; 4-page conference-style paper."
+  ],
+  "license": "unknown",
+  "access_status": "full_text",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M31"
+  ]
+ },
+ {
+  "key": "Hanks2022",
+  "title": "(Laughter in American English and Central Thai television talk)",
+  "authors": "Hanks",
+  "year": 2022,
+  "url": "https://doi.org/10.1515/ip-2022-2004",
+  "doi_isbn": "10.1515/ip-2022-2004",
+  "source_type": "empirical",
+  "tier": "A",
+  "key_findings": [
+   "Search summary: laughter use varies cross-linguistically between American English and Central Thai TV, aligning with linguistic patterns and cultural values."
+  ],
+  "practical_applications": [
+   "Thai laughter placement in VO should follow Thai norms, not dubbed-English habits."
+  ],
+  "limitations": [
+   "Title not confirmed; snippet only."
+  ],
+  "license": "copyrighted",
+  "access_status": "search_summary",
+  "verification_status": "unverified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M31"
+  ]
+ },
+ {
+  "key": "Crafton_PieChase",
+  "title": "Pie and Chase: Gag, Spectacle and Narrative in Slapstick Comedy",
+  "authors": "Donald Crafton",
+  "year": null,
+  "url": "https://www.taylorfrancis.com/chapters/oa-edit/10.5117/9789053569443-28/pie-chase-gag-spectacle-narrative-slapstick-comedy-donald-crafton",
+  "doi_isbn": "",
+  "source_type": "primary_text",
+  "tier": "A",
+  "key_findings": [
+   "Search summary: frames slapstick as a tension between the gag (spectacle, 'pie') and narrative ('chase'); rethinks the gag's role in classical comic film."
+  ],
+  "practical_applications": [
+   "Physical gags in clips should either push the story or be a deliberate pause from it — know which."
+  ],
+  "limitations": [
+   "Snippet and blog summary only; open-access chapter not read."
+  ],
+  "license": "open access (per listing)",
+  "access_status": "search_summary",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M31"
+  ]
+ },
+ {
+  "key": "Levine2017RuleOf3",
+  "title": "The comedy rule of 3s (blog post)",
+  "authors": "Ken Levine",
+  "year": 2017,
+  "url": "https://kenlevine.blogspot.com/2017/07/the-comedy-rule-of-3s.html?m=0",
+  "doi_isbn": "",
+  "source_type": "practitioner",
+  "tier": "D",
+  "key_findings": [
+   "Ken Levine blog (16 Jul 2017): the rule of three (comic triple) establishes a pattern and ends with something unexpected ('We serve lasagna, spaghetti, and poi').",
+   "Two items are usually enough to set the pattern; more than three feels wrong.",
+   "Traps: the first two items must clearly establish the pattern; keep setups straight (a funny setup cancels the payoff); don't make setups convoluted."
+  ],
+  "practical_applications": [
+   "Template for 3-slide carousel jokes."
+  ],
+  "limitations": [
+   "Craft, tier D. Callbacks and A/B-plot structure are NOT in this post (other practitioner pages)."
+  ],
+  "license": "copyrighted",
+  "access_status": "full_text",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M31"
+  ]
+ },
+ {
+  "key": "WarrenBarskyMcGraw2021",
+  "title": "What Makes Things Funny? An Integrative Review of the Antecedents of Laughter and Amusement",
+  "authors": "Caleb Warren, Adam Barsky, A. Peter McGraw",
+  "year": 2021,
+  "url": "https://leeds-faculty.colorado.edu/mcgrawp/pdf/warren.barsky.mcgraw.inpress.pdf",
+  "doi_isbn": "10.1177/1088868320961909",
+  "source_type": "review",
+  "tier": "A",
+  "key_findings": [
+   "Personality and Social Psychology Review 25(1):41-65. More than 20 psychological humour theories draw on five candidate antecedents: surprise, simultaneity, superiority, a violation appraisal, and conditions for a benign appraisal.",
+   "Against the evidence, simultaneity, violation and benign appraisals help distinguish humorous from non-humorous experiences; surprise and superiority do not.",
+   "Surprise is too broad (muggings, diagnoses surprise without amusement) and too narrow: expected punchlines were rated funnier (Kenny 1955; Pollio & Mers 1974), partial prior exposure made jokes funnier (Topolinski 2014), rewatch enjoyment equals first viewing (O'Brien 2019); callbacks and running gags work.",
+   "When surprise and violation were manipulated orthogonally (candy offered vs thrown, warned vs not), violations increased laughter; surprise did not.",
+   "Failed attempts at humour make people/organisations seem incompetent or insensitive and can elicit disgust, anger and disapproval."
+  ],
+  "practical_applications": [
+   "Don't chase 'surprise' as the core of a joke: build two simultaneous readings + a small violation + a clear 'it's okay' signal.",
+   "Running gags and callbacks are evidence-compatible; a known punchline can still land if it is a benign violation."
+  ],
+  "limitations": [
+   "Written by BVT proponents; integrative (not systematic) review; underlying studies mostly Western students."
+  ],
+  "license": "copyrighted (author copy)",
+  "access_status": "full_text",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M31"
+  ]
+ },
+ {
+  "key": "McGrawWilliamsWarren2014",
+  "title": "The Rise and Fall of Humor: Psychological Distance Modulates Humorous Responses to Tragedy",
+  "authors": "A. Peter McGraw, Lawrence E. Williams, Caleb Warren",
+  "year": 2014,
+  "url": "https://leeds-faculty.colorado.edu/mcgrawp/pdf/mcgraw.williams.warren.2014b.pdf",
+  "doi_isbn": "10.1177/1948550613515006",
+  "source_type": "empirical",
+  "tier": "A",
+  "key_findings": [
+   "Social Psychological and Personality Science 5(5), starting p. 566 (online Dec 2013). Longitudinal: about 100 different participants at each of 10 time points rated three Hurricane Sandy joke tweets (from one day before landfall to 99 days after).",
+   "Humour fell as the reality set in (day -1 M = 3.5 to day 8 M = 2.9), was lowest at day 15 (M = 2.7, 'too soon'), peaked at day 36 (M = 3.4), and fell again by day 99 (M = 2.6) - a comedic sweet spot, not a monotonic rise with time.",
+   "Changes in humour were mediated by perceived offensiveness (threat)."
+  ],
+  "practical_applications": [
+   "Topical jokes about a bad event have a window: not while it is fresh, and not once it no longer matters to the audience."
+  ],
+  "limitations": [
+   "One US event, online samples, three tweets; 7-point ratings."
+  ],
+  "license": "copyrighted (author copy)",
+  "access_status": "full_text",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M31"
+  ]
+ }
+]

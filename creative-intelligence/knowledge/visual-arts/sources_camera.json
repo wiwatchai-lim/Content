@@ -1,0 +1,1302 @@
+[
+ {
+  "key": "BaranowskiHecht2018",
+  "title": "Effect of Camera Angle on Perception of Trust and Attractiveness",
+  "authors": "Andreas M. Baranowski; Heiko Hecht",
+  "year": 2018,
+  "url": "https://experimental.psychologie.uni-mainz.de/files/2024/06/2018BaranowskiHecht_Camera_Angle.pdf",
+  "doi_isbn": "10.1177/0276237417710762",
+  "source_type": "empirical",
+  "tier": "A",
+  "key_findings": [
+   "12 actors filmed in frontal head-and-shoulder close-ups at 1 m, camera ~30 deg above, at, or ~30 deg below eye level; N=34 viewers (Empirical Studies of the Arts 36, online 2017).",
+   "Trust was highest at eye level (M=5.03) vs low angle (M=4.27, p=.007) and high angle (M=4.57, p=.082); low and high did not differ from each other.",
+   "No effect of camera angle on attractiveness or on Big-Five personality ratings.",
+   "Literature review: earlier findings are heterogeneous (Tiemens 1970 one of three newsreaders; Avery & Long 1976 minor; McCain et al. 1977 higher camera -> higher competence/composure/sociability; Kraft 1987 low=strength, eye=parity, high=weakness; Sevenants 2006 low->potency; Mandell & Shaw 1973 potency; Meridian 1987 no effect).",
+   "Authors conclude context and narrative strongly moderate camera-angle effects; Figure 1 lists angles used in prior studies (9-40 deg)."
+  ],
+  "practical_applications": [
+   "Direct-to-camera trust lines (shop staff, explainer VO with a face) -> eye level by default.",
+   "Do not assume low angle = more persuasive for a single talking face."
+  ],
+  "limitations": [
+   "Small N (34), students, one context (game-show trust task), 30 deg only.",
+   "Large-effect power only (eta_p^2 >= .14)."
+  ],
+  "license": "copyrighted (author-hosted PDF)",
+  "access_status": "full_text",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M18",
+   "M04"
+  ]
+ },
+ {
+  "key": "SevenantsDYdewalle2006",
+  "title": "Does it matter to be pictured from below?",
+  "authors": "Aline Sevenants; Gery d'Ydewalle",
+  "year": 2006,
+  "url": "https://account.psychologicabelgica.com/index.php/up-j-pb/article/view/pb-46-3-199/132",
+  "doi_isbn": "Psychologica Belgica 46(3), 199-210",
+  "source_type": "empirical",
+  "tier": "A",
+  "key_findings": [
+   "Three 5-picture stories; the two characters were introduced in high-angle, eye-level or low-angle shots (~35 deg off eye level); linear vs random picture order.",
+   "In linear (story) order, low-angle shots raised Potency ratings; no effect on Evaluation or Activation.",
+   "In the chess story, the character shown from below was more often chosen as the winner.",
+   "In random order (no narrative) no camera-angle effect appeared, contrary to Kraft's (1987) prediction that weaker narrative = stronger angle effect.",
+   "Review section: Meyers-Levy & Peracchio (1992) found low angle best for products only under low processing motivation; eye level best under moderate; no effect under high motivation; Meridian (1987) found no effect."
+  ],
+  "practical_applications": [
+   "Use low angle on a character only where the story already frames them as the winner/strong one; it reinforces rather than creates meaning."
+  ],
+  "limitations": [
+   "Student sample, still pictures, three stories; potency only."
+  ],
+  "license": "open access journal (licence not stated on PDF)",
+  "access_status": "full_text",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M18",
+   "M04"
+  ]
+ },
+ {
+  "key": "Giessner2011",
+  "title": "The Power of Pictures: Vertical Picture Angles in Power Pictures",
+  "authors": "Steffen R. Giessner; Michelle K. Ryan; Thomas W. Schubert; Niels van Quaquebeke",
+  "year": 2011,
+  "url": "https://repositorio.iscte-iul.pt/bitstream/10071/6966/1/Giesser_2011MediaPsychology.pdf",
+  "doi_isbn": "Media Psychology 14(4), 441-463",
+  "source_type": "empirical",
+  "tier": "A",
+  "key_findings": [
+   "Four archival studies (six samples) found media tend to depict powerful people from below more than powerless people; a salient power context strengthens this; two experiments found the same for people producing media content.",
+   "Explains the verticality-power link with evolutionary (height = formidability), social learning (children look up at powerful parents) and embodiment accounts.",
+   "Cites Mignault & Chaudhuri (2003) and Kraft (1987) as evidence that vertical angle shifts dominance judgments."
+  ],
+  "practical_applications": [
+   "Picture makers already encode power with vertical angle, so audiences have learned the code; it is a convention reinforced by use."
+  ],
+  "limitations": [
+   "Only abstract and introduction (pp. 1-4 of the preprint) read; archival design shows producer behaviour, not viewer effect."
+  ],
+  "license": "copyrighted (author preprint in institutional repository)",
+  "access_status": "abstract",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M18",
+   "M04"
+  ]
+ },
+ {
+  "key": "Kraft1987",
+  "title": "The influence of camera angle on comprehension and retention of pictorial events",
+  "authors": "Robert N. Kraft",
+  "year": 1987,
+  "url": "",
+  "doi_isbn": "Memory & Cognition 15, 291-307",
+  "source_type": "empirical",
+  "tier": "A",
+  "key_findings": [
+   "As summarised by Baranowski & Hecht (2018) and Sevenants & d'Ydewalle (2006): slide stories with characters shown from low, eye-level and high (up to ~40 deg) angles; low angles produced impressions of strength, action and superiority, eye level parity, high angles weakness, passivity and insignificance; effects on Potency and Activation, not Evaluation.",
+   "Kraft predicted that camera-angle effects grow when narrative structure is weak (later contradicted by Sevenants & d'Ydewalle 2006)."
+  ],
+  "practical_applications": [
+   "Classic citation for the power reading of vertical angle; use with the replication caveats."
+  ],
+  "limitations": [
+   "Not read directly; findings only as reported by the two secondary sources."
+  ],
+  "license": "copyrighted",
+  "access_status": "bibliographic",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M18",
+   "M04"
+  ]
+ },
+ {
+  "key": "MandellShaw1973",
+  "title": "Judging people in the news - unconsciously: Effect of camera angle and bodily activity",
+  "authors": "Lee M. Mandell; Donald L. Shaw",
+  "year": 1973,
+  "url": "",
+  "doi_isbn": "Journal of Broadcasting 17, 353-362",
+  "source_type": "empirical",
+  "tier": "A",
+  "key_findings": [
+   "As summarised by Sevenants & d'Ydewalle (2006): a filmed interview with a fictitious appointee, ~12 deg angles; Potency and Activation were higher in low-angle than high-angle conditions; Evaluation did not differ."
+  ],
+  "practical_applications": [
+   "Supports a modest potency effect of low angles on a speaking person."
+  ],
+  "limitations": [
+   "Not read directly; bibliographic only."
+  ],
+  "license": "copyrighted",
+  "access_status": "bibliographic",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M18"
+  ]
+ },
+ {
+  "key": "McCain1977",
+  "title": "The effect of camera angle on source credibility and attraction",
+  "authors": "Thomas A. McCain; Joseph Chilberg; Jacob Wakshlag",
+  "year": 1977,
+  "url": "",
+  "doi_isbn": "Journal of Broadcasting 21, 35-46",
+  "source_type": "empirical",
+  "tier": "A",
+  "key_findings": [
+   "As summarised by Baranowski & Hecht (2018): a higher camera angle raised competence, composure and sociability ratings of a TV speaker (opposite to the power convention); credibility was higher when fewer non-eye-level shots were cut in."
+  ],
+  "practical_applications": [
+   "For credibility of a speaker, keep most shots at eye level; angle shifts work only sparingly."
+  ],
+  "limitations": [
+   "Not read directly."
+  ],
+  "license": "copyrighted",
+  "access_status": "bibliographic",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M18"
+  ]
+ },
+ {
+  "key": "MeyersLevyPeracchio1992",
+  "title": "Getting an angle in advertising: The effect of camera angle on product evaluations",
+  "authors": "Joan Meyers-Levy; Laura A. Peracchio",
+  "year": 1992,
+  "url": "",
+  "doi_isbn": "Journal of Marketing Research 29(4)",
+  "source_type": "empirical",
+  "tier": "A",
+  "key_findings": [
+   "As summarised by Sevenants & d'Ydewalle (2006): product evaluations were most favourable for low-angle photos and least for high-angle photos only when processing motivation was low; at moderate motivation eye level was best; at high motivation angle had no effect (heuristic-processing account).",
+   "A University of Twente thesis (search snippet) reports a failed replication of the need-for-cognition moderation."
+  ],
+  "practical_applications": [
+   "Low-angle product hero shots may help fast-scrolling, low-attention viewers; do not expect them to matter to a careful buyer reading specs."
+  ],
+  "limitations": [
+   "Not read directly; exact title taken from search results; moderation contested."
+  ],
+  "license": "copyrighted",
+  "access_status": "bibliographic",
+  "verification_status": "unverified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M18",
+   "M26"
+  ]
+ },
+ {
+  "key": "Tiemens1970",
+  "title": "Some relationships of camera angle to communicator credibility",
+  "authors": "Robert K. Tiemens",
+  "year": 1970,
+  "url": "",
+  "doi_isbn": "Journal of Broadcasting 14, 483-490",
+  "source_type": "empirical",
+  "tier": "A",
+  "key_findings": [
+   "As summarised by Baranowski & Hecht (2018): only one of three newsreaders was rated higher on communicative ability and knowledgeability from a lower vantage point; no difference on authoritative/convincing."
+  ],
+  "practical_applications": [
+   "Evidence that angle effects are small and person-dependent."
+  ],
+  "limitations": [
+   "Not read directly."
+  ],
+  "license": "copyrighted",
+  "access_status": "bibliographic",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M18"
+  ]
+ },
+ {
+  "key": "WitkowerTracy2019",
+  "title": "A facial-action imposter: How head tilt influences perceptions of dominance from a neutral face",
+  "authors": "Zachary Witkower; Jessica L. Tracy",
+  "year": 2019,
+  "url": "https://www.psychologicalscience.org/news/releases/head-tilt-dominance.html",
+  "doi_isbn": "10.1177/0956797619838762",
+  "source_type": "empirical",
+  "tier": "A",
+  "key_findings": [
+   "Per press release and abstract snippets: five studies, N=1,517; a downward head tilt with forward gaze increased perceived dominance of a neutral face.",
+   "Mechanism: tilt creates the illusion of lowered, V-shaped brows (an 'action-unit imposter' for AU4); the eye/brow region is necessary and sufficient."
+  ],
+  "practical_applications": [
+   "A camera BELOW a face makes the head read as tilted UP relative to the viewer; a camera slightly ABOVE with the subject looking up into the lens reads as tilted down. Head pose relative to camera can counteract or reverse the expected low-angle 'power' effect (DERIVED)."
+  ],
+  "limitations": [
+   "Only press summary and abstract fragments read; head tilt is not the same manipulation as camera angle."
+  ],
+  "license": "copyrighted",
+  "access_status": "search_summary",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M04",
+   "M18"
+  ]
+ },
+ {
+  "key": "MignaultChaudhuri2003",
+  "title": "The many faces of a neutral face: Head tilt and perception of dominance and emotion",
+  "authors": "Alain Mignault; Avi Chaudhuri",
+  "year": 2003,
+  "url": "",
+  "doi_isbn": "10.1023/A:1023914509763",
+  "source_type": "empirical",
+  "tier": "A",
+  "key_findings": [
+   "As cited by Giessner et al. (2011): 3-D modelled faces shown from seven vertical angles; perceived dominance vs submissiveness varied with vertical head/picture angle."
+  ],
+  "practical_applications": [
+   "Supports a vertical-angle/dominance link for faces."
+  ],
+  "limitations": [
+   "Not read directly; Journal of Nonverbal Behavior 27(2)."
+  ],
+  "license": "copyrighted",
+  "access_status": "bibliographic",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M04"
+  ]
+ },
+ {
+  "key": "CuttingArmstrong2016",
+  "title": "Facial expression, size, and clutter: Inferences from movie structure to emotion judgments and back",
+  "authors": "James E. Cutting; Kacie L. Armstrong",
+  "year": 2016,
+  "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC4819543/",
+  "doi_isbn": "10.3758/s13414-015-1003-5",
+  "source_type": "empirical",
+  "tier": "A",
+  "key_findings": [
+   "~31,000 shots from 24 films (1940-2010): mean shot duration falls from ~8 s for extreme long shots to ~2.5 s for extreme close-ups.",
+   "Valence of faces was classified faster when faces were larger (closer scale): ~150 ms faster across scales 1-6 in movie stills; slight rise at ECU.",
+   "Clutter magnified the scale effect (~40 ms low clutter vs ~200 ms high clutter); filmmakers hold small-face, cluttered shots longer.",
+   "Seven-step shot scale: ELS, LS, MLS, MS, MCU, CU, ECU defined by focal-character size in frame."
+  ],
+  "practical_applications": [
+   "Hold wide/cluttered shots longer; close-ups can be short. Emotion beats need the face big and the background clean."
+  ],
+  "limitations": [
+   "Happiness/disgust only; reaction time, not felt emotion."
+  ],
+  "license": "copyrighted (PMC author manuscript)",
+  "access_status": "full_text",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M18",
+   "M04"
+  ]
+ },
+ {
+  "key": "RooneyBalint2018",
+  "title": "Watching More Closely: Shot Scale Affects Film Viewers' Theory of Mind Tendency But Not Ability",
+  "authors": "Brendan Rooney; Katalin E. Balint",
+  "year": 2018,
+  "url": "https://www.frontiersin.org/articles/10.3389/fpsyg.2017.02349/full",
+  "doi_isbn": "10.3389/fpsyg.2017.02349",
+  "source_type": "empirical",
+  "tier": "A",
+  "key_findings": [
+   "N=136, animated film 'Father and Daughter'; a SAD close-up of the girl raised spontaneous references to her mental (affective) states vs the long shot (p=.05) and vs a neutral close-up (p=.013).",
+   "A neutral close-up did not differ from the long shot; no effect on ToM ability when prompted."
+  ],
+  "practical_applications": [
+   "A close-up only adds empathy when the face carries an emotion; a blank close-up is wasted. Relevant to faceless Mint & Tao: the emotional carrier must be posture/props, not a face (DERIVED)."
+  ],
+  "limitations": [
+   "One film, one emotion, students, animated stimulus; a corrigendum exists."
+  ],
+  "license": "CC BY 4.0",
+  "access_status": "full_text",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M18",
+   "M04"
+  ]
+ },
+ {
+  "key": "BryanPeronaAdolphs2012",
+  "title": "Perspective Distortion from Interpersonal Distance Is an Implicit Visual Cue for Social Judgments of Faces",
+  "authors": "Ronnie Bryan; Pietro Perona; Ralph Adolphs",
+  "year": 2012,
+  "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC3448657/",
+  "doi_isbn": "10.1371/journal.pone.0045301",
+  "source_type": "empirical",
+  "tier": "A",
+  "key_findings": [
+   "Faces photographed simultaneously at ~45 cm vs ~135 cm (and 54 vs 120 cm outdoors), normalised for size, expression and lighting.",
+   "Close photos lowered trust-game investment and ratings of trustworthiness, competence and attractiveness (pooled trust d=0.24; effects d=0.14-0.36).",
+   "Close faces: nose relatively larger, ears smaller, narrower width-to-height ratio; participants did not notice the manipulation; explicit distance info did not change ratings.",
+   "Lens distortion was checked and negligible: the effect is camera DISTANCE (perspective), not lens aberration."
+  ],
+  "practical_applications": [
+   "Shoot faces wearing glasses from >= ~1.2-1.5 m (longer lens), never arm's-length wide-angle, for trust and attractiveness."
+  ],
+  "limitations": [
+   "18 base faces, white males; online studies uncontrolled; small effects; ratings intercorrelated."
+  ],
+  "license": "CC BY 4.0",
+  "access_status": "full_text",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M18",
+   "M04",
+   "M35"
+  ]
+ },
+ {
+  "key": "CooperPiazzaBanks2012",
+  "title": "The perceptual basis of common photographic practice",
+  "authors": "Emily A. Cooper; Elise A. Piazza; Martin S. Banks",
+  "year": 2012,
+  "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC3440305/",
+  "doi_isbn": "10.1167/12.5.8",
+  "source_type": "empirical",
+  "tier": "A",
+  "key_findings": [
+   "A picture is correct only from its centre of projection (COP); viewers do not compensate for wrong viewing distance: COP nearer than viewing distance -> depth looks expanded; farther -> compressed.",
+   "Preferred viewing distance barely depends on focal length (+20% vs +614% needed to match COP) and mostly on print size; intercept ~25 cm; preferred field of view ~22 deg (small prints) to ~36 deg (large).",
+   "Explains the 50 mm 'normal lens' rule (focal length ~ format diagonal, 43.3 mm for 35 mm); median of 3,930 Flickr SLR photos = 68 mm.",
+   "Recommends LONGER focal lengths for small images viewed close, e.g. phones (~30 cm)."
+  ],
+  "practical_applications": [
+   "For phone-viewed IG/TikTok, natural-looking people/products favour short-tele looks (~70-100 mm equiv.) more than 24-35 mm (DERIVED from their recommendation)."
+  ],
+  "limitations": [
+   "Small N in psychophysics (5-19); equations shown as images on PMC."
+  ],
+  "license": "copyrighted (PMC free)",
+  "access_status": "full_text",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M18",
+   "M04",
+   "M34"
+  ]
+ },
+ {
+  "key": "VishwanathGirshickBanks2005",
+  "title": "Why pictures look right when viewed from the wrong place",
+  "authors": "Dhanraj Vishwanath; Ahna R. Girshick; Martin S. Banks",
+  "year": 2005,
+  "url": "https://research-portal.st-andrews.ac.uk/en/publications/why-pictures-look-right-when-viewed-from-the-wrong-place/",
+  "doi_isbn": "Nature Neuroscience 8(10), 1401-1410",
+  "source_type": "empirical",
+  "tier": "A",
+  "key_findings": [
+   "Per abstract: perceived shapes in pictures stay nearly invariant over a wide range of oblique viewing angles when binocular cues to the picture surface are available.",
+   "Invariance comes from estimating the local surface orientation of the picture, not from geometric information in the picture; the model also explains perceived distortions in wide-angle pictures."
+  ],
+  "practical_applications": [
+   "Off-axis phone viewing is mostly tolerated; wide-angle edge distortion is not cured by this compensation."
+  ],
+  "limitations": [
+   "Abstract-level access only."
+  ],
+  "license": "copyrighted",
+  "access_status": "abstract",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M04",
+   "M18"
+  ]
+ },
+ {
+  "key": "Kubovy1986_va",
+  "title": "The Arrow in the Eye (online book; chapters V 'The Robustness of Perspective' and VIII 'Marginal Distortions')",
+  "authors": "Michael Kubovy; Christopher Tyler",
+  "year": null,
+  "url": "https://www.webexhibits.org/arrowintheeye/",
+  "doi_isbn": "",
+  "source_type": "textbook",
+  "tier": "B",
+  "key_findings": [
+   "Extends registry record Kubovy1986 (bibliographic). Robustness of perspective: viewed away from the centre of projection a picture should look sheared/magnified, yet viewers rarely notice; contested, with Rosinski & Farber arguing introspection is not evidence.",
+   "Leonardo expected pictures to look wrong unless seen from the COP or from >= 20x the largest dimension of the depicted objects.",
+   "Marginal distortion: correctly projected off-axis spheres become ellipses and off-axis columns become wider; painters drew spheres as circles and columns at equal widths, giving each its own principal ray; Uccello's Hawkwood mixes viewpoints."
+  ],
+  "practical_applications": [
+   "In wide images, draw/accept round things (lenses, heads, plates) as near-circles near the edges; keep key products near the centre."
+  ],
+  "limitations": [
+   "Online book; original publisher/year of this version not stated on pages read; relation to the 1986 Cambridge UP book assumed from authorship."
+  ],
+  "license": "copyrighted (free online)",
+  "access_status": "full_text",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M07",
+   "M04"
+  ]
+ },
+ {
+  "key": "OzkanBraunstein2010",
+  "title": "Background Surface and Horizon Effects in the Perception of Relative Size and Distance",
+  "authors": "Kerem Ozkan; Myron L. Braunstein",
+  "year": 2010,
+  "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC2929966/",
+  "doi_isbn": "Visual Cognition 18(2), 229-254",
+  "source_type": "empirical",
+  "tier": "A",
+  "key_findings": [
+   "Describes Sedgwick's (1973) horizon ratio: the horizon cuts objects on the same ground at the observer's eye height, so object size can be read as a multiple of eye height without knowing distance; Rogers (1996) found it works with explicit or implicit horizons in pictures.",
+   "Equal projected objects below the horizon: the higher one looks larger; this reverses when the lower object is on/above the horizon; holds for photographs.",
+   "The perceived horizon is pulled toward the visible end of the ground surface; distance judgments track height in the image."
+  ],
+  "practical_applications": [
+   "Basis of the 'heads on horizon' check for AI images; a visible ground edge (floor/sea line) acts as the horizon for viewers."
+  ],
+  "limitations": [
+   "Lab stimuli; size judgments not absolute."
+  ],
+  "license": "copyrighted (PMC author manuscript)",
+  "access_status": "full_text",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M04",
+   "M07"
+  ]
+ },
+ {
+  "key": "Sedgwick1973",
+  "title": "The visible horizon: A potential source of visual information for the perception of size and distance (doctoral dissertation)",
+  "authors": "Harold A. Sedgwick",
+  "year": 1973,
+  "url": "",
+  "doi_isbn": "",
+  "source_type": "empirical",
+  "tier": "A",
+  "key_findings": [
+   "As summarised by Ozkan & Braunstein (2010): objects of equal height are cut by the horizon in the same proportion regardless of distance (horizon ratio)."
+  ],
+  "practical_applications": [
+   "Geometric rule behind the figure-height check."
+  ],
+  "limitations": [
+   "Not read; title as commonly cited, not confirmed this session (dissertation, Cornell)."
+  ],
+  "license": "unknown",
+  "access_status": "bibliographic",
+  "verification_status": "unverified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M04",
+   "M07"
+  ]
+ },
+ {
+  "key": "Norling1939",
+  "title": "Perspective Made Easy: a step-by-step method for learning the basis of drawing",
+  "authors": "Ernest R. Norling",
+  "year": 1939,
+  "url": "https://archive.org/stream/PerspectiveMadeEasy/Norling%20-%20Perspective%20Made%20Easy_djvu.txt",
+  "doi_isbn": "Macmillan 1939; Dover 1999 ISBN 0486404730",
+  "source_type": "textbook",
+  "tier": "B",
+  "key_findings": [
+   "Horizon = eye level wherever you are; objects above it are seen from below, below it from above.",
+   "Figure-height transfer: line from a new spot through the feet of a known figure to the eye-level line, then back through the head gives the new figure's height (works whether heads are above or below eye level).",
+   "Vanishing points placed close together give 'violent', warped perspective (squares look like diamonds); place them far apart.",
+   "Circle in perspective = ellipse; the short (minor) axis lies along the cylinder's centre line (axle), the long axis forms a T with it.",
+   "Inclined planes vanish above/below the normal VP on a vertical through it (uphill street above the eye level, roofs on a vertical line).",
+   "Parallel edges cast parallel shadows to the same VP on a flat surface; sunlight = parallel rays, a nearby lamp fans shadows.",
+   "Reflections: upside down, as far below the surface as the object is above, share the object's VPs."
+  ],
+  "practical_applications": [
+   "Source for the drawing procedures in PERSPECTIVE_MASTERY.md and the error library."
+  ],
+  "limitations": [
+   "Text read via archive.org OCR (first ~100k characters); craft textbook, not perception research."
+  ],
+  "license": "unknown (1939 US edition; Dover reprint copyrighted)",
+  "access_status": "full_text",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M07"
+  ]
+ },
+ {
+  "key": "RobertsonBertling2013",
+  "title": "How to Draw: Drawing and Sketching Objects and Environments from Your Imagination",
+  "authors": "Scott Robertson; Thomas Bertling",
+  "year": 2013,
+  "url": "https://libcat.library.tamu.edu/Record/in00004167965/Description",
+  "doi_isbn": "ISBN 9781933492735",
+  "source_type": "textbook",
+  "tier": "B",
+  "key_findings": [
+   "Library records: Design Studio Press, 208 pp.; early chapters teach accurate perspective grids and ellipses (incl. 'drawing an ellipse on the minor axis') as the base for complex forms."
+  ],
+  "practical_applications": [
+   "Standard reference for grids, minor-axis ellipses, environments."
+  ],
+  "limitations": [
+   "Contents only from catalogue records; book text not read."
+  ],
+  "license": "copyrighted",
+  "access_status": "bibliographic",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M07"
+  ]
+ },
+ {
+  "key": "BYUI-ART110-ConeOfVision",
+  "title": "ART 110 Week 2: Perspective Theory - Cone of Vision",
+  "authors": "Brigham Young University-Idaho, Department of Art",
+  "year": null,
+  "url": "https://courses.byui.edu/art110_new/art110/week02/cone_of_vision.html",
+  "doi_isbn": "",
+  "source_type": "course",
+  "tier": "B",
+  "key_findings": [
+   "Cone of vision drawn as 60 deg from the station point (30 deg each side of the line of sight); objects drawn outside it become distorted.",
+   "Placing VP1/VP2 on a small format limits the cone of vision."
+  ],
+  "practical_applications": [
+   "Teaching convention for the 60 deg cone."
+  ],
+  "limitations": [
+   "States that objects outside the cone 'appear blurred' - a simplification; the drawing distortion is geometric (marginal distortion), not optical blur."
+  ],
+  "license": "unknown",
+  "access_status": "full_text",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M07"
+  ]
+ },
+ {
+  "key": "Farid2022-Perspective",
+  "title": "Perspective (In)consistency of Paint by Text",
+  "authors": "Hany Farid",
+  "year": 2022,
+  "url": "https://arxiv.org/abs/2206.14617",
+  "doi_isbn": "arXiv:2206.14617",
+  "source_type": "empirical",
+  "tier": "B",
+  "key_findings": [
+   "Forensic geometry checks on DALL-E 2 images (~25 per prompt set): vanishing points of parallel lines, shadow-to-object lines meeting at the light's projection, object-to-reflection lines converging.",
+   "Kitchen floors had consistent VPs but countertops did not share the floor's VP/vanishing line in all 25 images: locally consistent, globally inconsistent.",
+   "All 25 sunny-day cube images had cast shadows inconsistent with one light; reflections failed in 22 of 25 and even plausible ones failed the geometric test."
+  ],
+  "practical_applications": [
+   "Exact procedure for our AI-image perspective/shadow/reflection QC."
+  ],
+  "limitations": [
+   "Preprint, one model (DALL-E 2), small exploratory sample; newer models may do better."
+  ],
+  "license": "arXiv non-exclusive",
+  "access_status": "full_text",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M35",
+   "M07"
+  ]
+ },
+ {
+  "key": "BernalBerdun2025-PreciseCam",
+  "title": "PreciseCam: Precise Camera Control for Text-to-Image Generation",
+  "authors": "Edurne Bernal-Berdun; Ana Serrano; Belen Masia; Matheus Gadelha; Yannick Hold-Geoffroy; Xin Sun; Diego Gutierrez",
+  "year": 2025,
+  "url": "https://arxiv.org/html/2501.12910v1",
+  "doi_isbn": "arXiv:2501.12910",
+  "source_type": "empirical",
+  "tier": "B",
+  "key_findings": [
+   "T2I outputs often default to a flat camera parallel to the ground with the horizon mid-frame.",
+   "Prompt words ('shot from below', 'wide angle', Firefly camera tags) give only coarse control; SDXL could not reproduce lens distortion via prompts at all.",
+   "Controls roll, pitch, vertical FOV and distortion with a trained conditioning module (57,380-image dataset)."
+  ],
+  "practical_applications": [
+   "Expect FLUX/Codex to drift toward eye-level, mid-horizon framing; state angle strongly and verify."
+  ],
+  "limitations": [
+   "Preprint; camera accuracy shown mostly qualitatively; SDXL backbone, not FLUX."
+  ],
+  "license": "arXiv non-exclusive",
+  "access_status": "full_text",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M35",
+   "M34"
+  ]
+ },
+ {
+  "key": "web:docs.bfl.ai:13_va",
+  "title": "FLUX.2 prompting guide",
+  "authors": "Black Forest Labs",
+  "year": null,
+  "url": "https://docs.bfl.ai/guides/prompting_guide_flux2.md",
+  "doi_isbn": "",
+  "source_type": "docs",
+  "tier": "C",
+  "key_findings": [
+   "Extends registry record web:docs.bfl.ai:13. Recommends naming camera, lens and film stock for photorealism ('Shot on Hasselblad X2D, 80mm lens, f/2.8'); JSON schema has camera.angle, camera.distance, camera.depth_of_field.",
+   "FLUX.2 does not support negative prompts; write 'sharp focus throughout' instead of 'no blur'.",
+   "No dedicated perspective guidance."
+  ],
+  "practical_applications": [
+   "Use positive camera phrasing; our local model is FLUX.1 schnell, so treat FLUX.2 advice as a hint."
+  ],
+  "limitations": [
+   "Vendor docs for FLUX.2, not schnell; no evidence on how precisely numbers are followed."
+  ],
+  "license": "vendor docs",
+  "access_status": "full_text",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M34",
+   "M18"
+  ]
+ },
+ {
+  "key": "OpenAI-ImageGen15-Guide",
+  "title": "Gpt-image-1.5 Prompting Guide (OpenAI Cookbook)",
+  "authors": "OpenAI",
+  "year": null,
+  "url": "https://developers.openai.com/cookbook/examples/multimodal/image-gen-1.5-prompting_guide",
+  "doi_isbn": "",
+  "source_type": "docs",
+  "tier": "C",
+  "key_findings": [
+   "Camera/composition terms (lens, aperture feel, lighting) steer realism more reliably than generic quality words.",
+   "Specify framing/viewpoint (close-up, wide, top-down) and perspective/angle (eye-level, low-angle).",
+   "For edits: 'preserve the exact layout, proportions, and perspective'; for composites match lighting, perspective, scale and shadows; re-specify details that drift.",
+   "Page marked archived; no stated limits for camera control."
+  ],
+  "practical_applications": [
+   "Codex prompt wording for angle/lens; keep the real frame photo via -i and state 'preserve proportions and perspective'."
+  ],
+  "limitations": [
+   "Vendor guidance, not tested; model version may differ from what Codex uses."
+  ],
+  "license": "vendor docs",
+  "access_status": "full_text",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M34",
+   "M18"
+  ]
+ },
+ {
+  "key": "Wiki-AngleOfView",
+  "title": "Angle of view (photography)",
+  "authors": "Wikipedia contributors",
+  "year": null,
+  "url": "https://en.wikipedia.org/wiki/Angle_of_view_(photography)",
+  "doi_isbn": "",
+  "source_type": "encyclopedia",
+  "tier": "E",
+  "key_findings": [
+   "Rectilinear lens focused at infinity: alpha = 2 arctan(d / 2f), d = sensor dimension (36 x 24 mm, diagonal 43.3 mm for full frame).",
+   "Close focus: use effective focal length F(1+m); with pupil ratio P: alpha = 2 arctan(d / (2F(1+m/P))).",
+   "Defines normal lenses as 36-60 mm on 35 mm format (62-40 deg)."
+  ],
+  "practical_applications": [
+   "FOV table in LENS_OPTICS.md (recomputed by us)."
+  ],
+  "limitations": [
+   "Community-edited; its table lists 102.7 deg horizontal for 14 mm while the formula gives 104.3 deg - we use the formula."
+  ],
+  "license": "CC BY-SA 4.0",
+  "access_status": "full_text",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M18"
+  ]
+ },
+ {
+  "key": "web:en.wikipedia.org:6_va",
+  "title": "Hyperfocal distance",
+  "authors": "Wikipedia contributors",
+  "year": null,
+  "url": "https://en.wikipedia.org/wiki/Hyperfocal_distance",
+  "doi_isbn": "",
+  "source_type": "encyclopedia",
+  "tier": "E",
+  "key_findings": [
+   "Extends registry record web:en.wikipedia.org:6. H = f^2/(Nc) + f (approx. f^2/(Nc)); focused at H, sharp from H/2 to infinity; example 50 mm f/8 c=0.03 mm -> H ~ 10.5 m.",
+   "Historical sources: Kingslake 1951, Derr 1906, Sutton & Dawson 1867, Taylor 1892."
+  ],
+  "practical_applications": [
+   "Deep-focus establishing shots, hyperfocal table."
+  ],
+  "limitations": [
+   "Community-edited; formulas cross-checked by our own computation."
+  ],
+  "license": "CC BY-SA 4.0",
+  "access_status": "full_text",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M18"
+  ]
+ },
+ {
+  "key": "Wiki-DepthOfField",
+  "title": "Depth of field",
+  "authors": "Wikipedia contributors",
+  "year": null,
+  "url": "https://en.wikipedia.org/wiki/Depth_of_field",
+  "doi_isbn": "",
+  "source_type": "encyclopedia",
+  "tier": "E",
+  "key_findings": [
+   "DOF ~ 2u^2Nc/f^2 = 2Nc(1 - 1/M_T)^2 (paraxial approximation, u >> f).",
+   "Consecutive depths: focus at H -> H/2..inf; at H/2 -> H/3..H.",
+   "Same subject size + same f-number -> almost the same DOF regardless of focal length, but background blur differs.",
+   "Diffraction limits sharpness at small apertures, mostly relevant in close-up work; background blur disk b = d m_s x_d / D."
+  ],
+  "practical_applications": [
+   "DOF reasoning for eyewear close-ups and AI prompt wording."
+  ],
+  "limitations": [
+   "Community-edited; macro formula not given there."
+  ],
+  "license": "CC BY-SA 4.0",
+  "access_status": "full_text",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M18"
+  ]
+ },
+ {
+  "key": "Wiki-DepthOfFocus",
+  "title": "Depth of focus",
+  "authors": "Wikipedia contributors",
+  "year": null,
+  "url": "https://en.wikipedia.org/wiki/Depth_of_focus",
+  "doi_isbn": "",
+  "source_type": "encyclopedia",
+  "tier": "E",
+  "key_findings": [
+   "Depth of focus = tolerance of the sensor/film position (image side); t = 2Nc(1+m), ~2Nc at low magnification; measured in fractions of a mm.",
+   "Depth of field depends on focus distance; depth of focus does not; the terms are often confused. Cites Ray (2000) Manual of Photography."
+  ],
+  "practical_applications": [
+   "Vocabulary hygiene: never write 'depth of focus' in a prompt when depth of field is meant."
+  ],
+  "limitations": [
+   "Community-edited."
+  ],
+  "license": "CC BY-SA 4.0",
+  "access_status": "full_text",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M18"
+  ]
+ },
+ {
+  "key": "Nasse2010-Zeiss",
+  "title": "Depth of Field and Bokeh",
+  "authors": "H. H. Nasse (Carl Zeiss Camera Lens Division)",
+  "year": 2010,
+  "url": "https://lenspire.zeiss.com/photo/app/uploads/2018/02/cln35_en_web_special_bokeh.pdf",
+  "doi_isbn": "",
+  "source_type": "docs",
+  "tier": "C",
+  "key_findings": [
+   "Image-side depth of focus depends only on the f-number, not focal length.",
+   "Object-side DOF is (almost) independent of focal length at the same imaging scale (subject size), because a longer lens is used from proportionally farther away.",
+   "This breaks down at large distances, and the maximum blur of a distant background is LOWER for shorter focal lengths than for longer ones even at equal DOF.",
+   "Uses circle of confusion z = 0.029 mm = format diagonal/1500 for 24x36; choice of focal length is decided by room, intended perspective and background."
+  ],
+  "practical_applications": [
+   "To melt a shop background behind glasses: longer lens from farther away at the same framing, not just a wider aperture."
+  ],
+  "limitations": [
+   "Manufacturer white paper; read in part (pp. 1-10 of ~45)."
+  ],
+  "license": "copyrighted (free PDF)",
+  "access_status": "full_text",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M18"
+  ]
+ },
+ {
+  "key": "RED-ShutterAngle",
+  "title": "Shutter Angles & Creative Control (RED 101)",
+  "authors": "RED Digital Cinema",
+  "year": null,
+  "url": "https://www.reddigitalcinema.com/red-101/shutter-angle-tutorial",
+  "doi_isbn": "",
+  "source_type": "docs",
+  "tier": "C",
+  "key_findings": [
+   "Shutter angle expresses exposure time relative to frame rate (rotary-shutter origin); 180 deg at 24 fps ~ 1/48 s is the common cinema setting.",
+   "Smaller angles (e.g. 45 deg) look stuttered/crisp like 1950s newsreels or modern action; larger angles smear motion more and give more light; 360 deg is the limit."
+  ],
+  "practical_applications": [
+   "Motion-blur vocabulary for video prompts and for our rig.js motion blur choices."
+  ],
+  "limitations": [
+   "Manufacturer tutorial; formula inferred from the worked example."
+  ],
+  "license": "vendor docs",
+  "access_status": "full_text",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M18"
+  ]
+ },
+ {
+  "key": "Wiki-DistortionOptics",
+  "title": "Distortion (optics)",
+  "authors": "Wikipedia contributors",
+  "year": null,
+  "url": "https://en.wikipedia.org/wiki/Distortion_(optics)",
+  "doi_isbn": "",
+  "source_type": "encyclopedia",
+  "tier": "E",
+  "key_findings": [
+   "Distortion = deviation from rectilinear projection; changes shape without necessarily reducing sharpness.",
+   "Barrel (magnification decreases off-axis; wide-angle, fisheye, wide end of zooms), pincushion (increases; older/cheap teles, binoculars), mustache (barrel centre, pincushion edges).",
+   "Brown-Conrady radial model with K1, K2 (negative K1 ~ barrel) and tangential terms; corrected with lens profiles (Lightroom, Lensfun, OpenCV).",
+   "Perspective distortion is a separate effect: it does not bend straight lines."
+  ],
+  "practical_applications": [
+   "Distinguish bent lines (lens) from big noses/converging verticals (position)."
+  ],
+  "limitations": [
+   "Community-edited."
+  ],
+  "license": "CC BY-SA 4.0",
+  "access_status": "full_text",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M18",
+   "M35"
+  ]
+ },
+ {
+  "key": "Wiki-PerspectiveDistortion",
+  "title": "Perspective distortion",
+  "authors": "Wikipedia contributors",
+  "year": null,
+  "url": "https://en.wikipedia.org/wiki/Perspective_distortion",
+  "doi_isbn": "",
+  "source_type": "encyclopedia",
+  "tier": "E",
+  "key_findings": [
+   "Linear perspective changes are caused by distance, not by the lens per se; extension (wide/close) vs compression (tele/far) distortion.",
+   "85-135 mm on 35 mm format are generally considered good portrait lenses; viewing a wide image closer (or tele image farther) reduces apparent distortion."
+  ],
+  "practical_applications": [
+   "Supports 'distance first, lens second'."
+  ],
+  "limitations": [
+   "Community-edited; viewing-distance claim marked citation needed there (but supported by Cooper et al. 2012)."
+  ],
+  "license": "CC BY-SA 4.0",
+  "access_status": "full_text",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M18"
+  ]
+ },
+ {
+  "key": "Wiki-Vignetting",
+  "title": "Vignetting",
+  "authors": "Wikipedia contributors",
+  "year": null,
+  "url": "https://en.wikipedia.org/wiki/Vignetting",
+  "doi_isbn": "",
+  "source_type": "encyclopedia",
+  "tier": "E",
+  "key_findings": [
+   "Types: mechanical (hoods/filters), optical (cured by stopping down 2-3 stops), natural cos^4 falloff (not cured by stopping down; ~56% at 30 deg), pixel vignetting.",
+   "Cites Ray (2002) Applied Photographic Optics; artistic use to hold the eye centrally."
+  ],
+  "practical_applications": [
+   "Subtle vignette in grade keeps eyes on the product; heavy vignette reads 'toy camera/retro'."
+  ],
+  "limitations": [
+   "Community-edited."
+  ],
+  "license": "CC BY-SA 4.0",
+  "access_status": "full_text",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M18",
+   "M10"
+  ]
+ },
+ {
+  "key": "Wiki-ChromaticAberration",
+  "title": "Chromatic aberration",
+  "authors": "Wikipedia contributors",
+  "year": null,
+  "url": "https://en.wikipedia.org/wiki/Chromatic_aberration",
+  "doi_isbn": "",
+  "source_type": "encyclopedia",
+  "tier": "E",
+  "key_findings": [
+   "Longitudinal (axial) CA: colours focus at different distances; purple/green fringes in out-of-focus areas; reduced by stopping down; typical of long focal lengths.",
+   "Lateral (transverse) CA: magnification varies with wavelength; fringes toward edges; not reduced by stopping down; correctable in software by rescaling channels; typical of short focal lengths.",
+   "Corrected by achromats (f1V1 + f2V2 = 0), apochromats, low-dispersion glass, diffractive elements."
+  ],
+  "practical_applications": [
+   "Detect fringes on metal frame edges in product photos; add only as a deliberate 'vintage lens' cue."
+  ],
+  "limitations": [
+   "Community-edited; no discussion of artistic use."
+  ],
+  "license": "CC BY-SA 4.0",
+  "access_status": "full_text",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M18"
+  ]
+ },
+ {
+  "key": "Wiki-FisheyeLens",
+  "title": "Fisheye lens",
+  "authors": "Wikipedia contributors",
+  "year": null,
+  "url": "https://en.wikipedia.org/wiki/Fisheye_lens",
+  "doi_isbn": "",
+  "source_type": "encyclopedia",
+  "tier": "E",
+  "key_findings": [
+   "Mapping functions: rectilinear r = f tan(theta); stereographic r = 2f tan(theta/2); equidistant r = f theta; equisolid r = 2f sin(theta/2); orthographic r = f sin(theta).",
+   "Circular fisheye (image circle inside frame, black corners; ~8-10 mm on full frame) vs diagonal/full-frame fisheye (12-18 mm).",
+   "Uses: action sports, music videos, peepholes, security cameras, domes/VR."
+  ],
+  "practical_applications": [
+   "Peephole/door-camera POV look for story clips."
+  ],
+  "limitations": [
+   "Community-edited."
+  ],
+  "license": "CC BY-SA 4.0",
+  "access_status": "full_text",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M18",
+   "M34"
+  ]
+ },
+ {
+  "key": "Wiki-ForcedPerspective",
+  "title": "Forced perspective",
+  "authors": "Wikipedia contributors",
+  "year": null,
+  "url": "https://en.wikipedia.org/wiki/Forced_perspective",
+  "doi_isbn": "",
+  "source_type": "encyclopedia",
+  "tier": "E",
+  "key_findings": [
+   "Uses angular size/relative size to make objects look larger/smaller/closer/farther; LOTR hobbits (moving sets), Hagrid (scaled props), Potemkin Stairs, Disney castles.",
+   "Requirements: enough DOF for both planes, matched lighting/contrast (counter aerial perspective), fixed camera at the zero-parallax point - parallax reveals the trick."
+  ],
+  "practical_applications": [
+   "Giant-glasses or tiny-character gags in promo shots and puppet clips."
+  ],
+  "limitations": [
+   "Community-edited; cites Purves & Lotto 2003, O'Shea et al. 1994, Mather 1996."
+  ],
+  "license": "CC BY-SA 4.0",
+  "access_status": "full_text",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M07",
+   "M18"
+  ]
+ },
+ {
+  "key": "Wiki-ReversePerspective",
+  "title": "Reverse perspective",
+  "authors": "Wikipedia contributors",
+  "year": null,
+  "url": "https://en.wikipedia.org/wiki/Reverse_perspective",
+  "doi_isbn": "",
+  "source_type": "encyclopedia",
+  "tier": "E",
+  "key_findings": [
+   "Also inverse/Byzantine perspective: farther objects drawn larger, parallels diverge, vanishing points appear in front of the picture; Byzantine and Russian icons, pre-Renaissance art, Cubism, children's drawings.",
+   "Why it arose is still debated."
+  ],
+  "practical_applications": [
+   "Deliberate naive/folk look; recognise it as an error when unintended."
+  ],
+  "limitations": [
+   "Community-edited."
+  ],
+  "license": "CC BY-SA 4.0",
+  "access_status": "full_text",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M07"
+  ]
+ },
+ {
+  "key": "Wiki-ParallelProjection",
+  "title": "Parallel projection",
+  "authors": "Wikipedia contributors",
+  "year": null,
+  "url": "https://en.wikipedia.org/wiki/Parallel_projection",
+  "doi_isbn": "",
+  "source_type": "encyclopedia",
+  "tier": "E",
+  "key_findings": [
+   "Orthographic (rays perpendicular to the plane) vs oblique (rays at another angle; cavalier, cabinet, military types); axonometric includes isometric, dimetric, trimetric.",
+   "Parallel lines stay parallel; length ratios along parallels preserved; circles not parallel to the plane become ellipses; no size change with distance.",
+   "Cites Krikke (2000) 'Axonometry: A Matter of Perspective', IEEE CG&A; Carlbom & Paciorek (1978)."
+  ],
+  "practical_applications": [
+   "Isometric infographics of a shop layout; orthographic front/side views for frame spec sheets."
+  ],
+  "limitations": [
+   "Community-edited; isometric 30/120 deg and cabinet half-depth not stated on the page (standard drafting convention, flagged DERIVED/CRAFT in our text)."
+  ],
+  "license": "CC BY-SA 4.0",
+  "access_status": "full_text",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M07",
+   "M26"
+  ]
+ },
+ {
+  "key": "BarreFlocon1968",
+  "title": "La perspective curviligne (English: Curvilinear Perspective: From Visual Space to the Constructed Image, UC Press 1987)",
+  "authors": "Albert Flocon; Andre Barre",
+  "year": 1968,
+  "url": "https://en.wikipedia.org/wiki/Curvilinear_perspective",
+  "doi_isbn": "",
+  "source_type": "textbook",
+  "tier": "B",
+  "key_findings": [
+   "Per Wikipedia (search summary): formally codified curvilinear (five-point) perspective: four VPs around a circle (N, S, E, W) plus one at the centre; straight lines curve as in a fisheye; influenced by Escher; van Eyck's Arnolfini Portrait cited as an early approximation."
+  ],
+  "practical_applications": [
+   "Fisheye/POV panels in carousels and clips."
+  ],
+  "limitations": [
+   "Book not read; details from a Wikipedia search summary."
+  ],
+  "license": "copyrighted",
+  "access_status": "search_summary",
+  "verification_status": "unverified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M07"
+  ]
+ },
+ {
+  "key": "Held2010",
+  "title": "Using Blur to Affect Perceived Distance and Size",
+  "authors": "Robin T. Held; Emily A. Cooper; James F. O'Brien; Martin S. Banks",
+  "year": 2010,
+  "url": "https://history.siggraph.org/?p=123134",
+  "doi_isbn": "10.1145/1731047.1731057",
+  "source_type": "empirical",
+  "tier": "A",
+  "key_findings": [
+   "Probabilistic model of how viewers combine defocus blur with other pictorial cues to estimate absolute distance and hence scale; an algorithm adds blur to sharp images to change perceived distance/size (the link to the tilt-shift miniature look is OUR reading; the paper does not use that term) (effect).",
+   "Experiment agreed closely with the model; some common blur approximations worked and others did not."
+  ],
+  "practical_applications": [
+   "Miniature/diorama look: strong blur gradient consistent with the scene's depth = small scale; inconsistent blur bands fail (DERIVED)."
+  ],
+  "limitations": [
+   "Abstract only (ACM TOG 29(2), article 19).",
+   "Spot-check 2026-11-25: original wording checked; finding corrected to match the source."
+  ],
+  "license": "copyrighted",
+  "access_status": "abstract",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M04",
+   "M34",
+   "M18"
+  ]
+ },
+ {
+  "key": "OSheaBlackburnOno1994",
+  "title": "Contrast as a depth cue",
+  "authors": "Robert P. O'Shea; Shane G. Blackburn; Hiroshi Ono",
+  "year": 1994,
+  "url": "https://researchportal.murdoch.edu.au/esploro/outputs/journalArticle/Contrast-as-a-depth-cue/991005543080007891",
+  "doi_isbn": "Vision Research 34(12), 1595-1604",
+  "source_type": "empirical",
+  "tier": "A",
+  "key_findings": [
+   "Per abstract/secondary citations: the lower-contrast region was judged farther, monocularly and binocularly, even when size pointed the other way; contrast acts as a pictorial cue mimicking aerial perspective.",
+   "Follow-up O'Shea, Govan & Sekuler (1997, Perception): blur is a depth cue independent of contrast."
+  ],
+  "practical_applications": [
+   "Lower contrast/raise value of backgrounds to push them back; keep the product at highest contrast."
+  ],
+  "limitations": [
+   "Abstract/search-summary level only."
+  ],
+  "license": "copyrighted",
+  "access_status": "search_summary",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M04",
+   "M07"
+  ]
+ },
+ {
+  "key": "Wiki-Shot",
+  "title": "Shot (filmmaking)",
+  "authors": "Wikipedia contributors",
+  "year": null,
+  "url": "https://en.wikipedia.org/wiki/Shot_(filmmaking)",
+  "doi_isbn": "",
+  "source_type": "encyclopedia",
+  "tier": "E",
+  "key_findings": [
+   "Field sizes: extreme long, long/wide (often establishing), full, medium long (frame ends near the knees), American/cowboy (upper thighs, holster), medium (around the waist), MCU (more shoulder), CU (shoulder line visible), ECU (chin to forehead or a detail), Italian shot (eyes only), two shot.",
+   "Reverse shot = 180 deg turn to the previous image, often with POV/OTS; insert replaces the picture while audio continues.",
+   "Cites Bowen 'Grammar of the Shot' 4th ed. 2018, Katz 'Film Directing Shot by Shot' 1991, Ascher & Pincus 1999."
+  ],
+  "practical_applications": [
+   "Shared shot-size vocabulary in CAMERA_ANGLE_LIBRARY.json."
+  ],
+  "limitations": [
+   "Community-edited; definitions vary across textbooks."
+  ],
+  "license": "CC BY-SA 4.0",
+  "access_status": "full_text",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M18"
+  ]
+ },
+ {
+  "key": "StudioBinder-CameraShots",
+  "title": "Ultimate Guide to Camera Shots",
+  "authors": "StudioBinder",
+  "year": null,
+  "url": "https://studiobinder.com/blog/ultimate-guide-to-camera-shots/",
+  "doi_isbn": "",
+  "source_type": "practitioner",
+  "tier": "D",
+  "key_findings": [
+   "Practitioner taxonomy: EWS, WS, FS, MWS (knees up), cowboy (mid-thighs up, from Westerns), MS, MCU (chest up), CU, ECU; single/dirty single, two/three shot, OTS, over-the-hip, POV; eye/low/high/hip/knee/ground/shoulder level, Dutch, bird's eye/overhead (treated as one), aerial.",
+   "Stated purposes (craft): EWS isolation/unfamiliarity, low angle power, high angle inferiority, Dutch disorientation, ground level shows what the subject stands on."
+  ],
+  "practical_applications": [
+   "Naming conventions for shot lists."
+  ],
+  "limitations": [
+   "Craft claims, no evidence; treats overhead and bird's eye as identical."
+  ],
+  "license": "copyrighted",
+  "access_status": "full_text",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M18"
+  ]
+ },
+ {
+  "key": "Wiki-Cutaway",
+  "title": "Cutaway (filmmaking)",
+  "authors": "Wikipedia contributors",
+  "year": null,
+  "url": "https://en.wikipedia.org/wiki/Cutaway_(filmmaking)",
+  "doi_isbn": "",
+  "source_type": "encyclopedia",
+  "tier": "E",
+  "key_findings": [
+   "A cutaway interrupts continuous action with a view of something else, usually returning to the original shot; used to adjust pace, hide removed material, join two takes; documentary 'noddies' cover cuts; cites Brown (2012) Cinematography: Theory and Practice."
+  ],
+  "practical_applications": [
+   "Cover jump cuts in staff/VO clips with shop-detail cutaways."
+  ],
+  "limitations": [
+   "Community-edited; insert vs cutaway not distinguished there."
+  ],
+  "license": "CC BY-SA 4.0",
+  "access_status": "full_text",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M18"
+  ]
+ },
+ {
+  "key": "BordwellThompson-FilmArt",
+  "title": "Film Art: An Introduction (9th ed.)",
+  "authors": "David Bordwell; Kristin Thompson",
+  "year": 2010,
+  "url": "",
+  "doi_isbn": "McGraw-Hill",
+  "source_type": "textbook",
+  "tier": "A",
+  "key_findings": [
+   "Cited by Sevenants & d'Ydewalle (2006, citing the 2004 edition) for the practice of distinguishing mainly three vertical camera positions - high, eye level, low - out of an infinite number of possible angles, and by Baranowski & Hecht (2018, 9th ed. 2010) for the conventional readings (low = dominance, high = vulnerability, eye level for neutral/factual)."
+  ],
+  "practical_applications": [
+   "Canonical vocabulary reference."
+  ],
+  "limitations": [
+   "Not read this session; cited only via the two papers."
+  ],
+  "license": "copyrighted",
+  "access_status": "bibliographic",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M18"
+  ]
+ }
+]

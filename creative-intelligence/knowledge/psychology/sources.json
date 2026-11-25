@@ -1,0 +1,1337 @@
+[
+ {
+  "key": "OSC2015",
+  "title": "Estimating the reproducibility of psychological science",
+  "authors": "Open Science Collaboration",
+  "year": 2015,
+  "url": "https://www.pure.ed.ac.uk/ws/files/21474290/RPP.pdf",
+  "doi_isbn": "10.1126/science.aac4716",
+  "source_type": "empirical",
+  "tier": "A",
+  "key_findings": [
+   "100 studies from three 2008 psychology journals were replicated with high-powered designs.",
+   "35 of 97 replications (36%) were significant in the original direction vs 97% of originals; mean effect size fell from .403 to .197.",
+   "By journal/area: JPSP social 23%, JEP:LMC cognitive 48%, Psych Science social 29%, Psych Science cognitive 53% significant replications.",
+   "Replication success tracked the strength of the original evidence."
+  ],
+  "practical_applications": [
+   "Treat single famous social-psychology findings as provisional; prefer meta-analyses and large replications when writing 'science says' content.",
+   "Cognitive effects replicated more often than social ones in this sample."
+  ],
+  "limitations": [
+   "One replication per study; sample of three journals only.",
+   "Gilbert et al. (2016) technical comment disputed the interpretation; OSC replied."
+  ],
+  "license": "copyrighted (author version posted with AAAS permission)",
+  "access_status": "full_text",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M01"
+  ]
+ },
+ {
+  "key": "Klein2018",
+  "title": "Many Labs 2: Investigating variation in replicability across samples and settings",
+  "authors": "Klein, R. A., et al.",
+  "year": 2018,
+  "url": "http://eprints.lse.ac.uk/91159/1/Kappes_Many-labs-2.pdf",
+  "doi_isbn": "10.1177/2515245918810225",
+  "source_type": "empirical",
+  "tier": "A",
+  "key_findings": [
+   "Preregistered replications of 28 findings; each protocol run in ~half of 125 samples, 15,305 participants, 36 countries/territories.",
+   "15 of 28 (54%) significant in the original direction at p < .05 (14, 50%, at p < .0001); 21 (75%) had smaller effects than the original; 9 (32%) went in the opposite direction.",
+   "Median Cohen's d: 0.60 original vs 0.15 replication; 16 (57%) replications had d < .20.",
+   "Little heterogeneity from task order, lab vs online, or WEIRD vs less-WEIRD samples: variation was more attributable to the effect than to sample/setting."
+  ],
+  "practical_applications": [
+   "An effect that fails does not usually 'work only in some cultures'; an effect that works tends to work broadly. Relevant when importing Western findings to Thai audiences."
+  ],
+  "limitations": [
+   "Only 28 effects; mostly short online/lab tasks.",
+   "Read from the LSE author manuscript (accepted version)."
+  ],
+  "license": "unknown",
+  "access_status": "full_text",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M01"
+  ]
+ },
+ {
+  "key": "Hagger2016",
+  "title": "A multilab preregistered replication of the ego-depletion effect",
+  "authors": "Hagger, M. S., Chatzisarantis, N. L. D., et al.",
+  "year": 2016,
+  "url": "https://kops.uni-konstanz.de/server/api/core/bitstreams/d1f20ce9-761f-40e6-aaa8-4992d4744d3c/content",
+  "doi_isbn": "",
+  "source_type": "empirical",
+  "tier": "A",
+  "key_findings": [
+   "Registered Replication Report: 23 labs, total N = 2,141, standardized sequential-task protocol based on Sripada et al.",
+   "Ego-depletion effect d = 0.04, 95% CI [-0.07, 0.15] - small, CI includes zero.",
+   "Motivated by an earlier meta-analysis reporting a medium-sized effect and later meta-analyses that questioned its size and flagged possible bias."
+  ],
+  "practical_applications": [
+   "Do not write stories or captions claiming 'willpower is a battery that runs out' as fact."
+  ],
+  "limitations": [
+   "Critics (e.g. Dang 2016 commentary) argue the e-crossing manipulation may not have been depleting; a null for one paradigm is not proof the theory is wrong in every form.",
+   "Read from the KOPS (Konstanz) repository copy."
+  ],
+  "license": "unknown",
+  "access_status": "full_text",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M01"
+  ]
+ },
+ {
+  "key": "Doyen2012",
+  "title": "Behavioral priming: it's all in the mind, but whose mind?",
+  "authors": "Doyen, S., Klein, O., Pichon, C.-L., Cleeremans, A.",
+  "year": 2012,
+  "url": "https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0029081",
+  "doi_isbn": "10.1371/journal.pone.0029081",
+  "source_type": "empirical",
+  "tier": "A",
+  "key_findings": [
+   "Experiment 1: replication of Bargh, Chen & Burrows (1996) with automated (infrared) timing and a larger sample found no walking-speed priming effect.",
+   "Experiment 2: a walking-speed effect appeared only when experimenters were led to expect slower walking - experimenter expectations helped produce the effect.",
+   "Debriefing suggested participants were aware of the primes; authors conclude behavioural priming, while real, involves different mechanisms than usually assumed."
+  ],
+  "practical_applications": [
+   "Avoid 'show old-age words and people slow down' type claims; subtle-word social priming is weak evidence."
+  ],
+  "limitations": [
+   "Bargh disputed the study publicly; the paper itself was not read in full this session."
+  ],
+  "license": "CC BY",
+  "access_status": "full_text",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M01"
+  ]
+ },
+ {
+  "key": "Schimmack2017",
+  "title": "Reconstruction of a train wreck: How priming research went off the rails",
+  "authors": "Schimmack, U., Heene, M., Kesavan, K.",
+  "year": 2017,
+  "url": "https://replicationindex.com/2017/02/02/reconstruction-of-a-train-wreck-how-priming-research-went-of-the-rails/",
+  "doi_isbn": "",
+  "source_type": "practitioner",
+  "tier": "B",
+  "key_findings": [
+   "R-Index analysis of the 12 articles cited in the priming chapter (ch. 4) of Thinking, Fast and Slow: 11 of 12 had R-Index below 50.",
+   "Kahneman responded that behavioural priming effects 'cannot be as large and as robust as my chapter suggested' (as quoted in secondary coverage)."
+  ],
+  "practical_applications": [
+   "Use Thinking, Fast and Slow for the System 1/2 framing and heuristics, but not its social-priming chapter."
+  ],
+  "limitations": [
+   "Blog post by the critics themselves, not peer reviewed."
+  ],
+  "license": "unknown",
+  "access_status": "search_summary",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M01"
+  ]
+ },
+ {
+  "key": "Kahneman2011",
+  "title": "Thinking, Fast and Slow",
+  "authors": "Kahneman, D.",
+  "year": 2011,
+  "url": "https://www2.publishersweekly.com/9780374275631",
+  "doi_isbn": "ISBN 978-0-374-27563-1",
+  "source_type": "primary_text",
+  "tier": "B",
+  "key_findings": [
+   "Existence and edition confirmed (Farrar, Straus and Giroux, 2011). Content not read this session."
+  ],
+  "practical_applications": [
+   "Background framing for fast intuitive vs slow deliberate thinking; check each specific claim against replication literature (see Schimmack2017)."
+  ],
+  "limitations": [
+   "Popular book; priming chapter is not well supported by later replications."
+  ],
+  "license": "copyrighted",
+  "access_status": "bibliographic",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M01"
+  ]
+ },
+ {
+  "key": "Ranehill2015",
+  "title": "Assessing the robustness of power posing: No effect on hormones and risk tolerance in a large sample of men and women",
+  "authors": "Ranehill, E., Dreber, A., Johannesson, M., Leiberg, S., Sul, S., Weber, R. A.",
+  "year": 2015,
+  "url": "https://www.zne.uzh.ch/dam/jcr:e5fc4c3c-d50e-4aa9-96ab-4389e426d20d/Psychological%20Science-2015-Ranehill-0956797614553946.pdf",
+  "doi_isbn": "10.1177/0956797614553946",
+  "source_type": "empirical",
+  "tier": "A",
+  "key_findings": [
+   "N = 200 (original N = 42), experimenter blind to condition, >95% power.",
+   "Power posing raised self-reported feelings of power but had no significant effect on hormones or any of three behavioural tasks."
+  ],
+  "practical_applications": [
+   "A posture can change how people say they feel, but don't claim it changes hormones or performance."
+  ],
+  "limitations": [
+   "Conceptual (not exact) replication."
+  ],
+  "license": "copyrighted",
+  "access_status": "full_text",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M01"
+  ]
+ },
+ {
+  "key": "SimmonsSimonsohn2017",
+  "title": "Power posing: P-curving the evidence",
+  "authors": "Simmons, J. P., Simonsohn, U.",
+  "year": 2017,
+  "url": "https://faculty.wharton.upenn.edu/wp-content/uploads/2017/05/Simmons-Simonsohn-2017.pdf",
+  "doi_isbn": "10.1177/0956797616658563",
+  "source_type": "review",
+  "tier": "A",
+  "key_findings": [
+   "P-curve of the 33 studies cited by Carney, Cuddy & Yap (2015) did not show evidential value (flat p-curve) once selective reporting is considered.",
+   "Original first author Dana Carney later stated she no longer believes power-pose effects are real (separate statement)."
+  ],
+  "practical_applications": [
+   "Classic example of a viral pop-psych claim to avoid in content."
+  ],
+  "limitations": [
+   "Cuddy, Schultz & Fosse (2018) ran their own p-curve on a broader set and claimed evidential value for felt power; critics say it mixed effect directions. Not read directly."
+  ],
+  "license": "copyrighted",
+  "access_status": "full_text",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M01"
+  ]
+ },
+ {
+  "key": "Ruggeri2020",
+  "title": "Replicating patterns of prospect theory for decision under risk",
+  "authors": "Ruggeri, K., et al.",
+  "year": 2020,
+  "url": "https://ora.ox.ac.uk/objects/uuid:9da308a9-010d-4e44-9943-9cbd989e5e01",
+  "doi_isbn": "10.1038/s41562-020-0886-x",
+  "source_type": "empirical",
+  "tier": "A",
+  "key_findings": [
+   "Replication of the Kahneman & Tversky (1979) choice items with N = 4,098 (author manuscript) from 19 countries, 13 languages.",
+   "Results replicated for 94% of the 17 choice items and 12 of 13 theoretical contrasts; effects were at most attenuated vs 1979.",
+   "About a third of participants knew of loss aversion; awareness had only a very modest effect on choices."
+  ],
+  "practical_applications": [
+   "Loss framing ('what you lose by squinting every day') is on firmer ground than social priming."
+  ],
+  "limitations": [
+   "Hypothetical choices; Thailand not necessarily among the 19 countries (not checked).",
+   "Read the Oxford ORA author manuscript ('Not lost in translation'); it tests prospect-theory choice patterns, not the size of loss aversion directly.",
+   "Spot-check U3 2026-11-25 applied."
+  ],
+  "license": "unknown",
+  "access_status": "full_text",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M01"
+  ]
+ },
+ {
+  "key": "Baumeister2001",
+  "title": "Bad is stronger than good",
+  "authors": "Baumeister, R. F., Bratslavsky, E., Finkenauer, C., Vohs, K. D.",
+  "year": 2001,
+  "url": "https://fbaum.unc.edu/teaching/articles/Baumeister_2001.pdf",
+  "doi_isbn": "10.1037/1089-2680.5.4.323",
+  "source_type": "review",
+  "tier": "A",
+  "key_findings": [
+   "Across everyday events, trauma, relationships, social networks, interactions, feedback and learning, bad events have more impact than good ones.",
+   "Bad impressions and stereotypes form faster and resist disconfirmation more than good ones; 'hardly any exceptions' found.",
+   "Cites Gottman (1994): stable relationships need at least ~5 positive interactions per negative one."
+  ],
+  "practical_applications": [
+   "One bad shop experience outweighs several good ones - service stories should show repair, not only delight.",
+   "In Mint & Tao conflicts, one harsh line needs several warm beats to recover."
+  ],
+  "limitations": [
+   "Narrative review, not meta-analysis; the 5:1 ratio is Gottman's index cited by the review, not a universal law."
+  ],
+  "license": "copyrighted",
+  "access_status": "full_text",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M01"
+  ]
+ },
+ {
+  "key": "FredricksonKahneman1993",
+  "title": "Duration neglect in retrospective evaluations of affective episodes",
+  "authors": "Fredrickson, B. L., Kahneman, D.",
+  "year": 1993,
+  "url": "https://bear.warrington.ufl.edu/brenner/mar7588/Papers/fredr-kahneman-jpsp1993.pdf",
+  "doi_isbn": "JPSP 65(1), 45-55",
+  "source_type": "empirical",
+  "tier": "A",
+  "key_findings": [
+   "Study 1 (32 Ss) and Study 2 (96 Ss) with film clips: duration had small effects on retrospective evaluations.",
+   "Evaluations behave like a weighted average of 'snapshots'; a peak & end rule accounted for 94% of variance in an earlier procedure dataset, duration only 3% more."
+  ],
+  "practical_applications": [
+   "Endings and the strongest moment dominate memory of a clip or a shop visit: design a clear peak and a warm last beat."
+  ],
+  "limitations": [
+   "Authors themselves urge caution about partial correlations; later work (secondary) suggests day-long experiences may not follow peak-end."
+  ],
+  "license": "copyrighted",
+  "access_status": "full_text",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M01"
+  ]
+ },
+ {
+  "key": "Loewenstein1994",
+  "title": "The psychology of curiosity: A review and reinterpretation",
+  "authors": "Loewenstein, G.",
+  "year": 1994,
+  "url": "https://stafforini.com/works/loewenstein-1994-psychology-curiosity-review/",
+  "doi_isbn": "Psychological Bulletin 116(1), 75-98",
+  "source_type": "review",
+  "tier": "A",
+  "key_findings": [
+   "Curiosity is a cognitively induced deprivation arising from a perceived gap in knowledge (information-gap theory).",
+   "Earlier theories missed why people voluntarily seek curiosity and its intensity, transience, link to impulsivity and tendency to disappoint once satisfied."
+  ],
+  "practical_applications": [
+   "Open a specific, answerable gap on slide 1 and close it on the last slide."
+  ],
+  "limitations": [
+   "Abstract content known only through secondary pages this session."
+  ],
+  "license": "copyrighted",
+  "access_status": "search_summary",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M01"
+  ]
+ },
+ {
+  "key": "Kang2009",
+  "title": "The wick in the candle of learning: Epistemic curiosity activates reward circuitry and enhances memory",
+  "authors": "Kang, M. J., Hsu, M., Krajbich, I. M., Loewenstein, G., McClure, S. M., Wang, J. T., Camerer, C. F.",
+  "year": 2009,
+  "url": "https://www.cmu.edu/dietrich/sds/docs/loewenstein/WickCandleLearning.pdf",
+  "doi_isbn": "10.1111/j.1467-9280.2009.02402.x",
+  "source_type": "empirical",
+  "tier": "A",
+  "key_findings": [
+   "Curiosity about trivia questions was an inverted-U function of confidence, peaking near 50% confidence (r = .44 with P(1-P)).",
+   "Curiosity correlated with caudate activity (reward anticipation); people paid tokens/waiting time to learn answers.",
+   "Higher curiosity predicted better recall of surprising answers 1-2 weeks later."
+  ],
+  "practical_applications": [
+   "Best hooks are questions the viewer half-knows ('Why do arms get longer after 40?'), not total mysteries or obvious ones."
+  ],
+  "limitations": [
+   "Small fMRI samples; trivia questions, not stories or ads."
+  ],
+  "license": "copyrighted",
+  "access_status": "full_text",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M01"
+  ]
+ },
+ {
+  "key": "Sedikides2008",
+  "title": "Nostalgia: Past, present, and future",
+  "authors": "Sedikides, C., Wildschut, T., Arndt, J., Routledge, C.",
+  "year": 2008,
+  "url": "https://southampton.ac.uk/~crsi/Sedikides Wildschut Arndt  Routledge 2008 CDir.pdf",
+  "doi_isbn": "10.1111/j.1467-8721.2008.00595.x",
+  "source_type": "review",
+  "tier": "A",
+  "key_findings": [
+   "Nostalgia = sentimental longing for one's past; predominantly positive, self-relevant, social emotion.",
+   "Narratives feature the self as protagonist among close others, often with a redemption sequence (bad start -> good end).",
+   "Triggered by negative mood and especially loneliness; raises positive affect, self-esteem, social connectedness, and buffers existential threat.",
+   "Over 80% of British undergraduates reported nostalgia at least weekly."
+  ],
+  "practical_applications": [
+   "Nostalgia content (first pair of glasses, grandparent reading with glasses) should centre on people, not objects, and end on warmth."
+  ],
+  "limitations": [
+   "Mostly Western student samples in early work; short review."
+  ],
+  "license": "copyrighted",
+  "access_status": "full_text",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M01"
+  ]
+ },
+ {
+  "key": "RyanDeci2000",
+  "title": "Self-determination theory and the facilitation of intrinsic motivation, social development, and well-being",
+  "authors": "Ryan, R. M., Deci, E. L.",
+  "year": 2000,
+  "url": "https://pubmed.ncbi.nlm.nih.gov/11392867/",
+  "doi_isbn": "American Psychologist 55(1), 68-78",
+  "source_type": "review",
+  "tier": "A",
+  "key_findings": [
+   "Three innate psychological needs - competence, autonomy, relatedness - when satisfied yield enhanced self-motivation and well-being.",
+   "Focus on social contexts that facilitate vs forestall self-motivation."
+  ],
+  "practical_applications": [
+   "Characters grow when they choose (autonomy), get better at something (competence) and feel connected (relatedness); ads that pressure undermine autonomy."
+  ],
+  "limitations": [
+   "Abstract-level only this session."
+  ],
+  "license": "copyrighted",
+  "access_status": "search_summary",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M01"
+  ]
+ },
+ {
+  "key": "Chen2015",
+  "title": "Basic psychological need satisfaction, need frustration, and need strength across four cultures",
+  "authors": "Chen, B., Vansteenkiste, M., et al.",
+  "year": 2015,
+  "url": "https://selfdeterminationtheory.org/wp-content/uploads/2015/01/2014_Chen-et-al._need-satisfaction.pdf",
+  "doi_isbn": "Motivation and Emotion 39, 216-236",
+  "source_type": "empirical",
+  "tier": "A",
+  "key_findings": [
+   "Study 1: late adolescents in Belgium and China (N = 685, mean age 17); Study 2: Belgium, China, USA, Peru (N = 1,051, mean age 20).",
+   "Satisfaction of each need (autonomy, relatedness, competence) uniquely predicted well-being; frustration of each uniquely predicted ill-being.",
+   "Effects were equivalent across the four countries and not moderated by need valuation or need desire."
+  ],
+  "practical_applications": [
+   "Supports using SDT needs in Thai content too (cross-cultural, incl. an East Asian sample)."
+  ],
+  "limitations": [
+   "Students/young adults; no Thai sample; cross-sectional."
+  ],
+  "license": "copyrighted",
+  "access_status": "full_text",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M01"
+  ]
+ },
+ {
+  "key": "WahbaBridwell1976",
+  "title": "Maslow reconsidered: A review of research on the need hierarchy theory",
+  "authors": "Wahba, M. A., Bridwell, L. G.",
+  "year": 1976,
+  "url": "https://www.scribd.com/document/450607826/wahba1976-pdf",
+  "doi_isbn": "",
+  "source_type": "review",
+  "tier": "A",
+  "key_findings": [
+   "Review of ten factor-analytic and three ranking studies gave only partial support for Maslow.",
+   "No clear evidence for five distinct need categories or for a fixed hierarchy; some evidence for two types (deficiency vs growth)."
+  ],
+  "practical_applications": [
+   "Don't present Maslow's pyramid as proven science in content."
+  ],
+  "limitations": [
+   "Old review; title taken from common citation, not confirmed on page this session."
+  ],
+  "license": "copyrighted",
+  "access_status": "search_summary",
+  "verification_status": "unverified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M01"
+  ]
+ },
+ {
+  "key": "TayDiener2011",
+  "title": "Needs and subjective well-being around the world",
+  "authors": "Tay, L., Diener, E.",
+  "year": 2011,
+  "url": "https://news.illinois.edu/researchers-look-for-ingredients-of-happiness-around-the-world/",
+  "doi_isbn": "",
+  "source_type": "empirical",
+  "tier": "A",
+  "key_findings": [
+   "Data from 123 countries: fulfilment of Maslow-type needs correlates with well-being across cultures.",
+   "The order in which needs are met has little bearing on their contribution; people report social and self-actualisation needs met even when basic needs are not fully met."
+  ],
+  "practical_applications": [
+   "Belonging and respect matter even to customers under money pressure; don't assume 'price first, feelings later'."
+  ],
+  "limitations": [
+   "Known only via university press release and coverage this session."
+  ],
+  "license": "unknown",
+  "access_status": "search_summary",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M01"
+  ]
+ },
+ {
+  "key": "OpenStax2020",
+  "title": "Psychology 2e (sections 9.2 Lifespan Theories, 9.3 Stages of Development, 10.1 Motivation, 12.4 Conformity, Compliance, and Obedience)",
+  "authors": "Spielman, R. M., Jenkins, W. J., Lovett, M. D.",
+  "year": 2020,
+  "url": "https://openstax.org/books/psychology-2e/pages/9-2-lifespan-theories",
+  "doi_isbn": "ISBN 9781951693237",
+  "source_type": "textbook",
+  "tier": "A",
+  "key_findings": [
+   "Erikson: generativity vs stagnation (30-64) and integrity vs despair (65+); stage theories increasingly replaced by continuous, context-dependent views.",
+   "Middle adulthood: visual acuity decreases; crystallized intelligence stable or rising. Late adulthood: fluid intelligence and processing speed decline; networks shrink but remaining friendships stay as close or closer (Carstensen SST).",
+   "Motivation: overjustification effect strongest for expected tangible rewards; Yerkes-Dodson; self-efficacy; Maslow criticised for rigid ordering.",
+   "Asch: 76% conformed at least once; one dissenter cuts conformity near zero; normative vs informational influence; Milgram 65%, lower when victim closer."
+  ],
+  "practical_applications": [
+   "Customers 40+ are in the generativity stage - stories about helping grandchildren/teaching fit.",
+   "One honest 'dissenting' voice in a group story is enough to break conformity."
+  ],
+  "limitations": [
+   "Intro textbook; page states CC BY-NC-SA 4.0 and forbids use for training generative AI without permission - paraphrase only, do not copy text."
+  ],
+  "license": "CC BY-NC-SA 4.0 per page footer (search snippet of preface said CC BY 4.0 - conflicting)",
+  "access_status": "full_text",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M01"
+  ]
+ },
+ {
+  "key": "Soto2019",
+  "title": "How replicable are links between personality traits and consequential life outcomes? The Life Outcomes of Personality Replication Project",
+  "authors": "Soto, C. J.",
+  "year": 2019,
+  "url": "https://www.psychologicalscience.org/news/releases/personality-traits-life-outcomes-replication.html",
+  "doi_isbn": "10.1177/0956797619831612",
+  "source_type": "empirical",
+  "tier": "A",
+  "key_findings": [
+   "Preregistered replications of 78 Big Five trait-outcome associations (median N = 1,504).",
+   "~87% replicated in expected direction; effects ~77% as strong as originals."
+  ],
+  "practical_applications": [
+   "Big Five is a sound base for character bibles (e.g. Mint high openness, Tao high conscientiousness)."
+  ],
+  "limitations": [
+   "Cross-sectional self-report online samples."
+  ],
+  "license": "unknown",
+  "access_status": "search_summary",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M01"
+  ]
+ },
+ {
+  "key": "Pittenger2005",
+  "title": "Cautionary comments regarding the Myers-Briggs Type Indicator",
+  "authors": "Pittenger, D. J.",
+  "year": 2005,
+  "url": "https://www.Indiana.edu/~jobtalk/Articles/develop/mbti.pdf",
+  "doi_isbn": "Consulting Psychology Journal (2005)",
+  "source_type": "review",
+  "tier": "A",
+  "key_findings": [
+   "Insufficient evidence for the tenets of and claims about the MBTI.",
+   "Forcing continuous traits into dichotomous types weakens construct validity; earlier work reported 5-week retest type stability of 39-76% depending on dichotomy."
+  ],
+  "practical_applications": [
+   "MBTI letters may be used as a playful pop-culture hook only, never as science."
+  ],
+  "limitations": [
+   "Publisher (Myers-Briggs Co.) and some commentators dispute the reliability critique."
+  ],
+  "license": "copyrighted",
+  "access_status": "search_summary",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M01"
+  ]
+ },
+ {
+  "key": "BondSmith1996",
+  "title": "Culture and conformity: A meta-analysis of studies using Asch's (1952b, 1956) line judgment task",
+  "authors": "Bond, R., Smith, P. B.",
+  "year": 1996,
+  "url": "https://d-r-b-o-b.github.io/teaching/web_PSY333/Week_12/Ashe_meta.pdf",
+  "doi_isbn": "Psychological Bulletin 119(1), 111-137",
+  "source_type": "meta-analysis",
+  "tier": "S",
+  "key_findings": [
+   "68 reports, 133 Asch-type experiments, 4,627 participants, 17 countries (97 of the studies from the USA).",
+   "Unweighted mean d = 1.06 (median 0.96); strong heterogeneity (Q = 450.8, df 132).",
+   "US conformity has declined since the 1950s; collectivist countries tended to show higher conformity than individualist ones (three individualism-collectivism surveys)."
+  ],
+  "practical_applications": [
+   "In a collectivist context like Thailand, 'what people like us do' may carry extra weight - but test it."
+  ],
+  "limitations": [
+   "Unbalanced sample (79 US studies); no Thai data noted."
+  ],
+  "license": "copyrighted",
+  "access_status": "full_text",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M01"
+  ]
+ },
+ {
+  "key": "Goldstein2008",
+  "title": "A room with a viewpoint: Using social norms to motivate environmental conservation in hotels",
+  "authors": "Goldstein, N. J., Cialdini, R. B., Griskevicius, V.",
+  "year": 2008,
+  "url": "https://carlsonschool-d8.prd.umn.edu/sites/carlsonschool.umn.edu/files/2018-10/118359.pdf",
+  "doi_isbn": "10.1086/586910",
+  "source_type": "empirical",
+  "tier": "A",
+  "key_findings": [
+   "Two hotel field experiments on towel-reuse signs.",
+   "Exp. 1: descriptive-norm sign ('almost 75% of guests reuse') 44.1% reuse vs standard environmental sign 35.1% (chi2(1, N = 433) = 3.72, p = .05).",
+   "Exp. 2: descriptive norms combined 44.5% vs standard 37.2%; provincial norm ('guests in this room') 49.3% vs the other descriptive norms 42.8% (N = 1,318); citizen (43.5%), gender (40.9%) and guest (44.0%) identity norms did not differ from one another."
+  ],
+  "practical_applications": [
+   "Real, local social proof ('many Hua Hin customers choose ...') - only when true."
+  ],
+  "limitations": [
+   "German replication succeeded (Bohner & Schlueter 2014); a US resort study found the provincial-norm advantage non-significant.",
+   "Read from the University of Minnesota Carlson School copy."
+  ],
+  "license": "copyrighted",
+  "access_status": "full_text",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M01"
+  ]
+ },
+ {
+  "key": "Otten2016",
+  "title": "The Minimal Group Paradigm and its maximal impact in research on social categorization",
+  "authors": "Otten, S.",
+  "year": 2016,
+  "url": "https://pure.rug.nl/ws/portalfiles/portal/38916440/COPS_as_published.pdf",
+  "doi_isbn": "10.1016/j.copsyc.2016.06.010",
+  "source_type": "review",
+  "tier": "A",
+  "key_findings": [
+   "Current Opinion in Psychology 11, 85-89 (short review).",
+   "The Minimal Group Paradigm studies social categorization with arbitrary, novel groups and no realistic conflict of interest; it shaped Social Identity Theory and Self-Categorization Theory.",
+   "Recent variants extend it beyond in-group favouritism/discrimination to many other research fields."
+  ],
+  "practical_applications": [
+   "Simple shared labels ('glasses people', 'Hua Hin locals') can create in-group warmth; avoid out-group mocking."
+  ],
+  "limitations": [
+   "Title and details known via search summary only."
+  ],
+  "license": "unknown",
+  "access_status": "full_text",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M01"
+  ]
+ },
+ {
+  "key": "Mayer1995",
+  "title": "An integrative model of organizational trust",
+  "authors": "Mayer, R. C., Davis, J. H., Schoorman, F. D.",
+  "year": 1995,
+  "url": "https://makinggood.ac.nz/media/1270/mayeretal_1995_organizationaltrust.pdf",
+  "doi_isbn": "Academy of Management Review 20(3), 709-734",
+  "source_type": "review",
+  "tier": "A",
+  "key_findings": [
+   "Conceptual model with research propositions (not an empirical test).",
+   "Trust = willingness to be vulnerable to another party, distinguished from trustworthiness and from risk-taking.",
+   "Perceived trustworthiness = ability, benevolence, integrity; the trustor's propensity to trust also affects trust."
+  ],
+  "practical_applications": [
+   "Shop content should show all three: skill (accurate eye test), care (staff go extra), integrity (honest advice, e.g. 'you don't need new lenses yet')."
+  ],
+  "limitations": [
+   "Later reviewers question whether all three facets have unique effects."
+  ],
+  "license": "copyrighted",
+  "access_status": "full_text",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M01"
+  ]
+ },
+ {
+  "key": "Snyder2002",
+  "title": "Hope theory: Rainbows in the mind",
+  "authors": "Snyder, C. R.",
+  "year": 2002,
+  "url": "https://academic.oup.com/edited-volume/28108/chapter-abstract/212215719",
+  "doi_isbn": "Psychological Inquiry 13(4), 249-275",
+  "source_type": "review",
+  "tier": "A",
+  "key_findings": [
+   "Hope = agency (goal-directed energy) + pathways (planning routes to goals), anchored by goals.",
+   "High-hope people generate alternate pathways when blocked; pathways and agency feed each other."
+  ],
+  "practical_applications": [
+   "Hopeful stories show a goal, a blocked route, and a new route - not just positive feelings."
+  ],
+  "limitations": [
+   "Known via secondary sources; commentaries (Aspinwall & Leaf) question overlap with optimism/self-efficacy."
+  ],
+  "license": "copyrighted",
+  "access_status": "search_summary",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M01"
+  ]
+ },
+ {
+  "key": "Tannenbaum2015",
+  "title": "Appealing to fear: A meta-analysis of fear appeal effectiveness and theories",
+  "authors": "Tannenbaum, M. B., Hepler, J., Zimmerman, R. S., et al.",
+  "year": 2015,
+  "url": "https://www.ideals.illinois.edu/items/79646/bitstreams/208881/data.pdf",
+  "doi_isbn": "Psychological Bulletin 141, 1178-1204",
+  "source_type": "meta-analysis",
+  "tier": "S",
+  "key_findings": [
+   "127 papers (9% unpublished), 248 independent samples, N = 27,372.",
+   "Average effect on attitudes/intentions/behaviours d = 0.27 fixed-effects [0.25, 0.30]; random-effects d = 0.29 [0.22, 0.35] (attitudes 0.23, intentions 0.31, behaviours 0.27).",
+   "Efficacy statements increased effectiveness (95% CI 0.41-0.49 with vs 0.16-0.22 without), but fear appeals without efficacy did NOT backfire on average: significant negative effects in 9/154 low-efficacy vs 3/94 high-efficacy studies (n.s., Fisher p = .54) - the weak, not the strong, efficacy hypothesis was supported.",
+   "High vs moderate depicted fear: d = 0.02 [-0.05, 0.09] (21 samples) - no gain from more fear beyond moderate, and no backfire.",
+   "More effective when high susceptibility and severity were depicted, for one-time (vs repeated) behaviours, and for audiences that were more female, from collectivist cultures, or young adults."
+  ],
+  "practical_applications": [
+   "Fear (e.g. UV / pterygium risk) can persuade, but pair it with a clear, easy action."
+  ],
+  "limitations": [
+   "EPPM-specific results and moderators not read this session.",
+   "Read the 2015 UIUC dissertation (IDEALS) on which the Psychological Bulletin article is based - same sample counts; published numbers may differ slightly."
+  ],
+  "license": "copyrighted",
+  "access_status": "full_text",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M01"
+  ]
+ },
+ {
+  "key": "Witte1992",
+  "title": "Putting the fear back into fear appeals: The extended parallel process model",
+  "authors": "Witte, K.",
+  "year": 1992,
+  "url": "https://doi.org/10.1080/03637759209376276",
+  "doi_isbn": "10.1080/03637759209376276",
+  "source_type": "primary_text",
+  "tier": "A",
+  "key_findings": [
+   "Communication Monographs 59(4). Theory paper: integrates Janis, Leventhal and Rogers into the Extended Parallel Process Model (EPPM), based on Leventhal's danger control / fear control framework.",
+   "Per the abstract it aims to explain why fear appeals fail (boomerang/curvilinear results), re-incorporates fear as a central variable, and states threat-efficacy relations as propositions for future research.",
+   "Standard EPPM summary (secondary): high threat + high efficacy -> danger control; high threat + low efficacy -> fear control (denial, avoidance)."
+  ],
+  "practical_applications": [
+   "Every scare message needs response efficacy and self-efficacy ('a UV400 lens blocks it; come in for a free check')."
+  ],
+  "limitations": [
+   "Known via encyclopedia and citing meta-analysis (Bigsby & Albarracin 2021) only.",
+   "Only the abstract (via OpenAlex) was read. The threat x efficacy predictions are propositions; Tannenbaum2015 found no average backfire for low-efficacy messages."
+  ],
+  "license": "copyrighted",
+  "access_status": "abstract",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M01"
+  ]
+ },
+ {
+  "key": "SEP_Empathy",
+  "title": "Empathy (Stanford Encyclopedia of Philosophy)",
+  "authors": "Stueber, K. (author name not shown in fetched text)",
+  "year": 2025,
+  "url": "https://plato.stanford.edu/entries/empathy/",
+  "doi_isbn": "",
+  "source_type": "encyclopedia",
+  "tier": "B",
+  "key_findings": [
+   "Distinguishes emotional contagion, empathy proper (with self-other distinction), cognitive empathy/perspective taking, sympathy/empathic concern, and personal distress.",
+   "Batson's empathy-altruism hypothesis: empathic concern produces altruistic motivation ('easy escape' studies); critics propose egoistic alternatives.",
+   "Prinz and Bloom: empathy is biased toward the near, similar, cute, in-group and identifiable individual; perspective taking has more positive effects than affective empathy alone."
+  ],
+  "practical_applications": [
+   "Show one specific person (identifiable) to evoke empathy, but avoid making the audience feel personal distress (they look away)."
+  ],
+  "limitations": [
+   "Only the first ~100k of ~150k characters read; author name not confirmed on page (first published 2008, revised 2025)."
+  ],
+  "license": "copyrighted (free to read)",
+  "access_status": "full_text",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M01"
+  ]
+ },
+ {
+  "key": "Cuff2016",
+  "title": "Empathy: A review of the concept",
+  "authors": "Cuff, B. M. P., Brown, S. J., Taylor, L., Howat, D. J.",
+  "year": 2016,
+  "url": "https://nectar.northampton.ac.uk/id/eprint/17038/1/Cuff_etal_ER_2014_Empathy_a_review_of_the_concept.pdf",
+  "doi_isbn": "10.1177/1754073914558466",
+  "source_type": "review",
+  "tier": "A",
+  "key_findings": [
+   "Review of 43 discrete definitions of empathy; eight themes: distinguishing empathy from other concepts, cognitive or affective, congruent or incongruent, subject to other stimuli, self-other distinction or merging, trait or state, behavioural outcome, automatic or controlled.",
+   "Separates empathy from related concepts such as sympathy and proposes a new integrated conceptualisation."
+  ],
+  "practical_applications": [
+   "Say which kind of empathy a scene targets: feel-with (affective) or understand (cognitive)."
+  ],
+  "limitations": [
+   "Full text not accessed (core.ac.uk returned 403).",
+   "Read from the Northampton repository author version."
+  ],
+  "license": "unknown",
+  "access_status": "full_text",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M01"
+  ]
+ },
+ {
+  "key": "Bretherton1992",
+  "title": "The origins of attachment theory: John Bowlby and Mary Ainsworth",
+  "authors": "Bretherton, I.",
+  "year": 1992,
+  "url": "https://psychology.psy.sunysb.edu/attachment/online/inge_origins DP1992.pdf",
+  "doi_isbn": "Developmental Psychology 28(5), 759-775",
+  "source_type": "review",
+  "tier": "A",
+  "key_findings": [
+   "Bowlby built attachment theory from ethology, control systems, information processing and psychoanalysis; Ainsworth added the secure-base concept and the first empirical study (Uganda).",
+   "Internal working models of self and others let people predict the world; out-of-date models after drastic change can cause problems.",
+   "Attachment is not regression - it serves a healthy function in adult life too."
+  ],
+  "practical_applications": [
+   "Characters' reactions to separation/loss (a parent's old glasses) follow attachment logic: seeking proximity, protest, then reorganisation."
+  ],
+  "limitations": [
+   "Historical review, not evidence synthesis."
+  ],
+  "license": "copyrighted",
+  "access_status": "full_text",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M01"
+  ]
+ },
+ {
+  "key": "HazanShaver1987",
+  "title": "Romantic love conceptualized as an attachment process",
+  "authors": "Hazan, C., Shaver, P.",
+  "year": 1987,
+  "url": "https://pubmed.ncbi.nlm.nih.gov/3572722/",
+  "doi_isbn": "JPSP 52(3), 511-524",
+  "source_type": "empirical",
+  "tier": "A",
+  "key_findings": [
+   "Applied Ainsworth's three styles to adult romance; adult style distribution roughly matched infancy; styles linked to different love experiences."
+  ],
+  "practical_applications": [
+   "Secure / anxious / avoidant as a lens for character dynamics in dialogue stories."
+  ],
+  "limitations": [
+   "Early questionnaire studies; later work uses dimensional (anxiety x avoidance) measures (Fraley & Shaver 2000)."
+  ],
+  "license": "copyrighted",
+  "access_status": "search_summary",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M01"
+  ]
+ },
+ {
+  "key": "vanIJzendoorn1988",
+  "title": "Cross-cultural patterns of attachment: A meta-analysis of the Strange Situation",
+  "authors": "van IJzendoorn, M. H., Kroonenberg, P. M.",
+  "year": 1988,
+  "url": "https://scholarlypublications.universiteitleiden.nl/handle/1887/11634",
+  "doi_isbn": "10.2307/1130396",
+  "source_type": "meta-analysis",
+  "tier": "S",
+  "key_findings": [
+   "Child Development 59, 147-156: 32 samples from 8 countries, 1,990 Strange Situation classifications, analysed with correspondence analysis.",
+   "Intracultural variation was nearly 1.5 times the cross-cultural variation; samples from one country sometimes resembled other countries more than each other.",
+   "Avoidant (A) classifications were relatively more prevalent in Western European countries; resistant (C) relatively more frequent in Israel and Japan."
+  ],
+  "practical_applications": [
+   "Don't stereotype Thai or 'Asian' families as one attachment type."
+  ],
+  "limitations": [
+   "Old, few countries, no Thai sample."
+  ],
+  "license": "copyrighted",
+  "access_status": "full_text",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M01"
+  ]
+ },
+ {
+  "key": "Mayer2008_EI",
+  "title": "Emotional intelligence: New ability or eclectic traits?",
+  "authors": "Mayer, J. D., Salovey, P., Caruso, D. R.",
+  "year": 2008,
+  "url": "https://cdn2.psychologytoday.com/assets/attachments/1575/rp2008-mayersaloveycarusob.pdf",
+  "doi_isbn": "",
+  "source_type": "review",
+  "tier": "A",
+  "key_findings": [
+   "Ability-model authors (Mayer, Salovey, Caruso) agree the term EI is used too all-inclusively and describe much mixed-model ('EQ') research as a 'degenerating research program'.",
+   "They cite popular claims as extraordinary: EI 'as powerful, and at times more powerful, than IQ' (Goleman 1995) and 'nearly 90%' of star-performer differences due to EI (Goleman 1998).",
+   "They argue a valid, narrower ability concept of EI exists and recommend restricting the term to it."
+  ],
+  "practical_applications": [
+   "Use 'EQ' as everyday language for empathy/self-control, not as a measured score that predicts success."
+  ],
+  "limitations": [
+   "Proponents with royalty interest in MSCEIT; title from common citation not confirmed on page."
+  ],
+  "license": "copyrighted",
+  "access_status": "full_text",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M01"
+  ]
+ },
+ {
+  "key": "Goleman1995",
+  "title": "Emotional Intelligence: Why It Can Matter More Than IQ",
+  "authors": "Goleman, D.",
+  "year": 1995,
+  "url": "https://openlibrary.org/books/OL22485632M",
+  "doi_isbn": "",
+  "source_type": "primary_text",
+  "tier": "D",
+  "key_findings": [
+   "Existence confirmed (Bantam Books, 1995). Content not read this session."
+  ],
+  "practical_applications": [
+   "Popular framing only; the 'matters more than IQ' claim is contested (see Mayer2008_EI)."
+  ],
+  "limitations": [
+   "Popular science book, mixed-model EI."
+  ],
+  "license": "copyrighted",
+  "access_status": "bibliographic",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M01"
+  ]
+ },
+ {
+  "key": "Aronson2018",
+  "title": "The Social Animal (12th ed.)",
+  "authors": "Aronson, E., Aronson, J.",
+  "year": 2018,
+  "url": "https://store.macmillanlearning.com/US/product/The-Social-Animal/p/1464144184",
+  "doi_isbn": "ISBN 9781464144189",
+  "source_type": "textbook",
+  "tier": "B",
+  "key_findings": [
+   "Existence and edition confirmed (Worth Publishers). Content not read this session."
+  ],
+  "practical_applications": [
+   "Readable social-psychology reference for the team; verify specific studies."
+  ],
+  "limitations": [
+   "Not read."
+  ],
+  "license": "copyrighted",
+  "access_status": "bibliographic",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M01"
+  ]
+ },
+ {
+  "key": "CarstensenDeLiema2018",
+  "title": "The positivity effect: a negativity bias in youth fades with age",
+  "authors": "Carstensen, L. L., DeLiema, M.",
+  "year": 2018,
+  "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC6186441",
+  "doi_isbn": "",
+  "source_type": "review",
+  "tier": "A",
+  "key_findings": [
+   "Older adults attend to and remember positive information more than negative (positivity effect); authors argue it reflects motivational change, not cognitive/neural decline.",
+   "Socioemotional selectivity theory: limited time horizons shift goals toward emotional meaning and satisfaction; age differences in social-partner preferences were eliminated when time horizons were statistically controlled or experimentally expanded.",
+   "Considerable evidence that cognitive load reduces the positivity effect; knowing what reduces/enhances it can inform health and education messages for older people."
+  ],
+  "practical_applications": [
+   "For 50+ customers, emotionally meaningful, positively framed messages (seeing grandchildren's faces, reading with ease) may land better than threat-heavy ones."
+  ],
+  "limitations": [
+   "PMC page blocked by captcha; title from search summary; cross-cultural generality debated (e.g. Japan vs US)."
+  ],
+  "license": "unknown",
+  "access_status": "full_text",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M01"
+  ]
+ },
+ {
+  "key": "Levy2009",
+  "title": "Stereotype embodiment: A psychosocial approach to aging",
+  "authors": "Levy, B. R.",
+  "year": 2009,
+  "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC2927354/",
+  "doi_isbn": "Current Directions in Psychological Science 18, 332-336",
+  "source_type": "review",
+  "tier": "A",
+  "key_findings": [
+   "Stereotype embodiment theory: age stereotypes (a) are internalized across the life span, (b) can operate unconsciously, (c) gain salience from self-relevance, (d) work through multiple pathways (psychological, behavioural, physiological).",
+   "Experimental and longitudinal studies: positive and negative age stereotypes held by older people have beneficial and detrimental effects on cognitive and physical outcomes.",
+   "Central message: the ageing process is in part a social construct."
+  ],
+  "practical_applications": [
+   "Never show reading glasses as 'getting old and useless'; show capable, active older people."
+  ],
+  "limitations": [
+   "Some supporting experiments used subliminal priming - a method hit by the replication crisis; full text not read (PMC captcha)."
+  ],
+  "license": "unknown",
+  "access_status": "full_text",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M01"
+  ]
+ },
+ {
+  "key": "Berdahl2020",
+  "title": "Patient and economic burden of presbyopia: A systematic literature review",
+  "authors": "Berdahl, J., Bala, C., Dhariwal, M., Lemp-Hull, J., Thakker, D., Jawla, S.",
+  "year": 2020,
+  "url": "https://www.dovepress.com/patient-and-economic-burden-of-presbyopia-a-systematic-literature-revi-peer-reviewed-fulltext-article-OPTH",
+  "doi_isbn": "10.2147/OPTH.S269597",
+  "source_type": "review",
+  "tier": "S",
+  "key_findings": [
+   "53 studies; uncorrected presbyopia linked to up to 22% lower QoL score and ~80% difficulty with near tasks (Holden 2008).",
+   "Psychosocial: distress and low self-esteem reported; in one Chinese study 15% reported low sense of accomplishment and 7% shame/embarrassment.",
+   "Correction rates range from 6% (Africa) to 84% (North America); cost and inconvenience are barriers."
+  ],
+  "practical_applications": [
+   "Presbyopia content can name quiet embarrassment (holding the phone at arm's length) with warmth, not ridicule."
+  ],
+  "limitations": [
+   "Funded by Alcon with employee authors; English-only, mostly cross-sectional; psychological evidence thin."
+  ],
+  "license": "unknown (Dove Medical Press open access)",
+  "access_status": "full_text",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M01"
+  ]
+ },
+ {
+  "key": "SimonsChabris1999",
+  "title": "Gorillas in our midst: Sustained inattentional blindness for dynamic events",
+  "authors": "Simons, D. J., Chabris, C. F.",
+  "year": 1999,
+  "url": "https://journals.sagepub.com/doi/10.1068/p281059",
+  "doi_isbn": "10.1068/p281059",
+  "source_type": "empirical",
+  "tier": "A",
+  "key_findings": [
+   "People engaged in a monitoring task often miss an obvious unexpected event; harder tasks produce more misses.",
+   "Unexpected events similar to the attended features are noticed more."
+  ],
+  "practical_applications": [
+   "In busy frames viewers miss the product; give the glasses the single focus of attention."
+  ],
+  "limitations": [
+   "Details via secondary summaries this session."
+  ],
+  "license": "copyrighted",
+  "access_status": "search_summary",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M01"
+  ]
+ },
+ {
+  "key": "Loftus2005",
+  "title": "Planting misinformation in the human mind: A 30-year investigation of the malleability of memory",
+  "authors": "Loftus, E. F.",
+  "year": 2005,
+  "url": "https://www.motionpictures.org/wp-content/uploads/2013/09/LoftusLearningMemoryMisinfo05.pdf",
+  "doi_isbn": "Learning & Memory 12, 361-366",
+  "source_type": "review",
+  "tier": "A",
+  "key_findings": [
+   "Misleading post-event information impairs memory of the original event (misinformation effect).",
+   "Warnings help only under limited circumstances; effects stronger when attention is limited.",
+   "Young children and the elderly are more susceptible than younger adults; people can come to believe rich false events."
+  ],
+  "practical_applications": [
+   "Memory is reconstructive - flashback scenes can 'change' as characters retell them; never use this to mislead customers."
+  ],
+  "limitations": [
+   "Narrative review by the field's leading proponent."
+  ],
+  "license": "copyrighted",
+  "access_status": "full_text",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M01"
+  ]
+ },
+ {
+  "key": "Larsen2001",
+  "title": "Can people feel happy and sad at the same time?",
+  "authors": "Larsen, J. T., McGraw, A. P., Cacioppo, J. T.",
+  "year": 2001,
+  "url": "https://pubmed.ncbi.nlm.nih.gov/11642354/",
+  "doi_isbn": "Journal of Personality and Social Psychology",
+  "source_type": "empirical",
+  "tier": "A",
+  "key_findings": [
+   "Usually people report one or the other, but after Life Is Beautiful, moving out, or graduating many felt both happy and sad.",
+   "Affect is typically bipolar in experience but underlying processes are bivariate; later work: making endings salient heightens mixed emotions."
+  ],
+  "practical_applications": [
+   "Bittersweet endings ('last day before retirement', 'old frames retired') are a valid, documented emotion state for stories."
+  ],
+  "limitations": [
+   "Self-report studies."
+  ],
+  "license": "copyrighted",
+  "access_status": "search_summary",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M01"
+  ]
+ },
+ {
+  "key": "Gilovich2000",
+  "title": "The spotlight effect in social judgment: An egocentric bias in estimates of the salience of one's own actions and appearance",
+  "authors": "Gilovich, T., Medvec, V. H., Savitsky, K.",
+  "year": 2000,
+  "url": "https://www.kellogg.northwestern.edu/academics-research/research/detail/2000/the-spotlight-effect-in-social-judgment-an-egocentric-bias",
+  "doi_isbn": "10.1037/0022-3514.78.2.211",
+  "source_type": "empirical",
+  "tier": "A",
+  "key_findings": [
+   "People overestimate how many others notice their appearance (embarrassing T-shirt) and actions; anchoring-and-adjustment explanation."
+  ],
+  "practical_applications": [
+   "Addresses fear of 'looking old in reading glasses' or bold frames: others notice less than you think - a kind, true reassurance."
+  ],
+  "limitations": [
+   "Student samples; details via secondary summaries."
+  ],
+  "license": "copyrighted",
+  "access_status": "search_summary",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M01"
+  ]
+ },
+ {
+  "key": "Gross2015",
+  "title": "Emotion regulation: Current status and future prospects",
+  "authors": "Gross, J. J.",
+  "year": 2015,
+  "url": "https://scinapse.io/papers/2003220763",
+  "doi_isbn": "Psychological Inquiry 26(1), 1-26",
+  "source_type": "review",
+  "tier": "A",
+  "key_findings": [
+   "Process model sorts strategies by where they act in emotion generation (situation selection/modification, attentional deployment, cognitive change/reappraisal, response modulation).",
+   "Extended model: regulation as valuation with identification, selection, implementation stages."
+  ],
+  "practical_applications": [
+   "A character who reappraises ('it's not age, it's just focus') vs one who suppresses gives two clear arcs."
+  ],
+  "limitations": [
+   "Abstract-level only; field still debates what 'emotion regulation' covers."
+  ],
+  "license": "copyrighted",
+  "access_status": "search_summary",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M01"
+  ]
+ },
+ {
+  "key": "GreenBrock2000",
+  "title": "The role of transportation in the persuasiveness of public narratives",
+  "authors": "Green, M. C., Brock, T. C.",
+  "year": 2000,
+  "url": "https://www.cambridge.org/core/books/cambridge-handbook-of-consumer-psychology/storytelling-and-narrative-persuasion/3AB132C34C98AC968689A58FA4449802",
+  "doi_isbn": "JPSP 79(5), 701-721",
+  "source_type": "empirical",
+  "tier": "A",
+  "key_findings": [
+   "Introduced 'transportation' - absorption into a story - as a route by which stories change beliefs toward story content."
+  ],
+  "practical_applications": [
+   "Stories persuade when immersive; product claims inside a story should be story-true, not a jarring ad break."
+  ],
+  "limitations": [
+   "Known via handbook citation only."
+  ],
+  "license": "copyrighted",
+  "access_status": "search_summary",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M01"
+  ]
+ },
+ {
+  "key": "vanLaer2014",
+  "title": "The extended transportation-imagery model: A meta-analysis of the antecedents and consequences of consumers' narrative transportation",
+  "authors": "van Laer, T., de Ruyter, K., Visconti, L. M., Wetzels, M.",
+  "year": 2014,
+  "url": "https://openaccess.city.ac.uk/id/eprint/6755/1/SSRN-id2033192.pdf",
+  "doi_isbn": "Journal of Consumer Research 40(5), 797-817",
+  "source_type": "meta-analysis",
+  "tier": "S",
+  "key_findings": [
+   "Meta-analysis of 132 effect sizes from 76 published and unpublished articles.",
+   "Storyteller antecedents of transportation: identifiable characters r = .20, imaginable plot .29, verisimilitude .27; receiver: transportability .30, attention .29, familiarity .21; age had no effect.",
+   "Effects of transportation: affective responses .57 (large), attitudes .44, intentions .31, beliefs .26, narrative thoughts .20, critical thoughts -.20.",
+   "Fail-safe N 80-6,627; studies using the Transportation scale showed smaller effects (.34) than other scales (.56)."
+  ],
+  "practical_applications": [
+   "Supports story-first carousels/clips as a persuasion format."
+  ],
+  "limitations": [
+   "Specific effect sizes not read this session.",
+   "Read from the City University accepted manuscript; 43% of studies did not report age and 33% had mean age 18-22."
+  ],
+  "license": "unknown",
+  "access_status": "full_text",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M01"
+  ]
+ },
+ {
+  "key": "Montoya2017",
+  "title": "A re-examination of the mere exposure effect: The influence of repeated exposure on recognition, familiarity, and liking",
+  "authors": "Montoya, R. M., Horton, R. S., Vevea, J. L., Citkowicz, M., Lauber, E. A.",
+  "year": 2017,
+  "url": "https://www.pubmed.gov/28263645/",
+  "doi_isbn": "10.1037/bul0000085",
+  "source_type": "meta-analysis",
+  "tier": "S",
+  "key_findings": [
+   "268 curves from 81 articles: liking rises with exposure then falls (inverted-U).",
+   "Existing models do not adequately account for the findings."
+  ],
+  "practical_applications": [
+   "Repeat brand elements (wordmark, Mint & Tao) consistently, but vary execution to avoid wear-out."
+  ],
+  "limitations": [
+   "Abstract-level only."
+  ],
+  "license": "copyrighted",
+  "access_status": "search_summary",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M01"
+  ]
+ },
+ {
+  "key": "LeeFeeley2016",
+  "title": "The identifiable victim effect: A meta-analytic review",
+  "authors": "Lee, S., Feeley, T. H.",
+  "year": 2016,
+  "url": "https://pure.skku.edu/en/publications/the-identifiable-victim-effect-a-meta-analytic-review/",
+  "doi_isbn": "10.1080/15534510.2016.1216891",
+  "source_type": "meta-analysis",
+  "tier": "S",
+  "key_findings": [
+   "41 studies: significant but small effect (r = .05); stronger when the victim bears little responsibility and with money requests.",
+   "Later reanalysis (Maier et al. 2023, secondary) found moderate evidence of publication bias."
+  ],
+  "practical_applications": [
+   "One named person helps, but the effect is small - don't rely on it alone."
+  ],
+  "limitations": [
+   "Abstract-level; publication bias concern."
+  ],
+  "license": "copyrighted",
+  "access_status": "search_summary",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M01"
+  ]
+ }
+]

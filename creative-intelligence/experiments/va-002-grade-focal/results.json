@@ -1,0 +1,34 @@
+{
+ "a_original": {
+  "flags": [
+   "focal_point"
+  ],
+  "focal_sal": 0.61,
+  "lc": 2.35,
+  "span": 0.613
+ },
+ "b_desat_outside": {
+  "flags": [
+   "focal_point"
+  ],
+  "focal_sal": 0.66,
+  "lc": 2.4,
+  "span": 0.608
+ },
+ "c_darken_outside": {
+  "flags": [
+   "focal_point"
+  ],
+  "focal_sal": 0.85,
+  "lc": 2.63,
+  "span": 0.602
+ },
+ "d_both": {
+  "flags": [
+   "focal_point"
+  ],
+  "focal_sal": 0.84,
+  "lc": 2.68,
+  "span": 0.598
+ }
+}

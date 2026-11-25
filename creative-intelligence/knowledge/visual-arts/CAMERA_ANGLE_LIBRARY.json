@@ -1,0 +1,1010 @@
+[
+ {
+  "id": "cam.eye_level",
+  "name": "Eye-level angle",
+  "camera_position": "camera lens at the subject's eye height, axis level",
+  "height": "subject's eye height (standing adult ~1.5-1.7 m; seated ~1.2 m; child ~1.0 m)",
+  "distance": "any",
+  "view": "horizon passes through the subject's eyes; verticals parallel",
+  "purpose": "neutral reference; equality between viewer and subject; the default that makes other angles meaningful",
+  "perceptual_effect": "least perspective distortion of the face; viewer shares the subject's horizon (horizon ratio: equal-height people standing on flat ground all have their eyes on the horizon)",
+  "possible_emotions": [
+   "trust: highest at eye level for direct-to-camera speakers (BaranowskiHecht2018, N=34, vs 30 deg up/down) [EVIDENCE, medium]",
+   "parity/equality (Kraft1987, via secondary sources) [EVIDENCE, low-medium]",
+   "flat or boring when every shot uses it [CRAFT]"
+  ],
+  "example_use": "staff member explaining lens coatings to camera; Mint & Tao talking side by side at the same eye line",
+  "mistakes": [
+   "'eye level' set at the photographer's standing height for a seated or child subject (it becomes a high angle)",
+   "AI drift: models default to a flat eye-level camera even when another angle is asked (BernalBerdun2025-PreciseCam)"
+  ],
+  "combine_with": "soft frontal/45 deg key, neutral colour, centred or thirds composition; vary shot size instead of angle for rhythm",
+  "how": "camera height = subject eye height; level the camera; 50-85 mm-equivalent look for faces",
+  "use_for": [
+   "staff talking-head clips",
+   "product explainer",
+   "dialogue carousels"
+  ],
+  "limits": "no inherent drama; context decides the meaning",
+  "source_keys": [
+   "BaranowskiHecht2018",
+   "Kraft1987",
+   "OzkanBraunstein2010",
+   "BernalBerdun2025-PreciseCam",
+   "BordwellThompson-FilmArt"
+  ],
+  "test_status": "untested"
+ },
+ {
+  "id": "cam.high_angle",
+  "name": "High angle",
+  "camera_position": "above the subject's eyes, pitched down (typically 10-45 deg)",
+  "height": "above eye level",
+  "distance": "any",
+  "view": "looks down; ground plane fills more of the frame; verticals converge downward if strongly pitched",
+  "purpose": "make the subject smaller in its world, show the floor/space around it, show what lies on a surface",
+  "perceptual_effect": "subject appears smaller and lower in frame; face foreshortened (forehead larger, chin smaller); more environment visible",
+  "possible_emotions": [
+   "weakness/vulnerability/insignificance (Kraft1987 via secondary) [EVIDENCE, low-medium]",
+   "BUT higher competence, composure and sociability ratings for a TV speaker in McCain1977 (opposite direction) [EVIDENCE, low]",
+   "lower trust than eye level for a direct-address speaker (BaranowskiHecht2018: trend, p=.082) [EVIDENCE, low]",
+   "for products: least favourable only for low-motivation viewers (MeyersLevyPeracchio1992 via Sevenants) [EVIDENCE, low]",
+   "loneliness/being watched [CRAFT, GUIDE.md]"
+  ],
+  "example_use": "Mint alone at a big empty bus stop seen from above; a desk of frames from a slight high angle so all temples show",
+  "mistakes": [
+   "using it on a sympathetic hero in a brand promo without intending diminishment",
+   "too steep on faces: eyes looking up into the lens read as pleading [CRAFT]"
+  ],
+  "combine_with": "large negative space and a cooler, dimmer palette for sadness; for products pair with soft top light and a clean surface",
+  "how": "raise the camera 0.3-1 m above eye level, pitch down 10-30 deg; prompt 'high-angle shot looking down at ...'",
+  "use_for": [
+   "story carousels",
+   "product on counter",
+   "sad/lonely beats in clips"
+  ],
+  "limits": "effect sizes small and direction context-dependent",
+  "source_keys": [
+   "Kraft1987",
+   "McCain1977",
+   "BaranowskiHecht2018",
+   "MeyersLevyPeracchio1992",
+   "SevenantsDYdewalle2006",
+   "StudioBinder-CameraShots"
+  ],
+  "test_status": "untested"
+ },
+ {
+  "id": "cam.low_angle",
+  "name": "Low angle",
+  "camera_position": "below the subject's eyes, pitched up (typically 10-40 deg)",
+  "height": "below eye level (chest, waist, knee)",
+  "distance": "any",
+  "view": "looks up; ceiling/sky behind the subject; verticals converge upward",
+  "purpose": "make the subject dominant, heroic or threatening; isolate it against the sky; make a product monumental",
+  "perceptual_effect": "subject appears taller, chin and jaw enlarged, nostrils visible when steep; background simplified to sky/ceiling",
+  "possible_emotions": [
+   "potency/strength/dominance (Kraft1987; MandellShaw1973; SevenantsDYdewalle2006 - in story order only) [EVIDENCE, medium]",
+   "NO effect when the pictures lacked narrative order (SevenantsDYdewalle2006) and none in Meridian 1987 (cited there) [EVIDENCE, mixed]",
+   "LOWEST trust for a direct-address speaker (BaranowskiHecht2018, p=.007) [EVIDENCE, medium]",
+   "products rated more favourably by low-motivation viewers (MeyersLevyPeracchio1992) [EVIDENCE, low; replication contested]",
+   "media already depict powerful people from below more often (Giessner2011) - a learned code [EVIDENCE, medium]",
+   "credibility: only one of three newsreaders gained (communicative ability, knowledgeability) from a lower vantage point; no change in 'authoritative' (Tiemens1970 via BaranowskiHecht2018) [EVIDENCE, low]",
+   "dominance judgments of faces vary with vertical viewing angle (MignaultChaudhuri2003 via Giessner2011) [EVIDENCE, low-medium]"
+  ],
+  "example_use": "hero shot of sunglasses standing on a beach rock against the sky; Tao finally standing up for himself",
+  "mistakes": [
+   "steep low angle on a face with glasses: nostrils, under-chin and ceiling lights reflected in the lenses",
+   "assuming it makes a talking head more persuasive (evidence says less trust)",
+   "too much empty sky pushing the head against the bottom edge"
+  ],
+  "combine_with": "rim/back light against a bright sky and warm saturated colour for triumph, or hard underlight for threat; keep the head pose slightly down to avoid the chin-up look (head tilt interacts: WitkowerTracy2019)",
+  "how": "camera at chest/waist height of the subject, pitched up 15-30 deg; prompt 'low-angle shot from knee height looking up at ...'",
+  "use_for": [
+   "product hero shots",
+   "victory/power beats",
+   "villain/threat in story clips"
+  ],
+  "limits": "reinforces an existing story; weak on its own",
+  "source_keys": [
+   "Kraft1987",
+   "MandellShaw1973",
+   "SevenantsDYdewalle2006",
+   "BaranowskiHecht2018",
+   "MeyersLevyPeracchio1992",
+   "Giessner2011",
+   "WitkowerTracy2019",
+   "Tiemens1970",
+   "MignaultChaudhuri2003"
+  ],
+  "test_status": "untested"
+ },
+ {
+  "id": "cam.birds_eye",
+  "name": "Bird's-eye view",
+  "camera_position": "high above the scene, looking steeply down (not necessarily straight down)",
+  "height": "rooftop, crane or drone height",
+  "distance": "wide to extreme wide",
+  "view": "layout, paths and patterns visible; people become small shapes; 3-point convergence downward",
+  "purpose": "show geography, crowds, maps, fate, a character's smallness in a system",
+  "perceptual_effect": "the scene reads as a pattern/map; individual emotion is hard to read (small faces are read more slowly: CuttingArmstrong2016)",
+  "possible_emotions": [
+   "detachment, omniscience, fate [CRAFT]",
+   "insignificance/loneliness with one small figure [CRAFT, consistent with high-angle findings]",
+   "calm order when symmetric [CRAFT]"
+  ],
+  "example_use": "Hua Hin beach umbrellas from above as an intro; brand battle map clips",
+  "mistakes": [
+   "called 'overhead' when it is not straight down (keep the distinction)",
+   "AI buildings leaning inconsistently (mixed VP3)"
+  ],
+  "combine_with": "graphic composition, strong shapes and long low-sun shadows, minimal text",
+  "how": "camera 20-100 m up, pitch 45-80 deg down; prompt 'aerial bird's-eye view'",
+  "use_for": [
+   "establishing/intro",
+   "maps",
+   "carousel cover"
+  ],
+  "limits": "no facial emotion; needs strong shape design",
+  "source_keys": [
+   "StudioBinder-CameraShots",
+   "CuttingArmstrong2016",
+   "Wiki-Shot"
+  ],
+  "test_status": "untested"
+ },
+ {
+  "id": "cam.worms_eye",
+  "name": "Worm's-eye view",
+  "camera_position": "near the ground looking steeply up",
+  "height": "ground to knee level",
+  "distance": "close to medium",
+  "view": "sky/ceiling dominates; tall things tower; strong upward 3-point convergence",
+  "purpose": "extreme scale, awe, threat, a child's or small creature's viewpoint",
+  "perceptual_effect": "exaggerated height and looming; strong extension distortion when close with a wide lens",
+  "possible_emotions": [
+   "awe/monumentality [CRAFT]",
+   "threat/menace [CRAFT]",
+   "the viewer feels small [DERIVED from the high/low-angle logic]"
+  ],
+  "example_use": "a giant shop sign looming over tiny Mint; coconut palms from below at the beach",
+  "mistakes": [
+   "confused with low angle (worm's eye is extreme and ground-based)",
+   "used on products: frame shape distorted"
+  ],
+  "combine_with": "wide lens, sky gradient, silhouettes; low rumble SFX in clips",
+  "how": "camera on the ground pitched up 45-90 deg, 16-24 mm look",
+  "use_for": [
+   "story clips",
+   "environment hero shots"
+  ],
+  "limits": "rarely flattering for people",
+  "source_keys": [
+   "StudioBinder-CameraShots",
+   "Wiki-Shot"
+  ],
+  "test_status": "untested"
+ },
+ {
+  "id": "cam.dutch",
+  "name": "Dutch angle (canted / tilted frame)",
+  "camera_position": "any position, camera rolled around the lens axis",
+  "height": "any",
+  "distance": "any",
+  "view": "horizon and verticals tilted relative to the frame edges",
+  "purpose": "signal instability, wrongness, madness, disorientation",
+  "perceptual_effect": "frame edges no longer align with gravity; the viewer has to re-orient",
+  "possible_emotions": [
+   "unease/disorientation [CRAFT only - no controlled study found this session]",
+   "energy in action and music videos [CRAFT]",
+   "dizzy or cheap when overused [CRAFT, anecdotal]"
+  ],
+  "example_use": "the moment Tao realises he lost the glasses; a horror beat in night-optic",
+  "mistakes": [
+   "a tiny tilt (1-3 deg) that reads as a mistake, not intent",
+   "whole scenes in Dutch angle",
+   "tilting product packshots"
+  ],
+  "combine_with": "unstable light (flicker, hard shadows), dissonant colour; return to level when stability returns",
+  "how": "roll 8-25 deg; in rig.js cam.move({rot: 4-8}) per GUIDE.md; prompt 'dutch angle, tilted horizon'",
+  "use_for": [
+   "thriller/horror story clips",
+   "glitch transitions"
+  ],
+  "limits": "no empirical evidence of the emotional effect; keep it to 1-2 shots",
+  "source_keys": [
+   "StudioBinder-CameraShots",
+   "Wiki-Shot"
+  ],
+  "test_status": "untested"
+ },
+ {
+  "id": "cam.overhead",
+  "name": "Overhead / top-down (flat lay)",
+  "camera_position": "directly above, lens axis vertical",
+  "height": "above a table or floor",
+  "distance": "close to medium",
+  "view": "plan view, nearly orthographic; no horizon; surfaces read as flat shapes",
+  "purpose": "show an arrangement on a surface: flat lays, desks, recipes, a map of a room",
+  "perceptual_effect": "removes height cues; becomes graphic layout; read like a page",
+  "possible_emotions": [
+   "order/calm/inventory [CRAFT]",
+   "god-like observation, fate [CRAFT]",
+   "playful graphic design [CRAFT]"
+  ],
+  "example_use": "flat lay of three frames, cleaning cloth and case on linen; the ledger on the desk in a story clip",
+  "mistakes": [
+   "slight tilt = keystoned table edges",
+   "camera/phone shadow over the set",
+   "lenses reflecting the ceiling light as white blobs"
+  ],
+  "combine_with": "large soft top light or window light from one side for shape; grid composition; colour blocks",
+  "how": "camera exactly above, sensor parallel to the table; prompt 'top-down flat lay, shot from directly above'",
+  "use_for": [
+   "flat-lay product posts",
+   "story inserts"
+  ],
+  "limits": "glasses lose their face-fit context",
+  "source_keys": [
+   "StudioBinder-CameraShots"
+  ],
+  "test_status": "untested"
+ },
+ {
+  "id": "cam.ground_level",
+  "name": "Ground-level shot",
+  "camera_position": "camera resting on or just above the ground, axis roughly level",
+  "height": "0-20 cm",
+  "distance": "close to wide",
+  "view": "horizon very low; ground texture in the foreground; feet, wheels and floor objects visible",
+  "purpose": "show what is on the ground; intimacy with small things; a pet/child/object viewpoint",
+  "perceptual_effect": "the foreground ground plane is strongly foreshortened; strong depth from the texture gradient",
+  "possible_emotions": [
+   "intimacy with the small [CRAFT]",
+   "suspense when footsteps approach [CRAFT]"
+  ],
+  "example_use": "dropped glasses on the floor while feet walk past; sand-level beach shot with sunglasses",
+  "mistakes": [
+   "calling it worm's-eye (that one looks up)",
+   "everything but the ground out of focus without intent"
+  ],
+  "combine_with": "shallow DOF to blur the near ground; low raking sun for texture",
+  "how": "camera on the floor, roughly level; prompt 'ground-level shot, camera on the floor'",
+  "use_for": [
+   "story inserts",
+   "beach product shots"
+  ],
+  "limits": "limited use per story",
+  "source_keys": [
+   "StudioBinder-CameraShots"
+  ],
+  "test_status": "untested"
+ },
+ {
+  "id": "cam.pov",
+  "name": "Point-of-view (POV) shot",
+  "camera_position": "at a character's eye position, seeing what they see",
+  "height": "the character's eye height",
+  "distance": "matches what they look at",
+  "view": "subjective view; no character visible (or only hands)",
+  "purpose": "put the viewer in the character's head; reveal what they notice",
+  "perceptual_effect": "the viewer takes the character's spatial position; often handheld drift or vision effects (blur for myopia)",
+  "possible_emotions": [
+   "identification/immersion [CRAFT]",
+   "suspense/horror [CRAFT]",
+   "in our eyesight stories: experiencing blurred vs clear vision [DERIVED]"
+  ],
+  "example_use": "blurry street seen without glasses, then sharp after - the core eyesight-story shot; a peephole fisheye POV",
+  "mistakes": [
+   "POV height not matching the character (a child's POV at adult height)",
+   "no preceding look shot, so viewers do not know whose POV it is"
+  ],
+  "combine_with": "sandwich look -> POV -> reaction (StudioBinder); defocus to simulate refractive error; fisheye for peepholes",
+  "how": "camera at the character's eye, ~35-50 mm look; in rig.js hide the character layer, drift on",
+  "use_for": [
+   "eyesight story clips",
+   "before/after lens demos"
+  ],
+  "limits": "needs the look/reaction context",
+  "source_keys": [
+   "StudioBinder-CameraShots",
+   "Wiki-Shot",
+   "Wiki-FisheyeLens"
+  ],
+  "test_status": "untested"
+ },
+ {
+  "id": "cam.ots",
+  "name": "Over-the-shoulder (OTS)",
+  "camera_position": "behind and to one side of character A, framing B",
+  "height": "A's shoulder/eye height",
+  "distance": "medium to MCU on B",
+  "view": "A's shoulder/back of head in the foreground; B faces the camera",
+  "purpose": "dialogue coverage, connection, the spatial relation between speakers",
+  "perceptual_effect": "foreground occlusion adds depth; the viewer shares A's position",
+  "possible_emotions": [
+   "intimacy/engagement in conversation [CRAFT]",
+   "confrontation when A's shoulder is large and dark [CRAFT]"
+  ],
+  "example_use": "Mint (back, foreground) listening to Tao (facing) in a dialogue carousel",
+  "mistakes": [
+   "crossing the 180-degree line between OTS pairs",
+   "foreground shoulder too sharp and bright, stealing attention"
+  ],
+  "combine_with": "foreground darker and blurred; consistent eyelines; pair with the matching reverse OTS",
+  "how": "camera behind A, A's shoulder ~1/3 of the frame; in rig.js foreground layer --d:1.3",
+  "use_for": [
+   "dialogue clips",
+   "dialogue carousels"
+  ],
+  "limits": "needs two characters and line discipline",
+  "source_keys": [
+   "StudioBinder-CameraShots",
+   "Wiki-Shot"
+  ],
+  "test_status": "untested"
+ },
+ {
+  "id": "cam.reverse",
+  "name": "Reverse shot (shot / reverse shot)",
+  "camera_position": "the opposite camera position to the preceding shot (~180 deg turn, same side of the action line)",
+  "height": "matches the paired shot",
+  "distance": "matches the paired shot",
+  "view": "shows the other side of the exchange",
+  "purpose": "alternate speakers or show what a character faces",
+  "perceptual_effect": "builds a mental map of two positions; eyelines must match across the cut",
+  "possible_emotions": [
+   "tension rising as reverses tighten [CRAFT]"
+  ],
+  "example_use": "Mint's MCU -> reverse MCU of Tao as he answers",
+  "mistakes": [
+   "jumping the 180-degree line so both look the same way",
+   "mismatched sizes between paired shots without purpose"
+  ],
+  "combine_with": "matched sizes and lens looks for equality; unmatched (bigger/higher one) for a power imbalance",
+  "how": "mirror the first set-up across the line of action",
+  "use_for": [
+   "dialogue clips"
+  ],
+  "limits": "a grammar device, not emotional by itself",
+  "source_keys": [
+   "Wiki-Shot",
+   "StudioBinder-CameraShots"
+  ],
+  "test_status": "untested"
+ },
+ {
+  "id": "cam.insert",
+  "name": "Insert shot",
+  "camera_position": "close to an object or detail within the scene",
+  "height": "object height",
+  "distance": "close-up to macro",
+  "view": "the object fills ~60% of the frame",
+  "purpose": "give information the plot needs: a price tag, a hinge, a letter, a cracked lens",
+  "perceptual_effect": "focused attention; with no face the object carries the meaning",
+  "possible_emotions": [
+   "curiosity/revelation [CRAFT]",
+   "dread when the detail is a clue [CRAFT]"
+  ],
+  "example_use": "macro of the TR90 hinge flexing; the date in the ledger; a cracked lens on the floor",
+  "mistakes": [
+   "too short to read (GUIDE.md: >= 2.5 s for short text)",
+   "insert lit differently from the master shot"
+  ],
+  "combine_with": "match the scene's light direction; shallow DOF; a sound accent",
+  "how": "separate shot, object fills ~60%; 100 mm macro look",
+  "use_for": [
+   "product detail clips",
+   "story plot points"
+  ],
+  "limits": "must belong to the scene's time and space",
+  "source_keys": [
+   "Wiki-Shot",
+   "CuttingArmstrong2016"
+  ],
+  "test_status": "untested"
+ },
+ {
+  "id": "cam.cutaway",
+  "name": "Cutaway",
+  "camera_position": "anywhere outside the current main action",
+  "height": "any",
+  "distance": "any",
+  "view": "something other than the main action, then back",
+  "purpose": "control pace, cover edits/jump cuts, add context or a comic aside",
+  "perceptual_effect": "interrupts continuity; the viewer accepts elapsed or removed time",
+  "possible_emotions": [
+   "relief/humour [CRAFT]",
+   "context or irony [CRAFT]"
+  ],
+  "example_use": "staff talking -> cutaway to the display wall -> back (hides a cut in the talk)",
+  "mistakes": [
+   "cutaway in a different look (light/colour)",
+   "so many cutaways that the main line dilutes"
+  ],
+  "combine_with": "same grade, sound bed continuing underneath",
+  "how": "shoot 3-5 neutral details per location as B-roll",
+  "use_for": [
+   "talking-head clips",
+   "documentary-style promos"
+  ],
+  "limits": "no emotion of its own",
+  "source_keys": [
+   "Wiki-Cutaway"
+  ],
+  "test_status": "untested"
+ },
+ {
+  "id": "cam.reaction",
+  "name": "Reaction shot",
+  "camera_position": "on the listener/witness rather than the speaker",
+  "height": "listener eye level",
+  "distance": "MCU to CU",
+  "view": "the face/body of the one reacting",
+  "purpose": "tell the viewer how to feel about what was said or seen",
+  "perceptual_effect": "the listener's expression guides interpretation (Kuleshov; curriculum ch. 11)",
+  "possible_emotions": [
+   "empathy when the face carries an emotion: sad close-ups increased affective mental-state attribution, neutral close-ups did not (RooneyBalint2018) [EVIDENCE, medium]",
+   "comedy timing [CRAFT]"
+  ],
+  "example_use": "Tao's face when Mint reads the eye-test result; for faceless Mint & Tao the reaction is carried by posture and props",
+  "mistakes": [
+   "held too briefly to read (faces need size and time: CuttingArmstrong2016)",
+   "a neutral face held as a 'reaction' (does nothing per RooneyBalint2018)"
+  ],
+  "combine_with": "closest shot for the biggest line (GUIDE.md); soft key; silence or a sound beat",
+  "how": "MCU/CU of the listener, held 1-2 s",
+  "use_for": [
+   "dialogue clips",
+   "story carousels (posture panels)"
+  ],
+  "limits": "needs a readable emotional signal",
+  "source_keys": [
+   "RooneyBalint2018",
+   "CuttingArmstrong2016"
+  ],
+  "test_status": "untested"
+ },
+ {
+  "id": "cam.establishing",
+  "name": "Establishing shot",
+  "camera_position": "a wide position showing the whole location",
+  "height": "eye level or high",
+  "distance": "wide to extreme wide",
+  "view": "the full location, time of day, who is where",
+  "purpose": "orient the viewer in space and time at the start of a scene",
+  "perceptual_effect": "builds the spatial map that later shots rely on; long scales get longer durations in films (~8 s mean for ELS: CuttingArmstrong2016)",
+  "possible_emotions": [
+   "calm orientation [CRAFT]",
+   "loneliness or awe depending on scale [CRAFT]"
+  ],
+  "example_use": "the front of the TIME OPTIC shop at golden hour before a story starts",
+  "mistakes": [
+   "skipping it so later OTS/POV shots confuse",
+   "establishing shot that does not match later interiors (weather/time)"
+  ],
+  "combine_with": "deep focus (hyperfocal: 24 mm f/8 -> sharp from 1.2 m to infinity), atmospheric perspective for depth",
+  "how": "wide, deep focus, hold 1.5-3 s in short-form",
+  "use_for": [
+   "story clip openings",
+   "carousel slide 1"
+  ],
+  "limits": "slow for short-form; 1.5-3 s in Reels",
+  "source_keys": [
+   "Wiki-Shot",
+   "CuttingArmstrong2016",
+   "StudioBinder-CameraShots"
+  ],
+  "test_status": "untested"
+ },
+ {
+  "id": "cam.ews",
+  "name": "Extreme wide shot (EWS / ELS)",
+  "camera_position": "camera on the subject's axis at the distance that gives this framing",
+  "height": "usually eye level unless an angle is combined",
+  "distance": "far (tens to hundreds of m)",
+  "view": "landscape or whole place; people tiny",
+  "purpose": "where/when, scale, isolation",
+  "perceptual_effect": "shot scale = size of the focal subject in the frame; smaller faces are read more slowly and need longer shots, especially in clutter (CuttingArmstrong2016)",
+  "possible_emotions": [
+   "loneliness/insignificance or freedom [CRAFT]",
+   "faces unreadable; emotion read slowest at long scales (CuttingArmstrong2016) [EVIDENCE]"
+  ],
+  "example_use": "Hua Hin beach at dawn with one tiny figure",
+  "mistakes": [
+   "faces too small to read; cut too short",
+   "definitions vary between textbooks - name the frame line (e.g. 'knees up') in prompts and shot lists"
+  ],
+  "combine_with": "negative space, atmosphere, horizon on a third",
+  "how": "hold longer than close shots",
+  "use_for": [
+   "clips",
+   "carousels",
+   "promo stills"
+  ],
+  "limits": "scale meanings are CRAFT conventions; the evidence covers reading speed and empathy, not fixed emotions",
+  "source_keys": [
+   "CuttingArmstrong2016",
+   "Wiki-Shot",
+   "StudioBinder-CameraShots"
+  ],
+  "test_status": "untested"
+ },
+ {
+  "id": "cam.ws",
+  "name": "Wide / long shot (WS / LS)",
+  "camera_position": "camera on the subject's axis at the distance that gives this framing",
+  "height": "usually eye level unless an angle is combined",
+  "distance": "several m",
+  "view": "full bodies plus surroundings",
+  "purpose": "geography, staging, who is where",
+  "perceptual_effect": "shot scale = size of the focal subject in the frame; smaller faces are read more slowly and need longer shots, especially in clutter (CuttingArmstrong2016)",
+  "possible_emotions": [
+   "observation/neutral distance [CRAFT]"
+  ],
+  "example_use": "Mint and Tao inside the shop with the counter visible",
+  "mistakes": [
+   "clutter hiding the subject (clutter slows reading: CuttingArmstrong2016)",
+   "definitions vary between textbooks - name the frame line (e.g. 'knees up') in prompts and shot lists"
+  ],
+  "combine_with": "clear figure-ground separation, leading lines",
+  "how": "separate the subject by value/colour",
+  "use_for": [
+   "clips",
+   "carousels",
+   "promo stills"
+  ],
+  "limits": "scale meanings are CRAFT conventions; the evidence covers reading speed and empathy, not fixed emotions",
+  "source_keys": [
+   "CuttingArmstrong2016",
+   "Wiki-Shot",
+   "StudioBinder-CameraShots"
+  ],
+  "test_status": "untested"
+ },
+ {
+  "id": "cam.fs",
+  "name": "Full shot (FS)",
+  "camera_position": "camera on the subject's axis at the distance that gives this framing",
+  "height": "usually eye level unless an angle is combined",
+  "distance": "~3-5 m with a 50 mm look",
+  "view": "one body head to toe fills the frame height",
+  "purpose": "body language, walking, outfit",
+  "perceptual_effect": "shot scale = size of the focal subject in the frame; smaller faces are read more slowly and need longer shots, especially in clutter (CuttingArmstrong2016)",
+  "possible_emotions": [
+   "confidence/attitude through posture [CRAFT]"
+  ],
+  "example_use": "customer turning at the mirror, outfit + glasses",
+  "mistakes": [
+   "cutting off the feet",
+   "definitions vary between textbooks - name the frame line (e.g. 'knees up') in prompts and shot lists"
+  ],
+  "combine_with": "3/4 body angle",
+  "how": "small head- and footroom",
+  "use_for": [
+   "clips",
+   "carousels",
+   "promo stills"
+  ],
+  "limits": "scale meanings are CRAFT conventions; the evidence covers reading speed and empathy, not fixed emotions",
+  "source_keys": [
+   "CuttingArmstrong2016",
+   "Wiki-Shot",
+   "StudioBinder-CameraShots"
+  ],
+  "test_status": "untested"
+ },
+ {
+  "id": "cam.mws",
+  "name": "Medium wide / medium long shot (MWS / MLS)",
+  "camera_position": "camera on the subject's axis at the distance that gives this framing",
+  "height": "usually eye level unless an angle is combined",
+  "distance": "~2.5-4 m",
+  "view": "knees up (frame ends near the knees)",
+  "purpose": "gesture plus some setting",
+  "perceptual_effect": "shot scale = size of the focal subject in the frame; smaller faces are read more slowly and need longer shots, especially in clutter (CuttingArmstrong2016)",
+  "possible_emotions": [
+   "engaged but observing [CRAFT]"
+  ],
+  "example_use": "staff handing a case to a customer",
+  "mistakes": [
+   "cutting exactly at the knee joint (crop between joints)",
+   "definitions vary between textbooks - name the frame line (e.g. 'knees up') in prompts and shot lists"
+  ],
+  "combine_with": "two-shots in dialogue",
+  "how": "frame between joints",
+  "use_for": [
+   "clips",
+   "carousels",
+   "promo stills"
+  ],
+  "limits": "scale meanings are CRAFT conventions; the evidence covers reading speed and empathy, not fixed emotions",
+  "source_keys": [
+   "CuttingArmstrong2016",
+   "Wiki-Shot",
+   "StudioBinder-CameraShots"
+  ],
+  "test_status": "untested"
+ },
+ {
+  "id": "cam.cowboy",
+  "name": "Cowboy / American shot",
+  "camera_position": "camera on the subject's axis at the distance that gives this framing",
+  "height": "usually eye level unless an angle is combined",
+  "distance": "~2-3 m",
+  "view": "mid-thigh up (the holster line in Westerns)",
+  "purpose": "stance plus hands at hip level",
+  "perceptual_effect": "shot scale = size of the focal subject in the frame; smaller faces are read more slowly and need longer shots, especially in clutter (CuttingArmstrong2016)",
+  "possible_emotions": [
+   "swagger/readiness [CRAFT]"
+  ],
+  "example_use": "stylised promo pose, hand at the hip holding sunglasses",
+  "mistakes": [
+   "using it with no hip-level action (MS would do)",
+   "definitions vary between textbooks - name the frame line (e.g. 'knees up') in prompts and shot lists"
+  ],
+  "combine_with": "low angle for a heroic stance",
+  "how": "frame at mid-thigh",
+  "use_for": [
+   "clips",
+   "carousels",
+   "promo stills"
+  ],
+  "limits": "scale meanings are CRAFT conventions; the evidence covers reading speed and empathy, not fixed emotions",
+  "source_keys": [
+   "CuttingArmstrong2016",
+   "Wiki-Shot",
+   "StudioBinder-CameraShots"
+  ],
+  "test_status": "untested"
+ },
+ {
+  "id": "cam.ms",
+  "name": "Medium shot (MS)",
+  "camera_position": "camera on the subject's axis at the distance that gives this framing",
+  "height": "usually eye level unless an angle is combined",
+  "distance": "~1.5-2.5 m",
+  "view": "waist up",
+  "purpose": "normal dialogue, gestures, product in hand",
+  "perceptual_effect": "shot scale = size of the focal subject in the frame; smaller faces are read more slowly and need longer shots, especially in clutter (CuttingArmstrong2016)",
+  "possible_emotions": [
+   "neutral social distance [CRAFT]"
+  ],
+  "example_use": "staff explaining while holding the frame",
+  "mistakes": [
+   "too much headroom",
+   "definitions vary between textbooks - name the frame line (e.g. 'knees up') in prompts and shot lists"
+  ],
+  "combine_with": "eye level, rule of thirds, look room",
+  "how": "eyes on the upper third",
+  "use_for": [
+   "clips",
+   "carousels",
+   "promo stills"
+  ],
+  "limits": "scale meanings are CRAFT conventions; the evidence covers reading speed and empathy, not fixed emotions",
+  "source_keys": [
+   "CuttingArmstrong2016",
+   "Wiki-Shot",
+   "StudioBinder-CameraShots"
+  ],
+  "test_status": "untested"
+ },
+ {
+  "id": "cam.mcu",
+  "name": "Medium close-up (MCU)",
+  "camera_position": "camera on the subject's axis at the distance that gives this framing",
+  "height": "usually eye level unless an angle is combined",
+  "distance": "~1-1.5 m with an 85 mm look",
+  "view": "chest up",
+  "purpose": "most talking lines and reactions; face + glasses with shoulders",
+  "perceptual_effect": "shot scale = size of the focal subject in the frame; smaller faces are read more slowly and need longer shots, especially in clutter (CuttingArmstrong2016)",
+  "possible_emotions": [
+   "engagement/intimacy [CRAFT]"
+  ],
+  "example_use": "customer trying frames, face and shoulders",
+  "mistakes": [
+   "shooting it from 40-50 cm with a wide lens (BryanPeronaAdolphs2012: lower trust and attractiveness ratings)",
+   "definitions vary between textbooks - name the frame line (e.g. 'knees up') in prompts and shot lists"
+  ],
+  "combine_with": "85-105 mm look from >= 1.2 m",
+  "how": "step back, use a longer lens",
+  "use_for": [
+   "clips",
+   "carousels",
+   "promo stills"
+  ],
+  "limits": "scale meanings are CRAFT conventions; the evidence covers reading speed and empathy, not fixed emotions",
+  "source_keys": [
+   "CuttingArmstrong2016",
+   "Wiki-Shot",
+   "StudioBinder-CameraShots",
+   "BryanPeronaAdolphs2012"
+  ],
+  "test_status": "untested"
+ },
+ {
+  "id": "cam.cu",
+  "name": "Close-up (CU)",
+  "camera_position": "camera on the subject's axis at the distance that gives this framing",
+  "height": "usually eye level unless an angle is combined",
+  "distance": "~0.8-1.5 m with a tele look",
+  "view": "the face (shoulder line visible)",
+  "purpose": "emotion turns, the key line, how glasses sit on the face",
+  "perceptual_effect": "shot scale = size of the focal subject in the frame; smaller faces are read more slowly and need longer shots, especially in clutter (CuttingArmstrong2016)",
+  "possible_emotions": [
+   "empathy if the face shows emotion (RooneyBalint2018) [EVIDENCE]",
+   "faster emotion recognition than wider scales (CuttingArmstrong2016) [EVIDENCE]",
+   "intrusion/claustrophobia when overused [CRAFT]"
+  ],
+  "example_use": "close-up of a smile when the new progressive lenses work",
+  "mistakes": [
+   "close distance + wide lens (big nose, small ears); spending the CU too early (GUIDE.md)",
+   "definitions vary between textbooks - name the frame line (e.g. 'knees up') in prompts and shot lists"
+  ],
+  "combine_with": "shallow DOF on the near eye (85 mm f/2 at 1.5 m = ~3.5 cm DOF)",
+  "how": "short durations are fine (~2.5 s typical for close scales in films)",
+  "use_for": [
+   "clips",
+   "carousels",
+   "promo stills"
+  ],
+  "limits": "scale meanings are CRAFT conventions; the evidence covers reading speed and empathy, not fixed emotions",
+  "source_keys": [
+   "CuttingArmstrong2016",
+   "Wiki-Shot",
+   "StudioBinder-CameraShots",
+   "BryanPeronaAdolphs2012",
+   "RooneyBalint2018"
+  ],
+  "test_status": "untested"
+ },
+ {
+  "id": "cam.ecu",
+  "name": "Extreme close-up (ECU)",
+  "camera_position": "camera on the subject's axis at the distance that gives this framing",
+  "height": "usually eye level unless an angle is combined",
+  "distance": "very close, tele or macro",
+  "view": "a part: eyes, mouth, a hinge (chin-to-forehead or a detail)",
+  "purpose": "shock, detail, clue, sensory emphasis",
+  "perceptual_effect": "shot scale = size of the focal subject in the frame; smaller faces are read more slowly and need longer shots, especially in clutter (CuttingArmstrong2016)",
+  "possible_emotions": [
+   "intensity/shock [CRAFT]",
+   "slightly slower emotion reading at ECU than CU (CuttingArmstrong2016) [EVIDENCE, low]"
+  ],
+  "example_use": "an eye behind the lens with the AR-coating reflection",
+  "mistakes": [
+   "DOF so thin nothing is sharp; an out-of-context ECU confuses",
+   "definitions vary between textbooks - name the frame line (e.g. 'knees up') in prompts and shot lists"
+  ],
+  "combine_with": "macro lighting, focus stacking for products",
+  "how": "shoot as a separate insert",
+  "use_for": [
+   "clips",
+   "carousels",
+   "promo stills"
+  ],
+  "limits": "scale meanings are CRAFT conventions; the evidence covers reading speed and empathy, not fixed emotions",
+  "source_keys": [
+   "CuttingArmstrong2016",
+   "Wiki-Shot",
+   "StudioBinder-CameraShots"
+  ],
+  "test_status": "untested"
+ },
+ {
+  "id": "cam.macro",
+  "name": "Macro shot",
+  "camera_position": "camera on the subject's axis at the distance that gives this framing",
+  "height": "usually eye level unless an angle is combined",
+  "distance": "centimetres",
+  "view": "object at 1:2 to 1:1 magnification or closer",
+  "purpose": "material truth: hinge screws, acetate layers, coating sheen",
+  "perceptual_effect": "shot scale = size of the focal subject in the frame; smaller faces are read more slowly and need longer shots, especially in clutter (CuttingArmstrong2016)",
+  "possible_emotions": [
+   "fascination/craft quality [CRAFT]"
+  ],
+  "example_use": "acetate layer pattern and hinge rivet in a promo",
+  "mistakes": [
+   "single frame at 1:1 f/11 has ~1.3 mm DOF - most of the object is soft; dust shows",
+   "definitions vary between textbooks - name the frame line (e.g. 'knees up') in prompts and shot lists"
+  ],
+  "combine_with": "focus stacking, long macro lens for working distance, soft gradient light for reflections",
+  "how": "100 mm macro; stack 5-10 frames",
+  "use_for": [
+   "clips",
+   "carousels",
+   "promo stills"
+  ],
+  "limits": "scale meanings are CRAFT conventions; the evidence covers reading speed and empathy, not fixed emotions",
+  "source_keys": [
+   "CuttingArmstrong2016",
+   "Wiki-Shot",
+   "StudioBinder-CameraShots"
+  ],
+  "test_status": "untested"
+ },
+ {
+  "id": "cam.two_shot",
+  "name": "Two-shot",
+  "camera_position": "framing two subjects together",
+  "height": "usually eye level",
+  "distance": "MS to WS",
+  "view": "both characters in one frame",
+  "purpose": "relationship, balance of power, reactions in the same frame",
+  "perceptual_effect": "relative size and height in the frame are read as status [CRAFT; consistent with the verticality-power literature, Giessner2011]",
+  "possible_emotions": [
+   "closeness/connection [CRAFT]",
+   "imbalance when one is bigger or higher [CRAFT]"
+  ],
+  "example_use": "Mint and Tao on a bench sharing one pair of glasses",
+  "mistakes": [
+   "both centred and symmetrical with no relation",
+   "one face hidden by the other unintentionally"
+  ],
+  "combine_with": "staggered depth (one nearer), eyelines meeting, shared light",
+  "how": "both subjects on thirds or staggered in depth",
+  "use_for": [
+   "dialogue carousels",
+   "story clips"
+  ],
+  "limits": "meaning comes from staging",
+  "source_keys": [
+   "StudioBinder-CameraShots",
+   "Wiki-Shot",
+   "Giessner2011"
+  ],
+  "test_status": "untested"
+ },
+ {
+  "id": "cam.group_shot",
+  "name": "Group shot (three-shot and more)",
+  "camera_position": "framing three or more subjects",
+  "height": "eye level or slightly high so all faces show",
+  "distance": "WS to MS",
+  "view": "several people; composed in triangles or lines",
+  "purpose": "show a group, team, family or crowd dynamic",
+  "perceptual_effect": "viewers find the focal person by contrast, position and the gaze of the others [CRAFT]",
+  "possible_emotions": [
+   "belonging/community [CRAFT]",
+   "isolation of one member placed apart [CRAFT]"
+  ],
+  "example_use": "shop team photo for a holiday post; a family choosing frames together",
+  "mistakes": [
+   "everyone in a straight line at equal size",
+   "equal-height people at different depths with heads at different heights relative to the horizon on flat ground (perspective error, see perr.figure_horizon_mismatch)"
+  ],
+  "combine_with": "slight high angle to avoid hidden faces; triangular staging; one key light",
+  "how": "stagger depth; run the heads-on-horizon check",
+  "use_for": [
+   "team posts",
+   "family promo"
+  ],
+  "limits": "small faces are read slowly",
+  "source_keys": [
+   "StudioBinder-CameraShots",
+   "OzkanBraunstein2010"
+  ],
+  "test_status": "untested"
+ },
+ {
+  "id": "cam.profile",
+  "name": "Profile (side view)",
+  "camera_position": "perpendicular to the subject's facing direction",
+  "height": "eye level",
+  "distance": "CU to FS",
+  "view": "pure side silhouette",
+  "purpose": "show shape, the nose/temple line, walking direction, two people facing each other",
+  "perceptual_effect": "the silhouette reads strongly; no eye contact with the viewer -> observer stance",
+  "possible_emotions": [
+   "detachment/observation [CRAFT]",
+   "confrontation when two profiles face each other [CRAFT]"
+  ],
+  "example_use": "side view of glasses on a face showing temple length and ear fit; Mint & Tao facing each other in silhouette",
+  "mistakes": [
+   "temple hides the lens shape",
+   "nose and frame edges merge with the background (no rim light)"
+  ],
+  "combine_with": "rim/back light for edge separation; clean background",
+  "how": "camera 90 deg to the face",
+  "use_for": [
+   "frame-fit shots",
+   "silhouette story panels"
+  ],
+  "limits": "loses the frontal lens shape",
+  "source_keys": [
+   "StudioBinder-CameraShots"
+  ],
+  "test_status": "untested"
+ },
+ {
+  "id": "cam.three_quarter",
+  "name": "Three-quarter view",
+  "camera_position": "~30-45 deg off the subject's frontal axis",
+  "height": "eye level or slightly high",
+  "distance": "any size",
+  "view": "front and one side visible; the near side larger",
+  "purpose": "the most dimensional standard view of faces and products",
+  "perceptual_effect": "depth plus a recognisable front; for glasses shows lens shape, temple and hinge together",
+  "possible_emotions": [
+   "natural/engaged [CRAFT]"
+  ],
+  "example_use": "hero packshot of a frame at 3/4 on a mirror surface; customer turned 3/4 to the window light",
+  "mistakes": [
+   "far lens not correctly foreshortened/partly hidden by the bridge; mismatched lens ellipses",
+   "temples splayed unnaturally by AI"
+  ],
+  "combine_with": "short lighting from the far side; 2-point perspective with distant VPs",
+  "how": "turn subject or camera 30-45 deg; check ellipses (minor axis along each lens axis)",
+  "use_for": [
+   "product hero",
+   "portraits"
+  ],
+  "limits": "needs correct ellipses and perspective",
+  "source_keys": [
+   "StudioBinder-CameraShots",
+   "Norling1939"
+  ],
+  "test_status": "untested"
+ },
+ {
+  "id": "cam.front",
+  "name": "Front view (frontal)",
+  "camera_position": "on the subject's frontal axis",
+  "height": "eye level",
+  "distance": "any size",
+  "view": "symmetric, flat-ish; true lens shapes",
+  "purpose": "show true shape (catalogue), confrontation, direct address, symmetry",
+  "perceptual_effect": "direct gaze engages the viewer; symmetry reads formal/stable or uncanny",
+  "possible_emotions": [
+   "directness/honesty [CRAFT]",
+   "formality or uncanniness with perfect symmetry [CRAFT; GUIDE.md uses it for ghosts]"
+  ],
+  "example_use": "catalogue front shot for spec comparison; staff talking to camera",
+  "mistakes": [
+   "slight yaw making one lens bigger in a 'frontal' catalogue shot",
+   "frontal flash causing glare in the lenses"
+  ],
+  "combine_with": "large frontal soft light angled so reflections miss the lenses; long-lens, near-orthographic look",
+  "how": "camera centred on the bridge, lens axis perpendicular to the frame front",
+  "use_for": [
+   "catalogue",
+   "talking head"
+  ],
+  "limits": "flat if lit flat",
+  "source_keys": [
+   "Wiki-ParallelProjection",
+   "StudioBinder-CameraShots"
+  ],
+  "test_status": "untested"
+ },
+ {
+  "id": "cam.rear",
+  "name": "Rear view (from behind)",
+  "camera_position": "behind the subject, facing what they face",
+  "height": "subject eye height or slightly lower",
+  "distance": "FS to MS",
+  "view": "the back of the subject plus what lies ahead (the 'Rueckenfigur')",
+  "purpose": "invite the viewer to share the subject's gaze; anonymity; departure",
+  "perceptual_effect": "the viewer projects into the figure; the face is hidden",
+  "possible_emotions": [
+   "contemplation/longing [CRAFT]",
+   "anonymity that suits faceless characters [DERIVED for Mint & Tao]"
+  ],
+  "example_use": "Mint from behind looking at the sea before deciding to book an eye test",
+  "mistakes": [
+   "figure centred and blocking the view it is meant to contemplate"
+  ],
+  "combine_with": "figure on a third, horizon low or high, atmospheric depth ahead",
+  "how": "camera behind the subject, slightly offset",
+  "use_for": [
+   "story carousels",
+   "mood promos"
+  ],
+  "limits": "no facial emotion",
+  "source_keys": [
+   "StudioBinder-CameraShots"
+  ],
+  "test_status": "untested"
+ }
+]

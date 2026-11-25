@@ -1,0 +1,1133 @@
+[
+ {
+  "key": "TingsabadhAbramson1993",
+  "title": "Illustrations of the IPA: Thai",
+  "authors": "Tingsabadh, M. R. Kalaya; Abramson, Arthur S.",
+  "year": 1993,
+  "url": "https://www.cambridge.org/core/journals/journal-of-the-international-phonetic-association/article/thai/E8DF7F30D887DB49BC1E9F48163CB7E6",
+  "doi_isbn": "10.1017/S0025100300004746",
+  "source_type": "primary_text",
+  "tier": "A",
+  "key_findings": [
+   "Standard Thai has five tones: high, mid, low, rising, falling (khaa mid 'to get stuck', khàa 'galangal', khâa 'I', kháa 'to trade', khǎa 'leg').",
+   "Nine vowel qualities; length is distinctive for all vowels.",
+   "Only /p t k ʔ m n ŋ w j/ occur syllable-finally; final /p t ʔ/ have no audible release.",
+   "Primary stress falls on the final syllable of a word; the last primary stress before the end of a major prosodic group commonly takes extra stress.",
+   "/r/ vs /l/ distinction is not robust; many speakers favour [l] for single initial r; as second element of clusters both /l/ and /r/ tend to be deleted.",
+   "In polysyllabic words, low and high tones on short-/a/ glottal-stop syllables become mid when unstressed, with loss of the glottal stop."
+  ],
+  "practical_applications": [
+   "Lengthen/emphasise the LAST syllable of a word, not the first, when directing emphasis in Thai VO.",
+   "Unreleased final stops: a TTS that releases -p/-t/-k sounds foreign.",
+   "Do not force tones on unstressed กระ-/ประ-/สะ- prefixes."
+  ],
+  "limitations": [
+   "Only pp. 25-26 (vowels, tones, stress, conventions) were read from the scanned PDF; p. 24 and pp. 27-28 not read.",
+   "Describes careful Standard (Bangkok) Thai, not regional varieties."
+  ],
+  "license": "copyrighted",
+  "access_status": "full_text",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M21",
+   "M20"
+  ]
+ },
+ {
+  "key": "Abramson1979ICPhS",
+  "title": "Lexical tone and sentence prosody in Thai",
+  "authors": "Abramson, Arthur S.",
+  "year": 1979,
+  "url": "https://www.coli.uni-saarland.de/Phonetics/icphs/ICPhS1979/p9.2_380.pdf",
+  "doi_isbn": "",
+  "source_type": "empirical",
+  "tier": "A",
+  "key_findings": [
+   "Tones divide into 'dynamic' (falling, rising: rapid F0 movement) and 'static' (high, mid, low: slow movements).",
+   "Citation forms are the 'ideal' tone shapes; in running speech neighbouring tones cause coarticulation (e.g. first of two falling tones falls less far).",
+   "Certain unstressed CV syllables with short /a/ are normally toneless or neutralised to mid in running speech.",
+   "Three terminal junctures: rising (surprise, doubt, question), sustained (syntactic breaks, final syllable prolonged) and falling (sentence ends).",
+   "Sentence-final particles are prime carriers of terminal junctures; their 'lexical' tone is often overridden by sentence intonation (following Henderson 1949).",
+   "Sentence accent = syllable lengthening + tone contour approaching the ideal shape + amplitude increase."
+  ],
+  "practical_applications": [
+   "Put attitude/question melody on the final particle, not on content words.",
+   "Sentence-final content words drop lower in F0: a TTS that keeps a full high 'citation' fall on the last word sounds read-aloud.",
+   "Emphasis = length + clear tone shape + loudness, not raised pitch."
+  ],
+  "limitations": [
+   "Small corpus (one dialogue, one monologue), mostly auditory; author calls observations preliminary.",
+   "Pages 380-385 read; final page with Table 2 and conclusions not read."
+  ],
+  "license": "copyrighted (ICPhS proceedings archive)",
+  "access_status": "full_text",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M21",
+   "M20"
+  ]
+ },
+ {
+  "key": "PotisukHarperGandour1996",
+  "title": "Using stress to disambiguate spoken Thai sentences containing syntactic ambiguity",
+  "authors": "Potisuk, Siripong; Harper, Mary P.; Gandour, Jack",
+  "year": 1996,
+  "url": "https://www.isca-archive.org/icslp_1996/potisuk96_icslp.pdf",
+  "doi_isbn": "10.21437/ICSLP.1996-209",
+  "source_type": "empirical",
+  "tier": "A",
+  "key_findings": [
+   "Stress in connected Thai classified from rhyme duration, mean F0, F0 SD, mean energy and energy SD.",
+   "Rhyme duration is a better correlate of stress than nucleus or whole syllable.",
+   "Monosyllabic content words are strongly stressed; grammatical words/clitics are weakly stressed unless emphasised.",
+   "A bisyllabic noun compound has weak-strong stress, a subject-verb sequence strong-strong: stress disambiguates structure."
+  ],
+  "practical_applications": [
+   "Particles and function words (ก็, ที่, ของ, จะ) should be light in VO; content words carry weight.",
+   "Compound nouns (e.g. แว่นตา, สายตา) read weak-strong; reading them strong-strong can change parsing."
+  ],
+  "limitations": [
+   "Five speakers, read lab sentences; classifier accuracy dropped with speaker-independent normalisation."
+  ],
+  "license": "copyrighted (ISCA archive, open access)",
+  "access_status": "full_text",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M21",
+   "M20"
+  ]
+ },
+ {
+  "key": "Luksaneeyanawin1998",
+  "title": "Intonation in Thai (in Hirst & Di Cristo, eds., Intonation Systems: A Survey of Twenty Languages, pp. 376-394)",
+  "authors": "Luksaneeyanawin, Sudaporn",
+  "year": 1998,
+  "url": "",
+  "doi_isbn": "",
+  "source_type": "textbook",
+  "tier": "A",
+  "key_findings": [
+   "Per secondary summaries: three intonation classes in Thai - Fall (finality), Rise (non-finality/question) and Convoluted (contrariness, emphasis) - superimposed on the five lexical tones.",
+   "Builds on the author's 1983 Edinburgh PhD thesis 'Intonation in Thai'."
+  ],
+  "practical_applications": [
+   "Use three melody labels (fall / rise / convoluted) in voice direction rather than English-style pitch accents."
+  ],
+  "limitations": [
+   "Not read; findings come only from search snippets and a computational paper (Charnvivit et al. 2003) that uses the classes."
+  ],
+  "license": "copyrighted",
+  "access_status": "search_summary",
+  "verification_status": "unverified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M21",
+   "M20"
+  ]
+ },
+ {
+  "key": "Charnvivit2003",
+  "title": "F0 feature extraction by polynomial regression function for monosyllabic Thai tone recognition / intonation pattern recognition (Eurospeech 2003, co-author Luksaneeyanawin)",
+  "authors": "Charnvivit, P., et al.",
+  "year": 2003,
+  "url": "https://www.isca-archive.org/eurospeech_2003/charnvivit03_eurospeech.html",
+  "doi_isbn": "",
+  "source_type": "empirical",
+  "tier": "A",
+  "key_findings": [
+   "States there are three classes of intonation pattern in Thai: Fall, Rise and Convolution."
+  ],
+  "practical_applications": [
+   "Supports the three-class intonation vocabulary for voice direction."
+  ],
+  "limitations": [
+   "Only the search snippet was seen; exact title not confirmed."
+  ],
+  "license": "copyrighted (ISCA archive)",
+  "access_status": "search_summary",
+  "verification_status": "unverified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M21"
+  ]
+ },
+ {
+  "key": "Gandour1997BrainLang",
+  "title": "Interaction between tone and intonation in Thai after unilateral brain damage",
+  "authors": "Gandour, Jack, et al.",
+  "year": 1997,
+  "url": "https://bvbvf1.bib-bvb.de/vufind/PrimoRecord/cdi_proquest_miscellaneous_85656600",
+  "doi_isbn": "",
+  "source_type": "empirical",
+  "tier": "A",
+  "key_findings": [
+   "Tones in sentence-final position were significantly lower in F0 than in sentence-initial or -medial position, for normal and brain-damaged speakers."
+  ],
+  "practical_applications": [
+   "Expect and allow final lowering; do not 'correct' a TTS that lowers the last word as long as the tone shape is kept."
+  ],
+  "limitations": [
+   "Search summary only; sample and clinical focus not checked."
+  ],
+  "license": "copyrighted",
+  "access_status": "search_summary",
+  "verification_status": "unverified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M21"
+  ]
+ },
+ {
+  "key": "Gandour1993Coartic",
+  "title": "Anticipatory tonal coarticulation in Thai noun compounds after unilateral brain damage",
+  "authors": "Gandour, Jack; Ponglorpisit, S.; Dechongkit, S.; et al.",
+  "year": 1993,
+  "url": "https://bvbvf1.bib-bvb.de/vufind/PrimoRecord/cdi_proquest_miscellaneous_75898568",
+  "doi_isbn": "",
+  "source_type": "empirical",
+  "tier": "A",
+  "key_findings": [
+   "Brain and Language 45:1-20: the falling tone's pitch height and slope were affected by the following tone (anticipatory coarticulation) in noun compounds."
+  ],
+  "practical_applications": [
+   "Tone shapes in compounds legitimately differ from citation forms; judge a TTS by whether the word is recognisable, not by matching citation contours."
+  ],
+  "limitations": [
+   "Search summary only."
+  ],
+  "license": "copyrighted",
+  "access_status": "search_summary",
+  "verification_status": "unverified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M21"
+  ]
+ },
+ {
+  "key": "ZsigaNitisaroj2007",
+  "title": "Tone features, tone perception, and peak alignment in Thai (as summarised in a citing source)",
+  "authors": "Zsiga, Elizabeth; Nitisaroj, Rattima",
+  "year": 2007,
+  "url": "https://core.ac.uk/download/76378754.pdf",
+  "doi_isbn": "",
+  "source_type": "empirical",
+  "tier": "A",
+  "key_findings": [
+   "Per a citing source: any actual rise in the high tone is optional in citation form and prohibited in connected speech."
+  ],
+  "practical_applications": [
+   "A rising 'high' tone in running speech can be misheard; high tone in connected speech should be high-level/peak late."
+  ],
+  "limitations": [
+   "Only the search snippet from a citing document was seen."
+  ],
+  "license": "copyrighted",
+  "access_status": "search_summary",
+  "verification_status": "unverified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M21"
+  ]
+ },
+ {
+  "key": "Abramson1962",
+  "title": "The Vowels and Tones of Standard Thai: Acoustical Measurements and Experiments (IJAL 28(2), part 3; Indiana Univ. Research Center Publication 20)",
+  "authors": "Abramson, Arthur S.",
+  "year": 1962,
+  "url": "https://wals.info/refdb/record/Abramson-1962",
+  "doi_isbn": "",
+  "source_type": "empirical",
+  "tier": "A",
+  "key_findings": [
+   "Foundational acoustic and synthetic-speech perception study of Thai vowels and tones; based on 1960 Columbia dissertation."
+  ],
+  "practical_applications": [
+   "Baseline reference for tone shapes and vowel length."
+  ],
+  "limitations": [
+   "Bibliographic record only; measurements not read."
+  ],
+  "license": "copyrighted",
+  "access_status": "bibliographic",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M21"
+  ]
+ },
+ {
+  "key": "RI_Transcription_DLTV",
+  "title": "หลักเกณฑ์การทับศัพท์ภาษาอังกฤษ (Royal Institute English transcription rules, reproduced as DLTV Thai lesson handout, Mattayom 3)",
+  "authors": "Royal Institute / Office of the Royal Society (rules); DLTV handout compiler",
+  "year": 2022,
+  "url": "https://dltv.ac.th/utils/files/download/152744",
+  "doi_isbn": "",
+  "source_type": "docs",
+  "tier": "S",
+  "key_findings": [
+   "Vowels transcribed from the English dictionary pronunciation; consonants by a fixed table.",
+   "Silent letters take ์ (horn = ฮอร์น, world = เวิลด์).",
+   "ไม้ไต่คู้ used to distinguish from Thai words (log = ล็อก) or to show syllabification.",
+   "No tone marks in transcriptions, except where the word would clash with a Thai word (coke = โค้ก, coma = โคม่า).",
+   "Double final consonants: drop one in general words (football = ฟุตบอล) but keep both with ์ in technical terms/proper names (cell = เซลล์).",
+   "Hyphenated and open compounds are written joined (cross-stitch = ครอสสติตช์, night club = ไนต์คลับ).",
+   "Long-established loanwords in the RI dictionary keep their spelling."
+  ],
+  "practical_applications": [
+   "RI spelling is a WRITTEN standard and deliberately omits tones: a TTS respelling may add tone marks (spell as said) but subtitles should keep RI/brand spelling."
+  ],
+  "limitations": [
+   "Secondary reproduction in a school handout; consonant/vowel tables were referred to but the extracted text did not include them."
+  ],
+  "license": "public educational document (DLTV); rules by ORST",
+  "access_status": "full_text",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M21"
+  ]
+ },
+ {
+  "key": "ORST_Punctuation",
+  "title": "หลักเกณฑ์การใช้เครื่องหมายวรรคตอนและเครื่องหมายอื่น ๆ (Office of the Royal Society page)",
+  "authors": "สำนักงานราชบัณฑิตยสภา",
+  "year": null,
+  "url": "http://legacy.orst.go.th/?page_id=10365",
+  "doi_isbn": "",
+  "source_type": "docs",
+  "tier": "S",
+  "key_findings": [
+   "Per search summary of the ORST page: ฯลฯ at the end of a list is read 'ละ' or 'และอื่น ๆ'; in the middle (ก ฯลฯ ฮ) it is read 'ละถึง'."
+  ],
+  "practical_applications": [
+   "Normaliser: ฯลฯ followed by more text → 'ละถึง'; at end → 'และอื่น ๆ' (or 'ละ')."
+  ],
+  "limitations": [
+   "The ORST page refused connection; only the search engine summary was seen. Year unknown (0)."
+  ],
+  "license": "government publication",
+  "access_status": "search_summary",
+  "verification_status": "unverified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M21"
+  ]
+ },
+ {
+  "key": "Wiktionary_TH_ฯลฯ",
+  "title": "ฯลฯ - วิกิพจนานุกรม",
+  "authors": "Wiktionary contributors",
+  "year": 2026,
+  "url": "https://th.wiktionary.org/wiki/ฯลฯ",
+  "doi_isbn": "",
+  "source_type": "encyclopedia",
+  "tier": "E",
+  "key_findings": [
+   "Gives readings 'ละ' (omitting text at the end) and 'ละถึง' (omitting text in the middle); cites no source."
+  ],
+  "practical_applications": [
+   "Corroborates the ORST readings."
+  ],
+  "limitations": [
+   "Community source, no citations; does not list 'และอื่น ๆ'."
+  ],
+  "license": "CC BY-SA",
+  "access_status": "full_text",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M21"
+  ]
+ },
+ {
+  "key": "Marketeer_HOYA2025",
+  "title": "HOYA ตอกย้ำผู้นำ ตลาดเลนส์แว่นตา เปิดตัวนวัตกรรมเลนส์โปรเกรสซีฟสุดล้ำ ...",
+  "authors": "Marketeer Online (press release content from ไทยโฮยา เลนซ์)",
+  "year": 2025,
+  "url": "https://marketeeronline.co/archives/398349",
+  "doi_isbn": "",
+  "source_type": "docs",
+  "tier": "C",
+  "key_findings": [
+   "Brand written 'HOYA (โฮยา)'; Thai company 'บริษัท ไทยโฮยา เลนซ์ จำกัด'.",
+   "Progressive lens = 'เลนส์โปรเกรสซีฟ' (one tag misspells 'โปรแกรสซีฟ').",
+   "Presbyopia = 'สายตายาวตามอายุ'; myopia = 'สายตาสั้น'; astigmatism = 'เอียง' ('สายตาสั้นและเอียง')."
+  ],
+  "practical_applications": [
+   "Brand-verified Thai spelling of HOYA is โฮยา (no tone mark), not โฮย่า."
+  ],
+  "limitations": [
+   "Trade media rewrite of a press release; spelling of the spoken tone not shown (RI style omits tone marks)."
+  ],
+  "license": "copyrighted",
+  "access_status": "full_text",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M21"
+  ]
+ },
+ {
+  "key": "ThaiPR_Essilor2020",
+  "title": "เอสซีลอร์ เปิดตัวนวัตกรรมเลนส์โปรเกรสซีฟ “Varilux Comfort® Max” รุ่นล่าสุดเพื่อตอบโจทย์ชีวิตยุคนิวนอร์มอล",
+  "authors": "บริษัท เอสซีลอร์ ดิสทริบิวชั่น (ประเทศไทย) จำกัด via Vivaldi Integrated PR",
+  "year": 2020,
+  "url": "https://www.thaipr.net/?p=3005510",
+  "doi_isbn": "",
+  "source_type": "docs",
+  "tier": "C",
+  "key_findings": [
+   "Issuer is Essilor Distribution (Thailand) itself.",
+   "Thai spellings: เอสซีลอร์, เอสซีลอร์ กรุ๊ป, วารีลักส์, วารีลักส์ คอมฟอร์ต แม็กซ์, เลนส์โปรเกรสซีฟ.",
+   "Target group described as having 'ปัญหาสายตายาวตามอายุ'."
+  ],
+  "practical_applications": [
+   "Brand-verified readings for Essilor, Varilux and Comfort Max."
+  ],
+  "limitations": [
+   "2020 release; brand spelling of Varilux varies (ส์ here, ซ์ in Naewna 2019)."
+  ],
+  "license": "copyrighted",
+  "access_status": "full_text",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M21"
+  ]
+ },
+ {
+  "key": "Naewna_Essilor2019",
+  "title": "Naewna lady section: Essilor Varilux 60th anniversary / NEW YEAR NEW YOU campaign",
+  "authors": "Naewna (press content from Essilor Thailand)",
+  "year": 2019,
+  "url": "https://www.naewna.com/lady/457704",
+  "doi_isbn": "",
+  "source_type": "docs",
+  "tier": "C",
+  "key_findings": [
+   "Spellings: เอสซีลอร์, วารีลักซ์, เลนส์โปรเกรสซีฟ; website www.essilor.co.th."
+  ],
+  "practical_applications": [
+   "Second brand-sourced spelling of Varilux (วารีลักซ์)."
+  ],
+  "limitations": [
+   "Newspaper reproduction of press content."
+  ],
+  "license": "copyrighted",
+  "access_status": "full_text",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M21"
+  ]
+ },
+ {
+  "key": "Brandbuffet_ZEISS2021",
+  "title": "ZEISS 175 years [PR] (Brand Buffet)",
+  "authors": "Brand Buffet (PR; quotes MD of Carl Zeiss (Thailand))",
+  "year": 2021,
+  "url": "https://www.brandbuffet.in.th/2021/11/zeiss-175-years/",
+  "doi_isbn": "",
+  "source_type": "docs",
+  "tier": "C",
+  "key_findings": [
+   "Body text writes 'ไซส์ส (ZEISS)' and company 'บริษัท คาร์ล ไซส์ส (ประเทศไทย)'; the tag spells 'ไซสส์'."
+  ],
+  "practical_applications": [
+   "Brand's Thai written form is ไซส์ส; as TTS input it risks an extra final -t, so a separate spoken respelling is needed."
+  ],
+  "limitations": [
+   "Labelled [PR] but issuer not stated explicitly; inconsistent spellings within the page."
+  ],
+  "license": "copyrighted",
+  "access_status": "full_text",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M21"
+  ]
+ },
+ {
+  "key": "ZEISS_TH_GTC",
+  "title": "TH Carl Zeiss General Terms and Conditions (bilingual) - ZEISS asset downloads",
+  "authors": "Carl Zeiss Co., Ltd. (Thailand)",
+  "year": null,
+  "url": "https://asset-downloads.zeiss.com/catalogs/download/cco/05a32bf2-5f5b-4531-8f88-83bf6bbb9146/TH_Carl-Zeiss-GTC-Sales_Bilingual.pdf.pdf",
+  "doi_isbn": "",
+  "source_type": "docs",
+  "tier": "C",
+  "key_findings": [
+   "Per search summary: Thai legal documents name the company 'บริษัท คาร์ล ไซส์ส จำกัด' / 'คาร์ล ไซส์ส (ประเทศไทย)', with a variant 'คารล์ ไซสส์'."
+  ],
+  "practical_applications": [
+   "Confirms ZEISS's own Thai form uses ไซส์ส."
+  ],
+  "limitations": [
+   "Search summary only; PDF not opened."
+  ],
+  "license": "copyrighted",
+  "access_status": "search_summary",
+  "verification_status": "unverified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M21"
+  ]
+ },
+ {
+  "key": "Dailynews_Transitions",
+  "title": "Daily News article on photochromic ('auto') lenses",
+  "authors": "Daily News (Thailand)",
+  "year": null,
+  "url": "https://www.dailynews.co.th/news/4639274/",
+  "doi_isbn": "",
+  "source_type": "docs",
+  "tier": "D",
+  "key_findings": [
+   "Body text spells Transitions as 'ทรานซิชั่น' ('เลนส์ทรานซิชั่น', also called 'เลนส์ออโต้'); no brand representative quoted."
+  ],
+  "practical_applications": [
+   "Shows common Thai written form; not brand-verified."
+  ],
+  "limitations": [
+   "News article, not brand; date not recorded."
+  ],
+  "license": "copyrighted",
+  "access_status": "full_text",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M21"
+  ]
+ },
+ {
+  "key": "ODOptical_Rx",
+  "title": "(How to) อ่านใบตรวจค่าสายตาอย่างไรให้เหมือนผู้เชี่ยวชาญ - หมอแว่น",
+  "authors": "OD Optical (Thai optical shop)",
+  "year": null,
+  "url": "https://odoptical.com/eyeglass-prescription/",
+  "doi_isbn": "",
+  "source_type": "practitioner",
+  "tier": "D",
+  "key_findings": [
+   "SPH: minus = 'ค่าสายตาสั้น (Myopia)', plus = 'ค่าสายตายาว (Hyperopia)'; unit ไดออปเตอร์.",
+   "CYL = 'ค่าสายตาเอียง'; AXIS = 'องศาสายตาเอียง' / 'องศาแกนเอียง'.",
+   "ADD = 'ค่า Add', for 'สายตายาวตามวัย (Presbyopia)', +0.75 to +3.00 D.",
+   "-2.00 D is 'สายตาสั้นสองจุดศูนย์ไดออปเตอร์' but commonly said 'สั้นสองร้อย'."
+  ],
+  "practical_applications": [
+   "Shop VO should say powers in 'hundreds' (สั้นสองร้อย, เอียงเจ็ดสิบห้า) for customers; decimal reading for technical content."
+  ],
+  "limitations": [
+   "Practitioner blog of one shop; not an optometry council document."
+  ],
+  "license": "copyrighted",
+  "access_status": "full_text",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M21"
+  ]
+ },
+ {
+  "key": "Putuchon_Rx",
+  "title": "อ่านใบวัดสายตา SPH CYL AXIS ADD PD",
+  "authors": "putuchon.com",
+  "year": null,
+  "url": "https://www.putuchon.com/post/อ่านใบวัดสายตา-sph-cyl-axis-add-pd",
+  "doi_isbn": "",
+  "source_type": "practitioner",
+  "tier": "D",
+  "key_findings": [
+   "Thai technical glosses: SPH = 'กำลังทรงกลม', CYL = 'กำลังทรงกระบอก', AXIS = 'แกน' (1-180 องศา), ADD = 'กำลังบวกที่เพิ่ม...เพื่อช่วยการมองใกล้', PD = 'ระยะห่างระหว่างรูม่านตาสองข้าง' (มิลลิเมตร).",
+   "Minus lens = เลนส์กระจายแสง, plus = เลนส์รวมแสง."
+  ],
+  "practical_applications": [
+   "Thai-only glosses for VO when English abbreviations should not be read."
+  ],
+  "limitations": [
+   "Practitioner page; no spoken forms given."
+  ],
+  "license": "copyrighted",
+  "access_status": "full_text",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M21"
+  ]
+ },
+ {
+  "key": "ThWiki_Optometry",
+  "title": "ทัศนมาตรศาสตร์ - วิกิพีเดีย",
+  "authors": "Wikipedia contributors",
+  "year": 2026,
+  "url": "https://th.wikipedia.org/wiki/ทัศนมาตรศาสตร์",
+  "doi_isbn": "",
+  "source_type": "encyclopedia",
+  "tier": "E",
+  "key_findings": [
+   "Optometry = ทัศนมาตรศาสตร์, a โรคศิลปะ profession; practitioner = 'ผู้ประกอบโรคศิลปะโดยอาศัยทัศนมาตรศาสตร์'.",
+   "Cites ประกาศกระทรวงสาธารณสุข ฉบับที่ ๒ (พ.ศ. ๒๕๔๖); mentions ราชวิทยาลัยจักษุแพทย์แห่งประเทศไทย."
+  ],
+  "practical_applications": [
+   "Use ทัศนมาตรศาสตร์ / นักทัศนมาตร (common) and จักษุแพทย์ in Thai scripts instead of English."
+  ],
+  "limitations": [
+   "Article tagged as needing citations; no council document read."
+  ],
+  "license": "CC BY-SA",
+  "access_status": "full_text",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M21"
+  ]
+ },
+ {
+  "key": "Wiktionary_EN_IPA",
+  "title": "Wiktionary entries: myopia, astigmatism, ophthalmology, titanium, acetate, presbyopia, hyperopia",
+  "authors": "Wiktionary contributors",
+  "year": 2026,
+  "url": "https://en.wiktionary.org/wiki/myopia",
+  "doi_isbn": "",
+  "source_type": "encyclopedia",
+  "tier": "E",
+  "key_findings": [
+   "myopia UK /maɪˈəʊ.pɪ.ə/, US /maɪˈoʊ.pi.ə/.",
+   "astigmatism US /əˈstɪɡmətɪzm̩/.",
+   "ophthalmology UK /ˌɒfθə(l)ˈmɒləd͡ʒi/ ~ /ˌɒpθə(l)ˈmɒləd͡ʒi/; US /ˌɑpθə(l)ˈmɑləd͡ʒi/.",
+   "titanium US /taɪˈteɪni.əm/ ~ /tɪˈteɪni.əm/; Thai translation ไทเทเนียม.",
+   "acetate /ˈæsɪteɪ̯t/.",
+   "presbyopia and hyperopia entries had no English IPA."
+  ],
+  "practical_applications": [
+   "English IPA basis for RI-style transcription checks."
+  ],
+  "limitations": [
+   "Cambridge and Oxford Learner's dictionaries returned HTTP 403, so the planned Tier-B dictionary IPA could not be read; community source."
+  ],
+  "license": "CC BY-SA",
+  "access_status": "full_text",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M21"
+  ]
+ },
+ {
+  "key": "Wikipedia_ThaiScript",
+  "title": "Thai script - Wikipedia (tone rules section)",
+  "authors": "Wikipedia contributors",
+  "year": 2026,
+  "url": "https://en.wikipedia.org/wiki/Thai_script",
+  "doi_isbn": "",
+  "source_type": "encyclopedia",
+  "tier": "E",
+  "key_findings": [
+   "Class lists: high ข ฃ ฉ ผ ฝ ถ ฐ ศ ษ ส ห; mid ก จ ฎ ฏ ด ต บ ป อ; low = the rest.",
+   "Tone table by class x (live / dead short / dead long / mai ek / mai tho / mai tri / mai chattawa).",
+   "Low class: dead short → high, dead long → falling.",
+   "ห นำ before low sonorants (ง ญ น ม ว ย ร ล); อ นำ only in อย่า อยาก อย่าง อยู่."
+  ],
+  "practical_applications": [
+   "Lookup table for checking a TTS tone error against spelling."
+  ],
+  "limitations": [
+   "Tone section has no inline citations; first 100k characters read."
+  ],
+  "license": "CC BY-SA",
+  "access_status": "full_text",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M21"
+  ]
+ },
+ {
+  "key": "IwasakiHorie2000",
+  "title": "Creating speech register in Thai conversation",
+  "authors": "Iwasaki, Shoichi; Ingkaphirom Horie, Preeya",
+  "year": 2000,
+  "url": "https://www.cambridge.org/core/journals/language-in-society/article/creating-speech-register-in-thai-conversation/92F4296DA273C3FEEFF0D464BAAE0286",
+  "doi_isbn": "10.1017/S0047404500004024",
+  "source_type": "empirical",
+  "tier": "A",
+  "key_findings": [
+   "Register is built from formality-marking particles, pronouns, names, kin terms, titles and pragmatic particles.",
+   "Formality is a matter of degree, from the frequency and combination of these signs.",
+   "Strangers in unfamiliar situations negotiate a middle register."
+  ],
+  "practical_applications": [
+   "Register in a script is set mainly by particle density, pronoun/kin-term choice and titles, not by vocabulary alone.",
+   "Shop VO to unknown customers = middle register (polite particle + kin/title terms, no slang)."
+  ],
+  "limitations": [
+   "Abstract only; four conversations analysed."
+  ],
+  "license": "copyrighted",
+  "access_status": "abstract",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M21",
+   "M20"
+  ]
+ },
+ {
+  "key": "Prasithrathsint2001",
+  "title": "Syntactic Distribution and Communicative Function of the /kh/ Polite Particles in Thai",
+  "authors": "Prasithrathsint, Amara",
+  "year": 2001,
+  "url": "https://so04.tci-thaijo.org/index.php/joling/article/view/180922",
+  "doi_isbn": "",
+  "source_type": "empirical",
+  "tier": "A",
+  "key_findings": [
+   "Article on distribution and function of ครับ/ค่ะ/คะ-family particles (Language and Linguistics 20(1):11-23)."
+  ],
+  "practical_applications": [
+   "Key reference to read next for particle placement rules."
+  ],
+  "limitations": [
+   "PDF is an image scan without text layer; content not read."
+  ],
+  "license": "copyrighted",
+  "access_status": "bibliographic",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M21"
+  ]
+ },
+ {
+  "key": "Maklai2017",
+  "title": "The Use of the Thai Final Particle Na by Japanese Learners of Thai",
+  "authors": "Maklai, Sumintra; Ratitamkul, Theeraporn; Sirikanerat, Thanasak",
+  "year": 2017,
+  "url": "https://digital.car.chula.ac.th/manusya/vol20/iss2/2",
+  "doi_isbn": "",
+  "source_type": "empirical",
+  "tier": "A",
+  "key_findings": [
+   "Thai National Corpus: นะ has three functions - softening, emphasising, topic marking.",
+   "Native speakers and learners used นะ most for emphasis, least for topic marking."
+  ],
+  "practical_applications": [
+   "นะ is not only a softener: placed after a topic ('แว่นตัวนี้นะ ...') it marks the topic - useful for natural VO pacing."
+  ],
+  "limitations": [
+   "Abstract only; small pair-discussion sample (10+10)."
+  ],
+  "license": "copyrighted (open access journal)",
+  "access_status": "abstract",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M21"
+  ]
+ },
+ {
+  "key": "Jitpaisarnwattana2018",
+  "title": "Gender-Differential Tendencies in LINE Use: A Case of Thailand",
+  "authors": "Jitpaisarnwattana, Napat",
+  "year": 2018,
+  "url": "https://so04.tci-thaijo.org/index.php/jsel/article/download/159701/115439",
+  "doi_isbn": "",
+  "source_type": "empirical",
+  "tier": "A",
+  "key_findings": [
+   "3,384 LINE messages, 13 colleagues: women used final particles (นะ จ้ะ/จ้า ล่ะ) more; men used more stickers.",
+   "คะ/ค่ะ is described as used by females; some men reported using kha playfully/flirtatiously with women.",
+   "นะ signals that a response is expected and softens the tone.",
+   "Differences are socially constructed and shaped by the platform, not determined by gender alone."
+  ],
+  "practical_applications": [
+   "Particle choice signals persona, not just biological sex; avoid stereotyped 'female = many particles' writing."
+  ],
+  "limitations": [
+   "One workplace chat group; written chat not speech."
+  ],
+  "license": "copyrighted (open access journal)",
+  "access_status": "full_text",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M21"
+  ]
+ },
+ {
+  "key": "Cooke1989",
+  "title": "Thai sentence particles: forms, meanings and formal-semantic variations (Pacific Linguistics A-80)",
+  "authors": "Cooke, Joseph R.",
+  "year": 1989,
+  "url": "https://openresearch-repository.anu.edu.au/bitstream/1885/145098/1/PL-A80.pdf",
+  "doi_isbn": "",
+  "source_type": "textbook",
+  "tier": "A",
+  "key_findings": [
+   "Foundational description of Thai sentence particles including a chapter on the forms and meanings of นะ (per search summary)."
+  ],
+  "practical_applications": [
+   "Reference for particle meanings beyond craft knowledge."
+  ],
+  "limitations": [
+   "Search summary only; PDF not opened this session."
+  ],
+  "license": "CC BY-SA (Pacific Linguistics open archive) - not checked",
+  "access_status": "search_summary",
+  "verification_status": "unverified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M21"
+  ]
+ },
+ {
+  "key": "Rutherford2022",
+  "title": "Thai sentence-final imperative discourse particles (JSEALS 15.1)",
+  "authors": "Rutherford, Attapol T.",
+  "year": 2022,
+  "url": "https://evols.library.manoa.hawaii.edu/items/401b2b4b-6e3e-4e62-8216-dea7a8911aeb",
+  "doi_isbn": "",
+  "source_type": "empirical",
+  "tier": "A",
+  "key_findings": [
+   "Per abstract snippet: distribution of imperative particles (incl. นะ) depends on illocutionary force and Searlean felicity conditions."
+  ],
+  "practical_applications": [
+   "CTA lines: choose imperative particle by speech act (request vs. suggestion vs. urging)."
+  ],
+  "limitations": [
+   "Search summary only; author name as shown by search, not confirmed on the article page."
+  ],
+  "license": "CC BY (JSEALS) - not checked",
+  "access_status": "search_summary",
+  "verification_status": "unverified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M21"
+  ]
+ },
+ {
+  "key": "Raksapong2011_SiamU",
+  "title": "ระดับภาษาและการใช้ภาษาที่ถูกต้อง (course 113-108 การใช้ภาษาไทยเพื่อการสื่อสาร, week 3)",
+  "authors": "อ.รักษ์พงศ์ ธรรมผุสนา, Siam University",
+  "year": 2011,
+  "url": "https://gened.siam.edu/wp-content/uploads/2018/07/thaic-handout-03.pdf",
+  "doi_isbn": "",
+  "source_type": "course",
+  "tier": "B",
+  "key_findings": [
+   "Register = gradation of wording chosen by occasion, relationship and content.",
+   "Formal: พิธีการ (ceremony, high literature) and ทางการ/มาตรฐานราชการ (official letters, theses, speeches).",
+   "Informal: กึ่งทางการ (polite but not strict; business, people one does not know well or who are older/senior, lectures, light writing) and สนทนา / กันเอง levels."
+  ],
+  "practical_applications": [
+   "Shop VO and ads sit at กึ่งทางการ; Mint & Tao dialogue at สนทนา/กันเอง."
+  ],
+  "limitations": [
+   "Teaching handout (2011 semester 1/2554); school-grammar taxonomy, not sociolinguistic research."
+  ],
+  "license": "copyrighted",
+  "access_status": "full_text",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M21"
+  ]
+ },
+ {
+  "key": "Trakulkasemsuk2018",
+  "title": "Roles of English in facial cosmetic advertisements in Thai magazines",
+  "authors": "Trakulkasemsuk, Wannapa; Tontiwatkul, Tisa",
+  "year": 2018,
+  "url": "https://so04.tci-thaijo.org/index.php/jsel/article/view/159271",
+  "doi_isbn": "",
+  "source_type": "empirical",
+  "tier": "A",
+  "key_findings": [
+   "In 100 Thai cosmetic print ads, English is 'not really used for presenting meaning' but to catch attention, enhance product image/value and signal modernity."
+  ],
+  "practical_applications": [
+   "English brand/tech words in our ads work as image signals - keep them few and say them clearly; carry the actual message in Thai."
+  ],
+  "limitations": [
+   "Abstract only; print ads, one product category."
+  ],
+  "license": "copyrighted",
+  "access_status": "abstract",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M21"
+  ]
+ },
+ {
+  "key": "Kunarawong2014",
+  "title": "Thai-English Code Mixing and Code Switching in Cosmopolitan Magazine",
+  "authors": "Kunarawong (as listed by search)",
+  "year": 2014,
+  "url": "https://so04.tci-thaijo.org/index.php/NJLC/article/view/46947",
+  "doi_isbn": "",
+  "source_type": "empirical",
+  "tier": "A",
+  "key_findings": [
+   "Intrasentential code mixing was the most frequent; no tag switching found (per search snippet)."
+  ],
+  "practical_applications": [
+   "Thai copy typically mixes single English words inside Thai sentences - the case TTS handles worst."
+  ],
+  "limitations": [
+   "Search summary only."
+  ],
+  "license": "copyrighted",
+  "access_status": "search_summary",
+  "verification_status": "unverified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M21"
+  ]
+ },
+ {
+  "key": "Khotchaphet2026",
+  "title": "Linguistic Devices in Digital Tourism Advertisements by the Tourism Authority of Thailand (TAT): A Discourse Analysis Perspective",
+  "authors": "Khotchaphet, Suwatchai; Thong-in, Naphasanan",
+  "year": 2026,
+  "url": "https://so05.tci-thaijo.org/index.php/Ratchaphruekjournal/article/view/285263",
+  "doi_isbn": "",
+  "source_type": "empirical",
+  "tier": "A",
+  "key_findings": [
+   "30 TAT digital ads (Facebook, web, YouTube, 2022-2025): lexical selection ~42.5%, speech acts ~17.5%, claiming ~9.9% of devices.",
+   "Four strategies: creating atmosphere/identity, directing action, establishing credibility/authority, framing perspectives."
+  ],
+  "practical_applications": [
+   "Ad script checklist: one mood/identity line, one clear action line, one credibility line."
+  ],
+  "limitations": [
+   "Abstract only; tourism, not retail optics."
+  ],
+  "license": "copyrighted",
+  "access_status": "abstract",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M21"
+  ]
+ },
+ {
+  "key": "Leelaharattanarak2016",
+  "title": "Socio-cultural factors influencing face manifestation and communicative behaviour in Thai service encounters",
+  "authors": "Leelaharattanarak, Nattana",
+  "year": 2016,
+  "url": "https://so03.tci-thaijo.org/index.php/JLC/article/view/240497",
+  "doi_isbn": "",
+  "source_type": "review",
+  "tier": "A",
+  "key_findings": [
+   "เกรงใจ (consideration for others) is a key factor in Thai service communication.",
+   "Role/socio-economic differences between agents and customers shape communication; agents' customer-facing face can conflict with organisational face."
+  ],
+  "practical_applications": [
+   "Shop VO should leave the customer room to decide (no hard push); offers phrased as invitations."
+  ],
+  "limitations": [
+   "Abstract only; hotel/travel settings."
+  ],
+  "license": "copyrighted",
+  "access_status": "abstract",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M21"
+  ]
+ },
+ {
+  "key": "Elderspeak2021",
+  "title": "Understanding Elderspeak: An Evolutionary Concept Analysis (Innovation in Aging)",
+  "authors": "",
+  "year": 2021,
+  "url": "https://pubmed.ncbi.nlm.nih.gov/34476301/",
+  "doi_isbn": "",
+  "source_type": "review",
+  "tier": "A",
+  "key_findings": [
+   "Per search summary: studies disagree whether elderspeak helps or hinders comprehension; exaggerated prosody reduces comprehension.",
+   "Elderspeak is generally perceived as patronising; in dementia it increases resistiveness to care."
+  ],
+  "practical_applications": [
+   "For older customers: slower, clearer and well-paced speech is fine; sing-song exaggerated pitch and baby-talk terms are not."
+  ],
+  "limitations": [
+   "Search summary only (PMC page blocked by bot check); Western care settings; authors not recorded."
+  ],
+  "license": "open access (PMC) - not checked",
+  "access_status": "search_summary",
+  "verification_status": "unverified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M21",
+   "M20"
+  ]
+ },
+ {
+  "key": "Lin2014",
+  "title": "The text analysis and processing of Thai language text to speech conversion system",
+  "authors": "Lin; Yang; Zhao (Yunnan University)",
+  "year": 2014,
+  "url": "https://manuscript.isc.ac/Inventory/49/134238.htm",
+  "doi_isbn": "10.1109/ISCSLP.2014.6936630",
+  "source_type": "empirical",
+  "tier": "A",
+  "key_findings": [
+   "Thai texts often contain numbers, abbreviations and currency symbols; the two core problems are detecting non-standard words and disambiguating their reading."
+  ],
+  "practical_applications": [
+   "Normaliser needs context rules (e.g. 6/6 vision vs 6/6 date)."
+  ],
+  "limitations": [
+   "Abstract-level record via search only."
+  ],
+  "license": "copyrighted",
+  "access_status": "search_summary",
+  "verification_status": "unverified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M21",
+   "M20"
+  ]
+ },
+ {
+  "key": "JaiTTS2026",
+  "title": "JaiTTS: A Thai Voice Cloning Model",
+  "authors": "Karnjanaekarin, J.; Trakuekul, P.; Panitsrisit, N.; Sumanakul, S.; Nitayasomboon, V.; Guntasin, N.; Denkavin, T.; Rutherford, A. T.",
+  "year": 2026,
+  "url": "https://arxiv.org/abs/2604.27607",
+  "doi_isbn": "arXiv:2604.27607",
+  "source_type": "empirical",
+  "tier": "B",
+  "key_findings": [
+   "Handles numerals and Thai-English code-switching without explicit text normalisation.",
+   "Short-utterance CER 1.94% vs human ground truth 1.98%; won 283 / lost 58 of 400 pairwise comparisons against commercial systems."
+  ],
+  "practical_applications": [
+   "Modern end-to-end TTS can read raw numbers, but explicit normalisation stays the safe default for prices, powers and dates whose reading is a choice (casual vs formal)."
+  ],
+  "limitations": [
+   "Preprint abstract only; normalisation errors by category not reported in the abstract."
+  ],
+  "license": "arXiv licence (not checked)",
+  "access_status": "abstract",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M21",
+   "M20"
+  ]
+ },
+ {
+  "key": "Geng2025",
+  "title": "Empowering Global Voices: A Data-Efficient, Phoneme-Tone Adaptive Approach to High-Fidelity Speech Synthesis",
+  "authors": "Geng, Yizhong; Xu, Jizhuo; Liang, Zeyu; Yang, Jinghan; Shi, Xiaoyi; Shen, Xiaoyu",
+  "year": 2025,
+  "url": "https://arxiv.org/abs/2504.07858",
+  "doi_isbn": "arXiv:2504.07858",
+  "source_type": "empirical",
+  "tier": "B",
+  "key_findings": [
+   "Uses Thai as a case study where 'intricate phonetic rules and sparse resources' are addressed via a phoneme-tone adaptive approach; claims state-of-the-art subjective/objective scores."
+  ],
+  "practical_applications": [
+   "Confirms that tone-aware G2P is a known Thai TTS weak point; keep respellings that force tones."
+  ],
+  "limitations": [
+   "Abstract only; details of preprocessing not read."
+  ],
+  "license": "arXiv licence (not checked)",
+  "access_status": "abstract",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M21"
+  ]
+ },
+ {
+  "key": "Pathanasin_FinalC",
+  "title": "Exploring Patterns and Challenges in English Word-Final Consonant Pronunciation among Southern Thai EFL Learners",
+  "authors": "Pathanasin (as listed by search)",
+  "year": null,
+  "url": "https://ajaclibrary.wu.ac.th/index.php/ajac/article/view/77",
+  "doi_isbn": "",
+  "source_type": "empirical",
+  "tier": "A",
+  "key_findings": [
+   "Per search summary: 27 undergraduates often dropped English final stops; voiced finals most often mispronounced or omitted; linked to Thai/Southern Thai phonology."
+  ],
+  "practical_applications": [
+   "English lines for Thai staff: mark final consonants (price, size, fifty/fifteen) and drill them; avoid words ending in clusters where a simpler word exists."
+  ],
+  "limitations": [
+   "Search summary only; small sample; year not confirmed."
+  ],
+  "license": "copyrighted",
+  "access_status": "search_summary",
+  "verification_status": "unverified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M21"
+  ]
+ },
+ {
+  "key": "Elon_ThaiMeasures",
+  "title": "Metric Units and Everyday Measures (Thai grammar page)",
+  "authors": "elon.io",
+  "year": null,
+  "url": "https://elon.io/grammar/thai/numbers/measure-units",
+  "doi_isbn": "",
+  "source_type": "practitioner",
+  "tier": "E",
+  "key_findings": [
+   "Per search summary: ครึ่งลิตร = half a litre; สองลิตรครึ่ง = two and a half litres (ครึ่ง after the unit adds a half)."
+  ],
+  "practical_applications": [
+   "Normaliser rule: N.5 + unit → N + unit + ครึ่ง (casual)."
+  ],
+  "limitations": [
+   "Search summary only; site of unknown authority. Needs a reference grammar check."
+  ],
+  "license": "unknown",
+  "access_status": "search_summary",
+  "verification_status": "unverified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M21"
+  ]
+ },
+ {
+  "key": "Srisuruk2011",
+  "title": "Politeness and pragmatic competence in Thai speakers of English (Newcastle University PhD thesis)",
+  "authors": "Srisuruk, Pairote (as listed by search)",
+  "year": 2011,
+  "url": "https://theses.ncl.ac.uk/jspui/bitstream/10443/1189/1/Srisuruk%2011.pdf",
+  "doi_isbn": "",
+  "source_type": "empirical",
+  "tier": "A",
+  "key_findings": [
+   "Per search summary: for Thai hotel workers speaking English, negative politeness was the chosen strategy in most scenarios."
+  ],
+  "practical_applications": [
+   "English staff scripts: indirect, option-giving phrasing feels natural to Thai staff."
+  ],
+  "limitations": [
+   "Search summary only; title and author inferred from the file name and snippet, not confirmed."
+  ],
+  "license": "copyrighted (open thesis repository)",
+  "access_status": "search_summary",
+  "verification_status": "unverified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M21"
+  ]
+ }
+]

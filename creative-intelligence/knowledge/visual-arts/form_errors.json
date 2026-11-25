@@ -1,0 +1,286 @@
+{
+ "_meta": {
+  "task": "form",
+  "batch": "VA1",
+  "date": "2026-11-25",
+  "note": "Numeric thresholds are DERIVED (see VALUE_AND_NOTAN.md section 5) and need calibration; form_check code in VALUE_AND_NOTAN.md section 6."
+ },
+ "errors": [
+  {
+   "id": "FE01",
+   "name": "Mud: everything mid-value",
+   "symptom": "Image looks grey and flat; nothing pops at thumbnail size.",
+   "why_it_fails": "Form and depth are carried by luminance; without value groups the first-glance gist has no structure.",
+   "how_to_detect": "form_check: mid group > 60% and thumb32_rms < 0.08; L p2-p98 span < 0.30 without an intended compressed style.",
+   "fix": "Re-plan notan; push one group darker/lighter; add full-range accents at the focal area.",
+   "source_keys": [
+    "Dupree2003",
+    "GreeneOliva2009",
+    "Gurney2019_ValueGrouping"
+   ]
+  },
+  {
+   "id": "FE02",
+   "name": "Spotty notan (scattered values)",
+   "symptom": "Many small darks/lights everywhere; eye jumps around.",
+   "why_it_fails": "Ungrouped values give many competing contrast peaks and no dominant mass.",
+   "how_to_detect": "Count connected components of the dark mask > 0.5% of the area: many (> 8, derived) with no component > 20% of the dark area.",
+   "fix": "Weld adjacent similar values into one mass; remove or lighten small darks away from focal.",
+   "source_keys": [
+    "Gurney2019_ValueGrouping",
+    "ConwayLivingstone2007"
+   ]
+  },
+  {
+   "id": "FE03",
+   "name": "Competing focal contrast",
+   "symptom": "A bright window, sign or text block outshouts the glasses.",
+   "why_it_fails": "Gaze is drawn to local contrast and edges; two equal peaks split attention.",
+   "how_to_detect": "form_check with ROI=focal: focal_share_top5_contrast < 2 x focal_area_share; saliency peak outside the focal ROI in analyze_image overlay.",
+   "fix": "Compress/dim the competitor (HTML filter, vignette), raise contrast at focal, or crop.",
+   "source_keys": [
+    "ConwayLivingstone2007",
+    "TatlerBaddeleyGilchrist2005",
+    "EinhauserKonig2003"
+   ]
+  },
+  {
+   "id": "FE04",
+   "name": "Equiluminant hero",
+   "symptom": "Subject differs from ground only by hue; shimmers or vanishes in greyscale.",
+   "why_it_fails": "Equal-luminance colours flatten form and blur position; greyscale gist loses the subject.",
+   "how_to_detect": "deltaL_focal_vs_surround < 0.05 while hue/chroma differ strongly; subject not visible in greyscale 64 px.",
+   "fix": "Separate by value (>= 0.10, hero >= 0.26 OKLab L); keep the hue idea but shift lightness.",
+   "source_keys": [
+    "Dupree2003",
+    "ISO_CIE_11664_4"
+   ]
+  },
+  {
+   "id": "FE05",
+   "name": "Clipped highlights / crushed shadows",
+   "symptom": "White blobs with no detail on lenses or skin; black holes in shadows.",
+   "why_it_fails": "Tone reproduction failed to compress highlights smoothly; detail and form are lost.",
+   "how_to_detect": "analyze_image: clipped_highlights_pct > 0.5 (excluding tiny speculars) or crushed_shadows_pct > 2 when not intended.",
+   "fix": "Regenerate with softer key, or apply a roll-off curve; protect the product area.",
+   "source_keys": [
+    "Reinhard2002",
+    "GrahamField2008"
+   ]
+  },
+  {
+   "id": "FE06",
+   "name": "HDR halo / over-local tone mapping",
+   "symptom": "Glowing halos around edges, everything equally contrasty, gritty texture.",
+   "why_it_fails": "Aggressive local compression destroys contrast hierarchy and creates false edges.",
+   "how_to_detect": "Bright/dark bands 5-30 px wide along major edges (visual check at 100%); local contrast uniform across frame (focal_share_top5_contrast close to focal_area_share).",
+   "fix": "Reduce local tone mapping/clarity; rebuild hierarchy with a global curve and vignette.",
+   "source_keys": [
+    "Reinhard2002"
+   ]
+  },
+  {
+   "id": "FE07",
+   "name": "Washed-out high key",
+   "symptom": "Light image with no real dark; figures barely visible.",
+   "why_it_fails": "High key needs a dark accent to carry focus; without it the gist has nothing to grab.",
+   "how_to_detect": "key=high and L p2 > 0.45, or thumb32_rms < 0.08 (observed on faint charcoal slides).",
+   "fix": "Darken the focal figure/accent; strengthen line weight on silhouettes.",
+   "source_keys": [
+    "GreeneOliva2009",
+    "Gurney2019_ValueGrouping"
+   ]
+  },
+  {
+   "id": "FE08",
+   "name": "Light shadows / opaque shadows",
+   "symptom": "Shadow regions lighter than nearby lit areas, or flat painted patches hiding the surface.",
+   "why_it_fails": "Shadows must be locally darker and slightly desaturated, and transparent, to read as shadows.",
+   "how_to_detect": "Sample L and chroma: shadow L >= adjacent lit L, or shadow chroma higher than lit chroma; texture inside shadow fully gone.",
+   "fix": "Darken and desaturate shadows; let texture show through; keep reflected light darker than the light family.",
+   "source_keys": [
+    "Kingdom2004",
+    "ConwayLivingstone2007",
+    "Cavanagh2005"
+   ]
+  },
+  {
+   "id": "FE09",
+   "name": "Inconsistent or bottom light direction",
+   "symptom": "Bumps read as dents; shadows point different ways.",
+   "why_it_fails": "Shape-from-shading assumes light from above; conflicting directions break form reading.",
+   "how_to_detect": "Visual check of cast-shadow directions and highlight positions; flag light from below unless intended (horror/campfire).",
+   "fix": "Unify one key direction (default upper-left); regenerate or repaint shadows in HTML.",
+   "source_keys": [
+    "MamassianGoutcher2001",
+    "ConwayLivingstone2007"
+   ]
+  },
+  {
+   "id": "FE10",
+   "name": "Uniform hard edges (sticker / cut-out look)",
+   "symptom": "Every edge equally sharp; composited frame looks pasted on.",
+   "why_it_fails": "No edge hierarchy; depth cues from edge softness missing; the eye has no single anchor.",
+   "how_to_detect": "edge_density_focal_vs_rest < 1.2 with high overall edge density; cutout edge transition 0 px while background is blurred.",
+   "fix": "Apply the edge ladder: one hard edge at focal, firm silhouettes, soft turning forms; feather cutout 0.5-1 px and add contact shadow.",
+   "source_keys": [
+    "TatlerBaddeleyGilchrist2005",
+    "Proko_Edges"
+   ]
+  },
+  {
+   "id": "FE11",
+   "name": "Uniform softness (no found edge)",
+   "symptom": "Whole image soft/blurred; nothing to lock onto.",
+   "why_it_fails": "Without a sharp, high-contrast edge or detail peak, gaze wanders and the focal point is weak.",
+   "how_to_detect": "Laplacian variance of the focal ROI not higher than the rest (detail_ratio_focal_vs_rest < 1.2); overall Laplacian energy low.",
+   "fix": "Sharpen/restore detail on the focal object only; add one specular or rim edge.",
+   "source_keys": [
+    "DiPaolaRiebeEnns2010",
+    "DiPaolaRiebeEnns2013"
+   ]
+  },
+  {
+   "id": "FE12",
+   "name": "Wire outline (uniform line weight)",
+   "symptom": "Line art looks like a colouring book; forms flat.",
+   "why_it_fails": "Line weight cues for depth, size and light are missing.",
+   "how_to_detect": "Measure stroke width (distance transform on the ink mask): silhouette/interior ratio < 1.3 and coefficient of variation of width very low.",
+   "fix": "Apply the line-weight ladder (silhouette 1.5-2x interior; heavier on shadow side; taper free ends).",
+   "source_keys": [
+    "GoodwinVollickHertzmann2007",
+    "Hertzmann2021_LineThickness"
+   ]
+  },
+  {
+   "id": "FE13",
+   "name": "Outlined shadows / false contours",
+   "symptom": "Lines drawn around shadow shapes or reflections; form reads as patches.",
+   "why_it_fails": "Lines are read as depth/slant discontinuities; shadow borders drawn as lines become false object boundaries.",
+   "how_to_detect": "Visual check: lines that do not lie on occluding contours or creases; compare with the expected contour set.",
+   "fix": "Remove shadow outlines; express shadow with tone or hatching.",
+   "source_keys": [
+    "SayimCavanagh2011",
+    "Cole2008"
+   ]
+  },
+  {
+   "id": "FE14",
+   "name": "Broken junctions and tangents",
+   "symptom": "Lines cross through overlaps, gaps at overlaps, or edges just touching; depth order unclear.",
+   "why_it_fails": "T-junctions signal occlusion; crossings read as transparency, tangents are ambiguous.",
+   "how_to_detect": "Inspect overlaps at 100%: far lines must stop at near contours; flag edges touching within ~3 px without overlapping.",
+   "fix": "Redraw overlaps as clean T-junctions; move shapes to overlap clearly or separate.",
+   "source_keys": [
+    "SayimCavanagh2011"
+   ]
+  },
+  {
+   "id": "FE15",
+   "name": "Empty lens (no transparency cue)",
+   "symptom": "Cutout glasses look like empty wire frames.",
+   "why_it_fails": "Transparency reads from X-junctions and reflections; without them the lens is perceived as absent.",
+   "how_to_detect": "Background edges behind the lens unchanged (no tint/offset) and no reflection band.",
+   "fix": "Add the lens layer: slight tint/value shift of background lines through the lens plus one soft reflection.",
+   "source_keys": [
+    "SayimCavanagh2011",
+    "Cavanagh2005"
+   ]
+  },
+  {
+   "id": "FE16",
+   "name": "Detail everywhere (AI clutter)",
+   "symptom": "Every surface densely textured and sharp; busy, tiring image.",
+   "why_it_fails": "Peripheral vision summarises detail into noise; clutter makes it hard for anything to capture attention.",
+   "how_to_detect": "edge_density > 0.15 (line art) with edge_density_focal_vs_rest < 1.2; text box edge density > 0.03.",
+   "fix": "Blur/flatten background in HTML, prompt 'simple uncluttered background', remove props.",
+   "source_keys": [
+    "Rosenholtz2007",
+    "Rosenholtz2016",
+    "DeCarloSantella2002"
+   ]
+  },
+  {
+   "id": "FE17",
+   "name": "Detail in the wrong place",
+   "symptom": "Background or a secondary object is sharper and more detailed than the product.",
+   "why_it_fails": "Selective detail attracts and holds gaze; misplaced detail pulls the eye off the hero.",
+   "how_to_detect": "detail_ratio_focal_vs_rest < 1 with ROI on the product.",
+   "fix": "Swap: soften the distracting area, restore detail on the product (use the real frame photo).",
+   "source_keys": [
+    "DiPaolaRiebeEnns2010",
+    "DiPaolaRiebeEnns2013"
+   ]
+  },
+  {
+   "id": "FE18",
+   "name": "Crowded small details",
+   "symptom": "Small logo, price or engraving near other detail is overlooked or unreadable.",
+   "why_it_fails": "Crowding prevents identification of small items surrounded by clutter in the periphery.",
+   "how_to_detect": "Small element with other edges within ~1x its own size; low local contrast around it.",
+   "fix": "Give clear space, increase size/contrast, or bring it to centre with a punch-in.",
+   "source_keys": [
+    "WhitneyLevi2011"
+   ]
+  },
+  {
+   "id": "FE19",
+   "name": "Unreadable silhouette",
+   "symptom": "Subject merges with background or its own limbs; cannot tell what it is at 64 px.",
+   "why_it_fails": "Identification from silhouettes depends on view and separation; merged shapes lose the cue.",
+   "how_to_detect": "Fill subject mask black at 64 px - not identifiable; deltaL_focal_vs_surround < 0.10.",
+   "fix": "Change view/pose (arms off body, 3/4 frame view), separate by value or rim light.",
+   "source_keys": [
+    "Wagemans2008_Silhouette",
+    "SinhaEtAl2006"
+   ]
+  },
+  {
+   "id": "FE20",
+   "name": "Twin silhouettes (Mint = Tao)",
+   "symptom": "The two faceless characters look interchangeable.",
+   "why_it_fails": "With identical heads and no faces, identity must come from body shape, value and gesture.",
+   "how_to_detect": "Height-normalised silhouette IoU >= 0.75 or aspect ratios within 15% (derived); same clothing value.",
+   "fix": "Restore primary shape contrast (round bundled vs tall narrow coat) and light vs dark clothing; spell it out per figure in the prompt.",
+   "source_keys": [
+    "Wagemans2008_Silhouette",
+    "SinhaEtAl2006"
+   ]
+  },
+  {
+   "id": "FE21",
+   "name": "Shape monotony",
+   "symptom": "All shapes similar size and type; no rhythm or focal break.",
+   "why_it_fails": "No hierarchy or pattern break; grouping makes everything one texture.",
+   "how_to_detect": "Distribution of contour areas narrow (largest < 2x median, derived); circularity values all in one cluster with no outlier at focal.",
+   "fix": "Apply big-medium-small; add one contrasting shape at the focal point.",
+   "source_keys": [
+    "Wagemans2012",
+    "Julesz1981"
+   ]
+  },
+  {
+   "id": "FE22",
+   "name": "Stiff mannequin pose",
+   "symptom": "Faceless figures stand straight with arms at sides; no emotion reads.",
+   "why_it_fails": "Faceless characters rely on gesture; an I-pose without line of action carries no emotion.",
+   "how_to_detect": "Visual check: no identifiable C/S curve through head-spine-legs; arms overlapping torso.",
+   "fix": "Prompt actions and curves ('curling forward, head bowed', 'leaning toward'), exaggerate the key pose.",
+   "source_keys": [
+    "ThomasJohnston1981"
+   ]
+  },
+  {
+   "id": "FE23",
+   "name": "Trapped or sliver negative space",
+   "symptom": "Odd leftover gaps or thin slivers along frame edges draw the eye.",
+   "why_it_fails": "Negative shapes are perceived as shapes; awkward ones compete and look accidental.",
+   "how_to_detect": "Find background regions touching the frame edge with width < 3% of the frame side; enclosed gaps with odd outlines (visual).",
+   "fix": "Move/crop so gaps are clearly large or clearly closed; keep text zone one clean shape.",
+   "source_keys": [
+    "Vecera2002",
+    "PublicDomainReview-Dow"
+   ]
+  }
+ ]
+}

@@ -1,0 +1,1225 @@
+[
+ {
+  "key": "ConwayLivingstone2007",
+  "title": "Perspectives on science and art",
+  "authors": "Bevil R. Conway; Margaret S. Livingstone",
+  "year": 2007,
+  "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC2813684",
+  "doi_isbn": "10.1016/j.conb.2007.07.010",
+  "source_type": "review",
+  "tier": "A",
+  "key_findings": [
+   "Fixations concentrate on regions of high local contrast (citing Reinagel & Zador 1999); eyes attract gaze partly because they hold high local contrast.",
+   "Shadows must be locally darker and relatively desaturated to read as shadows (citing Kingdom et al. 2004/2005); their hue can be almost anything.",
+   "Faces stay recognisable at low resolution and in simplified/exaggerated forms (citing Sinha et al. 2006); simplified stencil shapes remain recognisable.",
+   "Artists were more often strabismic than non-artists in the authors' survey; reduced stereo may favour monocular cues (shading, occlusion, perspective).",
+   "Depth from shading need not be globally consistent; viewers accept physically impossible shadows/reflections (citing Cavanagh 2005)."
+  ],
+  "practical_applications": [
+   "Put the strongest local contrast where the eye should land (focal glasses, a character's head).",
+   "Stylised charcoal shadows only need to be darker (and greyer) than their surroundings; their exact geometry is free."
+  ],
+  "limitations": [
+   "Short review; value structure (notan) itself is not discussed.",
+   "Strabismus link is correlational."
+  ],
+  "license": "copyrighted (NIH author manuscript)",
+  "access_status": "full_text",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M05",
+   "M04",
+   "M07"
+  ]
+ },
+ {
+  "key": "OlivaTorralba2006",
+  "title": "Building the gist of a scene: the role of global image features in recognition",
+  "authors": "Aude Oliva; Antonio Torralba",
+  "year": 2006,
+  "url": "https://ocw.mit.edu/courses/9-459-scene-understanding-symposium-spring-2006/7071e712650f4866d011ddd8fbcb98c7_900paper1.pdf",
+  "doi_isbn": "Progress in Brain Research 155:23-36",
+  "source_type": "review",
+  "tier": "A",
+  "key_findings": [
+   "Scene gist can be computed from a low-dimensional global code of spatial layout (spatial envelope) without first recognising objects.",
+   "With brief presentations observers rely on the low-spatial-frequency part of hybrid images; longer viewing shifts reliance to finer content.",
+   "Processing runs global-to-local, which does not have to mean a fixed low-to-high spatial-frequency order."
+  ],
+  "practical_applications": [
+   "The coarse, blurred, small version of an image (its big value masses) is what a scrolling viewer gets first: design and test it.",
+   "Thumbnail/blur checks are a proxy for first-glance reading."
+  ],
+  "limitations": [
+   "Read via abstract and preprint excerpts, not full text.",
+   "Natural scenes, not illustrations or layouts."
+  ],
+  "license": "copyrighted",
+  "access_status": "abstract",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M04",
+   "M35"
+  ]
+ },
+ {
+  "key": "SchynsOliva1994",
+  "title": "From blobs to boundary edges: Evidence for time- and spatial-scale-dependent scene recognition",
+  "authors": "Philippe G. Schyns; Aude Oliva",
+  "year": 1994,
+  "url": "https://www.psychologicalscience.org/journals/psychological-science/j.1467-9280.1994.tb00500.x/",
+  "doi_isbn": "Psychological Science 5(4):195-200",
+  "source_type": "empirical",
+  "tier": "A",
+  "key_findings": [
+   "A coarse description (oriented 'blobs' in a spatial arrangement) can initiate scene recognition before object identity is processed.",
+   "At ~30 ms masked presentation observers used the low-spatial-frequency part of hybrid images; at longer durations the high-frequency part (as summarised by Oliva & Torralba)."
+  ],
+  "practical_applications": [
+   "Big value blobs carry the first read; fine line/texture is read later.",
+   "A blurred/thumbnail check approximates the first tens of ms of viewing."
+  ],
+  "limitations": [
+   "Accuracy figures not seen; summary via abstract and secondary review."
+  ],
+  "license": "copyrighted",
+  "access_status": "abstract",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M04"
+  ]
+ },
+ {
+  "key": "GreeneOliva2009",
+  "title": "The briefest of glances: The time course of natural scene understanding",
+  "authors": "Michelle R. Greene; Aude Oliva",
+  "year": 2009,
+  "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC2742770",
+  "doi_isbn": "10.1111/j.1467-9280.2009.02316.x",
+  "source_type": "empirical",
+  "tier": "A",
+  "key_findings": [
+   "75%-correct thresholds with masking: global properties (naturalness, openness, depth...) mean 34 ms (19-47 ms); basic-level categories mean 50 ms (30-67 ms).",
+   "Global layout properties are available before the scene is named; 20 participants, 548 landscape photos at 256x256 px."
+  ],
+  "practical_applications": [
+   "The overall structure of an image (open/closed, deep/flat, light/dark) is read within tens of ms: set it with value masses before detail.",
+   "Supports testing images at small size: what survives 256 px and a glance is the design."
+  ],
+  "limitations": [
+   "Landscape photographs only; masked lab presentation differs from feed scrolling."
+  ],
+  "license": "copyrighted (PMC author manuscript)",
+  "access_status": "full_text",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M04",
+   "M35"
+  ]
+ },
+ {
+  "key": "Torralba2009",
+  "title": "How many pixels make an image?",
+  "authors": "Antonio Torralba",
+  "year": 2009,
+  "url": "https://www.cambridge.org/core/journals/visual-neuroscience/article/div-classtitlehow-many-pixels-make-an-imagediv/2BB39816DCE8EC151C68AC3242A71C48",
+  "doi_isbn": "10.1017/S0952523808080930",
+  "source_type": "empirical",
+  "tier": "A",
+  "key_findings": [
+   "Human scene categorisation stays high across low-resolution and multi-megapixel images.",
+   "(Secondary summary) Viewers classify scenes and identify several objects at 32x32 pixels."
+  ],
+  "practical_applications": [
+   "A 32x32 colour or 64-px greyscale thumbnail is a defensible 'gist' test size: subject and scene type should still read."
+  ],
+  "limitations": [
+   "Exact accuracy per resolution not read (full text not accessed)."
+  ],
+  "license": "copyrighted",
+  "access_status": "abstract",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M04",
+   "M35"
+  ]
+ },
+ {
+  "key": "Livingstone2000",
+  "title": "Is it warm? Is it real? Or just low spatial frequency?",
+  "authors": "Margaret S. Livingstone",
+  "year": 2000,
+  "url": "",
+  "doi_isbn": "Science 290:1299",
+  "source_type": "empirical",
+  "tier": "A",
+  "key_findings": [
+   "(Secondary summaries) The Mona Lisa's smile is carried mainly by low spatial frequencies, so it is more visible in peripheral vision and fades when looked at directly.",
+   "Later work (Kontsevich & Tyler 2004) tested the claim with noise manipulations."
+  ],
+  "practical_applications": [
+   "Soft, low-frequency value shapes can carry mood that survives a glance and the periphery; crisp detail is only seen where the viewer looks."
+  ],
+  "limitations": [
+   "Original letter not read; content from press and citing papers."
+  ],
+  "license": "copyrighted",
+  "access_status": "search_summary",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M05",
+   "M04"
+  ]
+ },
+ {
+  "key": "DiPaolaRiebeEnns2010",
+  "title": "Rembrandt's textural agency: A shared perspective in visual art and science",
+  "authors": "Steve DiPaola; Caitlin Riebe; James T. Enns",
+  "year": 2010,
+  "url": "https://muse.jhu.edu/article/379665",
+  "doi_isbn": "Leonardo 43(2):145-151",
+  "source_type": "empirical",
+  "tier": "A",
+  "key_findings": [
+   "Rembrandt varied detail selectively ('textural agency') to guide gaze; with Rembrandt-style renderings of photographed portraits, viewers fixated the detailed eye faster and longer, with calmer eye movements.",
+   "Viewers preferred the selectively detailed renderings to the uniformly detailed original photographs (press summary)."
+  ],
+  "practical_applications": [
+   "Keep the sharpest, finest detail on the focal feature (glasses, a hand, part of a face) and reduce it elsewhere.",
+   "Calmer viewing paths come from a single detail peak, not uniform sharpness."
+  ],
+  "limitations": [
+   "Abstract and press summaries only; numeric results not read.",
+   "Portraits only."
+  ],
+  "license": "copyrighted",
+  "access_status": "abstract",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M05",
+   "M04",
+   "M07"
+  ]
+ },
+ {
+  "key": "DiPaolaRiebeEnns2013",
+  "title": "Following the masters: Portrait viewing and appreciation is guided by selective detail",
+  "authors": "Steve DiPaola; Caitlin Riebe; James T. Enns",
+  "year": 2013,
+  "url": "https://journals.sagepub.com/doi/10.1068/p7463",
+  "doi_isbn": "10.1068/p7463",
+  "source_type": "empirical",
+  "tier": "A",
+  "key_findings": [
+   "(Abstract excerpt/summaries) Painted portraits differ from photos in that selected regions are rendered in sharper detail; gaze was attracted to and held longer by regions of finer detail and by textural highlighting.",
+   "The study set out to separate detail from confounds (meaning, lighting) that usually co-occur with detail."
+  ],
+  "practical_applications": [
+   "Detail is a lever separate from value contrast: it can place the eye even when lighting is even."
+  ],
+  "limitations": [
+   "Full abstract and results not read; Perception 42(6):608-630 per library record."
+  ],
+  "license": "copyrighted",
+  "access_status": "search_summary",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M05",
+   "M04"
+  ]
+ },
+ {
+  "key": "Rosenholtz2007",
+  "title": "Measuring visual clutter",
+  "authors": "Ruth Rosenholtz; Yuanzhen Li; Lisa Nakano",
+  "year": 2007,
+  "url": "https://dspace.mit.edu/handle/1721.1/37593",
+  "doi_isbn": "10.1167/7.2.17",
+  "source_type": "empirical",
+  "tier": "A",
+  "key_findings": [
+   "Proposes Feature Congestion, Subband Entropy and Edge Density as image-computable clutter measures; clutter = how hard it is to add an item that captures attention.",
+   "Colour variability matters for clutter (captured only by Feature Congestion).",
+   "A later review reports simple edge density predicting search difficulty about as well as feature congestion."
+  ],
+  "practical_applications": [
+   "Edge density (edge pixels / area) is a cheap, evidence-linked clutter proxy for backgrounds behind text or the hero."
+  ],
+  "limitations": [
+   "Abstract and repository page only; validated on maps/scenes, not illustrations."
+  ],
+  "license": "copyrighted",
+  "access_status": "abstract",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M04",
+   "M35",
+   "M26"
+  ]
+ },
+ {
+  "key": "Rosenholtz2016",
+  "title": "Capabilities and limitations of peripheral vision",
+  "authors": "Ruth Rosenholtz",
+  "year": 2016,
+  "url": "https://annualreviews.org/doi/abs/10.1146/annurev-vision-082114-035733",
+  "doi_isbn": "10.1146/annurev-vision-082114-035733",
+  "source_type": "review",
+  "tier": "A",
+  "key_findings": [
+   "Peripheral vision supports many tasks despite losing much information; a lossy, relatively fixed peripheral encoding may explain the difficulty of peripheral recognition, search, change blindness and gist."
+  ],
+  "practical_applications": [
+   "Outside the focal zone viewers get a summary of detail; spend detail where the eye lands and keep the periphery statistically calm."
+  ],
+  "limitations": [
+   "Abstract only."
+  ],
+  "license": "copyrighted",
+  "access_status": "abstract",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M04"
+  ]
+ },
+ {
+  "key": "WhitneyLevi2011",
+  "title": "Visual crowding: a fundamental limit on conscious perception and object recognition",
+  "authors": "David Whitney; Dennis M. Levi",
+  "year": 2011,
+  "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC3070834",
+  "doi_isbn": "10.1016/j.tics.2011.02.005",
+  "source_type": "review",
+  "tier": "A",
+  "key_findings": [
+   "Crowding - impaired identification of an object among nearby clutter - limits perception across much of the visual field.",
+   "(Secondary) The crowding zone is roughly half the target's eccentricity (Bouma's rule)."
+  ],
+  "practical_applications": [
+   "Small details (logo, temple engraving, lettering) placed near other detail in the periphery will not be identified; give them space or move them to the focal zone."
+  ],
+  "limitations": [
+   "Abstract and secondary statements; Bouma figure from citing reviews."
+  ],
+  "license": "copyrighted (PMC author manuscript)",
+  "access_status": "abstract",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M04"
+  ]
+ },
+ {
+  "key": "GoodwinVollickHertzmann2007",
+  "title": "Isophote distance: a shading approach to artistic stroke thickness",
+  "authors": "Todd Goodwin; Ian Vollick; Aaron Hertzmann",
+  "year": 2007,
+  "url": "https://www.dgp.toronto.edu/~todd/isophote",
+  "doi_isbn": "10.1145/1274871.1274880",
+  "source_type": "empirical",
+  "tier": "A",
+  "key_findings": [
+   "Stroke thickness modelled as the image-space distance to the nearest isophote: thicker for nearer and less-curved forms, thinner for distant and highly curved ones; clamped to [Tmin, Tmax].",
+   "Reproduced the line weights of illustration examples with few parameters."
+  ],
+  "practical_applications": [
+   "Rule set for line weight in pencil/charcoal and rig line art: weight by depth, form size, curvature and light side."
+  ],
+  "limitations": [
+   "Graphics method validated by visual comparison, not perception experiments.",
+   "Spot-check 2026-11-25: original wording checked; finding corrected to match the source."
+  ],
+  "license": "copyrighted",
+  "access_status": "abstract",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M34",
+   "M07"
+  ]
+ },
+ {
+  "key": "Hertzmann2021_LineThickness",
+  "title": "How to Draw Pictures, Part 4: Line Thickness",
+  "authors": "Aaron Hertzmann",
+  "year": 2021,
+  "url": "https://aaronhertzmann.com/2021/05/19/how-to-draw-line-thickness.html",
+  "doi_isbn": "",
+  "source_type": "practitioner",
+  "tier": "C",
+  "key_findings": [
+   "Line thickness falls with distance and with radial curvature; thick forms get thicker strokes; strokes thicker on the underside of forms lit from above.",
+   "Silhouettes usually thicker than interior lines; strokes taper at free ends but not where they pass behind another object.",
+   "Artists compress the thickness range and care about relative differences; the author says these trends are observations, not systematic tests."
+  ],
+  "practical_applications": [
+   "Direct line-weight checklist for Mint & Tao pencil art and SVG rig strokes."
+  ],
+  "limitations": [
+   "Expert blog by a graphics researcher; observations, not experiments."
+  ],
+  "license": "copyrighted",
+  "access_status": "full_text",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M07",
+   "M34"
+  ]
+ },
+ {
+  "key": "Hertzmann2020",
+  "title": "Why do line drawings work? A realism hypothesis",
+  "authors": "Aaron Hertzmann",
+  "year": 2020,
+  "url": "https://pubmed.ncbi.nlm.nih.gov/32126897/",
+  "doi_isbn": "10.1177/0301006620908207",
+  "source_type": "review",
+  "tier": "A",
+  "key_findings": [
+   "Hypothesis: the visual system treats line drawings as approximately realistic renderings; drawing techniques are chosen to convey shape to a human observer.",
+   "Argues an edge-detector account (Sayim & Cavanagh 2011) cannot fully explain differences between photo edges and drawn lines."
+  ],
+  "practical_applications": [
+   "Draw the lines a plausible shading of the form would produce (contours, creases), not every edge in a reference photo."
+  ],
+  "limitations": [
+   "Theoretical paper; abstract and introduction only."
+  ],
+  "license": "copyrighted",
+  "access_status": "abstract",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M04",
+   "M07",
+   "M34"
+  ]
+ },
+ {
+  "key": "SayimCavanagh2011",
+  "title": "What line drawings reveal about the visual brain",
+  "authors": "Bilge Sayim; Patrick Cavanagh",
+  "year": 2011,
+  "url": "https://www.frontiersin.org/journals/human-neuroscience/articles/10.3389/fnhum.2011.00118/full",
+  "doi_isbn": "10.3389/fnhum.2011.00118",
+  "source_type": "review",
+  "tier": "A",
+  "key_findings": [
+   "Lines in standard drawings stand for depth or slant discontinuities; artists omit shadow borders, which would read as false object boundaries.",
+   "Line drawings are recognised by infants, people without pictorial culture and chimpanzees - not purely a learned convention.",
+   "Junctions carry 3D meaning: T = occlusion, Y = convex corner, X = transparency; contours may end where a smooth surface turns away."
+  ],
+  "practical_applications": [
+   "Pencil/charcoal line art: draw occluding contours and creases, end lines where forms turn, keep clean T-junctions at overlaps; use X-junctions (background line continuing through the lens) for glass."
+  ],
+  "limitations": [
+   "Perspective article; synthesis, not new experiments."
+  ],
+  "license": "CC BY",
+  "access_status": "full_text",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M04",
+   "M07"
+  ]
+ },
+ {
+  "key": "Cole2008",
+  "title": "Where do people draw lines?",
+  "authors": "Forrester Cole; Aleksey Golovinskiy; Alex Limpaecher; Heather Stoddart Barros; Adam Finkelstein; Thomas Funkhouser; Szymon Rusinkiewicz",
+  "year": 2008,
+  "url": "https://pixl.cs.princeton.edu/pubs/Cole_2008_WDP/index.php",
+  "doi_isbn": "ACM Transactions on Graphics 27(3) (SIGGRAPH 2008)",
+  "source_type": "empirical",
+  "tier": "A",
+  "key_findings": [
+   "Artists' lines for the same 3D shape largely overlap (75% within 1 mm of another artist's line), especially along occluding contours.",
+   "Most non-contour lines lie on large image-intensity gradients and match line-drawing algorithms; 14% were not explained by any local property studied."
+  ],
+  "practical_applications": [
+   "Occluding contours are the non-negotiable lines; interior lines go where shading changes fast. Use this to judge AI 'line art' that adds random interior lines."
+  ],
+  "limitations": [
+   "Abstract/project page; small artist sample; smooth 3D models, not characters."
+  ],
+  "license": "copyrighted",
+  "access_status": "abstract",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M34",
+   "M07"
+  ]
+ },
+ {
+  "key": "DeCarloSantella2002",
+  "title": "Stylization and abstraction of photographs",
+  "authors": "Doug DeCarlo; Anthony Santella",
+  "year": 2002,
+  "url": "https://www.eecs.umich.edu/courses/eecs498-2/papers/stylization-abstraction.pdf",
+  "doi_isbn": "10.1145/566654.566650",
+  "source_type": "empirical",
+  "tier": "A",
+  "key_findings": [
+   "Stylises photographs into line-and-region abstractions, keeping detail where viewers' eye movements show meaningful content and removing it elsewhere."
+  ],
+  "practical_applications": [
+   "Model for selective detail: keep structure and detail at fixated/meaningful regions, flatten the rest into large regions."
+  ],
+  "limitations": [
+   "Abstract and course summary; evaluation details not read."
+  ],
+  "license": "copyrighted",
+  "access_status": "abstract",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M34",
+   "M35"
+  ]
+ },
+ {
+  "key": "SantellaDeCarlo2002",
+  "title": "Abstracted painterly renderings using eye-tracking data",
+  "authors": "Anthony Santella; Doug DeCarlo",
+  "year": 2002,
+  "url": "https://www.cse.psu.edu/~rtc12/CSE597E/papers/eyegazeDeCarloNPAR02.pdf",
+  "doi_isbn": "NPAR 2002, pp. 75-82",
+  "source_type": "empirical",
+  "tier": "A",
+  "key_findings": [
+   "Uses a few seconds of a viewer's eye-tracking data to decide where a painterly rendering keeps detail; elsewhere strokes are larger and simpler."
+  ],
+  "practical_applications": [
+   "Detail allocation can follow where people look; our proxy is the saliency map from analyze_image.py."
+  ],
+  "limitations": [
+   "Abstract only."
+  ],
+  "license": "copyrighted",
+  "access_status": "abstract",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M34"
+  ]
+ },
+ {
+  "key": "Walther2011",
+  "title": "Simple line drawings suffice for functional MRI decoding of natural scene categories",
+  "authors": "Dirk B. Walther; Barry Chai; Eamon Caddigan; Diane M. Beck; Li Fei-Fei",
+  "year": 2011,
+  "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC3111263",
+  "doi_isbn": "10.1073/pnas.1015666108",
+  "source_type": "empirical",
+  "tier": "A",
+  "key_findings": [
+   "Scene category decoded from fMRI activity for line drawings as well as for colour photographs, from V1 to PPA/RSC.",
+   "Global scene structure preserved by line drawings is integral to scene-category representation."
+  ],
+  "practical_applications": [
+   "Line-art backgrounds for Mint & Tao can carry place (cafe, beach, street) with a few structural lines; texture everywhere is not needed."
+  ],
+  "limitations": [
+   "Six scene categories; abstract and press release."
+  ],
+  "license": "copyrighted",
+  "access_status": "abstract",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M04",
+   "M05"
+  ]
+ },
+ {
+  "key": "Reinhard2002",
+  "title": "Photographic tone reproduction for digital images",
+  "authors": "Erik Reinhard; Michael Stark; Peter Shirley; James Ferwerda",
+  "year": 2002,
+  "url": "https://users.cs.utah.edu/docs/techreports/2002/pdf/UUCS-02-001.pdf",
+  "doi_isbn": "ACM Transactions on Graphics 21(3):267-276",
+  "source_type": "empirical",
+  "tier": "A",
+  "key_findings": [
+   "Maps high-dynamic-range scene luminance to a low-range display using ideas from Ansel Adams' Zone System (11 print zones, 0 black to X white; key value; dodging-and-burning).",
+   "A simple global operator plus local dodging-and-burning gave good results across many test images (authors' report)."
+  ],
+  "practical_applications": [
+   "Tonal compression vocabulary: choose the key (where middle grey sits), roll off highlights instead of clipping, keep local contrast at the subject."
+  ],
+  "limitations": [
+   "Abstract and summaries; graphics evaluation, not perceptual experiments."
+  ],
+  "license": "copyrighted",
+  "access_status": "abstract",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M34",
+   "M18"
+  ]
+ },
+ {
+  "key": "GrahamField2008",
+  "title": "Global nonlinear compression of natural luminances in painted art",
+  "authors": "Daniel J. Graham; David J. Field",
+  "year": 2008,
+  "url": "https://people.hws.edu/graham/Graham-SPIE2008.pdf",
+  "doi_isbn": "10.1117/12.766636",
+  "source_type": "empirical",
+  "tier": "B",
+  "key_findings": [
+   "Paintings cannot reproduce natural luminance ranges; a log-like nonlinearity is a first approximation of how artists compress luminance.",
+   "A painter's global compression curve ('artist's look-up table') may be characteristic of a painter; Western observers preferred many such transforms over a plain log transform."
+  ],
+  "practical_applications": [
+   "Tonal compression is a style choice: define a 'house curve' per series (e.g. charcoal: lifted blacks, compressed mids) and keep it."
+  ],
+  "limitations": [
+   "Conference proceedings; abstract and excerpts."
+  ],
+  "license": "copyrighted",
+  "access_status": "abstract",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M05",
+   "M34"
+  ]
+ },
+ {
+  "key": "CampbellRobson1968",
+  "title": "Application of Fourier analysis to the visibility of gratings",
+  "authors": "F. W. Campbell; J. G. Robson",
+  "year": 1968,
+  "url": "https://www.cns.nyu.edu/~msl/courses/2223/Readings/campbellrobson68.pdf",
+  "doi_isbn": "Journal of Physiology 197:551-566",
+  "source_type": "empirical",
+  "tier": "A",
+  "key_findings": [
+   "Grating detection thresholds for different waveforms relate through Fourier theory; proposes independent mechanisms tuned to limited spatial-frequency ranges.",
+   "(Secondary) The contrast sensitivity function is band-pass, peaking around a few cycles per degree."
+  ],
+  "practical_applications": [
+   "Very fine texture at phone viewing distance is near-invisible; mid-scale marks carry most visible contrast."
+  ],
+  "limitations": [
+   "Peak value from secondary summary."
+  ],
+  "license": "copyrighted",
+  "access_status": "abstract",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M04"
+  ]
+ },
+ {
+  "key": "EinhauserKonig2003",
+  "title": "Does luminance-contrast contribute to a saliency map for overt visual attention?",
+  "authors": "Wolfgang Einhäuser; Peter König",
+  "year": 2003,
+  "url": "https://www.scilit.net/publications/064490ea9a47b2cbe9578d2bb105413b",
+  "doi_isbn": "European Journal of Neuroscience 17(5):1089-1097",
+  "source_type": "empirical",
+  "tier": "A",
+  "key_findings": [
+   "Contrast is elevated at fixated points, but when contrast was modified in natural images no causal contribution of luminance contrast to overt attention was detected; saliency may be computed late.",
+   "Parkhurst & Niebur (2004) re-explained the data with second-order (texture) contrast."
+  ],
+  "practical_applications": [
+   "Contested note: raw value contrast alone does not guarantee gaze; combine it with detail, meaning (faces, product) and isolation."
+  ],
+  "limitations": [
+   "Abstract only."
+  ],
+  "license": "copyrighted",
+  "access_status": "abstract",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M04"
+  ]
+ },
+ {
+  "key": "TatlerBaddeleyGilchrist2005",
+  "title": "Visual correlates of fixation selection: effects of scale and time",
+  "authors": "Benjamin W. Tatler; Roland J. Baddeley; Iain D. Gilchrist",
+  "year": 2005,
+  "url": "https://research-information.bris.ac.uk/en/publications/visual-correlates-of-fixation-selection-effects-of-scale-and-time/",
+  "doi_isbn": "10.1016/j.visres.2004.09.017",
+  "source_type": "empirical",
+  "tier": "A",
+  "key_findings": [
+   "Image features at fixation contributed similarly across viewing time (unlike Parkhurst et al. 2002).",
+   "(Secondary) Edge content and contrast were stronger fixation predictors than colour in these authors' work."
+  ],
+  "practical_applications": [
+   "Edges are a stronger gaze lever than hue alone: keep the hardest edges at the focal area."
+  ],
+  "limitations": [
+   "Search summary and secondary descriptions only."
+  ],
+  "license": "copyrighted",
+  "access_status": "search_summary",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M04"
+  ]
+ },
+ {
+  "key": "Kingdom2004",
+  "title": "Colour vision brings clarity to shadows",
+  "authors": "Frederick A. A. Kingdom; Catherine Beauce; Lyndsay Hunter",
+  "year": 2004,
+  "url": "https://www.mvr.mcgill.ca/Fred/Papers/Kingdom&Beauce&Hunter.pdf",
+  "doi_isbn": "Perception 33:907-914",
+  "source_type": "empirical",
+  "tier": "A",
+  "key_findings": [
+   "Colour vision helps identify shadows among other luminance changes; shadows carry shape, depth and movement information once identified."
+  ],
+  "practical_applications": [
+   "Shadow masses read best when darker AND slightly desaturated relative to the lit surface; coloured shadows are fine if this holds."
+  ],
+  "limitations": [
+   "Abstract and later citations."
+  ],
+  "license": "copyrighted",
+  "access_status": "abstract",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M04",
+   "M09"
+  ]
+ },
+ {
+  "key": "MamassianGoutcher2001",
+  "title": "Prior knowledge on the illumination position",
+  "authors": "Pascal Mamassian; Ross Goutcher",
+  "year": 2001,
+  "url": "https://doi.org/10.1016/S0010-0277(01)00116-0",
+  "doi_isbn": "Cognition 81(1):B1-B9",
+  "source_type": "empirical",
+  "tier": "A",
+  "key_findings": [
+   "Shape-from-shading assumes light from above, biased toward above-left (about 20-30 degrees per a companion paper); one later study found no left bias."
+  ],
+  "practical_applications": [
+   "Light flat line-art and charcoal forms from upper-left by default so bumps read as bumps; reverse only on purpose."
+  ],
+  "limitations": [
+   "Abstract/secondary; left bias is contested."
+  ],
+  "license": "copyrighted",
+  "access_status": "abstract",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M04",
+   "M10"
+  ]
+ },
+ {
+  "key": "SinhaEtAl2006",
+  "title": "Face recognition by humans: Nineteen results all computer vision researchers should know about",
+  "authors": "Pawan Sinha; Benjamin Balas; Yuri Ostrovsky; Richard Russell",
+  "year": 2006,
+  "url": "https://ieeexplore.ieee.org/document/4052483",
+  "doi_isbn": "Proceedings of the IEEE 94(11):1948-1962",
+  "source_type": "review",
+  "tier": "A",
+  "key_findings": [
+   "Familiar faces are recognised at very low resolution (high accuracy at 16x16 blocks in a cited study)."
+  ],
+  "practical_applications": [
+   "Identity is carried by coarse configuration; for faceless Mint & Tao the coarse silhouette (hair mass, head shape, posture) must carry identity instead."
+  ],
+  "limitations": [
+   "Search summary; the caricature result attributed to this paper by Conway & Livingstone was not seen directly."
+  ],
+  "license": "copyrighted",
+  "access_status": "search_summary",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M04"
+  ]
+ },
+ {
+  "key": "Wagemans2008_Silhouette",
+  "title": "Identification of everyday objects on the basis of silhouette and outline versions",
+  "authors": "Johan Wagemans et al.",
+  "year": 2008,
+  "url": "https://journals.sagepub.com/doi/10.1068/p5825",
+  "doi_isbn": "10.1068/p5825",
+  "source_type": "empirical",
+  "tier": "A",
+  "key_findings": [
+   "Identification of filled silhouettes and outlines of Snodgrass-Vanderwart objects ranged from near zero to perfect depending on the object; norms widely reused."
+  ],
+  "practical_applications": [
+   "Silhouette readability is object- and view-dependent: choose the view (pose, angle of the glasses) whose silhouette identifies it, and test it."
+  ],
+  "limitations": [
+   "Abstract; full author list not checked."
+  ],
+  "license": "copyrighted",
+  "access_status": "abstract",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M04"
+  ]
+ },
+ {
+  "key": "BarNeta2006",
+  "title": "Humans prefer curved visual objects",
+  "authors": "Moshe Bar; Maital Neta",
+  "year": 2006,
+  "url": "https://pubmed.ncbi.nlm.nih.gov/16913943/",
+  "doi_isbn": "10.1111/j.1467-9280.2006.01759.x",
+  "source_type": "empirical",
+  "tier": "A",
+  "key_findings": [
+   "Objects with curved contours were liked more than sharp-angled versions, for real objects and meaningless patterns; authors proposed sharp angles signal threat."
+  ],
+  "practical_applications": [
+   "Rounded shapes as the default for friendly characters/mascots and calm promo layouts."
+  ],
+  "limitations": [
+   "Abstract; threat explanation later contested (Bertamini 2016)."
+  ],
+  "license": "copyrighted",
+  "access_status": "abstract",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M05",
+   "M04"
+  ]
+ },
+ {
+  "key": "SilviaBarona2009",
+  "title": "Do people prefer curved objects? Angularity, expertise, and aesthetic preference",
+  "authors": "Paul J. Silvia; Christopher M. Barona",
+  "year": 2009,
+  "url": "",
+  "doi_isbn": "Empirical Studies of the Arts 27",
+  "source_type": "empirical",
+  "tier": "A",
+  "key_findings": [
+   "(Via citing papers) Curvature preference held after controlling perceived complexity, using regular and irregular polygons; expertise effects were inconsistent across studies."
+  ],
+  "practical_applications": [
+   "Curvature preference is not a reason to avoid angular design for expert audiences; test."
+  ],
+  "limitations": [
+   "Paper not reached; content only from Bertamini 2016 and Cotter 2017 citations."
+  ],
+  "license": "copyrighted",
+  "access_status": "search_summary",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M05"
+  ]
+ },
+ {
+  "key": "Bertamini2016",
+  "title": "Do observers like curvature or do they dislike angularity?",
+  "authors": "Marco Bertamini; Letizia Palumbo; Tamara N. Gheorghes; Mai Galatsidas",
+  "year": 2016,
+  "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC4975689",
+  "doi_isbn": "10.1111/bjop.12132",
+  "source_type": "empirical",
+  "tier": "A",
+  "key_findings": [
+   "Four experiments: curved shapes preferred (about 50 vs 37 on the rating scale), not explained by complexity; curved lines preferred to both straight and angular lines.",
+   "Approach to curves but no avoidance of angles in an implicit task; a threat account cannot fully explain the effect.",
+   "Cites Leder, Tinio & Bar (2011): curvature preference vanished for negatively valenced objects."
+  ],
+  "practical_applications": [
+   "Use curves to add warmth; use angles for energy/tension rather than expecting 'danger' by default."
+  ],
+  "limitations": [
+   "Small samples (14-36); some statistic reporting inconsistencies noted on reading."
+  ],
+  "license": "CC BY",
+  "access_status": "full_text",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M05",
+   "M04"
+  ]
+ },
+ {
+  "key": "PalumboRutaBertamini2015",
+  "title": "Comparing angular and curved shapes in terms of implicit associations and approach/avoidance responses",
+  "authors": "Letizia Palumbo; Nicole Ruta; Marco Bertamini",
+  "year": 2015,
+  "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC4603793",
+  "doi_isbn": "10.1371/journal.pone.0140043",
+  "source_type": "empirical",
+  "tier": "A",
+  "key_findings": [
+   "IAT: curved polygons associated with positive and safe (and a gender pattern), angular with negative and danger.",
+   "A manikin approach/avoidance task did not show the pattern a pure threat account predicts."
+  ],
+  "practical_applications": [
+   "Round = positive/safe and angular = negative/danger are measurable implicit associations at the abstract-shape level."
+  ],
+  "limitations": [
+   "Abstract; abstract polygons, not characters."
+  ],
+  "license": "CC BY",
+  "access_status": "abstract",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M05",
+   "M04"
+  ]
+ },
+ {
+  "key": "Chuquichambi2022",
+  "title": "How universal is preference for visual curvature? A systematic review and meta-analysis",
+  "authors": "Erick G. Chuquichambi et al.",
+  "year": 2022,
+  "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10091794",
+  "doi_isbn": "10.1111/nyas.14919",
+  "source_type": "meta-analysis",
+  "tier": "S",
+  "key_findings": [
+   "61 studies, 106 samples, 309 effects, about 11,000 participants: curvature preference g = 0.39 [0.25, 0.52].",
+   "Larger with limited presentation time (g 0.75 vs 0.32), meaningless stimuli (0.56) and real objects (0.42); no effect for spatial designs (-0.04); experts small and n.s. (0.13).",
+   "Large heterogeneity; no clear small-study bias. Reliable but not universal."
+  ],
+  "practical_applications": [
+   "At glance speed (feeds) curvature helps most; for experts and architecture-like layouts it matters little. A default lean, not a law."
+  ],
+  "limitations": [
+   "Only continuous measures; culture not tested as a moderator; about two thirds of the full text read."
+  ],
+  "license": "CC BY",
+  "access_status": "full_text",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M05",
+   "M04"
+  ]
+ },
+ {
+  "key": "Cwiek2022",
+  "title": "The bouba/kiki effect is robust across cultures and writing systems",
+  "authors": "Aleksandra Ćwiek et al. (incl. Marcus Perlman)",
+  "year": 2022,
+  "url": "https://diposit.ub.edu/items/aea96b18-1e9a-46f9-92ce-bf195101f3be/full",
+  "doi_isbn": "10.1098/rstb.2020.0390",
+  "source_type": "empirical",
+  "tier": "A",
+  "key_findings": [
+   "917 speakers of 25 languages (9 families, 10 writing systems): strong overall evidence for the bouba/kiki effect; bouba more consistent than kiki; largely independent of orthography."
+  ],
+  "practical_applications": [
+   "Round shapes match soft-sounding names and voices; pair round mascots with soft names/voices, spiky ones with sharp."
+  ],
+  "limitations": [
+   "Abstract and press; whether Thai was among the languages not confirmed."
+  ],
+  "license": "CC BY",
+  "access_status": "abstract",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M04",
+   "M05"
+  ]
+ },
+ {
+  "key": "RamachandranHubbard2001",
+  "title": "Synaesthesia - A window into perception, thought and language",
+  "authors": "V. S. Ramachandran; Edward M. Hubbard",
+  "year": 2001,
+  "url": "",
+  "doi_isbn": "Journal of Consciousness Studies 8(12):3-34",
+  "source_type": "review",
+  "tier": "B",
+  "key_findings": [
+   "Named the bouba/kiki effect (after Köhler's takete/baluba) and argued that naming is not fully arbitrary."
+  ],
+  "practical_applications": [
+   "Historical anchor for shape-sound mapping; use Cwiek2022 for robust evidence."
+  ],
+  "limitations": [
+   "Not read; the widely quoted agreement percentage was not verified."
+  ],
+  "license": "copyrighted",
+  "access_status": "bibliographic",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M04"
+  ]
+ },
+ {
+  "key": "Spehar2003",
+  "title": "Universal aesthetic of fractals",
+  "authors": "Branka Spehar; Colin W. G. Clifford; Ben R. Newell; Richard P. Taylor",
+  "year": 2003,
+  "url": "",
+  "doi_isbn": "Computers & Graphics 27(5):813-820",
+  "source_type": "empirical",
+  "tier": "A",
+  "key_findings": [
+   "(Secondary) Preference for fractal patterns peaks at mid fractal dimension (about 1.3-1.5) across natural, mathematical and painted (Pollock) fractals.",
+   "Later work (Spehar et al. 2016; Street et al. 2016) reports individual differences and treats 'universal' cautiously."
+  ],
+  "practical_applications": [
+   "Detail density: moderate complexity is liked more than sparse or dense; a texture field should not be maximally busy."
+  ],
+  "limitations": [
+   "Paper not read; claims from citing reviews."
+  ],
+  "license": "copyrighted",
+  "access_status": "search_summary",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M05"
+  ]
+ },
+ {
+  "key": "LederForsterGerger2011",
+  "title": "The glasses stereotype revisited: Effects of eyeglasses on perception, recognition, and impression of faces",
+  "authors": "Helmut Leder; Michael Forster; Gernot Gerger",
+  "year": 2011,
+  "url": "https://dx.doi.org/10.1024/1421-0185/a000059",
+  "doi_isbn": "10.1024/1421-0185/a000059",
+  "source_type": "empirical",
+  "tier": "A",
+  "key_findings": [
+   "Faces with full-rim glasses rated less attractive and likeable than without; rimless did not differ; both rated more intelligent and successful; rimless raised trustworthiness.",
+   "Glasses drew gaze to the eye region; rimless made faces less distinctive."
+  ],
+  "practical_applications": [
+   "Frame visibility changes impressions: full-rim adds intelligence/competence cues; rimless keeps the face's own look. Nothing here on face-shape matching."
+  ],
+  "limitations": [
+   "Abstract; European sample."
+  ],
+  "license": "copyrighted",
+  "access_status": "abstract",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M04",
+   "M05"
+  ]
+ },
+ {
+  "key": "OkamuraUra2017",
+  "title": "The effect of the shape of eyeglasses on judgements of personality",
+  "authors": "Yasuhiro Okamura; Mitsuhiro Ura",
+  "year": 2017,
+  "url": "https://www.europeanproceedings.com/article/10.15405/epsbs.2017.11.11",
+  "doi_isbn": "10.15405/epsbs.2017.11.11",
+  "source_type": "empirical",
+  "tier": "B",
+  "key_findings": [
+   "39 Japanese undergraduates imagined wearing round or square eyeglasses: round -> rated self warmer; square -> more competent and more stubborn.",
+   "Face shape was not manipulated; small between-subjects sample; main ANOVA statistics not reported in the text."
+  ],
+  "practical_applications": [
+   "Weak, preliminary support that round frames read warm and square frames read competent; face-shape matching advice remains retail convention."
+  ],
+  "limitations": [
+   "Very small N; conference proceedings; self-ratings of imagined wear."
+  ],
+  "license": "CC BY-NC-ND (proceedings)",
+  "access_status": "full_text",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M05",
+   "M04"
+  ]
+ },
+ {
+  "key": "PerdreauCavanagh2013",
+  "title": "Is artists' perception more veridical?",
+  "authors": "Florian Perdreau; Patrick Cavanagh",
+  "year": 2013,
+  "url": "https://www.frontiersin.org/articles/10.3389/fnins.2013.00006/pdf",
+  "doi_isbn": "10.3389/fnins.2013.00006",
+  "source_type": "empirical",
+  "tier": "A",
+  "key_findings": [
+   "Artists were as affected by visual context and constancies (size, lightness, shape) as novices; no special access to the retinal image.",
+   "Later work (2014) links drawing skill to efficient encoding of object structure; Ostrofsky et al. report a constancy-accuracy correlation (mixed evidence)."
+  ],
+  "practical_applications": [
+   "Value judged by eye on a colour image is unreliable even for trained artists: check value in greyscale/numerically."
+  ],
+  "limitations": [
+   "Search summary of abstracts."
+  ],
+  "license": "CC BY",
+  "access_status": "search_summary",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M04",
+   "M07"
+  ]
+ },
+ {
+  "key": "Munsell_Value",
+  "title": "Munsell Value (How Color Notation Works)",
+  "authors": "Munsell Color (X-Rite)",
+  "year": null,
+  "url": "https://munsell.com/about-munsell-color/how-color-notation-works/munsell-value/",
+  "doi_isbn": "",
+  "source_type": "docs",
+  "tier": "C",
+  "key_findings": [
+   "Munsell value runs 0 (black) to 10 (white) in perceptually equal steps; N5 is middle grey; real pigments only approach N0/N10."
+  ],
+  "practical_applications": [
+   "Use the 0-10 value vocabulary in briefs; a 5-value plan maps roughly to N2, N4, N5-6, N7-8, N9."
+  ],
+  "limitations": [
+   "Search summary of the page."
+  ],
+  "license": "copyrighted",
+  "access_status": "search_summary",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M09",
+   "M07"
+  ]
+ },
+ {
+  "key": "ISO_CIE_11664_4",
+  "title": "ISO/CIE 11664-4:2019 Colorimetry - Part 4: CIE 1976 L*a*b* colour space",
+  "authors": "ISO / CIE",
+  "year": 2019,
+  "url": "https://www.iso.org/standard/74166.html",
+  "doi_isbn": "ISO/CIE 11664-4:2019",
+  "source_type": "docs",
+  "tier": "S",
+  "key_findings": [
+   "Specifies CIELAB coordinates including the lightness correlate L* (cube root of relative luminance with a linear segment near black; 0-100)."
+  ],
+  "practical_applications": [
+   "Numeric value thresholds can be stated in L*; for neutrals OKLab L = (L*+16)/116 above the dark linear segment."
+  ],
+  "limitations": [
+   "Standard text not read; formula as quoted in secondary encyclopedic sources."
+  ],
+  "license": "copyrighted (standard)",
+  "access_status": "bibliographic",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M09"
+  ]
+ },
+ {
+  "key": "Gurney2019_ValueGrouping",
+  "title": "Plein-air tip: grouping tonal values",
+  "authors": "James Gurney",
+  "year": 2019,
+  "url": "https://gurneyjourney.blogspot.com/2019/12/plein-air-tip-grouping-tonal-values.html",
+  "doi_isbn": "",
+  "source_type": "practitioner",
+  "tier": "D",
+  "key_findings": [
+   "Organising values into a light group and a dark group is 'an essential composition strategy'; connect darks into one unbroken mass instead of scattered accents; reserve high contrast for what should be noticed.",
+   "A simple tonal design reads at a glance and at small size (reply in comments); 'shape welding' merges adjacent similar values."
+  ],
+  "practical_applications": [
+   "Mass shadows of figure and furniture into one dark shape in charcoal stories; keep the light group simple."
+  ],
+  "limitations": [
+   "Practitioner blog; no tests."
+  ],
+  "license": "copyrighted",
+  "access_status": "full_text",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M07"
+  ]
+ },
+ {
+  "key": "Proko_Edges",
+  "title": "Edges (lesson series) and Designing Value Groups (course)",
+  "authors": "Proko",
+  "year": null,
+  "url": "https://www.proko.com/course-lesson/edges-part-1",
+  "doi_isbn": "",
+  "source_type": "practitioner",
+  "tier": "D",
+  "key_findings": [
+   "(Search summaries) Start from hard edges, then soften transitions and lose edges in shadow to steer the eye to the focal point; squinting groups values and blurs detail."
+  ],
+  "practical_applications": [
+   "Edge pass procedure for painted/FLUX images: decide the hard edges first, lose the rest."
+  ],
+  "limitations": [
+   "Only search snippets read."
+  ],
+  "license": "copyrighted",
+  "access_status": "search_summary",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M07"
+  ]
+ },
+ {
+  "key": "Bancroft_CreatingCharacters",
+  "title": "Creating Characters with Personality: For Film, TV, Animation, Video Games, and Graphic Novels",
+  "authors": "Tom Bancroft",
+  "year": null,
+  "url": "https://tslbritain.librarika.com/p/283491",
+  "doi_isbn": "",
+  "source_type": "practitioner",
+  "tier": "D",
+  "key_findings": [
+   "(Via student papers) Proportion and body shape create visual interest and reveal personality; a widely cited source for shape-language character design."
+  ],
+  "practical_applications": [
+   "Practitioner basis for primary/secondary shape design of mascots and Mint & Tao silhouettes."
+  ],
+  "limitations": [
+   "Not read; publisher and year not confirmed this session."
+  ],
+  "license": "copyrighted",
+  "access_status": "bibliographic",
+  "verification_status": "unverified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M07"
+  ]
+ }
+]

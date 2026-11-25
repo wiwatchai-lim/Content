@@ -138,7 +138,7 @@ Limited animation = few moving parts, so every motion must be chosen. What keeps
 - **Blinks**: every 2–5 s, about 15 % double blinks. A blink = close 2 F, closed 1 F, open 3 F (`R.blink`). Blink **on head turns** (hides the eye travel), **after a realisation** (a slow blink), **never during shock or a stare** (pass `avoid` windows), more often when lying/nervous, rarely when focused or scary.
 - **Eyes lead**: pupils move first (3 F), the head follows 2 F later (8–9 F turn), the body last (6 F later, 12 F). `R.look` does this order. Ghosts and predators can break it (the head turns with no eye lead = uncanny).
 - **The thought shows before the line**: change the face 6–12 F *before* the character speaks; react 4–8 F *after* the other speaks. People think, then talk.
-- **Lip-sync**: don't flap — accents on loud syllables. Mouth shapes lead the sound by 1–2 F; minimum hold 2 F; close the mouth (M) on stops before pauses; between phrases go back to the character's rest mouth (smile/frown keeps the emotion while silent). `R.talk(P, t, ENV[n], text)` uses the line's loudness for open/close and Thai vowels for the shape: `า ะ ั ำ ไ ใ` → A, `ิ ี ึ ื เ แ` → E, `ุ ู` → U, `โ อ ว` → O.
+- **Lip-sync**: don't flap — accents on loud syllables. Mouth shapes lead the sound by 1–2 F; minimum hold 2 F; close the mouth (M) on stops before pauses; between phrases go back to the character's rest mouth (smile/frown keeps the emotion while silent). `R.talk(P, t, ENV[n], text)` splits the Thai text into syllables, spreads them over the loud beats of the line (long beats hold several syllables), and per syllable shows: the vowel (`า ะ ั ำ ไ ใ เ-า` → A, `ิ ี ึ ื เ แ` → E, `ุ ู` → U, `โ อ ว เ-ือ` → O), the onset consonant for 2 F — **ม บ ป พ ผ ภ = lips closed (M)**, **ฟ ฝ = G** (top teeth on lower lip), **ส ซ ต ด ท ช จ … = B** (teeth together) — and closes the lips on finals ม บ ป พ (ครับ, หนุ่ม). Check `P.lastTalk` in the console if a line looks off.
 - **Talking heads move**: small head accents (2–3°) on stressed words, not on every syllable. A big gesture once per line at most.
 - **Listeners act**: nods, blinks, small smile changes while the other talks (`R.listen`). The reaction is half the scene.
 - **Emotion = brows + eyes + mouth + body, in that order of speed**: brows/eyes change in 3–6 F, mouth 2 F later, body 8–20 F. `R.emote(P, t, kind)` packages: neutral, happy, joy, sad, shock, fear, angry, think, shy, tender.
@@ -148,7 +148,9 @@ Limited animation = few moving parts, so every motion must be chosen. What keeps
   - joy: up and outward — chest out, arms up, quick (5–8 F) with overshoot.
   - tender/thankful: eyes closed-smile, head tilt toward the other, hand to chest, slow.
 - **Status** (from theatre): high status = still, slow, takes space, looks directly; low status = fidgets, touches face, smaller, looks away. Ghosts often play high status even when kind (still, centred).
-- **Walk = personality**: step time .42 s brisk/young, .5 s normal, .6–.7 s elderly/tired/sad; bob 5–9 px; arm swing 10–18°. Sneak: longer steps, low body. Ghosts don't walk — they glide on a slow arc with the hem lagging (`R.glide`).
+- **Walk = personality**: step time .42 s brisk/young, .5 s normal, .6–.7 s elderly/tired/sad; bob 5–9 px; arm swing 10–18°. Sneak: longer steps, low body. Ghosts don't walk — they glide on a slow arc with the hem lagging (`R.glide`). Crossing the screen = side view (`R.walkSide`: contact → down → passing → up, leg angle computed from speed so the planted foot never slides); toward/away from camera = front `R.walk`. Turn between them with `R.turn`.
+- **On twos vs ones**: TV/anime characters move on 2s (`R.twos(P, true)` or `Rig(tl, { twos: true })`), which reads as hand-drawn and calmer; switch to 1s for the one big action of a scene (sakuga) and back. Camera moves always stay on 1s (a pan on 2s judders). Lip-sync stays on 1s.
+- **Smear**: on any move faster than ~6 F across 200 px+, add `R.smear` for 1–2 frames in the direction of travel (Looney Tunes / anime). Never 3 F+.
 - **Entrances and exits**: enter already moving (start the walk off-frame), exit fully out of frame or behind something; a ghost appears with 2 false flickers then rises in 1.2 s (`R.appear`).
 - **Gestures** (`R.pose`): idle, open, shrug, chest, chin, point, wave, cover, hug, hips, reach, fistsUp, behind. A gesture has a preparation (2–4 F), a stroke (on the stressed word), and a hold, then releases.
 - **Cheats that read as more animation than they are**: camera moves, a light flicker, particles (dust, petals), a cut to a reaction, a smear frame (a 1–2 F blur on a fast move), sweat drops / emotion marks, shadows moving.
@@ -221,13 +223,18 @@ Limited animation = few moving parts, so every motion must be chosen. What keeps
 ## 11. rig.js quick reference
 
 ```js
-const R = Rig(tl, { seed: 7 });                      // after: const tl = gsap.timeline({ paused: true })
+const R = Rig(tl, { seed: 7, twos: false });         // after: const tl = gsap.timeline({ paused: true }); twos = default for all puppets
 const P = R.puppet(svg, { x, y, s }, R.LOOKS.ton);   // LOOKS: ton, jan, chan — add new characters as looks
+const S = R.puppet(svg, { x, y, s, view: 'side', dir: 1|-1, twos }, R.LOOKS.ton);   // profile puppet (same joints, talk/emote work)
+R.walkSide(S, t0, t1, { x, y, s }, { step, bob, swing, lift })   // 4-pose side walk, stride = speed (no foot slide)
+R.turn(t, fromP, toP)            // swap views (side→front, left→right) on the spot, hidden by a squash + blink
+R.smear(P, t, 1|-1|'up'|'down', { frames: 1|2, amt })    // smear frame on a fast move (≤ 2 F)
+R.twos(P, true|false)            // from here on this puppet animates on 2s (camera stays on 1s); off for the big moment
 R.place(P, t, { x, y, s })      R.walk(P, t0, t1, { x, y, s }, { step, bob, swing })      R.glide(P, t0, t1, { x, y })
 R.look(P, t, dx, dy, { tilt, body, blink })          R.emote(P, t, 'happy|joy|sad|shock|fear|angry|think|shy|tender|neutral')
 R.pose(P, t, name, dur, ease)   R.arm(P, 'L'|'R', t, dur, up, bend)   R.wave(P, t, n)   R.nod(P, t, n)   R.shake(P, t, n)
 R.talk(P, t, ENV[n], TEXT)      R.listen(P, t0, t1)   R.blinks(P, t0, t1, avoid)   R.breathe(P, t0, t1)   R.appear(P, t)   R.fade(P, t, d, op)
-R.mouth(P, t, 'rest|M|A|E|O|U|smile|grin|frown|wail')   R.eyes(P, t, 'dot|wide|smile|closed')   R.brows(P, t, d, 'neutral|up|sad|angry|worried|skeptic')
+R.mouth(P, t, 'rest|M|B|G|A|E|O|U|smile|grin|frown|wail')   R.eyes(P, t, 'dot|wide|smile|closed')   R.brows(P, t, d, 'neutral|up|sad|angry|worried|skeptic')
 const cam = R.cam('#sceneId');  cam.set(t, { px, py, s, rot }).move(t, dur, {...}, ease).shake(t, d, amp).drift(t0, t1, amp)
 cam.rack(t, d, '#blurLayer', '#sharpLayer', px);  cam.vertigo(t, d, '#bgLayer', amt)
 R.cut(t, outId, inId)   R.dissolve(t, d, outId, inId)   R.dip(t, d, outId, inId, '#000')

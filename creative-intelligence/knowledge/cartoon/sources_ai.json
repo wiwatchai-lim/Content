@@ -1,0 +1,825 @@
+[
+ {
+  "key": "BFL-NegativeGuide",
+  "title": "Prompting guide: working without negative prompts",
+  "authors": "Black Forest Labs",
+  "year": null,
+  "url": "https://docs.bfl.ai/guides/prompting_guide_t2i_negative",
+  "doi_isbn": "",
+  "source_type": "docs",
+  "tier": "C",
+  "key_findings": [
+   "States \"FLUX models don't support negative prompts\".",
+   "Naming an excluded thing can pull the model toward it.",
+   "Recommends describing the positive visual opposite (e.g. 'a street with no cars' -> 'a quiet pedestrian walkway with cobblestones')."
+  ],
+  "practical_applications": [
+   "Rewrite every 'no X' in FLUX prompts as what is there instead (plain unmarked paper, empty sky, hands in pockets)."
+  ],
+  "limitations": [
+   "Vendor guidance, no controlled study; applies to FLUX in general, version not specified."
+  ],
+  "license": "copyrighted (vendor docs)",
+  "access_status": "full_text",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M44"
+  ]
+ },
+ {
+  "key": "BFL-StyleGuide",
+  "title": "Photographic looks, camera and lens language, art styles, lighting, target colors, and text in FLUX images",
+  "authors": "Black Forest Labs",
+  "year": null,
+  "url": "https://docs.bfl.ai/guides/prompting_unified_style",
+  "doi_isbn": "",
+  "source_type": "docs",
+  "tier": "C",
+  "key_findings": [
+   "Recommends naming a style AND describing its visual traits; concrete descriptions beat vague labels such as 'aesthetic'.",
+   "Mood/style line at the end of the prompt (documented for FLUX.2 klein); multi-image style reference exists only in FLUX 3 Image.",
+   "Text in images: quote exact strings, describe placement and type, proofread output."
+  ],
+  "practical_applications": [
+   "For FLUX.1 schnell: write style as traits (line weight, fill, shading, paper) rather than relying on a label alone."
+  ],
+  "limitations": [
+   "Written mainly for FLUX 3 / FLUX.2; transfer to FLUX.1 schnell is an assumption to test (ai_tests T1/T2).",
+   "Says nothing about artist names."
+  ],
+  "license": "copyrighted (vendor docs)",
+  "access_status": "full_text",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M44"
+  ]
+ },
+ {
+  "key": "BFL-FluxSchnellCard",
+  "title": "FLUX.1 [schnell] model card",
+  "authors": "Black Forest Labs",
+  "year": 2024,
+  "url": "https://huggingface.co/black-forest-labs/FLUX.1-schnell",
+  "doi_isbn": "",
+  "source_type": "docs",
+  "tier": "C",
+  "key_findings": [
+   "12B rectified-flow transformer, trained with latent adversarial diffusion distillation, 1-4 steps; Diffusers example uses guidance_scale=0.0.",
+   "Apache-2.0: personal, scientific and commercial use.",
+   "Listed limitations: may not match prompt; prompt following depends heavily on prompting style; may amplify biases."
+  ],
+  "practical_applications": [
+   "Keeps our setup legal for shop/client work; explains why steps stay at 4 and guidance is not a knob."
+  ],
+  "limitations": [
+   "Card gives almost no prompting guidance."
+  ],
+  "license": "Apache-2.0 (model); page copyrighted",
+  "access_status": "full_text",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M44"
+  ]
+ },
+ {
+  "key": "HoSalimans2022",
+  "title": "Classifier-Free Diffusion Guidance",
+  "authors": "Jonathan Ho, Tim Salimans",
+  "year": 2022,
+  "url": "https://arxiv.org/abs/2207.12598",
+  "doi_isbn": "arXiv:2207.12598",
+  "source_type": "empirical",
+  "tier": "A",
+  "key_findings": [
+   "Guidance can be obtained without a classifier by jointly training conditional and unconditional models and combining their score estimates.",
+   "The combination trades sample quality against diversity."
+  ],
+  "practical_applications": [
+   "Mechanism behind negative prompts: the negative text takes the place of the unconditional branch; at guidance weight 1 the combination reduces to the conditional prediction alone, so the negative has no effect (our derivation from the CFG formula, see AI_CARTOON_GENERATION.md section 2)."
+  ],
+  "limitations": [
+   "Abstract only read; the cfg=1 consequence is derived from the standard CFG formula, not stated in the abstract."
+  ],
+  "license": "arXiv non-exclusive licence",
+  "access_status": "abstract",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M44"
+  ]
+ },
+ {
+  "key": "Sauer2024-LADD",
+  "title": "Fast High-Resolution Image Synthesis with Latent Adversarial Diffusion Distillation",
+  "authors": "Axel Sauer, Frederic Boesel, Tim Dockhorn, Andreas Blattmann, Patrick Esser, Robin Rombach",
+  "year": 2024,
+  "url": "https://arxiv.org/abs/2403.12015",
+  "doi_isbn": "arXiv:2403.12015",
+  "source_type": "empirical",
+  "tier": "A",
+  "key_findings": [
+   "Distilled student matches teacher quality with 'four unguided sampling steps'; teacher data generated at a constant CFG.",
+   "Trade-off: quality kept 'at the expense of prompt alignment'; common issues 'object duplication and merging'.",
+   "No adjustable guidance strengths in the student; in editing it sometimes adheres too closely to the input."
+  ],
+  "practical_applications": [
+   "Explains schnell-type behaviour (no CFG knob, occasional duplicated limbs/characters, weaker prompt binding): keep scenes simple, one action per character."
+  ],
+  "limitations": [
+   "Paper is about SD3-Turbo; the FLUX schnell card names the same method family but BFL has published no schnell-specific results."
+  ],
+  "license": "arXiv non-exclusive licence",
+  "access_status": "full_text",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M44"
+  ]
+ },
+ {
+  "key": "Ye2023-IPAdapter",
+  "title": "IP-Adapter: Text Compatible Image Prompt Adapter for Text-to-Image Diffusion Models",
+  "authors": "Hu Ye, Jun Zhang, Sibo Liu, Xiao Han, Wei Yang",
+  "year": 2023,
+  "url": "https://arxiv.org/abs/2308.06721",
+  "doi_isbn": "arXiv:2308.06721",
+  "source_type": "empirical",
+  "tier": "A",
+  "key_findings": [
+   "~22M-parameter adapter with decoupled cross-attention for image features; base model frozen.",
+   "Image and text prompts can be combined; reusable on models fine-tuned from the same base."
+  ],
+  "practical_applications": [
+   "Image-as-prompt is the standard way to carry a character/style reference without training."
+  ],
+  "limitations": [
+   "Abstract only; original work is on Stable Diffusion, not FLUX."
+  ],
+  "license": "arXiv non-exclusive licence",
+  "access_status": "abstract",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M44"
+  ]
+ },
+ {
+  "key": "XLabs-FluxIPAdapter",
+  "title": "flux-ip-adapter model card",
+  "authors": "XLabs-AI",
+  "year": 2024,
+  "url": "https://huggingface.co/XLabs-AI/flux-ip-adapter",
+  "doi_isbn": "",
+  "source_type": "docs",
+  "tier": "C",
+  "key_findings": [
+   "IP-Adapter for FLUX.1-dev, trained at 512 and 1024 px; beta, 'may take more attempts'.",
+   "Weights under the FLUX.1 [dev] Non-Commercial License; ComfyUI via x-flux-comfyui nodes; suggests true_gs=2 if results are poor."
+  ],
+  "practical_applications": [
+   "Shows the FLUX IP-Adapter route exists but is dev-based and non-commercial -> not for client/shop output without a licence."
+  ],
+  "limitations": [
+   "Behaviour with schnell not documented."
+  ],
+  "license": "FLUX.1 [dev] Non-Commercial License",
+  "access_status": "full_text",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M44"
+  ]
+ },
+ {
+  "key": "BFL-ReduxCard",
+  "title": "FLUX.1 Redux [dev] model card",
+  "authors": "Black Forest Labs",
+  "year": 2024,
+  "url": "https://huggingface.co/black-forest-labs/FLUX.1-Redux-dev",
+  "doi_isbn": "",
+  "source_type": "docs",
+  "tier": "C",
+  "key_findings": [
+   "Adapter for image variations and restyling; described as working with FLUX.1 base models.",
+   "Falls under the FLUX.1 [dev] Non-Commercial License."
+  ],
+  "practical_applications": [
+   "Image-variation route for a character master, but the licence blocks commercial use without a BFL licence."
+  ],
+  "limitations": [
+   "Card does not discuss schnell explicitly."
+  ],
+  "license": "FLUX.1 [dev] Non-Commercial License",
+  "access_status": "full_text",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M44"
+  ]
+ },
+ {
+  "key": "ComfyUI-FluxExamples",
+  "title": "ComfyUI Examples: Flux",
+  "authors": "comfyanonymous (ComfyUI)",
+  "year": null,
+  "url": "https://comfyanonymous.github.io/ComfyUI_examples/flux/",
+  "doi_isbn": "",
+  "source_type": "docs",
+  "tier": "C",
+  "key_findings": [
+   "Schnell is 'a distilled 4 step model'.",
+   "Redux needs sigclip_vision_patch14_384 in clip_vision and flux1-redux-dev in style_models; it 'can be used to prompt flux dev or flux schnell'.",
+   "Fill (inpaint/outpaint), Canny and Depth models are dev-based."
+  ],
+  "practical_applications": [
+   "Technically Redux runs with our schnell workflow after downloading two files; the licence, not VRAM, is the blocker."
+  ],
+  "limitations": [
+   "No VRAM figures; an example page, not a spec."
+  ],
+  "license": "unknown (project docs)",
+  "access_status": "full_text",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M44"
+  ]
+ },
+ {
+  "key": "Guo2024-PuLID",
+  "title": "PuLID: Pure and Lightning ID Customization via Contrastive Alignment",
+  "authors": "Zinan Guo, Yanze Wu, Zhuowei Chen, Lang Chen, Peng Zhang, Qian He",
+  "year": 2024,
+  "url": "https://arxiv.org/abs/2404.16022",
+  "doi_isbn": "arXiv:2404.16022",
+  "source_type": "empirical",
+  "tier": "A",
+  "key_findings": [
+   "Tuning-free identity insertion with a Lightning T2I branch, contrastive alignment loss and ID loss (NeurIPS 2024).",
+   "Claims high ID fidelity while keeping background, lighting, composition and style close to the no-ID image."
+  ],
+  "practical_applications": [
+   "Face-identity tool for real people; little use for faceless pencil characters."
+  ],
+  "limitations": [
+   "Abstract only; the ID loss relies on face recognition, so faceless/cartoon characters are outside its design (our inference, untested)."
+  ],
+  "license": "arXiv non-exclusive licence",
+  "access_status": "abstract",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M44"
+  ]
+ },
+ {
+  "key": "PuLID-Repo",
+  "title": "PuLID GitHub repository (PuLID-FLUX)",
+  "authors": "ToTheBeginning (PuLID authors)",
+  "year": 2024,
+  "url": "https://github.com/ToTheBeginning/PuLID",
+  "doi_isbn": "",
+  "source_type": "docs",
+  "tier": "D",
+  "key_findings": [
+   "PuLID-FLUX 'can run on a 16GB graphic card'; local gradio demo 'supports 12GB'; fp8 install notes reference flux-dev-fp8.",
+   "Code Apache-2.0; ComfyUI implementations are third-party."
+  ],
+  "practical_applications": [
+   "Below the documented 12 GB minimum on a 6 GB RTX 3050 -> not feasible now."
+  ],
+  "limitations": [
+   "Requirements stated by the authors, not independently tested."
+  ],
+  "license": "Apache-2.0 (code)",
+  "access_status": "full_text",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M44"
+  ]
+ },
+ {
+  "key": "Ruiz2023-DreamBooth",
+  "title": "DreamBooth: Fine Tuning Text-to-Image Diffusion Models for Subject-Driven Generation",
+  "authors": "Nataniel Ruiz, Yuanzhen Li, Varun Jampani, Yael Pritch, Michael Rubinstein, Kfir Aberman",
+  "year": 2023,
+  "url": "https://arxiv.org/abs/2208.12242",
+  "doi_isbn": "arXiv:2208.12242",
+  "source_type": "empirical",
+  "tier": "A",
+  "key_findings": [
+   "3-5 subject images typical; 4 gave the best DINO/CLIP-T in their test.",
+   "Metrics: CLIP-I and DINO (subject fidelity), CLIP-T (prompt fidelity); DINO preferred because CLIP-I cannot separate subjects with similar descriptions; DINO correlates 0.32 vs CLIP-I 0.27 with human preference.",
+   "Failure modes: context-appearance entanglement (colour shifts with the prompt), overfitting to the training context, hallucinated details."
+  ],
+  "practical_applications": [
+   "Defines how to score character consistency (DINO similarity to the master) and warns that even a trained character drifts with context."
+  ],
+  "limitations": [
+   "Correlations with humans are modest (0.27-0.32); results on Imagen/SD with A100/TPU hardware."
+  ],
+  "license": "arXiv non-exclusive licence",
+  "access_status": "full_text",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M44"
+  ]
+ },
+ {
+  "key": "FluxGym",
+  "title": "FluxGym (FLUX LoRA trainer)",
+  "authors": "cocktailpeanut",
+  "year": 2024,
+  "url": "https://github.com/cocktailpeanut/fluxgym",
+  "doi_isbn": "",
+  "source_type": "practitioner",
+  "tier": "D",
+  "key_findings": [
+   "'LOW VRAM (12GB/16GB/20GB) support' via Kohya sd-scripts.",
+   "Supports Flux1-dev; schnell listed but the author 'Couldn't get high quality results, so not really recommended'."
+  ],
+  "practical_applications": [
+   "Local LoRA training on 6 GB is below the documented minimum -> not feasible locally; a dev-trained LoRA would also carry the dev licence question."
+  ],
+  "limitations": [
+   "Practitioner tool README; no benchmarks."
+  ],
+  "license": "unknown (see repo)",
+  "access_status": "full_text",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M44"
+  ]
+ },
+ {
+  "key": "ComfyUI-GGUF",
+  "title": "ComfyUI-GGUF README",
+  "authors": "city96",
+  "year": 2024,
+  "url": "https://github.com/city96/ComfyUI-GGUF",
+  "doi_isbn": "",
+  "source_type": "docs",
+  "tier": "C",
+  "key_findings": [
+   "GGUF loaders for ComfyUI; transformer/DiT models like Flux are less affected by quantization, enabling low-bit quants on low-end GPUs.",
+   "LoRA loading is 'experimental' and should work with the built-in LoRA loader nodes."
+  ],
+  "practical_applications": [
+   "Explains why FLUX runs on our 6 GB card and that applying (not training) a LoRA is possible but experimental."
+  ],
+  "limitations": [
+   "Work in progress; no quality numbers."
+  ],
+  "license": "unknown (see repo)",
+  "access_status": "full_text",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M44"
+  ]
+ },
+ {
+  "key": "Fu2023-DreamSim",
+  "title": "DreamSim: Learning New Dimensions of Human Visual Similarity using Synthetic Data",
+  "authors": "Stephanie Fu, Netanel Tamir, Shobhita Sundaram, Lucy Chai, Richard Zhang, Tali Dekel, Phillip Isola",
+  "year": 2023,
+  "url": "https://arxiv.org/abs/2306.09344",
+  "doi_isbn": "arXiv:2306.09344",
+  "source_type": "empirical",
+  "tier": "A",
+  "key_findings": [
+   "NIGHTS: 20,019 human 2AFC triplets.",
+   "Agreement with humans: PSNR 57.1%, SSIM 57.3%, LPIPS 70.7%, CLIP B/32 83.1%, DINO B/16 90.1%, DreamSim 96.2%.",
+   "DreamSim focuses on foreground objects and semantic content, also sensitive to colour and layout; LPIPS/DISTS dominated by low-level cues like background colour."
+  ],
+  "practical_applications": [
+   "Best available automatic proxy for 'do these two character images look like the same thing'; pixel metrics (PSNR/SSIM) are near chance for this."
+  ],
+  "limitations": [
+   "Benchmark images come from Stable Diffusion (mostly photo-like); agreement on line-art cartoons is untested; layout sensitivity can reward near-identical poses."
+  ],
+  "license": "arXiv non-exclusive licence",
+  "access_status": "full_text",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M44"
+  ]
+ },
+ {
+  "key": "Tewel2024-ConsiStory",
+  "title": "Training-Free Consistent Text-to-Image Generation (ConsiStory)",
+  "authors": "Yoad Tewel, Omri Kaduri, Rinon Gal, Yoni Kasten, Lior Wolf, Gal Chechik, Yuval Atzmon",
+  "year": 2024,
+  "url": "https://arxiv.org/abs/2402.03286",
+  "doi_isbn": "arXiv:2402.03286",
+  "source_type": "empirical",
+  "tier": "A",
+  "key_findings": [
+   "Shared subject-driven attention across a batch keeps a subject consistent without training (SDXL; SIGGRAPH 2024 / TOG).",
+   "Consistency measured with DreamSim on background-removed images (notes it can favour slight layout changes); text alignment with CLIP score; 2AFC user study with 3,000 responses.",
+   "Limits: appearance and style entangled (works best with one shared style); reduced layout diversity; localisation fails on unusual styles (<5%, fixed by re-seeding)."
+  ],
+  "practical_applications": [
+   "Evaluation recipe: mask the background, compute pairwise DreamSim within a character set, plus a prompt-alignment score; keep one style per series."
+  ],
+  "limitations": [
+   "SDXL-only implementation; not available for our FLUX GGUF setup."
+  ],
+  "license": "arXiv non-exclusive licence",
+  "access_status": "full_text",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M44"
+  ]
+ },
+ {
+  "key": "USCO-Part2-2025",
+  "title": "Copyright and Artificial Intelligence, Part 2: Copyrightability",
+  "authors": "U.S. Copyright Office",
+  "year": 2025,
+  "url": "https://www.copyright.gov/ai/Copyright-and-Artificial-Intelligence-Part-2-Copyrightability-Report.pdf",
+  "doi_isbn": "",
+  "source_type": "primary_text",
+  "tier": "B",
+  "key_findings": [
+   "'Copyright does not extend to purely AI-generated material, or material where there is insufficient human control over the expressive elements.'",
+   "'prompts do not alone provide sufficient control.'",
+   "Human authors keep copyright in their own work perceptible in outputs and in creative selection, coordination, arrangement or modification; an illustrator inputting their own drawing may have a 'greater claim to authorship'. Cites the Zarya of the Dawn comic decision (human text and arrangement registered, AI images not)."
+  ],
+  "practical_applications": [
+   "Hand-drawn layouts used as img2img input, human-written text in the HTML layer and documented selection/edits are what make a cartoon post protectable."
+  ],
+  "limitations": [
+   "US law only; Thai law not covered; case-by-case."
+  ],
+  "license": "public domain (US government work)",
+  "access_status": "full_text",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M44"
+  ]
+ },
+ {
+  "key": "USCO-Part3-2025",
+  "title": "Copyright and Artificial Intelligence, Part 3: Generative AI Training (Pre-publication)",
+  "authors": "U.S. Copyright Office",
+  "year": 2025,
+  "url": "https://www.copyright.gov/ai/Copyright-and-Artificial-Intelligence-Part-3-Generative-AI-Training-Report-Pre-Publication-Version.pdf",
+  "doi_isbn": "",
+  "source_type": "primary_text",
+  "tier": "B",
+  "key_findings": [
+   "Style is not protected by copyright as such, but there 'may be cases where the replication of style does capture protectible elements'.",
+   "Treats stylistic imitation as a possible market harm ('market dilution') in fair-use analysis; cites 'in the style of' prompts naming artists and the flood of images imitating a Japanese animation studio's look.",
+   "Notes some AI systems are instructed not to create images in the style of living artists."
+  ],
+  "practical_applications": [
+   "House rule: never name living artists, studios or franchises in prompts; describe generic traits of historical movements instead."
+  ],
+  "limitations": [
+   "Pre-publication version; US fair-use analysis; not a court ruling."
+  ],
+  "license": "public domain (US government work)",
+  "access_status": "full_text",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M44"
+  ]
+ },
+ {
+  "key": "Borji2023-Failures",
+  "title": "Qualitative Failures of Image Generation Models and Their Application in Detecting Deepfakes",
+  "authors": "Ali Borji",
+  "year": 2023,
+  "url": "https://arxiv.org/abs/2304.06470",
+  "doi_isbn": "arXiv:2304.06470",
+  "source_type": "review",
+  "tier": "A",
+  "key_findings": [
+   "Five failure categories: body parts (hands/fingers, eyes, teeth, eyeglasses...), geometry (straight lines, perspective, symmetry), physics (shadows, reflections, support), semantics/logic (spatial reasoning, repeated objects/faces), text/noise/details (garbled text, fine details, crowds)."
+  ],
+  "practical_applications": [
+   "QC checklist for every AI cartoon panel before publishing."
+  ],
+  "limitations": [
+   "Qualitative review drawn from papers and social media; models of 2022-23."
+  ],
+  "license": "arXiv non-exclusive licence",
+  "access_status": "full_text",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M44"
+  ]
+ },
+ {
+  "key": "Thairath2023-KhaiHuaRaoAI",
+  "title": "เบื้องหลัง 'ขายหัวเราะ ฉบับ AI'",
+  "authors": "ไทยรัฐ (Thairath)",
+  "year": 2023,
+  "url": "https://www.thairath.co.th/money/business_marketing/marketing/2676591",
+  "doi_isbn": "",
+  "source_type": "practitioner",
+  "tier": "C",
+  "key_findings": [
+   "Khai Hua Rao AI edition (Apr 2023), presented as the first Thai gag comic made with AI: AI wrote gags and drew images; a 5-6 person team prompted, selected, filled gaps and edited.",
+   "The team's own conclusion: AI cannot yet replace human creativity but can convey some humour."
+  ],
+  "practical_applications": [
+   "Thai industry precedent: AI as draft generator, humans curate and edit - the same split as our pipeline."
+  ],
+  "limitations": [
+   "News feature, publisher self-report; no audience data."
+  ],
+  "license": "copyrighted",
+  "access_status": "full_text",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M44"
+  ]
+ },
+ {
+  "key": "Alexander2022-RubberHose",
+  "title": "The Wild Classics Of Rubber Hose Animation That Inspired 'The Cuphead Show!'",
+  "authors": "Vincent Alexander (Cartoon Brew)",
+  "year": 2022,
+  "url": "https://www.cartoonbrew.com/cartoon-study/the-rubber-hose-classics-that-inspired-the-cuphead-show-213700.html",
+  "doi_isbn": "",
+  "source_type": "practitioner",
+  "tier": "C",
+  "key_findings": [
+   "Rubber hose: bouncy elasticity, floppy limbs, pie-cut eyes, white gloves, two-button pants; Bill Nolan credited with the approach (Felix, Krazy Kat).",
+   "Fleischer the 'rubber hose capital'; Disney moved away in the mid-1930s toward believable movement; out of favour by the mid-1930s; revived by Cuphead."
+  ],
+  "practical_applications": [
+   "Trait list for prompting a rubber-hose look without naming characters or studios."
+  ],
+  "limitations": [
+   "Trade journalism, not peer-reviewed."
+  ],
+  "license": "copyrighted",
+  "access_status": "full_text",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M44"
+  ]
+ },
+ {
+  "key": "History2024-SnowWhite",
+  "title": "How Disney's Snow White became the first full-length animated feature (History.com)",
+  "authors": "Becky Little",
+  "year": 2024,
+  "url": "https://www.history.com/articles/disney-snow-white-full-length-animated-feature-film",
+  "doi_isbn": "",
+  "source_type": "practitioner",
+  "tier": "C",
+  "key_findings": [
+   "Premiere 21 Dec 1937; about 3 years, $1.4M, 750 artists; aimed to compete with live-action features.",
+   "Multiplane camera first tested in The Old Mill (1937) to create depth."
+  ],
+  "practical_applications": [
+   "Anchor for the 'golden-age full animation' entry: naturalistic movement, depth, painted backgrounds."
+  ],
+  "limitations": [
+   "Popular history; the 'first full-length animated feature' claim ignores earlier non-US features (contested)."
+  ],
+  "license": "copyrighted",
+  "access_status": "full_text",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M44"
+  ]
+ },
+ {
+  "key": "IU-UPA",
+  "title": "United Productions of America (Nick and Stephen Bosustow Film Collection exhibit)",
+  "authors": "Indiana University Libraries Moving Image Archive",
+  "year": null,
+  "url": "https://collections.libraries.indiana.edu/IULMIA/exhibits/show/nick-and-stephen-bosustow-film/united-productions-of-america-",
+  "doi_isbn": "",
+  "source_type": "course",
+  "tier": "B",
+  "key_findings": [
+   "UPA founded 1943; modernism of simplified shapes, flat bold colour without shading, emphasis on the 2D picture plane.",
+   "Limited animation: about 12/8/6 drawings per second vs 24, redraw only moving parts, reuse movements; Gerald McBoing-Boing Oscar 1950.",
+   "Cites Bashara (Cartoon Vision): by the mid-1950s 'UPA style had become cartoon style'."
+  ],
+  "practical_applications": [
+   "Basis for the 'mid-century flat / limited animation' style entry and for limited-animation tricks in our HTML rig."
+  ],
+  "limitations": [
+   "Archive exhibit text summarising a scholarly book; Bashara not read directly."
+  ],
+  "license": "unknown (university archive page)",
+  "access_status": "full_text",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M44"
+  ]
+ },
+ {
+  "key": "Cormack2021-Flintstones",
+  "title": "The Flintstones Popularizes Prime-Time Cartoons (EBSCO Research Starters)",
+  "authors": "Richard G. Cormack",
+  "year": 2021,
+  "url": "https://www.ebsco.com/research-starters/arts-and-entertainment/flintstones-popularizes-prime-time-cartoons",
+  "doi_isbn": "",
+  "source_type": "encyclopedia",
+  "tier": "B",
+  "key_findings": [
+   "Hanna-Barbera cut costs with stationary backgrounds and about six facial movements; drawings for a half hour reduced by nearly 97% in some cases.",
+   "The Flintstones premiered 30 Sep 1960 on ABC as the first prime-time cartoon."
+  ],
+  "practical_applications": [
+   "Model for TV limited animation: held poses, mouth swaps, repeating backgrounds - what rig.js puppets do cheaply."
+  ],
+  "limitations": [
+   "Reference summary; drawing-count figures differ across sources."
+  ],
+  "license": "copyrighted",
+  "access_status": "full_text",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M44"
+  ]
+ },
+ {
+  "key": "Nakano2026-Tezuka",
+  "title": "Manga, Media and Content in Postwar Japan (nippon.com)",
+  "authors": "Nakano Haruyuki",
+  "year": 2026,
+  "url": "https://www.nippon.com/en/japan-topics/b11507/",
+  "doi_isbn": "",
+  "source_type": "practitioner",
+  "tier": "C",
+  "key_findings": [
+   "Astro Boy premiered 1 Jan 1963 on Fuji TV as Japan's first long-form TV anime; used fewer frames, reused drawings, moved only the mouth in some scenes.",
+   "Strong story-manga source material compensated for limited animation and set the manga-to-anime model."
+  ],
+  "practical_applications": [
+   "Anime lineage = story strength + economical motion; supports strong scripts with limited rig animation."
+  ],
+  "limitations": [
+   "Journalistic history article."
+  ],
+  "license": "copyrighted",
+  "access_status": "full_text",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M44"
+  ]
+ },
+ {
+  "key": "Gravett2008-ClearLine",
+  "title": "Hergé & The Clear Line",
+  "authors": "Paul Gravett",
+  "year": 2008,
+  "url": "https://paulgravett.com/articles/article/herge_the_clearline",
+  "doi_isbn": "",
+  "source_type": "practitioner",
+  "tier": "B",
+  "key_findings": [
+   "'Klare Lijn' label used in Joost Swarte's 1977 booklet; roots in Hergé's Tintin; Brussels School; later Dutch, French, Spanish and Italian followers.",
+   "Hergé stressed clarity of drawing, composition and narrative and disliked a style-only reading."
+  ],
+  "practical_applications": [
+   "Ligne claire entry: clarity and readability first - fits simple characters on calm backgrounds."
+  ],
+  "limitations": [
+   "Critic's essay (expert, not peer-reviewed); the visual rules (uniform line, flat colour) come from secondary summaries."
+  ],
+  "license": "copyrighted",
+  "access_status": "full_text",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M44"
+  ]
+ },
+ {
+  "key": "Jin2019-Webtoon",
+  "title": "Snack Culture's Dream of Big-Screen Culture: Korean Webtoons' Transmedia Storytelling",
+  "authors": "Dal Yong Jin",
+  "year": 2019,
+  "url": "https://ijoc.org/index.php/ijoc/article/view/10004",
+  "doi_isbn": "",
+  "source_type": "empirical",
+  "tier": "A",
+  "key_findings": [
+   "Webtoon portals from 2003 (Daum) and 2004 (Naver); smartphone era from 2009.",
+   "Web-focused attributes: vertical layout, colour drawing, fast production and consumption ('snack culture')."
+  ],
+  "practical_applications": [
+   "Vertical-scroll grammar for 9:16 story clips and carousels."
+  ],
+  "limitations": [
+   "Korea-specific; 2019."
+  ],
+  "license": "CC BY-NC-ND",
+  "access_status": "full_text",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M44"
+  ]
+ },
+ {
+  "key": "Khemmapat2018-ThaiAnimation",
+  "title": "ปัจจัยที่ส่งผลต่อศักยภาพภาพยนตร์แอนิเมชันไทยร่วมสมัย (Potential Factors Effecting Contemporary Animated Thai Films)",
+  "authors": "เขมพัทธ์ พัชรวิชญ์",
+  "year": 2018,
+  "url": "https://so04.tci-thaijo.org/index.php/archkmitl/article/view/132930",
+  "doi_isbn": "",
+  "source_type": "empirical",
+  "tier": "A",
+  "key_findings": [
+   "12 Thai theatrical animated features 1979-2016: classical era = Sudsakorn (2522/1979); contemporary era from 2545/2002 (Pang Pond, Khan Kluay 2549/2006 in 3D, Yak 2555/2012 ...).",
+   "Payut Ngaokrachang made Sudsakorn on cels with a 16 mm camera, budget 5M baht; then a gap of more than 20 years; SIPA policy revived the industry.",
+   "Only Khan Kluay and Yak succeeded commercially; problems: narrow target audience, TV-to-cinema shift without quality, adapting Thai literature without fresh ideas, technical lag."
+  ],
+  "practical_applications": [
+   "Thai audiences reward familiar Thai material told freshly; adaptation alone is not enough."
+  ],
+  "limitations": [
+   "KMITL architecture journal; interviews with 4 directors; features only, no TV/web."
+  ],
+  "license": "unknown (TCI journal)",
+  "access_status": "full_text",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M44"
+  ]
+ },
+ {
+  "key": "Junma-PayutThaiIdentity",
+  "title": "อัตลักษณ์ทางศิลปกรรมไทยในผลงานภาพยนตร์การ์ตูนของ อาจารย์ปยุต เงากระจ่าง ตั้งแต่ปี พ.ศ. 2498",
+  "authors": "วิสิฐ จันมา (Vizit Junma)",
+  "year": null,
+  "url": "https://so01.tci-thaijo.org/index.php/ajnu/article/view/26413",
+  "doi_isbn": "",
+  "source_type": "empirical",
+  "tier": "A",
+  "key_findings": [
+   "Payut's first Thai cartoon film 'เหตุมหัศจรรย์ในเช้าวันหนึ่ง' 2498/1955; หนุมานเผชิญภัย 2500/1957; Sudsakorn the first Thai feature.",
+   "Thai identity via simplified Thai physiognomy and dress, Thai settings and lai thai ornament; Hanuman characters adapted from traditional Thai mural painting with rounded soft forms; rubbery exaggeration in early work."
+  ],
+  "practical_applications": [
+   "How to make a cartoon read as Thai without cliché: everyday Thai settings, dress and body types, ornament as accent."
+  ],
+  "limitations": [
+   "Naresuan University journal; publication year not visible in the extracted text."
+  ],
+  "license": "unknown (TCI journal)",
+  "access_status": "full_text",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M44"
+  ]
+ },
+ {
+  "key": "Arochasiri2022-ThaiCartoonEvolution",
+  "title": "วิวัฒนาการทางวัฒนธรรมของการ์ตูนไทยสู่จินตนาการอันก้าวไกลในโลกดิจิทัล (Cultural evolution of Thai cartoons to the far-reaching imagination in the digital world)",
+  "authors": "ณปภัช อโรชาสิริ (Napapat Arochasiri)",
+  "year": 2022,
+  "url": "https://so05.tci-thaijo.org/index.php/arts/article/view/261158",
+  "doi_isbn": "",
+  "source_type": "review",
+  "tier": "B",
+  "key_findings": [
+   "Khrua In Khong called the first Thai cartoonist; first political cartoonist Khun Patiphak Pimlikit (Pleng Tripin) under Rama VI.",
+   "After 1932: Sawat Chutharop's serialised Sang Thong and comic sidekick Khun Muen (Popeye/Mickey influence); Prayoon Chanyawongse ('king of Thai cartoons', Magsaysay award); children's magazine Tukata (Pimon Kalasee, characters from 1952); Khai Hua Rao three-panel gags (Arwat); post-1967 TV-influenced superhero comics (Asawin Saifah); Chai Rachawat political strip after 14 Oct 1973.",
+   "Today: digital tools and manga influence; concern that a distinct Thai cartoon style may be lost; Wisut Ponnimit (hesheit) as a rough-line, idea-first Thai artist known abroad."
+  ],
+  "practical_applications": [
+   "Thai lineage for style proposals: Thai gag strip, Thai political caricature line, Thai fable/jakkrawong comics."
+  ],
+  "limitations": [
+   "Descriptive review relying partly on web sources; some dates not given."
+  ],
+  "license": "unknown (TCI journal)",
+  "access_status": "full_text",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M44"
+  ]
+ }
+]

@@ -1,0 +1,504 @@
+[
+ {
+  "id": "PG-GRID-6",
+  "name": "Six-panel grid (2 cols x 3 rows)",
+  "format": "page",
+  "panels": 6,
+  "grid": "Regular grid, equal panels, contiguous gutters",
+  "reading_path": "Z-path: L->R, then down (~94-95% of readers follow it in a canonical grid)",
+  "pacing_use": "Neutral, even rhythm; dialogue scenes, explainers; the safest default for non-comic readers",
+  "limits": "Monotonous if every panel is the same shot size; vary Macro/Mono/Micro inside it",
+  "source_keys": [
+   "Cohn2013Navigating",
+   "Cohn2014Architecture"
+  ],
+  "test_status": "untested"
+ },
+ {
+  "id": "PG-GRID-9",
+  "name": "Nine-panel grid (3x3)",
+  "format": "page",
+  "panels": 9,
+  "grid": "Regular 3x3 grid",
+  "reading_path": "Z-path",
+  "pacing_use": "Dense, measured beats; slow-time sequences (moment-to-moment) and repetition/variation gags",
+  "limits": "Panels get small on phones - avoid on IG; good for print/PDF",
+  "source_keys": [
+   "Cohn2013Navigating"
+  ],
+  "test_status": "untested"
+ },
+ {
+  "id": "PG-TIERS-3",
+  "name": "Three horizontal tiers (widescreen rows)",
+  "format": "page",
+  "panels": 3,
+  "grid": "Three full-width panels stacked",
+  "reading_path": "Top to bottom",
+  "pacing_use": "Cinematic, calm; establishing + two beats; each tier can be one constituent",
+  "limits": "Little room for interaction close-ups",
+  "source_keys": [
+   "Hacimusaoglu2023",
+   "Cohn2014Architecture"
+  ],
+  "test_status": "untested"
+ },
+ {
+  "id": "PG-ROWS-MIXED",
+  "name": "Rows with varying panel counts (2-3-1)",
+  "format": "page",
+  "panels": 6,
+  "grid": "Each row a constituent: row of 2, row of 3 (fast), final full-width row",
+  "reading_path": "Z-path row by row",
+  "pacing_use": "Row break = situational change; the short panels speed up action, the wide last row lands the Peak/Release",
+  "limits": "Keep gutters contiguous so rows read as rows",
+  "source_keys": [
+   "Hacimusaoglu2023",
+   "CohnCampbell2015"
+  ],
+  "test_status": "untested"
+ },
+ {
+  "id": "PG-SPLASH",
+  "name": "Splash page",
+  "format": "page",
+  "panels": 1,
+  "grid": "One panel fills the page",
+  "reading_path": "Single image; eye guided by composition",
+  "pacing_use": "Peak or big Establisher; a pause after a build-up; often placed after a page turn",
+  "limits": "Use rarely; loses meaning without the build-up before it; splash-as-Peak is an observation, not a tested finding",
+  "source_keys": [
+   "Cohn2014Architecture"
+  ],
+  "test_status": "untested"
+ },
+ {
+  "id": "PG-SPLASH-INSET",
+  "name": "Splash with insets",
+  "format": "page",
+  "panels": 3,
+  "grid": "Full-page image with 1-2 small inset panels",
+  "reading_path": "Outer (dominant) panel read first ~60% of the time, then insets",
+  "pacing_use": "Establisher + Refiner details; product detail on top of a scene",
+  "limits": "Readers split on order - number insets clearly or place them along the Z-path",
+  "source_keys": [
+   "Cohn2013Navigating",
+   "FoulshamCohn2021"
+  ],
+  "test_status": "untested"
+ },
+ {
+  "id": "PG-BLOCKAGE",
+  "name": "Blockage (tall right panel beside two stacked panels)",
+  "format": "page",
+  "panels": 3,
+  "grid": "Two stacked panels on the left, one tall panel on the right spanning both",
+  "reading_path": "Most readers go down the left stack first (Z-path only ~31%; <10% at full blockage)",
+  "pacing_use": "Two quick beats then a tall Peak/Release; vertical motion (falling, height)",
+  "limits": "Ambiguous for novice readers (they use the Z-path more) - avoid for broad social audiences or add cues (text position, arrows)",
+  "source_keys": [
+   "Cohn2013Navigating",
+   "CohnCampbell2015",
+   "Kirtley2022"
+  ],
+  "test_status": "untested"
+ },
+ {
+  "id": "PG-STAGGER",
+  "name": "Staggered gutters",
+  "format": "page",
+  "panels": 4,
+  "grid": "Gutter of the right column offset from the left one",
+  "reading_path": "Mostly Z-path (~89-90%); deviation grows as the offset approaches full blockage",
+  "pacing_use": "Dynamic, informal feel without breaking order",
+  "limits": "Large offsets behave like blockage",
+  "source_keys": [
+   "CohnCampbell2015",
+   "Cohn2013Navigating"
+  ],
+  "test_status": "untested"
+ },
+ {
+  "id": "PG-SEPARATION",
+  "name": "Separated groups (wide gutter)",
+  "format": "page",
+  "panels": 4,
+  "grid": "Panels grouped by a wider gutter into two clusters",
+  "reading_path": "Z-path ~71%; the wider the gutter, the more readers read group by group",
+  "pacing_use": "Mark two simultaneous threads or a time gap between groups",
+  "limits": "Unclear grouping causes order errors",
+  "source_keys": [
+   "Cohn2013Navigating",
+   "CohnCampbell2015"
+  ],
+  "test_status": "untested"
+ },
+ {
+  "id": "PG-OVERLAP",
+  "name": "Overlapping panels",
+  "format": "page",
+  "panels": 3,
+  "grid": "One panel overlaps another",
+  "reading_path": "Layout-dependent; overlap alone has little effect",
+  "pacing_use": "Energy, simultaneity, a detail popping out (Refiner)",
+  "limits": "Inconsistent reading order across layouts - test",
+  "source_keys": [
+   "Cohn2013Navigating",
+   "CohnCampbell2015"
+  ],
+  "test_status": "untested"
+ },
+ {
+  "id": "PG-CONJ",
+  "name": "Environmental-conjunction row",
+  "format": "page",
+  "panels": 4,
+  "grid": "Row of Mono panels each showing one character at the same moment",
+  "reading_path": "Z-path",
+  "pacing_use": "Introduce a group or a shared moment without a wide shot; reader infers the space (common in manga)",
+  "limits": "Readers less fluent in manga process it with different effort",
+  "source_keys": [
+   "Cohn2020PINS",
+   "CohnTWG2012"
+  ],
+  "test_status": "untested"
+ },
+ {
+  "id": "PG-DIAG",
+  "name": "Diagonal / broken-border action page",
+  "format": "page",
+  "panels": 5,
+  "grid": "Slanted gutters, panels breaking borders",
+  "reading_path": "Usually along the diagonals; external panel structure still drives navigation",
+  "pacing_use": "Fights, chaos, high tension",
+  "limits": "Hard to read on phones; keep one unambiguous path and use text position as a cue",
+  "source_keys": [
+   "Kirtley2022",
+   "CohnCampbell2015"
+  ],
+  "test_status": "untested"
+ },
+ {
+  "id": "PG-RTL",
+  "name": "Right-to-left manga page",
+  "format": "page",
+  "panels": 6,
+  "grid": "Any layout mirrored; book opens from the right",
+  "reading_path": "Mirrored Z-path: R->L, then down; balloons also R->L",
+  "pacing_use": "Only when publishing manga-style for RTL readers",
+  "limits": "Thai and English readers read L->R - mirror the whole layout and balloon order when adapting manga references",
+  "source_keys": [
+   "CohnCampbell2015",
+   "Cohn2013Navigating"
+  ],
+  "test_status": "untested"
+ },
+ {
+  "id": "ST-3",
+  "name": "Three-panel gag strip",
+  "format": "strip",
+  "panels": 3,
+  "grid": "Horizontal row of 3 equal panels",
+  "reading_path": "L->R",
+  "pacing_use": "Setup -> development/beat -> punchline (or I-P-R)",
+  "limits": "No room for a separate beat panel; keep text short",
+  "source_keys": [
+   "Cohn2012Peanuts",
+   "Cohn2020PINS"
+  ],
+  "test_status": "untested"
+ },
+ {
+  "id": "ST-4H",
+  "name": "Four-panel horizontal strip",
+  "format": "strip",
+  "panels": 4,
+  "grid": "Row of 4 equal panels (newspaper daily)",
+  "reading_path": "L->R",
+  "pacing_use": "E/I - L (silent beat) - P - R; classic gag timing with a pause before the punch",
+  "limits": "Panels small in a 1:1 frame - consider 2x2",
+  "source_keys": [
+   "Cohn2012Peanuts",
+   "Cohn2020PINS"
+  ],
+  "test_status": "untested"
+ },
+ {
+  "id": "ST-YONKOMA",
+  "name": "Yonkoma (vertical 4-panel)",
+  "format": "strip",
+  "panels": 4,
+  "grid": "Four equal panels stacked vertically",
+  "reading_path": "Top to bottom",
+  "pacing_use": "Ki (intro) - Sho (development) - Ten (twist/unexpected juxtaposition) - Ketsu (conclusion that recasts the twist)",
+  "limits": "Qualitative evidence only; works for gentle, conflict-light stories as well as gags",
+  "source_keys": [
+   "Dewi2022"
+  ],
+  "test_status": "untested"
+ },
+ {
+  "id": "ST-2X2",
+  "name": "2x2 four-panel square",
+  "format": "1:1",
+  "panels": 4,
+  "grid": "Four equal panels in a square",
+  "reading_path": "Z-path: top-left, top-right, bottom-left, bottom-right",
+  "pacing_use": "Four-beat story or gag in one IG/FB square; quote/dialogue images",
+  "limits": "Make the Z-path obvious (contiguous gutters); <=2 balloons per panel at this size (craft)",
+  "source_keys": [
+   "Cohn2013Navigating",
+   "WEBTOON-Handbook"
+  ],
+  "test_status": "untested"
+ },
+ {
+  "id": "ST-2PANEL-SPLIT",
+  "name": "Two-panel split (before/after, ask/answer)",
+  "format": "1:1",
+  "panels": 2,
+  "grid": "Two panels side by side or stacked",
+  "reading_path": "L->R or top->bottom",
+  "pacing_use": "Contrast, before/after, question/answer; Initial -> Release with Peak Drop",
+  "limits": "Needs a strong visual change between the two",
+  "source_keys": [
+   "Cohn2019Inference",
+   "Shifman2013"
+  ],
+  "test_status": "untested"
+ },
+ {
+  "id": "ST-SINGLE",
+  "name": "Single-panel cartoon",
+  "format": "1:1",
+  "panels": 1,
+  "grid": "One panel + caption or balloon",
+  "reading_path": "Image then caption (or balloon)",
+  "pacing_use": "Editorial/gag cartoon; the reader supplies the before/after",
+  "limits": "Caption-image relationship must be tight; one idea only",
+  "source_keys": [
+   "Cohn2013Balloons",
+   "McCloud1993"
+  ],
+  "test_status": "untested"
+ },
+ {
+  "id": "WT-STD",
+  "name": "Webtoon standard scroll",
+  "format": "webtoon",
+  "panels": null,
+  "grid": "Vertical strip, 800 px wide (official), images <=1280 px tall, <=2 MB each, <=20 MB / 100 images per episode",
+  "reading_path": "Top to bottom by scrolling; reader sees about one panel at a time",
+  "pacing_use": "Max 2 panels on screen; >=200 px between panels in a scene; <=3 balloons per panel, 1-2 sentences each",
+  "limits": "Platform editorial guidance, not reader research; preview font on a phone (12-30 px at 800 wide)",
+  "source_keys": [
+   "WEBTOON-Handbook"
+  ],
+  "test_status": "untested"
+ },
+ {
+  "id": "WT-SCENECHANGE",
+  "name": "Webtoon scene/time gap",
+  "format": "webtoon",
+  "panels": 2,
+  "grid": "Two panels separated by 600-1000 px of space (or a colour gradient)",
+  "reading_path": "Scroll",
+  "pacing_use": "Time passing, location change, a held breath; gradient/sepia for flashback",
+  "limits": "Too many long gaps feel empty",
+  "source_keys": [
+   "WEBTOON-Handbook",
+   "ClipStudio-Webtoon"
+  ],
+  "test_status": "untested"
+ },
+ {
+  "id": "WT-IMPACT",
+  "name": "Webtoon impact panel",
+  "format": "webtoon",
+  "panels": 1,
+  "grid": "Extra-tall or full-width borderless panel",
+  "reading_path": "Scroll into it",
+  "pacing_use": "Peak / emotional reveal; maximises the vertical format",
+  "limits": "Loses effect if overused",
+  "source_keys": [
+   "WEBTOON-Handbook"
+  ],
+  "test_status": "untested"
+ },
+ {
+  "id": "WT-DIALOGUE-FIRST",
+  "name": "Dialogue-before-character reveal",
+  "format": "webtoon",
+  "panels": 2,
+  "grid": "Balloon(s) appear in empty space, character panel below",
+  "reading_path": "Scroll: text first, then image",
+  "pacing_use": "Character deep in thought; suspense about who speaks",
+  "limits": "Off-panel balloon must clearly attach once the speaker appears",
+  "source_keys": [
+   "ClipStudio-Webtoon",
+   "Cohn2019Inference"
+  ],
+  "test_status": "untested"
+ },
+ {
+  "id": "WT-STAIRCASE",
+  "name": "Staircase / zig-zag scroll",
+  "format": "webtoon",
+  "panels": 4,
+  "grid": "Narrow panels alternating left and right down the strip",
+  "reading_path": "Down, alternating sides",
+  "pacing_use": "Back-and-forth dialogue, walking, falling",
+  "limits": "Keep speaker sides consistent (180-degree rule); craft pattern",
+  "source_keys": [
+   "WEBTOON-Handbook",
+   "ClipStudio-Webtoon"
+  ],
+  "test_status": "untested"
+ },
+ {
+  "id": "CR-1PER",
+  "name": "Carousel: one panel per slide",
+  "format": "carousel",
+  "panels": null,
+  "grid": "Each slide = one full-bleed panel, 1:1 or 4:5 (1080x1350), up to 20 slides",
+  "reading_path": "Swipe = next panel",
+  "pacing_use": "Webtoon-like control of timing; Peak revealed on a new slide after a swipe",
+  "limits": "Uses many slides; first slide must hook; first slide reportedly sets aspect ratio for the set (unverified)",
+  "source_keys": [
+   "MacRumors2024",
+   "WEBTOON-Handbook",
+   "Hacimusaoglu2023"
+  ],
+  "test_status": "untested"
+ },
+ {
+  "id": "CR-PAGE",
+  "name": "Carousel: page per slide",
+  "format": "carousel",
+  "panels": null,
+  "grid": "Each slide = 2-4 panel grid",
+  "reading_path": "Z-path inside slide, swipe between pages",
+  "pacing_use": "More story per slide; scene changes at slide boundaries (page-turn logic)",
+  "limits": "Small panels on phones; keep grid simple",
+  "source_keys": [
+   "Hacimusaoglu2023",
+   "Cohn2013Navigating"
+  ],
+  "test_status": "untested"
+ },
+ {
+  "id": "CR-PANORAMA",
+  "name": "Seamless panorama carousel",
+  "format": "carousel",
+  "panels": null,
+  "grid": "One wide image split across consecutive slides; slide edges act as invisible gutters",
+  "reading_path": "Swipe L->R through a continuous scene",
+  "pacing_use": "Journey, walk, time passing across one space",
+  "limits": "Never cut through a face/character or text at the slide seam",
+  "source_keys": [
+   "Groensteen2007",
+   "MacRumors2024"
+  ],
+  "test_status": "untested"
+ },
+ {
+  "id": "CR-HOOK-REVEAL",
+  "name": "Carousel hook / reveal pair",
+  "format": "carousel",
+  "panels": 2,
+  "grid": "Slide N ends on an Initial (question, about-to), slide N+1 shows the Peak",
+  "reading_path": "Swipe",
+  "pacing_use": "Cliffhanger inside a carousel; drives swipes",
+  "limits": "Page-turn suspense is an observation from print, untested on carousels",
+  "source_keys": [
+   "Cohn2014Architecture",
+   "Hacimusaoglu2023"
+  ],
+  "test_status": "untested"
+ },
+ {
+  "id": "CR-BOOKEND",
+  "name": "Carousel bookend",
+  "format": "carousel",
+  "panels": null,
+  "grid": "First and last slide share composition; the state has changed",
+  "reading_path": "Swipe",
+  "pacing_use": "Transformation stories (worried -> calm), before/after products; braiding inside one post",
+  "limits": "Change must be readable at a glance",
+  "source_keys": [
+   "Groensteen2007",
+   "Cohn2020PINS"
+  ],
+  "test_status": "untested"
+ },
+ {
+  "id": "V-SCROLLPAN",
+  "name": "9:16 scroll-pan of a tall comic",
+  "format": "9:16",
+  "panels": null,
+  "grid": "Tall webtoon-style image, camera pans down; 1-2 panels per frame",
+  "reading_path": "Top to bottom over time",
+  "pacing_use": "Turns a comic into a Reel/TikTok; gaps ~270 px (scene) / ~810-1350 px (scene change) at 1080 wide (scaled from WEBTOON 800 px guidance)",
+  "limits": "Keep text in the 9:16 safe zone; hold long enough to read Thai text",
+  "source_keys": [
+   "WEBTOON-Handbook"
+  ],
+  "test_status": "untested"
+ },
+ {
+  "id": "V-2STACK",
+  "name": "9:16 two-panel stack",
+  "format": "9:16",
+  "panels": 2,
+  "grid": "Two panels stacked top/bottom in one vertical frame",
+  "reading_path": "Top then bottom",
+  "pacing_use": "Question/answer, before/after; dialogue duo (speaker A top, speaker B bottom)",
+  "limits": "Bottom panel may fall in the UI zone - keep key content above the bottom ~35%",
+  "source_keys": [
+   "Cohn2013Navigating"
+  ],
+  "test_status": "untested"
+ },
+ {
+  "id": "STK-STATIC",
+  "name": "LINE sticker (static)",
+  "format": "sticker",
+  "panels": 1,
+  "grid": "Single figure, transparent PNG, max 370x320 px, even dimensions, ~10 px margin; sets of 8/16/24/32/40",
+  "reading_path": "Single glance in chat",
+  "pacing_use": "A one-panel reaction; the chat supplies the context panels",
+  "limits": "No ads, no scenery/objects-only, no overly tall full-length figures; check the live guideline before submitting",
+  "source_keys": [
+   "LINE-Static"
+  ],
+  "test_status": "untested"
+ },
+ {
+  "id": "STK-ANIM",
+  "name": "LINE sticker (animated)",
+  "format": "sticker",
+  "panels": 1,
+  "grid": "APNG, max 320x270 px, 5-20 frames, <=4 s, 1-4 loops; sets of 8/16/24",
+  "reading_path": "Loop in chat",
+  "pacing_use": "Micro-gag: anticipation -> action -> hold",
+  "limits": "Very few frames; the pose must read at thumbnail size",
+  "source_keys": [
+   "LINE-Animated"
+  ],
+  "test_status": "untested"
+ },
+ {
+  "id": "MM-TEMPLATE",
+  "name": "Meme template (fixed form, swappable text)",
+  "format": "1:1",
+  "panels": 2,
+  "grid": "2-4 panel fixed layout and poses; text slots others can replace",
+  "reading_path": "Z-path",
+  "pacing_use": "Shareable formats; form is copied most faithfully while content and stance change",
+  "limits": "Brand stance must fit (warm vs ironic)",
+  "source_keys": [
+   "Shifman2013"
+  ],
+  "test_status": "untested"
+ }
+]

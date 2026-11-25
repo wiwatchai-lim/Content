@@ -1,0 +1,819 @@
+{
+ "schema_version": "1.0",
+ "statuses": [
+  "NOT STARTED",
+  "RESEARCHING",
+  "DRAFTED",
+  "SOURCE VERIFIED",
+  "PRACTICALLY TESTED",
+  "HUMAN REVIEWED",
+  "PRODUCTION READY"
+ ],
+ "status_rules": {
+  "DRAFTED": "written down; sources not checked or not attached",
+  "SOURCE VERIFIED": "claims tied to SOURCE_REGISTRY entries that were really opened; for new batches also: >=50% of the module's sources read as full_text/abstract/publisher_page AND an independent spot-check found no wrong citation",
+  "PRACTICALLY TESTED": "used in a real job with the measured/observed result logged",
+  "HUMAN REVIEWED": "the user (or a named human) reviewed outputs built with it",
+  "PRODUCTION READY": "human reviewed + tests pass + no open critical gaps; never just because docs exist"
+ },
+ "current_phase": "Phase 2 done (first pass). Next: batch P3 (story, dialogue, comedy, emotional architecture) - see RESUME.md",
+ "phases_done": [
+  "Phase 0 audit (2026-11-25)",
+  "Phase 1 infrastructure (2026-11-25)",
+  "Phase 2 first pass (2026-11-25)"
+ ],
+ "batches": [
+  {
+   "id": "P2",
+   "date": "2026-11-25",
+   "modules": [
+    "M01",
+    "M02",
+    "M03",
+    "M04"
+   ],
+   "sources_added": 201,
+   "spot_check": "4 sampled: Kang2009 confirmed from PDF (r=.44, peak ~.50), Jack2012 confirmed on PMC; Kashdan2015 (403) and Kohsom1997 (empty page) unreachable, not refuted. 0 wrong citations.",
+   "notes": "Agents' search_summary findings are flagged by validate; treat as secondary until read."
+  },
+  {
+   "id": "VA1",
+   "date": "2026-11-25",
+   "modules": [
+    "M07",
+    "M09",
+    "M10",
+    "M18",
+    "M34"
+   ],
+   "sources_added": 183,
+   "spot_check": "12 sampled (3 per agent): 9 confirmed, 3 partly (wording the source does not use: Goodwin2007, Goral1984, Held2010 - corrected), 0 wrong, 0 unreachable; 4 checked only via abstract/repository because publisher pages blocked",
+   "notes": "Visual-arts brief. Read ratio (full_text+abstract+publisher_page): colour 64%, form 73%, light 61%, camera 74%. Tools: inspect_views.py, score.py art_mastery. Experiments VA-000..002 run. Next VA2: composition master, perception/eye guidance, typography mastery, compositing."
+  },
+  {
+   "id": "T1",
+   "date": "2026-11-25",
+   "modules": [
+    "M43",
+    "M21",
+    "M41",
+    "M33",
+    "M28",
+    "M29"
+   ],
+   "sources_added": 185,
+   "spot_check": "13 checked (incl. 3 brand-spelling pages): 13 confirmed, 0 wrong; 2 via secondary sources only (Hill1965, BBC goldfish), 3 via abstracts",
+   "notes": "Brief v3. Read ratio: M43 20%, M21 59%, M41 65%, M33 72%, M28 73%, M29 57%. Next T2 integration."
+  },
+  {
+   "id": "U1",
+   "date": "2026-11-25",
+   "modules": [
+    "M13",
+    "M14",
+    "M31",
+    "M32",
+    "M22",
+    "M23",
+    "M24",
+    "M12",
+    "M30"
+   ],
+   "sources_added": 224,
+   "spot_check": "8 checked: 4 confirmed, 3 partly (Tilleke AI-label scope/date, Eisend liking, Torcoli context - corrected), 1 WRONG (Coconuts: Culture Ministry -> private group Knowing Buddha - corrected)",
+   "notes": "User: knowledge must be general-purpose. Read ratios 20-55%; brief now demands >=50% real reads."
+  },
+  {
+   "id": "U2",
+   "date": "2026-11-25",
+   "modules": [
+    "M16",
+    "M38",
+    "M27",
+    "M17",
+    "M05",
+    "M06"
+   ],
+   "sources_added": 135,
+   "spot_check": "12 checked: 10 confirmed, 2 partly (Macdonald range, VanGeert framing - corrected), 0 wrong",
+   "notes": "Brief demanded >=50% real reads: achieved 52-90%."
+  },
+  {
+   "id": "U3",
+   "date": "2026-11-25",
+   "modules": [
+    "M43",
+    "M01",
+    "M02",
+    "M13",
+    "M31",
+    "M22",
+    "M23",
+    "M12",
+    "M30"
+   ],
+   "sources_added": 0,
+   "spot_check": "18 checked (2 per upgraded module): 15 confirmed, 3 partly (corrected), 0 wrong",
+   "notes": "Full-text upgrade; many snippet-based findings corrected (see LESSONS_LEARNED)."
+  },
+  {
+   "id": "C1",
+   "date": "2026-11-25",
+   "modules": [
+    "M44"
+   ],
+   "sources_added": 120,
+   "spot_check": "8: 6 confirmed, 2 partly (corrected), 0 wrong",
+   "notes": "All cartoon styles; FLUX style sweep experiments."
+  }
+ ],
+ "modules": [
+  {
+   "id": "M01",
+   "name": "Human Psychology",
+   "folder": "creative-intelligence/knowledge/psychology",
+   "phase": 2,
+   "status": "SOURCE VERIFIED",
+   "files": [
+    "creative-intelligence/knowledge/psychology/README.md",
+    "creative-intelligence/knowledge/psychology/sources.json"
+   ],
+   "notes": "P2 2026-11-25: 18 concepts, 48 sources but only 25% read beyond search snippets (PMC captcha). Upgrade: read Tannenbaum2015, Carstensen, Loewenstein1994 full text. No Thai-sample studies. | U3: full-text upgrade -> 60% read; independent spot-check of 18 (2/module): 0 wrong.",
+   "human_review": null,
+   "updated": "2026-11-25"
+  },
+  {
+   "id": "M02",
+   "name": "Emotion Science",
+   "folder": "creative-intelligence/knowledge/emotions",
+   "phase": 2,
+   "status": "SOURCE VERIFIED",
+   "files": [
+    "creative-intelligence/knowledge/emotions/README.md",
+    "creative-intelligence/knowledge/emotions/sources.json",
+    "creative-intelligence/knowledge/emotions/emotion_crosswalk.json",
+    ".claude/skills/ai-voice-director/EMOTION_LIBRARY.json",
+    ".claude/skills/ai-visual-artist/EMOTION_VISUAL_LIBRARY.json"
+   ],
+   "notes": "P2 2026-11-25: theory + crosswalk (114 rows; libraries share 108 ids) + 22 missing emotions found. 44% read. Upgrade: full text of Barrett2017, Hatfield1993, Webb2012, Tsai2006. | U3: full-text upgrade -> 70% read; independent spot-check of 18 (2/module): 0 wrong.",
+   "human_review": null,
+   "updated": "2026-11-25"
+  },
+  {
+   "id": "M03",
+   "name": "Philosophy and Wisdom",
+   "folder": "creative-intelligence/knowledge/philosophy",
+   "phase": 2,
+   "status": "SOURCE VERIFIED",
+   "files": [
+    "creative-intelligence/knowledge/philosophy/README.md",
+    "creative-intelligence/knowledge/philosophy/sources.json"
+   ],
+   "notes": "P2 2026-11-25: 52 sources, 79% read (SEP/IEP/Access to Insight); 40 misattributed quotes listed; 12 Mint & Tao examples. Gap: Gutenberg down (primary texts not read in full), no Thai primary sources (Buddhadasa, Payutto).",
+   "human_review": null,
+   "updated": "2026-11-25"
+  },
+  {
+   "id": "M04",
+   "name": "Cognitive Science",
+   "folder": "creative-intelligence/knowledge/cognitive-science",
+   "phase": 2,
+   "status": "SOURCE VERIFIED",
+   "files": [
+    "creative-intelligence/knowledge/cognitive-science/README.md",
+    "creative-intelligence/knowledge/cognitive-science/sources.json",
+    ".claude/skills/ai-visual-artist/research/R1_fundamentals_perception.md"
+   ],
+   "notes": "P2 2026-11-25: 17 concepts with EVIDENCE/DERIVED/INDUSTRY rules, 51 sources, 61% read. Gap: no peer-reviewed Thai subtitle reading speed; no IG/TikTok eye-tracking.",
+   "human_review": null,
+   "updated": "2026-11-25"
+  },
+  {
+   "id": "M05",
+   "name": "Neuroaesthetics",
+   "folder": "creative-intelligence/knowledge/neuroaesthetics",
+   "phase": 3,
+   "status": "SOURCE VERIFIED",
+   "files": [
+    ".claude/skills/ai-visual-artist/research/R1_fundamentals_perception.md",
+    ".claude/skills/ai-visual-artist/ART_FUNDAMENTALS.md",
+    "creative-intelligence/knowledge/neuroaesthetics/README.md"
+   ],
+   "notes": "Partial: balance/preference studies in R1. No dedicated pass yet | U2: 62% read, spot-check clean (12/12 supported, 2 wording fixes).",
+   "human_review": null,
+   "updated": "2026-11-25"
+  },
+  {
+   "id": "M06",
+   "name": "Aesthetic Intelligence",
+   "folder": "creative-intelligence/knowledge/aesthetics",
+   "phase": 3,
+   "status": "SOURCE VERIFIED",
+   "files": [
+    ".claude/skills/ai-visual-artist/IMAGE_CRITIQUE_ENGINE.md",
+    ".claude/skills/ai-visual-artist/MASTER_KNOWLEDGE.md",
+    "creative-intelligence/knowledge/aesthetics/README.md",
+    "creative-intelligence/knowledge/aesthetics/LOOK_DICTIONARY.md",
+    "creative-intelligence/knowledge/aesthetics/CRITIQUE_PROTOCOL.md"
+   ],
+   "notes": "Critique + taste rules exist; no taste study with human raters | U2: 52% read, spot-check clean (12/12 supported, 2 wording fixes).",
+   "human_review": null,
+   "updated": "2026-11-25"
+  },
+  {
+   "id": "M07",
+   "name": "Visual Art Fundamentals",
+   "folder": "creative-intelligence/knowledge/art",
+   "phase": 3,
+   "status": "SOURCE VERIFIED",
+   "files": [
+    ".claude/skills/ai-visual-artist/ART_FUNDAMENTALS.md",
+    ".claude/skills/ai-visual-artist/DRAWING_TECHNIQUES.md",
+    "creative-intelligence/knowledge/visual-arts/VALUE_AND_NOTAN.md",
+    "creative-intelligence/knowledge/visual-arts/EDGE_CONTROL.md",
+    "creative-intelligence/knowledge/visual-arts/DETAIL_HIERARCHY.md",
+    "creative-intelligence/knowledge/visual-arts/SHAPE_LANGUAGE.md",
+    "creative-intelligence/knowledge/visual-arts/PERSPECTIVE_MASTERY.md",
+    "creative-intelligence/knowledge/visual-arts/PERSPECTIVE_ERROR_LIBRARY.json",
+    "creative-intelligence/knowledge/visual-arts/form_libraries.json",
+    "creative-intelligence/knowledge/visual-arts/form_errors.json"
+   ],
+   "notes": "VA1 2026-11-25: deep files in knowledge/visual-arts/ (see README).",
+   "human_review": null,
+   "updated": "2026-11-25"
+  },
+  {
+   "id": "M08",
+   "name": "Composition and Visual Design",
+   "folder": "creative-intelligence/knowledge/composition",
+   "phase": 3,
+   "status": "PRACTICALLY TESTED",
+   "files": [
+    ".claude/skills/ai-visual-artist/COMPOSITION_LIBRARY.json",
+    "story-clips/_craft/curriculum/03-composition.md",
+    "creative-intelligence/knowledge/visual-arts/VISUAL_ERROR_LIBRARY.json",
+    "creative-intelligence/knowledge/visual-arts/VISUAL_EXPERIMENTS.json"
+   ],
+   "notes": "30 of 100 target; tested with FLUX + analyze_image (golden glasses job) | VA1 2026-11-25: deep files in knowledge/visual-arts/ (see README).",
+   "human_review": null,
+   "updated": "2026-11-25"
+  },
+  {
+   "id": "M09",
+   "name": "Color Science",
+   "folder": "creative-intelligence/knowledge/color",
+   "phase": 3,
+   "status": "SOURCE VERIFIED",
+   "files": [
+    ".claude/skills/ai-visual-artist/COLOR_PALETTE_LIBRARY.json",
+    ".claude/skills/ai-visual-artist/COLOR_THEORY.md",
+    ".claude/skills/ai-visual-artist/tools/color_tools.py",
+    "creative-intelligence/knowledge/visual-arts/ADVANCED_COLOR_SCIENCE.md",
+    "creative-intelligence/knowledge/visual-arts/COLOR_RELATIVITY.md",
+    "creative-intelligence/knowledge/visual-arts/COLOR_SCRIPTING.md",
+    "creative-intelligence/knowledge/visual-arts/color_relationships.json"
+   ],
+   "notes": "204 of 300 palettes | VA1 2026-11-25: deep files in knowledge/visual-arts/ (see README).",
+   "human_review": null,
+   "updated": "2026-11-25"
+  },
+  {
+   "id": "M10",
+   "name": "Lighting and Shadow",
+   "folder": "creative-intelligence/knowledge/lighting",
+   "phase": 3,
+   "status": "PRACTICALLY TESTED",
+   "files": [
+    ".claude/skills/ai-visual-artist/LIGHTING_LIBRARY.json",
+    "story-clips/_craft/curriculum/04-lighting.md",
+    "creative-intelligence/knowledge/visual-arts/LIGHTING_PHYSICS.md",
+    "creative-intelligence/knowledge/visual-arts/ATMOSPHERIC_EFFECTS.md",
+    "creative-intelligence/knowledge/visual-arts/light_libraries.json"
+   ],
+   "notes": "51 of 100; FLUX lighting lessons logged | VA1 2026-11-25: deep files in knowledge/visual-arts/ (see README).",
+   "human_review": null,
+   "updated": "2026-11-25"
+  },
+  {
+   "id": "M11",
+   "name": "Art History and Art Style",
+   "folder": "creative-intelligence/knowledge/art-history",
+   "phase": 3,
+   "status": "SOURCE VERIFIED",
+   "files": [
+    ".claude/skills/ai-visual-artist/ART_STYLE_LIBRARY.json",
+    ".claude/skills/ai-visual-artist/REFERENCE_DATABASE.json"
+   ],
+   "notes": "102 of 150 styles; 141 licensed artwork records (metadata only)",
+   "human_review": null,
+   "updated": "2026-11-25"
+  },
+  {
+   "id": "M12",
+   "name": "Visual Semiotics",
+   "folder": "creative-intelligence/knowledge/semiotics",
+   "phase": 3,
+   "status": "SOURCE VERIFIED",
+   "files": [
+    ".claude/skills/ai-visual-artist/VISUAL_STORYTELLING.md",
+    "creative-intelligence/knowledge/semiotics/README.md",
+    "creative-intelligence/knowledge/semiotics/SYMBOL_LIBRARY.json"
+   ],
+   "notes": "Only scattered metaphor notes | U1: 27% read. | U3: full-text upgrade -> 63% read; independent spot-check of 18 (2/module): 0 wrong.",
+   "human_review": null,
+   "updated": "2026-11-25"
+  },
+  {
+   "id": "M13",
+   "name": "Storytelling",
+   "folder": "creative-intelligence/knowledge/storytelling",
+   "phase": 4,
+   "status": "SOURCE VERIFIED",
+   "files": [
+    ".claude/skills/ai-visual-artist/VISUAL_STORYTELLING.md",
+    "story-clips/_craft/curriculum/08-storyboard.md",
+    "creative-intelligence/knowledge/storytelling/README.md",
+    "creative-intelligence/knowledge/storytelling/STORY_TEMPLATES.md"
+   ],
+   "notes": "120 story carousels produced in practice, but no sourced story-pattern library | U1: 25% read -> DRAFTED. | U3: full-text upgrade -> 55% read; independent spot-check of 18 (2/module): 0 wrong.",
+   "human_review": null,
+   "updated": "2026-11-25"
+  },
+  {
+   "id": "M14",
+   "name": "Screenwriting and Dialogue",
+   "folder": "creative-intelligence/knowledge/screenwriting",
+   "phase": 4,
+   "status": "SOURCE VERIFIED",
+   "files": [
+    "story-clips/_craft/GUIDE.md",
+    "creative-intelligence/knowledge/screenwriting/README.md",
+    "creative-intelligence/knowledge/screenwriting/SCRIPT_CHECKER.md"
+   ],
+   "notes": "Practice only (Mint & Tao, eyesight series); no sourced knowledge | U1: 50% read, spot-check clean. VO rate measured on our Puck TTS: ~11 Thai chars/s (DERIVED).",
+   "human_review": null,
+   "updated": "2026-11-25"
+  },
+  {
+   "id": "M15",
+   "name": "Character Design and Psychology",
+   "folder": "creative-intelligence/knowledge/characters",
+   "phase": 4,
+   "status": "SOURCE VERIFIED",
+   "files": [
+    ".claude/skills/ai-visual-artist/CHARACTER_DESIGN.md",
+    ".claude/skills/ai-visual-artist/CHARACTER_BIBLE_TEMPLATE.md"
+   ],
+   "notes": "",
+   "human_review": null,
+   "updated": "2026-11-25"
+  },
+  {
+   "id": "M16",
+   "name": "World Building",
+   "folder": "creative-intelligence/knowledge/world-building",
+   "phase": 4,
+   "status": "SOURCE VERIFIED",
+   "files": [
+    "creative-intelligence/knowledge/world-building/README.md",
+    "creative-intelligence/knowledge/world-building/STORY_BIBLE_TEMPLATE.md"
+   ],
+   "notes": "Series exist (eyesight, zombie, night-optic, slowly-growing) without a lore/continuity store | U2: 65% read, spot-check clean (12/12 supported, 2 wording fixes).",
+   "human_review": null,
+   "updated": "2026-11-25"
+  },
+  {
+   "id": "M17",
+   "name": "Body Language and Facial Acting",
+   "folder": "creative-intelligence/knowledge/acting",
+   "phase": 4,
+   "status": "SOURCE VERIFIED",
+   "files": [
+    "story-clips/_craft/GUIDE.md",
+    "story-clips/_craft/rig.js",
+    "creative-intelligence/knowledge/acting/README.md",
+    "creative-intelligence/knowledge/acting/ACTING_GUIDE.md",
+    "creative-intelligence/knowledge/acting/POSE_LIBRARY.json"
+   ],
+   "notes": "GUIDE section 5 + rig emotes; no FACS-sourced library | U2: 82% read, spot-check clean (12/12 supported, 2 wording fixes).",
+   "human_review": null,
+   "updated": "2026-11-25"
+  },
+  {
+   "id": "M18",
+   "name": "Cinematography",
+   "folder": "creative-intelligence/knowledge/cinematography",
+   "phase": 5,
+   "status": "PRACTICALLY TESTED",
+   "files": [
+    "story-clips/_craft/curriculum/01-photography-fundamentals.md",
+    "story-clips/_craft/curriculum/02-camera-lens.md",
+    "story-clips/_craft/curriculum/05-movement-language.md",
+    "story-clips/_craft/GUIDE.md",
+    "creative-intelligence/knowledge/visual-arts/CAMERA_ANGLE_LIBRARY.json",
+    "creative-intelligence/knowledge/visual-arts/LENS_OPTICS.md",
+    "creative-intelligence/knowledge/visual-arts/lens_examples.json"
+   ],
+   "notes": "Shot library not yet a structured file | VA1 2026-11-25: deep files in knowledge/visual-arts/ (see README).",
+   "human_review": null,
+   "updated": "2026-11-25"
+  },
+  {
+   "id": "M19",
+   "name": "Animation and Movement",
+   "folder": "creative-intelligence/knowledge/animation",
+   "phase": 5,
+   "status": "PRACTICALLY TESTED",
+   "files": [
+    "story-clips/_craft/curriculum/06-2d-animation.md",
+    "story-clips/_craft/curriculum/07-3d-character.md",
+    "story-clips/_craft/rig.js"
+   ],
+   "notes": "rig v2 measured (twos, walk, lip-sync)",
+   "human_review": null,
+   "updated": "2026-11-25"
+  },
+  {
+   "id": "M20",
+   "name": "Voice Acting and Emotional Speech",
+   "folder": "creative-intelligence/knowledge/voice",
+   "phase": 6,
+   "status": "PRACTICALLY TESTED",
+   "files": [
+    ".claude/skills/ai-voice-director/SKILL.md",
+    ".claude/skills/ai-voice-director/PROSODY_RULES.md",
+    ".claude/skills/ai-voice-director/CHARACTER_VOICE_BIBLE.md"
+   ],
+   "notes": "EP01 27 takes analysed; no native-listener ratings",
+   "human_review": null,
+   "updated": "2026-11-25"
+  },
+  {
+   "id": "M21",
+   "name": "Thai Language Specialization",
+   "folder": "creative-intelligence/knowledge/thai-language",
+   "phase": 6,
+   "status": "PRACTICALLY TESTED",
+   "files": [
+    ".claude/skills/ai-voice-director/THAI_PRONUNCIATION.md",
+    ".claude/skills/ai-voice-director/PRONUNCIATION_DICTIONARY.json",
+    ".claude/skills/ai-visual-artist/THAI_TYPOGRAPHY.md",
+    "creative-intelligence/knowledge/thai-language/README.md",
+    "creative-intelligence/knowledge/thai-language/STYLE_GUIDE.md",
+    "creative-intelligence/knowledge/thai-language/NORMALIZATION_RULES.md",
+    "creative-intelligence/knowledge/thai-language/pronunciation_proposals.json"
+   ],
+   "notes": "Dictionary has 43 entries; dialogue pragmatics/humour not covered | T1: brand spellings verified (HOYA โฮยา, Essilor เอสซีลอร์, Varilux วารีลักซ์) and merged; normaliser fixed (lens powers, 6/6, ranges, °C).",
+   "human_review": null,
+   "updated": "2026-11-25"
+  },
+  {
+   "id": "M22",
+   "name": "Sound Design",
+   "folder": "creative-intelligence/knowledge/sound",
+   "phase": 6,
+   "status": "SOURCE VERIFIED",
+   "files": [
+    "story-clips/_craft/FX.md",
+    "story-clips/_craft/sound.py",
+    "story-clips/_craft/sfxlib/CREDITS.md",
+    "creative-intelligence/knowledge/sound/README.md",
+    "creative-intelligence/knowledge/sound/SOUND_DESIGN_LIBRARY.md"
+   ],
+   "notes": "83 CC0 SFX in use; no sourced theory | U1: 20% read. | U3: full-text upgrade -> 60% read; independent spot-check of 18 (2/module): 0 wrong.",
+   "human_review": null,
+   "updated": "2026-11-25"
+  },
+  {
+   "id": "M23",
+   "name": "Music Theory and Music Psychology",
+   "folder": "creative-intelligence/knowledge/music",
+   "phase": 6,
+   "status": "SOURCE VERIFIED",
+   "files": [
+    "creative-intelligence/knowledge/music/README.md",
+    "creative-intelligence/knowledge/music/MUSIC_DIRECTION.md"
+   ],
+   "notes": "beat-clip uses librosa beat tracking only | U1: 42% read. | U3: full-text upgrade -> 58% read; independent spot-check of 18 (2/module): 0 wrong.",
+   "human_review": null,
+   "updated": "2026-11-25"
+  },
+  {
+   "id": "M24",
+   "name": "Audio Engineering",
+   "folder": "creative-intelligence/knowledge/audio-engineering",
+   "phase": 6,
+   "status": "SOURCE VERIFIED",
+   "files": [
+    ".claude/skills/ai-voice-director/QUALITY_CONTROL.md",
+    ".claude/skills/ai-voice-director/tools/qc.py",
+    "creative-intelligence/knowledge/audio-engineering/README.md",
+    "creative-intelligence/knowledge/audio-engineering/MIX_PLAYBOOK.md"
+   ],
+   "notes": "Voice loudness QC exists; no mix/master guide | U1: 55% read; ffmpeg commands run on test audio; Torcoli wording corrected (partly, not wrong).",
+   "human_review": null,
+   "updated": "2026-11-25"
+  },
+  {
+   "id": "M25",
+   "name": "Film Editing",
+   "folder": "creative-intelligence/knowledge/editing",
+   "phase": 7,
+   "status": "SOURCE VERIFIED",
+   "files": [
+    "story-clips/_craft/curriculum/11-edit-grade.md",
+    "story-clips/_craft/GUIDE.md"
+   ],
+   "notes": "",
+   "human_review": null,
+   "updated": "2026-11-25"
+  },
+  {
+   "id": "M26",
+   "name": "Graphic Design and Typography",
+   "folder": "creative-intelligence/knowledge/graphic-design",
+   "phase": 7,
+   "status": "SOURCE VERIFIED",
+   "files": [
+    ".claude/skills/ai-visual-artist/GRAPHIC_DESIGN.md",
+    ".claude/skills/ai-visual-artist/THAI_TYPOGRAPHY.md"
+   ],
+   "notes": "No layout library yet",
+   "human_review": null,
+   "updated": "2026-11-25"
+  },
+  {
+   "id": "M27",
+   "name": "Branding and Visual Identity",
+   "folder": "creative-intelligence/knowledge/branding",
+   "phase": 7,
+   "status": "SOURCE VERIFIED",
+   "files": [
+    "CLAUDE.md",
+    "creative-intelligence/knowledge/branding/README.md",
+    "creative-intelligence/knowledge/branding/BRAND_GUIDE_TEMPLATE.md",
+    "creative-intelligence/knowledge/branding/BRAND_CHECK.md"
+   ],
+   "notes": "House rules only; no Brand Bible file | U2: 73% read, spot-check clean (12/12 supported, 2 wording fixes).",
+   "human_review": null,
+   "updated": "2026-11-25"
+  },
+  {
+   "id": "M28",
+   "name": "Audience Psychology",
+   "folder": "creative-intelligence/knowledge/audience",
+   "phase": 7,
+   "status": "SOURCE VERIFIED",
+   "files": [
+    "creative-intelligence/knowledge/audience/README.md",
+    "creative-intelligence/knowledge/audience/RETENTION_REVIEW.md"
+   ],
+   "notes": "T1: 73% read, spot-check clean.",
+   "human_review": null,
+   "updated": "2026-11-25"
+  },
+  {
+   "id": "M29",
+   "name": "Marketing and Content Strategy",
+   "folder": "creative-intelligence/knowledge/marketing",
+   "phase": 7,
+   "status": "SOURCE VERIFIED",
+   "files": [
+    "creative-intelligence/knowledge/marketing/README.md",
+    "creative-intelligence/knowledge/marketing/CONTENT_TYPES.md",
+    "creative-intelligence/knowledge/marketing/ETHICS_AND_THAI_AD_RULES.md"
+   ],
+   "notes": "ads-meta skill reads real ad results; no strategy knowledge | T1: 57% read (Thai CPA + PDPA + Meta policies full text), spot-check clean. Thai FDA device-ad scope still unconfirmed.",
+   "human_review": null,
+   "updated": "2026-11-25"
+  },
+  {
+   "id": "M30",
+   "name": "Anthropology and Cultural Intelligence",
+   "folder": "creative-intelligence/knowledge/culture",
+   "phase": 7,
+   "status": "SOURCE VERIFIED",
+   "files": [
+    "creative-intelligence/knowledge/culture/README.md",
+    "creative-intelligence/knowledge/culture/CULTURAL_CHECK.md"
+   ],
+   "notes": "U1: 54% read BUT spot-check found 1 wrong citation (Coconuts: campaign by private group, not Culture Ministry) - corrected; stays DRAFTED until a clean re-check. | U3: full-text upgrade -> 84% read; independent spot-check of 18 (2/module): 0 wrong.",
+   "human_review": null,
+   "updated": "2026-11-25"
+  },
+  {
+   "id": "M31",
+   "name": "Humor and Comedy",
+   "folder": "creative-intelligence/knowledge/comedy",
+   "phase": 4,
+   "status": "SOURCE VERIFIED",
+   "files": [
+    "creative-intelligence/knowledge/comedy/README.md",
+    "creative-intelligence/knowledge/comedy/COMEDY_PLAYBOOK.md"
+   ],
+   "notes": "U1: 33% read; Eisend2009 wording corrected after spot-check. | U3: full-text upgrade -> 56% read; independent spot-check of 18 (2/module): 0 wrong.",
+   "human_review": null,
+   "updated": "2026-11-25"
+  },
+  {
+   "id": "M32",
+   "name": "Emotional Architecture",
+   "folder": "creative-intelligence/knowledge/emotional-architecture",
+   "phase": 7,
+   "status": "SOURCE VERIFIED",
+   "files": [
+    ".claude/skills/ai-voice-director/EMOTION_TRANSITIONS.md",
+    "creative-intelligence/knowledge/emotional-architecture/README.md",
+    "creative-intelligence/knowledge/emotional-architecture/EMOTION_DESIGN_MATRIX.md",
+    "creative-intelligence/knowledge/emotional-architecture/ARC_TEMPLATES.md"
+   ],
+   "notes": "Only voice transitions | U1: 50% read, spot-check clean.",
+   "human_review": null,
+   "updated": "2026-11-25"
+  },
+  {
+   "id": "M33",
+   "name": "Creative Thinking",
+   "folder": "creative-intelligence/knowledge/creative-thinking",
+   "phase": 7,
+   "status": "SOURCE VERIFIED",
+   "files": [
+    "creative-intelligence/knowledge/creative-thinking/README.md",
+    "creative-intelligence/knowledge/creative-thinking/IDEATION_PLAYBOOK.md"
+   ],
+   "notes": "T1: 72% read, spot-check clean.",
+   "human_review": null,
+   "updated": "2026-11-25"
+  },
+  {
+   "id": "M34",
+   "name": "Computer Graphics",
+   "folder": "creative-intelligence/knowledge/computer-graphics",
+   "phase": 8,
+   "status": "SOURCE VERIFIED",
+   "files": [
+    "story-clips/_craft/curriculum/07-3d-character.md",
+    "creative-intelligence/knowledge/visual-arts/MATERIAL_RENDERING.md"
+   ],
+   "notes": "VA1 2026-11-25: deep files in knowledge/visual-arts/ (see README). Status up: light batch 61% read (Burley2012, Karis2013, Hoffman2013, PBRT4 full text), spot-check clean.",
+   "human_review": null,
+   "updated": "2026-11-25"
+  },
+  {
+   "id": "M35",
+   "name": "Computer Vision and Image Processing",
+   "folder": "creative-intelligence/knowledge/computer-vision",
+   "phase": 8,
+   "status": "DRAFTED",
+   "files": [
+    ".claude/skills/ai-visual-artist/tools/analyze_image.py",
+    "tools/depth.py",
+    "tools/cutout.mjs"
+   ],
+   "notes": "Tools work in production; no sourced knowledge file",
+   "human_review": null,
+   "updated": "2026-11-25"
+  },
+  {
+   "id": "M36",
+   "name": "Generative AI",
+   "folder": "creative-intelligence/knowledge/generative-ai",
+   "phase": 8,
+   "status": "PRACTICALLY TESTED",
+   "files": [
+    ".claude/skills/ai-visual-artist/IMAGE_PROVIDER_ADAPTERS.md",
+    "story-clips/_craft/curriculum/09-ai-image-prompts.md",
+    "story-clips/_craft/curriculum/10-ai-video.md"
+   ],
+   "notes": "FLUX, Wan, Codex, Gemini TTS used for real",
+   "human_review": null,
+   "updated": "2026-11-25"
+  },
+  {
+   "id": "M37",
+   "name": "Production Engineering",
+   "folder": "creative-intelligence/knowledge/engineering",
+   "phase": 8,
+   "status": "PRACTICALLY TESTED",
+   "files": [
+    "story-clips/_craft/curriculum/12-production-qc.md",
+    "tools/render.mjs",
+    "tools/video.mjs"
+   ],
+   "notes": "",
+   "human_review": null,
+   "updated": "2026-11-25"
+  },
+  {
+   "id": "M38",
+   "name": "Continuity Management",
+   "folder": "creative-intelligence/knowledge/continuity",
+   "phase": 9,
+   "status": "SOURCE VERIFIED",
+   "files": [
+    ".claude/skills/ai-visual-artist/CHARACTER_BIBLE_TEMPLATE.md",
+    "creative-intelligence/knowledge/continuity/README.md",
+    "creative-intelligence/knowledge/continuity/CONTINUITY_SYSTEM.md",
+    "creative-intelligence/knowledge/continuity/continuity.schema.json"
+   ],
+   "notes": "U2: 90% read, spot-check clean (12/12 supported, 2 wording fixes).",
+   "human_review": null,
+   "updated": "2026-11-25"
+  },
+  {
+   "id": "M39",
+   "name": "Copyright, Ethics and Safety",
+   "folder": "creative-intelligence/knowledge/copyright",
+   "phase": 9,
+   "status": "DRAFTED",
+   "files": [
+    ".claude/skills/ai-visual-artist/REFERENCE_DATABASE.json",
+    "story-clips/_craft/sfxlib/CREDITS.md",
+    "sources/sources.csv"
+   ],
+   "notes": "Licence checks done per asset; no rules file",
+   "human_review": null,
+   "updated": "2026-11-25"
+  },
+  {
+   "id": "M40",
+   "name": "Knowledge Management",
+   "folder": "creative-intelligence/knowledge/knowledge-management",
+   "phase": 9,
+   "status": "DRAFTED",
+   "files": [
+    "creative-intelligence/MASTER_INDEX.md",
+    "creative-intelligence/tools/registry.py"
+   ],
+   "notes": "This system, started 2026-11-25",
+   "human_review": null,
+   "updated": "2026-11-25"
+  },
+  {
+   "id": "M41",
+   "name": "Critical Thinking",
+   "folder": "creative-intelligence/knowledge/critical-thinking",
+   "phase": 9,
+   "status": "SOURCE VERIFIED",
+   "files": [
+    "creative-intelligence/knowledge/critical-thinking/README.md",
+    "creative-intelligence/knowledge/critical-thinking/PRE_DELIVERY_CHECK.md"
+   ],
+   "notes": "Evidence practice embedded in skills (tiers, access levels) but not written up | T1: 65% read, spot-check clean.",
+   "human_review": null,
+   "updated": "2026-11-25"
+  },
+  {
+   "id": "M42",
+   "name": "Quality Assurance and Evaluation",
+   "folder": "creative-intelligence/knowledge/quality-control",
+   "phase": 11,
+   "status": "PRACTICALLY TESTED",
+   "files": [
+    ".claude/skills/ai-visual-artist/tools/score.py",
+    ".claude/skills/ai-voice-director/tools/qc.py",
+    ".claude/skills/ai-visual-artist/TEST_CASES.json",
+    ".claude/skills/ai-voice-director/TEST_CASES.json"
+   ],
+   "notes": "Automated scores only; no inter-rater human evaluation",
+   "human_review": null,
+   "updated": "2026-11-25"
+  },
+  {
+   "id": "M43",
+   "name": "Optical and Eye-Health Domain Knowledge",
+   "folder": "creative-intelligence/knowledge/optical",
+   "phase": 4,
+   "status": "SOURCE VERIFIED",
+   "files": [
+    "creative-intelligence/knowledge/optical/README.md",
+    "creative-intelligence/knowledge/optical/FACT_CHECK_WORKFLOW.md",
+    "creative-intelligence/knowledge/optical/claims_library.json"
+   ],
+   "notes": "Added 2026-11-25 from brief v3 phase 23 (no module covered it). Batch T1. | T1: only 20% of sources read beyond search snippets (PMC/AAO blocked) -> DRAFTED; needs full-text reads before health claims rely on it. | U3: full-text upgrade -> 93% read; independent spot-check of 18 (2/module): 0 wrong.",
+   "human_review": null,
+   "updated": "2026-11-25"
+  },
+  {
+   "id": "M44",
+   "name": "Cartoon, Comics and Illustration",
+   "folder": "creative-intelligence/knowledge/cartoon",
+   "phase": 3,
+   "status": "SOURCE VERIFIED",
+   "files": [
+    "creative-intelligence/knowledge/cartoon/README.md",
+    "creative-intelligence/knowledge/cartoon/CHARACTER_DESIGN_CARTOON.md",
+    "creative-intelligence/knowledge/cartoon/character_style_specs.json",
+    "creative-intelligence/knowledge/cartoon/CARTOON_RENDERING.md",
+    "creative-intelligence/knowledge/cartoon/rendering_recipes.json",
+    "creative-intelligence/knowledge/cartoon/COMICS_AND_SEQUENTIAL_ART.md",
+    "creative-intelligence/knowledge/cartoon/panel_layouts.json",
+    "creative-intelligence/knowledge/cartoon/AI_CARTOON_GENERATION.md",
+    "creative-intelligence/knowledge/cartoon/CARTOON_STYLE_HISTORY.md"
+   ],
+   "notes": "Added 2026-11-25: user asked to learn every cartoon style (เรียนเลย ทุกแนว). Batch C1. | C1: 120 sources, 87% read; spot-check 8: 6 confirmed, 2 partly (corrected), 0 wrong. Experiments C1-001, C1-002 run.",
+   "human_review": null,
+   "updated": "2026-11-25"
+  }
+ ]
+}

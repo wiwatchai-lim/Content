@@ -1,0 +1,725 @@
+[
+ {
+  "key": "Fortenbaugh2017",
+  "title": "Recent theoretical, neural, and clinical advances in sustained attention research",
+  "authors": "Fortenbaugh, F. C.; DeGutis, J.; Esterman, M.",
+  "year": 2017,
+  "url": "https://www.bu.edu/ballab/pubs/Fortenbaugh_annals2017.pdf",
+  "doi_isbn": "10.1111/nyas.13318",
+  "source_type": "review",
+  "tier": "A",
+  "key_findings": [
+   "Classic resource-depletion and mindlessness accounts of the vigilance decrement each fail to explain some findings.",
+   "Newer resource-control theory: attentional resources stay constant but executive control toward the task weakens and mind wandering takes more resources; opportunity-cost model: effort is reallocated by subjective value, not depleted.",
+   "A large reward withheld until the end of a 10-min run eliminated the vigilance decrement in one study.",
+   "In a web sample of 10,000+ (Fortenbaugh et al. 2015), sustained attention develops into young adulthood and does not decline until the mid-40s, later than processing speed."
+  ],
+  "practical_applications": [
+   "Frame retention as an opportunity-cost decision each moment: give a reason to stay, not a demand to concentrate.",
+   "A promised payoff at the end can sustain attention if it is valued and credible."
+  ],
+  "limitations": [
+   "Lab vigilance tasks (rare targets on screen), not entertainment video or social feeds.",
+   "Review focuses on 2012-2017 literature."
+  ],
+  "license": "copyrighted (author copy on lab site)",
+  "access_status": "full_text",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M28"
+  ]
+ },
+ {
+  "key": "Fortenbaugh2015",
+  "title": "Sustained attention across the life span in a sample of 10,000: dissociating ability and strategy",
+  "authors": "Fortenbaugh, F. C.; DeGutis, J.; Germine, L.; et al.",
+  "year": 2015,
+  "url": "",
+  "doi_isbn": "",
+  "source_type": "empirical",
+  "tier": "A",
+  "key_findings": [
+   "As reported in Fortenbaugh2017: gradCPT web study of 10,430 participants; sustained attention peaks late and age-related declines begin around the mid-40s."
+  ],
+  "practical_applications": [
+   "Audiences 45+ may need slightly calmer, clearer pacing; do not assume decline starts at 65."
+  ],
+  "limitations": [
+   "Only read via the 2017 review; web-based self-selected sample."
+  ],
+  "license": "copyrighted",
+  "access_status": "bibliographic",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M28"
+  ]
+ },
+ {
+  "key": "Maybin2017_BBC",
+  "title": "Busting the attention span myth",
+  "authors": "Maybin, S. (BBC World Service, More or Less)",
+  "year": 2017,
+  "url": "http://www.bbc.com/news/health-38896790",
+  "doi_isbn": "",
+  "source_type": "practitioner",
+  "tier": "C",
+  "key_findings": [
+   "The 8-second / goldfish figure appears in a 2015 Microsoft Canada Consumer Insights report but did not come from Microsoft's own research; it cites Statistic Brain.",
+   "Sources listed by Statistic Brain (US National Library of Medicine/NCBI, Associated Press) could find no record of research behind the numbers; Statistic Brain did not respond.",
+   "Gemma Briggs (Open University): an 'average attention span' is pretty meaningless; attention is task-dependent and shaped by what viewers bring.",
+   "Shorter film shot lengths show film-makers got better at grabbing attention, not that attention spans shrank (per the researcher behind that work).",
+   "Goldfish are a model system for learning and memory (Felicity Huntingford)."
+  ],
+  "practical_applications": [
+   "Never cite the 8-second/goldfish statistic; describe swiping as choice, not incapacity."
+  ],
+  "limitations": [
+   "Journalism, not peer-reviewed; read via a reproduction in a University of Wisconsin course PDF (bbc.com blocked for fetch)."
+  ],
+  "license": "copyrighted",
+  "access_status": "full_text",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M28"
+  ]
+ },
+ {
+  "key": "McGinty2017_WSJ",
+  "title": "Is Your Attention Span Shorter Than a Goldfish's?",
+  "authors": "McGinty, J. C. (Wall Street Journal)",
+  "year": 2017,
+  "url": "https://www.wsj.com/articles/is-your-attention-span-shorter-than-a-goldfishs-1487340000",
+  "doi_isbn": "",
+  "source_type": "practitioner",
+  "tier": "C",
+  "key_findings": [
+   "Popular 8-second claims are not corroborated by science; attention is too complex to reduce to a span of time.",
+   "Edward Vogel: measures of college students have been remarkably stable across 20 years; Michael Posner: no real evidence of change since the late 1800s.",
+   "The Microsoft report credits Statistic Brain; NLM and AP could not locate the cited numbers."
+  ],
+  "practical_applications": [
+   "Use as the citation when correcting the goldfish myth in team briefs."
+  ],
+  "limitations": [
+   "Newspaper article; read via reproduction in a University of Wisconsin course PDF."
+  ],
+  "license": "copyrighted",
+  "access_status": "full_text",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M28"
+  ]
+ },
+ {
+  "key": "KCL2022",
+  "title": "Are attention spans really collapsing? Data shows UK public are worried - but also see benefits from technology",
+  "authors": "The Policy Institute & Centre for Attention Studies, King's College London (Duffy, B. et al.); fieldwork Savanta ComRes",
+  "year": 2022,
+  "url": "https://www.kcl.ac.uk/news/are-attention-spans-really-collapsing-data-shows-uk-public-are-worried-but-also-see-benefits-from-technology",
+  "doi_isbn": "",
+  "source_type": "empirical",
+  "tier": "B",
+  "key_findings": [
+   "Online survey of 2,093 UK adults, 24-26 Sept 2021.",
+   "50% wrongly believe the average adult attention span is eight seconds; only 25% identify it as false.",
+   "Researchers: without long-term studies it is impossible to confirm attention spans have declined; Duffy calls the 8-second claim thoroughly debunked."
+  ],
+  "practical_applications": [
+   "Expect clients and collaborators to believe the myth; correct it gently with this source."
+  ],
+  "limitations": [
+   "UK sample; measures beliefs, not attention."
+  ],
+  "license": "copyrighted",
+  "access_status": "publisher_page",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M28"
+  ]
+ },
+ {
+  "key": "Bradbury2016",
+  "title": "Attention span during lectures: 8 seconds, 10 minutes, or more?",
+  "authors": "Bradbury, N. A.",
+  "year": 2016,
+  "url": "https://pubmed.ncbi.nlm.nih.gov/28145268/",
+  "doi_isbn": "10.1152/advan.00109.2016",
+  "source_type": "review",
+  "tier": "A",
+  "key_findings": [
+   "The widely repeated 10-15 minute lecture attention span ultimately relies on a single key 1978 manuscript and thin evidence.",
+   "Treats the 8-second figure as a separate myth from the 2015 Microsoft-commissioned report."
+  ],
+  "practical_applications": [
+   "Do not structure content around a fixed 'attention cliff' minute."
+  ],
+  "limitations": [
+   "Personal View article in Adv Physiol Educ 40(4):509-513; full text blocked (403), read via search summary/abstract."
+  ],
+  "license": "copyrighted",
+  "access_status": "search_summary",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M28"
+  ]
+ },
+ {
+  "key": "Risko2012",
+  "title": "Everyday attention: variation in mind wandering and memory in a lecture",
+  "authors": "Risko, E. F.; Anderson, N.; Sarwal, A.; Engelhardt, M.; Kingstone, A.",
+  "year": 2012,
+  "url": "https://zendy.io/title/10.1002/acp.1814",
+  "doi_isbn": "10.1002/acp.1814",
+  "source_type": "empirical",
+  "tier": "A",
+  "key_findings": [
+   "In a video-recorded lecture, reported mind wandering increased with time on task and memory for lecture material decreased; mind wandering related to memory."
+  ],
+  "practical_applications": [
+   "Long monotone segments lose viewers gradually; vary and re-hook rather than assume a fixed limit."
+  ],
+  "limitations": [
+   "Lab lecture videos; a secondary summary reports other lecture studies did not find increases over time."
+  ],
+  "license": "copyrighted",
+  "access_status": "search_summary",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M28"
+  ]
+ },
+ {
+  "key": "Gruber2014",
+  "title": "States of curiosity modulate hippocampus-dependent learning via the dopaminergic circuit",
+  "authors": "Gruber, M. J.; Gelman, B. D.; Ranganath, C.",
+  "year": 2014,
+  "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC4252494",
+  "doi_isbn": "10.1016/j.neuron.2014.08.060",
+  "source_type": "empirical",
+  "tier": "A",
+  "key_findings": [
+   "Better memory for trivia answers people were curious about, and also for unrelated faces shown during high-curiosity anticipation, at immediate and one-day tests.",
+   "High curiosity enhanced midbrain and nucleus accumbens activity and hippocampus-reward circuit connectivity."
+  ],
+  "practical_applications": [
+   "Place brand/product shots in the waiting period between question and answer, not only at the end."
+  ],
+  "limitations": [
+   "Small fMRI sample, trivia and faces not brands; read via abstract/summaries."
+  ],
+  "license": "copyrighted (PMC author manuscript)",
+  "access_status": "abstract",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M28"
+  ]
+ },
+ {
+  "key": "Ghibellini2025",
+  "title": "Interruption, recall and resumption: a meta-analysis of the Zeigarnik and Ovsiankina effects",
+  "authors": "Ghibellini, R.; Meier, B.",
+  "year": 2025,
+  "url": "https://ideas.repec.org/a/pal/palcom/v12y2025i1d10.1057_s41599-025-05000-w.html",
+  "doi_isbn": "10.1057/s41599-025-05000-w",
+  "source_type": "meta-analysis",
+  "tier": "S",
+  "key_findings": [
+   "The Ovsiankina effect (tendency to resume interrupted tasks) appears to be a general tendency; the Zeigarnik effect (better recall of unfinished tasks) lacks universal validity.",
+   "Authors suggest conditions that produced Zeigarnik effects (e.g., experimenter authority, involvement) were more common in historical studies."
+  ],
+  "practical_applications": [
+   "Treat open loops as curiosity plus urge-to-complete, not as a memory booster; always close the loop."
+  ],
+  "limitations": [
+   "Full text not reachable (nature.com redirect, unibe.ch DNS failure); pooled numbers reported by blogs not verified and not used."
+  ],
+  "license": "CC BY 4.0 (Humanities and Social Sciences Communications is open access; not confirmed on page)",
+  "access_status": "search_summary",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M28"
+  ]
+ },
+ {
+  "key": "Bunzeck2006",
+  "title": "Absolute coding of stimulus novelty in the human substantia nigra/VTA",
+  "authors": "Bunzeck, N.; Düzel, E.",
+  "year": 2006,
+  "url": "https://research.uni-luebeck.de/en/publications/absolute-coding-of-stimulus-novelty-in-the-human-substantia-nigra/",
+  "doi_isbn": "10.1016/j.neuron.2006.06.021",
+  "source_type": "empirical",
+  "tier": "A",
+  "key_findings": [
+   "Two fMRI studies: SN/VTA responses were driven by stimulus novelty rather than rarity, negative emotion or task relevance.",
+   "Novelty enhanced learning of familiar items presented in the same context."
+  ],
+  "practical_applications": [
+   "Genuinely new visual information (a new angle, a new detail) can recruit reward/learning systems; repetition of the same frame does not."
+  ],
+  "limitations": [
+   "Oddball lab paradigm; read via abstract/summary."
+  ],
+  "license": "copyrighted",
+  "access_status": "abstract",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M28"
+  ]
+ },
+ {
+  "key": "Lang2000",
+  "title": "The effects of edits on arousal, attention, and memory for television messages",
+  "authors": "Lang, A.; Zhou, S.; Schwartz, N.; Bolls, P. D.; Potter, R. F.",
+  "year": 2000,
+  "url": "https://scholars.cityu.edu.hk/en/publications/the-effects-of-edits-on-arousal-attention-and-memory-for-televisi/",
+  "doi_isbn": "10.1207/s15506878jobem4401_7",
+  "source_type": "empirical",
+  "tier": "A",
+  "key_findings": [
+   "Rate of edits (camera changes within the same scene) varied from slow to very fast; as edit rate increased, physiological arousal, self-reported arousal and memory increased.",
+   "Authors suggest edits can increase attention and encoding without substantially raising cognitive load."
+  ],
+  "practical_applications": [
+   "Change angle/scale of the same product within a scene to hold attention; distinguish from cuts that introduce wholly new information."
+  ],
+  "limitations": [
+   "Television era, horizontal screen; read via abstract only; full title may be longer than indexed slug."
+  ],
+  "license": "copyrighted",
+  "access_status": "abstract",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M28"
+  ]
+ },
+ {
+  "key": "Huskey2020",
+  "title": "The limited capacity model of motivated mediated message processing: meta-analytically summarizing two decades of research",
+  "authors": "Huskey, R.; Wilcox, S.; Clayton, R. B.; Keene, J. R.",
+  "year": 2020,
+  "url": "https://escholarship.org/uc/item/8xf6d77d",
+  "doi_isbn": "10.1080/23808985.2020.1839939",
+  "source_type": "meta-analysis",
+  "tier": "S",
+  "key_findings": [
+   "142 articles, 683 effects: pooled effect sizes for LC4MP domains (cognitive load, motivation, memory) range r = .314-.398.",
+   "Self-report measures give the largest pooled effects, then behavioral, then psychophysiological; no clear evidence of publication bias.",
+   "LC4MP: attention to media is governed by viewer goals and involuntary orienting responses to structural features."
+  ],
+  "practical_applications": [
+   "Use structural changes (cuts, motion, sound onsets) deliberately to orient attention, while respecting limited capacity."
+  ],
+  "limitations": [
+   "Authors acknowledge a 'fruit salad' approach grouping heterogeneous constructs; does not test sub-processes or interactions; only 66 effects had directional information."
+  ],
+  "license": "copyrighted (UC eScholarship author version)",
+  "access_status": "full_text",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M28"
+  ]
+ },
+ {
+  "key": "Cutting2010",
+  "title": "Attention and the evolution of Hollywood film",
+  "authors": "Cutting, J. E.; DeLong, J. E.; Nothelfer, C. E.",
+  "year": 2010,
+  "url": "https://www.psychologicalscience.org/journals/psychological-science/0956797610361679/",
+  "doi_isbn": "10.1177/0956797610361679",
+  "source_type": "empirical",
+  "tier": "A",
+  "key_findings": [
+   "150 popular films 1935-2005: shot lengths became more correlated with neighbours and their power spectra approached 1/f; authors suggest this may help harness attention.",
+   "A 2018 follow-up (295 films 1915-2015) found convergence on 1/f for several dimensions."
+  ],
+  "practical_applications": [
+   "Vary shot length in patterns (not uniform rapid cuts) when editing longer story clips."
+  ],
+  "limitations": [
+   "Critics (Cinemetrics) note dialogue length drives shot length and the attention link is hypothetical; read via abstract/press/commentary."
+  ],
+  "license": "copyrighted",
+  "access_status": "search_summary",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M28"
+  ]
+ },
+ {
+  "key": "Guo2014",
+  "title": "How video production affects student engagement: an empirical study of MOOC videos",
+  "authors": "Guo, P. J.; Kim, J.; Rubin, R.",
+  "year": 2014,
+  "url": "https://pg.ucsd.edu/publications/edX-MOOC-video-production-and-engagement_LAS-2014.txt",
+  "doi_isbn": "10.1145/2556325.2566239",
+  "source_type": "empirical",
+  "tier": "A",
+  "key_findings": [
+   "6.9 million video sessions across four edX courses: shorter videos are much more engaging.",
+   "Informal talking-head and Khan-style tablet drawings are more engaging; pre-recorded classroom lectures cut into segments engage poorly."
+  ],
+  "practical_applications": [
+   "For explainer clips, keep segments short and personal; avoid repurposing long talks unedited."
+  ],
+  "limitations": [
+   "Learners in MOOCs, not social-feed viewers; only abstract-level text read, so the length curve was not seen."
+  ],
+  "license": "copyrighted (ACM; author copy)",
+  "access_status": "abstract",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M28"
+  ]
+ },
+ {
+  "key": "Masood2026",
+  "title": "Counting How the Seconds Count: Understanding Algorithm-User Interplay in TikTok via ML-driven Analysis of Video Content",
+  "authors": "Masood, M.; Kannan, S.; Liu, Z.; Vasisht, D.; Gupta, I.",
+  "year": 2026,
+  "url": "https://arxiv.org/pdf/2503.20030",
+  "doi_isbn": "10.1145/3772318.3790311",
+  "source_type": "empirical",
+  "tier": "A",
+  "key_findings": [
+   "68-user lab study plus data donation of 2.65 million videos.",
+   "Users spend most time on a few topics but topics change often; feeds individualise rather than converge to trending.",
+   "Recommendations do not reflect just-performed actions (contrary to folk theory).",
+   "Users like topic change: session novelty relates to perceived content quality; sequence of videos matters.",
+   "Content features predict watching >10% of a video with ~70% accuracy, leaving much behaviour unexplained."
+  ],
+  "practical_applications": [
+   "Do not over-trust folk theories about 'the algorithm'; vary topics across a posting series; content quality explains only part of retention."
+  ],
+  "limitations": [
+   "Participants mostly 18-34, browsing TikTok on macOS web browser, not the mobile app; VLM clustering choices."
+  ],
+  "license": "CC BY 4.0",
+  "access_status": "full_text",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M28"
+  ]
+ },
+ {
+  "key": "YouTubeRetention",
+  "title": "Measure key moments for audience retention (YouTube Help)",
+  "authors": "YouTube / Google",
+  "year": null,
+  "url": "https://support.google.com/youtube/answer/9314415",
+  "doi_isbn": "",
+  "source_type": "docs",
+  "tier": "C",
+  "key_findings": [
+   "Flat line = viewers watch that part start to finish; gradual decline is typical; spikes = rewatching/sharing (strong or confusing content); dips = leaving/skipping.",
+   "Intro metric = share of audience still watching after the first 30 seconds; align opening with title and thumbnail.",
+   "Typical retention compares a video with the channel's 10 latest videos of similar length; move compelling content earlier."
+  ],
+  "practical_applications": [
+   "Read post-publication graphs against the RETENTION_REVIEW table; benchmark against own videos, not internet averages."
+  ],
+  "limitations": [
+   "Platform documentation; no published methodology or effect sizes."
+  ],
+  "license": "copyrighted",
+  "access_status": "full_text",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M28"
+  ]
+ },
+ {
+  "key": "TikTokCreative",
+  "title": "Creative best practices for performance ads (TikTok Business Help Center)",
+  "authors": "TikTok for Business",
+  "year": 2025,
+  "url": "https://ads.tiktok.com/help/article/creative-best-practices?lang=en",
+  "doi_isbn": "",
+  "source_type": "docs",
+  "tier": "C",
+  "key_findings": [
+   "Prioritise the hook in the first 6 seconds; introduce the content proposition in the first 3 seconds.",
+   "Use sound/music; captions or text overlays at 5-10 words per second; 9:16 vertical, 720p+, inside UI safe zone.",
+   "Feature creators, employees or customers; end with a clear CTA; structure hook -> USPs -> CTA; refresh creatives when performance declines."
+  ],
+  "practical_applications": [
+   "Use as craft defaults for product clips, labelled as platform guidance."
+  ],
+  "limitations": [
+   "No studies or data cited on the page; written for paid performance ads."
+  ],
+  "license": "copyrighted",
+  "access_status": "full_text",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M28",
+   "M29"
+  ]
+ },
+ {
+  "key": "MetaIGVideoBP",
+  "title": "Best practices for Instagram video ads (Meta Business Help Center)",
+  "authors": "Meta",
+  "year": null,
+  "url": "https://www.facebook.com/business/help/188534925073536",
+  "doi_isbn": "",
+  "source_type": "docs",
+  "tier": "C",
+  "key_findings": [
+   "Feature brand and key message within the first 3 seconds; 6-15 second videos are more effective in feed and stories; hook with motion or a compelling first frame.",
+   "Design for sound-off with subtitles and supers, but music/voiceover helps those who listen; Meta reports feed video ads have 2.25x higher CTA CTR when watched with sound on.",
+   "Provide key info early because many people interact before the video ends; native, non-ad-like creative performs better; test and iterate."
+  ],
+  "practical_applications": [
+   "Brand and frame visible in first seconds; every clip must work muted and unmuted."
+  ],
+  "limitations": [
+   "Platform guidance without methodology; retrieved through Meta's official help-article tool."
+  ],
+  "license": "copyrighted",
+  "access_status": "full_text",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M28",
+   "M29"
+  ]
+ },
+ {
+  "key": "MetaIGOptimize",
+  "title": "Optimize your ad creative for Instagram (Meta Business Help Center)",
+  "authors": "Meta",
+  "year": null,
+  "url": "https://www.facebook.com/business/help/1574729747001887",
+  "doi_isbn": "",
+  "source_type": "docs",
+  "tier": "C",
+  "key_findings": [
+   "Showcase brand/product within the first 3 seconds; under 15 s in feed, under 10 s in stories.",
+   "Structured storytelling (problem > solution > result, transformation, day in the life) and product demos help performance.",
+   "Product-focused creative for lower-funnel results, people-focused creative for brand objectives; aim for frequency of 2-3 impressions per person per 7 days."
+  ],
+  "practical_applications": [
+   "Choose product-focused vs people-focused clips by campaign goal; watch frequency to avoid fatigue."
+  ],
+  "limitations": [
+   "Platform guidance, no methodology."
+  ],
+  "license": "copyrighted",
+  "access_status": "full_text",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M28",
+   "M29"
+  ]
+ },
+ {
+  "key": "Costanza2012",
+  "title": "Generational differences in work-related attitudes: a meta-analysis",
+  "authors": "Costanza, D. P.; et al.",
+  "year": 2012,
+  "url": "https://link.springer.com/article/10.1007/s10869-012-9259-4",
+  "doi_isbn": "10.1007/s10869-012-9259-4",
+  "source_type": "meta-analysis",
+  "tier": "S",
+  "key_findings": [
+   "20 studies, 18 pairwise comparisons, 19,961 subjects across Traditionals, Boomers, Gen X and Millennials.",
+   "Relationships between generation and work outcomes are moderate to small, essentially zero in many cases; meaningful differences probably do not exist on the variables examined.",
+   "A 2024 meta-analytic review (Ravid, Costanza, Romero, J Organ Behav) reportedly found few systematic meaningful differences."
+  ],
+  "practical_applications": [
+   "Brief by life situation and age-related needs, not by generation label."
+  ],
+  "limitations": [
+   "Work attitudes, not media habits; Gen Z not included; read via abstract/search summary."
+  ],
+  "license": "copyrighted",
+  "access_status": "search_summary",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M28"
+  ]
+ },
+ {
+  "key": "NASEM2020",
+  "title": "Are Generational Categories Meaningful Distinctions for Workforce Management?",
+  "authors": "National Academies of Sciences, Engineering, and Medicine",
+  "year": 2020,
+  "url": "https://www.nationalacademies.org/read/25796/chapter/1",
+  "doi_isbn": "",
+  "source_type": "review",
+  "tier": "S",
+  "key_findings": [
+   "Committee charged to assess whether generational categories are meaningful for workforce management; notes advice on managing generations is prevalent but sometimes contradictory."
+  ],
+  "practical_applications": [
+   "Cite as an authoritative caution against generation-based targeting."
+  ],
+  "limitations": [
+   "Only front matter read; conclusions not read this session."
+  ],
+  "license": "copyrighted (free to read online)",
+  "access_status": "bibliographic",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M28"
+  ]
+ },
+ {
+  "key": "Pew2023",
+  "title": "How Pew Research Center will report on generations moving forward",
+  "authors": "Pew Research Center (Parker, K.)",
+  "year": 2023,
+  "url": "https://www.pewresearch.org/short-reads/2023/05/22/how-pew-research-center-will-report-on-generations-moving-forward/",
+  "doi_isbn": "",
+  "source_type": "docs",
+  "tier": "B",
+  "key_findings": [
+   "Generational analysis only when historical data allow comparing groups at the same life stage; age, period and cohort effects are hard to separate.",
+   "Demographic shifts can look like generational differences; great diversity within generations.",
+   "Labels like Gen Z/Millennial are reference points, not scientific facts; used sparingly to avoid reinforcing stereotypes."
+  ],
+  "practical_applications": [
+   "Remove generation stereotypes from briefs; use age/life-stage and context."
+  ],
+  "limitations": [
+   "Methodological statement, US focus."
+  ],
+  "license": "copyrighted",
+  "access_status": "full_text",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M28"
+  ]
+ },
+ {
+  "key": "Hou2022",
+  "title": "How to design font size for older adults: a systematic literature review with a mobile device",
+  "authors": "Hou, G.; Anicetus, U.; He, J.",
+  "year": 2022,
+  "url": "https://www.frontiersin.org/articles/10.3389/fpsyg.2022.931646/full",
+  "doi_isbn": "10.3389/fpsyg.2022.931646",
+  "source_type": "review",
+  "tier": "S",
+  "key_findings": [
+   "12 studies: older adults prefer larger fonts, but there is a critical size beyond which readability declines ('bigger may not always mean better').",
+   "Reading speed declines sharply below roughly 9-18 arcmin and declines less steeply above roughly 60-180 arcmin.",
+   "Recommended sizes range ~8-22 pt across devices, languages and tasks; higher contrast and more line spacing help; inconsistent units across studies, arcmin proposed."
+  ],
+  "practical_applications": [
+   "Subtitles for 45+ viewers: large, high-contrast, generous line spacing, but not so large that lines break every two words."
+  ],
+  "limitations": [
+   "Mixed devices and languages (Chinese, Japanese, English); no Thai script; small study count."
+  ],
+  "license": "CC BY (Frontiers; not confirmed on fetched portion)",
+  "access_status": "full_text",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M28"
+  ]
+ },
+ {
+  "key": "W3C_Older",
+  "title": "Older Users and Web Accessibility: Meeting the Needs of Ageing Web Users",
+  "authors": "W3C Web Accessibility Initiative (WAI)",
+  "year": null,
+  "url": "https://www.w3.org/WAI/older-users/",
+  "doi_isbn": "",
+  "source_type": "docs",
+  "tier": "B",
+  "key_findings": [
+   "Age-related impairments overlap with disabilities: reduced contrast sensitivity, colour perception and near focus; hearing loss for higher pitches and separating overlapping sounds (e.g., audio with background music); reduced short-term memory and easier distraction.",
+   "WCAG guidance for people with disabilities also serves older users."
+  ],
+  "practical_applications": [
+   "Duck music under voiceover; high-contrast captions; simple, low-distraction layouts for presbyopia content."
+  ],
+  "limitations": [
+   "Web-focused overview, not video-specific research."
+  ],
+  "license": "W3C document license",
+  "access_status": "full_text",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M28"
+  ]
+ },
+ {
+  "key": "Tinnemore2022",
+  "title": "The recognition of time-compressed speech as a function of age in listeners with cochlear implants or normal hearing",
+  "authors": "Tinnemore, A. R.; Montero, L.; Gordon-Salant, S.; Goupell, M. J.",
+  "year": 2022,
+  "url": "https://www.frontiersin.org/journals/aging-neuroscience/articles/10.3389/fnagi.2022.887581/full",
+  "doi_isbn": "10.3389/fnagi.2022.887581",
+  "source_type": "empirical",
+  "tier": "A",
+  "key_findings": [
+   "Normal-hearing younger, middle-aged and older listeners performed similarly at normal rate; age-by-compression interactions were not significant at 20% but significant at 40% and 60% compression.",
+   "Middle-aged (52-64) and older groups did not differ at 40-60% compression, suggesting age effects begin before 65.",
+   "Processing-speed test (Symbol Search) did not predict performance."
+  ],
+  "practical_applications": [
+   "Do not speed up TTS to fit a duration in content for 45+ customers; cut the script instead."
+  ],
+  "limitations": [
+   "English sentences, artificial time compression (natural fast speech may be harder per other work); first ~100k characters read."
+  ],
+  "license": "CC BY (Frontiers; not confirmed on fetched portion)",
+  "access_status": "full_text",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M28"
+  ]
+ },
+ {
+  "key": "ISO24495",
+  "title": "ISO 24495-1:2023 Plain language - Part 1: Governing principles and guidelines",
+  "authors": "ISO/TC 37",
+  "year": 2023,
+  "url": "https://www.iso.org/standard/78907.html",
+  "doi_isbn": "",
+  "source_type": "docs",
+  "tier": "S",
+  "key_findings": [
+   "Four principles: relevant, findable, understandable, usable; identify readers and purpose; evaluate with readers.",
+   "Applies to printed/digital text, may help video creators; does not cover accessibility (points to WCAG and EN 301 549)."
+  ],
+  "practical_applications": [
+   "English clips for tourists: short plain sentences, numbers clear, visuals carry the story."
+  ],
+  "limitations": [
+   "Paid standard; only publisher page and catalogue summaries read."
+  ],
+  "license": "copyrighted (paid standard)",
+  "access_status": "publisher_page",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M28"
+  ]
+ }
+]

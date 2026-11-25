@@ -1,0 +1,1346 @@
+{
+ "schema_version": 1,
+ "batch": "VA1",
+ "tag": "light",
+ "date": "2026-11-25",
+ "note": "New entries only. All untested. evidence_label: EVIDENCE/CRAFT/DERIVED. Product rule: never change a real product's structure, material, colour or shape.",
+ "existing_lighting_ids_checked": [
+  "three_point",
+  "key_fill_soft",
+  "broad",
+  "short",
+  "butterfly",
+  "loop",
+  "rembrandt",
+  "split",
+  "clamshell",
+  "rim_only",
+  "backlit_silhouette",
+  "high_key",
+  "low_key",
+  "chiaroscuro",
+  "tenebrism",
+  "golden_hour",
+  "blue_hour",
+  "overcast_soft",
+  "midday_hard",
+  "window_side",
+  "north_window",
+  "practical_lamp",
+  "candle_fire",
+  "neon_night",
+  "streetlight_sodium",
+  "moonlight_blue",
+  "volumetric_god_rays",
+  "fog_atmospheric",
+  "underwater_caustics",
+  "dappled_foliage",
+  "spotlight_theatrical",
+  "top_light",
+  "under_light_horror",
+  "cross_light",
+  "bounce_fill_warm",
+  "ambient_occlusion_only",
+  "global_illumination_interior",
+  "product_softbox",
+  "product_gradient_sweep",
+  "product_backlit_glass",
+  "jewelry_specular",
+  "eyewear_lens_reflection_control",
+  "flat_cartoon_cel",
+  "two_tone_anime_shade",
+  "storybook_soft_glow",
+  "noir_venetian",
+  "sunset_rim_warm_cool",
+  "screen_glow_face",
+  "lightning_flash",
+  "snow_bounce",
+  "stage_colour_gels"
+ ],
+ "lighting_setups": [
+  {
+   "id": "eyewear_ar_residual_reveal",
+   "name": "AR residual-colour reveal",
+   "purpose": "Show that a lens is AR-coated by letting one controlled reflection display the coating's real residual colour.",
+   "how": "Black seamless background, frame at 0-10 deg yaw on black acrylic. Main: 30x120 cm stripbox placed INSIDE the lens's family of angles - roughly on the camera axis side, 20-30 deg off-axis horizontally and 10-15 deg above lens height, 60-80 cm away - so it paints one narrow reflection on each lens. Fill for the frame: large softbox 90 deg camera-left, high (45 deg), outside the family of angles, black flag between it and the lenses. Ratio frame:background ~4:1; lens reflection 1-2 stops under frame highlight. Rotate frame 5 deg at a time to move hue along the reflection (thin-film colour shifts with angle).",
+   "limits": "Residual colour must match the real lens spec (green/blue/violet); uncoated lenses show white reflection instead. Strong reflection hides eyes in on-face shots - product only.",
+   "use_for": [
+    "product eyewear",
+    "lens promo",
+    "coating explainer carousel"
+   ],
+   "source_keys": [
+    "ARCoating_patents",
+    "OpenPBR",
+    "HunterBiverFuqua",
+    "PBRT4_va"
+   ],
+   "evidence_label": "DERIVED from thin-film/Fresnel physics + CRAFT family of angles",
+   "test_status": "untested"
+  },
+  {
+   "id": "eyewear_cross_polarized_flat",
+   "name": "Cross-polarized catalogue flat",
+   "purpose": "Remove nearly all specular glare from lenses and glossy acetate for cutouts and colour-true catalogue images.",
+   "how": "Two softboxes at +-45 deg, 30 deg above the frame, 70 cm away, each covered with linear polarizer film in the same orientation. Circular/linear polarizer on the lens rotated until highlights vanish (perpendicular). White or grey seamless 1 stop over the frame for easy cutout. Ratio 1.5:1 left:right. Then optionally blend in a second, non-polarized exposure at 20-30% to restore a faint lens presence (house rule: lenses must not look empty).",
+   "limits": "Kills the material cues (gloss, metal reflections) - metal can look flat grey; costs ~1.5-2 stops; birefringent plastics may show stress colours between polarizers (DERIVED, unverified). Never ship as the only image of a metal frame.",
+   "use_for": [
+    "cutouts for kits",
+    "colour-true catalogue",
+    "frame-kit layers"
+   ],
+   "source_keys": [
+    "CrossPol_PetaPixel",
+    "Brewster_Wiki"
+   ],
+   "evidence_label": "CRAFT + EVIDENCE (polarization)",
+   "test_status": "untested"
+  },
+  {
+   "id": "eyewear_overhead_flatlay_scrim",
+   "name": "Overhead flat-lay with scrim and black camera card",
+   "purpose": "Top-down 1:1 flat-lay where the lenses reflect a controlled dark card instead of the camera and ceiling.",
+   "how": "Camera straight down (90 deg) over the frame on a textured surface. 120x120 cm diffusion scrim 70-90 cm above the table, tilted 10-15 deg toward camera-top, lit through by one strobe/LED from above-behind. Cut a hole for the lens or hang a 30x40 cm black card around the camera so the lenses (which face the camera) mirror black. White card low at the bottom edge as fill. Ratio top:bottom ~2:1. Fold temples or tilt frame 5-10 deg so the lens reflection shows a gradient from scrim to black.",
+   "limits": "Large scrim reflection may wash over the lens if the frame lies flat; props near the frame show in metal reflections.",
+   "use_for": [
+    "IG 1:1 product",
+    "flat-lay carousel cover",
+    "kit backgrounds"
+   ],
+   "source_keys": [
+    "HunterBiverFuqua",
+    "Penumbra_SourceSize"
+   ],
+   "evidence_label": "CRAFT + DERIVED (angle of incidence = reflection)",
+   "test_status": "untested"
+  },
+  {
+   "id": "eyewear_on_face_twin_high_strips",
+   "name": "On-face twin high strips",
+   "purpose": "Light a person wearing glasses with clear eyes and no lens hotspots, keeping a faint believable lens reflection.",
+   "how": "Two 30x120 cm stripboxes vertical at +-60 deg from the camera axis, centres 40 deg above eye line, 1.2 m from face, feathered forward. Large white bounce or 1x1 m panel at chest height on axis as fill (2 stops under key -> ~4:1 when one strip is lowered, 2:1 for beauty). Subject chin down 3-5 deg; temples tilted slightly. Hair/back light 150 deg high for separation. Check every lens: reflection must sit at the lens edge or off frame.",
+   "limits": "Very wraparound lenses or high-curve sport frames still catch a strip; heavy minus lenses show thick edge rings regardless.",
+   "use_for": [
+    "staff portraits",
+    "customer try-on clips",
+    "promo scenes with models"
+   ],
+   "source_keys": [
+    "HunterBiverFuqua",
+    "PBRT4_va"
+   ],
+   "evidence_label": "CRAFT + DERIVED (family of angles)",
+   "test_status": "untested"
+  },
+  {
+   "id": "eyewear_mirror_lens_scene",
+   "name": "Mirror-lens scene reflection design",
+   "purpose": "Treat a mirror-coated sun lens as a mirror: design what it reflects (sky, sea, gradient card) rather than lighting the lens.",
+   "how": "Decide the reflection first: outdoors, frame faces open sky/sea with sun 30-60 deg to one side so the lens shows horizon line + sky gradient; in studio, hang a 1x1.5 m gradient card (light top to dark bottom, or brand colour) 1-1.5 m in front of the frame just above the camera, lit by a separate light. Camera and crew in black or hidden behind the card. Light the frame body separately from the side (90 deg, high) with flags keeping that light out of the lens.",
+   "limits": "Mirror colour must stay true to the product; reflections of identifiable people/brands must be avoided.",
+   "use_for": [
+    "sunglasses product",
+    "summer promo",
+    "Hua Hin beach scenes"
+   ],
+   "source_keys": [
+    "HunterBiverFuqua",
+    "OpenPBR",
+    "Hoffman2013"
+   ],
+   "evidence_label": "CRAFT + EVIDENCE (metals/thin-film reflect the environment)",
+   "test_status": "untested"
+  },
+  {
+   "id": "eyewear_metal_wire_edge_strips",
+   "name": "Metal wire edge strips",
+   "purpose": "Draw continuous bright lines along thin metal or rimless frames so their thin geometry reads against the background.",
+   "how": "Dark or mid-grey background. Two narrow stripboxes (15x90 cm, gridded) behind-left and behind-right at 120-150 deg from camera, at frame height, 50-70 cm away, so their mirror images run along the rims and temples. Small front fill (white card or 60 cm softbox above camera, 2-3 stops under the edge lines). Black flags just outside the frame edges to give the opposite side of each wire a dark line. Adjust strip height until the highlight line runs unbroken along the rim.",
+   "limits": "Gold-plated metal shows warm lines (correct), do not neutralise; matte-coated metal shows soft sheen not lines.",
+   "use_for": [
+    "titanium/rimless product",
+    "detail punch-ins in beat clips"
+   ],
+   "source_keys": [
+    "Hoffman2013",
+    "Burley2012_va",
+    "HunterBiverFuqua"
+   ],
+   "evidence_label": "CRAFT + EVIDENCE (conductor reflection)",
+   "test_status": "untested"
+  },
+  {
+   "id": "eyewear_tinted_lens_sun_shadow",
+   "name": "Tinted-lens hard-sun shadow",
+   "purpose": "Use real hard sun (or a bare fresnel) to cast coloured lens shadows and caustics as a summer graphic.",
+   "how": "Frame on a plain light surface (sand-coloured card, white plaster). Sun or bare LED/fresnel at 25-35 deg elevation, 90-120 deg from camera so shadows fall long across the frame. No fill or only a small white card (ratio 8:1+). Gradient/tinted lenses throw coloured transmitted light; plus lenses focus a bright spot inside the shadow, minus lenses darken the centre. Shoot within the short golden window at Hua Hin (~25 min for 0-6 deg) or between 08:00-09:00 for crisper light.",
+   "limits": "Only works with genuine hard light; clear lenses give faint caustics only. Colour of shadow must come from the real lens tint.",
+   "use_for": [
+    "sunglasses posts",
+    "summer carousel cover",
+    "UV/pterygium story"
+   ],
+   "source_keys": [
+    "Caustic_optics",
+    "glTF_KHR_volume",
+    "Penumbra_SourceSize"
+   ],
+   "evidence_label": "EVIDENCE (absorption, caustics) + DERIVED",
+   "test_status": "untested"
+  },
+  {
+   "id": "acetate_lightpad_transillumination",
+   "name": "Acetate light-pad transillumination",
+   "purpose": "Reveal the depth and amber layers of tortoiseshell or coloured translucent acetate.",
+   "how": "Place the frame front on a frosted acrylic sheet over an LED light pad (5000-5600 K) or a strobe firing up through diffusion. Background light 0.5-1 stop over the frame front exposure. Weak top key (60 cm softbox, 45 deg above, 1-2 stops under the backlight) to keep the surface gloss and edges. Black cards along the sides to outline the outer edge (dark-field edge) - keep the main look bright-field; do not mix both strongly.",
+   "limits": "Opaque acetate and metal parts go black; colour shifts if the pad is not neutral.",
+   "use_for": [
+    "acetate product detail",
+    "material explainer",
+    "frame-kit detail layer"
+   ],
+   "source_keys": [
+    "HunterBiverFuqua",
+    "Hoffman2013",
+    "glTF_KHR_volume"
+   ],
+   "evidence_label": "EVIDENCE (scattering/absorption) + CRAFT",
+   "test_status": "untested"
+  },
+  {
+   "id": "tropical_open_shade_sand_bounce",
+   "name": "Tropical open shade with sand bounce",
+   "purpose": "Flattering portraits with glasses under harsh Hua Hin midday sun without studio gear.",
+   "how": "Subject 0.5-1 m inside the edge of a deep shade (awning, building, tree line) facing out toward open bright sky; sun behind the shade-maker. Key = bright sky (huge soft source in front, ~30-60 deg elevation); fill = sunlit sand/pavement in front bouncing up (warm). Keep ratio ~2:1. Black card or dark wall on one side for shape. Check lenses: the bright sky band will mirror on the upper lens - chin down slightly.",
+   "limits": "Sand bounce lights the lower lens edge; very deep shade goes blue-cyan (sky-only light) - warm in grading.",
+   "use_for": [
+    "staff/customer photos outdoors",
+    "beach promo scenes",
+    "AI scene prompts set in Hua Hin"
+   ],
+   "source_keys": [
+    "OpenShade_scrim_sources",
+    "Preetham1999"
+   ],
+   "evidence_label": "CRAFT + EVIDENCE (sky as Rayleigh-lit source)",
+   "test_status": "untested"
+  },
+  {
+   "id": "beach_noon_overhead_silk",
+   "name": "Beach noon overhead silk",
+   "purpose": "Turn overhead tropical noon sun into soft light on a person at the beach while keeping the bright sea background.",
+   "how": "2x2 m full-stop silk 60-100 cm above the head, tilted toward the sun so the subject stays fully in its shade; sandbags or two assistants (wind). Silver/white reflector 1 m low in front at 30 deg below eye line for fill (2:1). Expose for skin; background sea/sky 1-2 stops brighter - acceptable airy look; add ND to keep shallow focus.",
+   "limits": "Wind; the silk's edge must not show as a hard line on the face; reflections of the silk appear in lenses as a soft panel (acceptable).",
+   "use_for": [
+    "beach promo",
+    "sunglasses on model",
+    "Hua Hin campaign"
+   ],
+   "source_keys": [
+    "OpenShade_scrim_sources"
+   ],
+   "evidence_label": "CRAFT",
+   "test_status": "untested"
+  },
+  {
+   "id": "book_light_soft_key",
+   "name": "Book light soft key",
+   "purpose": "Very soft yet directional key for interviews and faces with glasses; large source reduces specular intensity on lenses.",
+   "how": "Hard source (LED/fresnel) aimed into a 1.2x1.2 m white bounce board; a 1.2-2 m frame of diffusion (silk or grid cloth) placed parallel to the board, 30-60 cm in front of it, forming an open-book shape. Whole unit at 45 deg from camera, centre 30-40 deg above eye line, 1-1.5 m from face. Negative fill (black flag) on the far side for 3:1-4:1. Keep the source high to keep its lens reflection off the eyes.",
+   "limits": "Needs space and power (double loss); gap too large creates hotspots.",
+   "use_for": [
+    "shop interviews",
+    "optometrist explainer",
+    "story clip live-action"
+   ],
+   "source_keys": [
+    "BookLight_sources",
+    "Penumbra_SourceSize"
+   ],
+   "evidence_label": "CRAFT",
+   "test_status": "untested"
+  },
+  {
+   "id": "raking_texture_light",
+   "name": "Raking texture light",
+   "purpose": "Reveal surface texture (wood grain, stone, fabric, embossed packaging, acetate lamination edges).",
+   "how": "Single point or narrow slit source at 5-15 deg above the surface plane, from one side; no fill or a tiny card (ratio 8:1+). Camera roughly perpendicular to the surface. Make a second frame from 90 deg rotated light direction - features parallel to the beam disappear.",
+   "limits": "Exaggerates dust and scratches on glossy products; useless on mirror-like surfaces (reflects or misses entirely).",
+   "use_for": [
+    "props and backgrounds",
+    "material detail clips",
+    "wood/stone scene textures for AI references"
+   ],
+   "source_keys": [
+    "RakingLight_conservation"
+   ],
+   "evidence_label": "EVIDENCE/practice (conservation imaging)",
+   "test_status": "untested"
+  },
+  {
+   "id": "architecture_dusk_interior_balance",
+   "name": "Dusk shopfront interior-exterior balance",
+   "purpose": "Photograph or prompt the shop exterior when the twilight sky and the lit interior have similar brightness.",
+   "how": "Shoot during civil twilight (sun 0 to -6 deg), the short window at Hua Hin's latitude; meter sky vs interior and press the shutter when within ~1 stop. Interior practicals 3000-4000 K, white balance ~4500-5000 K so the sky goes blue and the interior warm. Camera on tripod at eye height, verticals straight. Optional: one hidden soft light on the sign.",
+   "limits": "Window lasts only minutes in the tropics; mixed LED colour casts show on product shelves.",
+   "use_for": [
+    "shop exterior posts",
+    "night-optic story establishing shots",
+    "closure notice backgrounds"
+   ],
+   "source_keys": [
+    "GoldenHour_timeanddate",
+    "Preetham1999"
+   ],
+   "evidence_label": "CRAFT + DERIVED (twilight geometry)",
+   "test_status": "untested"
+  },
+  {
+   "id": "shop_window_plus_ceiling_led",
+   "name": "Shop window daylight + ceiling LED",
+   "purpose": "Natural-looking interior light for the real eyewear shop with controlled lens reflections.",
+   "how": "Key: shop window/door daylight at 60-90 deg to the subject (side light), diffused with a sheer curtain if sun hits. Ambient: ceiling LED panels 4000 K (set camera WB ~5000 K so window stays neutral and LEDs slightly warm). Fill: white foam board on the shadow side (3:1). Black card/flag above the camera to kill the ceiling panels' reflections on lenses and display glass. Turn off or flag any LED strip that appears in lenses.",
+   "limits": "Mixed colour temperatures; overhead panels create raccoon eyes on staff if used as key.",
+   "use_for": [
+    "staff videos",
+    "try-on clips",
+    "behind-the-counter scenes"
+   ],
+   "source_keys": [
+    "Goral1984",
+    "HunterBiverFuqua"
+   ],
+   "evidence_label": "CRAFT + EVIDENCE (indirect light)",
+   "test_status": "untested"
+  },
+  {
+   "id": "leaf_backlight_translucency",
+   "name": "Leaf backlight translucency",
+   "purpose": "Make foliage glow through subsurface transmission - calm nature shots for eye-break clips.",
+   "how": "Sun or strong light behind the leaves at 150-180 deg from camera, 10-40 deg elevation; camera in the leaves' shadow or with a flag/lens hood to avoid flare. Expose for the glowing leaves; background in shade 2-3 stops darker. Morning in Hua Hin (sun from the sea side, east).",
+   "limits": "Flare veils contrast; dense dark leaves do not transmit much.",
+   "use_for": [
+    "eye-break nature clips",
+    "story backgrounds",
+    "calm carousel covers"
+   ],
+   "source_keys": [
+    "Hoffman2013",
+    "Jensen2001"
+   ],
+   "evidence_label": "EVIDENCE (scattering/transmission) + CRAFT",
+   "test_status": "untested"
+  },
+  {
+   "id": "charcoal_three_value_plan",
+   "name": "Charcoal three-value light plan",
+   "purpose": "A light plan for the pencil/charcoal Mint & Tao carousels that reads form with minimal tones.",
+   "how": "Choose one key direction per scene (e.g. upper-left 45 deg). Three values only: paper white (lit planes and highlights), one mid hatch (halftones + reflected light, never darker than the shadow), one dark (form + cast shadows). Model the lights, keep shadows flat (Gurney rule). Darkest accents only at occlusion contacts (feet on ground, cup on table) and a light core along the terminator. Cast shadows sharp near contact, softer away. Background planes one value lighter (aerial perspective).",
+   "limits": "Faceless characters lose expression cues if shadows cover the head; keep heads mostly in light.",
+   "use_for": [
+    "Slowly Growing carousels",
+    "charcoal story sets",
+    "storyboards"
+   ],
+   "source_keys": [
+    "Gurney2010_LightForm",
+    "Proko_Elements",
+    "Leonardo_Richter"
+   ],
+   "evidence_label": "CRAFT",
+   "test_status": "untested"
+  },
+  {
+   "id": "product_caustic_projection",
+   "name": "Product caustic projection",
+   "purpose": "Project moving water caustics onto the set behind/under the glasses for a summer, sea-side mood.",
+   "how": "Clear glass tray with 2-3 cm of water above or in front of the set; one hard source (bare LED/fresnel or sun) shining through it at 30-60 deg onto the backdrop/table; disturb the water for movement in video. Frame lit separately by a soft key from the opposite side (45 deg, high) with flags keeping caustics off the lenses if they confuse the lens read. Background caustics 0.5-1 stop over base backdrop.",
+   "limits": "Soft sources produce no crisp caustics; water near electrics; caustics on lenses can look like damage.",
+   "use_for": [
+    "summer promo",
+    "beat clip backgrounds",
+    "Hua Hin sea theme"
+   ],
+   "source_keys": [
+    "Caustic_optics"
+   ],
+   "evidence_label": "EVIDENCE (caustics) + CRAFT",
+   "test_status": "untested"
+  }
+ ],
+ "material_examples": [
+  {
+   "id": "mat_titanium_polished",
+   "name": "Polished titanium / stainless frame",
+   "purpose": "Metal frames that read as metal, not grey plastic.",
+   "pbr": {
+    "metallic": 1,
+    "base_color_linear": "cool grey ~0.55-0.65 (iron 0.53-0.58 as reference)",
+    "roughness": "0.05-0.2",
+    "anisotropy": 0,
+    "ior": "n/a (conductor)"
+   },
+   "how": "Give it something to reflect: strip highlights + dark card reflections along curves.",
+   "prompt_phrase": "mirror-polished titanium temples reflecting a long white strip light and a black card, cool grey metal, no diffuse colour",
+   "limits": "Titanium F0 not in verified tables; roughness ranges are estimates (CRAFT/DERIVED), not measurements",
+   "use_for": [
+    "product",
+    "clips"
+   ],
+   "source_keys": [
+    "Hoffman2013",
+    "PhysicallyBased_DB",
+    "Burley2012_va"
+   ],
+   "evidence_label": "EVIDENCE + DERIVED",
+   "test_status": "untested"
+  },
+  {
+   "id": "mat_titanium_brushed",
+   "name": "Brushed / matte-finished metal",
+   "purpose": "Satin metal frames.",
+   "pbr": {
+    "metallic": 1,
+    "roughness": "0.3-0.5",
+    "anisotropy": "0.5-0.9 along brushing"
+   },
+   "how": "Broad, stretched highlight; keep the metal tint.",
+   "prompt_phrase": "brushed titanium with a soft stretched highlight along the temple, satin metal sheen",
+   "limits": "Highlight direction vs brushing not verified this round; roughness ranges are estimates (CRAFT/DERIVED), not measurements",
+   "use_for": [
+    "product"
+   ],
+   "source_keys": [
+    "Burley2012_va",
+    "Ward1992"
+   ],
+   "evidence_label": "EVIDENCE + DERIVED",
+   "test_status": "untested"
+  },
+  {
+   "id": "mat_gold_plated",
+   "name": "Gold-plated / rose-gold metal",
+   "purpose": "Warm metal frames.",
+   "pbr": {
+    "metallic": 1,
+    "base_color_linear": "gold F0 1.00, 0.71, 0.29",
+    "roughness": "0.05-0.25"
+   },
+   "how": "Highlights and reflections are gold-tinted, never white.",
+   "prompt_phrase": "polished gold-plated metal frame, warm gold-tinted highlights and reflections, no white specular",
+   "limits": "roughness ranges are estimates (CRAFT/DERIVED), not measurements",
+   "use_for": [
+    "product"
+   ],
+   "source_keys": [
+    "Hoffman2013",
+    "PhysicallyBased_DB"
+   ],
+   "evidence_label": "EVIDENCE",
+   "test_status": "untested"
+  },
+  {
+   "id": "mat_painted_metal_clearcoat",
+   "name": "Painted / coated metal frame",
+   "purpose": "Colour-coated metal (metal underneath, paint on top).",
+   "pbr": {
+    "metallic": "0 (paint layer)",
+    "base_color": "paint colour",
+    "roughness": "0.3-0.6",
+    "clearcoat": "0-1, IOR 1.5"
+   },
+   "how": "Treat as dielectric paint; gloss from clearcoat.",
+   "prompt_phrase": "matte navy coated metal frame with a thin glossy clear coat highlight",
+   "limits": "Must know whether the real frame is plated or painted.",
+   "use_for": [
+    "product"
+   ],
+   "source_keys": [
+    "Burley2012_va"
+   ],
+   "evidence_label": "EVIDENCE",
+   "test_status": "untested"
+  },
+  {
+   "id": "mat_acetate_glossy_solid",
+   "name": "Glossy solid acetate",
+   "purpose": "Opaque coloured acetate frames.",
+   "pbr": {
+    "metallic": 0,
+    "ior": "~1.46-1.50",
+    "f0": "~0.04",
+    "roughness": "0.03-0.12",
+    "transmission": 0
+   },
+   "how": "Base colour dominant; one crisp white highlight per curve; Fresnel brightening at grazing edges.",
+   "prompt_phrase": "polished black acetate frame, deep colour with one crisp white highlight along each rim, slightly brighter edges",
+   "limits": "Eyewear-acetate IOR not directly verified; roughness ranges are estimates (CRAFT/DERIVED), not measurements",
+   "use_for": [
+    "product",
+    "clips"
+   ],
+   "source_keys": [
+    "CelluloseAcetate_patents",
+    "Hoffman2013"
+   ],
+   "evidence_label": "EVIDENCE + DERIVED",
+   "test_status": "untested"
+  },
+  {
+   "id": "mat_acetate_crystal_clear",
+   "name": "Crystal-clear acetate",
+   "purpose": "Transparent frames.",
+   "pbr": {
+    "metallic": 0,
+    "ior": "~1.46-1.50",
+    "transmission": 1,
+    "roughness": "0.02-0.08",
+    "attenuation": "near none"
+   },
+   "how": "Edges read via refraction: dark edges on bright field or bright edges on dark field (not both).",
+   "prompt_phrase": "crystal clear transparent acetate frame, thick edges outlined dark against a bright white background, background visible through it slightly displaced",
+   "limits": "Never use opacity for transparency.",
+   "use_for": [
+    "product"
+   ],
+   "source_keys": [
+    "HunterBiverFuqua",
+    "glTF_KHR_volume"
+   ],
+   "evidence_label": "EVIDENCE + CRAFT",
+   "test_status": "untested"
+  },
+  {
+   "id": "mat_acetate_tortoiseshell",
+   "name": "Tortoiseshell translucent acetate",
+   "purpose": "Havana/tortoise frames.",
+   "pbr": {
+    "metallic": 0,
+    "ior": "~1.46-1.50",
+    "transmission": "0.5-1",
+    "attenuation_color": "amber/brown",
+    "scattering": "low-medium",
+    "roughness": "0.03-0.12"
+   },
+   "how": "Backlight reveals layered amber pattern; front light shows dark mottling plus surface gloss.",
+   "prompt_phrase": "tortoiseshell acetate with deep amber translucent layers glowing where backlit, glossy surface highlight",
+   "limits": "Pattern must be the real frame's.",
+   "use_for": [
+    "product"
+   ],
+   "source_keys": [
+    "glTF_KHR_volume",
+    "Hoffman2013"
+   ],
+   "evidence_label": "EVIDENCE + DERIVED",
+   "test_status": "untested"
+  },
+  {
+   "id": "mat_tr90_matte",
+   "name": "TR90 / nylon matte",
+   "purpose": "Light flexible frames.",
+   "pbr": {
+    "metallic": 0,
+    "f0": "~0.04 (assumed)",
+    "roughness": "0.5-0.8",
+    "transmission": 0
+   },
+   "how": "Broad soft highlight, even colour.",
+   "prompt_phrase": "matte TR90 frame with a broad soft sheen, no sharp highlights",
+   "limits": "TR90 IOR not verified (datasheet behind login); roughness ranges are estimates (CRAFT/DERIVED), not measurements",
+   "use_for": [
+    "product"
+   ],
+   "source_keys": [
+    "Hoffman2013"
+   ],
+   "evidence_label": "DERIVED",
+   "test_status": "untested"
+  },
+  {
+   "id": "mat_lens_cr39",
+   "name": "Clear CR-39 lens (uncoated)",
+   "purpose": "Standard plastic lens.",
+   "pbr": {
+    "ior": 1.498,
+    "f0": "~0.040 per surface",
+    "transmission": 1,
+    "roughness": "0-0.02",
+    "abbe": 58
+   },
+   "how": "Faint white reflections of sources; background seen through; ~7.6% total reflection both surfaces.",
+   "prompt_phrase": "clear plastic lens with a faint soft white reflection of a window, eyes clearly visible behind it",
+   "limits": "Do not add rainbow fringes.",
+   "use_for": [
+    "product",
+    "lens explainer"
+   ],
+   "source_keys": [
+    "CR39_PPG_summary",
+    "glTF_KHR_ior"
+   ],
+   "evidence_label": "EVIDENCE + DERIVED",
+   "test_status": "untested"
+  },
+  {
+   "id": "mat_lens_polycarbonate",
+   "name": "Polycarbonate lens",
+   "purpose": "Impact-resistant lens.",
+   "pbr": {
+    "ior": "1.585-1.586",
+    "f0": "~0.051",
+    "transmission": 1,
+    "abbe": "~30",
+    "dispersion": "noticeable at thick edges"
+   },
+   "how": "Slightly stronger reflection than CR-39; possible faint colour fringing at edges of high power.",
+   "prompt_phrase": "thin polycarbonate lens, faint reflections, subtle colour fringe only at the thick edge",
+   "limits": "",
+   "use_for": [
+    "product",
+    "kids/sport"
+   ],
+   "source_keys": [
+    "Sultanova2009",
+    "OphthalmicLensMaterials_summary"
+   ],
+   "evidence_label": "EVIDENCE + DERIVED",
+   "test_status": "untested"
+  },
+  {
+   "id": "mat_lens_high_index_174",
+   "name": "High-index 1.74 lens",
+   "purpose": "Thinnest lens for strong prescriptions.",
+   "pbr": {
+    "ior": 1.74,
+    "f0": "~0.073 per surface (uncoated)",
+    "transmission": 1,
+    "abbe": "ve 32"
+   },
+   "how": "Uncoated it reflects nearly twice CR-39 (~13.6% both surfaces) - always shown AR-coated.",
+   "prompt_phrase": "ultra-thin high-index lens with a flat profile edge and a faint green anti-reflective sheen",
+   "limits": "",
+   "use_for": [
+    "lens promo"
+   ],
+   "source_keys": [
+    "Mitsui_MR",
+    "glTF_KHR_ior"
+   ],
+   "evidence_label": "EVIDENCE + DERIVED",
+   "test_status": "untested"
+  },
+  {
+   "id": "mat_lens_ar_coated",
+   "name": "AR-coated lens",
+   "purpose": "Lenses with anti-reflective multilayer.",
+   "pbr": {
+    "ior": "substrate",
+    "thin_film": "multilayer; total reflectance <1-2%",
+    "residual_color": "green typical; blue/violet by design"
+   },
+   "how": "Very faint coloured reflection that shifts hue with angle.",
+   "prompt_phrase": "anti-reflective coated lens, almost invisible, only a faint green residual reflection at an angle",
+   "limits": "Residual colour must match the real coating.",
+   "use_for": [
+    "product",
+    "coating explainer"
+   ],
+   "source_keys": [
+    "ARCoating_patents",
+    "OpenPBR"
+   ],
+   "evidence_label": "EVIDENCE",
+   "test_status": "untested"
+  },
+  {
+   "id": "mat_lens_mirror",
+   "name": "Mirror-coated sun lens",
+   "purpose": "Flash/mirror sunglasses.",
+   "pbr": {
+    "thin_film": "high-reflectance stack",
+    "reflectance": "high, coloured",
+    "transmission": "reduced"
+   },
+   "how": "Reflects the scene clearly; design the reflected scene.",
+   "prompt_phrase": "blue mirror-coated sunglass lenses reflecting a sea horizon and sky gradient",
+   "limits": "Colour must be the product's.",
+   "use_for": [
+    "sunglasses"
+   ],
+   "source_keys": [
+    "OpenPBR",
+    "HunterBiverFuqua"
+   ],
+   "evidence_label": "EVIDENCE + CRAFT",
+   "test_status": "untested"
+  },
+  {
+   "id": "mat_lens_gradient_tint",
+   "name": "Gradient tinted sun lens",
+   "purpose": "Tinted lenses dark top, light bottom.",
+   "pbr": {
+    "transmission": 1,
+    "attenuation_color": "lens tint",
+    "attenuation": "stronger at top"
+   },
+   "how": "Darker top fading down; coloured transmitted shadows in hard light.",
+   "prompt_phrase": "brown gradient tinted lenses, dark at the top fading to clear at the bottom, casting a soft brown shadow",
+   "limits": "Do not invert gradient; keep eyes visible if real lens allows.",
+   "use_for": [
+    "sunglasses"
+   ],
+   "source_keys": [
+    "glTF_KHR_volume"
+   ],
+   "evidence_label": "EVIDENCE",
+   "test_status": "untested"
+  },
+  {
+   "id": "mat_silicone_nosepad",
+   "name": "Silicone nose pad",
+   "purpose": "Small clear/frosted pads.",
+   "pbr": {
+    "ior": "~1.4 (typical silicone, unverified)",
+    "transmission": "0.6-1",
+    "roughness": "0.3-0.5",
+    "scattering": "low"
+   },
+   "how": "Slightly milky, soft highlight; must be present.",
+   "prompt_phrase": "small frosted silicone nose pads with soft highlights",
+   "limits": "IOR unverified.",
+   "use_for": [
+    "product detail"
+   ],
+   "source_keys": [],
+   "evidence_label": "DERIVED",
+   "test_status": "untested"
+  },
+  {
+   "id": "mat_water_clear",
+   "name": "Clear water / wet surface",
+   "purpose": "Water in scenes and wet ground.",
+   "pbr": {
+    "ior": 1.333,
+    "f0": "0.02",
+    "transmission": 1,
+    "absorption": "red over metres"
+   },
+   "how": "Mirror at grazing angles, transparent looking down; deep water blue-green.",
+   "prompt_phrase": "calm shallow sea water, transparent near the shore, mirror-like toward the horizon",
+   "limits": "",
+   "use_for": [
+    "scenes",
+    "clips"
+   ],
+   "source_keys": [
+    "PBRT4_va",
+    "BraunSmirnov1993",
+    "Gurney2007_WaterReflections"
+   ],
+   "evidence_label": "EVIDENCE",
+   "test_status": "untested"
+  },
+  {
+   "id": "mat_glass_vessel",
+   "name": "Clear glass (props)",
+   "purpose": "Glasses, bottles, display cases.",
+   "pbr": {
+    "ior": "1.5-1.52",
+    "f0": "0.04",
+    "transmission": 1,
+    "roughness": "0-0.05"
+   },
+   "how": "Edges via bright/dark field.",
+   "prompt_phrase": "clear glass with dark refractive edges against a bright backdrop",
+   "limits": "",
+   "use_for": [
+    "props"
+   ],
+   "source_keys": [
+    "glTF_KHR_ior",
+    "HunterBiverFuqua"
+   ],
+   "evidence_label": "EVIDENCE",
+   "test_status": "untested"
+  },
+  {
+   "id": "mat_frosted_glass",
+   "name": "Frosted / ground glass",
+   "purpose": "Diffuse transmissive panels.",
+   "pbr": {
+    "ior": 1.5,
+    "transmission": 1,
+    "roughness": "0.3-0.7"
+   },
+   "how": "Blurred light through; soft highlight.",
+   "prompt_phrase": "frosted glass panel softly glowing with blurred light behind it",
+   "limits": "roughness ranges are estimates (CRAFT/DERIVED), not measurements",
+   "use_for": [
+    "sets",
+    "backgrounds"
+   ],
+   "source_keys": [
+    "Walter2007"
+   ],
+   "evidence_label": "EVIDENCE",
+   "test_status": "untested"
+  },
+  {
+   "id": "mat_skin",
+   "name": "Human skin",
+   "purpose": "Faces wearing glasses.",
+   "pbr": {
+    "metallic": 0,
+    "ior": 1.4,
+    "f0": 0.028,
+    "subsurface": "on; red radius largest",
+    "roughness": "0.35-0.6 (varies by region)"
+   },
+   "how": "White specular; warm terminator; avoid red glow around shadows.",
+   "prompt_phrase": "natural skin with soft subsurface warmth at the shadow edge and white, non-yellow specular",
+   "limits": "Regional variation; roughness ranges are estimates (CRAFT/DERIVED), not measurements",
+   "use_for": [
+    "people"
+   ],
+   "source_keys": [
+    "dEon2007",
+    "OpenPBR"
+   ],
+   "evidence_label": "EVIDENCE",
+   "test_status": "untested"
+  },
+  {
+   "id": "mat_hair",
+   "name": "Hair",
+   "purpose": "Characters and models.",
+   "pbr": {
+    "model": "R/TT/TRT fibre lobes",
+    "anisotropy": "high",
+    "roughness": "0.2-0.4 (estimate)"
+   },
+   "how": "Two highlights on light hair (white + coloured), one on black hair.",
+   "prompt_phrase": "glossy black hair with a single soft white highlight band",
+   "limits": "roughness ranges are estimates (CRAFT/DERIVED), not measurements",
+   "use_for": [
+    "people",
+    "characters"
+   ],
+   "source_keys": [
+    "Marschner2003"
+   ],
+   "evidence_label": "EVIDENCE",
+   "test_status": "untested"
+  },
+  {
+   "id": "mat_velvet_fabric",
+   "name": "Velvet / cloth with sheen",
+   "purpose": "Glasses case lining, clothing.",
+   "pbr": {
+    "metallic": 0,
+    "sheen": "0.5-1",
+    "roughness": "0.7-1"
+   },
+   "how": "Bright grazing edges, darker centre.",
+   "prompt_phrase": "deep blue velvet case lining with soft bright sheen at its folds",
+   "limits": "roughness ranges are estimates (CRAFT/DERIVED), not measurements",
+   "use_for": [
+    "props",
+    "fashion"
+   ],
+   "source_keys": [
+    "EstevezKulla2017",
+    "Burley2012_va"
+   ],
+   "evidence_label": "EVIDENCE",
+   "test_status": "untested"
+  },
+  {
+   "id": "mat_cotton_fabric",
+   "name": "Matte cotton / linen",
+   "purpose": "Clothing, backdrops.",
+   "pbr": {
+    "metallic": 0,
+    "roughness": "0.8-1",
+    "sheen": "0-0.3"
+   },
+   "how": "Almost no highlight; texture under raking light.",
+   "prompt_phrase": "matte linen backdrop with visible weave under low side light",
+   "limits": "roughness ranges are estimates (CRAFT/DERIVED), not measurements",
+   "use_for": [
+    "sets"
+   ],
+   "source_keys": [
+    "Burley2012_va"
+   ],
+   "evidence_label": "DERIVED",
+   "test_status": "untested"
+  },
+  {
+   "id": "mat_leather",
+   "name": "Leather (case, strap)",
+   "purpose": "Leather goods.",
+   "pbr": {
+    "metallic": 0,
+    "roughness": "0.4-0.7 (natural) / 0.2-0.35 (polished)",
+    "clearcoat": "0-0.5"
+   },
+   "how": "Broad soft highlight, pore micro-texture.",
+   "prompt_phrase": "tan leather glasses case with a broad soft sheen and fine grain",
+   "limits": "No measured values this round.",
+   "use_for": [
+    "props"
+   ],
+   "source_keys": [],
+   "evidence_label": "CRAFT",
+   "test_status": "untested"
+  },
+  {
+   "id": "mat_wood_varnished",
+   "name": "Varnished wood",
+   "purpose": "Tables, shelves.",
+   "pbr": {
+    "metallic": 0,
+    "base_color": "grain texture",
+    "roughness": "0.2-0.4",
+    "clearcoat": "0.5-1"
+   },
+   "how": "Grain below a glossy layer; reflections of windows.",
+   "prompt_phrase": "varnished teak table with visible grain and a soft window reflection",
+   "limits": "roughness ranges are estimates (CRAFT/DERIVED), not measurements",
+   "use_for": [
+    "sets"
+   ],
+   "source_keys": [
+    "Burley2012_va"
+   ],
+   "evidence_label": "EVIDENCE + DERIVED",
+   "test_status": "untested"
+  },
+  {
+   "id": "mat_marble",
+   "name": "Marble",
+   "purpose": "Premium product surfaces.",
+   "pbr": {
+    "ior": 1.5,
+    "subsurface": "low-medium",
+    "roughness": "0.05-0.3",
+    "base_color_linear": "0.83, 0.79, 0.75 (example)"
+   },
+   "how": "Light sinks into edges; polished reflections.",
+   "prompt_phrase": "polished white marble slab with soft translucent edges",
+   "limits": "",
+   "use_for": [
+    "product surfaces"
+   ],
+   "source_keys": [
+    "PhysicallyBased_DB",
+    "Jensen2001"
+   ],
+   "evidence_label": "EVIDENCE",
+   "test_status": "untested"
+  },
+  {
+   "id": "mat_ceramic_glazed",
+   "name": "Glazed ceramic / porcelain",
+   "purpose": "Cups, tiles.",
+   "pbr": {
+    "ior": 1.5,
+    "base": "diffuse body",
+    "clearcoat": "1",
+    "roughness": "0.05-0.15 (glaze)"
+   },
+   "how": "Crisp glaze highlight over matte body colour.",
+   "prompt_phrase": "glazed white porcelain cup with a crisp highlight",
+   "limits": "roughness ranges are estimates (CRAFT/DERIVED), not measurements",
+   "use_for": [
+    "props"
+   ],
+   "source_keys": [
+    "PhysicallyBased_DB"
+   ],
+   "evidence_label": "DERIVED",
+   "test_status": "untested"
+  },
+  {
+   "id": "mat_paper",
+   "name": "Paper",
+   "purpose": "Carousel textures, cards.",
+   "pbr": {
+    "ior": 1.5,
+    "roughness": "0.8-1",
+    "transmission": "thin translucency when backlit",
+    "base_color_linear": "0.79, 0.83, 0.88 (office paper)"
+   },
+   "how": "Matte; thin sheets glow when backlit.",
+   "prompt_phrase": "slightly textured matte paper, faintly translucent where light passes through",
+   "limits": "",
+   "use_for": [
+    "charcoal style",
+    "props"
+   ],
+   "source_keys": [
+    "PhysicallyBased_DB"
+   ],
+   "evidence_label": "EVIDENCE",
+   "test_status": "untested"
+  },
+  {
+   "id": "mat_rubber",
+   "name": "Rubber",
+   "purpose": "Sport frame grips, tips.",
+   "pbr": {
+    "metallic": 0,
+    "roughness": "0.7-0.95"
+   },
+   "how": "Very broad faint highlight; black is not pure black.",
+   "prompt_phrase": "matte black rubber temple tips with a faint broad sheen",
+   "limits": "roughness ranges are estimates (CRAFT/DERIVED), not measurements",
+   "use_for": [
+    "product detail"
+   ],
+   "source_keys": [],
+   "evidence_label": "CRAFT",
+   "test_status": "untested"
+  },
+  {
+   "id": "mat_diamond_crystal",
+   "name": "Diamond / cut crystal",
+   "purpose": "Decorative crystals on frames.",
+   "pbr": {
+    "ior": 2.42,
+    "f0": 0.17,
+    "transmission": 1,
+    "dispersion": "high"
+   },
+   "how": "Many sparkle points + spectral fire from TIR (critical ~24 deg).",
+   "prompt_phrase": "small faceted crystals sparkling with tiny rainbow flashes",
+   "limits": "Only if the real frame has crystals.",
+   "use_for": [
+    "jewellery-style detail"
+   ],
+   "source_keys": [
+    "PBRT4_va",
+    "Hoffman2013"
+   ],
+   "evidence_label": "EVIDENCE",
+   "test_status": "untested"
+  },
+  {
+   "id": "mat_car_paint",
+   "name": "Glossy painted surface",
+   "purpose": "Cars, painted props in scenes.",
+   "pbr": {
+    "metallic": "0 (or flakes)",
+    "roughness": "0.3-0.5 base",
+    "clearcoat": "1, IOR 1.5"
+   },
+   "how": "Two-layer highlight: sharp coat + soft base.",
+   "prompt_phrase": "glossy red car paint with a sharp clear-coat reflection over soft colour",
+   "limits": "",
+   "use_for": [
+    "scenes"
+   ],
+   "source_keys": [
+    "Burley2012_va"
+   ],
+   "evidence_label": "EVIDENCE",
+   "test_status": "untested"
+  },
+  {
+   "id": "mat_sand",
+   "name": "Beach sand (dry / wet)",
+   "purpose": "Hua Hin beach ground.",
+   "pbr": {
+    "metallic": 0,
+    "roughness": "0.9-1 dry; wet adds water film (f0 0.02, low roughness)"
+   },
+   "how": "Dry: bright matte reflector; wet: darker and mirror-like at grazing angles.",
+   "prompt_phrase": "dry pale sand, and darker wet sand near the waterline reflecting the sky",
+   "limits": "No measured albedo this round.",
+   "use_for": [
+    "beach scenes"
+   ],
+   "source_keys": [
+    "Gurney2007_WaterReflections"
+   ],
+   "evidence_label": "DERIVED",
+   "test_status": "untested"
+  }
+ ],
+ "atmospheric_effects": [
+  {
+   "id": "atm_crepuscular_rays",
+   "name": "Crepuscular rays",
+   "purpose": "Sunbeams through cloud gaps for awe/hope beats.",
+   "how": "Rays converge toward the sun's position (even off frame); bright beams alternate with cloud-shadow bands; require visible haze overall; strongest with sun low behind cumulus.",
+   "prompt_phrase": "crepuscular rays fanning from behind cumulus clouds over the sea, hazy air",
+   "limits": "Parallel rays in wide shots are wrong; rays in crystal-clear air are wrong.",
+   "use_for": [
+    "story clips",
+    "promo scenes"
+   ],
+   "source_keys": [
+    "Atoptics_Crepuscular",
+    "Bruneton2008"
+   ],
+   "evidence_label": "EVIDENCE",
+   "test_status": "untested"
+  },
+  {
+   "id": "atm_anticrepuscular_rays",
+   "name": "Anticrepuscular rays",
+   "purpose": "Rare beams converging opposite the sun at sunset.",
+   "how": "Camera faces away from the low sun; faint rays converge to the antisolar point on the opposite horizon.",
+   "prompt_phrase": "faint anticrepuscular rays converging on the eastern horizon at sunset",
+   "limits": "Faint; easy to overdo.",
+   "use_for": [
+    "story clips"
+   ],
+   "source_keys": [
+    "Atoptics_Crepuscular"
+   ],
+   "evidence_label": "EVIDENCE",
+   "test_status": "untested"
+  },
+  {
+   "id": "atm_aerial_perspective_layers",
+   "name": "Aerial perspective layering",
+   "purpose": "Depth in landscapes/seascapes.",
+   "how": "3-4 depth layers: near full contrast; each farther layer raises blacks and lowers saturation, shifting to the sky colour; exponential not linear; keep the product in clear air.",
+   "prompt_phrase": "distant islands fading in layers into pale blue haze, foreground crisp",
+   "limits": "Dust haze should be white-grey-yellow, not blue.",
+   "use_for": [
+    "scenes",
+    "charcoal backgrounds"
+   ],
+   "source_keys": [
+    "Leonardo_Richter",
+    "Preetham1999"
+   ],
+   "evidence_label": "EVIDENCE",
+   "test_status": "untested"
+  },
+  {
+   "id": "atm_tropical_noon_haze",
+   "name": "Tropical noon haze",
+   "purpose": "Honest Hua Hin midday look.",
+   "how": "Overhead sun, short cast shadows, white-pale sky near the horizon, deeper blue only overhead; shadows filled by bright sky (not black).",
+   "prompt_phrase": "harsh tropical midday sun, short shadows, pale hazy horizon, humid air",
+   "limits": "Harsh on faces - use shade/silk setups for people.",
+   "use_for": [
+    "Hua Hin scenes",
+    "UV story"
+   ],
+   "source_keys": [
+    "Preetham1999",
+    "WHO_UVI_2002"
+   ],
+   "evidence_label": "EVIDENCE + DERIVED",
+   "test_status": "untested"
+  },
+  {
+   "id": "atm_sea_spray_backlit",
+   "name": "Backlit sea-spray haze",
+   "purpose": "Glowing beach atmosphere.",
+   "how": "Morning sun over the sea (east) behind subject 150-180 deg; humid salt aerosol forward-scatters into a warm glowing veil; horizon a soft white band.",
+   "prompt_phrase": "backlit morning sea spray glowing in warm haze along the Hua Hin shoreline",
+   "limits": "Flare reduces contrast; keep glasses lit from front with bounce.",
+   "use_for": [
+    "beach promo",
+    "eye-break clips"
+   ],
+   "source_keys": [
+    "Zieger2017",
+    "Preetham1999"
+   ],
+   "evidence_label": "EVIDENCE + DERIVED",
+   "test_status": "untested"
+  },
+  {
+   "id": "atm_dry_season_haze",
+   "name": "Dry-season smoke haze",
+   "purpose": "Hazy-season realism (Jan-Apr inland; coastal unverified).",
+   "how": "Milky yellow-white sky, low contrast distance, sun turns orange-red before reaching the horizon.",
+   "prompt_phrase": "milky yellow haze, pale orange sun low in a smoky sky",
+   "limits": "Evidence is for northern Thailand only.",
+   "use_for": [
+    "documentary-style scenes"
+   ],
+   "source_keys": [
+    "ThaiHaze_studies"
+   ],
+   "evidence_label": "EVIDENCE",
+   "test_status": "untested"
+  },
+  {
+   "id": "atm_morning_fog",
+   "name": "Morning fog / mist",
+   "purpose": "Quiet, mysterious openings.",
+   "how": "Neutral white-grey, equal across colours; visibility tens to hundreds of metres; objects fade to fog colour; backlight makes fog glow, frontlight flattens it.",
+   "prompt_phrase": "soft morning mist, trees fading to grey-white in layers",
+   "limits": "Rare at Hua Hin beach; use for inland hills or story worlds.",
+   "use_for": [
+    "story clips"
+   ],
+   "source_keys": [
+    "Preetham1999",
+    "PBRT4_va"
+   ],
+   "evidence_label": "EVIDENCE",
+   "test_status": "untested"
+  },
+  {
+   "id": "atm_dust_in_beam",
+   "name": "Dust motes in a light beam",
+   "purpose": "Still, nostalgic interior moments.",
+   "how": "Hard window beam into a darker room, camera looking toward the light so motes forward-scatter; motes vanish when light is behind camera.",
+   "prompt_phrase": "a shaft of window light with floating dust motes in a dim optical shop",
+   "limits": "Dust on products looks dirty - keep motes in the air away from lenses.",
+   "use_for": [
+    "shop interior story",
+    "night-optic"
+   ],
+   "source_keys": [
+    "Atoptics_Crepuscular",
+    "PBRT4_va"
+   ],
+   "evidence_label": "EVIDENCE + DERIVED",
+   "test_status": "untested"
+  },
+  {
+   "id": "atm_smoke_layer",
+   "name": "Thin smoke layer",
+   "purpose": "Mood/separation in night scenes.",
+   "how": "Thin smoke looks slightly bluish against dark backgrounds and warmer when seen toward the light (DERIVED small-particle scattering).",
+   "prompt_phrase": "thin bluish smoke drifting across a dark street lit by a warm lamp",
+   "limits": "Not sourced specifically this round.",
+   "use_for": [
+    "night story"
+   ],
+   "source_keys": [],
+   "evidence_label": "DERIVED",
+   "test_status": "untested"
+  },
+  {
+   "id": "atm_rain_streaks",
+   "name": "Rain streaks",
+   "purpose": "Rain that reads in stills/clips.",
+   "how": "Backlight the rain; streak length = exposure time (fast shutter dots, slow streaks); shallow depth of field blurs near drops; wet ground mirrors practicals.",
+   "prompt_phrase": "backlit rain streaks against a dark street, wet asphalt reflecting neon",
+   "limits": "Front-lit rain is invisible.",
+   "use_for": [
+    "story clips"
+   ],
+   "source_keys": [
+    "GargNayar2007"
+   ],
+   "evidence_label": "EVIDENCE + CRAFT",
+   "test_status": "untested"
+  },
+  {
+   "id": "atm_water_reflection",
+   "name": "Still-water reflection",
+   "purpose": "Lakes, puddles, calm sea.",
+   "how": "Reflection vertically below; light tones reflect slightly darker; near-mirror only at grazing view; looking down shows the bottom; ripples elongate light sources vertically into glitter paths.",
+   "prompt_phrase": "calm water reflecting the shophouses slightly darker, ripples stretching the lamp reflections",
+   "limits": "Exact flipped copy is wrong when camera is above water.",
+   "use_for": [
+    "scenes",
+    "clips"
+   ],
+   "source_keys": [
+    "Gurney2007_WaterReflections",
+    "PBRT4_va"
+   ],
+   "evidence_label": "EVIDENCE + CRAFT",
+   "test_status": "untested"
+  },
+  {
+   "id": "atm_sea_colour_shallow",
+   "name": "Shallow coastal sea colour",
+   "purpose": "Honest Hua Hin sea.",
+   "how": "Near shore pale green-turquoise with sandy suspended sediment; bluer with depth (red absorbed over metres); sky reflection dominates at grazing angles.",
+   "prompt_phrase": "pale green-turquoise shallow sea with sandy tones near the shore",
+   "limits": "Avoid deep-ocean cobalt for Hua Hin claims.",
+   "use_for": [
+    "Hua Hin scenes"
+   ],
+   "source_keys": [
+    "BraunSmirnov1993"
+   ],
+   "evidence_label": "EVIDENCE",
+   "test_status": "untested"
+  },
+  {
+   "id": "atm_golden_hour_tropical",
+   "name": "Tropical golden hour (short)",
+   "purpose": "Warm low sun at ~12.6 N.",
+   "how": "Sun 0-6 deg lasts ~25-27 min; long shadows, warm direct light, cool shadows; at Hua Hin beach the golden hour faces the sea in the morning.",
+   "prompt_phrase": "low warm morning sun rising over the Gulf of Thailand, long shadows across the sand",
+   "limits": "AI images must match long shadows to the low sun.",
+   "use_for": [
+    "promo",
+    "story"
+   ],
+   "source_keys": [
+    "GoldenHour_timeanddate",
+    "Preetham1999"
+   ],
+   "evidence_label": "DERIVED + EVIDENCE",
+   "test_status": "untested"
+  },
+  {
+   "id": "atm_blue_hour_shopfront",
+   "name": "Blue-hour shopfront",
+   "purpose": "Twilight exteriors.",
+   "how": "Civil twilight; sky deep blue, interiors warm; balance within ~1 stop.",
+   "prompt_phrase": "optical shop at blue hour, deep blue sky and warm glowing windows",
+   "limits": "Very short window.",
+   "use_for": [
+    "shop exterior"
+   ],
+   "source_keys": [
+    "Preetham1999",
+    "GoldenHour_timeanddate"
+   ],
+   "evidence_label": "CRAFT + DERIVED",
+   "test_status": "untested"
+  },
+  {
+   "id": "atm_moonlit_night_convention",
+   "name": "Moonlit night (convention)",
+   "purpose": "Readable night scenes.",
+   "how": "Low-saturation cool ambience (Purkinje convention), warm saturated practicals, rim separation; never show a bright sky in day-for-night.",
+   "prompt_phrase": "moonlit night with cool desaturated ambience and a single warm lamp in the shop window",
+   "limits": "Blue moonlight is perceptual/convention, not physics.",
+   "use_for": [
+    "night-optic",
+    "story clips"
+   ],
+   "source_keys": [
+    "Purkinje_sources",
+    "DayForNight_sources",
+    "Moonlight_illuminance"
+   ],
+   "evidence_label": "EVIDENCE + CRAFT",
+   "test_status": "untested"
+  },
+  {
+   "id": "atm_overcast_storm_contrast",
+   "name": "Storm sky over bright sea",
+   "purpose": "Dramatic monsoon afternoons.",
+   "how": "Dark cumulonimbus overhead with sunlit sea or beach under a cloud gap; rain shafts in distance; crepuscular rays possible.",
+   "prompt_phrase": "dark storm clouds over the Gulf with a sunlit patch on the sea and distant rain shafts",
+   "limits": "Not for 'sunny day' claims.",
+   "use_for": [
+    "story clips"
+   ],
+   "source_keys": [
+    "Atoptics_Crepuscular"
+   ],
+   "evidence_label": "DERIVED",
+   "test_status": "untested"
+  }
+ ]
+}

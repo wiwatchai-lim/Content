@@ -1,0 +1,2035 @@
+[
+ {
+  "unified_id": "anger.bitterness",
+  "voice_ids": [
+   "anger.bitterness"
+  ],
+  "visual_ids": [
+   "anger.bitterness"
+  ],
+  "kind": "state",
+  "match": "exact_id",
+  "name_en": "Bitterness",
+  "vad_from_voice_lib": {
+   "valence": -0.6,
+   "arousal": 0.35,
+   "dominance": 0.4
+  },
+  "theory_notes": "Appraisal: goal obstruction blamed on another agent, often unfairness, with coping potential high enough to confront (Lazarus1991, Moors2013). The scowl is produced in only a minority of real anger episodes, so never infer anger from a face alone (Barrett2019)."
+ },
+ {
+  "unified_id": "anger.cold",
+  "voice_ids": [
+   "anger.cold"
+  ],
+  "visual_ids": [
+   "anger.cold"
+  ],
+  "kind": "state",
+  "match": "exact_id",
+  "name_en": "Cold anger",
+  "vad_from_voice_lib": {
+   "valence": -0.6,
+   "arousal": 0.4,
+   "dominance": 0.9
+  },
+  "theory_notes": "Appraisal: goal obstruction blamed on another agent, often unfairness, with coping potential high enough to confront (Lazarus1991, Moors2013). The scowl is produced in only a minority of real anger episodes, so never infer anger from a face alone (Barrett2019)."
+ },
+ {
+  "unified_id": "anger.frustration",
+  "voice_ids": [
+   "anger.frustration"
+  ],
+  "visual_ids": [
+   "anger.frustration"
+  ],
+  "kind": "state",
+  "match": "exact_id",
+  "name_en": "Frustration",
+  "vad_from_voice_lib": {
+   "valence": -0.6,
+   "arousal": 0.65,
+   "dominance": 0.35
+  },
+  "theory_notes": "Appraisal: goal obstruction blamed on another agent, often unfairness, with coping potential high enough to confront (Lazarus1991, Moors2013). The scowl is produced in only a minority of real anger episodes, so never infer anger from a face alone (Barrett2019)."
+ },
+ {
+  "unified_id": "anger.hot",
+  "voice_ids": [
+   "anger.hot"
+  ],
+  "visual_ids": [
+   "anger.hot"
+  ],
+  "kind": "state",
+  "match": "exact_id",
+  "name_en": "Hot anger",
+  "vad_from_voice_lib": {
+   "valence": -0.7,
+   "arousal": 0.9,
+   "dominance": 0.8
+  },
+  "theory_notes": "Appraisal: goal obstruction blamed on another agent, often unfairness, with coping potential high enough to confront (Lazarus1991, Moors2013). The scowl is produced in only a minority of real anger episodes, so never infer anger from a face alone (Barrett2019)."
+ },
+ {
+  "unified_id": "anger.impatience",
+  "voice_ids": [
+   "anger.impatience"
+  ],
+  "visual_ids": [
+   "anger.impatience"
+  ],
+  "kind": "state",
+  "match": "exact_id",
+  "name_en": "Impatience",
+  "vad_from_voice_lib": {
+   "valence": -0.45,
+   "arousal": 0.6,
+   "dominance": 0.6
+  },
+  "theory_notes": "Appraisal: goal obstruction blamed on another agent, often unfairness, with coping potential high enough to confront (Lazarus1991, Moors2013). The scowl is produced in only a minority of real anger episodes, so never infer anger from a face alone (Barrett2019)."
+ },
+ {
+  "unified_id": "anger.indignation",
+  "voice_ids": [
+   "anger.indignation"
+  ],
+  "visual_ids": [
+   "anger.indignation"
+  ],
+  "kind": "state",
+  "match": "exact_id",
+  "name_en": "Indignation",
+  "vad_from_voice_lib": {
+   "valence": -0.6,
+   "arousal": 0.65,
+   "dominance": 0.7
+  },
+  "theory_notes": "Other-condemning moral anger (unfairness appraisal; Lazarus1991 'unfairly slighted'). Partial match for 'moral outrage'."
+ },
+ {
+  "unified_id": "anger.irritation",
+  "voice_ids": [
+   "anger.irritation"
+  ],
+  "visual_ids": [
+   "anger.irritation"
+  ],
+  "kind": "state",
+  "match": "exact_id",
+  "name_en": "Irritation",
+  "vad_from_voice_lib": {
+   "valence": -0.45,
+   "arousal": 0.5,
+   "dominance": 0.6
+  },
+  "theory_notes": "Appraisal: goal obstruction blamed on another agent, often unfairness, with coping potential high enough to confront (Lazarus1991, Moors2013). The scowl is produced in only a minority of real anger episodes, so never infer anger from a face alone (Barrett2019)."
+ },
+ {
+  "unified_id": "anger.rage",
+  "voice_ids": [
+   "anger.rage"
+  ],
+  "visual_ids": [
+   "anger.rage"
+  ],
+  "kind": "state",
+  "match": "exact_id",
+  "name_en": "Rage",
+  "vad_from_voice_lib": {
+   "valence": -0.85,
+   "arousal": 1.0,
+   "dominance": 0.85
+  },
+  "theory_notes": "Appraisal: goal obstruction blamed on another agent, often unfairness, with coping potential high enough to confront (Lazarus1991, Moors2013). The scowl is produced in only a minority of real anger episodes, so never infer anger from a face alone (Barrett2019)."
+ },
+ {
+  "unified_id": "anger.resentment",
+  "voice_ids": [
+   "anger.resentment"
+  ],
+  "visual_ids": [
+   "anger.resentment"
+  ],
+  "kind": "state",
+  "match": "exact_id",
+  "name_en": "Resentment",
+  "vad_from_voice_lib": {
+   "valence": -0.6,
+   "arousal": 0.4,
+   "dominance": 0.45
+  },
+  "theory_notes": "Appraisal: goal obstruction blamed on another agent, often unfairness, with coping potential high enough to confront (Lazarus1991, Moors2013). The scowl is produced in only a minority of real anger episodes, so never infer anger from a face alone (Barrett2019)."
+ },
+ {
+  "unified_id": "awe.admiration",
+  "voice_ids": [
+   "awe.admiration"
+  ],
+  "visual_ids": [
+   "awe.admiration"
+  ],
+  "kind": "state",
+  "match": "exact_id",
+  "name_en": "Admiration",
+  "vad_from_voice_lib": {
+   "valence": 0.65,
+   "arousal": 0.45,
+   "dominance": 0.4
+  },
+  "theory_notes": "Prototype = perceived vastness + need for accommodation (KeltnerHaidt2003); flavours: threat, beauty, ability, virtue, supernatural (Allen2018). Linked to 'small self' and prosociality (Piff2015) — mechanism has a reported failed replication; see README."
+ },
+ {
+  "unified_id": "awe.awe",
+  "voice_ids": [
+   "awe.awe"
+  ],
+  "visual_ids": [
+   "awe.awe"
+  ],
+  "kind": "state",
+  "match": "exact_id",
+  "name_en": "Awe",
+  "vad_from_voice_lib": {
+   "valence": 0.6,
+   "arousal": 0.55,
+   "dominance": 0.2
+  },
+  "theory_notes": "Vastness + accommodation (KeltnerHaidt2003). Distinct category in CowenKeltner2017 with a gradient to aesthetic appreciation."
+ },
+ {
+  "unified_id": "awe.childlike_wonder",
+  "voice_ids": [
+   "awe.childlike_wonder"
+  ],
+  "visual_ids": [
+   "awe.childlike_wonder"
+  ],
+  "kind": "state",
+  "match": "exact_id",
+  "name_en": "Childlike wonder",
+  "vad_from_voice_lib": {
+   "valence": 0.8,
+   "arousal": 0.55,
+   "dominance": 0.35
+  },
+  "theory_notes": "Awe + interest blend; beauty/ability flavour of awe (Allen2018)."
+ },
+ {
+  "unified_id": "calm.acceptance",
+  "voice_ids": [
+   "calm.acceptance"
+  ],
+  "visual_ids": [
+   "calm.acceptance"
+  ],
+  "kind": "state",
+  "match": "exact_id",
+  "name_en": "Acceptance",
+  "vad_from_voice_lib": {
+   "valence": 0.2,
+   "arousal": 0.15,
+   "dominance": 0.55
+  },
+  "theory_notes": "Reads as the outcome of reappraisal (antecedent-focused regulation) rather than suppression (Gross1998, Gross2002)."
+ },
+ {
+  "unified_id": "calm.serenity",
+  "voice_ids": [
+   "calm.serenity"
+  ],
+  "visual_ids": [
+   "calm.serenity"
+  ],
+  "kind": "state",
+  "match": "exact_id",
+  "name_en": "Serenity",
+  "vad_from_voice_lib": {
+   "valence": 0.55,
+   "arousal": 0.1,
+   "dominance": 0.6
+  },
+  "theory_notes": "LAP ideal affect (TsaiKnutsonFung2006); closest existing entry to Thai 'jai yen' but not identical (jai yen is a valued trait/regulation style)."
+ },
+ {
+  "unified_id": "care.compassion_consoling",
+  "voice_ids": [
+   "care.compassion_consoling"
+  ],
+  "visual_ids": [
+   "care.compassion_consoling"
+  ],
+  "kind": "social",
+  "match": "exact_id_name_variant",
+  "name_en": "Compassionate consoling",
+  "vad_from_voice_lib": {
+   "valence": 0.25,
+   "arousal": 0.25,
+   "dominance": 0.6
+  },
+  "theory_notes": "Other-oriented states (empathy, compassion, sympathy) and caregiving speech acts (reassurance, pleading, encouragement). Empathic pain is a Cowen-Keltner category; contagion via mimicry is the low-level route (Hatfield1993)."
+ },
+ {
+  "unified_id": "care.empathy",
+  "voice_ids": [
+   "care.empathy"
+  ],
+  "visual_ids": [
+   "care.empathy"
+  ],
+  "kind": "social",
+  "match": "exact_id",
+  "name_en": "Empathy",
+  "vad_from_voice_lib": {
+   "valence": 0.2,
+   "arousal": 0.3,
+   "dominance": 0.5
+  },
+  "theory_notes": "Partial match to Cowen-Keltner 'empathic pain'; low-level route is mimicry-feedback contagion (Hatfield1993). Feedback effects exist but are small (ManySmiles2022)."
+ },
+ {
+  "unified_id": "care.encouragement",
+  "voice_ids": [
+   "care.encouragement"
+  ],
+  "visual_ids": [
+   "care.encouragement"
+  ],
+  "kind": "social",
+  "match": "exact_id",
+  "name_en": "Encouragement",
+  "vad_from_voice_lib": {
+   "valence": 0.65,
+   "arousal": 0.55,
+   "dominance": 0.6
+  },
+  "theory_notes": "Other-oriented states (empathy, compassion, sympathy) and caregiving speech acts (reassurance, pleading, encouragement). Empathic pain is a Cowen-Keltner category; contagion via mimicry is the low-level route (Hatfield1993)."
+ },
+ {
+  "unified_id": "care.pleading",
+  "voice_ids": [
+   "care.pleading"
+  ],
+  "visual_ids": [
+   "care.pleading"
+  ],
+  "kind": "social",
+  "match": "exact_id",
+  "name_en": "Pleading",
+  "vad_from_voice_lib": {
+   "valence": -0.5,
+   "arousal": 0.6,
+   "dominance": 0.1
+  },
+  "theory_notes": "Other-oriented states (empathy, compassion, sympathy) and caregiving speech acts (reassurance, pleading, encouragement). Empathic pain is a Cowen-Keltner category; contagion via mimicry is the low-level route (Hatfield1993)."
+ },
+ {
+  "unified_id": "care.reassurance",
+  "voice_ids": [
+   "care.reassurance"
+  ],
+  "visual_ids": [
+   "care.reassurance"
+  ],
+  "kind": "social",
+  "match": "exact_id",
+  "name_en": "Reassurance",
+  "vad_from_voice_lib": {
+   "valence": 0.4,
+   "arousal": 0.3,
+   "dominance": 0.7
+  },
+  "theory_notes": "Other-oriented states (empathy, compassion, sympathy) and caregiving speech acts (reassurance, pleading, encouragement). Empathic pain is a Cowen-Keltner category; contagion via mimicry is the low-level route (Hatfield1993)."
+ },
+ {
+  "unified_id": "care.sympathy",
+  "voice_ids": [
+   "care.sympathy"
+  ],
+  "visual_ids": [
+   "care.sympathy"
+  ],
+  "kind": "social",
+  "match": "exact_id",
+  "name_en": "Sympathy",
+  "vad_from_voice_lib": {
+   "valence": -0.1,
+   "arousal": 0.25,
+   "dominance": 0.55
+  },
+  "theory_notes": "Other-oriented states (empathy, compassion, sympathy) and caregiving speech acts (reassurance, pleading, encouragement). Empathic pain is a Cowen-Keltner category; contagion via mimicry is the low-level route (Hatfield1993)."
+ },
+ {
+  "unified_id": "cognitive.confusion",
+  "voice_ids": [
+   "cognitive.confusion"
+  ],
+  "visual_ids": [
+   "cognitive.confusion"
+  ],
+  "kind": "epistemic",
+  "match": "exact_id",
+  "name_en": "Confusion",
+  "vad_from_voice_lib": {
+   "valence": -0.2,
+   "arousal": 0.45,
+   "dominance": 0.3
+  },
+  "theory_notes": "Knowledge emotions (interest, confusion, curiosity) — appraisals of novelty and comprehensibility; present in CowenKeltner2017 (interest, confusion) but outside Ekman's six."
+ },
+ {
+  "unified_id": "cognitive.curiosity",
+  "voice_ids": [
+   "cognitive.curiosity"
+  ],
+  "visual_ids": [
+   "cognitive.curiosity"
+  ],
+  "kind": "epistemic",
+  "match": "exact_id",
+  "name_en": "Curiosity",
+  "vad_from_voice_lib": {
+   "valence": 0.45,
+   "arousal": 0.6,
+   "dominance": 0.45
+  },
+  "theory_notes": "Knowledge emotions (interest, confusion, curiosity) — appraisals of novelty and comprehensibility; present in CowenKeltner2017 (interest, confusion) but outside Ekman's six."
+ },
+ {
+  "unified_id": "cognitive.hesitation",
+  "voice_ids": [
+   "cognitive.hesitation"
+  ],
+  "visual_ids": [
+   "cognitive.hesitation"
+  ],
+  "kind": "epistemic",
+  "match": "exact_id",
+  "name_en": "Hesitation",
+  "vad_from_voice_lib": {
+   "valence": -0.1,
+   "arousal": 0.35,
+   "dominance": 0.3
+  },
+  "theory_notes": "Knowledge emotions (interest, confusion, curiosity) — appraisals of novelty and comprehensibility; present in CowenKeltner2017 (interest, confusion) but outside Ekman's six."
+ },
+ {
+  "unified_id": "cognitive.interest",
+  "voice_ids": [
+   "cognitive.interest"
+  ],
+  "visual_ids": [
+   "cognitive.interest"
+  ],
+  "kind": "epistemic",
+  "match": "exact_id",
+  "name_en": "Interest",
+  "vad_from_voice_lib": {
+   "valence": 0.4,
+   "arousal": 0.55,
+   "dominance": 0.55
+  },
+  "theory_notes": "Knowledge emotions (interest, confusion, curiosity) — appraisals of novelty and comprehensibility; present in CowenKeltner2017 (interest, confusion) but outside Ekman's six."
+ },
+ {
+  "unified_id": "conflict.love_vs_anger",
+  "voice_ids": [
+   "conflict.love_vs_anger"
+  ],
+  "visual_ids": [
+   "conflict.love_vs_anger"
+  ],
+  "kind": "blend",
+  "match": "exact_id",
+  "name_en": "Love vs anger",
+  "vad_from_voice_lib": {
+   "valence": -0.2,
+   "arousal": 0.6,
+   "dominance": 0.5
+  },
+  "theory_notes": "Simultaneous competing appraisals of one event (e.g. love + anger at the same person); appraisal theory allows parallel episodes (Moors2013)."
+ },
+ {
+  "unified_id": "conflict.pride_vs_hurt",
+  "voice_ids": [
+   "conflict.pride_vs_hurt"
+  ],
+  "visual_ids": [
+   "conflict.pride_vs_hurt"
+  ],
+  "kind": "blend",
+  "match": "exact_id",
+  "name_en": "Pride vs hurt",
+  "vad_from_voice_lib": {
+   "valence": -0.4,
+   "arousal": 0.45,
+   "dominance": 0.55
+  },
+  "theory_notes": "Simultaneous competing appraisals of one event (e.g. love + anger at the same person); appraisal theory allows parallel episodes (Moors2013)."
+ },
+ {
+  "unified_id": "disgust.contempt",
+  "voice_ids": [
+   "disgust.contempt"
+  ],
+  "visual_ids": [
+   "disgust.contempt"
+  ],
+  "kind": "state",
+  "match": "exact_id",
+  "name_en": "Contempt",
+  "vad_from_voice_lib": {
+   "valence": -0.6,
+   "arousal": 0.35,
+   "dominance": 0.85
+  },
+  "theory_notes": "Contempt = looking down on another; basic status contested (Ekman1992 discusses it; weak face evidence per Barrett2019)."
+ },
+ {
+  "unified_id": "disgust.disgust",
+  "voice_ids": [
+   "disgust.disgust"
+  ],
+  "visual_ids": [
+   "disgust.disgust"
+  ],
+  "kind": "state",
+  "match": "exact_id",
+  "name_en": "Disgust",
+  "vad_from_voice_lib": {
+   "valence": -0.7,
+   "arousal": 0.5,
+   "dominance": 0.55
+  },
+  "theory_notes": "Basic emotion family in Ekman1992; contempt is the contested 7th. Disgust faces had weak cross-cultural support in posed studies reviewed by Barrett2019."
+ },
+ {
+  "unified_id": "fear.anxiety",
+  "voice_ids": [
+   "fear.anxiety"
+  ],
+  "visual_ids": [
+   "fear.anxiety"
+  ],
+  "kind": "state",
+  "match": "exact_id",
+  "name_en": "Anxiety",
+  "vad_from_voice_lib": {
+   "valence": -0.55,
+   "arousal": 0.6,
+   "dominance": 0.25
+  },
+  "theory_notes": "Anticipated harm + doubt about coping (Lazarus1991). Anxiety episodes last longer than fear episodes (VerduynLavrijsen2015)."
+ },
+ {
+  "unified_id": "fear.dread",
+  "voice_ids": [
+   "fear.dread"
+  ],
+  "visual_ids": [
+   "fear.dread"
+  ],
+  "kind": "state",
+  "match": "exact_id",
+  "name_en": "Dread",
+  "vad_from_voice_lib": {
+   "valence": -0.75,
+   "arousal": 0.5,
+   "dominance": 0.15
+  },
+  "theory_notes": "Close to threat-based awe when the source is vast (KeltnerHaidt2003 flavours) — uncertain overlap."
+ },
+ {
+  "unified_id": "fear.fear",
+  "voice_ids": [
+   "fear.fear"
+  ],
+  "visual_ids": [
+   "fear.fear"
+  ],
+  "kind": "state",
+  "match": "exact_id",
+  "name_en": "Fear",
+  "vad_from_voice_lib": {
+   "valence": -0.8,
+   "arousal": 0.75,
+   "dominance": 0.15
+  },
+  "theory_notes": "Appraisal: threat, uncertainty, low control (Moors2013). Anxiety = anticipated harm + doubt about coping (Lazarus1991). The 'gasping' fear face was read as threat/anger by Trobriand Islanders (Crivelli2016) — culture-dependent reading."
+ },
+ {
+  "unified_id": "fear.nervousness",
+  "voice_ids": [
+   "fear.nervousness"
+  ],
+  "visual_ids": [
+   "fear.nervousness"
+  ],
+  "kind": "state",
+  "match": "exact_id",
+  "name_en": "Nervousness",
+  "vad_from_voice_lib": {
+   "valence": -0.35,
+   "arousal": 0.6,
+   "dominance": 0.25
+  },
+  "theory_notes": "Appraisal: threat, uncertainty, low control (Moors2013). Anxiety = anticipated harm + doubt about coping (Lazarus1991). The 'gasping' fear face was read as threat/anger by Trobriand Islanders (Crivelli2016) — culture-dependent reading."
+ },
+ {
+  "unified_id": "fear.panic",
+  "voice_ids": [
+   "fear.panic"
+  ],
+  "visual_ids": [
+   "fear.panic"
+  ],
+  "kind": "state",
+  "match": "exact_id",
+  "name_en": "Panic",
+  "vad_from_voice_lib": {
+   "valence": -0.9,
+   "arousal": 1.0,
+   "dominance": 0.05
+  },
+  "theory_notes": "Appraisal: threat, uncertainty, low control (Moors2013). Anxiety = anticipated harm + doubt about coping (Lazarus1991). The 'gasping' fear face was read as threat/anger by Trobriand Islanders (Crivelli2016) — culture-dependent reading."
+ },
+ {
+  "unified_id": "fear.quiet_menace",
+  "voice_ids": [
+   "fear.quiet_menace"
+  ],
+  "visual_ids": [
+   "fear.quiet_menace"
+  ],
+  "kind": "state",
+  "match": "exact_id",
+  "name_en": "Quiet menace",
+  "vad_from_voice_lib": {
+   "valence": -0.6,
+   "arousal": 0.35,
+   "dominance": 0.9
+  },
+  "theory_notes": "Appraisal: threat, uncertainty, low control (Moors2013). Anxiety = anticipated harm + doubt about coping (Lazarus1991). The 'gasping' fear face was read as threat/anger by Trobriand Islanders (Crivelli2016) — culture-dependent reading."
+ },
+ {
+  "unified_id": "fear.worry",
+  "voice_ids": [
+   "fear.worry"
+  ],
+  "visual_ids": [
+   "fear.worry"
+  ],
+  "kind": "state",
+  "match": "exact_id",
+  "name_en": "Worry",
+  "vad_from_voice_lib": {
+   "valence": -0.45,
+   "arousal": 0.45,
+   "dominance": 0.35
+  },
+  "theory_notes": "Appraisal: threat, uncertainty, low control (Moors2013). Anxiety = anticipated harm + doubt about coping (Lazarus1991). The 'gasping' fear face was read as threat/anger by Trobriand Islanders (Crivelli2016) — culture-dependent reading."
+ },
+ {
+  "unified_id": "hidden.bravado_over_fear",
+  "voice_ids": [
+   "hidden.bravado_over_fear"
+  ],
+  "visual_ids": [
+   "hidden.bravado_over_fear"
+  ],
+  "kind": "regulated",
+  "match": "exact_id",
+  "name_en": "Bravado over fear",
+  "vad_from_voice_lib": {
+   "valence": -0.3,
+   "arousal": 0.65,
+   "dominance": 0.45
+  },
+  "theory_notes": "Masking one emotion with another (display rules; Pothisitthiporn2016 on Thai smiles when not happy). Same mechanism as 'suppressed'."
+ },
+ {
+  "unified_id": "hope.excitement",
+  "voice_ids": [
+   "hope.excitement"
+  ],
+  "visual_ids": [
+   "hope.excitement"
+  ],
+  "kind": "state",
+  "match": "exact_id",
+  "name_en": "Excitement",
+  "vad_from_voice_lib": {
+   "valence": 0.75,
+   "arousal": 0.85,
+   "dominance": 0.55
+  },
+  "theory_notes": "Appraisal: desired outcome still uncertain (Lazarus1991; Moors2013 'certainty' dimension)."
+ },
+ {
+  "unified_id": "hope.hope",
+  "voice_ids": [
+   "hope.hope"
+  ],
+  "visual_ids": [
+   "hope.hope"
+  ],
+  "kind": "state",
+  "match": "exact_id",
+  "name_en": "Hope",
+  "vad_from_voice_lib": {
+   "valence": 0.5,
+   "arousal": 0.45,
+   "dominance": 0.4
+  },
+  "theory_notes": "Appraisal: desired outcome still uncertain (Lazarus1991; Moors2013 'certainty' dimension)."
+ },
+ {
+  "unified_id": "joy.amusement",
+  "voice_ids": [
+   "joy.amusement"
+  ],
+  "visual_ids": [
+   "joy.amusement"
+  ],
+  "kind": "state",
+  "match": "exact_id",
+  "name_en": "Amusement",
+  "vad_from_voice_lib": {
+   "valence": 0.75,
+   "arousal": 0.6,
+   "dominance": 0.6
+  },
+  "theory_notes": "Positive-valence family. Basic-emotion view: happiness is one of six classic categories (Ekman1992). Constructionist view: a category built on pleasant core affect (Russell2003, Barrett2017). Cowen & Keltner split it further (joy, amusement, satisfaction, excitement...) along continuous gradients (CowenKeltner2017)."
+ },
+ {
+  "unified_id": "joy.contentment",
+  "voice_ids": [
+   "joy.contentment"
+  ],
+  "visual_ids": [
+   "joy.contentment"
+  ],
+  "kind": "state",
+  "match": "exact_id",
+  "name_en": "Contentment",
+  "vad_from_voice_lib": {
+   "valence": 0.7,
+   "arousal": 0.2,
+   "dominance": 0.6
+  },
+  "theory_notes": "Positive-valence family. Basic-emotion view: happiness is one of six classic categories (Ekman1992). Constructionist view: a category built on pleasant core affect (Russell2003, Barrett2017). Cowen & Keltner split it further (joy, amusement, satisfaction, excitement...) along continuous gradients (CowenKeltner2017)."
+ },
+ {
+  "unified_id": "joy.elation",
+  "voice_ids": [
+   "joy.elation"
+  ],
+  "visual_ids": [
+   "joy.elation"
+  ],
+  "kind": "state",
+  "match": "exact_id",
+  "name_en": "Elation",
+  "vad_from_voice_lib": {
+   "valence": 0.9,
+   "arousal": 0.9,
+   "dominance": 0.7
+  },
+  "theory_notes": "Positive-valence family. Basic-emotion view: happiness is one of six classic categories (Ekman1992). Constructionist view: a category built on pleasant core affect (Russell2003, Barrett2017). Cowen & Keltner split it further (joy, amusement, satisfaction, excitement...) along continuous gradients (CowenKeltner2017)."
+ },
+ {
+  "unified_id": "joy.happiness",
+  "voice_ids": [
+   "joy.happiness"
+  ],
+  "visual_ids": [
+   "joy.happiness"
+  ],
+  "kind": "state",
+  "match": "exact_id",
+  "name_en": "Happiness",
+  "vad_from_voice_lib": {
+   "valence": 0.8,
+   "arousal": 0.6,
+   "dominance": 0.6
+  },
+  "theory_notes": "Positive-valence family. Basic-emotion view: happiness is one of six classic categories (Ekman1992). Constructionist view: a category built on pleasant core affect (Russell2003, Barrett2017). Cowen & Keltner split it further (joy, amusement, satisfaction, excitement...) along continuous gradients (CowenKeltner2017)."
+ },
+ {
+  "unified_id": "joy.mischief",
+  "voice_ids": [
+   "joy.mischief"
+  ],
+  "visual_ids": [
+   "joy.mischief"
+  ],
+  "kind": "state",
+  "match": "exact_id",
+  "name_en": "Mischief",
+  "vad_from_voice_lib": {
+   "valence": 0.6,
+   "arousal": 0.55,
+   "dominance": 0.65
+  },
+  "theory_notes": "Positive-valence family. Basic-emotion view: happiness is one of six classic categories (Ekman1992). Constructionist view: a category built on pleasant core affect (Russell2003, Barrett2017). Cowen & Keltner split it further (joy, amusement, satisfaction, excitement...) along continuous gradients (CowenKeltner2017)."
+ },
+ {
+  "unified_id": "joy.pride",
+  "voice_ids": [
+   "joy.pride"
+  ],
+  "visual_ids": [
+   "joy.pride"
+  ],
+  "kind": "state",
+  "match": "exact_id",
+  "name_en": "Pride",
+  "vad_from_voice_lib": {
+   "valence": 0.7,
+   "arousal": 0.55,
+   "dominance": 0.85
+  },
+  "theory_notes": "Pride is self-conscious (internal attribution of success). Tracy & Robins split achievement-oriented ('authentic', unstable/specific) vs hubristic (stable/global) pride; this entry does not specify which (TracyRobins2004)."
+ },
+ {
+  "unified_id": "love.affection",
+  "voice_ids": [
+   "love.affection"
+  ],
+  "visual_ids": [
+   "love.affection"
+  ],
+  "kind": "state",
+  "match": "exact_id",
+  "name_en": "Affection",
+  "vad_from_voice_lib": {
+   "valence": 0.75,
+   "arousal": 0.4,
+   "dominance": 0.55
+  },
+  "theory_notes": "Attachment/affiliation family; not among Ekman's six. Cowen & Keltner list adoration, romance and sexual desire separately (CowenKeltner2017)."
+ },
+ {
+  "unified_id": "love.flirtation",
+  "voice_ids": [
+   "love.flirtation"
+  ],
+  "visual_ids": [
+   "love.flirtation"
+  ],
+  "kind": "state",
+  "match": "exact_id",
+  "name_en": "Flirtation",
+  "vad_from_voice_lib": {
+   "valence": 0.65,
+   "arousal": 0.55,
+   "dominance": 0.6
+  },
+  "theory_notes": "Attachment/affiliation family; not among Ekman's six. Cowen & Keltner list adoration, romance and sexual desire separately (CowenKeltner2017)."
+ },
+ {
+  "unified_id": "love.romantic",
+  "voice_ids": [
+   "love.romantic"
+  ],
+  "visual_ids": [
+   "love.romantic"
+  ],
+  "kind": "state",
+  "match": "exact_id",
+  "name_en": "Romantic love",
+  "vad_from_voice_lib": {
+   "valence": 0.8,
+   "arousal": 0.45,
+   "dominance": 0.45
+  },
+  "theory_notes": "Attachment/affiliation family; not among Ekman's six. Cowen & Keltner list adoration, romance and sexual desire separately (CowenKeltner2017)."
+ },
+ {
+  "unified_id": "love.tenderness",
+  "voice_ids": [
+   "love.tenderness"
+  ],
+  "visual_ids": [
+   "love.tenderness"
+  ],
+  "kind": "state",
+  "match": "exact_id",
+  "name_en": "Tenderness",
+  "vad_from_voice_lib": {
+   "valence": 0.75,
+   "arousal": 0.2,
+   "dominance": 0.45
+  },
+  "theory_notes": "Attachment/affiliation family; not among Ekman's six. Cowen & Keltner list adoration, romance and sexual desire separately (CowenKeltner2017)."
+ },
+ {
+  "unified_id": "low.boredom",
+  "voice_ids": [
+   "low.boredom"
+  ],
+  "visual_ids": [
+   "low.boredom"
+  ],
+  "kind": "low_arousal",
+  "match": "exact_id",
+  "name_en": "Boredom",
+  "vad_from_voice_lib": {
+   "valence": -0.4,
+   "arousal": 0.1,
+   "dominance": 0.35
+  },
+  "theory_notes": "Low-arousal states. Boredom is a Cowen-Keltner category; fatigue/drowsiness are bodily states that colour core affect (Russell2003) rather than emotions proper."
+ },
+ {
+  "unified_id": "low.drowsy",
+  "voice_ids": [
+   "low.drowsy"
+  ],
+  "visual_ids": [
+   "low.drowsy"
+  ],
+  "kind": "low_arousal",
+  "match": "exact_id",
+  "name_en": "Drowsy",
+  "vad_from_voice_lib": {
+   "valence": 0.0,
+   "arousal": 0.05,
+   "dominance": 0.3
+  },
+  "theory_notes": "Low-arousal states. Boredom is a Cowen-Keltner category; fatigue/drowsiness are bodily states that colour core affect (Russell2003) rather than emotions proper."
+ },
+ {
+  "unified_id": "low.fatigue",
+  "voice_ids": [
+   "low.fatigue"
+  ],
+  "visual_ids": [
+   "low.fatigue"
+  ],
+  "kind": "low_arousal",
+  "match": "exact_id",
+  "name_en": "Fatigue",
+  "vad_from_voice_lib": {
+   "valence": -0.35,
+   "arousal": 0.1,
+   "dominance": 0.25
+  },
+  "theory_notes": "Low-arousal states. Boredom is a Cowen-Keltner category; fatigue/drowsiness are bodily states that colour core affect (Russell2003) rather than emotions proper."
+ },
+ {
+  "unified_id": "mixed.bittersweet_farewell",
+  "voice_ids": [
+   "mixed.bittersweet_farewell"
+  ],
+  "visual_ids": [
+   "mixed.bittersweet_farewell"
+  ],
+  "kind": "blend",
+  "match": "exact_id",
+  "name_en": "Bittersweet farewell",
+  "vad_from_voice_lib": {
+   "valence": 0.0,
+   "arousal": 0.35,
+   "dominance": 0.45
+  },
+  "theory_notes": "Happy-sad mixed emotion (BerriosTotterdellKellett2015)."
+ },
+ {
+  "unified_id": "mixed.laughing_through_tears",
+  "voice_ids": [
+   "mixed.laughing_through_tears"
+  ],
+  "visual_ids": [
+   "mixed.laughing_through_tears"
+  ],
+  "kind": "blend",
+  "match": "exact_id",
+  "name_en": "Laughing through tears",
+  "vad_from_voice_lib": {
+   "valence": 0.0,
+   "arousal": 0.6,
+   "dominance": 0.35
+  },
+  "theory_notes": "Happy-sad co-activation is the most-studied mixed pair (BerriosTotterdellKellett2015)."
+ },
+ {
+  "unified_id": "mixed.nervous_laughter",
+  "voice_ids": [
+   "mixed.nervous_laughter"
+  ],
+  "visual_ids": [
+   "mixed.nervous_laughter"
+  ],
+  "kind": "blend",
+  "match": "exact_id",
+  "name_en": "Nervous laughter",
+  "vad_from_voice_lib": {
+   "valence": -0.2,
+   "arousal": 0.55,
+   "dominance": 0.25
+  },
+  "theory_notes": "Co-activation of opposite-valence emotions; robust in experiments (d=0.77, 63 studies) (BerriosTotterdellKellett2015). Supports bivariate (ESM) over strictly bipolar circumplex models."
+ },
+ {
+  "unified_id": "nostalgia.longing",
+  "voice_ids": [
+   "nostalgia.longing"
+  ],
+  "visual_ids": [
+   "nostalgia.longing"
+  ],
+  "kind": "blend",
+  "match": "exact_id",
+  "name_en": "Longing",
+  "vad_from_voice_lib": {
+   "valence": -0.35,
+   "arousal": 0.35,
+   "dominance": 0.25
+  },
+  "theory_notes": "Typically a mixed (bittersweet) state; mixed emotions are a robust measurable experience (BerriosTotterdellKellett2015). Also a Cowen-Keltner category."
+ },
+ {
+  "unified_id": "nostalgia.nostalgia",
+  "voice_ids": [
+   "nostalgia.nostalgia"
+  ],
+  "visual_ids": [
+   "nostalgia.nostalgia"
+  ],
+  "kind": "blend",
+  "match": "exact_id",
+  "name_en": "Nostalgia",
+  "vad_from_voice_lib": {
+   "valence": 0.15,
+   "arousal": 0.25,
+   "dominance": 0.45
+  },
+  "theory_notes": "Cowen-Keltner category; typically bittersweet (mixed)."
+ },
+ {
+  "unified_id": "performance.eerie_calm",
+  "voice_ids": [
+   "performance.eerie_calm"
+  ],
+  "visual_ids": [
+   "performance.eerie_calm"
+  ],
+  "kind": "register",
+  "match": "exact_id",
+  "name_en": "Eerie calm",
+  "vad_from_voice_lib": {
+   "valence": -0.2,
+   "arousal": 0.15,
+   "dominance": 0.7
+  },
+  "theory_notes": "Performance registers (storyteller, sales, expert, condolence): a delivery style chosen for a communicative goal, not an inner emotion. Listener emotion may follow via contagion (Hatfield1993) but the label describes the speaker's act."
+ },
+ {
+  "unified_id": "performance.formal_condolence",
+  "voice_ids": [
+   "performance.formal_condolence"
+  ],
+  "visual_ids": [
+   "performance.formal_condolence"
+  ],
+  "kind": "register",
+  "match": "exact_id",
+  "name_en": "Formal condolence",
+  "vad_from_voice_lib": {
+   "valence": -0.5,
+   "arousal": 0.15,
+   "dominance": 0.5
+  },
+  "theory_notes": "Performance registers (storyteller, sales, expert, condolence): a delivery style chosen for a communicative goal, not an inner emotion. Listener emotion may follow via contagion (Hatfield1993) but the label describes the speaker's act."
+ },
+ {
+  "unified_id": "performance.sales_enthusiasm",
+  "voice_ids": [
+   "performance.sales_enthusiasm"
+  ],
+  "visual_ids": [
+   "performance.sales_enthusiasm"
+  ],
+  "kind": "register",
+  "match": "exact_id",
+  "name_en": "Sales enthusiasm",
+  "vad_from_voice_lib": {
+   "valence": 0.7,
+   "arousal": 0.7,
+   "dominance": 0.65
+  },
+  "theory_notes": "Performance registers (storyteller, sales, expert, condolence): a delivery style chosen for a communicative goal, not an inner emotion. Listener emotion may follow via contagion (Hatfield1993) but the label describes the speaker's act."
+ },
+ {
+  "unified_id": "performance.storyteller_warmth",
+  "voice_ids": [
+   "performance.storyteller_warmth"
+  ],
+  "visual_ids": [
+   "performance.storyteller_warmth"
+  ],
+  "kind": "register",
+  "match": "exact_id_name_variant",
+  "name_en": "Warm storyteller",
+  "vad_from_voice_lib": {
+   "valence": 0.6,
+   "arousal": 0.4,
+   "dominance": 0.6
+  },
+  "theory_notes": "Performance registers (storyteller, sales, expert, condolence): a delivery style chosen for a communicative goal, not an inner emotion. Listener emotion may follow via contagion (Hatfield1993) but the label describes the speaker's act."
+ },
+ {
+  "unified_id": "performance.trusted_expert",
+  "voice_ids": [
+   "performance.trusted_expert"
+  ],
+  "visual_ids": [
+   "performance.trusted_expert"
+  ],
+  "kind": "register",
+  "match": "exact_id",
+  "name_en": "Trusted expert",
+  "vad_from_voice_lib": {
+   "valence": 0.35,
+   "arousal": 0.35,
+   "dominance": 0.8
+  },
+  "theory_notes": "Performance registers (storyteller, sales, expert, condolence): a delivery style chosen for a communicative goal, not an inner emotion. Listener emotion may follow via contagion (Hatfield1993) but the label describes the speaker's act."
+ },
+ {
+  "unified_id": "regret.regret",
+  "voice_ids": [
+   "regret.regret"
+  ],
+  "visual_ids": [
+   "regret.regret"
+  ],
+  "kind": "self_conscious",
+  "match": "exact_id",
+  "name_en": "Regret",
+  "vad_from_voice_lib": {
+   "valence": -0.55,
+   "arousal": 0.3,
+   "dominance": 0.35
+  },
+  "theory_notes": "Counterfactual, self-blaming family close to guilt (internal, specific attribution) (TracyRobins2004). Remorse/apology = guilt's reparative action tendency (TangneyStuewigMashek2007)."
+ },
+ {
+  "unified_id": "regret.remorse_apology",
+  "voice_ids": [
+   "regret.remorse_apology"
+  ],
+  "visual_ids": [
+   "regret.remorse_apology"
+  ],
+  "kind": "self_conscious",
+  "match": "exact_id_name_variant",
+  "name_en": "Remorse / sincere apology",
+  "vad_from_voice_lib": {
+   "valence": -0.55,
+   "arousal": 0.4,
+   "dominance": 0.2
+  },
+  "theory_notes": "Counterfactual, self-blaming family close to guilt (internal, specific attribution) (TracyRobins2004). Remorse/apology = guilt's reparative action tendency (TangneyStuewigMashek2007)."
+ },
+ {
+  "unified_id": "relief.relief",
+  "voice_ids": [
+   "relief.relief"
+  ],
+  "visual_ids": [
+   "relief.relief"
+  ],
+  "kind": "state",
+  "match": "exact_id",
+  "name_en": "Relief",
+  "vad_from_voice_lib": {
+   "valence": 0.6,
+   "arousal": 0.3,
+   "dominance": 0.5
+  },
+  "theory_notes": "Appraisal: a feared bad outcome did not happen (goal-congruent change from expected threat) (Moors2013)."
+ },
+ {
+  "unified_id": "sadness.betrayal_hurt",
+  "voice_ids": [
+   "sadness.betrayal_hurt"
+  ],
+  "visual_ids": [
+   "sadness.betrayal_hurt"
+  ],
+  "kind": "state",
+  "match": "exact_id_name_variant",
+  "name_en": "Hurt from betrayal",
+  "vad_from_voice_lib": {
+   "valence": -0.75,
+   "arousal": 0.5,
+   "dominance": 0.25
+  },
+  "theory_notes": "Appraisal: loss / irrevocable goal failure with low coping potential (Lazarus1991, Moors2013). Sadness episodes tend to last longest of many emotions, driven by event importance and rumination (VerduynLavrijsen2015)."
+ },
+ {
+  "unified_id": "sadness.despair",
+  "voice_ids": [
+   "sadness.despair"
+  ],
+  "visual_ids": [
+   "sadness.despair"
+  ],
+  "kind": "state",
+  "match": "exact_id",
+  "name_en": "Despair",
+  "vad_from_voice_lib": {
+   "valence": -0.9,
+   "arousal": 0.7,
+   "dominance": 0.1
+  },
+  "theory_notes": "Appraisal: loss / irrevocable goal failure with low coping potential (Lazarus1991, Moors2013). Sadness episodes tend to last longest of many emotions, driven by event importance and rumination (VerduynLavrijsen2015)."
+ },
+ {
+  "unified_id": "sadness.disappointment",
+  "voice_ids": [
+   "sadness.disappointment"
+  ],
+  "visual_ids": [
+   "sadness.disappointment"
+  ],
+  "kind": "state",
+  "match": "exact_id",
+  "name_en": "Disappointment",
+  "vad_from_voice_lib": {
+   "valence": -0.5,
+   "arousal": 0.35,
+   "dominance": 0.35
+  },
+  "theory_notes": "Appraisal: loss / irrevocable goal failure with low coping potential (Lazarus1991, Moors2013). Sadness episodes tend to last longest of many emotions, driven by event importance and rumination (VerduynLavrijsen2015)."
+ },
+ {
+  "unified_id": "sadness.grief",
+  "voice_ids": [
+   "sadness.grief"
+  ],
+  "visual_ids": [
+   "sadness.grief"
+  ],
+  "kind": "state",
+  "match": "exact_id",
+  "name_en": "Grief",
+  "vad_from_voice_lib": {
+   "valence": -0.9,
+   "arousal": 0.5,
+   "dominance": 0.15
+  },
+  "theory_notes": "Appraisal: loss / irrevocable goal failure with low coping potential (Lazarus1991, Moors2013). Sadness episodes tend to last longest of many emotions, driven by event importance and rumination (VerduynLavrijsen2015)."
+ },
+ {
+  "unified_id": "sadness.loneliness",
+  "voice_ids": [
+   "sadness.loneliness"
+  ],
+  "visual_ids": [
+   "sadness.loneliness"
+  ],
+  "kind": "state",
+  "match": "exact_id",
+  "name_en": "Loneliness",
+  "vad_from_voice_lib": {
+   "valence": -0.6,
+   "arousal": 0.2,
+   "dominance": 0.25
+  },
+  "theory_notes": "Appraisal: loss / irrevocable goal failure with low coping potential (Lazarus1991, Moors2013). Sadness episodes tend to last longest of many emotions, driven by event importance and rumination (VerduynLavrijsen2015)."
+ },
+ {
+  "unified_id": "sadness.melancholy",
+  "voice_ids": [
+   "sadness.melancholy"
+  ],
+  "visual_ids": [
+   "sadness.melancholy"
+  ],
+  "kind": "state",
+  "match": "exact_id",
+  "name_en": "Melancholy",
+  "vad_from_voice_lib": {
+   "valence": -0.6,
+   "arousal": 0.25,
+   "dominance": 0.3
+  },
+  "theory_notes": "Appraisal: loss / irrevocable goal failure with low coping potential (Lazarus1991, Moors2013). Sadness episodes tend to last longest of many emotions, driven by event importance and rumination (VerduynLavrijsen2015)."
+ },
+ {
+  "unified_id": "sadness.resignation",
+  "voice_ids": [
+   "sadness.resignation"
+  ],
+  "visual_ids": [
+   "sadness.resignation"
+  ],
+  "kind": "state",
+  "match": "exact_id",
+  "name_en": "Resignation",
+  "vad_from_voice_lib": {
+   "valence": -0.45,
+   "arousal": 0.15,
+   "dominance": 0.2
+  },
+  "theory_notes": "Low coping-potential appraisal (Moors2013); distinguish from 'acceptance' (reappraised, settled)."
+ },
+ {
+  "unified_id": "sadness.sadness",
+  "voice_ids": [
+   "sadness.sadness"
+  ],
+  "visual_ids": [
+   "sadness.sadness"
+  ],
+  "kind": "state",
+  "match": "exact_id",
+  "name_en": "Sadness",
+  "vad_from_voice_lib": {
+   "valence": -0.7,
+   "arousal": 0.25,
+   "dominance": 0.25
+  },
+  "theory_notes": "Appraisal: loss / irrevocable goal failure with low coping potential (Lazarus1991, Moors2013). Sadness episodes tend to last longest of many emotions, driven by event importance and rumination (VerduynLavrijsen2015)."
+ },
+ {
+  "unified_id": "selfconscious.embarrassment",
+  "voice_ids": [
+   "selfconscious.embarrassment"
+  ],
+  "visual_ids": [
+   "selfconscious.embarrassment"
+  ],
+  "kind": "self_conscious",
+  "match": "exact_id",
+  "name_en": "Embarrassment",
+  "vad_from_voice_lib": {
+   "valence": -0.3,
+   "arousal": 0.6,
+   "dominance": 0.2
+  },
+  "theory_notes": "Distinct appeasement display: gaze down, controlled smile, head turn, face touch — a sequence over ~seconds, not a single face (Keltner1995)."
+ },
+ {
+  "unified_id": "selfconscious.guilt",
+  "voice_ids": [
+   "selfconscious.guilt"
+  ],
+  "visual_ids": [
+   "selfconscious.guilt"
+  ],
+  "kind": "self_conscious",
+  "match": "exact_id",
+  "name_en": "Guilt",
+  "vad_from_voice_lib": {
+   "valence": -0.6,
+   "arousal": 0.45,
+   "dominance": 0.3
+  },
+  "theory_notes": "Guilt = specific behaviour; motivates repair and apology (TangneyStuewigMashek2007). Guilt episodes outlast shame episodes in recall data (VerduynLavrijsen2015)."
+ },
+ {
+  "unified_id": "selfconscious.shame",
+  "voice_ids": [
+   "selfconscious.shame"
+  ],
+  "visual_ids": [
+   "selfconscious.shame"
+  ],
+  "kind": "self_conscious",
+  "match": "exact_id",
+  "name_en": "Shame",
+  "vad_from_voice_lib": {
+   "valence": -0.75,
+   "arousal": 0.35,
+   "dominance": 0.1
+  },
+  "theory_notes": "Shame = negative evaluation of the stable, global self; linked to hiding, defensiveness, anger (TracyRobins2004, TangneyStuewigMashek2007). Do not merge with guilt."
+ },
+ {
+  "unified_id": "selfconscious.shyness",
+  "voice_ids": [
+   "selfconscious.shyness"
+  ],
+  "visual_ids": [
+   "selfconscious.shyness"
+  ],
+  "kind": "self_conscious",
+  "match": "exact_id",
+  "name_en": "Shyness",
+  "vad_from_voice_lib": {
+   "valence": -0.1,
+   "arousal": 0.3,
+   "dominance": 0.15
+  },
+  "theory_notes": "Self-conscious emotions need self-representation and internal attribution (TracyRobins2004). Shame = stable/global self ('I am bad'); guilt = specific behaviour ('I did bad'); embarrassment = public-self exposure (TracyRobins2004, TangneyStuewigMashek2007). Embarrassment has a distinct appeasement display: gaze down, controlled smile, face touch (Keltner1995)."
+ },
+ {
+  "unified_id": "social.deference_krengjai",
+  "voice_ids": [
+   "social.deference_krengjai"
+  ],
+  "visual_ids": [
+   "social.deference_krengjai"
+  ],
+  "kind": "social",
+  "match": "exact_id",
+  "name_en": "Deference (krengjai)",
+  "vad_from_voice_lib": {
+   "valence": 0.1,
+   "arousal": 0.3,
+   "dominance": 0.2
+  },
+  "theory_notes": "Thai kreng jai: reluctance to impose / deference; many meanings documented in discourse analysis (WyattPromkandorn2012). It is a socio-moral stance with feelings, not a basic emotion."
+ },
+ {
+  "unified_id": "social.envy",
+  "voice_ids": [
+   "social.envy"
+  ],
+  "visual_ids": [
+   "social.envy"
+  ],
+  "kind": "social",
+  "match": "exact_id",
+  "name_en": "Envy",
+  "vad_from_voice_lib": {
+   "valence": -0.5,
+   "arousal": 0.45,
+   "dominance": 0.3
+  },
+  "theory_notes": "Envy splits into benign (level-up, self-improvement) vs malicious (pull-down, harm the other) — appraisal of deservingness tips it (vandeVen2009). Entry does not specify the type."
+ },
+ {
+  "unified_id": "social.gloating",
+  "voice_ids": [
+   "social.gloating"
+  ],
+  "visual_ids": [
+   "social.gloating"
+  ],
+  "kind": "social",
+  "match": "exact_id",
+  "name_en": "Gloating",
+  "vad_from_voice_lib": {
+   "valence": 0.6,
+   "arousal": 0.6,
+   "dominance": 0.85
+  },
+  "theory_notes": "Social / interpersonal emotions whose appraisal involves another person's outcomes or standing (envy, jealousy, gratitude, schadenfreude). Gratitude: find-remind-bind (Algoe2012). Envy splits into benign vs malicious (vandeVen2009)."
+ },
+ {
+  "unified_id": "social.gratitude",
+  "voice_ids": [
+   "social.gratitude"
+  ],
+  "visual_ids": [
+   "social.gratitude"
+  ],
+  "kind": "social",
+  "match": "exact_id",
+  "name_en": "Gratitude",
+  "vad_from_voice_lib": {
+   "valence": 0.7,
+   "arousal": 0.35,
+   "dominance": 0.4
+  },
+  "theory_notes": "Gratitude finds, reminds and binds relationships (Algoe2012); a positive moral emotion (TangneyStuewigMashek2007). Thai 'bun khun' (indebted gratitude) is related but not covered."
+ },
+ {
+  "unified_id": "social.jealousy",
+  "voice_ids": [
+   "social.jealousy"
+  ],
+  "visual_ids": [
+   "social.jealousy"
+  ],
+  "kind": "social",
+  "match": "exact_id",
+  "name_en": "Jealousy",
+  "vad_from_voice_lib": {
+   "valence": -0.6,
+   "arousal": 0.6,
+   "dominance": 0.4
+  },
+  "theory_notes": "Social / interpersonal emotions whose appraisal involves another person's outcomes or standing (envy, jealousy, gratitude, schadenfreude). Gratitude: find-remind-bind (Algoe2012). Envy splits into benign vs malicious (vandeVen2009)."
+ },
+ {
+  "unified_id": "social.krengjai_refusal",
+  "voice_ids": [
+   "social.krengjai_refusal"
+  ],
+  "visual_ids": [
+   "social.krengjai_refusal"
+  ],
+  "kind": "social",
+  "match": "exact_id",
+  "name_en": "Krengjai refusal",
+  "vad_from_voice_lib": {
+   "valence": -0.1,
+   "arousal": 0.35,
+   "dominance": 0.3
+  },
+  "theory_notes": "Kreng jai expressed as indirect refusal; display-rule smiles when not happy are documented for Thais (Pothisitthiporn2016)."
+ },
+ {
+  "unified_id": "social.schadenfreude",
+  "voice_ids": [
+   "social.schadenfreude"
+  ],
+  "visual_ids": [
+   "social.schadenfreude"
+  ],
+  "kind": "social",
+  "match": "exact_id",
+  "name_en": "Schadenfreude",
+  "vad_from_voice_lib": {
+   "valence": 0.4,
+   "arousal": 0.5,
+   "dominance": 0.7
+  },
+  "theory_notes": "Linked to malicious envy and deservingness appraisals (vandeVen2009 discusses implications for Schadenfreude)."
+ },
+ {
+  "unified_id": "stance.conspiratorial_whisper",
+  "voice_ids": [
+   "stance.conspiratorial_whisper"
+  ],
+  "visual_ids": [
+   "stance.conspiratorial_whisper"
+  ],
+  "kind": "stance",
+  "match": "exact_id",
+  "name_en": "Conspiratorial whisper",
+  "vad_from_voice_lib": {
+   "valence": 0.3,
+   "arousal": 0.45,
+   "dominance": 0.55
+  },
+  "theory_notes": "Communicative stances (sarcasm, irony, suspicion...), not emotions in the theoretical sense: they are attitudes shown in how something is said. Inner emotion must not be inferred from them (Barrett2019)."
+ },
+ {
+  "unified_id": "stance.defensiveness",
+  "voice_ids": [
+   "stance.defensiveness"
+  ],
+  "visual_ids": [
+   "stance.defensiveness"
+  ],
+  "kind": "stance",
+  "match": "exact_id",
+  "name_en": "Defensiveness",
+  "vad_from_voice_lib": {
+   "valence": -0.4,
+   "arousal": 0.6,
+   "dominance": 0.45
+  },
+  "theory_notes": "Communicative stances (sarcasm, irony, suspicion...), not emotions in the theoretical sense: they are attitudes shown in how something is said. Inner emotion must not be inferred from them (Barrett2019)."
+ },
+ {
+  "unified_id": "stance.dry_irony",
+  "voice_ids": [
+   "stance.dry_irony"
+  ],
+  "visual_ids": [
+   "stance.dry_irony"
+  ],
+  "kind": "stance",
+  "match": "exact_id",
+  "name_en": "Dry irony",
+  "vad_from_voice_lib": {
+   "valence": 0.0,
+   "arousal": 0.2,
+   "dominance": 0.6
+  },
+  "theory_notes": "Communicative stances (sarcasm, irony, suspicion...), not emotions in the theoretical sense: they are attitudes shown in how something is said. Inner emotion must not be inferred from them (Barrett2019)."
+ },
+ {
+  "unified_id": "stance.indifference",
+  "voice_ids": [
+   "stance.indifference"
+  ],
+  "visual_ids": [
+   "stance.indifference"
+  ],
+  "kind": "stance",
+  "match": "exact_id",
+  "name_en": "Indifference",
+  "vad_from_voice_lib": {
+   "valence": -0.1,
+   "arousal": 0.1,
+   "dominance": 0.55
+  },
+  "theory_notes": "Communicative stances (sarcasm, irony, suspicion...), not emotions in the theoretical sense: they are attitudes shown in how something is said. Inner emotion must not be inferred from them (Barrett2019)."
+ },
+ {
+  "unified_id": "stance.mockery",
+  "voice_ids": [
+   "stance.mockery"
+  ],
+  "visual_ids": [
+   "stance.mockery"
+  ],
+  "kind": "stance",
+  "match": "exact_id",
+  "name_en": "Mockery",
+  "vad_from_voice_lib": {
+   "valence": -0.4,
+   "arousal": 0.55,
+   "dominance": 0.8
+  },
+  "theory_notes": "Communicative stances (sarcasm, irony, suspicion...), not emotions in the theoretical sense: they are attitudes shown in how something is said. Inner emotion must not be inferred from them (Barrett2019)."
+ },
+ {
+  "unified_id": "stance.playful_teasing",
+  "voice_ids": [
+   "stance.playful_teasing"
+  ],
+  "visual_ids": [
+   "stance.playful_teasing"
+  ],
+  "kind": "stance",
+  "match": "exact_id",
+  "name_en": "Playful teasing",
+  "vad_from_voice_lib": {
+   "valence": 0.5,
+   "arousal": 0.5,
+   "dominance": 0.6
+  },
+  "theory_notes": "Communicative stances (sarcasm, irony, suspicion...), not emotions in the theoretical sense: they are attitudes shown in how something is said. Inner emotion must not be inferred from them (Barrett2019)."
+ },
+ {
+  "unified_id": "stance.sarcasm",
+  "voice_ids": [
+   "stance.sarcasm"
+  ],
+  "visual_ids": [
+   "stance.sarcasm"
+  ],
+  "kind": "stance",
+  "match": "exact_id",
+  "name_en": "Sarcasm",
+  "vad_from_voice_lib": {
+   "valence": -0.4,
+   "arousal": 0.4,
+   "dominance": 0.65
+  },
+  "theory_notes": "Communicative stances (sarcasm, irony, suspicion...), not emotions in the theoretical sense: they are attitudes shown in how something is said. Inner emotion must not be inferred from them (Barrett2019)."
+ },
+ {
+  "unified_id": "stance.skepticism",
+  "voice_ids": [
+   "stance.skepticism"
+  ],
+  "visual_ids": [
+   "stance.skepticism"
+  ],
+  "kind": "stance",
+  "match": "exact_id",
+  "name_en": "Skepticism",
+  "vad_from_voice_lib": {
+   "valence": -0.15,
+   "arousal": 0.35,
+   "dominance": 0.6
+  },
+  "theory_notes": "Communicative stances (sarcasm, irony, suspicion...), not emotions in the theoretical sense: they are attitudes shown in how something is said. Inner emotion must not be inferred from them (Barrett2019)."
+ },
+ {
+  "unified_id": "stance.suspicion",
+  "voice_ids": [
+   "stance.suspicion"
+  ],
+  "visual_ids": [
+   "stance.suspicion"
+  ],
+  "kind": "stance",
+  "match": "exact_id",
+  "name_en": "Suspicion",
+  "vad_from_voice_lib": {
+   "valence": -0.35,
+   "arousal": 0.45,
+   "dominance": 0.5
+  },
+  "theory_notes": "Communicative stances (sarcasm, irony, suspicion...), not emotions in the theoretical sense: they are attitudes shown in how something is said. Inner emotion must not be inferred from them (Barrett2019)."
+ },
+ {
+  "unified_id": "suppressed.forced_cheer",
+  "voice_ids": [
+   "suppressed.forced_cheer"
+  ],
+  "visual_ids": [
+   "suppressed.forced_cheer"
+  ],
+  "kind": "regulated",
+  "match": "exact_id",
+  "name_en": "Forced cheer",
+  "vad_from_voice_lib": {
+   "valence": -0.3,
+   "arousal": 0.55,
+   "dominance": 0.35
+  },
+  "theory_notes": "Thai participants smiled more than Japanese when greeting/apologising while not happy (Pothisitthiporn2016) — a social smile, not evidence of joy (Barrett2019)."
+ },
+ {
+  "unified_id": "suppressed.holding_back_tears",
+  "voice_ids": [
+   "suppressed.holding_back_tears"
+  ],
+  "visual_ids": [
+   "suppressed.holding_back_tears"
+  ],
+  "kind": "regulated",
+  "match": "exact_id",
+  "name_en": "Holding back tears",
+  "vad_from_voice_lib": {
+   "valence": -0.7,
+   "arousal": 0.5,
+   "dominance": 0.35
+  },
+  "theory_notes": "Expressive suppression (Gross process model, response-focused): reduces visible expression but not felt experience, raises physiology and impairs memory (Gross2002); its social cost is smaller for people with Asian values (ButlerLeeGross2007). Story use: the audience sees the leak, the character keeps the mask."
+ },
+ {
+  "unified_id": "suppressed.polite_anger",
+  "voice_ids": [
+   "suppressed.polite_anger"
+  ],
+  "visual_ids": [
+   "suppressed.polite_anger"
+  ],
+  "kind": "regulated",
+  "match": "exact_id",
+  "name_en": "Polite anger",
+  "vad_from_voice_lib": {
+   "valence": -0.6,
+   "arousal": 0.5,
+   "dominance": 0.6
+  },
+  "theory_notes": "Expressive suppression (Gross process model, response-focused): reduces visible expression but not felt experience, raises physiology and impairs memory (Gross2002); its social cost is smaller for people with Asian values (ButlerLeeGross2007). Story use: the audience sees the leak, the character keeps the mask."
+ },
+ {
+  "unified_id": "surprise.neutral",
+  "voice_ids": [
+   "surprise.neutral"
+  ],
+  "visual_ids": [
+   "surprise.neutral"
+  ],
+  "kind": "state",
+  "match": "exact_id",
+  "name_en": "Surprise",
+  "vad_from_voice_lib": {
+   "valence": 0.0,
+   "arousal": 0.7,
+   "dominance": 0.4
+  },
+  "theory_notes": "Appraisal of novelty/unexpectedness, valence-neutral until a second appraisal tips it (Moors2013, Scherer2009). Basic in Ekman1992; some constructionists treat it as a cognitive state rather than an emotion."
+ },
+ {
+  "unified_id": "surprise.pleasant",
+  "voice_ids": [
+   "surprise.pleasant"
+  ],
+  "visual_ids": [
+   "surprise.pleasant"
+  ],
+  "kind": "state",
+  "match": "exact_id",
+  "name_en": "Pleasant surprise",
+  "vad_from_voice_lib": {
+   "valence": 0.75,
+   "arousal": 0.75,
+   "dominance": 0.55
+  },
+  "theory_notes": "Appraisal of novelty/unexpectedness, valence-neutral until a second appraisal tips it (Moors2013, Scherer2009). Basic in Ekman1992; some constructionists treat it as a cognitive state rather than an emotion."
+ },
+ {
+  "unified_id": "surprise.shock",
+  "voice_ids": [
+   "surprise.shock"
+  ],
+  "visual_ids": [
+   "surprise.shock"
+  ],
+  "kind": "state",
+  "match": "exact_id",
+  "name_en": "Shock",
+  "vad_from_voice_lib": {
+   "valence": -0.6,
+   "arousal": 0.85,
+   "dominance": 0.2
+  },
+  "theory_notes": "Appraisal of novelty/unexpectedness, valence-neutral until a second appraisal tips it (Moors2013, Scherer2009). Basic in Ekman1992; some constructionists treat it as a cognitive state rather than an emotion."
+ },
+ {
+  "unified_id": "transition.anger_to_sadness",
+  "voice_ids": [
+   "transition.anger_to_sadness"
+  ],
+  "visual_ids": [
+   "transition.anger_to_sadness"
+  ],
+  "kind": "transition",
+  "match": "exact_id_name_variant",
+  "name_en": "Anger to sadness",
+  "vad_from_voice_lib": {
+   "valence": -0.6,
+   "arousal": 0.5,
+   "dominance": 0.4
+  },
+  "theory_notes": "Emotion dynamics: emotions change by re-appraisal of the event (Moors2013 'continuous and recursive'); inertia and variability are person-level dynamics (KuppensVerduyn2017). Memory of the whole episode is weighted by peak and end (FredricksonKahneman1993)."
+ },
+ {
+  "unified_id": "transition.calm_to_panic",
+  "voice_ids": [
+   "transition.calm_to_panic"
+  ],
+  "visual_ids": [
+   "transition.calm_to_panic"
+  ],
+  "kind": "transition",
+  "match": "exact_id_name_variant",
+  "name_en": "Calm to panic",
+  "vad_from_voice_lib": {
+   "valence": -0.6,
+   "arousal": 0.75,
+   "dominance": 0.2
+  },
+  "theory_notes": "Emotion dynamics: emotions change by re-appraisal of the event (Moors2013 'continuous and recursive'); inertia and variability are person-level dynamics (KuppensVerduyn2017). Memory of the whole episode is weighted by peak and end (FredricksonKahneman1993)."
+ },
+ {
+  "unified_id": "transition.denial_to_acceptance",
+  "voice_ids": [
+   "transition.denial_to_acceptance"
+  ],
+  "visual_ids": [
+   "transition.denial_to_acceptance"
+  ],
+  "kind": "transition",
+  "match": "exact_id_name_variant",
+  "name_en": "Denial to acceptance",
+  "vad_from_voice_lib": {
+   "valence": -0.3,
+   "arousal": 0.4,
+   "dominance": 0.35
+  },
+  "theory_notes": "Narrative of reappraisal over time; regulation is stage-wise identify-select-implement (Gross2015)."
+ },
+ {
+  "unified_id": "transition.fear_to_relief",
+  "voice_ids": [
+   "transition.fear_to_relief"
+  ],
+  "visual_ids": [
+   "transition.fear_to_relief"
+  ],
+  "kind": "transition",
+  "match": "exact_id_name_variant",
+  "name_en": "Fear to relief",
+  "vad_from_voice_lib": {
+   "valence": 0.2,
+   "arousal": 0.5,
+   "dominance": 0.4
+  },
+  "theory_notes": "Classic peak-end shape: a relief ending dominates the remembered episode (FredricksonKahneman1993)."
+ },
+ {
+  "unified_id": "mood.coziness",
+  "voice_ids": [
+   "joy.contentment",
+   "calm.serenity"
+  ],
+  "visual_ids": [
+   "visual.coziness"
+  ],
+  "kind": "atmosphere",
+  "match": "uncertain",
+  "name_en": "Coziness",
+  "vad_from_voice_lib": null,
+  "theory_notes": "Scene atmosphere / mood for an image, not a person's emotion. Constructionist framing: a scene supplies affective quality (pleasant/unpleasant, arousing/calm) that viewers may categorise as an emotion (Russell2003)."
+ },
+ {
+  "unified_id": "mood.majesty",
+  "voice_ids": [
+   "awe.awe",
+   "awe.admiration"
+  ],
+  "visual_ids": [
+   "visual.majesty"
+  ],
+  "kind": "atmosphere",
+  "match": "uncertain",
+  "name_en": "Majesty",
+  "vad_from_voice_lib": null,
+  "theory_notes": "Scene atmosphere / mood for an image, not a person's emotion. Constructionist framing: a scene supplies affective quality (pleasant/unpleasant, arousing/calm) that viewers may categorise as an emotion (Russell2003)."
+ },
+ {
+  "unified_id": "mood.mystery",
+  "voice_ids": [
+   "cognitive.curiosity",
+   "cognitive.interest"
+  ],
+  "visual_ids": [
+   "visual.mystery"
+  ],
+  "kind": "atmosphere",
+  "match": "uncertain",
+  "name_en": "Mystery",
+  "vad_from_voice_lib": null,
+  "theory_notes": "Scene atmosphere / mood for an image, not a person's emotion. Constructionist framing: a scene supplies affective quality (pleasant/unpleasant, arousing/calm) that viewers may categorise as an emotion (Russell2003)."
+ },
+ {
+  "unified_id": "mood.peaceful_solitude",
+  "voice_ids": [
+   "calm.serenity"
+  ],
+  "visual_ids": [
+   "visual.peaceful_solitude"
+  ],
+  "kind": "atmosphere",
+  "match": "uncertain",
+  "name_en": "Peaceful solitude",
+  "vad_from_voice_lib": null,
+  "theory_notes": "Scene atmosphere / mood for an image, not a person's emotion. Constructionist framing: a scene supplies affective quality (pleasant/unpleasant, arousing/calm) that viewers may categorise as an emotion (Russell2003)."
+ },
+ {
+  "unified_id": "mood.warmth",
+  "voice_ids": [
+   "love.affection",
+   "love.tenderness"
+  ],
+  "visual_ids": [
+   "visual.warmth"
+  ],
+  "kind": "atmosphere",
+  "match": "uncertain",
+  "name_en": "Warmth",
+  "vad_from_voice_lib": null,
+  "theory_notes": "Scene atmosphere / mood for an image, not a person's emotion. Constructionist framing: a scene supplies affective quality (pleasant/unpleasant, arousing/calm) that viewers may categorise as an emotion (Russell2003)."
+ },
+ {
+  "unified_id": "vulnerable.vulnerability",
+  "voice_ids": [
+   "vulnerable.vulnerability"
+  ],
+  "visual_ids": [
+   "vulnerable.vulnerability"
+  ],
+  "kind": "state",
+  "match": "exact_id",
+  "name_en": "Vulnerability",
+  "vad_from_voice_lib": {
+   "valence": -0.3,
+   "arousal": 0.35,
+   "dominance": 0.15
+  },
+  "theory_notes": "Not a standard category in the reviewed taxonomies; reads as anxiety + exposure of the self (fear + self-conscious appraisal). Treat as a constructed blend."
+ },
+ {
+  "unified_id": "will.authority_command",
+  "voice_ids": [
+   "will.authority_command"
+  ],
+  "visual_ids": [
+   "will.authority_command"
+  ],
+  "kind": "motivational",
+  "match": "exact_id_name_variant",
+  "name_en": "Authoritative command",
+  "vad_from_voice_lib": {
+   "valence": 0.0,
+   "arousal": 0.5,
+   "dominance": 0.9
+  },
+  "theory_notes": "Action-readiness / approach states (determination, confidence, urgency). Frijda-style action tendencies within appraisal theory (Moors2013); not classic discrete emotions."
+ },
+ {
+  "unified_id": "will.confidence",
+  "voice_ids": [
+   "will.confidence"
+  ],
+  "visual_ids": [
+   "will.confidence"
+  ],
+  "kind": "motivational",
+  "match": "exact_id",
+  "name_en": "Confidence",
+  "vad_from_voice_lib": {
+   "valence": 0.5,
+   "arousal": 0.5,
+   "dominance": 0.85
+  },
+  "theory_notes": "Action-readiness / approach states (determination, confidence, urgency). Frijda-style action tendencies within appraisal theory (Moors2013); not classic discrete emotions."
+ },
+ {
+  "unified_id": "will.courage",
+  "voice_ids": [
+   "will.determination",
+   "hidden.bravado_over_fear"
+  ],
+  "visual_ids": [
+   "will.courage"
+  ],
+  "kind": "motivational",
+  "match": "uncertain",
+  "name_en": "Courage",
+  "vad_from_voice_lib": null,
+  "theory_notes": "Courage = acting despite fear: a fear appraisal plus approach action tendency (Moors2013 components); not a discrete emotion in the reviewed taxonomies."
+ },
+ {
+  "unified_id": "will.determination",
+  "voice_ids": [
+   "will.determination"
+  ],
+  "visual_ids": [
+   "will.determination"
+  ],
+  "kind": "motivational",
+  "match": "exact_id",
+  "name_en": "Determination",
+  "vad_from_voice_lib": {
+   "valence": 0.3,
+   "arousal": 0.65,
+   "dominance": 0.85
+  },
+  "theory_notes": "Action-readiness / approach states (determination, confidence, urgency). Frijda-style action tendencies within appraisal theory (Moors2013); not classic discrete emotions."
+ },
+ {
+  "unified_id": "will.triumph",
+  "voice_ids": [
+   "will.triumph"
+  ],
+  "visual_ids": [
+   "will.triumph"
+  ],
+  "kind": "motivational",
+  "match": "exact_id",
+  "name_en": "Triumph",
+  "vad_from_voice_lib": {
+   "valence": 0.85,
+   "arousal": 0.85,
+   "dominance": 0.95
+  },
+  "theory_notes": "Action-readiness / approach states (determination, confidence, urgency). Frijda-style action tendencies within appraisal theory (Moors2013); not classic discrete emotions."
+ },
+ {
+  "unified_id": "will.urgency",
+  "voice_ids": [
+   "will.urgency"
+  ],
+  "visual_ids": [
+   "will.urgency"
+  ],
+  "kind": "motivational",
+  "match": "exact_id",
+  "name_en": "Urgency",
+  "vad_from_voice_lib": {
+   "valence": -0.2,
+   "arousal": 0.8,
+   "dominance": 0.65
+  },
+  "theory_notes": "Action-readiness / approach states (determination, confidence, urgency). Frijda-style action tendencies within appraisal theory (Moors2013); not classic discrete emotions."
+ }
+]

@@ -1,0 +1,826 @@
+[
+ {
+  "key": "Reagan2016",
+  "title": "The emotional arcs of stories are dominated by six basic shapes",
+  "authors": "Andrew J. Reagan, Lewis Mitchell, Dilan Kiley, Christopher M. Danforth, Peter Sheridan Dodds",
+  "year": 2016,
+  "url": "https://arxiv.org/abs/1606.07772v3",
+  "doi_isbn": "10.1140/epjds/s13688-016-0093-1",
+  "source_type": "empirical",
+  "tier": "A",
+  "key_findings": [
+   "Sentiment (labMT hedonometer) of 10,000-word sliding windows across 1,327 filtered Project Gutenberg English fiction books.",
+   "Three methods (SVD, supervised, unsupervised clustering) converge on six core arcs: Rags to riches (rise), Tragedy/Riches to rags (fall), Man in a hole (fall-rise), Icarus (rise-fall), Cinderella (rise-fall-rise), Oedipus (fall-rise-fall).",
+   "Mode 1 (rise/fall) explains 30% of variance; first 12 modes explain 80% (mean-centred).",
+   "Hierarchical clustering: Man in a hole ~30%, Tragedy 32%, Oedipus 31%, Rags to riches 5% of corpus.",
+   "Highest median downloads: Icarus, Oedipus and two sequential Man-in-a-hole arcs; the most common arcs were not the most popular."
+  ],
+  "practical_applications": [
+   "Plan the emotional trajectory of a piece (rise/fall points) separately from its plot events.",
+   "Man-in-a-hole (problem then recovery) and double-dip shapes are a defensible default for short problem-solution stories."
+  ],
+  "limitations": [
+   "Authors: downloads are 'only a rough proxy for success'.",
+   "Measures the emotional valence of the text (syuzhet), not plot; novels 20k-100k words, English, Gutenberg only.",
+   "No evidence the arcs transfer to 15-60 s video; extrapolation is CRAFT."
+  ],
+  "license": "CC BY 4.0 (EPJ Data Science open access)",
+  "access_status": "full_text",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M13"
+  ]
+ },
+ {
+  "key": "VanLaer2014",
+  "title": "The Extended Transportation-Imagery Model: A Meta-Analysis of the Antecedents and Consequences of Consumers' Narrative Transportation",
+  "authors": "Tom van Laer, Ko de Ruyter, Luca M. Visconti, Martin Wetzels",
+  "year": 2014,
+  "url": "https://openaccess.city.ac.uk/id/eprint/6755/1/SSRN-id2033192.pdf",
+  "doi_isbn": "10.1086/673383",
+  "source_type": "meta-analysis",
+  "tier": "S",
+  "key_findings": [
+   "Journal of Consumer Research 40(5):797-817. Read: accepted manuscript (City Research Online eprint 6755) + the authors' 2015 seminar slides (eprint 18870) with the same tables.",
+   "Meta-analysis of 132 effect sizes of narrative transportation from 76 published and unpublished articles; inclusion required the Transportation (Green & Brock 2000), Being Hooked or Mysticism scale.",
+   "Storyteller antecedents (reliability-adjusted rho): identifiable character .20 (k=16), imaginable plot .29 (k=28), verisimilitude .27 (k=8) - all small.",
+   "Receiver antecedents: familiarity .21, attention .29, transportability .30 (medium), education .10, (female) sex .15; age .00 (n.s.; 43% of studies did not report age, 33% had mean age 18-22).",
+   "Consequences of transportation: affective response .57 (large), attitude .44, intention .31, belief .26, narrative thought .20, critical thought -.20 (fewer critical thoughts), studies with combined outcomes .36.",
+   "Moderator: Transportation scale gives smaller effects (.34) than other scales (.56); the authors attribute the gap to common-method/mood bias and recommend the Transportation scale. File-drawer N 80-6627."
+  ],
+  "practical_applications": [
+   "What a storyteller controls (clear character, imaginable plot, plausibility) each has only a small link to transportation; who the audience is (attention, transportability) matters as much.",
+   "Once viewers are transported, the link to attitude (.44) and affect (.57) is sizeable - but these are correlations with measured transportation, not the effect of 'using a story' vs not (see BraddockDillard2016, OKeefeHoeken2021)."
+  ],
+  "limitations": [
+   "Correlational pooled correlations (rho), mostly student samples, Western languages (Dutch, English, French, German, Italian); genre and medium could not be coded as moderators."
+  ],
+  "license": "copyrighted (accepted version in City Research Online)",
+  "access_status": "full_text",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M13"
+  ]
+ },
+ {
+  "key": "GreenBrock2000",
+  "title": "The role of transportation in the persuasiveness of public narratives",
+  "authors": "Melanie C. Green, Timothy C. Brock",
+  "year": 2000,
+  "url": "https://gwern.net/docs/www/pdfs.semanticscholar.org/39691cee32e52fbfc33f1a0316aa0d008cb699a4.pdf",
+  "doi_isbn": "10.1037/0022-3514.79.5.701",
+  "source_type": "empirical",
+  "tier": "A",
+  "key_findings": [
+   "Journal of Personality and Social Psychology 79(5):701-721.",
+   "Transportation = absorption into a story combining attention, imagery and feelings; a Transportation Scale was developed and validated (distinct from need for cognition).",
+   "Exp 1 (N=97): more-transported readers of 'Murder at the Mall' held more story-consistent beliefs and rated the sympathetic protagonist more favourably. Exp 2 (N=69): highly transported readers circled fewer 'Pinocchios' (false notes).",
+   "Exp 3 (N=274) and Exp 4 (N=258) replicated; in Exp 4 instructions that reduced transportation reduced story-consistent beliefs and evaluations.",
+   "Labelling the same story as fact or as fiction generally did not change transportation or the beliefs."
+  ],
+  "practical_applications": [
+   "Design for absorption: one concrete scene, sensory detail, no interruptions that break the 'story world'.",
+   "A story marked as fiction/dramatisation can still shift beliefs - so health facts inside fictional Mint & Tao stories must be correct."
+  ],
+  "limitations": [
+   "Lab text stories, US undergraduates; later studies sometimes found transportation did not mediate persuasion."
+  ],
+  "license": "copyrighted",
+  "access_status": "full_text",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M13"
+  ]
+ },
+ {
+  "key": "BrewerLichtenstein1982",
+  "title": "Stories are to entertain: A structural-affect theory of stories",
+  "authors": "William F. Brewer, Edward H. Lichtenstein",
+  "year": 1982,
+  "url": "https://www.ideals.illinois.edu/items/17648/bitstreams/63415/data.pdf",
+  "doi_isbn": "",
+  "source_type": "empirical",
+  "tier": "A",
+  "key_findings": [
+   "Read: University of Illinois Center for the Study of Reading Technical Report No. 265 (Oct 1982); also published in Journal of Pragmatics 6:473-486.",
+   "Stories are the subclass of narratives whose primary discourse force is entertainment.",
+   "Surprise: critical information early in the event sequence is omitted from the discourse and revealed late, forcing reinterpretation. Suspense: the initiating event (danger) is given and the outcome delayed. Curiosity: a significant event is omitted but the reader knows it is missing (e.g. a mystery), resolved when enough information is given.",
+   "In their experiments, suspense, curiosity and surprise versions produced the predicted affect curves; base narratives without such discourse organisations were not rated as stories by most readers, whereas suspense/surprise/curiosity versions were."
+  ],
+  "practical_applications": [
+   "Choose deliberately: suspense (show the danger first), curiosity (show that something happened, withhold what/how), or surprise (hide a key fact, reveal at the end)."
+  ],
+  "limitations": [
+   "Lab texts, US readers; the report summarises experiments detailed elsewhere (see BrewerLichtenstein1981)."
+  ],
+  "license": "copyrighted (tech report digitised, open in IDEALS)",
+  "access_status": "full_text",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M13"
+  ]
+ },
+ {
+  "key": "BrewerLichtenstein1981",
+  "title": "Brewer & Lichtenstein (1981) - course summary of 'The Trip Home' experiment",
+  "authors": "David S. Miall (course page summarising Brewer & Lichtenstein 1981)",
+  "year": 1981,
+  "url": "https://sites.ualberta.ca/~dmiall/694Empirical/Brewer_Lichtenstein_1981.htm",
+  "doi_isbn": "",
+  "source_type": "course",
+  "tier": "B",
+  "key_findings": [
+   "Six versions of a 4-page story (car bomb). Mean liking (7-pt): Base 2.15, Suspense standard 4.85, Foreshadowing 4.30, Misarranged (outcome first) 3.65, No resolution 3.85, Surprise 4.30.",
+   "'Is it a story' rating: No-resolution version fell to 2.75 (vs 5.05 standard) - removing the resolution hurt story-ness most.",
+   "A plain event sequence without suspense/surprise structure was rated lowest on both."
+  ],
+  "practical_applications": [
+   "Never end a story clip without resolution unless it is an explicit series cliffhanger with a known next episode.",
+   "Any affect structure beats a flat chronological list."
+  ],
+  "limitations": [
+   "Single story, student sample; page is a secondary course summary; curiosity condition not covered on this page."
+  ],
+  "license": "unknown (university course page)",
+  "access_status": "full_text",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M13"
+  ]
+ },
+ {
+  "key": "Mar2021",
+  "title": "Memory and comprehension of narrative versus expository texts: A meta-analysis",
+  "authors": "Raymond A. Mar and colleagues",
+  "year": 2021,
+  "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC8219577",
+  "doi_isbn": "10.3758/s13423-020-01853-1",
+  "source_type": "meta-analysis",
+  "tier": "S",
+  "key_findings": [
+   "Psychonomic Bulletin & Review 28(3):732-749. 37 articles, 78 samples, 33,078 participants.",
+   "Narrative texts better understood and remembered than expository: overall g = .55 [.31, .79]; comprehension g = .48; memory g = .72.",
+   "No moderator significant (age, listening vs reading, content control, delay, test format); heterogeneity I2 = 98%; publication bias signal for memory studies."
+  ],
+  "practical_applications": [
+   "Wrap educational facts (e.g. eye-health facts) in a short narrative to improve comprehension/recall, but keep the fact itself explicit."
+  ],
+  "limitations": [
+   "Only 28% of effects controlled content; few delayed tests (4), few listening studies (8).",
+   "Authors caution against forcing all information into narrative form."
+  ],
+  "license": "copyrighted (PMC author manuscript)",
+  "access_status": "full_text",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M13"
+  ]
+ },
+ {
+  "key": "BraddockDillard2016",
+  "title": "Meta-analytic evidence for the persuasive effect of narratives on beliefs, attitudes, intentions, and behaviors",
+  "authors": "Kurt Braddock, James Price Dillard",
+  "year": 2016,
+  "url": "https://mediawell.ssrc.org/?p=52168",
+  "doi_isbn": "10.1080/03637751.2015.1128555",
+  "source_type": "meta-analysis",
+  "tier": "S",
+  "key_findings": [
+   "Communication Monographs 83(4):446-467.",
+   "Narratives had small positive persuasive effects on beliefs, attitudes, intentions and behaviours (secondary sources report r about .17-.23).",
+   "Results suggested unidentified moderators."
+  ],
+  "practical_applications": [
+   "Stories persuade a little, not magically; combine story with a clear claim and CTA."
+  ],
+  "limitations": [
+   "Full text and abstract not reachable (publisher 403; Semantic Scholar elides the abstract; OpenAlex keyless quota exhausted 2026-11-25).",
+   "Search summaries quoting the abstract say fictionality moderator analyses gave MIXED results and that medium and research design did not change effect size; secondary summaries disagree on the direction - do not cite a direction."
+  ],
+  "license": "copyrighted",
+  "access_status": "search_summary",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M13"
+  ]
+ },
+ {
+  "key": "ShenSheerLi2015",
+  "title": "Impact of narratives on persuasion in health communication: A meta-analysis",
+  "authors": "Fuyuan Shen, Vivian C. Sheer, Ruobing Li",
+  "year": 2015,
+  "url": "https://pure.psu.edu/en/publications/impact-of-narratives-on-persuasion-in-health-communication-a-meta/",
+  "doi_isbn": "10.1080/00913367.2015.1018467",
+  "source_type": "meta-analysis",
+  "tier": "S",
+  "key_findings": [
+   "Journal of Advertising 44(2):105-113; 25 studies, N = 9,330.",
+   "Overall small effect of narrative on persuasion r = .063.",
+   "Audio and video narratives significant; print narratives not significant.",
+   "Detection and prevention narratives worked; cessation narratives did not."
+  ],
+  "practical_applications": [
+   "Narrative video fits detection/prevention messages (e.g. 'get your eyes checked') better than 'stop doing X' messages."
+  ],
+  "limitations": [
+   "O'Keefe & Hoeken (2021) reanalysis found substantial heterogeneity.",
+   "Read via abstract-level summaries."
+  ],
+  "license": "copyrighted",
+  "access_status": "search_summary",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M13",
+   "M14"
+  ]
+ },
+ {
+  "key": "OKeefeHoeken2021",
+  "title": "Message Design Choices Don't Make Much Difference to Persuasiveness and Can't Be Counted On - Not Even When Moderating Conditions Are Specified",
+  "authors": "Daniel J. O'Keefe, Hans Hoeken",
+  "year": 2021,
+  "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC8275937/",
+  "doi_isbn": "10.3389/fpsyg.2021.664160",
+  "source_type": "meta-analysis",
+  "tier": "S",
+  "key_findings": [
+   "Frontiers in Psychology; reviews 1,149 studies of 30 message-design variations.",
+   "Narrative vs non-narrative: mean r = .067 [.028, .105], k = 34, N = 9,330; 95% prediction interval -.107 to .237 (straddles zero).",
+   "Median main-effect r across the 30 variations = .10.",
+   "Even under specified moderators, prediction intervals included negative effects."
+  ],
+  "practical_applications": [
+   "Treat 'story beats facts' as a modest average bet, not a guarantee; test variants with real audiences."
+  ],
+  "limitations": [
+   "Only the first ~100k characters of the article were read."
+  ],
+  "license": "CC BY 4.0",
+  "access_status": "full_text",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M13",
+   "M14"
+  ]
+ },
+ {
+  "key": "Oh2025",
+  "title": "Kishotenketsu and its potential applications to prose writing",
+  "authors": "Gabriel Oh",
+  "year": 2025,
+  "url": "https://textjournal.scholasticahq.com/article/146391-kishotenketsu-and-its-potential-applications-to-prose-writing",
+  "doi_isbn": "",
+  "source_type": "review",
+  "tier": "B",
+  "key_findings": [
+   "TEXT: Journal of writing and writing courses 29(2), Oct 2025.",
+   "Ki (introduction), sho (development), ten (turn/twist), ketsu (conclusion); 'functions by induction' (Fister-Stoga 1993); Hinds (1982) calls it predominant in modern Japanese prose.",
+   "Conflict may exist but is not the driving force; allows passive protagonists, cyclical endings, perspective shift at ten.",
+   "Kubota (1997): no definitive academic explanation; Chinese/Japanese scholars advise against exact definitions of zhuan/ten; it is a guide, not a rule."
+  ],
+  "practical_applications": [
+   "Calm slice-of-life carousels (Mint & Tao) can use ki-sho-ten-ketsu: no villain, the 'ten' slide reframes everything."
+  ],
+  "limitations": [
+   "Literary-craft analysis of two novels; no audience data. Origin claims (e.g. Chinese jueju) are disputed in popular sources."
+  ],
+  "license": "copyrighted (open access journal)",
+  "access_status": "full_text",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M13"
+  ]
+ },
+ {
+  "key": "Rogers2023",
+  "title": "Seeing your life story as a Hero's Journey increases meaning in life",
+  "authors": "Benjamin A. Rogers, Herrison Chicas, John Michael Kelly, Emily Kubin, Michael S. Christian, Frank J. Kachanoff, Jonah Berger, Curtis Puryear, Dan P. McAdams, Kurt Gray",
+  "year": 2023,
+  "url": "https://chibe.upenn.edu/publications/seeing-your-life-story-as-a-heros-journey-increases-meaning-in-life",
+  "doi_isbn": "10.1037/pspa0000341",
+  "source_type": "empirical",
+  "tier": "A",
+  "key_findings": [
+   "Journal of Personality and Social Psychology. Life stories with more Hero's Journey elements correlated with more meaning in life and flourishing, less depression.",
+   "A 're-storying' intervention increased perceived meaning (six studies, >1,700 people per secondary summary)."
+  ],
+  "practical_applications": [
+   "The Hero's Journey has evidence as a self-narrative frame (meaning-making), which is different from evidence that it makes better ads or clips."
+  ],
+  "limitations": [
+   "Does not test audience response to fiction; read via secondary coverage."
+  ],
+  "license": "copyrighted",
+  "access_status": "search_summary",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M13"
+  ]
+ },
+ {
+  "key": "Dundes2005",
+  "title": "Folkloristics in the Twenty-First Century (AFS Invited Presidential Plenary Address, 2004)",
+  "authors": "Alan Dundes",
+  "year": 2005,
+  "url": "https://en.wikipedia.org/wiki/Hero%27s_journey",
+  "doi_isbn": "",
+  "source_type": "primary_text",
+  "tier": "A",
+  "key_findings": [
+   "Per secondary summaries: Dundes criticised Campbell as a non-expert relying on secondhand material and argued a universal archetype harms folklore study.",
+   "Toelken (per same summaries): Campbell selected only stories that fit the pattern.",
+   "Campbell's corpus centres on male heroes."
+  ],
+  "practical_applications": [
+   "Use the Hero's Journey as an optional writing tool, never as 'the universal structure of all stories'."
+  ],
+  "limitations": [
+   "Original address not read; only secondary summaries (Wikipedia, blog)."
+  ],
+  "license": "copyrighted",
+  "access_status": "search_summary",
+  "verification_status": "unverified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M13"
+  ]
+ },
+ {
+  "key": "LHN_Narratology",
+  "title": "The living handbook of narratology - entries 'Narratology' and 'Narrative Constitution'",
+  "authors": "Jan Christoph Meister; Michael Scheffel (living handbook of narratology, University of Hamburg)",
+  "year": 2014,
+  "url": "https://www-archiv.fdm.uni-hamburg.de/lhn/printpdf/article/narrative-constitution",
+  "doi_isbn": "",
+  "source_type": "encyclopedia",
+  "tier": "B",
+  "key_findings": [
+   "Meister, 'Narratology' (rev. 2014): narratology is a humanities discipline dedicated to the study of the logic, principles and practices of narrative representation.",
+   "Scheffel, 'Narrative Constitution' (rev. 2013): fabula/sujet comes from Russian formalism (Shklovsky); Tomashevsky: fabula = 'the totality of motifs in their logical causal-temporal chain', sujet = the same motifs in the sequence in which they are presented; later pairs histoire/discours (Todorov), story/plot (Forster)."
+  ],
+  "practical_applications": [
+   "Separate WHAT happens (fabula) from HOW/ORDER it is told (syuzhet) when planning a clip - the same events can be told as suspense, curiosity or surprise."
+  ],
+  "limitations": [
+   "Read via the handbook's print PDFs (archive site)."
+  ],
+  "license": "unknown (open academic handbook)",
+  "access_status": "full_text",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M13"
+  ]
+ },
+ {
+  "key": "Adams_StorySpine",
+  "title": "Meet the creator of the Story Spine, an 8-sentence tool to create and analyze stories (NPR interview)",
+  "authors": "NPR; Kenn Adams (interviewee)",
+  "year": 2026,
+  "url": "https://www.wunc.org/2026-06-23/meet-the-creator-of-the-story-spine-an-8-sentence-tool-to-create-and-analyze-stories",
+  "doi_isbn": "",
+  "source_type": "practitioner",
+  "tier": "D",
+  "key_findings": [
+   "NPR interview (2026): Kenn Adams invented the Story Spine, an eight-sentence exercise: Once upon a time / Every day / But one day / Because of that (x3) / Until finally / Ever since then.",
+   "Origin: late 1980s, while with Freestyle Repertory Theatre in New York (short-form improv).",
+   "Spread to Pixar via improv teacher Rebecca Stockley, who was hired to teach improvisation to Pixar writers."
+  ],
+  "practical_applications": [
+   "Fastest skeleton for 15-60 s stories; 'because of that' forces causality instead of 'and then'."
+  ],
+  "limitations": [
+   "Craft tool; no empirical test. The 'rule 4 of Emma Coats's 22 rules' link is not stated in this interview (other secondary sources only)."
+  ],
+  "license": "copyrighted",
+  "access_status": "full_text",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M13"
+  ]
+ },
+ {
+  "key": "Harmon_StoryCircle",
+  "title": "Dan Harmon Story Circle (practitioner explainers)",
+  "authors": "StudioBinder / Reedsy and others, describing Dan Harmon's method",
+  "year": null,
+  "url": "https://www.studiobinder.com/blog/dan-harmon-story-circle/",
+  "doi_isbn": "",
+  "source_type": "practitioner",
+  "tier": "D",
+  "key_findings": [
+   "StudioBinder (May 2025): 8 steps - You (comfort zone), Need (want something), Go (unfamiliar situation), Search (adapt), Find (get what they wanted), Take (pay a heavy price), Return (back to familiar situation), Change (having changed).",
+   "Presents the Circle as Harmon's later reworking of Campbell's Hero's Journey."
+  ],
+  "practical_applications": [
+   "Good for 3-10 min episodes (night-optic, series EPs)."
+  ],
+  "limitations": [
+   "Craft only; practitioner explainer, not Harmon's own text. The page calls Campbell an 'anthropologist' (he was a literature professor/mythologist) - low editorial rigour."
+  ],
+  "license": "copyrighted",
+  "access_status": "full_text",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M13"
+  ]
+ },
+ {
+  "key": "QuesenberryCoolsen2014",
+  "title": "What Makes a Super Bowl Ad Super? Five-Act Dramatic Form Affects Consumer Super Bowl Advertising Ratings",
+  "authors": "Keith A. Quesenberry, Michael K. Coolsen",
+  "year": 2014,
+  "url": "https://mosaic.messiah.edu/bus_ed/31",
+  "doi_isbn": "",
+  "source_type": "empirical",
+  "tier": "A",
+  "key_findings": [
+   "Journal of Marketing Theory and Practice 22(4):437-454.",
+   "Content analysis of 108 Super Bowl commercials over two years coded for Freytag five-act form.",
+   "Ads with more acts / full five-act form had higher consumer poll ratings (USA Today Ad Meter)."
+  ],
+  "practical_applications": [
+   "In 30-60 s ads, a complete mini-story (setup, rise, climax, fall, resolution) is associated with higher likability than a fragment."
+  ],
+  "limitations": [
+   "Correlational; Super Bowl ads (US, high budget, ~30-60 s); likability poll, not sales. A press summary called story completeness the sole predictor - stronger than the abstract."
+  ],
+  "license": "copyrighted",
+  "access_status": "abstract",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M13"
+  ]
+ },
+ {
+  "key": "LeavittChristenfeld2011",
+  "title": "Story spoilers don't spoil stories",
+  "authors": "Jonathan D. Leavitt, Nicholas J. S. Christenfeld",
+  "year": 2011,
+  "url": "https://www.psychologicalscience.org/news/releases/spoiler-alert-stories-are-not-spoiled-byspoilers.html",
+  "doi_isbn": "10.1177/0956797611417007",
+  "source_type": "empirical",
+  "tier": "A",
+  "key_findings": [
+   "Psychological Science; three experiments with short stories of three genres (ironic twist, mystery, literary).",
+   "Reported that spoiled stories were enjoyed as much or more than unspoiled ones."
+  ],
+  "practical_applications": [
+   "Outcome-first (curiosity) structure can work - but see the failed replications."
+  ],
+  "limitations": [
+   "Johnson & Rosenbaum (2015) and Levine, Betzner & Autry (2016) found spoilers reduce enjoyment; result is contested."
+  ],
+  "license": "copyrighted",
+  "access_status": "search_summary",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M13"
+  ]
+ },
+ {
+  "key": "SpoilerReplications",
+  "title": "Spoiler replications: Johnson & Rosenbaum (2015) 'Spoiler Alert' (Communication Research); Levine, Betzner & Autry (2016) (Discourse Processes)",
+  "authors": "Benjamin K. Johnson, Judith E. Rosenbaum; William H. Levine, Michelle Betzner, Kevin S. Autry",
+  "year": 2015,
+  "url": "https://news.uark.edu/articles/38085/fulbright-college-research-team-explores-how-spoilers-affect-reading-enjoyment",
+  "doi_isbn": "10.1177/0093650214564051",
+  "source_type": "empirical",
+  "tier": "A",
+  "key_findings": [
+   "Both follow-ups failed to confirm 'spoilers don't spoil' and found spoilers reduced enjoyment.",
+   "Levine et al.: a mid-story spoiler had no discernible effect; differences in spoiler format (one sentence vs thematic paragraph) proposed as explanation."
+  ],
+  "practical_applications": [
+   "Default: do not give away the payoff of a surprise-structured story in the caption/thumbnail."
+  ],
+  "limitations": [
+   "Text stories; read via secondary university news and summaries."
+  ],
+  "license": "copyrighted",
+  "access_status": "search_summary",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M13"
+  ]
+ },
+ {
+  "key": "Panero2016",
+  "title": "Replication of Kidd & Castano (2013) literary-fiction / theory-of-mind effect (3 labs)",
+  "authors": "Maria Eugenia Panero and colleagues",
+  "year": 2016,
+  "url": "https://www.bps.org.uk/research-digest/three-labs-just-failed-replicate-finding-quick-read-literary-fiction-boosts-your",
+  "doi_isbn": "",
+  "source_type": "empirical",
+  "tier": "A",
+  "key_findings": [
+   "Replication of Kidd & Castano (2013, Science) across 3 labs, N = 792: no RMET advantage for literary fiction after one passage.",
+   "Lifetime fiction exposure still predicted RMET.",
+   "Kidd & Castano disputed it; van Kuijk et al. reported a replication largely consistent with the original - mixed."
+  ],
+  "practical_applications": [
+   "Do not claim 'one story makes people more empathic' in content."
+  ],
+  "limitations": [
+   "Read via BPS digest and summaries."
+  ],
+  "license": "copyrighted",
+  "access_status": "search_summary",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M13"
+  ]
+ },
+ {
+  "key": "Cohen2001",
+  "title": "Defining identification: A theoretical look at the identification of audiences with media characters",
+  "authors": "Jonathan Cohen",
+  "year": 2001,
+  "url": "http://www.communicationcache.com/uploads/1/0/8/8/10887248/defining_identification-_a_theoretical_look_at_the_identification_of_audiences_with_media_characters.pdf",
+  "doi_isbn": "10.1207/S15327825MCS0403_01",
+  "source_type": "review",
+  "tier": "A",
+  "key_findings": [
+   "Mass Communication & Society 4(3):245-264.",
+   "Identification = experiencing reception and interpretation of the text 'from the inside, as if the events were happening to them'; contrasted with spectatorship (distanced mode).",
+   "Distinguishes identification from parasocial interaction, liking/similarity and imitation; identification is internal, imitation is external/behavioural.",
+   "Similarity need not be demographic: animated/iconic characters can elicit similarity through shared attributes (e.g. goofy, scared) or similar situations."
+  ],
+  "practical_applications": [
+   "Give the viewer a character's goal and point of view in the first beat; faceless characters (Mint & Tao) can still carry identification through clear goals and feelings."
+  ],
+  "limitations": [
+   "Theoretical paper - proposes hypotheses, no data."
+  ],
+  "license": "copyrighted",
+  "access_status": "full_text",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M13"
+  ]
+ },
+ {
+  "key": "PatienceDavies2021",
+  "title": "The case of the missing author: just where did the claim that stories are 22 times more memorable than facts alone come from?",
+  "authors": "Hari Patience-Davies",
+  "year": 2021,
+  "url": "https://venvegame.netlify.app/host-https-patiencedavies.com/2021/01/27/the-case-of-the-missing-author-just-where-did-the-claim-that-stories-are-22-times-more-memorable-than-facts-alone-come-from",
+  "doi_isbn": "",
+  "source_type": "practitioner",
+  "tier": "E",
+  "key_findings": [
+   "Could not find the '22x more memorable' claim in Bruner's Actual Minds, Possible Worlds; Aaker states it in a video without a method.",
+   "Stanford Women's Leadership page still repeats the figure."
+  ],
+  "practical_applications": [
+   "Never quote '22 times more memorable'; cite Mar 2021 (g = .55) instead."
+  ],
+  "limitations": [
+   "Blog (mirror URL); a myth-tracing exercise, not research."
+  ],
+  "license": "unknown",
+  "access_status": "search_summary",
+  "verification_status": "unverified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M13"
+  ]
+ },
+ {
+  "key": "BowerClark1969",
+  "title": "Narrative stories as mediators for serial learning",
+  "authors": "Gordon H. Bower, Michal C. Clark",
+  "year": 1969,
+  "url": "https://link.springer.com/content/pdf/10.3758/BF03332778.pdf",
+  "doi_isbn": "10.3758/BF03332778",
+  "source_type": "empirical",
+  "tier": "A",
+  "key_findings": [
+   "Psychonomic Science 14(4):181-182. 24 undergraduates; 12 serial lists of 10 concrete nouns; Narrative Ss wove each list into a story (mean 104 s per list), yoked Controls got the same study time.",
+   "Immediate recall: median 99.9% (Narrative) vs 99.1% (Control). Final cued recall of all 12 lists: average median 93% vs 13% - six to seven times more, no overlap between groups.",
+   "Authors attribute the effect to thematic organisation that reduces interference between lists."
+  ],
+  "practical_applications": [
+   "Linking items into a causal mini-story is a memory aid (e.g. a product's 3 features as one scene)."
+  ],
+  "limitations": [
+   "Small N, stories generated by the learner (not stories told to an audience), serial word lists.",
+   "Gamst & Freund (1978, see GamstFreund1978) found no story advantage with one 30-word list and 5 min study - the effect seems to depend on many lists/interference.",
+   "Earlier entry carried the wrong DOI (10.3758/BF03329666 = Gamst & Freund 1978); corrected 2026-11-25."
+  ],
+  "license": "copyrighted",
+  "access_status": "full_text",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M13"
+  ]
+ },
+ {
+  "key": "Dahlstrom2014",
+  "title": "Using narratives and storytelling to communicate science with nonexpert audiences",
+  "authors": "Michael F. Dahlstrom",
+  "year": 2014,
+  "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC4183170",
+  "doi_isbn": "10.1073/pnas.1320645111",
+  "source_type": "review",
+  "tier": "A",
+  "key_findings": [
+   "PNAS 111(Suppl 4):13614-13620.",
+   "Narratives increase comprehension, interest and engagement for nonexperts (per secondary summaries); can also spread misinformation.",
+   "Distinguishes using narrative for comprehension vs persuasion; the ethical question is how, not whether."
+  ],
+  "practical_applications": [
+   "Health/optical facts: the story carries attention, the fact must be checked and stated plainly."
+  ],
+  "limitations": [
+   "PMC blocked by browser check; read via summaries."
+  ],
+  "license": "copyrighted (PNAS open access)",
+  "access_status": "search_summary",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M13"
+  ]
+ },
+ {
+  "key": "NaveCamererMcCullough2015",
+  "title": "Does Oxytocin Increase Trust in Humans? A Critical Review of Research",
+  "authors": "Gideon Nave, Colin Camerer, Michael McCullough",
+  "year": 2015,
+  "url": "https://authors.library.caltech.edu/records/rj5sw-bsb59",
+  "doi_isbn": "",
+  "source_type": "review",
+  "tier": "A",
+  "key_findings": [
+   "Perspectives on Psychological Science. Evidence does not robustly show human trust is reliably linked to or caused by oxytocin; intranasal OT-trust finding has not replicated well; plasma OT measurement is problematic."
+  ],
+  "practical_applications": [
+   "Do not claim 'stories release oxytocin so viewers trust your brand' - neuro-marketing lore."
+  ],
+  "limitations": [
+   "About trust experiments, not narrative studies directly; read via abstract summaries."
+  ],
+  "license": "copyrighted",
+  "access_status": "search_summary",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M13"
+  ]
+ },
+ {
+  "key": "Nichols2001",
+  "title": "Introduction to Documentary",
+  "authors": "Bill Nichols",
+  "year": 2001,
+  "url": "https://en.wikipedia.org/wiki/Documentary_mode",
+  "doi_isbn": "",
+  "source_type": "textbook",
+  "tier": "A",
+  "key_findings": [
+   "Six documentary modes: poetic, expository, observational, participatory, reflexive, performative.",
+   "Modes overlap; a mode is a dominant tendency, not a fixed category (per Wikipedia summary quoting Nichols)."
+  ],
+  "practical_applications": [
+   "Shop/staff mini-docs: observational (watch a fitting), participatory (interview a customer), expository (VO + B-roll explainer)."
+  ],
+  "limitations": [
+   "Book not read; via encyclopedic/industry summaries (Indiana University Press, 2001; rev. 2010)."
+  ],
+  "license": "copyrighted",
+  "access_status": "bibliographic",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M13"
+  ]
+ },
+ {
+  "key": "Teixeira2012",
+  "title": "Emotion-Induced Engagement in Internet Video Advertisements",
+  "authors": "Thales Teixeira, Michel Wedel, Rik Pieters",
+  "year": 2012,
+  "url": "https://research.tilburguniversity.edu/en/publications/emotion-induced-engagement-in-internet-video-ads/",
+  "doi_isbn": "",
+  "source_type": "empirical",
+  "tier": "A",
+  "key_findings": [
+   "Journal of Marketing Research 49(2):144-159; facial-expression detection of joy and surprise while viewers watched 30-s ads and could stop (zap).",
+   "Joy and surprise affected concentration and retention; effect of joy asymmetric (gains from increases larger than losses from decreases)."
+  ],
+  "practical_applications": [
+   "Early positive emotion helps keep viewers in short video ads; plan an emotional rise early, not only at the end."
+  ],
+  "limitations": [
+   "Lab, 2010-era internet ads; read via abstract/press only."
+  ],
+  "license": "copyrighted",
+  "access_status": "abstract",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M13"
+  ]
+ },
+ {
+  "key": "Freytag1900",
+  "title": "Freytag's Technique of the Drama: An Exposition of Dramatic Composition and Art (trans. Elias J. MacEwan)",
+  "authors": "Gustav Freytag",
+  "year": 1900,
+  "url": "https://archive.org/details/freytagstechniqu00freyuoft",
+  "doi_isbn": "",
+  "source_type": "primary_text",
+  "tier": "B",
+  "key_findings": [
+   "Authorised translation from the 6th German edition (Scott, Foresman, Chicago 1900); original Die Technik des Dramas (1863).",
+   "Source of the 'pyramid' (five parts commonly listed: introduction/exposition, rising action, climax, falling action/return, catastrophe/denouement)."
+  ],
+  "practical_applications": [
+   "Five-act form for 30-90 s ads (see QuesenberryCoolsen2014)."
+  ],
+  "limitations": [
+   "Analysis of 19th-c. five-act tragedy; stage names confirmed via secondary sources only - scan not read."
+  ],
+  "license": "public domain",
+  "access_status": "bibliographic",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M13"
+  ]
+ },
+ {
+  "key": "Escalas2004",
+  "title": "Narrative Processing: Building Consumer Connections to Brands",
+  "authors": "Jennifer Edson Escalas",
+  "year": 2004,
+  "url": "https://cdn.vanderbilt.edu/vu-web/owen/files/people-294-EscalasVitae819-20190909143354.pdf",
+  "doi_isbn": "",
+  "source_type": "empirical",
+  "tier": "A",
+  "key_findings": [
+   "Journal of Consumer Psychology 14(1-2):168-180.",
+   "Narratively structured ads elicited more narrative processing than vignette ads; narrative processing related positively to self-brand connections, which related to brand attitudes and intentions (per summaries)."
+  ],
+  "practical_applications": [
+   "Brand stories should let viewers map the story onto their own life (self-brand connection), not just praise the product."
+  ],
+  "limitations": [
+   "Storyboard ads in lab; read via citing papers."
+  ],
+  "license": "copyrighted",
+  "access_status": "search_summary",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M13"
+  ]
+ },
+ {
+  "key": "GamstFreund1978",
+  "title": "Effects of subject-generated stories on recall",
+  "authors": "Glenn Gamst, Joel S. Freund",
+  "year": 1978,
+  "url": "https://link.springer.com/content/pdf/10.3758/BF03329666.pdf",
+  "doi_isbn": "10.3758/BF03329666",
+  "source_type": "empirical",
+  "tier": "A",
+  "key_findings": [
+   "Bulletin of the Psychonomic Society 12(3):185-188. Two free-recall experiments with a single 30-word list: telling learners to make up a story with the words did not improve mean recall vs standard study instructions, also when study time was varied.",
+   "Quotes Bower & Clark (1969) as 93% vs 13% final cued recall and attributes the difference to method (many short lists, interference)."
+  ],
+  "practical_applications": [
+   "'Stories help memory' is strongest when many items/lists would otherwise interfere; for one short list of facts the story advantage may vanish."
+  ],
+  "limitations": [
+   "Free recall of word lists via the learner's own stories; small student samples."
+  ],
+  "license": "copyrighted",
+  "access_status": "full_text",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M13"
+  ]
+ }
+]

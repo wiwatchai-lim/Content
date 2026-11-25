@@ -1,0 +1,343 @@
+{
+ "schema_version": "1.0",
+ "description": "Words the TTS should read differently from how they are written. tools/thai_normalize.py applies entries longest-first BEFORE numbers. Fields: written (as in the script), spoken (what to send to the TTS, Thai script respelling — keep the real spelling in subtitles), ipa (optional, Thai tones as diacritics or tone letters), style (omit = always; 'casual' = only with --style casual; 'formal' = only formal), whole_word (Latin words: match only whole words), category, note, verified (true only after hearing the TTS read it right). Add a word: append an entry, run tools/run_tests.py, listen once, set verified true.",
+ "entries": [
+  {
+   "written": "Time Optic",
+   "spoken": "ไทม์ ออปติก",
+   "category": "brand",
+   "whole_word": true,
+   "note": "shop name; two words, stress on ออป",
+   "verified": false
+  },
+  {
+   "written": "TIME OPTIC",
+   "spoken": "ไทม์ ออปติก",
+   "category": "brand",
+   "whole_word": true,
+   "case_sensitive": true,
+   "verified": false
+  },
+  {
+   "written": "Superlens",
+   "spoken": "ซูเปอร์เลนส์",
+   "category": "brand",
+   "whole_word": true,
+   "verified": false
+  },
+  {
+   "written": "Essilor",
+   "spoken": "เอสซีลอร์",
+   "category": "lens_brand",
+   "whole_word": true,
+   "verified": true,
+   "source": "ThaiPR_Essilor2020 + Naewna_Essilor2019 (เอสซีลอร์); spot-checked 2026-11-25"
+  },
+  {
+   "written": "Varilux",
+   "spoken": "วารีลักซ์",
+   "category": "lens_brand",
+   "whole_word": true,
+   "verified": true,
+   "source": "ThaiPR_Essilor2020 (วารีลักส์) + Naewna_Essilor2019 (วารีลักซ์) - same sound; spot-checked 2026-11-25"
+  },
+  {
+   "written": "Crizal",
+   "spoken": "คริซอล",
+   "category": "lens_brand",
+   "whole_word": true,
+   "verified": false
+  },
+  {
+   "written": "Transitions",
+   "spoken": "ทรานซิชั่นส์",
+   "category": "lens_brand",
+   "whole_word": true,
+   "verified": false
+  },
+  {
+   "written": "HOYA",
+   "spoken": "โฮยา",
+   "category": "lens_brand",
+   "whole_word": true,
+   "verified": true,
+   "source": "Marketeer_HOYA2025 (brand distributor writes โฮยา, ไทยโฮยา เลนซ์); spot-checked 2026-11-25"
+  },
+  {
+   "written": "Hoya",
+   "spoken": "โฮยา",
+   "category": "lens_brand",
+   "whole_word": true,
+   "verified": true,
+   "source": "Marketeer_HOYA2025; spot-checked 2026-11-25"
+  },
+  {
+   "written": "ZEISS",
+   "spoken": "ไซส์",
+   "category": "lens_brand",
+   "whole_word": true,
+   "verified": false
+  },
+  {
+   "written": "Zeiss",
+   "spoken": "ไซส์",
+   "category": "lens_brand",
+   "whole_word": true,
+   "verified": false
+  },
+  {
+   "written": "Ray-Ban",
+   "spoken": "เรย์แบน",
+   "category": "frame_brand",
+   "whole_word": true,
+   "verified": false
+  },
+  {
+   "written": "Oakley",
+   "spoken": "โอ๊คลีย์",
+   "category": "frame_brand",
+   "whole_word": true,
+   "verified": false
+  },
+  {
+   "written": "Gentle Monster",
+   "spoken": "เจนเทิล มอนสเตอร์",
+   "category": "frame_brand",
+   "whole_word": true,
+   "verified": false
+  },
+  {
+   "written": "Lindberg",
+   "spoken": "ลินด์เบิร์ก",
+   "category": "frame_brand",
+   "whole_word": true,
+   "verified": false
+  },
+  {
+   "written": "titanium",
+   "spoken": "ไทเทเนียม",
+   "category": "material",
+   "whole_word": true,
+   "verified": false
+  },
+  {
+   "written": "progressive",
+   "spoken": "โปรเกรสซีฟ",
+   "category": "lens_type",
+   "whole_word": true,
+   "verified": false
+  },
+  {
+   "written": "blue light",
+   "spoken": "บลูไลท์",
+   "category": "lens_type",
+   "whole_word": true,
+   "verified": false
+  },
+  {
+   "written": "Blue Cut",
+   "spoken": "บลูคัท",
+   "category": "lens_type",
+   "whole_word": true,
+   "verified": false
+  },
+  {
+   "written": "UV400",
+   "spoken": "ยูวี สี่ร้อย",
+   "category": "spec",
+   "whole_word": true,
+   "verified": false
+  },
+  {
+   "written": "UV",
+   "spoken": "ยูวี",
+   "category": "spec",
+   "whole_word": true,
+   "case_sensitive": true,
+   "verified": false
+  },
+  {
+   "written": "LINE",
+   "spoken": "ไลน์",
+   "category": "app",
+   "whole_word": true,
+   "case_sensitive": true,
+   "verified": false
+  },
+  {
+   "written": "@timeoptic",
+   "spoken": "แอดไทม์ออปติก",
+   "category": "handle",
+   "verified": false
+  },
+  {
+   "written": "Facebook",
+   "spoken": "เฟซบุ๊ก",
+   "category": "app",
+   "whole_word": true,
+   "verified": false
+  },
+  {
+   "written": "TikTok",
+   "spoken": "ติ๊กต็อก",
+   "category": "app",
+   "whole_word": true,
+   "verified": false
+  },
+  {
+   "written": "OK",
+   "spoken": "โอเค",
+   "category": "loanword",
+   "whole_word": true,
+   "case_sensitive": true,
+   "verified": false
+  },
+  {
+   "written": "Sale",
+   "spoken": "เซล",
+   "category": "loanword",
+   "whole_word": true,
+   "verified": false
+  },
+  {
+   "written": "SALE",
+   "spoken": "เซล",
+   "category": "loanword",
+   "whole_word": true,
+   "case_sensitive": true,
+   "verified": false
+  },
+  {
+   "written": "km",
+   "spoken": "กิโลเมตร",
+   "category": "unit",
+   "whole_word": true,
+   "case_sensitive": true,
+   "verified": false
+  },
+  {
+   "written": "mm",
+   "spoken": "มิลลิเมตร",
+   "category": "unit",
+   "whole_word": true,
+   "case_sensitive": true,
+   "verified": false
+  },
+  {
+   "written": "กม.",
+   "spoken": "กิโลเมตร",
+   "category": "abbreviation",
+   "verified": false
+  },
+  {
+   "written": "ชม.",
+   "spoken": "ชั่วโมง",
+   "category": "abbreviation",
+   "verified": false
+  },
+  {
+   "written": "นศ.",
+   "spoken": "นักศึกษา",
+   "category": "abbreviation",
+   "verified": false
+  },
+  {
+   "written": "รพ.",
+   "spoken": "โรงพยาบาล",
+   "category": "abbreviation",
+   "verified": false
+  },
+  {
+   "written": "จ.ประจวบคีรีขันธ์",
+   "spoken": "จังหวัดประจวบคีรีขันธ์",
+   "category": "place",
+   "verified": false
+  },
+  {
+   "written": "อ.หัวหิน",
+   "spoken": "อำเภอหัวหิน",
+   "category": "place",
+   "verified": false
+  },
+  {
+   "written": "ต.ค.",
+   "spoken": "ตุลาคม",
+   "category": "abbreviation",
+   "note": "only when not part of a date (dates are expanded first by rule)",
+   "verified": false
+  },
+  {
+   "written": "ไหม",
+   "spoken": "มั้ย",
+   "style": "casual",
+   "category": "colloquial",
+   "note": "question particle; in casual dialogue Thai speakers say มั้ย (high tone). Formal VO keeps ไหม. Do NOT apply to ผ้าไหม (silk) — write silk as ผ้าไหม and check by ear.",
+   "verified": false,
+   "not_in": [
+    "ผ้าไหม",
+    "ไหมพรม",
+    "เส้นไหม",
+    "ไหมขัดฟัน",
+    "ไหม้"
+   ]
+  },
+  {
+   "written": "อย่างไร",
+   "spoken": "ยังไง",
+   "style": "casual",
+   "category": "colloquial",
+   "verified": false
+  },
+  {
+   "written": "ฉัน",
+   "spoken": "ชั้น",
+   "style": "casual",
+   "category": "colloquial",
+   "note": "spoken short high-tone reading",
+   "verified": false,
+   "not_in": [
+    "ฉันท์"
+   ]
+  },
+  {
+   "written": "เขา",
+   "spoken": "เค้า",
+   "style": "casual",
+   "category": "colloquial",
+   "note": "pronoun เขา is said with high tone in speech; keep เขา (mountain) as written — check context",
+   "verified": false,
+   "not_in": [
+    "ภูเขา",
+    "เขาใหญ่",
+    "เขาตะเกียบ",
+    "เขาเต่า",
+    "เขาหินเหล็กไฟ",
+    "เขาสัตว์",
+    "เขาควาย",
+    "เขากวาง"
+   ]
+  },
+  {
+   "written": "หรือเปล่า",
+   "spoken": "รึเปล่า",
+   "style": "casual",
+   "category": "colloquial",
+   "verified": false
+  },
+  {
+   "written": "ไม่ใช่",
+   "spoken": "ไม่ใช่",
+   "category": "control",
+   "note": "kept on purpose: test entry, must read unchanged",
+   "verified": true
+  },
+  {
+   "written": "Comfort Max",
+   "spoken": "คอมฟอร์ต แม็กซ์",
+   "category": "lens_product",
+   "whole_word": true,
+   "verified": true,
+   "source": "ThaiPR_Essilor2020 (วารีลักส์ คอมฟอร์ต แม็กซ์); spot-checked 2026-11-25"
+  }
+ ]
+}

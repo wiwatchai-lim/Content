@@ -1,0 +1,4301 @@
+{
+ "corpus_files": [
+  ".claude/skills/ai-visual-artist/research\\R1_fundamentals_perception.md",
+  ".claude/skills/ai-visual-artist/research\\R2_color_light.md",
+  ".claude/skills/ai-visual-artist/research\\R3_design_type_story.md",
+  ".claude/skills/ai-visual-artist/research\\R4_ai_eval_styles.md",
+  ".claude/skills/ai-visual-artist\\ART_FUNDAMENTALS.md",
+  ".claude/skills/ai-visual-artist\\CHANGELOG.md",
+  ".claude/skills/ai-visual-artist\\CHARACTER_BIBLE_TEMPLATE.md",
+  ".claude/skills/ai-visual-artist\\CHARACTER_DESIGN.md",
+  ".claude/skills/ai-visual-artist\\COLOR_THEORY.md",
+  ".claude/skills/ai-visual-artist\\DRAWING_TECHNIQUES.md",
+  ".claude/skills/ai-visual-artist\\ENVIRONMENT_DESIGN.md",
+  ".claude/skills/ai-visual-artist\\EXAMPLES.md",
+  ".claude/skills/ai-visual-artist\\GRAPHIC_DESIGN.md",
+  ".claude/skills/ai-visual-artist\\IMAGE_CRITIQUE_ENGINE.md",
+  ".claude/skills/ai-visual-artist\\IMAGE_PROMPT_ENGINE.md",
+  ".claude/skills/ai-visual-artist\\IMAGE_PROVIDER_ADAPTERS.md",
+  ".claude/skills/ai-visual-artist\\MASTER_KNOWLEDGE.md",
+  ".claude/skills/ai-visual-artist\\RESEARCH_SOURCES.md",
+  ".claude/skills/ai-visual-artist\\SKILL.md",
+  ".claude/skills/ai-visual-artist\\THAI_TYPOGRAPHY.md",
+  ".claude/skills/ai-visual-artist\\VISUAL_STORYTELLING.md",
+  "creative-intelligence/knowledge\\cognitive-science\\README.md",
+  "creative-intelligence/knowledge\\emotions\\README.md",
+  "creative-intelligence/knowledge\\philosophy\\README.md",
+  "creative-intelligence/knowledge\\psychology\\README.md",
+  "story-clips/_craft/curriculum\\01-photography-fundamentals.md",
+  "story-clips/_craft/curriculum\\02-camera-lens.md",
+  "story-clips/_craft/curriculum\\03-composition.md",
+  "story-clips/_craft/curriculum\\04-lighting.md",
+  "story-clips/_craft/curriculum\\05-movement-language.md",
+  "story-clips/_craft/curriculum\\06-2d-animation.md",
+  "story-clips/_craft/curriculum\\07-3d-character.md",
+  "story-clips/_craft/curriculum\\08-storyboard.md",
+  "story-clips/_craft/curriculum\\09-ai-image-prompts.md",
+  "story-clips/_craft/curriculum\\10-ai-video.md",
+  "story-clips/_craft/curriculum\\11-edit-grade.md",
+  "story-clips/_craft/curriculum\\12-production-qc.md"
+ ],
+ "modules": {
+  "VA01 color science": {
+   "terms": 56,
+   "covered": 28,
+   "thin": [
+    "CIE XYZ",
+    "simultaneous contrast",
+    "chromatic adaptation",
+    "colour constancy",
+    "triadic",
+    "tetradic",
+    "monochromatic",
+    "dominance",
+    "saturation hierarchy",
+    "symbolism",
+    "colour script"
+   ],
+   "missing": [
+    "additive",
+    "subtractive",
+    "CMYK",
+    "Munsell",
+    "relativity",
+    "successive contrast",
+    "color constancy",
+    "split complementary",
+    "local color",
+    "local colour",
+    "reflected colo",
+    "environmental colo",
+    "discord",
+    "colour grading",
+    "gamut mapping",
+    "metamerism",
+    "spectral power"
+   ],
+   "rows": [
+    {
+     "term": "hue",
+     "hits": 36,
+     "grade": "covered",
+     "top_files": [
+      ".claude/skills/ai-visual-artist/research\\R2_color_light.md",
+      ".claude/skills/ai-visual-artist\\COLOR_THEORY.md",
+      "story-clips/_craft/curriculum\\11-edit-grade.md"
+     ]
+    },
+    {
+     "term": "value",
+     "hits": 175,
+     "grade": "covered",
+     "top_files": [
+      ".claude/skills/ai-visual-artist\\EXAMPLES.md",
+      ".claude/skills/ai-visual-artist/research\\R1_fundamentals_perception.md",
+      ".claude/skills/ai-visual-artist\\ART_FUNDAMENTALS.md"
+     ]
+    },
+    {
+     "term": "chroma",
+     "hits": 18,
+     "grade": "covered",
+     "top_files": [
+      ".claude/skills/ai-visual-artist/research\\R2_color_light.md",
+      ".claude/skills/ai-visual-artist\\COLOR_THEORY.md",
+      ".claude/skills/ai-visual-artist\\ART_FUNDAMENTALS.md"
+     ]
+    },
+    {
+     "term": "saturation",
+     "hits": 17,
+     "grade": "covered",
+     "top_files": [
+      "story-clips/_craft/curriculum\\11-edit-grade.md",
+      ".claude/skills/ai-visual-artist/research\\R2_color_light.md",
+      ".claude/skills/ai-visual-artist\\ART_FUNDAMENTALS.md"
+     ]
+    },
+    {
+     "term": "additive",
+     "hits": 0,
+     "grade": "missing",
+     "top_files": []
+    },
+    {
+     "term": "subtractive",
+     "hits": 0,
+     "grade": "missing",
+     "top_files": []
+    },
+    {
+     "term": "CMYK",
+     "hits": 0,
+     "grade": "missing",
+     "top_files": []
+    },
+    {
+     "term": "HSL",
+     "hits": 7,
+     "grade": "covered",
+     "top_files": [
+      ".claude/skills/ai-visual-artist/research\\R2_color_light.md",
+      ".claude/skills/ai-visual-artist\\COLOR_THEORY.md",
+      ".claude/skills/ai-visual-artist\\SKILL.md"
+     ]
+    },
+    {
+     "term": "HSV",
+     "hits": 6,
+     "grade": "covered",
+     "top_files": [
+      ".claude/skills/ai-visual-artist/research\\R2_color_light.md",
+      ".claude/skills/ai-visual-artist\\COLOR_THEORY.md",
+      ".claude/skills/ai-visual-artist\\SKILL.md"
+     ]
+    },
+    {
+     "term": "CIE XYZ",
+     "hits": 1,
+     "grade": "thin",
+     "top_files": [
+      ".claude/skills/ai-visual-artist\\COLOR_THEORY.md"
+     ]
+    },
+    {
+     "term": "CIELAB",
+     "hits": 11,
+     "grade": "covered",
+     "top_files": [
+      ".claude/skills/ai-visual-artist/research\\R2_color_light.md",
+      ".claude/skills/ai-visual-artist\\COLOR_THEORY.md",
+      ".claude/skills/ai-visual-artist\\MASTER_KNOWLEDGE.md"
+     ]
+    },
+    {
+     "term": "LCH",
+     "hits": 16,
+     "grade": "covered",
+     "top_files": [
+      ".claude/skills/ai-visual-artist/research\\R2_color_light.md",
+      ".claude/skills/ai-visual-artist\\COLOR_THEORY.md",
+      ".claude/skills/ai-visual-artist\\SKILL.md"
+     ]
+    },
+    {
+     "term": "OKLab",
+     "hits": 15,
+     "grade": "covered",
+     "top_files": [
+      ".claude/skills/ai-visual-artist/research\\R2_color_light.md",
+      ".claude/skills/ai-visual-artist\\COLOR_THEORY.md",
+      ".claude/skills/ai-visual-artist\\RESEARCH_SOURCES.md"
+     ]
+    },
+    {
+     "term": "OKLCH",
+     "hits": 16,
+     "grade": "covered",
+     "top_files": [
+      ".claude/skills/ai-visual-artist/research\\R2_color_light.md",
+      ".claude/skills/ai-visual-artist\\COLOR_THEORY.md",
+      ".claude/skills/ai-visual-artist\\SKILL.md"
+     ]
+    },
+    {
+     "term": "Munsell",
+     "hits": 0,
+     "grade": "missing",
+     "top_files": []
+    },
+    {
+     "term": "relativity",
+     "hits": 0,
+     "grade": "missing",
+     "top_files": []
+    },
+    {
+     "term": "simultaneous contrast",
+     "hits": 3,
+     "grade": "thin",
+     "top_files": [
+      ".claude/skills/ai-visual-artist/research\\R2_color_light.md",
+      ".claude/skills/ai-visual-artist\\COLOR_THEORY.md"
+     ]
+    },
+    {
+     "term": "successive contrast",
+     "hits": 0,
+     "grade": "missing",
+     "top_files": []
+    },
+    {
+     "term": "chromatic adaptation",
+     "hits": 1,
+     "grade": "thin",
+     "top_files": [
+      ".claude/skills/ai-visual-artist/research\\R2_color_light.md"
+     ]
+    },
+    {
+     "term": "color constancy",
+     "hits": 0,
+     "grade": "missing",
+     "top_files": []
+    },
+    {
+     "term": "colour constancy",
+     "hits": 2,
+     "grade": "thin",
+     "top_files": [
+      ".claude/skills/ai-visual-artist/research\\R2_color_light.md"
+     ]
+    },
+    {
+     "term": "color temperature",
+     "hits": 7,
+     "grade": "covered",
+     "top_files": [
+      "story-clips/_craft/curriculum\\04-lighting.md",
+      ".claude/skills/ai-visual-artist/research\\R2_color_light.md",
+      ".claude/skills/ai-visual-artist\\RESEARCH_SOURCES.md"
+     ]
+    },
+    {
+     "term": "colour temperature",
+     "hits": 6,
+     "grade": "covered",
+     "top_files": [
+      ".claude/skills/ai-visual-artist/research\\R2_color_light.md",
+      ".claude/skills/ai-visual-artist\\CHARACTER_DESIGN.md",
+      ".claude/skills/ai-visual-artist\\COLOR_THEORY.md"
+     ]
+    },
+    {
+     "term": "complementary",
+     "hits": 8,
+     "grade": "covered",
+     "top_files": [
+      ".claude/skills/ai-visual-artist\\COLOR_THEORY.md",
+      "story-clips/_craft/curriculum\\11-edit-grade.md",
+      ".claude/skills/ai-visual-artist/research\\R2_color_light.md"
+     ]
+    },
+    {
+     "term": "split complementary",
+     "hits": 0,
+     "grade": "missing",
+     "top_files": []
+    },
+    {
+     "term": "analogous",
+     "hits": 5,
+     "grade": "covered",
+     "top_files": [
+      ".claude/skills/ai-visual-artist/research\\R2_color_light.md",
+      ".claude/skills/ai-visual-artist\\COLOR_THEORY.md",
+      "story-clips/_craft/curriculum\\11-edit-grade.md"
+     ]
+    },
+    {
+     "term": "triadic",
+     "hits": 3,
+     "grade": "thin",
+     "top_files": [
+      ".claude/skills/ai-visual-artist\\COLOR_THEORY.md",
+      "story-clips/_craft/curriculum\\11-edit-grade.md"
+     ]
+    },
+    {
+     "term": "tetradic",
+     "hits": 1,
+     "grade": "thin",
+     "top_files": [
+      ".claude/skills/ai-visual-artist\\COLOR_THEORY.md"
+     ]
+    },
+    {
+     "term": "monochromatic",
+     "hits": 1,
+     "grade": "thin",
+     "top_files": [
+      ".claude/skills/ai-visual-artist\\COLOR_THEORY.md"
+     ]
+    },
+    {
+     "term": "limited palette",
+     "hits": 9,
+     "grade": "covered",
+     "top_files": [
+      ".claude/skills/ai-visual-artist\\EXAMPLES.md",
+      "story-clips/_craft/curriculum\\04-lighting.md"
+     ]
+    },
+    {
+     "term": "muted",
+     "hits": 71,
+     "grade": "covered",
+     "top_files": [
+      ".claude/skills/ai-visual-artist\\EXAMPLES.md",
+      ".claude/skills/ai-visual-artist\\CHARACTER_BIBLE_TEMPLATE.md",
+      ".claude/skills/ai-visual-artist\\ART_FUNDAMENTALS.md"
+     ]
+    },
+    {
+     "term": "neutral",
+     "hits": 110,
+     "grade": "covered",
+     "top_files": [
+      ".claude/skills/ai-visual-artist\\EXAMPLES.md",
+      "story-clips/_craft/curriculum\\11-edit-grade.md",
+      ".claude/skills/ai-visual-artist/research\\R2_color_light.md"
+     ]
+    },
+    {
+     "term": "accent",
+     "hits": 66,
+     "grade": "covered",
+     "top_files": [
+      ".claude/skills/ai-visual-artist\\EXAMPLES.md",
+      ".claude/skills/ai-visual-artist\\COLOR_THEORY.md",
+      ".claude/skills/ai-visual-artist/research\\R2_color_light.md"
+     ]
+    },
+    {
+     "term": "dominance",
+     "hits": 3,
+     "grade": "thin",
+     "top_files": [
+      "creative-intelligence/knowledge\\emotions\\README.md"
+     ]
+    },
+    {
+     "term": "proportion",
+     "hits": 41,
+     "grade": "covered",
+     "top_files": [
+      ".claude/skills/ai-visual-artist/research\\R1_fundamentals_perception.md",
+      ".claude/skills/ai-visual-artist\\EXAMPLES.md",
+      ".claude/skills/ai-visual-artist/research\\R2_color_light.md"
+     ]
+    },
+    {
+     "term": "saturation hierarchy",
+     "hits": 1,
+     "grade": "thin",
+     "top_files": [
+      ".claude/skills/ai-visual-artist\\IMAGE_CRITIQUE_ENGINE.md"
+     ]
+    },
+    {
+     "term": "local color",
+     "hits": 0,
+     "grade": "missing",
+     "top_files": []
+    },
+    {
+     "term": "local colour",
+     "hits": 0,
+     "grade": "missing",
+     "top_files": []
+    },
+    {
+     "term": "reflected colo",
+     "hits": 0,
+     "grade": "missing",
+     "top_files": []
+    },
+    {
+     "term": "environmental colo",
+     "hits": 0,
+     "grade": "missing",
+     "top_files": []
+    },
+    {
+     "term": "harmony",
+     "hits": 39,
+     "grade": "covered",
+     "top_files": [
+      ".claude/skills/ai-visual-artist/research\\R2_color_light.md",
+      "story-clips/_craft/curriculum\\06-2d-animation.md",
+      ".claude/skills/ai-visual-artist\\COLOR_THEORY.md"
+     ]
+    },
+    {
+     "term": "discord",
+     "hits": 0,
+     "grade": "missing",
+     "top_files": []
+    },
+    {
+     "term": "psychology",
+     "hits": 43,
+     "grade": "covered",
+     "top_files": [
+      ".claude/skills/ai-visual-artist\\RESEARCH_SOURCES.md",
+      ".claude/skills/ai-visual-artist/research\\R1_fundamentals_perception.md",
+      ".claude/skills/ai-visual-artist/research\\R2_color_light.md"
+     ]
+    },
+    {
+     "term": "symbolism",
+     "hits": 1,
+     "grade": "thin",
+     "top_files": [
+      ".claude/skills/ai-visual-artist\\MASTER_KNOWLEDGE.md"
+     ]
+    },
+    {
+     "term": "cultural",
+     "hits": 14,
+     "grade": "covered",
+     "top_files": [
+      ".claude/skills/ai-visual-artist/research\\R2_color_light.md",
+      ".claude/skills/ai-visual-artist\\COLOR_THEORY.md",
+      ".claude/skills/ai-visual-artist\\MASTER_KNOWLEDGE.md"
+     ]
+    },
+    {
+     "term": "accessibility",
+     "hits": 9,
+     "grade": "covered",
+     "top_files": [
+      ".claude/skills/ai-visual-artist/research\\R2_color_light.md",
+      ".claude/skills/ai-visual-artist\\RESEARCH_SOURCES.md",
+      ".claude/skills/ai-visual-artist\\ART_FUNDAMENTALS.md"
+     ]
+    },
+    {
+     "term": "color grading",
+     "hits": 4,
+     "grade": "covered",
+     "top_files": [
+      "story-clips/_craft/curriculum\\11-edit-grade.md"
+     ]
+    },
+    {
+     "term": "colour grading",
+     "hits": 0,
+     "grade": "missing",
+     "top_files": []
+    },
+    {
+     "term": "color script",
+     "hits": 13,
+     "grade": "covered",
+     "top_files": [
+      "story-clips/_craft/curriculum\\08-storyboard.md",
+      "story-clips/_craft/curriculum\\04-lighting.md"
+     ]
+    },
+    {
+     "term": "colour script",
+     "hits": 1,
+     "grade": "thin",
+     "top_files": [
+      ".claude/skills/ai-visual-artist\\VISUAL_STORYTELLING.md"
+     ]
+    },
+    {
+     "term": "gamut mapping",
+     "hits": 0,
+     "grade": "missing",
+     "top_files": []
+    },
+    {
+     "term": "gamma",
+     "hits": 7,
+     "grade": "covered",
+     "top_files": [
+      "story-clips/_craft/curriculum\\11-edit-grade.md",
+      ".claude/skills/ai-visual-artist\\COLOR_THEORY.md"
+     ]
+    },
+    {
+     "term": "ICC",
+     "hits": 7,
+     "grade": "covered",
+     "top_files": [
+      "creative-intelligence/knowledge\\philosophy\\README.md",
+      ".claude/skills/ai-visual-artist/research\\R4_ai_eval_styles.md",
+      ".claude/skills/ai-visual-artist\\RESEARCH_SOURCES.md"
+     ]
+    },
+    {
+     "term": "white balance",
+     "hits": 7,
+     "grade": "covered",
+     "top_files": [
+      "story-clips/_craft/curriculum\\01-photography-fundamentals.md",
+      "story-clips/_craft/curriculum\\11-edit-grade.md"
+     ]
+    },
+    {
+     "term": "metamerism",
+     "hits": 0,
+     "grade": "missing",
+     "top_files": []
+    },
+    {
+     "term": "spectral power",
+     "hits": 0,
+     "grade": "missing",
+     "top_files": []
+    }
+   ]
+  },
+  "VA02 value": {
+   "terms": 21,
+   "covered": 5,
+   "thin": [
+    "high key",
+    "low key",
+    "greyscale"
+   ],
+   "missing": [
+    "value scale",
+    "middle key",
+    "mid key",
+    "three-value",
+    "3-value",
+    "five-value",
+    "5-value",
+    "value group",
+    "shadow mass",
+    "light mass",
+    "contrast hierarchy",
+    "tonal compression",
+    "grayscale"
+   ],
+   "rows": [
+    {
+     "term": "value scale",
+     "hits": 0,
+     "grade": "missing",
+     "top_files": []
+    },
+    {
+     "term": "notan",
+     "hits": 9,
+     "grade": "covered",
+     "top_files": [
+      ".claude/skills/ai-visual-artist/research\\R1_fundamentals_perception.md",
+      ".claude/skills/ai-visual-artist\\ART_FUNDAMENTALS.md",
+      ".claude/skills/ai-visual-artist\\DRAWING_TECHNIQUES.md"
+     ]
+    },
+    {
+     "term": "high key",
+     "hits": 1,
+     "grade": "thin",
+     "top_files": [
+      "story-clips/_craft/curriculum\\01-photography-fundamentals.md"
+     ]
+    },
+    {
+     "term": "middle key",
+     "hits": 0,
+     "grade": "missing",
+     "top_files": []
+    },
+    {
+     "term": "mid key",
+     "hits": 0,
+     "grade": "missing",
+     "top_files": []
+    },
+    {
+     "term": "low key",
+     "hits": 1,
+     "grade": "thin",
+     "top_files": [
+      "story-clips/_craft/curriculum\\01-photography-fundamentals.md"
+     ]
+    },
+    {
+     "term": "three-value",
+     "hits": 0,
+     "grade": "missing",
+     "top_files": []
+    },
+    {
+     "term": "3-value",
+     "hits": 0,
+     "grade": "missing",
+     "top_files": []
+    },
+    {
+     "term": "five-value",
+     "hits": 0,
+     "grade": "missing",
+     "top_files": []
+    },
+    {
+     "term": "5-value",
+     "hits": 0,
+     "grade": "missing",
+     "top_files": []
+    },
+    {
+     "term": "value group",
+     "hits": 0,
+     "grade": "missing",
+     "top_files": []
+    },
+    {
+     "term": "shadow mass",
+     "hits": 0,
+     "grade": "missing",
+     "top_files": []
+    },
+    {
+     "term": "light mass",
+     "hits": 0,
+     "grade": "missing",
+     "top_files": []
+    },
+    {
+     "term": "contrast hierarchy",
+     "hits": 0,
+     "grade": "missing",
+     "top_files": []
+    },
+    {
+     "term": "tonal compression",
+     "hits": 0,
+     "grade": "missing",
+     "top_files": []
+    },
+    {
+     "term": "dynamic range",
+     "hits": 4,
+     "grade": "covered",
+     "top_files": [
+      "story-clips/_craft/curriculum\\01-photography-fundamentals.md",
+      "story-clips/_craft/curriculum\\02-camera-lens.md",
+      "story-clips/_craft/curriculum\\11-edit-grade.md"
+     ]
+    },
+    {
+     "term": "chiaroscuro",
+     "hits": 27,
+     "grade": "covered",
+     "top_files": [
+      ".claude/skills/ai-visual-artist\\EXAMPLES.md",
+      ".claude/skills/ai-visual-artist\\RESEARCH_SOURCES.md",
+      ".claude/skills/ai-visual-artist/research\\R2_color_light.md"
+     ]
+    },
+    {
+     "term": "silhouette",
+     "hits": 53,
+     "grade": "covered",
+     "top_files": [
+      ".claude/skills/ai-visual-artist\\EXAMPLES.md",
+      "story-clips/_craft/curriculum\\06-2d-animation.md",
+      ".claude/skills/ai-visual-artist\\ART_FUNDAMENTALS.md"
+     ]
+    },
+    {
+     "term": "grayscale",
+     "hits": 0,
+     "grade": "missing",
+     "top_files": []
+    },
+    {
+     "term": "greyscale",
+     "hits": 2,
+     "grade": "thin",
+     "top_files": [
+      ".claude/skills/ai-visual-artist/research\\R1_fundamentals_perception.md",
+      ".claude/skills/ai-visual-artist\\ART_FUNDAMENTALS.md"
+     ]
+    },
+    {
+     "term": "thumbnail",
+     "hits": 75,
+     "grade": "covered",
+     "top_files": [
+      ".claude/skills/ai-visual-artist\\EXAMPLES.md",
+      "story-clips/_craft/curriculum\\08-storyboard.md",
+      ".claude/skills/ai-visual-artist/research\\R3_design_type_story.md"
+     ]
+    }
+   ]
+  },
+  "VA03 perspective": {
+   "terms": 29,
+   "covered": 10,
+   "thin": [
+    "atmospheric perspective",
+    "orthographic",
+    "foreshortening",
+    "ground plane",
+    "ellipse"
+   ],
+   "missing": [
+    "two-point",
+    "four-point",
+    "five-point",
+    "curvilinear",
+    "forced perspective",
+    "reverse perspective",
+    "axonometric",
+    "horizon line",
+    "station point",
+    "picture plane",
+    "cone of vision",
+    "relative scale",
+    "perspective grid",
+    "shadows in perspective"
+   ],
+   "rows": [
+    {
+     "term": "one-point",
+     "hits": 7,
+     "grade": "covered",
+     "top_files": [
+      "story-clips/_craft/curriculum\\03-composition.md"
+     ]
+    },
+    {
+     "term": "two-point",
+     "hits": 0,
+     "grade": "missing",
+     "top_files": []
+    },
+    {
+     "term": "three-point",
+     "hits": 9,
+     "grade": "covered",
+     "top_files": [
+      "story-clips/_craft/curriculum\\04-lighting.md",
+      ".claude/skills/ai-visual-artist\\EXAMPLES.md"
+     ]
+    },
+    {
+     "term": "four-point",
+     "hits": 0,
+     "grade": "missing",
+     "top_files": []
+    },
+    {
+     "term": "five-point",
+     "hits": 0,
+     "grade": "missing",
+     "top_files": []
+    },
+    {
+     "term": "curvilinear",
+     "hits": 0,
+     "grade": "missing",
+     "top_files": []
+    },
+    {
+     "term": "atmospheric perspective",
+     "hits": 3,
+     "grade": "thin",
+     "top_files": [
+      ".claude/skills/ai-visual-artist\\EXAMPLES.md",
+      ".claude/skills/ai-visual-artist/research\\R1_fundamentals_perception.md"
+     ]
+    },
+    {
+     "term": "aerial perspective",
+     "hits": 9,
+     "grade": "covered",
+     "top_files": [
+      ".claude/skills/ai-visual-artist/research\\R1_fundamentals_perception.md",
+      ".claude/skills/ai-visual-artist/research\\R2_color_light.md",
+      ".claude/skills/ai-visual-artist\\ART_FUNDAMENTALS.md"
+     ]
+    },
+    {
+     "term": "linear perspective",
+     "hits": 6,
+     "grade": "covered",
+     "top_files": [
+      ".claude/skills/ai-visual-artist\\EXAMPLES.md",
+      ".claude/skills/ai-visual-artist/research\\R1_fundamentals_perception.md",
+      ".claude/skills/ai-visual-artist\\ART_FUNDAMENTALS.md"
+     ]
+    },
+    {
+     "term": "forced perspective",
+     "hits": 0,
+     "grade": "missing",
+     "top_files": []
+    },
+    {
+     "term": "reverse perspective",
+     "hits": 0,
+     "grade": "missing",
+     "top_files": []
+    },
+    {
+     "term": "isometric",
+     "hits": 7,
+     "grade": "covered",
+     "top_files": [
+      ".claude/skills/ai-visual-artist\\EXAMPLES.md"
+     ]
+    },
+    {
+     "term": "axonometric",
+     "hits": 0,
+     "grade": "missing",
+     "top_files": []
+    },
+    {
+     "term": "orthographic",
+     "hits": 2,
+     "grade": "thin",
+     "top_files": [
+      ".claude/skills/ai-visual-artist\\EXAMPLES.md"
+     ]
+    },
+    {
+     "term": "oblique",
+     "hits": 5,
+     "grade": "covered",
+     "top_files": [
+      ".claude/skills/ai-visual-artist/research\\R4_ai_eval_styles.md",
+      ".claude/skills/ai-visual-artist\\RESEARCH_SOURCES.md"
+     ]
+    },
+    {
+     "term": "horizon line",
+     "hits": 0,
+     "grade": "missing",
+     "top_files": []
+    },
+    {
+     "term": "eye level",
+     "hits": 18,
+     "grade": "covered",
+     "top_files": [
+      ".claude/skills/ai-visual-artist\\EXAMPLES.md",
+      ".claude/skills/ai-visual-artist\\DRAWING_TECHNIQUES.md",
+      "story-clips/_craft/curriculum\\04-lighting.md"
+     ]
+    },
+    {
+     "term": "vanishing point",
+     "hits": 4,
+     "grade": "covered",
+     "top_files": [
+      "story-clips/_craft/curriculum\\03-composition.md",
+      ".claude/skills/ai-visual-artist\\DRAWING_TECHNIQUES.md",
+      ".claude/skills/ai-visual-artist\\IMAGE_CRITIQUE_ENGINE.md"
+     ]
+    },
+    {
+     "term": "station point",
+     "hits": 0,
+     "grade": "missing",
+     "top_files": []
+    },
+    {
+     "term": "picture plane",
+     "hits": 0,
+     "grade": "missing",
+     "top_files": []
+    },
+    {
+     "term": "cone of vision",
+     "hits": 0,
+     "grade": "missing",
+     "top_files": []
+    },
+    {
+     "term": "foreshortening",
+     "hits": 2,
+     "grade": "thin",
+     "top_files": [
+      ".claude/skills/ai-visual-artist\\DRAWING_TECHNIQUES.md"
+     ]
+    },
+    {
+     "term": "overlap",
+     "hits": 55,
+     "grade": "covered",
+     "top_files": [
+      ".claude/skills/ai-visual-artist\\EXAMPLES.md",
+      "story-clips/_craft/curriculum\\07-3d-character.md",
+      ".claude/skills/ai-visual-artist\\ART_FUNDAMENTALS.md"
+     ]
+    },
+    {
+     "term": "relative scale",
+     "hits": 0,
+     "grade": "missing",
+     "top_files": []
+    },
+    {
+     "term": "ground plane",
+     "hits": 1,
+     "grade": "thin",
+     "top_files": [
+      ".claude/skills/ai-visual-artist/research\\R1_fundamentals_perception.md"
+     ]
+    },
+    {
+     "term": "perspective grid",
+     "hits": 0,
+     "grade": "missing",
+     "top_files": []
+    },
+    {
+     "term": "ellipse",
+     "hits": 3,
+     "grade": "thin",
+     "top_files": [
+      ".claude/skills/ai-visual-artist\\DRAWING_TECHNIQUES.md",
+      ".claude/skills/ai-visual-artist\\IMAGE_CRITIQUE_ENGINE.md"
+     ]
+    },
+    {
+     "term": "reflection",
+     "hits": 103,
+     "grade": "covered",
+     "top_files": [
+      ".claude/skills/ai-visual-artist\\EXAMPLES.md",
+      ".claude/skills/ai-visual-artist/research\\R1_fundamentals_perception.md",
+      "story-clips/_craft/curriculum\\04-lighting.md"
+     ]
+    },
+    {
+     "term": "shadows in perspective",
+     "hits": 0,
+     "grade": "missing",
+     "top_files": []
+    }
+   ]
+  },
+  "VA04 shots": {
+   "terms": 31,
+   "covered": 13,
+   "thin": [
+    "dutch",
+    "point of view",
+    "over-the-shoulder",
+    "cutaway",
+    "medium shot",
+    "medium close"
+   ],
+   "missing": [
+    "high angle",
+    "low angle",
+    "worm",
+    "ground level",
+    "reverse shot",
+    "extreme wide",
+    "full shot",
+    "medium wide",
+    "cowboy",
+    "two shot",
+    "group shot",
+    "rear view"
+   ],
+   "rows": [
+    {
+     "term": "eye level",
+     "hits": 18,
+     "grade": "covered",
+     "top_files": [
+      ".claude/skills/ai-visual-artist\\EXAMPLES.md",
+      ".claude/skills/ai-visual-artist\\DRAWING_TECHNIQUES.md",
+      "story-clips/_craft/curriculum\\04-lighting.md"
+     ]
+    },
+    {
+     "term": "high angle",
+     "hits": 0,
+     "grade": "missing",
+     "top_files": []
+    },
+    {
+     "term": "low angle",
+     "hits": 0,
+     "grade": "missing",
+     "top_files": []
+    },
+    {
+     "term": "bird",
+     "hits": 10,
+     "grade": "covered",
+     "top_files": [
+      ".claude/skills/ai-visual-artist\\VISUAL_STORYTELLING.md",
+      ".claude/skills/ai-visual-artist\\CHANGELOG.md",
+      ".claude/skills/ai-visual-artist\\DRAWING_TECHNIQUES.md"
+     ]
+    },
+    {
+     "term": "worm",
+     "hits": 0,
+     "grade": "missing",
+     "top_files": []
+    },
+    {
+     "term": "dutch",
+     "hits": 2,
+     "grade": "thin",
+     "top_files": [
+      "story-clips/_craft/curriculum\\03-composition.md",
+      "story-clips/_craft/curriculum\\05-movement-language.md"
+     ]
+    },
+    {
+     "term": "overhead",
+     "hits": 14,
+     "grade": "covered",
+     "top_files": [
+      ".claude/skills/ai-visual-artist\\EXAMPLES.md"
+     ]
+    },
+    {
+     "term": "ground level",
+     "hits": 0,
+     "grade": "missing",
+     "top_files": []
+    },
+    {
+     "term": "point of view",
+     "hits": 2,
+     "grade": "thin",
+     "top_files": [
+      ".claude/skills/ai-visual-artist/research\\R3_design_type_story.md",
+      "creative-intelligence/knowledge\\philosophy\\README.md"
+     ]
+    },
+    {
+     "term": "over-the-shoulder",
+     "hits": 1,
+     "grade": "thin",
+     "top_files": [
+      ".claude/skills/ai-visual-artist\\EXAMPLES.md"
+     ]
+    },
+    {
+     "term": "reverse shot",
+     "hits": 0,
+     "grade": "missing",
+     "top_files": []
+    },
+    {
+     "term": "insert",
+     "hits": 20,
+     "grade": "covered",
+     "top_files": [
+      "story-clips/_craft/curriculum\\05-movement-language.md",
+      ".claude/skills/ai-visual-artist\\EXAMPLES.md",
+      "story-clips/_craft/curriculum\\08-storyboard.md"
+     ]
+    },
+    {
+     "term": "cutaway",
+     "hits": 3,
+     "grade": "thin",
+     "top_files": [
+      "story-clips/_craft/curriculum\\05-movement-language.md"
+     ]
+    },
+    {
+     "term": "reaction shot",
+     "hits": 6,
+     "grade": "covered",
+     "top_files": [
+      "story-clips/_craft/curriculum\\05-movement-language.md",
+      "story-clips/_craft/curriculum\\11-edit-grade.md"
+     ]
+    },
+    {
+     "term": "establishing",
+     "hits": 5,
+     "grade": "covered",
+     "top_files": [
+      ".claude/skills/ai-visual-artist/research\\R3_design_type_story.md",
+      ".claude/skills/ai-visual-artist\\ENVIRONMENT_DESIGN.md",
+      ".claude/skills/ai-visual-artist\\EXAMPLES.md"
+     ]
+    },
+    {
+     "term": "extreme wide",
+     "hits": 0,
+     "grade": "missing",
+     "top_files": []
+    },
+    {
+     "term": "wide shot",
+     "hits": 8,
+     "grade": "covered",
+     "top_files": [
+      ".claude/skills/ai-visual-artist/research\\R1_fundamentals_perception.md",
+      ".claude/skills/ai-visual-artist\\DRAWING_TECHNIQUES.md",
+      ".claude/skills/ai-visual-artist\\EXAMPLES.md"
+     ]
+    },
+    {
+     "term": "full shot",
+     "hits": 0,
+     "grade": "missing",
+     "top_files": []
+    },
+    {
+     "term": "medium wide",
+     "hits": 0,
+     "grade": "missing",
+     "top_files": []
+    },
+    {
+     "term": "cowboy",
+     "hits": 0,
+     "grade": "missing",
+     "top_files": []
+    },
+    {
+     "term": "medium shot",
+     "hits": 3,
+     "grade": "thin",
+     "top_files": [
+      ".claude/skills/ai-visual-artist\\EXAMPLES.md",
+      ".claude/skills/ai-visual-artist\\VISUAL_STORYTELLING.md",
+      "story-clips/_craft/curriculum\\11-edit-grade.md"
+     ]
+    },
+    {
+     "term": "medium close",
+     "hits": 3,
+     "grade": "thin",
+     "top_files": [
+      "story-clips/_craft/curriculum\\03-composition.md",
+      "story-clips/_craft/curriculum\\05-movement-language.md",
+      "story-clips/_craft/curriculum\\08-storyboard.md"
+     ]
+    },
+    {
+     "term": "close-up",
+     "hits": 19,
+     "grade": "covered",
+     "top_files": [
+      ".claude/skills/ai-visual-artist\\EXAMPLES.md",
+      "story-clips/_craft/curriculum\\08-storyboard.md",
+      ".claude/skills/ai-visual-artist/research\\R3_design_type_story.md"
+     ]
+    },
+    {
+     "term": "extreme close",
+     "hits": 9,
+     "grade": "covered",
+     "top_files": [
+      ".claude/skills/ai-visual-artist\\EXAMPLES.md",
+      "story-clips/_craft/curriculum\\08-storyboard.md"
+     ]
+    },
+    {
+     "term": "macro",
+     "hits": 26,
+     "grade": "covered",
+     "top_files": [
+      "story-clips/_craft/curriculum\\02-camera-lens.md",
+      ".claude/skills/ai-visual-artist\\EXAMPLES.md",
+      "story-clips/_craft/curriculum\\12-production-qc.md"
+     ]
+    },
+    {
+     "term": "two shot",
+     "hits": 0,
+     "grade": "missing",
+     "top_files": []
+    },
+    {
+     "term": "group shot",
+     "hits": 0,
+     "grade": "missing",
+     "top_files": []
+    },
+    {
+     "term": "profile",
+     "hits": 18,
+     "grade": "covered",
+     "top_files": [
+      ".claude/skills/ai-visual-artist\\EXAMPLES.md",
+      "story-clips/_craft/curriculum\\06-2d-animation.md",
+      ".claude/skills/ai-visual-artist\\IMAGE_CRITIQUE_ENGINE.md"
+     ]
+    },
+    {
+     "term": "three-quarter",
+     "hits": 18,
+     "grade": "covered",
+     "top_files": [
+      ".claude/skills/ai-visual-artist\\EXAMPLES.md",
+      "story-clips/_craft/curriculum\\06-2d-animation.md",
+      "story-clips/_craft/curriculum\\09-ai-image-prompts.md"
+     ]
+    },
+    {
+     "term": "front view",
+     "hits": 7,
+     "grade": "covered",
+     "top_files": [
+      ".claude/skills/ai-visual-artist\\EXAMPLES.md",
+      "story-clips/_craft/curriculum\\06-2d-animation.md",
+      "story-clips/_craft/curriculum\\10-ai-video.md"
+     ]
+    },
+    {
+     "term": "rear view",
+     "hits": 0,
+     "grade": "missing",
+     "top_files": []
+    }
+   ]
+  },
+  "VA05 lens": {
+   "terms": 29,
+   "covered": 14,
+   "thin": [
+    "sensor size",
+    "field of view",
+    "pincushion",
+    "wide angle",
+    "wide-angle",
+    "telephoto",
+    "macro lens",
+    "aperture",
+    "focus distance",
+    "circle of confusion"
+   ],
+   "missing": [
+    "camera distance",
+    "standard lens",
+    "depth of focus",
+    "chromatic aberration",
+    "shutter angle"
+   ],
+   "rows": [
+    {
+     "term": "focal length",
+     "hits": 6,
+     "grade": "covered",
+     "top_files": [
+      "story-clips/_craft/curriculum\\02-camera-lens.md",
+      "story-clips/_craft/curriculum\\07-3d-character.md"
+     ]
+    },
+    {
+     "term": "sensor size",
+     "hits": 1,
+     "grade": "thin",
+     "top_files": [
+      "story-clips/_craft/curriculum\\07-3d-character.md"
+     ]
+    },
+    {
+     "term": "crop factor",
+     "hits": 7,
+     "grade": "covered",
+     "top_files": [
+      "story-clips/_craft/curriculum\\02-camera-lens.md"
+     ]
+    },
+    {
+     "term": "field of view",
+     "hits": 2,
+     "grade": "thin",
+     "top_files": [
+      "story-clips/_craft/curriculum\\02-camera-lens.md"
+     ]
+    },
+    {
+     "term": "camera distance",
+     "hits": 0,
+     "grade": "missing",
+     "top_files": []
+    },
+    {
+     "term": "perspective distortion",
+     "hits": 4,
+     "grade": "covered",
+     "top_files": [
+      "story-clips/_craft/curriculum\\02-camera-lens.md"
+     ]
+    },
+    {
+     "term": "barrel",
+     "hits": 7,
+     "grade": "covered",
+     "top_files": [
+      "story-clips/_craft/curriculum\\02-camera-lens.md",
+      ".claude/skills/ai-visual-artist\\EXAMPLES.md",
+      ".claude/skills/ai-visual-artist/research\\R1_fundamentals_perception.md"
+     ]
+    },
+    {
+     "term": "pincushion",
+     "hits": 2,
+     "grade": "thin",
+     "top_files": [
+      "story-clips/_craft/curriculum\\02-camera-lens.md"
+     ]
+    },
+    {
+     "term": "wide angle",
+     "hits": 1,
+     "grade": "thin",
+     "top_files": [
+      ".claude/skills/ai-visual-artist\\DRAWING_TECHNIQUES.md"
+     ]
+    },
+    {
+     "term": "wide-angle",
+     "hits": 3,
+     "grade": "thin",
+     "top_files": [
+      ".claude/skills/ai-visual-artist/research\\R1_fundamentals_perception.md",
+      ".claude/skills/ai-visual-artist\\DRAWING_TECHNIQUES.md",
+      "story-clips/_craft/curriculum\\02-camera-lens.md"
+     ]
+    },
+    {
+     "term": "standard lens",
+     "hits": 0,
+     "grade": "missing",
+     "top_files": []
+    },
+    {
+     "term": "telephoto",
+     "hits": 2,
+     "grade": "thin",
+     "top_files": [
+      "story-clips/_craft/curriculum\\02-camera-lens.md"
+     ]
+    },
+    {
+     "term": "fisheye",
+     "hits": 4,
+     "grade": "covered",
+     "top_files": [
+      "story-clips/_craft/curriculum\\02-camera-lens.md"
+     ]
+    },
+    {
+     "term": "macro lens",
+     "hits": 2,
+     "grade": "thin",
+     "top_files": [
+      "story-clips/_craft/curriculum\\01-photography-fundamentals.md",
+      "story-clips/_craft/curriculum\\02-camera-lens.md"
+     ]
+    },
+    {
+     "term": "tilt-shift",
+     "hits": 7,
+     "grade": "covered",
+     "top_files": [
+      "story-clips/_craft/curriculum\\02-camera-lens.md"
+     ]
+    },
+    {
+     "term": "anamorphic",
+     "hits": 19,
+     "grade": "covered",
+     "top_files": [
+      "story-clips/_craft/curriculum\\02-camera-lens.md"
+     ]
+    },
+    {
+     "term": "aperture",
+     "hits": 3,
+     "grade": "thin",
+     "top_files": [
+      "story-clips/_craft/curriculum\\01-photography-fundamentals.md"
+     ]
+    },
+    {
+     "term": "depth of field",
+     "hits": 109,
+     "grade": "covered",
+     "top_files": [
+      ".claude/skills/ai-visual-artist\\EXAMPLES.md",
+      "story-clips/_craft/curriculum\\01-photography-fundamentals.md",
+      ".claude/skills/ai-visual-artist\\IMAGE_PROMPT_ENGINE.md"
+     ]
+    },
+    {
+     "term": "depth of focus",
+     "hits": 0,
+     "grade": "missing",
+     "top_files": []
+    },
+    {
+     "term": "focus distance",
+     "hits": 1,
+     "grade": "thin",
+     "top_files": [
+      "story-clips/_craft/curriculum\\07-3d-character.md"
+     ]
+    },
+    {
+     "term": "hyperfocal",
+     "hits": 7,
+     "grade": "covered",
+     "top_files": [
+      "story-clips/_craft/curriculum\\01-photography-fundamentals.md"
+     ]
+    },
+    {
+     "term": "circle of confusion",
+     "hits": 2,
+     "grade": "thin",
+     "top_files": [
+      "story-clips/_craft/curriculum\\01-photography-fundamentals.md"
+     ]
+    },
+    {
+     "term": "bokeh",
+     "hits": 19,
+     "grade": "covered",
+     "top_files": [
+      "story-clips/_craft/curriculum\\02-camera-lens.md",
+      "story-clips/_craft/curriculum\\01-photography-fundamentals.md",
+      ".claude/skills/ai-visual-artist\\EXAMPLES.md"
+     ]
+    },
+    {
+     "term": "focus plane",
+     "hits": 6,
+     "grade": "covered",
+     "top_files": [
+      ".claude/skills/ai-visual-artist\\EXAMPLES.md"
+     ]
+    },
+    {
+     "term": "flare",
+     "hits": 21,
+     "grade": "covered",
+     "top_files": [
+      "story-clips/_craft/curriculum\\02-camera-lens.md",
+      ".claude/skills/ai-visual-artist\\EXAMPLES.md",
+      ".claude/skills/ai-visual-artist/research\\R4_ai_eval_styles.md"
+     ]
+    },
+    {
+     "term": "chromatic aberration",
+     "hits": 0,
+     "grade": "missing",
+     "top_files": []
+    },
+    {
+     "term": "vignett",
+     "hits": 17,
+     "grade": "covered",
+     "top_files": [
+      ".claude/skills/ai-visual-artist\\EXAMPLES.md",
+      "story-clips/_craft/curriculum\\04-lighting.md",
+      "story-clips/_craft/curriculum\\02-camera-lens.md"
+     ]
+    },
+    {
+     "term": "motion blur",
+     "hits": 14,
+     "grade": "covered",
+     "top_files": [
+      "story-clips/_craft/curriculum\\01-photography-fundamentals.md",
+      "story-clips/_craft/curriculum\\07-3d-character.md",
+      "story-clips/_craft/curriculum\\05-movement-language.md"
+     ]
+    },
+    {
+     "term": "shutter angle",
+     "hits": 0,
+     "grade": "missing",
+     "top_files": []
+    }
+   ]
+  },
+  "VA06 composition": {
+   "terms": 41,
+   "covered": 28,
+   "thin": [
+    "dynamic symmetry",
+    "variety"
+   ],
+   "missing": [
+    "C-curve",
+    "Z-composition",
+    "L-composition",
+    "cruciform",
+    "central composition",
+    "rule of odds",
+    "visual mass",
+    "visual tension",
+    "visual flow",
+    "directional force",
+    "cropping"
+   ],
+   "rows": [
+    {
+     "term": "rule of thirds",
+     "hits": 20,
+     "grade": "covered",
+     "top_files": [
+      "story-clips/_craft/curriculum\\03-composition.md",
+      ".claude/skills/ai-visual-artist/research\\R1_fundamentals_perception.md",
+      ".claude/skills/ai-visual-artist\\RESEARCH_SOURCES.md"
+     ]
+    },
+    {
+     "term": "golden ratio",
+     "hits": 10,
+     "grade": "covered",
+     "top_files": [
+      "story-clips/_craft/curriculum\\03-composition.md",
+      ".claude/skills/ai-visual-artist/research\\R1_fundamentals_perception.md",
+      ".claude/skills/ai-visual-artist\\MASTER_KNOWLEDGE.md"
+     ]
+    },
+    {
+     "term": "golden spiral",
+     "hits": 4,
+     "grade": "covered",
+     "top_files": [
+      "story-clips/_craft/curriculum\\03-composition.md",
+      ".claude/skills/ai-visual-artist\\ART_FUNDAMENTALS.md"
+     ]
+    },
+    {
+     "term": "dynamic symmetry",
+     "hits": 1,
+     "grade": "thin",
+     "top_files": [
+      "story-clips/_craft/curriculum\\03-composition.md"
+     ]
+    },
+    {
+     "term": "S-curve",
+     "hits": 13,
+     "grade": "covered",
+     "top_files": [
+      ".claude/skills/ai-visual-artist\\EXAMPLES.md",
+      "story-clips/_craft/curriculum\\11-edit-grade.md"
+     ]
+    },
+    {
+     "term": "C-curve",
+     "hits": 0,
+     "grade": "missing",
+     "top_files": []
+    },
+    {
+     "term": "Z-composition",
+     "hits": 0,
+     "grade": "missing",
+     "top_files": []
+    },
+    {
+     "term": "L-composition",
+     "hits": 0,
+     "grade": "missing",
+     "top_files": []
+    },
+    {
+     "term": "triangular",
+     "hits": 8,
+     "grade": "covered",
+     "top_files": [
+      ".claude/skills/ai-visual-artist\\EXAMPLES.md"
+     ]
+    },
+    {
+     "term": "diagonal",
+     "hits": 72,
+     "grade": "covered",
+     "top_files": [
+      ".claude/skills/ai-visual-artist\\EXAMPLES.md",
+      ".claude/skills/ai-visual-artist/research\\R4_ai_eval_styles.md",
+      ".claude/skills/ai-visual-artist\\ART_FUNDAMENTALS.md"
+     ]
+    },
+    {
+     "term": "radial",
+     "hits": 13,
+     "grade": "covered",
+     "top_files": [
+      ".claude/skills/ai-visual-artist\\EXAMPLES.md",
+      ".claude/skills/ai-visual-artist\\ART_FUNDAMENTALS.md",
+      "story-clips/_craft/curriculum\\04-lighting.md"
+     ]
+    },
+    {
+     "term": "cruciform",
+     "hits": 0,
+     "grade": "missing",
+     "top_files": []
+    },
+    {
+     "term": "symmetr",
+     "hits": 81,
+     "grade": "covered",
+     "top_files": [
+      ".claude/skills/ai-visual-artist\\EXAMPLES.md",
+      "story-clips/_craft/curriculum\\03-composition.md",
+      ".claude/skills/ai-visual-artist\\ART_FUNDAMENTALS.md"
+     ]
+    },
+    {
+     "term": "asymmetr",
+     "hits": 17,
+     "grade": "covered",
+     "top_files": [
+      ".claude/skills/ai-visual-artist\\EXAMPLES.md",
+      ".claude/skills/ai-visual-artist\\ART_FUNDAMENTALS.md",
+      "story-clips/_craft/curriculum\\03-composition.md"
+     ]
+    },
+    {
+     "term": "central composition",
+     "hits": 0,
+     "grade": "missing",
+     "top_files": []
+    },
+    {
+     "term": "rule of odds",
+     "hits": 0,
+     "grade": "missing",
+     "top_files": []
+    },
+    {
+     "term": "leading line",
+     "hits": 4,
+     "grade": "covered",
+     "top_files": [
+      "story-clips/_craft/curriculum\\03-composition.md",
+      ".claude/skills/ai-visual-artist\\EXAMPLES.md"
+     ]
+    },
+    {
+     "term": "frame within",
+     "hits": 4,
+     "grade": "covered",
+     "top_files": [
+      "story-clips/_craft/curriculum\\03-composition.md"
+     ]
+    },
+    {
+     "term": "negative space",
+     "hits": 12,
+     "grade": "covered",
+     "top_files": [
+      "story-clips/_craft/curriculum\\03-composition.md",
+      ".claude/skills/ai-visual-artist\\ENVIRONMENT_DESIGN.md",
+      ".claude/skills/ai-visual-artist\\IMAGE_CRITIQUE_ENGINE.md"
+     ]
+    },
+    {
+     "term": "visual weight",
+     "hits": 5,
+     "grade": "covered",
+     "top_files": [
+      ".claude/skills/ai-visual-artist/research\\R1_fundamentals_perception.md",
+      "story-clips/_craft/curriculum\\03-composition.md",
+      ".claude/skills/ai-visual-artist\\ART_FUNDAMENTALS.md"
+     ]
+    },
+    {
+     "term": "visual mass",
+     "hits": 0,
+     "grade": "missing",
+     "top_files": []
+    },
+    {
+     "term": "visual tension",
+     "hits": 0,
+     "grade": "missing",
+     "top_files": []
+    },
+    {
+     "term": "balance",
+     "hits": 113,
+     "grade": "covered",
+     "top_files": [
+      ".claude/skills/ai-visual-artist\\EXAMPLES.md",
+      ".claude/skills/ai-visual-artist/research\\R1_fundamentals_perception.md",
+      "story-clips/_craft/curriculum\\01-photography-fundamentals.md"
+     ]
+    },
+    {
+     "term": "visual flow",
+     "hits": 0,
+     "grade": "missing",
+     "top_files": []
+    },
+    {
+     "term": "directional force",
+     "hits": 0,
+     "grade": "missing",
+     "top_files": []
+    },
+    {
+     "term": "repetition",
+     "hits": 13,
+     "grade": "covered",
+     "top_files": [
+      ".claude/skills/ai-visual-artist\\EXAMPLES.md",
+      ".claude/skills/ai-visual-artist\\ART_FUNDAMENTALS.md",
+      "creative-intelligence/knowledge\\cognitive-science\\README.md"
+     ]
+    },
+    {
+     "term": "rhythm",
+     "hits": 44,
+     "grade": "covered",
+     "top_files": [
+      ".claude/skills/ai-visual-artist\\EXAMPLES.md",
+      "story-clips/_craft/curriculum\\11-edit-grade.md",
+      ".claude/skills/ai-visual-artist/research\\R3_design_type_story.md"
+     ]
+    },
+    {
+     "term": "pattern",
+     "hits": 145,
+     "grade": "covered",
+     "top_files": [
+      ".claude/skills/ai-visual-artist\\EXAMPLES.md",
+      ".claude/skills/ai-visual-artist/research\\R3_design_type_story.md",
+      "story-clips/_craft/curriculum\\04-lighting.md"
+     ]
+    },
+    {
+     "term": "unity",
+     "hits": 11,
+     "grade": "covered",
+     "top_files": [
+      ".claude/skills/ai-visual-artist/research\\R4_ai_eval_styles.md",
+      "story-clips/_craft/curriculum\\07-3d-character.md",
+      ".claude/skills/ai-visual-artist/research\\R1_fundamentals_perception.md"
+     ]
+    },
+    {
+     "term": "variety",
+     "hits": 1,
+     "grade": "thin",
+     "top_files": [
+      ".claude/skills/ai-visual-artist\\ART_FUNDAMENTALS.md"
+     ]
+    },
+    {
+     "term": "focal point",
+     "hits": 19,
+     "grade": "covered",
+     "top_files": [
+      ".claude/skills/ai-visual-artist\\ART_FUNDAMENTALS.md",
+      ".claude/skills/ai-visual-artist\\IMAGE_CRITIQUE_ENGINE.md",
+      ".claude/skills/ai-visual-artist\\DRAWING_TECHNIQUES.md"
+     ]
+    },
+    {
+     "term": "figure-ground",
+     "hits": 22,
+     "grade": "covered",
+     "top_files": [
+      ".claude/skills/ai-visual-artist\\EXAMPLES.md",
+      ".claude/skills/ai-visual-artist/research\\R1_fundamentals_perception.md",
+      ".claude/skills/ai-visual-artist\\RESEARCH_SOURCES.md"
+     ]
+    },
+    {
+     "term": "isolation",
+     "hits": 13,
+     "grade": "covered",
+     "top_files": [
+      ".claude/skills/ai-visual-artist\\EXAMPLES.md",
+      ".claude/skills/ai-visual-artist\\ART_FUNDAMENTALS.md",
+      ".claude/skills/ai-visual-artist/research\\R3_design_type_story.md"
+     ]
+    },
+    {
+     "term": "hierarchy",
+     "hits": 18,
+     "grade": "covered",
+     "top_files": [
+      "story-clips/_craft/curriculum\\06-2d-animation.md",
+      ".claude/skills/ai-visual-artist/research\\R3_design_type_story.md",
+      ".claude/skills/ai-visual-artist\\ART_FUNDAMENTALS.md"
+     ]
+    },
+    {
+     "term": "foreground",
+     "hits": 115,
+     "grade": "covered",
+     "top_files": [
+      ".claude/skills/ai-visual-artist\\EXAMPLES.md",
+      "story-clips/_craft/curriculum\\03-composition.md",
+      ".claude/skills/ai-visual-artist/research\\R1_fundamentals_perception.md"
+     ]
+    },
+    {
+     "term": "tangent",
+     "hits": 5,
+     "grade": "covered",
+     "top_files": [
+      ".claude/skills/ai-visual-artist\\IMAGE_CRITIQUE_ENGINE.md",
+      "story-clips/_craft/curriculum\\06-2d-animation.md",
+      "story-clips/_craft/curriculum\\07-3d-character.md"
+     ]
+    },
+    {
+     "term": "cropping",
+     "hits": 0,
+     "grade": "missing",
+     "top_files": []
+    },
+    {
+     "term": "headroom",
+     "hits": 9,
+     "grade": "covered",
+     "top_files": [
+      "story-clips/_craft/curriculum\\03-composition.md",
+      ".claude/skills/ai-visual-artist\\ART_FUNDAMENTALS.md"
+     ]
+    },
+    {
+     "term": "lead room",
+     "hits": 5,
+     "grade": "covered",
+     "top_files": [
+      "story-clips/_craft/curriculum\\03-composition.md",
+      ".claude/skills/ai-visual-artist\\ART_FUNDAMENTALS.md"
+     ]
+    },
+    {
+     "term": "look room",
+     "hits": 8,
+     "grade": "covered",
+     "top_files": [
+      "story-clips/_craft/curriculum\\03-composition.md"
+     ]
+    },
+    {
+     "term": "safe zone",
+     "hits": 64,
+     "grade": "covered",
+     "top_files": [
+      ".claude/skills/ai-visual-artist\\EXAMPLES.md",
+      "story-clips/_craft/curriculum\\03-composition.md",
+      "story-clips/_craft/curriculum\\12-production-qc.md"
+     ]
+    }
+   ]
+  },
+  "VA07 lighting": {
+   "terms": 35,
+   "covered": 25,
+   "thin": [
+    "hard light",
+    "cast shadow",
+    "core shadow",
+    "reflected light",
+    "atmospheric scattering"
+   ],
+   "missing": [
+    "direct light",
+    "indirect",
+    "fill light",
+    "back light",
+    "form shadow"
+   ],
+   "rows": [
+    {
+     "term": "direct light",
+     "hits": 0,
+     "grade": "missing",
+     "top_files": []
+    },
+    {
+     "term": "indirect",
+     "hits": 0,
+     "grade": "missing",
+     "top_files": []
+    },
+    {
+     "term": "key light",
+     "hits": 29,
+     "grade": "covered",
+     "top_files": [
+      ".claude/skills/ai-visual-artist\\EXAMPLES.md",
+      ".claude/skills/ai-visual-artist/research\\R2_color_light.md",
+      "story-clips/_craft/curriculum\\04-lighting.md"
+     ]
+    },
+    {
+     "term": "fill light",
+     "hits": 0,
+     "grade": "missing",
+     "top_files": []
+    },
+    {
+     "term": "rim light",
+     "hits": 16,
+     "grade": "covered",
+     "top_files": [
+      ".claude/skills/ai-visual-artist\\EXAMPLES.md",
+      "story-clips/_craft/curriculum\\04-lighting.md",
+      "story-clips/_craft/curriculum\\07-3d-character.md"
+     ]
+    },
+    {
+     "term": "back light",
+     "hits": 0,
+     "grade": "missing",
+     "top_files": []
+    },
+    {
+     "term": "backlight",
+     "hits": 14,
+     "grade": "covered",
+     "top_files": [
+      ".claude/skills/ai-visual-artist\\EXAMPLES.md",
+      ".claude/skills/ai-visual-artist\\IMAGE_CRITIQUE_ENGINE.md",
+      "story-clips/_craft/curriculum\\01-photography-fundamentals.md"
+     ]
+    },
+    {
+     "term": "bounce",
+     "hits": 23,
+     "grade": "covered",
+     "top_files": [
+      ".claude/skills/ai-visual-artist\\EXAMPLES.md",
+      "story-clips/_craft/curriculum\\04-lighting.md",
+      ".claude/skills/ai-visual-artist/research\\R2_color_light.md"
+     ]
+    },
+    {
+     "term": "ambient",
+     "hits": 15,
+     "grade": "covered",
+     "top_files": [
+      ".claude/skills/ai-visual-artist\\EXAMPLES.md",
+      ".claude/skills/ai-visual-artist/research\\R2_color_light.md",
+      ".claude/skills/ai-visual-artist\\COLOR_THEORY.md"
+     ]
+    },
+    {
+     "term": "practical",
+     "hits": 41,
+     "grade": "covered",
+     "top_files": [
+      "story-clips/_craft/curriculum\\04-lighting.md",
+      ".claude/skills/ai-visual-artist\\EXAMPLES.md",
+      ".claude/skills/ai-visual-artist/research\\R2_color_light.md"
+     ]
+    },
+    {
+     "term": "motivated",
+     "hits": 78,
+     "grade": "covered",
+     "top_files": [
+      ".claude/skills/ai-visual-artist\\EXAMPLES.md",
+      "story-clips/_craft/curriculum\\04-lighting.md",
+      ".claude/skills/ai-visual-artist/research\\R2_color_light.md"
+     ]
+    },
+    {
+     "term": "soft light",
+     "hits": 33,
+     "grade": "covered",
+     "top_files": [
+      ".claude/skills/ai-visual-artist\\EXAMPLES.md",
+      "story-clips/_craft/curriculum\\04-lighting.md",
+      ".claude/skills/ai-visual-artist/research\\R2_color_light.md"
+     ]
+    },
+    {
+     "term": "hard light",
+     "hits": 2,
+     "grade": "thin",
+     "top_files": [
+      "story-clips/_craft/curriculum\\04-lighting.md"
+     ]
+    },
+    {
+     "term": "diffus",
+     "hits": 101,
+     "grade": "covered",
+     "top_files": [
+      ".claude/skills/ai-visual-artist/research\\R4_ai_eval_styles.md",
+      ".claude/skills/ai-visual-artist\\EXAMPLES.md",
+      "story-clips/_craft/curriculum\\09-ai-image-prompts.md"
+     ]
+    },
+    {
+     "term": "specular",
+     "hits": 17,
+     "grade": "covered",
+     "top_files": [
+      ".claude/skills/ai-visual-artist\\EXAMPLES.md",
+      ".claude/skills/ai-visual-artist/research\\R2_color_light.md",
+      "story-clips/_craft/curriculum\\07-3d-character.md"
+     ]
+    },
+    {
+     "term": "global illumination",
+     "hits": 6,
+     "grade": "covered",
+     "top_files": [
+      ".claude/skills/ai-visual-artist/research\\R2_color_light.md",
+      "story-clips/_craft/curriculum\\07-3d-character.md",
+      ".claude/skills/ai-visual-artist\\RESEARCH_SOURCES.md"
+     ]
+    },
+    {
+     "term": "falloff",
+     "hits": 56,
+     "grade": "covered",
+     "top_files": [
+      ".claude/skills/ai-visual-artist\\EXAMPLES.md",
+      "story-clips/_craft/curriculum\\04-lighting.md"
+     ]
+    },
+    {
+     "term": "inverse square",
+     "hits": 6,
+     "grade": "covered",
+     "top_files": [
+      ".claude/skills/ai-visual-artist/research\\R2_color_light.md",
+      "story-clips/_craft/curriculum\\04-lighting.md",
+      ".claude/skills/ai-visual-artist\\RESEARCH_SOURCES.md"
+     ]
+    },
+    {
+     "term": "cast shadow",
+     "hits": 2,
+     "grade": "thin",
+     "top_files": [
+      ".claude/skills/ai-visual-artist\\DRAWING_TECHNIQUES.md",
+      ".claude/skills/ai-visual-artist\\EXAMPLES.md"
+     ]
+    },
+    {
+     "term": "form shadow",
+     "hits": 0,
+     "grade": "missing",
+     "top_files": []
+    },
+    {
+     "term": "core shadow",
+     "hits": 1,
+     "grade": "thin",
+     "top_files": [
+      ".claude/skills/ai-visual-artist\\DRAWING_TECHNIQUES.md"
+     ]
+    },
+    {
+     "term": "contact shadow",
+     "hits": 13,
+     "grade": "covered",
+     "top_files": [
+      ".claude/skills/ai-visual-artist/research\\R2_color_light.md",
+      ".claude/skills/ai-visual-artist\\EXAMPLES.md",
+      ".claude/skills/ai-visual-artist\\GRAPHIC_DESIGN.md"
+     ]
+    },
+    {
+     "term": "occlusion",
+     "hits": 13,
+     "grade": "covered",
+     "top_files": [
+      ".claude/skills/ai-visual-artist/research\\R2_color_light.md",
+      ".claude/skills/ai-visual-artist/research\\R1_fundamentals_perception.md",
+      ".claude/skills/ai-visual-artist\\DRAWING_TECHNIQUES.md"
+     ]
+    },
+    {
+     "term": "reflected light",
+     "hits": 1,
+     "grade": "thin",
+     "top_files": [
+      ".claude/skills/ai-visual-artist\\DRAWING_TECHNIQUES.md"
+     ]
+    },
+    {
+     "term": "penumbra",
+     "hits": 6,
+     "grade": "covered",
+     "top_files": [
+      ".claude/skills/ai-visual-artist/research\\R2_color_light.md",
+      ".claude/skills/ai-visual-artist\\ENVIRONMENT_DESIGN.md",
+      ".claude/skills/ai-visual-artist\\MASTER_KNOWLEDGE.md"
+     ]
+    },
+    {
+     "term": "umbra",
+     "hits": 6,
+     "grade": "covered",
+     "top_files": [
+      ".claude/skills/ai-visual-artist/research\\R2_color_light.md",
+      ".claude/skills/ai-visual-artist\\ENVIRONMENT_DESIGN.md",
+      ".claude/skills/ai-visual-artist\\MASTER_KNOWLEDGE.md"
+     ]
+    },
+    {
+     "term": "highlight",
+     "hits": 129,
+     "grade": "covered",
+     "top_files": [
+      ".claude/skills/ai-visual-artist\\EXAMPLES.md",
+      "story-clips/_craft/curriculum\\11-edit-grade.md",
+      ".claude/skills/ai-visual-artist/research\\R2_color_light.md"
+     ]
+    },
+    {
+     "term": "halftone",
+     "hits": 16,
+     "grade": "covered",
+     "top_files": [
+      ".claude/skills/ai-visual-artist\\EXAMPLES.md",
+      "story-clips/_craft/curriculum\\07-3d-character.md",
+      ".claude/skills/ai-visual-artist/research\\R4_ai_eval_styles.md"
+     ]
+    },
+    {
+     "term": "subsurface",
+     "hits": 14,
+     "grade": "covered",
+     "top_files": [
+      "story-clips/_craft/curriculum\\07-3d-character.md",
+      ".claude/skills/ai-visual-artist/research\\R2_color_light.md",
+      ".claude/skills/ai-visual-artist\\EXAMPLES.md"
+     ]
+    },
+    {
+     "term": "reflection",
+     "hits": 103,
+     "grade": "covered",
+     "top_files": [
+      ".claude/skills/ai-visual-artist\\EXAMPLES.md",
+      ".claude/skills/ai-visual-artist/research\\R1_fundamentals_perception.md",
+      "story-clips/_craft/curriculum\\04-lighting.md"
+     ]
+    },
+    {
+     "term": "refraction",
+     "hits": 5,
+     "grade": "covered",
+     "top_files": [
+      "story-clips/_craft/curriculum\\07-3d-character.md",
+      ".claude/skills/ai-visual-artist/research\\R1_fundamentals_perception.md"
+     ]
+    },
+    {
+     "term": "fresnel",
+     "hits": 6,
+     "grade": "covered",
+     "top_files": [
+      ".claude/skills/ai-visual-artist/research\\R2_color_light.md",
+      ".claude/skills/ai-visual-artist\\DRAWING_TECHNIQUES.md",
+      ".claude/skills/ai-visual-artist\\MASTER_KNOWLEDGE.md"
+     ]
+    },
+    {
+     "term": "caustic",
+     "hits": 5,
+     "grade": "covered",
+     "top_files": [
+      ".claude/skills/ai-visual-artist\\EXAMPLES.md",
+      "story-clips/_craft/curriculum\\07-3d-character.md"
+     ]
+    },
+    {
+     "term": "volumetric",
+     "hits": 12,
+     "grade": "covered",
+     "top_files": [
+      ".claude/skills/ai-visual-artist\\EXAMPLES.md",
+      "story-clips/_craft/curriculum\\04-lighting.md",
+      ".claude/skills/ai-visual-artist/research\\R2_color_light.md"
+     ]
+    },
+    {
+     "term": "atmospheric scattering",
+     "hits": 2,
+     "grade": "thin",
+     "top_files": [
+      ".claude/skills/ai-visual-artist/research\\R2_color_light.md",
+      ".claude/skills/ai-visual-artist\\RESEARCH_SOURCES.md"
+     ]
+    }
+   ]
+  },
+  "VA08 edges": {
+   "terms": 19,
+   "covered": 4,
+   "thin": [
+    "lost edge",
+    "found edge",
+    "simplification"
+   ],
+   "missing": [
+    "lost and found",
+    "edge hierarchy",
+    "edge contrast",
+    "line quality",
+    "mark making",
+    "mark-making",
+    "texture density",
+    "detail density",
+    "detail distribution",
+    "visual noise",
+    "selective detail",
+    "visual reduction"
+   ],
+   "rows": [
+    {
+     "term": "hard edge",
+     "hits": 6,
+     "grade": "covered",
+     "top_files": [
+      ".claude/skills/ai-visual-artist\\EXAMPLES.md",
+      ".claude/skills/ai-visual-artist/research\\R2_color_light.md",
+      ".claude/skills/ai-visual-artist/research\\R4_ai_eval_styles.md"
+     ]
+    },
+    {
+     "term": "soft edge",
+     "hits": 9,
+     "grade": "covered",
+     "top_files": [
+      ".claude/skills/ai-visual-artist\\EXAMPLES.md",
+      ".claude/skills/ai-visual-artist/research\\R4_ai_eval_styles.md",
+      ".claude/skills/ai-visual-artist\\DRAWING_TECHNIQUES.md"
+     ]
+    },
+    {
+     "term": "lost edge",
+     "hits": 1,
+     "grade": "thin",
+     "top_files": [
+      ".claude/skills/ai-visual-artist\\DRAWING_TECHNIQUES.md"
+     ]
+    },
+    {
+     "term": "found edge",
+     "hits": 1,
+     "grade": "thin",
+     "top_files": [
+      ".claude/skills/ai-visual-artist\\ART_FUNDAMENTALS.md"
+     ]
+    },
+    {
+     "term": "lost and found",
+     "hits": 0,
+     "grade": "missing",
+     "top_files": []
+    },
+    {
+     "term": "edge hierarchy",
+     "hits": 0,
+     "grade": "missing",
+     "top_files": []
+    },
+    {
+     "term": "edge contrast",
+     "hits": 0,
+     "grade": "missing",
+     "top_files": []
+    },
+    {
+     "term": "line weight",
+     "hits": 4,
+     "grade": "covered",
+     "top_files": [
+      ".claude/skills/ai-visual-artist\\ART_FUNDAMENTALS.md",
+      ".claude/skills/ai-visual-artist\\CHARACTER_BIBLE_TEMPLATE.md",
+      "story-clips/_craft/curriculum\\06-2d-animation.md"
+     ]
+    },
+    {
+     "term": "line quality",
+     "hits": 0,
+     "grade": "missing",
+     "top_files": []
+    },
+    {
+     "term": "mark making",
+     "hits": 0,
+     "grade": "missing",
+     "top_files": []
+    },
+    {
+     "term": "mark-making",
+     "hits": 0,
+     "grade": "missing",
+     "top_files": []
+    },
+    {
+     "term": "brushwork",
+     "hits": 8,
+     "grade": "covered",
+     "top_files": [
+      ".claude/skills/ai-visual-artist\\EXAMPLES.md",
+      ".claude/skills/ai-visual-artist/research\\R4_ai_eval_styles.md",
+      ".claude/skills/ai-visual-artist\\RESEARCH_SOURCES.md"
+     ]
+    },
+    {
+     "term": "texture density",
+     "hits": 0,
+     "grade": "missing",
+     "top_files": []
+    },
+    {
+     "term": "detail density",
+     "hits": 0,
+     "grade": "missing",
+     "top_files": []
+    },
+    {
+     "term": "detail distribution",
+     "hits": 0,
+     "grade": "missing",
+     "top_files": []
+    },
+    {
+     "term": "visual noise",
+     "hits": 0,
+     "grade": "missing",
+     "top_files": []
+    },
+    {
+     "term": "selective detail",
+     "hits": 0,
+     "grade": "missing",
+     "top_files": []
+    },
+    {
+     "term": "simplification",
+     "hits": 1,
+     "grade": "thin",
+     "top_files": [
+      ".claude/skills/ai-visual-artist/research\\R1_fundamentals_perception.md"
+     ]
+    },
+    {
+     "term": "visual reduction",
+     "hits": 0,
+     "grade": "missing",
+     "top_files": []
+    }
+   ]
+  },
+  "VA09 shape": {
+   "terms": 19,
+   "covered": 7,
+   "thin": [
+    "organic shape",
+    "simplification",
+    "exaggeration"
+   ],
+   "missing": [
+    "primary shape",
+    "secondary shape",
+    "tertiary",
+    "shape rhythm",
+    "shape contrast",
+    "shape repetition",
+    "shape hierarchy",
+    "negative shape",
+    "positive shape"
+   ],
+   "rows": [
+    {
+     "term": "primary shape",
+     "hits": 0,
+     "grade": "missing",
+     "top_files": []
+    },
+    {
+     "term": "secondary shape",
+     "hits": 0,
+     "grade": "missing",
+     "top_files": []
+    },
+    {
+     "term": "tertiary",
+     "hits": 0,
+     "grade": "missing",
+     "top_files": []
+    },
+    {
+     "term": "organic shape",
+     "hits": 3,
+     "grade": "thin",
+     "top_files": [
+      ".claude/skills/ai-visual-artist/research\\R4_ai_eval_styles.md",
+      ".claude/skills/ai-visual-artist\\ENVIRONMENT_DESIGN.md",
+      ".claude/skills/ai-visual-artist\\RESEARCH_SOURCES.md"
+     ]
+    },
+    {
+     "term": "geometric shape",
+     "hits": 16,
+     "grade": "covered",
+     "top_files": [
+      ".claude/skills/ai-visual-artist\\EXAMPLES.md"
+     ]
+    },
+    {
+     "term": "shape rhythm",
+     "hits": 0,
+     "grade": "missing",
+     "top_files": []
+    },
+    {
+     "term": "shape contrast",
+     "hits": 0,
+     "grade": "missing",
+     "top_files": []
+    },
+    {
+     "term": "shape repetition",
+     "hits": 0,
+     "grade": "missing",
+     "top_files": []
+    },
+    {
+     "term": "shape hierarchy",
+     "hits": 0,
+     "grade": "missing",
+     "top_files": []
+    },
+    {
+     "term": "silhouette",
+     "hits": 53,
+     "grade": "covered",
+     "top_files": [
+      ".claude/skills/ai-visual-artist\\EXAMPLES.md",
+      "story-clips/_craft/curriculum\\06-2d-animation.md",
+      ".claude/skills/ai-visual-artist\\ART_FUNDAMENTALS.md"
+     ]
+    },
+    {
+     "term": "simplification",
+     "hits": 1,
+     "grade": "thin",
+     "top_files": [
+      ".claude/skills/ai-visual-artist/research\\R1_fundamentals_perception.md"
+     ]
+    },
+    {
+     "term": "proportion",
+     "hits": 41,
+     "grade": "covered",
+     "top_files": [
+      ".claude/skills/ai-visual-artist/research\\R1_fundamentals_perception.md",
+      ".claude/skills/ai-visual-artist\\EXAMPLES.md",
+      ".claude/skills/ai-visual-artist/research\\R2_color_light.md"
+     ]
+    },
+    {
+     "term": "scale",
+     "hits": 65,
+     "grade": "covered",
+     "top_files": [
+      ".claude/skills/ai-visual-artist\\EXAMPLES.md",
+      ".claude/skills/ai-visual-artist/research\\R4_ai_eval_styles.md",
+      ".claude/skills/ai-visual-artist\\ART_FUNDAMENTALS.md"
+     ]
+    },
+    {
+     "term": "exaggeration",
+     "hits": 1,
+     "grade": "thin",
+     "top_files": [
+      "story-clips/_craft/curriculum\\06-2d-animation.md"
+     ]
+    },
+    {
+     "term": "appeal",
+     "hits": 15,
+     "grade": "covered",
+     "top_files": [
+      ".claude/skills/ai-visual-artist/research\\R3_design_type_story.md",
+      "creative-intelligence/knowledge\\psychology\\README.md",
+      ".claude/skills/ai-visual-artist\\CHARACTER_DESIGN.md"
+     ]
+    },
+    {
+     "term": "gesture",
+     "hits": 9,
+     "grade": "covered",
+     "top_files": [
+      ".claude/skills/ai-visual-artist/research\\R1_fundamentals_perception.md",
+      ".claude/skills/ai-visual-artist\\ART_FUNDAMENTALS.md",
+      ".claude/skills/ai-visual-artist\\DRAWING_TECHNIQUES.md"
+     ]
+    },
+    {
+     "term": "line of action",
+     "hits": 5,
+     "grade": "covered",
+     "top_files": [
+      ".claude/skills/ai-visual-artist\\DRAWING_TECHNIQUES.md",
+      ".claude/skills/ai-visual-artist\\EXAMPLES.md",
+      ".claude/skills/ai-visual-artist/research\\R1_fundamentals_perception.md"
+     ]
+    },
+    {
+     "term": "negative shape",
+     "hits": 0,
+     "grade": "missing",
+     "top_files": []
+    },
+    {
+     "term": "positive shape",
+     "hits": 0,
+     "grade": "missing",
+     "top_files": []
+    }
+   ]
+  },
+  "VA10 materials": {
+   "terms": 32,
+   "covered": 25,
+   "thin": [
+    "leather",
+    "ceramic",
+    "opacity",
+    "BSSRDF"
+   ],
+   "missing": [
+    "transparent plastic",
+    "index of refraction",
+    "absorption"
+   ],
+   "rows": [
+    {
+     "term": "metal",
+     "hits": 41,
+     "grade": "covered",
+     "top_files": [
+      ".claude/skills/ai-visual-artist\\EXAMPLES.md",
+      "story-clips/_craft/curriculum\\07-3d-character.md",
+      ".claude/skills/ai-visual-artist/research\\R2_color_light.md"
+     ]
+    },
+    {
+     "term": "glass",
+     "hits": 320,
+     "grade": "covered",
+     "top_files": [
+      ".claude/skills/ai-visual-artist\\EXAMPLES.md",
+      "story-clips/_craft/curriculum\\10-ai-video.md",
+      "story-clips/_craft/curriculum\\04-lighting.md"
+     ]
+    },
+    {
+     "term": "transparent plastic",
+     "hits": 0,
+     "grade": "missing",
+     "top_files": []
+    },
+    {
+     "term": "translucent",
+     "hits": 8,
+     "grade": "covered",
+     "top_files": [
+      ".claude/skills/ai-visual-artist\\EXAMPLES.md",
+      ".claude/skills/ai-visual-artist/research\\R2_color_light.md",
+      ".claude/skills/ai-visual-artist\\DRAWING_TECHNIQUES.md"
+     ]
+    },
+    {
+     "term": "glossy",
+     "hits": 7,
+     "grade": "covered",
+     "top_files": [
+      ".claude/skills/ai-visual-artist\\EXAMPLES.md",
+      ".claude/skills/ai-visual-artist/research\\R2_color_light.md",
+      ".claude/skills/ai-visual-artist\\DRAWING_TECHNIQUES.md"
+     ]
+    },
+    {
+     "term": "matte",
+     "hits": 88,
+     "grade": "covered",
+     "top_files": [
+      ".claude/skills/ai-visual-artist\\EXAMPLES.md",
+      ".claude/skills/ai-visual-artist/research\\R1_fundamentals_perception.md",
+      ".claude/skills/ai-visual-artist/research\\R4_ai_eval_styles.md"
+     ]
+    },
+    {
+     "term": "wood",
+     "hits": 78,
+     "grade": "covered",
+     "top_files": [
+      ".claude/skills/ai-visual-artist\\EXAMPLES.md",
+      ".claude/skills/ai-visual-artist\\RESEARCH_SOURCES.md",
+      ".claude/skills/ai-visual-artist/research\\R4_ai_eval_styles.md"
+     ]
+    },
+    {
+     "term": "stone",
+     "hits": 12,
+     "grade": "covered",
+     "top_files": [
+      ".claude/skills/ai-visual-artist/research\\R1_fundamentals_perception.md",
+      ".claude/skills/ai-visual-artist\\ART_FUNDAMENTALS.md",
+      ".claude/skills/ai-visual-artist\\EXAMPLES.md"
+     ]
+    },
+    {
+     "term": "water",
+     "hits": 75,
+     "grade": "covered",
+     "top_files": [
+      ".claude/skills/ai-visual-artist\\EXAMPLES.md",
+      "creative-intelligence/knowledge\\philosophy\\README.md",
+      ".claude/skills/ai-visual-artist/research\\R2_color_light.md"
+     ]
+    },
+    {
+     "term": "fabric",
+     "hits": 21,
+     "grade": "covered",
+     "top_files": [
+      ".claude/skills/ai-visual-artist\\EXAMPLES.md",
+      ".claude/skills/ai-visual-artist/research\\R4_ai_eval_styles.md",
+      ".claude/skills/ai-visual-artist\\DRAWING_TECHNIQUES.md"
+     ]
+    },
+    {
+     "term": "leather",
+     "hits": 1,
+     "grade": "thin",
+     "top_files": [
+      ".claude/skills/ai-visual-artist\\EXAMPLES.md"
+     ]
+    },
+    {
+     "term": "skin",
+     "hits": 44,
+     "grade": "covered",
+     "top_files": [
+      "story-clips/_craft/curriculum\\07-3d-character.md",
+      "story-clips/_craft/curriculum\\11-edit-grade.md",
+      ".claude/skills/ai-visual-artist/research\\R2_color_light.md"
+     ]
+    },
+    {
+     "term": "hair",
+     "hits": 42,
+     "grade": "covered",
+     "top_files": [
+      ".claude/skills/ai-visual-artist\\EXAMPLES.md",
+      ".claude/skills/ai-visual-artist\\CHARACTER_BIBLE_TEMPLATE.md",
+      "story-clips/_craft/curriculum\\05-movement-language.md"
+     ]
+    },
+    {
+     "term": "fur",
+     "hits": 7,
+     "grade": "covered",
+     "top_files": [
+      ".claude/skills/ai-visual-artist/research\\R2_color_light.md",
+      ".claude/skills/ai-visual-artist\\ART_FUNDAMENTALS.md",
+      ".claude/skills/ai-visual-artist\\DRAWING_TECHNIQUES.md"
+     ]
+    },
+    {
+     "term": "ceramic",
+     "hits": 2,
+     "grade": "thin",
+     "top_files": [
+      ".claude/skills/ai-visual-artist\\EXAMPLES.md",
+      "story-clips/_craft/curriculum\\09-ai-image-prompts.md"
+     ]
+    },
+    {
+     "term": "paper",
+     "hits": 253,
+     "grade": "covered",
+     "top_files": [
+      ".claude/skills/ai-visual-artist\\EXAMPLES.md",
+      ".claude/skills/ai-visual-artist/research\\R4_ai_eval_styles.md",
+      ".claude/skills/ai-visual-artist\\RESEARCH_SOURCES.md"
+     ]
+    },
+    {
+     "term": "rubber",
+     "hits": 4,
+     "grade": "covered",
+     "top_files": [
+      ".claude/skills/ai-visual-artist\\EXAMPLES.md"
+     ]
+    },
+    {
+     "term": "crystal",
+     "hits": 6,
+     "grade": "covered",
+     "top_files": [
+      ".claude/skills/ai-visual-artist\\EXAMPLES.md",
+      "story-clips/_craft/curriculum\\04-lighting.md",
+      "creative-intelligence/knowledge\\psychology\\README.md"
+     ]
+    },
+    {
+     "term": "roughness",
+     "hits": 12,
+     "grade": "covered",
+     "top_files": [
+      "story-clips/_craft/curriculum\\07-3d-character.md",
+      ".claude/skills/ai-visual-artist/research\\R2_color_light.md"
+     ]
+    },
+    {
+     "term": "metallic",
+     "hits": 13,
+     "grade": "covered",
+     "top_files": [
+      "story-clips/_craft/curriculum\\07-3d-character.md",
+      ".claude/skills/ai-visual-artist/research\\R2_color_light.md",
+      ".claude/skills/ai-visual-artist\\EXAMPLES.md"
+     ]
+    },
+    {
+     "term": "specular",
+     "hits": 17,
+     "grade": "covered",
+     "top_files": [
+      ".claude/skills/ai-visual-artist\\EXAMPLES.md",
+      ".claude/skills/ai-visual-artist/research\\R2_color_light.md",
+      "story-clips/_craft/curriculum\\07-3d-character.md"
+     ]
+    },
+    {
+     "term": "transmission",
+     "hits": 13,
+     "grade": "covered",
+     "top_files": [
+      "story-clips/_craft/curriculum\\07-3d-character.md"
+     ]
+    },
+    {
+     "term": "opacity",
+     "hits": 2,
+     "grade": "thin",
+     "top_files": [
+      "story-clips/_craft/curriculum\\07-3d-character.md"
+     ]
+    },
+    {
+     "term": "index of refraction",
+     "hits": 0,
+     "grade": "missing",
+     "top_files": []
+    },
+    {
+     "term": "IOR",
+     "hits": 71,
+     "grade": "covered",
+     "top_files": [
+      ".claude/skills/ai-visual-artist\\EXAMPLES.md",
+      "story-clips/_craft/curriculum\\07-3d-character.md",
+      ".claude/skills/ai-visual-artist/research\\R3_design_type_story.md"
+     ]
+    },
+    {
+     "term": "absorption",
+     "hits": 0,
+     "grade": "missing",
+     "top_files": []
+    },
+    {
+     "term": "scattering",
+     "hits": 25,
+     "grade": "covered",
+     "top_files": [
+      ".claude/skills/ai-visual-artist/research\\R2_color_light.md",
+      ".claude/skills/ai-visual-artist\\RESEARCH_SOURCES.md",
+      ".claude/skills/ai-visual-artist/research\\R1_fundamentals_perception.md"
+     ]
+    },
+    {
+     "term": "anisotrop",
+     "hits": 4,
+     "grade": "covered",
+     "top_files": [
+      "story-clips/_craft/curriculum\\07-3d-character.md"
+     ]
+    },
+    {
+     "term": "BRDF",
+     "hits": 7,
+     "grade": "covered",
+     "top_files": [
+      ".claude/skills/ai-visual-artist/research\\R2_color_light.md",
+      ".claude/skills/ai-visual-artist\\RESEARCH_SOURCES.md"
+     ]
+    },
+    {
+     "term": "BSSRDF",
+     "hits": 2,
+     "grade": "thin",
+     "top_files": [
+      ".claude/skills/ai-visual-artist/research\\R2_color_light.md"
+     ]
+    },
+    {
+     "term": "PBR",
+     "hits": 22,
+     "grade": "covered",
+     "top_files": [
+      "story-clips/_craft/curriculum\\07-3d-character.md",
+      ".claude/skills/ai-visual-artist/research\\R2_color_light.md",
+      ".claude/skills/ai-visual-artist\\DRAWING_TECHNIQUES.md"
+     ]
+    },
+    {
+     "term": "physically based",
+     "hits": 8,
+     "grade": "covered",
+     "top_files": [
+      ".claude/skills/ai-visual-artist/research\\R2_color_light.md",
+      ".claude/skills/ai-visual-artist\\RESEARCH_SOURCES.md",
+      "story-clips/_craft/curriculum\\07-3d-character.md"
+     ]
+    }
+   ]
+  },
+  "VA11 atmosphere": {
+   "terms": 20,
+   "covered": 15,
+   "thin": [
+    "smoke",
+    "weather"
+   ],
+   "missing": [
+    "water reflection",
+    "sun rays",
+    "crepuscular"
+   ],
+   "rows": [
+    {
+     "term": "fog",
+     "hits": 61,
+     "grade": "covered",
+     "top_files": [
+      ".claude/skills/ai-visual-artist\\EXAMPLES.md",
+      ".claude/skills/ai-visual-artist/research\\R2_color_light.md",
+      ".claude/skills/ai-visual-artist\\ART_FUNDAMENTALS.md"
+     ]
+    },
+    {
+     "term": "mist",
+     "hits": 16,
+     "grade": "covered",
+     "top_files": [
+      ".claude/skills/ai-visual-artist\\EXAMPLES.md",
+      ".claude/skills/ai-visual-artist/research\\R1_fundamentals_perception.md"
+     ]
+    },
+    {
+     "term": "haze",
+     "hits": 23,
+     "grade": "covered",
+     "top_files": [
+      ".claude/skills/ai-visual-artist\\EXAMPLES.md",
+      ".claude/skills/ai-visual-artist/research\\R2_color_light.md",
+      ".claude/skills/ai-visual-artist/research\\R1_fundamentals_perception.md"
+     ]
+    },
+    {
+     "term": "smoke",
+     "hits": 3,
+     "grade": "thin",
+     "top_files": [
+      ".claude/skills/ai-visual-artist/research\\R2_color_light.md",
+      ".claude/skills/ai-visual-artist\\DRAWING_TECHNIQUES.md",
+      ".claude/skills/ai-visual-artist\\EXAMPLES.md"
+     ]
+    },
+    {
+     "term": "dust",
+     "hits": 28,
+     "grade": "covered",
+     "top_files": [
+      ".claude/skills/ai-visual-artist\\EXAMPLES.md",
+      "creative-intelligence/knowledge\\cognitive-science\\README.md",
+      ".claude/skills/ai-visual-artist/research\\R2_color_light.md"
+     ]
+    },
+    {
+     "term": "rain",
+     "hits": 145,
+     "grade": "covered",
+     "top_files": [
+      ".claude/skills/ai-visual-artist\\EXAMPLES.md",
+      ".claude/skills/ai-visual-artist/research\\R4_ai_eval_styles.md",
+      ".claude/skills/ai-visual-artist/research\\R1_fundamentals_perception.md"
+     ]
+    },
+    {
+     "term": "snow",
+     "hits": 15,
+     "grade": "covered",
+     "top_files": [
+      ".claude/skills/ai-visual-artist\\EXAMPLES.md",
+      ".claude/skills/ai-visual-artist\\COLOR_THEORY.md",
+      ".claude/skills/ai-visual-artist\\GRAPHIC_DESIGN.md"
+     ]
+    },
+    {
+     "term": "cloud",
+     "hits": 28,
+     "grade": "covered",
+     "top_files": [
+      "story-clips/_craft/curriculum\\02-camera-lens.md",
+      ".claude/skills/ai-visual-artist/research\\R3_design_type_story.md",
+      ".claude/skills/ai-visual-artist\\EXAMPLES.md"
+     ]
+    },
+    {
+     "term": "water reflection",
+     "hits": 0,
+     "grade": "missing",
+     "top_files": []
+    },
+    {
+     "term": "sun rays",
+     "hits": 0,
+     "grade": "missing",
+     "top_files": []
+    },
+    {
+     "term": "god rays",
+     "hits": 9,
+     "grade": "covered",
+     "top_files": [
+      ".claude/skills/ai-visual-artist\\EXAMPLES.md",
+      ".claude/skills/ai-visual-artist/research\\R2_color_light.md",
+      "story-clips/_craft/curriculum\\02-camera-lens.md"
+     ]
+    },
+    {
+     "term": "crepuscular",
+     "hits": 0,
+     "grade": "missing",
+     "top_files": []
+    },
+    {
+     "term": "rayleigh",
+     "hits": 9,
+     "grade": "covered",
+     "top_files": [
+      ".claude/skills/ai-visual-artist/research\\R2_color_light.md",
+      ".claude/skills/ai-visual-artist/research\\R1_fundamentals_perception.md",
+      ".claude/skills/ai-visual-artist\\DRAWING_TECHNIQUES.md"
+     ]
+    },
+    {
+     "term": "mie",
+     "hits": 9,
+     "grade": "covered",
+     "top_files": [
+      ".claude/skills/ai-visual-artist/research\\R2_color_light.md",
+      ".claude/skills/ai-visual-artist/research\\R1_fundamentals_perception.md",
+      ".claude/skills/ai-visual-artist\\DRAWING_TECHNIQUES.md"
+     ]
+    },
+    {
+     "term": "weather",
+     "hits": 3,
+     "grade": "thin",
+     "top_files": [
+      ".claude/skills/ai-visual-artist/research\\R2_color_light.md",
+      ".claude/skills/ai-visual-artist\\CHARACTER_DESIGN.md",
+      ".claude/skills/ai-visual-artist\\ENVIRONMENT_DESIGN.md"
+     ]
+    },
+    {
+     "term": "golden hour",
+     "hits": 18,
+     "grade": "covered",
+     "top_files": [
+      ".claude/skills/ai-visual-artist\\EXAMPLES.md",
+      ".claude/skills/ai-visual-artist/research\\R2_color_light.md",
+      "story-clips/_craft/curriculum\\01-photography-fundamentals.md"
+     ]
+    },
+    {
+     "term": "blue hour",
+     "hits": 12,
+     "grade": "covered",
+     "top_files": [
+      ".claude/skills/ai-visual-artist\\EXAMPLES.md",
+      ".claude/skills/ai-visual-artist/research\\R2_color_light.md",
+      "story-clips/_craft/curriculum\\01-photography-fundamentals.md"
+     ]
+    },
+    {
+     "term": "twilight",
+     "hits": 31,
+     "grade": "covered",
+     "top_files": [
+      ".claude/skills/ai-visual-artist\\EXAMPLES.md",
+      ".claude/skills/ai-visual-artist/research\\R2_color_light.md",
+      ".claude/skills/ai-visual-artist\\RESEARCH_SOURCES.md"
+     ]
+    },
+    {
+     "term": "moonlight",
+     "hits": 26,
+     "grade": "covered",
+     "top_files": [
+      ".claude/skills/ai-visual-artist\\EXAMPLES.md",
+      "story-clips/_craft/curriculum\\04-lighting.md",
+      "story-clips/_craft/curriculum\\08-storyboard.md"
+     ]
+    },
+    {
+     "term": "night",
+     "hits": 65,
+     "grade": "covered",
+     "top_files": [
+      ".claude/skills/ai-visual-artist\\EXAMPLES.md",
+      "story-clips/_craft/curriculum\\11-edit-grade.md",
+      "story-clips/_craft/curriculum\\08-storyboard.md"
+     ]
+    }
+   ]
+  },
+  "VA12 perception": {
+   "terms": 21,
+   "covered": 13,
+   "thin": [
+    "eye tracking",
+    "crowding",
+    "cognitive load",
+    "depth perception"
+   ],
+   "missing": [
+    "contrast sensitivity",
+    "spatial frequency",
+    "peripheral",
+    "fovea"
+   ],
+   "rows": [
+    {
+     "term": "gestalt",
+     "hits": 15,
+     "grade": "covered",
+     "top_files": [
+      ".claude/skills/ai-visual-artist/research\\R1_fundamentals_perception.md",
+      ".claude/skills/ai-visual-artist\\RESEARCH_SOURCES.md",
+      ".claude/skills/ai-visual-artist\\ART_FUNDAMENTALS.md"
+     ]
+    },
+    {
+     "term": "proximity",
+     "hits": 8,
+     "grade": "covered",
+     "top_files": [
+      ".claude/skills/ai-visual-artist/research\\R1_fundamentals_perception.md",
+      ".claude/skills/ai-visual-artist/research\\R2_color_light.md",
+      ".claude/skills/ai-visual-artist/research\\R3_design_type_story.md"
+     ]
+    },
+    {
+     "term": "similarity",
+     "hits": 14,
+     "grade": "covered",
+     "top_files": [
+      ".claude/skills/ai-visual-artist/research\\R2_color_light.md",
+      ".claude/skills/ai-visual-artist/research\\R1_fundamentals_perception.md",
+      ".claude/skills/ai-visual-artist\\ART_FUNDAMENTALS.md"
+     ]
+    },
+    {
+     "term": "closure",
+     "hits": 9,
+     "grade": "covered",
+     "top_files": [
+      "story-clips/_craft/curriculum\\12-production-qc.md",
+      ".claude/skills/ai-visual-artist/research\\R3_design_type_story.md",
+      ".claude/skills/ai-visual-artist/research\\R1_fundamentals_perception.md"
+     ]
+    },
+    {
+     "term": "continuity",
+     "hits": 14,
+     "grade": "covered",
+     "top_files": [
+      "story-clips/_craft/curriculum\\05-movement-language.md",
+      ".claude/skills/ai-visual-artist/research\\R3_design_type_story.md",
+      ".claude/skills/ai-visual-artist\\ART_FUNDAMENTALS.md"
+     ]
+    },
+    {
+     "term": "common fate",
+     "hits": 4,
+     "grade": "covered",
+     "top_files": [
+      ".claude/skills/ai-visual-artist/research\\R1_fundamentals_perception.md",
+      ".claude/skills/ai-visual-artist\\ART_FUNDAMENTALS.md"
+     ]
+    },
+    {
+     "term": "figure-ground",
+     "hits": 22,
+     "grade": "covered",
+     "top_files": [
+      ".claude/skills/ai-visual-artist\\EXAMPLES.md",
+      ".claude/skills/ai-visual-artist/research\\R1_fundamentals_perception.md",
+      ".claude/skills/ai-visual-artist\\RESEARCH_SOURCES.md"
+     ]
+    },
+    {
+     "term": "saliency",
+     "hits": 17,
+     "grade": "covered",
+     "top_files": [
+      ".claude/skills/ai-visual-artist/research\\R1_fundamentals_perception.md",
+      ".claude/skills/ai-visual-artist\\CHANGELOG.md",
+      ".claude/skills/ai-visual-artist\\IMAGE_CRITIQUE_ENGINE.md"
+     ]
+    },
+    {
+     "term": "eye tracking",
+     "hits": 2,
+     "grade": "thin",
+     "top_files": [
+      ".claude/skills/ai-visual-artist/research\\R1_fundamentals_perception.md"
+     ]
+    },
+    {
+     "term": "eye-tracking",
+     "hits": 13,
+     "grade": "covered",
+     "top_files": [
+      "creative-intelligence/knowledge\\cognitive-science\\README.md",
+      ".claude/skills/ai-visual-artist/research\\R1_fundamentals_perception.md",
+      ".claude/skills/ai-visual-artist\\CHANGELOG.md"
+     ]
+    },
+    {
+     "term": "bottom-up",
+     "hits": 6,
+     "grade": "covered",
+     "top_files": [
+      "creative-intelligence/knowledge\\cognitive-science\\README.md",
+      ".claude/skills/ai-visual-artist/research\\R1_fundamentals_perception.md"
+     ]
+    },
+    {
+     "term": "top-down",
+     "hits": 10,
+     "grade": "covered",
+     "top_files": [
+      "creative-intelligence/knowledge\\cognitive-science\\README.md",
+      ".claude/skills/ai-visual-artist/research\\R1_fundamentals_perception.md",
+      ".claude/skills/ai-visual-artist\\EXAMPLES.md"
+     ]
+    },
+    {
+     "term": "contrast sensitivity",
+     "hits": 0,
+     "grade": "missing",
+     "top_files": []
+    },
+    {
+     "term": "spatial frequency",
+     "hits": 0,
+     "grade": "missing",
+     "top_files": []
+    },
+    {
+     "term": "peripheral",
+     "hits": 0,
+     "grade": "missing",
+     "top_files": []
+    },
+    {
+     "term": "fovea",
+     "hits": 0,
+     "grade": "missing",
+     "top_files": []
+    },
+    {
+     "term": "crowding",
+     "hits": 1,
+     "grade": "thin",
+     "top_files": [
+      ".claude/skills/ai-visual-artist\\IMAGE_CRITIQUE_ENGINE.md"
+     ]
+    },
+    {
+     "term": "fluency",
+     "hits": 10,
+     "grade": "covered",
+     "top_files": [
+      "creative-intelligence/knowledge\\cognitive-science\\README.md"
+     ]
+    },
+    {
+     "term": "cognitive load",
+     "hits": 3,
+     "grade": "thin",
+     "top_files": [
+      "creative-intelligence/knowledge\\cognitive-science\\README.md"
+     ]
+    },
+    {
+     "term": "depth perception",
+     "hits": 1,
+     "grade": "thin",
+     "top_files": [
+      ".claude/skills/ai-visual-artist/research\\R1_fundamentals_perception.md"
+     ]
+    },
+    {
+     "term": "illusion",
+     "hits": 8,
+     "grade": "covered",
+     "top_files": [
+      ".claude/skills/ai-visual-artist/research\\R3_design_type_story.md",
+      ".claude/skills/ai-visual-artist\\RESEARCH_SOURCES.md",
+      ".claude/skills/ai-visual-artist/research\\R1_fundamentals_perception.md"
+     ]
+    }
+   ]
+  },
+  "VA13 visual dev": {
+   "terms": 19,
+   "covered": 7,
+   "thin": [
+    "colour script",
+    "art direction",
+    "environment design",
+    "set dressing"
+   ],
+   "missing": [
+    "mood board",
+    "style board",
+    "visual development",
+    "production design",
+    "set design",
+    "prop design",
+    "environmental storytelling",
+    "mise-en-sc"
+   ],
+   "rows": [
+    {
+     "term": "mood board",
+     "hits": 0,
+     "grade": "missing",
+     "top_files": []
+    },
+    {
+     "term": "moodboard",
+     "hits": 6,
+     "grade": "covered",
+     "top_files": [
+      "story-clips/_craft/curriculum\\12-production-qc.md"
+     ]
+    },
+    {
+     "term": "style board",
+     "hits": 0,
+     "grade": "missing",
+     "top_files": []
+    },
+    {
+     "term": "color script",
+     "hits": 13,
+     "grade": "covered",
+     "top_files": [
+      "story-clips/_craft/curriculum\\08-storyboard.md",
+      "story-clips/_craft/curriculum\\04-lighting.md"
+     ]
+    },
+    {
+     "term": "colour script",
+     "hits": 1,
+     "grade": "thin",
+     "top_files": [
+      ".claude/skills/ai-visual-artist\\VISUAL_STORYTELLING.md"
+     ]
+    },
+    {
+     "term": "visual development",
+     "hits": 0,
+     "grade": "missing",
+     "top_files": []
+    },
+    {
+     "term": "art direction",
+     "hits": 3,
+     "grade": "thin",
+     "top_files": [
+      ".claude/skills/ai-visual-artist/research\\R1_fundamentals_perception.md",
+      ".claude/skills/ai-visual-artist/research\\R3_design_type_story.md",
+      ".claude/skills/ai-visual-artist\\IMAGE_PROMPT_ENGINE.md"
+     ]
+    },
+    {
+     "term": "production design",
+     "hits": 0,
+     "grade": "missing",
+     "top_files": []
+    },
+    {
+     "term": "concept art",
+     "hits": 4,
+     "grade": "covered",
+     "top_files": [
+      ".claude/skills/ai-visual-artist\\EXAMPLES.md"
+     ]
+    },
+    {
+     "term": "environment design",
+     "hits": 3,
+     "grade": "thin",
+     "top_files": [
+      ".claude/skills/ai-visual-artist/research\\R3_design_type_story.md",
+      ".claude/skills/ai-visual-artist\\ENVIRONMENT_DESIGN.md"
+     ]
+    },
+    {
+     "term": "set design",
+     "hits": 0,
+     "grade": "missing",
+     "top_files": []
+    },
+    {
+     "term": "set dressing",
+     "hits": 1,
+     "grade": "thin",
+     "top_files": [
+      ".claude/skills/ai-visual-artist\\ENVIRONMENT_DESIGN.md"
+     ]
+    },
+    {
+     "term": "prop design",
+     "hits": 0,
+     "grade": "missing",
+     "top_files": []
+    },
+    {
+     "term": "costume",
+     "hits": 5,
+     "grade": "covered",
+     "top_files": [
+      ".claude/skills/ai-visual-artist\\CHARACTER_DESIGN.md",
+      ".claude/skills/ai-visual-artist/research\\R3_design_type_story.md",
+      ".claude/skills/ai-visual-artist\\CHARACTER_BIBLE_TEMPLATE.md"
+     ]
+    },
+    {
+     "term": "architectur",
+     "hits": 12,
+     "grade": "covered",
+     "top_files": [
+      ".claude/skills/ai-visual-artist\\EXAMPLES.md",
+      ".claude/skills/ai-visual-artist\\RESEARCH_SOURCES.md",
+      ".claude/skills/ai-visual-artist/research\\R4_ai_eval_styles.md"
+     ]
+    },
+    {
+     "term": "environmental storytelling",
+     "hits": 0,
+     "grade": "missing",
+     "top_files": []
+    },
+    {
+     "term": "staging",
+     "hits": 13,
+     "grade": "covered",
+     "top_files": [
+      "story-clips/_craft/curriculum\\03-composition.md",
+      ".claude/skills/ai-visual-artist/research\\R3_design_type_story.md",
+      "story-clips/_craft/curriculum\\06-2d-animation.md"
+     ]
+    },
+    {
+     "term": "mise-en-sc",
+     "hits": 0,
+     "grade": "missing",
+     "top_files": []
+    },
+    {
+     "term": "motif",
+     "hits": 21,
+     "grade": "covered",
+     "top_files": [
+      "story-clips/_craft/curriculum\\08-storyboard.md",
+      ".claude/skills/ai-visual-artist\\EXAMPLES.md",
+      "story-clips/_craft/curriculum\\05-movement-language.md"
+     ]
+    }
+   ]
+  },
+  "VA14 drawing/painting": {
+   "terms": 23,
+   "covered": 10,
+   "thin": [
+    "cross-hatch",
+    "matte painting"
+   ],
+   "missing": [
+    "gesture drawing",
+    "blind contour",
+    "structural drawing",
+    "analytical drawing",
+    "cross hatch",
+    "wet-on-wet",
+    "glazing",
+    "scumbl",
+    "alla prima",
+    "grisaille",
+    "photobash"
+   ],
+   "rows": [
+    {
+     "term": "gesture drawing",
+     "hits": 0,
+     "grade": "missing",
+     "top_files": []
+    },
+    {
+     "term": "contour",
+     "hits": 15,
+     "grade": "covered",
+     "top_files": [
+      ".claude/skills/ai-visual-artist/research\\R1_fundamentals_perception.md",
+      ".claude/skills/ai-visual-artist\\ART_FUNDAMENTALS.md",
+      ".claude/skills/ai-visual-artist\\DRAWING_TECHNIQUES.md"
+     ]
+    },
+    {
+     "term": "blind contour",
+     "hits": 0,
+     "grade": "missing",
+     "top_files": []
+    },
+    {
+     "term": "construction",
+     "hits": 26,
+     "grade": "covered",
+     "top_files": [
+      ".claude/skills/ai-visual-artist\\EXAMPLES.md",
+      "creative-intelligence/knowledge\\emotions\\README.md",
+      ".claude/skills/ai-visual-artist/research\\R1_fundamentals_perception.md"
+     ]
+    },
+    {
+     "term": "structural drawing",
+     "hits": 0,
+     "grade": "missing",
+     "top_files": []
+    },
+    {
+     "term": "analytical drawing",
+     "hits": 0,
+     "grade": "missing",
+     "top_files": []
+    },
+    {
+     "term": "blocking",
+     "hits": 11,
+     "grade": "covered",
+     "top_files": [
+      "story-clips/_craft/curriculum\\03-composition.md",
+      "story-clips/_craft/curriculum\\07-3d-character.md"
+     ]
+    },
+    {
+     "term": "thumbnail",
+     "hits": 75,
+     "grade": "covered",
+     "top_files": [
+      ".claude/skills/ai-visual-artist\\EXAMPLES.md",
+      "story-clips/_craft/curriculum\\08-storyboard.md",
+      ".claude/skills/ai-visual-artist/research\\R3_design_type_story.md"
+     ]
+    },
+    {
+     "term": "cross hatch",
+     "hits": 0,
+     "grade": "missing",
+     "top_files": []
+    },
+    {
+     "term": "cross-hatch",
+     "hits": 1,
+     "grade": "thin",
+     "top_files": [
+      ".claude/skills/ai-visual-artist\\IMAGE_PROMPT_ENGINE.md"
+     ]
+    },
+    {
+     "term": "hatching",
+     "hits": 9,
+     "grade": "covered",
+     "top_files": [
+      ".claude/skills/ai-visual-artist\\EXAMPLES.md",
+      ".claude/skills/ai-visual-artist\\IMAGE_PROMPT_ENGINE.md"
+     ]
+    },
+    {
+     "term": "stippl",
+     "hits": 4,
+     "grade": "covered",
+     "top_files": [
+      ".claude/skills/ai-visual-artist\\EXAMPLES.md"
+     ]
+    },
+    {
+     "term": "dry brush",
+     "hits": 5,
+     "grade": "covered",
+     "top_files": [
+      ".claude/skills/ai-visual-artist\\EXAMPLES.md",
+      "story-clips/_craft/curriculum\\06-2d-animation.md"
+     ]
+    },
+    {
+     "term": "wet-on-wet",
+     "hits": 0,
+     "grade": "missing",
+     "top_files": []
+    },
+    {
+     "term": "glazing",
+     "hits": 0,
+     "grade": "missing",
+     "top_files": []
+    },
+    {
+     "term": "scumbl",
+     "hits": 0,
+     "grade": "missing",
+     "top_files": []
+    },
+    {
+     "term": "impasto",
+     "hits": 14,
+     "grade": "covered",
+     "top_files": [
+      ".claude/skills/ai-visual-artist\\EXAMPLES.md",
+      ".claude/skills/ai-visual-artist/research\\R4_ai_eval_styles.md",
+      ".claude/skills/ai-visual-artist\\RESEARCH_SOURCES.md"
+     ]
+    },
+    {
+     "term": "alla prima",
+     "hits": 0,
+     "grade": "missing",
+     "top_files": []
+    },
+    {
+     "term": "grisaille",
+     "hits": 0,
+     "grade": "missing",
+     "top_files": []
+    },
+    {
+     "term": "digital painting",
+     "hits": 4,
+     "grade": "covered",
+     "top_files": [
+      ".claude/skills/ai-visual-artist\\EXAMPLES.md"
+     ]
+    },
+    {
+     "term": "photobash",
+     "hits": 0,
+     "grade": "missing",
+     "top_files": []
+    },
+    {
+     "term": "matte painting",
+     "hits": 2,
+     "grade": "thin",
+     "top_files": [
+      ".claude/skills/ai-visual-artist\\EXAMPLES.md"
+     ]
+    },
+    {
+     "term": "illustration",
+     "hits": 44,
+     "grade": "covered",
+     "top_files": [
+      ".claude/skills/ai-visual-artist\\EXAMPLES.md",
+      ".claude/skills/ai-visual-artist/research\\R4_ai_eval_styles.md",
+      ".claude/skills/ai-visual-artist\\VISUAL_STORYTELLING.md"
+     ]
+    }
+   ]
+  },
+  "VA15 typography": {
+   "terms": 25,
+   "covered": 12,
+   "thin": [
+    "modular grid",
+    "column grid",
+    "kerning",
+    "safe area",
+    "DPI"
+   ],
+   "missing": [
+    "baseline grid",
+    "hierarchical grid",
+    "asymmetric layout",
+    "optical alignment",
+    "font pairing",
+    "responsive",
+    "trim",
+    "CMYK"
+   ],
+   "rows": [
+    {
+     "term": "modular grid",
+     "hits": 1,
+     "grade": "thin",
+     "top_files": [
+      ".claude/skills/ai-visual-artist/research\\R3_design_type_story.md"
+     ]
+    },
+    {
+     "term": "column grid",
+     "hits": 1,
+     "grade": "thin",
+     "top_files": [
+      ".claude/skills/ai-visual-artist/research\\R3_design_type_story.md"
+     ]
+    },
+    {
+     "term": "baseline grid",
+     "hits": 0,
+     "grade": "missing",
+     "top_files": []
+    },
+    {
+     "term": "hierarchical grid",
+     "hits": 0,
+     "grade": "missing",
+     "top_files": []
+    },
+    {
+     "term": "asymmetric layout",
+     "hits": 0,
+     "grade": "missing",
+     "top_files": []
+    },
+    {
+     "term": "editorial",
+     "hits": 11,
+     "grade": "covered",
+     "top_files": [
+      ".claude/skills/ai-visual-artist\\EXAMPLES.md",
+      ".claude/skills/ai-visual-artist\\GRAPHIC_DESIGN.md",
+      ".claude/skills/ai-visual-artist\\COLOR_THEORY.md"
+     ]
+    },
+    {
+     "term": "optical alignment",
+     "hits": 0,
+     "grade": "missing",
+     "top_files": []
+    },
+    {
+     "term": "kerning",
+     "hits": 3,
+     "grade": "thin",
+     "top_files": [
+      ".claude/skills/ai-visual-artist/research\\R3_design_type_story.md",
+      ".claude/skills/ai-visual-artist\\GRAPHIC_DESIGN.md",
+      ".claude/skills/ai-visual-artist\\IMAGE_CRITIQUE_ENGINE.md"
+     ]
+    },
+    {
+     "term": "font pairing",
+     "hits": 0,
+     "grade": "missing",
+     "top_files": []
+    },
+    {
+     "term": "hierarchy",
+     "hits": 18,
+     "grade": "covered",
+     "top_files": [
+      "story-clips/_craft/curriculum\\06-2d-animation.md",
+      ".claude/skills/ai-visual-artist/research\\R3_design_type_story.md",
+      ".claude/skills/ai-visual-artist\\ART_FUNDAMENTALS.md"
+     ]
+    },
+    {
+     "term": "line height",
+     "hits": 5,
+     "grade": "covered",
+     "top_files": [
+      ".claude/skills/ai-visual-artist/research\\R3_design_type_story.md",
+      ".claude/skills/ai-visual-artist\\THAI_TYPOGRAPHY.md"
+     ]
+    },
+    {
+     "term": "leading",
+     "hits": 18,
+     "grade": "covered",
+     "top_files": [
+      ".claude/skills/ai-visual-artist\\EXAMPLES.md",
+      "story-clips/_craft/curriculum\\03-composition.md",
+      ".claude/skills/ai-visual-artist/research\\R3_design_type_story.md"
+     ]
+    },
+    {
+     "term": "tracking",
+     "hits": 31,
+     "grade": "covered",
+     "top_files": [
+      ".claude/skills/ai-visual-artist/research\\R3_design_type_story.md",
+      "creative-intelligence/knowledge\\cognitive-science\\README.md",
+      ".claude/skills/ai-visual-artist/research\\R1_fundamentals_perception.md"
+     ]
+    },
+    {
+     "term": "readability",
+     "hits": 5,
+     "grade": "covered",
+     "top_files": [
+      ".claude/skills/ai-visual-artist/research\\R3_design_type_story.md",
+      ".claude/skills/ai-visual-artist\\CHARACTER_BIBLE_TEMPLATE.md",
+      ".claude/skills/ai-visual-artist\\CHARACTER_DESIGN.md"
+     ]
+    },
+    {
+     "term": "legibility",
+     "hits": 12,
+     "grade": "covered",
+     "top_files": [
+      ".claude/skills/ai-visual-artist/research\\R3_design_type_story.md",
+      ".claude/skills/ai-visual-artist\\IMAGE_CRITIQUE_ENGINE.md",
+      ".claude/skills/ai-visual-artist\\RESEARCH_SOURCES.md"
+     ]
+    },
+    {
+     "term": "white space",
+     "hits": 5,
+     "grade": "covered",
+     "top_files": [
+      ".claude/skills/ai-visual-artist\\EXAMPLES.md",
+      ".claude/skills/ai-visual-artist\\GRAPHIC_DESIGN.md"
+     ]
+    },
+    {
+     "term": "density",
+     "hits": 4,
+     "grade": "covered",
+     "top_files": [
+      ".claude/skills/ai-visual-artist/research\\R1_fundamentals_perception.md",
+      ".claude/skills/ai-visual-artist\\ART_FUNDAMENTALS.md",
+      "story-clips/_craft/curriculum\\07-3d-character.md"
+     ]
+    },
+    {
+     "term": "responsive",
+     "hits": 0,
+     "grade": "missing",
+     "top_files": []
+    },
+    {
+     "term": "thai",
+     "hits": 380,
+     "grade": "covered",
+     "top_files": [
+      ".claude/skills/ai-visual-artist/research\\R3_design_type_story.md",
+      ".claude/skills/ai-visual-artist\\RESEARCH_SOURCES.md",
+      ".claude/skills/ai-visual-artist\\THAI_TYPOGRAPHY.md"
+     ]
+    },
+    {
+     "term": "bleed",
+     "hits": 24,
+     "grade": "covered",
+     "top_files": [
+      ".claude/skills/ai-visual-artist\\EXAMPLES.md",
+      ".claude/skills/ai-visual-artist/research\\R2_color_light.md",
+      ".claude/skills/ai-visual-artist\\GRAPHIC_DESIGN.md"
+     ]
+    },
+    {
+     "term": "trim",
+     "hits": 0,
+     "grade": "missing",
+     "top_files": []
+    },
+    {
+     "term": "safe area",
+     "hits": 1,
+     "grade": "thin",
+     "top_files": [
+      ".claude/skills/ai-visual-artist\\VISUAL_STORYTELLING.md"
+     ]
+    },
+    {
+     "term": "PPI",
+     "hits": 63,
+     "grade": "covered",
+     "top_files": [
+      ".claude/skills/ai-visual-artist\\EXAMPLES.md",
+      "creative-intelligence/knowledge\\philosophy\\README.md",
+      "story-clips/_craft/curriculum\\06-2d-animation.md"
+     ]
+    },
+    {
+     "term": "DPI",
+     "hits": 1,
+     "grade": "thin",
+     "top_files": [
+      ".claude/skills/ai-visual-artist\\GRAPHIC_DESIGN.md"
+     ]
+    },
+    {
+     "term": "CMYK",
+     "hits": 0,
+     "grade": "missing",
+     "top_files": []
+    }
+   ]
+  },
+  "VA16 compositing": {
+   "terms": 26,
+   "covered": 10,
+   "thin": [
+    "color correction",
+    "colour correction",
+    "alpha",
+    "sharpen",
+    "shadow match"
+   ],
+   "missing": [
+    "dodge",
+    "blend mode",
+    "frequency separation",
+    "noise reduction",
+    "restoration",
+    "background removal",
+    "perspective correction",
+    "reflection match",
+    "light match",
+    "color match",
+    "colour match"
+   ],
+   "rows": [
+    {
+     "term": "exposure",
+     "hits": 44,
+     "grade": "covered",
+     "top_files": [
+      ".claude/skills/ai-visual-artist\\EXAMPLES.md",
+      "story-clips/_craft/curriculum\\01-photography-fundamentals.md",
+      "story-clips/_craft/curriculum\\11-edit-grade.md"
+     ]
+    },
+    {
+     "term": "white balance",
+     "hits": 7,
+     "grade": "covered",
+     "top_files": [
+      "story-clips/_craft/curriculum\\01-photography-fundamentals.md",
+      "story-clips/_craft/curriculum\\11-edit-grade.md"
+     ]
+    },
+    {
+     "term": "color correction",
+     "hits": 2,
+     "grade": "thin",
+     "top_files": [
+      "story-clips/_craft/curriculum\\04-lighting.md",
+      "story-clips/_craft/curriculum\\11-edit-grade.md"
+     ]
+    },
+    {
+     "term": "colour correction",
+     "hits": 1,
+     "grade": "thin",
+     "top_files": [
+      ".claude/skills/ai-visual-artist/research\\R2_color_light.md"
+     ]
+    },
+    {
+     "term": "grading",
+     "hits": 6,
+     "grade": "covered",
+     "top_files": [
+      "story-clips/_craft/curriculum\\11-edit-grade.md"
+     ]
+    },
+    {
+     "term": "curves",
+     "hits": 34,
+     "grade": "covered",
+     "top_files": [
+      ".claude/skills/ai-visual-artist\\EXAMPLES.md",
+      "story-clips/_craft/curriculum\\11-edit-grade.md",
+      ".claude/skills/ai-visual-artist/research\\R4_ai_eval_styles.md"
+     ]
+    },
+    {
+     "term": "levels",
+     "hits": 13,
+     "grade": "covered",
+     "top_files": [
+      ".claude/skills/ai-visual-artist/research\\R3_design_type_story.md",
+      "creative-intelligence/knowledge\\cognitive-science\\README.md",
+      ".claude/skills/ai-visual-artist\\THAI_TYPOGRAPHY.md"
+     ]
+    },
+    {
+     "term": "contrast",
+     "hits": 336,
+     "grade": "covered",
+     "top_files": [
+      ".claude/skills/ai-visual-artist\\EXAMPLES.md",
+      ".claude/skills/ai-visual-artist/research\\R2_color_light.md",
+      "story-clips/_craft/curriculum\\11-edit-grade.md"
+     ]
+    },
+    {
+     "term": "dodge",
+     "hits": 0,
+     "grade": "missing",
+     "top_files": []
+    },
+    {
+     "term": "burn",
+     "hits": 6,
+     "grade": "covered",
+     "top_files": [
+      ".claude/skills/ai-visual-artist\\EXAMPLES.md",
+      ".claude/skills/ai-visual-artist/research\\R1_fundamentals_perception.md",
+      ".claude/skills/ai-visual-artist\\RESEARCH_SOURCES.md"
+     ]
+    },
+    {
+     "term": "mask",
+     "hits": 5,
+     "grade": "covered",
+     "top_files": [
+      "story-clips/_craft/curriculum\\09-ai-image-prompts.md",
+      ".claude/skills/ai-visual-artist/research\\R4_ai_eval_styles.md"
+     ]
+    },
+    {
+     "term": "alpha",
+     "hits": 1,
+     "grade": "thin",
+     "top_files": [
+      "story-clips/_craft/curriculum\\07-3d-character.md"
+     ]
+    },
+    {
+     "term": "blend mode",
+     "hits": 0,
+     "grade": "missing",
+     "top_files": []
+    },
+    {
+     "term": "blending",
+     "hits": 4,
+     "grade": "covered",
+     "top_files": [
+      ".claude/skills/ai-visual-artist/research\\R2_color_light.md",
+      ".claude/skills/ai-visual-artist\\COLOR_THEORY.md"
+     ]
+    },
+    {
+     "term": "frequency separation",
+     "hits": 0,
+     "grade": "missing",
+     "top_files": []
+    },
+    {
+     "term": "noise reduction",
+     "hits": 0,
+     "grade": "missing",
+     "top_files": []
+    },
+    {
+     "term": "sharpen",
+     "hits": 1,
+     "grade": "thin",
+     "top_files": [
+      ".claude/skills/ai-visual-artist\\ART_FUNDAMENTALS.md"
+     ]
+    },
+    {
+     "term": "restoration",
+     "hits": 0,
+     "grade": "missing",
+     "top_files": []
+    },
+    {
+     "term": "background removal",
+     "hits": 0,
+     "grade": "missing",
+     "top_files": []
+    },
+    {
+     "term": "perspective correction",
+     "hits": 0,
+     "grade": "missing",
+     "top_files": []
+    },
+    {
+     "term": "shadow match",
+     "hits": 1,
+     "grade": "thin",
+     "top_files": [
+      ".claude/skills/ai-visual-artist\\EXAMPLES.md"
+     ]
+    },
+    {
+     "term": "reflection match",
+     "hits": 0,
+     "grade": "missing",
+     "top_files": []
+    },
+    {
+     "term": "light match",
+     "hits": 0,
+     "grade": "missing",
+     "top_files": []
+    },
+    {
+     "term": "color match",
+     "hits": 0,
+     "grade": "missing",
+     "top_files": []
+    },
+    {
+     "term": "colour match",
+     "hits": 0,
+     "grade": "missing",
+     "top_files": []
+    },
+    {
+     "term": "composit",
+     "hits": 210,
+     "grade": "covered",
+     "top_files": [
+      ".claude/skills/ai-visual-artist\\EXAMPLES.md",
+      ".claude/skills/ai-visual-artist/research\\R1_fundamentals_perception.md",
+      ".claude/skills/ai-visual-artist/research\\R4_ai_eval_styles.md"
+     ]
+    }
+   ]
+  },
+  "VA17 criticism": {
+   "terms": 12,
+   "covered": 5,
+   "thin": [
+    "formal analysis",
+    "contextual",
+    "restraint",
+    "originality"
+   ],
+   "missing": [
+    "comparative",
+    "sophistication",
+    "cultural context"
+   ],
+   "rows": [
+    {
+     "term": "formal analysis",
+     "hits": 2,
+     "grade": "thin",
+     "top_files": [
+      ".claude/skills/ai-visual-artist/research\\R1_fundamentals_perception.md",
+      ".claude/skills/ai-visual-artist\\RESEARCH_SOURCES.md"
+     ]
+    },
+    {
+     "term": "contextual",
+     "hits": 2,
+     "grade": "thin",
+     "top_files": [
+      ".claude/skills/ai-visual-artist/research\\R1_fundamentals_perception.md",
+      ".claude/skills/ai-visual-artist\\RESEARCH_SOURCES.md"
+     ]
+    },
+    {
+     "term": "comparative",
+     "hits": 0,
+     "grade": "missing",
+     "top_files": []
+    },
+    {
+     "term": "aesthetic judg",
+     "hits": 6,
+     "grade": "covered",
+     "top_files": [
+      ".claude/skills/ai-visual-artist/research\\R1_fundamentals_perception.md",
+      ".claude/skills/ai-visual-artist\\RESEARCH_SOURCES.md"
+     ]
+    },
+    {
+     "term": "interpretation",
+     "hits": 5,
+     "grade": "covered",
+     "top_files": [
+      ".claude/skills/ai-visual-artist/research\\R1_fundamentals_perception.md",
+      "creative-intelligence/knowledge\\philosophy\\README.md",
+      ".claude/skills/ai-visual-artist\\ART_FUNDAMENTALS.md"
+     ]
+    },
+    {
+     "term": "intent",
+     "hits": 14,
+     "grade": "covered",
+     "top_files": [
+      ".claude/skills/ai-visual-artist\\IMAGE_CRITIQUE_ENGINE.md",
+      ".claude/skills/ai-visual-artist\\ART_FUNDAMENTALS.md",
+      ".claude/skills/ai-visual-artist\\IMAGE_PROMPT_ENGINE.md"
+     ]
+    },
+    {
+     "term": "restraint",
+     "hits": 2,
+     "grade": "thin",
+     "top_files": [
+      ".claude/skills/ai-visual-artist/research\\R4_ai_eval_styles.md",
+      ".claude/skills/ai-visual-artist\\RESEARCH_SOURCES.md"
+     ]
+    },
+    {
+     "term": "sophistication",
+     "hits": 0,
+     "grade": "missing",
+     "top_files": []
+    },
+    {
+     "term": "originality",
+     "hits": 1,
+     "grade": "thin",
+     "top_files": [
+      ".claude/skills/ai-visual-artist\\IMAGE_CRITIQUE_ENGINE.md"
+     ]
+    },
+    {
+     "term": "critique",
+     "hits": 27,
+     "grade": "covered",
+     "top_files": [
+      ".claude/skills/ai-visual-artist\\SKILL.md",
+      ".claude/skills/ai-visual-artist/research\\R3_design_type_story.md",
+      ".claude/skills/ai-visual-artist\\IMAGE_CRITIQUE_ENGINE.md"
+     ]
+    },
+    {
+     "term": "art history",
+     "hits": 4,
+     "grade": "covered",
+     "top_files": [
+      ".claude/skills/ai-visual-artist/research\\R1_fundamentals_perception.md",
+      ".claude/skills/ai-visual-artist/research\\R2_color_light.md",
+      ".claude/skills/ai-visual-artist/research\\R4_ai_eval_styles.md"
+     ]
+    },
+    {
+     "term": "cultural context",
+     "hits": 0,
+     "grade": "missing",
+     "top_files": []
+    }
+   ]
+  },
+  "VA18 experiments": {
+   "terms": 8,
+   "covered": 4,
+   "thin": [
+    "one variable",
+    "before/after"
+   ],
+   "missing": [
+    "fixed seed",
+    "comparison sheet"
+   ],
+   "rows": [
+    {
+     "term": "A/B",
+     "hits": 10,
+     "grade": "covered",
+     "top_files": [
+      "story-clips/_craft/curriculum\\12-production-qc.md",
+      "creative-intelligence/knowledge\\psychology\\README.md",
+      ".claude/skills/ai-visual-artist\\CHANGELOG.md"
+     ]
+    },
+    {
+     "term": "controlled",
+     "hits": 36,
+     "grade": "covered",
+     "top_files": [
+      ".claude/skills/ai-visual-artist\\EXAMPLES.md",
+      ".claude/skills/ai-visual-artist/research\\R1_fundamentals_perception.md",
+      ".claude/skills/ai-visual-artist/research\\R3_design_type_story.md"
+     ]
+    },
+    {
+     "term": "same seed",
+     "hits": 4,
+     "grade": "covered",
+     "top_files": [
+      ".claude/skills/ai-visual-artist\\EXAMPLES.md"
+     ]
+    },
+    {
+     "term": "fixed seed",
+     "hits": 0,
+     "grade": "missing",
+     "top_files": []
+    },
+    {
+     "term": "one variable",
+     "hits": 1,
+     "grade": "thin",
+     "top_files": [
+      "story-clips/_craft/curriculum\\09-ai-image-prompts.md"
+     ]
+    },
+    {
+     "term": "before/after",
+     "hits": 2,
+     "grade": "thin",
+     "top_files": [
+      ".claude/skills/ai-visual-artist\\EXAMPLES.md",
+      "story-clips/_craft/curriculum\\12-production-qc.md"
+     ]
+    },
+    {
+     "term": "comparison sheet",
+     "hits": 0,
+     "grade": "missing",
+     "top_files": []
+    },
+    {
+     "term": "experiment",
+     "hits": 15,
+     "grade": "covered",
+     "top_files": [
+      ".claude/skills/ai-visual-artist/research\\R1_fundamentals_perception.md",
+      ".claude/skills/ai-visual-artist/research\\R3_design_type_story.md",
+      ".claude/skills/ai-visual-artist\\RESEARCH_SOURCES.md"
+     ]
+    }
+   ]
+  }
+ }
+}

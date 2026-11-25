@@ -1,0 +1,1543 @@
+{
+  "schema_version": "1.0",
+  "compositions": [
+    {
+      "id": "rule_of_thirds",
+      "name": "Rule of thirds",
+      "name_th": "กฎสามส่วน",
+      "what": "Divide the frame by two vertical and two horizontal lines; place the subject, eyes or horizon on a line or an intersection (power point).",
+      "why_it_works": "Craft heuristic. It reliably avoids dead-centre static placement and leaves look/lead room (curriculum-03). There is no strong perceptual evidence that thirds placement itself is preferred; its value is as a quick off-centre starting point.",
+      "how_to_apply": [
+        "Decide the single focal point",
+        "Put it on the intersection on the side opposite to where it looks or moves",
+        "Place horizon on a horizontal third, not the centre",
+        "Use the empty two-thirds for context or text"
+      ],
+      "good_example": "Customer trying on round gold glasses, eyes on the upper third line, face on the left third, looking right into blurred shop shelves.",
+      "bad_example": "Every product and every face dropped onto an intersection automatically, so a whole carousel looks the same and faces look into the near edge.",
+      "fix": "Choose placement from intent: give look room, or centre deliberately when symmetry serves the message.",
+      "when_to_break": "Hero product and logos (centre), symmetry, 9:16 (vertical centre axis + horizontal thirds), 2.39:1 where thirds lines sit too far apart (curriculum-03).",
+      "focal_point_strategy": "One subject at one power point; secondary element at the diagonal opposite point.",
+      "viewing_path": "Power point → along gaze direction → secondary point or text area.",
+      "balance": "asymmetrical",
+      "aspect_ratio_notes": "16:9 works best; 1:1 fine; 4:5 use upper third for eyes; 9:16 keep subject near vertical centre (right side collides with UI buttons) and use horizontal thirds; 21:9 lines too far apart.",
+      "negative_space_use": "The two empty thirds hold context, eye room or headline.",
+      "depth_layers": "Optional; FG element on the opposite third adds depth.",
+      "emotion_ids": [
+        "calm.serenity",
+        "cognitive.interest",
+        "joy.contentment"
+      ],
+      "ai_prompt_phrases": [
+        "her face on the left third of the frame, looking toward empty space on the right",
+        "horizon on the lower third line",
+        "subject placed off-centre in the left third"
+      ],
+      "ai_pitfalls": "Typing 'rule of thirds' alone gives random placement; say what goes where (curriculum-03). Image models default to a centred, mid-sized subject; position words are often ignored, more so at low step counts (FLUX schnell). Workarounds: state position in plain words early in the prompt (subject → framing → light, curriculum-03), generate at the final aspect ratio, use img2img from a rough layout sketch or HTML block-out (tools/flux.py --init --denoise 0.6-0.8), outpaint/extend canvas to move the subject off-centre, or generate wider and crop after.",
+      "overlay_guide": {
+        "type": "grid",
+        "v": [
+          0.333,
+          0.667
+        ],
+        "h": [
+          0.333,
+          0.667
+        ],
+        "points": [
+          [
+            0.333,
+            0.333
+          ],
+          [
+            0.667,
+            0.333
+          ],
+          [
+            0.333,
+            0.667
+          ],
+          [
+            0.667,
+            0.667
+          ]
+        ],
+        "note": "Normalised 0-1, origin top-left."
+      },
+      "refs": [
+        "curriculum-03",
+        "Artistic"
+      ],
+      "evidence": "craft"
+    },
+    {
+      "id": "golden_ratio",
+      "name": "Golden ratio (phi grid)",
+      "name_th": "สัดส่วนทองคำ",
+      "what": "Divide the frame at 0.382 / 0.618 (phi grid) instead of thirds.",
+      "why_it_works": "Weak/mixed evidence. Claims that the golden ratio is innately preferred or underlies famous works are largely myths (Parthenon ≈ 9:4, Vitruvius never mentions it — curriculum-03 citing PetaPixel/Photography Life). Use it as another off-centre grid only, never as a reason a picture is good.",
+      "how_to_apply": [
+        "Use the phi lines as a slightly more central alternative to thirds",
+        "Place the subject on a 0.382/0.618 line",
+        "Check after platform crop; the ~5% difference from thirds often vanishes"
+      ],
+      "good_example": "Frame resting on sand slightly left of centre at x≈0.382, sky gradient above for a headline.",
+      "bad_example": "Drawing a spiral and grid over a finished image to 'prove' it is beautiful.",
+      "fix": "Pick placement by intent; treat phi as an option among grids.",
+      "when_to_break": "Almost always optional; skip it when thirds or centre fits.",
+      "focal_point_strategy": "Subject on a phi intersection.",
+      "viewing_path": "Like thirds but closer to centre.",
+      "balance": "asymmetrical",
+      "aspect_ratio_notes": "Differences from thirds shrink with width: on 1080 px ≈ 52 px (curriculum-03); in 9:16 use horizontal phi lines only.",
+      "negative_space_use": "Larger 0.618 area holds context/text.",
+      "depth_layers": "Not inherent.",
+      "emotion_ids": [
+        "calm.serenity",
+        "cognitive.interest"
+      ],
+      "ai_prompt_phrases": [
+        "subject placed slightly left of centre, about 40 percent from the left edge"
+      ],
+      "ai_pitfalls": "'golden ratio composition' does nothing verifiable in prompts (curriculum-03); give explicit positions. Workarounds: state position in plain words early in the prompt (subject → framing → light, curriculum-03), generate at the final aspect ratio, use img2img from a rough layout sketch or HTML block-out (tools/flux.py --init --denoise 0.6-0.8), outpaint/extend canvas to move the subject off-centre, or generate wider and crop after.",
+      "overlay_guide": {
+        "type": "grid",
+        "v": [
+          0.382,
+          0.618
+        ],
+        "h": [
+          0.382,
+          0.618
+        ],
+        "points": [
+          [
+            0.382,
+            0.382
+          ],
+          [
+            0.618,
+            0.382
+          ],
+          [
+            0.382,
+            0.618
+          ],
+          [
+            0.618,
+            0.618
+          ]
+        ],
+        "note": "Phi grid; compare against thirds 0.333/0.667."
+      },
+      "refs": [
+        "curriculum-03"
+      ],
+      "evidence": "mixed"
+    },
+    {
+      "id": "golden_spiral",
+      "name": "Golden spiral",
+      "name_th": "เกลียวทองคำ",
+      "what": "A logarithmic spiral growing by phi each quarter turn, used as a curving path that ends at the focal point.",
+      "why_it_works": "Weak evidence; overlays after the fact suffer confirmation bias because the spiral can be moved, scaled and flipped to fit almost anything (curriculum-03, Fstoppers). The useful part is the craft idea of a curving path coiling into the subject.",
+      "how_to_apply": [
+        "Design a curved flow (S-curve, arc of objects) that tightens toward the subject",
+        "Place the subject at the spiral's eye",
+        "Never chase the exact curve"
+      ],
+      "good_example": "Wave line on a beach curving from the bottom right into a pair of sunglasses at the upper left power point.",
+      "bad_example": "Spiral drawn over a random photo with claims it explains the appeal.",
+      "fix": "Describe the curve and the end point in words; use s_curve_flow logic.",
+      "when_to_break": "Graphic layouts, symmetry, most text-led posts.",
+      "focal_point_strategy": "Subject at the tight end of the curve.",
+      "viewing_path": "Wide end → along the curve → eye of the spiral.",
+      "balance": "asymmetrical",
+      "aspect_ratio_notes": "Natural in 3:2/16:9; squashed in 1:1; vertical in 9:16 (rotate 90°).",
+      "negative_space_use": "The wide outer part can be quiet space.",
+      "depth_layers": "Curve may run from FG to BG.",
+      "emotion_ids": [
+        "awe.awe",
+        "calm.serenity",
+        "cognitive.curiosity"
+      ],
+      "ai_prompt_phrases": [
+        "a curving line of shells leading from the lower right corner to the glasses at the upper left"
+      ],
+      "ai_pitfalls": "Models cannot follow 'golden spiral'; describe the actual curved elements. Workarounds: state position in plain words early in the prompt (subject → framing → light, curriculum-03), generate at the final aspect ratio, use img2img from a rough layout sketch or HTML block-out (tools/flux.py --init --denoise 0.6-0.8), outpaint/extend canvas to move the subject off-centre, or generate wider and crop after.",
+      "overlay_guide": {
+        "type": "spiral",
+        "eye": [
+          0.618,
+          0.382
+        ],
+        "ratio": 1.618,
+        "orientations": 8,
+        "note": "Draw any of 8 orientations; eye at a phi intersection. Display as a teaching aid, not a score."
+      },
+      "refs": [
+        "curriculum-03"
+      ],
+      "evidence": "mixed"
+    },
+    {
+      "id": "leading_lines",
+      "name": "Leading lines",
+      "name_th": "เส้นนำสายตา",
+      "what": "Lines in the scene (roads, rails, shelves, counter edges, shadows) that run toward the subject.",
+      "why_it_works": "Evidence-backed in part: edges and orientation are strong low-level saliency features (Itti1998), and Gestalt continuity groups lines into paths (Wagemans2012). That they literally steer gaze is craft-supported and plausible.",
+      "how_to_apply": [
+        "Find or add lines converging on the subject",
+        "Start lines at frame edges/corners",
+        "Avoid lines that run out of frame past the subject",
+        "Diagonals add energy"
+      ],
+      "good_example": "Floor tiles and a display counter converge on a teen sitting in the eye-test chair (curriculum-03 example).",
+      "bad_example": "A strong road line leading out of the frame away from the person.",
+      "fix": "Reposition the camera so lines meet at the subject, or block exiting lines with an object.",
+      "when_to_break": "Minimal or flat graphic posts where lines add clutter.",
+      "focal_point_strategy": "Subject at convergence/vanishing point.",
+      "viewing_path": "Frame edge → along lines → subject.",
+      "balance": "varies",
+      "aspect_ratio_notes": "9:16: vertical lines/paths from bottom to the face; 16:9: horizontal or one-point; 1:1: diagonals.",
+      "negative_space_use": "Lines can cross empty space to connect it to the subject.",
+      "depth_layers": "Lines receding from FG to BG create depth.",
+      "emotion_ids": [
+        "cognitive.curiosity",
+        "will.determination",
+        "hope.hope"
+      ],
+      "ai_prompt_phrases": [
+        "the lines of the wooden counter lead the eye toward the glasses",
+        "one-point perspective, lines converging on the subject"
+      ],
+      "ai_pitfalls": "Models add lines but rarely aim them at the subject. Use one-point perspective wording, or a layout sketch with img2img. Workarounds: state position in plain words early in the prompt (subject → framing → light, curriculum-03), generate at the final aspect ratio, use img2img from a rough layout sketch or HTML block-out (tools/flux.py --init --denoise 0.6-0.8), outpaint/extend canvas to move the subject off-centre, or generate wider and crop after.",
+      "overlay_guide": {
+        "type": "lines",
+        "segments": [
+          [
+            0,
+            1,
+            0.5,
+            0.5
+          ],
+          [
+            1,
+            1,
+            0.5,
+            0.5
+          ],
+          [
+            0,
+            0,
+            0.5,
+            0.5
+          ],
+          [
+            1,
+            0,
+            0.5,
+            0.5
+          ]
+        ],
+        "note": "Example corner-to-centre lines; analyze tool should detect actual lines (Hough) and test whether they converge within 0.1 of the focal point."
+      },
+      "refs": [
+        "Itti1998",
+        "Wagemans2012",
+        "curriculum-03"
+      ],
+      "evidence": "mixed"
+    },
+    {
+      "id": "symmetry",
+      "name": "Symmetry",
+      "name_th": "สมมาตร",
+      "what": "Mirror balance around a central axis; subject on the centre line.",
+      "why_it_works": "Symmetry is detected rapidly and is a strong Gestalt grouping/figure cue (Wagemans2012). Emotional effect (formal, calm, comic or uncanny) is context-driven craft (curriculum-03: Kubrick vs Wes Anderson).",
+      "how_to_apply": [
+        "Align the camera exactly on the axis",
+        "Level horizon",
+        "Match left and right elements",
+        "Add one small asymmetry only if it is the point"
+      ],
+      "good_example": "Frontal view of glasses centred on a symmetrical display shelf, soft light both sides.",
+      "bad_example": "Almost-symmetrical shot 3° off-axis — reads as a mistake.",
+      "fix": "Commit fully: perfect alignment or clearly asymmetric.",
+      "when_to_break": "When you need motion or tension; when the subject's gaze needs room.",
+      "focal_point_strategy": "Centre axis.",
+      "viewing_path": "Centre → out to symmetric pairs → back to centre.",
+      "balance": "symmetrical",
+      "aspect_ratio_notes": "Strong in 1:1 and 9:16 (centre axis fits UI); in 16:9 wide sides become decoration.",
+      "negative_space_use": "Equal margins.",
+      "depth_layers": "One-point perspective adds depth.",
+      "emotion_ids": [
+        "calm.serenity",
+        "performance.eerie_calm",
+        "will.authority_command",
+        "joy.amusement"
+      ],
+      "ai_prompt_phrases": [
+        "perfectly symmetrical frontal composition, subject on the exact centre line",
+        "one-point perspective, mirror symmetry"
+      ],
+      "ai_pitfalls": "Models produce near-symmetry with mismatched details (two different temple arms); inspect. Use mirror-flip of one half in post if needed.",
+      "overlay_guide": {
+        "type": "axis",
+        "v": [
+          0.5
+        ],
+        "h": [
+          0.5
+        ],
+        "note": "Score left/right mirror difference."
+      },
+      "refs": [
+        "Wagemans2012",
+        "Arnheim1974",
+        "curriculum-03"
+      ],
+      "evidence": "mixed"
+    },
+    {
+      "id": "asymmetrical_balance",
+      "name": "Asymmetrical balance",
+      "name_th": "สมดุลแบบไม่สมมาตร",
+      "what": "A large or dark mass on one side balanced by a smaller but brighter, more saturated or more interesting element on the other.",
+      "why_it_works": "Arnheim1974 describes visual weight from size, colour, position, isolation and interest, with a lever-like effect from distance to centre. Evidence for exact weights is limited; treat as craft informed by perception theory.",
+      "how_to_apply": [
+        "Place the heavy element nearer centre",
+        "Place the light element further out",
+        "Use colour or brightness to boost the small element",
+        "Check by squinting"
+      ],
+      "good_example": "Dark wooden cabinet filling the left, a small bright red frame on the right third.",
+      "bad_example": "All heavy objects on one side, empty other side with no counterweight.",
+      "fix": "Add a small accent opposite, or shift masses.",
+      "when_to_break": "When unease is intended (intentional imbalance, Mr. Robot short-siding, curriculum-03).",
+      "focal_point_strategy": "Usually the smaller bright element.",
+      "viewing_path": "Big mass → accent.",
+      "balance": "asymmetrical",
+      "aspect_ratio_notes": "Easier in wide ratios; 9:16 balances top vs bottom.",
+      "negative_space_use": "Space around the light element increases its weight (isolation).",
+      "depth_layers": "Masses can sit on different planes.",
+      "emotion_ids": [
+        "cognitive.interest",
+        "calm.acceptance",
+        "hope.excitement"
+      ],
+      "ai_prompt_phrases": [
+        "a large dark cabinet on the left balanced by a small bright red pair of glasses on the right"
+      ],
+      "ai_pitfalls": "Models drift to centring the main object; state both masses and sides. Workarounds: state position in plain words early in the prompt (subject → framing → light, curriculum-03), generate at the final aspect ratio, use img2img from a rough layout sketch or HTML block-out (tools/flux.py --init --denoise 0.6-0.8), outpaint/extend canvas to move the subject off-centre, or generate wider and crop after.",
+      "overlay_guide": {
+        "type": "balance",
+        "v": [
+          0.5
+        ],
+        "note": "Compute weighted centroid of saliency/contrast; balanced if within ±0.08 of 0.5 horizontally."
+      },
+      "refs": [
+        "Arnheim1974",
+        "curriculum-03"
+      ],
+      "evidence": "mixed"
+    },
+    {
+      "id": "radial",
+      "name": "Radial",
+      "name_th": "รัศมีจากศูนย์กลาง",
+      "what": "Elements radiate from or circle around a centre point.",
+      "why_it_works": "Converging/ radiating lines and concentric shapes point to the centre (Gestalt continuity, Wagemans2012); strong centre pull. Specific emotional effects are craft.",
+      "how_to_apply": [
+        "Put the subject at the hub",
+        "Arrange spokes evenly",
+        "Keep spokes simpler than the hub"
+      ],
+      "good_example": "Frames arranged like petals around one featured pair on a table, top-down.",
+      "bad_example": "Uneven spokes and a weak centre — eye has nowhere to land.",
+      "fix": "Strengthen hub contrast; even out spokes.",
+      "when_to_break": "When the story is about one direction of movement.",
+      "focal_point_strategy": "Hub.",
+      "viewing_path": "Periphery → along spokes → centre.",
+      "balance": "radial",
+      "aspect_ratio_notes": "Best 1:1; in 9:16 put hub in upper-middle; in 16:9 spokes stretch.",
+      "negative_space_use": "Space between spokes.",
+      "depth_layers": "Usually flat (top-down) or tunnel-like.",
+      "emotion_ids": [
+        "awe.awe",
+        "joy.elation",
+        "cognitive.curiosity"
+      ],
+      "ai_prompt_phrases": [
+        "eyeglass frames arranged in a radial pattern around one central pair, top-down view"
+      ],
+      "ai_pitfalls": "Models struggle with exact counts and even spacing; build in HTML from cutouts instead.",
+      "overlay_guide": {
+        "type": "radial",
+        "center": [
+          0.5,
+          0.5
+        ],
+        "circles": [
+          [
+            0.5,
+            0.5,
+            0.15
+          ],
+          [
+            0.5,
+            0.5,
+            0.3
+          ]
+        ],
+        "note": "Spokes every 30°."
+      },
+      "refs": [
+        "Wagemans2012",
+        "Artistic"
+      ],
+      "evidence": "mixed"
+    },
+    {
+      "id": "triangular",
+      "name": "Triangular",
+      "name_th": "สามเหลี่ยม",
+      "what": "Three key points (faces, objects) form a triangle; stable when based at the bottom.",
+      "why_it_works": "Craft (classical painting, triangle staging in film — curriculum-03). Closure groups three points into one shape (Gestalt).",
+      "how_to_apply": [
+        "Pick three elements",
+        "Vary their depth and height",
+        "Make the apex the most important",
+        "Avoid a flat line-up"
+      ],
+      "good_example": "Mother FG left, son MG centre, optometrist BG right — all faces visible (curriculum-03).",
+      "bad_example": "Three people in a row at equal height.",
+      "fix": "Stagger heights and distances.",
+      "when_to_break": "Single-subject frames; deliberately confrontational line-ups.",
+      "focal_point_strategy": "Apex or the most lit vertex.",
+      "viewing_path": "Vertex → vertex → vertex, ending at apex.",
+      "balance": "varies",
+      "aspect_ratio_notes": "Wide ratios allow wide base; 9:16 use tall triangle.",
+      "negative_space_use": "Space inside the triangle connects the elements.",
+      "depth_layers": "Natural FG/MG/BG staging.",
+      "emotion_ids": [
+        "calm.acceptance",
+        "social.gratitude",
+        "care.empathy"
+      ],
+      "ai_prompt_phrases": [
+        "triangle staging: one person in the foreground left, one in the centre midground, one in the background right"
+      ],
+      "ai_pitfalls": "Models line characters up side by side; specify FG/MG/BG positions explicitly.",
+      "overlay_guide": {
+        "type": "triangle",
+        "segments": [
+          [
+            0.2,
+            0.85,
+            0.5,
+            0.25
+          ],
+          [
+            0.5,
+            0.25,
+            0.8,
+            0.85
+          ],
+          [
+            0.2,
+            0.85,
+            0.8,
+            0.85
+          ]
+        ],
+        "note": "Example upright triangle."
+      },
+      "refs": [
+        "curriculum-03",
+        "Wagemans2012"
+      ],
+      "evidence": "craft"
+    },
+    {
+      "id": "diagonal",
+      "name": "Diagonal",
+      "name_th": "แนวทแยง",
+      "what": "Main lines or the subject axis run corner to corner.",
+      "why_it_works": "Arnheim1974 discusses oblique orientation as dynamic tension compared with stable verticals/horizontals; widely used craft. Effects on viewers are not precisely quantified.",
+      "how_to_apply": [
+        "Align the subject or a line along a diagonal",
+        "Start in a corner",
+        "Avoid slight accidental tilt"
+      ],
+      "good_example": "Temple arm of a frame running from lower left to upper right in a macro.",
+      "bad_example": "Horizon tilted 2°, looking like an error.",
+      "fix": "Commit to a clear angle (≥ 15°) or level it.",
+      "when_to_break": "Calm, formal, trustworthy messages.",
+      "focal_point_strategy": "End of the diagonal or a point on it.",
+      "viewing_path": "Corner → along diagonal.",
+      "balance": "asymmetrical",
+      "aspect_ratio_notes": "1:1 prevents flat feel (curriculum-03); 9:16 steeper diagonal.",
+      "negative_space_use": "Triangles of space either side.",
+      "depth_layers": "Diagonal receding into depth adds perspective.",
+      "emotion_ids": [
+        "hope.excitement",
+        "will.urgency",
+        "joy.elation"
+      ],
+      "ai_prompt_phrases": [
+        "the glasses placed diagonally from the lower left to the upper right corner",
+        "dynamic diagonal composition"
+      ],
+      "ai_pitfalls": "Models default to horizontal product placement; rotate the cutout in HTML or describe the diagonal explicitly.",
+      "overlay_guide": {
+        "type": "lines",
+        "segments": [
+          [
+            0,
+            1,
+            1,
+            0
+          ],
+          [
+            0,
+            0,
+            1,
+            1
+          ]
+        ],
+        "note": "Main diagonals; also baroque/sinister diagonals."
+      },
+      "refs": [
+        "Arnheim1974",
+        "curriculum-03"
+      ],
+      "evidence": "mixed"
+    },
+    {
+      "id": "center",
+      "name": "Centred",
+      "name_th": "วางกลาง",
+      "what": "Subject at the centre of the frame.",
+      "why_it_works": "Craft: centring is correct for hero products, logos and symmetrical subjects (curriculum-03) and reads as stable, direct and confident (Arnheim1974 treats the centre as the most balanced position). A general tendency of viewers to look at image centres is often reported, but no source for it is cited here.",
+      "how_to_apply": [
+        "Centre the subject exactly",
+        "Simplify background",
+        "Use symmetry or a frame to support it"
+      ],
+      "good_example": "Hero shot of one frame on a gradient sweep, centred, with headline space above.",
+      "bad_example": "Centred portrait with a person looking sideways off-frame and too much headroom.",
+      "fix": "Tighten framing or move to thirds when gaze implies direction.",
+      "when_to_break": "Narrative frames needing direction or look room.",
+      "focal_point_strategy": "Centre.",
+      "viewing_path": "Centre first, then out.",
+      "balance": "symmetrical",
+      "aspect_ratio_notes": "Ideal for 1:1 and 9:16 (UI safe); in 16:9 the sides may feel empty.",
+      "negative_space_use": "Equal margins, often text above/below.",
+      "depth_layers": "Background blur supports it.",
+      "emotion_ids": [
+        "will.confidence",
+        "calm.serenity",
+        "performance.trusted_expert"
+      ],
+      "ai_prompt_phrases": [
+        "centred hero product shot, the glasses in the middle of the frame"
+      ],
+      "ai_pitfalls": "Easiest for models — the default. Risk is that every image is centred; vary deliberately.",
+      "overlay_guide": {
+        "type": "center",
+        "points": [
+          [
+            0.5,
+            0.5
+          ]
+        ],
+        "circles": [
+          [
+            0.5,
+            0.5,
+            0.1
+          ]
+        ],
+        "note": "Focal point within 0.1 of centre."
+      },
+      "refs": [
+        "curriculum-03",
+        "Artistic"
+      ],
+      "evidence": "mixed"
+    },
+    {
+      "id": "negative_space",
+      "name": "Negative space",
+      "name_th": "พื้นที่ว่าง",
+      "what": "Large intentional empty area around a small subject.",
+      "why_it_works": "Isolation raises the salience of the subject (contrast with a uniform surround, Itti1998). Emotional reading (loneliness, calm, luxury) is craft.",
+      "how_to_apply": [
+        "Keep the subject small and simple",
+        "Make the empty area plain (sky, wall, sand)",
+        "Decide what the space is for (emotion or text)"
+      ],
+      "good_example": "Matte black titanium glasses slightly below centre on pale sand, upper third clean sky for a headline (curriculum-03).",
+      "bad_example": "'Minimal' prompt plus 'detailed, intricate' words, producing clutter.",
+      "fix": "Remove busy terms, describe the empty area concretely.",
+      "when_to_break": "Information-heavy posts, products needing detail.",
+      "focal_point_strategy": "Small subject with strongest contrast.",
+      "viewing_path": "Subject → space → text.",
+      "balance": "asymmetrical",
+      "aspect_ratio_notes": "9:16 put space top for headline; 16:9 side space; 1:1 corners.",
+      "negative_space_use": "Primary — headline area or emotion.",
+      "depth_layers": "Often 1-2 layers.",
+      "emotion_ids": [
+        "visual.peaceful_solitude",
+        "sadness.loneliness",
+        "calm.serenity"
+      ],
+      "ai_prompt_phrases": [
+        "clean negative space in the upper third for a headline, no text",
+        "minimal composition, small subject, plain empty background"
+      ],
+      "ai_pitfalls": "Models fill space with props; repeat 'empty' and name the surface. Never let the model write text. Outpaint to add space.",
+      "overlay_guide": {
+        "type": "zones",
+        "rects": [
+          [
+            0,
+            0,
+            1,
+            0.333
+          ]
+        ],
+        "note": "Measure low-detail area fraction; e.g. ≥ 40% low-edge-density."
+      },
+      "refs": [
+        "Itti1998",
+        "curriculum-03"
+      ],
+      "evidence": "mixed"
+    },
+    {
+      "id": "frame_within_frame",
+      "name": "Frame within a frame",
+      "name_th": "กรอบซ้อนกรอบ",
+      "what": "A doorway, window, mirror, display case or the eyewear frame itself encloses the subject.",
+      "why_it_works": "Enclosure is a Gestalt figure cue (closure, surroundedness) and adds contrast edges around the subject (Wagemans2012). Narrative meanings (secrecy, being watched) are craft (curriculum-03).",
+      "how_to_apply": [
+        "Find an enclosing shape",
+        "Put the subject inside it",
+        "Keep the frame darker or out of focus"
+      ],
+      "good_example": "Optician seen through the cabinet's wooden doorway; or eyes framed through a pair of glasses held up.",
+      "bad_example": "The inner frame is busier than the subject.",
+      "fix": "Darken or blur the frame layer.",
+      "when_to_break": "Open, free feelings.",
+      "focal_point_strategy": "Subject inside the inner frame.",
+      "viewing_path": "Outer frame → inner frame → subject.",
+      "balance": "varies",
+      "aspect_ratio_notes": "Works in all ratios; a vertical door suits 9:16.",
+      "negative_space_use": "Frame border acts as structured space.",
+      "depth_layers": "Frame usually FG, subject MG.",
+      "emotion_ids": [
+        "visual.mystery",
+        "love.tenderness",
+        "stance.suspicion"
+      ],
+      "ai_prompt_phrases": [
+        "seen through the open doorway of a glass display cabinet",
+        "her eyes framed through a pair of glasses held up to the camera"
+      ],
+      "ai_pitfalls": "Models merge frame and subject; use foreground/midground wording.",
+      "overlay_guide": {
+        "type": "inner_rect",
+        "rects": [
+          [
+            0.2,
+            0.15,
+            0.8,
+            0.85
+          ]
+        ],
+        "note": "Detect enclosing contour around focal point."
+      },
+      "refs": [
+        "Wagemans2012",
+        "curriculum-03"
+      ],
+      "evidence": "mixed"
+    },
+    {
+      "id": "layered_depth",
+      "name": "Layered depth (FG/MG/BG)",
+      "name_th": "ชั้นความลึก",
+      "what": "Distinct foreground, midground and background planes.",
+      "why_it_works": "Pictorial depth cues — overlap, size gradient, aerial perspective, defocus — are established perception findings (Livingstone2002); layering stacks them.",
+      "how_to_apply": [
+        "FG: an edge object (often blurred)",
+        "MG: the story/subject",
+        "BG: place and time",
+        "Separate by tone and focus"
+      ],
+      "good_example": "Blurred cabinet edge FG, optician holding tortoiseshell frames MG, hazy street BG.",
+      "bad_example": "Everything equally sharp at one distance — flat.",
+      "fix": "Add an FG object and atmospheric fade.",
+      "when_to_break": "Flat graphic styles, flatlays.",
+      "focal_point_strategy": "MG subject sharpest.",
+      "viewing_path": "FG edge → MG subject → BG context.",
+      "balance": "varies",
+      "aspect_ratio_notes": "9:16 stack vertically; 16:9 horizontally.",
+      "negative_space_use": "Blurred BG works as soft space.",
+      "depth_layers": "Three explicit layers.",
+      "emotion_ids": [
+        "cognitive.interest",
+        "visual.coziness",
+        "nostalgia.nostalgia"
+      ],
+      "ai_prompt_phrases": [
+        "foreground: ..., midground: ..., background: ...",
+        "blurred foreground edge, sharp subject, hazy background"
+      ],
+      "ai_pitfalls": "FLUX responds well to explicit FG/MG/BG (curriculum-03, BFL docs); without it models flatten.",
+      "overlay_guide": {
+        "type": "depth",
+        "note": "Use depth map (tools/depth.py) to check ≥ 3 depth clusters."
+      },
+      "refs": [
+        "Livingstone2002",
+        "curriculum-03"
+      ],
+      "evidence": "finding"
+    },
+    {
+      "id": "subject_isolation",
+      "name": "Subject isolation",
+      "name_th": "แยกตัวแบบให้เด่น",
+      "what": "Separating the subject by focus, light, colour or tone contrast.",
+      "why_it_works": "Saliency is driven by local contrast in intensity, colour and orientation (Itti1998); one saturated colour among muted ones draws the eye (curriculum-03).",
+      "how_to_apply": [
+        "Shallow depth of field",
+        "Light the subject brighter",
+        "Single accent colour",
+        "Clean background"
+      ],
+      "good_example": "Red frame sharp on a grey blurred table.",
+      "bad_example": "Subject the same tone as background.",
+      "fix": "Change background value or add rim light.",
+      "when_to_break": "Environmental storytelling.",
+      "focal_point_strategy": "Maximum contrast at the subject.",
+      "viewing_path": "Subject straight away.",
+      "balance": "varies",
+      "aspect_ratio_notes": "All ratios.",
+      "negative_space_use": "Muted BG becomes space.",
+      "depth_layers": "Often 2 layers.",
+      "emotion_ids": [
+        "will.confidence",
+        "cognitive.interest",
+        "sadness.loneliness"
+      ],
+      "ai_prompt_phrases": [
+        "shallow depth of field, the glasses sharp against a softly blurred background",
+        "the only saturated colour in the frame"
+      ],
+      "ai_pitfalls": "Models may add accent colours everywhere; state 'muted background'.",
+      "overlay_guide": {
+        "type": "saliency",
+        "note": "Saliency peak should coincide with focal point."
+      },
+      "refs": [
+        "Itti1998",
+        "curriculum-03"
+      ],
+      "evidence": "finding"
+    },
+    {
+      "id": "visual_weight_counterbalance",
+      "name": "Visual weight counterbalance",
+      "name_th": "ถ่วงน้ำหนักภาพ",
+      "what": "Deliberate balancing of elements by size, value, colour, text and position.",
+      "why_it_works": "Arnheim1974: weight from size, colour, location, isolation; faces and text are heavy. Lever effect is theory and craft.",
+      "how_to_apply": [
+        "List the heavy elements: faces, text, saturated colour, high contrast, large size, elements near the edge",
+        "Squint or blur to see masses",
+        "Move heavy elements toward centre or add a counterweight opposite",
+        "Re-check after adding HTML text, which adds weight"
+      ],
+      "good_example": "Bold headline block top-left (HTML) balanced by a bright frame cutout bottom-right, plain background between.",
+      "bad_example": "Large red price tag beside the face pulls the eye away from the product (curriculum-03).",
+      "fix": "Reduce price size/saturation, move it to a quiet corner, or give the face/product more contrast.",
+      "when_to_break": "When unease or instability is the message (intentional imbalance).",
+      "focal_point_strategy": "Make the heaviest element the focal point; reduce competing weights.",
+      "viewing_path": "Heaviest element → counterweight → supporting text.",
+      "balance": "asymmetrical",
+      "aspect_ratio_notes": "16:9 balance left/right; 9:16 balance top/bottom and keep weight inside the safe box; 1:1 balance on diagonals.",
+      "negative_space_use": "Empty area around an element increases its weight through isolation.",
+      "depth_layers": "Nearer, larger elements carry more weight; blurred BG carries little.",
+      "emotion_ids": [
+        "calm.serenity",
+        "cognitive.interest",
+        "will.confidence"
+      ],
+      "ai_prompt_phrases": [
+        "a large dark shape on the left balanced by a small bright accent on the right",
+        "keep the right half quiet for text"
+      ],
+      "ai_pitfalls": "Models do not know the text that will be added; generate the image leaving the text side quiet, then balance in HTML. They also add random bright accents that steal weight — remove with inpainting or ask for a muted background.",
+      "overlay_guide": {
+        "type": "balance",
+        "v": [
+          0.5
+        ],
+        "h": [
+          0.5
+        ],
+        "note": "Saliency/contrast-weighted centroid; within ±0.08 of centre = balanced, beyond = deliberate imbalance."
+      },
+      "refs": [
+        "Arnheim1974",
+        "curriculum-03"
+      ],
+      "evidence": "mixed"
+    },
+    {
+      "id": "figure_ground",
+      "name": "Figure-ground",
+      "name_th": "ภาพกับพื้น",
+      "what": "Make the subject (figure) read instantly as separate from its background (ground) through value, colour, edge and shape contrast — or make the relationship ambiguous on purpose.",
+      "why_it_works": "Core Gestalt finding: regions that are smaller, enclosed, convex, symmetric or lower in the frame tend to be seen as figure (Wertheimer1923; reviewed in Wagemans2012). Clear figure-ground lets viewers parse a thumbnail in a glance.",
+      "how_to_apply": [
+        "Squint or blur the draft: the subject must remain a readable shape",
+        "Put a light subject on dark ground or vice versa (value first, colour second)",
+        "Remove tangents where subject edges touch background lines",
+        "Give dark-haired or dark-framed subjects a rim or lighter background"
+      ],
+      "good_example": "Black acetate frame as a crisp silhouette on a pale Timberwolf sweep; every edge readable at thumbnail size.",
+      "bad_example": "Lamp post appears to grow out of a customer's head; dark frame on dark wood disappears (curriculum-03 mistake list).",
+      "fix": "Shift the camera a few degrees, change background value, or add rim light so the outline separates.",
+      "when_to_break": "Op-art or puzzle images where figure-ground reversal is the point; mystery frames where the subject should emerge slowly.",
+      "focal_point_strategy": "The figure is the focal point; keep its strongest edge contrast at the most important part (eyes, lens).",
+      "viewing_path": "Figure shape first → its internal detail → ground context.",
+      "balance": "varies",
+      "aspect_ratio_notes": "Same in all ratios; in 9:16 the platform UI overlays add a third 'layer' — keep the figure clear of it.",
+      "negative_space_use": "The ground is the negative space; keep it simple in value.",
+      "depth_layers": "Usually two (figure, ground); a third FG layer must not merge with the figure.",
+      "emotion_ids": [
+        "cognitive.interest",
+        "will.confidence",
+        "awe.childlike_wonder"
+      ],
+      "ai_prompt_phrases": [
+        "the dark frames stand out as a clean silhouette against a pale plain background",
+        "strong separation between subject and background, nothing touching the outline"
+      ],
+      "ai_pitfalls": "Models often place background lines tangent to heads or let similar tones merge. Check a blurred/greyscale version; fix with background value words or a cutout composited in HTML over a generated background.",
+      "overlay_guide": {
+        "type": "silhouette",
+        "note": "Convert to greyscale, Otsu threshold; figure should form one dominant blob with mean value contrast ≥ 0.25 against ground."
+      },
+      "refs": [
+        "Wertheimer1923",
+        "Wagemans2012",
+        "curriculum-03"
+      ],
+      "evidence": "finding"
+    },
+    {
+      "id": "s_curve_flow",
+      "name": "S-curve flow",
+      "name_th": "เส้นโค้งตัว S",
+      "what": "A gentle S-shaped line (shoreline, path, river, draped cloth, body pose) that carries the eye through the frame in a relaxed zig-zag.",
+      "why_it_works": "Gestalt good continuation makes a smooth curve read as one path (Wagemans2012). Its 'grace' and calm associations are craft (Artistic), not measured.",
+      "how_to_apply": [
+        "Start the curve at a bottom corner or edge",
+        "Let it swing across the frame at least twice",
+        "End it on or near the subject",
+        "Keep the curve the smoothest, most continuous line in the image"
+      ],
+      "good_example": "Hua Hin water line curving from the lower right, across the middle, to a woman in sunglasses on the upper left third.",
+      "bad_example": "The curve exits the side of the frame and the subject sits off the path.",
+      "fix": "Reframe so the curve terminates at the subject, or move the subject onto the curve.",
+      "when_to_break": "Rigid geometric, architectural or tech themes; urgent messages where a straight diagonal is stronger.",
+      "focal_point_strategy": "Subject at the end (or the last bend) of the S.",
+      "viewing_path": "Entry corner → first bend → second bend → subject.",
+      "balance": "asymmetrical",
+      "aspect_ratio_notes": "Natural in 9:16 and 4:5 (vertical S); in 16:9 flatten to a horizontal S; 1:1 fits one bend plus end.",
+      "negative_space_use": "Calm areas inside the bends; good places for small text.",
+      "depth_layers": "A receding S (road into distance) adds strong depth.",
+      "emotion_ids": [
+        "calm.serenity",
+        "love.tenderness",
+        "visual.peaceful_solitude"
+      ],
+      "ai_prompt_phrases": [
+        "a winding S-shaped path leads from the bottom of the frame to the person",
+        "gently curving shoreline sweeping toward the figure"
+      ],
+      "ai_pitfalls": "'S-curve composition' is weak in prompts; name the concrete element that curves and where it starts/ends. Use a sketch with img2img for exact shape.",
+      "overlay_guide": {
+        "type": "curve",
+        "points": [
+          [
+            0.25,
+            1.0
+          ],
+          [
+            0.7,
+            0.72
+          ],
+          [
+            0.3,
+            0.42
+          ],
+          [
+            0.62,
+            0.12
+          ]
+        ],
+        "note": "Example S control points (Catmull-Rom); mirror horizontally as needed."
+      },
+      "refs": [
+        "Wagemans2012",
+        "Artistic"
+      ],
+      "evidence": "mixed"
+    },
+    {
+      "id": "repetition_rhythm",
+      "name": "Repetition / rhythm",
+      "name_th": "การซ้ำและจังหวะ",
+      "what": "Repeated shapes, colours or objects at regular or progressive intervals, creating visual rhythm.",
+      "why_it_works": "Similarity and proximity cause repeated elements to group into a pattern (Gestalt; Wagemans2012). Perceived 'rhythm' and its calming or energetic effect is craft.",
+      "how_to_apply": [
+        "Repeat one element type (frames, shelves, arches)",
+        "Choose interval: regular = calm, accelerating = energy",
+        "Let repetition recede for depth",
+        "Plan one focal point (often a pattern_break)"
+      ],
+      "good_example": "Wall of identical display shelves receding diagonally, each with a pair of frames, the nearest one sharp.",
+      "bad_example": "Flat even grid with no focal point; the eye wanders and leaves.",
+      "fix": "Add size progression, perspective, or one different element.",
+      "when_to_break": "Single hero product with negative space; emotional portraits.",
+      "focal_point_strategy": "Nearest/sharpest repeat or the odd one out.",
+      "viewing_path": "Along the row → to the end or the break.",
+      "balance": "varies",
+      "aspect_ratio_notes": "16:9 and 21:9 suit horizontal rows; 9:16 vertical stacks; 1:1 grids.",
+      "negative_space_use": "Intervals between repeats are rhythmic space.",
+      "depth_layers": "Receding repetition is a strong size-gradient depth cue.",
+      "emotion_ids": [
+        "calm.serenity",
+        "cognitive.interest",
+        "low.boredom"
+      ],
+      "ai_prompt_phrases": [
+        "a long row of identical eyeglass frames on wooden shelves receding into the distance",
+        "repeating arches creating rhythm"
+      ],
+      "ai_pitfalls": "Models make repeated items inconsistent (different shapes, melted copies). For exact repetition, generate one item and repeat cutouts in HTML.",
+      "overlay_guide": {
+        "type": "periodicity",
+        "note": "Autocorrelation/FFT peak along x or y indicates repetition; report interval in normalised units."
+      },
+      "refs": [
+        "Wagemans2012",
+        "Artistic"
+      ],
+      "evidence": "mixed"
+    },
+    {
+      "id": "scale_contrast",
+      "name": "Scale contrast",
+      "name_th": "ความต่างของขนาด",
+      "what": "Pair something very large with something very small to show scale, power or vulnerability.",
+      "why_it_works": "Size difference is salient and also a depth cue (familiar size; Livingstone2002). Meanings (grandeur, loneliness, power) are craft; size/height in frame = power is a film convention (curriculum-03).",
+      "how_to_apply": [
+        "Pick a known-size reference (person, hand)",
+        "Make the size ratio extreme (≥ 1:10)",
+        "Give the small element contrast so it is not lost",
+        "Keep the large element simple"
+      ],
+      "good_example": "Tiny figure walking across the bridge of a giant pair of glasses on a white plane (surreal promo).",
+      "bad_example": "Elements of similar sizes scattered with no hierarchy.",
+      "fix": "Enlarge the hero or shrink the reference; remove mid-sized clutter.",
+      "when_to_break": "Accurate product scale is needed (size guides, fitting info).",
+      "focal_point_strategy": "Usually the small element (contrast-boosted) or the large element's detail.",
+      "viewing_path": "Large mass → small figure → back to large.",
+      "balance": "asymmetrical",
+      "aspect_ratio_notes": "9:16 shows height/vertical scale; 21:9 and 16:9 landscape scale.",
+      "negative_space_use": "Large empty area emphasises smallness.",
+      "depth_layers": "Small far figure vs huge near object exaggerates depth.",
+      "emotion_ids": [
+        "awe.awe",
+        "visual.majesty",
+        "vulnerable.vulnerability"
+      ],
+      "ai_prompt_phrases": [
+        "a tiny person standing next to giant eyeglasses, extreme scale contrast",
+        "small lone figure dwarfed by a huge landscape"
+      ],
+      "ai_pitfalls": "Models normalise sizes; state the ratio in words ('the person is no taller than the lens'). Compose large/small layers separately and scale in HTML for control.",
+      "overlay_guide": {
+        "type": "size",
+        "note": "Ratio of bounding-box areas of largest and smallest salient objects; ≥ 10 = strong contrast."
+      },
+      "refs": [
+        "Livingstone2002",
+        "curriculum-03",
+        "Artistic"
+      ],
+      "evidence": "mixed"
+    },
+    {
+      "id": "pattern_break",
+      "name": "Pattern break",
+      "name_th": "แหวกแบบแผน",
+      "what": "One element differs (colour, orientation, size, state) within an otherwise uniform pattern.",
+      "why_it_works": "Visual search 'pop-out': a single feature singleton in a homogeneous field is detected quickly, consistent with saliency models (Itti1998).",
+      "how_to_apply": [
+        "Build a clean uniform pattern",
+        "Change exactly one feature of one element",
+        "Place the odd element off-centre (thirds) for interest",
+        "Keep everything else identical"
+      ],
+      "good_example": "Grid of black frames with one Peach-coloured frame on the upper-right power point.",
+      "bad_example": "Several 'special' elements competing; or noisy pattern so the break does not pop.",
+      "fix": "Reduce to one break and make the pattern more uniform.",
+      "when_to_break": "When calm repetition itself is the message.",
+      "focal_point_strategy": "The singleton.",
+      "viewing_path": "Immediate jump to the break → pattern for context.",
+      "balance": "varies",
+      "aspect_ratio_notes": "All; dense grids suit 1:1 and 4:5.",
+      "negative_space_use": "The uniform pattern acts as a textured ground.",
+      "depth_layers": "Usually flat; works in perspective too.",
+      "emotion_ids": [
+        "surprise.pleasant",
+        "cognitive.curiosity",
+        "joy.mischief"
+      ],
+      "ai_prompt_phrases": [
+        "rows of identical black eyeglass frames, one single bright peach frame among them",
+        "everything identical except one"
+      ],
+      "ai_pitfalls": "Models scatter variations and miscount. Best built in HTML from one cutout repeated + one recoloured.",
+      "overlay_guide": {
+        "type": "anomaly",
+        "note": "Feature-outlier detection (colour/orientation z-score > 3 for exactly one object)."
+      },
+      "refs": [
+        "Itti1998"
+      ],
+      "evidence": "finding"
+    },
+    {
+      "id": "odd_grouping",
+      "name": "Odd grouping (rule of odds)",
+      "name_th": "จัดกลุ่มเลขคี่",
+      "what": "Group objects in odd numbers (3, 5) so one can sit in the middle and the group reads as a unit.",
+      "why_it_works": "Craft rule (Artistic). No strong evidence that odd numbers are preferred; the useful part is avoiding a 50/50 split between two equal items and giving the group a centre.",
+      "how_to_apply": [
+        "Group 3 (or 5) items close together (proximity)",
+        "Vary size/height/depth",
+        "Make one the hero",
+        "Avoid perfect line-ups"
+      ],
+      "good_example": "Three frames on a stone: hero front-centre, two behind at different heights.",
+      "bad_example": "Two identical frames side by side, attention split down the middle.",
+      "fix": "Add a third smaller prop or make one of the two clearly dominant.",
+      "when_to_break": "Pairs for comparison (before/after, his/hers); data/grid layouts.",
+      "focal_point_strategy": "Middle or largest item.",
+      "viewing_path": "Hero → second → third → back to hero.",
+      "balance": "asymmetrical",
+      "aspect_ratio_notes": "All; triangle grouping fits 1:1 and 4:5.",
+      "negative_space_use": "Space around the group frames it as one unit.",
+      "depth_layers": "Stagger items front/back.",
+      "emotion_ids": [
+        "calm.serenity",
+        "joy.contentment",
+        "visual.coziness"
+      ],
+      "ai_prompt_phrases": [
+        "three pairs of glasses grouped together on a stone, one in front and two behind"
+      ],
+      "ai_pitfalls": "Models often generate the wrong count (2 or 4). Verify; place cutouts in HTML for exact counts.",
+      "overlay_guide": {
+        "type": "count",
+        "note": "Count salient objects; flag even counts of equal-sized items."
+      },
+      "refs": [
+        "Artistic"
+      ],
+      "evidence": "craft"
+    },
+    {
+      "id": "z_pattern",
+      "name": "Z-pattern layout",
+      "name_th": "รูปแบบตัว Z",
+      "what": "For sparse graphic layouts, place elements along a Z: top-left → top-right → diagonal → bottom-left → bottom-right.",
+      "why_it_works": "Craft/design heuristic based on left-to-right, top-to-bottom reading habits (English and Thai both read left-to-right). Treat as a layout convention, not proven gaze law.",
+      "how_to_apply": [
+        "Logo or hook top-left",
+        "Headline top-right or across",
+        "Image across the diagonal",
+        "CTA or price bottom-right (inside the safe zone)"
+      ],
+      "good_example": "1:1 promo: partner logo top-left, headline top-right, glasses on the diagonal, 'แชทเลย' CTA bottom-right.",
+      "bad_example": "CTA top-left before the viewer knows the offer.",
+      "fix": "Reorder elements along reading order; end with the action.",
+      "when_to_break": "Image-led emotional posts; centred hero layouts; 9:16 where bottom-right is covered by UI.",
+      "focal_point_strategy": "Image at the diagonal, CTA as final stop.",
+      "viewing_path": "TL → TR → diagonal → BL → BR.",
+      "balance": "asymmetrical",
+      "aspect_ratio_notes": "Best 1:1, 4:5, web banners; 9:16 bottom-right is platform UI — move CTA up into the safe box (x 65-950, y 270-1250 on 1080×1920, curriculum-03).",
+      "negative_space_use": "Empty corridors between Z strokes keep it scannable.",
+      "depth_layers": "Mostly flat graphic layers.",
+      "emotion_ids": [
+        "performance.sales_enthusiasm",
+        "will.confidence",
+        "cognitive.interest"
+      ],
+      "ai_prompt_phrases": [
+        "plain background with clean empty areas in the top right and bottom right corners for text",
+        "product placed on a diagonal from lower left to upper right"
+      ],
+      "ai_pitfalls": "Never let the model write the text; generate the image with empty zones and set text in HTML.",
+      "overlay_guide": {
+        "type": "path",
+        "segments": [
+          [
+            0.08,
+            0.1,
+            0.92,
+            0.1
+          ],
+          [
+            0.92,
+            0.1,
+            0.08,
+            0.9
+          ],
+          [
+            0.08,
+            0.9,
+            0.92,
+            0.9
+          ]
+        ],
+        "note": "Z path; check that key elements sit near its vertices."
+      },
+      "refs": [
+        "Artistic"
+      ],
+      "evidence": "craft"
+    },
+    {
+      "id": "f_pattern",
+      "name": "F-pattern layout",
+      "name_th": "รูปแบบตัว F",
+      "what": "For text-heavy slides: strong headline across the top, sub-points left-aligned beneath, so a scanning eye reads the left edge and the first words of each line.",
+      "why_it_works": "Craft/UX convention for scanning text; reading-pattern research exists for web pages but is outside this brief's keys, so it is labelled craft here. Left alignment gives a single strong edge (MullerBrockmann1981 grid logic).",
+      "how_to_apply": [
+        "Headline full-width at top",
+        "Left-align bullets",
+        "Front-load key words",
+        "Image or icon on the right, not interrupting the left edge"
+      ],
+      "good_example": "Carousel tip slide: headline top, 3 left-aligned tips, small frame cutout bottom-right.",
+      "bad_example": "Centred multi-line paragraphs with ragged both sides.",
+      "fix": "Left-align and shorten lines; bold the first words.",
+      "when_to_break": "Image-led or single-message posts; quote images (centre may be right).",
+      "focal_point_strategy": "Headline, then left column.",
+      "viewing_path": "Across the top → down the left → short horizontal sweeps.",
+      "balance": "asymmetrical",
+      "aspect_ratio_notes": "4:5 and 1:1 carousels; 16:9 slides; in 9:16 keep it inside the safe box.",
+      "negative_space_use": "Right side breathing room or image area.",
+      "depth_layers": "Flat; background image should be quiet behind text.",
+      "emotion_ids": [
+        "performance.trusted_expert",
+        "cognitive.interest",
+        "care.reassurance"
+      ],
+      "ai_prompt_phrases": [
+        "soft plain background with a large empty area on the left for text",
+        "subtle illustration in the lower right corner only"
+      ],
+      "ai_pitfalls": "Text belongs in the HTML layer; ask the model only for a quiet background with space.",
+      "overlay_guide": {
+        "type": "path",
+        "segments": [
+          [
+            0.08,
+            0.12,
+            0.92,
+            0.12
+          ],
+          [
+            0.08,
+            0.3,
+            0.7,
+            0.3
+          ],
+          [
+            0.08,
+            0.12,
+            0.08,
+            0.9
+          ]
+        ],
+        "note": "F strokes; text block left edge near x=0.08."
+      },
+      "refs": [
+        "MullerBrockmann1981",
+        "Artistic"
+      ],
+      "evidence": "craft"
+    },
+    {
+      "id": "flatlay_grid",
+      "name": "Flatlay grid",
+      "name_th": "จัดวางมุมบนเป็นกริด",
+      "what": "Camera straight down (90°) over objects arranged on an aligned grid or knolling layout.",
+      "why_it_works": "Alignment and proximity grouping make items read as an organised set (Gestalt; Wagemans2012); grid structure is a design craft (MullerBrockmann1981).",
+      "how_to_apply": [
+        "Shoot/request true top-down",
+        "Align items to a grid with equal gutters",
+        "Rotate items to 0°/90° (knolling) or a consistent angle",
+        "Choose one hero larger or central"
+      ],
+      "good_example": "Frame, case, cleaning cloth and lens card on a Snow background, equal spacing, hero frame centre-top.",
+      "bad_example": "Slight perspective tilt and random angles look careless.",
+      "fix": "Exact 90° camera; straighten items; consistent gutters.",
+      "when_to_break": "Lifestyle warmth wanted (loose scatter, hands entering).",
+      "focal_point_strategy": "Hero item largest or at centre/upper third.",
+      "viewing_path": "Hero → row by row.",
+      "balance": "varies",
+      "aspect_ratio_notes": "1:1 and 4:5 ideal; 9:16 stack as a column; 16:9 rows.",
+      "negative_space_use": "Gutters and margins are the space; generous margins read premium.",
+      "depth_layers": "Flat; only contact shadows give depth.",
+      "emotion_ids": [
+        "calm.serenity",
+        "cognitive.interest",
+        "performance.trusted_expert"
+      ],
+      "ai_prompt_phrases": [
+        "top-down flat lay, objects neatly arranged in a grid on a plain light background, soft even shadows",
+        "knolling layout, everything aligned at right angles"
+      ],
+      "ai_pitfalls": "Models tilt the camera and warp objects. Prefer real cutouts arranged in HTML over a generated surface texture.",
+      "overlay_guide": {
+        "type": "grid",
+        "v": [
+          0.25,
+          0.5,
+          0.75
+        ],
+        "h": [
+          0.25,
+          0.5,
+          0.75
+        ],
+        "note": "Check object centres snap to grid within ±0.03."
+      },
+      "refs": [
+        "MullerBrockmann1981",
+        "Wagemans2012"
+      ],
+      "evidence": "mixed"
+    },
+    {
+      "id": "over_shoulder",
+      "name": "Over the shoulder",
+      "name_th": "มุมข้ามไหล่",
+      "what": "Camera behind one character's shoulder, which occupies a blurred edge of the frame, looking at the other character or object.",
+      "why_it_works": "Film grammar craft for dialogue and POV (Block2008, bibliographic; curriculum-03 GUIDE eyeline). Puts the viewer inside the scene.",
+      "how_to_apply": [
+        "Shoulder/head as dark blurred FG on one side (~1/4 of frame)",
+        "Other face on the opposite third",
+        "Respect the 180° line",
+        "Eyeline toward the shoulder"
+      ],
+      "good_example": "Customer's shoulder FG left, optician MG right third adjusting frames, looking at her.",
+      "bad_example": "Shoulder fills half the frame and the face is cramped against the edge.",
+      "fix": "Reduce shoulder to a quarter; open more look room.",
+      "when_to_break": "Single-subject product shots; when isolation is the point.",
+      "focal_point_strategy": "Opposing face/eyes.",
+      "viewing_path": "Dark shoulder edge → face.",
+      "balance": "asymmetrical",
+      "aspect_ratio_notes": "16:9 natural; 9:16 crop shoulder to the bottom corner; 1:1 tight.",
+      "negative_space_use": "Shoulder is a dark mass framing the face.",
+      "depth_layers": "FG shoulder, MG face, BG shop.",
+      "emotion_ids": [
+        "care.empathy",
+        "cognitive.interest",
+        "social.gratitude"
+      ],
+      "ai_prompt_phrases": [
+        "over-the-shoulder shot from behind the customer's blurred shoulder, the optician facing camera on the right third"
+      ],
+      "ai_pitfalls": "Models often show both faces or place the camera in front; describe whose back is to camera and its blur. A rough sketch + img2img helps.",
+      "overlay_guide": {
+        "type": "zones",
+        "rects": [
+          [
+            0.0,
+            0.3,
+            0.28,
+            1.0
+          ]
+        ],
+        "points": [
+          [
+            0.667,
+            0.333
+          ]
+        ],
+        "note": "Shoulder zone left; face near the right-upper power point (mirror as needed)."
+      },
+      "refs": [
+        "Block2008",
+        "curriculum-03"
+      ],
+      "evidence": "craft"
+    },
+    {
+      "id": "dominant_foreground",
+      "name": "Dominant foreground",
+      "name_th": "ฉากหน้าเด่น",
+      "what": "A large, near object fills the lower or side portion of the frame with the scene extending deep behind it (wide lens, close distance).",
+      "why_it_works": "Relative size and perspective convergence are established depth cues (Livingstone2002); exaggerating the near element amplifies depth. Visual drama is craft.",
+      "how_to_apply": [
+        "Use a wide lens (16-28 mm) close to the near object",
+        "Place it low or to one side",
+        "Keep a clear line to the background",
+        "Focus near or deep"
+      ],
+      "good_example": "Sunglasses huge in the lower foreground on beach sand, sharp; sea and tiny figures behind.",
+      "bad_example": "Foreground object blocks the subject or is an unrelated blur.",
+      "fix": "Lower/shift the FG so the background story stays visible.",
+      "when_to_break": "Flat graphic styles; accurate product proportion (wide-angle distorts).",
+      "focal_point_strategy": "FG hero object, BG supports context.",
+      "viewing_path": "FG object → along depth → background.",
+      "balance": "asymmetrical",
+      "aspect_ratio_notes": "9:16 strong (FG bottom, BG top); 16:9 FG in a lower corner.",
+      "negative_space_use": "Sky/BG area above becomes text space.",
+      "depth_layers": "Exaggerated FG + distant BG, MG optional.",
+      "emotion_ids": [
+        "awe.awe",
+        "hope.excitement",
+        "will.confidence"
+      ],
+      "ai_prompt_phrases": [
+        "wide-angle close-up, the sunglasses large in the lower foreground, the beach stretching far behind",
+        "low camera, huge foreground object, deep background"
+      ],
+      "ai_pitfalls": "Models shrink the FG object to mid-size; specify 'fills the bottom third' and lens mm. Product shape may distort — use a real cutout for the product.",
+      "overlay_guide": {
+        "type": "zones",
+        "rects": [
+          [
+            0.0,
+            0.6,
+            1.0,
+            1.0
+          ]
+        ],
+        "note": "FG occupies the bottom ~40%; check depth map near-plane fraction."
+      },
+      "refs": [
+        "Livingstone2002",
+        "curriculum-03"
+      ],
+      "evidence": "mixed"
+    },
+    {
+      "id": "low_horizon",
+      "name": "Low horizon",
+      "name_th": "เส้นขอบฟ้าต่ำ",
+      "what": "Horizon placed low (around the lower third or below) so sky dominates.",
+      "why_it_works": "Craft: emphasis follows area — a big sky stresses space, weather, freedom. Horizon placement on a third is a thirds convention (curriculum-03).",
+      "how_to_apply": [
+        "Put horizon at y ≈ 0.67-0.85",
+        "Make the sky interesting or plain for text",
+        "Keep the horizon level",
+        "Small subject on the horizon line"
+      ],
+      "good_example": "Hua Hin dusk: thin strip of beach at the bottom, vast gradient sky, small figure in sunglasses.",
+      "bad_example": "Low horizon with a blank grey sky and nothing to say.",
+      "fix": "Use the sky for text or colour story, or raise the horizon.",
+      "when_to_break": "When ground detail matters; dull skies.",
+      "focal_point_strategy": "Subject on or just above the horizon line.",
+      "viewing_path": "Subject → sky.",
+      "balance": "asymmetrical",
+      "aspect_ratio_notes": "9:16 ideal (sky as headline area, keep below top 14% UI); 16:9 landscape; 1:1 works.",
+      "negative_space_use": "Sky = negative space / headline zone.",
+      "depth_layers": "Ground FG thin, sky BG.",
+      "emotion_ids": [
+        "hope.hope",
+        "visual.peaceful_solitude",
+        "awe.awe"
+      ],
+      "ai_prompt_phrases": [
+        "low horizon in the bottom fifth of the frame, vast open sky above",
+        "huge sky, small figure on the horizon"
+      ],
+      "ai_pitfalls": "Models centre horizons; give explicit fraction. Outpaint upward to add sky.",
+      "overlay_guide": {
+        "type": "horizon",
+        "h": [
+          0.667,
+          0.8
+        ],
+        "note": "Detected horizon y should be ≥ 0.62; tilt ≤ 0.5°."
+      },
+      "refs": [
+        "curriculum-03",
+        "Artistic"
+      ],
+      "evidence": "craft"
+    },
+    {
+      "id": "high_horizon",
+      "name": "High horizon",
+      "name_th": "เส้นขอบฟ้าสูง",
+      "what": "Horizon placed high (upper third or above) so ground/sea dominates.",
+      "why_it_works": "Craft: emphasis on terrain, path or subject on the ground; reduces sky distraction.",
+      "how_to_apply": [
+        "Horizon at y ≈ 0.15-0.33",
+        "Fill ground with texture or leading lines",
+        "Subject in the lower area",
+        "Keep level"
+      ],
+      "good_example": "Sand ripples and footprints leading to sunglasses lying near the bottom, sea a thin band at top.",
+      "bad_example": "High horizon with featureless ground.",
+      "fix": "Add texture, lines or a subject on the ground.",
+      "when_to_break": "Dramatic skies.",
+      "focal_point_strategy": "Subject in the lower or middle ground.",
+      "viewing_path": "Bottom → along ground lines → horizon.",
+      "balance": "asymmetrical",
+      "aspect_ratio_notes": "9:16 good for paths; keep horizon below the top UI zone (≈ 14%).",
+      "negative_space_use": "Smooth ground areas.",
+      "depth_layers": "Ground receding gives depth.",
+      "emotion_ids": [
+        "cognitive.curiosity",
+        "calm.serenity",
+        "visual.peaceful_solitude"
+      ],
+      "ai_prompt_phrases": [
+        "high horizon near the top of the frame, mostly sand in view",
+        "looking down a path, horizon in the upper fifth"
+      ],
+      "ai_pitfalls": "Models centre horizons; specify the fraction and camera tilt down.",
+      "overlay_guide": {
+        "type": "horizon",
+        "h": [
+          0.2,
+          0.333
+        ],
+        "note": "Detected horizon y should be ≤ 0.38."
+      },
+      "refs": [
+        "Artistic"
+      ],
+      "evidence": "craft"
+    },
+    {
+      "id": "vignette_tunnel",
+      "name": "Vignette / tunnel",
+      "name_th": "ขอบมืดและอุโมงค์",
+      "what": "Edges darker or enclosed (arch, foliage, corridor, lens vignette) funnelling attention to a bright centre.",
+      "why_it_works": "Brightness contrast and enclosure pull attention to the lit centre (saliency, Itti1998; enclosure as figure cue, Wagemans2012). Strength of effect is craft-tuned.",
+      "how_to_apply": [
+        "Darken edges 0.5-1.5 stops",
+        "Keep the subject in the brightest area",
+        "Use real tunnels or arches for depth",
+        "Subtle in ads, strong in drama"
+      ],
+      "good_example": "Corridor of the old shop at night, dark walls, bright pair of glasses at the far end.",
+      "bad_example": "Heavy post vignette on a bright product image, looking dated.",
+      "fix": "Reduce strength or use real light falloff.",
+      "when_to_break": "High-key clean posts; flatlays.",
+      "focal_point_strategy": "Bright centre/end.",
+      "viewing_path": "Edges → inward → subject.",
+      "balance": "radial",
+      "aspect_ratio_notes": "Circular vignette in 1:1; elliptical in 16:9; in 9:16 darken top/bottom lightly — UI already covers them.",
+      "negative_space_use": "Dark edges are quiet space.",
+      "depth_layers": "Tunnel gives FG to BG depth.",
+      "emotion_ids": [
+        "visual.mystery",
+        "fear.dread",
+        "will.determination"
+      ],
+      "ai_prompt_phrases": [
+        "dark vignette around the edges, light focused on the centre",
+        "looking down a dark tunnel toward a bright opening"
+      ],
+      "ai_pitfalls": "Models can produce over-strong vignettes or none; better added in HTML/CSS (radial gradient) so it is controllable.",
+      "overlay_guide": {
+        "type": "radial",
+        "center": [
+          0.5,
+          0.5
+        ],
+        "circles": [
+          [
+            0.5,
+            0.5,
+            0.35
+          ],
+          [
+            0.5,
+            0.5,
+            0.5
+          ]
+        ],
+        "note": "Compare mean luminance inside r=0.35 vs outside r=0.5."
+      },
+      "refs": [
+        "Itti1998",
+        "Wagemans2012"
+      ],
+      "evidence": "mixed"
+    },
+    {
+      "id": "split_screen",
+      "name": "Split screen",
+      "name_th": "แบ่งจอ",
+      "what": "Frame divided into two (or more) panels or halves showing contrast, comparison or simultaneity.",
+      "why_it_works": "Common-region grouping (Gestalt, Wagemans2012) separates each half into its own unit, inviting comparison. Narrative use is film/comic craft (McCloud1993).",
+      "how_to_apply": [
+        "Divide with a clear line/gap",
+        "Match layout/scale on both sides for comparison",
+        "Vary only the compared variable",
+        "Label in HTML"
+      ],
+      "good_example": "Left: blurred view without glasses; right: sharp view with the same framing.",
+      "bad_example": "Two unrelated images with different framing, so the comparison is unclear.",
+      "fix": "Same camera, same subject position; change one variable only.",
+      "when_to_break": "Single-message hero posts.",
+      "focal_point_strategy": "The difference between halves.",
+      "viewing_path": "Left (before) → right (after), or top → bottom in 9:16.",
+      "balance": "symmetrical",
+      "aspect_ratio_notes": "16:9 split left/right; 9:16 split top/bottom; 1:1 either.",
+      "negative_space_use": "Gutter between halves.",
+      "depth_layers": "Each half has its own layers.",
+      "emotion_ids": [
+        "cognitive.interest",
+        "surprise.pleasant",
+        "relief.relief"
+      ],
+      "ai_prompt_phrases": [
+        "generate each half separately with identical framing"
+      ],
+      "ai_pitfalls": "Models handle split screens badly (bleed between halves). Generate halves separately (same seed/prompt with one change) and assemble in HTML.",
+      "overlay_guide": {
+        "type": "split",
+        "v": [
+          0.5
+        ],
+        "note": "Use h=[0.5] for 9:16."
+      },
+      "refs": [
+        "Wagemans2012",
+        "McCloud1993"
+      ],
+      "evidence": "mixed"
+    }
+  ]
+}

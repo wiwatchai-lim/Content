@@ -1,0 +1,112 @@
+{
+ "schema_version": "1.0",
+ "id": "real_critique_babybird_01",
+ "intent": {
+  "purpose": "carousel_slide",
+  "audience": "IG followers of the story carousels (Thai, phone)",
+  "message": "Two friends find a baby bird that fell from its nest.",
+  "story_context": "ลูกนกตกรัง, slide 1 of 5 (carousel/kits/2026-11-24_81-baby-bird)",
+  "scene_objective": "the viewer must SEE the baby bird and the two friends' concern"
+ },
+ "references": [
+  {
+   "path_or_url": "carousel/kits/2026-11-24_81-baby-bird/export/01.png",
+   "role": "composition_reference"
+  }
+ ],
+ "format": {
+  "aspect": "1:1",
+  "width": 1080,
+  "height": 1080,
+  "text_layer": "html_overlay"
+ },
+ "direction": {
+  "emotion": "care.compassion_consoling",
+  "emotion_intensity": 0.5,
+  "style": "pencil_sketch_loose"
+ },
+ "blueprint": {
+  "composition": "symmetry",
+  "primary_focal_point": {
+   "what": "the baby bird on the ground",
+   "where": "should be between the two figures, near the crouching friend's hands"
+  },
+  "viewing_path": [
+   "speech bubble 1",
+   "baby bird",
+   "crouching friend",
+   "standing friend",
+   "speech bubble 2"
+  ],
+  "balance": "symmetrical",
+  "depth_layers": {
+   "foreground": "grass tufts",
+   "midground": "two friends and the tree",
+   "background": "plain paper"
+  },
+  "negative_space": "top third holds the two speech bubbles",
+  "camera": {
+   "shot_size": "full",
+   "angle": "eye_level"
+  }
+ },
+ "outputs": [
+  {
+   "path": "carousel/kits/2026-11-24_81-baby-bird/export/01.png",
+   "selected": true,
+   "generated_by": "existing slide (FLUX + HTML bubbles), analysed 2026-11-24"
+  }
+ ],
+ "critique": [
+  {
+   "area": "hierarchy",
+   "where": "lower-left, x 0.19 y 0.85 (the bird)",
+   "problem": "the baby bird — the subject of the line 'มีลูกนกตกอยู่ตรงนี้' — is tiny, low-contrast and outside the saliency top 3; attention goes to the speech bubbles (0.72, 0.68) and the tree trunk",
+   "severity": "major",
+   "likely_cause": "bird generated small at the frame edge; tree trunk is the darkest, sharpest vertical in the centre",
+   "fix": "regenerate with the bird larger in the centre-bottom between the figures, or composite a bird layer near the crouching friend's hands; lighten the trunk",
+   "side_effects": "changes the slide-to-slide continuity — check slides 2–5"
+  },
+  {
+   "area": "composition",
+   "where": "vertical centre line (tree trunk, x 0.5)",
+   "problem": "the trunk splits the frame exactly in half, separating the two friends who should be sharing one concern",
+   "severity": "minor",
+   "likely_cause": "symmetric prompt layout",
+   "fix": "shift the trunk to a third or behind one figure; or keep it if separation is meant (it is not in this beat)",
+   "side_effects": "bubble positions may need to move"
+  },
+  {
+   "area": "storytelling",
+   "where": "crouching friend's hands (x 0.38, y 0.75)",
+   "problem": "hands rest on the knees instead of reaching toward the bird, so the action that links character and subject is missing",
+   "severity": "minor",
+   "likely_cause": "default crouch pose",
+   "fix": "pose 'one hand reaching gently toward the small bird on the ground'",
+   "side_effects": "hands are a known weak point — check fingers"
+  },
+  {
+   "area": "text_legibility",
+   "where": "speech bubbles, top",
+   "problem": "none — Thai text is in the HTML layer, high contrast, correct spelling",
+   "severity": "polish",
+   "fix": "keep"
+  }
+ ],
+ "score": {
+  "weights_profile": "social_post_text",
+  "criteria": {
+   "composition": 6,
+   "color_harmony": 8,
+   "lighting": 7,
+   "visual_hierarchy": 5,
+   "emotional_impact": 6,
+   "storytelling": 5,
+   "art_style": 8,
+   "technical_accuracy": 8,
+   "originality": 6,
+   "finishing": 8
+  },
+  "rater": "claude (provisional AI judgement, no viewer test)"
+ }
+}

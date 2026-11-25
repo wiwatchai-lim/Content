@@ -1,0 +1,475 @@
+{
+ "module": "M44",
+ "part": "cartoon character design",
+ "date": "2026-11-25",
+ "note": "Head ratios and traits are CRAFT conventions unless a source_key with tier A/B/S is listed for that trait; prompt_descriptors contain no artist or franchise names; all cards untested in our providers (FLUX/Codex/rig).",
+ "cards": [
+  {
+   "id": "chibi_sd",
+   "style": "Chibi / Super Deformed (SD)",
+   "head_ratio": "2-3 heads tall (head = 1/3 to 1/2 of total height); some SD variants up to ~4",
+   "eye_style": "very large, set low on the face, big highlights; often simplified to dots/arcs in gag beats",
+   "line": "clean, uniform or slightly thick outline; rounded terminals",
+   "shading": "flat cel or 1-step soft shade; minimal folds",
+   "palette_tendency": "bright, high-saturation accents on light base; signature colour per character",
+   "typical_exaggeration": "head and eyes enlarged, body and limbs shrunk to stubs, hands as mittens; emotion pushed via symbols",
+   "typical_uses": [
+    "stickers",
+    "merch",
+    "reaction beats",
+    "mascots",
+    "comic relief inside a normal-proportion story"
+   ],
+   "mistakes": [
+    "keeping adult anatomy detail (knuckles, folds) at SD scale",
+    "losing the signature hair/prop that identifies the full-size version",
+    "neck too long / limbs too long so it reads as a child rather than SD",
+    "eyes placed high (kills the baby-schema effect)"
+   ],
+   "prompt_descriptors": [
+    "chibi super-deformed character, 2.5 heads tall",
+    "oversized round head, large low-set eyes, tiny nose and mouth",
+    "stubby arms and legs, mitten hands",
+    "clean thick outline, flat cel shading, simple shapes"
+   ],
+   "evidence_note": "Cuteness effect of big head/low big eyes = EVIDENCE (baby schema); exact head counts = CRAFT.",
+   "source_keys": [
+    "Wikipedia_Chibi",
+    "Chaitiamvong2025",
+    "Glocker2009",
+    "Borgi2014",
+    "Lorenz1943"
+   ],
+   "test_status": "untested"
+  },
+  {
+   "id": "kawaii_mascot",
+   "style": "Kawaii mascot / character goods",
+   "head_ratio": "1.5-3 heads; often head and body merged into one rounded mass",
+   "eye_style": "small dot or bean eyes OR large glossy eyes, set wide and low; mouth tiny or absent",
+   "line": "soft rounded outline, sometimes coloured (not black) line",
+   "shading": "flat colour, tiny cheek blush, no cast shadows",
+   "palette_tendency": "pastel or soft high-key palette, 2-4 colours + blush pink",
+   "typical_exaggeration": "roundness, small size, softness; features compressed into the lower half of the face",
+   "typical_uses": [
+    "brand mascots",
+    "packaging",
+    "LINE stickers",
+    "children's goods",
+    "softening a serious message"
+   ],
+   "mistakes": [
+    "adding sharp angles or detailed teeth",
+    "too many colours or detail -> loses 'small and simple' read",
+    "no link to the product/brand (Pichedpan2020)",
+    "face features high on the head (reads adult)"
+   ],
+   "prompt_descriptors": [
+    "kawaii mascot character, soft rounded body, head and body one shape",
+    "tiny dot eyes set low and wide, small blush cheeks",
+    "pastel palette, flat colour, soft coloured outline",
+    "simple, friendly, plush-toy-like"
+   ],
+   "evidence_note": "Kawaii as approach/closeness emotion = EVIDENCE (Nittono); dot-eye/pastel conventions = CRAFT/OBSERVED.",
+   "source_keys": [
+    "Nittono2016",
+    "Nittono2012",
+    "Glocker2009",
+    "HindeBarden1985",
+    "Pichedpan2020"
+   ],
+   "test_status": "untested"
+  },
+  {
+   "id": "western_tv_cartoon",
+   "style": "Western TV cartoon (modern flat / graphic)",
+   "head_ratio": "3-5 heads typical; strong variation inside the cast (squat vs lanky)",
+   "eye_style": "simple shapes: circles/ovals with dot pupils, or pill eyes; brows as separate floating shapes",
+   "line": "uniform vector-like line or no line (shape-based); thick-thin less common",
+   "shading": "flat colour, occasional single shadow tone",
+   "palette_tendency": "bold, saturated, limited per character; strong hue contrast between cast members",
+   "typical_exaggeration": "geometric simplification, big mouths for dialogue/lip-sync, elastic poses",
+   "typical_uses": [
+    "explainers",
+    "kids/family series",
+    "social shorts",
+    "brand animation on a budget"
+   ],
+   "mistakes": [
+    "every character built from the same base (cast sameness)",
+    "detail that cannot be animated cheaply",
+    "mouth/brow shapes too subtle for small screens"
+   ],
+   "prompt_descriptors": [
+    "flat 2D cartoon character, simple geometric shapes",
+    "dot pupils in oval eyes, floating eyebrows, wide expressive mouth",
+    "bold flat colours, clean uniform outline",
+    "limited animation style, graphic and readable"
+   ],
+   "evidence_note": "Western characters ~2x human eye area (Liu2019, EVIDENCE B); simplified faces read emotion faster (Kendall2016).",
+   "source_keys": [
+    "Liu2019",
+    "Kendall2016",
+    "ThomasJohnston1981"
+   ],
+   "test_status": "untested"
+  },
+  {
+   "id": "rubber_hose",
+   "style": "Rubber hose (1920s-30s US animation)",
+   "head_ratio": "~2.5-4 heads; round body masses",
+   "eye_style": "historically varied; commonly large simple eyes with solid pupils (CRAFT/OBSERVED, not confirmed by the sources read)",
+   "line": "even, bold black line; limbs as single flowing curves",
+   "shading": "flat; originally black-and-white or limited colour, film-grain look in revivals",
+   "palette_tendency": "black, white, grey + one accent in revivals",
+   "typical_exaggeration": "unjointed noodle limbs, squash-and-bounce, everything moves in time to music",
+   "typical_uses": [
+    "retro/vintage campaigns",
+    "music-synced loops",
+    "playful product animation"
+   ],
+   "mistakes": [
+    "adding elbows/knees (breaks the style)",
+    "complex anatomy",
+    "copying a specific classic character's design (copyright)"
+   ],
+   "prompt_descriptors": [
+    "vintage 1930s rubber hose cartoon style",
+    "noodle limbs without elbows or knees, round body, bouncy pose",
+    "bold black outline, black and white with film grain",
+    "simple large eyes, white gloves optional"
+   ],
+   "evidence_note": "Limb/body traits from encyclopedia (E) + animation-studies blog (B); eye/glove traits CRAFT.",
+   "source_keys": [
+    "Wikipedia_RubberHose",
+    "Taberham2019"
+   ],
+   "test_status": "untested"
+  },
+  {
+   "id": "feature_animation_classic",
+   "style": "Feature animation (classic hand-drawn / 3D feature, 'appeal'-driven)",
+   "head_ratio": "heroes ~4-6 heads (stylised adult), children 3-4, comic sidekicks 2-3; wide cast range",
+   "eye_style": "large, highly expressive eyes with full brow/lid acting; size scaled to age and role",
+   "line": "hand-drawn: tapered line with weight variation; 3D: no line, soft forms",
+   "shading": "soft volumetric shading, rim/bounce light; 3D uses stylised softened textures",
+   "palette_tendency": "harmonious scene-driven palette; character colour tied to role and arc",
+   "typical_exaggeration": "squash and stretch, appeal, clear silhouette, shape-language casts (round friendly / angular threatening)",
+   "typical_uses": [
+    "story-driven clips",
+    "hero mascots",
+    "emotional brand films"
+   ],
+   "mistakes": [
+    "realistic skin texture on stylised shapes (Zell2015 mismatch)",
+    "twinning (symmetrical poses)",
+    "eyes too large for a realistic face (Katsyri2015 atypicality)"
+   ],
+   "prompt_descriptors": [
+    "stylised feature-animation character, appealing proportions",
+    "large expressive eyes, readable brows, soft rounded forms",
+    "soft volumetric lighting, gentle rim light, stylised smooth skin",
+    "clear silhouette, gesture with line of action"
+   ],
+   "evidence_note": "Appeal/exaggeration = CRAFT; material-shape consistency and uncanny risks = EVIDENCE (Zell2015, Katsyri2015).",
+   "source_keys": [
+    "ThomasJohnston1981",
+    "Zell2015",
+    "Katsyri2015",
+    "Mori2012",
+    "McDonnell2012"
+   ],
+   "test_status": "untested"
+  },
+  {
+   "id": "anime_shonen",
+   "style": "Anime / manga - shonen (action, boys' market)",
+   "head_ratio": "teen heroes ~6-7 heads; adults 7-8; SD inserts for comedy",
+   "eye_style": "large angular eyes (smaller than shojo), strong brows, sharp highlights; ~3.4x real eye area across Japanese animation (Liu2019)",
+   "line": "crisp line, thick-thin, speed lines, hatching/screentone in manga",
+   "shading": "cel shading 2-tone with hard shadow edges",
+   "palette_tendency": "high-contrast, saturated costumes; signature hair colour/shape",
+   "typical_exaggeration": "spiky silhouette hair, dynamic foreshortening, symbolic emblems (sweat drop, anger vein, speed lines)",
+   "typical_uses": [
+    "action shorts",
+    "energetic promos",
+    "youth-targeted content"
+   ],
+   "mistakes": [
+    "realistic skin/pores with anime eyes (mismatch)",
+    "same face for every character (rely on hair only)",
+    "emblems used outside their convention (confuses readers)"
+   ],
+   "prompt_descriptors": [
+    "anime action style, teen hero ~6.5 heads tall",
+    "sharp expressive eyes with strong eyebrows, spiky distinctive hairstyle",
+    "crisp thick-thin linework, two-tone cel shading with hard shadows",
+    "dynamic foreshortened pose, speed lines"
+   ],
+   "evidence_note": "Eye-area ratio and shared manga visual vocabulary = EVIDENCE; genre-specific traits = CRAFT/OBSERVED.",
+   "source_keys": [
+    "Liu2019",
+    "CohnEhly2016",
+    "Bisiecka2022",
+    "Katsyri2015"
+   ],
+   "test_status": "untested"
+  },
+  {
+   "id": "manga_shojo",
+   "style": "Manga / anime - shojo (romance/drama, girls' market)",
+   "head_ratio": "slender, 7-8+ heads, elongated limbs",
+   "eye_style": "very large eyes with multiple highlights and detailed irises, long lashes; small nose (often a mark), small mouth",
+   "line": "fine delicate line, thin outlines, flowing hair strands",
+   "shading": "soft tones, screentone gradients, sparkles/flower backgrounds as emotional emblems",
+   "palette_tendency": "pastels, soft gradients",
+   "typical_exaggeration": "eyes and hair as emotion carriers; thinner cheek-jaw line for all genders (as reported in a Japanese study, search_summary only)",
+   "typical_uses": [
+    "emotional/romantic stories",
+    "beauty and lifestyle content",
+    "dialogue drama"
+   ],
+   "mistakes": [
+    "childlike face on an adult body causing age ambiguity (Bisiecka2022: female anime faces are hard to age)",
+    "eyes so large on semi-real rendering that it becomes eerie (Katsyri2015)"
+   ],
+   "prompt_descriptors": [
+    "shojo manga style, slender elegant proportions",
+    "very large detailed sparkling eyes, long lashes, small nose and mouth",
+    "fine delicate linework, flowing hair",
+    "soft pastel screentone, floating sparkles and petals"
+   ],
+   "evidence_note": "Shojo/shonen share one visual language in different proportions (CohnEhly2016).",
+   "source_keys": [
+    "CohnEhly2016",
+    "Liu2019",
+    "Bisiecka2022",
+    "Katsyri2015"
+   ],
+   "test_status": "untested"
+  },
+  {
+   "id": "realistic_comic",
+   "style": "Realistic / adventure comic (superhero, graphic novel realism)",
+   "head_ratio": "7.5-8 heads (heroic 8-9)",
+   "eye_style": "anatomically sized eyes; emotion via brow and muscle",
+   "line": "confident inked line with spotted blacks, feathering/hatching",
+   "shading": "dramatic chiaroscuro, cast shadows, rim light",
+   "palette_tendency": "genre-dependent: primaries for classic hero, muted for noir/graphic novel",
+   "typical_exaggeration": "idealised anatomy, foreshortening, heroic poses; caricature of distinctive features (jaw, brow)",
+   "typical_uses": [
+    "serious stories",
+    "dramatic product hero shots",
+    "historical/realistic narratives"
+   ],
+   "mistakes": [
+    "anatomy errors read instantly at this realism level",
+    "cartoon-sized eyes on realistic heads (atypicality)",
+    "faces too average -> characters blend (Rhodes1987: distinctiveness aids recognition)"
+   ],
+   "prompt_descriptors": [
+    "realistic graphic novel illustration, 8-head proportions",
+    "bold inked linework, spotted blacks, cross-hatching",
+    "dramatic chiaroscuro lighting",
+    "naturalistic eyes, distinctive facial structure"
+   ],
+   "evidence_note": "Near-real = least tolerance for error (Frowd2007: photos tolerate ~4-6% exaggeration vs 16-42% for line drawings).",
+   "source_keys": [
+    "Rhodes1987",
+    "Frowd2007",
+    "Katsyri2015",
+    "Mori2012"
+   ],
+   "test_status": "untested"
+  },
+  {
+   "id": "webtoon",
+   "style": "Webtoon (vertical-scroll digital comic)",
+   "head_ratio": "6.5-8 heads (manhwa-influenced), SD for comedy beats",
+   "eye_style": "large but semi-realistic eyes, clean highlights",
+   "line": "clean digital line, often thin; sometimes lineless painting",
+   "shading": "full colour, soft airbrush/gradient cel, glow effects",
+   "palette_tendency": "full-colour, mood-driven palettes per episode; character colour signature for small frames",
+   "typical_exaggeration": "close-ups and face-led acting; designs must read in small phone frames one panel at a time",
+   "typical_uses": [
+    "serial stories on phones",
+    "vertical carousels/Reels storytelling"
+   ],
+   "mistakes": [
+    "detail that disappears at phone size",
+    "wide shots with tiny faces as the only emotion carrier",
+    "inconsistent face between panels (no model sheet)"
+   ],
+   "prompt_descriptors": [
+    "vertical webtoon style, full colour digital illustration",
+    "semi-realistic face, large clean eyes, thin clean linework",
+    "soft gradient cel shading, gentle glow",
+    "close-up framing for a phone screen"
+   ],
+   "evidence_note": "Format facts = B (Han2017); style traits CRAFT/OBSERVED - no academic character-design analysis found.",
+   "source_keys": [
+    "Han2017",
+    "Kendall2016"
+   ],
+   "test_status": "untested"
+  },
+  {
+   "id": "childrens_picture_book",
+   "style": "Children's picture book",
+   "head_ratio": "toddler-facing: 2.5-4 heads, round; older readers: wider range",
+   "eye_style": "simple dot or small oval eyes, or large round eyes; clear readable expressions",
+   "line": "loose textured line (pencil, crayon) or none (painted shapes)",
+   "shading": "gouache/watercolour/textured flat; paper texture",
+   "palette_tendency": "warm, harmonious; limited per spread",
+   "typical_exaggeration": "baby schema for warmth; anthropomorphic animals common",
+   "typical_uses": [
+    "read-aloud stories",
+    "kids' education",
+    "family brand stories"
+   ],
+   "mistakes": [
+    "for under-2s: heavy stylisation hurts transfer to real objects (Ganea2008)",
+    "teaching facts/behaviour with talking animals reduces learning/transfer (Strouse2018)",
+    "flaps/gimmicks that distract (Tare 2010 via Strouse2018)"
+   ],
+   "prompt_descriptors": [
+    "children's picture book illustration, soft textured gouache",
+    "round friendly characters, simple dot eyes, clear gentle expressions",
+    "warm harmonious palette, paper texture",
+    "uncluttered composition"
+   ],
+   "evidence_note": "Realism vs learning = EVIDENCE (A); choose realistic/human characters when real-world transfer is the goal.",
+   "source_keys": [
+    "Ganea2008",
+    "Strouse2018",
+    "Borgi2014",
+    "Glocker2009"
+   ],
+   "test_status": "untested"
+  },
+  {
+   "id": "thai_gag_comic",
+   "style": "Thai gag-comic tradition (household humour magazines, one-baht comics)",
+   "head_ratio": "not documented in sources; varies by cartoonist (DERIVED: gag panels favour short, big-headed figures for readability - unverified)",
+   "eye_style": "varies; simple cartoon eyes typical of gag format (OBSERVED, unverified)",
+   "line": "pen-and-ink, black-and-white interiors historically (pocket format)",
+   "shading": "flat / none in interiors",
+   "palette_tendency": "colour covers; B&W pages",
+   "typical_exaggeration": "single-page gags with a punchline; recurring 'editor and cartoonists gang' self-caricature; everyday Thai family and social situations",
+   "typical_uses": [
+    "Thai humour posts",
+    "nostalgic campaigns",
+    "gag carousels"
+   ],
+   "mistakes": [
+    "treating 'Thai cartoon' as one style - the tradition is plural (Verstappen2017)",
+    "copying a named cartoonist's characters",
+    "political/sarcastic gags for family audience (publisher split titles for this reason)"
+   ],
+   "prompt_descriptors": [
+    "Thai gag comic strip style, single-page joke",
+    "simple pen-and-ink cartoon figures, expressive faces",
+    "black and white interior, everyday Thai setting",
+    "clear punchline panel"
+   ],
+   "evidence_note": "Format/history = B; visual specifics not documented -> must be checked against samples before use.",
+   "source_keys": [
+    "Verstappen2017"
+   ],
+   "test_status": "untested"
+  },
+  {
+   "id": "thai_line_sticker",
+   "style": "Thai LINE sticker character",
+   "head_ratio": "SD, ~2-3 heads; large face",
+   "eye_style": "large simple eyes; expression pushed for small size",
+   "line": "freehand vector line, rounded",
+   "shading": "flat colour",
+   "palette_tendency": "bright split-complementary pairs + grey/white (one case study)",
+   "typical_exaggeration": "big face for emotion, everyday gestures, short Thai phrases (polite particles), humour; animals common; often 2+ characters",
+   "typical_uses": [
+    "chat stickers",
+    "brand spoke-characters",
+    "social reaction posts"
+   ],
+   "mistakes": [
+    "no visible link to the brand/product (Pichedpan2020)",
+    "emotion too subtle at sticker size",
+    "text embedded in AI images (house rule: text in HTML layer)"
+   ],
+   "prompt_descriptors": [
+    "cute chat-sticker character, super-deformed 2.5 heads",
+    "big expressive face, simple large eyes",
+    "flat bright colours, rounded freehand vector outline",
+    "everyday gesture, white sticker border"
+   ],
+   "evidence_note": "Thai design research (C/B); persona-led workflow.",
+   "source_keys": [
+    "Chaitiamvong2025",
+    "Pichedpan2020",
+    "Wikipedia_Chibi"
+   ],
+   "test_status": "untested"
+  },
+  {
+   "id": "thai_cg_feature",
+   "style": "Thai 3D feature animation (stylised animals/history)",
+   "head_ratio": "animal leads stylised (large head/eyes for young characters); human cast stylised",
+   "eye_style": "large expressive eyes on animal faces",
+   "line": "no line (3D)",
+   "shading": "soft 3D lighting, stylised textures",
+   "palette_tendency": "non-natural signature colours for leads (e.g. a blue elephant)",
+   "typical_exaggeration": "stylised designs combined with realistic animal movement (search_summary only)",
+   "typical_uses": [
+    "Thai heritage stories",
+    "animal mascot animation"
+   ],
+   "mistakes": [
+    "realistic textures on stylised shapes (Zell2015)",
+    "copying a specific film character"
+   ],
+   "prompt_descriptors": [
+    "stylised 3D animated young elephant, large expressive eyes",
+    "unusual signature body colour, soft rounded forms",
+    "historical Thai setting, warm cinematic lighting",
+    "appealing feature-animation proportions"
+   ],
+   "evidence_note": "Only basic facts verified (E); treat traits as hypotheses.",
+   "source_keys": [
+    "Wikipedia_KhanKluay",
+    "Zell2015"
+   ],
+   "test_status": "untested"
+  },
+  {
+   "id": "faceless_pencil_duo",
+   "style": "Faceless pencil/charcoal figures (house style: Slowly Growing)",
+   "head_ratio": "~5-6 heads, round smooth featureless heads",
+   "eye_style": "none - emotion carried by posture, distance, head tilt",
+   "line": "fine graphite pencil / charcoal",
+   "shading": "soft graphite tone on aged cream paper",
+   "palette_tendency": "beige, warm grey, charcoal, muted brown",
+   "typical_exaggeration": "silhouette and gesture contrast instead of face exaggeration",
+   "typical_uses": [
+    "Thai dialogue carousels",
+    "reflective quote images"
+   ],
+   "mistakes": [
+    "two figures with identical silhouettes",
+    "stiff mannequin poses",
+    "any facial features creeping in"
+   ],
+   "prompt_descriptors": [
+    "two faceless figures with smooth round heads, no facial features",
+    "fine graphite pencil on aged cream paper",
+    "body language carries emotion: head bowed, leaning toward each other",
+    "one short and round in a chunky sweater, one taller in a long straight coat"
+   ],
+   "evidence_note": "Project house style (see slowly-growing/README.md, SHAPE_LANGUAGE 3.1); evidence only indirect.",
+   "source_keys": [
+    "Kendall2016"
+   ],
+   "test_status": "untested"
+  }
+ ]
+}

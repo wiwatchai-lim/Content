@@ -1,0 +1,148 @@
+{
+ "file": "abandoned_house_A_fog_dusk-2.png",
+ "width": 1360,
+ "height": 768,
+ "aspect": 1.7708,
+ "value": {
+  "mean_L": 0.435,
+  "rms_contrast": 0.271,
+  "key": "mid",
+  "clipped_highlights_pct": 0.0,
+  "crushed_shadows_pct": 1.31,
+  "notan_3_pct": [
+   58.9,
+   16.3,
+   24.8
+  ]
+ },
+ "color": {
+  "dominant": [
+   {
+    "hex": "#071113",
+    "share_pct": 26.0,
+    "oklch": [
+     0.169,
+     0.017,
+     203.6
+    ]
+   },
+   {
+    "hex": "#112328",
+    "share_pct": 23.9,
+    "oklch": [
+     0.244,
+     0.025,
+     216.3
+    ]
+   },
+   {
+    "hex": "#BEDFE1",
+    "share_pct": 15.4,
+    "oklch": [
+     0.881,
+     0.035,
+     200.7
+    ]
+   },
+   {
+    "hex": "#8AB2BA",
+    "share_pct": 12.8,
+    "oklch": [
+     0.736,
+     0.044,
+     211.5
+    ]
+   },
+   {
+    "hex": "#5B828D",
+    "share_pct": 11.1,
+    "oklch": [
+     0.581,
+     0.046,
+     218.3
+    ]
+   },
+   {
+    "hex": "#284047",
+    "share_pct": 10.8,
+    "oklch": [
+     0.356,
+     0.032,
+     218.2
+    ]
+   }
+  ],
+  "mean_chroma": 0.031,
+  "hue_spread_deg": 6.8,
+  "harmony_guess": "monochromatic/analogous",
+  "warm_pct": 0,
+  "cool_pct": 23.9,
+  "proportion_top3_pct": [
+   26.0,
+   23.9,
+   15.4
+  ],
+  "proportion_note": "more even split than 60-30-10 (fine if intended)"
+ },
+ "saliency_peaks": [
+  {
+   "x": 0.307,
+   "y": 0.092,
+   "strength": 0.822,
+   "nearest_guide_dist": {
+    "thirds": 0.243,
+    "phi": 0.3,
+    "centre": 0.451
+   }
+  },
+  {
+   "x": 0.732,
+   "y": 0.523,
+   "strength": 0.695,
+   "nearest_guide_dist": {
+    "thirds": 0.158,
+    "phi": 0.148,
+    "centre": 0.233
+   }
+  },
+  {
+   "x": 0.42,
+   "y": 0.163,
+   "strength": 0.605,
+   "nearest_guide_dist": {
+    "thirds": 0.191,
+    "phi": 0.222,
+    "centre": 0.346
+   }
+  }
+ ],
+ "balance": {
+  "weight_centre": [
+   0.496,
+   0.412
+  ],
+  "offset_from_centre": 0.088,
+  "reading": "asymmetrical"
+ },
+ "sharpness": {
+  "overall": 459.6,
+  "focal": 1100.9,
+  "background": 445.7,
+  "focal_vs_background": 2.47
+ },
+ "edge_density_thirds": {
+  "rows_top_mid_bottom": [
+   0.0144,
+   0.0651,
+   0.009
+  ],
+  "cols_left_mid_right": [
+   0.0229,
+   0.0382,
+   0.0274
+  ]
+ },
+ "technical": {
+  "noise_sigma_est": 1.33
+ }
+}

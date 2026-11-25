@@ -1,0 +1,544 @@
+[
+ {
+  "key": "Chion1994_AudioVision",
+  "title": "Audio-Vision: Sound on Screen (trans. C. Gorbman; 2nd ed. 2019 with foreword by W. Murch)",
+  "authors": "Chion, Michel",
+  "year": 1994,
+  "url": "https://www.perlego.com/book/862432/audiovision-sound-on-screen-pdf",
+  "doi_isbn": "",
+  "source_type": "textbook",
+  "tier": "A",
+  "key_findings": [
+   "'Added value': the expressive and informative value a sound adds to an image, so that the information seems to come from the image itself.",
+   "'Synchresis': the spontaneous, irresistible weld between a sound and a visual event heard and seen at the same time, independent of logic (fight-scene punches).",
+   "Sound also 'temporally animates' and 'vectorises' an image (gives it direction toward an expected end)."
+  ],
+  "practical_applications": [
+   "Any sound placed exactly on a visual event will be read as that event's sound - basis of foley/cartoon SFX and of 'impossible' sounds for drawn characters."
+  ],
+  "limitations": [
+   "Film-theory text (tier A as scholarly monograph) but its claims are analytical, not experimental. Read via secondary sources (Basanta 2017, reviews)."
+  ],
+  "license": "copyrighted",
+  "access_status": "bibliographic",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M22"
+  ]
+ },
+ {
+  "key": "Basanta2017_Synchresis",
+  "title": "Shades of Synchresis",
+  "authors": "Basanta, Adam",
+  "year": 2017,
+  "url": "https://econtact.ca/19_2/basanta_synchresis.html",
+  "doi_isbn": "",
+  "source_type": "practitioner",
+  "tier": "B",
+  "key_findings": [
+   "Quotes Chion 1994: synchresis is 'the spontaneous and irresistible weld' (p.63); strength depends on meaning, context, gestalt and rhythm (pp.63-64); added value (p.5, p.21); vectorisation (pp.13-14).",
+   "Notes Chion's frameworks lack a measure of synchresis strength; the author's typology is not empirically tested."
+  ],
+  "practical_applications": [
+   "Page-referenced Chion quotes for our docs."
+  ],
+  "limitations": [
+   "Artist-researcher essay in eContact! 19.2; informal observations."
+  ],
+  "license": "copyrighted",
+  "access_status": "full_text",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M22"
+  ]
+ },
+ {
+  "key": "StormsZyda2000",
+  "title": "Interactions in perceived quality of auditory-visual displays",
+  "authors": "Storms, Russell L.; Zyda, Michael J.",
+  "year": 2000,
+  "url": "https://mikezyda.com/resources/pubs/Presence9.6.pdf",
+  "doi_isbn": "",
+  "source_type": "empirical",
+  "tier": "A",
+  "key_findings": [
+   "108 participants, 3 automated experiments manipulating pixel resolution / visual noise and audio sampling rate / audio noise.",
+   "High-quality audio with high-quality visuals raised perceived VISUAL quality vs visual-only baseline; low-quality audio with high-quality visuals lowered perceived audio quality.",
+   "With low-quality visuals, high-quality audio raised perceived audio quality."
+  ],
+  "practical_applications": [
+   "Clean, full-band audio makes the same picture look better - spend effort on VO cleanliness and SFX quality, especially for AI/cartoon visuals."
+  ],
+  "limitations": [
+   "Presence 9(6) 557-580; 2000-era displays; static image of a radio + music; small effects, lab setting."
+  ],
+  "license": "copyrighted (MIT Press)",
+  "access_status": "full_text",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M22"
+  ]
+ },
+ {
+  "key": "BeerendsDeCaluwe1999",
+  "title": "The influence of video quality on perceived audio quality and vice versa",
+  "authors": "Beerends, J. G.; de Caluwe, F. E.",
+  "year": 1999,
+  "url": "https://www.aes.org/e-lib/browse.cfm?elib=12105",
+  "doi_isbn": "",
+  "source_type": "empirical",
+  "tier": "A",
+  "key_findings": [
+   "Video quality contributes significantly to judged audio quality; the video effect on audio judgements was larger than audio's effect on video judgements.",
+   "Video quality dominates overall audiovisual quality in non-conversational material."
+  ],
+  "practical_applications": [
+   "Balance the Storms & Zyda result: audio helps perceived quality, but a bad picture cannot be rescued by sound."
+  ],
+  "limitations": [
+   "JAES 47(5) 355-362; abstract only; sample details unverified."
+  ],
+  "license": "copyrighted (AES)",
+  "access_status": "abstract",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M22"
+  ]
+ },
+ {
+  "key": "ITU1998_BT1359",
+  "title": "Recommendation ITU-R BT.1359-1: Relative timing of sound and vision for broadcasting",
+  "authors": "ITU-R",
+  "year": 1998,
+  "url": "https://www.itu.int/dms_pubrec/itu-r/rec/bt/R-REC-BT.1359-1-199811-I!!PDF-E.pdf",
+  "doi_isbn": "",
+  "source_type": "docs",
+  "tier": "S",
+  "key_findings": [
+   "Subjective tests (Japan, Switzerland, Australia; NTSC and PAL) give detectability thresholds of about +45 ms to -125 ms and acceptability thresholds of about +90 ms to -185 ms on average (positive = sound advanced/early relative to vision).",
+   "Recommends overall sound/picture timing tolerance not exceeding +90 ms or -185 ms; final source selection to transmitter input within +22.5 ms / -30 ms.",
+   "Annex cites ITU-R BR.265: film sound/picture location within +/- half a frame (about +/-22 ms at 24 fps); the asymmetric tolerance means viewers are more sensitive to sound arriving early than late."
+  ],
+  "practical_applications": [
+   "At 30 fps one frame = 33 ms: a hit SFX may sit 0-1 frame early but never more than ~1 frame early; up to ~3 frames late is still undetectable."
+  ],
+  "limitations": [
+   "Broadcast lip-sync context (TV chains), not short-form social video; ITU-R page lists BT.1359-1 (11/98) as 'In force' (checked 2026-11-25)."
+  ],
+  "license": "ITU, free download",
+  "access_status": "full_text",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M22"
+  ]
+ },
+ {
+  "key": "Sekuler1997",
+  "title": "Sound alters visual motion perception",
+  "authors": "Sekuler, R.; Sekuler, A. B.; Lau, R.",
+  "year": 1997,
+  "url": "https://www.nature.com/articles/385308a0",
+  "doi_isbn": "10.1038/385308a0",
+  "source_type": "empirical",
+  "tier": "A",
+  "key_findings": [
+   "Two discs moving through each other look like 'streaming'; a brief click at the moment of overlap makes most observers see them 'bounce'."
+  ],
+  "practical_applications": [
+   "A single well-timed contact sound changes what the eye sees happen - cheapest way to make cartoon contacts read."
+  ],
+  "limitations": [
+   "Nature 385:308; read via abstract-level summaries; effect weaker in older observers (later work)."
+  ],
+  "license": "copyrighted",
+  "access_status": "search_summary",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M22"
+  ]
+ },
+ {
+  "key": "Shams2000",
+  "title": "What you see is what you hear (sound-induced flash illusion)",
+  "authors": "Shams, L.; Kamitani, Y.; Shimojo, S.",
+  "year": 2000,
+  "url": "https://www.doi.org/10.1038/35048669",
+  "doi_isbn": "10.1038/35048669",
+  "source_type": "empirical",
+  "tier": "A",
+  "key_findings": [
+   "Abstract: auditory information can qualitatively alter perception of an unambiguous visual stimulus, creating a striking visual illusion - overturning the view that vision always dominates.",
+   "Detail from secondary summaries (not in the abstract): a single flash with two or more beeps is seen as multiple flashes."
+  ],
+  "practical_applications": [
+   "Rapid SFX can 'multiply' perceived visual events (sparkles, blinks, flickers) - use with care, it can also feel busy."
+  ],
+  "limitations": [
+   "Nature 408:788 (2000); abstract read, full letter paywalled."
+  ],
+  "license": "copyrighted",
+  "access_status": "abstract",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M22"
+  ]
+ },
+ {
+  "key": "WallaceStevenson2014",
+  "title": "The construct of the multisensory temporal binding window and its dysregulation in developmental disabilities",
+  "authors": "Wallace, M. T.; Stevenson, R. A.",
+  "year": 2014,
+  "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC4326640",
+  "doi_isbn": "",
+  "source_type": "review",
+  "tier": "A",
+  "key_findings": [
+   "Review: the multisensory temporal binding window (TBW) is the epoch within which stimuli from different senses are likely to be bound; even at delays of a hundred ms or more, subjects still report audio-visual pairs as simultaneous on a high percentage of trials.",
+   "Points of subjective simultaneity typically fall in the visual-leading range; TBW size is highly variable between people, but left (auditory-leading) and right (visual-leading) windows correlate within a person.",
+   "TBW width depends on stimulus: narrowest for simple flashes/beeps, widest for speech; it recalibrates to environmental statistics and can be substantially narrowed by feedback training.",
+   "TBW is altered (wider) in autism, dyslexia and schizophrenia."
+  ],
+  "practical_applications": [
+   "Explains why slightly late SFX still fuse but early SFX feel wrong; individual viewers differ."
+  ],
+  "limitations": [
+   "Review centred on clinical populations; window widths vary by task (SJ2, SJ3, TOJ). Read via PMC4326640 (Neuropsychologia 64:105-123)."
+  ],
+  "license": "open access (PMC)",
+  "access_status": "full_text",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M22"
+  ]
+ },
+ {
+  "key": "BradleyLang2007_IADS2",
+  "title": "The International Affective Digitized Sounds (IADS-2): affective ratings of sounds and instruction manual",
+  "authors": "Bradley, M. M.; Lang, P. J.",
+  "year": 2007,
+  "url": "",
+  "doi_isbn": "",
+  "source_type": "empirical",
+  "tier": "A",
+  "key_findings": [
+   "Standardised set of 111 everyday sounds rated on valence, arousal and dominance (Self-Assessment Manikin); IADS-1 1999, IADS-2 2007; uneven coverage of valence-arousal space."
+  ],
+  "practical_applications": [
+   "Evidence that everyday sounds (screams, laughter, erotic sounds, alarms, birds) carry stable affect - basis of our emotion -> sound table."
+  ],
+  "limitations": [
+   "Technical report not read; facts from papers that use IADS (e.g. Stevenson & James 2008)."
+  ],
+  "license": "restricted (research use)",
+  "access_status": "bibliographic",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M22"
+  ]
+ },
+ {
+  "key": "StevensonJames2008",
+  "title": "Affective auditory stimuli: characterization of the International Affective Digitized Sounds (IADS) by discrete emotional categories",
+  "authors": "Stevenson, R. A.; James, T. W.",
+  "year": 2008,
+  "url": "https://link.springer.com/article/10.3758/BRM.40.1.315",
+  "doi_isbn": "10.3758/BRM.40.1.315",
+  "source_type": "empirical",
+  "tier": "A",
+  "key_findings": [
+   "Collected discrete-emotion ratings for the IADS, a database of 111 sounds already rated on valence, arousal and dominance, so sounds can be chosen under both dimensional and categorical theories of affect."
+  ],
+  "practical_applications": [
+   "Pick SFX by the discrete emotion they reliably evoke, not by name only."
+  ],
+  "limitations": [
+   "Abstract read on Springer page (Behavior Research Methods 40(1):315-321); per-category numbers not read. IADS-E (2018) expands the set."
+  ],
+  "license": "copyrighted",
+  "access_status": "abstract",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M22"
+  ]
+ },
+ {
+  "key": "Neuhoff1998",
+  "title": "Perceptual bias for rising tones",
+  "authors": "Neuhoff, J. G.",
+  "year": 1998,
+  "url": "https://ideas.repec.org/a/nat/nature/v395y1998i6698d10.1038_25862.html",
+  "doi_isbn": "10.1038/25862",
+  "source_type": "empirical",
+  "tier": "A",
+  "key_findings": [
+   "Listeners reliably overestimated the change in level of rising-level tones relative to equivalent falling tones; the bias was stronger at higher levels.",
+   "Author proposes a selective advantage (rising intensity can signal an approaching source) and an asymmetry in neural coding of harmonic dynamic intensity change.",
+   "From earlier secondary search (not re-checked): replicated in rhesus monkeys (Ghazanfar et al. 2002); a 2026 paper proposes a 'speed prior' explanation."
+  ],
+  "practical_applications": [
+   "Risers / crescendos feel bigger and nearer than their dB change; downlifters feel like release - use risers sparingly or they over-promise."
+  ],
+  "limitations": [
+   "Nature 395:123-124; abstract read via RePEc; the adaptive explanation is the author's interpretation."
+  ],
+  "license": "copyrighted",
+  "access_status": "abstract",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M22"
+  ]
+ },
+ {
+  "key": "Ament2021_FoleyGrail",
+  "title": "The Foley Grail: The Art of Performing Sound for Film, Games, and Animation (3rd ed.)",
+  "authors": "Ament, Vanessa Theme",
+  "year": 2021,
+  "url": "https://www.routledge.com/The-Foley-Grail-The-Art-of-Performing-Sound-for-Film-Games-and-Animation/Ament/p/book/9780367442248",
+  "doi_isbn": "9780367442248",
+  "source_type": "textbook",
+  "tier": "D",
+  "key_findings": [
+   "Craft monograph by a Hollywood foley artist: spotting, cueing, footsteps, props, cloth, sync; one of the first scholarly books on foley."
+  ],
+  "practical_applications": [
+   "Foley layers: feet, cloth/moves, specifics (props) - our sfxlib follows the same split."
+  ],
+  "limitations": [
+   "Publisher page only; craft knowledge (tier D)."
+  ],
+  "license": "copyrighted",
+  "access_status": "publisher_page",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M22"
+  ]
+ },
+ {
+  "key": "Murch_DenseClarity",
+  "title": "Dense Clarity - Clear Density (Transom, 2005)",
+  "authors": "Murch, Walter",
+  "year": 2005,
+  "url": "https://transom.org/2005/walter-murch/",
+  "doi_isbn": "",
+  "source_type": "practitioner",
+  "tier": "D",
+  "key_findings": [
+   "Murch places sounds on a conceptual spectrum from 'Encoded' (clearest example: speech, meaning carried by a code) to 'Embodied' (clearest example: music, sound experienced directly); most sound effects lie between.",
+   "'Law of Two-and-a-Half' (first noticed on THX-1138 robot footsteps, 1969-70): within one 'colour' of sound an audience can follow about two-and-a-half layers; at three they congeal into one new 'many' (robots walking in a group); two simultaneous conversations can just be followed, three cannot.",
+   "If layers are spread evenly across the spectrum, about five layers per 'moment' (he suggests any five-second section) is the maximum that keeps the mix both dense and clear: one dialogue, one music, one 'linguistic' effect (footsteps), one 'musical' effect (atmospheric tonality), one balanced effect.",
+   "Worked out on the Apocalypse Now premixes, where too many good sounds together 'melted into an unimpressive racket'."
+  ],
+  "practical_applications": [
+   "Limit simultaneous layers of the same kind; spread layers across the encoded-embodied spectrum (VO + one music + one SFX family)."
+  ],
+  "limitations": [
+   "Practitioner essay (tier D): his own heuristic from experience, not an experiment; the left-right-brain explanation he offers is speculative."
+  ],
+  "license": "copyrighted",
+  "access_status": "full_text",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M22"
+  ]
+ },
+ {
+  "key": "Sonnenschein2001",
+  "title": "Sound Design: The Expressive Power of Music, Voice and Sound Effects in Cinema",
+  "authors": "Sonnenschein, David",
+  "year": 2001,
+  "url": "https://thegreatestbooks.org/books/62174",
+  "doi_isbn": "9780941188265",
+  "source_type": "textbook",
+  "tier": "D",
+  "key_findings": [
+   "Practical and theoretical guide to dialogue, effects, music and ambience for storytelling and emotion; frequently cited by music-psychology papers as one of few sources on combined sound design."
+  ],
+  "practical_applications": [
+   "Vocabulary for briefs (texture, rhythm, density, point of audition)."
+  ],
+  "limitations": [
+   "Bibliographic only; craft."
+  ],
+  "license": "copyrighted",
+  "access_status": "bibliographic",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M22"
+  ]
+ },
+ {
+  "key": "KockLouven2019_SoundDesign",
+  "title": "[exact title not confirmed] Kock & Louven 2019 empirical study on sound design and music in moving pictures",
+  "authors": "Kock, M.; Louven, C.",
+  "year": 2019,
+  "url": "https://core.ac.uk/download/229086715.pdf",
+  "doi_isbn": "",
+  "source_type": "empirical",
+  "tier": "A",
+  "key_findings": [
+   "States that neither music psychology, film psychology nor neuroscience has profoundly explored the power of sound design scientifically."
+  ],
+  "practical_applications": [
+   "Honest framing: most sound-design rules are craft, not science."
+  ],
+  "limitations": [
+   "Seen only as a search snippet."
+  ],
+  "license": "unknown",
+  "access_status": "search_summary",
+  "verification_status": "unverified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M22"
+  ]
+ },
+ {
+  "key": "InsideScience_Hitchcock",
+  "title": "Hitchcock flicks give your brain tunnel vision (report on Bezdek et al. fMRI study of suspense)",
+  "authors": "Inside Science (AIP)",
+  "year": 2015,
+  "url": "https://www.aip.org/inside-science/hitchcock-flicks-give-your-brain-tunnel-vision",
+  "doi_isbn": "",
+  "source_type": "practitioner",
+  "tier": "C",
+  "key_findings": [
+   "Report (2015) on Bezdek et al. (Neuroscience): participants in fMRI watched 10 suspense film clips (3 Hitchcock, plus e.g. Alien) while flashing checkerboards stimulated the visual periphery; in high-suspense moments activity in peripheral parts of the calcarine sulcus dropped and central-field activity rose - attention narrowed to the centre.",
+   "The changes were not explained by moment-to-moment visual features (e.g. brightness) but by plot and threat; suspense was rated by a separate group with a slider.",
+   "Effects of sound and music were explicitly left untested (Zacks: 'think of Jaws')."
+  ],
+  "practical_applications": [
+   "Suspense focuses the eye - put the key object in the centre during sound-built tension and silence."
+  ],
+  "limitations": [
+   "Science journalism; primary paper not read. fMRI measure, not behavioural probes - the earlier entry wrongly said 'slower responses, missed peripheral probes'."
+  ],
+  "license": "copyrighted",
+  "access_status": "full_text",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M22"
+  ]
+ },
+ {
+  "key": "Raeymaekers2019_Silence",
+  "title": "[PhD thesis on silence in film sound] Kingston University",
+  "authors": "Raeymaekers, S.",
+  "year": 2019,
+  "url": "https://eprints.kingston.ac.uk/id/eprint/53458/1/Raeymaekers-S.pdf",
+  "doi_isbn": "",
+  "source_type": "course",
+  "tier": "B",
+  "key_findings": [
+   "Argues a general overview of the uses of silence is lacking in sound and film studies."
+  ],
+  "practical_applications": [
+   "Silence design is under-researched: treat our silence rules as craft."
+  ],
+  "limitations": [
+   "Snippet only; title not confirmed."
+  ],
+  "license": "unknown",
+  "access_status": "search_summary",
+  "verification_status": "unverified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M22"
+  ]
+ },
+ {
+  "key": "ChengWakefield_HRTF",
+  "title": "Introduction to Head-Related Transfer Functions (HRTF's): Representations of HRTF's in Time, Frequency, and Space (invited tutorial)",
+  "authors": "Cheng, C. I.; Wakefield, G. H.",
+  "year": null,
+  "url": "https://isr.umd.edu/Labs/ISL/BAIL/hrtf_review.pdf",
+  "doi_isbn": "",
+  "source_type": "review",
+  "tier": "B",
+  "key_findings": [
+   "Duplex theory (Rayleigh): azimuth from interaural time differences (ITD) and interaural intensity differences (IID); above about 1500 Hz ITD becomes ambiguous (wavelength comparable to head size) and head shadow makes IID the useful cue.",
+   "Duplex theory alone leaves a 'cone of confusion' (Hornbostel & Wertheimer 1920), most acute in the median plane where ITD and IID are about zero; HRTF spectral colouring by torso, head and pinna resolves elevation and front/back.",
+   "Elevation cues are thought to depend on the pinna, with frequencies near 6-8 kHz important; Blauert: median-plane localisation needs broadband sound.",
+   "Measured HRTFs can synthesise spatial sound over headphones."
+  ],
+  "practical_applications": [
+   "Phones/earbuds: stereo panning = ILD only; real 3D needs binaural (HRTF) rendering and is lost on a phone speaker."
+  ],
+  "limitations": [
+   "Authors at University of Michigan (copy hosted on a University of Maryland lab site); tutorial from about 1999-2001, so newer HRTF personalisation work is not covered; venue not printed on the copy read."
+  ],
+  "license": "unknown",
+  "access_status": "full_text",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M22"
+  ]
+ },
+ {
+  "key": "KrishnanKellarisAurand2012",
+  "title": "Sonic logos: can sound influence willingness to pay?",
+  "authors": "Krishnan, V.; Kellaris, J. J.; Aurand, T. W.",
+  "year": 2012,
+  "url": "https://dx.doi.org/10.1108/10610421211246685",
+  "doi_isbn": "10.1108/10610421211246685",
+  "source_type": "empirical",
+  "tier": "A",
+  "key_findings": [
+   "Lab experiment: the number of tones in a sonic logo influenced willingness-to-pay non-linearly."
+  ],
+  "practical_applications": [
+   "A short repeated sound signature (motif) carries brand meaning; keep it simple and consistent."
+  ],
+  "limitations": [
+   "Journal of Product & Brand Management; snippet only."
+  ],
+  "license": "copyrighted",
+  "access_status": "search_summary",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M22"
+  ]
+ },
+ {
+  "key": "Mas2021_SonicLogo",
+  "title": "The impact of the sonic logo's acoustic features on orienting responses, emotions and brand personality transmission",
+  "authors": "Mas, L. et al.",
+  "year": 2021,
+  "url": "https://doi.org/10.1108/JPBM-05-2019-2370",
+  "doi_isbn": "10.1108/JPBM-05-2019-2370",
+  "source_type": "empirical",
+  "tier": "A",
+  "key_findings": [
+   "Psychophysiology + self-report lab experiment linking sonic-logo acoustic features to orienting response, emotion and perceived brand personality."
+  ],
+  "practical_applications": [
+   "Acoustic features of a motif (tempo, pitch contour, timbre) shape the personality the brand seems to have."
+  ],
+  "limitations": [
+   "Snippet only; findings not detailed."
+  ],
+  "license": "copyrighted",
+  "access_status": "search_summary",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M22"
+  ]
+ }
+]

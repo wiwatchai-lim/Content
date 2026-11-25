@@ -1,0 +1,149 @@
+{
+ "file": "abandoned_house_B_night_window_v4.png",
+ "width": 1360,
+ "height": 768,
+ "aspect": 1.7708,
+ "value": {
+  "mean_L": 0.1,
+  "rms_contrast": 0.095,
+  "key": "low",
+  "clipped_highlights_pct": 0.0,
+  "crushed_shadows_pct": 67.46,
+  "notan_3_pct": [
+   99.8,
+   0.2,
+   0.0
+  ]
+ },
+ "color": {
+  "dominant": [
+   {
+    "hex": "#000000",
+    "share_pct": 32.2,
+    "oklch": [
+     0.003,
+     0.002,
+     268.7
+    ]
+   },
+   {
+    "hex": "#000203",
+    "share_pct": 27.4,
+    "oklch": [
+     0.083,
+     0.013,
+     223.8
+    ]
+   },
+   {
+    "hex": "#010B0F",
+    "share_pct": 26.3,
+    "oklch": [
+     0.138,
+     0.022,
+     223.3
+    ]
+   },
+   {
+    "hex": "#052132",
+    "share_pct": 7.9,
+    "oklch": [
+     0.237,
+     0.046,
+     237.8
+    ]
+   },
+   {
+    "hex": "#033A52",
+    "share_pct": 6.0,
+    "oklch": [
+     0.329,
+     0.066,
+     233.7
+    ]
+   },
+   {
+    "hex": "#BB6B0A",
+    "share_pct": 0.3,
+    "oklch": [
+     0.605,
+     0.137,
+     61.6
+    ]
+   }
+  ],
+  "mean_chroma": 0.02,
+  "hue_spread_deg": 176.2,
+  "harmony_guess": "contrasting (complementary/triadic-like)",
+  "warm_pct": 0.3,
+  "cool_pct": 13.9,
+  "proportion_top3_pct": [
+   32.2,
+   27.4,
+   26.3
+  ],
+  "proportion_note": "more even split than 60-30-10 (fine if intended)"
+ },
+ "saliency_peaks": [
+  {
+   "x": 0.501,
+   "y": 0.469,
+   "strength": 0.949,
+   "nearest_guide_dist": {
+    "thirds": 0.214,
+    "phi": 0.146,
+    "centre": 0.031
+   }
+  },
+  {
+   "x": 0.572,
+   "y": 0.0,
+   "strength": 0.574,
+   "nearest_guide_dist": {
+    "thirds": 0.347,
+    "phi": 0.385,
+    "centre": 0.505
+   }
+  },
+  {
+   "x": 0.439,
+   "y": 0.051,
+   "strength": 0.441,
+   "nearest_guide_dist": {
+    "thirds": 0.301,
+    "phi": 0.336,
+    "centre": 0.453
+   }
+  }
+ ],
+ "balance": {
+  "weight_centre": [
+   0.499,
+   0.372
+  ],
+  "offset_from_centre": 0.128,
+  "reading": "asymmetrical"
+ },
+ "sharpness": {
+  "overall": 64.1,
+  "focal": 761.2,
+  "background": 48.4,
+  "focal_vs_background": 15.73
+ },
+ "edge_density_thirds": {
+  "rows_top_mid_bottom": [
+   0.0447,
+   0.0129,
+   0.0023
+  ],
+  "cols_left_mid_right": [
+   0.0113,
+   0.0347,
+   0.0139
+  ]
+ },
+ "technical": {
+  "noise_sigma_est": 0.33
+ },
+ "overlay": "abandoned_house_B_night_window_v4_ov.png"
+}

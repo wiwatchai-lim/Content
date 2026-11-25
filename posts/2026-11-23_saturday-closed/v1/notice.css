@@ -1,0 +1,29 @@
+/* Shop closed notice — same family as posts/2026-09-26_flood-care (the shop's Facebook notice look):
+   dark green ground with faint diagonal lines, one square snow card, wordmark on top, Peach accent, message, rule, sign-off.
+   Here the date is the hero: a big green day number. */
+html, body { margin: 0; background: transparent; }
+body { position: relative; width: 1080px; height: 1350px; overflow: hidden; font-family: var(--to-font-thai); color: var(--to-black); }
+body > [data-layer] { position: absolute; box-sizing: border-box; }
+
+.background { inset: 0;
+  background:
+    repeating-linear-gradient(102deg, transparent 0 46px, rgba(250, 250, 250, .05) 46px 48px, transparent 48px 131px),
+    repeating-linear-gradient(104deg, transparent 0 83px, rgba(250, 250, 250, .035) 83px 84px, transparent 84px 197px),
+    radial-gradient(ellipse 85% 60% at 50% 40%, #1d4a37 0%, var(--to-green) 55%, #0b2118 100%); }
+
+.card { left: 90px; top: 170px; width: 900px; height: 1010px; padding: 88px 80px 84px; background: var(--to-snow);
+        text-align: center; box-shadow: 0 30px 80px rgba(0, 0, 0, .35);
+        display: flex; flex-direction: column; justify-content: center; }
+.card > * { flex-shrink: 0; }
+.card .logo { display: block; width: 360px; margin: 0 auto; }
+.card .accent { width: 72px; height: 5px; margin: 40px auto 44px; background: var(--to-peach); }
+
+.card .label { margin: 0; font-weight: 500; font-size: 34px; letter-spacing: .04em; color: var(--to-black); opacity: .75; }
+.card .day { margin: 6px 0 0; font-family: var(--to-font-display); font-weight: 800; font-size: 230px; line-height: .95;
+             color: var(--to-green); letter-spacing: -.02em; }
+.card .month { margin: 10px 0 0; font-weight: 700; font-size: 44px; line-height: 1.4; color: var(--to-green); }
+.card .closed { margin: 34px auto 0; display: inline-block; align-self: center; padding: 10px 34px 14px;
+                background: var(--to-green); color: var(--to-snow); font-weight: 700; font-size: 40px; line-height: 1.4; }
+
+.card .rule { height: 2px; margin: 48px 60px 40px; background: var(--to-hairline); }
+.card .note { margin: 0; font-size: 32px; line-height: 1.7; text-wrap: balance; }

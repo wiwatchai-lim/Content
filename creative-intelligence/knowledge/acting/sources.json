@@ -1,0 +1,822 @@
+[
+ {
+  "key": "deGelder2009",
+  "title": "Why bodies? Twelve reasons for including bodily expressions in affective neuroscience",
+  "authors": "de Gelder, B.",
+  "year": 2009,
+  "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC2781896/",
+  "doi_isbn": "10.1098/rstb.2009.0190",
+  "source_type": "review",
+  "tier": "A",
+  "key_findings": [
+   "Over 95% of human emotion studies had used faces; a May-2009 PubMed count gave 3521 hits for emotion x faces vs 339 for emotion x bodies.",
+   "Bodily expressions are recognised about as reliably as facial expressions; dynamic clips are recognised roughly 10% better than stills; point-light displays are harder.",
+   "Bodies show emotion together with the action the person is preparing (fear body = escape) and can be read at a distance where faces cannot.",
+   "Body emotion biases how an ambiguous face is read; face-body incongruence is detected early (~115 ms).",
+   "Different emotions draw attention to different body parts (e.g. hands for aggression)."
+  ],
+  "practical_applications": [
+   "Faceless characters (Mint & Tao) can carry emotion through posture and movement; this is a research-backed channel, not a workaround.",
+   "Show the action tendency (approach, withdraw, freeze) rather than a static 'emotion pose'."
+  ],
+  "limitations": [
+   "Narrative review by one author, partly built on her own lab's work; neuroscience parts are not directly needed for craft.",
+   "WebFetch read ~100k of ~116k characters (the end of the reference list not read)."
+  ],
+  "license": "open access via PMC (Royal Society; check licence)",
+  "access_status": "full_text",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M17"
+  ]
+ },
+ {
+  "key": "Dael2012",
+  "title": "Emotion expression in body action and posture",
+  "authors": "Dael, N.; Mortillaro, M.; Scherer, K. R.",
+  "year": 2012,
+  "url": "https://archive-ouverte.unige.ch/unige:97844",
+  "doi_isbn": "10.1037/a0025737",
+  "source_type": "empirical",
+  "tier": "A",
+  "key_findings": [
+   "10 professional actors x 12 emotions (GEMEP corpus), coded with the Body Action and Posture (BAP) system and reduced to 16 behaviour factors.",
+   "Hot anger was homogeneously expressed by frontal body lean / forward movement (one cluster contained all hot-anger portrayals).",
+   "Amusement: touching/manipulation and discontinuous movements with mid-action holds, head straight and oriented to the interlocutor.",
+   "Elated joy (70%) and pride (40%) shared symmetrical up-down repetitive arm action; panic fear (60%) shared symmetrical arm action with knee movement, overlapping with joy (30%).",
+   "Sadness (60%) and relief (50%) were grouped together by arms resting (in pockets); despair and anxiety shared an indistinct pattern; anxiety + panic fear also showed backward lean, upward gaze and lateral trunk lean.",
+   "Interest and irritation shared arms at side + trunk leaning forward + one-arm asymmetric action.",
+   "Discriminant classification: elated joy 90%, amusement and hot anger 70%, sadness and irritation 30%; sadness was classified as despair as often as sadness. Cross-validated accuracies only 10-60%.",
+   "Arousal (activation) was the first discriminating dimension; most emotions were expressed by several different patterns."
+  ],
+  "practical_applications": [
+   "High-arousal emotions (anger, joy, amusement) are easy to stage with body alone; low-arousal ones (sadness vs relief, irritation vs interest) need context, props or a second cue.",
+   "Disambiguate pairs known to be confused: joy vs panic fear, sadness vs relief vs despair, interest vs irritation."
+  ],
+  "limitations": [
+   "Acted portrayals by 10 Western-European actors, standing, filmed in a lab; not spontaneous behaviour.",
+   "Exploratory cluster analysis; small n per cell; classification not cross-validated in the main report."
+  ],
+  "license": "copyrighted (APA); author archive copy",
+  "access_status": "full_text",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M17"
+  ]
+ },
+ {
+  "key": "Kleinsmith2013",
+  "title": "Affective Body Expression Perception and Recognition: A Survey",
+  "authors": "Kleinsmith, A.; Bianchi-Berthouze, N.",
+  "year": 2013,
+  "url": "https://ieeexplore.ieee.org/document/6212434",
+  "doi_isbn": "10.1109/T-AFFC.2012.16",
+  "source_type": "review",
+  "tier": "A",
+  "key_findings": [
+   "Both form (posture) and motion carry affect; motion can be sufficient for basic emotions but recognition drops when form is disrupted; posture helps separate emotions with similar movement activation.",
+   "High-level features that matter: leaning direction, openness of the body, head position (up/down/tilted); angular/diagonal configurations read as threatening, rounded ones as warm (Aronoff, ballet).",
+   "Sadness core: arms straight down close to the body; happiness/elation: head bent back, arms often raised; hands raised = happy, low = sad; lateral opening separates happy and fear from sad.",
+   "Disgust and pride can both use crossed arms; head position separates them (forward for disgust, back for pride) - Wallbott.",
+   "Non-acted Wii postures: defeated and concentrating both had slumped shoulders and arms down/diagonal; frustrated and triumphant both had shoulders up/back and arms raised laterally - arousal separated better than valence.",
+   "Cross-cultural: Japanese, Sri Lankan and American observers agreed best on sad/depressed for a faceless genderless avatar, but Japanese rated animated postures as more intense.",
+   "Prototypical expressions are rare in real life (Russell); context changes how an emotion is expressed."
+  ],
+  "practical_applications": [
+   "Use head position + openness + lean as the three main levers for a faceless puppet.",
+   "Expect triumph vs frustration and defeat vs concentration to be confused unless context or hands disambiguate."
+  ],
+  "limitations": [
+   "Narrative survey (not systematic); most cited studies use acted expressions.",
+   "Read from a lecture-site copy of the published PDF; tables partly garbled in text extraction."
+  ],
+  "license": "copyrighted (IEEE)",
+  "access_status": "full_text",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M17"
+  ]
+ },
+ {
+  "key": "Atkinson2004",
+  "title": "Emotion perception from dynamic and static body expressions in point-light and full-light displays",
+  "authors": "Atkinson, A. P.; Dittrich, W. H.; Gemmell, A. J.; Young, A. W.",
+  "year": 2004,
+  "url": "https://journals.sagepub.com/doi/10.1068/p5096",
+  "doi_isbn": "10.1068/p5096",
+  "source_type": "empirical",
+  "tier": "A",
+  "key_findings": [
+   "10 actors with faces covered portrayed anger, disgust, fear, happiness, sadness at 3 levels of exaggeration; 150 full-light and 150 point-light clips plus static peak frames.",
+   "Basic emotions were readily identified from body movement even in point-light displays; static images were less efficient than dynamic displays.",
+   "More exaggerated movement increased recognition accuracy (most clearly for dynamic point-light) and intensity ratings; intensity judgements relied more on movement than on static form (secondary summaries add: exaggeration did not help sadness)."
+  ],
+  "practical_applications": [
+   "Faces can be hidden entirely and emotion still reads - direct support for faceless characters.",
+   "In clips, exaggerate movement amplitude for clarity; in stills (carousels) expect lower accuracy and add context."
+  ],
+  "limitations": [
+   "Abstract read via Europe PMC; per-emotion accuracies not read.",
+   "Acted, Western actors."
+  ],
+  "license": "copyrighted",
+  "access_status": "abstract",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M17"
+  ]
+ },
+ {
+  "key": "Dittrich1996",
+  "title": "Perception of emotion from dynamic point-light displays represented in dance",
+  "authors": "Dittrich, W. H.; Troscianko, T.; Lea, S. E. G.; Morgan, D.",
+  "year": 1996,
+  "url": "https://journals.sagepub.com/doi/10.1068/p250727",
+  "doi_isbn": "10.1068/p250727",
+  "source_type": "empirical",
+  "tier": "A",
+  "key_findings": [
+   "Two trained dancers conveyed fear, anger, grief, joy, surprise, disgust.",
+   "Full-body clips: 88% correct; upright point-light (13 dots): 63% correct, well above chance; inversion reduced point-light performance close to chance."
+  ],
+  "practical_applications": [
+   "Movement pattern alone carries emotion - a simplified stick/pencil figure that moves well can read.",
+   "Keep characters upright and anatomically coherent; scrambled or inverted motion loses meaning."
+  ],
+  "limitations": [
+   "Only two dancers; dance is stylised movement.",
+   "Abstract only."
+  ],
+  "license": "copyrighted",
+  "access_status": "abstract",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M17"
+  ]
+ },
+ {
+  "key": "Aviezer2012",
+  "title": "Body cues, not facial expressions, discriminate between intense positive and negative emotions",
+  "authors": "Aviezer, H.; Trope, Y.; Todorov, A.",
+  "year": 2012,
+  "url": "https://www.science.org/doi/10.1126/science.1224313",
+  "doi_isbn": "10.1126/science.1224313",
+  "source_type": "empirical",
+  "tier": "A",
+  "key_findings": [
+   "At peak intensity (e.g. winning/losing), positive and negative situations were discriminated from isolated bodies but not from isolated faces.",
+   "Viewers perceived illusory valence in non-diagnostic faces when shown with bodies; in face-body composites, perceived affect followed the body."
+  ],
+  "practical_applications": [
+   "For big moments (win, loss, shock) the body pose decides how the moment reads - design the body first.",
+   "Body + context can make the same neutral/ambiguous face (or no face) read as joy or despair."
+  ],
+  "limitations": [
+   "Real-life photos of athletes/people at peak intensity; generalisation to mild emotions not tested.",
+   "Abstract only."
+  ],
+  "license": "copyrighted",
+  "access_status": "abstract",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M17"
+  ]
+ },
+ {
+  "key": "Coulson2004",
+  "title": "Attributing emotion to static body postures: Recognition accuracy, confusions, and viewpoint dependence",
+  "authors": "Coulson, M.",
+  "year": 2004,
+  "url": "https://ueaeprints.uea.ac.uk/id/eprint/73537/",
+  "doi_isbn": "10.1023/B:JONB.0000023655.25550.be",
+  "source_type": "empirical",
+  "tier": "A",
+  "key_findings": [
+   "176 computer-generated mannequin postures, each from 3 viewing angles, forced choice of 6 emotions.",
+   "Agreement ranged from zero for many disgust postures to over 90% for some anger and sadness postures.",
+   "Anatomical features and viewing angle predicted responses; confusions suggested a circumplex, with happiness and surprise close together."
+  ],
+  "practical_applications": [
+   "For static images of simplified figures: anger and sadness can read from posture alone; disgust needs props/context.",
+   "Pick the camera angle that shows the posture most clearly (viewpoint matters)."
+  ],
+  "limitations": [
+   "Wooden, faceless mannequins without hand detail; static only.",
+   "Abstract read; per-feature tables not read."
+  ],
+  "license": "copyrighted",
+  "access_status": "abstract",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M17"
+  ]
+ },
+ {
+  "key": "Pollick2001",
+  "title": "Perceiving affect from arm movement",
+  "authors": "Pollick, F. E.; Paterson, H. M.; Bruderlin, A.; Sanford, A. J.",
+  "year": 2001,
+  "url": "https://doi.org/10.1016/S0010-0277(01)00147-0",
+  "doi_isbn": "10.1016/S0010-0277(01)00147-0",
+  "source_type": "empirical",
+  "tier": "A",
+  "key_findings": [
+   "Point-light drinking and knocking arm movements with 10 affects; perceived affect formed a circumplex: dimension 1 activation, dimension 2 pleasantness.",
+   "Activation correlated strongly with movement kinematics (speed) even in scrambled displays; pleasantness seemed carried by phase relations between limb segments.",
+   "Secondary summaries: anger/happiness judged from fast, jerky movement; sadness from slow, smooth movement."
+  ],
+  "practical_applications": [
+   "Tempo controls arousal: speed up for anger/joy/excitement, slow and smooth for sadness/tiredness.",
+   "Valence needs coordination quality (smooth flowing vs jerky, disconnected), not just speed."
+  ],
+  "limitations": [
+   "Two actors; arm-only point-light.",
+   "Abstract only; the fast/jerky detail comes from secondary sources."
+  ],
+  "license": "copyrighted",
+  "access_status": "abstract",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M17"
+  ]
+ },
+ {
+  "key": "Roether2009",
+  "title": "Critical features for the perception of emotion from gait",
+  "authors": "Roether, C. L.; Omlor, L.; Christensen, A.; Giese, M. A.",
+  "year": 2009,
+  "url": "https://doi.org/10.1167/9.6.15",
+  "doi_isbn": "10.1167/9.6.15",
+  "source_type": "empirical",
+  "tier": "A",
+  "key_findings": [
+   "Motion capture of neutral, angry, happy, sad, fearful gaits from 25 people; observers judged avatars animated with them.",
+   "Judgements rely on simple features such as overall speed and on posture/dynamic cues; emotion-specific features depended on only a few joints.",
+   "Artificial walkers with only the critical features produced after-effects like natural emotional walkers."
+  ],
+  "practical_applications": [
+   "A walk cycle can carry emotion with a few changes: speed, head inclination, arm-swing amplitude (details in the Kleinsmith survey).",
+   "Matches rig.js walk timings (brisk vs slow) - a cheap emotion channel for every entrance."
+  ],
+  "limitations": [
+   "Abstract only; exact joint-angle results not read.",
+   "Acted gaits."
+  ],
+  "license": "open access (Journal of Vision; check licence)",
+  "access_status": "abstract",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M17"
+  ]
+ },
+ {
+  "key": "Wallbott1998",
+  "title": "Bodily expression of emotion",
+  "authors": "Wallbott, H. G.",
+  "year": 1998,
+  "url": "https://doi.org/10.1002/(SICI)1099-0992(1998110)28:6<879::AID-EJSP901>3.0.CO;2-W",
+  "doi_isbn": "10.1002/(SICI)1099-0992(1998110)28:6<879::AID-EJSP901>3.0.CO;2-W",
+  "source_type": "empirical",
+  "tier": "A",
+  "key_findings": [
+   "(Per Dael2012 and Kleinsmith2013, which were read in full) Actors portraying 14 emotions; overall classification ~.54; movement quality (activity, expansiveness, energy) strongly aided differentiation.",
+   "(Per secondary sources) part of the movement differences are explained by activation; collapsed posture for shame/sadness; pride more in body than face; arms crossed for disgust and pride, separated by head forward vs back."
+  ],
+  "practical_applications": [
+   "Use expansiveness and energy as first-order controls; head position as the tie-breaker."
+  ],
+  "limitations": [
+   "Not read directly; findings stated only as reported by secondary sources."
+  ],
+  "license": "copyrighted",
+  "access_status": "search_summary",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M17"
+  ]
+ },
+ {
+  "key": "TracyMatsumoto2008",
+  "title": "The spontaneous expression of pride and shame: Evidence for biologically innate nonverbal displays",
+  "authors": "Tracy, J. L.; Matsumoto, D.",
+  "year": 2008,
+  "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC2575323",
+  "doi_isbn": "10.1073/pnas.0802686105",
+  "source_type": "empirical",
+  "tier": "A",
+  "key_findings": [
+   "Judo athletes at the 2004 Olympic (sighted, 36 nations) and Paralympic (blind, 20 nations, 12 congenitally blind) Games.",
+   "After winning: head tilted back, smile, arms raised, hands in fists, arms out, chest expanded, torso out - in sighted and blind athletes; hands on hips NOT reliably displayed.",
+   "After losing: only shoulders slumped and chest narrowed increased (head down / face hiding not associated with losing in this photo set).",
+   "Shame display was weaker in more individualistic cultures (sighted only), suggesting cultural suppression; no moderation in blind athletes."
+  ],
+  "practical_applications": [
+   "Triumph = expand and rise (head back, arms up/out, fists); defeat = narrow the chest, drop the shoulders.",
+   "In collectivist settings (including Thai audiences, plausibly) visible shame displays after failure are culturally acceptable - but this is an inference, Thailand not separately analysed."
+  ],
+  "limitations": [
+   "No self-report of felt emotion; competition with audience; one photographer, limited angles; small congenitally blind sample."
+  ],
+  "license": "open access via PMC",
+  "access_status": "full_text",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M17"
+  ]
+ },
+ {
+  "key": "Melzer2019",
+  "title": "How do we recognize emotion from movement? Specific motor components contribute to the recognition of each emotion",
+  "authors": "Melzer, A.; Shafir, T.; Tsachor, R. P.",
+  "year": 2019,
+  "url": "https://doi.org/10.3389/fpsyg.2019.01389",
+  "doi_isbn": "10.3389/fpsyg.2019.01389",
+  "source_type": "empirical",
+  "tier": "A",
+  "key_findings": [
+   "Earlier work (Shafir et al. 2016) found Laban components that enhanced feeling: happiness = jumping, rhythmic, spreading, free flow, lightness, up, rising; sadness = passive weight, arms touching upper body, sinking, head dropping; fear = retreating, condensing, bound flow, backwards, enclosing; anger = strong weight, sudden time, advancing, direct.",
+   "Clips of Certified Movement Analysts moving those components (without intending emotion) were recognised as the associated emotion above chance; anger only 47.2% of anger-component clips.",
+   "Actor clips (Atkinson set) were recognised better for anger, fear and neutral."
+  ],
+  "practical_applications": [
+   "A practical vocabulary for directing movement quality: e.g. 'sinking, passive weight' for sadness; 'retreat + condense + bound flow' for fear.",
+   "Useful prompt words for AI video and notes for puppet timing."
+  ],
+  "limitations": [
+   "All movers adult Caucasian women; sample too small for cross-cultural analysis; Laban coding by its own practitioners."
+  ],
+  "license": "CC BY 4.0",
+  "access_status": "full_text",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M17"
+  ]
+ },
+ {
+  "key": "Bernardet2019",
+  "title": "Assessing the reliability of the Laban Movement Analysis system",
+  "authors": "Bernardet, U.; Fdili Alaoui, S.; Studd, K.; Bradley, K.; Pasquier, P.; Schiphorst, T.",
+  "year": 2019,
+  "url": "https://doi.org/10.1371/journal.pone.0218179",
+  "doi_isbn": "10.1371/journal.pone.0218179",
+  "source_type": "empirical",
+  "tier": "A",
+  "key_findings": [
+   "Certified Movement Analysts annotated the most and second-most salient difference between a neutral and a varied movement in a custom tool.",
+   "Inter-rater reliability (Krippendorff's alpha) ranged from weak to acceptable depending on how the two rounds were combined.",
+   "Positioned as the first formal reliability assessment of a widely used system."
+  ],
+  "practical_applications": [
+   "Treat Laban terms as a shared craft vocabulary, not as a validated measurement scale.",
+   "When two people disagree about Laban labels for a shot, that is normal - test with viewers instead."
+  ],
+  "limitations": [
+   "One study, small expert sample, limited movement set."
+  ],
+  "license": "CC BY 4.0",
+  "access_status": "full_text",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M17"
+  ]
+ },
+ {
+  "key": "Langton2000",
+  "title": "Do the eyes have it? Cues to the direction of social attention",
+  "authors": "Langton, S. R. H.; Watt, R. J.; Bruce, V.",
+  "year": 2000,
+  "url": "https://storre.stir.ac.uk/bitstream/1893/21045/1/LangtonWattBruce_2000.pdf",
+  "doi_isbn": "10.1016/S1364-6613(99)01436-9",
+  "source_type": "review",
+  "tier": "A",
+  "key_findings": [
+   "Gaze direction is processed rapidly and triggers reflexive shifts of the observer's attention, even when uninformative and when told to ignore it.",
+   "Perceived attention direction depends not only on the eyes but on head orientation, body posture and pointing; head orientation changes perceived gaze (Wollaston effect).",
+   "Head orientation and pointing may be more salient than eye gaze for young children; cues are processed automatically and in parallel."
+  ],
+  "practical_applications": [
+   "Faceless characters can still 'look': turn the head (and body) toward the target and the viewer's attention follows.",
+   "Use head turn + point to steer the viewer to a product or object in the frame."
+  ],
+  "limitations": [
+   "Review written 2000; later gaze-cueing literature not covered here."
+  ],
+  "license": "author accepted manuscript (University of Stirling repository)",
+  "access_status": "full_text",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M17"
+  ]
+ },
+ {
+  "key": "Emery2000",
+  "title": "The eyes have it: the neuroethology, function and evolution of social gaze",
+  "authors": "Emery, N. J.",
+  "year": 2000,
+  "url": "https://doi.org/10.1016/S0149-7634(00)00025-7",
+  "doi_isbn": "10.1016/S0149-7634(00)00025-7",
+  "source_type": "review",
+  "tier": "A",
+  "key_findings": [
+   "Gaze is a core social signal; its signal value depends on the status, disposition and emotional state of sender and receiver.",
+   "Brain regions respond selectively to faces, bodies and gaze; gaze following may be 'hard-wired' (STS-amygdala-OFC circuit)."
+  ],
+  "practical_applications": [
+   "Direct orientation toward another character = engagement/challenge; averted = deference/avoidance - read through status context."
+  ],
+  "limitations": [
+   "Abstract only; mostly primate neuroethology."
+  ],
+  "license": "copyrighted",
+  "access_status": "abstract",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M17"
+  ]
+ },
+ {
+  "key": "Mignault2003",
+  "title": "The many faces of a neutral face: Head tilt and perception of dominance and emotion",
+  "authors": "Mignault, A.; Chaudhuri, A.",
+  "year": 2003,
+  "url": "https://doi.org/10.1023/A:1023914509763",
+  "doi_isbn": "10.1023/A:1023914509763",
+  "source_type": "empirical",
+  "tier": "A",
+  "key_findings": [
+   "Secondary sources disagree on what it found: one says direct gaze + upward head tilt expresses dominance and downward head + averted gaze submission; another attributes 'head down increases perceived dominance' to it.",
+   "Later work (2020, Perception, per search snippet) found both 30-degree up and 20-degree down postures read as more dominant and less trustworthy than level; Witkower & Tracy reported slightly-down heads read angrier."
+  ],
+  "practical_applications": [
+   "Head pitch changes perceived status and emotion, but the direction depends on the rest of the face/body and the camera angle - test, do not assume."
+  ],
+  "limitations": [
+   "Not read; secondary sources conflict - recorded as contested."
+  ],
+  "license": "copyrighted",
+  "access_status": "search_summary",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M17"
+  ]
+ },
+ {
+  "key": "WitkowerTracy2019",
+  "title": "Bodily communication of emotion: Evidence for extrafacial behavioral expressions and available coding systems",
+  "authors": "Witkower, Z.; Tracy, J. L.",
+  "year": 2019,
+  "url": "https://doi.org/10.1177/1754073917749880",
+  "doi_isbn": "10.1177/1754073917749880",
+  "source_type": "review",
+  "tier": "A",
+  "key_findings": [
+   "(Abstract per search result) Reviews evidence that pride, joy, sadness, shame, embarrassment, anger, fear and disgust are shown and recognised through bodily behaviour.",
+   "No existing body coding system covers the full range of emotions."
+  ],
+  "practical_applications": [
+   "Supports a pose library covering these eight emotions as the most evidence-backed set."
+  ],
+  "limitations": [
+   "Abstract content seen only via search result text."
+  ],
+  "license": "copyrighted",
+  "access_status": "search_summary",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M17"
+  ]
+ },
+ {
+  "key": "Hostetter2011",
+  "title": "When do gestures communicate? A meta-analysis",
+  "authors": "Hostetter, A. B.",
+  "year": 2011,
+  "url": "https://doi.org/10.1037/a0022128",
+  "doi_isbn": "10.1037/a0022128",
+  "source_type": "meta-analysis",
+  "tier": "S",
+  "key_findings": [
+   "63 samples: speech + gesture gives a significant, moderate comprehension benefit over speech alone.",
+   "Gestures depicting motor actions help more than gestures about abstract topics.",
+   "Benefit is larger when gestures are not redundant with speech; children benefit more than adults."
+  ],
+  "practical_applications": [
+   "Give characters gestures that add information (show the size, shape, action) rather than repeat the words.",
+   "In TTS clips, an iconic gesture of the action described helps viewers - especially for family/child audiences."
+  ],
+  "limitations": [
+   "Abstract only; lab comprehension tasks."
+  ],
+  "license": "copyrighted",
+  "access_status": "abstract",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M17"
+  ]
+ },
+ {
+  "key": "ShattuckHufnagelRen2018",
+  "title": "The prosodic characteristics of non-referential co-speech gestures in a sample of academic-lecture-style speech",
+  "authors": "Shattuck-Hufnagel, S.; Ren, A.",
+  "year": 2018,
+  "url": "https://doi.org/10.3389/fpsyg.2018.01514",
+  "doi_isbn": "10.3389/fpsyg.2018.01514",
+  "source_type": "empirical",
+  "tier": "A",
+  "key_findings": [
+   "Summarises McNeill (1992): referential gestures = iconic, metaphoric, deictic; beats were defined mainly as 'not iconic, metaphoric or deictic'; McNeill distinguished single flick beats marking narrative points from rhythm-beating gestures.",
+   "1,334 stroke-defined gestures in 20 min of lecture speech: the stroke of non-referential gestures tends to align with a pitch-accented syllable, as for other gesture types (Loehr 2004 strokes align with pitch accents).",
+   "Cites Kendon (1972, 1980, 2004) for gesture phrase structure and kinematic constancy across prosodic constituents; non-referential gestures are not a homogeneous 'beat' class."
+  ],
+  "practical_applications": [
+   "Time a gesture's stroke to the stressed syllable of the TTS line; preparation before, hold/retraction after.",
+   "Use beats sparingly as emphasis; use iconic gestures for content."
+  ],
+  "limitations": [
+   "One speaker style (American English lectures); Thai is a tonal language - stroke-to-stress alignment in Thai not tested here."
+  ],
+  "license": "CC BY 4.0",
+  "access_status": "full_text",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M17"
+  ]
+ },
+ {
+  "key": "McNeill1992",
+  "title": "Hand and Mind: What Gestures Reveal about Thought",
+  "authors": "McNeill, D.",
+  "year": 1992,
+  "url": "",
+  "doi_isbn": "",
+  "source_type": "textbook",
+  "tier": "A",
+  "key_findings": [
+   "(Per secondary sources read: ShattuckHufnagelRen2018 and search results) Classifies co-speech gestures as iconic, metaphoric, deictic and beats; categories are not mutually exclusive; builds on 'Kendon's continuum'."
+  ],
+  "practical_applications": [
+   "Plan each gesture by type: show (iconic), idea-as-object (metaphoric), point (deictic), emphasis (beat)."
+  ],
+  "limitations": [
+   "Book not read; content stated only as reported by secondary sources."
+  ],
+  "license": "copyrighted",
+  "access_status": "bibliographic",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M17"
+  ]
+ },
+ {
+  "key": "Sorokowska2017",
+  "title": "Preferred interpersonal distances: A global comparison",
+  "authors": "Sorokowska, A.; Sorokowski, P.; Hilpert, P.; et al.",
+  "year": 2017,
+  "url": "https://wrap.warwick.ac.uk/100226",
+  "doi_isbn": "10.1177/0022022117698039",
+  "source_type": "empirical",
+  "tier": "A",
+  "key_findings": [
+   "8,943 participants in 42 countries chose preferred distances on a 0-220 cm graphic scale between two figures (stranger, acquaintance, close person).",
+   "Means: social (stranger) 135.1 cm, personal (acquaintance) 91.7 cm, intimate (close) 31.9 cm; the order held in every country, absolute values varied widely.",
+   "Women and older people preferred larger distances; warmer countries preferred closer stranger distances.",
+   "Hall's (1966) contact/non-contact split by geography (Asian populations as non-contact) is only partly supported; earlier evidence was often anecdotal.",
+   "Thailand was not among the sampled countries (checked the manuscript text)."
+  ],
+  "practical_applications": [
+   "Distance between Mint and Tao in frame is a relationship dial: ~1 body-width apart = close; 2-3 = acquainted; more = stranger/estranged.",
+   "Do not rely on Hall's culture labels; use the relative order, which is cross-culturally stable."
+  ],
+  "limitations": [
+   "Self-report picture task, not observed behaviour; sex of the other person unspecified; ~200 per country."
+  ],
+  "license": "accepted manuscript, WRAP terms (personal research use)",
+  "access_status": "full_text",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M17"
+  ]
+ },
+ {
+  "key": "Hall1966",
+  "title": "The Hidden Dimension",
+  "authors": "Hall, E. T.",
+  "year": 1966,
+  "url": "",
+  "doi_isbn": "",
+  "source_type": "textbook",
+  "tier": "B",
+  "key_findings": [
+   "(Per Sorokowska2017, read in full) Proposes four distance zones - intimate (0-46 cm), personal, social and public - and a contact vs non-contact culture distinction; cultural norms seen as the main factor."
+  ],
+  "practical_applications": [
+   "Zone vocabulary for staging two-shots and for blocking real people in clips."
+  ],
+  "limitations": [
+   "Not read; zone ranges beyond 'intimate 0-46 cm' not confirmed this session; theory partly anecdotal (Sorokowska2017)."
+  ],
+  "license": "copyrighted",
+  "access_status": "bibliographic",
+  "verification_status": "unverified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M17"
+  ]
+ },
+ {
+  "key": "AnumanRajadhon_wai",
+  "title": "Thai Traditional Salutation",
+  "authors": "Phya Anuman Rajadhon",
+  "year": null,
+  "url": "https://thesiamsociety.org/knowledge-hub/uploads/research/528/665c8ae5db4e5.pdf",
+  "doi_isbn": "",
+  "source_type": "primary_text",
+  "tier": "B",
+  "key_findings": [
+   "Wai: palms joined, touching the body between face and chest; the higher the hands, the greater the respect; the junior in age or rank initiates and the senior reciprocates; less strict between intimates.",
+   "Movement is never sharp: raised and lowered gracefully, upper arms close to the body, elbows not extended; idealised hand shape is the 'budding lotus' (phanom mue).",
+   "A senior conscious of superiority returns the wai no higher than the chest, or just nods / raises the right hand (rap wai); monks do not return a layperson's wai.",
+   "When standing before a seated respected person one stoops or bends the head; simple folk crouch on their haunches before great personages until they pass.",
+   "Krap (kneel and bow, forehead to floor between the hands, three times) is for the Buddha/Triple Gems; mop krap (crouched bow) for parents, teachers, royalty; side-sitting posture 'nang phap phiap' with legs folded back.",
+   "The author stresses variation by class, locality and setting; his description is a generalisation."
+  ],
+  "practical_applications": [
+   "Correct Thai respect choreography for characters: who wais first, hand height by status, slow tempo, elbows in.",
+   "A rushed, high-elbow or one-handed wai reads as careless or comic - use only on purpose."
+  ],
+  "limitations": [
+   "Mid-20th-century description (exact year not confirmed); modern urban practice is looser (Thailand Foundation and guides).",
+   "Scanned text with OCR errors."
+  ],
+  "license": "unknown (Siam Society knowledge hub)",
+  "access_status": "full_text",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M17"
+  ]
+ },
+ {
+  "key": "ThailandFoundation2024",
+  "title": "Feet Low, Head High: A Guide to Thai Etiquettes",
+  "authors": "Varapongsittikul, T. (ed. Mongkolrat, T.)",
+  "year": 2024,
+  "url": "https://thailandfoundation.or.th/?p=518467",
+  "doi_isbn": "",
+  "source_type": "docs",
+  "tier": "C",
+  "key_findings": [
+   "Feet are the lowest/least clean part: do not point feet or soles at people or Buddha images; tuck feet or sit cross-legged; do not put feet on tables; do not step over pillows or books.",
+   "Head is the most sacred part: do not touch anyone's head, even children's; do not pass objects over a head; bow the head when walking past elders.",
+   "Do not position the body above an elder's head; crouch or move on knees to pass seated elders or monks.",
+   "Everyday wai: palms together at chest level with a slight head bow; on special occasions bow low with hands at the elder's feet."
+  ],
+  "practical_applications": [
+   "Cultural checks for every Thai scene: feet direction when seated, no head pats, lower the body when passing elders."
+  ],
+  "limitations": [
+   "Cultural-promotion article (states it does not reflect government views); normative, not observational."
+  ],
+  "license": "copyrighted",
+  "access_status": "publisher_page",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M17"
+  ]
+ },
+ {
+  "key": "EkmanGroupFACS",
+  "title": "Facial Action Coding System (FACS) - product page",
+  "authors": "Paul Ekman Group",
+  "year": null,
+  "url": "https://www.paulekman.com/facial-action-coding-system/",
+  "doi_isbn": "",
+  "source_type": "docs",
+  "tier": "C",
+  "key_findings": [
+   "FACS is an anatomically based system describing all visually discernible facial movement as Action Units; first published 1978 (Ekman & Friesen), revised 2002.",
+   "FACS codes are descriptive; EMFACS codes 'have to be interpreted into emotion categories'.",
+   "Self-study 50-100 hours; used by researchers, animators and computer scientists."
+  ],
+  "practical_applications": [
+   "Use AU names as a precise vocabulary for faces when a character HAS a face (TTS clip puppets, AI video prompts), not as an emotion detector."
+  ],
+  "limitations": [
+   "Vendor page."
+  ],
+  "license": "copyrighted",
+  "access_status": "publisher_page",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M17"
+  ]
+ },
+ {
+  "key": "McDonnell2021",
+  "title": "Model for predicting perception of facial action unit activation using virtual humans",
+  "authors": "McDonnell, R.; Zibrek, K.; Carrigan, E.; Dahyot, R.",
+  "year": 2021,
+  "url": "https://mural.maynoothuniversity.ie/15110/",
+  "doi_isbn": "10.1016/j.cag.2021.07.022",
+  "source_type": "empirical",
+  "tier": "A",
+  "key_findings": [
+   "Blendshape rigs are usually built from FACS Action Units; some AUs are perceptually more noticeable than others (ordering table provided).",
+   "Perceived difference grew roughly linearly with activation for most AUs; almost no AU was distinguishable from neutral at 0.2 activation except eyes closed and mouth open.",
+   "Geometric RMS predicted visibility better than the image metric SSIM; character race/sex had some effects, no other-race effect."
+  ],
+  "practical_applications": [
+   "Subtle face moves (<20% intensity) are invisible to viewers - at our small on-screen sizes push face changes harder or move the body instead."
+  ],
+  "limitations": [
+   "Realistic virtual humans viewed close-up; stylised 2D puppets not tested."
+  ],
+  "license": "CC BY 4.0",
+  "access_status": "full_text",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M17"
+  ]
+ },
+ {
+  "key": "Lasseter1987",
+  "title": "Principles of traditional animation applied to 3D computer animation",
+  "authors": "Lasseter, J.",
+  "year": 1987,
+  "url": "https://doi.org/10.1145/37401.37407",
+  "doi_isbn": "10.1145/37401.37407",
+  "source_type": "practitioner",
+  "tier": "D",
+  "key_findings": [
+   "Lists the Disney principles (squash & stretch, timing, anticipation, staging, follow-through/overlap, straight-ahead vs pose-to-pose, slow in/out, arcs, exaggeration, secondary action, appeal).",
+   "Staging in silhouette: early black-and-white characters showed that actions must read in silhouette; Andre's scratch was moved to the side for clarity.",
+   "Anticipation prepares the audience and can show weight (bend low before lifting a heavy object).",
+   "'All actions and movements of a character are the result of its thought processes'; a character does the same action differently in different emotional states.",
+   "Exaggeration must be balanced across design, action, sound; exaggerating only one element - or everything - looks wrong."
+  ],
+  "practical_applications": [
+   "Silhouette test for every key pose of Mint & Tao; show the thought before the action."
+  ],
+  "limitations": [
+   "Craft knowledge from a practitioner (Pixar), published at SIGGRAPH; not empirical evidence."
+  ],
+  "license": "copyrighted (ACM); course mirror",
+  "access_status": "full_text",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M17"
+  ]
+ },
+ {
+  "key": "Hooks2023",
+  "title": "Acting for Animators (5th edition)",
+  "authors": "Hooks, E.",
+  "year": 2023,
+  "url": "https://www.routledge.com/Acting-for-Animators/Hooks/p/book/9781032266473",
+  "doi_isbn": "ISBN 9781032266473",
+  "source_type": "practitioner",
+  "tier": "D",
+  "key_findings": [
+   "Publisher description/TOC: applies acting theory (Aristotle to Stanislavsky) to animation; action -> obstacle -> objective; 'acting is a process of exposing, not of hiding'; acting is doing and reacting; status transactions and power centres; psychological gesture; character rhythm; a scene is a negotiation; Laban movement analysis.",
+   "Earlier edition TOC (retailer listing, 4th ed. 2017) includes 'Thinking tends to lead to conclusions' and 'Emotion tends to lead to action'."
+  ],
+  "practical_applications": [
+   "Give every character an objective and an obstacle per scene; stage status changes through posture and space."
+  ],
+  "limitations": [
+   "Only publisher/retailer pages read; book content not read; practitioner tier."
+  ],
+  "license": "copyrighted",
+  "access_status": "publisher_page",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M17"
+  ]
+ }
+]

@@ -1,0 +1,619 @@
+[
+ {
+  "key": "ReberSchwarzWinkielman2004",
+  "title": "Processing Fluency and Aesthetic Pleasure: Is Beauty in the Perceiver's Processing Experience?",
+  "authors": "Reber, R., Schwarz, N., Winkielman, P.",
+  "year": 2004,
+  "url": "https://pages.ucsd.edu/~pwinkielman/reber-schwarz-winkielman-beauty-PSPR-2004.pdf",
+  "doi_isbn": "10.1207/s15327957pspr0804_3",
+  "source_type": "review",
+  "tier": "A",
+  "key_findings": [
+   "Core proposal: the more fluently a perceiver processes an object, the more positive the aesthetic response; beauty is 'objectified', not objective.",
+   "Four assumptions: objects differ in fluency (symmetry, figure-ground contrast, goodness of form, prototypicality, repetition, priming); fluency is hedonically marked (positive); people use the feeling as information unless its value is questioned; impact is moderated by expectation and attribution.",
+   "Fluency is discounted when people attribute the feeling to an irrelevant source (e.g., background music); fluency that comes as a surprise (expected hard, turns out easy) gives the strongest pleasure, a reading of 'unity in variety'.",
+   "Inverted-U for complexity is explained as two opposing mechanisms (salience of the fluency source vs loss of fluency).",
+   "Experts prefer more complex/asymmetric stimuli; the authors propose training raises fluency for complex stimuli and experts apply explicit norms of taste, sometimes down-rating simple stimuli despite their ease.",
+   "Simplicity is not the same as ease: redundant, contextual patterns can be easier than sparse ones; actual ease must be tested."
+  ],
+  "practical_applications": [
+   "Make the main read easy (contrast, clear figure-ground, familiar layout) and put the challenge in meaning, not in decoding.",
+   "An 'aha' (looks complex, resolves simply) is the strongest fluency payoff: good for story-carousel final slides."
+  ],
+  "limitations": [
+   "Theory/review paper; the authors call the evidence on complexity, expertise and valence 'sparse and sometimes contradictory'.",
+   "Mostly lab stimuli (abstract patterns, words); fluency effects on real artworks and ads are smaller and context-dependent."
+  ],
+  "license": "copyrighted (author-hosted copy)",
+  "access_status": "full_text",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M05"
+  ]
+ },
+ {
+  "key": "Winkielman2006",
+  "title": "Prototypes Are Attractive Because They Are Easy on the Mind",
+  "authors": "Winkielman, P., Halberstadt, J., Fazendeiro, T., Catty, S.",
+  "year": 2006,
+  "url": "https://pages.ucsd.edu/~pwinkiel/winkielman-halberstadt-fazendeiro-catty_Prototypes-PS-2006.pdf",
+  "doi_isbn": "10.1111/j.1467-9280.2006.01785.x",
+  "source_type": "empirical",
+  "tier": "A",
+  "key_findings": [
+   "With random-dot and geometric patterns, prototypicality predicted both categorisation speed (fluency) and attractiveness.",
+   "Fluency partially mediated the prototypicality-attractiveness link; some effect of prototypicality remained when fluency was controlled.",
+   "Facial EMG: prepared (fluent) prototypes produced quick extra activity over the cheek (smile) muscle, i.e., a genuine mild positive affect, not only a cold judgement."
+  ],
+  "practical_applications": [
+   "A recognisable category look (a clear 'eyewear shop' or 'story card' prototype) earns an immediate small liking bonus; deviate from it deliberately, not randomly."
+  ],
+  "limitations": [
+   "Abstract lab patterns; small effects; does not test meaningful commercial images.",
+   "Beauty-in-averageness for faces may also have other causes (the authors say fluency explains part, not all)."
+  ],
+  "license": "copyrighted (author-hosted copy)",
+  "access_status": "full_text",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M05",
+   "M06"
+  ]
+ },
+ {
+  "key": "ChatterjeeVartanian2014",
+  "title": "Neuroaesthetics",
+  "authors": "Chatterjee, A., Vartanian, O.",
+  "year": 2014,
+  "url": "https://neuroaesthetics.med.upenn.edu/assets/user-content/documents/publications/chatterjee-vartanian-2014-01.pdf",
+  "doi_isbn": "10.1016/j.tics.2014.03.003",
+  "source_type": "review",
+  "tier": "A",
+  "key_findings": [
+   "Aesthetic experience emerges from interaction of three systems (the 'aesthetic triad'): sensory-motor, emotion-valuation, meaning-knowledge; the systems are not always equally weighted.",
+   "Context changes valuation: abstract images labelled 'museum' were rated more attractive than when labelled 'computer-generated', with more medial OFC/vmPFC activity; 'art status', titles and authenticity (original vs copy) modulate responses.",
+   "Aesthetic pleasure may reflect 'liking' without 'wanting' (Berridge), a neural reading of Kant's disinterested interest.",
+   "Default mode network (DMN) involvement in the most moving artworks is cited from Vessel et al. 2012.",
+   "Limits: meaning of individual artworks is fluid and historically contingent; the biggest challenge is reverse inference from brain location to mental process, which should generate hypotheses, not confirm them."
+  ],
+  "practical_applications": [
+   "Framing (caption, label, 'handmade', 'by our optician') is part of the aesthetic object; plan it as deliberately as the image.",
+   "Treat brain-region claims in marketing ('this lights up the reward centre') as unproven."
+  ],
+  "limitations": [
+   "Short review (2014); field has since grown and critiques of small-sample fMRI apply.",
+   "Context-label study is cited, not re-analysed here."
+  ],
+  "license": "copyrighted (author-hosted copy)",
+  "access_status": "full_text",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M05",
+   "M06"
+  ]
+ },
+ {
+  "key": "Pelowski2017",
+  "title": "Move me, astonish me... delight my eyes and brain: The Vienna Integrated Model of top-down and bottom-up processes in Art Perception (VIMAP) and corresponding affective, evaluative, and neurophysiological correlates",
+  "authors": "Pelowski, M., Markey, P. S., Forster, M., Gerger, G., Leder, H.",
+  "year": 2017,
+  "url": "https://doi.org/10.1016/j.plrev.2017.02.003",
+  "doi_isbn": "10.1016/j.plrev.2017.02.003",
+  "source_type": "review",
+  "tier": "A",
+  "key_findings": [
+   "Per abstract: VIMAP integrates artwork-driven (bottom-up) processing with top-down mechanisms to explain why the same artwork produces very different responses across people.",
+   "Per Van Geert & Wagemans 2020: in VIMAP, order and complexity are detected in perceptual analysis and further processed in implicit memory integration.",
+   "Per Pizzolante et al. 2024: Pelowski's models frame transformation as expectation-artwork discrepancy that, when resolved, yields insight/epiphany."
+  ],
+  "practical_applications": [
+   "Plan for multiple outcomes of one image (facile liking, confusion, rejection, insight) instead of one 'correct' reaction."
+  ],
+  "limitations": [
+   "Full text not read; stage details and outcome names unverified here.",
+   "Large theoretical model; many links remain to be tested."
+  ],
+  "license": "copyrighted",
+  "access_status": "search_summary",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M05"
+  ]
+ },
+ {
+  "key": "Hekkert2003",
+  "title": "'Most advanced, yet acceptable': Typicality and novelty as joint predictors of aesthetic preference in industrial design",
+  "authors": "Hekkert, P., Snelders, D., van Wieringen, P. C. W.",
+  "year": 2003,
+  "url": "https://www.jimdavies.org/summaries/HekkertSneldersVanwieringen2003.html",
+  "doi_isbn": "",
+  "source_type": "empirical",
+  "tier": "A",
+  "key_findings": [
+   "Per a CogSci summary (secondary): three studies with consumer products (sanders, telephones, teakettles, cars, phones); typicality and novelty were negatively correlated but each positively predicted preference, suppressing each other's effect.",
+   "Typicality and novelty jointly explained about 56% of preference variance in Study 3; central tendency (objective typicality) gave about 60%.",
+   "Experts showed weaker typicality-novelty suppression; the hypothesis that experts rely more on novelty was not supported.",
+   "Linked to Loewy's MAYA principle (Most Advanced, Yet Acceptable)."
+  ],
+  "practical_applications": [
+   "New looks should keep a clear category anchor (recognisable layout, product shape) while adding one novel element."
+  ],
+  "limitations": [
+   "Original article not read; numbers come from a third-party summary (which itself has one internal inconsistency).",
+   "An apparel study reported no negative typicality-novelty correlation (per search summary), so the pattern is category-dependent."
+  ],
+  "license": "copyrighted",
+  "access_status": "search_summary",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M05",
+   "M06"
+  ]
+ },
+ {
+  "key": "GucluturkJacobsVanLier2016",
+  "title": "Liking versus Complexity: Decomposing the Inverted U-curve",
+  "authors": "Güçlütürk, Y., Jacobs, R. H. A. H., van Lier, R.",
+  "year": 2016,
+  "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC4796011/",
+  "doi_isbn": "10.3389/fnhum.2016.00112",
+  "source_type": "empirical",
+  "tier": "A",
+  "key_findings": [
+   "30 participants rated 144 computer-generated grayscale patterns for liking and complexity; objective complexity = compressed file size (r = .946 with perceived complexity).",
+   "Two clusters: 20 people liked simpler patterns (r = -.79 with complexity), 10 liked complex patterns (r = .87).",
+   "Averaging the two opposite linear functions produced the group-level inverted U; a two-cluster model fit better than a quadratic model.",
+   "Both clusters perceived complexity the same way; they differed in liking, not perception."
+  ],
+  "practical_applications": [
+   "Do not aim for 'medium complexity for everyone'; choose complexity per audience segment and test.",
+   "File size of a compressed PNG/JPEG is a cheap proxy for visual complexity when comparing variants."
+  ],
+  "limitations": [
+   "Small, young sample; post hoc clustering; abstract grayscale stimuli only; 1-second exposures."
+  ],
+  "license": "CC BY 4.0",
+  "access_status": "full_text",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M05",
+   "M06"
+  ]
+ },
+ {
+  "key": "VanGeertWagemans2020",
+  "title": "Order, Complexity, and Aesthetic Appreciation",
+  "authors": "Van Geert, E., Wagemans, J.",
+  "year": 2020,
+  "url": "https://lirias.kuleuven.be/retrieve/552894",
+  "doi_isbn": "10.1037/aca0000224",
+  "source_type": "review",
+  "tier": "A",
+  "key_findings": [
+   "Complexity = quantity and variety of information; order = its structure and organisation; following Arnheim, the authors treat them as antagonistic but complementary.",
+   "Complexity-liking findings are mixed: inverted U, positive linear (snowflakes, textures) and even U-shaped (solid objects) relations are reported.",
+   "Fractal dimension preference typically around D 1.3-1.5 with subgroup differences; Fourier slope about -2 typical of natural scenes and Western graphic art.",
+   "Symmetry is usually preferred, but slight asymmetry can be preferred (e.g., Mondrian comparisons); explicit beauty ratings of asymmetry rise with art expertise.",
+   "Individual differences: Openness relates to preference for complexity; art training generally relates to preferring complexity; visual working memory capacity predicts preferred complexity; preference for harmony correlates across colour, shape, space and music (Palmer & Griscom 2013).",
+   "Authors' view: individuals differ in their preferred balance between order and complexity."
+  ],
+  "practical_applications": [
+   "Add order (grid, repetition, alignment, limited palette) when a frame must carry many elements; add variety when an ordered frame feels dead.",
+   "Treat complexity preference as audience-specific; order effects are more stable."
+  ],
+  "limitations": [
+   "Narrative review (not a meta-analysis), visual modality focus; postprint version read.",
+   "Spot-check 2026-11-25: framing credited to Arnheim; open copy is the 2018 accepted manuscript (DOI 10.1037/aca0000224)."
+  ],
+  "license": "copyrighted (postprint; figure CC BY 4.0)",
+  "access_status": "full_text",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M05",
+   "M06"
+  ]
+ },
+ {
+  "key": "Nadal2010",
+  "title": "Visual Complexity and Beauty Appreciation: Explaining the Divergence of Results",
+  "authors": "Nadal, M., Munar, E., Marty, G., Cela-Conde, C. J.",
+  "year": 2010,
+  "url": "https://doi.org/10.2190/EM.28.2.d",
+  "doi_isbn": "10.2190/EM.28.2.d",
+  "source_type": "empirical",
+  "tier": "A",
+  "key_findings": [
+   "Per search summary and citing papers: divergent complexity-beauty results stem from how studies define and manipulate complexity.",
+   "Complexity has at least three dimensions: amount/variety of elements, their organisation, and asymmetry, each relating differently to beauty ratings."
+  ],
+  "practical_applications": [
+   "When critiquing 'too busy', say which kind: too many elements, poor organisation, or imbalance."
+  ],
+  "limitations": [
+   "Full text not read; details and effect sizes unverified."
+  ],
+  "license": "copyrighted",
+  "access_status": "search_summary",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M05",
+   "M06"
+  ]
+ },
+ {
+  "key": "ChmielSchubert2017",
+  "title": "Back to the inverted-U for music preference: A review of the literature",
+  "authors": "Chmiel, A., Schubert, E.",
+  "year": 2017,
+  "url": "https://researchers.westernsydney.edu.au/en/publications/back-to-the-inverted-u-for-music-preference-a-review-of-the-liter/",
+  "doi_isbn": "",
+  "source_type": "review",
+  "tier": "A",
+  "key_findings": [
+   "Per abstract summary: of 57 music-preference studies, 50 (87.7%) were classed compatible with an overarching (segmented) inverted-U, 5 mixed, 2 incompatible.",
+   "Authors urge caution in dismissing the inverted-U, while acknowledging problems with Berlyne's arousal theory itself.",
+   "A citing paper reports a stricter count (Wundt effects found in only 15 of 57), showing classification dependence."
+  ],
+  "practical_applications": [
+   "For music beds and pacing, moderate familiarity/complexity is a reasonable default, but verify with the audience."
+  ],
+  "limitations": [
+   "Full text not read; 'compatible' is a lenient category; music domain, not visual."
+  ],
+  "license": "copyrighted",
+  "access_status": "search_summary",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M05"
+  ]
+ },
+ {
+  "key": "Taylor2011",
+  "title": "Perceptual and Physiological Responses to Jackson Pollock's Fractals",
+  "authors": "Taylor, R. P., Spehar, B., Van Donkelaar, P., Hagerhall, C. M.",
+  "year": 2011,
+  "url": "https://www.frontiersin.org/articles/10.3389/fnhum.2011.00060/full",
+  "doi_isbn": "10.3389/fnhum.2011.00060",
+  "source_type": "review",
+  "tier": "A",
+  "key_findings": [
+   "Across natural scenes, computer fractals and Pollock paintings, viewers on average preferred mid-range fractal dimension D about 1.3-1.5 (220-participant study cited).",
+   "Skin conductance (24 participants) showed the smallest stress rise for D = 1.4 patterns; EEG (32 participants) showed largest frontal alpha changes at D about 1.3.",
+   "Gaze paths are themselves fractal (D about 1.4-1.5), proposed link to foraging-like search.",
+   "Pollock's own work rose to D about 1.7, above typical viewer preference."
+  ],
+  "practical_applications": [
+   "Backgrounds with natural, moderately rough self-similar texture (clouds, foliage, soft wood grain) are a defensible calm-but-alive choice behind products; avoid both flat dead fields and dense high-D noise behind text."
+  ],
+  "limitations": [
+   "Review largely of the authors' own programme; small physiological samples (6-32); fMRI preliminary; D alone does not capture complexity; Van Geert & Wagemans note subgroup differences (inverted-U, positive, negative)."
+  ],
+  "license": "CC BY",
+  "access_status": "full_text",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M05"
+  ]
+ },
+ {
+  "key": "Weichselbaum2018",
+  "title": "Implicit and Explicit Evaluation of Visual Symmetry as a Function of Art Expertise",
+  "authors": "Weichselbaum, H., Leder, H., Ansorge, U.",
+  "year": 2018,
+  "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC5937629/",
+  "doi_isbn": "10.1177/2041669518761464",
+  "source_type": "empirical",
+  "tier": "A",
+  "key_findings": [
+   "79 students (psychology and art history), 80 abstract patterns; symmetrical patterns rated more beautiful (est. means 4.24 vs 2.83 on 1-7).",
+   "Implicit (IAT) symmetry-positive association (D = 0.55) did not vary with art expertise.",
+   "Explicit ratings of asymmetrical patterns rose with expertise, though experts still rated symmetry higher overall."
+  ],
+  "practical_applications": [
+   "Symmetry is a safe default for broad audiences (product hero shots, logos); asymmetry reads as 'designed/artistic' mainly to trained viewers."
+  ],
+  "limitations": [
+   "Abstract patterns, lab setting, student sample, custom expertise questionnaire, balance not controlled; correlational."
+  ],
+  "license": "CC BY 4.0",
+  "access_status": "full_text",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M05",
+   "M06"
+  ]
+ },
+ {
+  "key": "VesselStarrRubin2012",
+  "title": "The brain on art: intense aesthetic experience activates the default mode network",
+  "authors": "Vessel, E. A., Starr, G. G., Rubin, N.",
+  "year": 2012,
+  "url": "https://www.frontiersin.org/articles/10.3389/fnhum.2012.00066/full",
+  "doi_isbn": "10.3389/fnhum.2012.00066",
+  "source_type": "empirical",
+  "tier": "A",
+  "key_findings": [
+   "16 observers rated 109 paintings 1-4 for 'how strongly does this move you'.",
+   "For the most moving works (rating 4), anterior medial prefrontal cortex (a DMN hub) was not suppressed as it was for 1-3 ratings; PCC, hippocampus, substantia nigra also responded more.",
+   "Inter-observer agreement on which paintings moved them was very low (mean pairwise r = .13)."
+  ],
+  "practical_applications": [
+   "The strongest responses are personal (self-relevant) and idiosyncratic: aim content at a specific audience's lives rather than generic 'beauty'."
+  ],
+  "limitations": [
+   "Small fMRI sample (16), typical of the replicability problems described by Turner et al. 2018; no physiological arousal measure."
+  ],
+  "license": "CC BY",
+  "access_status": "full_text",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M05"
+  ]
+ },
+ {
+  "key": "Vessel2018",
+  "title": "Stronger shared taste for natural aesthetic domains than for artifacts of human culture",
+  "authors": "Vessel, E. A., Maurer, N., Denker, A. H., Starr, G. G.",
+  "year": 2018,
+  "url": "https://pure.mpg.de/pubman/item/item_2604469_2",
+  "doi_isbn": "10.1016/j.cognition.2018.06.009",
+  "source_type": "empirical",
+  "tier": "A",
+  "key_findings": [
+   "Per search summary: agreement between observers was high for faces and natural landscapes, low for architecture and artworks.",
+   "A second experiment found higher agreement for landscapes than exterior architecture with no reliability difference.",
+   "Authors propose natural categories are more uniformly behaviourally relevant, while artifact taste depends on individual experience."
+  ],
+  "practical_applications": [
+   "Nature imagery and faces are the 'safer' shared-taste elements; stylised design choices split audiences more."
+  ],
+  "limitations": [
+   "Full text blocked (403); numbers not verified here."
+  ],
+  "license": "copyrighted",
+  "access_status": "search_summary",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M05",
+   "M06"
+  ]
+ },
+ {
+  "key": "BrielmannPelli2018",
+  "title": "Aesthetics",
+  "authors": "Brielmann, A. A., Pelli, D. G.",
+  "year": 2018,
+  "url": "https://sciencedaily.com/releases/2018/08/180820113032.htm",
+  "doi_isbn": "10.1016/j.cub.2018.06.004",
+  "source_type": "review",
+  "tier": "B",
+  "key_findings": [
+   "Per press summaries: beauty may be an intense form of ordinary pleasure; beauty and pleasure ratings rise together nearly linearly.",
+   "Average features (symmetry, roundness) raise beauty on average, but individual taste differences are large (about half the variance in face attractiveness attributed to personal taste)."
+  ],
+  "practical_applications": [
+   "Average-based design rules set a floor, not a ceiling; personal relevance drives the top end."
+  ],
+  "limitations": [
+   "Only press/secondary coverage read; primer not read."
+  ],
+  "license": "copyrighted",
+  "access_status": "search_summary",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M05",
+   "M06"
+  ]
+ },
+ {
+  "key": "Silvia2005",
+  "title": "What is interesting? Exploring the appraisal structure of interest",
+  "authors": "Silvia, P. J.",
+  "year": 2005,
+  "url": "https://doi.org/10.1037/1528-3542.5.1.89",
+  "doi_isbn": "10.1037/1528-3542.5.1.89",
+  "source_type": "empirical",
+  "tier": "A",
+  "key_findings": [
+   "Per search summary: interest rests on two appraisals, novelty-complexity and coping potential (ability to understand it).",
+   "Four in-vivo experiments supported this; appraisals predicted interest beyond curiosity/openness traits, and did not predict enjoyment."
+  ],
+  "practical_applications": [
+   "Make something new AND give the viewer a handle to understand it (caption, familiar character, clear cue): novelty without coping = confusion."
+  ],
+  "limitations": [
+   "Full text not read; a dissertation reports inconsistent coping-potential effects."
+  ],
+  "license": "copyrighted",
+  "access_status": "search_summary",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M05"
+  ]
+ },
+ {
+  "key": "KeltnerHaidt2003",
+  "title": "Approaching awe, a moral, spiritual, and aesthetic emotion",
+  "authors": "Keltner, D., Haidt, J.",
+  "year": 2003,
+  "url": "https://greatergood.berkeley.edu/dacherkeltner/docs/keltner.haidt.awe.2003.pdf",
+  "doi_isbn": "10.1080/02699930302297",
+  "source_type": "review",
+  "tier": "A",
+  "key_findings": [
+   "Prototype of awe: perceived vastness (physical or social size) plus need for accommodation (experience does not fit current mental structures).",
+   "Five flavouring appraisals: threat, beauty, exceptional ability, virtue, supernatural causality; e.g., vastness without accommodation = deference, accommodation without vastness = surprise; ability without vastness = admiration; virtue = elevation.",
+   "Art that is easily graspable may entertain but rarely induces awe; obscurity and challenge raise accommodation (Burke).",
+   "Authors state the approach was developed 'in the absence of empirical evidence'."
+  ],
+  "practical_applications": [
+   "Awe shots need scale cues (tiny figure vs vast landscape/sky) plus something not instantly understood; a pretty sunset alone gives beauty, not awe."
+  ],
+  "limitations": [
+   "Conceptual paper; later empirical work (e.g., Yaden 2019 scale) builds on it."
+  ],
+  "license": "copyrighted (author-hosted copy)",
+  "access_status": "full_text",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M05"
+  ]
+ },
+ {
+  "key": "Yaden2019",
+  "title": "The development of the Awe Experience Scale (AWE-S): A multifactorial measure for a complex emotion",
+  "authors": "Yaden, D. B., et al.",
+  "year": 2019,
+  "url": "https://digitalcommons.memphis.edu/facpubs/8695",
+  "doi_isbn": "",
+  "source_type": "empirical",
+  "tier": "A",
+  "key_findings": [
+   "Per search summary: six factors - altered time perception, self-diminishment, connectedness, perceived vastness, physical sensations, need for accommodation; structure confirmed in a second sample (N = 636).",
+   "Japanese adaptation reportedly kept the six-factor structure."
+  ],
+  "practical_applications": [
+   "Checklist for an 'awe' beat: slowed time (hold/slow motion), small self (scale), connection, vastness, bodily cue (chills), something to make sense of."
+  ],
+  "limitations": [
+   "Full text not read; journal/DOI not confirmed in this session (listed as 'et al.' to avoid guessing co-authors)."
+  ],
+  "license": "copyrighted",
+  "access_status": "search_summary",
+  "verification_status": "unverified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M05"
+  ]
+ },
+ {
+  "key": "Menninghaus2015",
+  "title": "Towards a Psychological Construct of Being Moved",
+  "authors": "Menninghaus, W., et al.",
+  "year": 2015,
+  "url": "https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0128451",
+  "doi_isbn": "10.1371/journal.pone.0128451",
+  "source_type": "empirical",
+  "tier": "A",
+  "key_findings": [
+   "Three German-language studies (N = 228, 1,683, 901).",
+   "Moving episodes mostly involve relationship or critical life events (death, birth, marriage, separation, reunion); sadness (43%) and joy (27%) most often co-reported.",
+   "Being moved is a mixed emotion, especially for fiction (positive and negative affect nearly equal); high intensity but low-to-mid arousal; felt as warm, soft, elevating.",
+   "Highest appraisals: compatibility with social norms and self-ideals; low appraisal of own causation (observer stance)."
+  ],
+  "practical_applications": [
+   "Moving story beats come from bonds being tested, lost or restored, watched from a witness position; keep arousal calm (slow pacing, soft sound)."
+  ],
+  "limitations": [
+   "Self-report, German students only, no physiology; Study 1 scale formatting error."
+  ],
+  "license": "CC BY 4.0",
+  "access_status": "full_text",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M05"
+  ]
+ },
+ {
+  "key": "Zickfeld2019",
+  "title": "Kama Muta: Conceptualizing and Measuring the Experience Often Labelled Being Moved Across 19 Nations and 15 Languages",
+  "authors": "Zickfeld, J. H., Schubert, T. W., Seibt, B., ... Fiske, A. P.",
+  "year": 2019,
+  "url": "https://www.openu.ac.il/Lists/MediaServer_Documents/PersonalSites/DrRavitNussinson/Zickfeld%20et%20al.%20(2018)%20KAVIAR%20Project.pdf",
+  "doi_isbn": "10.1037/emo0000450",
+  "source_type": "empirical",
+  "tier": "A",
+  "key_findings": [
+   "19 countries, 15 languages, N = 3,542; KAMMUS scale covering appraisal, valence, sensations, motivation, labels.",
+   "Kama muta is a positive social-relational emotion evoked by a sudden intensification of communal sharing.",
+   "Typical signs: warmth in the chest, moist eyes/tears, chills/goosebumps, choked up, buoyancy; motivates devotion and moral commitment to communal bonds.",
+   "The five facets correlated highly in every sample despite cultural variation."
+  ],
+  "practical_applications": [
+   "Design 'heart-warming' beats around a sudden closeness (reunion, unexpected kindness, being included); the emotion transfers across cultures, the specific signals are local (use Thai relational cues)."
+  ],
+  "limitations": [
+   "Self-report; online-first 2018 version read; published 2019 Emotion 19(3)."
+  ],
+  "license": "copyrighted (APA; personal-use copy)",
+  "access_status": "full_text",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M05"
+  ]
+ },
+ {
+  "key": "Pizzolante2024",
+  "title": "Aesthetic experiences and their transformative power: a systematic review",
+  "authors": "Pizzolante, M., Pelowski, M., et al.",
+  "year": 2024,
+  "url": "https://frontiersin.org/articles/10.3389/fpsyg.2024.1328449/full",
+  "doi_isbn": "10.3389/fpsyg.2024.1328449",
+  "source_type": "review",
+  "tier": "S",
+  "key_findings": [
+   "23 included articles (12 theoretical, 11 empirical; 13 empirical studies).",
+   "Facilitators: empathy, aesthetic sensitivity, openness, expectations, contextual design; process: cognitive discrepancy, emotion, insight; after-effects: self-change, empathy, critical thinking.",
+   "Quality: Downs & Black mean 16.2/27; only two studies had active controls; mostly self-report, uncontrolled designs, rare long-term follow-up."
+  ],
+  "practical_applications": [
+   "Claims that a post/clip 'changes lives' are not evidence-based; aim for insight moments and measure modest outcomes (saves, comments)."
+  ],
+  "limitations": [
+   "Authors' strong conclusion exceeds the evidence quality they report; first half of the text read in detail."
+  ],
+  "license": "CC BY 4.0",
+  "access_status": "full_text",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M05"
+  ]
+ },
+ {
+  "key": "Turner2018",
+  "title": "Small sample sizes reduce the replicability of task-based fMRI studies",
+  "authors": "Turner, B. O., et al.",
+  "year": 2018,
+  "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC6123695/",
+  "doi_isbn": "10.1038/s42003-018-0073-z",
+  "source_type": "empirical",
+  "tier": "A",
+  "key_findings": [
+   "Resampling 11 tasks: at typical N about 30, replicability of group maps is modest; smallest N with average R-squared > .5 was 36.",
+   "Even at N = 121 the conservative voxel Jaccard overlap stays below 0.6; peaks often fail to replicate.",
+   "Good test-retest reliability does not guarantee replicability; recommend power analysis, individual-difference approaches and large studies."
+  ],
+  "practical_applications": [
+   "Most neuroaesthetics fMRI studies (N 15-30) should be read as hypothesis-generating; never use them as proof in content claims."
+  ],
+  "limitations": [
+   "General fMRI, not aesthetics-specific; authors decline a universal minimum N."
+  ],
+  "license": "CC BY 4.0",
+  "access_status": "full_text",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M05"
+  ]
+ }
+]

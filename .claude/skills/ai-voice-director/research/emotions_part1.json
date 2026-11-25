@@ -1,0 +1,2603 @@
+[
+  {
+    "id": "joy.happiness",
+    "name_en": "Happiness",
+    "name_th": "ดีใจ",
+    "type": "primary",
+    "family": "joy",
+    "vad": {
+      "valence": 0.8,
+      "arousal": 0.6,
+      "dominance": 0.6
+    },
+    "meaning": "A warm, positive reaction to something good happening now; moderate arousal, not yet ecstatic.",
+    "speaker_intent": "Share the good feeling and draw the listener into it.",
+    "pitch_level": "slightly higher than baseline",
+    "pitch_range": "wider than neutral; smooth rises and falls",
+    "rate": "slightly faster than neutral, even rhythm",
+    "energy": "medium-high, bright but not shouting",
+    "pauses": "short and few; a tiny lift-pause before the good news word",
+    "voice_quality": "bright, clear, slightly smiling (spread lips raise the formants)",
+    "breath": "easy, unforced; maybe a light laugh-breath at the end",
+    "emphasis": "the word that names the good thing gets a lift and a little extra length",
+    "thai_note": "Raise the whole phrase register a little and let it move more, but each syllable keeps its own lexical tone: ได้ (falling) must still fall, ใหม่ (low) must still sit low even inside a bright phrase. Warmth comes from smile-voice and particles like นะ, เลย, จัง; ค่ะ/ครับ can be slightly lengthened and bright.",
+    "examples_th": [
+      "ใส่แว่นใหม่แล้วชัดมากเลยครับ เห็นใบไม้ทีละใบเลย",
+      "ยายจันทำขนมมาฝากด้วยเหรอคะ ดีใจจัง"
+    ],
+    "examples_en": [
+      "Oh, these are perfect, I can actually read the menu now!"
+    ],
+    "variants": [
+      "Open: big smile-voice, quick rhythm, a small laugh after the line.",
+      "Quiet happiness: same smile-voice but soft, pitch only a little above baseline, as if not wanting to jinx it.",
+      "Polite customer happiness: bright on the first words, settles into a warm polite ครับ/ค่ะ."
+    ],
+    "ai_mistakes": [
+      "Uniformly high pitch on every word so it sounds like a children's-show host.",
+      "Adds exclamation energy to every sentence, losing the natural dip at phrase ends.",
+      "Smile-voice that bends Thai tones (falling tone ได้ comes out rising)."
+    ],
+    "gemini_style": "a genuinely happy person sharing good news, bright and warm with a smile in the voice",
+    "refs": [
+      "BanseScherer1996",
+      "JuslinLaukka2003",
+      "Scherer2003",
+      "TingsabadhAbramson1993",
+      "Artistic"
+    ],
+    "confidence": "high",
+    "evidence_note": "Happiness/elation acoustic profiles from acted-speech studies (mostly European languages); smile-voice and Thai advice are craft; no Thai emotion data."
+  },
+  {
+    "id": "joy.elation",
+    "name_en": "Elation",
+    "name_th": "ดีใจสุดขีด",
+    "type": "primary",
+    "family": "joy",
+    "vad": {
+      "valence": 0.9,
+      "arousal": 0.9,
+      "dominance": 0.7
+    },
+    "meaning": "Very high-arousal joy: winning, a huge relief-plus-joy moment, wonderful surprise news.",
+    "speaker_intent": "Burst out with the feeling; can't hold it in.",
+    "pitch_level": "clearly higher than baseline",
+    "pitch_range": "wide; large jumps, high peaks",
+    "rate": "fast, sometimes tumbling, words run together",
+    "energy": "high, loud peaks, strong onsets",
+    "pauses": "almost none inside the phrase; breathless gaps between bursts",
+    "voice_quality": "bright, can crack on peaks, occasional laugh or squeal",
+    "breath": "quick gasping in-breaths between bursts",
+    "emphasis": "several stressed words, each with a high peak; repeated words escalate",
+    "thai_note": "The register jumps up and the range widens, but a rising arousal contour must not turn falling-tone words into rising ones: in 'ได้แล้ว' both ได้ and แล้ว (high) keep their shape, just higher and louder. Use repetition and particles like เย้, จริงเหรอ, โอ้โห; drop polite particles or shout them short.",
+    "examples_th": [
+      "ได้แล้ว! ได้แล้วครับยาย! ผมสอบผ่านแล้ว!",
+      "จริงเหรอคะ ลดครึ่งราคาเลยเหรอ โอ้โห!"
+    ],
+    "examples_en": [
+      "Yes! Yes, we got it, we actually got it!"
+    ],
+    "variants": [
+      "Shouting joy: loud, fast, high peaks, laugh in the middle.",
+      "Disbelieving elation: starts breathy and halting ('จริง... จริงเหรอ'), then explodes.",
+      "Tearful elation: high and fast but the voice cracks and wobbles near tears."
+    ],
+    "ai_mistakes": [
+      "Reads it at normal speed with polite pauses, sounding like a forced 'yay'.",
+      "Same peak on every word, so it becomes shouting rather than joy.",
+      "Clips the breaths and laughs, so it sounds edited and unhuman.",
+      "Tone distortion: every syllable pushed into a rising shape."
+    ],
+    "gemini_style": "someone who just heard the best news of their life, breathless, fast and laughing",
+    "refs": [
+      "BanseScherer1996",
+      "JuslinLaukka2003",
+      "Cowen2019",
+      "TingsabadhAbramson1993",
+      "Artistic"
+    ],
+    "confidence": "high",
+    "evidence_note": "Elation is among the best-studied acted emotions (high F0, wide range, fast, loud); Cowen2019 covers elation vocal bursts, not speech; Thai notes are craft."
+  },
+  {
+    "id": "joy.contentment",
+    "name_en": "Contentment",
+    "name_th": "อิ่มใจ / พอใจ",
+    "type": "primary",
+    "family": "joy",
+    "vad": {
+      "valence": 0.7,
+      "arousal": 0.2,
+      "dominance": 0.6
+    },
+    "meaning": "Quiet, low-arousal satisfaction: things are good enough, nothing needs to change.",
+    "speaker_intent": "Express settled well-being; invite the listener to relax too.",
+    "pitch_level": "at or slightly below baseline",
+    "pitch_range": "narrow to moderate; gentle, rounded contours",
+    "rate": "unhurried, slightly slow",
+    "energy": "low-medium, soft onsets",
+    "pauses": "relaxed pauses at phrase ends, a satisfied beat before the last phrase",
+    "voice_quality": "warm, slightly breathy, relaxed throat; light smile-voice",
+    "breath": "soft, contented exhale ('ฮ่า...') at the start or end",
+    "emphasis": "light; a warm lengthening on the word for the good thing",
+    "thai_note": "Keep tones exact but let the whole phrase sit low and relaxed. Contentment lives in elongated final particles: นะ, เนอะ, จ้ะ, ล่ะ with a soft fall. Do not let the relaxed speech flatten contrasts between low and mid tones.",
+    "examples_th": [
+      "ปิดร้านแล้ว ได้นั่งจิบชาแบบนี้ก็ดีเนอะ",
+      "แว่นอันนี้ใส่สบายจัง ไม่หนักเลยค่ะ"
+    ],
+    "examples_en": [
+      "This is nice. Just tea, the rain, and an empty shop."
+    ],
+    "variants": [
+      "Sigh of satisfaction: long exhale, then slow warm line.",
+      "Smiling murmur: very soft, close to the mic, as if talking to oneself.",
+      "Grandmotherly contentment: slow, warm, particles lengthened (จ้ะ...)."
+    ],
+    "ai_mistakes": [
+      "Reads it with energetic 'happy' voice, missing the low arousal.",
+      "Makes it sound bored or sleepy because pitch is flat without warmth.",
+      "Pauses become too long and heavy, tipping into sadness."
+    ],
+    "gemini_style": "a relaxed, satisfied person at the end of a good day, slow and warm with a soft smile",
+    "refs": [
+      "Russell1980",
+      "Cowen2019",
+      "GoblNiChasaide2003",
+      "Artistic"
+    ],
+    "confidence": "medium",
+    "evidence_note": "Placed on the circumplex as positive/low-arousal; Cowen2019 has contentment vocal bursts; speech-level acoustic data are thin, profile is extrapolated from low-arousal findings plus craft."
+  },
+  {
+    "id": "joy.amusement",
+    "name_en": "Amusement",
+    "name_th": "ขำ",
+    "type": "primary",
+    "family": "joy",
+    "vad": {
+      "valence": 0.75,
+      "arousal": 0.6,
+      "dominance": 0.6
+    },
+    "meaning": "Finding something funny; laughter is near or breaks through the speech.",
+    "speaker_intent": "Share the joke, signal 'this is funny', bond with the listener.",
+    "pitch_level": "higher than baseline, especially on laughing syllables",
+    "pitch_range": "wide and bouncy",
+    "rate": "irregular: speeds up toward the punchline, breaks for laughs",
+    "energy": "medium-high, pulsing",
+    "pauses": "laugh-breaks inside the phrase; short pause before the funny word",
+    "voice_quality": "smile-voice, laughter bubbles, breathy on giggles",
+    "breath": "rhythmic laugh exhalations ('ฮะๆ'), a gulp of air after laughing",
+    "emphasis": "the absurd detail gets drawn out or laughed through",
+    "thai_note": "Laughter can ride over words, but the words underneath must keep their tones; don't let a giggle turn a low-tone word into a high one. Thai amusement often uses อะ, ดิ, ว่ะ (casual), 555-style laughs written as ฮ่าๆ, and the phrase 'ขำอะ'.",
+    "examples_th": [
+      "ลุงชาญใส่แว่นกลับหัวมาตั้งแต่เช้าเลยเหรอครับ ฮ่าๆ",
+      "ยายจันแกล้งปิดไฟอีกแล้ว ตกใจหมดเลย ขำอะ"
+    ],
+    "examples_en": [
+      "Wait, you wore them upside down all morning? Oh my god."
+    ],
+    "variants": [
+      "Laughing through the line: words broken by chuckles.",
+      "Suppressed amusement: trying to stay polite with a customer, smile-voice, one snort escapes.",
+      "Dry amusement: almost deadpan, a single soft breath-laugh at the end."
+    ],
+    "ai_mistakes": [
+      "Inserts a fake 'ha ha ha' read as words instead of real laughter.",
+      "Laughs at the wrong place (before the funny part).",
+      "Keeps perfect diction while 'laughing', which sounds staged.",
+      "Uniform loudness instead of laugh bursts."
+    ],
+    "gemini_style": "someone trying not to laugh while telling a funny story, smiling and chuckling between words",
+    "refs": [
+      "Cowen2019",
+      "JuslinLaukka2003",
+      "GoblNiChasaide2003",
+      "Artistic"
+    ],
+    "confidence": "medium",
+    "evidence_note": "Amusement is well recognised in vocal bursts (laughter, Cowen2019); laughter-in-speech acoustics are less studied; Thai notes are craft."
+  },
+  {
+    "id": "joy.pride",
+    "name_en": "Pride",
+    "name_th": "ภูมิใจ",
+    "type": "secondary",
+    "family": "joy",
+    "vad": {
+      "valence": 0.7,
+      "arousal": 0.55,
+      "dominance": 0.85
+    },
+    "meaning": "Positive self-evaluation after an achievement (own or someone close).",
+    "speaker_intent": "Show the achievement, claim credit or honour another's success.",
+    "pitch_level": "slightly higher or at baseline, steady",
+    "pitch_range": "moderate; firm, controlled falls",
+    "rate": "measured, a little slower than happiness",
+    "energy": "medium-high, full and resonant",
+    "pauses": "a deliberate pause before naming the achievement",
+    "voice_quality": "full, chest-resonant, firm; warm if proud of someone else",
+    "breath": "a fuller in-breath before the key line (chest up)",
+    "emphasis": "the achievement and 'I/we' get firm, falling stress",
+    "thai_note": "Pride is carried by a steady, slightly lifted register and firm phrase-final falls, not by changing any word's tone. Particles: เลยนะ, นะครับ said with weight; for pride in someone else, จ้ะ / นะลูก said warmly.",
+    "examples_th": [
+      "ร้านเล็กๆ ของเรา ตัดแว่นให้คนทั้งซอยมาสิบปีแล้วนะครับ",
+      "หลานยายเรียนจบแล้วจ้ะ ยายดีใจจริงๆ"
+    ],
+    "examples_en": [
+      "Ten years, and every pair in this shop was fitted by hand."
+    ],
+    "variants": [
+      "Self-pride: chest voice, steady, slight smile.",
+      "Proud of another: warm, slightly emotional, voice softens on the name.",
+      "Modest pride: understated, quick, but a small proud lift on the key word."
+    ],
+    "ai_mistakes": [
+      "Turns pride into arrogance with sneering voice quality.",
+      "Plays it as plain loud happiness, missing the steady dominance.",
+      "Emphasises every word, so nothing stands out."
+    ],
+    "gemini_style": "a quietly proud shop owner talking about his work, steady, warm and confident",
+    "refs": [
+      "BanseScherer1996",
+      "Mehrabian1996",
+      "Artistic"
+    ],
+    "confidence": "low",
+    "evidence_note": "Pride was in Banse & Scherer's set but with poor recognition; high dominance placement from PAD theory; the profile is mostly craft."
+  },
+  {
+    "id": "sadness.sadness",
+    "name_en": "Sadness",
+    "name_th": "เศร้า",
+    "type": "primary",
+    "family": "sadness",
+    "vad": {
+      "valence": -0.7,
+      "arousal": 0.25,
+      "dominance": 0.25
+    },
+    "meaning": "Low-arousal response to loss or disappointment; energy withdraws.",
+    "speaker_intent": "Express the loss; often seek comfort without asking directly.",
+    "pitch_level": "lower than baseline",
+    "pitch_range": "narrow; small, downward-drifting contours",
+    "rate": "slow; longer vowels",
+    "energy": "low, soft onsets, trailing ends",
+    "pauses": "more and longer pauses, especially before hard words",
+    "voice_quality": "breathy or lax, creaky at phrase ends",
+    "breath": "audible, heavier exhales; sometimes a sigh before speaking",
+    "emphasis": "little emphasis; weight sits on the loss word, said softer rather than louder",
+    "thai_note": "Lower and narrow the overall register, slow down, but keep each tone: a high tone (e.g. น้อง, ไม่ไหว with falling ไม่) must not flatten into mid just because range shrinks. Final particles drop and soften (นะ..., ครับ trailing), or are omitted.",
+    "examples_th": [
+      "ร้านเงียบไปเยอะเลยนะครับ ตั้งแต่ลุงชาญย้ายไป",
+      "หนูหาแว่นของแม่ไม่เจอค่ะ แม่ใส่ประจำเลย"
+    ],
+    "examples_en": [
+      "It's just quiet here now. Since he left."
+    ],
+    "variants": [
+      "Soft and slow, voice almost steady, a sigh before the line.",
+      "Fighting tears: steady until one word wobbles.",
+      "Resigned sadness: flat, low, very little movement."
+    ],
+    "ai_mistakes": [
+      "Reads too fast at normal pitch, sounding merely calm.",
+      "Over-acts with constant sobbing and a melodramatic tremble.",
+      "Pauses placed between syllables of one word instead of between phrases.",
+      "Compressed range flattens Thai tone contrasts until words are unclear."
+    ],
+    "gemini_style": "a quietly sad person speaking slowly and softly, low voice, sighing",
+    "refs": [
+      "BanseScherer1996",
+      "JuslinLaukka2003",
+      "Scherer2003",
+      "GoblNiChasaide2003",
+      "TingsabadhAbramson1993"
+    ],
+    "confidence": "high",
+    "evidence_note": "Low F0, narrow range, slow rate, low intensity agree across many acted-speech studies; Pell2009 shows sadness recognised across languages; no Thai-specific acoustic data."
+  },
+  {
+    "id": "sadness.grief",
+    "name_en": "Grief",
+    "name_th": "โศกเศร้า / อาลัย",
+    "type": "secondary",
+    "family": "sadness",
+    "vad": {
+      "valence": -0.9,
+      "arousal": 0.5,
+      "dominance": 0.15
+    },
+    "meaning": "Deep sorrow after a death or irreversible loss; can swing between numbness and overwhelming waves.",
+    "speaker_intent": "Get the words out despite the pain; honour the lost person.",
+    "pitch_level": "lower than baseline, rising sharply when the voice breaks",
+    "pitch_range": "mostly narrow, with sudden wide breaks",
+    "rate": "slow and uneven",
+    "energy": "low with sudden surges on breaks",
+    "pauses": "long pauses; words stop mid-phrase and restart",
+    "voice_quality": "breathy, tight throat, cracks and tremor on key words",
+    "breath": "shaky, catching in-breaths; sobbing breaths in open grief",
+    "emphasis": "the name of the lost person or 'ไม่อยู่แล้ว' carries the break",
+    "thai_note": "When the voice breaks, pitch jumps up and wavers, but the word's lexical tone must stay recognisable: ยาย (mid) shouldn't become ย่าย. Particles often vanish; if used, ครับ/ค่ะ is barely voiced. Thai grief often uses repetitions ('ยาย... ยายครับ').",
+    "examples_th": [
+      "ยายครับ... ผมยังเก็บแว่นที่ยายใส่ไว้อยู่เลยนะครับ",
+      "วันนี้ครบปีที่แม่ไปแล้วค่ะ หนูยังทำใจไม่ได้เลย"
+    ],
+    "examples_en": [
+      "I still keep her glasses on the counter. I can't move them."
+    ],
+    "variants": [
+      "Controlled: steady, low, the voice breaks on one word only (the name).",
+      "Numb: flat, almost monotone, slow, eyes-unfocused feeling.",
+      "Open sobbing: words broken by sobs and gasps, pitch jumps.",
+      "Remembering with a sad smile: warm, a soft laugh that turns into a catch."
+    ],
+    "ai_mistakes": [
+      "Constant tremolo on every syllable, sounding like a cartoon cry.",
+      "Clean, steady delivery with only slow tempo, so no real pain.",
+      "Sobs placed regularly like a pattern instead of where the pain hits.",
+      "Overlong pauses that make the line drag beyond the clip timing."
+    ],
+    "gemini_style": "a grieving grandson speaking about his late grandmother, low and slow, voice breaking on her name",
+    "refs": [
+      "BanseScherer1996",
+      "JuslinLaukka2003",
+      "GoblNiChasaide2003",
+      "Artistic"
+    ],
+    "confidence": "medium",
+    "evidence_note": "Banse & Scherer's 'despair' and 'sadness' bracket grief; break/tremor details are craft; no Thai data."
+  },
+  {
+    "id": "sadness.melancholy",
+    "name_en": "Melancholy",
+    "name_th": "เศร้าซึม",
+    "type": "secondary",
+    "family": "sadness",
+    "vad": {
+      "valence": -0.6,
+      "arousal": 0.25,
+      "dominance": 0.3
+    },
+    "meaning": "A lingering, reflective sadness, often tinged with nostalgia; not acute pain.",
+    "speaker_intent": "Reflect aloud; share a bittersweet mood.",
+    "pitch_level": "slightly lower than baseline",
+    "pitch_range": "narrow; slow gentle falls",
+    "rate": "slow, legato, lengthened final syllables",
+    "energy": "low, soft, even",
+    "pauses": "reflective pauses mid-sentence, as if looking out the window",
+    "voice_quality": "soft, slightly breathy, warm-dark",
+    "breath": "long gentle exhales",
+    "emphasis": "nostalgic words (เมื่อก่อน, ตอนนั้น) get soft lengthening",
+    "thai_note": "Slightly lowered register and lingering vowels; keep tones crisp enough to be understood. Ending with a long soft นะ or เนอะ gives the wistful colour; avoid making the last syllable creak so much its tone disappears.",
+    "examples_th": [
+      "เมื่อก่อนตอนตีสอง ซอยนี้ยังมีร้านข้าวต้มเปิดอยู่นะ",
+      "ฝนตกทีไร ก็คิดถึงบ้านที่ต่างจังหวัดทุกทีเลยค่ะ"
+    ],
+    "examples_en": [
+      "Back then, the whole street stayed awake with us."
+    ],
+    "variants": [
+      "Nostalgic: soft, a faint wistful smile in the voice.",
+      "Heavy melancholy: lower, slower, almost a murmur.",
+      "Narrator melancholy: steady, even, slightly distant."
+    ],
+    "ai_mistakes": [
+      "Plays it as acute grief with breaks and sobs.",
+      "Sounds sleepy or bored because warmth is missing.",
+      "Lengthens every syllable equally, losing natural Thai rhythm."
+    ],
+    "gemini_style": "a wistful person remembering old times on a rainy night, slow, soft and a little sad",
+    "refs": [
+      "JuslinLaukka2003",
+      "Russell1980",
+      "Artistic"
+    ],
+    "confidence": "medium",
+    "evidence_note": "Tendencies borrowed from low-arousal sadness findings; melancholy itself is not separately measured in the key sources; nostalgic colour is craft."
+  },
+  {
+    "id": "sadness.despair",
+    "name_en": "Despair",
+    "name_th": "สิ้นหวัง",
+    "type": "primary",
+    "family": "sadness",
+    "vad": {
+      "valence": -0.9,
+      "arousal": 0.7,
+      "dominance": 0.1
+    },
+    "meaning": "Hopelessness with high distress: nothing can be done, but the person is still fighting it.",
+    "speaker_intent": "Cry out against a hopeless situation; plead or give up.",
+    "pitch_level": "higher than sadness, often above baseline",
+    "pitch_range": "wide, with falling wails",
+    "rate": "irregular; bursts and drags",
+    "energy": "medium-high, strained",
+    "pauses": "broken pauses; phrases cut off",
+    "voice_quality": "tense, strained, can crack; sobbing quality",
+    "breath": "ragged, gasping breaths",
+    "emphasis": "words of impossibility (ไม่ได้, ไม่มีทาง) carry strain and a falling wail",
+    "thai_note": "Despair widens the range and adds wailing falls, which can blur tones; keep ไม่ (falling) falling and ได้ (falling) falling, and don't stretch a mid-tone word into a fall. Particles may become pleading: แล้วจะให้ทำยังไงล่ะ, เถอะ.",
+    "examples_th": [
+      "ไม่มีทางแล้วครับ ร้านต้องปิดจริงๆ แล้ว",
+      "หนูมองไม่เห็นแล้วค่ะหมอ แล้วหนูจะทำงานยังไง"
+    ],
+    "examples_en": [
+      "There's nothing left to try. Nothing."
+    ],
+    "variants": [
+      "Wailing despair: high, cracking, falling wails.",
+      "Exhausted despair: starts strong, collapses into a whisper.",
+      "Pleading despair: aimed at someone, rising 'please' quality at the end."
+    ],
+    "ai_mistakes": [
+      "Reads it like quiet sadness, missing the high distress.",
+      "Screams evenly, sounding like anger rather than hopelessness.",
+      "Tone distortion from exaggerated wailing contours."
+    ],
+    "gemini_style": "a person at the end of hope, voice straining and breaking, close to tears",
+    "refs": [
+      "BanseScherer1996",
+      "JuslinLaukka2003",
+      "Scherer2003",
+      "Artistic"
+    ],
+    "confidence": "medium",
+    "evidence_note": "Banse & Scherer separate despair (higher arousal) from sadness; recognition decent in acted data; no Thai data."
+  },
+  {
+    "id": "anger.hot",
+    "name_en": "Hot anger",
+    "name_th": "โกรธจัด",
+    "type": "primary",
+    "family": "anger",
+    "vad": {
+      "valence": -0.7,
+      "arousal": 0.9,
+      "dominance": 0.8
+    },
+    "meaning": "Explosive, high-arousal anger at an offence; the person is ready to confront.",
+    "speaker_intent": "Confront, stop the offender, assert dominance.",
+    "pitch_level": "clearly higher than baseline",
+    "pitch_range": "wide; sharp, steep falls",
+    "rate": "fast, clipped",
+    "energy": "high, loud, hard attacks",
+    "pauses": "short, hard stops; pause only before a threat",
+    "voice_quality": "tense, harsh, pressed",
+    "breath": "sharp intake before the outburst",
+    "emphasis": "hard stress on key words, each hit separately",
+    "thai_note": "Hot anger raises loudness and register and makes falls steeper, but must not convert tones: in 'ไม่ได้' both falling tones stay falling, just harder. Polite particles often drop; if kept (ครับ!) they become short and clipped, which itself sounds furious. Casual particles: นะ!, สิ!, เว้ย (rough).",
+    "examples_th": [
+      "บอกแล้วไงว่าอย่าจับเลนส์ด้วยมือ!",
+      "นี่คุณ! ขโมยแว่นในร้านผมเหรอครับ!"
+    ],
+    "examples_en": [
+      "I told you not to touch the lenses!"
+    ],
+    "variants": [
+      "Shouting: loud, high, hard attacks.",
+      "Barked commands: short phrases, each a hit.",
+      "Shaking fury: loud but voice trembling with adrenaline."
+    ],
+    "ai_mistakes": [
+      "Loud but at normal pitch and rhythm, sounding like projecting not fury.",
+      "Every word equally loud, no structure.",
+      "Polite particles kept long and soft, contradicting the anger.",
+      "Distorts falling tones into rising shouts."
+    ],
+    "gemini_style": "a furious man shouting, fast, loud and sharp",
+    "refs": [
+      "BanseScherer1996",
+      "JuslinLaukka2003",
+      "Scherer2003",
+      "GoblNiChasaide2003",
+      "Pell2009"
+    ],
+    "confidence": "high",
+    "evidence_note": "Hot anger is one of the most consistent acoustic profiles in acted speech; recognised across languages (Pell2009); no Thai acoustic data."
+  },
+  {
+    "id": "anger.cold",
+    "name_en": "Cold anger",
+    "name_th": "โกรธเย็น",
+    "type": "primary",
+    "family": "anger",
+    "vad": {
+      "valence": -0.6,
+      "arousal": 0.4,
+      "dominance": 0.9
+    },
+    "meaning": "Controlled, suppressed anger: quiet, precise, threatening.",
+    "speaker_intent": "Warn and dominate without losing control.",
+    "pitch_level": "at or below baseline",
+    "pitch_range": "narrow; controlled, deliberate falls",
+    "rate": "slow, deliberate, evenly spaced words",
+    "energy": "medium-low, but tense and firm",
+    "pauses": "deliberate pauses between words; long pause before the key line",
+    "voice_quality": "tense, tight, slightly pressed; no warmth",
+    "breath": "controlled, audible nasal breath",
+    "emphasis": "each key word pressed separately, hard consonant onsets",
+    "thai_note": "Thai cold anger often keeps polite particles, said flat and precise (ครับ. / ค่ะ.), which makes it more threatening. Lower register and slow tempo must keep every tone intact; over-flat delivery can erase tone contrasts, so keep them crisp.",
+    "examples_th": [
+      "ผมพูดครั้งเดียวนะครับ วางแว่นตัวนั้นลง",
+      "คุณรู้ใช่มั้ยคะ ว่าทำอะไรลงไป"
+    ],
+    "examples_en": [
+      "Put. The frames. Down."
+    ],
+    "variants": [
+      "Icy politeness: perfect polite words, flat and slow.",
+      "Low growl: quiet, close, pressed voice.",
+      "Restrained, leaking: calm, but one word tightens and nearly cracks."
+    ],
+    "ai_mistakes": [
+      "Reads it as calm/neutral, missing the tension.",
+      "Raises volume, turning it into hot anger.",
+      "Adds sarcastic melody instead of flat control."
+    ],
+    "gemini_style": "a quietly furious person speaking slowly and coldly, controlled and threatening",
+    "refs": [
+      "BanseScherer1996",
+      "Scherer2003",
+      "GoblNiChasaide2003",
+      "Artistic"
+    ],
+    "confidence": "medium",
+    "evidence_note": "Banse & Scherer distinguish cold (lower arousal) from hot anger; politeness-as-threat in Thai is craft."
+  },
+  {
+    "id": "anger.irritation",
+    "name_en": "Irritation",
+    "name_th": "รำคาญ",
+    "type": "secondary",
+    "family": "anger",
+    "vad": {
+      "valence": -0.45,
+      "arousal": 0.5,
+      "dominance": 0.6
+    },
+    "meaning": "Mild, short-lived anger at small repeated annoyances.",
+    "speaker_intent": "Signal 'stop that' without a real fight.",
+    "pitch_level": "slightly higher than baseline",
+    "pitch_range": "moderate; clipped falls",
+    "rate": "slightly fast, clipped",
+    "energy": "medium",
+    "pauses": "short huffs; impatient micro-pauses",
+    "voice_quality": "slightly tense, sometimes nasal",
+    "breath": "huff or sharp sigh before speaking",
+    "emphasis": "repeated words or 'อีกแล้ว' get stress",
+    "thai_note": "Irritation shows in clipped length and a huff, not tonal change. Particles: อีกแล้วเหรอ, ล่ะ, เนี่ย, สักที with a short, flat ending. Keep ครับ/ค่ะ short and clipped rather than dropping it for customers. The annoyance changes length and voice quality only; the lexical tone of every word (เล่น falling, กริ่ง low) stays as in calm speech.",
+    "examples_th": [
+      "ยายจัน อย่าเล่นกริ่งประตูตอนตีสองได้มั้ยครับ",
+      "ลืมแว่นไว้อีกแล้วเหรอเนี่ย"
+    ],
+    "examples_en": [
+      "Again? That's the third time tonight."
+    ],
+    "variants": [
+      "Huffy: sigh, then a clipped line.",
+      "Polite but strained: customer-service smile that slips.",
+      "Mutter: under the breath, to oneself."
+    ],
+    "ai_mistakes": [
+      "Plays it as full anger, too loud.",
+      "Too neutral, irritation lost.",
+      "Exaggerated sigh that sounds like a sound effect."
+    ],
+    "gemini_style": "an irritated person, a little clipped and impatient, sighing",
+    "refs": [
+      "JuslinLaukka2003",
+      "Artistic"
+    ],
+    "confidence": "low",
+    "evidence_note": "Extrapolated from anger findings scaled down in arousal; irritation itself is rarely measured; mostly craft."
+  },
+  {
+    "id": "anger.frustration",
+    "name_en": "Frustration",
+    "name_th": "หงุดหงิด / อึดอัดใจ",
+    "type": "secondary",
+    "family": "anger",
+    "vad": {
+      "valence": -0.6,
+      "arousal": 0.65,
+      "dominance": 0.35
+    },
+    "meaning": "Anger at being blocked from a goal, mixed with helplessness.",
+    "speaker_intent": "Vent; sometimes ask for help indirectly.",
+    "pitch_level": "slightly higher, with strained peaks",
+    "pitch_range": "moderate to wide, uneven",
+    "rate": "uneven; speeds up then stalls",
+    "energy": "medium-high, pushing",
+    "pauses": "stalls mid-phrase, exasperated breaks",
+    "voice_quality": "tense, strained, groaning at times",
+    "breath": "exasperated exhales, groans",
+    "emphasis": "the obstacle word gets pushed stress",
+    "thai_note": "Exasperation comes from strained voice and uneven tempo; tones stay put. Particles: ทำไม...ล่ะ, สักที, เลย, โอ๊ย. Avoid stretching a low-tone word upward when groaning.",
+    "examples_th": [
+      "ไขน็อตแว่นตัวนี้มาสามรอบแล้ว ทำไมมันหลุดอีกล่ะ",
+      "โอ๊ย กดสั่งของในแอปไม่ได้สักทีค่ะ"
+    ],
+    "examples_en": [
+      "Why won't this screw just stay in?"
+    ],
+    "variants": [
+      "Groaning: exhales, strained mid-phrase.",
+      "Building: calm start, escalating to a near-shout.",
+      "Defeated: frustrated words, tired, falling voice."
+    ],
+    "ai_mistakes": [
+      "Reads it as hot anger without helplessness.",
+      "Uniform loudness, no stalls.",
+      "Groans rendered as words."
+    ],
+    "gemini_style": "a frustrated person fighting a stubborn problem, exasperated and strained",
+    "refs": [
+      "JuslinLaukka2003",
+      "Artistic"
+    ],
+    "confidence": "low",
+    "evidence_note": "Not separately measured in key sources; built from anger and distress tendencies plus craft."
+  },
+  {
+    "id": "anger.rage",
+    "name_en": "Rage",
+    "name_th": "เดือดดาล / โกรธสุดขีด",
+    "type": "primary",
+    "family": "anger",
+    "vad": {
+      "valence": -0.85,
+      "arousal": 1.0,
+      "dominance": 0.85
+    },
+    "meaning": "The extreme end of anger, close to losing control; reached after a long build-up or a grave offence.",
+    "speaker_intent": "Overpower the other person and release the pressure, whatever the cost.",
+    "pitch_level": "very high, near the top of the voice",
+    "pitch_range": "very wide; screamed peaks and brutal falls",
+    "rate": "either fast and spilling, or slow, pounding word-by-word",
+    "energy": "maximal; may distort; hardest attacks of any emotion",
+    "pauses": "very short gaps used as hammer beats between words",
+    "voice_quality": "harsh, rough, rasping; voice may crack into hoarseness",
+    "breath": "huge gulps of air, panting after the outburst",
+    "emphasis": "nearly every word is hit; the worst word (ชื่อ, คำด่า, คำสั่ง) gets the highest peak",
+    "thai_note": "Even at screaming level the lexical tones must survive: in 'ออกไป' ออก (low) stays low relative to ไป (mid), just both far higher and louder; do not let one big rising scream swallow the falling tone of ไม่ in 'ไม่เอาแล้ว'. Polite particles vanish entirely; keep shop content free of crude words and let repetition carry the force.",
+    "examples_th": [
+      "ออกไป! ออกไปจากร้านผมเดี๋ยวนี้!",
+      "พอแล้ว! สิบปีที่ฉันทนมา พอกันที!"
+    ],
+    "examples_en": [
+      "Get out! Get out of my shop, now!"
+    ],
+    "variants": [
+      "Screaming rage: top of the voice, harsh, cracks at the peak.",
+      "Pounding rage: slow, loud, one word per beat, jaw clenched.",
+      "Rage collapsing: screams the first line, then the voice breaks and goes hoarse."
+    ],
+    "ai_mistakes": [
+      "Reads it as loud narration, no harshness or breath.",
+      "Audio clipping/distortion because the model maximises loudness on every syllable.",
+      "Keeps neat sentence melody and polite particles, sounding acted.",
+      "Turns every syllable into a rising shout, wrecking Thai tones."
+    ],
+    "gemini_style": "a man screaming in uncontrolled rage, harsh, hoarse and pounding each word",
+    "refs": [
+      "BanseScherer1996",
+      "JuslinLaukka2003",
+      "GoblNiChasaide2003",
+      "Artistic"
+    ],
+    "confidence": "medium",
+    "evidence_note": "Extrapolated from the hot-anger end of acted-speech profiles; screaming/rage is rarely measured separately; Thai notes are craft."
+  },
+  {
+    "id": "fear.fear",
+    "name_en": "Fear",
+    "name_th": "กลัว",
+    "type": "primary",
+    "family": "fear",
+    "vad": {
+      "valence": -0.8,
+      "arousal": 0.75,
+      "dominance": 0.15
+    },
+    "meaning": "A response to an immediate, specific threat (a noise in the dark shop, a figure behind the counter); urge to flee, freeze or hide.",
+    "speaker_intent": "Warn, ask for help, or stay unnoticed by the threat.",
+    "pitch_level": "higher than baseline",
+    "pitch_range": "wider, irregular, with jitter on held vowels",
+    "rate": "faster and uneven; freezes then rushes",
+    "energy": "medium; may drop suddenly to a hush",
+    "pauses": "frozen stops in mid-phrase, listening pauses",
+    "voice_quality": "tense and breathy; tremor on vowels",
+    "breath": "quick, shallow, audible in-breaths; a gasp on the scare",
+    "emphasis": "the threat word (ใคร, เสียง, ข้างหลัง) gets tense, held stress",
+    "thai_note": "Fear lifts the whole register and adds tremor, but the tremor must not wobble a mid-tone word like ใคร into a rising one, or a low tone into mid. When fear goes to a whisper, pitch disappears and tones must be carried by clear vowels and timing. Particles become small and shaky (ครับ…, น่ะ, เหรอ).",
+    "examples_th": [
+      "ใคร... ใครอยู่ตรงนั้นครับ",
+      "ได้ยินมั้ยคะ เหมือนมีคนเดินอยู่หลังร้าน"
+    ],
+    "examples_en": [
+      "Who's there? I can hear you breathing."
+    ],
+    "variants": [
+      "Trembling: higher, shaky, breathy, uneven speed.",
+      "Whispered fear: almost no voice, fast, hushed, mouth close to the mic.",
+      "Brave front: tries to sound firm ('ใครครับ') but cracks on the last word."
+    ],
+    "ai_mistakes": [
+      "Smooth, steady delivery: frightened words, calm voice.",
+      "Escalates to screaming (that is panic, not fear).",
+      "Whisper so unvoiced that Thai tones are lost and words become unclear.",
+      "No breath sounds, so the fear feels synthetic."
+    ],
+    "gemini_style": "a frightened young man in a dark shop at 2 am, breathy, trembling and hushed",
+    "refs": [
+      "BanseScherer1996",
+      "JuslinLaukka2003",
+      "Scherer2003",
+      "Pell2009",
+      "TingsabadhAbramson1993"
+    ],
+    "confidence": "high",
+    "evidence_note": "Higher F0, wider/irregular contour and faster rate recur in acted-speech studies; fear recognised across languages (Pell2009); no Thai acoustic data."
+  },
+  {
+    "id": "fear.panic",
+    "name_en": "Panic",
+    "name_th": "ตื่นตระหนก",
+    "type": "primary",
+    "family": "fear",
+    "vad": {
+      "valence": -0.9,
+      "arousal": 1.0,
+      "dominance": 0.05
+    },
+    "meaning": "Fear at its extreme: control is gone, thinking narrows to escape or help.",
+    "speaker_intent": "Get help or get out immediately.",
+    "pitch_level": "very high",
+    "pitch_range": "very wide and chaotic",
+    "rate": "very fast, tumbling, words overlap",
+    "energy": "high, screaming bursts",
+    "pauses": "no real pauses; only gasps between bursts",
+    "voice_quality": "shrill, strained, cracks and squeaks",
+    "breath": "hyperventilation, gasping in-breaths",
+    "emphasis": "the call itself (ช่วยด้วย, ไฟ, หนี) repeated with rising urgency",
+    "thai_note": "Panic depends on repetition and breath, not new melodies: 'ช่วยด้วย!' keeps ด้วย falling even when screamed, and 'หนีเร็ว' keeps เร็ว high. Particles disappear; names are shouted. Don't let the scream become one continuous rising siren over the whole sentence. Screaming raises the whole pitch level, never the lexical tone pattern of individual words.",
+    "examples_th": [
+      "ช่วยด้วย! ไฟไหม้หลังร้าน! ช่วยด้วยครับ!",
+      "ยายจัน! ยาย! ประตูมันปิดเองค่ะ เปิดไม่ออก!"
+    ],
+    "examples_en": [
+      "Help! Fire, there's a fire in the back!"
+    ],
+    "variants": [
+      "Screaming panic: shrill, very fast, repeated cries.",
+      "Breathless panic: hyperventilating, words squeezed out between gasps.",
+      "Frozen panic: tiny, high, fast voice repeating one word."
+    ],
+    "ai_mistakes": [
+      "Too composed: fast but evenly paced like a news read.",
+      "One loudness level throughout, no bursts.",
+      "A single rising siren contour across the sentence that breaks lexical tones.",
+      "Missing gasps, so it sounds like shouting, not panic."
+    ],
+    "gemini_style": "a panicking woman screaming for help, breathless, very fast and shrill",
+    "refs": [
+      "BanseScherer1996",
+      "JuslinLaukka2003",
+      "Scherer2003",
+      "Artistic"
+    ],
+    "confidence": "high",
+    "evidence_note": "Panic fear is a well-recognised category in Banse & Scherer's acted data; extreme profile agrees with arousal findings; Thai notes are craft."
+  },
+  {
+    "id": "fear.anxiety",
+    "name_en": "Anxiety",
+    "name_th": "กังวลใจ / วิตกกังวล",
+    "type": "primary",
+    "family": "fear",
+    "vad": {
+      "valence": -0.55,
+      "arousal": 0.6,
+      "dominance": 0.25
+    },
+    "meaning": "Diffuse, future-oriented apprehension without a clear present threat: something might go wrong.",
+    "speaker_intent": "Seek reassurance, talk the worry through, or hedge.",
+    "pitch_level": "slightly higher than baseline",
+    "pitch_range": "moderate but unstable; small hesitant rises",
+    "rate": "slightly fast, with stops and restarts",
+    "energy": "medium-low, tight",
+    "pauses": "hesitations, fillers (เอ่อ, คือ), false starts",
+    "voice_quality": "tight throat, slightly breathy, thin",
+    "breath": "shallow, frequent breaths; held breath before the key question",
+    "emphasis": "uncertain words (ถ้า, จะ, หรือเปล่า) get slight tension",
+    "thai_note": "Anxiety shows through hesitation, fillers (เอ่อ, คือว่า) and small question-like endings (หรือเปล่าครับ, ใช่มั้ยคะ). Raising the register slightly must not make a falling-tone word like ใช่ or ไม่ rise; the questioning feel belongs to the particle, not the content words.",
+    "examples_th": [
+      "เอ่อ... สายตาผมจะสั้นขึ้นอีกหรือเปล่าครับหมอ",
+      "คือ... ลูกค้าจะชอบแว่นที่เราเลือกให้มั้ยคะ"
+    ],
+    "examples_en": [
+      "Um, is it going to get worse? My eyesight, I mean."
+    ],
+    "variants": [
+      "Hesitant: fillers, restarts, small voice.",
+      "Rapid anxious talking: fast, over-explaining, little breath.",
+      "Controlled anxiety: calm words but a tight, thin voice and quick breath."
+    ],
+    "ai_mistakes": [
+      "Reads fillers like เอ่อ as full words with full stress.",
+      "Steady confident tone that contradicts the hedging words.",
+      "Over-acted trembling like full fear.",
+      "Turns every sentence end into a rising question, including statements."
+    ],
+    "gemini_style": "a nervous patient asking the optician a worried question, hesitant, tight and a little fast",
+    "refs": [
+      "BanseScherer1996",
+      "JuslinLaukka2003",
+      "Scherer2003",
+      "Artistic"
+    ],
+    "confidence": "medium",
+    "evidence_note": "Anxiety (vs panic fear) is in Banse & Scherer's set and is lower arousal; acoustic recognition only moderate; filler/hesitation advice is craft."
+  },
+  {
+    "id": "fear.worry",
+    "name_en": "Worry",
+    "name_th": "เป็นห่วง",
+    "type": "secondary",
+    "family": "fear",
+    "vad": {
+      "valence": -0.45,
+      "arousal": 0.45,
+      "dominance": 0.35
+    },
+    "meaning": "Concern about someone or something specific; often caring, other-directed.",
+    "speaker_intent": "Check on someone, warn gently, ask them to take care.",
+    "pitch_level": "at or slightly above baseline",
+    "pitch_range": "moderate; soft rising ends on questions",
+    "rate": "slightly slow, careful",
+    "energy": "medium-low, soft",
+    "pauses": "small pauses before the worrying part",
+    "voice_quality": "soft, slightly breathy, warm-tense",
+    "breath": "a small sigh or in-breath before speaking",
+    "emphasis": "the person or risk (ตา, กลับดึก, ขับรถ) gets gentle stress",
+    "thai_note": "Worry for others in Thai is carried by caring particles and softeners: นะ, นะลูก, จ้ะ, ระวังด้วยนะ, ไหวมั้ย. The concerned lift sits on the particle, while words like ขับ (low) and รถ (high) keep their tones.",
+    "examples_th": [
+      "ตาแดงแบบนี้ นอนดึกอีกแล้วใช่มั้ยต้น ยายเป็นห่วงนะ",
+      "ขับรถกลับดีๆ นะคะ ฝนตกหนักเลย"
+    ],
+    "examples_en": [
+      "You're squinting again. Are you sure you're okay to drive?"
+    ],
+    "variants": [
+      "Gentle worry: soft, caring, slightly slow.",
+      "Scolding worry: firmer, a little sharp, but love underneath.",
+      "Hidden worry: casual words, tension leaks through a quick breath."
+    ],
+    "ai_mistakes": [
+      "Plays it as fear with trembling.",
+      "Sounds neutral, losing the care.",
+      "Scolding version comes out as plain anger."
+    ],
+    "gemini_style": "a caring grandmother gently worried about her grandson, soft and warm with a little concern",
+    "refs": [
+      "Artistic"
+    ],
+    "confidence": "low",
+    "evidence_note": "No direct acoustic studies; profile is craft built on low-to-moderate arousal tendencies."
+  },
+  {
+    "id": "fear.dread",
+    "name_en": "Dread",
+    "name_th": "หวาดหวั่น / ใจคอไม่ดี",
+    "type": "secondary",
+    "family": "fear",
+    "vad": {
+      "valence": -0.75,
+      "arousal": 0.5,
+      "dominance": 0.15
+    },
+    "meaning": "Anticipatory fear of something bad that is coming and cannot be avoided.",
+    "speaker_intent": "Brace for it; share the heavy foreboding.",
+    "pitch_level": "slightly lower than baseline",
+    "pitch_range": "narrow, held, with small falls",
+    "rate": "slow, deliberate, as if delaying",
+    "energy": "low, contained",
+    "pauses": "long, heavy pauses; trailing endings",
+    "voice_quality": "breathy, hushed, sometimes tight",
+    "breath": "slow, held breath; quiet exhale",
+    "emphasis": "the coming event (พรุ่งนี้, ผลตรวจ) weighted and slowed",
+    "thai_note": "Dread lowers and narrows the register; keep tone contrasts clear despite the compression: ผล (rising tone) must still rise and ตรวจ (low) still sit low, even when hushed. Endings trail with a soft แล้ว... or นะ... that fades.",
+    "examples_th": [
+      "พรุ่งนี้ก็ต้องไปฟังผลตรวจตาแล้วครับ ใจคอไม่ดีเลย",
+      "ไฟในร้านกะพริบอีกแล้ว ทุกทีก่อนจะมีเรื่องค่ะ"
+    ],
+    "examples_en": [
+      "Tomorrow I find out. I keep thinking about it."
+    ],
+    "variants": [
+      "Hushed foreboding: low, slow, almost whispering.",
+      "Tight dread: steady words, throat tight, breath held.",
+      "Narrated dread: storyteller voice, slow, ominous falls."
+    ],
+    "ai_mistakes": [
+      "Plays it as active fear with high pitch and speed.",
+      "Sounds merely sad.",
+      "Ominous narration overdone like a trailer voice."
+    ],
+    "gemini_style": "someone quietly dreading tomorrow's news, low, slow and hushed",
+    "refs": [
+      "Artistic"
+    ],
+    "confidence": "low",
+    "evidence_note": "Not separately measured in key sources; craft based on fear/sadness tendencies."
+  },
+  {
+    "id": "disgust.disgust",
+    "name_en": "Disgust",
+    "name_th": "รังเกียจ / ขยะแขยง",
+    "type": "primary",
+    "family": "disgust",
+    "vad": {
+      "valence": -0.7,
+      "arousal": 0.5,
+      "dominance": 0.55
+    },
+    "meaning": "Rejection of something offensive, dirty or morally repulsive.",
+    "speaker_intent": "Push the thing away; show it is unacceptable.",
+    "pitch_level": "at or slightly lower than baseline",
+    "pitch_range": "moderate; falling, drawn-out contours",
+    "rate": "slower, with drawn-out vowels on the offending word",
+    "energy": "medium",
+    "pauses": "a pause before naming the disgusting thing",
+    "voice_quality": "nasal, pharyngeal constriction, sometimes creaky; 'yuck' quality",
+    "breath": "a sharp nasal exhale or 'อี๋' burst",
+    "emphasis": "the disgusting object word is lengthened and nasalised",
+    "thai_note": "Thai disgust uses the burst อี๋ / แหวะ and lengthened vowels. Nasality and constriction carry the feeling; the lengthened word must keep its tone (เลนส์ with high tone stays high, เปื้อน stays falling).",
+    "examples_th": [
+      "อี๋ เลนส์เปื้อนมือมันขนาดนี้ ใส่ไปได้ยังไงครับ",
+      "แหวะ นมในตู้เย็นบูดแล้วค่ะ"
+    ],
+    "examples_en": [
+      "Ugh. How have you been wearing these? They're filthy."
+    ],
+    "variants": [
+      "Physical disgust: 'อี๋', nose-wrinkle nasal voice.",
+      "Moral disgust: low, slow, cold and drawn out.",
+      "Polite disgust: tries to hide it with a customer, a small grimace sound leaks."
+    ],
+    "ai_mistakes": [
+      "Reads 'อี๋' as a plain syllable with no disgust burst.",
+      "Turns it into anger with loudness.",
+      "Too nasal, so the text becomes unintelligible."
+    ],
+    "gemini_style": "someone genuinely grossed out, wrinkling their nose, nasal and drawn out",
+    "refs": [
+      "BanseScherer1996",
+      "JuslinLaukka2003",
+      "Cowen2019",
+      "Artistic"
+    ],
+    "confidence": "medium",
+    "evidence_note": "Disgust has low recognition in acted sentences but good recognition as vocal bursts (Cowen2019); nasal quality is craft."
+  },
+  {
+    "id": "disgust.contempt",
+    "name_en": "Contempt",
+    "name_th": "ดูถูก / เหยียด",
+    "type": "primary",
+    "family": "disgust",
+    "vad": {
+      "valence": -0.6,
+      "arousal": 0.35,
+      "dominance": 0.85
+    },
+    "meaning": "Looking down on someone as inferior or worthless.",
+    "speaker_intent": "Belittle, assert superiority, dismiss.",
+    "pitch_level": "lower than baseline",
+    "pitch_range": "narrow, with one slow scoop or fall",
+    "rate": "slow, drawling",
+    "energy": "low-medium, relaxed but cold",
+    "pauses": "dismissive pause before the put-down",
+    "voice_quality": "creaky, nasal, one-sided smirk quality",
+    "breath": "a short scoffing exhale ('หึ')",
+    "emphasis": "the target or insulting comparison gets slow, falling stress",
+    "thai_note": "Contempt is low, slow and drawled, with a scoff (หึ, เฮอะ). Drawling must not distort tones: a falling tone stays falling, just slower. Particles like เหรอ, หรอก, เถอะ with a flat fall sound dismissive.",
+    "examples_th": [
+      "หึ แว่นร้านเล็กๆ แบบนี้ จะไปสู้ร้านในห้างได้เหรอ",
+      "ตัดแว่นถูกๆ แบบนี้ อีกเดือนก็พังแล้วค่ะ"
+    ],
+    "examples_en": [
+      "Oh please. A shop this small? Really?"
+    ],
+    "variants": [
+      "Scoffing: 'หึ', then slow, drawled line.",
+      "Icy contempt: barely any melody, flat and slow.",
+      "Smiling contempt: polite words, smirk in the voice."
+    ],
+    "ai_mistakes": [
+      "Plays it as anger with loudness.",
+      "Adds playful sarcasm, losing coldness.",
+      "Drawl so slow that the line breaks timing."
+    ],
+    "gemini_style": "a snobbish customer looking down on a small shop, slow, low and dismissive with a scoff",
+    "refs": [
+      "BanseScherer1996",
+      "CheangPell2008",
+      "GoblNiChasaide2003",
+      "Artistic"
+    ],
+    "confidence": "medium",
+    "evidence_note": "Contempt is in Banse & Scherer's set (moderate recognition); low/slow pattern consistent with sarcasm findings in English (CheangPell2008); Thai notes are craft."
+  },
+  {
+    "id": "surprise.neutral",
+    "name_en": "Surprise",
+    "name_th": "แปลกใจ",
+    "type": "primary",
+    "family": "surprise",
+    "vad": {
+      "valence": 0.0,
+      "arousal": 0.7,
+      "dominance": 0.4
+    },
+    "meaning": "Brief reaction to the unexpected before evaluating it as good or bad.",
+    "speaker_intent": "React to the unexpected; ask what is happening.",
+    "pitch_level": "higher on the reaction word",
+    "pitch_range": "wide jump at onset, then settles",
+    "rate": "sudden stop, then normal",
+    "energy": "a burst on the reaction, then medium",
+    "pauses": "a short frozen beat right after the reaction",
+    "voice_quality": "breathy onset, open",
+    "breath": "quick in-breath (gasp) before speaking",
+    "emphasis": "the reaction word (อ้าว, เอ๊ะ, ห๊ะ) gets the jump",
+    "thai_note": "Thai surprise lives in interjections (อ้าว, เอ๊ะ, ห๊ะ, อุ๊ย) and question particles (เหรอ, หรอ). The pitch jump goes on the interjection; content words afterwards keep their own tones.",
+    "examples_th": [
+      "อ้าว ลุงชาญ มาตั้งแต่เมื่อไหร่ครับ",
+      "เอ๊ะ แว่นอยู่บนหัวนี่เองค่ะ"
+    ],
+    "examples_en": [
+      "Oh! When did you get here?"
+    ],
+    "variants": [
+      "Short gasp, then a curious question.",
+      "Double-take: 'เอ๊ะ' quiet, then louder 'อ้าว'.",
+      "Mild surprise: small lift, stays calm."
+    ],
+    "ai_mistakes": [
+      "No gasp, interjection read flat.",
+      "Whole sentence at peak pitch.",
+      "Interjection given the wrong tone (อ้าว read with rising)."
+    ],
+    "gemini_style": "someone caught off guard, a quick gasp then a surprised question",
+    "refs": [
+      "Ekman1992",
+      "Cowen2019",
+      "Artistic"
+    ],
+    "confidence": "medium",
+    "evidence_note": "Surprise is a basic emotion (Ekman1992) and recognised as a vocal burst (Cowen2019); speech acoustics less consistent; Thai interjection advice is craft."
+  },
+  {
+    "id": "surprise.pleasant",
+    "name_en": "Pleasant surprise",
+    "name_th": "เซอร์ไพรส์ / ประหลาดใจอย่างดีใจ",
+    "type": "secondary",
+    "family": "surprise",
+    "vad": {
+      "valence": 0.75,
+      "arousal": 0.75,
+      "dominance": 0.55
+    },
+    "meaning": "The unexpected turns out to be good.",
+    "speaker_intent": "Show delight and thank or welcome the cause.",
+    "pitch_level": "higher than baseline, rising toward the good part",
+    "pitch_range": "wide; rise then warm fall",
+    "rate": "fast onset, then slower appreciative ending",
+    "energy": "medium-high",
+    "pauses": "a gasp-pause before the good word",
+    "voice_quality": "bright, breathy, smile-voice",
+    "breath": "a delighted gasp or 'โห' exhale",
+    "emphasis": "the gift or surprise word gets warm lengthening",
+    "thai_note": "Pleasant surprise uses ว้าว, โห, จริงเหรอ plus a warm ending (จังเลย, นะคะ). Raise and widen the phrase register, but keep tones: in 'ให้หนูเหรอคะ' ให้ stays falling, หนู stays rising.",
+    "examples_th": [
+      "โห ยายจันเย็บผ้าเช็ดแว่นให้ผมเหรอครับ น่ารักจัง",
+      "ให้หนูเหรอคะ แว่นกันแดดอันนี้ สวยมากเลย"
+    ],
+    "examples_en": [
+      "Wait, for me? You made this?"
+    ],
+    "variants": [
+      "Gasp, then delighted words.",
+      "Touched: surprised, voice softening and a bit emotional.",
+      "Squeal: high, fast, excited."
+    ],
+    "ai_mistakes": [
+      "Plays generic happiness without the gasp.",
+      "Exaggerated squeal for an adult character.",
+      "Ending rises like a question even after the surprise lands."
+    ],
+    "gemini_style": "someone delighted by an unexpected gift, a gasp then warm, bright surprise",
+    "refs": [
+      "Cowen2019",
+      "JuslinLaukka2003",
+      "Artistic"
+    ],
+    "confidence": "medium",
+    "evidence_note": "Cowen2019 maps positive surprise vocal bursts; speech profile mixed from joy and surprise; craft."
+  },
+  {
+    "id": "surprise.shock",
+    "name_en": "Shock",
+    "name_th": "ตกใจ / ช็อก",
+    "type": "secondary",
+    "family": "surprise",
+    "vad": {
+      "valence": -0.6,
+      "arousal": 0.85,
+      "dominance": 0.2
+    },
+    "meaning": "Sudden, intense surprise at bad news or a frightening sight; the mind briefly stops.",
+    "speaker_intent": "Absorb the blow; check that it is really true.",
+    "pitch_level": "jumps high on the reaction, then drops below baseline as the news sinks in",
+    "pitch_range": "one very wide jump, then flat and stunned",
+    "rate": "abrupt stop, then slow and broken",
+    "energy": "a burst on the gasp, then drained and quiet",
+    "pauses": "a frozen silence (about 0.5-1 s) right after the reaction",
+    "voice_quality": "breathy gasp, then hollow, unsupported voice",
+    "breath": "sharp in-gasp and held breath; the next phrase starts on almost no air",
+    "emphasis": "the shocking fact is repeated back with disbelief (ปิดร้าน... เหรอ)",
+    "thai_note": "Thai shock uses อะไรนะ, ห๊ะ, ไม่จริง, จริงเหรอ. The pitch jump belongs to the interjection; when the shocking words are echoed back slowly, ปิด (low) and ร้าน (high) keep their tones even in a stunned flat voice. Polite particles often drop at first and come back weakly.",
+    "examples_th": [
+      "อะไรนะครับ... ร้านจะโดนรื้อเหรอ",
+      "ไม่จริงใช่มั้ยคะ ลุงชาญเข้าโรงพยาบาลเหรอ"
+    ],
+    "examples_en": [
+      "What? They're tearing the shop down?"
+    ],
+    "variants": [
+      "Gasp-burst, then a frozen whisper repeating the news.",
+      "Numb shock: no burst at all, flat, slow, hollow repetition.",
+      "Loud disbelief: 'ห๊ะ!' high and loud, then 'ไม่จริง' falling hard."
+    ],
+    "ai_mistakes": [
+      "Skips the frozen beat, so the gasp and the next words run together.",
+      "Plays it as anger because of the loudness.",
+      "Repeats the shocking words in normal reading melody, no disbelief.",
+      "Renders the gasp as an odd noise or reads an interjection as a plain word."
+    ],
+    "gemini_style": "someone hearing terrible news, a sharp gasp, a stunned pause, then hollow disbelief",
+    "refs": [
+      "Cowen2019",
+      "JuslinLaukka2003",
+      "Artistic"
+    ],
+    "confidence": "low",
+    "evidence_note": "Negative-surprise vocal bursts are a category in Cowen2019 (nonverbal, not speech); the speech profile and freeze timing are craft."
+  },
+  {
+    "id": "cognitive.confusion",
+    "name_en": "Confusion",
+    "name_th": "งง / สับสน",
+    "type": "secondary",
+    "family": "cognitive",
+    "vad": {
+      "valence": -0.2,
+      "arousal": 0.45,
+      "dominance": 0.3
+    },
+    "meaning": "Information doesn't fit what the person expected; they can't make sense of it yet.",
+    "speaker_intent": "Get clarification; slow the other person down.",
+    "pitch_level": "around baseline, lifting at question points",
+    "pitch_range": "moderate, with small checking rises and puzzled scoops",
+    "rate": "slower, stop-start, as if thinking mid-sentence",
+    "energy": "medium-low, uncertain",
+    "pauses": "puzzled mid-phrase pauses; a stop before re-asking",
+    "voice_quality": "slightly creaky or lax, uncertain",
+    "breath": "a short 'hm?' exhale or a breath before re-asking",
+    "emphasis": "the word that doesn't make sense is echoed back with a questioning scoop",
+    "thai_note": "Thai confusion uses งง, เดี๋ยวนะ, หมายความว่าไง, ยังไงนะ. Put the questioning lift on the particle (นะ, เหรอ, ครับ) and keep content words in tone: in 'ไม่เท่ากัน' ไม่ and เท่า stay falling; making them rise sounds wrong to Thai ears.",
+    "examples_th": [
+      "เดี๋ยวนะครับ ลูกค้าบอกว่าแว่นหายจากกล่องไปเองเหรอ",
+      "งงค่ะ ค่าสายตาซ้ายกับขวาทำไมไม่เท่ากัน"
+    ],
+    "examples_en": [
+      "Hold on. The glasses just vanished from the box?"
+    ],
+    "variants": [
+      "Puzzled thinking-aloud: slow, a creaky 'อืม', then the question.",
+      "Overwhelmed: several quick questions in a row, rising stress.",
+      "Polite confusion with a customer: soft 'ขอโทษนะครับ ยังไงนะครับ' with a small smile."
+    ],
+    "ai_mistakes": [
+      "Reads the question as a flat statement.",
+      "Puts a rising contour on every word, distorting Thai tones.",
+      "Sounds irritated instead of puzzled.",
+      "No thinking pauses, so it sounds like the speaker already understands."
+    ],
+    "gemini_style": "a puzzled young man trying to make sense of something odd, slow, stop-start and questioning",
+    "refs": [
+      "Cowen2019",
+      "Artistic"
+    ],
+    "confidence": "low",
+    "evidence_note": "Confusion is a vocal-burst category in Cowen2019; speech-level acoustics are not established; profile is craft."
+  },
+  {
+    "id": "cognitive.interest",
+    "name_en": "Interest",
+    "name_th": "สนใจ",
+    "type": "primary",
+    "family": "cognitive",
+    "vad": {
+      "valence": 0.4,
+      "arousal": 0.55,
+      "dominance": 0.55
+    },
+    "meaning": "Engaged attention: something is worth knowing more about.",
+    "speaker_intent": "Learn more and encourage the other person to keep talking.",
+    "pitch_level": "slightly higher than baseline",
+    "pitch_range": "moderately wide, lively",
+    "rate": "medium, leaning-in tempo",
+    "energy": "medium, forward",
+    "pauses": "short attentive pauses, as if listening",
+    "voice_quality": "clear, slightly bright, forward placement",
+    "breath": "light in-breath before each question",
+    "emphasis": "the topic word and the question word (ยังไง, ทำไม) get lively stress",
+    "thai_note": "Interest sits in a lively phrase register and open questions: ยังไงครับ, แล้ว...ล่ะคะ, เล่าให้ฟังหน่อย. Liveliness belongs to the phrase, not the syllables: ฟ้า in แสงสีฟ้า keeps its high tone and ได้ its falling tone.",
+    "examples_th": [
+      "เลนส์ตัวนี้ตัดแสงสีฟ้าได้จริงเหรอครับ ทำงานยังไง",
+      "แว่นของยายจันอายุร้อยปีเลยเหรอคะ เล่าให้ฟังหน่อยสิ"
+    ],
+    "examples_en": [
+      "Really? So how does the coating actually work?"
+    ],
+    "variants": [
+      "Engaged: lively, quick follow-up questions.",
+      "Quiet fascination: softer, slower, leaning in.",
+      "Professional interest: measured, attentive 'ครับ... ครับ' while the customer talks."
+    ],
+    "ai_mistakes": [
+      "Flat, bored delivery of an interested question.",
+      "Over-excited, sounding like elation.",
+      "Rising pitch on every syllable instead of on the question particle."
+    ],
+    "gemini_style": "an engaged listener leaning in, lively, attentive and curious",
+    "refs": [
+      "BanseScherer1996",
+      "Cowen2019",
+      "Artistic"
+    ],
+    "confidence": "medium",
+    "evidence_note": "Interest appears in Banse & Scherer's acted set and as a vocal burst in Cowen2019; recognition moderate; Thai notes are craft."
+  },
+  {
+    "id": "cognitive.curiosity",
+    "name_en": "Curiosity",
+    "name_th": "อยากรู้อยากเห็น",
+    "type": "secondary",
+    "family": "cognitive",
+    "vad": {
+      "valence": 0.45,
+      "arousal": 0.6,
+      "dominance": 0.45
+    },
+    "meaning": "An itch to find out; drawn toward a mystery such as a locked drawer or a strange old pair of glasses.",
+    "speaker_intent": "Probe, peek, coax the secret out.",
+    "pitch_level": "slightly higher, rising on questions",
+    "pitch_range": "moderate; playful upward glides on particles",
+    "rate": "slightly fast and eager; slows on the mysterious detail",
+    "energy": "medium, can drop to a conspiratorial hush",
+    "pauses": "a teasing pause before the mysterious word",
+    "voice_quality": "bright, sometimes hushed and breathy",
+    "breath": "a quick in-breath before the question",
+    "emphasis": "the mystery object word gets a drawn-out, intrigued lengthening",
+    "thai_note": "Curiosity uses อยากรู้จัง, ข้างในมีอะไรเหรอ, ขอดูหน่อยได้มั้ย. The playful glide sits on the final particle (เหรอ, น้า, ได้มั้ย); don't glide content words: เก่า stays low, ม่วง stays falling. Lexical tones stay fixed; only the phrase melody and particles carry the intrigue.",
+    "examples_th": [
+      "ลิ้นชักเก่าๆ ใต้เคาน์เตอร์นี่ ข้างในมีอะไรเหรอครับยาย",
+      "แว่นอันนี้ของใครคะ ทำไมเลนส์เป็นสีม่วง อยากรู้จัง"
+    ],
+    "examples_en": [
+      "What's in the old drawer? Can I just take a peek?"
+    ],
+    "variants": [
+      "Eager: quick questions, bright and rising.",
+      "Hushed sleuth: whispering, slow, intrigued.",
+      "Childlike: wide-eyed, sing-song questions."
+    ],
+    "ai_mistakes": [
+      "Plays it identical to interest, losing the itch and playfulness.",
+      "Whisper so breathy the words are lost.",
+      "Sing-song melody that bends lexical tones."
+    ],
+    "gemini_style": "a curious person discovering a mysterious old object, eager, hushed and intrigued",
+    "refs": [
+      "Artistic"
+    ],
+    "confidence": "low",
+    "evidence_note": "No direct acoustic data on curiosity in the key sources; craft extrapolated from interest."
+  },
+  {
+    "id": "awe.awe",
+    "name_en": "Awe",
+    "name_th": "ทึ่ง / ตะลึง",
+    "type": "secondary",
+    "family": "awe",
+    "vad": {
+      "valence": 0.6,
+      "arousal": 0.55,
+      "dominance": 0.2
+    },
+    "meaning": "Wonder at something vast or beyond understanding: seeing clearly for the first time, a ghost glowing gently, a sky full of stars.",
+    "speaker_intent": "Express wonder; often words fail.",
+    "pitch_level": "slightly higher, but the voice softens",
+    "pitch_range": "moderate; slow, open rises",
+    "rate": "slow, words separated",
+    "energy": "low-medium, hushed",
+    "pauses": "long wondering pauses; the sentence may trail off",
+    "voice_quality": "breathy, hushed, open throat",
+    "breath": "audible in-breath before, long exhale after",
+    "emphasis": "the wonder word (สวย, ชัด, เยอะ) lengthened and breathy",
+    "thai_note": "Thai awe uses โห..., ว้าว, สวยจัง, ไม่เคยเห็นแบบนี้มาก่อน. A breathy, open voice and long vowels carry it; lengthening must keep tones (สวย rising stays rising, ชัด high stays high).",
+    "examples_th": [
+      "โห... ชัดขนาดนี้เลยเหรอครับ ผมไม่เคยเห็นดาวเยอะแบบนี้มาก่อน",
+      "ยายจัน... ยายตัวเรืองแสงได้ด้วยเหรอคะ"
+    ],
+    "examples_en": [
+      "Oh... I've never seen the stars this clearly."
+    ],
+    "variants": [
+      "Hushed wonder: almost a whisper, long pauses.",
+      "Tearful awe: soft, moved, voice catching.",
+      "Childlike awe: brighter, a slow 'ว้าว'."
+    ],
+    "ai_mistakes": [
+      "Plays it as loud excitement.",
+      "Rushes through with no wonder pauses.",
+      "Over-breathy so the words vanish."
+    ],
+    "gemini_style": "someone struck with wonder, hushed, slow and breathy, almost speechless",
+    "refs": [
+      "Cowen2019",
+      "CowenKeltner2017",
+      "Artistic"
+    ],
+    "confidence": "low",
+    "evidence_note": "Awe is a distinct self-report category (CowenKeltner2017) and vocal burst (Cowen2019); speech acoustics are craft."
+  },
+  {
+    "id": "awe.admiration",
+    "name_en": "Admiration",
+    "name_th": "ชื่นชม",
+    "type": "secondary",
+    "family": "awe",
+    "vad": {
+      "valence": 0.65,
+      "arousal": 0.45,
+      "dominance": 0.4
+    },
+    "meaning": "Positive regard for another person's skill or virtue.",
+    "speaker_intent": "Praise and honour someone.",
+    "pitch_level": "slightly higher than baseline",
+    "pitch_range": "moderate, warm rises on the praise",
+    "rate": "medium, slowed on the praise word",
+    "energy": "medium, warm",
+    "pauses": "a small appreciative pause before the compliment",
+    "voice_quality": "warm, resonant, sincere",
+    "breath": "a soft impressed exhale",
+    "emphasis": "the skill or quality word (เก่ง, ละเอียด, เป๊ะ) gets warm weight",
+    "thai_note": "Admiration uses เก่งมากเลย, สุดยอด, นับถือจริงๆ with sincere ครับ/ค่ะ. Warmth lives in the phrase register: เก่ง (low) stays low even when praised with energy, and จริงๆ keeps its mid tone.",
+    "examples_th": [
+      "ลุงชาญดัดขาแว่นด้วยมือได้เป๊ะขนาดนี้ เก่งมากเลยครับ",
+      "หมอวัดสายตาละเอียดมากเลยค่ะ หนูนับถือจริงๆ"
+    ],
+    "examples_en": [
+      "You bent that frame by hand? That's incredible work."
+    ],
+    "variants": [
+      "Warm sincere praise.",
+      "Impressed disbelief: 'โห' then praise.",
+      "Respectful admiration toward an elder: softer, polite, careful."
+    ],
+    "ai_mistakes": [
+      "Flattering, salesy tone.",
+      "Sarcastic-sounding melody from exaggerated stress.",
+      "Generic happiness without the regard."
+    ],
+    "gemini_style": "someone sincerely admiring another's craft, warm and impressed",
+    "refs": [
+      "CowenKeltner2017",
+      "Artistic"
+    ],
+    "confidence": "low",
+    "evidence_note": "Admiration is a self-report category (CowenKeltner2017); no speech acoustic data; craft."
+  },
+  {
+    "id": "low.boredom",
+    "name_en": "Boredom",
+    "name_th": "เบื่อ",
+    "type": "primary",
+    "family": "low",
+    "vad": {
+      "valence": -0.4,
+      "arousal": 0.1,
+      "dominance": 0.35
+    },
+    "meaning": "Low-arousal disengagement: nothing interesting is happening and time drags.",
+    "speaker_intent": "Signal disinterest; sometimes nudge for a change.",
+    "pitch_level": "lower than baseline",
+    "pitch_range": "very narrow, close to monotone",
+    "rate": "slow, dragging, lazy rhythm",
+    "energy": "low, little effort",
+    "pauses": "long, empty pauses between phrases",
+    "voice_quality": "lax, creaky, lazy articulation",
+    "breath": "long sighs; possibly a yawn",
+    "emphasis": "almost none; at most a drawn-out complaint word (เบื่อ, นาน)",
+    "thai_note": "Boredom uses เบื่ออะ, ไม่มีอะไรทำเลย, เมื่อไหร่จะ...สักที. The phrase can be near-monotone, but each syllable must keep its tone: if every word sits on one mid pitch, Thai becomes unintelligible. Keep tone shapes small but present; let the laziness show in length and creak.",
+    "examples_th": [
+      "ตีสามแล้ว ไม่มีลูกค้าสักคน เบื่อจังครับ",
+      "รอคิววัดสายตานานจัง เมื่อไหร่จะถึงคิวหนูสักทีคะ"
+    ],
+    "examples_en": [
+      "Three a.m. Not a single customer. Again."
+    ],
+    "variants": [
+      "Sighing monotone: big sigh, then a flat line.",
+      "Yawning drawl: words stretched by a half-yawn.",
+      "Petulant boredom: whiny, slightly higher, dragging the particle (สักทีอ่ะ)."
+    ],
+    "ai_mistakes": [
+      "Flattens all Thai tones onto one pitch.",
+      "Sounds sad instead of disengaged.",
+      "Overacted cartoon yawn in the middle of a word."
+    ],
+    "gemini_style": "a bored shopkeeper at 3 am, slow, flat, lazy and sighing",
+    "refs": [
+      "BanseScherer1996",
+      "JuslinLaukka2003",
+      "TingsabadhAbramson1993"
+    ],
+    "confidence": "high",
+    "evidence_note": "Low F0, narrow range and slow rate for boredom recur in acted-speech studies; tone-preservation advice is craft; no Thai emotion data."
+  },
+  {
+    "id": "low.fatigue",
+    "name_en": "Fatigue",
+    "name_th": "เหนื่อย / อ่อนล้า",
+    "type": "secondary",
+    "family": "low",
+    "vad": {
+      "valence": -0.35,
+      "arousal": 0.1,
+      "dominance": 0.25
+    },
+    "meaning": "Physical or mental exhaustion after long work, late nights or strain on the eyes.",
+    "speaker_intent": "Say how tired one is; ask for rest or sympathy.",
+    "pitch_level": "lower than baseline",
+    "pitch_range": "narrow, sagging",
+    "rate": "slow; vowels drag, consonants soft",
+    "energy": "low; voice sometimes runs out at phrase ends",
+    "pauses": "pauses to breathe; trailing endings",
+    "voice_quality": "breathy, creaky (vocal fry) at ends, slack articulation",
+    "breath": "heavy exhales, an 'เฮ้อ' before speaking",
+    "emphasis": "the tiredness word (เหนื่อย, ล้า, ไม่ไหว) given a long, sagging exhale",
+    "thai_note": "Fatigue sags the register and lets phrase ends creak, but creak must not erase the tone of the last word: ไหว (rising) should still rise faintly, ล้า (high) should still sound high. Particles get dragged and breathy (ครับ..., แล้วอะ, เนอะ).",
+    "examples_th": [
+      "เฮ้อ ตัดเลนส์มาทั้งคืน ตาจะปิดแล้วครับ",
+      "จ้องจอทั้งวัน ตาล้าไปหมดแล้วค่ะ"
+    ],
+    "examples_en": [
+      "I've been staring at screens all day. My eyes are done."
+    ],
+    "variants": [
+      "Sighing exhaustion: big exhale, slow sagging line.",
+      "Running on empty: tries to be polite, voice keeps fading.",
+      "Punchy-tired: slightly giddy, laughs weakly at own tiredness."
+    ],
+    "ai_mistakes": [
+      "Same as boredom (no strain, no effort).",
+      "Over-long sighs that eat the timing.",
+      "Vocal fry so heavy that final tones disappear."
+    ],
+    "gemini_style": "an exhausted person at the end of a long night, slow, breathy and fading",
+    "refs": [
+      "GoblNiChasaide2003",
+      "Artistic"
+    ],
+    "confidence": "low",
+    "evidence_note": "Fatigue is not a category in the core emotion studies; voice-quality (breathy/creaky) links from GoblNiChasaide2003; mostly craft."
+  },
+  {
+    "id": "calm.serenity",
+    "name_en": "Serenity",
+    "name_th": "สงบ / ใจเย็น",
+    "type": "secondary",
+    "family": "calm",
+    "vad": {
+      "valence": 0.55,
+      "arousal": 0.1,
+      "dominance": 0.6
+    },
+    "meaning": "Peaceful, untroubled calm; inner stillness.",
+    "speaker_intent": "Soothe; show steady presence.",
+    "pitch_level": "slightly lower than baseline, stable",
+    "pitch_range": "narrow but smooth, rounded",
+    "rate": "slow, even, legato",
+    "energy": "low, soft, steady",
+    "pauses": "even, unhurried pauses at phrase ends",
+    "voice_quality": "warm, slightly breathy, relaxed",
+    "breath": "slow, deep, regular breathing",
+    "emphasis": "very light; soft weight on calming words (ค่อยๆ, ไม่เป็นไร, หายใจ)",
+    "thai_note": "Serenity is a low, steady phrase register with soft particles (นะ, จ้ะ, นะคะ). Smoothness must not blur tone contrasts: in 'ค่อยๆ หลับตา' ค่อย keeps its falling tone and หลับ its low tone, just gently.",
+    "examples_th": [
+      "ค่อยๆ หลับตานะครับ หายใจเข้าช้าๆ",
+      "ไม่ต้องรีบจ้ะ ยายนั่งรอได้ทั้งคืน"
+    ],
+    "examples_en": [
+      "Close your eyes. Breathe in slowly."
+    ],
+    "variants": [
+      "Meditation guide: slow, even, warm.",
+      "Ghost-grandma calm: soft, slightly airy, timeless.",
+      "Grounded calm under pressure: steady, low, in a tense scene."
+    ],
+    "ai_mistakes": [
+      "Sleepy or bored delivery.",
+      "Whispering throughout, losing warmth.",
+      "Pauses too long and uniform, sounding mechanical."
+    ],
+    "gemini_style": "a calm, peaceful voice guiding someone to rest, slow, soft and steady",
+    "refs": [
+      "Russell1980",
+      "Artistic"
+    ],
+    "confidence": "low",
+    "evidence_note": "Placed as positive/low-arousal on the circumplex; no direct acoustic study; craft."
+  },
+  {
+    "id": "love.tenderness",
+    "name_en": "Tenderness",
+    "name_th": "อ่อนโยน",
+    "type": "primary",
+    "family": "love",
+    "vad": {
+      "valence": 0.75,
+      "arousal": 0.2,
+      "dominance": 0.45
+    },
+    "meaning": "Gentle, caring love toward someone vulnerable: a child, an elder, someone hurt.",
+    "speaker_intent": "Comfort, protect and reassure.",
+    "pitch_level": "slightly lower or at baseline",
+    "pitch_range": "narrow to moderate; soft, rounded contours",
+    "rate": "slow, gentle",
+    "energy": "low, soft onsets",
+    "pauses": "gentle pauses; time given to the listener",
+    "voice_quality": "breathy, warm, soft",
+    "breath": "soft exhales, no hard attacks",
+    "emphasis": "the name or endearment (ลูก, หลาน, ต้น) softened and lengthened",
+    "thai_note": "Thai tenderness lives in soft particles and endearments: นะลูก, จ้ะ, นะคะ, หนู. Softness changes register and voice quality only; ลูก (falling) stays falling and หลาน (rising) stays rising even when murmured. Lower, softer pitch level is fine; lexical tones are never traded for a sing-song baby-talk melody.",
+    "examples_th": [
+      "ไม่เป็นไรนะลูก แว่นแตกเดี๋ยวยายพาไปตัดใหม่",
+      "เจ็บตรงไหนคะหนู ให้พี่ดูหน่อยนะ"
+    ],
+    "examples_en": [
+      "It's alright, sweetheart. We'll get you new ones."
+    ],
+    "variants": [
+      "Soft comforting murmur.",
+      "Tender smile-voice: warm, light.",
+      "Tender but sad: soft, with a small catch."
+    ],
+    "ai_mistakes": [
+      "Talks down / baby talk to an adult.",
+      "Too bright and cheerful.",
+      "Breathiness so strong words are unclear."
+    ],
+    "gemini_style": "a gentle grandmother comforting a child, soft, warm and slow",
+    "refs": [
+      "JuslinLaukka2003",
+      "GoblNiChasaide2003",
+      "Artistic"
+    ],
+    "confidence": "medium",
+    "evidence_note": "Tenderness (low F0, slow, soft, breathy) appears in Juslin & Laukka's review mostly from music/acted speech; Thai notes are craft."
+  },
+  {
+    "id": "love.affection",
+    "name_en": "Affection",
+    "name_th": "รักใคร่ / เอ็นดู",
+    "type": "secondary",
+    "family": "love",
+    "vad": {
+      "valence": 0.75,
+      "arousal": 0.4,
+      "dominance": 0.55
+    },
+    "meaning": "Warm fondness for friends, family, regulars; everyday love.",
+    "speaker_intent": "Show fondness, tease gently, strengthen the bond.",
+    "pitch_level": "slightly higher than baseline",
+    "pitch_range": "moderate, playful rises",
+    "rate": "medium, relaxed",
+    "energy": "medium, warm",
+    "pauses": "natural, relaxed",
+    "voice_quality": "warm, smile-voice",
+    "breath": "easy breathing, light laugh-breaths",
+    "emphasis": "the name or nickname gets a warm lift",
+    "thai_note": "Affection uses เอ็นดู, ตัวเล็ก, nicknames, จ้ะ, นะ, เนอะ, a teasing ล่ะ. The warm lift belongs on particles and nicknames; ลุง (mid) stays mid in 'ลุงชาญ', not lifted to rising. Lexical tones must not drift with the smile-voice.",
+    "examples_th": [
+      "ลุงชาญมาอีกแล้ว คิดถึงร้านผมล่ะสิครับ",
+      "มาแล้วเหรอจ๊ะ ยายรออยู่เลย กินข้าวมาหรือยัง"
+    ],
+    "examples_en": [
+      "Back again, Uncle Chan? Couldn't stay away, huh?"
+    ],
+    "variants": [
+      "Warm welcome.",
+      "Teasing fondness: playful, a small laugh.",
+      "Quiet fondness: soft, a gentle smile."
+    ],
+    "ai_mistakes": [
+      "Flat greeting voice.",
+      "Too romantic.",
+      "Sugary, exaggerated sweetness."
+    ],
+    "gemini_style": "a warm, fond voice greeting a familiar friend, smiling and relaxed",
+    "refs": [
+      "CowenKeltner2017",
+      "Artistic"
+    ],
+    "confidence": "low",
+    "evidence_note": "Affection/adoration appear as self-report categories (CowenKeltner2017); speech profile is craft."
+  },
+  {
+    "id": "love.romantic",
+    "name_en": "Romantic love",
+    "name_th": "รักแบบคนรัก",
+    "type": "secondary",
+    "family": "love",
+    "vad": {
+      "valence": 0.8,
+      "arousal": 0.45,
+      "dominance": 0.45
+    },
+    "meaning": "Intimate love toward a partner or someone one is falling for; closeness and longing.",
+    "speaker_intent": "Express love, draw the other person closer, make the moment private.",
+    "pitch_level": "slightly lower than baseline, intimate",
+    "pitch_range": "moderate; soft, slow glides",
+    "rate": "slow, unhurried",
+    "energy": "low-medium, close-mic, as if only one person should hear",
+    "pauses": "a held pause just before the important word (รัก, คิดถึง)",
+    "voice_quality": "warm, breathy, soft onsets",
+    "breath": "audible soft in-breath before the key line",
+    "emphasis": "'รัก', 'คิดถึง' and the partner's name lengthened softly rather than stressed hard",
+    "thai_note": "Romantic Thai leans on นะ, จ้ะ, ตัวเอง, เธอ and soft endings. Keep the intimacy in voice quality and register: รัก keeps its high tone and คิดถึง its high-rising shape; don't melt them into one sighing fall. Avoid sing-song melody, which sounds like a karaoke ballad.",
+    "examples_th": [
+      "ใส่แว่นอันนี้แล้ว เธอน่ารักขึ้นอีกนะ",
+      "คิดถึงนะ เลิกงานแล้วรีบกลับมานะคะ"
+    ],
+    "examples_en": [
+      "You look beautiful in those. You always do."
+    ],
+    "variants": [
+      "Intimate: close, soft, slow, almost a whisper on the last word.",
+      "Nervous confession: hesitant, quick breath, voice shaking a little on 'รัก'.",
+      "Playful love: lighter, smiling, a teasing particle at the end."
+    ],
+    "ai_mistakes": [
+      "Over-breathy, sounding like a parody of seduction.",
+      "Sing-song 'ballad' melody that bends lexical tones.",
+      "Formal announcer clarity, killing the intimacy.",
+      "Loudness the same as normal dialogue."
+    ],
+    "gemini_style": "a man quietly telling the woman he loves something tender, close, soft and warm",
+    "refs": [
+      "GoblNiChasaide2003",
+      "Artistic"
+    ],
+    "confidence": "low",
+    "evidence_note": "No direct acoustic study of romantic love in speech in the key sources; breathy-intimate link from voice-quality work (GoblNiChasaide2003); mostly craft."
+  },
+  {
+    "id": "love.flirtation",
+    "name_en": "Flirtation",
+    "name_th": "หยอด / จีบ",
+    "type": "performance",
+    "family": "love",
+    "vad": {
+      "valence": 0.65,
+      "arousal": 0.55,
+      "dominance": 0.6
+    },
+    "meaning": "Playful romantic interest signalled lightly, with deniability.",
+    "speaker_intent": "Charm, tease, test the other person's interest without committing.",
+    "pitch_level": "slightly lower or at baseline, with playful lifts",
+    "pitch_range": "moderate-wide, playful scoops on particles",
+    "rate": "relaxed; slows on the line that carries the hint",
+    "energy": "medium, light",
+    "pauses": "a teasing beat before the punchline of the compliment",
+    "voice_quality": "smile-voice, slightly breathy, a little husky",
+    "breath": "a light laugh-breath after the line",
+    "emphasis": "the double-meaning word gets a slow, knowing lengthening",
+    "thai_note": "Thai flirting lines rely on wordplay and particles like นะ, น้า, หรอ, อะ, with the playful scoop on the particle. The hinting word keeps its tone (ชัด stays high in 'มองเห็นชัดเลย'); the scoop must not turn it into a different word.",
+    "examples_th": [
+      "ตัดแว่นใหม่แล้วมองอะไรก็ชัดนะครับ ยกเว้นใจคุณนี่แหละ",
+      "มาวัดสายตาบ่อยจัง หรือมาดูคนวัดคะ"
+    ],
+    "examples_en": [
+      "New glasses? Funny, I can see everything clearly except where I stand with you."
+    ],
+    "variants": [
+      "Smooth: low, relaxed, knowing smile.",
+      "Cheeky: bright, quick, laughs at own line.",
+      "Shy flirt: tries the line, then rushes the end and laughs nervously."
+    ],
+    "ai_mistakes": [
+      "Reads the pickup line straight, like information.",
+      "Over-sexualised breathy delivery for a light cartoon.",
+      "Exaggerated sing-song that sounds mocking.",
+      "Misses the beat before the punchline."
+    ],
+    "gemini_style": "someone playfully flirting with a cheeky smile, light, teasing and a little husky",
+    "refs": [
+      "Artistic"
+    ],
+    "confidence": "low",
+    "evidence_note": "No acoustic studies of flirtation in the key sources; entirely craft."
+  },
+  {
+    "id": "social.gratitude",
+    "name_en": "Gratitude",
+    "name_th": "ซาบซึ้ง / ขอบคุณ",
+    "type": "social",
+    "family": "social",
+    "vad": {
+      "valence": 0.7,
+      "arousal": 0.35,
+      "dominance": 0.4
+    },
+    "meaning": "Warm thankfulness toward someone who helped or gave something.",
+    "speaker_intent": "Thank sincerely and acknowledge the other person's effort.",
+    "pitch_level": "slightly higher or at baseline",
+    "pitch_range": "moderate, warm falls",
+    "rate": "medium to slow, the thanks itself unhurried",
+    "energy": "medium-low, sincere",
+    "pauses": "a short pause before 'ขอบคุณ', as if gathering feeling",
+    "voice_quality": "warm, open, slightly breathy if moved",
+    "breath": "a soft breath before thanking",
+    "emphasis": "'ขอบคุณ' and 'มาก' get warm length; the helper's name softened",
+    "thai_note": "Thai thanks scale with politeness: ขอบคุณครับ/ค่ะ, ขอบคุณมากๆ เลยนะคะ, ขอบใจนะ (to younger). Lengthen มาก with warmth but keep its falling tone; คุณ stays mid. A deep bow-like tone comes from a slower, lower ending, not from changing tones.",
+    "examples_th": [
+      "ขอบคุณมากเลยนะครับลุง ที่ช่วยเฝ้าร้านให้ทั้งคืน",
+      "ขอบคุณค่ะหมอ ตอนนี้หนูอ่านหนังสือให้ลูกฟังได้แล้ว"
+    ],
+    "examples_en": [
+      "Thank you. Really. I can read to my kids again."
+    ],
+    "variants": [
+      "Warm everyday thanks: bright, sincere.",
+      "Deeply moved: slower, voice catching.",
+      "Formal customer thanks: polite, clear, warm ending."
+    ],
+    "ai_mistakes": [
+      "Reads 'ขอบคุณครับ' as a quick service formula with no feeling.",
+      "Over-emotional tears for a small favour.",
+      "Bright announcer thanks, like an ad."
+    ],
+    "gemini_style": "a sincerely grateful person, warm and a little moved, thanking someone who helped them",
+    "refs": [
+      "CowenKeltner2017",
+      "BrownLevinson1987",
+      "Artistic"
+    ],
+    "confidence": "low",
+    "evidence_note": "Gratitude is not among the vocal-emotion categories measured in the key acoustic studies; politeness framing from BrownLevinson1987; craft."
+  },
+  {
+    "id": "relief.relief",
+    "name_en": "Relief",
+    "name_th": "โล่งใจ",
+    "type": "secondary",
+    "family": "relief",
+    "vad": {
+      "valence": 0.6,
+      "arousal": 0.3,
+      "dominance": 0.5
+    },
+    "meaning": "The release of tension when a feared outcome doesn't happen.",
+    "speaker_intent": "Let the tension go; share that it's over.",
+    "pitch_level": "starts at baseline, drops lower on the exhale",
+    "pitch_range": "moderate; one big falling contour",
+    "rate": "slows down after the release",
+    "energy": "medium, then softer",
+    "pauses": "a long exhale-pause before the words",
+    "voice_quality": "breathy, relaxed, sometimes laughing",
+    "breath": "the classic long exhale ('เฮ้อ', 'ฟู่') before speaking",
+    "emphasis": "the reassuring word (ไม่เป็นไร, ปกติ, เจอแล้ว) gets the falling release",
+    "thai_note": "Thai relief: เฮ้อ, โล่งอก, ค่อยยังชั่ว, นึกว่า... The big falling release must keep words' tones: ไม่เป็นไร has ไม่ falling, เป็น mid, ไร mid — the drop comes across the phrase, not by forcing เป็น into a fall.",
+    "examples_th": [
+      "เฮ้อ เจอแว่นแล้ว นึกว่าลืมไว้บนรถเมล์ครับ",
+      "ค่อยยังชั่ว หมอบอกว่าตาปกติดีค่ะ"
+    ],
+    "examples_en": [
+      "Oh thank God. It's fine. Everything's fine."
+    ],
+    "variants": [
+      "Big sigh, then soft relaxed line.",
+      "Laughing relief: shaky laugh, voice still trembling.",
+      "Tearful relief: voice cracks as tension breaks."
+    ],
+    "ai_mistakes": [
+      "No exhale; the line starts at full voice.",
+      "Sounds like sadness because the sigh is too heavy.",
+      "Sigh rendered as a strange noise or spoken word."
+    ],
+    "gemini_style": "someone hugely relieved after a scare, a long exhale then soft, shaky words",
+    "refs": [
+      "Cowen2019",
+      "Artistic"
+    ],
+    "confidence": "medium",
+    "evidence_note": "Relief is a well-recognised vocal burst (sigh) in Cowen2019; speech after the burst is craft."
+  },
+  {
+    "id": "hope.hope",
+    "name_en": "Hope",
+    "name_th": "ความหวัง",
+    "type": "secondary",
+    "family": "hope",
+    "vad": {
+      "valence": 0.5,
+      "arousal": 0.45,
+      "dominance": 0.4
+    },
+    "meaning": "Positive expectation of something uncertain; looking forward despite doubt.",
+    "speaker_intent": "Express the wish; encourage self or others.",
+    "pitch_level": "slightly higher than baseline, lifting toward the end",
+    "pitch_range": "moderate, gentle rising arcs",
+    "rate": "medium, a bit slower on the wish",
+    "energy": "medium-low, gently building",
+    "pauses": "a small pause before the hoped-for thing",
+    "voice_quality": "soft, clear, slightly breathy",
+    "breath": "a quiet in-breath before the wish",
+    "emphasis": "the wished-for outcome word (หาย, กลับมา, ดีขึ้น) gets a gentle lift",
+    "thai_note": "Thai hope uses หวังว่า, คงจะ, น่าจะ, ขอให้ and soft นะ. The lift is a phrase arc; ดีขึ้น keeps ขึ้น falling, หาย keeps rising. Don't end every hopeful line on a question-like rise. The hopeful arc is phrase intonation layered on top of fixed lexical tones.",
+    "examples_th": [
+      "หวังว่าแว่นใหม่จะช่วยให้คุณยายอ่านหนังสือได้อีกนะครับ",
+      "ขอให้ตาลูกดีขึ้นนะคะ แม่จะพาไปหาหมอทุกเดือนเลย"
+    ],
+    "examples_en": [
+      "Maybe with these, she'll be able to read again."
+    ],
+    "variants": [
+      "Gentle hope: soft, rising slightly.",
+      "Fragile hope: hesitant, close to tears.",
+      "Encouraging hope: warmer, firmer, for someone else."
+    ],
+    "ai_mistakes": [
+      "Plays it as certain happiness.",
+      "Rising question intonation on every line.",
+      "Flat, no lift."
+    ],
+    "gemini_style": "a quietly hopeful person, soft and gently uplifting, with a trace of doubt",
+    "refs": [
+      "Artistic"
+    ],
+    "confidence": "low",
+    "evidence_note": "No direct acoustic study of hope in the key sources; craft."
+  },
+  {
+    "id": "hope.excitement",
+    "name_en": "Excitement",
+    "name_th": "ตื่นเต้น",
+    "type": "secondary",
+    "family": "hope",
+    "vad": {
+      "valence": 0.75,
+      "arousal": 0.85,
+      "dominance": 0.55
+    },
+    "meaning": "High-arousal anticipation of something good that is about to happen (new stock arriving, first day with new glasses, a trip).",
+    "speaker_intent": "Share the buzz and pull others into the anticipation.",
+    "pitch_level": "higher than baseline",
+    "pitch_range": "wide and bouncy, with frequent peaks",
+    "rate": "fast, rushing, words tumbling over each other",
+    "energy": "high, forward, energetic",
+    "pauses": "few; quick catch-breaths instead of real pauses",
+    "voice_quality": "bright, slightly tense-bright, smile-voice",
+    "breath": "quick, audible in-breaths between rushes",
+    "emphasis": "the time word (พรุ่งนี้, อีกนิดเดียว) and the awaited thing get peaks",
+    "thai_note": "Thai excitement uses ตื่นเต้นจัง, รอไม่ไหวแล้ว, จะได้...แล้ว, เลย. The bounce is in the phrase register and tempo: in 'รอไม่ไหวแล้ว' รอ stays mid, ไม่ falling, ไหว rising, แล้ว high — don't let excitement push all four into the same rising shape. A faster, higher phrase must still let each lexical tone be heard.",
+    "examples_th": [
+      "พรุ่งนี้แว่นรุ่นใหม่จะมาถึงร้านแล้วครับ รอไม่ไหวแล้ว",
+      "ตื่นเต้นจัง จะได้เห็นหน้าลูกชัดๆ ครั้งแรกเลยค่ะ"
+    ],
+    "examples_en": [
+      "Tomorrow! The new collection lands tomorrow!"
+    ],
+    "variants": [
+      "Bubbly: fast, bright, laughing between phrases.",
+      "Nervous excitement: fast but with a jittery, breathy edge (first date, first fitting).",
+      "Contained excitement: trying to stay professional with a customer, energy leaks into quick tempo."
+    ],
+    "ai_mistakes": [
+      "Reads it at normal speed, so the words say excited but the voice doesn't.",
+      "Turns into shouting with one loudness level.",
+      "Pushes every syllable into a rising shape, breaking Thai tones.",
+      "No catch-breaths, so the rush sounds machine-generated."
+    ],
+    "gemini_style": "someone buzzing with excitement about tomorrow, fast, bright and a little breathless",
+    "refs": [
+      "JuslinLaukka2003",
+      "Russell1980",
+      "Artistic"
+    ],
+    "confidence": "medium",
+    "evidence_note": "Shares the high-arousal positive tendencies documented for joy/elation in acted speech; excitement itself is not separately measured in the key sources; Thai notes are craft."
+  },
+  {
+    "id": "will.determination",
+    "name_en": "Determination",
+    "name_th": "มุ่งมั่น / ตั้งใจแน่วแน่",
+    "type": "stance",
+    "family": "will",
+    "vad": {
+      "valence": 0.3,
+      "arousal": 0.65,
+      "dominance": 0.85
+    },
+    "meaning": "Resolve to act or keep going despite difficulty.",
+    "speaker_intent": "Commit out loud; convince self and others it will be done.",
+    "pitch_level": "at or slightly below baseline, steady",
+    "pitch_range": "narrow to moderate; firm, final falls",
+    "rate": "measured, even beats",
+    "energy": "medium-high, firm and supported",
+    "pauses": "a deliberate pause before the commitment",
+    "voice_quality": "firm, chest-resonant, slightly tense, no breathiness",
+    "breath": "a full, steady in-breath before the vow",
+    "emphasis": "the commitment verb and negation (จะ, ต้อง, ไม่ยอม) get firm, separate stress",
+    "thai_note": "Determination is carried by steady tempo, a full chest voice and firm phrase-final falls. Thai markers: ต้อง, จะ...ให้ได้, ไม่ยอมแพ้, ครับ said short and firm. The firm fall belongs to the phrase: ได้ stays falling, ยอม stays mid — don't stamp every word with a falling tone.",
+    "examples_th": [
+      "ร้านนี้ยายสร้างมา ผมจะเปิดต่อให้ได้ครับ",
+      "ต่อให้ต้องฝึกอ่านทุกวัน หนูก็จะทำค่ะ"
+    ],
+    "examples_en": [
+      "Grandma built this shop. I'm keeping it open. Whatever it takes."
+    ],
+    "variants": [
+      "Quiet resolve: low, steady, almost whispered vow.",
+      "Rallying: louder, building, for others to hear.",
+      "Through tears: voice wet and shaky, but each word firm."
+    ],
+    "ai_mistakes": [
+      "Shouted like anger.",
+      "Bright cheerleader tone that sounds unconvinced.",
+      "Rushed delivery with no weight on the commitment words."
+    ],
+    "gemini_style": "a young man quietly vowing to keep his late grandmother's shop open, low, steady and firm",
+    "refs": [
+      "Mehrabian1996",
+      "Artistic"
+    ],
+    "confidence": "low",
+    "evidence_note": "Dominance placement from PAD theory; no direct acoustic study of determination in the key sources; craft."
+  },
+  {
+    "id": "will.confidence",
+    "name_en": "Confidence",
+    "name_th": "มั่นใจ",
+    "type": "stance",
+    "family": "will",
+    "vad": {
+      "valence": 0.5,
+      "arousal": 0.5,
+      "dominance": 0.85
+    },
+    "meaning": "Assured belief in one's own competence; relaxed authority.",
+    "speaker_intent": "Reassure, persuade, show expertise (e.g. an optician recommending a lens).",
+    "pitch_level": "at baseline or slightly lower",
+    "pitch_range": "moderate; clean falls at phrase ends, no question-like rises",
+    "rate": "medium, unhurried",
+    "energy": "medium, steady and supported",
+    "pauses": "purposeful short pauses before key facts; no hesitation fillers",
+    "voice_quality": "clear, resonant, relaxed throat",
+    "breath": "calm, regular breath",
+    "emphasis": "the key fact or recommendation word gets clear, falling stress",
+    "thai_note": "Confidence in Thai: แน่นอนครับ, รับรองค่ะ, ไม่ต้องห่วง, with declarative falls. The authoritative fall sits on the end of the phrase; หนา (rising) stays rising in 'เลนส์บางกว่า ไม่หนา', and ไม่ต้อง keeps falling-falling. Avoid hedges (มั้ง, หรือเปล่า) and question-like rises. Lexical tones stay exact; authority comes from steadiness, not from forcing falls onto words.",
+    "examples_th": [
+      "เลนส์ตัวนี้บางกว่าเดิมครึ่งหนึ่ง ใส่แล้วไม่หนักแน่นอนครับ",
+      "ไม่ต้องห่วงค่ะ ค่าสายตาวัดละเอียดแล้ว ใส่ได้สบาย"
+    ],
+    "examples_en": [
+      "This lens is half as thick. Trust me, you'll forget you're wearing it."
+    ],
+    "variants": [
+      "Expert: calm, clear, measured.",
+      "Warm confidence: friendly, smiling, still assured.",
+      "Swagger: slower, slightly lower, a hint of a smirk."
+    ],
+    "ai_mistakes": [
+      "Upspeak at phrase ends, making statements sound unsure.",
+      "Salesy over-enthusiasm.",
+      "Arrogant or condescending quality.",
+      "Too fast, as if hiding something."
+    ],
+    "gemini_style": "a confident, friendly expert explaining calmly and clearly, assured and warm",
+    "refs": [
+      "Mehrabian1996",
+      "Ladd2008",
+      "Artistic"
+    ],
+    "confidence": "low",
+    "evidence_note": "Dominance framing from PAD; falling declarative intonation from intonational phonology (Ladd2008) is general, not emotion-specific; mostly craft."
+  },
+  {
+    "id": "will.triumph",
+    "name_en": "Triumph",
+    "name_th": "ชนะ / สะใจที่ทำสำเร็จ",
+    "type": "secondary",
+    "family": "will",
+    "vad": {
+      "valence": 0.85,
+      "arousal": 0.85,
+      "dominance": 0.95
+    },
+    "meaning": "The victorious joy of overcoming an opponent or a hard obstacle.",
+    "speaker_intent": "Celebrate the win, assert victory.",
+    "pitch_level": "higher than baseline",
+    "pitch_range": "wide, with a strong final peak and fall",
+    "rate": "fast build, then a slower declared ending",
+    "energy": "high, full, powerful",
+    "pauses": "a dramatic beat before the victory line",
+    "voice_quality": "full, bright, strong; can turn into a shout",
+    "breath": "big in-breath before; exultant exhale after",
+    "emphasis": "the victory word (สำเร็จ, ชนะ, ได้แล้ว) gets a strong peak",
+    "thai_note": "Thai triumph: สำเร็จแล้ว, ชนะแล้ว, เห็นมั้ยล่ะ, ว่าแล้ว. A big peak and fall on the phrase, but สำเร็จ keeps its rising-then-low shape and แล้ว stays high; a 'victory' roar must not flatten both syllables into one fall. Raise the pitch level and range for the win, keep every lexical tone shape.",
+    "examples_th": [
+      "ซ่อมได้แล้ว! บานพับอันนี้ไม่มีใครซ่อมได้ แต่ผมทำได้!",
+      "เห็นมั้ยล่ะ บอกแล้วว่าหนูอ่านป้ายนั้นออก!"
+    ],
+    "examples_en": [
+      "I fixed it! Nobody else could, but I did!"
+    ],
+    "variants": [
+      "Roaring triumph: loud, chest voice, peak and fall.",
+      "Gloating triumph: slower, lower, smug smile.",
+      "Breathless triumph: exhausted but exultant."
+    ],
+    "ai_mistakes": [
+      "Sounds like plain happiness, missing dominance.",
+      "Screams evenly without the build.",
+      "Gloating version turns cruel."
+    ],
+    "gemini_style": "someone triumphant after finally succeeding, loud, proud and exultant",
+    "refs": [
+      "Cowen2019",
+      "Mehrabian1996",
+      "Artistic"
+    ],
+    "confidence": "medium",
+    "evidence_note": "Triumph is a recognised vocal-burst category (Cowen2019, nonverbal); speech-level profile and Thai notes are craft."
+  },
+  {
+    "id": "selfconscious.embarrassment",
+    "name_en": "Embarrassment",
+    "name_th": "เขิน / อาย (ขายหน้า)",
+    "type": "secondary",
+    "family": "selfconscious",
+    "vad": {
+      "valence": -0.3,
+      "arousal": 0.6,
+      "dominance": 0.2
+    },
+    "meaning": "Brief self-conscious discomfort after a social slip in front of others (wrong name, tripping, glasses on the head).",
+    "speaker_intent": "Smooth over the slip, laugh it off, get attention away from oneself.",
+    "pitch_level": "slightly higher than baseline",
+    "pitch_range": "moderate, with quick nervous rises",
+    "rate": "faster, rushed, sometimes stumbling",
+    "energy": "medium, dropping at the end",
+    "pauses": "a sudden stop after the slip, then rushed talk",
+    "voice_quality": "breathy, a nervous laugh, slightly thin",
+    "breath": "a sharp nervous in-breath; a giggle-exhale",
+    "emphasis": "the slip itself is mumbled; the correction gets quick stress",
+    "thai_note": "Thai embarrassment uses อุ๊ย, แหะๆ, ขอโทษทีครับ, เขินจัง, with a nervous laugh. Rushed speech must still respect tones: in 'ขอโทษที' ขอ (rising), โทษ (falling), ที (mid) — rushing should shorten, not reshape them. Particles get quick and soft (ครับ, นะ).",
+    "examples_th": [
+      "อุ๊ย แว่นอยู่บนหัวผมเองครับ แหะๆ หาตั้งนาน",
+      "ขอโทษค่ะ เรียกชื่อผิด นึกว่าลุงชาญ ฮ่าๆ"
+    ],
+    "examples_en": [
+      "Oh no, they were on my head the whole time. Sorry!"
+    ],
+    "variants": [
+      "Laughing it off: nervous giggle, quick apology.",
+      "Mortified: quiet, rushed, voice shrinking.",
+      "Covering with joke: bright, too fast, laughs at self."
+    ],
+    "ai_mistakes": [
+      "Plays it as shame (heavy and slow) instead of a light flush.",
+      "Fake 'ha ha' read as words.",
+      "Steady confident delivery that ignores the slip.",
+      "Rushing that blurs the tones until words are unclear."
+    ],
+    "gemini_style": "someone embarrassed after a silly mistake, a nervous laugh, rushed and a little breathy",
+    "refs": [
+      "Cowen2019",
+      "BanseScherer1996",
+      "Artistic"
+    ],
+    "confidence": "low",
+    "evidence_note": "Embarrassment is a vocal-burst category in Cowen2019 (nonverbal laughter/sounds); speech profile is craft."
+  },
+  {
+    "id": "selfconscious.shame",
+    "name_en": "Shame",
+    "name_th": "ละอายใจ / อับอาย",
+    "type": "secondary",
+    "family": "selfconscious",
+    "vad": {
+      "valence": -0.75,
+      "arousal": 0.35,
+      "dominance": 0.1
+    },
+    "meaning": "A painful sense that the whole self is bad or exposed, not just one act.",
+    "speaker_intent": "Hide, shrink, admit failure while wanting to disappear.",
+    "pitch_level": "lower than baseline",
+    "pitch_range": "narrow, sinking",
+    "rate": "slow, hesitant, sometimes stopping",
+    "energy": "low, receding, fading at phrase ends",
+    "pauses": "long hesitations before admitting; trailing endings",
+    "voice_quality": "weak, breathy, creaky, unsupported",
+    "breath": "shallow; heavy exhale before the admission",
+    "emphasis": "almost none; the admission word is mumbled rather than stressed",
+    "thai_note": "Shame shrinks the voice; Thai speakers often lower the register, use fewer words and soft ครับ/ค่ะ almost swallowed. Even mumbled, words keep tones: in 'ผมผิดเอง' ผม (rising) and ผิด (low) must stay distinguishable — mumbling is volume and clarity, not a new pitch.",
+    "examples_th": [
+      "ผมทำแว่นของยายหักเองครับ... ไม่กล้าบอกใคร",
+      "หนูโกหกแม่ว่าใส่แว่นทุกวัน... จริงๆ ไม่ได้ใส่ค่ะ"
+    ],
+    "examples_en": [
+      "It was me. I broke her glasses. I didn't tell anyone."
+    ],
+    "variants": [
+      "Shrinking: very quiet, slow, trailing off.",
+      "Choked admission: words forced out, voice breaking.",
+      "Defensive shame: starts with a quick excuse, collapses into a quiet admission."
+    ],
+    "ai_mistakes": [
+      "Plays it as plain sadness, missing the hiding quality.",
+      "Too clear and loud, as if reporting.",
+      "Over-dramatic sobbing.",
+      "Mumbling so much the words are unintelligible."
+    ],
+    "gemini_style": "a young man ashamed, admitting something quietly, slow, low and shrinking",
+    "refs": [
+      "BanseScherer1996",
+      "Artistic"
+    ],
+    "confidence": "low",
+    "evidence_note": "Shame was in Banse & Scherer's set but poorly recognised from voice alone; profile is largely craft."
+  },
+  {
+    "id": "selfconscious.guilt",
+    "name_en": "Guilt",
+    "name_th": "รู้สึกผิด",
+    "type": "secondary",
+    "family": "selfconscious",
+    "vad": {
+      "valence": -0.6,
+      "arousal": 0.45,
+      "dominance": 0.3
+    },
+    "meaning": "Feeling responsible for a specific wrong done to someone; focused on the act and the harm.",
+    "speaker_intent": "Confess, make amends, or carry the weight.",
+    "pitch_level": "slightly lower than baseline",
+    "pitch_range": "narrow to moderate, with heavy falls",
+    "rate": "slow, careful, sometimes halting",
+    "energy": "medium-low, tense",
+    "pauses": "a pause before the confession; pauses around the victim's name",
+    "voice_quality": "tight, slightly breathy",
+    "breath": "heavy breath in before confessing",
+    "emphasis": "the wrong act and 'ผม/หนู' get heavy, sinking stress",
+    "thai_note": "Thai guilt uses ผมผิดเอง, ไม่น่าเลย, ถ้าวันนั้น..., รู้สึกผิด. Heaviness comes from tempo and voice quality: ผิด (low) stays low, น่า (falling) stays falling in 'ไม่น่าเลย'. Particles are kept, but heavy and short (ครับ / ค่ะ). The heavy delivery lowers the pitch level overall; it must not change any word's lexical tone.",
+    "examples_th": [
+      "วันนั้นผมไม่น่าปิดร้านเร็ว ยายเลยต้องรออยู่คนเดียว",
+      "ถ้าหนูพาแม่ไปตรวจตาเร็วกว่านี้ก็คงไม่เป็นแบบนี้ค่ะ"
+    ],
+    "examples_en": [
+      "If I'd taken her in sooner, maybe it wouldn't have happened."
+    ],
+    "variants": [
+      "Confessing: slow, halting, heavy.",
+      "Self-blaming: low monotone, repeating 'ไม่น่าเลย'.",
+      "Guilt hidden under a cheerful voice that cracks once."
+    ],
+    "ai_mistakes": [
+      "Plays it as grief (open sobbing) when the line is about responsibility, not loss.",
+      "Neutral reading with no weight on the wrong act.",
+      "Stresses 'ถ้า' brightly so the conditional sounds hopeful instead of regretful.",
+      "Even pauses everywhere instead of the heavy pause before the confession."
+    ],
+    "gemini_style": "someone weighed down by guilt, confessing slowly, low and halting, blaming themselves",
+    "refs": [
+      "Cowen2019",
+      "Artistic"
+    ],
+    "confidence": "low",
+    "evidence_note": "Guilt appears as a vocal-burst category in Cowen2019 (nonverbal); no speech acoustic data in the key sources; profile is craft."
+  },
+  {
+    "id": "selfconscious.shyness",
+    "name_en": "Shyness",
+    "name_th": "ขี้อาย / เขินอาย",
+    "type": "secondary",
+    "family": "selfconscious",
+    "vad": {
+      "valence": -0.1,
+      "arousal": 0.3,
+      "dominance": 0.15
+    },
+    "meaning": "Social timidity: wanting contact but holding back, especially with strangers or a crush.",
+    "speaker_intent": "Get through the interaction politely without drawing attention.",
+    "pitch_level": "slightly higher, thin, or lower and murmured",
+    "pitch_range": "narrow",
+    "rate": "slower to start, then quick to finish",
+    "energy": "low, soft",
+    "pauses": "hesitation before speaking; ends trail into silence",
+    "voice_quality": "breathy, small, thin",
+    "breath": "small in-breaths; hold before replying",
+    "emphasis": "almost none; the request is said quickly and softly",
+    "thai_note": "Shy Thai uses fillers (เอ่อ, คือ), small polite particles (ครับ/ค่ะ very soft), and indirect requests (ขอ...หน่อยได้มั้ยคะ). A soft voice reduces pitch movement, but tones must remain: ขอ (rising) and หน่อย (low) stay distinguishable.",
+    "examples_th": [
+      "เอ่อ... ขอลองแว่นอันนั้นหน่อยได้มั้ยคะ",
+      "คือ... ผมเอาขนมมาฝากครับ ยายทำเอง"
+    ],
+    "examples_en": [
+      "Um, could I... try those ones? If that's okay."
+    ],
+    "variants": [
+      "Soft and small: quiet, hesitant.",
+      "Blushing smile: shy laugh.",
+      "Shy rush: hesitates, then rushes the line out."
+    ],
+    "ai_mistakes": [
+      "Plays it as fear, with trembling and fast breathing.",
+      "Normal loudness and confident pacing that contradict the fillers.",
+      "Reads เอ่อ / คือ as full stressed words instead of soft hesitations.",
+      "Whispered so softly that Thai tones are lost."
+    ],
+    "gemini_style": "a shy young woman asking a stranger for something, soft, hesitant and a little breathy, with a small embarrassed smile",
+    "refs": [
+      "Artistic"
+    ],
+    "confidence": "low",
+    "evidence_note": "No direct acoustic study of shyness in the key sources; entirely craft."
+  },
+  {
+    "id": "regret.regret",
+    "name_en": "Regret",
+    "name_th": "เสียดาย / เสียใจภายหลัง",
+    "type": "secondary",
+    "family": "regret",
+    "vad": {
+      "valence": -0.55,
+      "arousal": 0.3,
+      "dominance": 0.35
+    },
+    "meaning": "Wishing a past choice had been different; looking back at a missed chance.",
+    "speaker_intent": "Reflect on what could have been; warn others not to repeat it.",
+    "pitch_level": "slightly lower than baseline",
+    "pitch_range": "narrow to moderate, with a wistful fall on 'if only'",
+    "rate": "slow, reflective",
+    "energy": "low-medium",
+    "pauses": "a reflective pause after 'ถ้า...' and before the lost outcome",
+    "voice_quality": "soft, slightly breathy, with a sigh-like quality",
+    "breath": "a sigh before or after the line",
+    "emphasis": "the missed action (ไม่ได้, น่าจะ, ตอนนั้น) gets wistful lengthening",
+    "thai_note": "Thai regret: เสียดายจัง, รู้งี้..., น่าจะ...ตั้งแต่แรก, ตอนนั้น. The wistful fall sits at the end of the clause; น่าจะ keeps น่า falling and จะ low; รู้งี้ keeps รู้ high. Don't let the sigh pull high-tone words down into falls.",
+    "examples_th": [
+      "รู้งี้ผมน่าจะถ่ายรูปกับยายไว้เยอะๆ ตอนยายยังอยู่",
+      "เสียดายค่ะ ไม่ได้ตรวจตาตั้งแต่ตอนเด็ก ตอนนี้สายตาสั้นเยอะแล้ว"
+    ],
+    "examples_en": [
+      "If only I'd taken more photos with her while I could."
+    ],
+    "variants": [
+      "Wistful: soft sigh, slow, a faint sad smile.",
+      "Bitter regret: harder edge, short laugh at oneself.",
+      "Advice-giving regret: warmer, turned outward ('อย่าเป็นแบบผมนะ')."
+    ],
+    "ai_mistakes": [
+      "Plays it as grief with crying.",
+      "Reads 'รู้งี้' brightly, as a casual remark.",
+      "Uniform sad tone with no lift-and-fall on the 'if only' clause."
+    ],
+    "gemini_style": "someone gently regretting a missed chance, slow, soft and wistful with a sigh",
+    "refs": [
+      "Artistic"
+    ],
+    "confidence": "low",
+    "evidence_note": "Regret is not a measured category in the key acoustic studies; profile built from sadness tendencies plus craft."
+  },
+  {
+    "id": "regret.remorse_apology",
+    "name_en": "Remorse / sincere apology",
+    "name_th": "สำนึกผิด / ขอโทษจากใจ",
+    "type": "social",
+    "family": "regret",
+    "vad": {
+      "valence": -0.55,
+      "arousal": 0.4,
+      "dominance": 0.2
+    },
+    "meaning": "Sincere sorrow for harm caused to someone, expressed as an apology that seeks forgiveness.",
+    "speaker_intent": "Apologise sincerely, take responsibility, repair the relationship.",
+    "pitch_level": "slightly lower than baseline",
+    "pitch_range": "narrow; soft falls, no defensive rises",
+    "rate": "slow, careful, unhurried on 'ขอโทษ'",
+    "energy": "low-medium, soft but clear",
+    "pauses": "a pause before 'ขอโทษ'; a pause after it to let it land",
+    "voice_quality": "soft, slightly breathy, sincere, no edge",
+    "breath": "an audible breath before the apology",
+    "emphasis": "'ขอโทษ' and the admission of the specific wrong get weight; excuses are absent",
+    "thai_note": "Thai apology scales with politeness: ขอโทษครับ/ค่ะ, ขอโทษจริงๆ นะครับ, ขอโทษที่..., ผมผิดเอง; to elders, the voice lowers and slows (BrownLevinson1987 frames this as negative politeness). ขอโทษ keeps ขอ rising and โทษ falling even when said very softly; a rushed or bright 'ขอโทษค่ะ' sounds like a service formula, not remorse. Softness lowers pitch level and loudness only; lexical tones stay intact.",
+    "examples_th": [
+      "ขอโทษจริงๆ นะครับลุง ผมใส่เลนส์ผิดข้างให้ลุงเอง",
+      "ขอโทษนะคะยาย ที่ไม่ได้มาหาตั้งนาน"
+    ],
+    "examples_en": [
+      "I'm sorry. I fitted the wrong lens. That was my fault."
+    ],
+    "variants": [
+      "Sincere and steady: soft, clear, takes responsibility.",
+      "Choked apology: voice breaks on 'ขอโทษ'.",
+      "Formal service apology to a customer: polite, calm, but warm and genuine."
+    ],
+    "ai_mistakes": [
+      "Reads 'ขอโทษค่ะ' quickly and brightly like a call-centre script.",
+      "Defensive rising tone that sounds like an excuse.",
+      "Over-emotional sobbing for a small mistake.",
+      "No pause after the apology, so it doesn't land."
+    ],
+    "gemini_style": "a young optician sincerely apologising to an old customer, soft, slow and taking responsibility",
+    "refs": [
+      "BrownLevinson1987",
+      "Artistic"
+    ],
+    "confidence": "low",
+    "evidence_note": "Politeness framing from BrownLevinson1987; no acoustic study of apology/remorse in the key sources; craft."
+  },
+  {
+    "id": "sadness.disappointment",
+    "name_en": "Disappointment",
+    "name_th": "ผิดหวัง",
+    "type": "secondary",
+    "family": "sadness",
+    "vad": {
+      "valence": -0.5,
+      "arousal": 0.35,
+      "dominance": 0.35
+    },
+    "meaning": "Sadness when an expected good outcome doesn't happen.",
+    "speaker_intent": "Register the letdown; sometimes hide it politely.",
+    "pitch_level": "starts at baseline, sinks lower",
+    "pitch_range": "a falling arc from hope to letdown",
+    "rate": "slows after the letdown",
+    "energy": "fades from medium to low",
+    "pauses": "a deflating pause after the bad news word",
+    "voice_quality": "deflated, slightly breathy, sagging",
+    "breath": "a deflating exhale (a small 'อ้อ' or 'เหรอ')",
+    "emphasis": "the expected thing gets a hopeful start then a sinking end",
+    "thai_note": "Thai disappointment: อ้าว, เหรอ..., นึกว่า..., ไม่เป็นไร (as a brave mask). The deflating fall is across the phrase: in 'ไม่เป็นไรครับ' ไม่ stays falling and เป็น/ไร stay mid; a polite mask is a quieter, slightly flat version, not a cheerful one. The sinking arc is overall pitch level dropping across the phrase; each word's lexical tone remains.",
+    "examples_th": [
+      "อ้าว แว่นรุ่นนั้นหมดแล้วเหรอครับ... ไม่เป็นไรครับ",
+      "นึกว่าวันนี้ลูกจะมาหา... ไม่มาเหรอ"
+    ],
+    "examples_en": [
+      "Oh. It's sold out? ...No, it's fine."
+    ],
+    "variants": [
+      "Deflating: hopeful start, sinking end.",
+      "Polite mask: 'ไม่เป็นไร' said quietly, a small flat smile.",
+      "Open disappointment: sigh, longer sagging line."
+    ],
+    "ai_mistakes": [
+      "Reads 'ไม่เป็นไร' cheerfully when it should be a brave mask.",
+      "Plays it as grief.",
+      "No deflation contour; flat from start to end."
+    ],
+    "gemini_style": "someone quietly disappointed, starting hopeful and deflating, hiding it politely",
+    "refs": [
+      "Cowen2019",
+      "Artistic"
+    ],
+    "confidence": "low",
+    "evidence_note": "Disappointment is a vocal-burst category in Cowen2019; speech profile is craft."
+  },
+  {
+    "id": "anger.resentment",
+    "name_en": "Resentment",
+    "name_th": "ขุ่นเคือง / น้อยใจสะสม",
+    "type": "secondary",
+    "family": "anger",
+    "vad": {
+      "valence": -0.6,
+      "arousal": 0.4,
+      "dominance": 0.45
+    },
+    "meaning": "Lingering anger over past unfair treatment; bitterness held for a long time.",
+    "speaker_intent": "Let the other person know the hurt is remembered; push back indirectly.",
+    "pitch_level": "slightly lower than baseline",
+    "pitch_range": "narrow, with tight, clipped falls",
+    "rate": "slow and pointed, or curt",
+    "energy": "medium-low, tight",
+    "pauses": "loaded pauses before the jab",
+    "voice_quality": "tight, slightly creaky, cool",
+    "breath": "a controlled exhale through the nose",
+    "emphasis": "the old grievance word (ทุกที, ตลอด, เสมอ) gets bitter weight",
+    "thai_note": "Thai resentment often comes indirectly: ก็ได้, ตามสบาย, ทุกทีแหละ, ไม่เป็นไรหรอก (bitter). The bitterness is in voice quality and slowed delivery, not tone: หรอก keeps its low tone; ตลอด keeps its low-low shape. Particles used curtly (ครับ. / ค่ะ.).",
+    "examples_th": [
+      "ไม่เป็นไรหรอกครับ ผมชินแล้ว ร้านผมโดนลืมทุกที",
+      "ก็ได้ค่ะ ตามสบาย เหมือนทุกครั้งนั่นแหละ"
+    ],
+    "examples_en": [
+      "It's fine. I'm used to being forgotten."
+    ],
+    "variants": [
+      "Bitter politeness: polite words, cold and slow.",
+      "Simmering: low, tight, almost muttered.",
+      "Leaking: calm, then one word bursts sharper."
+    ],
+    "ai_mistakes": [
+      "Plays it as hot anger.",
+      "Reads 'ไม่เป็นไร' as genuine.",
+      "Sarcasm too sing-song and playful."
+    ],
+    "gemini_style": "someone quietly bitter about being treated unfairly for years, cool, tight and pointed",
+    "refs": [
+      "CheangPell2008",
+      "Artistic"
+    ],
+    "confidence": "low",
+    "evidence_note": "No direct acoustic data; slow/low pattern resembles sarcasm findings in English (CheangPell2008), which may not transfer to Thai; craft."
+  },
+  {
+    "id": "social.jealousy",
+    "name_en": "Jealousy",
+    "name_th": "หึง",
+    "type": "social",
+    "family": "social",
+    "vad": {
+      "valence": -0.6,
+      "arousal": 0.6,
+      "dominance": 0.4
+    },
+    "meaning": "Fear of losing someone's attention or love to a rival.",
+    "speaker_intent": "Guard the relationship; probe or accuse.",
+    "pitch_level": "slightly higher, tight",
+    "pitch_range": "moderate, edgy",
+    "rate": "uneven; quick probing questions",
+    "energy": "medium, tense",
+    "pauses": "suspicious pauses before the question",
+    "voice_quality": "tight, slightly nasal or clipped",
+    "breath": "short, tense breaths",
+    "emphasis": "the rival's name and 'ใคร' get pointed stress",
+    "thai_note": "Thai jealousy uses ใคร, คุยกับใคร, สนิทกันเหรอ, งอน-style particles (ไม่ต้องมาเลย, ก็ไปสิ). The pointed lift goes on question particles; ใคร (mid) shouldn't be pushed to rising. Tension changes voice quality and pitch level, not lexical tones.",
+    "examples_th": [
+      "ลูกค้าผู้หญิงเมื่อกี้ใครเหรอ คุยนานจังนะ",
+      "ยายจันเอ็นดูลุงชาญมากกว่าผมอีกนะครับ"
+    ],
+    "examples_en": [
+      "Who was that? You talked to her for a long time."
+    ],
+    "variants": [
+      "Probing: casual words, tense undertone.",
+      "Sulky jealousy (งอน): pouty, slower, flat ending.",
+      "Accusing: sharper, faster."
+    ],
+    "ai_mistakes": [
+      "Plays it as plain hot anger, losing the insecurity underneath.",
+      "Reads the casual-sounding question genuinely casually, with no tense undertone.",
+      "Cartoonish whining for an adult character.",
+      "Rising question contour spread over the whole sentence instead of the final particle."
+    ],
+    "gemini_style": "someone jealous trying to sound casual but tense underneath, probing with a tight voice",
+    "refs": [
+      "Artistic"
+    ],
+    "confidence": "low",
+    "evidence_note": "No acoustic studies of jealousy in the key sources; entirely craft."
+  },
+  {
+    "id": "social.envy",
+    "name_en": "Envy",
+    "name_th": "อิจฉา",
+    "type": "social",
+    "family": "social",
+    "vad": {
+      "valence": -0.5,
+      "arousal": 0.45,
+      "dominance": 0.3
+    },
+    "meaning": "Wanting what someone else has (their shop, their eyesight, their luck), often with a sting of inferiority.",
+    "speaker_intent": "Voice the want; sometimes belittle the other to feel better.",
+    "pitch_level": "at or slightly lower than baseline",
+    "pitch_range": "narrow to moderate, with a sour scoop on the compliment",
+    "rate": "slightly slow, drawn out on what the other has",
+    "energy": "medium-low",
+    "pauses": "a sour pause before the backhanded part",
+    "voice_quality": "slightly nasal or tight; a forced smile-voice when hiding it",
+    "breath": "a small sigh or 'ชิ' / 'เฮอะ' exhale",
+    "emphasis": "the coveted thing (ร้านใหญ่, ตาดี, โชคดี) gets a lengthened, sour stress",
+    "thai_note": "Thai envy: อิจฉาจัง, ดีจังนะ (sour), โชคดีจริงๆ เลยนะ, ชิ. Openly playful envy is common and friendly in Thai; bitter envy is quieter and tighter. The sour scoop belongs on the particle (นะ, เนอะ); ดี stays mid and โชค stays falling. The sourness is voice quality and phrase melody; lexical tones stay unchanged.",
+    "examples_th": [
+      "ร้านฝั่งตรงข้ามลูกค้าเต็มทุกคืนเลยนะครับ ดีจังเนอะ",
+      "อิจฉาคนตาดีจังค่ะ ไม่ต้องใส่แว่นก็เห็นชัด"
+    ],
+    "examples_en": [
+      "Must be nice, having a queue out the door every night."
+    ],
+    "variants": [
+      "Playful envy: smiling, light, friendly teasing ('อิจฉาอะ').",
+      "Sour envy: forced compliment, tight voice.",
+      "Wistful envy: soft, sad, wishing rather than resenting."
+    ],
+    "ai_mistakes": [
+      "Plays it as jealousy (fear of loss) instead of wanting what another has.",
+      "Reads 'ดีจังเนอะ' as sincere praise, missing the sour edge.",
+      "Too aggressive, sounding like contempt.",
+      "No difference between playful and bitter envy."
+    ],
+    "gemini_style": "someone quietly envious, complimenting a rival with a forced smile and a sour edge",
+    "refs": [
+      "Artistic"
+    ],
+    "confidence": "low",
+    "evidence_note": "No acoustic study of envy in the key sources; entirely craft."
+  },
+  {
+    "id": "sadness.loneliness",
+    "name_en": "Loneliness",
+    "name_th": "เหงา",
+    "type": "secondary",
+    "family": "sadness",
+    "vad": {
+      "valence": -0.6,
+      "arousal": 0.2,
+      "dominance": 0.25
+    },
+    "meaning": "Painful sense of being alone or disconnected, even among people (an empty shop at 2 am, an old man who lives alone).",
+    "speaker_intent": "Voice the emptiness; sometimes reach out without saying it directly.",
+    "pitch_level": "slightly lower than baseline",
+    "pitch_range": "narrow, small falls",
+    "rate": "slow, with long lingering vowels",
+    "energy": "low, soft, small in the space",
+    "pauses": "long empty pauses, as if waiting for an answer that doesn't come",
+    "voice_quality": "soft, breathy, a little hollow",
+    "breath": "quiet exhales; the breath is part of the silence",
+    "emphasis": "words of absence (คนเดียว, ไม่มีใคร, เงียบ) lengthened softly",
+    "thai_note": "Thai loneliness: เหงา, อยู่คนเดียว, ไม่มีใครเลย, เงียบจัง, with a trailing นะ or เนอะ that seems to ask an empty room. Narrow, soft register, but เหงา keeps its rising tone and เงียบ its falling tone; don't let them collapse into a flat murmur.",
+    "examples_th": [
+      "ตีสองแล้ว ร้านเงียบจัง... ไม่มีใครคุยด้วยเลยนะ",
+      "ลุงอยู่คนเดียวมาตั้งแต่ป้าไป กินข้าวคนเดียวทุกวันครับ"
+    ],
+    "examples_en": [
+      "It's two a.m. Just me and the ticking clock."
+    ],
+    "variants": [
+      "Quiet emptiness: soft, slow, long pauses.",
+      "Brave loneliness: casual words, slight laugh, sadness underneath.",
+      "Reaching out: soft question to someone (or a ghost) who may be listening."
+    ],
+    "ai_mistakes": [
+      "Plays it as grief with crying.",
+      "Sounds bored instead of aching.",
+      "Pauses removed, losing the empty space.",
+      "Too dramatic for a quiet everyday feeling."
+    ],
+    "gemini_style": "a lonely man alone in a quiet shop at night, soft, slow and a little hollow",
+    "refs": [
+      "Artistic"
+    ],
+    "confidence": "low",
+    "evidence_note": "No direct acoustic study of loneliness in the key sources; built from sadness tendencies plus craft."
+  }
+]

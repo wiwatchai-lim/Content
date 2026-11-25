@@ -1,0 +1,164 @@
+{
+ "schema_version": "1.0",
+ "project": "night-optic EP01 (retro-analysis of the existing takes)",
+ "scene": {
+  "id": "EP01",
+  "location": "old wooden optician shop by a canal, 2 a.m.",
+  "acoustic_space": "small_room",
+  "situation": "a ghost grandma asks Ton to fix her glasses"
+ },
+ "characters": [
+  {
+   "id": "narrator_th",
+   "voice_by_provider": {
+    "gemini": "Charon"
+   }
+  }
+ ],
+ "lines": [
+  {
+   "id": "L01",
+   "character": "narrator_th",
+   "language": "th",
+   "text": "ร้านแว่นของปู่… ปิดมาสิบปี จนคืนที่ผมย้ายเข้ามาอยู่",
+   "emotion": {
+    "primary": "performance.storyteller_warmth",
+    "intensity": 0.4
+   },
+   "direction": "retro-annotation: what this line needed (EP01 was read by one narrator voice for all characters)",
+   "prosody": {
+    "pitch_baseline": "baseline",
+    "rate": "baseline",
+    "ending": "fall"
+   }
+  },
+  {
+   "id": "L03",
+   "character": "narrator_th",
+   "language": "th",
+   "text": "คืนแรก ตีสองตรง… กระดิ่งหน้าร้านดังขึ้น",
+   "emotion": {
+    "primary": "performance.eerie_calm",
+    "intensity": 0.5
+   },
+   "direction": "retro-annotation: what this line needed (EP01 was read by one narrator voice for all characters)",
+   "prosody": {
+    "pitch_baseline": "baseline",
+    "rate": "baseline",
+    "ending": "fall"
+   }
+  },
+  {
+   "id": "L06",
+   "character": "jan",
+   "language": "th",
+   "text": "พ่อหนุ่ม… ร้านเปิดอยู่ไหมจ๊ะ",
+   "emotion": {
+    "primary": "love.tenderness",
+    "intensity": 0.4
+   },
+   "direction": "retro-annotation: what this line needed (EP01 was read by one narrator voice for all characters)",
+   "prosody": {
+    "pitch_baseline": "slightly_higher",
+    "rate": "slow",
+    "ending": "soft_fall"
+   }
+  },
+  {
+   "id": "L07",
+   "character": "ton",
+   "language": "th",
+   "text": "ปิดแล้วครับยาย… เอ่อ ยายเข้ามาได้ยังไงครับ",
+   "emotion": {
+    "primary": "fear.anxiety",
+    "intensity": 0.6
+   },
+   "direction": "retro-annotation: what this line needed (EP01 was read by one narrator voice for all characters)",
+   "prosody": {
+    "pitch_baseline": "slightly_higher",
+    "rate": "baseline",
+    "ending": "soft_fall"
+   }
+  },
+  {
+   "id": "L09",
+   "character": "jan",
+   "language": "th",
+   "text": "ยายอ่านจดหมายไม่ออกมาหลายปีแล้ว… ช่วยยายหน่อยนะ",
+   "emotion": {
+    "primary": "care.pleading",
+    "intensity": 0.5
+   },
+   "direction": "retro-annotation: what this line needed (EP01 was read by one narrator voice for all characters)",
+   "prosody": {
+    "pitch_baseline": "slightly_higher",
+    "rate": "slow",
+    "ending": "soft_fall"
+   }
+  },
+  {
+   "id": "L16",
+   "character": "narrator_th",
+   "language": "th",
+   "text": "แม่ครับ ผมได้งานแล้ว ปีใหม่นี้ผมจะกลับบ้าน",
+   "emotion": {
+    "primary": "nostalgia.longing",
+    "intensity": 0.5
+   },
+   "direction": "retro-annotation: what this line needed (EP01 was read by one narrator voice for all characters)",
+   "prosody": {
+    "pitch_baseline": "baseline",
+    "rate": "baseline",
+    "ending": "fall"
+   }
+  },
+  {
+   "id": "L18",
+   "character": "jan",
+   "language": "th",
+   "text": "ขอบใจนะพ่อหนุ่ม… ค่าแว่น ยายฝากไว้ในสมุดของปู่แล้ว",
+   "emotion": {
+    "primary": "social.gratitude",
+    "intensity": 0.5
+   },
+   "direction": "retro-annotation: what this line needed (EP01 was read by one narrator voice for all characters)",
+   "prosody": {
+    "pitch_baseline": "slightly_higher",
+    "rate": "slow",
+    "ending": "soft_fall"
+   }
+  },
+  {
+   "id": "L22",
+   "character": "narrator_th",
+   "language": "th",
+   "text": "คุณยายจันทร์ แว่นกรอบทอง ยังไม่ได้มารับ ปีสองห้าหนึ่งเก้า",
+   "emotion": {
+    "primary": "performance.eerie_calm",
+    "intensity": 0.4
+   },
+   "direction": "retro-annotation: what this line needed (EP01 was read by one narrator voice for all characters)",
+   "prosody": {
+    "pitch_baseline": "baseline",
+    "rate": "baseline",
+    "ending": "fall"
+   }
+  },
+  {
+   "id": "L25",
+   "character": "chan",
+   "language": "th",
+   "text": "ผมตามหาบ้านของแม่มาสี่สิบปี… ใช่ที่นี่ไหมครับ",
+   "emotion": {
+    "primary": "nostalgia.longing",
+    "intensity": 0.6
+   },
+   "direction": "retro-annotation: what this line needed (EP01 was read by one narrator voice for all characters)",
+   "prosody": {
+    "pitch_baseline": "lower",
+    "rate": "slow",
+    "ending": "rise"
+   }
+  }
+ ]
+}

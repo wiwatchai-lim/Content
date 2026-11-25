@@ -1,0 +1,60 @@
+{
+ "model": "gemini-3.1-flash-tts-preview",
+ "mode": "prompt",
+ "requests": [
+  {
+   "line": "L01",
+   "voice": "Charon",
+   "prompt": "Character: warm storyteller, calm, intimate (story-clips); age 30–45. Situation: a ghost grandma asks Ton to fix her glasses. Direction: retro-annotation: what this line needed (EP01 was read by one narrator voice for all characters). Feeling: warm storyteller — voice warm, rounded, relaxed smile; energy medium, warm; pace moderate and varied: slower at suspense, quicker in action. Voice: finishing each sentence with a clear fall. Natural Central Thai; keep every word's tone; final particles light and short; unreleased final stops.\nRead only the words after the colon, nothing else:\nร้านแว่นของปู่… ปิดมาสิบปี จนคืนที่ผมย้ายเข้ามาอยู่",
+   "chars": 640
+  },
+  {
+   "line": "L03",
+   "voice": "Charon",
+   "prompt": "Character: warm storyteller, calm, intimate (story-clips); age 30–45. Situation: a ghost grandma asks Ton to fix her glasses. Direction: retro-annotation: what this line needed (EP01 was read by one narrator voice for all characters). Feeling: eerie calm — voice soft, smooth, a little breathy; no tension; energy low and constant; pace slow and perfectly even. Voice: finishing each sentence with a clear fall. Natural Central Thai; keep every word's tone; final particles light and short; unreleased final stops.\nRead only the words after the colon, nothing else:\nคืนแรก ตีสองตรง… กระดิ่งหน้าร้านดังขึ้น",
+   "chars": 605
+  },
+  {
+   "line": "L06",
+   "voice": "Vindemiatrix",
+   "prompt": "Character: gentle, patient, a little sad, loving; a ghost who is never scary on purpose; age ~80; breathiness + a slight age tremor (low, not wobbly); never echo/robotic \"ghost\" effects in the TTS — reverb is added in the mix only if the scene calls for it. Situation: a ghost grandma asks Ton to fix her glasses. Direction: retro-annotation: what this line needed (EP01 was read by one narrator voice for all characters). Feeling: tenderness — voice breathy, warm, soft; energy low, soft onsets; pace slow, gentle. Voice: a slightly higher voice, slowly, letting the end fall softly. Natural Central Thai; keep every word's tone; final particles light and short; unreleased final stops.\nRead only the words after the colon, nothing else:\nพ่อหนุ่ม… ร้านเปิดอยู่ไหมจ๊ะ",
+   "chars": 767
+  },
+  {
+   "line": "L07",
+   "voice": "Puck",
+   "prompt": "Character: kind, conscientious, a bit timid at night, curious; hides fear with politeness; grandson who inherited the shop; age 26–30; slightly breathy soft onsets; smiles audibly when he is relieved. Situation: a ghost grandma asks Ton to fix her glasses. Direction: retro-annotation: what this line needed (EP01 was read by one narrator voice for all characters). Feeling: anxiety — voice tight throat, slightly breathy, thin; energy medium-low, tight; pace slightly fast, with stops and restarts. Voice: a slightly higher voice, letting the end fall softly. Natural Central Thai; keep every word's tone; final particles light and short; unreleased final stops.\nRead only the words after the colon, nothing else:\nปิดแล้วครับยาย… เอ่อ ยายเข้ามาได้ยังไงครับ",
+   "chars": 757
+  },
+  {
+   "line": "L09",
+   "voice": "Vindemiatrix",
+   "prompt": "Character: gentle, patient, a little sad, loving; a ghost who is never scary on purpose; age ~80; breathiness + a slight age tremor (low, not wobbly); never echo/robotic \"ghost\" effects in the TTS — reverb is added in the mix only if the scene calls for it. Situation: a ghost grandma asks Ton to fix her glasses. Direction: retro-annotation: what this line needed (EP01 was read by one narrator voice for all characters). Feeling: pleading — voice breathy, whiny or cracking; energy medium-high, straining; pace variable: fast rush then drawn-out key word. Voice: a slightly higher voice, slowly, letting the end fall softly. Natural Central Thai; keep every word's tone; final particles light and short; unreleased final stops.\nRead only the words after the colon, nothing else:\nยายอ่านจดหมายไม่ออกมาหลายปีแล้ว… ช่วยยายหน่อยนะ",
+   "chars": 828
+  },
+  {
+   "line": "L16",
+   "voice": "Charon",
+   "prompt": "Character: warm storyteller, calm, intimate (story-clips); age 30–45. Situation: a ghost grandma asks Ton to fix her glasses. Direction: retro-annotation: what this line needed (EP01 was read by one narrator voice for all characters). Feeling: longing — voice breathy, occasionally thin; a slight catch possible on the name; energy low-medium, swelling slightly on the name or object of longing; pace slow, drawn-out key vowels. Voice: finishing each sentence with a clear fall. Natural Central Thai; keep every word's tone; final particles light and short; unreleased final stops.\nRead only the words after the colon, nothing else:\nแม่ครับ ผมได้งานแล้ว ปีใหม่นี้ผมจะกลับบ้าน",
+   "chars": 675
+  },
+  {
+   "line": "L18",
+   "voice": "Vindemiatrix",
+   "prompt": "Character: gentle, patient, a little sad, loving; a ghost who is never scary on purpose; age ~80; breathiness + a slight age tremor (low, not wobbly); never echo/robotic \"ghost\" effects in the TTS — reverb is added in the mix only if the scene calls for it. Situation: a ghost grandma asks Ton to fix her glasses. Direction: retro-annotation: what this line needed (EP01 was read by one narrator voice for all characters). Feeling: gratitude — voice warm, open, slightly breathy if moved; energy medium-low, sincere; pace medium to slow, the thanks itself unhurried. Voice: a slightly higher voice, slowly, letting the end fall softly. Natural Central Thai; keep every word's tone; final particles light and short; unreleased final stops.\nRead only the words after the colon, nothing else:\nขอบใจนะพ่อหนุ่ม… ค่าแว่น ยายฝากไว้ในสมุดของปู่แล้ว",
+   "chars": 840
+  },
+  {
+   "line": "L22",
+   "voice": "Charon",
+   "prompt": "Character: warm storyteller, calm, intimate (story-clips); age 30–45. Situation: a ghost grandma asks Ton to fix her glasses. Direction: retro-annotation: what this line needed (EP01 was read by one narrator voice for all characters). Feeling: eerie calm — voice soft, smooth, a little breathy; no tension; energy low and constant; pace slow and perfectly even. Voice: finishing each sentence with a clear fall. Natural Central Thai; keep every word's tone; final particles light and short; unreleased final stops.\nRead only the words after the colon, nothing else:\nคุณยายจันทร์ แว่นกรอบทอง ยังไม่ได้มารับ ปีสองห้าหนึ่งเก้า",
+   "chars": 623
+  },
+  {
+   "line": "L25",
+   "voice": "Algenib",
+   "prompt": "Character: gruff on the outside, sentimental inside; plain-spoken; age 60–70; slightly rough (harsh/creaky at phrase ends), chest resonance. Situation: a ghost grandma asks Ton to fix her glasses. Direction: retro-annotation: what this line needed (EP01 was read by one narrator voice for all characters). Feeling: longing — voice breathy, occasionally thin; a slight catch possible on the name; energy low-medium, swelling slightly on the name or object of longing; pace slow, drawn-out key vowels. Voice: a lower voice than usual, slowly, a questioning lift at the end. Natural Central Thai; keep every word's tone; final particles light and short; unreleased final stops.\nRead only the words after the colon, nothing else:\nผมตามหาบ้านของแม่มาสี่สิบปี… ใช่ที่นี่ไหมครับ",
+   "chars": 771
+  }
+ ]
+}

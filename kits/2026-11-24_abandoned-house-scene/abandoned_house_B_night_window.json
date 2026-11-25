@@ -1,0 +1,116 @@
+{
+ "schema_version": "1.0",
+ "id": "abandoned_house_B_night_window",
+ "intent": {
+  "purpose": "story_frame",
+  "audience": "Thai viewers of drama/story clips, phone and TV",
+  "message": "An old abandoned Thai wooden house that nobody has entered for years — something is waiting inside.",
+  "scene_objective": "establishing shot of the haunted location",
+  "subtext": "a family's past left behind",
+  "constraints": [
+   "no people",
+   "no text",
+   "empty plate for characters and subtitles later"
+  ]
+ },
+ "format": {
+  "aspect": "16:9",
+  "width": 1360,
+  "height": 768,
+  "text_layer": "html_overlay"
+ },
+ "direction": {
+  "emotion": "fear.dread",
+  "emotion_intensity": 0.7,
+  "style": "cinematic_realism",
+  "visual_metaphor": "one window is still awake",
+  "mood_words": [
+   "eerie",
+   "silent",
+   "forgotten"
+  ]
+ },
+ "blueprint": {
+  "composition": "frame_within_frame",
+  "primary_focal_point": {
+   "what": "an old abandoned traditional Thai teak house on tall stilts at night, one upstairs window glowing with faint warm candle light, the rest of the house black and rotting, vines on the walls",
+   "where": "centre",
+   "how_emphasised": "the glowing window is the only warm point in a cold dark frame"
+  },
+  "viewing_path": [
+   "glowing upstairs window",
+   "dark stairs under the house",
+   "overgrown path in the foreground"
+  ],
+  "balance": "symmetrical",
+  "subject_placement": "the house in the centre, framed by dark overhanging tree branches on both sides",
+  "depth_layers": {
+   "foreground": "tall wild grass and a cracked brick path, a rusty fallen gate",
+   "midground": "the stilt house and a dead banana tree",
+   "background": "tall trees fading into thick grey-blue fog"
+  },
+  "negative_space": "a heavy cloudy night sky above the roof",
+  "camera": {
+   "shot_size": "wide",
+   "angle": "low",
+   "lens_mm": 28,
+   "depth_of_field": "deep"
+  },
+  "value_plan": "low key: almost everything deep blue-black, one small warm window"
+ },
+ "palette": {
+  "id": "pal.emo_fear_cold_shadow",
+  "temperature": "warm_cool_contrast"
+ },
+ "lighting": {
+  "id": "blue_hour",
+  "key_direction": "cold blue night light from a cloudy sky behind the house",
+  "quality": "soft",
+  "color_temperature_k": 9000,
+  "notes": "exactly one small upstairs window glows faint warm orange; every other window is black"
+ },
+ "environment": "a rural village in central Thailand at dusk, the house deep in an overgrown garden",
+ "prompt": {
+  "provider": "flux_local",
+  "steps": 4,
+  "seed": 31,
+  "avoid": "The scene is completely empty of people and animals; the image has no letters or signs",
+  "init_image": "kits/2026-11-24_abandoned-house-scene/abandoned_house_B_night_window-2.png",
+  "denoise": 0.55
+ },
+ "critique": [
+  {
+   "area": "art_style",
+   "where": "house roof",
+   "problem": "roof is a plain hip roof — less recognisably Thai than A",
+   "severity": "minor",
+   "likely_cause": "B kept its v1 layout (img2img/post-fix route)",
+   "fix": "regenerate B with the Thai-house wording from A",
+   "side_effects": "new layout to check"
+  },
+  {
+   "area": "artifacts",
+   "where": "right window (x 0.68, y 0.32)",
+   "problem": "second lit window was darkened in post; edge looks slightly flat at full size",
+   "severity": "polish",
+   "fix": "accept for video at speed, or regenerate",
+   "side_effects": "none"
+  }
+ ],
+ "score": {
+  "weights_profile": "story_frame",
+  "criteria": {
+   "composition": 7,
+   "color_harmony": 8,
+   "lighting": 8,
+   "visual_hierarchy": 9,
+   "emotional_impact": 8,
+   "storytelling": 8,
+   "art_style": 7,
+   "technical_accuracy": 7,
+   "originality": 6,
+   "finishing": 7
+  },
+  "rater": "claude (provisional AI judgement, no viewer test)"
+ }
+}

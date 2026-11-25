@@ -1,0 +1,448 @@
+{
+ "generated_by": "_build/merge_errors.py",
+ "note": "Generated index - edit the source files, then re-run.",
+ "count": 49,
+ "errors": [
+  {
+   "id": "FE01",
+   "area": "value/edge/shape",
+   "name": "Mud: everything mid-value",
+   "symptom": "Image looks grey and flat; nothing pops at thumbnail size.",
+   "detect": "form_check: mid group > 60% and thumb32_rms < 0.08; L p2-p98 span < 0.30 without an intended compressed style.",
+   "fix": "Re-plan notan; push one group darker/lighter; add full-range accents at the focal area.",
+   "source_file": "form_errors.json"
+  },
+  {
+   "id": "FE02",
+   "area": "value/edge/shape",
+   "name": "Spotty notan (scattered values)",
+   "symptom": "Many small darks/lights everywhere; eye jumps around.",
+   "detect": "Count connected components of the dark mask > 0.5% of the area: many (> 8, derived) with no component > 20% of the dark area.",
+   "fix": "Weld adjacent similar values into one mass; remove or lighten small darks away from focal.",
+   "source_file": "form_errors.json"
+  },
+  {
+   "id": "FE03",
+   "area": "value/edge/shape",
+   "name": "Competing focal contrast",
+   "symptom": "A bright window, sign or text block outshouts the glasses.",
+   "detect": "form_check with ROI=focal: focal_share_top5_contrast < 2 x focal_area_share; saliency peak outside the focal ROI in analyze_image overlay.",
+   "fix": "Compress/dim the competitor (HTML filter, vignette), raise contrast at focal, or crop.",
+   "source_file": "form_errors.json"
+  },
+  {
+   "id": "FE04",
+   "area": "value/edge/shape",
+   "name": "Equiluminant hero",
+   "symptom": "Subject differs from ground only by hue; shimmers or vanishes in greyscale.",
+   "detect": "deltaL_focal_vs_surround < 0.05 while hue/chroma differ strongly; subject not visible in greyscale 64 px.",
+   "fix": "Separate by value (>= 0.10, hero >= 0.26 OKLab L); keep the hue idea but shift lightness.",
+   "source_file": "form_errors.json"
+  },
+  {
+   "id": "FE05",
+   "area": "value/edge/shape",
+   "name": "Clipped highlights / crushed shadows",
+   "symptom": "White blobs with no detail on lenses or skin; black holes in shadows.",
+   "detect": "analyze_image: clipped_highlights_pct > 0.5 (excluding tiny speculars) or crushed_shadows_pct > 2 when not intended.",
+   "fix": "Regenerate with softer key, or apply a roll-off curve; protect the product area.",
+   "source_file": "form_errors.json"
+  },
+  {
+   "id": "FE06",
+   "area": "value/edge/shape",
+   "name": "HDR halo / over-local tone mapping",
+   "symptom": "Glowing halos around edges, everything equally contrasty, gritty texture.",
+   "detect": "Bright/dark bands 5-30 px wide along major edges (visual check at 100%); local contrast uniform across frame (focal_share_top5_contrast close to focal_area_share).",
+   "fix": "Reduce local tone mapping/clarity; rebuild hierarchy with a global curve and vignette.",
+   "source_file": "form_errors.json"
+  },
+  {
+   "id": "FE07",
+   "area": "value/edge/shape",
+   "name": "Washed-out high key",
+   "symptom": "Light image with no real dark; figures barely visible.",
+   "detect": "key=high and L p2 > 0.45, or thumb32_rms < 0.08 (observed on faint charcoal slides).",
+   "fix": "Darken the focal figure/accent; strengthen line weight on silhouettes.",
+   "source_file": "form_errors.json"
+  },
+  {
+   "id": "FE08",
+   "area": "value/edge/shape",
+   "name": "Light shadows / opaque shadows",
+   "symptom": "Shadow regions lighter than nearby lit areas, or flat painted patches hiding the surface.",
+   "detect": "Sample L and chroma: shadow L >= adjacent lit L, or shadow chroma higher than lit chroma; texture inside shadow fully gone.",
+   "fix": "Darken and desaturate shadows; let texture show through; keep reflected light darker than the light family.",
+   "source_file": "form_errors.json"
+  },
+  {
+   "id": "FE09",
+   "area": "value/edge/shape",
+   "name": "Inconsistent or bottom light direction",
+   "symptom": "Bumps read as dents; shadows point different ways.",
+   "detect": "Visual check of cast-shadow directions and highlight positions; flag light from below unless intended (horror/campfire).",
+   "fix": "Unify one key direction (default upper-left); regenerate or repaint shadows in HTML.",
+   "source_file": "form_errors.json"
+  },
+  {
+   "id": "FE10",
+   "area": "value/edge/shape",
+   "name": "Uniform hard edges (sticker / cut-out look)",
+   "symptom": "Every edge equally sharp; composited frame looks pasted on.",
+   "detect": "edge_density_focal_vs_rest < 1.2 with high overall edge density; cutout edge transition 0 px while background is blurred.",
+   "fix": "Apply the edge ladder: one hard edge at focal, firm silhouettes, soft turning forms; feather cutout 0.5-1 px and add contact shadow.",
+   "source_file": "form_errors.json"
+  },
+  {
+   "id": "FE11",
+   "area": "value/edge/shape",
+   "name": "Uniform softness (no found edge)",
+   "symptom": "Whole image soft/blurred; nothing to lock onto.",
+   "detect": "Laplacian variance of the focal ROI not higher than the rest (detail_ratio_focal_vs_rest < 1.2); overall Laplacian energy low.",
+   "fix": "Sharpen/restore detail on the focal object only; add one specular or rim edge.",
+   "source_file": "form_errors.json"
+  },
+  {
+   "id": "FE12",
+   "area": "value/edge/shape",
+   "name": "Wire outline (uniform line weight)",
+   "symptom": "Line art looks like a colouring book; forms flat.",
+   "detect": "Measure stroke width (distance transform on the ink mask): silhouette/interior ratio < 1.3 and coefficient of variation of width very low.",
+   "fix": "Apply the line-weight ladder (silhouette 1.5-2x interior; heavier on shadow side; taper free ends).",
+   "source_file": "form_errors.json"
+  },
+  {
+   "id": "FE13",
+   "area": "value/edge/shape",
+   "name": "Outlined shadows / false contours",
+   "symptom": "Lines drawn around shadow shapes or reflections; form reads as patches.",
+   "detect": "Visual check: lines that do not lie on occluding contours or creases; compare with the expected contour set.",
+   "fix": "Remove shadow outlines; express shadow with tone or hatching.",
+   "source_file": "form_errors.json"
+  },
+  {
+   "id": "FE14",
+   "area": "value/edge/shape",
+   "name": "Broken junctions and tangents",
+   "symptom": "Lines cross through overlaps, gaps at overlaps, or edges just touching; depth order unclear.",
+   "detect": "Inspect overlaps at 100%: far lines must stop at near contours; flag edges touching within ~3 px without overlapping.",
+   "fix": "Redraw overlaps as clean T-junctions; move shapes to overlap clearly or separate.",
+   "source_file": "form_errors.json"
+  },
+  {
+   "id": "FE15",
+   "area": "value/edge/shape",
+   "name": "Empty lens (no transparency cue)",
+   "symptom": "Cutout glasses look like empty wire frames.",
+   "detect": "Background edges behind the lens unchanged (no tint/offset) and no reflection band.",
+   "fix": "Add the lens layer: slight tint/value shift of background lines through the lens plus one soft reflection.",
+   "source_file": "form_errors.json"
+  },
+  {
+   "id": "FE16",
+   "area": "value/edge/shape",
+   "name": "Detail everywhere (AI clutter)",
+   "symptom": "Every surface densely textured and sharp; busy, tiring image.",
+   "detect": "edge_density > 0.15 (line art) with edge_density_focal_vs_rest < 1.2; text box edge density > 0.03.",
+   "fix": "Blur/flatten background in HTML, prompt 'simple uncluttered background', remove props.",
+   "source_file": "form_errors.json"
+  },
+  {
+   "id": "FE17",
+   "area": "value/edge/shape",
+   "name": "Detail in the wrong place",
+   "symptom": "Background or a secondary object is sharper and more detailed than the product.",
+   "detect": "detail_ratio_focal_vs_rest < 1 with ROI on the product.",
+   "fix": "Swap: soften the distracting area, restore detail on the product (use the real frame photo).",
+   "source_file": "form_errors.json"
+  },
+  {
+   "id": "FE18",
+   "area": "value/edge/shape",
+   "name": "Crowded small details",
+   "symptom": "Small logo, price or engraving near other detail is overlooked or unreadable.",
+   "detect": "Small element with other edges within ~1x its own size; low local contrast around it.",
+   "fix": "Give clear space, increase size/contrast, or bring it to centre with a punch-in.",
+   "source_file": "form_errors.json"
+  },
+  {
+   "id": "FE19",
+   "area": "value/edge/shape",
+   "name": "Unreadable silhouette",
+   "symptom": "Subject merges with background or its own limbs; cannot tell what it is at 64 px.",
+   "detect": "Fill subject mask black at 64 px - not identifiable; deltaL_focal_vs_surround < 0.10.",
+   "fix": "Change view/pose (arms off body, 3/4 frame view), separate by value or rim light.",
+   "source_file": "form_errors.json"
+  },
+  {
+   "id": "FE20",
+   "area": "value/edge/shape",
+   "name": "Twin silhouettes (Mint = Tao)",
+   "symptom": "The two faceless characters look interchangeable.",
+   "detect": "Height-normalised silhouette IoU >= 0.75 or aspect ratios within 15% (derived); same clothing value.",
+   "fix": "Restore primary shape contrast (round bundled vs tall narrow coat) and light vs dark clothing; spell it out per figure in the prompt.",
+   "source_file": "form_errors.json"
+  },
+  {
+   "id": "FE21",
+   "area": "value/edge/shape",
+   "name": "Shape monotony",
+   "symptom": "All shapes similar size and type; no rhythm or focal break.",
+   "detect": "Distribution of contour areas narrow (largest < 2x median, derived); circularity values all in one cluster with no outlier at focal.",
+   "fix": "Apply big-medium-small; add one contrasting shape at the focal point.",
+   "source_file": "form_errors.json"
+  },
+  {
+   "id": "FE22",
+   "area": "value/edge/shape",
+   "name": "Stiff mannequin pose",
+   "symptom": "Faceless figures stand straight with arms at sides; no emotion reads.",
+   "detect": "Visual check: no identifiable C/S curve through head-spine-legs; arms overlapping torso.",
+   "fix": "Prompt actions and curves ('curling forward, head bowed', 'leaning toward'), exaggerate the key pose.",
+   "source_file": "form_errors.json"
+  },
+  {
+   "id": "FE23",
+   "area": "value/edge/shape",
+   "name": "Trapped or sliver negative space",
+   "symptom": "Odd leftover gaps or thin slivers along frame edges draw the eye.",
+   "detect": "Find background regions touching the frame edge with width < 3% of the frame side; enclosed gaps with odd outlines (visual).",
+   "fix": "Move/crop so gaps are clearly large or clearly closed; keep text zone one clean shape.",
+   "source_file": "form_errors.json"
+  },
+  {
+   "id": "perr.two_horizons",
+   "area": "perspective",
+   "name": "Two horizons",
+   "symptom": "floor lines and counter/shelf lines vanish to points at different heights; the room feels subtly 'off'",
+   "detect": "extend >= 3 receding horizontals per ground-parallel family; their VPs must lie on one horizontal line",
+   "fix": "regenerate with fewer receding planes and an explicit camera ('eye-level camera at 1.6 m, level'); or crop out the offending object; or warp it to the main grid",
+   "source_file": "PERSPECTIVE_ERROR_LIBRARY.json"
+  },
+  {
+   "id": "perr.object_vp_mismatch",
+   "area": "perspective",
+   "name": "Object off the room's grid",
+   "symptom": "a box, counter or display case aligned with the walls converges to its own VPs, not the room's",
+   "detect": "extend the object's edges and the wall/floor edges; aligned objects must share VPs, rotated ones need VPs on the same horizon",
+   "fix": "rotate/warp the object to the room VPs in post; or prompt the object 'parallel to the back wall'",
+   "source_file": "PERSPECTIVE_ERROR_LIBRARY.json"
+  },
+  {
+   "id": "perr.vp_off_horizon",
+   "area": "perspective",
+   "name": "Ground-parallel lines vanishing off the horizon",
+   "symptom": "a flat tabletop or road converges to a point above or below the eye level",
+   "detect": "find the horizon from the floor; any level surface must vanish on it",
+   "fix": "correct with a perspective warp; regenerate stating 'level table, horizon at ... height'",
+   "source_file": "PERSPECTIVE_ERROR_LIBRARY.json"
+  },
+  {
+   "id": "perr.incline_on_horizon",
+   "area": "perspective",
+   "name": "Slope vanishing on the horizon",
+   "symptom": "a street that climbs or stairs that rise still vanish exactly on the horizon line",
+   "detect": "uphill parallels must meet on a vertical above the level VP; downhill below",
+   "fix": "repaint the slope lines to an auxiliary VP; or avoid slopes in AI backgrounds",
+   "source_file": "PERSPECTIVE_ERROR_LIBRARY.json"
+  },
+  {
+   "id": "perr.figure_horizon_mismatch",
+   "area": "perspective",
+   "name": "Heads-on-horizon violation",
+   "symptom": "on flat ground, equal-height people at different depths are cut by the horizon at different body heights (one at the eyes, another at the knees); some look like giants or dolls",
+   "detect": "for each figure r = (feet->horizon)/(feet->head); equal-height figures must give equal r; camera at standing eye height -> all adult eyes on the horizon; Norling transfer line through feet and heads",
+   "fix": "rescale/move figures to match r; or justify (stairs, stage, child, seated)",
+   "source_file": "PERSPECTIVE_ERROR_LIBRARY.json"
+  },
+  {
+   "id": "perr.mixed_verticals",
+   "area": "perspective",
+   "name": "Mixed vertical convergence",
+   "symptom": "some verticals are parallel, others lean toward a third VP",
+   "detect": "extend 4+ verticals across the frame: all parallel (level camera) or all meeting at one VP3",
+   "fix": "keystone-correct to parallel (shift-lens look) or regenerate with 'level camera, straight vertical lines'",
+   "source_file": "PERSPECTIVE_ERROR_LIBRARY.json"
+  },
+  {
+   "id": "perr.vp3_wrong_side",
+   "area": "perspective",
+   "name": "Third vanishing point on the wrong side",
+   "symptom": "a scene seen from above has verticals spreading downward (or a low-angle scene converging downward)",
+   "detect": "looking down -> verticals meet below the frame; looking up -> above",
+   "fix": "regenerate; mirror-correct is not possible",
+   "source_file": "PERSPECTIVE_ERROR_LIBRARY.json"
+  },
+  {
+   "id": "perr.vps_too_close",
+   "area": "perspective",
+   "name": "Warped boxes (vanishing points too close)",
+   "symptom": "boxes and rooms look stretched, corners sharper than 90 deg, squares become diamonds",
+   "detect": "estimate VP1-VP2 spacing; less than ~1.7x the image width means the view exceeds a 60-deg cone (DERIVED from Thales circle)",
+   "fix": "move VPs off-canvas; ask for a longer lens look ('50 mm, distant viewpoint')",
+   "source_file": "PERSPECTIVE_ERROR_LIBRARY.json"
+  },
+  {
+   "id": "perr.reverse_perspective",
+   "area": "perspective",
+   "name": "Unintended reverse perspective",
+   "symptom": "a table top or box gets wider toward the back; side edges diverge",
+   "detect": "extend the side edges: they must converge behind the object, not in front",
+   "fix": "redraw the far edge shorter; regenerate with 'seen from the front, edges converge away from camera'",
+   "source_file": "PERSPECTIVE_ERROR_LIBRARY.json"
+  },
+  {
+   "id": "perr.mixed_projection",
+   "area": "perspective",
+   "name": "Isometric object in a perspective scene",
+   "symptom": "one object keeps parallel edges (no convergence) while the room converges",
+   "detect": "edges of the object stay parallel while comparable room edges converge",
+   "fix": "re-render the object in perspective, or make the whole image isometric on purpose",
+   "source_file": "PERSPECTIVE_ERROR_LIBRARY.json"
+  },
+  {
+   "id": "perr.tile_grid",
+   "area": "perspective",
+   "name": "Inconsistent floor/tile grid",
+   "symptom": "tiles do not shrink regularly with distance; diagonals of tiles wander; grout lines curve",
+   "detect": "draw the diagonals of several tiles: they must meet at one diagonal VP on the horizon; spacing must shrink smoothly",
+   "fix": "replace the floor with a projected texture or a plain floor",
+   "source_file": "PERSPECTIVE_ERROR_LIBRARY.json"
+  },
+  {
+   "id": "perr.ellipse_axis",
+   "area": "perspective",
+   "name": "Ellipse axis not aligned with the object's axis",
+   "symptom": "a cup, wheel or lens rim looks twisted; the oval leans against its cylinder",
+   "detect": "the minor axis must lie along the cylinder's/lens's axis; the major axis perpendicular to it (T-shape)",
+   "fix": "redraw ellipses on the minor axis; for glasses align both lens ellipses with the frame's facing direction",
+   "source_file": "PERSPECTIVE_ERROR_LIBRARY.json"
+  },
+  {
+   "id": "perr.ellipse_degree",
+   "area": "perspective",
+   "name": "Wrong ellipse degree",
+   "symptom": "circles far above or below the eye level are as flat as circles near it (or the reverse)",
+   "detect": "horizontal circles must get rounder the farther they are from the horizon; a circle on the horizon is a line",
+   "fix": "redraw degrees in sequence (stacked plates, glasses in a display tray)",
+   "source_file": "PERSPECTIVE_ERROR_LIBRARY.json"
+  },
+  {
+   "id": "perr.ellipse_centre",
+   "area": "perspective",
+   "name": "Centre placed at the ellipse's middle",
+   "symptom": "a stem, screw or pin sits at the geometric centre of a receding circle and looks to float forward",
+   "detect": "draw the square around the circle in perspective and its diagonals; the crossing is the true centre",
+   "fix": "move the stem slightly back along the minor axis",
+   "source_file": "PERSPECTIVE_ERROR_LIBRARY.json"
+  },
+  {
+   "id": "perr.lens_pair_mismatch",
+   "area": "perspective",
+   "name": "Mismatched lens pair (eyewear)",
+   "symptom": "the two lenses of one frame differ in shape, size or ellipse orientation beyond what foreshortening explains",
+   "detect": "mirror one lens over the bridge centre line (frontal) or check both ellipses share the minor-axis direction (3/4)",
+   "fix": "composite the real cutout from the kit (Codex -i reference); never ship a generated frame as the product",
+   "source_file": "PERSPECTIVE_ERROR_LIBRARY.json"
+  },
+  {
+   "id": "perr.lens_reflection_mismatch",
+   "area": "perspective",
+   "name": "Lens reflections that disagree",
+   "symptom": "the left lens reflects a window, the right a different scene or light; highlights at inconsistent positions",
+   "detect": "both lenses must mirror the same environment from nearly the same viewpoint; highlights consistent with the key light",
+   "fix": "paint matching reflections or remove them (AR-coated look); light with one large soft source",
+   "source_file": "PERSPECTIVE_ERROR_LIBRARY.json"
+  },
+  {
+   "id": "perr.shadow_light_inconsistent",
+   "area": "perspective",
+   "name": "Shadows from different suns",
+   "symptom": "cast shadows point in different directions or have different lengths for objects of similar height",
+   "detect": "connect object points to their shadow points; all lines must meet at one point (the light's projection); shadows of parallel verticals converge to one shadow VP on the horizon",
+   "fix": "repaint shadows to one light; or choose an overcast look (soft shadows) where errors are less visible",
+   "source_file": "PERSPECTIVE_ERROR_LIBRARY.json"
+  },
+  {
+   "id": "perr.missing_contact_shadow",
+   "area": "perspective",
+   "name": "Floating object (no contact shadow)",
+   "symptom": "glasses, feet or a product seem to hover above the surface",
+   "detect": "zoom to every contact point: there must be a dark, tight shadow",
+   "fix": "add a contact shadow (multiply layer, soft, darkest at contact)",
+   "source_file": "PERSPECTIVE_ERROR_LIBRARY.json"
+  },
+  {
+   "id": "perr.reflection_geometry",
+   "area": "perspective",
+   "name": "Impossible mirror/water reflection",
+   "symptom": "reflection shifted, wrong size, or showing the object from an impossible angle",
+   "detect": "vertical mirror: object->reflection lines converge to one point; water: reflection hangs from the point directly below the object, as far below as the object is above",
+   "fix": "rebuild the reflection by flipping the object about the surface; or crop the mirror out",
+   "source_file": "PERSPECTIVE_ERROR_LIBRARY.json"
+  },
+  {
+   "id": "perr.scale_error",
+   "area": "perspective",
+   "name": "Wrong real-world scale",
+   "symptom": "a pair of glasses as wide as a shoulder, a door shorter than a person, a counter at knee height",
+   "detect": "compare with known sizes (door ~2 m, counter ~0.9-1 m, glasses front ~13-15 cm) via the horizon ratio",
+   "fix": "rescale in post; mention sizes in the prompt ('glasses on a 90 cm counter')",
+   "source_file": "PERSPECTIVE_ERROR_LIBRARY.json"
+  },
+  {
+   "id": "perr.marginal_distortion",
+   "area": "perspective",
+   "name": "Stretched edge objects",
+   "symptom": "faces, lenses or balls near the frame edge of a wide image look egg-shaped",
+   "detect": "compare round objects at the edge vs centre",
+   "fix": "move key round objects toward the centre; describe a longer lens; or re-project (stereographic/Panini) for wide scenes",
+   "source_file": "PERSPECTIVE_ERROR_LIBRARY.json"
+  },
+  {
+   "id": "perr.close_camera_face",
+   "area": "perspective",
+   "name": "Unintended close-camera face",
+   "symptom": "big nose, small ears, frame front oversized relative to temples - looks like an arm's-length selfie",
+   "detect": "nose-to-face-width ratio vs a reference; temples shrinking abruptly",
+   "fix": "prompt 'photographed from 2 m with an 85 mm lens'; crop a wider frame instead of moving closer",
+   "source_file": "PERSPECTIVE_ERROR_LIBRARY.json"
+  },
+  {
+   "id": "perr.aerial_perspective_inverted",
+   "area": "perspective",
+   "name": "Inverted atmospheric perspective",
+   "symptom": "distant hills or buildings darker, sharper and more saturated than the middle ground",
+   "detect": "compare contrast/saturation by depth band: it should drop with distance (daylight, haze)",
+   "fix": "lift values and lower contrast/saturation of far planes; add haze",
+   "source_file": "PERSPECTIVE_ERROR_LIBRARY.json"
+  },
+  {
+   "id": "perr.blur_depth_mismatch",
+   "area": "perspective",
+   "name": "Blur not consistent with depth",
+   "symptom": "objects at the same distance blurred differently, or a sharp far object next to a blurred near one at the same depth; tilt-shift band ignoring the ground plane",
+   "detect": "map relative depths; blur must grow smoothly with distance from one focus plane (or follow a tilted plane)",
+   "fix": "redo blur in post from a depth map (tools/depth.py) or ask for 'deep focus'",
+   "source_file": "PERSPECTIVE_ERROR_LIBRARY.json"
+  },
+  {
+   "id": "perr.partial_fisheye",
+   "area": "perspective",
+   "name": "Partial fisheye",
+   "symptom": "background lines curve but the product or a building stays rectilinear; lines through the centre curve",
+   "detect": "in a true fisheye, lines through the image centre stay straight and all others curve consistently with distance from the centre",
+   "fix": "use a real fisheye remap in post or drop the effect",
+   "source_file": "PERSPECTIVE_ERROR_LIBRARY.json"
+  },
+  {
+   "id": "perr.angle_drift",
+   "area": "perspective",
+   "name": "Camera angle not obeyed",
+   "symptom": "asked for low angle or bird's eye, received a flat eye-level view with the horizon mid-frame",
+   "detect": "check where the horizon is and whether verticals converge as expected for the requested pitch",
+   "fix": "state the angle with height and direction ('camera at knee height tilted up 30 degrees'), add a visible cue (ceiling, sky, floor), use an image reference, or composite",
+   "source_file": "PERSPECTIVE_ERROR_LIBRARY.json"
+  }
+ ]
+}

@@ -1,0 +1,1135 @@
+{
+ "library": "color_relationships",
+ "version": "2026-11-25",
+ "module": "M09",
+ "description": "Library of colour RELATIONSHIPS (not palettes): how two or more colours, lights or surfaces relate. Labels EVIDENCE / CRAFT / DERIVED / HYPOTHESIS. Source keys are in sources_color.json (new) or SOURCE_REGISTRY.json / ai-visual-artist research (existing). Nothing has been generated yet (test_status untested).",
+ "entries": [
+  {
+   "id": "crel.warm_key_cool_shadow",
+   "name": "Warm light / cool shadow",
+   "category": "light_temperature",
+   "label": "EVIDENCE+CRAFT",
+   "purpose": "Outdoor sun: the lit side takes the warm sun colour, shadows are filled by blue skylight; reads as daylight and gives depth.",
+   "how": "Key from sun side, lit planes h~60-80 (OKLCH) slightly warm; shadow planes shift toward h~230-260 and lose ~30-50% chroma; keep the shift on every object incl. skin so it reads as light. Prompt: 'warm late sun from left, cool sky-blue shadows'.",
+   "limits": "Overcast or indoor single-source scenes have no blue skylight fill; overdoing the blue looks like a filter. Craft magnitudes are not measured.",
+   "use_for": [
+    "promo_scene",
+    "eyewear_product",
+    "story_clip"
+   ],
+   "source_keys": [
+    "HyperPhysics_Scattering",
+    "Gurney2010",
+    "LaferSousa2015"
+   ],
+   "test_status": "untested"
+  },
+  {
+   "id": "crel.cool_key_warm_bounce",
+   "name": "Cool window key / warm bounce",
+   "category": "light_temperature",
+   "label": "CRAFT+DERIVED",
+   "purpose": "Indoor north-window light with a wooden floor/table bouncing warm light into shadows; calm, natural shop/home feel.",
+   "how": "Key = window (neutral-cool), fill = warm bounce from below (wood, sand, kraft paper); underside of chin/frame and shadow side gain h~60-80 at low chroma.",
+   "limits": "Bounce strength depends on surface area and distance; in AI images the bounce is often missing and must be asked for.",
+   "use_for": [
+    "eyewear_product",
+    "promo_scene",
+    "story_clip"
+   ],
+   "source_keys": [
+    "Bloj1999",
+    "Gurney2010"
+   ],
+   "test_status": "untested"
+  },
+  {
+   "id": "crel.practical_warm_pool_in_cool_dark",
+   "name": "Warm practical pool in cool darkness",
+   "category": "light_temperature",
+   "label": "CRAFT",
+   "purpose": "Night interior: a lamp/sign makes a small warm pool; the rest of the frame is cool and dark. Isolation, intimacy, mystery.",
+   "how": "Low key (notan mostly dark); one practical source h~70-85, moderate C; ambient h~240-260, C<=0.04; soft falloff at the pool edge; characters step in/out of the pool on story beats.",
+   "limits": "Too many practicals destroy the pool; the warm area must stay small relative to the frame.",
+   "use_for": [
+    "story_clip",
+    "promo_scene"
+   ],
+   "source_keys": [
+    "web:studio.blender.org:85",
+    "Gurney2010"
+   ],
+   "test_status": "untested"
+  },
+  {
+   "id": "crel.golden_hour_long_blue_shadow",
+   "name": "Golden hour: low warm sun, long blue shadows",
+   "category": "light_temperature",
+   "label": "EVIDENCE+CRAFT",
+   "purpose": "Low sun passes through more atmosphere (warmer); shadows lit by the remaining blue sky look strongly blue; romantic, nostalgic.",
+   "how": "Raking light 5-15 deg; warm side h~55-70 high chroma; shadow h~240 visibly blue; long cast shadows as composition lines (Hua Hin beach promo).",
+   "limits": "Mood link is associative/cultural; the warm side can turn skin orange - protect skin hue.",
+   "use_for": [
+    "promo_scene",
+    "beat_clip"
+   ],
+   "source_keys": [
+    "HyperPhysics_Scattering",
+    "McCamy1992",
+    "TPE_GoldenBlueHour"
+   ],
+   "test_status": "untested"
+  },
+  {
+   "id": "crel.mixed_daylight_tungsten",
+   "name": "Mixed daylight + tungsten in one frame",
+   "category": "light_temperature",
+   "label": "EVIDENCE",
+   "purpose": "Two sources of different CCT: camera or viewer can neutralise only one; the other side keeps a cast. Use for cosy contrast, avoid for product truth.",
+   "how": "Mood: let the window side go blue and the lamp side orange on purpose. Product colour: switch off one source or gel them to match; set WB on a neutral card under the key.",
+   "limits": "Auto-WB averages the two and gets neither right; product colour then shifts across the frame.",
+   "use_for": [
+    "eyewear_product",
+    "story_clip"
+   ],
+   "source_keys": [
+    "Gijsenij2011",
+    "ShevellKingdom2008"
+   ],
+   "test_status": "untested"
+  },
+  {
+   "id": "crel.shadow_leans_to_complement",
+   "name": "Shadows lean toward the complement of the light",
+   "category": "light_temperature",
+   "label": "CRAFT+DERIVED",
+   "purpose": "Under a strongly coloured key, neutral shadow areas look tinted toward the opposite hue (contrast/adaptation); painters exaggerate it to make light feel coloured.",
+   "how": "Warm key: push shadow hue 150-180 deg away at low chroma (C 0.02-0.05); magenta neon key: shadows slightly green-teal.",
+   "limits": "Exaggeration is a style choice; physically shadows are lit by whatever ambient light exists, which may not be the complement.",
+   "use_for": [
+    "story_clip",
+    "promo_scene",
+    "story_carousel"
+   ],
+   "source_keys": [
+    "Chevreul1839",
+    "ShevellKingdom2008",
+    "Gurney2010"
+   ],
+   "test_status": "untested"
+  },
+  {
+   "id": "crel.blue_hour_cool_ambient_warm_windows",
+   "name": "Blue hour: cool ambient, warm windows",
+   "category": "light_temperature",
+   "label": "EVIDENCE+CRAFT",
+   "purpose": "After sunset the sky light is deep blue; windows and signs read warm and inviting by contrast.",
+   "how": "Ambient h~250-265, mid-low key; windows and shop sign h~70-85; make the lit shop facade the warmest, brightest area for a 'come in' feel.",
+   "limits": "Short window in real shoots; in AI images keep sky and window light consistent.",
+   "use_for": [
+    "promo_scene",
+    "story_clip"
+   ],
+   "source_keys": [
+    "USNO_Twilight",
+    "TPE_GoldenBlueHour"
+   ],
+   "test_status": "untested"
+  },
+  {
+   "id": "crel.colour_bleed_ground_to_underside",
+   "name": "Colour bleed from ground to underside",
+   "category": "reflected_colour",
+   "label": "EVIDENCE",
+   "purpose": "Light reflected from a coloured surface tints nearby surfaces facing it (mutual illumination); grounds objects in the scene.",
+   "how": "Cutout frame on a coloured table/cloth: add a soft gradient of the ground colour on the lower rim and temple insides (HTML layer, multiply/soft-light, opacity 10-25%), strongest where closest.",
+   "limits": "Weak on dark or matte-black surfaces; overdone it looks like a coloured glow.",
+   "use_for": [
+    "eyewear_product",
+    "promo_scene"
+   ],
+   "source_keys": [
+    "Bloj1999",
+    "WitzelGegenfurtner2018",
+    "Zhukov1998"
+   ],
+   "test_status": "untested"
+  },
+  {
+   "id": "crel.concave_fold_mutual_illumination",
+   "name": "Inside corners deepen colour",
+   "category": "reflected_colour",
+   "label": "EVIDENCE",
+   "purpose": "In a concave fold (inside of a case, a book gutter) light bounces back and forth so colour deepens; vision expects this.",
+   "how": "Case shots: inside corners of a coloured lining darker and more saturated than the flat floor; paper props: gutters slightly richer.",
+   "limits": "Depends on perceived shape; flat-shaded AI renders often miss it.",
+   "use_for": [
+    "eyewear_product",
+    "story_carousel"
+   ],
+   "source_keys": [
+    "Bloj1999"
+   ],
+   "test_status": "untested"
+  },
+  {
+   "id": "crel.metal_shows_environment",
+   "name": "Metal frames show the environment, not a local colour",
+   "category": "reflected_colour",
+   "label": "EVIDENCE+CRAFT",
+   "purpose": "Polished metal has almost no diffuse local colour; you see the environment reflected and tinted by the metal (gold, rose, gunmetal).",
+   "how": "Plan reflections: a light card for a bright rim, a dark flag for a defining dark line; gold = reflections tinted warm; a coloured card puts an accent into the rim.",
+   "limits": "On flat backgrounds metal looks dull grey; cutouts carry reflections from the original shoot that may contradict the new scene.",
+   "use_for": [
+    "eyewear_product",
+    "promo_scene",
+    "beat_clip"
+   ],
+   "source_keys": [
+    "Fleming2014",
+    "Burley2012",
+    "Gurney2010"
+   ],
+   "test_status": "untested"
+  },
+  {
+   "id": "crel.specular_carries_light_colour",
+   "name": "Specular highlights carry the light colour",
+   "category": "reflected_colour",
+   "label": "EVIDENCE",
+   "purpose": "On dielectrics (acetate, TR90, lens surface) the highlight has the colour of the light, not the object; viewers use highlights as an illumination cue.",
+   "how": "Red acetate under warm key: highlight warm-white, never pink; keep highlight hue identical across all objects in the frame.",
+   "limits": "Metals tint their highlights; coated lenses add coating colour to reflections.",
+   "use_for": [
+    "eyewear_product",
+    "promo_scene",
+    "story_clip"
+   ],
+   "source_keys": [
+    "WitzelGegenfurtner2018",
+    "Schlick1994",
+    "Burley2012"
+   ],
+   "test_status": "untested"
+  },
+  {
+   "id": "crel.lens_reflects_scene",
+   "name": "Lenses and mirror coatings take the scene's colours",
+   "category": "reflected_colour",
+   "label": "CRAFT+DERIVED",
+   "purpose": "Lenses reflect the environment; mirror coatings reflect strongly. An empty-looking lens breaks realism (house rule: cutouts get a lens layer).",
+   "how": "Lens layer with a faint, blurred, perspective-warped reflection of the brightest scene area (window/sky), opacity 10-30%, plus a thin specular arc; mirror lenses show a distorted scene in the coating tint.",
+   "limits": "AR residual reflection colour differs by product; copy the real lens, do not invent a hue.",
+   "use_for": [
+    "eyewear_product",
+    "beat_clip",
+    "promo_scene"
+   ],
+   "source_keys": [
+    "Fleming2014",
+    "WitzelGegenfurtner2018"
+   ],
+   "test_status": "untested"
+  },
+  {
+   "id": "crel.local_colour_in_lit_halftone",
+   "name": "Local colour lives in the lit half-tone",
+   "category": "reflected_colour",
+   "label": "EVIDENCE+CRAFT",
+   "purpose": "Observers estimate an object's lightness from its brightest parts excluding highlights; that plane shows the true local colour best.",
+   "how": "Turn the frame so the rim front takes direct but non-specular light; leave that plane untouched when correcting; judge 'is the colour right' only there.",
+   "limits": "Strong coloured ambient (sunset) shifts even that plane - then add a neutral reference shot.",
+   "use_for": [
+    "eyewear_product"
+   ],
+   "source_keys": [
+    "WitzelGegenfurtner2018"
+   ],
+   "test_status": "untested"
+  },
+  {
+   "id": "crel.atmospheric_distance_shift",
+   "name": "Distance shifts toward the air colour",
+   "category": "reflected_colour",
+   "label": "EVIDENCE",
+   "purpose": "Scattering between viewer and far objects lowers contrast and pulls colour toward the sky/haze colour: a depth cue.",
+   "how": "Per depth plane: raise L, lower C, shift h toward the sky colour; foreground keeps the darkest darks and highest chroma.",
+   "limits": "Clear dry air or night scenes show little shift; misuse makes everything foggy.",
+   "use_for": [
+    "promo_scene",
+    "story_clip",
+    "story_carousel"
+   ],
+   "source_keys": [
+    "HyperPhysics_Scattering",
+    "Gurney2010"
+   ],
+   "test_status": "untested"
+  },
+  {
+   "id": "crel.simultaneous_contrast_halo_grey_product",
+   "name": "Grey/clear product shifts toward the background's complement",
+   "category": "appearance",
+   "label": "EVIDENCE",
+   "purpose": "A neutral product (smoke-grey TR90, clear acetate, silver) on a saturated ground looks tinted toward the complementary hue and shifted in lightness opposite to the ground.",
+   "how": "If true colour matters include a shot on a neutral ground (L~0.85-0.92, C~0); otherwise pick a ground whose induced shift flatters the frame (cool ground warms a brown frame).",
+   "limits": "Grows with ground area and chroma; outlines alter it.",
+   "use_for": [
+    "eyewear_product",
+    "promo_scene",
+    "beat_clip"
+   ],
+   "source_keys": [
+    "Chevreul1839",
+    "ShevellKingdom2008",
+    "Albers1963"
+   ],
+   "test_status": "untested"
+  },
+  {
+   "id": "crel.lightness_induction_dark_ground",
+   "name": "Same tone looks lighter on dark, darker on light",
+   "category": "appearance",
+   "label": "EVIDENCE",
+   "purpose": "Lightness is judged relative to surroundings; a black frame on black velvet loses its edge, a grey frame on black looks lighter.",
+   "how": "Dark frames on mid-light grounds; light/clear frames on mid-dark grounds; check in notan view.",
+   "limits": "Edge highlights can rescue dark-on-dark; low-key mood shots may want the merge on purpose.",
+   "use_for": [
+    "eyewear_product",
+    "promo_scene",
+    "quote_image"
+   ],
+   "source_keys": [
+    "Albers1963",
+    "ShevellKingdom2008"
+   ],
+   "test_status": "untested"
+  },
+  {
+   "id": "crel.assimilation_fine_lines",
+   "name": "Fine lines spread their colour (assimilation)",
+   "category": "appearance",
+   "label": "EVIDENCE",
+   "purpose": "Thin dense pattern lines pull the colour of the area they cross toward themselves instead of contrasting with it.",
+   "how": "Charcoal carousels: tint under dense dark hatching reads duller/darker; light hatching lightens an area without changing its fill; brand green under black texture reads near-black.",
+   "limits": "At wide line spacing it turns into contrast; viewing size decides which effect wins.",
+   "use_for": [
+    "story_carousel",
+    "quote_image"
+   ],
+   "source_keys": [
+    "MonnierShevell2003"
+   ],
+   "test_status": "untested"
+  },
+  {
+   "id": "crel.equiluminant_vibration",
+   "name": "Equal-luminance complements vibrate",
+   "category": "appearance",
+   "label": "CRAFT+DERIVED",
+   "purpose": "Two saturated hues at nearly equal luminance (red on green, blue on orange) give an unstable edge and poor legibility because the luminance channel carries no edge.",
+   "how": "Avoid for text and product edges; keep it small if wanted (poster, discord moment); else separate the pair by >=0.25 OKLCH L or add a neutral outline.",
+   "limits": "The 'vibration' claim is craft; the legibility loss follows from WCAG luminance contrast.",
+   "use_for": [
+    "beat_clip",
+    "promo_scene",
+    "infographic"
+   ],
+   "source_keys": [
+    "W3C_WCAG21",
+    "WitzelGegenfurtner2018"
+   ],
+   "test_status": "untested"
+  },
+  {
+   "id": "crel.chromatic_variance_surround_mutes_centre",
+   "name": "A busy colourful surround mutes the centre",
+   "category": "appearance",
+   "label": "EVIDENCE",
+   "purpose": "A surround with high chromatic variance lowers perceived contrast of the region inside it compared with a uniform surround of the same average.",
+   "how": "A product on a busy colourful scene looks less vivid than on a calm one; simplify or blur the surround (house rule: calm backgrounds).",
+   "limits": "Measured on lab patterns; magnitude in photos unknown.",
+   "use_for": [
+    "eyewear_product",
+    "promo_scene",
+    "beat_clip"
+   ],
+   "source_keys": [
+    "ShevellKingdom2008"
+   ],
+   "test_status": "untested"
+  },
+  {
+   "id": "crel.successive_relief_after_dark",
+   "name": "Bright/warm scene after a long dark/cool one feels stronger",
+   "category": "appearance",
+   "label": "EVIDENCE+DERIVED",
+   "purpose": "Adaptation and afterimages from the previous shot shift the next one toward the opposite; relief needs less grading.",
+   "how": "Place the relief beat after a cool low-key stretch of several seconds; grade it only moderately warm; preview cuts in sequence, never only as stills. Carousels: dark slide then bright slide.",
+   "limits": "Very short shots give little effect; exact durations not verified.",
+   "use_for": [
+    "story_clip",
+    "story_carousel",
+    "beat_clip"
+   ],
+   "source_keys": [
+    "Zaidi2012",
+    "WitzelGegenfurtner2018"
+   ],
+   "test_status": "untested"
+  },
+  {
+   "id": "crel.adaptation_white_drift",
+   "name": "Whites drift after adaptation",
+   "category": "appearance",
+   "label": "EVIDENCE",
+   "purpose": "After minutes in warm light, warm whites look white; after a long warm sequence a neutral shot looks bluish. Full adaptation takes minutes.",
+   "how": "Before a product reveal in a long warm sequence, re-introduce a neutral or cool shot; in grading sessions rest on a neutral grey screen.",
+   "limits": "Viewer room light and night-shift settings are uncontrolled.",
+   "use_for": [
+    "story_clip",
+    "beat_clip"
+   ],
+   "source_keys": [
+    "WitzelGegenfurtner2018",
+    "ShevellKingdom2008"
+   ],
+   "test_status": "untested"
+  },
+  {
+   "id": "crel.saturated_text_looks_brighter",
+   "name": "Saturated reds/blues look brighter than they measure",
+   "category": "appearance",
+   "label": "EVIDENCE",
+   "purpose": "Helmholtz-Kohlrausch: at equal luminance, saturated colours (esp. blue, red) look brighter than greys/yellows, so the eye overrates their contrast.",
+   "how": "Always measure text contrast with color_tools.py contrast; do not trust the eye for red/blue price tags; a saturated blue accent feels heavier than its L.",
+   "limits": "Magnitude varies by observer and condition; mechanism debated.",
+   "use_for": [
+    "beat_clip",
+    "promo_scene",
+    "infographic",
+    "quote_image"
+   ],
+   "source_keys": [
+    "Corney2009",
+    "W3C_WCAG22_Understanding143"
+   ],
+   "test_status": "untested"
+  },
+  {
+   "id": "crel.memory_colour_reference",
+   "name": "Familiar objects are judged against memory colours",
+   "category": "appearance",
+   "label": "EVIDENCE",
+   "purpose": "Skin, sky, foliage, fruit are seen biased toward their typical colour and act as references viewers use to decide whether an image is off.",
+   "how": "Grade freely but keep skin in a believable range (vectorscope skin line); a familiar object (hand, leaf, white paper) near the product is a silent reference.",
+   "limits": "Strongest on the blue-yellow axis; memory colours differ between people and cultures.",
+   "use_for": [
+    "eyewear_product",
+    "promo_scene",
+    "story_clip",
+    "beat_clip"
+   ],
+   "source_keys": [
+    "WitzelGegenfurtner2018"
+   ],
+   "test_status": "untested"
+  },
+  {
+   "id": "crel.ambiguous_illumination_split",
+   "name": "Ambiguous illumination splits viewers (#TheDress)",
+   "category": "appearance",
+   "label": "EVIDENCE",
+   "purpose": "When pixel colours lie on the daylight (blue-yellow) axis and illumination cues are missing, viewers silently assume different lights and see different object colours.",
+   "how": "Navy, tortoise, brown/blue tinted lenses on plain grounds are high risk: add directional shadow, skin in the same light, a white reference; check at thumbnail size.",
+   "limits": "Colours off the daylight axis (green/purple) are far less ambiguous.",
+   "use_for": [
+    "eyewear_product",
+    "promo_scene"
+   ],
+   "source_keys": [
+    "LaferSousa2015",
+    "WitzelGegenfurtner2018"
+   ],
+   "test_status": "untested"
+  },
+  {
+   "id": "crel.global_tint_reads_as_light",
+   "name": "A tint on everything reads as light; on one object reads as colour",
+   "category": "appearance",
+   "label": "EVIDENCE+DERIVED",
+   "purpose": "A cast applied to the whole scene including skin is attributed to the illuminant; a cast only on the object changes the object's colour.",
+   "how": "Time of day / mood: grade globally (bg, props, skin, product). 'This product is special': tint or glow only the product. Do not tint only the background if the product should look correctly lit.",
+   "limits": "Strong global casts still shift product colour for some viewers; keep one neutral shot.",
+   "use_for": [
+    "story_clip",
+    "promo_scene",
+    "beat_clip"
+   ],
+   "source_keys": [
+    "LaferSousa2015"
+   ],
+   "test_status": "untested"
+  },
+  {
+   "id": "crel.size_changes_appearance",
+   "name": "Big areas look different from small swatches",
+   "category": "appearance",
+   "label": "EVIDENCE+CRAFT",
+   "purpose": "Appearance and interpretation change with area/image size; large fields tend to read more intense than the chip they were picked from.",
+   "how": "Pick large background colours slightly calmer than the swatch you like; review every image at IG thumbnail size and full screen.",
+   "limits": "Size-effect magnitudes not quantified here.",
+   "use_for": [
+    "promo_scene",
+    "story_carousel",
+    "quote_image",
+    "beat_clip"
+   ],
+   "source_keys": [
+    "Li2017_CAM16",
+    "LaferSousa2015"
+   ],
+   "test_status": "untested"
+  },
+  {
+   "id": "crel.chroma_edges_signal_objects",
+   "name": "Chroma edges mark objects; luminance carries shading",
+   "category": "appearance",
+   "label": "EVIDENCE",
+   "purpose": "In natural scenes chromatic and luminance contrast are statistically independent; chroma changes tend to mark object boundaries while luminance also changes with shadow.",
+   "how": "Separate the frame from the background by hue/chroma even when values are close (shading can stay natural); value for form/depth, chroma for 'a different thing'.",
+   "limits": "Not enough alone for legibility or CVD viewers; pair with value contrast for text and key edges.",
+   "use_for": [
+    "eyewear_product",
+    "promo_scene",
+    "story_clip"
+   ],
+   "source_keys": [
+    "WitzelGegenfurtner2018"
+   ],
+   "test_status": "untested"
+  },
+  {
+   "id": "crel.tint_axis_errors_more_visible",
+   "name": "Green-magenta errors look worse than warm-cool errors",
+   "category": "appearance",
+   "label": "DERIVED",
+   "purpose": "Observers are most uncertain along the blue-yellow (daylight) axis, so warm/cool shifts read as 'light' while green/magenta shifts read as 'wrong'.",
+   "how": "Correcting AI/phone images: fix tint (green-magenta) precisely first, then choose temperature for mood.",
+   "limits": "Derived from uncertainty data, not a direct test of grading tolerance.",
+   "use_for": [
+    "eyewear_product",
+    "promo_scene",
+    "story_clip",
+    "beat_clip"
+   ],
+   "source_keys": [
+    "WitzelGegenfurtner2018"
+   ],
+   "test_status": "untested"
+  },
+  {
+   "id": "crel.relative_temperature",
+   "name": "Warm/cool is relative to neighbours",
+   "category": "appearance",
+   "label": "CRAFT",
+   "purpose": "A red-violet looks warm next to blue and cool next to orange; temperature contrast exists only in relation.",
+   "how": "Decide temperature by pairs that touch in the frame; when analyze_image warm_pct/cool_pct (fixed hue bins) disagrees with the feel, trust the pairwise judgement and note it.",
+   "limits": "Craft vocabulary; the warm-cool association itself is a robust colour-emotion dimension.",
+   "use_for": [
+    "promo_scene",
+    "story_clip",
+    "story_carousel"
+   ],
+   "source_keys": [
+    "Albers1963",
+    "Itten1961",
+    "Ou2004"
+   ],
+   "test_status": "untested"
+  },
+  {
+   "id": "crel.dominant_subordinate_accent",
+   "name": "Dominant / subordinate / accent",
+   "category": "harmony",
+   "label": "CRAFT",
+   "purpose": "One hue family dominates by area, one supports, one small accent carries attention: unity with a focal point.",
+   "how": "Measure with analyze_image proportion_top3_pct; accent = smallest area, highest chroma, at the saliency peak; options 90/10, 70/20/10, 60/30/10.",
+   "limits": "60-30-10 has no known origin; k-means counts area, not attention.",
+   "use_for": [
+    "eyewear_product",
+    "promo_scene",
+    "story_carousel",
+    "quote_image"
+   ],
+   "source_keys": [
+    "Itten1961",
+    "Unverified_60_30_10",
+    "ODonovan2011"
+   ],
+   "test_status": "untested"
+  },
+  {
+   "id": "crel.neutral_field_single_accent",
+   "name": "Neutral field + one accent",
+   "category": "harmony",
+   "label": "CRAFT+DERIVED",
+   "purpose": "Premium/editorial product look: near-neutral surroundings (C<0.02) with a single saturated element (coloured acetate frame or brand peach).",
+   "how": "Measured on our _example post: warm greys 93.6%, brand green 3.3%, black 2.5%, mean_chroma 0.009. For a colourful frame, let the frame be the only chromatic object.",
+   "limits": "Can feel cold for warm story content; neutrals still need value structure.",
+   "use_for": [
+    "eyewear_product",
+    "quote_image",
+    "promo_scene"
+   ],
+   "source_keys": [
+    "ODonovan2011"
+   ],
+   "test_status": "untested"
+  },
+  {
+   "id": "crel.chroma_reserved_for_focal",
+   "name": "Highest chroma reserved for the focal point",
+   "category": "harmony",
+   "label": "CRAFT+DERIVED",
+   "purpose": "Saturation hierarchy: chroma steps down from subject to midground to background, guiding attention.",
+   "how": "Background C<=0.04, midground 0.04-0.08, subject highest; check that the strongest saliency peak sits on the subject.",
+   "limits": "Saliency models are not eye-tracking; a bright high-contrast low-chroma area can still win.",
+   "use_for": [
+    "eyewear_product",
+    "promo_scene",
+    "beat_clip",
+    "story_clip"
+   ],
+   "source_keys": [
+    "Itti1998",
+    "WitzelGegenfurtner2018"
+   ],
+   "test_status": "untested"
+  },
+  {
+   "id": "crel.lightness_contrast_drives_pair_preference",
+   "name": "Lightness contrast drives pair preference and legibility",
+   "category": "harmony",
+   "label": "EVIDENCE",
+   "purpose": "Pair preference depends strongly on how liked the component colours are and on lightness contrast; WCAG legibility also rests on luminance contrast.",
+   "how": "Any two colours that must be read together (text/bg, frame/bg) need a clear L difference (color_tools contrast); choose hue for meaning after L is set.",
+   "limits": "Patch studies, Western samples; whole-image effects weaker.",
+   "use_for": [
+    "quote_image",
+    "infographic",
+    "beat_clip",
+    "eyewear_product"
+   ],
+   "source_keys": [
+    "SchlossPalmer2011",
+    "W3C_WCAG21"
+   ],
+   "test_status": "untested"
+  },
+  {
+   "id": "crel.hue_similarity_harmony",
+   "name": "Similar hues feel harmonious",
+   "category": "harmony",
+   "label": "EVIDENCE",
+   "purpose": "Harmony ratings rise with hue similarity; analogous and monochromatic are the best-supported 'harmony' schemes.",
+   "how": "Calm story slides and quote images: one hue family (+-30 deg OKLCH), interest from value and texture.",
+   "limits": "Harmonious is not the same as preferred or attention-getting; needs a value accent.",
+   "use_for": [
+    "story_carousel",
+    "quote_image",
+    "story_clip"
+   ],
+   "source_keys": [
+    "SchlossPalmer2011",
+    "OuLuo2006"
+   ],
+   "test_status": "untested"
+  },
+  {
+   "id": "crel.pairwise_check_triads",
+   "name": "Check multi-colour schemes pair by pair",
+   "category": "harmony",
+   "label": "EVIDENCE",
+   "purpose": "Three-colour harmony is approximately the average harmony of its three pairs; the shape on the wheel is not what matters.",
+   "how": "For triadic/tetradic palettes evaluate the pairs that actually touch in the layout; mute or separate the worst pair with a neutral.",
+   "limits": "Model built on colour wheels and interior images; extension beyond three colours suggested, not shown.",
+   "use_for": [
+    "infographic",
+    "promo_scene",
+    "story_carousel"
+   ],
+   "source_keys": [
+    "Ou2011_Additivity"
+   ],
+   "test_status": "untested"
+  },
+  {
+   "id": "crel.template_as_idea_not_rule",
+   "name": "Hue templates are idea generators, not quality rules",
+   "category": "harmony",
+   "label": "EVIDENCE",
+   "purpose": "Large theme datasets show little natural use of templates and no higher ratings for template-matching themes; 2-3 hues per 5-colour theme rated best.",
+   "how": "Generate candidates with color_tools harmony, then choose by value structure, context and testing in the composite.",
+   "limits": "Ratings were of context-free 5-colour themes.",
+   "use_for": [
+    "promo_scene",
+    "infographic",
+    "story_carousel"
+   ],
+   "source_keys": [
+    "ODonovan2011",
+    "CohenOr2006",
+    "Westland2007"
+   ],
+   "test_status": "untested"
+  },
+  {
+   "id": "crel.complement_unequal",
+   "name": "Complements with unequal area and chroma",
+   "category": "harmony",
+   "label": "CRAFT",
+   "purpose": "Complementary pairs work when one dominates and the other is small or muted; equal amounts compete.",
+   "how": "Teal sea 70% muted + small saturated orange tortoise frame; or muted orange room + a small cool lens reflection.",
+   "limits": "Opposites on CIELAB/OKLCH wheels only approximate perceived complements.",
+   "use_for": [
+    "promo_scene",
+    "beat_clip",
+    "eyewear_product"
+   ],
+   "source_keys": [
+    "Itten1961",
+    "Mahyar2007"
+   ],
+   "test_status": "untested"
+  },
+  {
+   "id": "crel.analogous_needs_value_range",
+   "name": "Analogous palettes need a wide value range",
+   "category": "harmony",
+   "label": "CRAFT",
+   "purpose": "Neighbouring hues at similar lightness turn muddy and flat; a wide value range keeps form and focus.",
+   "how": "Spread L from ~0.25 to ~0.95 across the family; put the extreme L at the focal point.",
+   "limits": "High-key pastel styles compress value on purpose; then use edges/line for structure.",
+   "use_for": [
+    "story_carousel",
+    "promo_scene",
+    "quote_image"
+   ],
+   "source_keys": [
+    "SchlossPalmer2011"
+   ],
+   "test_status": "untested"
+  },
+  {
+   "id": "crel.limited_palette_mother_colour",
+   "name": "Limited palette via mother colour or gamut mask",
+   "category": "harmony",
+   "label": "CRAFT",
+   "purpose": "Restricting the gamut makes all parts feel lit by the same light and belong together.",
+   "how": "Mix a little of one 'mother' hue into every colour (HTML: overlay of that hue at 5-10%), or draw a gamut polygon on the OKLCH wheel and pick only inside it.",
+   "limits": "Overdone it becomes a monotone filter; brand colours may fall outside the mask.",
+   "use_for": [
+    "story_carousel",
+    "story_clip",
+    "promo_scene"
+   ],
+   "source_keys": [
+    "Gurney2010"
+   ],
+   "test_status": "untested"
+  },
+  {
+   "id": "crel.discord_value_inversion",
+   "name": "Discord: reversed natural value order",
+   "category": "harmony",
+   "label": "CRAFT",
+   "purpose": "A hue made lighter than its natural order next to a naturally lighter hue (light violet beside darker yellow) creates tension; small doses enliven, large doses disturb.",
+   "how": "Check OKLCH L (natural order yellow > orange > red > blue/violet at max chroma); invert one pair in a small area for unease (night-optic ghost moment).",
+   "limits": "No scientific evidence for the emotional claim.",
+   "use_for": [
+    "story_clip",
+    "story_carousel"
+   ],
+   "source_keys": [
+    "Harlan1986_Discord"
+   ],
+   "test_status": "untested"
+  },
+  {
+   "id": "crel.natural_value_order",
+   "name": "Hues have a natural lightness order",
+   "category": "harmony",
+   "label": "EVIDENCE",
+   "purpose": "At maximum sRGB chroma yellow is very light (L~0.97) and blue/violet dark (L~0.45); dark yellows become browns/mustards.",
+   "how": "Plan hues by available lightness: a dark accent cannot be vivid yellow, a light accent cannot be vivid blue; use OKLCH gamut-aware ramps.",
+   "limits": "sRGB-specific; wider gamuts move the limits.",
+   "use_for": [
+    "infographic",
+    "promo_scene",
+    "story_carousel"
+   ],
+   "source_keys": [
+    "Ottosson2020",
+    "Newhall1943"
+   ],
+   "test_status": "untested"
+  },
+  {
+   "id": "crel.ecological_association_context",
+   "name": "Colour liking follows what the colour is attached to",
+   "category": "meaning",
+   "label": "EVIDENCE",
+   "purpose": "People like colours to the extent they like the objects associated with them; the same brown is pleasant as wood/coffee and unpleasant as rot.",
+   "how": "Judge a colour in its object context (brown acetate next to wood and leather); pick backgrounds whose associations support the product.",
+   "limits": "Associations vary by culture and person.",
+   "use_for": [
+    "eyewear_product",
+    "promo_scene"
+   ],
+   "source_keys": [
+    "PalmerSchloss2010",
+    "Schloss2024"
+   ],
+   "test_status": "untested"
+  },
+  {
+   "id": "crel.assignment_inference_in_sets",
+   "name": "Meaning is inferred relative to the other colours in the set",
+   "category": "meaning",
+   "label": "EVIDENCE",
+   "purpose": "In legends/codes viewers assign colours to concepts by comparing all options, not only by the strongest association.",
+   "how": "Infographics (lens types, coatings): choose colours so each concept's best match is distinct within the set; test with the team without the legend.",
+   "limits": "Studied in visualisations; generalisation to ads untested.",
+   "use_for": [
+    "infographic",
+    "story_carousel"
+   ],
+   "source_keys": [
+    "Schloss2024"
+   ],
+   "test_status": "untested"
+  },
+  {
+   "id": "crel.association_not_causation",
+   "name": "State colour emotion as association, not effect",
+   "category": "meaning",
+   "label": "EVIDENCE",
+   "purpose": "Colour-emotion associations are robust across cultures (for colour words) but causal effects on behaviour (red/performance, red/attractiveness) are small or vanish after bias correction.",
+   "how": "Write 'often associated with' in briefs and captions; offer several palettes per emotion; never promise sales/trust effects.",
+   "limits": "Cultural rules (mourning) must be respected regardless of experimental evidence.",
+   "use_for": [
+    "promo_scene",
+    "story_carousel",
+    "quote_image",
+    "story_clip"
+   ],
+   "source_keys": [
+    "Jonauskaite2020",
+    "Gnambs2020",
+    "Lehmann2018",
+    "Elliot2015"
+   ],
+   "test_status": "untested"
+  },
+  {
+   "id": "crel.thai_day_colour",
+   "name": "Thai colour of the day / birth-day colour",
+   "category": "meaning",
+   "label": "HYPOTHESIS",
+   "purpose": "Each weekday has a colour (Sun red, Mon yellow, Tue pink, Wed green, Thu orange, Fri blue, Sat purple), linked to Hindu astrology and day Buddha images; one's birth-day colour is lucky.",
+   "how": "Optional day-themed posts; a light accent, not sales pressure; avoid royal birthday colours in commercial promos.",
+   "limits": "Source is tier E and details vary; confirm with Thai staff before use.",
+   "use_for": [
+    "quote_image",
+    "story_carousel",
+    "promo_scene"
+   ],
+   "source_keys": [
+    "Wiki_ThaiDayColours"
+   ],
+   "test_status": "untested"
+  },
+  {
+   "id": "crel.thai_mourning_black_white",
+   "name": "Black and white = mourning",
+   "category": "meaning",
+   "label": "EVIDENCE(news)+HYPOTHESIS",
+   "purpose": "Black/white are mourning colours in Thailand (nationwide during the 2016 royal mourning period); celebratory saturated palettes can offend in mourning contexts.",
+   "how": "During national mourning or condolence posts: monochrome or black/white with minimal accent; pause promo palettes.",
+   "limits": "Everyday black is fashion-neutral; context decides.",
+   "use_for": [
+    "quote_image",
+    "promo_scene",
+    "story_carousel"
+   ],
+   "source_keys": [
+    "AlJazeera2016_Mourning"
+   ],
+   "test_status": "untested"
+  },
+  {
+   "id": "crel.thai_fa_vs_namngoen",
+   "name": "Thai 'fa' (light blue) vs 'nam-ngoen' (dark blue)",
+   "category": "meaning",
+   "label": "HYPOTHESIS",
+   "purpose": "Thai names light blue and dark blue separately; by analogy with Russian blue categories, Thai viewers may read a fa-to-nam-ngoen change as a different colour, not a shade.",
+   "how": "In Thai briefs say which one; keep a 'fa' background inside the light-blue category (high L) when the brief says fa.",
+   "limits": "Untested; Thai basic-term counts are disputed.",
+   "use_for": [
+    "promo_scene",
+    "story_carousel",
+    "quote_image"
+   ],
+   "source_keys": [
+    "Unthanon2020",
+    "Laophairoj2005",
+    "WitzelGegenfurtner2018"
+   ],
+   "test_status": "untested"
+  },
+  {
+   "id": "crel.redundant_coding_cvd",
+   "name": "Never code meaning by red vs green alone",
+   "category": "accessibility",
+   "label": "EVIDENCE",
+   "purpose": "Several percent of men have red-green deficiency; observer metamerism means pairs that differ for you may match for them.",
+   "how": "Pair hue with a value difference, icon or label (sale tag shape + text); simulate with color_tools cvd.",
+   "limits": "Simulation approximates, not reproduces, individual experience.",
+   "use_for": [
+    "infographic",
+    "beat_clip",
+    "promo_scene"
+   ],
+   "source_keys": [
+    "Birch2012",
+    "Machado2009",
+    "Berns2000_Metamerism"
+   ],
+   "test_status": "untested"
+  },
+  {
+   "id": "crel.text_over_photo_local_contrast",
+   "name": "Text over photos: measure the worst local patch",
+   "category": "accessibility",
+   "label": "EVIDENCE",
+   "purpose": "WCAG counts insufficient contrast from background images as failure; photos vary under each glyph.",
+   "how": "Measure against the lightest (or darkest) area under the text; add a scrim/gradient band; aim above 4.5:1 for older eyewear customers.",
+   "limits": "Logotypes exempt; APCA only as a supplementary check.",
+   "use_for": [
+    "beat_clip",
+    "promo_scene",
+    "quote_image"
+   ],
+   "source_keys": [
+    "W3C_WCAG22_Understanding143",
+    "APCA_Nutshell"
+   ],
+   "test_status": "untested"
+  },
+  {
+   "id": "crel.linear_light_blending",
+   "name": "Blend and composite in linear light",
+   "category": "pipeline",
+   "label": "EVIDENCE",
+   "purpose": "Averaging gamma-encoded sRGB values darkens and dulls midpoints; light adds linearly.",
+   "how": "Blurs, resizes, glows and light overlays on linearised values; CSS gradients in oklab interpolation.",
+   "limits": "Paint-like mixing needs a pigment model, not linear light.",
+   "use_for": [
+    "promo_scene",
+    "beat_clip",
+    "story_clip"
+   ],
+   "source_keys": [
+    "IEC61966_2_1",
+    "W3C_CSSColor4",
+    "ACES_Docs"
+   ],
+   "test_status": "untested"
+  },
+  {
+   "id": "crel.pigment_vs_light_mix",
+   "name": "Pigment mixing vs light mixing",
+   "category": "pipeline",
+   "label": "EVIDENCE",
+   "purpose": "Blue + yellow as light/RGB average gives grey; as paint gives green because pigments absorb and scatter repeatedly (Kubelka-Munk).",
+   "how": "Watercolour/gouache carousel styles: let the AI paint the overlaps or use a pigment mixer; do not fake paint overlaps with CSS blend modes.",
+   "limits": "Mixbox code licence reported as CC BY-NC (secondary); check before use.",
+   "use_for": [
+    "story_carousel",
+    "quote_image"
+   ],
+   "source_keys": [
+    "SochorovaJamriska2021",
+    "KubelkaMunk1931"
+   ],
+   "test_status": "untested"
+  },
+  {
+   "id": "crel.grey_world_failure_dominant_scene",
+   "name": "Auto white balance fails in one-colour scenes",
+   "category": "pipeline",
+   "label": "EVIDENCE+DERIVED",
+   "purpose": "Gray-world assumes the scene averages to grey; a frame dominated by sea, foliage or an orange wall drags the image toward the opposite cast.",
+   "how": "Shoot a grey card/white lens cloth in the same light, lock manual WB, or pick a known neutral in post before judging frame colour.",
+   "limits": "Learning-based camera AWB may do better than gray-world; still verify.",
+   "use_for": [
+    "eyewear_product",
+    "promo_scene",
+    "beat_clip"
+   ],
+   "source_keys": [
+    "Gijsenij2011",
+    "ShevellKingdom2008"
+   ],
+   "test_status": "untested"
+  },
+  {
+   "id": "crel.p3_to_srgb_gamut_compress",
+   "name": "Wide-gamut phone photos need gamut mapping to sRGB",
+   "category": "pipeline",
+   "label": "EVIDENCE+DERIVED",
+   "purpose": "iPhone images are often Display P3 (wider than sRGB); clipping on conversion flattens saturated greens/reds of acetate frames.",
+   "how": "Convert P3 to sRGB with a perceptual intent / gamut compression before compositing in HTML; compare saturated areas before/after.",
+   "limits": "Platform handling of embedded profiles varies; test on the target app.",
+   "use_for": [
+    "eyewear_product",
+    "beat_clip"
+   ],
+   "source_keys": [
+    "MDN_DisplayP3",
+    "ICC_Profiles",
+    "Morovic2008"
+   ],
+   "test_status": "untested"
+  },
+  {
+   "id": "crel.intent_by_content",
+   "name": "Rendering intent by content type",
+   "category": "pipeline",
+   "label": "EVIDENCE",
+   "purpose": "Perceptual keeps gradations for photos; relative colorimetric keeps in-gamut colours exact for brand/proof; absolute for spot colours; saturation for charts.",
+   "how": "Shop flyers: photos perceptual, logo/brand colours relative colorimetric with a proof; never edit brand colour on an uncalibrated screen.",
+   "limits": "Perceptual and saturation intents are vendor-specific.",
+   "use_for": [
+    "print"
+   ],
+   "source_keys": [
+    "ICC_Profiles",
+    "Morovic2008"
+   ],
+   "test_status": "untested"
+  },
+  {
+   "id": "crel.shop_led_vs_daylight_metamerism",
+   "name": "Frame colour shifts between shop LEDs and daylight",
+   "category": "pipeline",
+   "label": "EVIDENCE",
+   "purpose": "Surfaces matching under one light can mismatch under another (metamer mismatching); low colour-rendition LEDs also distort hue/chroma.",
+   "how": "Show at least one daylight shot of each frame; when matching parts (front vs temples, frame vs case) check under both shop and window light; invite customers to check near the window.",
+   "limits": "Metamerism is uncommon in nature; frequency among acetate batches is a hypothesis.",
+   "use_for": [
+    "eyewear_product"
+   ],
+   "source_keys": [
+    "WitzelGegenfurtner2018",
+    "Berns2000_Metamerism",
+    "CIE224_2017"
+   ],
+   "test_status": "untested"
+  },
+  {
+   "id": "crel.high_fidelity_slight_red_chroma_light",
+   "name": "Product/try-on light: high fidelity, no red chroma loss",
+   "category": "pipeline",
+   "label": "EVIDENCE",
+   "purpose": "TM-30 research: perceived normalness and preference are driven by red chroma plus average fidelity; slight positive red chroma is preferred.",
+   "how": "Prefer lamps with high Rf (proposed: Rf>=80 and Rcs,h1 0..+8% for 'normal'; Rf>=74 with Rg>=100 for 'preferred'); do not mix lamp models/CCTs at one shooting table.",
+   "limits": "Criteria are one group's proposals summarised in DOE slides; datasheets often give only CRI Ra.",
+   "use_for": [
+    "eyewear_product"
+   ],
+   "source_keys": [
+    "Royer2017_TM30",
+    "CIE224_2017"
+   ],
+   "test_status": "untested"
+  },
+  {
+   "id": "crel.selective_hue_shift_grade",
+   "name": "Grade by moving one hue range, protect the rest",
+   "category": "pipeline",
+   "label": "EVIDENCE(case)+DERIVED",
+   "purpose": "A strong look can come from shifting one hue range across the whole film (O Brother: summer greens to dry browns/yellows) while touching little else.",
+   "how": "Hue-vs-hue/qualifier on the offending range (e.g. over-green AI foliage behind a product); protect skin and product hue; keep changes minimal to avoid artifacts.",
+   "limits": "Heavy secondaries on 8-bit AI images band quickly.",
+   "use_for": [
+    "story_clip",
+    "promo_scene",
+    "beat_clip"
+   ],
+   "source_keys": [
+    "Deakins2000_ASC",
+    "WitzelGegenfurtner2018"
+   ],
+   "test_status": "untested"
+  },
+  {
+   "id": "crel.palette_change_marks_turning_point",
+   "name": "Palette changes mark story turning points",
+   "category": "colour_script",
+   "label": "CRAFT",
+   "purpose": "A colour script keeps the palette stable within a beat and changes it at turning points so the audience feels the structure.",
+   "how": "One thumbnail per beat; note L/C/h and light relationship per beat; at most one big change per ~15 s in short clips.",
+   "limits": "No experimental evidence of audience effect; animation-studio craft.",
+   "use_for": [
+    "story_clip",
+    "story_carousel",
+    "beat_clip"
+   ],
+   "source_keys": [
+    "PixarInABox_ColorScripts",
+    "Amidi2011",
+    "web:studio.blender.org:85"
+   ],
+   "test_status": "untested"
+  },
+  {
+   "id": "crel.motif_colour",
+   "name": "A motif colour tied to one meaning",
+   "category": "colour_script",
+   "label": "CRAFT+EVIDENCE",
+   "purpose": "A recurring colour linked to one character/object/idea (brand peach whenever the glasses help) builds meaning; meaning is inferred relative to the other colours used.",
+   "how": "Reserve the motif hue: do not use it on unrelated props; let it appear at each payoff beat.",
+   "limits": "Too many motifs cancel out.",
+   "use_for": [
+    "story_clip",
+    "story_carousel",
+    "beat_clip"
+   ],
+   "source_keys": [
+    "Schloss2024",
+    "Bellantoni2005"
+   ],
+   "test_status": "untested"
+  },
+  {
+   "id": "crel.value_script_for_monochrome",
+   "name": "Value script for monochrome series",
+   "category": "colour_script",
+   "label": "CRAFT+DERIVED",
+   "purpose": "Charcoal/pencil stories have little hue, so the arc must live in value-key changes plus at most one accent.",
+   "how": "Problem slides mid-low key, resolution high key, accent only at the turning point; review the whole strip in greyscale.",
+   "limits": "Untested on our audience.",
+   "use_for": [
+    "story_carousel",
+    "quote_image"
+   ],
+   "source_keys": [
+    "PixarInABox_ColorScripts",
+    "WitzelGegenfurtner2018"
+   ],
+   "test_status": "untested"
+  }
+ ]
+}

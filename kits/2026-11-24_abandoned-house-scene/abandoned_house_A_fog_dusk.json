@@ -1,0 +1,114 @@
+{
+ "schema_version": "1.0",
+ "id": "abandoned_house_A_fog_dusk",
+ "intent": {
+  "purpose": "story_frame",
+  "audience": "Thai viewers of drama/story clips, phone and TV",
+  "message": "An old abandoned Thai wooden house that nobody has entered for years — something is waiting inside.",
+  "scene_objective": "establishing shot of the haunted location",
+  "subtext": "a family's past left behind",
+  "constraints": [
+   "no people",
+   "no text",
+   "empty plate for characters and subtitles later"
+  ]
+ },
+ "format": {
+  "aspect": "16:9",
+  "width": 1360,
+  "height": 768,
+  "text_layer": "html_overlay"
+ },
+ "direction": {
+  "emotion": "visual.mystery",
+  "emotion_intensity": 0.7,
+  "style": "cinematic_realism",
+  "visual_metaphor": "the path is swallowed by nature; the house has closed its eyes",
+  "mood_words": [
+   "eerie",
+   "silent",
+   "forgotten"
+  ]
+ },
+ "blueprint": {
+  "composition": "leading_lines",
+  "primary_focal_point": {
+   "what": "an abandoned old Thai stilt house in the style of traditional central Thailand: built of dark weathered teak, lifted two metres above the ground on many tall round pillars, a very steep tall roof whose gable boards sweep up into slender curved horns at the tips, walls of rectangular framed teak panels, a dark open doorway at the top of steep wooden stairs, vines and roots climbing the pillars",
+   "where": "centre, slightly above the middle",
+   "how_emphasised": "the only clear dark shape in pale fog, darkest value at the open doorway"
+  },
+  "viewing_path": [
+   "overgrown brick path in the foreground",
+   "the dark open doorway",
+   "the broken roof against the fog"
+  ],
+  "balance": "symmetrical",
+  "subject_placement": "the house sits in the centre at the end of the path",
+  "depth_layers": {
+   "foreground": "tall wild grass and a cracked brick path, a rusty fallen gate",
+   "midground": "the stilt house and a dead banana tree",
+   "background": "tall trees fading into thick grey-blue fog"
+  },
+  "negative_space": "pale fog in the upper sky",
+  "camera": {
+   "shot_size": "wide",
+   "angle": "low",
+   "lens_mm": 28,
+   "depth_of_field": "deep"
+  },
+  "value_plan": "mid-light fog, the house a dark silhouette, the doorway the darkest point"
+ },
+ "palette": {
+  "id": "pal.emo_mystery_fog",
+  "temperature": "cool"
+ },
+ "lighting": {
+  "id": "fog_atmospheric",
+  "key_direction": "dim dusk light diffused through fog from behind the house",
+  "quality": "soft",
+  "color_temperature_k": 7000
+ },
+ "environment": "a rural village in central Thailand at dusk, the house deep in an overgrown garden",
+ "prompt": {
+  "provider": "flux_local",
+  "steps": 4,
+  "seed": 41,
+  "avoid": "The scene is completely empty of people and animals; the image has no letters or signs"
+ },
+ "critique": [
+  {
+   "area": "storytelling",
+   "where": "path and pillars (lower third)",
+   "problem": "the house looks intact and the path is clean — \"abandoned\" reads weakly",
+   "severity": "major",
+   "likely_cause": "Thai-house wording took priority; overgrowth words dropped in the rewrite",
+   "fix": "img2img at denoise ~0.45 adding broken panels, missing roof tiles, weeds over the path",
+   "side_effects": "may change the clean silhouette that makes it read as Thai"
+  },
+  {
+   "area": "hierarchy",
+   "where": "doorway at the top of the stairs (x 0.5, y 0.45)",
+   "problem": "the dark doorway is not a saliency peak; the path (0.86) and roof tip (0.83) lead",
+   "severity": "minor",
+   "likely_cause": "doorway small and mid-grey in fog",
+   "fix": "darken the doorway in grade, or a faint warm glow inside",
+   "side_effects": "a glow changes the mood toward B"
+  }
+ ],
+ "score": {
+  "weights_profile": "story_frame",
+  "criteria": {
+   "composition": 8,
+   "color_harmony": 8,
+   "lighting": 7,
+   "visual_hierarchy": 7,
+   "emotional_impact": 7,
+   "storytelling": 6,
+   "art_style": 8,
+   "technical_accuracy": 8,
+   "originality": 7,
+   "finishing": 7
+  },
+  "rater": "claude (provisional AI judgement, no viewer test)"
+ }
+}

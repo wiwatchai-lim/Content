@@ -1,0 +1,777 @@
+[
+ {
+  "key": "SEP_PeirceSemiotics",
+  "title": "Peirce's Theory of Signs",
+  "authors": "(SEP entry; author not captured in the fetched text)",
+  "year": null,
+  "url": "https://plato.stanford.edu/entries/peirce-semiotics/",
+  "doi_isbn": "",
+  "source_type": "encyclopedia",
+  "tier": "B",
+  "key_findings": [
+   "A sign is determined by an Object and produces an effect (interpretant) in a person; it signifies only as it is interpreted.",
+   "Icon = signifies by shared quality (portrait, diagram); index = existential/causal link (smoke-fire, weathercock, pointing finger); symbol = convention/habit/law (words, traffic lights).",
+   "Peirce came to see pure icons and indices as rare; most signs mix iconic, indexical and symbolic features (hypo-icon, sub-index).",
+   "Later typologies (10 and 66 classes) are uncertain even for Peirce and are disputed by scholars."
+  ],
+  "practical_applications": [
+   "Classify every visual element by HOW it carries meaning: icons travel across cultures best, symbols least.",
+   "An index (steam from a cup, footprints, worn edges) shows a cause and needs little caption; a symbol needs shared convention or a caption."
+  ],
+  "limitations": [
+   "Author and revision date not captured.",
+   "Only the sections on the triad and typologies were summarised."
+  ],
+  "license": "copyrighted (SEP)",
+  "access_status": "full_text",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M12"
+  ]
+ },
+ {
+  "key": "Saussure1916",
+  "title": "Course in General Linguistics (excerpt: Nature of the Linguistic Sign)",
+  "authors": "de Saussure, F. (ed. Bally & Sechehaye)",
+  "year": 1916,
+  "url": "https://www.umsl.edu/~gradyf/theory/CourseinGeneralLinguistics.htm",
+  "doi_isbn": "",
+  "source_type": "primary_text",
+  "tier": "A",
+  "key_findings": [
+   "Saussure defines the sign as the whole formed by a concept and a sound-image, and proposes the terms signified (signifie) and signifier (signifiant).",
+   "Principle I: the bond between signifier and signified is arbitrary - e.g. 'sister' has no inner link to the French sounds s-o-r; 'ox' is b-o-f on one side of a border and o-k-s on the other.",
+   "He raises whether a future semiology should include modes of expression based on natural signs such as pantomime.",
+   "From earlier search only (not re-read): a Semiotica critique argues arbitrariness is usually read as symmetrical without justification."
+  ],
+  "practical_applications": [
+   "Meaning of a symbol is set by the community that uses it, so the same form can mean different things to Thai vs foreign viewers."
+  ],
+  "limitations": [
+   "Read: a course-page excerpt of the English translation (Nature of the Linguistic Sign), not the whole book.",
+   "Saussure's model is linguistic; extension to images (via Barthes) is an interpretive move, not an empirical result."
+  ],
+  "license": "public domain (original); translation copyright varies",
+  "access_status": "full_text",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M12"
+  ]
+ },
+ {
+  "key": "Barthes1977",
+  "title": "Rhetoric of the Image (in Image-Music-Text, trans. S. Heath)",
+  "authors": "Barthes, R.",
+  "year": 1977,
+  "url": "https://Monoskop.org/images/8/8a/Barthes_Roland_rhetoric_of_the_image.pdf",
+  "doi_isbn": "",
+  "source_type": "primary_text",
+  "tier": "A",
+  "key_findings": [
+   "Analyses a Panzani pasta ad as three messages: a linguistic message, a coded iconic (symbolic/connoted) message and a non-coded iconic (literal/denoted) message; the literal message supports the symbolic one.",
+   "Connoted signs: the half-open string bag spilling provisions = 'return from the market' with the euphoric values of freshness and domestic preparation; tomato, pepper and the poster's yellow-green-red = 'Italianicity', a specifically French knowledge - 'an Italian would barely perceive' it; the name Panzani itself connotes Italianicity by assonance.",
+   "All images are polysemous ('a floating chain of signifieds'); text relates to image by anchorage (fixes the reading, has a repressive value; most frequent, common in press photographs and advertisements) or relay (text and image complementary, unity at the level of the story; seen particularly in cartoons and comic strips)."
+  ],
+  "practical_applications": [
+   "Captions in our posts are anchorage: write them to close off unwanted readings.",
+   "Mint & Tao speech bubbles are relay: text carries the plot the image cannot."
+  ],
+  "limitations": [
+   "Read in Trachtenberg (ed.) Classic Essays on Photography (1980), Heath translation; essay first published 1964.",
+   "Interpretive/theoretical, not empirical."
+  ],
+  "license": "copyrighted",
+  "access_status": "full_text",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M12"
+  ]
+ },
+ {
+  "key": "Scott1994",
+  "title": "Images in Advertising: The Need for a Theory of Visual Rhetoric",
+  "authors": "Scott, L. M.",
+  "year": 1994,
+  "url": "https://econbiz.de/Record/images-in-advertising-the-need-for-a-theory-of-visual-rhetoric-scott-linda/10011423877",
+  "doi_isbn": "10.1086/209396",
+  "source_type": "review",
+  "tier": "A",
+  "key_findings": [
+   "Criticises the assumption that pictures simply reflect reality.",
+   "Treats visuals as a convention-based symbolic system; many images seen as 'affect-laden' are complex figurative arguments.",
+   "Calls for a pluralistic research program on pictures as persuasion; source of 'cultural competency' idea used by McQuarrie & Mick."
+  ],
+  "practical_applications": [
+   "Plan images as arguments (claim + evidence + figure), not decoration."
+  ],
+  "limitations": [
+   "Theoretical article; abstract only."
+  ],
+  "license": "copyrighted",
+  "access_status": "abstract",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M12"
+  ]
+ },
+ {
+  "key": "McQuarrieMick1996",
+  "title": "Figures of Rhetoric in Advertising Language",
+  "authors": "McQuarrie, E. F.; Mick, D. G.",
+  "year": 1996,
+  "url": "https://ideas.repec.org/a/oup/jconrs/v22y1996i4p424-38.html",
+  "doi_isbn": "10.1086/209459",
+  "source_type": "empirical",
+  "tier": "A",
+  "key_findings": [
+   "Framework: figurative vs non-figurative; schemes (excess regularity) vs tropes (irregularity); four operations: repetition, reversal, substitution, destabilization.",
+   "A rhetorical figure is an artful deviation in the form of a statement.",
+   "Preliminary validation data support the distinctions, linked to predicted consumer responses."
+  ],
+  "practical_applications": [
+   "Use the same taxonomy for captions and visuals: rhyme/repetition (scheme) is lower risk than pun/metaphor (trope)."
+  ],
+  "limitations": [
+   "Abstract only; the specific predictions were not read."
+  ],
+  "license": "copyrighted",
+  "access_status": "abstract",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M12"
+  ]
+ },
+ {
+  "key": "McQuarrieMick1999",
+  "title": "Visual Rhetoric in Advertising: Text-Interpretive, Experimental, and Reader-Response Analyses",
+  "authors": "McQuarrie, E. F.; Mick, D. G.",
+  "year": 1999,
+  "url": "https://ideas.repec.org/a/oup/jconrs/v26y1999i1p37-54.html",
+  "doi_isbn": "10.1086/209549",
+  "source_type": "empirical",
+  "tier": "A",
+  "key_findings": [
+   "Visual figures tested (rhyme, antithesis, metaphor, pun) produced more elaboration and more favourable ad attitude without lower comprehension.",
+   "Reader-response interviews matched the text-based analysis.",
+   "Effects of visual tropes (metaphor, pun) diminished or disappeared for people lacking the cultural competency to read the (American) ads."
+  ],
+  "practical_applications": [
+   "Visual metaphor helps only when the audience shares the code: for foreign tourists, prefer schemes or very common metaphors."
+  ],
+  "limitations": [
+   "Abstract only; US ads and samples; a 2003 follow-up (JCR 29(4)) examined directed vs incidental exposure (not read)."
+  ],
+  "license": "copyrighted",
+  "access_status": "abstract",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M12"
+  ]
+ },
+ {
+  "key": "PhillipsMcQuarrie2004",
+  "title": "Beyond Visual Metaphor: A New Typology of Visual Rhetoric in Advertising",
+  "authors": "Phillips, B. J.; McQuarrie, E. F.",
+  "year": 2004,
+  "url": "https://informahealthcare.com/doi/full/10.1080/02650487.2018.1447760",
+  "doi_isbn": "Marketing Theory 4:113-136",
+  "source_type": "review",
+  "tier": "A",
+  "key_findings": [
+   "Typology built from properties of pictures: visual structure (juxtaposition, fusion, replacement) x meaning operation (connection, comparison) per Lagerwerf2023's summary.",
+   "Ordered by complexity: juxtaposition < fusion < replacement (as commonly summarised).",
+   "A later student study (search snippet, source not identified) reported juxtaposition prompted more elaboration and fusion was hardest to comprehend."
+  ],
+  "practical_applications": [
+   "Template for product metaphors: side-by-side (juxtaposition) for broad audiences; fused object for engaged followers; replacement only with strong context."
+  ],
+  "limitations": [
+   "Original article not read; typology described via secondary sources (Lagerwerf2023, a 2018 International Journal of Advertising extension at the URL).",
+   "'Connection/comparison' categories confirmed only through Lagerwerf2023's text."
+  ],
+  "license": "copyrighted",
+  "access_status": "bibliographic",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M12"
+  ]
+ },
+ {
+  "key": "vanMulken2010",
+  "title": "The impact of perceived complexity, deviation and comprehension on the appreciation of visual metaphor in advertising across three European countries",
+  "authors": "van Mulken, M.; le Pair, R.; Forceville, C.",
+  "year": 2010,
+  "url": "https://benjamins.com/online/emetbib/publications/11979",
+  "doi_isbn": "Journal of Pragmatics 42(12)",
+  "source_type": "empirical",
+  "tier": "A",
+  "key_findings": [
+   "Experiment with authentic ads in three European countries, three visual metaphor types.",
+   "Hybrids (fusion) were the preferred type.",
+   "Deviation from expectation and comprehension raised appreciation; perceived complexity correlated negatively with appreciation.",
+   "Follow-up (van Mulken, van Hooft & Nederstigt 2014) proposed a 'tipping point': moderately challenging metaphors appreciated more than very simple or very complex ones."
+  ],
+  "practical_applications": [
+   "Aim for 'surprising but solvable': if testers cannot state the intended meaning, simplify."
+  ],
+  "limitations": [
+   "Search summary only; author list from bibliography record, title not seen in full; unverified details.",
+   "European samples; Lagerwerf2023 did NOT find the inverted U."
+  ],
+  "license": "copyrighted",
+  "access_status": "search_summary",
+  "verification_status": "unverified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M12"
+  ]
+ },
+ {
+  "key": "Lagerwerf2023",
+  "title": "Conceptual similarity and visual metaphor: effects on viewing times, appreciation, and recall",
+  "authors": "Lagerwerf, L.; van Mulken, M.; Lagerwerf, J. B.",
+  "year": 2023,
+  "url": "https://frontiersin.org/articles/10.3389/fcomm.2023.1266813/full",
+  "doi_isbn": "10.3389/fcomm.2023.1266813",
+  "source_type": "empirical",
+  "tier": "A",
+  "key_findings": [
+   "Three experiments (N=65, 73, 73) with 27 juxtaposed object pairs: hyponyms (same kind), visual comparisons (metaphors), unrelated.",
+   "Hyponyms identified fastest and liked most; metaphors next; unrelated last.",
+   "Longer exposure did not change preference; recall lowest for unrelated pairs; 5 s exposure improved recall.",
+   "Fluency theory explained appreciation better than the 'pleasure of solving' view; the inverted U was not found."
+  ],
+  "practical_applications": [
+   "In fast-scrolling feeds, easy-to-process pairings win liking; save puzzling metaphors for content people stop to read."
+  ],
+  "limitations": [
+   "About 100k of 121k characters read; lab stimuli, not real ads; Dutch-context samples; no culture comparison."
+  ],
+  "license": "CC BY 4.0 (Frontiers)",
+  "access_status": "full_text",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M12"
+  ]
+ },
+ {
+  "key": "Panofsky1939",
+  "title": "Studies in Iconology (Introductory: three levels of meaning)",
+  "authors": "Panofsky, E.",
+  "year": 1939,
+  "url": "https://assets.cambridge.org/97805211/95089/excerpt/9780521195089_excerpt.pdf",
+  "doi_isbn": "",
+  "source_type": "textbook",
+  "tier": "A",
+  "key_findings": [
+   "Level 1 pre-iconographic description: forms, figures, objects (primary/natural subject).",
+   "Level 2 iconography: conventional subject (who/what story) known through cultural convention.",
+   "Level 3 iconology: why a society gave the image that meaning; levels blend in practice.",
+   "Critics question the label 'secondary/conventional subject'."
+  ],
+  "practical_applications": [
+   "Three-step symbol check: what is literally shown -> which convention it invokes -> what that convention means to THIS audience."
+  ],
+  "limitations": [
+   "Panofsky's own text not read; the three-level model is now verified through Lorenz2016_PanofskyModel (textbook chapter read in full). The previously linked Cambridge excerpt is Lorenz's book, not Panofsky's."
+  ],
+  "license": "copyrighted",
+  "access_status": "search_summary",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M12"
+  ]
+ },
+ {
+  "key": "ISO9186_1_2014",
+  "title": "ISO 9186-1:2014 Graphical symbols - Test methods - Part 1: Method for testing comprehensibility",
+  "authors": "ISO/TC 145",
+  "year": 2014,
+  "url": "https://www.iso.org/standard/59226.html",
+  "doi_isbn": "",
+  "source_type": "docs",
+  "tier": "S",
+  "key_findings": [
+   "Standard method for measuring how well a symbol variant conveys its intended message without explanatory text: proportion of respondents who understand it correctly.",
+   "Part 2 covers perceptual quality, Part 3 referent association; confirmed 2019; a revision (DIS Ed. 3) is in progress."
+  ],
+  "practical_applications": [
+   "Basis for our cheap 'does this symbol read?' test: show without caption, ask open question, score correct/partly/wrong."
+  ],
+  "limitations": [
+   "Paywalled; acceptance threshold not seen in the standard itself."
+  ],
+  "license": "copyrighted (ISO)",
+  "access_status": "publisher_page",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M12"
+  ]
+ },
+ {
+  "key": "SafetySignComp_PMC10258412",
+  "title": "Safety sign comprehension of fiberboard industry employees",
+  "authors": "Gungor, Celal",
+  "year": 2023,
+  "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10258412",
+  "doi_isbn": "10.1016/j.heliyon.2023.e16744",
+  "source_type": "empirical",
+  "tier": "A",
+  "key_findings": [
+   "139 fiberboard-industry employees (99.3% male, mean age 32) gave the meaning of 22 common safety signs (ISO 7010 designs): mean comprehension 66.6% (range 22.5%-98.6%); warning signs lowest, prohibition signs highest.",
+   "Below 40%: toxic material, automated external defibrillator, overhead obstacle, and 'disconnect mains plug' signs.",
+   "Method section: 67% comprehension is the acceptance criterion for safety symbols in ISO 3864 and 85% in ANSI Z535.3-2022.",
+   "Earlier studies cited range from 39.2% to 78.4% overall comprehension, attributed to cultural, educational and design differences."
+  ],
+  "practical_applications": [
+   "Borrow as a working bar: a symbol meant to carry meaning alone should reach roughly 2 of 3 correct in a small open-ended test; safety-critical messages need text anyway."
+  ],
+  "limitations": [
+   "Heliyon 9(6):e16744 (2023), Turkey, one industry, mostly male workers; the ISO/ANSI thresholds are as cited by the author, standards themselves not read."
+  ],
+  "license": "CC BY 4.0",
+  "access_status": "full_text",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M12"
+  ]
+ },
+ {
+  "key": "ArchetypeReplication2013",
+  "title": "(Cross-cultural replication of Rosen et al. archetypal symbol word-association paradigm) - Behavioral Sciences 3:541",
+  "authors": "",
+  "year": 2013,
+  "url": "https://boris.unibe.ch/62656/1/behavsci-03-00541.pdf",
+  "doi_isbn": "",
+  "source_type": "empirical",
+  "tier": "A",
+  "key_findings": [
+   "German replication of an English-language paradigm reported the archetypal-symbol memory effect was unlikely to be a linguistic artefact (per search summary).",
+   "Accompanying dissertation concedes empirical research on archetypes is 'extremely sparse'.",
+   "Critiques: Jung's universalism leans on Western esoteric concepts; some archetypes may map to evolved motives (mating, care, status) rather than inherited images."
+  ],
+  "practical_applications": [
+   "Treat 'universal archetypes' as a weak hypothesis; rely on broadly shared experiences (mother-child, light-dark, height-power) and still test locally."
+  ],
+  "limitations": [
+   "Search summary only; authors not captured; small literature."
+  ],
+  "license": "CC BY (MDPI, verify)",
+  "access_status": "search_summary",
+  "verification_status": "unverified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M12"
+  ]
+ },
+ {
+  "key": "MatsumotoHwang2013",
+  "title": "Cultural Similarities and Differences in Emblematic Gestures",
+  "authors": "Matsumoto, D.; Hwang, H. C.",
+  "year": 2013,
+  "url": "https://www.humintell.com/2013/01/gestures-emblems-cultural-variances/",
+  "doi_isbn": "Journal of Nonverbal Behavior",
+  "source_type": "empirical",
+  "tier": "A",
+  "key_findings": [
+   "Lab blog summary of the Journal of Nonverbal Behavior paper: emblems were catalogued across cultural groups against a standard list of verbal messages; culturally similar gestures carried more basic messages than culturally variant ones.",
+   "Three kinds of difference: different forms for the same message (insults exist everywhere); different meanings for the same form (the ring = 'A-OK', 'money' or other messages); culture-unique emblems ('apology' only in South Asia, 'hunger' only in East Asia, 'day after tomorrow' only in the Middle East)."
+  ],
+  "practical_applications": [
+   "Never let a hand gesture carry the message for a mixed-nationality audience; pair with words or use neutral hands."
+  ],
+  "limitations": [
+   "Read only via the lab's own blog summary (Humintell, 9 Jan 2013), read in full; the paper itself not read; which regions read the ring as 'money' is not stated in the summary."
+  ],
+  "license": "copyrighted",
+  "access_status": "search_summary",
+  "verification_status": "unverified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M12",
+   "M30"
+  ]
+ },
+ {
+  "key": "Maricopa_Nonverbal",
+  "title": "4.4 Nonverbal Communication and Culture (COM110 open textbook)",
+  "authors": "Maricopa Community Colleges (OER)",
+  "year": 2023,
+  "url": "https://open.maricopa.edu/com110r2023/?p=129",
+  "doi_isbn": "",
+  "source_type": "course",
+  "tier": "B",
+  "key_findings": [
+   "The North American A-OK sign is an obscene gesture in many European cultures; the inverted peace sign (palm inward) is an insult in England and Australia.",
+   "Thumbs-up = 'well done' in North America; in Greece and other countries it equals the insulting 'Up yours!' (citing Cotton 2013).",
+   "Greek moutza (open palm thrust outward) is an insult; counting on fingers differs between North Americans and other Europeans.",
+   "Bowing is more common in Asian cultures; the head nod is an abbreviated bow; nonverbal norms vary with context and individuals."
+  ],
+  "practical_applications": [
+   "Avoid thumbs-up / OK as the hero gesture in ads aimed at mixed foreign audiences."
+  ],
+  "limitations": [
+   "Open textbook (OER, 2023); country lists not exhaustive. Note: it does NOT mention Brazil - the earlier 'inverted OK obscene in Brazil' claim was not in this source."
+  ],
+  "license": "CC BY (OER, verify)",
+  "access_status": "full_text",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M12"
+  ]
+ },
+ {
+  "key": "Yang2012",
+  "title": "(Number 4 aversion and number 8 preference in Chinese retail prices)",
+  "authors": "Yang, Z.",
+  "year": 2012,
+  "url": "https://phys.org/news/2012-03-lucky-unlucky-customers.pdf",
+  "doi_isbn": "Journal of Socio-Economics",
+  "source_type": "empirical",
+  "tier": "A",
+  "key_findings": [
+   "Aversion to 4 plus preference for 8 pushes Chinese prices upward; retailer gains estimated up to 1.40% of 2007 GDP (as reported).",
+   "Related: Simmons & Schindler (Nanyang) found Chinese price ads favour 8 and avoid 4; a Singapore study of ~900 ads found ~32% prices ending in 8 (Roschk, Westjohn & Magnusson)."
+  ],
+  "practical_applications": [
+   "For Chinese-speaking customers, avoid 4 in prices/promo codes; 8 endings are familiar."
+  ],
+  "limitations": [
+   "Read via press release (phys.org) summary only."
+  ],
+  "license": "copyrighted",
+  "access_status": "search_summary",
+  "verification_status": "unverified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M12",
+   "M30"
+  ]
+ },
+ {
+  "key": "Phillips2001_BMJ",
+  "title": "The Hound of the Baskervilles effect: natural experiment on the influence of psychological stress on timing of death",
+  "authors": "Phillips, D. P.; Liu, G. C.; Kwok, K.; Jarvinen, J. R.; Zhang, W.; Abramson, I. S.",
+  "year": 2001,
+  "url": "https://www.bmj.com/content/323/7327/1443",
+  "doi_isbn": "",
+  "source_type": "empirical",
+  "tier": "A",
+  "key_findings": [
+   "Notes Chinese and Japanese consider 4 unlucky; some Chinese/Japanese hospitals omit 4th floor or room 4.",
+   "Reported a cardiac death peak on the 4th of the month among Chinese/Japanese Americans."
+  ],
+  "practical_applications": [
+   "Evidence that number-4 avoidance is real practice; but do not claim it has health effects."
+  ],
+  "limitations": [
+   "Contested: Smith 2002 (BMJ) found no persuasive day effect in California data; a 2003 Medical Journal of Australia Hong Kong study did not support it; McGill OSS summary agrees.",
+   "Search summary only."
+  ],
+  "license": "copyrighted",
+  "access_status": "search_summary",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M12"
+  ]
+ },
+ {
+  "key": "KoreaNet2020",
+  "title": "Korean superstitions (Honorary Reporter article)",
+  "authors": "Dovletoglou, E.",
+  "year": 2020,
+  "url": "https://www.korea.net/NewsFocus/HonoraryReporters/view?articleId=191095",
+  "doi_isbn": "",
+  "source_type": "practitioner",
+  "tier": "E",
+  "key_findings": [
+   "Korean 'four' sounds like 'death'; buildings may label floor 4 as 'F'.",
+   "Writing a living person's name in red is taboo (red on memorial wreaths/death records); personal seal (dojang) is the exception.",
+   "Shoes as gifts = the recipient will run away; avoid dark/red gift wrap."
+  ],
+  "practical_applications": [
+   "Never render a Korean customer's name in red text in a thank-you graphic."
+  ],
+  "limitations": [
+   "Volunteer reporter on a government portal; folk-belief reporting, strength of belief today not measured."
+  ],
+  "license": "copyrighted",
+  "access_status": "full_text",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M12",
+   "M30"
+  ]
+ },
+ {
+  "key": "Britannica_Swastika",
+  "title": "Swastika",
+  "authors": "Encyclopaedia Britannica",
+  "year": null,
+  "url": "https://www.britannica.com/topic/swastika",
+  "doi_isbn": "",
+  "source_type": "encyclopedia",
+  "tier": "B",
+  "key_findings": [
+   "Auspicious symbol in Hindu, Buddhist and Jain traditions (prosperity, sun; Buddha's footprints; Japanese manji).",
+   "Adopted by the Nazi Party in 1920 (Hakenkreuz); since WWII most Westerners read it as a Nazi symbol.",
+   "Germany exempts religious temple uses; ADL calls Hindu/Buddhist temple uses innocuous."
+  ],
+  "practical_applications": [
+   "Even in a Thai temple context, crop or avoid the swastika in content for Western audiences; explain if it must appear."
+  ],
+  "limitations": [
+   "Search summary across Britannica and other encyclopedias; Britannica page not opened directly."
+  ],
+  "license": "copyrighted",
+  "access_status": "search_summary",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M12"
+  ]
+ },
+ {
+  "key": "CGTN2024_Dragon",
+  "title": "The symbol of the dragon in Eastern and Western cultures",
+  "authors": "CGTN",
+  "year": 2024,
+  "url": "https://news.cgtn.com/news/2024-01-23/The-symbol-of-the-dragon-in-Eastern-and-Western-cultures-1qBfOYDTExG/share_amp.html",
+  "doi_isbn": "",
+  "source_type": "practitioner",
+  "tier": "C",
+  "key_findings": [
+   "Chinese dragon ('loong'): wingless serpentine body with features of carp, tiger and eagle; sacred symbol of good luck, power and wealth, might, wisdom and harmony with nature; believed to bring rain and harvests (Shi Aidong, Chinese Academy of Social Sciences).",
+   "Reverence has grown since the 1980s; many Chinese call themselves 'descendants of the dragon'.",
+   "Western dragon: fire-breathing, bat-winged antagonist of chaos and evil; Satan in the Book of Revelation; St George legend; Smaug in The Hobbit.",
+   "Chinese folklore also has dual good/evil dragons (Heilongjiang black vs white dragon)."
+  ],
+  "practical_applications": [
+   "Dragon imagery for Chinese New Year is positive for Chinese audiences; for Western viewers frame it as celebratory (colour, dance) not menacing."
+  ],
+  "limitations": [
+   "Chinese state media; no audience-perception data. The Olympic-mascot and 2024 'loong' wording-debate claims in the earlier entry are NOT in this article (unverified)."
+  ],
+  "license": "copyrighted",
+  "access_status": "full_text",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M12"
+  ]
+ },
+ {
+  "key": "SCMP2025_GiftTaboos",
+  "title": "Gifts you must avoid giving in Chinese culture, from clocks and shoes to pears, and why",
+  "authors": "South China Morning Post",
+  "year": 2025,
+  "url": "https://www.scmp.com/lifestyle/chinese-culture/article/3316324/gifts-you-must-avoid-giving-chinese-culture-clocks-and-shoes-pears-and-why",
+  "doi_isbn": "",
+  "source_type": "practitioner",
+  "tier": "C",
+  "key_findings": [
+   "Giving a clock (song zhong) sounds like attending a deathbed/funeral (song zhong); strongest with elders; a token payment can neutralise it.",
+   "Umbrella (san) sounds like 'separate' (san); chrysanthemums associated with funerals; pears and shoes also on avoid lists."
+  ],
+  "practical_applications": [
+   "Gift/promo imagery for Chinese customers: no clocks, umbrellas, white chrysanthemums as 'gifts'."
+  ],
+  "limitations": [
+   "Newspaper lifestyle article; search summary only; regional variation not covered."
+  ],
+  "license": "copyrighted",
+  "access_status": "search_summary",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M12",
+   "M30"
+  ]
+ },
+ {
+  "key": "Nation_NationalSymbols",
+  "title": "Six National Symbols to showcase Thai Identity to the World",
+  "authors": "The Nation Thailand",
+  "year": 2025,
+  "url": "https://www.nationthailand.com/life/art-culture/40050668",
+  "doi_isbn": "",
+  "source_type": "practitioner",
+  "tier": "C",
+  "key_findings": [
+   "On 14 May 2025 the Thai government announced in the Royal Gazette six national symbols to strengthen soft power: Thai elephant (national animal), Ratchaphruek / golden shower tree (national flower), Sala Thai (national architecture), Thai betta fish (national aquatic animal), Naga (national mythical creature), and the Wai (national cultural gesture).",
+   "Stated meanings: elephant = strength, endurance, royal and war history; Ratchaphruek = unity, loyalty, prosperity; betta = bravery and elegance; Naga = protection, sanctity, link between human and spiritual realms; Wai = humility and mutual respect."
+  ],
+  "practical_applications": [
+   "National symbols are positive identity markers but carry state/royal weight: use respectfully, not as jokes or mascots for discounts."
+  ],
+  "limitations": [
+   "News article (31 May 2025) reporting the Gazette notice; Gazette text not read. The earlier entry's 2001 Cabinet date and the list including Garuda, flag and Ramakien are not in this article."
+  ],
+  "license": "copyrighted",
+  "access_status": "full_text",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M12",
+   "M30"
+  ]
+ },
+ {
+  "key": "AsianArt_Lotus",
+  "title": "The lotus in Buddhism (100 Flowers exhibition)",
+  "authors": "Asian Art Museum of San Francisco",
+  "year": null,
+  "url": "https://100flowers.asianart.org/hotspot_tab/the-lotus-in-buddhism",
+  "doi_isbn": "",
+  "source_type": "docs",
+  "tier": "B",
+  "key_findings": [
+   "Asian Art Museum: the lotus is one of the most important and recognised Buddhist symbols across all Buddhist cultures; it symbolises purity, 'spontaneous' generation, faithfulness and spiritual awakening.",
+   "Thai details (bua luang, merit-making, funeral use) come from earlier search summaries of Thai press, not from this page."
+  ],
+  "practical_applications": [
+   "Lotus is safe and positive for Thai audiences in calm/wellness contexts; avoid on feet, floors, trash, or comic contexts."
+  ],
+  "limitations": [
+   "Short museum page; Thai-specific uses not verified here."
+  ],
+  "license": "copyrighted",
+  "access_status": "full_text",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M12"
+  ]
+ },
+ {
+  "key": "Thailex",
+  "title": "Thailand Lexicon (entries: naga; sai sin; nang kwak)",
+  "authors": "thailex.info",
+  "year": null,
+  "url": "https://thailex.info/THAILEX/THAILEXENG/lexicon/Thailand%20Lexicon%20-%20naga,%20naag%20(mythical%20serpent).htm",
+  "doi_isbn": "",
+  "source_type": "encyclopedia",
+  "tier": "D",
+  "key_findings": [
+   "Naga entry: mythical cobra-like serpent, often multi-headed; guardian of the Buddha and protector of earthly waters; symbol of fertility, steadfastness, wealth and abundance; dwells under the earth, in water and in the skies where it makes rain; often rainbow-coloured.",
+   "Isaan rocket festivals 'wake the naga' for rain; Nong Khai naga fireballs on the Mekong; naga often shown battling Garuda.",
+   "Folk story: a naga disguised as a monk was told it could not be ordained but could guard temples - hence ordination candidates are called 'naag' and nagas line stair rails and roof edges; naga bridges = safe passage over water.",
+   "Sai sin and Nang Kwak entries: from earlier search summary only (not in the page read)."
+  ],
+  "practical_applications": [
+   "Naga/Nang Kwak are folk-religious: fine as respectful cultural reference, risky as cartoon mascots for selling."
+  ],
+  "limitations": [
+   "Non-academic travel lexicon; only the naga entry was read in full."
+  ],
+  "license": "unknown",
+  "access_status": "full_text",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M12"
+  ]
+ },
+ {
+  "key": "Wannavithyapa2026",
+  "title": "The Sacralization of the San Phra Phum (Spirit House) as Manifested in the Community Beliefs of Thai Society",
+  "authors": "Wannavithyapa, Gritsanaphon",
+  "year": 2026,
+  "url": "https://so06.tci-thaijo.org/index.php/jmpr/article/view/290899",
+  "doi_isbn": "Journal of MCU Philosophy Review",
+  "source_type": "review",
+  "tier": "A",
+  "key_findings": [
+   "Documentary review: San Phra Phum (spirit house) belief has two roots - belief in deities (Phra Phum as tree/community guardian deity, linked to the Four Heavenly Kings of the Mahasamaya Sutta and protective deities in the Ratana Sutta, with offerings in return) and sacred space (originally the burial site of a revered tribal leader or ancestor, later a village guardian shrine).",
+   "Buddhism introduced deity belief to replace indigenous guardian/ancestral spirits, giving Phra Phum the character of a deity in a palace (prasat); the sacred space imitates Mount Meru and celestial realms.",
+   "Conclusion: the spirit house links humans and nature and represents cultural syncretism for sustainable coexistence.",
+   "From earlier search only: Davidson (Chula MA 1996, 893 Bangkok residents) on Phra Phum beside Buddha images; origins disputed."
+  ],
+  "practical_applications": [
+   "Spirit houses read as 'home/place protection, respect'; never show people climbing, kicking or mocking one."
+  ],
+  "limitations": [
+   "Abstract only; Journal of MCU Philosophy Review 9(2), May-Aug 2026; documentary review, not fieldwork."
+  ],
+  "license": "unknown (ThaiJO)",
+  "access_status": "abstract",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M12",
+   "M30"
+  ]
+ },
+ {
+  "key": "Naresuan2023_Nine",
+  "title": "(Number nine in Thai creative culture) - Journal of Humanities, Naresuan University",
+  "authors": "",
+  "year": 2023,
+  "url": "https://so03.tci-thaijo.org/index.php/jhnu/article/download/244459/177556/1045043",
+  "doi_isbn": "",
+  "source_type": "empirical",
+  "tier": "A",
+  "key_findings": [
+   "Number nine is significantly applied in Thai 'creative' culture, linked to astrology/sacredness and its homophone (kao ~ 'step forward' = progress).",
+   "Popular sources add: nine monks at blessings, nine auspicious desserts, record lucky-licence-plate auctions (Bangkok Post: ~45m baht)."
+  ],
+  "practical_applications": [
+   "9 is a positive number in Thai promos (e.g. 9.9 campaigns, 99 baht) - meaning 'progress'."
+  ],
+  "limitations": [
+   "PDF text garbled; title/authors not captured; methods unverified."
+  ],
+  "license": "unknown (ThaiJO)",
+  "access_status": "search_summary",
+  "verification_status": "unverified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M12",
+   "M30"
+  ]
+ },
+ {
+  "key": "Lorenz2016_PanofskyModel",
+  "title": "Ancient Mythological Images and their Interpretation: An Introduction to Iconology, Semiotics and Image Studies in Classical Art History (Chapter 1 excerpt)",
+  "authors": "Lorenz, Katharina",
+  "year": 2016,
+  "url": "https://assets.cambridge.org/97805211/95089/excerpt/9780521195089_excerpt.pdf",
+  "doi_isbn": "978-0-521-19508-9",
+  "source_type": "textbook",
+  "tier": "A",
+  "key_findings": [
+   "Panofsky's iconology (first sketched in a 1932 article from a 1931 Kant Society paper, revised in English after 1933) is a three-step interpretive model whose levels he said amalgamate into one 'circle of interpretation'.",
+   "Level 1, primary or natural subject matter (phenomenal meaning) = pre-iconographic description of what a viewer can identify from lines and colours using everyday experience.",
+   "Level 2, secondary or conventional subject matter = iconographic analysis; Panofsky's example: a dinner table with thirteen guests is likely the Last Supper (needs literary/cultural knowledge).",
+   "Level 3, intrinsic meaning or documentary meaning = iconology proper: principles revealing the attitudes of 'a nation, a period, a class, a religious or philosophical persuasion'.",
+   "Lorenz notes Panofsky's model changed considerably between 1930, 1932 and the English versions."
+  ],
+  "practical_applications": [
+   "Symbol audit: (1) what is literally shown, (2) what convention it invokes for this audience, (3) what worldview it signals."
+  ],
+  "limitations": [
+   "Secondary textbook chapter (publisher excerpt) describing Panofsky; Panofsky's own text not read."
+  ],
+  "license": "copyrighted (publisher excerpt)",
+  "access_status": "full_text",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M12"
+  ]
+ }
+]

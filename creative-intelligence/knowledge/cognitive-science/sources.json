@@ -1,0 +1,1367 @@
+[
+  {
+    "key": "Miller1956",
+    "title": "The magical number seven, plus or minus two: Some limits on our capacity for processing information",
+    "authors": "George A. Miller",
+    "year": 1956,
+    "url": "https://pubmed.ncbi.nlm.nih.gov/13310704/",
+    "doi_isbn": "10.1037/h0043158",
+    "source_type": "empirical",
+    "tier": "A",
+    "key_findings": [
+      "(Secondary summaries) Summarised evidence that the immediate memory span of young adults is about seven items",
+      "Emphasised that effective capacity can be extended by recoding/chunking"
+    ],
+    "practical_applications": [
+      "Historical anchor only; use Cowan's ~4 chunks as design ceiling"
+    ],
+    "limitations": [
+      "Not read; 'seven' described by later authors as partly rhetorical"
+    ],
+    "license": "copyrighted",
+    "access_status": "bibliographic",
+    "verification_status": "verified",
+    "date_accessed": "2026-11-25",
+    "modules": [
+      "M04"
+    ]
+  },
+  {
+    "key": "Cowan2001",
+    "title": "The magical number 4 in short-term memory: A reconsideration of mental storage capacity",
+    "authors": "Nelson Cowan",
+    "year": 2001,
+    "url": "https://memory.psych.missouri.edu/assets/doc/articles/2001/cowan-bbs-2001.pdf",
+    "doi_isbn": "10.1017/S0140525X01003922",
+    "source_type": "review",
+    "tier": "A",
+    "key_findings": [
+      "When rehearsal and long-term-memory chunking are prevented, a single central capacity limit averages about 4 chunks (population range about 3 to 5)",
+      "Miller's 7 reflects rehearsal and grouping; capacity is counted in chunks, not raw items",
+      "Some theories place the limit in duration/decay rather than number (debated in the article)"
+    ],
+    "practical_applications": [
+      "Max ~4 meaning units per slide/shot",
+      "Lists of 3-4 items; group longer lists into categories",
+      "Limit new names/numbers per spoken sentence"
+    ],
+    "limitations": [
+      "Lab tasks with digits/words/shapes, not narratives",
+      "Defining a 'chunk' in real sentences is hard"
+    ],
+    "license": "copyrighted",
+    "access_status": "full_text",
+    "verification_status": "verified",
+    "date_accessed": "2026-11-25",
+    "modules": [
+      "M04"
+    ]
+  },
+  {
+    "key": "Simons1999",
+    "title": "Gorillas in our midst: Sustained inattentional blindness for dynamic events",
+    "authors": "Daniel J. Simons; Christopher F. Chabris",
+    "year": 1999,
+    "url": "https://journals.sagepub.com/doi/10.1068/p281059",
+    "doi_isbn": "10.1068/p281059",
+    "source_type": "empirical",
+    "tier": "A",
+    "key_findings": [
+      "(Secondary summaries) Many observers engaged in an attention-demanding counting task failed to notice an unexpected person in a gorilla suit",
+      "Noticing depends on primary-task difficulty and on similarity of the unexpected event to attended items"
+    ],
+    "practical_applications": [
+      "Give price/CTA its own moment, not during long captions or main action"
+    ],
+    "limitations": [
+      "Read via search summaries only; feed-context magnitude unknown"
+    ],
+    "license": "copyrighted",
+    "access_status": "search_summary",
+    "verification_status": "verified",
+    "date_accessed": "2026-11-25",
+    "modules": [
+      "M04"
+    ]
+  },
+  {
+    "key": "Cerf2009",
+    "title": "Faces and text attract gaze independent of the task: Experimental data and computer model",
+    "authors": "Moran Cerf; E. Paxon Frady; Christof Koch",
+    "year": 2009,
+    "url": "https://resolver.caltech.edu/CaltechAUTHORS:20130816-103355264",
+    "doi_isbn": "10.1167/9.12.10",
+    "source_type": "empirical",
+    "tier": "A",
+    "key_findings": [
+      "In free viewing, faces were fixated ~16.6x and text ~11.1x more than comparable regions (size/position normalised)",
+      "Participants found it hard to avoid faces and text even when costly",
+      "Adding face/text channels to a bottom-up saliency model improved fixation prediction"
+    ],
+    "practical_applications": [
+      "Place the product near faces/text, which capture gaze first",
+      "Text in speech bubbles is the gaze magnet for faceless Mint & Tao"
+    ],
+    "limitations": [
+      "Static desktop images; no cartoon or faceless characters tested"
+    ],
+    "license": "unknown",
+    "access_status": "abstract",
+    "verification_status": "verified",
+    "date_accessed": "2026-11-25",
+    "modules": [
+      "M04"
+    ]
+  },
+  {
+    "key": "Broda2024",
+    "title": "Individual differences in face salience and rapid face saccades",
+    "authors": "Maximilian Davide Broda; Petra Borovska; Benjamin de Haas",
+    "year": 2024,
+    "url": "https://jlupub.ub.uni-giessen.de/bitstreams/eb900d2d-1080-45a6-bb5b-d74eb350d139/download",
+    "doi_isbn": "10.1167/jov.24.6.16",
+    "source_type": "empirical",
+    "tier": "A",
+    "key_findings": [
+      "77 participants: saccades were faster to faces, face features and text than to cars; the advantage was largest for full faces",
+      "Isolated eye regions were not sufficient to produce face-like rapid saccades",
+      "Stable individual differences in face saccade speed, weakly correlated with face fixations in free viewing"
+    ],
+    "practical_applications": [
+      "Full faces beat partial faces for instant capture; text also has a speed advantage"
+    ],
+    "limitations": [
+      "Lab saccadic choice task, not a feed"
+    ],
+    "license": "CC BY 4.0",
+    "access_status": "full_text",
+    "verification_status": "verified",
+    "date_accessed": "2026-11-25",
+    "modules": [
+      "M04"
+    ]
+  },
+  {
+    "key": "Frischen2007",
+    "title": "Gaze cueing of attention: Visual attention, social cognition, and individual differences",
+    "authors": "Alexandra Frischen; Andrew P. Bayliss; Steven P. Tipper",
+    "year": 2007,
+    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC1950440",
+    "doi_isbn": "10.1037/0033-2909.133.4.694",
+    "source_type": "review",
+    "tier": "A",
+    "key_findings": [
+      "Reviews the gaze-cueing paradigm: observers shift attention in the direction another face is looking",
+      "Covers social-cognitive, developmental and clinical individual differences"
+    ],
+    "practical_applications": [
+      "Have the model look at the glasses or key text at least once"
+    ],
+    "limitations": [
+      "Only abstract read; effect sizes not extracted"
+    ],
+    "license": "copyrighted (author manuscript on PMC)",
+    "access_status": "abstract",
+    "verification_status": "verified",
+    "date_accessed": "2026-11-25",
+    "modules": [
+      "M04"
+    ]
+  },
+  {
+    "key": "Abrams2003",
+    "title": "Motion onset captures attention",
+    "authors": "Richard A. Abrams; Shawn E. Christ",
+    "year": 2003,
+    "url": "https://pubmed.ncbi.nlm.nih.gov/12930472/",
+    "doi_isbn": "10.1111/1467-9280.01458",
+    "source_type": "empirical",
+    "tier": "A",
+    "key_findings": [
+      "Across three experiments, the onset of motion (not motion per se) captured attention",
+      "Debated: Franconeri & Simons argued some motion captures attention by itself; a later account linked the effect to jerky animation (disputed)"
+    ],
+    "practical_applications": [
+      "Stagger element entrances so the key element starts moving alone"
+    ],
+    "limitations": [
+      "Abstract only; simple lab displays"
+    ],
+    "license": "copyrighted",
+    "access_status": "abstract",
+    "verification_status": "verified",
+    "date_accessed": "2026-11-25",
+    "modules": [
+      "M04"
+    ]
+  },
+  {
+    "key": "Theeuwes2010",
+    "title": "Top-down and bottom-up control of visual selection (Acta Psychologica 135) - read only via Egeth, Leonard & Leber commentary",
+    "authors": "Jan Theeuwes",
+    "year": 2010,
+    "url": "https://www.asc.ohio-state.edu/psychology/cclab/downloads/Egeth2010.pdf",
+    "doi_isbn": "",
+    "source_type": "review",
+    "tier": "A",
+    "key_findings": [
+      "(Per commentary) Theeuwes argues an initial feedforward sweep is stimulus-driven so salience dominates early orienting; top-down control acts afterwards",
+      "Commentators argue capture is much smaller when target and distractor are known in advance, implying some top-down control"
+    ],
+    "practical_applications": [
+      "Make the first frame win on salience alone"
+    ],
+    "limitations": [
+      "Target article itself not read; only commentary snippet"
+    ],
+    "license": "copyrighted",
+    "access_status": "search_summary",
+    "verification_status": "unverified",
+    "date_accessed": "2026-11-25",
+    "modules": [
+      "M04"
+    ]
+  },
+  {
+    "key": "Awh2012",
+    "title": "Top-down versus bottom-up attentional control: a failed theoretical dichotomy",
+    "authors": "Edward Awh; Artem V. Belopolsky; Jan Theeuwes",
+    "year": 2012,
+    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC3426354",
+    "doi_isbn": "Trends in Cognitive Sciences 16(8):437-443",
+    "source_type": "review",
+    "tier": "A",
+    "key_findings": [
+      "The goal vs salience dichotomy is inadequate; selection history (past selections/rewards) also shapes an integrated priority map"
+    ],
+    "practical_applications": [
+      "Keep series visual identity stable so followers' selection history works for us"
+    ],
+    "limitations": [
+      "Abstract level; later debate continues on terminology"
+    ],
+    "license": "copyrighted (author manuscript on PMC)",
+    "access_status": "abstract",
+    "verification_status": "verified",
+    "date_accessed": "2026-11-25",
+    "modules": [
+      "M04"
+    ]
+  },
+  {
+    "key": "Sweller2019",
+    "title": "Cognitive architecture and instructional design: 20 years later",
+    "authors": "John Sweller; Jeroen J. G. van Merrienboer; Fred Paas",
+    "year": 2019,
+    "url": "https://link.springer.com/article/10.1007/s10648-019-09465-5",
+    "doi_isbn": "10.1007/s10648-019-09465-5",
+    "source_type": "review",
+    "tier": "A",
+    "key_findings": [
+      "Reviews 20 years of cognitive load theory: manage load so processing irrelevant to learning is minimised and germane processing optimised within capacity",
+      "Grounds the theory in evolutionary psychology and extends it to course-level design and measurement"
+    ],
+    "practical_applications": [
+      "Cut extraneous load: split-attention, redundancy, transient information"
+    ],
+    "limitations": [
+      "Full text not reached (login redirect); effects come from instructional settings"
+    ],
+    "license": "unknown",
+    "access_status": "search_summary",
+    "verification_status": "verified",
+    "date_accessed": "2026-11-25",
+    "modules": [
+      "M04"
+    ]
+  },
+  {
+    "key": "Mayer2023",
+    "title": "Research-based principles for designing multimedia instruction (chapter in: In Their Own Words, APA Division 2)",
+    "authors": "Richard E. Mayer",
+    "year": 2023,
+    "url": "https://www.unh.edu/teaching-learning-resource-hub/sites/default/files/media/2023-06/itow-research-based-principles-for-designing-multimedia-instruction-mayer.pdf",
+    "doi_isbn": "",
+    "source_type": "review",
+    "tier": "A",
+    "key_findings": [
+      "Median effect sizes from Mayer (2021): multimedia d=1.35 (13 tests); coherence 18/19 d=0.86; signaling 26/28 d=0.70; redundancy 8/12 d=0.10; spatial contiguity 9/9 d=0.82; temporal contiguity 8/8 d=1.31; segmenting 7/7 d=0.67; pre-training 10/10 d=0.78; modality 18/19 d=1.00; personalization 13/15 d=1.00; voice 6/7 d=0.74; embodiment 16/17 d=0.58; image 7 tests d=0.19; generative activities 37/44 d=0.71",
+      "Redundancy effect diminishes or reverses when the lesson is slow/learner-paced, on-screen text is short or reworded, learners use a second language, or there are no graphics",
+      "Signaling works best used sparingly, for low-knowledge learners and complex material; coherence strongest for low working-memory learners, system-paced lessons and highly interesting extraneous material"
+    ],
+    "practical_applications": [
+      "Captions with VO are acceptable (small redundancy cost); keep any extra on-screen headline to keywords",
+      "Place text next to what it describes; sync narration with visuals",
+      "Use a conversational script and the most human-sounding TTS voice"
+    ],
+    "limitations": [
+      "Author's own meta-analysis of mostly his lab's studies; outcome is learning transfer, not engagement"
+    ],
+    "license": "copyrighted",
+    "access_status": "full_text",
+    "verification_status": "verified",
+    "date_accessed": "2026-11-25",
+    "modules": [
+      "M04"
+    ]
+  },
+  {
+    "key": "Mayer2024",
+    "title": "The past, present, and future of the cognitive theory of multimedia learning",
+    "authors": "Richard E. Mayer",
+    "year": 2024,
+    "url": "https://link.springer.com/10.1007/s10648-023-09842-1",
+    "doi_isbn": "10.1007/s10648-023-09842-1",
+    "source_type": "review",
+    "tier": "A",
+    "key_findings": [
+      "Reviews four decades of CTML; core ideas (dual channels, limited capacity, active processing) constant over time",
+      "Lists 15 evidence-based multimedia design principles"
+    ],
+    "practical_applications": [
+      "Framework for clip and carousel design reviews"
+    ],
+    "limitations": [
+      "Abstract/introduction level only"
+    ],
+    "license": "unknown",
+    "access_status": "abstract",
+    "verification_status": "verified",
+    "date_accessed": "2026-11-25",
+    "modules": [
+      "M04"
+    ]
+  },
+  {
+    "key": "Ginns2005",
+    "title": "Meta-analysis of the modality effect",
+    "authors": "Paul Ginns",
+    "year": 2005,
+    "url": "https://peeref.com/works/69577168",
+    "doi_isbn": "10.1016/j.learninstruc.2005.07.001",
+    "source_type": "meta-analysis",
+    "tier": "S",
+    "key_findings": [
+      "43 independent effects; strong modality effect (spoken text + graphics beats written text + graphics), especially under system-paced conditions"
+    ],
+    "practical_applications": [
+      "In clips (system-paced) let voice carry the explanation while visuals show"
+    ],
+    "limitations": [
+      "Abstract only; moderators not extracted"
+    ],
+    "license": "copyrighted",
+    "access_status": "abstract",
+    "verification_status": "verified",
+    "date_accessed": "2026-11-25",
+    "modules": [
+      "M04"
+    ]
+  },
+  {
+    "key": "Adesope2012",
+    "title": "Verbal redundancy in multimedia learning environments: A meta-analysis",
+    "authors": "Olusola O. Adesope; John C. Nesbit",
+    "year": 2012,
+    "url": "https://rex.libraries.wsu.edu/esploro/outputs/journalArticle/Verbal-Redundancy-in-Multimedia-Learning-Environments/99900601157101842",
+    "doi_isbn": "Journal of Educational Psychology 104:250-263",
+    "source_type": "meta-analysis",
+    "tier": "S",
+    "key_findings": [
+      "(Secondary summaries) Spoken+written presentations outperformed spoken-only; condensed on-screen key words added to narration were associated with better learning; negative effects most likely when spoken and written text are identical and accompanied by pictures"
+    ],
+    "practical_applications": [
+      "Subtitles are not harmful for short social clips; on-screen headlines should be condensed keywords"
+    ],
+    "limitations": [
+      "Not read beyond secondary summaries"
+    ],
+    "license": "copyrighted",
+    "access_status": "search_summary",
+    "verification_status": "verified",
+    "date_accessed": "2026-11-25",
+    "modules": [
+      "M04"
+    ]
+  },
+  {
+    "key": "Leahy2016",
+    "title": "Cognitive load theory and the effects of transient information on the modality effect",
+    "authors": "Wayne Leahy; John Sweller",
+    "year": 2016,
+    "url": "https://doi.org/10.1007/s11251-015-9362-9",
+    "doi_isbn": "10.1007/s11251-015-9362-9",
+    "source_type": "empirical",
+    "tier": "A",
+    "key_findings": [
+      "Longer audio text was inferior to equivalent visual text (modality effect reversed) because transient speech overloads working memory; shortening the audio restored the usual modality effect (modality x length interaction)",
+      "Earlier paper (Leahy & Sweller 2011, Applied Cognitive Psychology 25(6):943-951) reported the same reversal"
+    ],
+    "practical_applications": [
+      "Keep VO sentences short; move dense facts to persistent on-screen text or visuals"
+    ],
+    "limitations": [
+      "Abstract only; sample sizes unverified"
+    ],
+    "license": "copyrighted",
+    "access_status": "abstract",
+    "verification_status": "verified",
+    "date_accessed": "2026-11-25",
+    "modules": [
+      "M04"
+    ]
+  },
+  {
+    "key": "Schneider2018",
+    "title": "A meta-analysis of how signaling affects learning with media",
+    "authors": "Sascha Schneider; Maik Beege; Steve Nebel; Gunter Daniel Rey",
+    "year": 2018,
+    "url": "https://doi.org/10.1016/j.edurev.2017.11.001",
+    "doi_isbn": "10.1016/j.edurev.2017.11.001",
+    "source_type": "meta-analysis",
+    "tier": "S",
+    "key_findings": [
+      "(Secondary summary) 103 studies, 12,201 participants; retention g+=0.53, transfer g+=0.33",
+      "Benefit larger for low prior knowledge learners; moderated by pacing and signal type"
+    ],
+    "practical_applications": [
+      "One clear highlight per slide; design for novices"
+    ],
+    "limitations": [
+      "Numbers from secondary sources, not checked against original"
+    ],
+    "license": "copyrighted",
+    "access_status": "search_summary",
+    "verification_status": "unverified",
+    "date_accessed": "2026-11-25",
+    "modules": [
+      "M04"
+    ]
+  },
+  {
+    "key": "Rey2019",
+    "title": "A meta-analysis of the segmenting effect",
+    "authors": "Gunter Daniel Rey; Maik Beege; Steve Nebel; Maria Wirzberger; Tobias H. Schmitt; Sascha Schneider",
+    "year": 2019,
+    "url": "https://www.doi.org/10.1007/S10648-018-9456-4",
+    "doi_isbn": "10.1007/s10648-018-9456-4",
+    "source_type": "meta-analysis",
+    "tier": "S",
+    "key_findings": [
+      "56 investigations, 88 comparisons: segmenting has small-to-medium effects on retention and transfer, lowers overall cognitive load and increases learning time",
+      "High prior knowledge learners gained more retention from segmentation"
+    ],
+    "practical_applications": [
+      "One story beat per slide; clear segment breaks in clips"
+    ],
+    "limitations": [
+      "Abstract only"
+    ],
+    "license": "copyrighted",
+    "access_status": "abstract",
+    "verification_status": "verified",
+    "date_accessed": "2026-11-25",
+    "modules": [
+      "M04"
+    ]
+  },
+  {
+    "key": "Rey2012",
+    "title": "A review of research and a meta-analysis of the seductive detail effect",
+    "authors": "Gunter Daniel Rey",
+    "year": 2012,
+    "url": "https://learntechlib.org/primary/p/39253",
+    "doi_isbn": "Educational Research Review 7(3):216-237",
+    "source_type": "meta-analysis",
+    "tier": "S",
+    "key_findings": [
+      "Existence and bibliographic data confirmed; Mayer (2023) cites it for coherence boundary conditions (stronger when extraneous material is highly interesting)"
+    ],
+    "practical_applications": [
+      "Remove interesting-but-irrelevant decorations"
+    ],
+    "limitations": [
+      "Content not read"
+    ],
+    "license": "copyrighted",
+    "access_status": "bibliographic",
+    "verification_status": "verified",
+    "date_accessed": "2026-11-25",
+    "modules": [
+      "M04"
+    ]
+  },
+  {
+    "key": "Sundararajan2020",
+    "title": "Keep it coherent: A meta-analysis of the seductive details effect",
+    "authors": "Narayankripa Sundararajan; Olusola Adesope",
+    "year": 2020,
+    "url": "https://rex.libraries.wsu.edu/esploro/outputs/journalArticle/Keep-it-Coherent-A-Meta-Analysis-of/99900601155501842",
+    "doi_isbn": "",
+    "source_type": "meta-analysis",
+    "tier": "S",
+    "key_findings": [
+      "Existence confirmed (Educational Psychology Review, 2020); cited by Mayer (2023) as support for the coherence principle"
+    ],
+    "practical_applications": [
+      "Same as Rey2012"
+    ],
+    "limitations": [
+      "Content not read"
+    ],
+    "license": "copyrighted",
+    "access_status": "bibliographic",
+    "verification_status": "verified",
+    "date_accessed": "2026-11-25",
+    "modules": [
+      "M04"
+    ]
+  },
+  {
+    "key": "Reber2004",
+    "title": "Processing fluency and aesthetic pleasure: Is beauty in the perceiver's processing experience?",
+    "authors": "Rolf Reber; Norbert Schwarz; Piotr Winkielman",
+    "year": 2004,
+    "url": "https://pages.ucsd.edu/~pwinkielman/reber-schwarz-winkielman-beauty-PSPR-2004.pdf",
+    "doi_isbn": "10.1207/s15327957pspr0804_3",
+    "source_type": "review",
+    "tier": "A",
+    "key_findings": [
+      "The more fluently an object is processed, the more positive the aesthetic response; figural goodness, symmetry, figure-ground contrast, repetition and prototypicality all raise fluency",
+      "Fluency is hedonically marked and used as information unless attributed to an irrelevant source (then discounted)",
+      "Figure-ground contrast affected prettiness only at short exposures (0.3-3 s), not at 10 s (Reber & Schwarz 2001, as reported)",
+      "Same statements judged more likely true in high contrast (Reber & Schwarz 1999, as reported); repetition increases both liking and truth judgments"
+    ],
+    "practical_applications": [
+      "High text/background contrast and readable fonts for feed viewing",
+      "Consistent, recognisable brand style",
+      "Do not exploit repetition for unsupported health claims"
+    ],
+    "limitations": [
+      "Theoretical review; preference for complexity explained via attribution, not directly tested"
+    ],
+    "license": "copyrighted",
+    "access_status": "full_text",
+    "verification_status": "verified",
+    "date_accessed": "2026-11-25",
+    "modules": [
+      "M04"
+    ]
+  },
+  {
+    "key": "Alter2009",
+    "title": "Uniting the tribes of fluency to form a metacognitive nation",
+    "authors": "Adam L. Alter; Daniel M. Oppenheimer",
+    "year": 2009,
+    "url": "https://journals.sagepub.com/doi/10.1177/1088868309341564",
+    "doi_isbn": "10.1177/1088868309341564",
+    "source_type": "review",
+    "tier": "A",
+    "key_findings": [
+      "Reviews fluency as a general metacognitive cue influencing judgments across perceptual, linguistic and conceptual forms"
+    ],
+    "practical_applications": [
+      "Simple wording and clear layout make claims feel truer and nicer - use responsibly"
+    ],
+    "limitations": [
+      "Abstract only"
+    ],
+    "license": "copyrighted",
+    "access_status": "abstract",
+    "verification_status": "verified",
+    "date_accessed": "2026-11-25",
+    "modules": [
+      "M04"
+    ]
+  },
+  {
+    "key": "Dechene2010",
+    "title": "The truth about the truth: A meta-analytic review of the truth effect",
+    "authors": "Alice Dechene; Christoph Stahl; Jochim Hansen; Michaela Wanke",
+    "year": 2010,
+    "url": "https://edoc.unibas.ch/10139",
+    "doi_isbn": "10.1177/1088868309352251",
+    "source_type": "meta-analysis",
+    "tier": "S",
+    "key_findings": [
+      "51 studies; repetition increases judged truth: d=0.39 within-items, d=0.50 between-items (random effects)",
+      "A 2021 registered report notes original data unavailable and that bias correction might give smaller effects"
+    ],
+    "practical_applications": [
+      "Ethics: never use repetition to push unproven claims"
+    ],
+    "limitations": [
+      "Search-summary level; meta-analysis quality questioned"
+    ],
+    "license": "copyrighted",
+    "access_status": "search_summary",
+    "verification_status": "verified",
+    "date_accessed": "2026-11-25",
+    "modules": [
+      "M04"
+    ]
+  },
+  {
+    "key": "Meyer2015",
+    "title": "Disfluent fonts don't help people solve math problems",
+    "authors": "Andrew Meyer; Shane Frederick; et al.",
+    "year": 2015,
+    "url": "https://moodle2.units.it/pluginfile.php/171151/mod_resource/content/1/Meyer%20et%20al.%202015.pdf",
+    "doi_isbn": "10.1037/xge0000049",
+    "source_type": "empirical",
+    "tier": "A",
+    "key_findings": [
+      "Pooling the original experiment with 16 replications: no effect of hard-to-read fonts on solution rates under any tested condition; disfluent fonts only slightly slowed responses"
+    ],
+    "practical_applications": [
+      "Never use hard-to-read fonts as a 'make them think' device"
+    ],
+    "limitations": [
+      "Abstract only; specific to reasoning problems"
+    ],
+    "license": "copyrighted",
+    "access_status": "abstract",
+    "verification_status": "verified",
+    "date_accessed": "2026-11-25",
+    "modules": [
+      "M04"
+    ]
+  },
+  {
+    "key": "Craik1972",
+    "title": "Levels of processing: A framework for memory research",
+    "authors": "Fergus I. M. Craik; Robert S. Lockhart",
+    "year": 1972,
+    "url": "https://psych205.stanford.edu/papers/CraikLockhart72.pdf",
+    "doi_isbn": "Journal of Verbal Learning and Verbal Behavior 11:671-684",
+    "source_type": "primary_text",
+    "tier": "A",
+    "key_findings": [
+      "(Secondary summaries) Memory depends on depth of processing at encoding, from shallow sensory to deep semantic analysis; offered as a framework, not a complete theory",
+      "Criticised for not defining depth independently of memory outcome"
+    ],
+    "practical_applications": [
+      "Make jokes/messages hinge on meaning, not just visuals"
+    ],
+    "limitations": [
+      "Not read in full"
+    ],
+    "license": "copyrighted",
+    "access_status": "search_summary",
+    "verification_status": "verified",
+    "date_accessed": "2026-11-25",
+    "modules": [
+      "M04"
+    ]
+  },
+  {
+    "key": "Roediger2006",
+    "title": "Test-enhanced learning: Taking memory tests improves long-term retention",
+    "authors": "Henry L. Roediger III; Jeffrey D. Karpicke",
+    "year": 2006,
+    "url": "https://pubmed.ncbi.nlm.nih.gov/16507066/",
+    "doi_isbn": "10.1111/j.1467-9280.2006.01693.x",
+    "source_type": "empirical",
+    "tier": "A",
+    "key_findings": [
+      "Restudy beat testing at 5 minutes, but prior testing produced substantially better retention at 2 days and 1 week, even though restudy raised confidence more"
+    ],
+    "practical_applications": [
+      "End carousels with a question to answer before the reveal"
+    ],
+    "limitations": [
+      "Abstract only; educational prose, not ads"
+    ],
+    "license": "copyrighted",
+    "access_status": "abstract",
+    "verification_status": "verified",
+    "date_accessed": "2026-11-25",
+    "modules": [
+      "M04"
+    ]
+  },
+  {
+    "key": "Cepeda2006",
+    "title": "Distributed practice in verbal recall tasks: A review and quantitative synthesis",
+    "authors": "Nicholas J. Cepeda; Harold Pashler; Edward Vul; John T. Wixted; Doug Rohrer",
+    "year": 2006,
+    "url": "https://pubmed.ncbi.nlm.nih.gov/16719566/",
+    "doi_isbn": "Psychological Bulletin 132(3):354-380",
+    "source_type": "meta-analysis",
+    "tier": "S",
+    "key_findings": [
+      "839 assessments in 317 experiments: spaced beats massed; the optimal inter-study interval grows with the retention interval"
+    ],
+    "practical_applications": [
+      "Re-surface key health messages across episodes days/weeks apart in new forms"
+    ],
+    "limitations": [
+      "Abstract only; verbal recall in lab"
+    ],
+    "license": "copyrighted",
+    "access_status": "abstract",
+    "verification_status": "verified",
+    "date_accessed": "2026-11-25",
+    "modules": [
+      "M04"
+    ]
+  },
+  {
+    "key": "Dunlosky2013",
+    "title": "Improving students' learning with effective learning techniques: Promising directions from cognitive and educational psychology",
+    "authors": "John Dunlosky; Katherine A. Rawson; Elizabeth J. Marsh; Mitchell J. Nathan; Daniel T. Willingham",
+    "year": 2013,
+    "url": "https://scholars.duke.edu/publication/954654",
+    "doi_isbn": "10.1177/1529100612453266",
+    "source_type": "review",
+    "tier": "S",
+    "key_findings": [
+      "Practice testing and distributed practice rated high utility; elaborative interrogation, self-explanation, interleaving moderate; summarisation, highlighting, keyword mnemonic, imagery for text, rereading low"
+    ],
+    "practical_applications": [
+      "Prefer retrieval prompts over repeated summaries"
+    ],
+    "limitations": [
+      "Abstract/press-release level"
+    ],
+    "license": "copyrighted",
+    "access_status": "abstract",
+    "verification_status": "verified",
+    "date_accessed": "2026-11-25",
+    "modules": [
+      "M04"
+    ]
+  },
+  {
+    "key": "Gobet2001",
+    "title": "Chunking mechanisms in human learning",
+    "authors": "Fernand Gobet; Peter C. R. Lane; Steve Croker; Peter C-H. Cheng; Gary Jones; Iain Oliver; Julian M. Pine",
+    "year": 2001,
+    "url": "https://pubmed.ncbi.nlm.nih.gov/11390294/",
+    "doi_isbn": "10.1016/S1364-6613(00)01662-4",
+    "source_type": "review",
+    "tier": "A",
+    "key_findings": [
+      "Distinguishes deliberate, goal-oriented chunking from automatic perceptual chunking; illustrated with verbal learning, expert memory and language acquisition"
+    ],
+    "practical_applications": [
+      "Keep a fixed episode/slide structure so followers chunk the format"
+    ],
+    "limitations": [
+      "Abstract only"
+    ],
+    "license": "copyrighted",
+    "access_status": "abstract",
+    "verification_status": "verified",
+    "date_accessed": "2026-11-25",
+    "modules": [
+      "M04"
+    ]
+  },
+  {
+    "key": "JohnsonLaird2010",
+    "title": "Mental models and human reasoning",
+    "authors": "Philip N. Johnson-Laird",
+    "year": 2010,
+    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC2972923",
+    "doi_isbn": "10.1073/pnas.1012933107",
+    "source_type": "review",
+    "tier": "A",
+    "key_findings": [
+      "People reason by building models of possibilities; models represent what is true and omit what is false, reducing working-memory load but producing systematic errors"
+    ],
+    "practical_applications": [
+      "Keep character world rules consistent; use one correct comparison visual for lens functions"
+    ],
+    "limitations": [
+      "Abstract level; reasoning theory applied to narrative by analogy"
+    ],
+    "license": "open access (PNAS/PMC)",
+    "access_status": "abstract",
+    "verification_status": "verified",
+    "date_accessed": "2026-11-25",
+    "modules": [
+      "M04"
+    ]
+  },
+  {
+    "key": "Clark2013",
+    "title": "Whatever next? Predictive brains, situated agents, and the future of cognitive science",
+    "authors": "Andy Clark",
+    "year": 2013,
+    "url": "https://pubmed.ncbi.nlm.nih.gov/23663408/",
+    "doi_isbn": "10.1017/S0140525X12000477",
+    "source_type": "review",
+    "tier": "A",
+    "key_findings": [
+      "Examines the hierarchical prediction-machine view of the brain as a candidate unifying account of perception and action, and lists evidential, methodological and conceptual challenges"
+    ],
+    "practical_applications": [
+      "Craft metaphor only: set up an expectation before a twist"
+    ],
+    "limitations": [
+      "Theory; abstract level"
+    ],
+    "license": "copyrighted",
+    "access_status": "abstract",
+    "verification_status": "verified",
+    "date_accessed": "2026-11-25",
+    "modules": [
+      "M04"
+    ]
+  },
+  {
+    "key": "Friston2010",
+    "title": "The free-energy principle: a unified brain theory?",
+    "authors": "Karl Friston",
+    "year": 2010,
+    "url": "https://pubmed.ncbi.nlm.nih.gov/20068583/",
+    "doi_isbn": "10.1038/nrn2787",
+    "source_type": "review",
+    "tier": "A",
+    "key_findings": [
+      "Proposes that free-energy minimisation (an upper bound on surprise) accounts for action, perception and learning and may unify several brain theories"
+    ],
+    "practical_applications": [
+      "Do not cite as scientific proof in published content"
+    ],
+    "limitations": [
+      "Highly theoretical and contested; abstract level"
+    ],
+    "license": "copyrighted",
+    "access_status": "abstract",
+    "verification_status": "verified",
+    "date_accessed": "2026-11-25",
+    "modules": [
+      "M04"
+    ]
+  },
+  {
+    "key": "Litwin2020",
+    "title": "Unification by fiat: Arrested development of predictive processing",
+    "authors": "Piotr Litwin; Marcin Milkowski",
+    "year": 2020,
+    "url": "https://philarchive.org/archive/LITUBF",
+    "doi_isbn": "10.1111/cogs.12867",
+    "source_type": "review",
+    "tier": "A",
+    "key_findings": [
+      "Argues PP's status as a unifying theory is asserted rather than earned; gaps between theory and its biological/computational bases have arrested its development"
+    ],
+    "practical_applications": [
+      "Treat predictive processing as low-confidence theory"
+    ],
+    "limitations": [
+      "Abstract level"
+    ],
+    "license": "unknown",
+    "access_status": "abstract",
+    "verification_status": "verified",
+    "date_accessed": "2026-11-25",
+    "modules": [
+      "M04"
+    ]
+  },
+  {
+    "key": "Vroomen2010",
+    "title": "Perception of intersensory synchrony: A tutorial review",
+    "authors": "Jean Vroomen; Mirjam Keetels",
+    "year": 2010,
+    "url": "https://core.ac.uk/download/420810866.pdf",
+    "doi_isbn": "10.3758/APP.72.4.871",
+    "source_type": "review",
+    "tier": "A",
+    "key_findings": [
+      "Reviews measurement of audiovisual synchrony (temporal order and simultaneity judgments) and ways the brain handles lags: wide integration window, compensation, recalibration of perceived synchrony, shifting one stream toward the other"
+    ],
+    "practical_applications": [
+      "Sound slightly late is tolerated more than sound early"
+    ],
+    "limitations": [
+      "Search summary only; numeric windows not read here"
+    ],
+    "license": "copyrighted",
+    "access_status": "search_summary",
+    "verification_status": "verified",
+    "date_accessed": "2026-11-25",
+    "modules": [
+      "M04"
+    ]
+  },
+  {
+    "key": "vanWassenhove2007",
+    "title": "Temporal window of integration in auditory-visual speech perception",
+    "authors": "Virginie van Wassenhove; Ken W. Grant; David Poeppel",
+    "year": 2007,
+    "url": "https://scholar.usuhs.edu/en/publications/temporal-window-of-integration-in-auditory-visual-speech-percepti/",
+    "doi_isbn": "10.1016/j.neuropsychologia.2006.01.001",
+    "source_type": "empirical",
+    "tier": "A",
+    "key_findings": [
+      "43 participants: audiovisual speech integration spans an asymmetric window of about 200 ms favouring visual lead; speech tolerates larger asynchrony than non-speech",
+      "Later work cites roughly 50 ms audio-lead to 200 ms visual-lead as perceived synchronous"
+    ],
+    "practical_applications": [
+      "Lip-sync: mouth may start slightly before audio, never audio clearly before mouth"
+    ],
+    "limitations": [
+      "Abstract and citing sources only"
+    ],
+    "license": "copyrighted",
+    "access_status": "abstract",
+    "verification_status": "verified",
+    "date_accessed": "2026-11-25",
+    "modules": [
+      "M04"
+    ]
+  },
+  {
+    "key": "Wallace2014",
+    "title": "The construct of the multisensory temporal binding window and its dysregulation in developmental disabilities",
+    "authors": "Mark T. Wallace; Ryan A. Stevenson",
+    "year": 2014,
+    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC4326640",
+    "doi_isbn": "Neuropsychologia 64:105-123",
+    "source_type": "review",
+    "tier": "A",
+    "key_findings": [
+      "Defines the temporal binding window as the span within which multisensory inputs are likely integrated; the window is altered in autism, dyslexia and schizophrenia and is malleable"
+    ],
+    "practical_applications": [
+      "Expect individual differences in sync tolerance; aim inside the tightest thresholds"
+    ],
+    "limitations": [
+      "Abstract level"
+    ],
+    "license": "author manuscript on PMC",
+    "access_status": "search_summary",
+    "verification_status": "verified",
+    "date_accessed": "2026-11-25",
+    "modules": [
+      "M04"
+    ]
+  },
+  {
+    "key": "ITU-BT1359",
+    "title": "Recommendation ITU-R BT.1359-1: Relative timing of sound and vision for broadcasting",
+    "authors": "International Telecommunication Union, Radiocommunication Sector (ITU-R)",
+    "year": 1998,
+    "url": "https://www.itu.int/dms_pubrec/itu-r/rec/bt/R-REC-BT.1359-1-199811-I!!PDF-E.pdf",
+    "doi_isbn": "ITU-R BT.1359-1",
+    "source_type": "docs",
+    "tier": "S",
+    "key_findings": [
+      "Subjective tests: detectability thresholds about +45 ms (sound advanced) to -125 ms (sound delayed); acceptability about +90 ms to -185 ms"
+    ],
+    "practical_applications": [
+      "Never let audio lead picture by more than ~45 ms (about 1 frame at 30 fps)"
+    ],
+    "limitations": [
+      "Read via quoted search snippets of the official text; broadcast TV tests from the 1990s"
+    ],
+    "license": "ITU copyright",
+    "access_status": "search_summary",
+    "verification_status": "verified",
+    "date_accessed": "2026-11-25",
+    "modules": [
+      "M04"
+    ]
+  },
+  {
+    "key": "SEP-Embodied",
+    "title": "Embodied Cognition (Stanford Encyclopedia of Philosophy)",
+    "authors": "Lawrence Shapiro; Shannon Spaulding",
+    "year": 2021,
+    "url": "https://plato.stanford.edu/archives/fall2021/entries/embodied-cognition/",
+    "doi_isbn": "",
+    "source_type": "encyclopedia",
+    "tier": "B",
+    "key_findings": [
+      "Cognition is embodied when deeply dependent on bodily features beyond the brain; distinguishes embodied from embedded and extended cognition; critics argue the body's role may be causal rather than constitutive"
+    ],
+    "practical_applications": [
+      "Use bodily acting for characters; avoid strong claims about body-to-mind effects"
+    ],
+    "limitations": [
+      "Search snippets only; archived edition"
+    ],
+    "license": "copyrighted",
+    "access_status": "search_summary",
+    "verification_status": "verified",
+    "date_accessed": "2026-11-25",
+    "modules": [
+      "M04"
+    ]
+  },
+  {
+    "key": "Wagenmakers2016",
+    "title": "Registered Replication Report: Strack, Martin, & Stepper (1988)",
+    "authors": "Eric-Jan Wagenmakers; et al.",
+    "year": 2016,
+    "url": "https://pure.uva.nl/ws/files/14872420/Registered_Replication_Report.pdf",
+    "doi_isbn": "Perspectives on Psychological Science 11(6):917-928",
+    "source_type": "meta-analysis",
+    "tier": "S",
+    "key_findings": [
+      "17 labs, same protocol: pen-in-teeth vs pen-in-lips cartoon funniness difference 0.03 points (95% CI -0.11 to 0.16) vs 0.82 in the original"
+    ],
+    "practical_applications": [
+      "Do not claim 'just smile and you'll be happy' as science"
+    ],
+    "limitations": [
+      "Abstract level"
+    ],
+    "license": "copyrighted",
+    "access_status": "abstract",
+    "verification_status": "verified",
+    "date_accessed": "2026-11-25",
+    "modules": [
+      "M04"
+    ]
+  },
+  {
+    "key": "Coles2022",
+    "title": "A multi-lab test of the facial feedback hypothesis by the Many Smiles Collaboration",
+    "authors": "Nicholas A. Coles; et al.",
+    "year": 2022,
+    "url": "https://hal.univ-grenoble-alpes.fr/hal-04048618/document",
+    "doi_isbn": "Nature Human Behaviour 6:1731-1742",
+    "source_type": "empirical",
+    "tier": "A",
+    "key_findings": [
+      "3,878 participants in 19 countries: facial mimicry and voluntary smiling amplified and initiated happiness; pen-in-mouth evidence less conclusive; lead author notes the effect is small"
+    ],
+    "practical_applications": [
+      "Eye-break clips may invite a relaxed face but must not overclaim"
+    ],
+    "limitations": [
+      "Abstract/press level"
+    ],
+    "license": "unknown",
+    "access_status": "abstract",
+    "verification_status": "verified",
+    "date_accessed": "2026-11-25",
+    "modules": [
+      "M04"
+    ]
+  },
+  {
+    "key": "Winskel2009",
+    "title": "Eye movements when reading spaced and unspaced Thai and English: A comparison of Thai-English bilinguals and English monolinguals",
+    "authors": "Heather Winskel; Ralph Radach; Sudaporn Luksaneeyanawin",
+    "year": 2009,
+    "url": "https://www.allgemeinepsychologie.uni-wuppertal.de/fileadmin/psychologie/allgemeinepsychologie/Artikel/Artikel_Radach/Winskel_Radach_Thai_English_JML_2009.pdf",
+    "doi_isbn": "10.1016/j.jml.2009.07.002",
+    "source_type": "empirical",
+    "tier": "A",
+    "key_findings": [
+      "Thai sentences with inserted interword spaces were read slightly slower (1834 vs 1746 ms, marginal) with more fixations (9.27 vs 8.62, significant) than normal unspaced Thai",
+      "Spaces facilitated recognition of target words but did not change initial landing positions in Thai; removing spaces severely disrupted English",
+      "Authors suggest Thai-specific segmentation cues (e.g. vowel letters written before the consonant, tone marks) may guide skilled readers"
+    ],
+    "practical_applications": [
+      "Do not insert spaces between every Thai word in slides or captions; break lines at phrase boundaries"
+    ],
+    "limitations": [
+      "Single-line sentences on desktop; bilingual university readers"
+    ],
+    "license": "copyrighted",
+    "access_status": "full_text",
+    "verification_status": "verified",
+    "date_accessed": "2026-11-25",
+    "modules": [
+      "M04"
+    ]
+  },
+  {
+    "key": "Kasisopa2013",
+    "title": "Eye movements while reading an unspaced writing system: The case of Thai",
+    "authors": "Benjawan Kasisopa; Ronan G. Reilly; Sudaporn Luksaneeyanawin; Denis Burnham",
+    "year": 2013,
+    "url": "https://researchers.westernsydney.edu.au/en/publications/eye-movements-while-reading-an-unspaced-writing-system-the-case-o/",
+    "doi_isbn": "Vision Research 86:71-80",
+    "source_type": "empirical",
+    "tier": "A",
+    "key_findings": [
+      "30 Thai adults: higher position-specific frequency of word-initial and word-final characters moved landing sites closer to word centre, suggesting readers use character-position statistics for eye guidance"
+    ],
+    "practical_applications": [
+      "Use common spelling; avoid unusual abbreviations that break familiar word boundaries"
+    ],
+    "limitations": [
+      "Search summary only"
+    ],
+    "license": "copyrighted",
+    "access_status": "search_summary",
+    "verification_status": "verified",
+    "date_accessed": "2026-11-25",
+    "modules": [
+      "M04"
+    ]
+  },
+  {
+    "key": "Kohsom1997",
+    "title": "Adding spaces to Thai and English: Effects on reading",
+    "authors": "Chananda Kohsom; Fernand Gobet",
+    "year": 1997,
+    "url": "https://escholarship.org/uc/item/5hw7j71z",
+    "doi_isbn": "Proceedings of the 19th Annual Conference of the Cognitive Science Society, 388-393",
+    "source_type": "empirical",
+    "tier": "A",
+    "key_findings": [
+      "Thai readers were faster and made fewer errors with added spaces; meaning helped independently; no transfer of unspaced reading skill to English (not eye-tracking)"
+    ],
+    "practical_applications": [
+      "Conflicts with Winskel 2009 - treat spacing advice as medium confidence"
+    ],
+    "limitations": [
+      "Conference paper; abstract only"
+    ],
+    "license": "unknown",
+    "access_status": "abstract",
+    "verification_status": "verified",
+    "date_accessed": "2026-11-25",
+    "modules": [
+      "M04"
+    ]
+  },
+  {
+    "key": "Szarkowska2018",
+    "title": "Viewers can keep up with fast subtitles: Evidence from eye movements",
+    "authors": "Agnieszka Szarkowska; Olivia Gerber-Moron",
+    "year": 2018,
+    "url": "https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0199331",
+    "doi_isbn": "10.1371/journal.pone.0199331",
+    "source_type": "empirical",
+    "tier": "A",
+    "key_findings": [
+      "74 English/Polish/Spanish viewers at 12, 16, 20 cps: comprehension and scene recognition unaffected by speed",
+      "Share of time on subtitles rose ~50% to ~60% (Exp.1) and ~40% to ~45% (Exp.2) from slow to fast",
+      "Slow subtitles caused far more rereading (about 2 in 3 vs 1 in 5) and more frustration; interviews suggested synchronisation mattered more than speed"
+    ],
+    "practical_applications": [
+      "Do not over-slow Thai subtitles; prioritise precise sync with speech"
+    ],
+    "limitations": [
+      "European languages, not Thai; speed confounded with text reduction"
+    ],
+    "license": "CC BY 4.0",
+    "access_status": "full_text",
+    "verification_status": "verified",
+    "date_accessed": "2026-11-25",
+    "modules": [
+      "M04"
+    ]
+  },
+  {
+    "key": "Delgado2018",
+    "title": "Don't throw away your printed books: A meta-analysis on the effects of reading media on reading comprehension",
+    "authors": "Pablo Delgado; Cristina Vargas; Rakefet Ackerman; Ladislao Salmeron",
+    "year": 2018,
+    "url": "https://www.uv.es/lasalgon/papers/Delgado%202018%20dont%20throw%20away%20your%20printed%20books.pdf",
+    "doi_isbn": "10.1016/j.edurev.2018.09.003",
+    "source_type": "meta-analysis",
+    "tier": "S",
+    "key_findings": [
+      "54 studies (2000-2017, ~171,000 participants): comprehension better on paper than screens in both between- and within-subject designs",
+      "Screen inferiority larger for expository texts and under time limits (as summarised by later review)"
+    ],
+    "practical_applications": [
+      "Keep informational carousels shorter than narrative ones"
+    ],
+    "limitations": [
+      "Abstract/summaries; mostly longer texts than our slides"
+    ],
+    "license": "copyrighted",
+    "access_status": "abstract",
+    "verification_status": "verified",
+    "date_accessed": "2026-11-25",
+    "modules": [
+      "M04"
+    ]
+  },
+  {
+    "key": "MayerAT2024",
+    "title": "Headlines, pictures, likes: Attention to social media newsfeed post elements on smartphones and in public",
+    "authors": "Anna-Theresa Mayer; Jakob Ohme; Ewa Maslowska; Claire M. Segijn",
+    "year": 2024,
+    "url": "https://refubium.fu-berlin.de/handle/fub188/43335",
+    "doi_isbn": "10.1177/20563051241245666",
+    "source_type": "empirical",
+    "tier": "A",
+    "key_findings": [
+      "Eye-tracking, 201 students, dynamic Facebook newsfeed: less attention to visuals on mobile; in public settings more attention to textual post elements"
+    ],
+    "practical_applications": [
+      "Always pair images with a short text carrying the message"
+    ],
+    "limitations": [
+      "Search summary only; student sample; Facebook not IG/TikTok"
+    ],
+    "license": "open access (DOAJ-listed)",
+    "access_status": "search_summary",
+    "verification_status": "verified",
+    "date_accessed": "2026-11-25",
+    "modules": [
+      "M04"
+    ]
+  },
+  {
+    "key": "FacebookIQ2016",
+    "title": "Capturing attention in feed: The science behind effective video creative",
+    "authors": "Facebook IQ (tests by Fors Marsh Group, commissioned by Facebook)",
+    "year": 2016,
+    "url": "https://www.marketingdive.com/news/facebook-why-mobile-video-ads-must-work-fast/446217/",
+    "doi_isbn": "",
+    "source_type": "docs",
+    "tier": "C",
+    "key_findings": [
+      "(As reported) people spend on average 1.7 s with a piece of mobile feed content vs 2.5 s on desktop; recall significant after 0.25 s exposure"
+    ],
+    "practical_applications": [
+      "Hook must be readable within the first 1-2 s"
+    ],
+    "limitations": [
+      "Industry-commissioned; method not public; 2016 Facebook feed"
+    ],
+    "license": "copyrighted",
+    "access_status": "search_summary",
+    "verification_status": "verified",
+    "date_accessed": "2026-11-25",
+    "modules": [
+      "M04"
+    ]
+  },
+  {
+    "key": "NetflixThai",
+    "title": "Thai Timed Text Style Guide",
+    "authors": "Netflix",
+    "year": null,
+    "url": "https://partnerhelp.netflixstudios.com/hc/en-us/articles/220448308",
+    "doi_isbn": "",
+    "source_type": "docs",
+    "tier": "C",
+    "key_findings": [
+      "Thai subtitles: max 17 cps adult (13 children); SDH 20/17",
+      "35 characters per line excluding tone marks and upper/lower vowels; max two lines; prefer one line; bottom-heavy pyramid; avoid two short lines",
+      "No sentence-final periods; separate sentences with a single space"
+    ],
+    "practical_applications": [
+      "Caption timing and layout rules for Thai story clips"
+    ],
+    "limitations": [
+      "Industry practice, not empirical research; page revision date unknown"
+    ],
+    "license": "copyrighted",
+    "access_status": "full_text",
+    "verification_status": "verified",
+    "date_accessed": "2026-11-25",
+    "modules": [
+      "M04"
+    ]
+  },
+  {
+    "key": "NetflixGeneral",
+    "title": "Timed Text Style Guide: General Requirements",
+    "authors": "Netflix",
+    "year": null,
+    "url": "https://partnerhelp.netflixstudios.com/hc/en-us/articles/215758617",
+    "doi_isbn": "",
+    "source_type": "docs",
+    "tier": "C",
+    "key_findings": [
+      "(Search summary) Minimum subtitle duration 5/6 s (~0.83 s), maximum 7 s"
+    ],
+    "practical_applications": [
+      "Each caption cue stays at least ~0.8 s"
+    ],
+    "limitations": [
+      "Not opened directly"
+    ],
+    "license": "copyrighted",
+    "access_status": "search_summary",
+    "verification_status": "verified",
+    "date_accessed": "2026-11-25",
+    "modules": [
+      "M04"
+    ]
+  },
+  {
+    "key": "ThaiLoopedFonts",
+    "title": "Bridging cultures through letters: Typotheque's typographic journey in Thailand (with ATypI 2025 talk summary)",
+    "authors": "Typotheque / Granshan",
+    "year": null,
+    "url": "https://granshan.com/insights/bridging-cultures-through-letters-typotheques-typographic-journey-in-thailand",
+    "doi_isbn": "",
+    "source_type": "practitioner",
+    "tier": "D",
+    "key_findings": [
+      "(As reported) a Chulalongkorn study (180+ readers) found looped Thai improved paragraph reading speed; an ATypI 2025 study found no performance difference but all ages perceived looped fonts as more legible; younger readers associate loopless with modernity"
+    ],
+    "practical_applications": [
+      "Prefer looped Thai fonts for long dialogue/subtitles (weak evidence)"
+    ],
+    "limitations": [
+      "Foundry-produced summaries; peer-reviewed originals not located"
+    ],
+    "license": "copyrighted",
+    "access_status": "search_summary",
+    "verification_status": "unverified",
+    "date_accessed": "2026-11-25",
+    "modules": [
+      "M04"
+    ]
+  },
+  {
+    "key": "Brysbaert2019",
+    "title": "How many words do we read per minute? A review and meta-analysis of reading rate",
+    "authors": "Marc Brysbaert",
+    "year": 2019,
+    "url": "https://www.Gwern.net/doc/psychology/linguistics/2019-brysbaert.pdf",
+    "doi_isbn": "",
+    "source_type": "meta-analysis",
+    "tier": "S",
+    "key_findings": [
+      "(Search summary) 190 studies: average adult English silent reading 238 wpm non-fiction, 260 fiction; wpm depends on word length so cross-language wpm comparisons are not valid"
+    ],
+    "practical_applications": [
+      "Do not import English wpm targets into Thai captions"
+    ],
+    "limitations": [
+      "Search summary only; no Thai data"
+    ],
+    "license": "copyrighted",
+    "access_status": "search_summary",
+    "verification_status": "verified",
+    "date_accessed": "2026-11-25",
+    "modules": [
+      "M04"
+    ]
+  },
+  {
+    "key": "Coupe2014",
+    "title": "Cross-linguistic investigations of oral and silent reading",
+    "authors": "Christophe Coupe; Yoon Mi Oh; Francois Pellegrino; Egidio Marsico",
+    "year": 2014,
+    "url": "https://www.isca-archive.org/interspeech_2014/coupe14_interspeech.html",
+    "doi_isbn": "10.21437/Interspeech.2014-127",
+    "source_type": "empirical",
+    "tier": "A",
+    "key_findings": [
+      "Eight languages including Thai: oral and silent reading rates are well correlated, suggesting syllabic complexity affects both"
+    ],
+    "practical_applications": [
+      "Candidate source for Thai reading-rate figures (next research)"
+    ],
+    "limitations": [
+      "Abstract only; Thai figures not extracted"
+    ],
+    "license": "unknown",
+    "access_status": "abstract",
+    "verification_status": "verified",
+    "date_accessed": "2026-11-25",
+    "modules": [
+      "M04"
+    ]
+  }
+]

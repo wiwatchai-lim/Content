@@ -1,0 +1,1365 @@
+{
+ "module": "M12",
+ "version": "2026-11-25 (sources upgraded 2026-11-25)",
+ "schema_note": "meanings by culture; source_keys without prefix -> semiotics/sources.json, 'culture:' prefix -> culture/sources.json; restriction: none|respect|legal; test_status always 'untested' until a comprehension test (see README section 5) is logged",
+ "count": 50,
+ "symbols": [
+  {
+   "id": "th.buddha_image",
+   "symbol": "Buddha image (statue, painting, silhouette, head)",
+   "category": "thai_religious",
+   "sign_type": "icon+symbol",
+   "meanings": {
+    "thai": "The Buddha himself, object of veneration; kept above head height; shoes off in its chapel.",
+    "western": "Often read as generic 'zen / calm / spa / Asian decor'.",
+    "east_asian": "Buddha in Mahayana traditions; also venerated."
+   },
+   "risks_misreadings": [
+    "Using it as decor, spa mood or product background offends many Thais",
+    "Buddha heads/cropped bodies, tattoos, on floors/toilets/bars = documented controversies",
+    "Penal Code s.206 covers acts against religious objects/places"
+   ],
+   "use_for": [
+    "Respectful documentary of temple visits (shot from below/level, nothing placed above it)"
+   ],
+   "avoid": [
+    "Any ad, product shot, meme, cartoon Buddha, cropped head, placing Buddha below feet or next to alcohol/sexualised content"
+   ],
+   "restriction": "legal",
+   "source_keys": [
+    "culture:Coconuts_BuddhaMisuse",
+    "culture:ThaiPenalCode",
+    "culture:ThailandFoundation2024",
+    "culture:AVIA2024_ThaiAdMatrix"
+   ],
+   "evidence_note": "Press + law text + etiquette guides agree; no audience study.",
+   "confidence": "high",
+   "test_status": "untested"
+  },
+  {
+   "id": "th.monk_figure",
+   "symbol": "Monk / saffron robe / alms bowl",
+   "category": "thai_religious",
+   "sign_type": "symbol",
+   "meanings": {
+    "thai": "Sangha, merit, morality; monks are revered and bound by Vinaya rules.",
+    "western": "Exotic serenity, mindfulness; sometimes costume humour.",
+    "east_asian": "Monks in Chinese/Japanese/Korean Buddhism wear other colours; similar reverence."
+   },
+   "risks_misreadings": [
+    "Costume monks, monks selling products, revered monks' faces on goods (Supreme case 2021)",
+    "Penal Code s.208: wrongfully using monk dress/symbols to deceive"
+   ],
+   "use_for": [
+    "Real merit-making scenes with consent; faceless silhouettes for culture explainers"
+   ],
+   "avoid": [
+    "Monk characters endorsing products, comic monks, AI-generated 'monk' selling eyewear"
+   ],
+   "restriction": "legal",
+   "source_keys": [
+    "culture:FashionLaw2021_Supreme",
+    "culture:ThaiPenalCode",
+    "culture:AVIA2024_ThaiAdMatrix"
+   ],
+   "evidence_note": "Law text + one enforcement case.",
+   "confidence": "high",
+   "test_status": "untested"
+  },
+  {
+   "id": "th.religious_tattoo_yant",
+   "symbol": "Sak yant / yantra designs, Buddha tattoos",
+   "category": "thai_religious",
+   "sign_type": "symbol",
+   "meanings": {
+    "thai": "Protective sacred designs blessed by monks/ajarn; Buddha tattoos considered disrespectful by authorities.",
+    "western": "Cool travel souvenir / tattoo art.",
+    "east_asian": ""
+   },
+   "risks_misreadings": [
+    "Private campaign group Knowing Buddha runs billboards against Buddha tattoos/decor for tourists",
+    "Yant designs may be copyright-protected (DIP comment in Supreme case)"
+   ],
+   "use_for": [
+    "Explained cultural content with practitioners' consent"
+   ],
+   "avoid": [
+    "Decorative yant patterns on product graphics or merch"
+   ],
+   "restriction": "respect",
+   "source_keys": [
+    "culture:Coconuts_BuddhaMisuse",
+    "culture:FashionLaw2021_Supreme"
+   ],
+   "evidence_note": "Press reports via search summary.",
+   "confidence": "medium",
+   "test_status": "untested"
+  },
+  {
+   "id": "th.temple_wat",
+   "symbol": "Temple (wat) buildings, ubosot, stupa/chedi",
+   "category": "thai_religious",
+   "sign_type": "icon+symbol",
+   "meanings": {
+    "thai": "Sacred space; shoes off in chapel; threshold not stepped on (guardian spirit); dress modestly.",
+    "western": "Tourist landmark, golden exotic backdrop.",
+    "east_asian": "Temples - also sacred."
+   },
+   "risks_misreadings": [
+    "Fashion/product shoots in temples can read as using sacred space for sale",
+    "Stepping on thresholds, pointing feet at images"
+   ],
+   "use_for": [
+    "Respectful travel content; 'merit-making' themes"
+   ],
+   "avoid": [
+    "Sexualised poses, product placement on altars, drone shots over ceremonies without permission"
+   ],
+   "restriction": "respect",
+   "source_keys": [
+    "culture:ThailandFoundation2024",
+    "culture:ThaiPenalCode"
+   ],
+   "evidence_note": "Etiquette guide + law.",
+   "confidence": "high",
+   "test_status": "untested"
+  },
+  {
+   "id": "th.temple_roof_motifs",
+   "symbol": "Chofa finial, naga bargeboards, gilded gable motifs",
+   "category": "thai_religious",
+   "sign_type": "icon+symbol",
+   "meanings": {
+    "thai": "Temple identity; chofa often read as Garuda or Hamsa; naga on roof edges and stair rails as guardians.",
+    "western": "Generic 'Thai style' ornament.",
+    "east_asian": ""
+   },
+   "risks_misreadings": [
+    "Lifting sacred architectural motifs into logos or packaging can look like appropriation of temple identity"
+   ],
+   "use_for": [
+    "Abstracted, clearly secular Thai patterns (kanok-style lines) with care"
+   ],
+   "avoid": [
+    "Exact chofa/naga temple elements on discount graphics"
+   ],
+   "restriction": "respect",
+   "source_keys": [
+    "Thailex"
+   ],
+   "evidence_note": "Chofa symbolism mainly from dealer/Wikipedia pages (weak).",
+   "confidence": "low",
+   "test_status": "untested"
+  },
+  {
+   "id": "th.lotus",
+   "symbol": "Lotus (bua, bua luang)",
+   "category": "thai_religious",
+   "sign_type": "symbol",
+   "meanings": {
+    "thai": "Purity, transcendence, faith; merit-making offering; Buddha seated on lotus; also used at funerals.",
+    "western": "Yoga/wellness, calm, beauty.",
+    "east_asian": "Buddhist purity (China, Japan, Korea); purity rising from mud."
+   },
+   "risks_misreadings": [
+    "Funeral association in some Thai contexts (lotus in hands of the deceased)",
+    "Lotus under feet / on floor mats can feel disrespectful"
+   ],
+   "use_for": [
+    "Calm, eye-rest, wellness, gratitude content"
+   ],
+   "avoid": [
+    "Comic contexts, on shoes/floor, with alcohol"
+   ],
+   "restriction": "respect",
+   "source_keys": [
+    "AsianArt_Lotus"
+   ],
+   "evidence_note": "Museum page read (purity, spontaneous generation, faithfulness, awakening); Thai funeral/merit uses from Thai press via search summary only.",
+   "confidence": "high",
+   "test_status": "untested"
+  },
+  {
+   "id": "th.naga",
+   "symbol": "Naga (serpent deity)",
+   "category": "thai_folk_religious",
+   "sign_type": "symbol",
+   "meanings": {
+    "thai": "National mythical creature (2025 designation); guardian of the Buddha and protector of waters, bringer of rain; temple stair-rail/roof guardian; fertility, wealth, abundance; Nong Khai naga fireballs; rival of Garuda.",
+    "western": "Snake = danger/evil, temptation.",
+    "east_asian": "Chinese dragon/water deities (different creature)."
+   },
+   "risks_misreadings": [
+    "Western viewers may read a serpent as threatening",
+    "Cartoon nagas for sales can offend believers"
+   ],
+   "use_for": [
+    "Water, rain, protection themes in Thai-only folklore stories"
+   ],
+   "avoid": [
+    "Mascot use for promotions"
+   ],
+   "restriction": "respect",
+   "source_keys": [
+    "Thailex",
+    "Nation_NationalSymbols"
+   ],
+   "evidence_note": "Thailex naga entry and The Nation (both read in full); academic folklore papers not read.",
+   "confidence": "medium",
+   "test_status": "untested"
+  },
+  {
+   "id": "th.garuda_emblem",
+   "symbol": "Garuda (Phra Khrut Pha) - national/royal emblem",
+   "category": "thai_royal_state",
+   "sign_type": "symbol",
+   "meanings": {
+    "thai": "Emblem of the state and monarchy; royal warrant mark granted to selected companies.",
+    "western": "Eagle-like mythical bird; may be read as decorative.",
+    "east_asian": "Garuda also in Indonesia (national emblem) and Hindu myth."
+   },
+   "risks_misreadings": [
+    "Khrut Pha Emblem Act B.E. 2534 as amended 2535: 'khrut pha emblem' = any garuda image in any pose, with or without text; using it (or a warrant-of-appointment emblem) without right so as to make others believe you have the right - up to 1 year and/or 6,000 baht (s.13)",
+    "Warrants are granted by royal charter via the Bureau of the Royal Household; using it implies royal endorsement"
+   ],
+   "use_for": [
+    "Never - unless a client legally holds the warrant and provides official artwork"
+   ],
+   "avoid": [
+    "Any Garuda drawing in logos, merch, posts"
+   ],
+   "restriction": "legal",
+   "source_keys": [
+    "culture:KhrutPhaAct2535",
+    "culture:NationGaruda2021"
+   ],
+   "evidence_note": "Act text (Wikisource translation) read in full; Wissanu 2021 statement read in full.",
+   "confidence": "high",
+   "test_status": "untested"
+  },
+  {
+   "id": "th.royal_portrait",
+   "symbol": "Royal portraits, royal family images, royal crests",
+   "category": "thai_royal_state",
+   "sign_type": "icon",
+   "meanings": {
+    "thai": "Deep respect; displayed in homes/shops; banknotes carry the King's portrait.",
+    "western": "Celebrity/public-figure imagery.",
+    "east_asian": ""
+   },
+   "risks_misreadings": [
+    "Penal Code s.112 (lèse-majesté): defame/insult/threaten King, Queen, Heir, Regent - severe prison terms",
+    "Anything placed above/over, edited, cropped, memed, or juxtaposed with products is high risk",
+    "Stepping on banknotes (King's image) is taboo per etiquette guides"
+   ],
+   "use_for": [
+    "Only official royal-occasion notices in the exact style the shop uses (e.g., closure/mourning), with untouched official imagery"
+   ],
+   "avoid": [
+    "Any creative edit, humour, AI-generated royal likeness, product next to royal image, royal colours as sales hook"
+   ],
+   "restriction": "legal",
+   "source_keys": [
+    "culture:ThaiPenalCode",
+    "culture:AVIA2024_ThaiAdMatrix"
+   ],
+   "evidence_note": "Law text; current penalty 3-15 years per press summaries.",
+   "confidence": "high",
+   "test_status": "untested"
+  },
+  {
+   "id": "th.national_flag",
+   "symbol": "Thai national flag (tri-rong)",
+   "category": "thai_royal_state",
+   "sign_type": "symbol",
+   "meanings": {
+    "thai": "Nation-Religion-King (red/white/blue as commonly taught); respect at 08:00/18:00 anthem.",
+    "western": "National identity.",
+    "east_asian": ""
+   },
+   "risks_misreadings": [
+    "Penal Code s.118 (current text): any act against a flag or other symbol of the State to desecrate the nation - up to 2 years and/or 40,000 baht; s.135 same for flags of friendly foreign states; Flag Act B.E. 2522 s.54 also criminalises flag desecration (text not read)",
+    "Flag on shoes, floors, trash, wipes"
+   ],
+   "use_for": [
+    "Intact flags in national-day greetings"
+   ],
+   "avoid": [
+    "Distorted, cropped-as-pattern, or stepped-on flags"
+   ],
+   "restriction": "legal",
+   "source_keys": [
+    "culture:ThaiPenalCode",
+    "culture:ChulaFlagThesis"
+   ],
+   "evidence_note": "Penal Code ss.118/135 verified (1956 translation + current consolidated Thai text); Flag Act s.54 existence via Chula Law Journal 2024 abstract; colour meaning common teaching (unsourced).",
+   "confidence": "medium",
+   "test_status": "untested"
+  },
+  {
+   "id": "th.white_elephant",
+   "symbol": "White elephant (chang phueak)",
+   "category": "thai_royal_state",
+   "sign_type": "symbol",
+   "meanings": {
+    "thai": "Royal sovereignty and prestige; historically royal possession.",
+    "western": "Idiom 'white elephant' = costly useless burden (English idiom - unsourced here).",
+    "east_asian": ""
+   },
+   "risks_misreadings": [
+    "English idiom gives the opposite connotation to foreign viewers",
+    "Royal link makes jokey use risky"
+   ],
+   "use_for": [
+    "Heritage/history content"
+   ],
+   "avoid": [
+    "Product metaphors ('our white elephant deal')"
+   ],
+   "restriction": "respect",
+   "source_keys": [
+    "Nation_NationalSymbols"
+   ],
+   "evidence_note": "Thai side sourced; English idiom common knowledge, unsourced.",
+   "confidence": "medium",
+   "test_status": "untested"
+  },
+  {
+   "id": "th.elephant",
+   "symbol": "Elephant (chang) - national animal",
+   "category": "thai_national",
+   "sign_type": "icon+symbol",
+   "meanings": {
+    "thai": "National animal (2025 Royal Gazette designation); strength, endurance, royal/war history; National Elephant Day 13 Mar (unsourced here).",
+    "western": "Wisdom, memory, gentle giant; 'elephant in the room'.",
+    "east_asian": "Strength; Ganesha (India) = remover of obstacles."
+   },
+   "risks_misreadings": [
+    "Elephant rides/performances raise animal-welfare backlash with foreign audiences (craft knowledge, unsourced)",
+    "Tourist cliché overuse"
+   ],
+   "use_for": [
+    "Pride, memory, steadiness metaphors; national day greetings"
+   ],
+   "avoid": [
+    "Riding/chain imagery; elephants as cheap 'Thailand' shorthand"
+   ],
+   "restriction": "none",
+   "source_keys": [
+    "Nation_NationalSymbols"
+   ],
+   "evidence_note": "One of six national symbols announced in the Royal Gazette on 14 May 2025 (The Nation, read in full). Welfare risk is unsourced craft.",
+   "confidence": "high",
+   "test_status": "untested"
+  },
+  {
+   "id": "th.ratchaphruek",
+   "symbol": "Ratchaphruek / golden shower tree (Cassia fistula)",
+   "category": "thai_national",
+   "sign_type": "icon+symbol",
+   "meanings": {
+    "thai": "National flower (2025 designation); yellow blooms = unity, loyalty, prosperity (The Nation).",
+    "western": "Pretty yellow flowers (no specific meaning).",
+    "east_asian": ""
+   },
+   "risks_misreadings": [
+    "Yellow also carries royal/political associations - check timing"
+   ],
+   "use_for": [
+    "Seasonal (Mar-May) Thai-identity visuals"
+   ],
+   "avoid": [
+    "Political-season use"
+   ],
+   "restriction": "none",
+   "source_keys": [
+    "Nation_NationalSymbols"
+   ],
+   "evidence_note": "One of six national symbols announced in the Royal Gazette on 14 May 2025 (The Nation, read in full).",
+   "confidence": "medium",
+   "test_status": "untested"
+  },
+  {
+   "id": "th.sala_thai",
+   "symbol": "Sala Thai pavilion",
+   "category": "thai_national",
+   "sign_type": "icon",
+   "meanings": {
+    "thai": "National architecture symbol; rest, hospitality, Thai identity.",
+    "western": "Exotic gazebo.",
+    "east_asian": ""
+   },
+   "risks_misreadings": [
+    "Low risk"
+   ],
+   "use_for": [
+    "Calm 'Thai place' backgrounds, eye-break scenes"
+   ],
+   "avoid": [],
+   "restriction": "none",
+   "source_keys": [
+    "Nation_NationalSymbols"
+   ],
+   "evidence_note": "One of six national symbols announced in the Royal Gazette on 14 May 2025 (The Nation, read in full).",
+   "confidence": "medium",
+   "test_status": "untested"
+  },
+  {
+   "id": "th.fighting_fish",
+   "symbol": "Siamese fighting fish / Thai betta (pla kat)",
+   "category": "thai_national",
+   "sign_type": "icon",
+   "meanings": {
+    "thai": "National aquatic animal (2025 designation); bravery and elegance (The Nation).",
+    "western": "Betta pet fish.",
+    "east_asian": ""
+   },
+   "risks_misreadings": [
+    "Fighting connotation; animal welfare in fish fights"
+   ],
+   "use_for": [
+    "Colourful identity motifs"
+   ],
+   "avoid": [
+    "Fight imagery"
+   ],
+   "restriction": "none",
+   "source_keys": [
+    "Nation_NationalSymbols"
+   ],
+   "evidence_note": "One of six national symbols announced in the Royal Gazette on 14 May 2025 (The Nation, read in full).",
+   "confidence": "medium",
+   "test_status": "untested"
+  },
+  {
+   "id": "th.spirit_house",
+   "symbol": "Spirit house (san phra phum)",
+   "category": "thai_folk_religious",
+   "sign_type": "icon+symbol",
+   "meanings": {
+    "thai": "Home/land guardian; daily offerings. Roots per Wannavithyapa 2026 abstract: guardian-deity belief (Buddhist suttas) + sacred space from ancestor/leader burial sites; Buddhism recast the guardian spirit as a deity in a palace; syncretism for coexistence.",
+    "western": "Doll-house shrine; 'quaint'.",
+    "east_asian": "Chinese ancestor/earth-god shrines (possible origin, disputed)."
+   },
+   "risks_misreadings": [
+    "Mocking, kicking, using as prop; showing it neglected may read as bad omen"
+   ],
+   "use_for": [
+    "Home, place, protection, respect"
+   ],
+   "avoid": [
+    "Comic slapstick near shrine"
+   ],
+   "restriction": "respect",
+   "source_keys": [
+    "Wannavithyapa2026"
+   ],
+   "evidence_note": "Academic article abstract read; origin debate (Chinese shrine vs Brahmic) from search summary.",
+   "confidence": "medium",
+   "test_status": "untested"
+  },
+  {
+   "id": "th.nang_kwak",
+   "symbol": "Nang Kwak (beckoning lady)",
+   "category": "thai_folk_religious",
+   "sign_type": "icon+symbol",
+   "meanings": {
+    "thai": "Shop luck: beckons customers and money; kept by registers.",
+    "western": "Unknown figure.",
+    "east_asian": "Compare maneki-neko (Japanese beckoning cat) - similar commercial role."
+   },
+   "risks_misreadings": [
+    "Using a sacred-ish figure as sale mascot may feel cheap to believers",
+    "Beckoning gesture direction differs by culture"
+   ],
+   "use_for": [
+    "Respectful 'opening day / welcome' shop-culture content"
+   ],
+   "avoid": [
+    "Cartoon Nang Kwak pushing discounts"
+   ],
+   "restriction": "respect",
+   "source_keys": [
+    "Thailex"
+   ],
+   "evidence_note": "Lexicon summary; origin uncertain.",
+   "confidence": "low",
+   "test_status": "untested"
+  },
+  {
+   "id": "th.sai_sin",
+   "symbol": "Sai sin (white sacred thread)",
+   "category": "thai_religious",
+   "sign_type": "symbol",
+   "meanings": {
+    "thai": "Blessing/protection; wedding binding; animist + Buddhist roots; wrist strings after blessings.",
+    "western": "Friendship bracelet.",
+    "east_asian": "Also Cambodia, Myanmar, Laos."
+   },
+   "risks_misreadings": [
+    "Low risk if shown in real ritual context"
+   ],
+   "use_for": [
+    "Gratitude, blessing, new-beginning stories"
+   ],
+   "avoid": [
+    "Cutting/throwing away string as a gag"
+   ],
+   "restriction": "respect",
+   "source_keys": [
+    "Thailex"
+   ],
+   "evidence_note": "Lexicon summary.",
+   "confidence": "medium",
+   "test_status": "untested"
+  },
+  {
+   "id": "th.number_9",
+   "symbol": "Number 9 (kao)",
+   "category": "numbers",
+   "sign_type": "symbol",
+   "meanings": {
+    "thai": "Auspicious: homophone with 'step forward/progress'; nine monks at blessings; nine desserts; lucky plates sell for millions.",
+    "western": "Neutral.",
+    "east_asian": "Japanese 'ku' can sound like 'suffering' (general knowledge, unverified here); Chinese 9 ~ 'long-lasting' (unverified)."
+   },
+   "risks_misreadings": [
+    "Japanese viewers may not share the positive reading"
+   ],
+   "use_for": [
+    "Thai promos: 9.9, 99, 'ก้าวหน้า' wordplay"
+   ],
+   "avoid": [],
+   "restriction": "none",
+   "source_keys": [
+    "Naresuan2023_Nine"
+   ],
+   "evidence_note": "One academic article (text garbled) + strong popular evidence.",
+   "confidence": "medium",
+   "test_status": "untested"
+  },
+  {
+   "id": "num.4",
+   "symbol": "Number 4",
+   "category": "numbers",
+   "sign_type": "symbol",
+   "meanings": {
+    "thai": "Neutral in Thai (no strong taboo found this session).",
+    "western": "Neutral.",
+    "east_asian": "Unlucky in Chinese, Japanese, Korean: 'four' ~ 'death'; floors labelled F or skipped; Chinese prices avoid 4."
+   },
+   "risks_misreadings": [
+    "Price endings, room numbers, '4 for 1' bundles for Chinese/Korean/Japanese customers"
+   ],
+   "use_for": [
+    "Thai-only audiences: fine"
+   ],
+   "avoid": [
+    "Tourist-facing prices ending in 4, '4-piece gift set' for Chinese buyers"
+   ],
+   "restriction": "none",
+   "source_keys": [
+    "Yang2012",
+    "KoreaNet2020",
+    "Phillips2001_BMJ"
+   ],
+   "evidence_note": "Practice well documented; health effects contested.",
+   "confidence": "high",
+   "test_status": "untested"
+  },
+  {
+   "id": "num.8",
+   "symbol": "Number 8",
+   "category": "numbers",
+   "sign_type": "symbol",
+   "meanings": {
+    "thai": "Neutral-positive (Chinese-Thai communities share Chinese reading).",
+    "western": "Neutral; infinity sign when rotated.",
+    "east_asian": "Chinese: prosperity ('ba' ~ 'fa'); price endings in 8 common in Chinese/Singapore ads."
+   },
+   "risks_misreadings": [
+    "Over-use looks like a gimmick to Western viewers"
+   ],
+   "use_for": [
+    "Chinese New Year promos, prices ending 88"
+   ],
+   "avoid": [],
+   "restriction": "none",
+   "source_keys": [
+    "Yang2012"
+   ],
+   "evidence_note": "Several price-ending studies.",
+   "confidence": "high",
+   "test_status": "untested"
+  },
+  {
+   "id": "num.13",
+   "symbol": "Number 13 / Friday 13th",
+   "category": "numbers",
+   "sign_type": "symbol",
+   "meanings": {
+    "thai": "Not traditionally significant.",
+    "western": "Unlucky (Western superstition - common knowledge).",
+    "east_asian": ""
+   },
+   "risks_misreadings": [
+    "Minor; a few Western viewers notice"
+   ],
+   "use_for": [
+    "Horror/humour for Western audiences"
+   ],
+   "avoid": [],
+   "restriction": "none",
+   "source_keys": [],
+   "evidence_note": "Unsourced common knowledge; Smith 2002 BMJ tested day 13 deaths (null) - see Phillips2001_BMJ limitations.",
+   "confidence": "low",
+   "test_status": "untested"
+  },
+  {
+   "id": "gesture.wai",
+   "symbol": "Wai (palms together, slight bow)",
+   "category": "gestures",
+   "sign_type": "symbol",
+   "meanings": {
+    "thai": "Greeting, thanks, apology, respect; height/depth depends on status; junior initiates; deeper for monks/Buddha. Designated national cultural gesture (Royal Gazette, 14 May 2025).",
+    "western": "Namaste/prayer-hands or 'thank you'; sometimes misread as prayer.",
+    "east_asian": ""
+   },
+   "risks_misreadings": [
+    "Wrong hierarchy (senior wai-ing junior first) looks odd; foreigners over-wai service staff",
+    "Wai with objects in hand, or as a jokey 'please buy'"
+   ],
+   "use_for": [
+    "Thank-you posts, apology notices, staff greeting customers"
+   ],
+   "avoid": [
+    "Mascots wai-ing products; mocking exaggerated wai"
+   ],
+   "restriction": "respect",
+   "source_keys": [
+    "culture:ThailandFoundation2024",
+    "culture:Scroope2025",
+    "Nation_NationalSymbols"
+   ],
+   "evidence_note": "Etiquette guides consistent.",
+   "confidence": "high",
+   "test_status": "untested"
+  },
+  {
+   "id": "gesture.head_touch",
+   "symbol": "Touching someone's head / objects over heads",
+   "category": "gestures",
+   "sign_type": "index",
+   "meanings": {
+    "thai": "Head most sacred; touching (even children's) or passing objects over heads is offensive.",
+    "western": "Affectionate pat on head (children, friends).",
+    "east_asian": "Also sensitive in parts of Asia."
+   },
+   "risks_misreadings": [
+    "Western 'pat on head' gesture reads as disrespect in Thailand"
+   ],
+   "use_for": [],
+   "avoid": [
+    "Scenes where an adult pats a Thai child/elder; product held over a person's head"
+   ],
+   "restriction": "respect",
+   "source_keys": [
+    "culture:ThailandFoundation2024",
+    "culture:Scroope2025"
+   ],
+   "evidence_note": "Consistent guides.",
+   "confidence": "high",
+   "test_status": "untested"
+  },
+  {
+   "id": "gesture.feet_soles",
+   "symbol": "Feet / soles pointing, feet on tables",
+   "category": "gestures",
+   "sign_type": "index",
+   "meanings": {
+    "thai": "Feet lowest and least clean: don't point soles at people or Buddha images; don't move things with feet; don't step over pillows/books/food.",
+    "western": "Feet up = relaxed; casual.",
+    "east_asian": "Feet also impolite in much of Asia and Middle East (general)."
+   },
+   "risks_misreadings": [
+    "Relaxed 'feet on desk' lifestyle shot is rude to Thai viewers"
+   ],
+   "use_for": [],
+   "avoid": [
+    "Feet toward camera/Buddha, shoes on table, pointing with foot"
+   ],
+   "restriction": "respect",
+   "source_keys": [
+    "culture:ThailandFoundation2024",
+    "culture:Scroope2025"
+   ],
+   "evidence_note": "Consistent guides.",
+   "confidence": "high",
+   "test_status": "untested"
+  },
+  {
+   "id": "gesture.pointing",
+   "symbol": "Pointing with index finger",
+   "category": "gestures",
+   "sign_type": "index",
+   "meanings": {
+    "thai": "Rude/accusatory toward people; prefer open hand or chin/lip gesture.",
+    "western": "Normal for directing attention.",
+    "east_asian": "Impolite in several Asian contexts (general)."
+   },
+   "risks_misreadings": [
+    "Character pointing at customer reads accusatory"
+   ],
+   "use_for": [
+    "Pointing at objects/screens is mild"
+   ],
+   "avoid": [
+    "Pointing at people, at Buddha images"
+   ],
+   "restriction": "none",
+   "source_keys": [
+    "culture:Scroope2025"
+   ],
+   "evidence_note": "Cultural Atlas.",
+   "confidence": "medium",
+   "test_status": "untested"
+  },
+  {
+   "id": "gesture.beckon",
+   "symbol": "Beckoning (come here)",
+   "category": "gestures",
+   "sign_type": "symbol",
+   "meanings": {
+    "thai": "Palm-down, fingers curled toward self; palm-up finger curl is offensive (used for animals).",
+    "western": "Palm-up finger curl is normal.",
+    "east_asian": "Palm-down beckon common in East/Southeast Asia (general)."
+   },
+   "risks_misreadings": [
+    "Western palm-up beckon offends Thais; Thai palm-down beckon can look like 'go away' to Westerners"
+   ],
+   "use_for": [
+    "Show palm-down for Thai content"
+   ],
+   "avoid": [
+    "Palm-up beckon"
+   ],
+   "restriction": "none",
+   "source_keys": [
+    "culture:Scroope2025",
+    "MatsumotoHwang2013"
+   ],
+   "evidence_note": "Guides + emblem research shows form/meaning varies.",
+   "confidence": "medium",
+   "test_status": "untested"
+  },
+  {
+   "id": "gesture.ok_ring",
+   "symbol": "OK ring (thumb + index circle)",
+   "category": "gestures",
+   "sign_type": "symbol",
+   "meanings": {
+    "thai": "Understood as OK by many (borrowed).",
+    "western": "OK/fine (US); 'precision'.",
+    "east_asian": "'Money' is one documented meaning of the ring (Matsumoto & Hwang; region not stated in the summary read).",
+    "other": "Many European cultures: obscene (Maricopa)"
+   },
+   "risks_misreadings": [
+    "Obscene in many European cultures (Maricopa); Brazil 'obscene' is a common claim not found in the sources read",
+    "Same form, different meanings: A-OK / money / other (Matsumoto & Hwang)",
+    "Co-opted by some hate groups online (unsourced here)"
+   ],
+   "use_for": [
+    "Avoid as hero gesture"
+   ],
+   "avoid": [
+    "Mixed-audience ads relying on the gesture"
+   ],
+   "restriction": "none",
+   "source_keys": [
+    "MatsumotoHwang2013",
+    "Maricopa_Nonverbal"
+   ],
+   "evidence_note": "Emblem study + textbook.",
+   "confidence": "medium",
+   "test_status": "untested"
+  },
+  {
+   "id": "gesture.thumbs_up",
+   "symbol": "Thumbs-up",
+   "category": "gestures",
+   "sign_type": "symbol",
+   "meanings": {
+    "thai": "Generally understood as 'good' (borrowed from global media).",
+    "western": "Well done / approval.",
+    "east_asian": "",
+    "other": "Greece and other countries: insult 'Up yours!' (Maricopa citing Cotton 2013)"
+   },
+   "risks_misreadings": [
+    "Insulting in Greece and some other countries",
+    "In VR command study, Chinese users preferred OK sign to confirm"
+   ],
+   "use_for": [
+    "Thai-only casual posts"
+   ],
+   "avoid": [
+    "Tourist-facing ads as the main message"
+   ],
+   "restriction": "none",
+   "source_keys": [
+    "Maricopa_Nonverbal",
+    "MatsumotoHwang2013"
+   ],
+   "evidence_note": "Textbook claim; country list incomplete.",
+   "confidence": "medium",
+   "test_status": "untested"
+  },
+  {
+   "id": "gesture.v_sign",
+   "symbol": "V sign (peace / victory)",
+   "category": "gestures",
+   "sign_type": "symbol",
+   "meanings": {
+    "thai": "Cute photo pose (very common in Thai selfies).",
+    "western": "Peace/victory; UK/Aus/NZ palm-inward = insult.",
+    "east_asian": "Common cute photo pose (Japan, Korea, China)."
+   },
+   "risks_misreadings": [
+    "Palm-inward version offensive in UK/Commonwealth"
+   ],
+   "use_for": [
+    "Palm-out in casual Thai/Asian content"
+   ],
+   "avoid": [
+    "Palm-inward"
+   ],
+   "restriction": "none",
+   "source_keys": [],
+   "evidence_note": "Unsourced common knowledge - verify before relying.",
+   "confidence": "low",
+   "test_status": "untested"
+  },
+  {
+   "id": "gesture.smile_nod",
+   "symbol": "Smile and nod",
+   "category": "gestures",
+   "sign_type": "index",
+   "meanings": {
+    "thai": "Smile can mask awkwardness/sadness/apology; nod = 'I hear you', not agreement.",
+    "western": "Smile = happy; nod = yes.",
+    "east_asian": ""
+   },
+   "risks_misreadings": [
+    "Foreign viewers may misread a Thai character's apologetic smile as indifference"
+   ],
+   "use_for": [
+    "Subtle emotion in Mint & Tao via context"
+   ],
+   "avoid": [
+    "Captioning a smile as 'happy' without context"
+   ],
+   "restriction": "none",
+   "source_keys": [
+    "culture:Scroope2025"
+   ],
+   "evidence_note": "Cultural Atlas; see emotions/README section 2.10 on face reading.",
+   "confidence": "medium",
+   "test_status": "untested"
+  },
+  {
+   "id": "ea.clock_gift",
+   "symbol": "Clock as gift",
+   "category": "gift_objects",
+   "sign_type": "symbol",
+   "meanings": {
+    "thai": "Neutral for most Thais (Chinese-Thai families may share taboo).",
+    "western": "Thoughtful gift.",
+    "east_asian": "Chinese: 'give a clock' ~ 'attend a deathbed/funeral' - wish of death, esp. to elders."
+   },
+   "risks_misreadings": [
+    "Watch/clock gift promos for Chinese customers"
+   ],
+   "use_for": [],
+   "avoid": [
+    "'Gift a clock' campaigns for Chinese New Year"
+   ],
+   "restriction": "none",
+   "source_keys": [
+    "SCMP2025_GiftTaboos"
+   ],
+   "evidence_note": "Newspaper explainer.",
+   "confidence": "medium",
+   "test_status": "untested"
+  },
+  {
+   "id": "ea.umbrella_gift",
+   "symbol": "Umbrella as gift",
+   "category": "gift_objects",
+   "sign_type": "symbol",
+   "meanings": {
+    "thai": "Neutral.",
+    "western": "Neutral.",
+    "east_asian": "Chinese: 'umbrella' ~ 'separate' - bad for couples/friends."
+   },
+   "risks_misreadings": [
+    "Couples promos for Chinese buyers"
+   ],
+   "use_for": [],
+   "avoid": [
+    "Free umbrella with couple's purchase for Chinese market"
+   ],
+   "restriction": "none",
+   "source_keys": [
+    "SCMP2025_GiftTaboos"
+   ],
+   "evidence_note": "Newspaper explainer.",
+   "confidence": "medium",
+   "test_status": "untested"
+  },
+  {
+   "id": "ea.chrysanthemum",
+   "symbol": "Chrysanthemum (esp. white/yellow)",
+   "category": "flowers",
+   "sign_type": "symbol",
+   "meanings": {
+    "thai": "Generally neutral/decorative.",
+    "western": "Autumn, cheer (US); funerals in parts of Europe (unsourced).",
+    "east_asian": "China/Korea/Japan: funeral flower (white); also Japanese imperial crest (yellow 16-petal, unsourced)."
+   },
+   "risks_misreadings": [
+    "Giving chrysanthemums = funeral connotation for Chinese viewers"
+   ],
+   "use_for": [],
+   "avoid": [
+    "Chrysanthemum bouquets as gift imagery for Chinese/Korean audiences"
+   ],
+   "restriction": "none",
+   "source_keys": [
+    "SCMP2025_GiftTaboos"
+   ],
+   "evidence_note": "Gift-avoid lists; imperial crest unsourced.",
+   "confidence": "medium",
+   "test_status": "untested"
+  },
+  {
+   "id": "ea.red_ink_name",
+   "symbol": "Name written in red",
+   "category": "text_colour",
+   "sign_type": "symbol",
+   "meanings": {
+    "thai": "Some Thais also avoid writing names in red (unverified).",
+    "western": "Red ink = correction/urgent.",
+    "east_asian": "Korea: writing a living person's name in red is taboo (death records/wreaths); seal stamps exempt; similar beliefs elsewhere in East Asia (unverified)."
+   },
+   "risks_misreadings": [
+    "Red customer names in thank-you graphics, winner announcements"
+   ],
+   "use_for": [],
+   "avoid": [
+    "Korean (and East Asian) customer names in red"
+   ],
+   "restriction": "none",
+   "source_keys": [
+    "KoreaNet2020"
+   ],
+   "evidence_note": "Volunteer-reporter article; Thai practice unverified.",
+   "confidence": "medium",
+   "test_status": "untested"
+  },
+  {
+   "id": "ea.shoes_gift",
+   "symbol": "Shoes as gift",
+   "category": "gift_objects",
+   "sign_type": "symbol",
+   "meanings": {
+    "thai": "Neutral (feet low - giving shoes to elders may feel odd, unsourced).",
+    "western": "Neutral.",
+    "east_asian": "Korea: recipient will 'run away'; China: on avoid lists."
+   },
+   "risks_misreadings": [],
+   "use_for": [],
+   "avoid": [
+    "Couple-gift shoe promos for Korean audiences"
+   ],
+   "restriction": "none",
+   "source_keys": [
+    "KoreaNet2020",
+    "SCMP2025_GiftTaboos"
+   ],
+   "evidence_note": "Folk-belief reporting.",
+   "confidence": "low",
+   "test_status": "untested"
+  },
+  {
+   "id": "x.swastika",
+   "symbol": "Swastika / manji",
+   "category": "religious_cross_cultural",
+   "sign_type": "symbol",
+   "meanings": {
+    "thai": "Seen on some Buddhist/Hindu items; auspicious.",
+    "western": "Nazi hate symbol (dominant reading since WWII).",
+    "east_asian": "Japan: manji marks temples on maps; Hindu/Buddhist/Jain auspicious sign."
+   },
+   "risks_misreadings": [
+    "Western viewers read Nazism instantly regardless of orientation or context"
+   ],
+   "use_for": [
+    "Explained in religious-history content only"
+   ],
+   "avoid": [
+    "Any decorative use; even incidental in temple backgrounds for foreign audiences - crop or explain"
+   ],
+   "restriction": "respect",
+   "source_keys": [
+    "Britannica_Swastika"
+   ],
+   "evidence_note": "Encyclopedia + ADL agree.",
+   "confidence": "high",
+   "test_status": "untested"
+  },
+  {
+   "id": "x.dragon",
+   "symbol": "Dragon",
+   "category": "animals_mythic",
+   "sign_type": "icon+symbol",
+   "meanings": {
+    "thai": "Chinese-Thai: auspicious (Chinese New Year, Yaowarat); naga is a separate Thai creature.",
+    "western": "Menace, chaos, evil (Revelation); also heroic fantasy pets in modern media.",
+    "east_asian": "China ('loong'): good luck, power, wealth, wisdom, harmony with nature; rain and harvests; 'descendants of the dragon'."
+   },
+   "risks_misreadings": [
+    "Aggressive dragon art for Western viewers; Western 'slay the dragon' metaphors for Chinese viewers"
+   ],
+   "use_for": [
+    "Chinese New Year promos with friendly, dancing dragons"
+   ],
+   "avoid": [
+    "Dragon as villain in content aimed at Chinese customers"
+   ],
+   "restriction": "none",
+   "source_keys": [
+    "CGTN2024_Dragon"
+   ],
+   "evidence_note": "CGTN article read in full (state media; expert quotes, no perception study).",
+   "confidence": "medium",
+   "test_status": "untested"
+  },
+  {
+   "id": "x.fair_skin",
+   "symbol": "Light vs dark skin as before/after or status cue",
+   "category": "body_representation",
+   "sign_type": "symbol",
+   "meanings": {
+    "thai": "Fair skin long associated with beauty/status in Thai advertising - and now a backlash trigger (colourism).",
+    "western": "Racism/colourism red flag.",
+    "east_asian": "Fair-skin ideal common, increasingly criticised."
+   },
+   "risks_misreadings": [
+    "Seoul Secret 2016 'white makes you a winner' ad pulled after outcry"
+   ],
+   "use_for": [],
+   "avoid": [
+    "Darkening/lightening skin to show 'better', winners lighter than losers, filters that whiten faces"
+   ],
+   "restriction": "respect",
+   "source_keys": [
+    "culture:SlutskiyHamilton2017"
+   ],
+   "evidence_note": "Case + content analysis.",
+   "confidence": "high",
+   "test_status": "untested"
+  },
+  {
+   "id": "x.archetype_light_dark",
+   "symbol": "Light vs darkness (dawn, lamp, shadow)",
+   "category": "archetypal",
+   "sign_type": "icon+index",
+   "meanings": {
+    "thai": "Light = wisdom/merit (Buddhist 'light of Dhamma'), clarity; Loy Krathong/candles (unsourced).",
+    "western": "Good vs evil, hope, revelation.",
+    "east_asian": "Similar broad pattern."
+   },
+   "risks_misreadings": [
+    "Broadly shared, but specific colour/lamp meanings vary"
+   ],
+   "use_for": [
+    "Eyesight/clarity metaphors (clear vision = light)"
+   ],
+   "avoid": [
+    "Assuming 'universal archetype' means no test is needed"
+   ],
+   "restriction": "none",
+   "source_keys": [
+    "ArchetypeReplication2013"
+   ],
+   "evidence_note": "Archetype evidence weak; light-dark is a common experience-based metaphor.",
+   "confidence": "medium",
+   "test_status": "untested"
+  },
+  {
+   "id": "x.archetype_height",
+   "symbol": "Height / up-down (high = power, sacred)",
+   "category": "archetypal",
+   "sign_type": "index+symbol",
+   "meanings": {
+    "thai": "Very strong: head high, feet low; Buddha and royalty placed highest; elders' heads not looked down on.",
+    "western": "Up = good/power (common metaphor).",
+    "east_asian": "Similar."
+   },
+   "risks_misreadings": [
+    "In Thailand vertical placement is a respect rule, not just a metaphor - a product placed above a Buddha image or royal portrait is offensive"
+   ],
+   "use_for": [
+    "Compose respect: elders/teachers higher in frame"
+   ],
+   "avoid": [
+    "Product above sacred items; looming camera over elders in sincere scenes"
+   ],
+   "restriction": "respect",
+   "source_keys": [
+    "culture:ThailandFoundation2024",
+    "culture:Scroope2025"
+   ],
+   "evidence_note": "Etiquette guides; conceptual-metaphor claim general.",
+   "confidence": "high",
+   "test_status": "untested"
+  },
+  {
+   "id": "sign.steam_index",
+   "symbol": "Steam from cup/food",
+   "category": "everyday_index",
+   "sign_type": "index",
+   "meanings": {
+    "thai": "Freshly made, warmth, care (e.g., morning coffee before shop opens).",
+    "western": "Same.",
+    "east_asian": "Same."
+   },
+   "risks_misreadings": [
+    "Low"
+   ],
+   "use_for": [
+    "Showing 'fresh / just made / warm welcome' without words"
+   ],
+   "avoid": [],
+   "restriction": "none",
+   "source_keys": [
+    "SEP_PeirceSemiotics"
+   ],
+   "evidence_note": "Index type per Peirce (smoke-fire); reading itself untested.",
+   "confidence": "medium",
+   "test_status": "untested"
+  },
+  {
+   "id": "sign.market_bag_freshness",
+   "symbol": "Open shopping bag spilling fresh produce",
+   "category": "everyday_connotation",
+   "sign_type": "icon+symbol",
+   "meanings": {
+    "thai": "Market freshness, home cooking (Thai talad).",
+    "western": "Freshness, domestic preparation (Barthes' Panzani).",
+    "east_asian": "Similar."
+   },
+   "risks_misreadings": [
+    "Connotation depends on cultural knowledge (Barthes: 'Italianicity' invisible to Italians)"
+   ],
+   "use_for": [
+    "Freshness/'new arrivals' visual"
+   ],
+   "avoid": [],
+   "restriction": "none",
+   "source_keys": [
+    "Barthes1977"
+   ],
+   "evidence_note": "Classic semiotic analysis, not tested.",
+   "confidence": "medium",
+   "test_status": "untested"
+  },
+  {
+   "id": "sign.eye_chart",
+   "symbol": "Eye chart (Snellen letters / Thai E-chart)",
+   "category": "eyewear_domain",
+   "sign_type": "icon+symbol",
+   "meanings": {
+    "thai": "Eye test, optometrist, 'time to check your eyes'.",
+    "western": "Same.",
+    "east_asian": "Same (letters vary)."
+   },
+   "risks_misreadings": [
+    "Using a chart with wrong letters/medical claims may imply clinical service the shop does not offer"
+   ],
+   "use_for": [
+    "Eye-check reminders, 'how clear is your vision?' hooks"
+   ],
+   "avoid": [
+    "Claims of diagnosis"
+   ],
+   "restriction": "none",
+   "source_keys": [],
+   "evidence_note": "Craft/common knowledge; untested. Links: marketing/ETHICS_AND_THAI_AD_RULES.md (health claims).",
+   "confidence": "low",
+   "test_status": "untested"
+  },
+  {
+   "id": "sign.blur_focus",
+   "symbol": "Blur -> sharp focus transition",
+   "category": "eyewear_domain",
+   "sign_type": "icon",
+   "meanings": {
+    "thai": "Seeing clearly with right glasses.",
+    "western": "Same; also 'realisation'.",
+    "east_asian": "Same."
+   },
+   "risks_misreadings": [
+    "Exaggerated 'cure' implication if paired with health claims"
+   ],
+   "use_for": [
+    "Product clips: before/after clarity as experience, not medical claim"
+   ],
+   "avoid": [
+    "Implying glasses fix eye disease"
+   ],
+   "restriction": "none",
+   "source_keys": [
+    "SEP_PeirceSemiotics"
+   ],
+   "evidence_note": "Iconic simulation of experience; untested.",
+   "confidence": "low",
+   "test_status": "untested"
+  },
+  {
+   "id": "sign.warning_triangle",
+   "symbol": "Warning triangle / safety pictograms",
+   "category": "pictogram",
+   "sign_type": "symbol",
+   "meanings": {
+    "thai": "Caution (international ISO convention).",
+    "western": "Same.",
+    "east_asian": "Same."
+   },
+   "risks_misreadings": [
+    "Pictograms below ~67% comprehension are not safe to stand alone (ISO 3864 criterion as cited by Gungor 2023; ANSI Z535.3 uses 85%)",
+    "Real-world mean comprehension of 22 common safety signs was only 66.6% (Gungor 2023)"
+   ],
+   "use_for": [
+    "Safety/eye-strain warnings with text"
+   ],
+   "avoid": [
+    "Icon-only safety messages"
+   ],
+   "restriction": "none",
+   "source_keys": [
+    "ISO9186_1_2014",
+    "SafetySignComp_PMC10258412"
+   ],
+   "evidence_note": "Standard method (ISO 9186-1 page) + Gungor 2023 Heliyon study read in full; thresholds cited there, standards not read.",
+   "confidence": "medium",
+   "test_status": "untested"
+  },
+  {
+   "id": "rhet.juxtaposition",
+   "symbol": "Visual figure: juxtaposition (two things side by side)",
+   "category": "visual_rhetoric",
+   "sign_type": "figure",
+   "meanings": {
+    "thai": "Works if both objects are familiar to Thai viewers.",
+    "western": "Same.",
+    "east_asian": "Same."
+   },
+   "risks_misreadings": [
+    "Unrelated pairs are processed slowest and liked least"
+   ],
+   "use_for": [
+    "Glasses beside a matching object (shape rhyme) - easiest metaphor"
+   ],
+   "avoid": [
+    "Obscure pairings"
+   ],
+   "restriction": "none",
+   "source_keys": [
+    "PhillipsMcQuarrie2004",
+    "Lagerwerf2023"
+   ],
+   "evidence_note": "Typology + experiments.",
+   "confidence": "medium",
+   "test_status": "untested"
+  },
+  {
+   "id": "rhet.fusion",
+   "symbol": "Visual figure: fusion / hybrid (two objects merged)",
+   "category": "visual_rhetoric",
+   "sign_type": "figure",
+   "meanings": {
+    "thai": "Engaging for followers who stop to look.",
+    "western": "Same.",
+    "east_asian": "Same."
+   },
+   "risks_misreadings": [
+    "Harder to comprehend; complexity lowers liking past a point"
+   ],
+   "use_for": [
+    "Hero images for engaged audience"
+   ],
+   "avoid": [
+    "Fast-scroll ads, tourist audiences"
+   ],
+   "restriction": "none",
+   "source_keys": [
+    "vanMulken2010",
+    "PhillipsMcQuarrie2004"
+   ],
+   "evidence_note": "Hybrids preferred in one European study; harder in another - mixed.",
+   "confidence": "low",
+   "test_status": "untested"
+  },
+  {
+   "id": "rhet.replacement",
+   "symbol": "Visual figure: replacement (expected object swapped)",
+   "category": "visual_rhetoric",
+   "sign_type": "figure",
+   "meanings": {
+    "thai": "Needs strong context or caption anchorage.",
+    "western": "Same.",
+    "east_asian": "Same."
+   },
+   "risks_misreadings": [
+    "Highest risk of non-comprehension, especially for viewers lacking cultural competency"
+   ],
+   "use_for": [
+    "Only with a caption that anchors"
+   ],
+   "avoid": [
+    "Standalone cross-cultural ads"
+   ],
+   "restriction": "none",
+   "source_keys": [
+    "PhillipsMcQuarrie2004",
+    "McQuarrieMick1999"
+   ],
+   "evidence_note": "Complexity ordering from typology; cultural competency effect.",
+   "confidence": "low",
+   "test_status": "untested"
+  },
+  {
+   "id": "colour.link",
+   "symbol": "Colour symbolism (day colours, black/white mourning, red+gold, saffron, yellow/royal)",
+   "category": "colour",
+   "sign_type": "symbol",
+   "meanings": {
+    "thai": "see creative-intelligence/knowledge/visual-arts/ADVANCED_COLOR_SCIENCE.md section 7",
+    "western": "see creative-intelligence/knowledge/visual-arts/ADVANCED_COLOR_SCIENCE.md section 7",
+    "east_asian": "see creative-intelligence/knowledge/visual-arts/ADVANCED_COLOR_SCIENCE.md section 7"
+   },
+   "risks_misreadings": [
+    "Royal colours and mourning periods are timing-sensitive"
+   ],
+   "use_for": [
+    "Look up before choosing palette"
+   ],
+   "avoid": [],
+   "restriction": "respect",
+   "source_keys": [],
+   "evidence_note": "Covered in ADVANCED_COLOR_SCIENCE.md 7.2 - not repeated here.",
+   "confidence": "medium",
+   "test_status": "untested"
+  }
+ ]
+}

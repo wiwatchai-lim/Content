@@ -1,0 +1,656 @@
+[
+ {
+  "key": "JuslinVastfjall2008",
+  "title": "Emotional responses to music: the need to consider underlying mechanisms",
+  "authors": "Juslin, P. N.; Västfjäll, D.",
+  "year": 2008,
+  "url": "https://pubmed.ncbi.nlm.nih.gov/18826699/",
+  "doi_isbn": "",
+  "source_type": "review",
+  "tier": "A",
+  "key_findings": [
+   "Target article (BBS 31(5) 559-575): research had neglected the mechanisms by which music induces emotion; proposes six mechanisms beyond cognitive appraisal (brain stem reflex, evaluative conditioning, emotional contagion, visual imagery, episodic memory, musical expectancy)."
+  ],
+  "practical_applications": [
+   "A music brief must say WHICH mechanism we rely on (e.g. contagion via tempo/timbre, expectancy via a build), not just 'make it emotional'."
+  ],
+  "limitations": [
+   "Theoretical; commentaries contest parts. Abstract-level access."
+  ],
+  "license": "copyrighted",
+  "access_status": "abstract",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M23"
+  ]
+ },
+ {
+  "key": "Juslin2013_BRECVEMA",
+  "title": "From everyday emotions to aesthetic emotions: towards a unified theory of musical emotions",
+  "authors": "Juslin, P. N.",
+  "year": 2013,
+  "url": "https://ui.adsabs.harvard.edu/abs/2013PhLRv..10..235J",
+  "doi_isbn": "",
+  "source_type": "review",
+  "tier": "A",
+  "key_findings": [
+   "Revised framework with eight mechanisms: Brain stem reflex, Rhythmic entrainment, Evaluative conditioning, Contagion, Visual imagery, Episodic memory, Musical expectancy, Aesthetic judgement (BRECVEMA)."
+  ],
+  "practical_applications": [
+   "Checklist for music direction: which of the 8 does the cue use?"
+  ],
+  "limitations": [
+   "Physics of Life Reviews 10:235; snippet/abstract level."
+  ],
+  "license": "copyrighted",
+  "access_status": "search_summary",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M23"
+  ]
+ },
+ {
+  "key": "EerolaVuoskoski2013",
+  "title": "A review of music and emotion studies: approaches, emotion models, and stimuli",
+  "authors": "Eerola, T.; Vuoskoski, J. K.",
+  "year": 2013,
+  "url": "https://jyx.jyu.fi/dspace/handle/123456789/44357",
+  "doi_isbn": "10.1525/MP.2012.30.3.307",
+  "source_type": "review",
+  "tier": "S",
+  "key_findings": [
+   "Review of 251 studies: self-report dominates; ~70% use discrete or dimensional emotion models; stimuli lean on a small set of familiar Western classical pieces."
+  ],
+  "practical_applications": [
+   "Results generalise poorly to Thai pop, lo-fi or library music; test our own cues on our audience."
+  ],
+  "limitations": [
+   "Music Perception 30(3) 307-340; abstract only."
+  ],
+  "license": "copyrighted",
+  "access_status": "abstract",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M23"
+  ]
+ },
+ {
+  "key": "Huron2006_SweetAnticipation",
+  "title": "Sweet Anticipation: Music and the Psychology of Expectation",
+  "authors": "Huron, David",
+  "year": 2006,
+  "url": "https://mitpressbookstore.mit.edu/book/9780262582780",
+  "doi_isbn": "978-0-262-08345-4",
+  "source_type": "textbook",
+  "tier": "A",
+  "key_findings": [
+   "ITPRA theory: five expectation response systems - Imagination, Tension, Prediction, Reaction, Appraisal.",
+   "Devices such as syncopation, cadence, meter, tonality and climax exploit these responses; accounts for chills, laughter, awe.",
+   "Critics (e.g. Zilberg, Leonardo 2007) question universality claims from an ethnomusicology view."
+  ],
+  "practical_applications": [
+   "Build tension (uncertainty) before a reveal, reward with a predictable resolution on the product shot; a 'wrong' surprise works for comedy."
+  ],
+  "limitations": [
+   "Publisher page and reviews only; Western tonal bias."
+  ],
+  "license": "copyrighted",
+  "access_status": "publisher_page",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M23"
+  ]
+ },
+ {
+  "key": "LerdahlKrumhansl2007",
+  "title": "Modeling tonal tension",
+  "authors": "Lerdahl, F.; Krumhansl, C. L.",
+  "year": 2007,
+  "url": "https://doi.org/10.1525/mp.2007.24.4.329",
+  "doi_isbn": "",
+  "source_type": "empirical",
+  "tier": "A",
+  "key_findings": [
+   "Tonal Pitch Space model predicts listeners' tension ratings from prolongational structure, pitch-space distance, surface dissonance and voice-leading attraction; extended to chromatic music."
+  ],
+  "practical_applications": [
+   "Tension rises with distance from the home chord and dissonance; resolution = return home. Use at endings."
+  ],
+  "limitations": [
+   "Music Perception 24(4) 329-366; summaries only; Western tonal music.",
+   "Check 2026-11-25: the Zenodo PDF previously linked is Wagner (2014) 'Cognitive Models of Tonal Tension', a University of Amsterdam student paper that reviews this model - not the original article."
+  ],
+  "license": "copyrighted",
+  "access_status": "search_summary",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M23"
+  ]
+ },
+ {
+  "key": "Fritz2009_Mafa",
+  "title": "Universal recognition of three basic emotions in music",
+  "authors": "Fritz, T. et al.",
+  "year": 2009,
+  "url": "https://pure.mpg.de/pubman/item/item_1798490_5/component/file_2084652/fritz.pdf",
+  "doi_isbn": "10.1016/j.cub.2009.02.058",
+  "source_type": "empirical",
+  "tier": "A",
+  "key_findings": [
+   "Mafa listeners (Cameroon) with no Western music exposure recognised happy, sad and scared/fearful Western piano excerpts above chance (about 2/3 happy, ~1/2 sad and fearful per press reports).",
+   "Authors warn against the 'universal language of emotion' idea."
+  ],
+  "practical_applications": [
+   "Broad happy/sad/scary cues travel across cultures; finer moods (nostalgia, kreng-jai warmth) do not necessarily."
+  ],
+  "limitations": [
+   "Current Biology 19(7) 573-576; 21 participants per coverage; summary-level access."
+  ],
+  "license": "copyrighted",
+  "access_status": "search_summary",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M23"
+  ]
+ },
+ {
+  "key": "Gagnon2003_ModeTempo",
+  "title": "Mode and tempo relative contributions to 'happy-sad' judgements in equitone melodies",
+  "authors": "Gagnon, L. et al.",
+  "year": 2003,
+  "url": "https://informahealthcare.com/doi/abs/10.1080/02699930302279",
+  "doi_isbn": "10.1080/02699930302279",
+  "source_type": "empirical",
+  "tier": "A",
+  "key_findings": [
+   "Mode and tempo each affect happy-sad judgements; tempo was the more salient cue."
+  ],
+  "practical_applications": [
+   "If we can't change the track's mode, tempo/energy is the stronger lever for 'happy vs sad'."
+  ],
+  "limitations": [
+   "Cognition & Emotion 17:25-40; abstract-level summary."
+  ],
+  "license": "copyrighted",
+  "access_status": "search_summary",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M23"
+  ]
+ },
+ {
+  "key": "Husain2002_TempoMode",
+  "title": "Effects of musical tempo and mode on arousal, mood, and spatial abilities",
+  "authors": "Husain, G.; Thompson, W. F.; Schellenberg, E. G.",
+  "year": 2002,
+  "url": "https://sites.utm.utoronto.ca/sites/sites.utm.utoronto.ca.glenn_website/files/download/Husain.pdf",
+  "doi_isbn": "",
+  "source_type": "empirical",
+  "tier": "A",
+  "key_findings": [
+   "36 undergraduates; Mozart K.448 as MIDI in 4 versions: 165 vs 60 bpm x major vs minor.",
+   "Tempo changed arousal but not mood; mode changed mood but not arousal; spatial-task scores followed arousal/mood (arousal-mood account of the 'Mozart effect')."
+  ],
+  "practical_applications": [
+   "Two independent knobs: tempo = energy/arousal, mode = valence/mood. Brief them separately."
+  ],
+  "limitations": [
+   "Small sample; one piece; Western students."
+  ],
+  "license": "copyrighted",
+  "access_status": "full_text",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M23"
+  ]
+ },
+ {
+  "key": "JuslinLaukka2003",
+  "title": "Communication of emotions in vocal expression and music performance: different channels, same code?",
+  "authors": "Juslin, P. N.; Laukka, P.",
+  "year": 2003,
+  "url": "https://www.scribd.com/document/696920957/Juslin-emotion2003",
+  "doi_isbn": "10.1037/0033-2909.129.5.770",
+  "source_type": "meta-analysis",
+  "tier": "S",
+  "key_findings": [
+   "Meta-analysis of 104 vocal-expression and 41 music-performance studies; emotions are communicated with similar cue patterns (tempo/rate, loudness, pitch, timbre) in voice and music."
+  ],
+  "practical_applications": [
+   "Match VO prosody and music cues (both fast/bright for joy, slow/soft/low for sadness) so they don't fight."
+  ],
+  "limitations": [
+   "Psychological Bulletin 129:770-814; secondary summaries only for cue details."
+  ],
+  "license": "copyrighted",
+  "access_status": "search_summary",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M23"
+  ]
+ },
+ {
+  "key": "Gabrielsson2014_Structure",
+  "title": "The relationship between musical structure and perceived expression (Oxford Handbook of Music Psychology, 2nd ed.)",
+  "authors": "Gabrielsson, A.",
+  "year": 2014,
+  "url": "https://academic.oup.com/edited-volume/34489/chapter/292614599",
+  "doi_isbn": "",
+  "source_type": "review",
+  "tier": "A",
+  "key_findings": [
+   "Any structural factor (tempo, loudness, pitch, timbre, mode, rhythm, harmony...) can point to several emotions; effects are additive or interactive.",
+   "Clearest results for basic auditory/motion variables (loudness, timbre, pitch, tempo); typical musical variables less clear."
+  ],
+  "practical_applications": [
+   "Write briefs in tempo/loudness/register/timbre first, harmony second."
+  ],
+  "limitations": [
+   "Chapter abstract only."
+  ],
+  "license": "copyrighted",
+  "access_status": "abstract",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M23"
+  ]
+ },
+ {
+  "key": "Parncutt2014_MajorMinor",
+  "title": "The emotional connotations of major versus minor tonality: one or more origins?",
+  "authors": "Parncutt, R.",
+  "year": 2014,
+  "url": "https://static.uni-graz.at/fileadmin/_Persoenliche_Webseite/parncutt_richard/Pdfs/Parncutt2014EmotionalConnotations.pdf",
+  "doi_isbn": "10.1177/1029864914542842",
+  "source_type": "review",
+  "tier": "A",
+  "key_findings": [
+   "The major-positive / minor-negative valence association is psychologically robust in Western tonal music but has no single accepted explanation; Parncutt compares six partly related theories.",
+   "Theories: dissonance (minor passages rougher / less harmonic on average); alterity-markedness (major and positive emotion are the common norm, minor and negative the marked 'Other'); uncertainty (minor triad has a more ambiguous root; minor scale has three forms because degrees 6 and 7 vary); speech (minor scale degrees 3 and 6 are lower than expected, like sad speech); salience of flats; familiarity/cultural learning (differences emerged by accident in the 14th-16th centuries and were reinforced by composers).",
+   "Conclusion: there are arguments for and against each theory; the truth may be a mixture - not immediately clear which to privilege."
+  ],
+  "practical_applications": [
+   "Minor = sad is a learned Western-tonal association, strong for our audience (Thai pop is largely Western-tonal) but not universal."
+  ],
+  "limitations": [
+   "Theoretical review of Western tonal music; does not establish cross-cultural universality."
+  ],
+  "license": "copyrighted",
+  "access_status": "full_text",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M23"
+  ]
+ },
+ {
+  "key": "Kampfe2011_BGMmeta",
+  "title": "The impact of background music on adult listeners: a meta-analysis",
+  "authors": "Kämpfe, J.; Sedlmeier, P.; Renkewitz, F.",
+  "year": 2011,
+  "url": "https://www.gwern.net/doc/music/music-distraction/2011-kampfe.pdf",
+  "doi_isbn": "10.1177/0305735610376261",
+  "source_type": "meta-analysis",
+  "tier": "S",
+  "key_findings": [
+   "97 studies analysed (from 189 articles); global effect is null because specific effects cancel out.",
+   "Background music vs none: disturbs reading (all 8 studies negative, mean r = -.11, n = 680), small negative effect on memory, positive on emotional reactions and sports.",
+   "Memory for advertisement content: negligible slight negative (r = -.05, 7 studies, n = 930).",
+   "Music tempo influences the tempo of activities done while listening."
+  ],
+  "practical_applications": [
+   "Music under on-screen text or VO slightly hurts comprehension; music does help mood. Use it, but keep it simple and low under information."
+  ],
+  "limitations": [
+   "Psychology of Music 39(4) 424-448; heterogeneous small studies; adults only."
+  ],
+  "license": "copyrighted",
+  "access_status": "full_text",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M23"
+  ]
+ },
+ {
+  "key": "EllermeierZimmer2014_ISE",
+  "title": "The psychoacoustics of the irrelevant sound effect",
+  "authors": "Ellermeier, W.; Zimmer, K.",
+  "year": 2014,
+  "url": "https://www.jstage.jst.go.jp/article/ast/35/1/35_E141002/_article",
+  "doi_isbn": "10.1250/ast.35.10",
+  "source_type": "review",
+  "tier": "A",
+  "key_findings": [
+   "Irrelevant sound effect (ISE): memorising visually presented lists is reliably impaired by background sound that participants are told to ignore, at moderate levels; speech or speech analogues produce by far the largest effects (unfamiliar speech raised serial-recall errors by about 50% on average in the authors' data).",
+   "Noticeable spectral change over time is a necessary condition for an ISE; level change by itself is not.",
+   "FM-tone study (24 participants, FM rate 0-50 Hz): disruption is non-monotonic with a maximum near 4 Hz (where perceived fluctuation strength also peaks), but no FM tone disrupted as much as speech.",
+   "Table 1 re-tabulates earlier studies: music can produce almost equally large effects as speech (signals of sufficient spectro-temporal complexity); Salame & Baddeley (1989) vocal music produced larger effects than instrumental music.",
+   "No current model (cognitive or psychoacoustic - fluctuation strength, speech transmission index) captures all the data."
+  ],
+  "practical_applications": [
+   "Sung lyrics and choppy, changing music under VO compete with the words more than a steady pad; prefer instrumental, smooth beds."
+  ],
+  "limitations": [
+   "Invited review, Acoustical Science and Technology 35(1):10-16; lab serial-recall tasks, not video comprehension."
+  ],
+  "license": "copyrighted",
+  "access_status": "full_text",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M23"
+  ]
+ },
+ {
+  "key": "SalameBaddeley1989",
+  "title": "Effects of background music on phonological short-term memory",
+  "authors": "Salamé, P.; Baddeley, A.",
+  "year": 1989,
+  "url": "",
+  "doi_isbn": "",
+  "source_type": "empirical",
+  "tier": "A",
+  "key_findings": [
+   "As re-tabulated in Ellermeier & Zimmer 2014 (Table 1): vocal music disrupted serial recall more than instrumental music."
+  ],
+  "practical_applications": [
+   "Historical anchor for 'vocal music disrupts verbal memory more than instrumental'."
+  ],
+  "limitations": [
+   "Bibliographic only; findings not checked against the original.",
+   "Original not read; finding comes only from the Ellermeier & Zimmer 2014 review."
+  ],
+  "license": "copyrighted",
+  "access_status": "bibliographic",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M23"
+  ]
+ },
+ {
+  "key": "Frontiers2024_LyricsReading",
+  "title": "Impact of background music on reading comprehension: influence of lyrics language and study habits",
+  "authors": "Sun, Y.; Sun, C.; Li, C.; Shao, X.; Liu, Q.; Liu, H.",
+  "year": 2024,
+  "url": "https://www.frontiersin.org/journals/psychology/articles/10.3389/fpsyg.2024.1363562/full",
+  "doi_isbn": "10.3389/fpsyg.2024.1363562",
+  "source_type": "empirical",
+  "tier": "A",
+  "key_findings": [
+   "N=90 students of one sports university in Shandong (45 habitual music listeners, 45 not); Mandarin pop, English pop, no music: music with lyrics hurt reading comprehension.",
+   "90 college students in East China (50 female; 45 habitual music-listeners, 45 non-listeners; 30 per group: Mandarin pop, English pop, no music): music with lyrics reduced reading comprehension vs no music.",
+   "Comprehension dropped most when lyrics were in the same language as the text; accuracy was lowest with native-language (L1) lyrics for both listeners and non-listeners.",
+   "Non-listeners were hurt more; habitual listeners were much less distracted. Results support the duplex-mechanism account of auditory distraction.",
+   "Effect held even though the music was slow-tempo (contrast: Thompson et al. 2012 found fast, loud instrumental music disrupts reading more than slow)."
+  ],
+  "practical_applications": [
+   "For Thai text-heavy carousels/reels: no lyrics, especially not Thai lyrics, under reading or VO."
+  ],
+  "limitations": [
+   "One sample of Chinese students, reading tasks (not video watching); a corrigendum has been published (not read).",
+   "Spot-check U3 2026-11-25 applied."
+  ],
+  "license": "CC BY (Frontiers)",
+  "access_status": "full_text",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M23"
+  ]
+ },
+ {
+  "key": "Allan2007_SoundAdvertising",
+  "title": "Sound advertising: a review of the experimental evidence on the effects of music in commercials on attention, memory, attitudes, and purchase intention",
+  "authors": "Allan, D.",
+  "year": 2007,
+  "url": "",
+  "doi_isbn": "",
+  "source_type": "review",
+  "tier": "A",
+  "key_findings": [
+   "Review (Journal of Media Psychology) of experiments on music in commercials and attention, memory, attitude and purchase intention; findings on recall are mixed."
+  ],
+  "practical_applications": [
+   "Music in ads is not automatically positive; fit and attention matter."
+  ],
+  "limitations": [
+   "Seen only as a search snippet; title partly from snippet."
+  ],
+  "license": "copyrighted",
+  "access_status": "search_summary",
+  "verification_status": "unverified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M23"
+  ]
+ },
+ {
+  "key": "Oakes_MusicalCongruity",
+  "title": "An ad's musical congruity with the brand fires purchase intent (WARC)",
+  "authors": "Oakes, Steve",
+  "year": null,
+  "url": "https://www.warc.com/content/article/an_ad's_musical_congruity_with_the_brand_fires_purchase_intent/89208",
+  "doi_isbn": "",
+  "source_type": "practitioner",
+  "tier": "C",
+  "key_findings": [
+   "Summarises effects of 10 types of music-brand congruity on purchase intent, brand attitude, recall and affect."
+  ],
+  "practical_applications": [
+   "Musical fit (genre, tempo, mood matching brand and picture) is the main variable to brief."
+  ],
+  "limitations": [
+   "Paywalled trade article; snippet only. Some studies find incongruent music raises attention and recall."
+  ],
+  "license": "copyrighted",
+  "access_status": "search_summary",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M23"
+  ]
+ },
+ {
+  "key": "Cohen2015_CAM",
+  "title": "Congruence-Association Model and experiments in film music: toward interdisciplinary collaboration",
+  "authors": "Cohen, A. J.",
+  "year": 2015,
+  "url": "https://scholar2.islandarchives.ca/islandora/object/ir%3A12552",
+  "doi_isbn": "",
+  "source_type": "review",
+  "tier": "A",
+  "key_findings": [
+   "CAM: viewers build a coherent narrative from audio and visual channels; structural congruence (shared accents/timing) steers visual attention, association supplies meaning."
+  ],
+  "practical_applications": [
+   "Accents in music that coincide with visual accents direct the eye; the music's mood colours how the scene is interpreted."
+  ],
+  "limitations": [
+   "Music and the Moving Image 8(2) 5-24; summaries only."
+  ],
+  "license": "copyrighted",
+  "access_status": "search_summary",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M23"
+  ]
+ },
+ {
+  "key": "YouTube_AudioLibrary",
+  "title": "Use music and sound effects from the Audio Library (YouTube Help)",
+  "authors": "Google / YouTube",
+  "year": null,
+  "url": "https://support.google.com/youtube/answer/3376882?hl=en",
+  "doi_isbn": "",
+  "source_type": "docs",
+  "tier": "C",
+  "key_findings": [
+   "Creative Commons tracks require crediting the artist in the video description (copy text provided); standard-licence tracks need no attribution.",
+   "Audio Library content is copyright-safe on YouTube and won't get Content ID claims; monetisable in YPP.",
+   "The page does not state rules for use outside YouTube."
+  ],
+  "practical_applications": [
+   "OK for YouTube uploads; for FB/IG/TikTok use only CC BY tracks with credit, or platform libraries."
+  ],
+  "limitations": [
+   "Terms change; check per track licence."
+  ],
+  "license": "copyrighted",
+  "access_status": "full_text",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M23"
+  ]
+ },
+ {
+  "key": "CC_Licenses",
+  "title": "About CC Licenses",
+  "authors": "Creative Commons",
+  "year": null,
+  "url": "https://creativecommons.org/share-your-work/cc-licenses/",
+  "doi_isbn": "",
+  "source_type": "docs",
+  "tier": "C",
+  "key_findings": [
+   "Six licences: BY, BY-SA, BY-ND, BY-NC, BY-NC-SA, BY-NC-ND; all require attribution; NC forbids commercial use; ND forbids sharing adaptations; CC0 waives rights (public domain dedication)."
+  ],
+  "practical_applications": [
+   "Shop content is commercial: avoid NC tracks. Cutting a track to picture may count as an adaptation, so avoid ND tracks for music we edit."
+  ],
+  "limitations": [
+   "Not legal advice; whether a sync edit is an 'adaptation' should be checked in the licence legal code."
+  ],
+  "license": "CC BY 4.0",
+  "access_status": "full_text",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M23"
+  ]
+ },
+ {
+  "key": "TikTok_CML",
+  "title": "About the Commercial Music Library (TikTok Ads help)",
+  "authors": "TikTok",
+  "year": null,
+  "url": "https://ads.tiktok.com/help/article/commercial-music-library",
+  "doi_isbn": "",
+  "source_type": "docs",
+  "tier": "C",
+  "key_findings": [
+   "Page last updated July 2025: the Commercial Music Library is a pre-cleared global library of 1 million songs, free for businesses to use in content on TikTok.",
+   "Businesses cannot use the general music library commercially; the CML is to be used for all commercial TikTok activity - organic content (including duet, react, stitch), video ads and branded content.",
+   "Using other users' original sounds or other licensed sounds in business content requires your own licence check."
+  ],
+  "practical_applications": [
+   "Business accounts posting promos on TikTok should pick from the CML in-app."
+  ],
+  "limitations": [
+   "Help page; detailed CML terms (separate page) not read; use outside TikTok is not granted by this page."
+  ],
+  "license": "copyrighted",
+  "access_status": "full_text",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M23"
+  ]
+ },
+ {
+  "key": "Meta_SoundCollection",
+  "title": "Meta Sound Collection terms (as summarised by secondary sources and Instagram help)",
+  "authors": "Meta",
+  "year": null,
+  "url": "https://help.instagram.com/ipad-app/402084904469945",
+  "doi_isbn": "",
+  "source_type": "docs",
+  "tier": "C",
+  "key_findings": [
+   "Secondary summaries: licence covers commercial or non-commercial use but only inside content on Meta products; one Instagram help page says library music is for personal, non-commercial use - conflicting."
+  ],
+  "practical_applications": [
+   "Use Sound Collection only for FB/IG content; never export it to TikTok/YouTube; check terms before paid ads."
+  ],
+  "limitations": [
+   "Conflicting statements; primary terms not read."
+  ],
+  "license": "copyrighted",
+  "access_status": "search_summary",
+  "verification_status": "unverified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M23"
+  ]
+ },
+ {
+  "key": "Thailand1994_CopyrightAct",
+  "title": "Copyright Act B.E. 2537 (1994), English translation",
+  "authors": "Kingdom of Thailand",
+  "year": 1994,
+  "url": "https://en.wikisource.org/wiki/Translation:Copyright_Act,_2537_BE",
+  "doi_isbn": "",
+  "source_type": "primary_text",
+  "tier": "S",
+  "key_findings": [
+   "s.19: copyright lasts for the author's life plus 50 years; ss.20-22 give other terms (e.g. sound recordings, audiovisual works).",
+   "s.4: 'sound recording' excludes a film soundtrack; 'audiovisual work' includes its soundtrack.",
+   "s.32 para 1: use is not infringement if it does not conflict with normal exploitation and does not unreasonably prejudice the owner; para 2 lists purposes (research/study non-profit, personal use, criticism with acknowledgement, news, teaching...).",
+   "Performers' rights (s.44) last 50 years from the performance/recording (s.49); s.45 remuneration for commercial use of recorded performances."
+  ],
+  "practical_applications": [
+   "A shop promo is commercial use: none of the s.32 purposes cover using a popular Thai song in an ad. License it or use cleared libraries."
+  ],
+  "limitations": [
+   "Unofficial translation; amendments up to Copyright Act (No. 5) B.E. 2565 (2022) exist (IP Thailand) and were not checked. Not legal advice."
+  ],
+  "license": "public domain (statute)",
+  "access_status": "full_text",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M23"
+  ]
+ },
+ {
+  "key": "Apple_FCP_BeatDetection",
+  "title": "Edit to the beat in Final Cut Pro for Mac",
+  "authors": "Apple",
+  "year": null,
+  "url": "https://support.apple.com/guide/final-cut-pro/ver65b55a2b7/mac",
+  "doi_isbn": "",
+  "source_type": "docs",
+  "tier": "D",
+  "key_findings": [
+   "Final Cut Pro Beat Detection analyses a music clip and shows a beat grid of song parts (big structural transitions), bars and beats; edit points snap to the grid when snapping is on.",
+   "It can trim a music clip to the length of a video edit without perceptible breaks; Apple advises a 4/4 clip for the most accurate grid.",
+   "Toggle with Clip > Enable Beat Detection (Option-B)."
+  ],
+  "practical_applications": [
+   "Confirms the craft practice of editing on beat/bar grids; our beat-clip pipeline uses librosa for the same."
+  ],
+  "limitations": [
+   "Vendor documentation (Final Cut Pro for Mac); accuracy not independently tested."
+  ],
+  "license": "copyrighted",
+  "access_status": "full_text",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M23"
+  ]
+ }
+]

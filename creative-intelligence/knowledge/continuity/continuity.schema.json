@@ -1,0 +1,247 @@
+{
+ "$schema": "https://json-schema.org/draft/2020-12/schema",
+ "$id": "creative-intelligence/continuity.schema.json",
+ "title": "Per-series continuity file (proposal, M38)",
+ "description": "One file per series: <series-folder>/continuity.json. Source of truth for what is canon on screen. See CONTINUITY_SYSTEM.md.",
+ "type": "object",
+ "required": ["series", "version", "updated", "canon_through", "characters", "rules", "episodes"],
+ "additionalProperties": false,
+ "$defs": {
+  "id": {"type": "string", "pattern": "^[a-z0-9]+(\\.[a-z0-9_-]+)+$", "description": "namespaced: <series>.<entity>, e.g. zombie.chan"},
+  "ep": {"type": "string", "description": "episode code as used in folder names, e.g. Z04, EP07, 017"},
+  "status": {"enum": ["canon", "planned", "retired", "retconned"], "description": "canon = shown/published; planned = bible only"},
+  "names": {
+   "type": "object", "required": ["th"],
+   "properties": {"th": {"type": "string"}, "en": {"type": "string"}, "aliases": {"type": "array", "items": {"type": "string"}}},
+   "additionalProperties": false
+  },
+  "ref": {
+   "type": "object", "required": ["path"],
+   "properties": {
+    "path": {"type": "string", "description": "repo-relative path to the approved master image/file"},
+    "approved_on": {"type": "string"},
+    "note": {"type": "string"}
+   },
+   "additionalProperties": false
+  },
+  "generation": {
+   "type": "object",
+   "description": "Everything needed to reproduce or re-steer an image. A seed alone is not enough.",
+   "properties": {
+    "tool": {"enum": ["flux-local", "codex-gpt-image", "svg-rig", "kling", "wan", "hand-drawn", "other"]},
+    "model": {"type": "string"},
+    "seed": {"type": ["integer", "null"]},
+    "sampler": {"type": "string"},
+    "steps": {"type": ["integer", "null"]},
+    "size": {"type": "string"},
+    "prompt_file": {"type": "string"},
+    "reference_images": {"type": "array", "items": {"type": "string"}},
+    "adapters": {"type": "array", "items": {"type": "object", "properties": {"kind": {"enum": ["lora", "ip-adapter", "controlnet", "other"]}, "name": {"type": "string"}, "weight": {"type": "number"}}, "additionalProperties": false}}
+   },
+   "additionalProperties": false
+  },
+  "appearance": {
+   "type": "object", "required": ["ep", "note"],
+   "properties": {"ep": {"$ref": "#/$defs/ep"}, "note": {"type": "string"}},
+   "additionalProperties": false
+  }
+ },
+ "properties": {
+  "series": {
+   "type": "object", "required": ["id", "title", "format", "language"],
+   "properties": {
+    "id": {"type": "string", "pattern": "^[a-z0-9]+$"},
+    "title": {"$ref": "#/$defs/names"},
+    "format": {"type": "string", "description": "e.g. 9:16 clip 90 s, IG 1:1 carousel 6 slides"},
+    "language": {"type": "string"},
+    "kind": {"enum": ["serial", "anthology", "episodic", "campaign"], "description": "serial = state carries over; anthology = format carries over"},
+    "bible": {"type": "string", "description": "path to SERIES.md / STORY_BIBLE"},
+    "branding": {"type": "string"}
+   },
+   "additionalProperties": false
+  },
+  "version": {"type": "integer", "minimum": 1},
+  "updated": {"type": "string", "description": "YYYY-MM-DD"},
+  "canon_through": {"$ref": "#/$defs/ep", "description": "last episode actually published/rendered"},
+  "characters": {
+   "type": "array",
+   "items": {
+    "type": "object", "required": ["id", "names", "role", "identity_markers"],
+    "properties": {
+     "id": {"$ref": "#/$defs/id"},
+     "names": {"$ref": "#/$defs/names"},
+     "role": {"type": "string"},
+     "age": {"type": ["integer", "string", "null"]},
+     "traits": {"type": "array", "items": {"type": "string"}, "description": "behaviour the audience will track (want, fear, habit)"},
+     "never": {"type": "array", "items": {"type": "string"}, "description": "things this character never does/says"},
+     "identity_markers": {"type": "array", "minItems": 1, "items": {"type": "string"}, "description": "3-6 visual cues that must be present in every image (silhouette, garment, colour, prop)"},
+     "screen_side": {"enum": ["left", "right", "free"], "description": "default side in two-shots"},
+     "voice": {"type": "string", "description": "pointer to CHARACTER_VOICE_BIBLE entry / TTS voice"},
+     "bible_ref": {"type": "string", "description": "pointer to CHARACTER_BIBLE entry"},
+     "looks": {
+      "type": "array",
+      "items": {
+       "type": "object", "required": ["look_id", "from_ep", "description"],
+       "properties": {
+        "look_id": {"type": "string"},
+        "from_ep": {"$ref": "#/$defs/ep"},
+        "to_ep": {"$ref": "#/$defs/ep"},
+        "description": {"type": "string"},
+        "palette": {"type": "array", "items": {"type": "string"}},
+        "master_ref": {"$ref": "#/$defs/ref"},
+        "generation": {"$ref": "#/$defs/generation"}
+       },
+       "additionalProperties": false
+      }
+     },
+     "knowledge": {
+      "type": "array", "description": "what the character knows and since when (prevents knowing things too early)",
+      "items": {"type": "object", "required": ["fact", "since"], "properties": {"fact": {"type": "string"}, "since": {"$ref": "#/$defs/ep"}}, "additionalProperties": false}
+     },
+     "state_changes": {
+      "type": "array", "description": "injuries, deaths, relationships, possessions that carry over",
+      "items": {"type": "object", "required": ["ep", "change"], "properties": {"ep": {"$ref": "#/$defs/ep"}, "change": {"type": "string"}, "status": {"$ref": "#/$defs/status"}}, "additionalProperties": false}
+     },
+     "first_ep": {"$ref": "#/$defs/ep"},
+     "alive": {"type": "boolean"}
+    },
+    "additionalProperties": false
+   }
+  },
+  "props": {
+   "type": "array",
+   "items": {
+    "type": "object", "required": ["id", "name", "identity_markers"],
+    "properties": {
+     "id": {"$ref": "#/$defs/id"},
+     "name": {"$ref": "#/$defs/names"},
+     "owner": {"type": "string"},
+     "hero": {"type": "boolean", "description": "true = story/product points at it; must match exactly"},
+     "identity_markers": {"type": "array", "items": {"type": "string"}},
+     "master_ref": {"$ref": "#/$defs/ref"},
+     "states": {"type": "array", "items": {"type": "object", "required": ["ep", "state"], "properties": {"ep": {"$ref": "#/$defs/ep"}, "state": {"type": "string"}}, "additionalProperties": false}}
+    },
+    "additionalProperties": false
+   }
+  },
+  "places": {
+   "type": "array",
+   "items": {
+    "type": "object", "required": ["id", "name", "description"],
+    "properties": {
+     "id": {"$ref": "#/$defs/id"},
+     "name": {"$ref": "#/$defs/names"},
+     "real_place": {"type": "boolean"},
+     "description": {"type": "string"},
+     "layout": {"type": "string", "description": "fixed geography: where the door/window/counter is; which way is 'out' on screen"},
+     "lighting": {"type": "string"},
+     "master_ref": {"$ref": "#/$defs/ref"},
+     "first_ep": {"$ref": "#/$defs/ep"}
+    },
+    "additionalProperties": false
+   }
+  },
+  "timeline": {
+   "type": "array",
+   "items": {
+    "type": "object", "required": ["ep", "when", "event"],
+    "properties": {
+     "ep": {"$ref": "#/$defs/ep"},
+     "when": {"type": "string", "description": "story time, e.g. 'Day 1 17:40', 'one year later'"},
+     "event": {"type": "string"},
+     "who": {"type": "array", "items": {"type": "string"}},
+     "where": {"type": "string"},
+     "status": {"$ref": "#/$defs/status"}
+    },
+    "additionalProperties": false
+   }
+  },
+  "running_elements": {
+   "type": "array", "description": "running jokes, catchphrases, motifs, format devices, end-card teases",
+   "items": {
+    "type": "object", "required": ["id", "type", "description"],
+    "properties": {
+     "id": {"$ref": "#/$defs/id"},
+     "type": {"enum": ["joke", "catchphrase", "motif", "format_device", "tease", "sound"]},
+     "description": {"type": "string"},
+     "rule": {"type": "string", "description": "how it may vary (escalate, invert, rest)"},
+     "appearances": {"type": "array", "items": {"$ref": "#/$defs/appearance"}},
+     "rest_after": {"type": "integer", "description": "skip at least N episodes after use (avoid wear-out)"}
+    },
+    "additionalProperties": false
+   }
+  },
+  "rules": {
+   "type": "array", "description": "world rules, real facts, format and brand rules",
+   "items": {
+    "type": "object", "required": ["id", "type", "statement", "status"],
+    "properties": {
+     "id": {"$ref": "#/$defs/id"},
+     "type": {"enum": ["world", "fact", "format", "brand", "production"]},
+     "statement": {"type": "string"},
+     "cost_or_limit": {"type": "string", "description": "what the rule costs or cannot do"},
+     "established_in": {"$ref": "#/$defs/ep"},
+     "may_resolve_plot": {"type": "boolean", "description": "true only if the audience has seen the rule before it is used"},
+     "source": {"type": "string", "description": "for type=fact: citation / sources.json key"},
+     "status": {"$ref": "#/$defs/status"}
+    },
+    "additionalProperties": false
+   }
+  },
+  "open_threads": {
+   "type": "array", "description": "set-ups waiting for pay-off (Chekhov list)",
+   "items": {
+    "type": "object", "required": ["id", "setup_ep", "description", "state"],
+    "properties": {
+     "id": {"$ref": "#/$defs/id"},
+     "setup_ep": {"$ref": "#/$defs/ep"},
+     "description": {"type": "string"},
+     "payoff_ep": {"$ref": "#/$defs/ep"},
+     "state": {"enum": ["open", "paid_off", "dropped"]}
+    },
+    "additionalProperties": false
+   }
+  },
+  "episodes": {
+   "type": "array",
+   "items": {
+    "type": "object", "required": ["ep", "title", "status"],
+    "properties": {
+     "ep": {"$ref": "#/$defs/ep"},
+     "title": {"$ref": "#/$defs/names"},
+     "status": {"enum": ["idea", "script", "in_production", "rendered", "published"]},
+     "folder": {"type": "string"},
+     "published_on": {"type": "string"},
+     "summary": {"type": "string"},
+     "introduces": {"type": "array", "items": {"type": "string"}, "description": "entity ids first shown here"},
+     "changes": {"type": "array", "items": {"type": "string"}, "description": "state changes made here (also logged on the entity)"},
+     "tease_next": {"type": "string"},
+     "check": {"type": "object", "properties": {"done_on": {"type": "string"}, "issues": {"type": "array", "items": {"type": "string"}}}, "additionalProperties": false}
+    },
+    "additionalProperties": false
+   }
+  },
+  "discrepancies": {
+   "type": "array", "description": "known errors already published and the decision taken",
+   "items": {
+    "type": "object", "required": ["ep", "description", "decision"],
+    "properties": {
+     "ep": {"$ref": "#/$defs/ep"},
+     "description": {"type": "string"},
+     "severity": {"enum": ["critical", "major", "minor"]},
+     "decision": {"enum": ["fix_reupload", "retcon", "explain_in_story", "ignore"]},
+     "note": {"type": "string"}
+    },
+    "additionalProperties": false
+   }
+  },
+  "spelling": {
+   "type": "array", "description": "fixed Thai/English spellings and TTS pronunciations",
+   "items": {
+    "type": "object", "required": ["th"],
+    "properties": {"th": {"type": "string"}, "en": {"type": "string"}, "tts": {"type": "string"}},
+    "additionalProperties": false
+   }
+  }
+ }
+}

@@ -1,0 +1,99 @@
+/* Closure notice v2 — formal. Same family as posts/2026-09-26_flood-care (the shop's Facebook notice look):
+   dark green ground with faint diagonal lines, one square snow card. Inside: wordmark, Peach accent, eyebrow,
+   two date tiles (Sat 28 / Sun 29) over a green "closed" band, then the reopening date and hours.
+   Shop details sit on the green ground below the card. th + en share this sheet. */
+html, body { margin: 0; background: transparent; }
+body { position: relative; width: 1080px; height: 1350px; overflow: hidden; font-family: var(--to-font-body); color: var(--to-black); }
+body > [data-layer] { position: absolute; box-sizing: border-box; }
+p { margin: 0; }
+
+.background { inset: 0;
+  background:
+    repeating-linear-gradient(102deg, transparent 0 46px, rgba(250, 250, 250, .05) 46px 48px, transparent 48px 131px),
+    repeating-linear-gradient(104deg, transparent 0 83px, rgba(250, 250, 250, .035) 83px 84px, transparent 84px 197px),
+    radial-gradient(ellipse 85% 60% at 50% 40%, #1d4a37 0%, var(--to-green) 55%, #0b2118 100%); }
+
+.card { left: 90px; top: 110px; width: 900px; height: 1050px; padding: 76px 90px 70px; background: var(--to-snow);
+        text-align: center; box-shadow: 0 30px 80px rgba(0, 0, 0, .35);
+        display: flex; flex-direction: column; align-items: center; }
+.card > * { flex-shrink: 0; margin: 0; }
+.logo { width: 330px; }
+.accent { width: 72px; height: 5px; margin-top: 34px !important; background: var(--to-peach); }
+.eyebrow { margin-top: 30px !important; font-family: var(--to-font-display); font-weight: 700; font-size: 26px;
+           letter-spacing: var(--to-track-eyebrow); text-transform: uppercase; color: var(--to-green); }
+
+.dates { margin-top: 34px !important; width: 100%; display: grid; grid-template-columns: 1fr 1fr;
+         border: 2px solid var(--to-green); }
+.tile { padding: 22px 0 20px; }
+.dates.one { grid-template-columns: 1fr; width: 560px; }
+.dates.one .num { font-size: 190px; }
+.tile + .tile { border-left: 2px solid var(--to-hairline); }
+.tile .dow { font-weight: 500; font-size: 30px; line-height: 1.3; color: var(--to-black); }
+.tile .num { font-family: var(--to-font-display); font-weight: 800; font-size: 150px; line-height: 1; letter-spacing: var(--to-track-display); color: var(--to-green); }
+.tile .mon { font-weight: 500; font-size: 28px; line-height: 1.3; color: var(--to-black); opacity: .7; }
+.band { grid-column: 1 / -1; padding: 12px 0 14px; background: var(--to-green); color: var(--to-snow);
+        font-family: var(--to-font-display); font-weight: 700; font-size: 34px; letter-spacing: .12em; text-transform: uppercase; }
+
+.rule { width: 620px; height: 2px; margin-top: 44px !important; background: var(--to-hairline); }
+.reopen-label { margin-top: 36px !important; font-size: 28px; font-weight: 500; letter-spacing: .04em; color: var(--to-black); opacity: .7; }
+.reopen { margin-top: 8px !important; font-family: var(--to-font-display); font-weight: 700; font-size: 44px; line-height: 1.3; color: var(--to-green); }
+.hours { margin-top: 6px !important; font-size: 32px; font-weight: 500; line-height: 1.4; }
+.promo { margin-top: 40px !important; padding: 14px 30px 16px; border: 1.5px solid var(--to-green); color: var(--to-green);
+         font-size: 25px; font-weight: 500; line-height: 1.45; }
+.card { justify-content: center; }
+.promo { margin-top: 34px !important; }
+.sorry { margin-top: 26px !important; font-size: 26px; line-height: 1.5; opacity: .7; }
+
+.footer { left: 90px; width: 900px; top: 1196px; text-align: center; color: var(--to-snow); }
+.footer .name { font-family: var(--to-font-display); font-weight: 700; font-size: 26px; letter-spacing: var(--to-track-eyebrow); text-transform: uppercase; }
+.footer .info { margin-top: 10px; font-size: 22px; line-height: 1.5; opacity: .82; }
+.footer .dot { display: inline-block; width: 6px; height: 6px; margin: 0 14px 5px; background: var(--to-peach); vertical-align: middle; }
+
+/* Thai: Noto Sans Thai for everything that isn't a number or the wordmark */
+html[lang="th"] body, html[lang="th"] .eyebrow, html[lang="th"] .band, html[lang="th"] .reopen { font-family: var(--to-font-thai); }
+html[lang="th"] .eyebrow { font-size: 30px; letter-spacing: .06em; }
+html[lang="th"] .band { font-size: 36px; letter-spacing: .04em; }
+html[lang="th"] .reopen { font-size: 42px; }
+html[lang="th"] .tile .dow { font-size: 32px; }
+html[lang="th"] .dates.one .num { font-size: 165px; }
+html[lang="th"] .rule { margin-top: 34px !important; }
+html[lang="th"] .reopen-label { margin-top: 28px !important; }
+
+/* v3: bigger type (user 2026-11-23: "ตัวหนังสือเล็กไป") — taller card, smaller logo/number to make room */
+.card { top: 70px; height: 1120px; padding: 56px 70px 52px; }
+.logo { width: 280px; }
+.accent { margin-top: 26px !important; }
+.eyebrow { margin-top: 24px !important; font-size: 32px; }
+.dates { margin-top: 26px !important; }
+.dates.one { width: 600px; }
+.tile { padding: 16px 0 14px; }
+.tile .dow { font-size: 38px; }
+.dates.one .num { font-size: 150px; }
+.tile .mon { font-size: 36px; opacity: .8; }
+.band { font-size: 44px; padding: 10px 0 12px; }
+.rule { margin-top: 32px !important; }
+.reopen-label { margin-top: 26px !important; font-size: 36px; opacity: .8; }
+.reopen { font-size: 52px; }
+.hours { font-size: 44px; }
+.promo { margin-top: 28px !important; font-size: 31px; padding: 14px 26px 16px; }
+.sorry { margin-top: 22px !important; font-size: 32px; opacity: .8; }
+.footer { top: 1212px; }
+.footer .name { font-size: 32px; }
+.footer .info { font-size: 28px; }
+html[lang="th"] .eyebrow { font-size: 38px; }
+html[lang="th"] .tile .dow { font-size: 40px; }
+html[lang="th"] .dates.one .num { font-size: 140px; }
+html[lang="th"] .band { font-size: 46px; }
+html[lang="th"] .rule { margin-top: 28px !important; }
+html[lang="th"] .reopen-label { margin-top: 20px !important; }
+html[lang="th"] .reopen { font-size: 50px; }
+html[lang="th"] .promo { font-size: 30px; }
+
+/* v4: the closed day is the hero (user: "ข้อความเด่นคือเราหยุดวันเสาร์ที่ 28") — one big green block */
+.hero { margin-top: 30px !important; width: 100%; padding: 30px 0 34px; background: var(--to-green); color: var(--to-snow); }
+.hero .h-top { font-family: var(--to-font-display); font-weight: 700; font-size: 44px; letter-spacing: .14em; text-transform: uppercase; color: var(--to-peach); }
+.hero .h-main { margin-top: 4px; font-family: var(--to-font-display); font-weight: 800; font-size: 112px; line-height: 1.1; letter-spacing: -.01em; }
+.hero .h-sub { margin-top: 6px; font-size: 40px; font-weight: 500; opacity: .9; }
+html[lang="th"] .hero .h-top, html[lang="th"] .hero .h-main { font-family: var(--to-font-thai); letter-spacing: 0; }
+html[lang="th"] .hero .h-top { font-size: 50px; }
+html[lang="th"] .hero .h-main { font-size: 108px; line-height: 1.35; font-weight: 700; }

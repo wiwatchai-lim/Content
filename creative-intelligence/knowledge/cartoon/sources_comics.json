@@ -1,0 +1,851 @@
+[
+ {
+  "key": "Cohn2013Navigating",
+  "title": "Navigating comics: an empirical and theoretical approach to strategies of reading comic page layouts",
+  "authors": "Neil Cohn",
+  "year": 2013,
+  "url": "https://www.frontiersin.org/articles/10.3389/fpsyg.2013.00186/full",
+  "doi_isbn": "10.3389/fpsyg.2013.00186",
+  "source_type": "empirical",
+  "tier": "A",
+  "key_findings": [
+   "145 participants numbered empty panels on 12 layouts; Z-path used ~94% in a canonical grid",
+   "Blockage: 91/145 read the left vertical stack first instead of the Z-path",
+   "Separation Z-path ~0.72; staggering ~0.90 (trend only); inset: outer dominant panel first 60%",
+   "Upper-left panel almost always starts the page (0.96); left-to-right preferred 93 vs 21",
+   "Proposes Assemblage (grouped areas, smooth paths, no jumping, no gaps) and ordered preference rules",
+   "Frequent comic readers used blockage paths more; frequent manga readers used L->R entry less"
+  ],
+  "practical_applications": [
+   "Use plain grids for broad audiences",
+   "Avoid or cue blockage layouts",
+   "Start the page with a clear top-left panel"
+  ],
+  "limitations": [
+   "Self-selected Comic-Con sample (2004)",
+   "Empty panels, no content",
+   "Self-reported expertise"
+  ],
+  "license": "CC BY (Frontiers)",
+  "access_status": "full_text",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M44"
+  ]
+ },
+ {
+  "key": "CohnCampbell2015",
+  "title": "Navigating comics II: constraints on the reading order of comic page layouts",
+  "authors": "Neil Cohn, Hannah Campbell",
+  "year": 2015,
+  "url": "https://www.visuallanguagelab.com/P/NCHC_pagelayouts2.pdf",
+  "doi_isbn": "10.1002/acp.3086",
+  "source_type": "empirical",
+  "tier": "A",
+  "key_findings": [
+   "All departures from a grid (blockage/staggering, separation, overlap) pushed readers off the Z-path",
+   "Deviation was graded: the lower the rightward gutter, the less the Z-path; at full blockage Z-path <10%",
+   "Wider gutters increased group-by-group reading",
+   "Notes written Japanese can run right-to-left in vertical columns, unlike L->R English"
+  ],
+  "practical_applications": [
+   "Keep gutters contiguous when you want rows to read as rows",
+   "Use gutter width deliberately to group panels"
+  ],
+  "limitations": [
+   "Empty-panel task",
+   "Author preprint read; published in Applied Cognitive Psychology 29:193-199"
+  ],
+  "license": "copyrighted (author preprint)",
+  "access_status": "full_text",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M44"
+  ]
+ },
+ {
+  "key": "Cohn2014Architecture",
+  "title": "The architecture of visual narrative comprehension: the interaction of narrative structure and page layout in understanding comics",
+  "authors": "Neil Cohn",
+  "year": 2014,
+  "url": "https://www.frontiersin.org/articles/10.3389/fpsyg.2014.00680/full",
+  "doi_isbn": "10.3389/fpsyg.2014.00680",
+  "source_type": "review",
+  "tier": "A",
+  "key_findings": [
+   "Z-path in grid 95%, staggered 89%, separated 71%, blockage 31% (synthesis)",
+   "Narrative constituents and layout tiers are not isomorphic; they operate in parallel",
+   "Suggests (untested) Initials at page ends drive page turns and splash pages act as Peaks"
+  ],
+  "practical_applications": [
+   "Align scene changes and cliffhangers with page/slide boundaries as a hypothesis to test"
+  ],
+  "limitations": [
+   "Focused review of the author's own work",
+   "Layout-narrative mappings are observations, not tested"
+  ],
+  "license": "CC BY (Frontiers)",
+  "access_status": "full_text",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M44"
+  ]
+ },
+ {
+  "key": "CohnTWG2012",
+  "title": "Framing attention in Japanese and American comics: cross-cultural differences in attentional structure",
+  "authors": "Neil Cohn, Amaro Taylor-Weiner, Suzanne Grossman",
+  "year": 2012,
+  "url": "https://www.frontiersin.org/articles/10.3389/fpsyg.2012.00349/full",
+  "doi_isbn": "10.3389/fpsyg.2012.00349",
+  "source_type": "empirical",
+  "tier": "A",
+  "key_findings": [
+   "30 books (US mainstream, US indy, Japanese manga), ~300 panels each, coded Macro/Mono/Micro/Amorphic",
+   "US comics: Macro ~ Mono, few Micro/Amorphic; manga: Mono dominant, more Micro and Amorphic",
+   "Shot types track genre more than country",
+   "Interpreted as manga using panels as a spotlight of attention; convention is an alternative explanation"
+  ],
+  "practical_applications": [
+   "Vary attentional framing: Amorphic for mood pauses, Micro for product/detail inserts"
+  ],
+  "limitations": [
+   "10 books per group; translated shonen only",
+   "Moderate shot-coding reliability (kappa 0.54)",
+   "Cognition link inferred"
+  ],
+  "license": "CC BY (Frontiers)",
+  "access_status": "full_text",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M44"
+  ]
+ },
+ {
+  "key": "Cohn2020PINS",
+  "title": "Your brain on comics: a cognitive model of visual narrative comprehension",
+  "authors": "Neil Cohn",
+  "year": 2020,
+  "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC9328425/fullTextXML",
+  "doi_isbn": "10.1111/tops.12421",
+  "source_type": "review",
+  "tier": "A",
+  "key_findings": [
+   "PINS model: semantics (mental model, updating) and narrative structure (categories, constituents) processed in parallel",
+   "Categories: Establisher, Initial, (Prolongation), Peak, Release; plus conjunction and Refiner (head-modifier) schemas",
+   "People delete Establishers/Releases more than Peaks/Initials; missing core panels are detected more accurately",
+   "N400 indexes semantic access; anterior negativity narrative structure; P600 updating/inference",
+   "Visual language fluency (VLFI) modulates ERPs, reaction and viewing times; manga readership changes processing of Environmental-Conjunction"
+  ],
+  "practical_applications": [
+   "Plan each panel's narrative role; cut peripheral panels first",
+   "Keep inference load low for non-comic audiences"
+  ],
+  "limitations": [
+   "Model synthesises mostly one lab's work",
+   "Mostly wordless Western strips"
+  ],
+  "license": "CC BY (open access, Topics in Cognitive Science)",
+  "access_status": "full_text",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M44"
+  ]
+ },
+ {
+  "key": "FoulshamCohn2021",
+  "title": "Zooming in on visual narrative comprehension",
+  "authors": "Tom Foulsham, Neil Cohn",
+  "year": 2021,
+  "url": "https://link.springer.com/article/10.3758/s13421-020-01101-w",
+  "doi_isbn": "10.3758/s13421-020-01101-w",
+  "source_type": "empirical",
+  "tier": "A",
+  "key_findings": [
+   "Panels zoomed to the regions fixated by earlier readers (about 13% of the panel area) were rated easier to understand than non-fixated or incongruous controls (7-point scale: 4.2 vs 1.8; full panels 6.1) and were viewed more similarly to the originals.",
+   "Non-fixated or incongruous crops were harder",
+   "Fixation-based inset panels also highlighted key content; modifications affected subsequent panels"
+  ],
+  "practical_applications": [
+   "Crop tightly to the informative region; use inserts/Refiners for product details"
+  ],
+  "limitations": [
+   "Self-paced lab task, six-panel strips",
+   "Memory & Cognition 49:451-466",
+   "Spot-check C1 2026-11-25: corrected."
+  ],
+  "license": "copyrighted",
+  "access_status": "full_text",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M44"
+  ]
+ },
+ {
+  "key": "FoulshamWybrowCohn2016",
+  "title": "Reading without words: eye movements in the comprehension of comic strips",
+  "authors": "Tom Foulsham, Dean Wybrow, Neil Cohn",
+  "year": 2016,
+  "url": "https://www.visuallanguagelab.com/P/TFDWNC_eyemovements.pdf",
+  "doi_isbn": "10.1002/acp.3229",
+  "source_type": "empirical",
+  "tier": "A",
+  "key_findings": [
+   "Panels in original order were understood faster with fewer fixations than in random order",
+   "Random order produced more regressions",
+   "Narrative context changed where people looked inside panels"
+  ],
+  "practical_applications": [
+   "Coherent order lowers effort; scrambled or unclear order costs attention"
+  ],
+  "limitations": [
+   "Wordless Peanuts strips",
+   "Lab eye tracking"
+  ],
+  "license": "copyrighted (author copy)",
+  "access_status": "full_text",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M44"
+  ]
+ },
+ {
+  "key": "Cohn2019Inference",
+  "title": "Being explicit about the implicit: inference generating techniques in visual narrative",
+  "authors": "Neil Cohn",
+  "year": 2019,
+  "url": "https://www.cambridge.org/core/journals/language-and-cognition/article/being-explicit-about-the-implicit-inference-generating-techniques-in-visual-narrative/AEBDBD7A09A3892D860463AB57588112",
+  "doi_isbn": "10.1017/langcog.2019.6",
+  "source_type": "review",
+  "tier": "A",
+  "key_findings": [
+   "Speech balloons and motion lines are bound morphemes (affixes) that attach to stems; framing out the stem triggers inference",
+   "Peak Drop: deliberate omission of the Peak, inferred from Initial + Release",
+   "Suppletive panels (action stars, fight clouds, poof clouds) and text substitution (a sound effect replaces the Peak)"
+  ],
+  "practical_applications": [
+   "Use Peak Drop for before/after and gentle handling of sad or violent beats",
+   "SFX can stand in for an action"
+  ],
+  "limitations": [
+   "Theoretical/descriptive, corpus examples; not exhaustive"
+  ],
+  "license": "CC BY 4.0",
+  "access_status": "full_text",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M44"
+  ]
+ },
+ {
+  "key": "Cohn2012Peanuts",
+  "title": "(Pea)nuts and bolts of visual narrative: structure and meaning in sequential image comprehension",
+  "authors": "Neil Cohn, Martin Paczynski, Ray Jackendoff, Phillip J. Holcomb, Gina R. Kuperberg",
+  "year": 2012,
+  "url": "https://www.visuallanguagelab.com/P/NC_(Pea)nuts&bolts.pdf",
+  "doi_isbn": "10.1016/j.cogpsych.2012.01.003",
+  "source_type": "empirical",
+  "tier": "A",
+  "key_findings": [
+   "Compared Normal, Semantic-only, Structural-only and Scrambled strips",
+   "Reaction times fastest for Normal, slowest for Scrambled, intermediate for the others",
+   "N300/N400 smallest for Normal sequences: structure + meaning together ease processing"
+  ],
+  "practical_applications": [
+   "Both a coherent narrative arc and related content are needed"
+  ],
+  "limitations": [
+   "Only abstract read in detail; DOI and Cognitive Psychology 65 (2012) 1-38 confirmed from the PDF header"
+  ],
+  "license": "copyrighted (author copy)",
+  "access_status": "abstract",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M44"
+  ]
+ },
+ {
+  "key": "Cohn2010TimeTransitions",
+  "title": "The limits of time and transitions: challenges to theories of sequential image comprehension",
+  "authors": "Neil Cohn",
+  "year": 2010,
+  "url": "https://www.visuallanguagelab.com/P/NC_Time&Transitions.pdf",
+  "doi_isbn": "10.1386/stic.1.1.127/1",
+  "source_type": "primary_text",
+  "tier": "A",
+  "key_findings": [
+   "Critiques McCloud's six transitions as linear panel-to-panel relations without hierarchy",
+   "Argues closure is an additive inference made at the next panel, not in the gutter",
+   "Critiques Groensteen's arthrology as making no testable predictions; proposes hierarchic grouping (grammar)"
+  ],
+  "practical_applications": [
+   "Treat McCloud transitions as a planning vocabulary, not a cognitive model"
+  ],
+  "limitations": [
+   "Theoretical argument; Studies in Comics 1(1)"
+  ],
+  "license": "copyrighted (author copy)",
+  "access_status": "full_text",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M44"
+  ]
+ },
+ {
+  "key": "Cohn2013Balloons",
+  "title": "Beyond speech balloons and thought bubbles: the integration of text and image",
+  "authors": "Neil Cohn",
+  "year": 2013,
+  "url": "https://www.visuallanguagelab.com/P/NC_speechballoons.pdf",
+  "doi_isbn": "10.1515/sem-2013-0079",
+  "source_type": "primary_text",
+  "tier": "A",
+  "key_findings": [
+   "Four text-image interfaces: Inherent, Emergent (balloons/tails), Adjoined (captions near), Independent",
+   "Integration tempered by Gestalt grouping and semantic features",
+   "Balloon carriers link text content to a root (speaker)"
+  ],
+  "practical_applications": [
+   "Balloon-free captions are Adjoined: speaker must be signalled by position, colour or font"
+  ],
+  "limitations": [
+   "Theoretical, Semiotica 197"
+  ],
+  "license": "copyrighted (author copy)",
+  "access_status": "full_text",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M44"
+  ]
+ },
+ {
+  "key": "CohnEhly2016",
+  "title": "The vocabulary of manga: visual morphology in dialects of Japanese Visual Language",
+  "authors": "Neil Cohn, Sean Ehly",
+  "year": 2016,
+  "url": "https://www.visuallanguagelab.com/P/NCSE_mangamorphology.pdf",
+  "doi_isbn": "10.1016/j.pragma.2015.11.008",
+  "source_type": "empirical",
+  "tier": "A",
+  "key_findings": [
+   "Described and categorised 73 conventional graphic schemas in manga (e.g. nosebleeds, sleep bubbles)",
+   "Corpus of 20 books: most schemas recur in shonen and shojo, at different proportions ('dialects')"
+  ],
+  "practical_applications": [
+   "Use recognised symbols to carry emotion for faceless characters"
+  ],
+  "limitations": [
+   "Only abstract read in this session"
+  ],
+  "license": "copyrighted (author copy)",
+  "access_status": "abstract",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M44"
+  ]
+ },
+ {
+  "key": "PrathaAvunjianCohn2016",
+  "title": "Pow, punch, pika, and chu: the structure of sound effects in genres of American comics and Japanese manga",
+  "authors": "Nimish K. Pratha, Natalie Avunjian, Neil Cohn",
+  "year": 2016,
+  "url": "https://www.visuallanguagelab.com/P/2016.MC.NPNANC.pdf",
+  "doi_isbn": "10.1515/mc-2016-0017",
+  "source_type": "empirical",
+  "tier": "A",
+  "key_findings": [
+   "US mainstream comics used 100% onomatopoetic SFX, indy comics also some descriptive SFX (Punch!)",
+   "Shojo manga used more gitaigo (state-mimicking) and hiragana; shonen more giongo and katakana",
+   "In English a similar function is carried by font stylisation"
+  ],
+  "practical_applications": [
+   "Choose SFX type (sound vs state word) and lettering style by genre and tone"
+  ],
+  "limitations": [
+   "Small genre corpora; Multimodal Communication 5(2)"
+  ],
+  "license": "copyrighted (author copy)",
+  "access_status": "full_text",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M44"
+  ]
+ },
+ {
+  "key": "Hacimusaoglu2023",
+  "title": "Navigating meaning in the spatial layouts of comics: a cross-cultural corpus analysis",
+  "authors": "Irmak Hacimusaoglu, Bien Klomberg, Neil Cohn",
+  "year": 2023,
+  "url": "https://doi.org/10.1080/13506285.2023.2198271",
+  "doi_isbn": "10.1080/13506285.2023.2198271",
+  "source_type": "empirical",
+  "tier": "A",
+  "key_findings": [
+   "Corpus of 134 annotated comics (North America, Europe, Asia)",
+   "Within-row transitions change the situation least; across rows and pages more",
+   "Page boundaries align with spatial-location changes; Asian comics less constrained by layout"
+  ],
+  "practical_applications": [
+   "Put scene/location changes on page or slide boundaries"
+  ],
+  "limitations": [
+   "Only abstract read (publisher blocked); correlational"
+  ],
+  "license": "CC BY (open access per OpenAlex)",
+  "access_status": "abstract",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M44"
+  ]
+ },
+ {
+  "key": "Kirtley2022",
+  "title": "Navigating the narrative: an eye-tracking study of readers' strategies when reading comic page layouts",
+  "authors": "Clare Kirtley, Chris Murray, Phillip B. Vaughan, Benjamin W. Tatler",
+  "year": 2022,
+  "url": "https://doi.org/10.1002/acp.4018",
+  "doi_isbn": "10.1002/acp.4018",
+  "source_type": "empirical",
+  "tier": "A",
+  "key_findings": [
+   "Eye tracking replicated the dominant influence of panel external structure on navigation",
+   "Text location inside panels affected order in ambiguous layouts"
+  ],
+  "practical_applications": [
+   "Use balloon position to cue reading order when a layout is irregular"
+  ],
+  "limitations": [
+   "Only abstract read (publisher blocked)"
+  ],
+  "license": "CC BY (open access per OpenAlex)",
+  "access_status": "abstract",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M44"
+  ]
+ },
+ {
+  "key": "Yang2024",
+  "title": "Reading comics: the effect of expertise on eye movements",
+  "authors": "Hong Yang",
+  "year": 2024,
+  "url": "https://doi.org/10.16910/jemr.17.4.5",
+  "doi_isbn": "10.16910/jemr.17.4.5",
+  "source_type": "empirical",
+  "tier": "A",
+  "key_findings": [
+   "14 experts vs 17 non-experts; experts made more and larger saccades",
+   "Experts attended more to images; non-experts needed more and longer fixations on text"
+  ],
+  "practical_applications": [
+   "For general audiences keep text short; images should carry the story"
+  ],
+  "limitations": [
+   "Small sample; GLMM with layout/text controls"
+  ],
+  "license": "CC BY (Journal of Eye Movement Research)",
+  "access_status": "full_text",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M44"
+  ]
+ },
+ {
+  "key": "Maier2019",
+  "title": "Picturing words: the semantics of speech balloons",
+  "authors": "Emar Maier",
+  "year": 2019,
+  "url": "https://platform.openjournals.nl/PAC/article/download/22042/23695",
+  "doi_isbn": "10.53437/ptek3353",
+  "source_type": "primary_text",
+  "tier": "B",
+  "key_findings": [
+   "Speech and thought bubbles analysed as quotational event modification in a dynamic picture semantics",
+   "Balloons are symbolic elements inside iconic pictures; non-verbal affixes (motion lines, lightbulbs) can be analysed similarly"
+  ],
+  "practical_applications": [
+   "Balloon content is read as a quotation attached to the depicted speaker/event"
+  ],
+  "limitations": [
+   "Formal semantics proceedings paper (Amsterdam Colloquium); no empirical data"
+  ],
+  "license": "open access (unknown licence)",
+  "access_status": "full_text",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M44"
+  ]
+ },
+ {
+  "key": "Dewi2022",
+  "title": "The secret art of comedy manga: analisis struktur kishotenketsu pada komik populer Jepang",
+  "authors": "Ni Kadek Karisma Dewi, Ni Nyoman Puspa Dewi, Luh Putu Leoni Pramesti, I Nyoman Larry Julianto",
+  "year": 2022,
+  "url": "https://journals.telkomuniversity.ac.id/demandia/article/download/4301/1805",
+  "doi_isbn": "10.25124/demandia.v7i1.4301",
+  "source_type": "empirical",
+  "tier": "B",
+  "key_findings": [
+   "Yonkoma structure: Ki = intro (panel 1), Sho = development (2), Ten = unexpected twist/climax (3), Ketsu = conclusion that makes the reader rethink the twist (4)",
+   "Qualitative analysis of Gekkan Shojo Nozaki-kun ch.101: structure gives a clear, consistent message and scales to longer plots"
+  ],
+  "practical_applications": [
+   "Use ki-sho-ten-ketsu for 4-slide gentle gags and reflective stories"
+  ],
+  "limitations": [
+   "Descriptive qualitative study of one manga; Indonesian design journal"
+  ],
+  "license": "open access (unknown licence)",
+  "access_status": "full_text",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M44"
+  ]
+ },
+ {
+  "key": "CornwelSmith2022",
+  "title": "Review of 'The Art of Thai Comics: A Century of Strips and Stripes' by Nicolas Verstappen",
+  "authors": "Philip Cornwel-Smith",
+  "year": 2022,
+  "url": "https://so06.tci-thaijo.org/index.php/pub_jss/article/download/255851/172735",
+  "doi_isbn": "",
+  "source_type": "review",
+  "tier": "B",
+  "key_findings": [
+   "Thai comics peaked 1980s-2000s; first Siamese comic strip late 1920s (Pong Gab Priaw)",
+   "Temple-mural tradition: panels with minimal captions and detailed backgrounds, colour with narrative codes",
+   "Manga has dominated Thai comics since the 1980s; Thai comics characterised by eclectic mixing (lai rot)"
+  ],
+  "practical_applications": [
+   "Detailed, meaningful backgrounds and folk-tale retelling fit Thai visual heritage"
+  ],
+  "limitations": [
+   "Book review, not primary research; Journal of the Siam Society 110(1)"
+  ],
+  "license": "copyrighted",
+  "access_status": "full_text",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M44"
+  ]
+ },
+ {
+  "key": "Rungrojsuwan2007",
+  "title": "The symbolization of sounds in Thai onomatopoeic words",
+  "authors": "Sorabud Rungrojsuwan",
+  "year": 2007,
+  "url": "https://digital.car.chula.ac.th/manusya/vol10/iss2/4",
+  "doi_isbn": "",
+  "source_type": "empirical",
+  "tier": "B",
+  "key_findings": [
+   "Data from Thai dictionaries and 40 Japanese-to-Thai translated comics",
+   "Most Thai sound-symbolic words are monomorphemic or reduplicated",
+   "Meanings relate to human behaviours, activities and surroundings"
+  ],
+  "practical_applications": [
+   "Thai SFX design: use single syllables and reduplication"
+  ],
+  "limitations": [
+   "Only the abstract page read; full PDF blocked by a bot check"
+  ],
+  "license": "unknown",
+  "access_status": "publisher_page",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M44"
+  ]
+ },
+ {
+  "key": "Shifman2013",
+  "title": "Memes in a digital world: reconciling with a conceptual troublemaker",
+  "authors": "Limor Shifman",
+  "year": 2013,
+  "url": "https://academic.oup.com/jcmc/article/18/3/362/4067545",
+  "doi_isbn": "10.1111/jcc4.12013",
+  "source_type": "primary_text",
+  "tier": "A",
+  "key_findings": [
+   "Internet memes = groups of related items circulated, imitated and transformed by many users",
+   "Three dimensions: content, form, stance (participation, keying, communicative function)",
+   "Spread through mimicry and remix; form is copied most faithfully while content/stance shift"
+  ],
+  "practical_applications": [
+   "Design comic templates with fixed form and swappable content; match stance to brand"
+  ],
+  "limitations": [
+   "Two qualitative case studies; 2013 platforms"
+  ],
+  "license": "CC BY (JCMC open access)",
+  "access_status": "full_text",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M44"
+  ]
+ },
+ {
+  "key": "McCloud1993",
+  "title": "Understanding Comics: The Invisible Art",
+  "authors": "Scott McCloud",
+  "year": 1993,
+  "url": "https://doi.org/10.1109/tpc.1998.661632",
+  "doi_isbn": "",
+  "source_type": "textbook",
+  "tier": "B",
+  "key_findings": [
+   "Closure and six panel transitions (moment, action, subject, scene, aspect, non-sequitur) as described in Cohn2010TimeTransitions"
+  ],
+  "practical_applications": [
+   "Vocabulary for planning transitions"
+  ],
+  "limitations": [
+   "Book not read this session; content known via Cohn2010TimeTransitions and a 1998 IEEE review record (the URL/DOI is that 1998 review, not the book)"
+  ],
+  "license": "copyrighted",
+  "access_status": "bibliographic",
+  "verification_status": "unverified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M44"
+  ]
+ },
+ {
+  "key": "Eisner2008",
+  "title": "Comics and Sequential Art: Principles and Practices from the Legendary Cartoonist",
+  "authors": "Will Eisner",
+  "year": 2008,
+  "url": "",
+  "doi_isbn": "",
+  "source_type": "textbook",
+  "tier": "B",
+  "key_findings": [
+   "Existence of 1985/1990 and 2008 editions confirmed via OpenAlex records"
+  ],
+  "practical_applications": [
+   "Classic practitioner textbook on sequential art"
+  ],
+  "limitations": [
+   "Not read this session; no findings claimed"
+  ],
+  "license": "copyrighted",
+  "access_status": "bibliographic",
+  "verification_status": "unverified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M44"
+  ]
+ },
+ {
+  "key": "Groensteen2007",
+  "title": "The System of Comics (trans. Bart Beaty, Nick Nguyen)",
+  "authors": "Thierry Groensteen",
+  "year": 2007,
+  "url": "https://muse.jhu.edu/books/9781621039396",
+  "doi_isbn": "",
+  "source_type": "textbook",
+  "tier": "B",
+  "key_findings": [
+   "Per search summaries: spatio-topia (space + place of panels), arthrology (relations among images), restricted vs general arthrology, braiding (tressage)"
+  ],
+  "practical_applications": [
+   "Motif repetition across distant panels/episodes"
+  ],
+  "limitations": [
+   "Only search summaries read; French original 1999, English 2007 (University Press of Mississippi)"
+  ],
+  "license": "copyrighted",
+  "access_status": "search_summary",
+  "verification_status": "unverified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M44"
+  ]
+ },
+ {
+  "key": "LINE-Static",
+  "title": "Sticker guidelines (static) - LINE Creators Market",
+  "authors": "LINE Corporation",
+  "year": 2026,
+  "url": "https://creator.line.me/en/guideline/sticker/",
+  "doi_isbn": "",
+  "source_type": "docs",
+  "tier": "S",
+  "key_findings": [
+   "Sets of 8/16/24/32/40; sticker max 370x320 px, <=1 MB; main 240x240; tab 96x74; PNG transparent; >=72 dpi RGB; even dimensions; ~10 px margin; ZIP <=60 MB",
+   "Recommended: everyday expressions/messages; not recommended: objects/scenery, overly long images, low variety",
+   "Prohibited: advertising, requests for personal info, sexual/violent content, under-age drinking/smoking"
+  ],
+  "practical_applications": [
+   "Spec sheet for sticker sets"
+  ],
+  "limitations": [
+   "Platform rules change; re-check before submission"
+  ],
+  "license": "copyrighted (official guideline)",
+  "access_status": "full_text",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M44"
+  ]
+ },
+ {
+  "key": "LINE-Animated",
+  "title": "Animated sticker guidelines - LINE Creators Market",
+  "authors": "LINE Corporation",
+  "year": 2026,
+  "url": "https://creator.line.me/en/guideline/animationsticker/",
+  "doi_isbn": "",
+  "source_type": "docs",
+  "tier": "S",
+  "key_findings": [
+   "Sets of 8/16/24; max 320x270 px (one side >=270); 5-20 frames; <=4 s; 1-4 loops; APNG with .png; <=1 MB each; main 240x240; tab 96x74"
+  ],
+  "practical_applications": [
+   "Spec sheet for animated stickers"
+  ],
+  "limitations": [
+   "Platform rules change"
+  ],
+  "license": "copyrighted (official guideline)",
+  "access_status": "full_text",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M44"
+  ]
+ },
+ {
+  "key": "WEBTOON-Handbook",
+  "title": "Creator's Resource Handbook and Before You Publish Checklist (WEBTOON CANVAS)",
+  "authors": "WEBTOON (NAVER)",
+  "year": null,
+  "url": "https://webtoons-static.pstatic.net/creator101/en/pdf/Creators-Resource-Handbook-Updated.pdf",
+  "doi_isbn": "",
+  "source_type": "docs",
+  "tier": "C",
+  "key_findings": [
+   "Vertical format: reader sees one panel at a time; max 2 panels on screen; <=3 balloons/panel; 1-2 sentences per balloon; diamond stacking",
+   "Min 200 px between panels in a scene; 600-1000 px for location/scene transition; vary panel size; impact panels",
+   "Images <800 px wide and <1280 px tall, <=2 MB each, <=20 MB / 100 images; JPG/PNG",
+   "Thumbnails 1080x1080 (<500 KB) and 1080x1920 (<700 KB), no text; launch with 3 episodes; font 12-30 px typical"
+  ],
+  "practical_applications": [
+   "Pacing and spec rules for webtoon and scroll-pan clips"
+  ],
+  "limitations": [
+   "Editorial guidance from the platform, not reader research; year not printed"
+  ],
+  "license": "copyrighted",
+  "access_status": "full_text",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M44"
+  ]
+ },
+ {
+  "key": "ClipStudio-Webtoon",
+  "title": "Tips for Creating Vertical Scrolling Webtoons",
+  "authors": "Clip Studio (Celsys) tutorial",
+  "year": null,
+  "url": "https://www.clipstudio.net/how-to-draw/archives/157055",
+  "doi_isbn": "",
+  "source_type": "practitioner",
+  "tier": "D",
+  "key_findings": [
+   "Canvas 800 px wide per WEBTOON spec; export in sections <=1280 px",
+   "Spacing gives readers rest and time for text; larger gaps mark scene change",
+   "Gradient maps (e.g. sepia) for flashback; colour can extend beyond panels; dialogue before character suggests thought"
+  ],
+  "practical_applications": [
+   "Practical webtoon production tips"
+  ],
+  "limitations": [
+   "Practitioner tutorial; no pixel values for spacing"
+  ],
+  "license": "copyrighted",
+  "access_status": "full_text",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M44"
+  ]
+ },
+ {
+  "key": "BlambotGrammar",
+  "title": "Comic Book Grammar & Tradition",
+  "authors": "Nate Piekos (Blambot)",
+  "year": null,
+  "url": "https://blambot.com/pages/comic-book-grammar-tradition",
+  "doi_isbn": "",
+  "source_type": "practitioner",
+  "tier": "D",
+  "key_findings": [
+   "Tails point to the mouth and end ~50-60% of the way to the head; joined balloons = one train of thought",
+   "Off-panel: tail to border or none; thought balloons largely replaced by captions",
+   "Burst = shout; dashed = whisper; lightning tail = radio; caption types: location/time, internal, spoken, editorial; avoid tangents",
+   "Bold italic for emphasis; double dashes for interruption; ellipses for trailing"
+  ],
+  "practical_applications": [
+   "Lettering conventions for balloons and captions (adapt for Thai: no caps)"
+  ],
+  "limitations": [
+   "US English conventions; craft, not research"
+  ],
+  "license": "copyrighted",
+  "access_status": "full_text",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M44"
+  ]
+ },
+ {
+  "key": "MacRumors2024",
+  "title": "Instagram Now Allows Up to 20 Photos and Videos for Carousel Posts",
+  "authors": "MacRumors",
+  "year": 2024,
+  "url": "https://www.macrumors.com/2024/08/08/instagram-20-photos-carousel-posts/",
+  "doi_isbn": "",
+  "source_type": "docs",
+  "tier": "C",
+  "key_findings": [
+   "Instagram raised the carousel limit from 10 to 20 photos/videos, rolling out worldwide on 8 Aug 2024"
+  ],
+  "practical_applications": [
+   "Carousel comics can run up to 20 slides"
+  ],
+  "limitations": [
+   "News report, not Instagram's Help Center; aspect-ratio rules not covered"
+  ],
+  "license": "copyrighted",
+  "access_status": "full_text",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M44"
+  ]
+ }
+]

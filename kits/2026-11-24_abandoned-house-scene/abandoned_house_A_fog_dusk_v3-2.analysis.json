@@ -1,0 +1,149 @@
+{
+ "file": "abandoned_house_A_fog_dusk_v3-2.png",
+ "width": 1360,
+ "height": 768,
+ "aspect": 1.7708,
+ "value": {
+  "mean_L": 0.466,
+  "rms_contrast": 0.292,
+  "key": "mid",
+  "clipped_highlights_pct": 0.0,
+  "crushed_shadows_pct": 3.39,
+  "notan_3_pct": [
+   54.7,
+   14.4,
+   30.9
+  ]
+ },
+ "color": {
+  "dominant": [
+   {
+    "hex": "#091012",
+    "share_pct": 29.8,
+    "oklch": [
+     0.166,
+     0.012,
+     212.1
+    ]
+   },
+   {
+    "hex": "#182725",
+    "share_pct": 17.8,
+    "oklch": [
+     0.258,
+     0.02,
+     186.3
+    ]
+   },
+   {
+    "hex": "#D7E9DA",
+    "share_pct": 16.5,
+    "oklch": [
+     0.915,
+     0.028,
+     151.3
+    ]
+   },
+   {
+    "hex": "#9BB9B2",
+    "share_pct": 15.8,
+    "oklch": [
+     0.762,
+     0.034,
+     178.9
+    ]
+   },
+   {
+    "hex": "#6D8986",
+    "share_pct": 10.3,
+    "oklch": [
+     0.607,
+     0.032,
+     188.6
+    ]
+   },
+   {
+    "hex": "#35473F",
+    "share_pct": 9.8,
+    "oklch": [
+     0.379,
+     0.025,
+     168.5
+    ]
+   }
+  ],
+  "mean_chroma": 0.024,
+  "hue_spread_deg": 0,
+  "harmony_guess": "achromatic/neutral",
+  "warm_pct": 0,
+  "cool_pct": 0,
+  "proportion_top3_pct": [
+   29.8,
+   17.8,
+   16.5
+  ],
+  "proportion_note": "more even split than 60-30-10 (fine if intended)"
+ },
+ "saliency_peaks": [
+  {
+   "x": 0.596,
+   "y": 0.732,
+   "strength": 0.864,
+   "nearest_guide_dist": {
+    "thirds": 0.096,
+    "phi": 0.116,
+    "centre": 0.251
+   }
+  },
+  {
+   "x": 0.51,
+   "y": 0.141,
+   "strength": 0.826,
+   "nearest_guide_dist": {
+    "thirds": 0.248,
+    "phi": 0.264,
+    "centre": 0.359
+   }
+  },
+  {
+   "x": 0.998,
+   "y": 0.0,
+   "strength": 0.755,
+   "nearest_guide_dist": {
+    "thirds": 0.47,
+    "phi": 0.539,
+    "centre": 0.706
+   }
+  }
+ ],
+ "balance": {
+  "weight_centre": [
+   0.514,
+   0.502
+  ],
+  "offset_from_centre": 0.014,
+  "reading": "centred/symmetrical"
+ },
+ "sharpness": {
+  "overall": 828.3,
+  "focal": 2584.1,
+  "background": 788.6,
+  "focal_vs_background": 3.28
+ },
+ "edge_density_thirds": {
+  "rows_top_mid_bottom": [
+   0.014,
+   0.0504,
+   0.0774
+  ],
+  "cols_left_mid_right": [
+   0.0244,
+   0.0898,
+   0.0277
+  ]
+ },
+ "technical": {
+  "noise_sigma_est": 0.99
+ },
+ "overlay": "abandoned_house_A_fog_dusk_v3-2_ov.png"
+}

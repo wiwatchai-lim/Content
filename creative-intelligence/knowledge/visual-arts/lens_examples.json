@@ -1,0 +1,330 @@
+[
+ {
+  "id": "lens.catalogue_packshot",
+  "name": "True-shape catalogue packshot",
+  "purpose": "show a frame exactly as it is, with no perspective exaggeration of the front vs the temples",
+  "how": "100 mm macro (or 85-135 mm) from ~40-60 cm, f/11; DOF at 40 cm is only ~8 mm (c=0.03 mm) so stack 5-10 frames from lens front to temple tips; camera at bridge height, 5-15 deg above for the top bar; lens profile correction on",
+  "prompt_hint": "'product photo of eyeglasses, 100 mm macro lens from a distance, true-to-shape frame, sharp from front to temple tips, soft gradient background'",
+  "limits": "AI cannot be trusted for product geometry: composite the real kit cutout; stacking needs a still subject",
+  "use_for": [
+   "frame-kit backgrounds",
+   "catalogue posts"
+  ],
+  "evidence_label": "EVIDENCE (DOF maths) + CRAFT",
+  "source_keys": [
+   "Nasse2010-Zeiss",
+   "Wiki-DepthOfField",
+   "BryanPeronaAdolphs2012"
+  ],
+  "test_status": "untested"
+ },
+ {
+  "id": "lens.hinge_macro_stack",
+  "name": "Hinge / logo macro insert",
+  "purpose": "material truth: screws, acetate layers, engraved logo",
+  "how": "1:1 macro, f/8-f/11 (DOF ~1-1.3 mm, from 2Nc(1+m)/m^2), 10-30 stacked frames; long macro (100 mm+) for working distance so a softbox gradient can reflect in polished metal; effective aperture loses ~2 stops at 1:1",
+  "prompt_hint": "'extreme macro of an acetate eyeglass hinge, focus-stacked, every screw sharp, soft gradient reflection'",
+  "limits": "single AI image will invent screw counts and logos; dust and fingerprints show at 1:1",
+  "use_for": [
+   "insert shots in clips",
+   "detail carousels"
+  ],
+  "evidence_label": "DERIVED (formula) + CRAFT",
+  "source_keys": [
+   "Wiki-DepthOfField",
+   "Wiki-AngleOfView"
+  ],
+  "test_status": "untested"
+ },
+ {
+  "id": "lens.portrait_try_on_85",
+  "name": "Try-on portrait, eyes sharp",
+  "purpose": "flattering, trustworthy face with glasses and a soft shop background",
+  "how": "85 mm f/2-2.8 from ~1.5 m (MCU/CU); DOF at f/2 ~3.5 cm: focus on the near eye/lens front; temple tips may soften; keep the face out of the frame corners",
+  "prompt_hint": "'portrait of a woman trying on glasses, 85 mm lens, photographed from 1.5 m, f/2, shallow depth of field, eyes in sharp focus'",
+  "limits": "closer than ~1 m reintroduces the big-nose effect even with an 85 mm crop",
+  "use_for": [
+   "promo portraits",
+   "staff clips"
+  ],
+  "evidence_label": "EVIDENCE",
+  "source_keys": [
+   "BryanPeronaAdolphs2012",
+   "Wiki-PerspectiveDistortion",
+   "Nasse2010-Zeiss"
+  ],
+  "test_status": "untested"
+ },
+ {
+  "id": "lens.whole_frame_sharp_face",
+  "name": "Face with the whole frame sharp",
+  "purpose": "show the full frame on the face (front + temple to ear) for fit explanations",
+  "how": "85 mm f/5.6 at 1.5 m gives ~10 cm DOF; 3/4 or profile view; light so the far temple separates",
+  "prompt_hint": "'85 mm, f/5.6, the entire eyeglass frame sharp from lenses to ear tips, three-quarter view'",
+  "limits": "background less blurred; separate with light/colour instead",
+  "use_for": [
+   "fit/comfort explainer clips"
+  ],
+  "evidence_label": "EVIDENCE (DOF maths)",
+  "source_keys": [
+   "Wiki-DepthOfField"
+  ],
+  "test_status": "untested"
+ },
+ {
+  "id": "lens.background_melt_tele",
+  "name": "Melt the background behind a person",
+  "purpose": "isolate a customer from a busy street/shop at the same framing",
+  "how": "step back and use 135-200 mm instead of opening a 50 mm wider: at equal subject size DOF is almost the same, but the distant background blurs more with the longer lens; keep >= 3-5 m between subject and background",
+  "prompt_hint": "'shot from far away with a 200 mm telephoto lens, background reduced to soft colour, subject sharp'",
+  "limits": "needs space; heavy compression flattens the face slightly",
+  "use_for": [
+   "street promos",
+   "beach portraits"
+  ],
+  "evidence_label": "EVIDENCE",
+  "source_keys": [
+   "Nasse2010-Zeiss",
+   "Wiki-DepthOfField"
+  ],
+  "test_status": "untested"
+ },
+ {
+  "id": "lens.environmental_35",
+  "name": "Environmental portrait in the shop",
+  "purpose": "staff/owner in context, shop readable around them",
+  "how": "35 mm from 2-3 m at f/2.8-4; subject in the central third (edges of a 35 mm frame stretch faces); level camera so verticals of display cases stay straight",
+  "prompt_hint": "'35 mm environmental portrait of an optician in a small eyewear shop, level camera, straight vertical lines, subject centred'",
+  "limits": "do not move closer than ~1.5 m for a face; corners distort",
+  "use_for": [
+   "about-us posts",
+   "documentary clips"
+  ],
+  "evidence_label": "EVIDENCE + CRAFT",
+  "source_keys": [
+   "Kubovy1986_va",
+   "Wiki-PerspectiveDistortion"
+  ],
+  "test_status": "untested"
+ },
+ {
+  "id": "lens.hyperfocal_establishing",
+  "name": "Deep-focus establishing shot",
+  "purpose": "everything from foreground to horizon acceptably sharp",
+  "how": "24 mm at f/8 focused at the hyperfocal distance H ~2.4 m (sharp from ~1.2 m to infinity, c=0.03 mm); 35 mm f/8 H ~5.1 m",
+  "prompt_hint": "'wide establishing shot, 24 mm, deep focus, everything sharp from the foreground railing to the horizon'",
+  "limits": "phone sensors already have deep focus; c must shrink if the frame is cropped heavily for 9:16",
+  "use_for": [
+   "story openings",
+   "Hua Hin location shots"
+  ],
+  "evidence_label": "EVIDENCE",
+  "source_keys": [
+   "web:en.wikipedia.org:6_va",
+   "Wiki-DepthOfField"
+  ],
+  "test_status": "untested"
+ },
+ {
+  "id": "lens.shift_storefront_9x16",
+  "name": "Straight verticals on a vertical storefront",
+  "purpose": "professional architecture look in 9:16 where converging verticals are very visible",
+  "how": "keep the camera level and shift the lens (or shoot wider, level, and crop the upper part); or keystone-correct in post; avoid pitching the camera up",
+  "prompt_hint": "'front view of the shop facade, level camera, vertical lines perfectly parallel, architectural photography'",
+  "limits": "post-correction stretches the top; leave margin",
+  "use_for": [
+   "shop announcements",
+   "closure notices with a shop photo"
+  ],
+  "evidence_label": "EVIDENCE (projective geometry) + CRAFT",
+  "source_keys": [
+   "Wiki-DistortionOptics"
+  ],
+  "test_status": "untested"
+ },
+ {
+  "id": "lens.tilt_shift_miniature",
+  "name": "Miniature ('toy town') intro",
+  "purpose": "make Hua Hin streets look like a diorama for a playful opener",
+  "how": "high viewpoint (bird's-eye ~30-60 deg down), tilted focus plane or a post blur that grows smoothly above and below a horizontal band following the ground plane; boost saturation and contrast",
+  "prompt_hint": "'tilt-shift photograph of a beach town street from above, miniature effect, narrow band of focus, toy-like'",
+  "limits": "blur must match the depth gradient or the scale illusion fails (Held2010: some blur approximations do not work)",
+  "use_for": [
+   "clip intros",
+   "map/brand battle clips"
+  ],
+  "evidence_label": "EVIDENCE (abstract) + DERIVED",
+  "source_keys": [
+   "Held2010"
+  ],
+  "test_status": "untested"
+ },
+ {
+  "id": "lens.fisheye_peephole_pov",
+  "name": "Peephole / door-camera POV",
+  "purpose": "comic or suspense POV of someone at the shop door",
+  "how": "circular fisheye look (8-10 mm full-frame equivalent, equisolid/equidistant mapping); lines through the centre straight; vignette to black outside the circle",
+  "prompt_hint": "'circular fisheye view through a door peephole, curved walls, person at the door in the centre'",
+  "limits": "never on product geometry; AI often bends only part of the image",
+  "use_for": [
+   "story clips POV",
+   "humour posts"
+  ],
+  "evidence_label": "EVIDENCE + CRAFT",
+  "source_keys": [
+   "Wiki-FisheyeLens",
+   "BarreFlocon1968"
+  ],
+  "test_status": "untested"
+ },
+ {
+  "id": "lens.myopia_pov_blur",
+  "name": "Uncorrected-vision POV",
+  "purpose": "let viewers feel blurred distance vision before the new glasses",
+  "how": "defocus blur that increases with distance (near objects sharp for a myope), lower contrast at distance; then rack to sharp when the glasses go on",
+  "prompt_hint": "'point-of-view of a short-sighted person: near hands sharp, street signs in the distance blurred'",
+  "limits": "simulation is illustrative, not clinical; label as such in health content",
+  "use_for": [
+   "eyesight story clips",
+   "lens promo"
+  ],
+  "evidence_label": "DERIVED (optics of defocus) + CRAFT",
+  "source_keys": [
+   "Wiki-DepthOfField",
+   "OSheaBlackburnOno1994"
+  ],
+  "test_status": "untested"
+ },
+ {
+  "id": "lens.rack_focus_reveal",
+  "name": "Rack focus from reflection to face",
+  "purpose": "move attention from the lens surface (coating reflection) to the eye behind it",
+  "how": "long lens, wide aperture (f/2-2.8), focus pulled from the lens front to the eye (~1-2 cm apart at MCU distance means a tiny pull at 85 mm f/2); in rig.js use cam.rack",
+  "prompt_hint": "video: 'slow rack focus from the reflection on the lens to the eye behind it'",
+  "limits": "AI video seldom performs a true focus pull; may need two clips crossfaded",
+  "use_for": [
+   "coating promo clips"
+  ],
+  "evidence_label": "CRAFT",
+  "source_keys": [
+   "Wiki-DepthOfField"
+  ],
+  "test_status": "untested"
+ },
+ {
+  "id": "lens.phone_long_look",
+  "name": "Phone-viewing focal-length choice",
+  "purpose": "make faces and products look natural on small screens viewed at ~30 cm",
+  "how": "prefer 70-100 mm-equivalent framing for people/products (Cooper et al. recommend longer focal lengths for small, close-viewed images; median Flickr SLR focal length 68 mm); keep 24-35 mm for scene-setting",
+  "prompt_hint": "'medium close-up, 85 mm lens look, natural proportions'",
+  "limits": "recommendation derived from print-viewing experiments; not tested on IG audiences",
+  "use_for": [
+   "IG 1:1 posts",
+   "Reels 9:16"
+  ],
+  "evidence_label": "DERIVED from EVIDENCE",
+  "source_keys": [
+   "CooperPiazzaBanks2012"
+  ],
+  "test_status": "untested"
+ },
+ {
+  "id": "lens.close_wide_comedy",
+  "name": "Deliberate close wide-angle comedy face",
+  "purpose": "exaggerate a character's surprise or a selfie joke",
+  "how": "24 mm or wider from 30-40 cm: nose x1.2+ relative to ears; use only when the joke is the distortion",
+  "prompt_hint": "'comic close-up selfie, wide-angle lens very close, exaggerated nose, funny expression'",
+  "limits": "lowers trust/attractiveness ratings (Bryan 2012) - never on a customer or a product hero",
+  "use_for": [
+   "humour clips"
+  ],
+  "evidence_label": "EVIDENCE",
+  "source_keys": [
+   "BryanPeronaAdolphs2012"
+  ],
+  "test_status": "untested"
+ },
+ {
+  "id": "lens.shutter_180_shop",
+  "name": "Natural motion in shop video",
+  "purpose": "cinematic, flicker-free motion under shop lighting",
+  "how": "25 fps at 1/50 s (180 deg) under 50 Hz mains lighting; 24 fps at 1/48 may flicker under some lights; check LED panels",
+  "prompt_hint": "video: 'natural motion blur, 24 fps cinematic'",
+  "limits": "AI video ignores shutter settings; this is for real filming and for choosing rig motion blur",
+  "use_for": [
+   "staff/shop filming"
+  ],
+  "evidence_label": "EVIDENCE (formula) + DERIVED (50 Hz)",
+  "source_keys": [
+   "RED-ShutterAngle"
+  ],
+  "test_status": "untested"
+ },
+ {
+  "id": "lens.narrow_shutter_action",
+  "name": "Crisp staccato action",
+  "purpose": "make a fast action (frame snapping open, sunglasses tossed) crisp and energetic",
+  "how": "45-90 deg shutter (1/192-1/96 s at 24 fps); more light needed",
+  "prompt_hint": "'crisp fast action, no motion blur, frozen water droplets'",
+  "limits": "looks jittery for slow moves",
+  "use_for": [
+   "beat clips",
+   "action inserts"
+  ],
+  "evidence_label": "CRAFT",
+  "source_keys": [
+   "RED-ShutterAngle"
+  ],
+  "test_status": "untested"
+ },
+ {
+  "id": "lens.subtle_vignette",
+  "name": "Subtle vignette to hold the eye",
+  "purpose": "keep attention on the centred product",
+  "how": "darken corners 0.3-0.5 stop (natural cos^4 falloff is ~0.4 stop at 20 deg off-axis); avoid visible rings",
+  "prompt_hint": "'subtle natural vignette'",
+  "limits": "heavy vignette reads retro/toy; conflicts with logo corners",
+  "use_for": [
+   "product posts",
+   "promo stills"
+  ],
+  "evidence_label": "EVIDENCE (cos^4) + CRAFT",
+  "source_keys": [
+   "Wiki-Vignetting"
+  ],
+  "test_status": "untested"
+ },
+ {
+  "id": "lens.coating_ghost_demo",
+  "name": "Before/after flare to sell AR coating",
+  "purpose": "visualise what anti-reflective coating removes",
+  "how": "'before': bright point light at the frame edge producing ghost images and veiling glare across an uncoated lens; 'after': same light, clean view; keep light position identical",
+  "prompt_hint": "'split image: left, uncoated lens with strong reflections and ghosting from a lamp; right, same scene through an anti-reflective coated lens, clear'",
+  "limits": "camera-lens flare and spectacle-lens reflections are different systems; claims about coating performance need lens-maker data",
+  "use_for": [
+   "coating promos"
+  ],
+  "evidence_label": "DERIVED",
+  "source_keys": [
+   "Wiki-ChromaticAberration",
+   "Wiki-Vignetting"
+  ],
+  "test_status": "untested"
+ },
+ {
+  "id": "lens.chromatic_vintage",
+  "name": "Deliberate chromatic aberration",
+  "purpose": "vintage/glitch mood in a music beat clip",
+  "how": "lateral CA: shift R and B channels outward toward the edges (none at the centre); keep the product centred and clean",
+  "prompt_hint": "'vintage lens with slight chromatic aberration at the edges'",
+  "limits": "on metal frames, fringes read as dirt or bad quality; never on catalogue shots",
+  "use_for": [
+   "beat clips (style)"
+  ],
+  "evidence_label": "EVIDENCE (where CA appears) + CRAFT",
+  "source_keys": [
+   "Wiki-ChromaticAberration"
+  ],
+  "test_status": "untested"
+ }
+]

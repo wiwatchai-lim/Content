@@ -1,0 +1,199 @@
+{
+ "schema_version": 1,
+ "note": "Only experiments that were actually run. Images live in creative-intelligence/experiments/<folder>/. Planned ones are in 'planned' and must not be cited as results.",
+ "experiments": [
+  {
+   "id": "VA-000",
+   "date": "2026-11-25",
+   "question": "Does the new inspect_views focal check agree with the earlier human judgement of the golden-glasses series (v1 lamp steals the eye, v5 fixed)?",
+   "variable": "image version (existing images, nothing generated)",
+   "controlled": "same scene and intent; focal point given by hand at the glasses",
+   "method": "inspect_views.py on tests/real/golden_v1-2, v4-1, v5 with --focal at the glasses",
+   "result": {
+    "saliency_focal_vs_strongest_elsewhere": {
+     "v1": 0.61,
+     "v4": 0.85,
+     "v5": 1.11
+    },
+    "local_contrast_focal_vs_rest": {
+     "v1": 2.35,
+     "v4": 4.01,
+     "v5": 4.57
+    },
+    "edge_density_focal_vs_rest": {
+     "v1": 5.41,
+     "v4": 6.84,
+     "v5": 10.3
+    }
+   },
+   "conclusion": "All three measures rise in the same order as the earlier judgement; only v5 passes the focal check. Now a regression test in run_tests.py.",
+   "limits": "3 images from one series; the earlier judgement was Claude's plus the analyze_image read, not a panel of viewers. Saliency is a model, not eye-tracking.",
+   "status": "done"
+  },
+  {
+   "id": "VA-001",
+   "date": "2026-11-25",
+   "question": "With FLUX schnell, a fixed seed and a fixed prompt, does changing ONLY the light-direction phrase give a controlled lighting comparison?",
+   "variable": "light phrase: side (raking from left) / top (straight down from above) / back (from behind toward camera)",
+   "controlled": "seed 4242, 768x768, 4 steps, identical product/surface/background/camera words",
+   "files": "creative-intelligence/experiments/va-001-light-direction/{side,top,back}.png, compare.jpg, *_views.jpg",
+   "result": {
+    "observed": [
+     "side: soft raking light and a long shadow, but the glasses' shadow falls to the left/back, not to the right as asked",
+     "top: the model turned the camera into a top-down flat-lay (the phrase 'from above' moved the CAMERA, not only the light); flat lighting; value span 0.30 (flagged flat)",
+     "back: no visible rim light; instead the glasses stand upright facing the camera, a gradient wall appears, temple tips turn black - product details changed",
+     "the frame's bridge and temple shape differ between all three"
+    ],
+    "inspect_views_flags": {
+     "side": [],
+     "top": [
+      "focal_point",
+      "value_range",
+      "thumbnail_readability"
+     ],
+     "back": [
+      "focal_point"
+     ]
+    },
+    "value_span": {
+     "side": 0.467,
+     "top": 0.302,
+     "back": 0.688
+    }
+   },
+   "conclusion": "No. In FLUX schnell a lighting phrase leaks into camera angle, composition and product design, so one-phrase variants with a fixed seed are NOT a controlled lighting test. Side/raking light gave the most readable product image here (only one seed).",
+   "lessons": [
+    "Light-direction words like 'from above' can move the camera: say 'camera at eye level' again and describe the light by its effect on the surface",
+    "Text-to-image cannot hold a real product constant: product lighting tests must start from the real photo (compositing / relight) or a 3D/HTML render",
+    "For controlled visual A/B tests, change the variable outside the model (HTML/CSS layers, grading, crop) or fix geometry first"
+   ],
+   "limits": "one seed, one model (FLUX schnell 4 steps); not tested on Codex. Judgement by Claude from the images plus inspect_views numbers.",
+   "status": "done"
+  },
+  {
+   "id": "VA-002",
+   "date": "2026-11-25",
+   "question": "Can a post grade alone (no regeneration) move the eye from a bright lamp to the glasses? Which works better: desaturating or darkening the surround?",
+   "variable": "grade outside a soft focal ellipse: none / desaturate 60% / darken 30% / both",
+   "controlled": "same pixels, same focal ellipse, same mask fall-off; only the grade differs (fully controlled)",
+   "files": "creative-intelligence/experiments/va-002-grade-focal/ (a-d png, compare.jpg, *_views.jpg, results.json)",
+   "result": {
+    "saliency_focal_vs_strongest_elsewhere": {
+     "original": 0.61,
+     "desaturate": 0.66,
+     "darken": 0.85,
+     "both": 0.84
+    },
+    "local_contrast_focal_vs_rest": {
+     "original": 2.35,
+     "desaturate": 2.4,
+     "darken": 2.63,
+     "both": 2.68
+    }
+   },
+   "conclusion": "Darkening the surround helped about 5x more than desaturating it (+0.24 vs +0.05). That fits the evidence that luminance contrast drives bottom-up saliency more than chroma does. No grade passed: a light source inside the frame stays the brightest spot. The real fix is composition (crop the lamp out or regenerate it off-frame), which is what v5 did.",
+   "lessons": [
+    "Fix order for a stolen focal point: composition (crop/remove) > luminance (darken surround) > saturation",
+    "A grade cannot outweigh a visible light source; never leave a practical lamp brighter than the product"
+   ],
+   "limits": "one image; saliency model not eye-tracking; mask shape chosen by hand",
+   "status": "done"
+  },
+  {
+   "id": "C1-001",
+   "date": "2026-11-25",
+   "question": "Does FLUX schnell follow cartoon style words? Same subject, same seed, only the style phrase changes (8 styles).",
+   "variable": "style phrase: chibi, modern TV cartoon, anime cel, 1930s rubber hose, crayon picture book, flat vector, b/w manga, webtoon",
+   "controlled": "seed 777, 768x768, 4 steps, identical subject phrase (small round orange cat waving, full body, plain light background)",
+   "files": "creative-intelligence/experiments/c1-style-sweep/*.png, sheet.jpg",
+   "result": {
+    "judged_by": "Claude, looking at the sheet (no human rating yet)",
+    "followed_well": [
+     "tvcartoon (bold black outline, flat colour)",
+     "crayon (paper + crayon texture)",
+     "manga (b/w ink line; but no screentone)"
+    ],
+    "partly": [
+     "rubberhose (white gloves, noodle-ish limbs, grain/vignette - but stayed in colour though 'black and white' was asked; no pie-cut eyes)",
+     "flatvector (flatter shapes, still has thin outlines)"
+    ],
+    "barely": [
+     "chibi (head only slightly bigger)",
+     "anime (same cute sticker cat, no anime cel look)",
+     "webtoon (almost identical to anime/chibi)"
+    ]
+   },
+   "conclusion": "FLUX schnell has a strong default 'cute sticker cat' look for this subject. Style LABELS (anime, webtoon, chibi) barely move it; concrete rendering traits (black outline weight, crayon texture, b/w ink, white gloves) do. 'Black and white' was ignored once the subject says 'orange'.",
+   "lessons": [
+    "Prompt cartoon styles by traits (line, shading steps, texture, palette, proportions with numbers e.g. 'head as big as the body'), not by style names",
+    "Remove colour words from the subject when asking for b/w",
+    "Label-only styles collapse into the model default; check a sweep before promising a style"
+   ],
+   "limits": "one seed, one subject, FLUX schnell 4 steps; judged by Claude only",
+   "status": "done"
+  },
+  {
+   "id": "C1-002",
+   "date": "2026-11-25",
+   "question": "Do trait-based prompts fix the 4 styles that failed by name in C1-001?",
+   "variable": "prompt wording: style name (v1) vs concrete traits (v2)",
+   "controlled": "seed 777, 768x768, 4 steps, same subject",
+   "files": "creative-intelligence/experiments/c1-style-sweep/v2_*.png, v1_vs_v2.jpg",
+   "result": {
+    "judged_by": "Claude from the sheet",
+    "rubberhose": "fixed - grayscale, gloves, film grain (removing 'orange' + 'grayscale only, no color' worked)",
+    "chibi": "partly - bigger glossy eyes, but head still not as big as the body",
+    "anime": "partly - slender body, sharper line; artefact: one eye blank white",
+    "webtoon": "partly - pink gradient background, glossy green eyes; character still the default cute cat"
+   },
+   "conclusion": "Traits help: 1 of 4 fully fixed, 3 partly. FLUX schnell keeps its default cute-cat proportions; exact proportions (head = body) are not obeyed. For a precise cartoon style use a reference image (img2img / IP-Adapter, not installed) or draw the character in HTML/SVG.",
+   "lessons": [
+    "Grayscale works only when no colour word is left in the prompt",
+    "FLUX schnell ignores numeric proportions; check eyes for artefacts in anime-like prompts"
+   ],
+   "limits": "one seed; Claude judgement only",
+   "status": "done"
+  },
+  {
+   "id": "C1-003 (plan M44-T4)",
+   "date": "2026-11-25",
+   "question": "Turnaround in ONE image (sheet) vs 3 separate images: which gives correct views and a consistent character?",
+   "variable": "S = one 1344x768 sheet / G = three 768x768 images (front, side, back)",
+   "controlled": "same character text, seeds 101-103, FLUX schnell 4 steps",
+   "files": "creative-intelligence/experiments/c1-t4-turnaround/ (S_*.png, G_*.png, compare.jpg)",
+   "result": {
+    "judged_by": "Claude from compare.jpg",
+    "S_sheet": "1/3 correct (seed 101: front/side/back, outfit identical). 102: middle view is only a floating head. 103: front view drawn twice, no side view.",
+    "G_separate": "9/9 views correct; outfit consistent within a seed; seed 102 trousers light although 'dark' was asked; seed 102 has fake signature text",
+    "identity": "within a sheet the outfit matches best; across separate images with the same seed it is close but not identical"
+   },
+   "conclusion": "Separate generations with the same seed and the same character text were more reliable (9/9 views) than a sheet (1/3 usable). A sheet is worth trying only with several seeds, keeping the good one.",
+   "lessons": [
+    "For turnarounds: same seed + same identity text, one view per image",
+    "Check for fake signatures/text in pencil styles (cv2.inpaint or re-roll)"
+   ],
+   "limits": "3 seeds; Claude judgement; no similarity metric (DreamSim not installed)",
+   "status": "done"
+  }
+ ],
+ "planned": [
+  {
+   "id": "VA-P01",
+   "idea": "Same carousel frame (HTML), change only the value structure (high key vs low key) - fully controlled because it is a layer change",
+   "tool": "HTML render",
+   "cost": "free"
+  },
+  {
+   "id": "VA-P02",
+   "idea": "Same FLUX image, crop/negative space variants made by cropping one large render (composition test without regeneration)",
+   "tool": "FLUX + crop",
+   "cost": "free"
+  },
+  {
+   "id": "VA-P04",
+   "idea": "Mint & Tao shape language: round vs angular silhouettes of the same pose, ask the user which reads which character",
+   "tool": "HTML/SVG",
+   "cost": "free, needs user rating"
+  }
+ ]
+}

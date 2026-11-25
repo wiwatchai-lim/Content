@@ -1,0 +1,884 @@
+{
+ "schema_version": "1.0",
+ "note": "Edges are design links for routing, not claims of scientific causation.",
+ "nodes": [
+  {
+   "id": "M01",
+   "type": "module",
+   "name": "Human Psychology"
+  },
+  {
+   "id": "M02",
+   "type": "module",
+   "name": "Emotion Science"
+  },
+  {
+   "id": "M03",
+   "type": "module",
+   "name": "Philosophy and Wisdom"
+  },
+  {
+   "id": "M04",
+   "type": "module",
+   "name": "Cognitive Science"
+  },
+  {
+   "id": "M05",
+   "type": "module",
+   "name": "Neuroaesthetics"
+  },
+  {
+   "id": "M06",
+   "type": "module",
+   "name": "Aesthetic Intelligence"
+  },
+  {
+   "id": "M07",
+   "type": "module",
+   "name": "Visual Art Fundamentals"
+  },
+  {
+   "id": "M08",
+   "type": "module",
+   "name": "Composition and Visual Design"
+  },
+  {
+   "id": "M09",
+   "type": "module",
+   "name": "Color Science"
+  },
+  {
+   "id": "M10",
+   "type": "module",
+   "name": "Lighting and Shadow"
+  },
+  {
+   "id": "M11",
+   "type": "module",
+   "name": "Art History and Art Style"
+  },
+  {
+   "id": "M12",
+   "type": "module",
+   "name": "Visual Semiotics"
+  },
+  {
+   "id": "M13",
+   "type": "module",
+   "name": "Storytelling"
+  },
+  {
+   "id": "M14",
+   "type": "module",
+   "name": "Screenwriting and Dialogue"
+  },
+  {
+   "id": "M15",
+   "type": "module",
+   "name": "Character Design and Psychology"
+  },
+  {
+   "id": "M16",
+   "type": "module",
+   "name": "World Building"
+  },
+  {
+   "id": "M17",
+   "type": "module",
+   "name": "Body Language and Facial Acting"
+  },
+  {
+   "id": "M18",
+   "type": "module",
+   "name": "Cinematography"
+  },
+  {
+   "id": "M19",
+   "type": "module",
+   "name": "Animation and Movement"
+  },
+  {
+   "id": "M20",
+   "type": "module",
+   "name": "Voice Acting and Emotional Speech"
+  },
+  {
+   "id": "M21",
+   "type": "module",
+   "name": "Thai Language Specialization"
+  },
+  {
+   "id": "M22",
+   "type": "module",
+   "name": "Sound Design"
+  },
+  {
+   "id": "M23",
+   "type": "module",
+   "name": "Music Theory and Music Psychology"
+  },
+  {
+   "id": "M24",
+   "type": "module",
+   "name": "Audio Engineering"
+  },
+  {
+   "id": "M25",
+   "type": "module",
+   "name": "Film Editing"
+  },
+  {
+   "id": "M26",
+   "type": "module",
+   "name": "Graphic Design and Typography"
+  },
+  {
+   "id": "M27",
+   "type": "module",
+   "name": "Branding and Visual Identity"
+  },
+  {
+   "id": "M28",
+   "type": "module",
+   "name": "Audience Psychology"
+  },
+  {
+   "id": "M29",
+   "type": "module",
+   "name": "Marketing and Content Strategy"
+  },
+  {
+   "id": "M30",
+   "type": "module",
+   "name": "Anthropology and Cultural Intelligence"
+  },
+  {
+   "id": "M31",
+   "type": "module",
+   "name": "Humor and Comedy"
+  },
+  {
+   "id": "M32",
+   "type": "module",
+   "name": "Emotional Architecture"
+  },
+  {
+   "id": "M33",
+   "type": "module",
+   "name": "Creative Thinking"
+  },
+  {
+   "id": "M34",
+   "type": "module",
+   "name": "Computer Graphics"
+  },
+  {
+   "id": "M35",
+   "type": "module",
+   "name": "Computer Vision and Image Processing"
+  },
+  {
+   "id": "M36",
+   "type": "module",
+   "name": "Generative AI"
+  },
+  {
+   "id": "M37",
+   "type": "module",
+   "name": "Production Engineering"
+  },
+  {
+   "id": "M38",
+   "type": "module",
+   "name": "Continuity Management"
+  },
+  {
+   "id": "M39",
+   "type": "module",
+   "name": "Copyright, Ethics and Safety"
+  },
+  {
+   "id": "M40",
+   "type": "module",
+   "name": "Knowledge Management"
+  },
+  {
+   "id": "M41",
+   "type": "module",
+   "name": "Critical Thinking"
+  },
+  {
+   "id": "M42",
+   "type": "module",
+   "name": "Quality Assurance and Evaluation"
+  },
+  {
+   "id": "skill:master-creative-director",
+   "type": "skill",
+   "name": "master-creative-director"
+  },
+  {
+   "id": "skill:ai-visual-artist",
+   "type": "skill",
+   "name": "ai-visual-artist"
+  },
+  {
+   "id": "skill:ai-voice-director",
+   "type": "skill",
+   "name": "ai-voice-director"
+  },
+  {
+   "id": "skill:frame-kit",
+   "type": "skill",
+   "name": "frame-kit"
+  },
+  {
+   "id": "skill:beat-clip",
+   "type": "skill",
+   "name": "beat-clip"
+  },
+  {
+   "id": "skill:eye-break-clip",
+   "type": "skill",
+   "name": "eye-break-clip"
+  },
+  {
+   "id": "skill:daily-post",
+   "type": "skill",
+   "name": "daily-post"
+  },
+  {
+   "id": "skill:flux-like-chatgpt",
+   "type": "skill",
+   "name": "flux-like-chatgpt"
+  },
+  {
+   "id": "skill:story-craft",
+   "type": "skill",
+   "name": "story-craft"
+  },
+  {
+   "id": "skill:carousel-stories",
+   "type": "skill",
+   "name": "carousel-stories"
+  },
+  {
+   "id": "skill:ads-meta",
+   "type": "skill",
+   "name": "ads-meta"
+  },
+  {
+   "id": "tool:codex-image",
+   "type": "tool",
+   "name": "codex-image"
+  },
+  {
+   "id": "tool:flux-schnell-local",
+   "type": "tool",
+   "name": "flux-schnell-local"
+  },
+  {
+   "id": "tool:wan-2.2-ti2v-5b",
+   "type": "tool",
+   "name": "wan-2.2-ti2v-5b"
+  },
+  {
+   "id": "tool:gemini-tts",
+   "type": "tool",
+   "name": "gemini-tts"
+  },
+  {
+   "id": "tool:hyperframes",
+   "type": "tool",
+   "name": "hyperframes"
+  },
+  {
+   "id": "tool:html-render",
+   "type": "tool",
+   "name": "html-render"
+  },
+  {
+   "id": "tool:analyze-image",
+   "type": "tool",
+   "name": "analyze-image"
+  },
+  {
+   "id": "tool:voice-qc",
+   "type": "tool",
+   "name": "voice-qc"
+  },
+  {
+   "id": "tool:librosa-beats",
+   "type": "tool",
+   "name": "librosa-beats"
+  },
+  {
+   "id": "tool:sfxlib",
+   "type": "tool",
+   "name": "sfxlib"
+  },
+  {
+   "id": "tool:depth-anything-v2-small",
+   "type": "tool",
+   "name": "depth-anything-v2-small"
+  },
+  {
+   "id": "M43",
+   "type": "module",
+   "name": "Optical and Eye-Health Domain Knowledge"
+  },
+  {
+   "id": "M44",
+   "type": "module",
+   "name": "Cartoon, Comics and Illustration"
+  }
+ ],
+ "edges": [
+  {
+   "from": "M01",
+   "to": "M13",
+   "relation": "informs",
+   "use_case": "stories built on real human motivation (needs, fears, hopes)",
+   "evidence": "design decision (not a research finding)"
+  },
+  {
+   "from": "M03",
+   "to": "M14",
+   "relation": "informs",
+   "use_case": "dialogue with meaning; ideas stated accurately, not as fake quotes",
+   "evidence": "design decision (not a research finding)"
+  },
+  {
+   "from": "M02",
+   "to": "M09",
+   "relation": "informs",
+   "use_case": "emotion -> palette choice (valence/arousal as a starting point, culture-dependent)",
+   "evidence": "design decision (not a research finding)"
+  },
+  {
+   "from": "M02",
+   "to": "M10",
+   "relation": "informs",
+   "use_case": "emotion -> lighting key/contrast",
+   "evidence": "design decision (not a research finding)"
+  },
+  {
+   "from": "M17",
+   "to": "M20",
+   "relation": "must_agree_with",
+   "use_case": "face, body and voice show the same emotion beat",
+   "evidence": "design decision (not a research finding)"
+  },
+  {
+   "from": "M17",
+   "to": "M19",
+   "relation": "implemented_by",
+   "use_case": "acting realised through animation timing",
+   "evidence": "design decision (not a research finding)"
+  },
+  {
+   "from": "M12",
+   "to": "M18",
+   "relation": "combined_with",
+   "use_case": "meaning through framing/objects instead of explanation",
+   "evidence": "design decision (not a research finding)"
+  },
+  {
+   "from": "M23",
+   "to": "M25",
+   "relation": "combined_with",
+   "use_case": "music phrasing drives cut rhythm",
+   "evidence": "design decision (not a research finding)"
+  },
+  {
+   "from": "M28",
+   "to": "M29",
+   "relation": "informs",
+   "use_case": "content fitted to audience, tested with real results",
+   "evidence": "design decision (not a research finding)"
+  },
+  {
+   "from": "M35",
+   "to": "M42",
+   "relation": "implemented_by",
+   "use_case": "automated image/continuity checks",
+   "evidence": "design decision (not a research finding)"
+  },
+  {
+   "from": "M40",
+   "to": "M42",
+   "relation": "combined_with",
+   "use_case": "lessons from experiments feed back into rules",
+   "evidence": "design decision (not a research finding)"
+  },
+  {
+   "from": "M04",
+   "to": "M26",
+   "relation": "informs",
+   "use_case": "cognitive load -> words per slide, hierarchy",
+   "evidence": "design decision (not a research finding)"
+  },
+  {
+   "from": "M04",
+   "to": "M25",
+   "relation": "informs",
+   "use_case": "audio-visual sync and caption timing",
+   "evidence": "design decision (not a research finding)"
+  },
+  {
+   "from": "M05",
+   "to": "M06",
+   "relation": "informs",
+   "use_case": "what is evidence vs taste in aesthetic judgement",
+   "evidence": "design decision (not a research finding)"
+  },
+  {
+   "from": "M15",
+   "to": "M38",
+   "relation": "requires",
+   "use_case": "character bible is the reference for continuity checks",
+   "evidence": "design decision (not a research finding)"
+  },
+  {
+   "from": "M16",
+   "to": "M38",
+   "relation": "requires",
+   "use_case": "world rules/timeline for multi-episode continuity",
+   "evidence": "design decision (not a research finding)"
+  },
+  {
+   "from": "M21",
+   "to": "M20",
+   "relation": "constrains",
+   "use_case": "Thai tones must survive emotional prosody",
+   "evidence": "design decision (not a research finding)"
+  },
+  {
+   "from": "M21",
+   "to": "M26",
+   "relation": "constrains",
+   "use_case": "Thai line breaking and typography",
+   "evidence": "design decision (not a research finding)"
+  },
+  {
+   "from": "M30",
+   "to": "M12",
+   "relation": "constrains",
+   "use_case": "symbols change meaning across cultures",
+   "evidence": "design decision (not a research finding)"
+  },
+  {
+   "from": "M31",
+   "to": "M14",
+   "relation": "informs",
+   "use_case": "comic timing in dialogue",
+   "evidence": "design decision (not a research finding)"
+  },
+  {
+   "from": "M32",
+   "to": "M13",
+   "relation": "structures",
+   "use_case": "emotional timeline of a story",
+   "evidence": "design decision (not a research finding)"
+  },
+  {
+   "from": "M32",
+   "to": "M23",
+   "relation": "drives",
+   "use_case": "music mood per beat",
+   "evidence": "design decision (not a research finding)"
+  },
+  {
+   "from": "M39",
+   "to": "M36",
+   "relation": "constrains",
+   "use_case": "licences/consent for AI inputs and outputs",
+   "evidence": "design decision (not a research finding)"
+  },
+  {
+   "from": "M41",
+   "to": "M40",
+   "relation": "governs",
+   "use_case": "evidence tiers and verification of every source",
+   "evidence": "design decision (not a research finding)"
+  },
+  {
+   "from": "M33",
+   "to": "M13",
+   "relation": "generates",
+   "use_case": "several concept options before choosing",
+   "evidence": "design decision (not a research finding)"
+  },
+  {
+   "from": "M27",
+   "to": "M26",
+   "relation": "constrains",
+   "use_case": "brand rules on every layout",
+   "evidence": "design decision (not a research finding)"
+  },
+  {
+   "from": "M07",
+   "to": "skill:ai-visual-artist",
+   "relation": "used_by",
+   "use_case": "",
+   "evidence": "design decision (not a research finding)"
+  },
+  {
+   "from": "M08",
+   "to": "skill:ai-visual-artist",
+   "relation": "used_by",
+   "use_case": "",
+   "evidence": "design decision (not a research finding)"
+  },
+  {
+   "from": "M09",
+   "to": "skill:ai-visual-artist",
+   "relation": "used_by",
+   "use_case": "",
+   "evidence": "design decision (not a research finding)"
+  },
+  {
+   "from": "M10",
+   "to": "skill:ai-visual-artist",
+   "relation": "used_by",
+   "use_case": "",
+   "evidence": "design decision (not a research finding)"
+  },
+  {
+   "from": "M11",
+   "to": "skill:ai-visual-artist",
+   "relation": "used_by",
+   "use_case": "",
+   "evidence": "design decision (not a research finding)"
+  },
+  {
+   "from": "M26",
+   "to": "skill:ai-visual-artist",
+   "relation": "used_by",
+   "use_case": "",
+   "evidence": "design decision (not a research finding)"
+  },
+  {
+   "from": "M02",
+   "to": "skill:ai-voice-director",
+   "relation": "used_by",
+   "use_case": "",
+   "evidence": "design decision (not a research finding)"
+  },
+  {
+   "from": "M20",
+   "to": "skill:ai-voice-director",
+   "relation": "used_by",
+   "use_case": "",
+   "evidence": "design decision (not a research finding)"
+  },
+  {
+   "from": "M21",
+   "to": "skill:ai-voice-director",
+   "relation": "used_by",
+   "use_case": "",
+   "evidence": "design decision (not a research finding)"
+  },
+  {
+   "from": "M24",
+   "to": "skill:ai-voice-director",
+   "relation": "used_by",
+   "use_case": "",
+   "evidence": "design decision (not a research finding)"
+  },
+  {
+   "from": "M18",
+   "to": "skill:story-craft",
+   "relation": "used_by",
+   "use_case": "",
+   "evidence": "design decision (not a research finding)"
+  },
+  {
+   "from": "M19",
+   "to": "skill:story-craft",
+   "relation": "used_by",
+   "use_case": "",
+   "evidence": "design decision (not a research finding)"
+  },
+  {
+   "from": "M22",
+   "to": "skill:story-craft",
+   "relation": "used_by",
+   "use_case": "",
+   "evidence": "design decision (not a research finding)"
+  },
+  {
+   "from": "M25",
+   "to": "skill:story-craft",
+   "relation": "used_by",
+   "use_case": "",
+   "evidence": "design decision (not a research finding)"
+  },
+  {
+   "from": "M13",
+   "to": "skill:carousel-stories",
+   "relation": "used_by",
+   "use_case": "",
+   "evidence": "design decision (not a research finding)"
+  },
+  {
+   "from": "M14",
+   "to": "skill:carousel-stories",
+   "relation": "used_by",
+   "use_case": "",
+   "evidence": "design decision (not a research finding)"
+  },
+  {
+   "from": "M03",
+   "to": "skill:carousel-stories",
+   "relation": "used_by",
+   "use_case": "Slowly Growing themes",
+   "evidence": "design decision (not a research finding)"
+  },
+  {
+   "from": "M29",
+   "to": "skill:ads-meta",
+   "relation": "used_by",
+   "use_case": "",
+   "evidence": "design decision (not a research finding)"
+  },
+  {
+   "from": "M23",
+   "to": "skill:beat-clip",
+   "relation": "used_by",
+   "use_case": "",
+   "evidence": "design decision (not a research finding)"
+  },
+  {
+   "from": "skill:ai-visual-artist",
+   "to": "tool:flux-schnell-local",
+   "relation": "uses",
+   "use_case": "",
+   "evidence": "design decision (not a research finding)"
+  },
+  {
+   "from": "skill:ai-visual-artist",
+   "to": "tool:codex-image",
+   "relation": "uses",
+   "use_case": "ask first",
+   "evidence": "design decision (not a research finding)"
+  },
+  {
+   "from": "skill:ai-visual-artist",
+   "to": "tool:analyze-image",
+   "relation": "uses",
+   "use_case": "",
+   "evidence": "design decision (not a research finding)"
+  },
+  {
+   "from": "skill:ai-voice-director",
+   "to": "tool:gemini-tts",
+   "relation": "uses",
+   "use_case": "",
+   "evidence": "design decision (not a research finding)"
+  },
+  {
+   "from": "skill:ai-voice-director",
+   "to": "tool:voice-qc",
+   "relation": "uses",
+   "use_case": "",
+   "evidence": "design decision (not a research finding)"
+  },
+  {
+   "from": "skill:story-craft",
+   "to": "tool:hyperframes",
+   "relation": "uses",
+   "use_case": "",
+   "evidence": "design decision (not a research finding)"
+  },
+  {
+   "from": "skill:story-craft",
+   "to": "tool:sfxlib",
+   "relation": "uses",
+   "use_case": "",
+   "evidence": "design decision (not a research finding)"
+  },
+  {
+   "from": "skill:beat-clip",
+   "to": "tool:librosa-beats",
+   "relation": "uses",
+   "use_case": "",
+   "evidence": "design decision (not a research finding)"
+  },
+  {
+   "from": "skill:frame-kit",
+   "to": "tool:codex-image",
+   "relation": "uses",
+   "use_case": "prompts only; user runs",
+   "evidence": "design decision (not a research finding)"
+  },
+  {
+   "from": "skill:frame-kit",
+   "to": "tool:depth-anything-v2-small",
+   "relation": "uses",
+   "use_case": "2.5D",
+   "evidence": "design decision (not a research finding)"
+  },
+  {
+   "from": "skill:daily-post",
+   "to": "tool:html-render",
+   "relation": "uses",
+   "use_case": "",
+   "evidence": "design decision (not a research finding)"
+  },
+  {
+   "from": "skill:flux-like-chatgpt",
+   "to": "tool:flux-schnell-local",
+   "relation": "uses",
+   "use_case": "",
+   "evidence": "design decision (not a research finding)"
+  },
+  {
+   "from": "skill:eye-break-clip",
+   "to": "tool:hyperframes",
+   "relation": "uses",
+   "use_case": "",
+   "evidence": "design decision (not a research finding)"
+  },
+  {
+   "from": "skill:carousel-stories",
+   "to": "tool:html-render",
+   "relation": "uses",
+   "use_case": "",
+   "evidence": "design decision (not a research finding)"
+  },
+  {
+   "from": "skill:master-creative-director",
+   "to": "skill:ai-visual-artist",
+   "relation": "routes_to",
+   "use_case": "",
+   "evidence": ""
+  },
+  {
+   "from": "skill:master-creative-director",
+   "to": "skill:ai-voice-director",
+   "relation": "routes_to",
+   "use_case": "",
+   "evidence": ""
+  },
+  {
+   "from": "skill:master-creative-director",
+   "to": "skill:frame-kit",
+   "relation": "routes_to",
+   "use_case": "",
+   "evidence": ""
+  },
+  {
+   "from": "skill:master-creative-director",
+   "to": "skill:beat-clip",
+   "relation": "routes_to",
+   "use_case": "",
+   "evidence": ""
+  },
+  {
+   "from": "skill:master-creative-director",
+   "to": "skill:eye-break-clip",
+   "relation": "routes_to",
+   "use_case": "",
+   "evidence": ""
+  },
+  {
+   "from": "skill:master-creative-director",
+   "to": "skill:daily-post",
+   "relation": "routes_to",
+   "use_case": "",
+   "evidence": ""
+  },
+  {
+   "from": "skill:master-creative-director",
+   "to": "skill:flux-like-chatgpt",
+   "relation": "routes_to",
+   "use_case": "",
+   "evidence": ""
+  },
+  {
+   "from": "skill:master-creative-director",
+   "to": "skill:story-craft",
+   "relation": "routes_to",
+   "use_case": "",
+   "evidence": ""
+  },
+  {
+   "from": "skill:master-creative-director",
+   "to": "skill:carousel-stories",
+   "relation": "routes_to",
+   "use_case": "",
+   "evidence": ""
+  },
+  {
+   "from": "skill:master-creative-director",
+   "to": "skill:ads-meta",
+   "relation": "routes_to",
+   "use_case": "",
+   "evidence": ""
+  },
+  {
+   "from": "M43",
+   "to": "M29",
+   "relation": "constrains",
+   "use_case": "health claims limit what marketing may say",
+   "evidence": "design decision (not a research finding)"
+  },
+  {
+   "from": "M43",
+   "to": "M13",
+   "relation": "feeds",
+   "use_case": "accurate eye facts for story clips",
+   "evidence": "design decision (not a research finding)"
+  },
+  {
+   "from": "M43",
+   "to": "M42",
+   "relation": "checked_by",
+   "use_case": "medical fact-check step in QA",
+   "evidence": "design decision (not a research finding)"
+  },
+  {
+   "from": "M43",
+   "to": "M39",
+   "relation": "combined_with",
+   "use_case": "health-advertising rules",
+   "evidence": "design decision (not a research finding)"
+  },
+  {
+   "from": "M44",
+   "to": "M07",
+   "relation": "builds_on",
+   "use_case": "drawing fundamentals",
+   "evidence": "design decision (not a research finding)"
+  },
+  {
+   "from": "M44",
+   "to": "M15",
+   "relation": "combined_with",
+   "use_case": "character design",
+   "evidence": "design decision (not a research finding)"
+  },
+  {
+   "from": "M44",
+   "to": "M19",
+   "relation": "feeds",
+   "use_case": "2D animation",
+   "evidence": "design decision (not a research finding)"
+  },
+  {
+   "from": "M44",
+   "to": "M36",
+   "relation": "implemented_by",
+   "use_case": "AI cartoon generation",
+   "evidence": "design decision (not a research finding)"
+  },
+  {
+   "from": "M44",
+   "to": "M13",
+   "relation": "combined_with",
+   "use_case": "comic storytelling",
+   "evidence": "design decision (not a research finding)"
+  }
+ ]
+}

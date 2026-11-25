@@ -1,0 +1,5261 @@
+{
+ "schema_version": "1.0",
+ "cases": [
+  {
+   "id": "TC001",
+   "category": "same_text_diff_emotion",
+   "description": "Tao says the same three words to Mint in three different moods; each reading must be clearly different.",
+   "input": {
+    "schema_version": "1.0",
+    "project": "test",
+    "characters": [
+     {
+      "id": "tao",
+      "voice_by_provider": {
+       "gemini": "Umbriel"
+      }
+     }
+    ],
+    "lines": [
+     {
+      "id": "l1",
+      "character": "tao",
+      "language": "th",
+      "text": "ก็ได้ ตามใจเธอเลย",
+      "analysis": {
+       "speaker": "Tao (27)",
+       "listener": "Mint",
+       "goal": "to end the argument",
+       "subtext": "I'm too tired to keep losing"
+      },
+      "emotion": {
+       "primary": "sadness.resignation",
+       "intensity": 0.5
+      },
+      "direction": "You have stopped fighting; there is nothing left to argue about.",
+      "prosody": {
+       "pitch_baseline": "lower",
+       "pitch_range": "narrow",
+       "rate": "slow",
+       "energy": "low",
+       "voice_quality": "breathy",
+       "ending": "trail_off"
+      },
+      "pauses": [
+       {
+        "after": "ก็ได้",
+        "ms": 400,
+        "kind": "breath"
+       }
+      ]
+     },
+     {
+      "id": "l2",
+      "character": "tao",
+      "language": "th",
+      "text": "ก็ได้ ตามใจเธอเลย",
+      "analysis": {
+       "speaker": "Tao (27)",
+       "listener": "Mint",
+       "goal": "to make her happy",
+       "subtext": "you always win and I like it"
+      },
+      "emotion": {
+       "primary": "love.affection",
+       "intensity": 0.5
+      },
+      "direction": "Indulge her with a smile; you would give her anything.",
+      "prosody": {
+       "pitch_baseline": "baseline",
+       "pitch_range": "baseline",
+       "rate": "slightly_slow",
+       "energy": "medium",
+       "voice_quality": "smiling",
+       "ending": "soft_fall"
+      },
+      "emphasis": [
+       {
+        "word": "ก็ได้",
+        "how": "longer"
+       }
+      ]
+     },
+     {
+      "id": "l3",
+      "character": "tao",
+      "language": "th",
+      "text": "ก็ได้ ตามใจเธอเลย",
+      "analysis": {
+       "speaker": "Tao (27)",
+       "listener": "Mint",
+       "goal": "to make her feel the cost",
+       "subtext": "fine, but you owe me"
+      },
+      "emotion": {
+       "primary": "anger.bitterness",
+       "intensity": 0.5
+      },
+      "direction": "Concede with a sting she will feel; you will remember this.",
+      "prosody": {
+       "pitch_baseline": "lower",
+       "pitch_range": "narrow",
+       "rate": "baseline",
+       "energy": "medium",
+       "voice_quality": "tense",
+       "ending": "cut_off",
+       "rhythm": "clipped"
+      }
+     }
+    ]
+   },
+   "expected": {
+    "must": [
+     "l1 ends trailing off and softer than l3",
+     "l2 has an audible smile and a soft fall",
+     "l3 is clipped with a cut-off ending",
+     "all three use the same voice (Charon)",
+     "word เธอ not stressed in any reading"
+    ],
+    "must_not": [
+     "the three readings sound interchangeable",
+     "l3 shouted",
+     "l2 sounds sarcastic"
+    ]
+   },
+   "auto_checks": [
+    {
+     "type": "schema_valid"
+    },
+    {
+     "type": "emotion_ids_exist"
+    },
+    {
+     "type": "same_character_same_voice"
+    },
+    {
+     "type": "prosody_order",
+     "field": "energy",
+     "line_a": "l1",
+     "line_b": "l3",
+     "relation": "lt"
+    },
+    {
+     "type": "prosody_order",
+     "field": "rate",
+     "line_a": "l2",
+     "line_b": "l1",
+     "relation": "gt"
+    }
+   ]
+  },
+  {
+   "id": "TC002",
+   "category": "same_text_diff_emotion",
+   "description": "English 'Nice job.' as cutting sarcasm vs genuine admiration from the same character.",
+   "input": {
+    "schema_version": "1.0",
+    "project": "test",
+    "characters": [
+     {
+      "id": "tao",
+      "voice_by_provider": {
+       "gemini": "Umbriel"
+      }
+     }
+    ],
+    "lines": [
+     {
+      "id": "l1",
+      "character": "tao",
+      "language": "en",
+      "text": "Nice job.",
+      "analysis": {
+       "speaker": "Tao (27)",
+       "listener": "a clumsy friend",
+       "goal": "to point out the mistake",
+       "subtext": "you broke it"
+      },
+      "emotion": {
+       "primary": "stance.sarcasm",
+       "intensity": 0.5
+      },
+      "direction": "He just broke the frame; say it flat and slow so he hears the opposite.",
+      "prosody": {
+       "pitch_baseline": "lower",
+       "pitch_range": "narrow",
+       "rate": "slow",
+       "energy": "low",
+       "voice_quality": "modal",
+       "ending": "level"
+      },
+      "emphasis": [
+       {
+        "word": "Nice",
+        "how": "longer"
+       }
+      ]
+     },
+     {
+      "id": "l2",
+      "character": "tao",
+      "language": "en",
+      "text": "Nice job.",
+      "analysis": {
+       "speaker": "Tao (27)",
+       "listener": "a friend who fixed it",
+       "goal": "to praise",
+       "subtext": "I didn't think you could"
+      },
+      "emotion": {
+       "primary": "awe.admiration",
+       "intensity": 0.5
+      },
+      "direction": "You are genuinely impressed by the repair; a quiet nod in the voice.",
+      "prosody": {
+       "pitch_baseline": "baseline",
+       "pitch_range": "baseline",
+       "rate": "slightly_slow",
+       "energy": "medium",
+       "voice_quality": "smiling",
+       "ending": "soft_fall"
+      },
+      "emphasis": [
+       {
+        "word": "Nice",
+        "how": "louder"
+       }
+      ]
+     }
+    ]
+   },
+   "expected": {
+    "must": [
+     "l1 irony cue: lengthened 'Nice', level ending",
+     "l1 pitch lower and range narrower than l2",
+     "l2 warm, soft fall",
+     "listener can tell which one is sarcastic without context"
+    ],
+    "must_not": [
+     "l1 rising, bright intonation",
+     "l2 flat or drawn-out like l1"
+    ]
+   },
+   "auto_checks": [
+    {
+     "type": "schema_valid"
+    },
+    {
+     "type": "emotion_ids_exist"
+    },
+    {
+     "type": "same_character_same_voice"
+    },
+    {
+     "type": "prosody_order",
+     "field": "pitch_baseline",
+     "line_a": "l1",
+     "line_b": "l2",
+     "relation": "lt"
+    },
+    {
+     "type": "prosody_order",
+     "field": "energy",
+     "line_a": "l1",
+     "line_b": "l2",
+     "relation": "lt"
+    }
+   ]
+  },
+  {
+   "id": "TC003",
+   "category": "same_text_diff_emotion",
+   "description": "Ton says 'ไม่เป็นไรครับ' three ways: reassuring a customer, hiding heartbreak, giving up.",
+   "input": {
+    "schema_version": "1.0",
+    "project": "test",
+    "characters": [
+     {
+      "id": "ton",
+      "voice_by_provider": {
+       "gemini": "Puck"
+      }
+     }
+    ],
+    "lines": [
+     {
+      "id": "l1",
+      "character": "ton",
+      "language": "th",
+      "text": "ไม่เป็นไรครับ",
+      "analysis": {
+       "speaker": "Ton (optician, 28)",
+       "listener": "customer",
+       "goal": "to calm her",
+       "subtext": "it really is fine"
+      },
+      "emotion": {
+       "primary": "care.reassurance",
+       "intensity": 0.5
+      },
+      "direction": "The customer dropped a frame; take the worry off her immediately.",
+      "prosody": {
+       "pitch_baseline": "slightly_lower",
+       "pitch_range": "narrow",
+       "rate": "slightly_slow",
+       "energy": "medium",
+       "voice_quality": "smiling",
+       "ending": "soft_fall"
+      }
+     },
+     {
+      "id": "l2",
+      "character": "ton",
+      "language": "th",
+      "text": "ไม่เป็นไรครับ",
+      "analysis": {
+       "speaker": "Ton (optician, 28)",
+       "listener": "coworker",
+       "goal": "to stop the questions",
+       "subtext": "I am not okay"
+      },
+      "emotion": {
+       "primary": "suppressed.forced_cheer",
+       "intensity": 0.6,
+       "secondary": "sadness.sadness",
+       "masked_by": "joy.happiness"
+      },
+      "direction": "She just broke up with you; push the brightness one notch too high so no one asks.",
+      "prosody": {
+       "pitch_baseline": "higher",
+       "pitch_range": "wide",
+       "rate": "slightly_fast",
+       "energy": "medium",
+       "voice_quality": "smiling",
+       "ending": "smile_ending"
+      }
+     },
+     {
+      "id": "l3",
+      "character": "ton",
+      "language": "th",
+      "text": "ไม่เป็นไรครับ",
+      "analysis": {
+       "speaker": "Ton (optician, 28)",
+       "listener": "Chan",
+       "goal": "to accept",
+       "subtext": "there is nothing I can do"
+      },
+      "emotion": {
+       "primary": "sadness.resignation",
+       "intensity": 0.6
+      },
+      "direction": "The shop is closing and you have run out of arguments; say it to the floor.",
+      "prosody": {
+       "pitch_baseline": "lower",
+       "pitch_range": "very_narrow",
+       "rate": "slow",
+       "energy": "low",
+       "voice_quality": "creaky",
+       "ending": "trail_off"
+      }
+     }
+    ]
+   },
+   "expected": {
+    "must": [
+     "l2 pitch higher than l1 and l3",
+     "l2 brightness sounds slightly forced (stiff smile, sagging end)",
+     "l3 trails off with creak",
+     "ครับ kept and unstressed in all three"
+    ],
+    "must_not": [
+     "l2 sounds genuinely happy with no strain",
+     "l3 sobbing",
+     "ครับ dropped or stressed"
+    ]
+   },
+   "auto_checks": [
+    {
+     "type": "schema_valid"
+    },
+    {
+     "type": "emotion_ids_exist"
+    },
+    {
+     "type": "same_character_same_voice"
+    },
+    {
+     "type": "prosody_order",
+     "field": "pitch_baseline",
+     "line_a": "l2",
+     "line_b": "l1",
+     "relation": "gt"
+    },
+    {
+     "type": "prosody_order",
+     "field": "energy",
+     "line_a": "l3",
+     "line_b": "l1",
+     "relation": "lt"
+    }
+   ]
+  },
+  {
+   "id": "TC004",
+   "category": "same_text_diff_emotion",
+   "description": "Mint's 'จริงเหรอ' as pleasant surprise, scepticism and betrayed hurt.",
+   "input": {
+    "schema_version": "1.0",
+    "project": "test",
+    "characters": [
+     {
+      "id": "mint",
+      "voice_by_provider": {
+       "gemini": "Leda"
+      }
+     }
+    ],
+    "lines": [
+     {
+      "id": "l1",
+      "character": "mint",
+      "language": "th",
+      "text": "จริงเหรอ",
+      "analysis": {
+       "speaker": "Mint (25)",
+       "listener": "Tao",
+       "goal": "to confirm good news",
+       "subtext": "please be true"
+      },
+      "emotion": {
+       "primary": "surprise.pleasant",
+       "intensity": 0.7
+      },
+      "direction": "Tao says he got you concert tickets; you light up.",
+      "prosody": {
+       "pitch_baseline": "higher",
+       "pitch_range": "very_wide",
+       "rate": "fast",
+       "energy": "high",
+       "voice_quality": "smiling",
+       "ending": "rise"
+      }
+     },
+     {
+      "id": "l2",
+      "character": "mint",
+      "language": "th",
+      "text": "จริงเหรอ",
+      "analysis": {
+       "speaker": "Mint (25)",
+       "listener": "Tao",
+       "goal": "to call his bluff",
+       "subtext": "I know you're lying"
+      },
+      "emotion": {
+       "primary": "stance.skepticism",
+       "intensity": 0.5
+      },
+      "direction": "He claims he went to bed at ten; you don't buy it.",
+      "prosody": {
+       "pitch_baseline": "lower",
+       "pitch_range": "narrow",
+       "rate": "slow",
+       "energy": "medium",
+       "voice_quality": "modal",
+       "ending": "level"
+      },
+      "emphasis": [
+       {
+        "word": "จริง",
+        "how": "longer"
+       }
+      ]
+     },
+     {
+      "id": "l3",
+      "character": "mint",
+      "language": "th",
+      "text": "จริงเหรอ",
+      "analysis": {
+       "speaker": "Mint (25)",
+       "listener": "Tao",
+       "goal": "to hear him deny it",
+       "subtext": "how could you"
+      },
+      "emotion": {
+       "primary": "sadness.betrayal_hurt",
+       "intensity": 0.7
+      },
+      "direction": "You just learned he told everyone your secret; you can barely get it out.",
+      "prosody": {
+       "pitch_baseline": "slightly_lower",
+       "pitch_range": "narrow",
+       "rate": "slow",
+       "energy": "low",
+       "voice_quality": "trembling",
+       "ending": "trail_off"
+      }
+     }
+    ]
+   },
+   "expected": {
+    "must": [
+     "l1 wide range, rising end",
+     "l2 drawn-out จริง, level end",
+     "l3 trembling, quieter, trailing",
+     "lexical tones of จริง and เหรอ unchanged in all three"
+    ],
+    "must_not": [
+     "l1 and l2 both rising and bright",
+     "tone of เหรอ distorted to carry the emotion"
+    ]
+   },
+   "auto_checks": [
+    {
+     "type": "schema_valid"
+    },
+    {
+     "type": "emotion_ids_exist"
+    },
+    {
+     "type": "same_character_same_voice"
+    },
+    {
+     "type": "prosody_order",
+     "field": "rate",
+     "line_a": "l1",
+     "line_b": "l2",
+     "relation": "gt"
+    },
+    {
+     "type": "prosody_order",
+     "field": "energy",
+     "line_a": "l3",
+     "line_b": "l1",
+     "relation": "lt"
+    }
+   ]
+  },
+  {
+   "id": "TC005",
+   "category": "same_text_diff_emotion",
+   "description": "Jan says 'กลับมาแล้วเหรอลูก' with tenderness, relief and eerie calm.",
+   "input": {
+    "schema_version": "1.0",
+    "project": "test",
+    "characters": [
+     {
+      "id": "jan",
+      "voice_by_provider": {
+       "gemini": "Vindemiatrix"
+      }
+     }
+    ],
+    "lines": [
+     {
+      "id": "l1",
+      "character": "jan",
+      "language": "th",
+      "text": "กลับมาแล้วเหรอลูก",
+      "analysis": {
+       "speaker": "Jan (ghost grandma, 80)",
+       "listener": "Ton",
+       "goal": "to welcome",
+       "subtext": "I was waiting for you"
+      },
+      "emotion": {
+       "primary": "love.tenderness",
+       "intensity": 0.6
+      },
+      "direction": "Ton comes in from the rain; welcome him like a grandson.",
+      "prosody": {
+       "pitch_baseline": "slightly_lower",
+       "pitch_range": "narrow",
+       "rate": "slow",
+       "energy": "low",
+       "voice_quality": "breathy",
+       "ending": "soft_fall"
+      }
+     },
+     {
+      "id": "l2",
+      "character": "jan",
+      "language": "th",
+      "text": "กลับมาแล้วเหรอลูก",
+      "analysis": {
+       "speaker": "Jan (ghost grandma, 80)",
+       "listener": "Ton",
+       "goal": "to let him know she was scared",
+       "subtext": "thank god"
+      },
+      "emotion": {
+       "primary": "relief.relief",
+       "intensity": 0.7
+      },
+      "direction": "He was gone all night in a storm; let the worry out in one breath.",
+      "prosody": {
+       "pitch_baseline": "baseline",
+       "pitch_range": "baseline",
+       "rate": "slow",
+       "energy": "medium",
+       "voice_quality": "breathy",
+       "ending": "soft_fall"
+      },
+      "nonverbal": [
+       "sigh"
+      ]
+     },
+     {
+      "id": "l3",
+      "character": "jan",
+      "language": "th",
+      "text": "กลับมาแล้วเหรอลูก",
+      "analysis": {
+       "speaker": "Jan (ghost grandma, 80)",
+       "listener": "Ton",
+       "goal": "to greet",
+       "subtext": "I have been here all along"
+      },
+      "emotion": {
+       "primary": "performance.eerie_calm",
+       "intensity": 0.6
+      },
+      "direction": "You speak from the dark before he has switched on the light; perfectly calm, which is the scary part.",
+      "prosody": {
+       "pitch_baseline": "lower",
+       "pitch_range": "very_narrow",
+       "rate": "very_slow",
+       "energy": "very_low",
+       "voice_quality": "breathy",
+       "ending": "level",
+       "loudness": "whisper"
+      }
+     }
+    ]
+   },
+   "expected": {
+    "must": [
+     "l2 starts with an audible exhale or sigh",
+     "l3 quieter and flatter than l1",
+     "jan stays slow in all three",
+     "ลูก unstressed and soft"
+    ],
+    "must_not": [
+     "any reading faster than conversational",
+     "l3 sounds like a horror-movie growl"
+    ]
+   },
+   "auto_checks": [
+    {
+     "type": "schema_valid"
+    },
+    {
+     "type": "emotion_ids_exist"
+    },
+    {
+     "type": "same_character_same_voice"
+    },
+    {
+     "type": "prosody_order",
+     "field": "energy",
+     "line_a": "l3",
+     "line_b": "l1",
+     "relation": "lt"
+    },
+    {
+     "type": "prosody_order",
+     "field": "energy",
+     "line_a": "l2",
+     "line_b": "l1",
+     "relation": "gt"
+    }
+   ]
+  },
+  {
+   "id": "TC006",
+   "category": "same_text_diff_emotion",
+   "description": "Customer reacts to the same price in English, pleased vs sceptical; spoken text must read the number.",
+   "input": {
+    "schema_version": "1.0",
+    "project": "test",
+    "characters": [
+     {
+      "id": "customer",
+      "voice_by_provider": {
+       "gemini": "Kore"
+      }
+     }
+    ],
+    "lines": [
+     {
+      "id": "l1",
+      "character": "customer",
+      "language": "en",
+      "text": "Only 1,290 baht?",
+      "spoken_text": "Only one thousand two hundred and ninety baht?",
+      "analysis": {
+       "speaker": "customer",
+       "listener": "Ton",
+       "goal": "to confirm",
+       "subtext": "what a deal"
+      },
+      "emotion": {
+       "primary": "surprise.pleasant",
+       "intensity": 0.6
+      },
+      "direction": "You expected three thousand; you're delighted.",
+      "prosody": {
+       "pitch_baseline": "higher",
+       "pitch_range": "wide",
+       "rate": "slightly_fast",
+       "energy": "high",
+       "voice_quality": "smiling",
+       "ending": "rise"
+      }
+     },
+     {
+      "id": "l2",
+      "character": "customer",
+      "language": "en",
+      "text": "Only 1,290 baht?",
+      "spoken_text": "Only one thousand two hundred and ninety baht?",
+      "analysis": {
+       "speaker": "customer",
+       "listener": "Ton",
+       "goal": "to find the catch",
+       "subtext": "what's wrong with it"
+      },
+      "emotion": {
+       "primary": "stance.skepticism",
+       "intensity": 0.5
+      },
+      "direction": "It sounds too cheap to be real; you're looking for the catch.",
+      "prosody": {
+       "pitch_baseline": "lower",
+       "pitch_range": "narrow",
+       "rate": "slow",
+       "energy": "medium",
+       "voice_quality": "modal",
+       "ending": "level"
+      },
+      "emphasis": [
+       {
+        "word": "Only",
+        "how": "longer"
+       }
+      ]
+     }
+    ]
+   },
+   "expected": {
+    "must": [
+     "number read as 'one thousand two hundred and ninety baht' in both",
+     "l1 rising question, l2 level",
+     "l2 slower with a drawn-out 'Only'"
+    ],
+    "must_not": [
+     "digits read one by one",
+     "both readings rise the same way"
+    ]
+   },
+   "auto_checks": [
+    {
+     "type": "schema_valid"
+    },
+    {
+     "type": "emotion_ids_exist"
+    },
+    {
+     "type": "same_character_same_voice"
+    },
+    {
+     "type": "spoken_text_contains",
+     "line": "l1",
+     "text": "one thousand two hundred and ninety"
+    },
+    {
+     "type": "spoken_text_not_contains",
+     "line": "l2",
+     "text": "1,290"
+    },
+    {
+     "type": "prosody_order",
+     "field": "rate",
+     "line_a": "l2",
+     "line_b": "l1",
+     "relation": "lt"
+    }
+   ]
+  },
+  {
+   "id": "TC007",
+   "category": "emotion_contradicts_words",
+   "description": "Ton insists he is fine while holding back tears; the words say fine, the voice must leak.",
+   "input": {
+    "schema_version": "1.0",
+    "project": "test",
+    "characters": [
+     {
+      "id": "ton",
+      "voice_by_provider": {
+       "gemini": "Puck"
+      }
+     }
+    ],
+    "lines": [
+     {
+      "id": "l1",
+      "character": "ton",
+      "language": "th",
+      "text": "ผมไม่เป็นไรจริงๆ ครับลุง",
+      "analysis": {
+       "speaker": "Ton (optician, 28)",
+       "listener": "Chan",
+       "goal": "to stop him worrying",
+       "subtext": "I am not fine",
+       "unsaid": "I miss her",
+       "outer_emotion": "calm",
+       "inner_emotion": "grief"
+      },
+      "emotion": {
+       "primary": "suppressed.holding_back_tears",
+       "intensity": 0.6,
+       "masked_by": "calm.acceptance"
+      },
+      "direction": "Convince Chan you are fine so he doesn't worry; your voice nearly gives you away on จริงๆ.",
+      "prosody": {
+       "pitch_baseline": "slightly_lower",
+       "pitch_range": "narrow",
+       "rate": "slow",
+       "energy": "low",
+       "voice_quality": "trembling",
+       "ending": "soft_fall",
+       "tremor": "low"
+      },
+      "pauses": [
+       {
+        "after": "จริงๆ",
+        "ms": 400,
+        "kind": "hesitation"
+       }
+      ]
+     }
+    ]
+   },
+   "expected": {
+    "must": [
+     "slight tremor on จริงๆ",
+     "controlled, soft, slower than baseline",
+     "a swallow or breath before ครับลุง is acceptable"
+    ],
+    "must_not": [
+     "open sobbing",
+     "bright cheerful reading that matches the words",
+     "ครับ stressed"
+    ]
+   },
+   "auto_checks": [
+    {
+     "type": "schema_valid"
+    },
+    {
+     "type": "emotion_ids_exist"
+    },
+    {
+     "type": "same_character_same_voice"
+    }
+   ]
+  },
+  {
+   "id": "TC008",
+   "category": "emotion_contradicts_words",
+   "description": "Mint congratulates a rival with envy underneath.",
+   "input": {
+    "schema_version": "1.0",
+    "project": "test",
+    "characters": [
+     {
+      "id": "mint",
+      "voice_by_provider": {
+       "gemini": "Leda"
+      }
+     }
+    ],
+    "lines": [
+     {
+      "id": "l1",
+      "character": "mint",
+      "language": "th",
+      "text": "ยินดีด้วยนะ ดีใจด้วยจริงๆ",
+      "analysis": {
+       "speaker": "Mint (25)",
+       "listener": "a coworker who got the promotion",
+       "goal": "to look gracious",
+       "subtext": "that should have been me",
+       "outer_emotion": "happiness",
+       "inner_emotion": "envy"
+      },
+      "emotion": {
+       "primary": "social.envy",
+       "intensity": 0.5,
+       "masked_by": "joy.happiness"
+      },
+      "direction": "Congratulate her in front of everyone; the smile is a little too tight and the second phrase a little too insistent.",
+      "prosody": {
+       "pitch_baseline": "baseline",
+       "pitch_range": "narrow",
+       "rate": "slightly_slow",
+       "energy": "medium",
+       "voice_quality": "smiling",
+       "ending": "level"
+      },
+      "emphasis": [
+       {
+        "word": "จริงๆ",
+        "how": "longer"
+       }
+      ]
+     }
+    ]
+   },
+   "expected": {
+    "must": [
+     "surface reads as polite congratulations",
+     "range narrower than real joy",
+     "จริงๆ slightly over-lengthened"
+    ],
+    "must_not": [
+     "obviously bitter or hostile tone",
+     "wide, bouncy joyful range"
+    ]
+   },
+   "auto_checks": [
+    {
+     "type": "schema_valid"
+    },
+    {
+     "type": "emotion_ids_exist"
+    },
+    {
+     "type": "same_character_same_voice"
+    }
+   ]
+  },
+  {
+   "id": "TC009",
+   "category": "emotion_contradicts_words",
+   "description": "Chan chases Ton away gruffly to hide that he is about to cry.",
+   "input": {
+    "schema_version": "1.0",
+    "project": "test",
+    "characters": [
+     {
+      "id": "chan",
+      "voice_by_provider": {
+       "gemini": "Algenib"
+      }
+     }
+    ],
+    "lines": [
+     {
+      "id": "l1",
+      "character": "chan",
+      "language": "th",
+      "text": "ไปให้พ้นเลย ไม่อยากเห็นหน้าแล้ว",
+      "analysis": {
+       "speaker": "Chan (old uncle, 65)",
+       "listener": "Ton",
+       "goal": "to make the goodbye quick",
+       "subtext": "please don't go",
+       "outer_emotion": "irritation",
+       "inner_emotion": "sadness"
+      },
+      "emotion": {
+       "primary": "suppressed.holding_back_tears",
+       "intensity": 0.7,
+       "masked_by": "anger.irritation"
+      },
+      "direction": "Ton is leaving for Bangkok; shove him out of the door with words because if he stays one more second you will cry.",
+      "prosody": {
+       "pitch_baseline": "lower",
+       "pitch_range": "narrow",
+       "rate": "slow",
+       "energy": "medium",
+       "voice_quality": "trembling",
+       "ending": "cut_off"
+      },
+      "pauses": [
+       {
+        "after": "ไปให้พ้นเลย",
+        "ms": 600,
+        "kind": "dramatic"
+       }
+      ]
+     }
+    ]
+   },
+   "expected": {
+    "must": [
+     "gruff surface but a crack or tremor on หน้า or แล้ว",
+     "slower than real anger",
+     "cut-off ending as if he turns away"
+    ],
+    "must_not": [
+     "genuine shouting anger",
+     "tearful sobbing that drops the gruff mask"
+    ]
+   },
+   "auto_checks": [
+    {
+     "type": "schema_valid"
+    },
+    {
+     "type": "emotion_ids_exist"
+    },
+    {
+     "type": "same_character_same_voice"
+    }
+   ]
+  },
+  {
+   "id": "TC010",
+   "category": "emotion_contradicts_words",
+   "description": "An English customer claims to be calm while panicking.",
+   "input": {
+    "schema_version": "1.0",
+    "project": "test",
+    "characters": [
+     {
+      "id": "customer",
+      "voice_by_provider": {
+       "gemini": "Kore"
+      }
+     }
+    ],
+    "lines": [
+     {
+      "id": "l1",
+      "character": "customer",
+      "language": "en",
+      "text": "I'm totally calm. Totally. It's just a lost passport.",
+      "analysis": {
+       "speaker": "customer",
+       "listener": "Ton",
+       "goal": "to look in control",
+       "subtext": "I am about to lose it",
+       "outer_emotion": "calm",
+       "inner_emotion": "panic"
+      },
+      "emotion": {
+       "primary": "fear.anxiety",
+       "intensity": 0.7,
+       "masked_by": "calm.serenity"
+      },
+      "direction": "Talk yourself down in front of the staff; the faster you go the less calm you sound.",
+      "prosody": {
+       "pitch_baseline": "slightly_higher",
+       "pitch_range": "narrow",
+       "rate": "fast",
+       "energy": "medium",
+       "voice_quality": "tense",
+       "ending": "rise",
+       "rhythm": "rushed"
+      }
+     }
+    ]
+   },
+   "expected": {
+    "must": [
+     "rate faster than conversational",
+     "pitch slightly raised",
+     "'Totally' repeated quicker and higher than the first"
+    ],
+    "must_not": [
+     "slow, relaxed delivery that matches the words",
+     "screaming"
+    ]
+   },
+   "auto_checks": [
+    {
+     "type": "schema_valid"
+    },
+    {
+     "type": "emotion_ids_exist"
+    },
+    {
+     "type": "same_character_same_voice"
+    }
+   ]
+  },
+  {
+   "id": "TC011",
+   "category": "emotion_contradicts_words",
+   "description": "Jan says she isn't lonely, with loneliness underneath and a little joke on top.",
+   "input": {
+    "schema_version": "1.0",
+    "project": "test",
+    "characters": [
+     {
+      "id": "jan",
+      "voice_by_provider": {
+       "gemini": "Vindemiatrix"
+      }
+     }
+    ],
+    "lines": [
+     {
+      "id": "l1",
+      "character": "jan",
+      "language": "th",
+      "text": "ยายไม่เหงาหรอกจ้ะ มีแมวอยู่ตั้งตัวนึง",
+      "analysis": {
+       "speaker": "Jan (ghost grandma, 80)",
+       "listener": "Ton",
+       "goal": "to stop him worrying",
+       "subtext": "I am very lonely"
+      },
+      "emotion": {
+       "primary": "sadness.loneliness",
+       "intensity": 0.5,
+       "masked_by": "joy.amusement"
+      },
+      "direction": "Make him laugh so he stops pitying you; the joke is light, the pause before it is not.",
+      "prosody": {
+       "pitch_baseline": "slightly_lower",
+       "pitch_range": "narrow",
+       "rate": "slow",
+       "energy": "low",
+       "voice_quality": "breathy",
+       "ending": "smile_ending"
+      },
+      "pauses": [
+       {
+        "after": "หรอกจ้ะ",
+        "ms": 700,
+        "kind": "breath"
+       }
+      ],
+      "nonverbal": [
+       "laugh_soft"
+      ]
+     }
+    ]
+   },
+   "expected": {
+    "must": [
+     "soft laugh or smile on ตั้งตัวนึง",
+     "pause after หรอกจ้ะ longer than normal",
+     "overall energy low"
+    ],
+    "must_not": [
+     "energetic comic delivery",
+     "openly sad crying voice"
+    ]
+   },
+   "auto_checks": [
+    {
+     "type": "schema_valid"
+    },
+    {
+     "type": "emotion_ids_exist"
+    },
+    {
+     "type": "same_character_same_voice"
+    }
+   ]
+  },
+  {
+   "id": "TC012",
+   "category": "emotion_contradicts_words",
+   "description": "Tao says 'I'm not angry' coldly.",
+   "input": {
+    "schema_version": "1.0",
+    "project": "test",
+    "characters": [
+     {
+      "id": "tao",
+      "voice_by_provider": {
+       "gemini": "Umbriel"
+      }
+     }
+    ],
+    "lines": [
+     {
+      "id": "l1",
+      "character": "tao",
+      "language": "th",
+      "text": "ฉันไม่ได้โกรธนะ เข้าใจไหม ไม่ได้โกรธ",
+      "spoken_text": "ฉันไม่ได้โกรธนะ เข้าใจมั้ย ไม่ได้โกรธ",
+      "analysis": {
+       "speaker": "Tao (27)",
+       "listener": "Mint",
+       "goal": "to make her stop",
+       "subtext": "I am furious"
+      },
+      "emotion": {
+       "primary": "anger.cold",
+       "intensity": 0.6,
+       "masked_by": "calm.serenity"
+      },
+      "direction": "Deny it slowly and precisely; every repetition is a closing door.",
+      "prosody": {
+       "pitch_baseline": "lower",
+       "pitch_range": "very_narrow",
+       "rate": "slow",
+       "energy": "medium",
+       "voice_quality": "tense",
+       "ending": "fall",
+       "articulation": "crisp",
+       "rhythm": "clipped"
+      }
+     }
+    ]
+   },
+   "expected": {
+    "must": [
+     "very narrow range, crisp consonants",
+     "second ไม่ได้โกรธ slower than the first",
+     "ไหม read as มั้ย"
+    ],
+    "must_not": [
+     "shouting",
+     "warm or relaxed voice"
+    ]
+   },
+   "auto_checks": [
+    {
+     "type": "schema_valid"
+    },
+    {
+     "type": "emotion_ids_exist"
+    },
+    {
+     "type": "same_character_same_voice"
+    },
+    {
+     "type": "spoken_text_contains",
+     "line": "l1",
+     "text": "มั้ย"
+    },
+    {
+     "type": "spoken_text_not_contains",
+     "line": "l1",
+     "text": "ไหม"
+    }
+   ]
+  },
+  {
+   "id": "TC013",
+   "category": "sarcasm",
+   "description": "Tao's dry Thai sarcasm about lost glasses.",
+   "input": {
+    "schema_version": "1.0",
+    "project": "test",
+    "characters": [
+     {
+      "id": "tao",
+      "voice_by_provider": {
+       "gemini": "Umbriel"
+      }
+     }
+    ],
+    "lines": [
+     {
+      "id": "l1",
+      "character": "tao",
+      "language": "th",
+      "text": "โห เก่งมาก ทำแว่นหายเป็นอันที่สามของเดือน",
+      "analysis": {
+       "speaker": "Tao (27)",
+       "listener": "Mint",
+       "goal": "to tease her about carelessness",
+       "subtext": "you are hopeless"
+      },
+      "emotion": {
+       "primary": "stance.sarcasm",
+       "intensity": 0.6
+      },
+      "direction": "Praise the opposite of what you mean; let the drawn-out words do the work.",
+      "prosody": {
+       "pitch_baseline": "lower",
+       "pitch_range": "narrow",
+       "rate": "slow",
+       "energy": "low",
+       "voice_quality": "modal",
+       "ending": "level"
+      },
+      "pauses": [
+       {
+        "after": "เก่งมาก",
+        "ms": 350,
+        "kind": "comic"
+       }
+      ],
+      "emphasis": [
+       {
+        "word": "โห",
+        "how": "longer"
+       },
+       {
+        "word": "เก่ง",
+        "how": "longer"
+       }
+      ]
+     }
+    ]
+   },
+   "expected": {
+    "must": [
+     "irony cue: lengthened โห and เก่ง",
+     "pitch lower and range narrow",
+     "level ending, no bright rise",
+     "เก่ง keeps its falling tone"
+    ],
+    "must_not": [
+     "genuine, bright praise intonation",
+     "laughter"
+    ]
+   },
+   "auto_checks": [
+    {
+     "type": "schema_valid"
+    },
+    {
+     "type": "emotion_ids_exist"
+    },
+    {
+     "type": "same_character_same_voice"
+    }
+   ]
+  },
+  {
+   "id": "TC014",
+   "category": "sarcasm",
+   "description": "Mint's sarcasm about rain, bright fake smile.",
+   "input": {
+    "schema_version": "1.0",
+    "project": "test",
+    "characters": [
+     {
+      "id": "mint",
+      "voice_by_provider": {
+       "gemini": "Leda"
+      }
+     }
+    ],
+    "lines": [
+     {
+      "id": "l1",
+      "character": "mint",
+      "language": "th",
+      "text": "ดีจังเลยนะ ฝนตกวันที่ลืมร่มพอดี",
+      "analysis": {
+       "speaker": "Mint (25)",
+       "listener": "Tao",
+       "goal": "to vent",
+       "subtext": "this is terrible"
+      },
+      "emotion": {
+       "primary": "stance.sarcasm",
+       "intensity": 0.5
+      },
+      "direction": "Complain to the sky with an exaggerated fake smile.",
+      "prosody": {
+       "pitch_baseline": "slightly_higher",
+       "pitch_range": "narrow",
+       "rate": "slow",
+       "energy": "medium",
+       "voice_quality": "smiling",
+       "ending": "level"
+      },
+      "emphasis": [
+       {
+        "word": "ดีจัง",
+        "how": "longer"
+       }
+      ]
+     }
+    ]
+   },
+   "expected": {
+    "must": [
+     "ดีจัง lengthened",
+     "slower than Mint's baseline",
+     "smile sounds exaggerated, not warm"
+    ],
+    "must_not": [
+     "sincere happy reading",
+     "angry shouting"
+    ]
+   },
+   "auto_checks": [
+    {
+     "type": "schema_valid"
+    },
+    {
+     "type": "emotion_ids_exist"
+    },
+    {
+     "type": "same_character_same_voice"
+    }
+   ]
+  },
+  {
+   "id": "TC015",
+   "category": "sarcasm",
+   "description": "English sarcasm compared with the same speaker's neutral line; sarcastic line slower and lower.",
+   "input": {
+    "schema_version": "1.0",
+    "project": "test",
+    "characters": [
+     {
+      "id": "tao",
+      "voice_by_provider": {
+       "gemini": "Umbriel"
+      }
+     }
+    ],
+    "lines": [
+     {
+      "id": "l1",
+      "character": "tao",
+      "language": "en",
+      "text": "The meeting starts at three.",
+      "analysis": {
+       "speaker": "Tao (27)",
+       "listener": "Mint",
+       "goal": "to inform",
+       "subtext": "nothing"
+      },
+      "emotion": {
+       "primary": "surprise.neutral",
+       "intensity": 0.2
+      },
+      "direction": "Just pass on the information.",
+      "prosody": {
+       "pitch_baseline": "baseline",
+       "pitch_range": "baseline",
+       "rate": "baseline",
+       "energy": "medium",
+       "voice_quality": "modal",
+       "ending": "fall"
+      }
+     },
+     {
+      "id": "l2",
+      "character": "tao",
+      "language": "en",
+      "text": "Oh, great. Another quick meeting. Can't wait.",
+      "analysis": {
+       "speaker": "Tao (27)",
+       "listener": "Mint",
+       "goal": "to complain",
+       "subtext": "these meetings waste my life"
+      },
+      "emotion": {
+       "primary": "stance.sarcasm",
+       "intensity": 0.6
+      },
+      "direction": "Lean on 'quick'; flat everywhere else.",
+      "prosody": {
+       "pitch_baseline": "lower",
+       "pitch_range": "narrow",
+       "rate": "slow",
+       "energy": "low",
+       "voice_quality": "modal",
+       "ending": "level"
+      },
+      "emphasis": [
+       {
+        "word": "great",
+        "how": "longer"
+       },
+       {
+        "word": "quick",
+        "how": "longer"
+       }
+      ]
+     }
+    ]
+   },
+   "expected": {
+    "must": [
+     "l2 slower and lower than l1",
+     "'great' and 'quick' lengthened",
+     "l2 level ending"
+    ],
+    "must_not": [
+     "l2 enthusiastic rising intonation"
+    ]
+   },
+   "auto_checks": [
+    {
+     "type": "schema_valid"
+    },
+    {
+     "type": "emotion_ids_exist"
+    },
+    {
+     "type": "same_character_same_voice"
+    },
+    {
+     "type": "prosody_order",
+     "field": "rate",
+     "line_a": "l2",
+     "line_b": "l1",
+     "relation": "lt"
+    },
+    {
+     "type": "prosody_order",
+     "field": "pitch_baseline",
+     "line_a": "l2",
+     "line_b": "l1",
+     "relation": "lt"
+    }
+   ]
+  },
+  {
+   "id": "TC016",
+   "category": "sarcasm",
+   "description": "Chan's self-directed dry irony must stay deadpan.",
+   "input": {
+    "schema_version": "1.0",
+    "project": "test",
+    "characters": [
+     {
+      "id": "chan",
+      "voice_by_provider": {
+       "gemini": "Algenib"
+      }
+     }
+    ],
+    "lines": [
+     {
+      "id": "l1",
+      "character": "chan",
+      "language": "th",
+      "text": "เออ ดีมาก ร้านแว่นที่เจ้าของหาแว่นตัวเองไม่เจอ",
+      "analysis": {
+       "speaker": "Chan (old uncle, 65)",
+       "listener": "Ton",
+       "goal": "to make light of it",
+       "subtext": "I'm getting old"
+      },
+      "emotion": {
+       "primary": "stance.dry_irony",
+       "intensity": 0.5
+      },
+      "direction": "Laugh at yourself without laughing; the joke is on you and you know it.",
+      "prosody": {
+       "pitch_baseline": "lower",
+       "pitch_range": "narrow",
+       "rate": "slow",
+       "energy": "low",
+       "voice_quality": "modal",
+       "ending": "level"
+      },
+      "pauses": [
+       {
+        "after": "ดีมาก",
+        "ms": 400,
+        "kind": "comic"
+       }
+      ]
+     }
+    ]
+   },
+   "expected": {
+    "must": [
+     "pause after ดีมาก",
+     "flat, deadpan",
+     "chest voice consistent with Chan"
+    ],
+    "must_not": [
+     "audible laughter",
+     "angry tone"
+    ]
+   },
+   "auto_checks": [
+    {
+     "type": "schema_valid"
+    },
+    {
+     "type": "emotion_ids_exist"
+    },
+    {
+     "type": "same_character_same_voice"
+    }
+   ]
+  },
+  {
+   "id": "TC017",
+   "category": "sarcasm",
+   "description": "Playful teasing vs cutting sarcasm with the same words from Mint.",
+   "input": {
+    "schema_version": "1.0",
+    "project": "test",
+    "characters": [
+     {
+      "id": "mint",
+      "voice_by_provider": {
+       "gemini": "Leda"
+      }
+     }
+    ],
+    "lines": [
+     {
+      "id": "l1",
+      "character": "mint",
+      "language": "th",
+      "text": "เก่งจังเลยนะคุณเต๋า",
+      "analysis": {
+       "speaker": "Mint (25)",
+       "listener": "Tao",
+       "goal": "to tease",
+       "subtext": "I'm actually impressed"
+      },
+      "emotion": {
+       "primary": "stance.playful_teasing",
+       "intensity": 0.5
+      },
+      "direction": "He finally fixed the bike; tease him affectionately.",
+      "prosody": {
+       "pitch_baseline": "higher",
+       "pitch_range": "wide",
+       "rate": "slightly_fast",
+       "energy": "medium",
+       "voice_quality": "smiling",
+       "ending": "rise"
+      }
+     },
+     {
+      "id": "l2",
+      "character": "mint",
+      "language": "th",
+      "text": "เก่งจังเลยนะคุณเต๋า",
+      "analysis": {
+       "speaker": "Mint (25)",
+       "listener": "Tao",
+       "goal": "to scold",
+       "subtext": "you ruined it"
+      },
+      "emotion": {
+       "primary": "stance.sarcasm",
+       "intensity": 0.6
+      },
+      "direction": "He broke the bike again; cut him with it.",
+      "prosody": {
+       "pitch_baseline": "lower",
+       "pitch_range": "narrow",
+       "rate": "slow",
+       "energy": "low",
+       "voice_quality": "modal",
+       "ending": "level"
+      },
+      "emphasis": [
+       {
+        "word": "เก่ง",
+        "how": "longer"
+       }
+      ]
+     }
+    ]
+   },
+   "expected": {
+    "must": [
+     "l1 wide, smiling, rising",
+     "l2 narrow, slow, flat",
+     "คุณเต๋า sounds affectionate in l1 and distancing in l2"
+    ],
+    "must_not": [
+     "the two readings sound the same"
+    ]
+   },
+   "auto_checks": [
+    {
+     "type": "schema_valid"
+    },
+    {
+     "type": "emotion_ids_exist"
+    },
+    {
+     "type": "same_character_same_voice"
+    },
+    {
+     "type": "prosody_order",
+     "field": "pitch_baseline",
+     "line_a": "l2",
+     "line_b": "l1",
+     "relation": "lt"
+    },
+    {
+     "type": "prosody_order",
+     "field": "rate",
+     "line_a": "l2",
+     "line_b": "l1",
+     "relation": "lt"
+    }
+   ]
+  },
+  {
+   "id": "TC018",
+   "category": "sarcasm",
+   "description": "A customer's polite Thai sarcasm with ค่ะ about waiting time.",
+   "input": {
+    "schema_version": "1.0",
+    "project": "test",
+    "characters": [
+     {
+      "id": "customer",
+      "voice_by_provider": {
+       "gemini": "Kore"
+      }
+     }
+    ],
+    "lines": [
+     {
+      "id": "l1",
+      "character": "customer",
+      "language": "th",
+      "text": "ค่ะ บริการดีมากเลยค่ะ รอแค่ชั่วโมงเดียวเอง",
+      "politeness": "polite",
+      "analysis": {
+       "speaker": "customer",
+       "listener": "Ton",
+       "goal": "to complain politely",
+       "subtext": "this is unacceptable"
+      },
+      "emotion": {
+       "primary": "stance.sarcasm",
+       "intensity": 0.6
+      },
+      "direction": "Keep every polite word; the drawn-out words carry the complaint.",
+      "prosody": {
+       "pitch_baseline": "slightly_lower",
+       "pitch_range": "narrow",
+       "rate": "slow",
+       "energy": "medium",
+       "voice_quality": "tense",
+       "ending": "level"
+      },
+      "emphasis": [
+       {
+        "word": "ดีมาก",
+        "how": "longer"
+       },
+       {
+        "word": "แค่",
+        "how": "longer"
+       }
+      ]
+     }
+    ]
+   },
+   "expected": {
+    "must": [
+     "ดีมาก and แค่ lengthened",
+     "ค่ะ kept, short and unstressed",
+     "level ending on เอง"
+    ],
+    "must_not": [
+     "sincere praise",
+     "ค่ะ dropped or shouted"
+    ]
+   },
+   "auto_checks": [
+    {
+     "type": "schema_valid"
+    },
+    {
+     "type": "emotion_ids_exist"
+    },
+    {
+     "type": "same_character_same_voice"
+    }
+   ]
+  },
+  {
+   "id": "TC019",
+   "category": "transition_between_sentences",
+   "description": "Ton: fear to relief across two lines when he sees it's Jan.",
+   "input": {
+    "schema_version": "1.0",
+    "project": "test",
+    "characters": [
+     {
+      "id": "ton",
+      "voice_by_provider": {
+       "gemini": "Puck"
+      }
+     }
+    ],
+    "lines": [
+     {
+      "id": "l1",
+      "character": "ton",
+      "language": "th",
+      "text": "ใ...ใครอยู่ตรงนั้นครับ",
+      "analysis": {
+       "speaker": "Ton (optician, 28)",
+       "listener": "the dark",
+       "goal": "to find out who is there",
+       "subtext": "please be nobody"
+      },
+      "emotion": {
+       "primary": "fear.fear",
+       "intensity": 0.7
+      },
+      "direction": "Call into the dark, trying to sound brave and failing.",
+      "prosody": {
+       "pitch_baseline": "higher",
+       "pitch_range": "narrow",
+       "rate": "baseline",
+       "energy": "medium",
+       "voice_quality": "trembling",
+       "ending": "rise",
+       "rhythm": "halting"
+      }
+     },
+     {
+      "id": "l2",
+      "character": "ton",
+      "language": "th",
+      "text": "อ้าว ยายนี่เอง นึกว่าใคร",
+      "analysis": {
+       "speaker": "Ton (optician, 28)",
+       "listener": "Jan",
+       "goal": "to greet",
+       "subtext": "I nearly died"
+      },
+      "emotion": {
+       "primary": "relief.relief",
+       "intensity": 0.6
+      },
+      "direction": "Deflate completely; laugh at your own fear.",
+      "prosody": {
+       "pitch_baseline": "baseline",
+       "pitch_range": "baseline",
+       "rate": "slow",
+       "energy": "medium",
+       "voice_quality": "breathy",
+       "ending": "soft_fall"
+      },
+      "nonverbal": [
+       "sigh"
+      ]
+     }
+    ]
+   },
+   "expected": {
+    "must": [
+     "l2 lower pitch than l1",
+     "l2 slower than l1",
+     "audible exhale before อ้าว"
+    ],
+    "must_not": [
+     "l2 still trembling",
+     "both lines same energy"
+    ]
+   },
+   "auto_checks": [
+    {
+     "type": "schema_valid"
+    },
+    {
+     "type": "emotion_ids_exist"
+    },
+    {
+     "type": "same_character_same_voice"
+    },
+    {
+     "type": "prosody_order",
+     "field": "pitch_baseline",
+     "line_a": "l2",
+     "line_b": "l1",
+     "relation": "lt"
+    },
+    {
+     "type": "prosody_order",
+     "field": "rate",
+     "line_a": "l2",
+     "line_b": "l1",
+     "relation": "lt"
+    }
+   ]
+  },
+  {
+   "id": "TC020",
+   "category": "transition_between_sentences",
+   "description": "Mint: denial to acceptance over three lines.",
+   "input": {
+    "schema_version": "1.0",
+    "project": "test",
+    "characters": [
+     {
+      "id": "mint",
+      "voice_by_provider": {
+       "gemini": "Leda"
+      }
+     }
+    ],
+    "lines": [
+     {
+      "id": "l1",
+      "character": "mint",
+      "language": "th",
+      "text": "ไม่จริงหรอก",
+      "analysis": {
+       "speaker": "Mint (25)",
+       "listener": "Tao",
+       "goal": "to deny",
+       "subtext": "he will call"
+      },
+      "emotion": {
+       "primary": "transition.denial_to_acceptance",
+       "intensity": 0.6
+      },
+      "direction": "Refuse to believe it; fast and firm.",
+      "prosody": {
+       "pitch_baseline": "slightly_higher",
+       "pitch_range": "baseline",
+       "rate": "fast",
+       "energy": "high",
+       "voice_quality": "tense",
+       "ending": "fall"
+      }
+     },
+     {
+      "id": "l2",
+      "character": "mint",
+      "language": "th",
+      "text": "เขาต้องโทรมาแน่",
+      "spoken_text": "เค้าต้องโทรมาแน่",
+      "analysis": {
+       "speaker": "Mint (25)",
+       "listener": "Tao",
+       "goal": "to convince herself",
+       "subtext": "he won't"
+      },
+      "emotion": {
+       "primary": "transition.denial_to_acceptance",
+       "intensity": 0.5
+      },
+      "direction": "Insist again, but less sure.",
+      "prosody": {
+       "pitch_baseline": "baseline",
+       "pitch_range": "narrow",
+       "rate": "baseline",
+       "energy": "medium",
+       "voice_quality": "modal",
+       "ending": "level"
+      }
+     },
+     {
+      "id": "l3",
+      "character": "mint",
+      "language": "th",
+      "text": "...ไม่โทรมาแล้วล่ะ เนอะ",
+      "analysis": {
+       "speaker": "Mint (25)",
+       "listener": "herself",
+       "goal": "to accept",
+       "subtext": "it's over"
+      },
+      "emotion": {
+       "primary": "calm.acceptance",
+       "intensity": 0.5
+      },
+      "direction": "Hear yourself and let go; the เนอะ is to yourself.",
+      "prosody": {
+       "pitch_baseline": "lower",
+       "pitch_range": "narrow",
+       "rate": "slow",
+       "energy": "low",
+       "voice_quality": "breathy",
+       "ending": "soft_fall"
+      },
+      "pauses": [
+       {
+        "after": "แล้วล่ะ",
+        "ms": 500,
+        "kind": "breath"
+       }
+      ]
+     }
+    ]
+   },
+   "expected": {
+    "must": [
+     "energy falls line by line",
+     "l3 slowest and softest",
+     "เขา read เค้า in l2"
+    ],
+    "must_not": [
+     "l3 louder than l1",
+     "acceptance played as sobbing"
+    ]
+   },
+   "auto_checks": [
+    {
+     "type": "schema_valid"
+    },
+    {
+     "type": "emotion_ids_exist"
+    },
+    {
+     "type": "same_character_same_voice"
+    },
+    {
+     "type": "prosody_order",
+     "field": "energy",
+     "line_a": "l1",
+     "line_b": "l3",
+     "relation": "gt"
+    },
+    {
+     "type": "prosody_order",
+     "field": "rate",
+     "line_a": "l1",
+     "line_b": "l3",
+     "relation": "gt"
+    },
+    {
+     "type": "spoken_text_contains",
+     "line": "l2",
+     "text": "เค้า"
+    }
+   ]
+  },
+  {
+   "id": "TC021",
+   "category": "transition_between_sentences",
+   "description": "Ton: calm to panic across two lines.",
+   "input": {
+    "schema_version": "1.0",
+    "project": "test",
+    "characters": [
+     {
+      "id": "ton",
+      "voice_by_provider": {
+       "gemini": "Puck"
+      }
+     }
+    ],
+    "lines": [
+     {
+      "id": "l1",
+      "character": "ton",
+      "language": "th",
+      "text": "ไม่เป็นไรครับ แค่ไฟกระพริบ",
+      "analysis": {
+       "speaker": "Ton (optician, 28)",
+       "listener": "customer",
+       "goal": "to calm",
+       "subtext": "it's normal"
+      },
+      "emotion": {
+       "primary": "calm.serenity",
+       "intensity": 0.4
+      },
+      "direction": "Reassure the customer as if it happens every night.",
+      "prosody": {
+       "pitch_baseline": "baseline",
+       "pitch_range": "narrow",
+       "rate": "baseline",
+       "energy": "medium",
+       "voice_quality": "modal",
+       "ending": "soft_fall",
+       "loudness": "conversational"
+      }
+     },
+     {
+      "id": "l2",
+      "character": "ton",
+      "language": "th",
+      "text": "เดี๋ยวนะ ทำไมประตูล็อก!",
+      "analysis": {
+       "speaker": "Ton (optician, 28)",
+       "listener": "customer",
+       "goal": "to get out",
+       "subtext": "we are trapped"
+      },
+      "emotion": {
+       "primary": "fear.panic",
+       "intensity": 0.8
+      },
+      "direction": "You notice the door; lose it.",
+      "prosody": {
+       "pitch_baseline": "much_higher",
+       "pitch_range": "wide",
+       "rate": "fast",
+       "energy": "very_high",
+       "voice_quality": "tense",
+       "ending": "cut_off",
+       "loudness": "projected"
+      }
+     }
+    ]
+   },
+   "expected": {
+    "must": [
+     "l2 louder and faster than l1",
+     "pause before เดี๋ยวนะ"
+    ],
+    "must_not": [
+     "l1 already nervous",
+     "l2 calm"
+    ]
+   },
+   "auto_checks": [
+    {
+     "type": "schema_valid"
+    },
+    {
+     "type": "emotion_ids_exist"
+    },
+    {
+     "type": "same_character_same_voice"
+    },
+    {
+     "type": "prosody_order",
+     "field": "loudness",
+     "line_a": "l1",
+     "line_b": "l2",
+     "relation": "lt"
+    },
+    {
+     "type": "prosody_order",
+     "field": "rate",
+     "line_a": "l1",
+     "line_b": "l2",
+     "relation": "lt"
+    }
+   ]
+  },
+  {
+   "id": "TC022",
+   "category": "transition_between_sentences",
+   "description": "Chan: hot anger to grief between two lines.",
+   "input": {
+    "schema_version": "1.0",
+    "project": "test",
+    "characters": [
+     {
+      "id": "chan",
+      "voice_by_provider": {
+       "gemini": "Algenib"
+      }
+     }
+    ],
+    "lines": [
+     {
+      "id": "l1",
+      "character": "chan",
+      "language": "th",
+      "text": "ใครใช้ให้แกยุ่งกับแว่นอันนั้น!",
+      "analysis": {
+       "speaker": "Chan (old uncle, 65)",
+       "listener": "Ton",
+       "goal": "to stop him",
+       "subtext": "don't touch her things"
+      },
+      "emotion": {
+       "primary": "anger.hot",
+       "intensity": 0.8
+      },
+      "direction": "Snatch the glasses back and shout.",
+      "prosody": {
+       "pitch_baseline": "higher",
+       "pitch_range": "wide",
+       "rate": "fast",
+       "energy": "very_high",
+       "voice_quality": "harsh",
+       "ending": "cut_off",
+       "loudness": "shout"
+      }
+     },
+     {
+      "id": "l2",
+      "character": "chan",
+      "language": "th",
+      "text": "...มันเป็นของเมียข้า",
+      "analysis": {
+       "speaker": "Chan (old uncle, 65)",
+       "listener": "Ton",
+       "goal": "to explain",
+       "subtext": "I miss her"
+      },
+      "emotion": {
+       "primary": "sadness.grief",
+       "intensity": 0.7
+      },
+      "direction": "The anger drains out; say it to the glasses, not to Ton.",
+      "prosody": {
+       "pitch_baseline": "lower",
+       "pitch_range": "very_narrow",
+       "rate": "very_slow",
+       "energy": "low",
+       "voice_quality": "creaky",
+       "ending": "trail_off",
+       "loudness": "soft"
+      }
+     }
+    ]
+   },
+   "expected": {
+    "must": [
+     "l2 much softer and slower than l1",
+     "long silence before l2",
+     "l2 creaky trail-off"
+    ],
+    "must_not": [
+     "l2 still shouting",
+     "l2 sobbing loudly"
+    ]
+   },
+   "auto_checks": [
+    {
+     "type": "schema_valid"
+    },
+    {
+     "type": "emotion_ids_exist"
+    },
+    {
+     "type": "same_character_same_voice"
+    },
+    {
+     "type": "prosody_order",
+     "field": "loudness",
+     "line_a": "l1",
+     "line_b": "l2",
+     "relation": "gt"
+    },
+    {
+     "type": "prosody_order",
+     "field": "energy",
+     "line_a": "l1",
+     "line_b": "l2",
+     "relation": "gt"
+    }
+   ]
+  },
+  {
+   "id": "TC023",
+   "category": "transition_between_sentences",
+   "description": "English: anger to guilt between lines.",
+   "input": {
+    "schema_version": "1.0",
+    "project": "test",
+    "characters": [
+     {
+      "id": "mint",
+      "voice_by_provider": {
+       "gemini": "Leda"
+      }
+     }
+    ],
+    "lines": [
+     {
+      "id": "l1",
+      "character": "mint",
+      "language": "en",
+      "text": "You never listen to me!",
+      "analysis": {
+       "speaker": "Mint (25)",
+       "listener": "Tao",
+       "goal": "to be heard",
+       "subtext": "I feel invisible"
+      },
+      "emotion": {
+       "primary": "anger.hot",
+       "intensity": 0.7
+      },
+      "direction": "Throw it at him.",
+      "prosody": {
+       "pitch_baseline": "higher",
+       "pitch_range": "wide",
+       "rate": "fast",
+       "energy": "high",
+       "voice_quality": "tense",
+       "ending": "fall",
+       "loudness": "projected"
+      }
+     },
+     {
+      "id": "l2",
+      "character": "mint",
+      "language": "en",
+      "text": "...Sorry. That wasn't fair.",
+      "analysis": {
+       "speaker": "Mint (25)",
+       "listener": "Tao",
+       "goal": "to apologise",
+       "subtext": "I went too far"
+      },
+      "emotion": {
+       "primary": "selfconscious.guilt",
+       "intensity": 0.5
+      },
+      "direction": "Hear yourself and take it back quietly.",
+      "prosody": {
+       "pitch_baseline": "lower",
+       "pitch_range": "narrow",
+       "rate": "slow",
+       "energy": "low",
+       "voice_quality": "breathy",
+       "ending": "soft_fall",
+       "loudness": "soft"
+      }
+     }
+    ]
+   },
+   "expected": {
+    "must": [
+     "l2 softer and slower",
+     "pause after 'Sorry'"
+    ],
+    "must_not": [
+     "l2 defensive or loud"
+    ]
+   },
+   "auto_checks": [
+    {
+     "type": "schema_valid"
+    },
+    {
+     "type": "emotion_ids_exist"
+    },
+    {
+     "type": "same_character_same_voice"
+    },
+    {
+     "type": "prosody_order",
+     "field": "loudness",
+     "line_a": "l2",
+     "line_b": "l1",
+     "relation": "lt"
+    },
+    {
+     "type": "prosody_order",
+     "field": "rate",
+     "line_a": "l2",
+     "line_b": "l1",
+     "relation": "lt"
+    }
+   ]
+  },
+  {
+   "id": "TC024",
+   "category": "transition_between_sentences",
+   "description": "Jan: transition inside one line at แต่ from joy to bittersweet farewell.",
+   "input": {
+    "schema_version": "1.0",
+    "project": "test",
+    "characters": [
+     {
+      "id": "jan",
+      "voice_by_provider": {
+       "gemini": "Vindemiatrix"
+      }
+     }
+    ],
+    "lines": [
+     {
+      "id": "l1",
+      "character": "jan",
+      "language": "th",
+      "text": "ยายดีใจนะที่ได้เจอลูก แต่ถึงเวลาที่ยายต้องไปแล้วจ้ะ",
+      "analysis": {
+       "speaker": "Jan (ghost grandma, 80)",
+       "listener": "Ton",
+       "goal": "to say goodbye gently",
+       "subtext": "I don't want to go",
+       "turning_point": true
+      },
+      "emotion": {
+       "primary": "joy.happiness",
+       "intensity": 0.5,
+       "transition_to": "mixed.bittersweet_farewell",
+       "transition_at": "แต่"
+      },
+      "direction": "Smile at him for the first half; from แต่ your goodbye starts and the warmth turns sad.",
+      "prosody": {
+       "pitch_baseline": "baseline",
+       "pitch_range": "baseline",
+       "rate": "slow",
+       "energy": "medium",
+       "voice_quality": "smiling",
+       "ending": "soft_fall"
+      },
+      "pauses": [
+       {
+        "after": "ได้เจอลูก",
+        "ms": 700,
+        "kind": "dramatic"
+       }
+      ]
+     }
+    ]
+   },
+   "expected": {
+    "must": [
+     "change happens at แต่, not earlier",
+     "second half slower and softer, slight tremor",
+     "first half audibly smiling"
+    ],
+    "must_not": [
+     "whole line one flat emotion",
+     "change starts on ดีใจ"
+    ]
+   },
+   "auto_checks": [
+    {
+     "type": "schema_valid"
+    },
+    {
+     "type": "emotion_ids_exist"
+    },
+    {
+     "type": "same_character_same_voice"
+    }
+   ]
+  },
+  {
+   "id": "TC025",
+   "category": "character_consistency",
+   "description": "Ton across four very different emotions keeps voice Puck, his timid baseline and ครับ.",
+   "input": {
+    "schema_version": "1.0",
+    "project": "test",
+    "characters": [
+     {
+      "id": "ton",
+      "voice_by_provider": {
+       "gemini": "Puck"
+      }
+     }
+    ],
+    "lines": [
+     {
+      "id": "l1",
+      "character": "ton",
+      "language": "th",
+      "text": "สวัสดีครับ เชิญด้านในครับ",
+      "emotion": {
+       "primary": "social.deference_krengjai",
+       "intensity": 0.4
+      },
+      "direction": "Welcome a stranger politely.",
+      "prosody": {
+       "pitch_baseline": "baseline",
+       "pitch_range": "baseline",
+       "rate": "baseline",
+       "energy": "medium",
+       "voice_quality": "smiling",
+       "ending": "soft_fall"
+      }
+     },
+     {
+      "id": "l2",
+      "character": "ton",
+      "language": "th",
+      "text": "ไฟดับ! ยายครับ ยายอยู่ไหนครับ!",
+      "emotion": {
+       "primary": "fear.panic",
+       "intensity": 0.9
+      },
+      "direction": "Find her in the dark.",
+      "prosody": {
+       "pitch_baseline": "much_higher",
+       "pitch_range": "wide",
+       "rate": "very_fast",
+       "energy": "very_high",
+       "voice_quality": "tense",
+       "ending": "rise",
+       "loudness": "projected"
+      }
+     },
+     {
+      "id": "l3",
+      "character": "ton",
+      "language": "th",
+      "text": "ผมจะช่วยลุงเองครับ",
+      "emotion": {
+       "primary": "will.confidence",
+       "intensity": 0.6
+      },
+      "direction": "For once, no hedging.",
+      "prosody": {
+       "pitch_baseline": "slightly_lower",
+       "pitch_range": "baseline",
+       "rate": "baseline",
+       "energy": "high",
+       "voice_quality": "modal",
+       "ending": "fall"
+      }
+     },
+     {
+      "id": "l4",
+      "character": "ton",
+      "language": "th",
+      "text": "อืม... อีกห้านาทีครับ",
+      "emotion": {
+       "primary": "low.drowsy",
+       "intensity": 0.6
+      },
+      "direction": "Half asleep.",
+      "prosody": {
+       "pitch_baseline": "lower",
+       "pitch_range": "very_narrow",
+       "rate": "very_slow",
+       "energy": "low",
+       "voice_quality": "breathy",
+       "ending": "trail_off"
+      }
+     }
+    ]
+   },
+   "expected": {
+    "must": [
+     "every ton line uses gemini voice Puck",
+     "ครับ present in every line, even in panic",
+     "confident line still sounds like the same young man, not older or deeper",
+     "differences are relative to one baseline"
+    ],
+    "must_not": [
+     "voice or apparent age changes between lines",
+     "ครับ dropped in l2"
+    ]
+   },
+   "auto_checks": [
+    {
+     "type": "schema_valid"
+    },
+    {
+     "type": "emotion_ids_exist"
+    },
+    {
+     "type": "same_character_same_voice"
+    },
+    {
+     "type": "prosody_order",
+     "field": "rate",
+     "line_a": "l2",
+     "line_b": "l4",
+     "relation": "gt"
+    }
+   ]
+  },
+  {
+   "id": "TC026",
+   "category": "character_consistency",
+   "description": "Jan stays slow and soft even when urgent; the contrast is relative to her own baseline.",
+   "input": {
+    "schema_version": "1.0",
+    "project": "test",
+    "characters": [
+     {
+      "id": "jan",
+      "voice_by_provider": {
+       "gemini": "Vindemiatrix"
+      }
+     },
+     {
+      "id": "mint",
+      "voice_by_provider": {
+       "gemini": "Leda"
+      }
+     }
+    ],
+    "lines": [
+     {
+      "id": "l1",
+      "character": "jan",
+      "language": "th",
+      "text": "ค่อยๆ กินนะลูก",
+      "spoken_text": "ค่อยค่อย กินนะลูก",
+      "emotion": {
+       "primary": "love.tenderness",
+       "intensity": 0.5
+      },
+      "direction": "Watch him eat.",
+      "prosody": {
+       "pitch_baseline": "slightly_lower",
+       "pitch_range": "narrow",
+       "rate": "slow",
+       "energy": "low",
+       "voice_quality": "breathy",
+       "ending": "soft_fall"
+      }
+     },
+     {
+      "id": "l2",
+      "character": "jan",
+      "language": "th",
+      "text": "ลูก! ระวังข้างหลัง!",
+      "emotion": {
+       "primary": "will.urgency",
+       "intensity": 0.8
+      },
+      "direction": "Warn him; as fast and loud as an eighty-year-old ghost gets.",
+      "prosody": {
+       "pitch_baseline": "higher",
+       "pitch_range": "wide",
+       "rate": "baseline",
+       "energy": "high",
+       "voice_quality": "breathy",
+       "ending": "fall",
+       "loudness": "projected"
+      }
+     },
+     {
+      "id": "l3",
+      "character": "mint",
+      "language": "th",
+      "text": "โอเค เข้าใจแล้วค่ะ",
+      "emotion": {
+       "primary": "calm.acceptance",
+       "intensity": 0.3
+      },
+      "direction": "Calm agreement in a different scene, for reference.",
+      "prosody": {
+       "pitch_baseline": "baseline",
+       "pitch_range": "baseline",
+       "rate": "baseline",
+       "energy": "medium",
+       "voice_quality": "modal",
+       "ending": "soft_fall"
+      }
+     }
+    ]
+   },
+   "expected": {
+    "must": [
+     "jan uses voice Sulafat in both lines",
+     "jan's urgent line is faster than her tender line but still an old woman's voice",
+     "jan keeps นะลูก / soft particles",
+     "ๆ expanded in spoken_text"
+    ],
+    "must_not": [
+     "jan's urgent line sounds like a young woman",
+     "jan voice changes"
+    ]
+   },
+   "auto_checks": [
+    {
+     "type": "schema_valid"
+    },
+    {
+     "type": "emotion_ids_exist"
+    },
+    {
+     "type": "same_character_same_voice"
+    },
+    {
+     "type": "prosody_order",
+     "field": "rate",
+     "line_a": "l2",
+     "line_b": "l1",
+     "relation": "gt"
+    },
+    {
+     "type": "spoken_text_not_contains",
+     "line": "l1",
+     "text": "ๆ"
+    }
+   ]
+  },
+  {
+   "id": "TC027",
+   "category": "character_consistency",
+   "description": "Chan switches politeness (วะ with Ton, ครับ with a customer) without changing voice.",
+   "input": {
+    "schema_version": "1.0",
+    "project": "test",
+    "characters": [
+     {
+      "id": "chan",
+      "voice_by_provider": {
+       "gemini": "Algenib"
+      }
+     }
+    ],
+    "lines": [
+     {
+      "id": "l1",
+      "character": "chan",
+      "language": "th",
+      "text": "ไอ้หนู เอาไขควงมาให้หน่อยดิวะ",
+      "politeness": "intimate",
+      "emotion": {
+       "primary": "anger.impatience",
+       "intensity": 0.3
+      },
+      "direction": "Bark at Ton like family.",
+      "prosody": {
+       "pitch_baseline": "lower",
+       "pitch_range": "narrow",
+       "rate": "baseline",
+       "energy": "medium",
+       "voice_quality": "modal",
+       "ending": "fall"
+      }
+     },
+     {
+      "id": "l2",
+      "character": "chan",
+      "language": "th",
+      "text": "ได้ครับ เดี๋ยวผมดูให้นะครับ",
+      "politeness": "polite",
+      "emotion": {
+       "primary": "care.reassurance",
+       "intensity": 0.4
+      },
+      "direction": "Same man, now serving a customer; polite but still gruff underneath.",
+      "prosody": {
+       "pitch_baseline": "lower",
+       "pitch_range": "narrow",
+       "rate": "baseline",
+       "energy": "medium",
+       "voice_quality": "modal",
+       "ending": "soft_fall"
+      }
+     }
+    ]
+   },
+   "expected": {
+    "must": [
+     "both lines voice Algenib",
+     "same chest resonance and gruffness in both",
+     "politeness carried by words and softer ending, not a new voice"
+    ],
+    "must_not": [
+     "l2 sounds like a different, younger man"
+    ]
+   },
+   "auto_checks": [
+    {
+     "type": "schema_valid"
+    },
+    {
+     "type": "emotion_ids_exist"
+    },
+    {
+     "type": "same_character_same_voice"
+    }
+   ]
+  },
+  {
+   "id": "TC028",
+   "category": "character_consistency",
+   "description": "Tao mocks someone in a high nasal imitation; it is still Tao's voice.",
+   "input": {
+    "schema_version": "1.0",
+    "project": "test",
+    "characters": [
+     {
+      "id": "tao",
+      "voice_by_provider": {
+       "gemini": "Umbriel"
+      }
+     }
+    ],
+    "lines": [
+     {
+      "id": "l1",
+      "character": "tao",
+      "language": "th",
+      "text": "อุ้ย ผู้เชี่ยวชาญมาแล้วค่ะ",
+      "emotion": {
+       "primary": "stance.mockery",
+       "intensity": 0.5
+      },
+      "direction": "Imitate a fawning assistant, exaggerated.",
+      "prosody": {
+       "pitch_baseline": "much_higher",
+       "pitch_range": "very_wide",
+       "rate": "baseline",
+       "energy": "medium",
+       "voice_quality": "falsetto",
+       "ending": "rise",
+       "resonance": "nasal",
+       "rhythm": "sing_song"
+      }
+     },
+     {
+      "id": "l2",
+      "character": "tao",
+      "language": "th",
+      "text": "ล้อเล่น นั่งเถอะ",
+      "emotion": {
+       "primary": "stance.dry_irony",
+       "intensity": 0.3
+      },
+      "direction": "Back to yourself instantly, flat.",
+      "prosody": {
+       "pitch_baseline": "lower",
+       "pitch_range": "narrow",
+       "rate": "slow",
+       "energy": "low",
+       "voice_quality": "modal",
+       "ending": "fall"
+      }
+     }
+    ]
+   },
+   "expected": {
+    "must": [
+     "both lines voice Charon",
+     "l1 is clearly a man doing an impression",
+     "l2 snaps back to his dry baseline"
+    ],
+    "must_not": [
+     "a female voice is used for l1",
+     "l2 keeps the falsetto"
+    ]
+   },
+   "auto_checks": [
+    {
+     "type": "schema_valid"
+    },
+    {
+     "type": "emotion_ids_exist"
+    },
+    {
+     "type": "same_character_same_voice"
+    },
+    {
+     "type": "prosody_order",
+     "field": "pitch_baseline",
+     "line_a": "l1",
+     "line_b": "l2",
+     "relation": "gt"
+    }
+   ]
+  },
+  {
+   "id": "TC029",
+   "category": "character_consistency",
+   "description": "Two warm storytellers (narrator_th and Jan) stay distinct.",
+   "input": {
+    "schema_version": "1.0",
+    "project": "test",
+    "characters": [
+     {
+      "id": "narrator_th",
+      "voice_by_provider": {
+       "gemini": "Charon"
+      }
+     },
+     {
+      "id": "jan",
+      "voice_by_provider": {
+       "gemini": "Vindemiatrix"
+      }
+     }
+    ],
+    "lines": [
+     {
+      "id": "l1",
+      "character": "narrator_th",
+      "language": "th",
+      "text": "กาลครั้งหนึ่ง ในซอยเล็กๆ มีร้านแว่นเก่าแก่ร้านหนึ่ง",
+      "spoken_text": "กาลครั้งหนึ่ง ในซอยเล็กเล็ก มีร้านแว่นเก่าแก่ร้านหนึ่ง",
+      "emotion": {
+       "primary": "performance.storyteller_warmth",
+       "intensity": 0.5
+      },
+      "direction": "Open the tale.",
+      "prosody": {
+       "pitch_baseline": "slightly_lower",
+       "pitch_range": "baseline",
+       "rate": "slow",
+       "energy": "medium",
+       "voice_quality": "modal",
+       "ending": "soft_fall"
+      }
+     },
+     {
+      "id": "l2",
+      "character": "jan",
+      "language": "th",
+      "text": "แล้วช่างแว่นคนนั้น ก็คือตาของลูกเองจ้ะ",
+      "emotion": {
+       "primary": "performance.storyteller_warmth",
+       "intensity": 0.5
+      },
+      "direction": "Finish your own story to Ton.",
+      "prosody": {
+       "pitch_baseline": "slightly_lower",
+       "pitch_range": "narrow",
+       "rate": "very_slow",
+       "energy": "low",
+       "voice_quality": "breathy",
+       "ending": "soft_fall"
+      }
+     },
+     {
+      "id": "l3",
+      "character": "narrator_th",
+      "language": "th",
+      "text": "คืนนั้น ต้นนั่งฟังจนฟ้าสาง",
+      "emotion": {
+       "primary": "calm.serenity",
+       "intensity": 0.4
+      },
+      "direction": "Close the scene.",
+      "prosody": {
+       "pitch_baseline": "slightly_lower",
+       "pitch_range": "narrow",
+       "rate": "slow",
+       "energy": "low",
+       "voice_quality": "modal",
+       "ending": "soft_fall"
+      }
+     }
+    ]
+   },
+   "expected": {
+    "must": [
+     "narrator_th uses Vindemiatrix in l1 and l3",
+     "jan uses Sulafat",
+     "jan breathier and slower than the narrator"
+    ],
+    "must_not": [
+     "narrator and Jan share one voice",
+     "narrator changes voice between l1 and l3"
+    ]
+   },
+   "auto_checks": [
+    {
+     "type": "schema_valid"
+    },
+    {
+     "type": "emotion_ids_exist"
+    },
+    {
+     "type": "same_character_same_voice"
+    },
+    {
+     "type": "prosody_order",
+     "field": "rate",
+     "line_a": "l2",
+     "line_b": "l1",
+     "relation": "lt"
+    },
+    {
+     "type": "spoken_text_not_contains",
+     "line": "l1",
+     "text": "ๆ"
+    }
+   ]
+  },
+  {
+   "id": "TC030",
+   "category": "character_consistency",
+   "description": "Mint stays bright and quick at baseline even when sad; she keeps ค่ะ/นะ.",
+   "input": {
+    "schema_version": "1.0",
+    "project": "test",
+    "characters": [
+     {
+      "id": "mint",
+      "voice_by_provider": {
+       "gemini": "Leda"
+      }
+     }
+    ],
+    "lines": [
+     {
+      "id": "l1",
+      "character": "mint",
+      "language": "th",
+      "text": "วันนี้อากาศดีมากเลยนะ ไปเดินเล่นกันไหม",
+      "spoken_text": "วันนี้อากาศดีมากเลยนะ ไปเดินเล่นกันมั้ย",
+      "emotion": {
+       "primary": "joy.happiness",
+       "intensity": 0.6
+      },
+      "direction": "Invite Tao out.",
+      "prosody": {
+       "pitch_baseline": "higher",
+       "pitch_range": "wide",
+       "rate": "fast",
+       "energy": "high",
+       "voice_quality": "smiling",
+       "ending": "rise"
+      }
+     },
+     {
+      "id": "l2",
+      "character": "mint",
+      "language": "th",
+      "text": "ไม่เป็นไรค่ะ ไว้วันหลังก็ได้นะ",
+      "emotion": {
+       "primary": "sadness.disappointment",
+       "intensity": 0.5
+      },
+      "direction": "He can't come; let it go lightly.",
+      "prosody": {
+       "pitch_baseline": "baseline",
+       "pitch_range": "narrow",
+       "rate": "baseline",
+       "energy": "medium",
+       "voice_quality": "modal",
+       "ending": "soft_fall"
+      }
+     }
+    ]
+   },
+   "expected": {
+    "must": [
+     "both lines voice Leda",
+     "l2 still recognisably Mint: not slowed to Jan-like pace",
+     "particles ค่ะ and นะ kept and unstressed"
+    ],
+    "must_not": [
+     "l2 delivered in a different, older voice"
+    ]
+   },
+   "auto_checks": [
+    {
+     "type": "schema_valid"
+    },
+    {
+     "type": "emotion_ids_exist"
+    },
+    {
+     "type": "same_character_same_voice"
+    },
+    {
+     "type": "prosody_order",
+     "field": "energy",
+     "line_a": "l2",
+     "line_b": "l1",
+     "relation": "lt"
+    },
+    {
+     "type": "spoken_text_contains",
+     "line": "l1",
+     "text": "มั้ย"
+    }
+   ]
+  },
+  {
+   "id": "TC031",
+   "category": "thai_pronunciation",
+   "description": "Prices with comma and '.-', and a phone number, normalised for TTS.",
+   "input": {
+    "schema_version": "1.0",
+    "project": "test",
+    "characters": [
+     {
+      "id": "shop_vo",
+      "voice_by_provider": {
+       "gemini": "Sulafat"
+      }
+     }
+    ],
+    "lines": [
+     {
+      "id": "l1",
+      "character": "shop_vo",
+      "language": "th",
+      "text": "แว่นครบชุด 1,290 บาท ลดเหลือ 990.-",
+      "spoken_text": "แว่นครบชุด หนึ่งพันสองร้อยเก้าสิบบาท ลดเหลือเก้าร้อยเก้าสิบบาท",
+      "emotion": {
+       "primary": "performance.sales_enthusiasm",
+       "intensity": 0.6
+      },
+      "direction": "Announce the deal with a friendly smile.",
+      "prosody": {
+       "pitch_baseline": "slightly_higher",
+       "pitch_range": "wide",
+       "rate": "slightly_fast",
+       "energy": "high",
+       "voice_quality": "smiling",
+       "ending": "fall"
+      }
+     },
+     {
+      "id": "l2",
+      "character": "shop_vo",
+      "language": "th",
+      "text": "โทร 081-234-5678",
+      "spoken_text": "โทร ศูนย์แปดหนึ่ง สองสามสี่ ห้าหกเจ็ดแปด",
+      "emotion": {
+       "primary": "will.urgency",
+       "intensity": 0.3
+      },
+      "direction": "Read the number so people can write it down.",
+      "prosody": {
+       "pitch_baseline": "baseline",
+       "pitch_range": "narrow",
+       "rate": "slow",
+       "energy": "medium",
+       "voice_quality": "modal",
+       "ending": "fall",
+       "articulation": "crisp"
+      },
+      "pauses": [
+       {
+        "after": "ศูนย์แปดหนึ่ง",
+        "ms": 250,
+        "kind": "micro"
+       },
+       {
+        "after": "สองสามสี่",
+        "ms": 250,
+        "kind": "micro"
+       }
+      ]
+     }
+    ]
+   },
+   "expected": {
+    "must": [
+     "1,290 read หนึ่งพันสองร้อยเก้าสิบบาท",
+     "990.- read เก้าร้อยเก้าสิบบาท",
+     "phone digits read one by one in 3-3-4 groups",
+     "0 read ศูนย์"
+    ],
+    "must_not": [
+     "'จุด' or 'ขีด' read for .- or -",
+     "phone read as one large number"
+    ]
+   },
+   "auto_checks": [
+    {
+     "type": "schema_valid"
+    },
+    {
+     "type": "emotion_ids_exist"
+    },
+    {
+     "type": "same_character_same_voice"
+    },
+    {
+     "type": "spoken_text_contains",
+     "line": "l1",
+     "text": "หนึ่งพันสองร้อยเก้าสิบบาท"
+    },
+    {
+     "type": "spoken_text_contains",
+     "line": "l1",
+     "text": "เก้าร้อยเก้าสิบบาท"
+    },
+    {
+     "type": "spoken_text_not_contains",
+     "line": "l1",
+     "text": "1,290"
+    },
+    {
+     "type": "spoken_text_not_contains",
+     "line": "l1",
+     "text": ".-"
+    },
+    {
+     "type": "spoken_text_contains",
+     "line": "l2",
+     "text": "ศูนย์แปดหนึ่ง"
+    },
+    {
+     "type": "spoken_text_not_contains",
+     "line": "l2",
+     "text": "-"
+    }
+   ]
+  },
+  {
+   "id": "TC032",
+   "category": "thai_pronunciation",
+   "description": "Thai date with abbreviated month and Buddhist-era year.",
+   "input": {
+    "schema_version": "1.0",
+    "project": "test",
+    "characters": [
+     {
+      "id": "shop_vo",
+      "voice_by_provider": {
+       "gemini": "Sulafat"
+      }
+     }
+    ],
+    "lines": [
+     {
+      "id": "l1",
+      "character": "shop_vo",
+      "language": "th",
+      "text": "โปรนี้ถึงวันที่ 31 ธ.ค. พ.ศ. 2569 เท่านั้น",
+      "spoken_text": "โปรนี้ถึงวันที่สามสิบเอ็ด ธันวาคม พุทธศักราช สองพันห้าร้อยหกสิบเก้า เท่านั้น",
+      "emotion": {
+       "primary": "will.urgency",
+       "intensity": 0.4
+      },
+      "direction": "A clear, friendly deadline.",
+      "prosody": {
+       "pitch_baseline": "baseline",
+       "pitch_range": "baseline",
+       "rate": "baseline",
+       "energy": "medium",
+       "voice_quality": "modal",
+       "ending": "fall"
+      }
+     }
+    ]
+   },
+   "expected": {
+    "must": [
+     "ธ.ค. read ธันวาคม",
+     "พ.ศ. read พุทธศักราช",
+     "2569 read สองพันห้าร้อยหกสิบเก้า",
+     "31 read สามสิบเอ็ด (not สามสิบหนึ่ง)"
+    ],
+    "must_not": [
+     "letters ธอ คอ read out",
+     "year read digit by digit"
+    ]
+   },
+   "auto_checks": [
+    {
+     "type": "schema_valid"
+    },
+    {
+     "type": "emotion_ids_exist"
+    },
+    {
+     "type": "same_character_same_voice"
+    },
+    {
+     "type": "spoken_text_contains",
+     "line": "l1",
+     "text": "ธันวาคม"
+    },
+    {
+     "type": "spoken_text_contains",
+     "line": "l1",
+     "text": "สองพันห้าร้อยหกสิบเก้า"
+    },
+    {
+     "type": "spoken_text_contains",
+     "line": "l1",
+     "text": "สามสิบเอ็ด"
+    },
+    {
+     "type": "spoken_text_not_contains",
+     "line": "l1",
+     "text": "ธ.ค."
+    },
+    {
+     "type": "spoken_text_not_contains",
+     "line": "l1",
+     "text": "พ.ศ."
+    }
+   ]
+  },
+  {
+   "id": "TC033",
+   "category": "thai_pronunciation",
+   "description": "Times with น.: formal announcement vs conversational register.",
+   "input": {
+    "schema_version": "1.0",
+    "project": "test",
+    "characters": [
+     {
+      "id": "shop_vo",
+      "voice_by_provider": {
+       "gemini": "Sulafat"
+      }
+     },
+     {
+      "id": "ton",
+      "voice_by_provider": {
+       "gemini": "Puck"
+      }
+     }
+    ],
+    "lines": [
+     {
+      "id": "l1",
+      "character": "shop_vo",
+      "language": "th",
+      "text": "เปิด 10:00 น. ปิด 20:00 น. งานเริ่ม 14:30 น.",
+      "spoken_text": "เปิดสิบนาฬิกา ปิดยี่สิบนาฬิกา งานเริ่มสิบสี่นาฬิกาสามสิบนาที",
+      "politeness": "formal",
+      "emotion": {
+       "primary": "performance.trusted_expert",
+       "intensity": 0.3
+      },
+      "direction": "Formal announcement; read times in the official 24-hour style.",
+      "prosody": {
+       "pitch_baseline": "baseline",
+       "pitch_range": "narrow",
+       "rate": "baseline",
+       "energy": "medium",
+       "voice_quality": "modal",
+       "ending": "fall"
+      }
+     },
+     {
+      "id": "l2",
+      "character": "ton",
+      "language": "th",
+      "text": "นัด 14:30 นะครับ",
+      "spoken_text": "นัดบ่ายสองโมงครึ่งนะครับ",
+      "politeness": "polite",
+      "emotion": {
+       "primary": "care.reassurance",
+       "intensity": 0.3
+      },
+      "direction": "Confirm an appointment casually.",
+      "prosody": {
+       "pitch_baseline": "baseline",
+       "pitch_range": "baseline",
+       "rate": "baseline",
+       "energy": "medium",
+       "voice_quality": "smiling",
+       "ending": "soft_fall"
+      }
+     }
+    ]
+   },
+   "expected": {
+    "must": [
+     "l1 uses นาฬิกา reading",
+     "l2 uses everyday บ่ายสองโมงครึ่ง",
+     "น. never read as นอ"
+    ],
+    "must_not": [
+     "colon read as a word",
+     "l2 read สิบสี่นาฬิกา (too formal for chat)"
+    ]
+   },
+   "auto_checks": [
+    {
+     "type": "schema_valid"
+    },
+    {
+     "type": "emotion_ids_exist"
+    },
+    {
+     "type": "same_character_same_voice"
+    },
+    {
+     "type": "spoken_text_contains",
+     "line": "l1",
+     "text": "สิบสี่นาฬิกาสามสิบนาที"
+    },
+    {
+     "type": "spoken_text_not_contains",
+     "line": "l1",
+     "text": "น."
+    },
+    {
+     "type": "spoken_text_contains",
+     "line": "l2",
+     "text": "บ่ายสองโมงครึ่ง"
+    },
+    {
+     "type": "spoken_text_not_contains",
+     "line": "l2",
+     "text": "14:30"
+    }
+   ]
+  },
+  {
+   "id": "TC034",
+   "category": "thai_pronunciation",
+   "description": "English brand words and % inside Thai lines.",
+   "input": {
+    "schema_version": "1.0",
+    "project": "test",
+    "characters": [
+     {
+      "id": "shop_vo",
+      "voice_by_provider": {
+       "gemini": "Sulafat"
+      }
+     }
+    ],
+    "lines": [
+     {
+      "id": "l1",
+      "character": "shop_vo",
+      "language": "th-en",
+      "text": "เลนส์ Hoya กับกรอบ Ray-Ban ที่ Time Optic",
+      "spoken_text": "เลนส์โฮย่า กับกรอบเรย์แบน ที่ไทม์ ออพติก",
+      "emotion": {
+       "primary": "performance.trusted_expert",
+       "intensity": 0.5
+      },
+      "direction": "Name the brands confidently, Thai style.",
+      "prosody": {
+       "pitch_baseline": "baseline",
+       "pitch_range": "baseline",
+       "rate": "baseline",
+       "energy": "medium",
+       "voice_quality": "modal",
+       "ending": "fall"
+      }
+     },
+     {
+      "id": "l2",
+      "character": "shop_vo",
+      "language": "th",
+      "text": "ลด 50% ทุกรุ่น",
+      "spoken_text": "ลดห้าสิบเปอร์เซ็นต์ทุกรุ่น",
+      "emotion": {
+       "primary": "hope.excitement",
+       "intensity": 0.6
+      },
+      "direction": "Share big news like a friend who found a great deal.",
+      "prosody": {
+       "pitch_baseline": "higher",
+       "pitch_range": "wide",
+       "rate": "fast",
+       "energy": "high",
+       "voice_quality": "smiling",
+       "ending": "fall"
+      }
+     }
+    ]
+   },
+   "expected": {
+    "must": [
+     "brands read in Thai-adapted form (โฮย่า, เรย์แบน, ไทม์ ออพติก)",
+     "no switch to an English accent mid-line",
+     "% read เปอร์เซ็นต์"
+    ],
+    "must_not": [
+     "Latin letters spelled out",
+     "% skipped"
+    ]
+   },
+   "auto_checks": [
+    {
+     "type": "schema_valid"
+    },
+    {
+     "type": "emotion_ids_exist"
+    },
+    {
+     "type": "same_character_same_voice"
+    },
+    {
+     "type": "spoken_text_not_contains",
+     "line": "l1",
+     "text": "Hoya"
+    },
+    {
+     "type": "spoken_text_contains",
+     "line": "l1",
+     "text": "เรย์แบน"
+    },
+    {
+     "type": "spoken_text_contains",
+     "line": "l1",
+     "text": "ไทม์ ออพติก"
+    },
+    {
+     "type": "spoken_text_contains",
+     "line": "l2",
+     "text": "ห้าสิบเปอร์เซ็นต์"
+    },
+    {
+     "type": "spoken_text_not_contains",
+     "line": "l2",
+     "text": "%"
+    }
+   ]
+  },
+  {
+   "id": "TC035",
+   "category": "thai_pronunciation",
+   "description": "ไหม read มั้ย and เขา read เค้า in casual dialogue.",
+   "input": {
+    "schema_version": "1.0",
+    "project": "test",
+    "characters": [
+     {
+      "id": "mint",
+      "voice_by_provider": {
+       "gemini": "Leda"
+      }
+     },
+     {
+      "id": "tao",
+      "voice_by_provider": {
+       "gemini": "Umbriel"
+      }
+     }
+    ],
+    "lines": [
+     {
+      "id": "l1",
+      "character": "mint",
+      "language": "th",
+      "text": "เขาจะมาไหมอ่ะ",
+      "spoken_text": "เค้าจะมามั้ยอ่ะ",
+      "emotion": {
+       "primary": "fear.worry",
+       "intensity": 0.4
+      },
+      "direction": "Ask Tao, half hoping.",
+      "prosody": {
+       "pitch_baseline": "slightly_higher",
+       "pitch_range": "narrow",
+       "rate": "baseline",
+       "energy": "medium",
+       "voice_quality": "modal",
+       "ending": "rise"
+      }
+     },
+     {
+      "id": "l2",
+      "character": "tao",
+      "language": "th",
+      "text": "ไม่รู้ดิ ลองโทรถามเขาไหมล่ะ",
+      "spoken_text": "ไม่รู้ดิ ลองโทรถามเค้ามั้ยล่ะ",
+      "emotion": {
+       "primary": "calm.serenity",
+       "intensity": 0.3
+      },
+      "direction": "Shrug it off.",
+      "prosody": {
+       "pitch_baseline": "lower",
+       "pitch_range": "narrow",
+       "rate": "slow",
+       "energy": "low",
+       "voice_quality": "modal",
+       "ending": "level"
+      }
+     }
+    ]
+   },
+   "expected": {
+    "must": [
+     "ไหม pronounced มั้ย (high tone), never the rising-tone ไหม (silk)",
+     "เขา pronounced เค้า (short high)",
+     "particles อ่ะ/ล่ะ/ดิ unstressed"
+    ],
+    "must_not": [
+     "ไหม read with rising tone",
+     "เขา read with long rising tone"
+    ]
+   },
+   "auto_checks": [
+    {
+     "type": "schema_valid"
+    },
+    {
+     "type": "emotion_ids_exist"
+    },
+    {
+     "type": "same_character_same_voice"
+    },
+    {
+     "type": "spoken_text_not_contains",
+     "line": "l1",
+     "text": "ไหม"
+    },
+    {
+     "type": "spoken_text_contains",
+     "line": "l1",
+     "text": "มั้ย"
+    },
+    {
+     "type": "spoken_text_contains",
+     "line": "l1",
+     "text": "เค้า"
+    },
+    {
+     "type": "spoken_text_not_contains",
+     "line": "l2",
+     "text": "ไหม"
+    },
+    {
+     "type": "spoken_text_not_contains",
+     "line": "l2",
+     "text": "เขา"
+    }
+   ]
+  },
+  {
+   "id": "TC036",
+   "category": "thai_pronunciation",
+   "description": "ฯลฯ, ๆ and abbreviations (ป.1, รพ.) expanded.",
+   "input": {
+    "schema_version": "1.0",
+    "project": "test",
+    "characters": [
+     {
+      "id": "narrator_th",
+      "voice_by_provider": {
+       "gemini": "Charon"
+      }
+     }
+    ],
+    "lines": [
+     {
+      "id": "l1",
+      "character": "narrator_th",
+      "language": "th",
+      "text": "ที่ร้านมีกรอบแว่น เลนส์ คอนแทคเลนส์ ฯลฯ",
+      "spoken_text": "ที่ร้านมีกรอบแว่น เลนส์ คอนแทคเลนส์ และอื่นอื่นอีกมากมาย",
+      "emotion": {
+       "primary": "performance.trusted_expert",
+       "intensity": 0.3
+      },
+      "direction": "List lightly.",
+      "prosody": {
+       "pitch_baseline": "baseline",
+       "pitch_range": "baseline",
+       "rate": "baseline",
+       "energy": "medium",
+       "voice_quality": "modal",
+       "ending": "soft_fall"
+      }
+     },
+     {
+      "id": "l2",
+      "character": "narrator_th",
+      "language": "th",
+      "text": "น้องเรียน ป.1 เพิ่งไปตรวจตาที่ รพ. มา ค่อยๆ อ่านทีละตัว",
+      "spoken_text": "น้องเรียนประถมหนึ่ง เพิ่งไปตรวจตาที่โรงพยาบาลมา ค่อยค่อย อ่านทีละตัว",
+      "emotion": {
+       "primary": "performance.storyteller_warmth",
+       "intensity": 0.4
+      },
+      "direction": "Tell it gently.",
+      "prosody": {
+       "pitch_baseline": "baseline",
+       "pitch_range": "baseline",
+       "rate": "slow",
+       "energy": "medium",
+       "voice_quality": "modal",
+       "ending": "soft_fall"
+      }
+     }
+    ]
+   },
+   "expected": {
+    "must": [
+     "ฯลฯ read as และอื่นๆ (never 'ไปยาลใหญ่')",
+     "ๆ repeats the word (ค่อยค่อย)",
+     "ป.1 → ประถมหนึ่ง, รพ. → โรงพยาบาล"
+    ],
+    "must_not": [
+     "symbol names read aloud",
+     "ป.1 read ปอหนึ่ง in narration"
+    ]
+   },
+   "auto_checks": [
+    {
+     "type": "schema_valid"
+    },
+    {
+     "type": "emotion_ids_exist"
+    },
+    {
+     "type": "same_character_same_voice"
+    },
+    {
+     "type": "spoken_text_not_contains",
+     "line": "l1",
+     "text": "ฯลฯ"
+    },
+    {
+     "type": "spoken_text_contains",
+     "line": "l1",
+     "text": "และอื่นอื่น"
+    },
+    {
+     "type": "spoken_text_contains",
+     "line": "l2",
+     "text": "ประถมหนึ่ง"
+    },
+    {
+     "type": "spoken_text_contains",
+     "line": "l2",
+     "text": "โรงพยาบาล"
+    },
+    {
+     "type": "spoken_text_not_contains",
+     "line": "l2",
+     "text": "ๆ"
+    }
+   ]
+  },
+  {
+   "id": "TC037",
+   "category": "multi_character_dialogue",
+   "description": "Ton meets Jan: each keeps their own pace and particles.",
+   "input": {
+    "schema_version": "1.0",
+    "project": "test",
+    "scene": {
+     "id": "night-ep01-s3",
+     "location": "shop at 2 a.m.",
+     "acoustic_space": "small_room",
+     "situation": "Ton meets Jan for the first time"
+    },
+    "characters": [
+     {
+      "id": "ton",
+      "voice_by_provider": {
+       "gemini": "Puck"
+      }
+     },
+     {
+      "id": "jan",
+      "voice_by_provider": {
+       "gemini": "Vindemiatrix"
+      }
+     }
+    ],
+    "lines": [
+     {
+      "id": "l1",
+      "character": "ton",
+      "language": "th",
+      "text": "ใ...ใครครับ",
+      "analysis": {
+       "speaker": "Ton (optician, 28)",
+       "listener": "the dark",
+       "goal": "to find out",
+       "subtext": "please be no one"
+      },
+      "emotion": {
+       "primary": "fear.fear",
+       "intensity": 0.7
+      },
+      "direction": "Call into the dark.",
+      "prosody": {
+       "pitch_baseline": "higher",
+       "pitch_range": "narrow",
+       "rate": "fast",
+       "energy": "medium",
+       "voice_quality": "trembling",
+       "ending": "rise"
+      }
+     },
+     {
+      "id": "l2",
+      "character": "jan",
+      "language": "th",
+      "text": "ยายเองจ้ะ ไม่ต้องกลัวนะลูก",
+      "analysis": {
+       "speaker": "Jan (ghost grandma, 80)",
+       "listener": "Ton",
+       "goal": "to calm",
+       "subtext": "I mean no harm"
+      },
+      "emotion": {
+       "primary": "performance.eerie_calm",
+       "intensity": 0.5
+      },
+      "direction": "Calm him like a grandson.",
+      "prosody": {
+       "pitch_baseline": "lower",
+       "pitch_range": "very_narrow",
+       "rate": "very_slow",
+       "energy": "low",
+       "voice_quality": "breathy",
+       "ending": "soft_fall"
+      }
+     },
+     {
+      "id": "l3",
+      "character": "ton",
+      "language": "th",
+      "text": "ยาย... เป็นผีเหรอครับ",
+      "analysis": {
+       "speaker": "Ton (optician, 28)",
+       "listener": "Jan",
+       "goal": "to know",
+       "subtext": "please say no"
+      },
+      "emotion": {
+       "primary": "fear.fear",
+       "intensity": 0.6
+      },
+      "direction": "Ask the unthinkable.",
+      "prosody": {
+       "pitch_baseline": "higher",
+       "pitch_range": "narrow",
+       "rate": "slightly_slow",
+       "energy": "medium",
+       "voice_quality": "trembling",
+       "ending": "rise"
+      },
+      "pauses": [
+       {
+        "after": "ยาย",
+        "ms": 500,
+        "kind": "hesitation"
+       }
+      ]
+     },
+     {
+      "id": "l4",
+      "character": "jan",
+      "language": "th",
+      "text": "ฮึๆ ผีก็สายตายาวได้นะลูก",
+      "spoken_text": "ฮึฮึ ผีก็สายตายาวได้นะลูก",
+      "analysis": {
+       "speaker": "Jan (ghost grandma, 80)",
+       "listener": "Ton",
+       "goal": "to lighten the mood",
+       "subtext": "don't be scared"
+      },
+      "emotion": {
+       "primary": "joy.amusement",
+       "intensity": 0.4
+      },
+      "direction": "Chuckle at his shock; you find it funny too.",
+      "prosody": {
+       "pitch_baseline": "lower",
+       "pitch_range": "narrow",
+       "rate": "slow",
+       "energy": "low",
+       "voice_quality": "smiling",
+       "ending": "soft_fall"
+      },
+      "nonverbal": [
+       "laugh_soft"
+      ]
+     }
+    ]
+   },
+   "expected": {
+    "must": [
+     "jan's lines slower than ton's",
+     "ton ends with ครับ, jan with จ้ะ/นะลูก",
+     "voices fixed (Puck / Sulafat)",
+     "jan's calm contrasts ton's fear"
+    ],
+    "must_not": [
+     "jan and ton at the same pace",
+     "jan sounds scary"
+    ]
+   },
+   "auto_checks": [
+    {
+     "type": "schema_valid"
+    },
+    {
+     "type": "emotion_ids_exist"
+    },
+    {
+     "type": "same_character_same_voice"
+    },
+    {
+     "type": "prosody_order",
+     "field": "rate",
+     "line_a": "l2",
+     "line_b": "l1",
+     "relation": "lt"
+    },
+    {
+     "type": "prosody_order",
+     "field": "rate",
+     "line_a": "l4",
+     "line_b": "l3",
+     "relation": "lt"
+    }
+   ]
+  },
+  {
+   "id": "TC038",
+   "category": "multi_character_dialogue",
+   "description": "Mint and Tao bicker about jealousy: quick vs dry.",
+   "input": {
+    "schema_version": "1.0",
+    "project": "test",
+    "characters": [
+     {
+      "id": "mint",
+      "voice_by_provider": {
+       "gemini": "Leda"
+      }
+     },
+     {
+      "id": "tao",
+      "voice_by_provider": {
+       "gemini": "Umbriel"
+      }
+     }
+    ],
+    "lines": [
+     {
+      "id": "l1",
+      "character": "mint",
+      "language": "th",
+      "text": "ใครอ่ะ ผู้หญิงที่ทักนายเมื่อกี้",
+      "analysis": {
+       "speaker": "Mint (25)",
+       "listener": "Tao",
+       "goal": "to find out",
+       "subtext": "I'm jealous"
+      },
+      "emotion": {
+       "primary": "social.jealousy",
+       "intensity": 0.5
+      },
+      "direction": "Too casual on purpose.",
+      "prosody": {
+       "pitch_baseline": "baseline",
+       "pitch_range": "narrow",
+       "rate": "slightly_slow",
+       "energy": "medium",
+       "voice_quality": "tense",
+       "ending": "level"
+      }
+     },
+     {
+      "id": "l2",
+      "character": "tao",
+      "language": "th",
+      "text": "หึงเหรอ",
+      "analysis": {
+       "speaker": "Tao (27)",
+       "listener": "Mint",
+       "goal": "to tease",
+       "subtext": "I like that you care"
+      },
+      "emotion": {
+       "primary": "stance.playful_teasing",
+       "intensity": 0.4
+      },
+      "direction": "Slow smile.",
+      "prosody": {
+       "pitch_baseline": "lower",
+       "pitch_range": "narrow",
+       "rate": "slow",
+       "energy": "low",
+       "voice_quality": "smiling",
+       "ending": "rise"
+      }
+     },
+     {
+      "id": "l3",
+      "character": "mint",
+      "language": "th",
+      "text": "ใครหึง! ไม่ได้หึงสักหน่อย",
+      "analysis": {
+       "speaker": "Mint (25)",
+       "listener": "Tao",
+       "goal": "to deny",
+       "subtext": "yes I am"
+      },
+      "emotion": {
+       "primary": "stance.defensiveness",
+       "intensity": 0.6
+      },
+      "direction": "Deny it too fast.",
+      "prosody": {
+       "pitch_baseline": "higher",
+       "pitch_range": "wide",
+       "rate": "fast",
+       "energy": "high",
+       "voice_quality": "tense",
+       "ending": "fall"
+      }
+     },
+     {
+      "id": "l4",
+      "character": "tao",
+      "language": "th",
+      "text": "อือ ไม่ได้หึง",
+      "analysis": {
+       "speaker": "Tao (27)",
+       "listener": "Mint",
+       "goal": "to tease more",
+       "subtext": "you totally are"
+      },
+      "emotion": {
+       "primary": "stance.dry_irony",
+       "intensity": 0.4
+      },
+      "direction": "Agree in a way that means the opposite.",
+      "prosody": {
+       "pitch_baseline": "lower",
+       "pitch_range": "very_narrow",
+       "rate": "slow",
+       "energy": "low",
+       "voice_quality": "modal",
+       "ending": "level"
+      }
+     }
+    ]
+   },
+   "expected": {
+    "must": [
+     "mint faster and higher than tao",
+     "short gap before l2 (comic beat)",
+     "l4 flat with lengthened อือ"
+    ],
+    "must_not": [
+     "tao matching mint's energy",
+     "mint's l1 obviously angry"
+    ]
+   },
+   "auto_checks": [
+    {
+     "type": "schema_valid"
+    },
+    {
+     "type": "emotion_ids_exist"
+    },
+    {
+     "type": "same_character_same_voice"
+    },
+    {
+     "type": "prosody_order",
+     "field": "rate",
+     "line_a": "l3",
+     "line_b": "l4",
+     "relation": "gt"
+    },
+    {
+     "type": "prosody_order",
+     "field": "energy",
+     "line_a": "l3",
+     "line_b": "l2",
+     "relation": "gt"
+    }
+   ]
+  },
+  {
+   "id": "TC039",
+   "category": "multi_character_dialogue",
+   "description": "Three-way: developer threatens, Chan stands firm, Ton backs him.",
+   "input": {
+    "schema_version": "1.0",
+    "project": "test",
+    "characters": [
+     {
+      "id": "customer",
+      "voice_by_provider": {
+       "gemini": "Kore"
+      }
+     },
+     {
+      "id": "chan",
+      "voice_by_provider": {
+       "gemini": "Algenib"
+      }
+     },
+     {
+      "id": "ton",
+      "voice_by_provider": {
+       "gemini": "Puck"
+      }
+     }
+    ],
+    "lines": [
+     {
+      "id": "l1",
+      "character": "customer",
+      "language": "th",
+      "text": "ร้านเล็กๆ แบบนี้ ไฟไหม้ทีเดียวก็หมดนะลุง",
+      "spoken_text": "ร้านเล็กเล็ก แบบนี้ ไฟไหม้ทีเดียวก็หมดนะลุง",
+      "analysis": {
+       "speaker": "customer",
+       "listener": "Chan",
+       "goal": "to scare",
+       "subtext": "sell or else"
+      },
+      "emotion": {
+       "primary": "fear.quiet_menace",
+       "intensity": 0.6
+      },
+      "direction": "Smile while threatening.",
+      "prosody": {
+       "pitch_baseline": "slightly_lower",
+       "pitch_range": "narrow",
+       "rate": "slow",
+       "energy": "low",
+       "voice_quality": "smiling",
+       "ending": "level"
+      }
+     },
+     {
+      "id": "l2",
+      "character": "chan",
+      "language": "th",
+      "text": "ลองดูสิ",
+      "analysis": {
+       "speaker": "Chan (old uncle, 65)",
+       "listener": "developer",
+       "goal": "to defy",
+       "subtext": "I'm not afraid of you"
+      },
+      "emotion": {
+       "primary": "anger.cold",
+       "intensity": 0.7
+      },
+      "direction": "Two words, no shouting.",
+      "prosody": {
+       "pitch_baseline": "lower",
+       "pitch_range": "very_narrow",
+       "rate": "slow",
+       "energy": "medium",
+       "voice_quality": "tense",
+       "ending": "fall"
+      }
+     },
+     {
+      "id": "l3",
+      "character": "ton",
+      "language": "th",
+      "text": "ผมเป็นพยานครับ ทุกคำที่คุณพูด",
+      "analysis": {
+       "speaker": "Ton (optician, 28)",
+       "listener": "developer",
+       "goal": "to protect Chan",
+       "subtext": "I'm scared but I'm staying"
+      },
+      "emotion": {
+       "primary": "will.confidence",
+       "intensity": 0.6
+      },
+      "direction": "Step up beside Chan, polite but firm.",
+      "prosody": {
+       "pitch_baseline": "baseline",
+       "pitch_range": "baseline",
+       "rate": "baseline",
+       "energy": "high",
+       "voice_quality": "modal",
+       "ending": "fall"
+      }
+     }
+    ]
+   },
+   "expected": {
+    "must": [
+     "three distinct voices (Kore, Algenib, Puck)",
+     "chan quieter than a shout",
+     "ton keeps ครับ while firm",
+     "ๆ expanded in l1"
+    ],
+    "must_not": [
+     "chan shouting",
+     "developer audibly angry"
+    ]
+   },
+   "auto_checks": [
+    {
+     "type": "schema_valid"
+    },
+    {
+     "type": "emotion_ids_exist"
+    },
+    {
+     "type": "same_character_same_voice"
+    },
+    {
+     "type": "spoken_text_not_contains",
+     "line": "l1",
+     "text": "ๆ"
+    }
+   ]
+  },
+  {
+   "id": "TC040",
+   "category": "multi_character_dialogue",
+   "description": "English shop complaint resolved: customer and Ton.",
+   "input": {
+    "schema_version": "1.0",
+    "project": "test",
+    "characters": [
+     {
+      "id": "customer",
+      "voice_by_provider": {
+       "gemini": "Kore"
+      }
+     },
+     {
+      "id": "ton",
+      "voice_by_provider": {
+       "gemini": "Puck"
+      }
+     }
+    ],
+    "lines": [
+     {
+      "id": "l1",
+      "character": "customer",
+      "language": "en",
+      "text": "I've been waiting forty minutes. This is ridiculous.",
+      "analysis": {
+       "speaker": "customer",
+       "listener": "Ton",
+       "goal": "to get service",
+       "subtext": "I'm late for work"
+      },
+      "emotion": {
+       "primary": "anger.irritation",
+       "intensity": 0.6
+      },
+      "direction": "Complain firmly.",
+      "prosody": {
+       "pitch_baseline": "slightly_higher",
+       "pitch_range": "narrow",
+       "rate": "baseline",
+       "energy": "high",
+       "voice_quality": "tense",
+       "ending": "fall"
+      }
+     },
+     {
+      "id": "l2",
+      "character": "ton",
+      "language": "en",
+      "text": "I'm really sorry. They're ready now, let me fit them for you.",
+      "analysis": {
+       "speaker": "Ton (optician, 28)",
+       "listener": "customer",
+       "goal": "to calm and fix",
+       "subtext": "my fault"
+      },
+      "emotion": {
+       "primary": "regret.remorse_apology",
+       "intensity": 0.6
+      },
+      "direction": "Own it and act.",
+      "prosody": {
+       "pitch_baseline": "slightly_lower",
+       "pitch_range": "narrow",
+       "rate": "slightly_slow",
+       "energy": "medium",
+       "voice_quality": "modal",
+       "ending": "soft_fall"
+      }
+     },
+     {
+      "id": "l3",
+      "character": "customer",
+      "language": "en",
+      "text": "Oh. Okay. Thanks. They actually look great.",
+      "analysis": {
+       "speaker": "customer",
+       "listener": "Ton",
+       "goal": "to accept",
+       "subtext": "I overreacted"
+      },
+      "emotion": {
+       "primary": "relief.relief",
+       "intensity": 0.5
+      },
+      "direction": "Soften despite yourself.",
+      "prosody": {
+       "pitch_baseline": "baseline",
+       "pitch_range": "baseline",
+       "rate": "slow",
+       "energy": "medium",
+       "voice_quality": "smiling",
+       "ending": "soft_fall"
+      }
+     }
+    ]
+   },
+   "expected": {
+    "must": [
+     "customer's energy drops from l1 to l3",
+     "ton calmer than the customer in l2",
+     "pauses between 'Oh. Okay. Thanks.'"
+    ],
+    "must_not": [
+     "ton matching the customer's irritation"
+    ]
+   },
+   "auto_checks": [
+    {
+     "type": "schema_valid"
+    },
+    {
+     "type": "emotion_ids_exist"
+    },
+    {
+     "type": "same_character_same_voice"
+    },
+    {
+     "type": "prosody_order",
+     "field": "energy",
+     "line_a": "l1",
+     "line_b": "l3",
+     "relation": "gt"
+    },
+    {
+     "type": "prosody_order",
+     "field": "energy",
+     "line_a": "l2",
+     "line_b": "l1",
+     "relation": "lt"
+    }
+   ]
+  },
+  {
+   "id": "TC041",
+   "category": "multi_character_dialogue",
+   "description": "Comic timing between Chan and Ton about glasses on his head.",
+   "input": {
+    "schema_version": "1.0",
+    "project": "test",
+    "characters": [
+     {
+      "id": "chan",
+      "voice_by_provider": {
+       "gemini": "Algenib"
+      }
+     },
+     {
+      "id": "ton",
+      "voice_by_provider": {
+       "gemini": "Puck"
+      }
+     }
+    ],
+    "lines": [
+     {
+      "id": "l1",
+      "character": "chan",
+      "language": "th",
+      "text": "แว่นข้าหายไปไหนวะ หาตั้งครึ่งชั่วโมงแล้ว",
+      "analysis": {
+       "speaker": "Chan (old uncle, 65)",
+       "listener": "Ton",
+       "goal": "to get help",
+       "subtext": "I'm getting old"
+      },
+      "emotion": {
+       "primary": "anger.frustration",
+       "intensity": 0.5
+      },
+      "direction": "Mutter while searching.",
+      "prosody": {
+       "pitch_baseline": "lower",
+       "pitch_range": "baseline",
+       "rate": "baseline",
+       "energy": "medium",
+       "voice_quality": "harsh",
+       "ending": "cut_off"
+      }
+     },
+     {
+      "id": "l2",
+      "character": "ton",
+      "language": "th",
+      "text": "ลุงครับ... อยู่บนหัวลุงครับ",
+      "analysis": {
+       "speaker": "Ton (optician, 28)",
+       "listener": "Chan",
+       "goal": "to tell him without embarrassing him",
+       "subtext": "this is hilarious"
+      },
+      "emotion": {
+       "primary": "social.deference_krengjai",
+       "intensity": 0.4,
+       "secondary": "joy.amusement"
+      },
+      "direction": "Polite, straight face; hold the pause.",
+      "prosody": {
+       "pitch_baseline": "baseline",
+       "pitch_range": "narrow",
+       "rate": "slow",
+       "energy": "low",
+       "voice_quality": "modal",
+       "ending": "soft_fall"
+      },
+      "pauses": [
+       {
+        "after": "ลุงครับ",
+        "ms": 700,
+        "kind": "comic"
+       }
+      ]
+     },
+     {
+      "id": "l3",
+      "character": "chan",
+      "language": "th",
+      "text": "...รู้แล้วน่า",
+      "analysis": {
+       "speaker": "Chan (old uncle, 65)",
+       "listener": "Ton",
+       "goal": "to save face",
+       "subtext": "I'm embarrassed"
+      },
+      "emotion": {
+       "primary": "selfconscious.embarrassment",
+       "intensity": 0.5
+      },
+      "direction": "Grumble to cover the embarrassment.",
+      "prosody": {
+       "pitch_baseline": "lower",
+       "pitch_range": "narrow",
+       "rate": "slow",
+       "energy": "low",
+       "voice_quality": "modal",
+       "ending": "fall"
+      },
+      "pauses": [
+       {
+        "after": "รู้แล้วน่า",
+        "ms": 200,
+        "kind": "micro"
+       }
+      ]
+     }
+    ]
+   },
+   "expected": {
+    "must": [
+     "comic pause after ลุงครับ in l2",
+     "l3 starts after a beat of silence",
+     "nobody laughs audibly"
+    ],
+    "must_not": [
+     "ton laughing",
+     "punchline rushed"
+    ]
+   },
+   "auto_checks": [
+    {
+     "type": "schema_valid"
+    },
+    {
+     "type": "emotion_ids_exist"
+    },
+    {
+     "type": "same_character_same_voice"
+    },
+    {
+     "type": "prosody_order",
+     "field": "rate",
+     "line_a": "l2",
+     "line_b": "l1",
+     "relation": "lt"
+    }
+   ]
+  },
+  {
+   "id": "TC042",
+   "category": "multi_character_dialogue",
+   "description": "Ton relays between Jan (whispering, unseen by Chan) and Chan.",
+   "input": {
+    "schema_version": "1.0",
+    "project": "test",
+    "characters": [
+     {
+      "id": "jan",
+      "voice_by_provider": {
+       "gemini": "Vindemiatrix"
+      }
+     },
+     {
+      "id": "ton",
+      "voice_by_provider": {
+       "gemini": "Puck"
+      }
+     },
+     {
+      "id": "chan",
+      "voice_by_provider": {
+       "gemini": "Algenib"
+      }
+     }
+    ],
+    "lines": [
+     {
+      "id": "l1",
+      "character": "jan",
+      "language": "th",
+      "text": "บอกลุงเขาสิลูก ว่าแว่นอยู่ในตู้เย็น",
+      "spoken_text": "บอกลุงเค้าสิลูก ว่าแว่นอยู่ในตู้เย็น",
+      "analysis": {
+       "speaker": "Jan (ghost grandma, 80)",
+       "listener": "Ton",
+       "goal": "to share the joke",
+       "subtext": "I hid them"
+      },
+      "emotion": {
+       "primary": "stance.conspiratorial_whisper",
+       "intensity": 0.5
+      },
+      "direction": "Whisper into Ton's ear, enjoying the prank.",
+      "prosody": {
+       "pitch_baseline": "baseline",
+       "pitch_range": "narrow",
+       "rate": "slightly_fast",
+       "energy": "very_low",
+       "voice_quality": "breathy",
+       "ending": "soft_fall",
+       "loudness": "whisper"
+      }
+     },
+     {
+      "id": "l2",
+      "character": "ton",
+      "language": "th",
+      "text": "ลุงครับ ลองดูในตู้เย็นยังครับ",
+      "analysis": {
+       "speaker": "Ton (optician, 28)",
+       "listener": "Chan",
+       "goal": "to help without revealing Jan",
+       "subtext": "a ghost told me"
+      },
+      "emotion": {
+       "primary": "cognitive.hesitation",
+       "intensity": 0.4
+      },
+      "direction": "Suggest it innocently.",
+      "prosody": {
+       "pitch_baseline": "baseline",
+       "pitch_range": "narrow",
+       "rate": "baseline",
+       "energy": "medium",
+       "voice_quality": "modal",
+       "ending": "rise",
+       "loudness": "conversational"
+      }
+     },
+     {
+      "id": "l3",
+      "character": "chan",
+      "language": "th",
+      "text": "หา! แว่นไปอยู่ในตู้เย็นได้ยังไง!",
+      "analysis": {
+       "speaker": "Chan (old uncle, 65)",
+       "listener": "Ton",
+       "goal": "to understand",
+       "subtext": "this is impossible"
+      },
+      "emotion": {
+       "primary": "surprise.shock",
+       "intensity": 0.8
+      },
+      "direction": "Find them; disbelief.",
+      "prosody": {
+       "pitch_baseline": "much_higher",
+       "pitch_range": "wide",
+       "rate": "fast",
+       "energy": "very_high",
+       "voice_quality": "modal",
+       "ending": "fall",
+       "loudness": "projected"
+      }
+     }
+    ]
+   },
+   "expected": {
+    "must": [
+     "jan whispers (quieter than both men)",
+     "chan louder than ton",
+     "เขา read เค้า"
+    ],
+    "must_not": [
+     "jan at normal loudness"
+    ]
+   },
+   "auto_checks": [
+    {
+     "type": "schema_valid"
+    },
+    {
+     "type": "emotion_ids_exist"
+    },
+    {
+     "type": "same_character_same_voice"
+    },
+    {
+     "type": "prosody_order",
+     "field": "loudness",
+     "line_a": "l1",
+     "line_b": "l2",
+     "relation": "lt"
+    },
+    {
+     "type": "prosody_order",
+     "field": "loudness",
+     "line_a": "l3",
+     "line_b": "l2",
+     "relation": "gt"
+    },
+    {
+     "type": "spoken_text_contains",
+     "line": "l1",
+     "text": "เค้า"
+    }
+   ]
+  },
+  {
+   "id": "TC043",
+   "category": "narrative_continuity",
+   "description": "Grief scene: Chan's second line must not bounce back to normal energy.",
+   "input": {
+    "schema_version": "1.0",
+    "project": "test",
+    "scene": {
+     "situation": "Chan holds his late wife's glasses",
+     "previous_beat": "Ton found the old frame in a drawer",
+     "acoustic_space": "small_room"
+    },
+    "characters": [
+     {
+      "id": "chan",
+      "voice_by_provider": {
+       "gemini": "Algenib"
+      }
+     }
+    ],
+    "lines": [
+     {
+      "id": "l1",
+      "character": "chan",
+      "language": "th",
+      "text": "แว่นอันนี้ของเมียลุง...",
+      "analysis": {
+       "speaker": "Chan (old uncle, 65)",
+       "listener": "Ton",
+       "goal": "to share",
+       "subtext": "I miss her"
+      },
+      "emotion": {
+       "primary": "sadness.grief",
+       "intensity": 0.7
+      },
+      "direction": "Say it aloud for the first time.",
+      "prosody": {
+       "pitch_baseline": "lower",
+       "pitch_range": "very_narrow",
+       "rate": "very_slow",
+       "energy": "low",
+       "voice_quality": "creaky",
+       "ending": "trail_off"
+      }
+     },
+     {
+      "id": "l2",
+      "character": "chan",
+      "language": "th",
+      "text": "เขาใส่จนวันสุดท้าย",
+      "spoken_text": "เค้าใส่จนวันสุดท้าย",
+      "analysis": {
+       "speaker": "Chan (old uncle, 65)",
+       "listener": "Ton",
+       "goal": "to share",
+       "subtext": "I couldn't save her"
+      },
+      "emotion": {
+       "primary": "sadness.grief",
+       "intensity": 0.7
+      },
+      "direction": "Continue in the same breath of sadness.",
+      "prosody": {
+       "pitch_baseline": "lower",
+       "pitch_range": "very_narrow",
+       "rate": "very_slow",
+       "energy": "low",
+       "voice_quality": "creaky",
+       "ending": "trail_off"
+      }
+     }
+    ]
+   },
+   "expected": {
+    "must": [
+     "l2 energy equal to l1",
+     "no reset to neutral between lines",
+     "เขา read เค้า"
+    ],
+    "must_not": [
+     "l2 brighter or faster than l1"
+    ]
+   },
+   "auto_checks": [
+    {
+     "type": "schema_valid"
+    },
+    {
+     "type": "emotion_ids_exist"
+    },
+    {
+     "type": "same_character_same_voice"
+    },
+    {
+     "type": "prosody_order",
+     "field": "energy",
+     "line_a": "l1",
+     "line_b": "l2",
+     "relation": "eq"
+    },
+    {
+     "type": "prosody_order",
+     "field": "rate",
+     "line_a": "l1",
+     "line_b": "l2",
+     "relation": "eq"
+    }
+   ]
+  },
+  {
+   "id": "TC044",
+   "category": "narrative_continuity",
+   "description": "Eerie narration hands over to Ton's whisper; Ton must not break the hush.",
+   "input": {
+    "schema_version": "1.0",
+    "project": "test",
+    "scene": {
+     "situation": "the bell rings at 2 a.m.",
+     "acoustic_space": "small_room"
+    },
+    "characters": [
+     {
+      "id": "narrator_th",
+      "voice_by_provider": {
+       "gemini": "Charon"
+      }
+     },
+     {
+      "id": "ton",
+      "voice_by_provider": {
+       "gemini": "Puck"
+      }
+     }
+    ],
+    "lines": [
+     {
+      "id": "l1",
+      "character": "narrator_th",
+      "language": "th",
+      "text": "ตีสองตรง... เสียงกระดิ่งหน้าร้านดังขึ้น",
+      "emotion": {
+       "primary": "performance.eerie_calm",
+       "intensity": 0.6
+      },
+      "direction": "Hush the audience.",
+      "prosody": {
+       "pitch_baseline": "lower",
+       "pitch_range": "narrow",
+       "rate": "slow",
+       "energy": "low",
+       "voice_quality": "breathy",
+       "ending": "level",
+       "loudness": "soft"
+      }
+     },
+     {
+      "id": "l2",
+      "character": "ton",
+      "language": "th",
+      "text": "ใครน่ะครับ",
+      "analysis": {
+       "speaker": "Ton (optician, 28)",
+       "listener": "the dark",
+       "goal": "to find out",
+       "subtext": "I'm scared"
+      },
+      "emotion": {
+       "primary": "fear.fear",
+       "intensity": 0.6
+      },
+      "direction": "Whisper-level; you don't want whatever it is to hear you.",
+      "prosody": {
+       "pitch_baseline": "slightly_higher",
+       "pitch_range": "narrow",
+       "rate": "slow",
+       "energy": "low",
+       "voice_quality": "trembling",
+       "ending": "rise",
+       "loudness": "soft"
+      }
+     }
+    ]
+   },
+   "expected": {
+    "must": [
+     "ton's loudness equals the narrator's (soft)",
+     "continuous hushed mood",
+     "same scene ambience"
+    ],
+    "must_not": [
+     "ton loud or projected",
+     "cheerful tone"
+    ]
+   },
+   "auto_checks": [
+    {
+     "type": "schema_valid"
+    },
+    {
+     "type": "emotion_ids_exist"
+    },
+    {
+     "type": "same_character_same_voice"
+    },
+    {
+     "type": "prosody_order",
+     "field": "loudness",
+     "line_a": "l1",
+     "line_b": "l2",
+     "relation": "eq"
+    }
+   ]
+  },
+  {
+   "id": "TC045",
+   "category": "narrative_continuity",
+   "description": "Mint's anger escalates over three lines.",
+   "input": {
+    "schema_version": "1.0",
+    "project": "test",
+    "characters": [
+     {
+      "id": "mint",
+      "voice_by_provider": {
+       "gemini": "Leda"
+      }
+     }
+    ],
+    "lines": [
+     {
+      "id": "l1",
+      "character": "mint",
+      "language": "th",
+      "text": "นายลืมอีกแล้วเหรอ",
+      "emotion": {
+       "primary": "anger.irritation",
+       "intensity": 0.4
+      },
+      "direction": "First warning.",
+      "prosody": {
+       "pitch_baseline": "baseline",
+       "pitch_range": "narrow",
+       "rate": "baseline",
+       "energy": "low",
+       "voice_quality": "tense",
+       "ending": "level"
+      }
+     },
+     {
+      "id": "l2",
+      "character": "mint",
+      "language": "th",
+      "text": "นี่ครั้งที่สามแล้วนะ",
+      "emotion": {
+       "primary": "anger.frustration",
+       "intensity": 0.6
+      },
+      "direction": "Push harder.",
+      "prosody": {
+       "pitch_baseline": "slightly_higher",
+       "pitch_range": "baseline",
+       "rate": "slightly_fast",
+       "energy": "medium",
+       "voice_quality": "tense",
+       "ending": "fall"
+      }
+     },
+     {
+      "id": "l3",
+      "character": "mint",
+      "language": "th",
+      "text": "ฉันเบื่อแล้ว! เบื่อจริงๆ!",
+      "spoken_text": "ฉันเบื่อแล้ว! เบื่อจริงจริง!",
+      "emotion": {
+       "primary": "anger.hot",
+       "intensity": 0.8
+      },
+      "direction": "Explode; you have run out of patience.",
+      "prosody": {
+       "pitch_baseline": "higher",
+       "pitch_range": "wide",
+       "rate": "fast",
+       "energy": "high",
+       "voice_quality": "harsh",
+       "ending": "fall",
+       "loudness": "projected"
+      }
+     }
+    ]
+   },
+   "expected": {
+    "must": [
+     "energy rises l1 < l2 < l3",
+     "same voice throughout",
+     "ๆ expanded"
+    ],
+    "must_not": [
+     "l1 already shouting",
+     "l3 quieter than l2"
+    ]
+   },
+   "auto_checks": [
+    {
+     "type": "schema_valid"
+    },
+    {
+     "type": "emotion_ids_exist"
+    },
+    {
+     "type": "same_character_same_voice"
+    },
+    {
+     "type": "prosody_order",
+     "field": "energy",
+     "line_a": "l1",
+     "line_b": "l2",
+     "relation": "lt"
+    },
+    {
+     "type": "prosody_order",
+     "field": "energy",
+     "line_a": "l2",
+     "line_b": "l3",
+     "relation": "lt"
+    },
+    {
+     "type": "spoken_text_not_contains",
+     "line": "l3",
+     "text": "ๆ"
+    }
+   ]
+  },
+  {
+   "id": "TC046",
+   "category": "narrative_continuity",
+   "description": "After a reveal, Ton's next line carries the shock residue.",
+   "input": {
+    "schema_version": "1.0",
+    "project": "test",
+    "scene": {
+     "previous_beat": "Ton asked how long she has been here",
+     "acoustic_space": "small_room"
+    },
+    "characters": [
+     {
+      "id": "jan",
+      "voice_by_provider": {
+       "gemini": "Vindemiatrix"
+      }
+     },
+     {
+      "id": "ton",
+      "voice_by_provider": {
+       "gemini": "Puck"
+      }
+     }
+    ],
+    "lines": [
+     {
+      "id": "l1",
+      "character": "jan",
+      "language": "th",
+      "text": "ยายตายมาหกสิบปีแล้วจ้ะ",
+      "analysis": {
+       "speaker": "Jan (ghost grandma, 80)",
+       "listener": "Ton",
+       "goal": "to tell the truth",
+       "subtext": "it's fine"
+      },
+      "emotion": {
+       "primary": "calm.acceptance",
+       "intensity": 0.5
+      },
+      "direction": "Tell him plainly.",
+      "prosody": {
+       "pitch_baseline": "lower",
+       "pitch_range": "narrow",
+       "rate": "very_slow",
+       "energy": "low",
+       "voice_quality": "breathy",
+       "ending": "soft_fall"
+      }
+     },
+     {
+      "id": "l2",
+      "character": "ton",
+      "language": "th",
+      "text": "หก...หกสิบปี... เลยเหรอครับ",
+      "analysis": {
+       "speaker": "Ton (optician, 28)",
+       "listener": "Jan",
+       "goal": "to understand",
+       "subtext": "I can't believe it"
+      },
+      "emotion": {
+       "primary": "surprise.shock",
+       "intensity": 0.6
+      },
+      "direction": "Repeat it as your brain catches up; still stunned.",
+      "prosody": {
+       "pitch_baseline": "slightly_higher",
+       "pitch_range": "narrow",
+       "rate": "slow",
+       "energy": "low",
+       "voice_quality": "breathy",
+       "ending": "rise",
+       "rhythm": "halting"
+      },
+      "pauses": [
+       {
+        "after": "หก...หกสิบปี...",
+        "ms": 600,
+        "kind": "hesitation"
+       }
+      ]
+     }
+    ]
+   },
+   "expected": {
+    "must": [
+     "l2 halting with repeated หก",
+     "l2 not a loud shriek: shock is quiet here",
+     "continuity from the calm reveal"
+    ],
+    "must_not": [
+     "l2 cheerful",
+     "l2 shouted"
+    ]
+   },
+   "auto_checks": [
+    {
+     "type": "schema_valid"
+    },
+    {
+     "type": "emotion_ids_exist"
+    },
+    {
+     "type": "same_character_same_voice"
+    },
+    {
+     "type": "prosody_order",
+     "field": "rate",
+     "line_a": "l2",
+     "line_b": "l1",
+     "relation": "gt"
+    }
+   ]
+  },
+  {
+   "id": "TC047",
+   "category": "narrative_continuity",
+   "description": "Jan calms Ton over the scene; Ton's lines get slower.",
+   "input": {
+    "schema_version": "1.0",
+    "project": "test",
+    "characters": [
+     {
+      "id": "ton",
+      "voice_by_provider": {
+       "gemini": "Puck"
+      }
+     },
+     {
+      "id": "jan",
+      "voice_by_provider": {
+       "gemini": "Vindemiatrix"
+      }
+     }
+    ],
+    "lines": [
+     {
+      "id": "l1",
+      "character": "ton",
+      "language": "th",
+      "text": "ไฟดับ! ยายครับ ยายอยู่ไหน!",
+      "emotion": {
+       "primary": "fear.panic",
+       "intensity": 0.9
+      },
+      "direction": "Panic in the dark.",
+      "prosody": {
+       "pitch_baseline": "much_higher",
+       "pitch_range": "wide",
+       "rate": "very_fast",
+       "energy": "very_high",
+       "voice_quality": "tense",
+       "ending": "rise",
+       "loudness": "projected"
+      }
+     },
+     {
+      "id": "l2",
+      "character": "jan",
+      "language": "th",
+      "text": "ยายอยู่นี่จ้ะ ค่อยๆ หายใจนะลูก",
+      "spoken_text": "ยายอยู่นี่จ้ะ ค่อยค่อย หายใจนะลูก",
+      "emotion": {
+       "primary": "care.reassurance",
+       "intensity": 0.5
+      },
+      "direction": "Slow him with your breathing.",
+      "prosody": {
+       "pitch_baseline": "lower",
+       "pitch_range": "narrow",
+       "rate": "slow",
+       "energy": "low",
+       "voice_quality": "breathy",
+       "ending": "soft_fall"
+      }
+     },
+     {
+      "id": "l3",
+      "character": "ton",
+      "language": "th",
+      "text": "ครับ... ครับยาย",
+      "emotion": {
+       "primary": "relief.relief",
+       "intensity": 0.5
+      },
+      "direction": "Breathe out; you're safe.",
+      "prosody": {
+       "pitch_baseline": "baseline",
+       "pitch_range": "narrow",
+       "rate": "slow",
+       "energy": "low",
+       "voice_quality": "breathy",
+       "ending": "soft_fall",
+       "loudness": "soft"
+      }
+     }
+    ]
+   },
+   "expected": {
+    "must": [
+     "ton's l3 slower and softer than l1",
+     "jan steady throughout",
+     "audible breath in l3"
+    ],
+    "must_not": [
+     "ton still panicking in l3"
+    ]
+   },
+   "auto_checks": [
+    {
+     "type": "schema_valid"
+    },
+    {
+     "type": "emotion_ids_exist"
+    },
+    {
+     "type": "same_character_same_voice"
+    },
+    {
+     "type": "prosody_order",
+     "field": "rate",
+     "line_a": "l1",
+     "line_b": "l3",
+     "relation": "gt"
+    },
+    {
+     "type": "prosody_order",
+     "field": "loudness",
+     "line_a": "l1",
+     "line_b": "l3",
+     "relation": "gt"
+    }
+   ]
+  },
+  {
+   "id": "TC048",
+   "category": "narrative_continuity",
+   "description": "Episode recap then next-episode tease by the same narrator; the tease is brighter.",
+   "input": {
+    "schema_version": "1.0",
+    "project": "test",
+    "characters": [
+     {
+      "id": "narrator_th",
+      "voice_by_provider": {
+       "gemini": "Charon"
+      }
+     }
+    ],
+    "lines": [
+     {
+      "id": "l1",
+      "character": "narrator_th",
+      "language": "th",
+      "text": "ตอนที่แล้ว ต้นได้เจอยายจันเป็นครั้งแรก",
+      "emotion": {
+       "primary": "performance.storyteller_warmth",
+       "intensity": 0.4
+      },
+      "direction": "Catch the audience up.",
+      "prosody": {
+       "pitch_baseline": "baseline",
+       "pitch_range": "baseline",
+       "rate": "baseline",
+       "energy": "medium",
+       "voice_quality": "modal",
+       "ending": "soft_fall"
+      }
+     },
+     {
+      "id": "l2",
+      "character": "narrator_th",
+      "language": "th",
+      "text": "ติดตามตอนต่อไป วันศุกร์ที่ 5 เวลา 20:00 น.",
+      "spoken_text": "ติดตามตอนต่อไป วันศุกร์ที่ห้า เวลาสองทุ่มตรง",
+      "emotion": {
+       "primary": "hope.excitement",
+       "intensity": 0.6
+      },
+      "direction": "Leave them wanting more.",
+      "prosody": {
+       "pitch_baseline": "slightly_higher",
+       "pitch_range": "wide",
+       "rate": "slightly_fast",
+       "energy": "high",
+       "voice_quality": "smiling",
+       "ending": "fall"
+      }
+     }
+    ]
+   },
+   "expected": {
+    "must": [
+     "same voice in both lines",
+     "l2 brighter than l1",
+     "time read สองทุ่มตรง"
+    ],
+    "must_not": [
+     "narrator voice changes",
+     "20:00 read as digits"
+    ]
+   },
+   "auto_checks": [
+    {
+     "type": "schema_valid"
+    },
+    {
+     "type": "emotion_ids_exist"
+    },
+    {
+     "type": "same_character_same_voice"
+    },
+    {
+     "type": "prosody_order",
+     "field": "energy",
+     "line_a": "l2",
+     "line_b": "l1",
+     "relation": "gt"
+    },
+    {
+     "type": "spoken_text_contains",
+     "line": "l2",
+     "text": "สองทุ่ม"
+    },
+    {
+     "type": "spoken_text_not_contains",
+     "line": "l2",
+     "text": "20:00"
+    }
+   ]
+  }
+ ]
+}

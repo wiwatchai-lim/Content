@@ -1,0 +1,1374 @@
+[
+ {
+  "key": "Barrett2019",
+  "title": "Emotional Expressions Reconsidered: Challenges to Inferring Emotion From Human Facial Movements",
+  "authors": "Barrett, L. F.; Adolphs, R.; Marsella, S.; Martinez, A. M.; Pollak, S. D.",
+  "year": 2019,
+  "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC6640856",
+  "doi_isbn": "10.1177/1529100619832930",
+  "source_type": "review",
+  "tier": "S",
+  "key_findings": [
+   "Tests the 'common view' that anger, disgust, fear, happiness, sadness, surprise can be read from facial configurations; evidence does not support using them as diagnostic of emotion.",
+   "Four criteria: reliability, specificity, generalizability, validity.",
+   "People do scowl/smile/frown more than chance in the matching emotion, but the link is weak: meta-analysis cited (Duran et al. 2017) average r = .32, average proportion .19 (category range .15-.25).",
+   "Posed expressions match the prototypes better than spontaneous ones; e.g. only 8 of 55 winning judo fighters produced a Duchenne smile (Study 1), all during social interaction.",
+   "Context (situation, culture, internal state) is largely unmeasured and is a likely reason for weak reliability; automated detectors drop below ~83% accuracy outside the lab."
+  ],
+  "practical_applications": [
+   "Rule for the studio: never state or caption a character's inner emotion from face or voice alone; give context (situation, words, action).",
+   "Faceless Mint & Tao fit this science: emotion is carried by situation, posture and dialogue, not a stereotyped face."
+  ],
+  "limitations": [
+   "Only the first ~100k of ~560k characters of the PMC page were read; the closing recommendations section was not read in full.",
+   "Corrigendum exists (10.1177/1529100619889954).",
+   "Critics from basic-emotion tradition dispute how strongly to read the results (not reviewed here)."
+  ],
+  "license": "CC BY-NC (PMC open access; verify)",
+  "access_status": "full_text",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M02"
+  ]
+ },
+ {
+  "key": "Barrett2017",
+  "title": "The theory of constructed emotion: an active inference account of interoception and categorization",
+  "authors": "Barrett, L. F.",
+  "year": 2017,
+  "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC5390700",
+  "doi_isbn": "10.1093/scan/nsw154",
+  "source_type": "review",
+  "tier": "A",
+  "key_findings": [
+   "Social Cognitive and Affective Neuroscience 12(1). Presents the theory of constructed emotion (formerly the conceptual act theory) as a brain-based computational account.",
+   "The brain uses prediction (predictive coding) and interoception, and categorizes sensations with learned emotion concepts to construct instances of emotion.",
+   "Emotion categories show degeneracy: dissimilar brain representations can produce instances of the same category, so no one-to-one emotion-circuit mapping is expected."
+  ],
+  "practical_applications": [
+   "Supports showing emotion through situation + concept (words, culture) rather than fixed facial templates.",
+   "Explains why Thai emotion words (jai-compounds) may shape what viewers feel and name."
+  ],
+  "limitations": [
+   "PMC full text blocked by a browser check this session; content known only from search summaries and Wikipedia.",
+   "Published online Oct 2016 in SCAN 12(1); page range differs between sources (Ovid lists 1-23)."
+  ],
+  "license": "CC BY-NC (PMC; verify)",
+  "access_status": "full_text",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M02"
+  ]
+ },
+ {
+  "key": "Moors2013",
+  "title": "Appraisal Theories of Emotion: State of the Art and Future Development",
+  "authors": "Moors, A.; Ellsworth, P. C.; Scherer, K. R.; Frijda, N. H.",
+  "year": 2013,
+  "url": "https://archive-ouverte.unige.ch/unige:97856",
+  "doi_isbn": "10.1177/1754073912468165",
+  "source_type": "review",
+  "tier": "A",
+  "key_findings": [
+   "Appraisal theories define emotions as processes (episodes), not states; componential: appraisal, motivational (action tendencies), somatic, motor (expression) and feeling components.",
+   "The process is continuous and recursive; changes in one component feed back to others; several episodes may run in parallel.",
+   "Appraisal detects significance for well-being = satisfaction/obstruction of concerns (needs, attachments, values, goals, beliefs).",
+   "Core appraisal variables: goal relevance, goal congruence, certainty, agency (self/other/circumstance), coping potential/control; some add novelty, urgency, intentionality, fairness, norm compatibility."
+  ],
+  "practical_applications": [
+   "Write story beats as appraisal changes: same event, different appraisal -> different emotion (e.g. Tao blames himself = guilt; blames the shop = anger).",
+   "Use the appraisal variables as a checklist when designing a turning point in a carousel."
+  ],
+  "limitations": [
+   "Introduction to a special section; summarises rather than tests theories.",
+   "Appraisal lists are not claimed to be exhaustive or universal."
+  ],
+  "license": "copyrighted (open repository copy)",
+  "access_status": "full_text",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M02"
+  ]
+ },
+ {
+  "key": "Scherer2009",
+  "title": "The dynamic architecture of emotion: Evidence for the component process model",
+  "authors": "Scherer, K. R.",
+  "year": 2009,
+  "url": "https://archive-ouverte.unige.ch/unige:97810",
+  "doi_isbn": "10.1080/02699930902928969",
+  "source_type": "review",
+  "tier": "A",
+  "key_findings": [
+   "Emotion as an emergent dynamic process based on subjective appraisal of significant events; emphasis on the sequence of appraisal checks (stimulus evaluation checks) and synchronisation of response systems."
+  ],
+  "practical_applications": [
+   "Sequence for a reaction shot: novelty -> pleasantness -> goal relevance -> coping -> norms; animate the change in that order."
+  ],
+  "limitations": [
+   "Only abstract and secondary descriptions seen."
+  ],
+  "license": "copyrighted",
+  "access_status": "search_summary",
+  "verification_status": "unverified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M02"
+  ]
+ },
+ {
+  "key": "Lazarus1991",
+  "title": "Cognition and Motivation in Emotion",
+  "authors": "Lazarus, R. S.",
+  "year": 1991,
+  "url": "https://acs.ist.psu.edu/misc/dirk-files/Papers/Cognition&Emotion/Cognition%20and%20motivation%20in%20emotion..htm",
+  "doi_isbn": "",
+  "source_type": "review",
+  "tier": "A",
+  "key_findings": [
+   "American Psychologist 46(4), 352-367.",
+   "Primary appraisal (is this relevant to my well-being: harm/benefit) and secondary appraisal (coping options).",
+   "Core relational themes summarise the emotion-producing person-environment relation, e.g. anger: unfairly slighted; anxiety: anticipated harm with doubt about coping; shame: personal failure."
+  ],
+  "practical_applications": [
+   "One-line 'core relational theme' per scene makes the intended emotion explicit for writers and voice directors."
+  ],
+  "limitations": [
+   "Read via an HTML copy hosted on a university site; themes for envy, pride, hope etc. are in the 1991 book, not this article."
+  ],
+  "license": "copyrighted",
+  "access_status": "full_text",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M02"
+  ]
+ },
+ {
+  "key": "Roseman2013",
+  "title": "Appraisal in the Emotion System: Coherence in Strategies for Coping",
+  "authors": "Roseman, I. J.",
+  "year": 2013,
+  "url": "https://api.philpapers.org/rec/ROSAIT-3",
+  "doi_isbn": "",
+  "source_type": "review",
+  "tier": "A",
+  "key_findings": [
+   "Emotion Review 5(2), 141-149. Emotions form an organised system of coping strategies guided by appraisals, for threats and opportunities."
+  ],
+  "practical_applications": [
+   "Frame each emotion by what it makes the character DO (coping strategy), useful for action beats."
+  ],
+  "limitations": [
+   "Abstract only."
+  ],
+  "license": "copyrighted",
+  "access_status": "search_summary",
+  "verification_status": "unverified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M02"
+  ]
+ },
+ {
+  "key": "Ekman1992",
+  "title": "An argument for basic emotions",
+  "authors": "Ekman, P.",
+  "year": 1992,
+  "url": "https://sanlab.psych.ucla.edu/wp-content/uploads/sites/31/2016/03/Ekman-1992-An-argument-for-basic-emotions.pdf",
+  "doi_isbn": "",
+  "source_type": "review",
+  "tier": "A",
+  "key_findings": [
+   "Emotions evolved for adaptive value; characteristics include rapid onset, short duration, unbidden occurrence, automatic appraisal and coherence among responses.",
+   "Emotion 'families' share expression, physiology, antecedents and perhaps appraisal."
+  ],
+  "practical_applications": [
+   "Basic-emotion families are still a useful coarse index for libraries (joy, sadness, anger, fear, disgust, surprise)."
+  ],
+  "limitations": [
+   "The PDF link returned 404 this session; content from abstract and secondary summaries.",
+   "Strong universality claims contested (Barrett2019, Jack2012)."
+  ],
+  "license": "copyrighted",
+  "access_status": "search_summary",
+  "verification_status": "unverified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M02"
+  ]
+ },
+ {
+  "key": "Russell2003",
+  "title": "Core affect and the psychological construction of emotion",
+  "authors": "Russell, J. A.",
+  "year": 2003,
+  "url": "https://pubmed.ncbi.nlm.nih.gov/12529060/",
+  "doi_isbn": "10.1037/0033-295X.110.1.145",
+  "source_type": "review",
+  "tier": "A",
+  "key_findings": [
+   "Core affect = neurophysiological state consciously accessible as the simplest raw feeling; a single blend of pleasure-displeasure and activation (a point on the circumplex).",
+   "Core affect can be free-floating (mood) or attributed to an Object, beginning an emotional episode; prototypical episodes such as fear/anger = core affect attributed to something plus non-emotional processes.",
+   "Defines affective quality (a stimulus' power to change core affect), attributed affect, affect regulation, emotional meta-experience."
+  ],
+  "practical_applications": [
+   "Images/clips set core affect (pleasant/calm etc.) through 'affective quality'; the caption/dialogue supplies the Object that turns it into a named emotion.",
+   "Explains 'mood' entries (visual.coziness) as affective quality, not character emotion."
+  ],
+  "limitations": [
+   "Read via text extraction of a course-hosted PDF copy (keyword excerpts)."
+  ],
+  "license": "copyrighted",
+  "access_status": "full_text",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M02"
+  ]
+ },
+ {
+  "key": "Mehrabian1996",
+  "title": "Pleasure-arousal-dominance: A general framework for describing and measuring individual differences in temperament",
+  "authors": "Mehrabian, A.",
+  "year": 1996,
+  "url": "https://link.springer.com/doi/10.1007/BF02686918",
+  "doi_isbn": "10.1007/BF02686918",
+  "source_type": "empirical",
+  "tier": "A",
+  "key_findings": [
+   "Current Psychology 14, 261-292. Three nearly orthogonal dimensions (pleasure, arousal, dominance) describe emotional states; temperament = average emotional state across situations."
+  ],
+  "practical_applications": [
+   "Dominance axis separates anger (high D) from fear (low D) at the same valence/arousal - useful for posture and camera height."
+  ],
+  "limitations": [
+   "Abstract and secondary summaries only."
+  ],
+  "license": "copyrighted",
+  "access_status": "search_summary",
+  "verification_status": "unverified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M02"
+  ]
+ },
+ {
+  "key": "CowenKeltner2017",
+  "title": "Self-report captures 27 distinct categories of emotion bridged by continuous gradients",
+  "authors": "Cowen, A. S.; Keltner, D.",
+  "year": 2017,
+  "url": "https://pubmed.ncbi.nlm.nih.gov/28874542/",
+  "doi_isbn": "10.1073/pnas.1702247114",
+  "source_type": "empirical",
+  "tier": "A",
+  "key_findings": [
+   "PNAS 114(38), E7900-E7909. Reported emotional states elicited by 2,185 short videos.",
+   "Videos reliably elicited 27 distinct varieties of reported emotional experience; category labels (e.g. amusement) captured reports better than valence/arousal dimensions.",
+   "Boundaries between categories are fuzzy, linked by gradients (anxiety-fear-horror-disgust; calmness-aesthetic appreciation-awe) that track smooth variation in dimensions such as valence and dominance."
+  ],
+  "practical_applications": [
+   "Reference list for gap analysis of the studio's emotion libraries.",
+   "Gradients suggest designing transitions along neighbouring states, not jumps."
+  ],
+  "limitations": [
+   "Abstract-level; US English-speaking sample; Barrett et al. published a constructionist reply."
+  ],
+  "license": "copyrighted",
+  "access_status": "full_text",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M02"
+  ]
+ },
+ {
+  "key": "Lindquist2012",
+  "title": "The brain basis of emotion: A meta-analytic review",
+  "authors": "Lindquist, K. A.; Wager, T. D.; Kober, H.; Bliss-Moreau, E.; Barrett, L. F.",
+  "year": 2012,
+  "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC4329228",
+  "doi_isbn": "10.1017/S0140525X11000446",
+  "source_type": "meta-analysis",
+  "tier": "S",
+  "key_findings": [
+   "Behavioral and Brain Sciences 35(3), 121-143. Meta-analytic summary of human neuroimaging studies of emotion experience and perception.",
+   "Little evidence that discrete emotion categories are consistently and specifically localized to distinct brain regions (locationist hypothesis).",
+   "Evidence fits psychological construction: a set of interacting, domain-general networks is active across emotion categories and in non-emotional operations."
+  ],
+  "practical_applications": [
+   "Science basis for treating emotion labels as useful categories, not brain modules."
+  ],
+  "limitations": [
+   "Findings not read this session; only the framing from search results."
+  ],
+  "license": "copyrighted (PMC author manuscript)",
+  "access_status": "full_text",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M02"
+  ]
+ },
+ {
+  "key": "ScarantinoDeSousa2018",
+  "title": "Emotion (Stanford Encyclopedia of Philosophy)",
+  "authors": "Scarantino, A.; de Sousa, R.",
+  "year": 2018,
+  "url": "https://plato.stanford.edu/entries/emotion/",
+  "doi_isbn": "",
+  "source_type": "encyclopedia",
+  "tier": "B",
+  "key_findings": [
+   "Three traditions: feeling, evaluative (incl. appraisal), motivational.",
+   "Basic emotion theory vs psychological constructionism; appraisal theories answer the differentiation problem via appraisal patterns but do not by themselves say what emotions are."
+  ],
+  "practical_applications": [
+   "Orientation map for writers choosing which theory to lean on for a given task."
+  ],
+  "limitations": [
+   "Read first ~100k characters plus footer; first published 25 Sep 2018, revision date not seen."
+  ],
+  "license": "copyrighted (SEP)",
+  "access_status": "full_text",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M02"
+  ]
+ },
+ {
+  "key": "TracyRobins2004",
+  "title": "Putting the Self Into Self-Conscious Emotions: A Theoretical Model",
+  "authors": "Tracy, J. L.; Robins, R. W.",
+  "year": 2004,
+  "url": "https://sdimakis.github.io/moral_psychology/readings/week_8/optional/Tracy_2004.pdf",
+  "doi_isbn": "",
+  "source_type": "review",
+  "tier": "A",
+  "key_findings": [
+   "Psychological Inquiry 15(2), 103-125. Self-conscious emotions require self-awareness and self-representations, emerge later, are cognitively complex and show weaker evidence of universal expressions.",
+   "Model: attention to self -> identity-goal relevance -> internal attribution; shame = internal stable/global ('I'm a dumb person'), guilt = internal unstable/specific ('I didn't try hard enough').",
+   "Embarrassment: public self, identity-goal incongruence, internal attribution; argued less cognitively elaborated, emerges earlier in childhood.",
+   "Two prides: achievement-oriented (unstable/specific) vs hubristic (stable/global). Humiliation proposed as public focus + stable/global blame (flagged as under-researched)."
+  ],
+  "practical_applications": [
+   "Write shame vs guilt lines by the attribution: 'I'm hopeless' (shame) vs 'I forgot your glasses' (guilt).",
+   "Pride beats: credit the effort ('I practised') not the self ('I'm the best') to keep a character likeable."
+  ],
+  "limitations": [
+   "Read via text extraction of a course-hosted copy (keyword excerpts).",
+   "Theoretical model; predictions tested later by others."
+  ],
+  "license": "copyrighted",
+  "access_status": "full_text",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M02"
+  ]
+ },
+ {
+  "key": "TangneyStuewigMashek2007",
+  "title": "Moral emotions and moral behavior",
+  "authors": "Tangney, J. P.; Stuewig, J.; Mashek, D. J.",
+  "year": 2007,
+  "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC3083636/",
+  "doi_isbn": "10.1146/annurev.psych.56.091103.070145",
+  "source_type": "review",
+  "tier": "A",
+  "key_findings": [
+   "Annual Review of Psychology 58, 345-372. Reviews shame, guilt, embarrassment and positive moral emotions (elevation, gratitude, pride), plus other-oriented empathy.",
+   "Self-conscious emotions function as an 'emotional moral barometer' and can be anticipated before acting as well as felt afterwards.",
+   "On balance guilt (about a behaviour) appears more adaptive than shame (about the self); guilt-proneness consistently correlates with perspective-taking and empathic concern."
+  ],
+  "practical_applications": [
+   "Guilt (repair) is the prosocial self-conscious emotion; brand stories should invite repair, never shame the viewer."
+  ],
+  "limitations": [
+   "Only abstract-level summaries read (PMC blocked)."
+  ],
+  "license": "copyrighted",
+  "access_status": "full_text",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M02"
+  ]
+ },
+ {
+  "key": "Keltner1995",
+  "title": "Signs of Appeasement: Evidence for the Distinct Displays of Embarrassment, Amusement, and Shame",
+  "authors": "Keltner, D.",
+  "year": 1995,
+  "url": "https://greatergood.berkeley.edu/dacherkeltner/docs/keltner.embarrassment.jpsp.1995.pdf",
+  "doi_isbn": "",
+  "source_type": "empirical",
+  "tier": "A",
+  "key_findings": [
+   "JPSP 68(3), 441-454. Five studies: embarrassment has a distinct nonverbal display that differs from amusement and is identified by observers.",
+   "Embarrassment markers: gaze down, gaze shifts, smile controls, head turn, face touches; nearly all embarrassed targets looked down (94% vs 72% of amused).",
+   "Appeasement hypothesis: display more readily perceived from lower-status individuals."
+  ],
+  "practical_applications": [
+   "Animate embarrassment as a 2-3 s sequence (look down -> suppressed smile -> head turn -> touch face) for faceless puppets via body and head."
+  ],
+  "limitations": [
+   "Lab sample, US students; display is a tendency not a diagnostic (see Barrett2019).",
+   "Read via text extraction (keyword excerpts)."
+  ],
+  "license": "copyrighted",
+  "access_status": "full_text",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M02"
+  ]
+ },
+ {
+  "key": "KeltnerHaidt2003",
+  "title": "Approaching awe, a moral, spiritual, and aesthetic emotion",
+  "authors": "Keltner, D.; Haidt, J.",
+  "year": 2003,
+  "url": "https://pubmed.ncbi.nlm.nih.gov/29715721/",
+  "doi_isbn": "",
+  "source_type": "review",
+  "tier": "A",
+  "key_findings": [
+   "Cognition and Emotion 17, 297-314. Prototype approach: perceived vastness + need for accommodation; peripheral flavours.",
+   "Proposed evolutionary origin in low-rank members' response to powerful leaders."
+  ],
+  "practical_applications": [
+   "Awe images need scale (small figure, vast scene) and something that does not fit expectations."
+  ],
+  "limitations": [
+   "Abstract and secondary summaries; theoretical paper."
+  ],
+  "license": "copyrighted",
+  "access_status": "search_summary",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M02"
+  ]
+ },
+ {
+  "key": "Allen2018",
+  "title": "The Science of Awe (white paper for the John Templeton Foundation)",
+  "authors": "Allen, S. (Greater Good Science Center, UC Berkeley)",
+  "year": 2018,
+  "url": "https://ggsc.berkeley.edu/images/uploads/GGSC-JTF_White_Paper-Awe_FINAL.pdf",
+  "doi_isbn": "",
+  "source_type": "review",
+  "tier": "B",
+  "key_findings": [
+   "Summarises Keltner & Haidt: vastness + accommodation; five flavours: threat, beauty, ability, virtue, supernatural causality.",
+   "Awe often accompanied by 'small self', connectedness; cultural differences in elicitors (personal accomplishment more in US, awe of another person more in China)."
+  ],
+  "practical_applications": [
+   "Threat-flavoured awe (storm, huge wave) vs beauty awe (sunset at Hua Hin) need different palettes and music."
+  ],
+  "limitations": [
+   "Funded white paper, narrative review; read via text extraction (excerpts)."
+  ],
+  "license": "copyrighted",
+  "access_status": "full_text",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M02"
+  ]
+ },
+ {
+  "key": "Piff2015",
+  "title": "Awe, the small self, and prosocial behavior",
+  "authors": "Piff, P. K.; Dietze, P.; Feinberg, M.; Stancato, D. M.; Keltner, D.",
+  "year": 2015,
+  "url": "https://www.apa.org/news/press/releases/2015/05/altruistic-behavior",
+  "doi_isbn": "10.1037/pspi0000018",
+  "source_type": "empirical",
+  "tier": "A",
+  "key_findings": [
+   "JPSP 108(6). Five studies; dispositional and induced awe linked to more prosocial behaviour, mediated by a sense of small self (per press release)."
+  ],
+  "practical_applications": [
+   "Awe scenes can precede a kindness beat in a story."
+  ],
+  "limitations": [
+   "Press-release level; a student replication reported failure to replicate the small-self finding (unpublished)."
+  ],
+  "license": "copyrighted",
+  "access_status": "search_summary",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M02"
+  ]
+ },
+ {
+  "key": "Lin2025AweMeta",
+  "title": "The relationship between awe and prosocial behavior: Three-level meta-analysis and meta-analytic structural equation modeling",
+  "authors": "Lin, R.; Yu, Q.; Hu, T.; Zhang, J.; Ye, Y.; Lian, R.",
+  "year": 2025,
+  "url": "https://journal.psych.ac.cn/acps/EN/10.3724/SP.J.1041.2025.0631",
+  "doi_isbn": "10.3724/SP.J.1041.2025.0631",
+  "source_type": "meta-analysis",
+  "tier": "S",
+  "key_findings": [
+   "Acta Psychologica Sinica 57(4), 631-651. Subgroup estimates seen in snippets: self-report prosocial measures r ~ .41, lab behavioural measures r ~ .24."
+  ],
+  "practical_applications": [
+   "Expect awe->kindness effects to be modest in real behaviour."
+  ],
+  "limitations": [
+   "Pooled estimate not seen; snippet-level only."
+  ],
+  "license": "unknown",
+  "access_status": "search_summary",
+  "verification_status": "unverified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M02"
+  ]
+ },
+ {
+  "key": "Algoe2012",
+  "title": "Find, Remind, and Bind: The Functions of Gratitude in Everyday Relationships",
+  "authors": "Algoe, S. B.",
+  "year": 2012,
+  "url": "https://cir.nii.ac.jp/crid/1360011146523440000",
+  "doi_isbn": "10.1111/j.1751-9004.2012.00439.x",
+  "source_type": "review",
+  "tier": "A",
+  "key_findings": [
+   "Social and Personality Psychology Compass 6(6), 455-469. Gratitude helps find new relationship partners, reminds of existing ones and binds (maintains) them."
+  ],
+  "practical_applications": [
+   "Thank-you posts to customers work as relationship 'bind' moments, not just politeness."
+  ],
+  "limitations": [
+   "Secondary summaries only."
+  ],
+  "license": "copyrighted",
+  "access_status": "search_summary",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M02"
+  ]
+ },
+ {
+  "key": "vandeVen2009",
+  "title": "Leveling up and down: The experiences of benign and malicious envy",
+  "authors": "van de Ven, N.; Zeelenberg, M.; Pieters, R.",
+  "year": 2009,
+  "url": "https://pubmed.ncbi.nlm.nih.gov/19485619/",
+  "doi_isbn": "10.1037/a0015669",
+  "source_type": "empirical",
+  "tier": "A",
+  "key_findings": [
+   "Emotion 9(3), 419-429. Benign envy -> moving-up motivation (self-improvement); malicious envy -> pulling-down motivation; found in Dutch (two words) and US/Spanish (one word) samples."
+  ],
+  "practical_applications": [
+   "Marketing should evoke benign envy (I could have that too) and never malicious envy or mockery of others."
+  ],
+  "limitations": [
+   "Abstract only."
+  ],
+  "license": "copyrighted",
+  "access_status": "abstract",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M02"
+  ]
+ },
+ {
+  "key": "Hatfield1993",
+  "title": "Emotional Contagion",
+  "authors": "Hatfield, E.; Cacioppo, J. T.; Rapson, R. L.",
+  "year": 1993,
+  "url": "https://www.psychologicalscience.org/journals/current-directions/1467-8721.ep10770953/",
+  "doi_isbn": "10.1111/1467-8721.ep10770953",
+  "source_type": "review",
+  "tier": "A",
+  "key_findings": [
+   "Current Directions in Psychological Science 2(3). Primitive emotional contagion: automatic mimicry of face, voice, posture, then feedback from the mimicry shapes one's own feeling, producing convergence (as summarised by secondary sources)."
+  ],
+  "practical_applications": [
+   "A calm, warm narrator voice and relaxed body language in clips are the low-level route to a calm viewer."
+  ],
+  "limitations": [
+   "Full text behind login; mechanism details from secondary summaries."
+  ],
+  "license": "copyrighted",
+  "access_status": "search_summary",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M02"
+  ]
+ },
+ {
+  "key": "ManySmiles2022",
+  "title": "A multi-lab test of the facial feedback hypothesis by the Many Smiles Collaboration",
+  "authors": "Coles, N. A. et al.",
+  "year": 2022,
+  "url": "https://hal.univ-grenoble-alpes.fr/hal-04048618",
+  "doi_isbn": "10.1038/s41562-022-01458-9",
+  "source_type": "empirical",
+  "tier": "S",
+  "key_findings": [
+   "Nature Human Behaviour 6, 1731-1742. Preregistered adversarial multi-lab study, n = 3,878 participants in 19 countries.",
+   "Facial mimicry and voluntary facial action tasks could both amplify and initiate feelings of happiness.",
+   "Evidence was less conclusive when facial feedback was manipulated unobtrusively via the pen-in-mouth task."
+  ],
+  "practical_applications": [
+   "Feedback (part of contagion) is real but small: do not promise 'smile and you will feel happy' in health content."
+  ],
+  "limitations": [
+   "Effect sizes not read this session.",
+   "Only the abstract on the publisher page was read (full text paywalled at session time)."
+  ],
+  "license": "unknown (repository copy)",
+  "access_status": "abstract",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M02"
+  ]
+ },
+ {
+  "key": "Kramer2014",
+  "title": "Experimental evidence of massive-scale emotional contagion through social networks",
+  "authors": "Kramer, A. D. I.; Guillory, J. E.; Hancock, J. T.",
+  "year": 2014,
+  "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC4066473",
+  "doi_isbn": "",
+  "source_type": "empirical",
+  "tier": "A",
+  "key_findings": [
+   "PNAS 111(24), 8788-8790. News Feed experiment with N = 689,003 Facebook users.",
+   "Reducing positive posts: positive words in users' updates fell by 0.1% (d = 0.02) and negative words rose 0.04% (d = 0.001); reducing negative posts had the opposite pattern (d = 0.02 and 0.008).",
+   "Authors note effects are small (as small as d = 0.001) but argue they matter at scale; a withdrawal effect also appeared (fewer emotional posts seen -> less expressive)."
+  ],
+  "practical_applications": [
+   "Feed tone spreads in text form even without faces; keep the shop's feed warm, not anxious."
+  ],
+  "limitations": [
+   "Effect sizes very small (not verified here); Editorial Expression of Concern over consent - ethically contested.",
+   "Effect sizes are tiny; consent/ethics of the experiment were widely criticised (secondary).",
+   "PNAS published an Editorial Expression of Concern (111(29):10779) about consent.",
+   "Spot-check U3 2026-11-25 applied."
+  ],
+  "license": "copyrighted",
+  "access_status": "full_text",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M02"
+  ]
+ },
+ {
+  "key": "Gross1998",
+  "title": "The emerging field of emotion regulation: An integrative review",
+  "authors": "Gross, J. J.",
+  "year": 1998,
+  "url": "https://static1.squarespace.com/static/55917f64e4b0cd3b4705b68c/t/5c47fda9758d46280be433e9/1548221901394/Gross+%281998%29.pdf",
+  "doi_isbn": "10.1037/1089-2680.2.3.271",
+  "source_type": "review",
+  "tier": "A",
+  "key_findings": [
+   "Review of General Psychology 2(3), 271-299. Defines emotion regulation as how people influence which emotions they have, when, and how they experience and express them; distinguishes it from coping, mood regulation, defence and affect regulation.",
+   "Process model: antecedent-focused strategies (situation selection, situation modification, attentional deployment, cognitive change/reappraisal) vs response-focused strategies (response modulation, e.g. suppression).",
+   "Reviews early evidence that reappraisal and suppression have different consequences, with reappraisal acting earlier in the emotion process."
+  ],
+  "practical_applications": [
+   "Five regulation points = five places a story character can change an emotion: choose the situation, change it, shift attention, rethink it, hide it."
+  ],
+  "limitations": [
+   "Abstract-level; full text not read."
+  ],
+  "license": "copyrighted",
+  "access_status": "full_text",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M02"
+  ]
+ },
+ {
+  "key": "Gross2002",
+  "title": "Emotion regulation: Affective, cognitive, and social consequences",
+  "authors": "Gross, J. J.",
+  "year": 2002,
+  "url": "https://pubmed.ncbi.nlm.nih.gov/12212647/",
+  "doi_isbn": "10.1017/s0048577201393198",
+  "source_type": "review",
+  "tier": "A",
+  "key_findings": [
+   "Psychophysiology 39(3), 281-291. Reappraisal (early) decreases experience and expression with no memory cost; suppression (late) decreases expression but not experience, impairs memory and increases physiological responding for suppressors and their partners.",
+   "Suppressing negative expression does not reduce negative experience, but suppressing positive expression does reduce amusement."
+  ],
+  "practical_applications": [
+   "'Holding back tears' = suppression: the feeling stays, the body leaks (breath, jaw, hands).",
+   "Reappraisal lines ('maybe it's a chance to...') are the healthy turn in Mint & Tao stories."
+  ],
+  "limitations": [
+   "Read via text extraction of a course-hosted PDF (abstract + excerpts); mostly US student samples."
+  ],
+  "license": "copyrighted",
+  "access_status": "full_text",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M02"
+  ]
+ },
+ {
+  "key": "GrossJohn2003",
+  "title": "Individual differences in two emotion regulation processes: Implications for affect, relationships, and well-being",
+  "authors": "Gross, J. J.; John, O. P.",
+  "year": 2003,
+  "url": "https://pubmed.ncbi.nlm.nih.gov/12916575/",
+  "doi_isbn": "10.1037/0022-3514.85.2.348",
+  "source_type": "empirical",
+  "tier": "A",
+  "key_findings": [
+   "JPSP 85(2), 348-362. Five studies; introduces the ERQ. Habitual reappraisal relates to better well-being and interpersonal functioning; habitual suppression to worse."
+  ],
+  "practical_applications": [
+   "Characters who habitually suppress can be shown as more distant in relationships - a gentle arc toward sharing feelings."
+  ],
+  "limitations": [
+   "Correlational; abstract only."
+  ],
+  "license": "copyrighted",
+  "access_status": "abstract",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M02"
+  ]
+ },
+ {
+  "key": "Gross2015",
+  "title": "Emotion Regulation: Current Status and Future Prospects",
+  "authors": "Gross, J. J.",
+  "year": 2015,
+  "url": "https://ora.ox.ac.uk/objects/uuid:9bba3ad3-97f3-492b-add1-9c450cfb3d47",
+  "doi_isbn": "10.1080/1047840X.2014.940781",
+  "source_type": "review",
+  "tier": "A",
+  "key_findings": [
+   "Psychological Inquiry 26(1), 1-26. Extended process model: regulation as valuation with stages identification, selection, implementation."
+  ],
+  "practical_applications": [
+   "Story arcs of regulation: notice the feeling -> pick a strategy -> carry it out."
+  ],
+  "limitations": [
+   "Search summaries only; commentary notes co-regulation is underplayed."
+  ],
+  "license": "copyrighted",
+  "access_status": "search_summary",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M02"
+  ]
+ },
+ {
+  "key": "Webb2012",
+  "title": "Dealing with feeling: A meta-analysis of the effectiveness of strategies derived from the process model of emotion regulation",
+  "authors": "Webb, T. L.; Miles, E.; Sheeran, P.",
+  "year": 2012,
+  "url": "https://www.socmot.uni-konstanz.de/node/89",
+  "doi_isbn": "10.1037/a0027600",
+  "source_type": "meta-analysis",
+  "tier": "S",
+  "key_findings": [
+   "Psychological Bulletin 138(4), 775-808. 306 comparisons: attentional deployment overall d+ = 0.00 (distraction 0.27, concentration -0.26); response modulation small (0.16; suppressing expression 0.32, suppressing experience/thoughts not effective); cognitive change small-medium (reappraising stimulus 0.36, perspective taking 0.45, reappraising response 0.23)."
+  ],
+  "practical_applications": [
+   "Perspective-taking is the strongest listed strategy - ideal for Mint helping Tao see it from another side."
+  ],
+  "limitations": [
+   "Figures from abstract/secondary snippets; lab manipulations."
+  ],
+  "license": "copyrighted",
+  "access_status": "search_summary",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M02"
+  ]
+ },
+ {
+  "key": "ButlerLeeGross2007",
+  "title": "Emotion regulation and culture: Are the social consequences of emotion suppression culture-specific?",
+  "authors": "Butler, E. A.; Lee, T. L.; Gross, J. J.",
+  "year": 2007,
+  "url": "https://pubmed.ncbi.nlm.nih.gov/17352561/",
+  "doi_isbn": "",
+  "source_type": "empirical",
+  "tier": "A",
+  "key_findings": [
+   "Emotion 7(1), 30-48. Suppression's negative social effects (less responsiveness, hostile partner perceptions) were smaller for participants with stronger Asian values."
+  ],
+  "practical_applications": [
+   "Thai polite restraint should not automatically be written as cold or fake; in-culture it can read as considerate."
+  ],
+  "limitations": [
+   "Female US college students (European vs bicultural Asian values); not Thai samples."
+  ],
+  "license": "copyrighted",
+  "access_status": "abstract",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M02"
+  ]
+ },
+ {
+  "key": "Kashdan2015",
+  "title": "Unpacking Emotion Differentiation: Transforming Unpleasant Experience by Perceiving Distinctions in Negativity",
+  "authors": "Kashdan, T. B.; Barrett, L. F.; McKnight, P. E.",
+  "year": 2015,
+  "url": "https://www.psychologicalscience.org/journals/current-directions/0963721414550708/",
+  "doi_isbn": "10.1177/0963721414550708",
+  "source_type": "review",
+  "tier": "A",
+  "key_findings": [
+   "Current Directions in Psychological Science 24, 10-16. Emotion differentiation (granularity) - distinguishing fine-grained negative states - supports regulation and is a component of interventions."
+  ],
+  "practical_applications": [
+   "Precise emotion words in Thai captions (e.g. 'น้อยใจ' vs 'เสียใจ') are more useful to viewers than 'sad'."
+  ],
+  "limitations": [
+   "Abstract-level; measurement validity debated."
+  ],
+  "license": "copyrighted",
+  "access_status": "abstract",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M02"
+  ]
+ },
+ {
+  "key": "BerriosTotterdellKellett2015",
+  "title": "Eliciting mixed emotions: a meta-analysis comparing models, types, and measures",
+  "authors": "Berrios, R.; Totterdell, P.; Kellett, S.",
+  "year": 2015,
+  "url": "https://www.frontiersin.org/articles/10.3389/fpsyg.2015.00428/full",
+  "doi_isbn": "10.3389/fpsyg.2015.00428",
+  "source_type": "meta-analysis",
+  "tier": "S",
+  "key_findings": [
+   "63 experimental studies (N = 7,157): mixed emotions reliably elicited, d = 0.77 (PET-PEESE corrected ~0.53); similar across discrete vs dimensional models and across mixed-emotion types.",
+   "Happy-sad is the most studied pair; methods include films, music, ads, autobiographical recall.",
+   "Supports the Evaluative Space Model (positive and negative affect as separable) over strictly bipolar circumplex."
+  ],
+  "practical_applications": [
+   "Bittersweet endings (farewell, last day of a season) are a scientifically real target, not a contradiction."
+  ],
+  "limitations": [
+   "Experimental studies only; self-report and memory biases; first ~100k characters read."
+  ],
+  "license": "CC BY 4.0",
+  "access_status": "full_text",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M02"
+  ]
+ },
+ {
+  "key": "VerduynLavrijsen2015",
+  "title": "Which emotions last longest and why: The role of event importance and rumination",
+  "authors": "Verduyn, P.; Lavrijsen, S.",
+  "year": 2015,
+  "url": "https://ppw.kuleuven.be/okp/_pdf/Verduyn2015WELLA.pdf",
+  "doi_isbn": "",
+  "source_type": "empirical",
+  "tier": "A",
+  "key_findings": [
+   "Motivation and Emotion 39, 119-127. 233 Belgian high-school students recalled recent episodes of 27 emotions and reported duration, appraisals and regulation.",
+   "Sadness lasted longest (median ~120 h in the paper's figure); shame, surprise, fear, disgust, boredom, being touched, irritation and relief were shortest.",
+   "Fear was shorter than anxiety (t(1647) = 4.12, p < .0001) and guilt longer than shame (t(1647) = 2.71, p = .0067).",
+   "Event importance and rumination together accounted for 43% of the between-emotion variance in duration."
+  ],
+  "practical_applications": [
+   "Sadness/guilt beats can linger across slides; fear/surprise resolve fast."
+  ],
+  "limitations": [
+   "Retrospective self-report; Belgian adolescents; specific hour figures from press coverage only.",
+   "Retrospective self-reports from one adolescent sample; the press figure of ~35 h for joy was not confirmed from the text."
+  ],
+  "license": "copyrighted",
+  "access_status": "full_text",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M02"
+  ]
+ },
+ {
+  "key": "KuppensVerduyn2017",
+  "title": "Emotion dynamics",
+  "authors": "Kuppens, P.; Verduyn, P.",
+  "year": 2017,
+  "url": "https://cris.maastrichtuniversity.nl/en/publications/emotion-dynamics/",
+  "doi_isbn": "10.1016/j.copsyc.2017.06.004",
+  "source_type": "review",
+  "tier": "A",
+  "key_findings": [
+   "Current Opinion in Psychology 17, 22-26. Study of trajectories, patterns and regularities of emotional change over time; inertia (resistance to change) cited from this line of work."
+  ],
+  "practical_applications": [
+   "Character design: high-inertia character (slow to change mood) vs high-variability character."
+  ],
+  "limitations": [
+   "Bibliographic record + citing papers only."
+  ],
+  "license": "copyrighted",
+  "access_status": "bibliographic",
+  "verification_status": "unverified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M02"
+  ]
+ },
+ {
+  "key": "FredricksonKahneman1993",
+  "title": "Duration neglect in retrospective evaluations of affective episodes",
+  "authors": "Fredrickson, B. L.; Kahneman, D.",
+  "year": 1993,
+  "url": "https://bear.warrington.ufl.edu/brenner/mar7588/Papers/fredr-kahneman-jpsp1993.pdf",
+  "doi_isbn": "10.1037/0022-3514.65.1.45",
+  "source_type": "empirical",
+  "tier": "A",
+  "key_findings": [
+   "JPSP 65(1), 45-55. Study 1: 32 participants rated pleasant and aversive film clips of varied length in real time and globally; Study 2: 96 participants ranked the clips from memory or online.",
+   "Effects of duration on retrospective evaluations were small, fully explained by changes in real-time affect, and smaller when made from memory (duration neglect).",
+   "Retrospective evaluations behave like a weighted average of 'snapshots'; the paper cites a reanalysis of Varey & Kahneman (1992) where peak + end discomfort explained 94% of variance and duration added only 3%."
+  ],
+  "practical_applications": [
+   "Design every clip and carousel with a deliberate peak and a warm last slide; length matters less than the ending."
+  ],
+  "limitations": [
+   "Lab film clips; peak-end does not hold well for day-long experiences (Miron-Shatz).",
+   "The 94% figure comes from the cited reanalysis of judgments about another person's schematic discomfort reports, not from these film studies."
+  ],
+  "license": "copyrighted",
+  "access_status": "full_text",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M02"
+  ]
+ },
+ {
+  "key": "LaBarCabeza2006",
+  "title": "Cognitive neuroscience of emotional memory",
+  "authors": "LaBar, K. S.; Cabeza, R.",
+  "year": 2006,
+  "url": "https://scholars.duke.edu/publication/663628",
+  "doi_isbn": "10.1038/nrn1825",
+  "source_type": "review",
+  "tier": "A",
+  "key_findings": [
+   "Nature Reviews Neuroscience 7(1), 54-64. The amygdala mediates emotional learning and boosts memory operations in hippocampus and prefrontal cortex across encoding, consolidation and retrieval."
+  ],
+  "practical_applications": [
+   "Emotional (arousing) moments in a story are remembered better - put the product/brand inside the emotional beat, not after it."
+  ],
+  "limitations": [
+   "Abstract only."
+  ],
+  "license": "copyrighted",
+  "access_status": "abstract",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M02"
+  ]
+ },
+ {
+  "key": "TalaricoRubin2003",
+  "title": "Confidence, not consistency, characterizes flashbulb memories",
+  "authors": "Talarico, J. M.; Rubin, D. C.",
+  "year": 2003,
+  "url": "https://www.psychologicalscience.org/journals/psychological-science/1467-9280.02453/",
+  "doi_isbn": "10.1111/1467-9280.02453",
+  "source_type": "empirical",
+  "tier": "A",
+  "key_findings": [
+   "Psychological Science 14(5), 455-461. 54 students after 9/11: consistency of flashbulb and everyday memories declined equally; only vividness/confidence stayed high for flashbulb memories."
+  ],
+  "practical_applications": [
+   "Emotional memories feel vivid but are not more accurate: characters can be confidently wrong about the past - a good story device."
+  ],
+  "limitations": [
+   "Small sample; up to 32 weeks."
+  ],
+  "license": "copyrighted",
+  "access_status": "abstract",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M02"
+  ]
+ },
+ {
+  "key": "Jack2012",
+  "title": "Facial expressions of emotion are not culturally universal",
+  "authors": "Jack, R. E.; Garrod, O. G. B.; Yu, H.; Caldara, R.; Schyns, P. G.",
+  "year": 2012,
+  "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC3358835",
+  "doi_isbn": "",
+  "source_type": "empirical",
+  "tier": "A",
+  "key_findings": [
+   "PNAS 109(19), 7241-7244. Reverse-correlation with a generative face grammar: 15 Western Caucasian and 15 East Asian observers each categorized 4,800 animations.",
+   "Western mental models formed six distinct clusters for the six 'basic' emotions; East Asian models did not form distinct clusters.",
+   "East Asian observers represented emotional intensity with distinctive dynamic eye activity; authors argue this refutes the universality hypothesis."
+  ],
+  "practical_applications": [
+   "Do not rely on Western-coded facial clichés for Thai audiences; context matters more."
+  ],
+  "limitations": [
+   "Debated (Sauter & Eisner comment and reply); summaries only.",
+   "Small observer sample (30); later critiques (e.g. Sauter & Eisner, secondary) dispute the strength of the conclusion."
+  ],
+  "license": "copyrighted",
+  "access_status": "full_text",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M02"
+  ]
+ },
+ {
+  "key": "Crivelli2016",
+  "title": "The fear gasping face as a threat display in a Melanesian society",
+  "authors": "Crivelli, C.; Russell, J. A.; Jarillo, S.; Fernández-Dols, J.-M.",
+  "year": 2016,
+  "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC5098662",
+  "doi_isbn": "10.1073/pnas.1611622113",
+  "source_type": "empirical",
+  "tier": "A",
+  "key_findings": [
+   "PNAS 113(44). Two studies with adolescents of the Trobriand Islands (Papua New Guinea), with researchers speaking the vernacular.",
+   "Study 1: mixed, variable attribution with much lower agreement than in Western samples; the gasping 'fear' face was consistently matched to anger and threat.",
+   "Study 2: asked to pick the threatening face, Trobrianders chose the gasping 'fear' face, Spaniards the scowling 'angry' face."
+  ],
+  "practical_applications": [
+   "Face-to-emotion mappings are culture-dependent."
+  ],
+  "limitations": [
+   "Small-scale society; definitional critique of 'gasping face'."
+  ],
+  "license": "copyrighted",
+  "access_status": "full_text",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M02"
+  ]
+ },
+ {
+  "key": "ElfenbeinAmbady2002",
+  "title": "On the universality and cultural specificity of emotion recognition: a meta-analysis",
+  "authors": "Elfenbein, H. A.; Ambady, N.",
+  "year": 2002,
+  "url": "https://pubmed.ncbi.nlm.nih.gov/11931516/",
+  "doi_isbn": "",
+  "source_type": "meta-analysis",
+  "tier": "S",
+  "key_findings": [
+   "Psychological Bulletin 128(2), 203-235. Emotions recognised above chance across cultures, with an in-group advantage (better accuracy for same-culture expressors)."
+  ],
+  "practical_applications": [
+   "Thai actors/voices are read more accurately by Thai viewers - favour Thai talent and Thai TTS."
+  ],
+  "limitations": [
+   "Matsumoto (2002) disputes the in-group advantage on design grounds."
+  ],
+  "license": "copyrighted",
+  "access_status": "abstract",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M02"
+  ]
+ },
+ {
+  "key": "MesquitaFrijda1992",
+  "title": "Cultural variations in emotions: A review",
+  "authors": "Mesquita, B.; Frijda, N. H.",
+  "year": 1992,
+  "url": "https://dare.uva.nl/id/8df34d69-af17-4058-bb38-d546508243fe",
+  "doi_isbn": "",
+  "source_type": "review",
+  "tier": "A",
+  "key_findings": [
+   "Psychological Bulletin 112(2), 179-204. Cultural differences and similarities appear in every phase of the emotion process; which appears depends on level of description; differences arise from event schemas, appraisal propensities, behaviour repertoires, regulation."
+  ],
+  "practical_applications": [
+   "Localise emotion at each phase: what triggers it in Thai life, how it is appraised, how it is shown, how it is regulated."
+  ],
+  "limitations": [
+   "Abstract only."
+  ],
+  "license": "copyrighted",
+  "access_status": "abstract",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M02"
+  ]
+ },
+ {
+  "key": "Jackson2019",
+  "title": "Emotion semantics show both cultural variation and universal structure",
+  "authors": "Jackson, J. C.; Watts, J.; Henry, T. R.; List, J.-M.; et al.",
+  "year": 2019,
+  "url": "https://openresearch-repository.anu.edu.au/bitstreams/51e9da84-0297-470f-beb0-c58eeec2c575/download",
+  "doi_isbn": "10.1126/science.aaw8160",
+  "source_type": "empirical",
+  "tier": "A",
+  "key_findings": [
+   "Science 366(6472), 1517-1522. Colexification analysis of emotion concepts across 2,474 spoken languages.",
+   "Emotion colexification networks vary significantly across language families, and the variation is predicted by the geographic proximity of the families.",
+   "Universal structure too: all families differentiate emotions primarily by hedonic valence and secondarily by physiological activation."
+  ],
+  "practical_applications": [
+   "Translate emotions by meaning, not word-for-word; valence/arousal is the safe common ground."
+  ],
+  "limitations": [
+   "Abstract/press-level."
+  ],
+  "license": "copyrighted",
+  "access_status": "full_text",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M02"
+  ]
+ },
+ {
+  "key": "TsaiKnutsonFung2006",
+  "title": "Cultural variation in affect valuation",
+  "authors": "Tsai, J. L.; Knutson, B.; Fung, H. H.",
+  "year": 2006,
+  "url": "https://www.psychologicalscience.org/observer/affect-valuation-theory-measurement-and-cultural-variation",
+  "doi_isbn": "",
+  "source_type": "empirical",
+  "tier": "A",
+  "key_findings": [
+   "JPSP. Ideal affect (how people want to feel) is shaped by culture more than actual affect; European Americans value high-arousal positive states more, Hong Kong Chinese value low-arousal positive (calm) more; a 2025 meta-analysis reports these differences persist."
+  ],
+  "practical_applications": [
+   "Thai/Asian audiences may respond to calm-positive (LAP) imagery; test rather than assume."
+  ],
+  "limitations": [
+   "No Thai samples; secondary summaries."
+  ],
+  "license": "copyrighted",
+  "access_status": "search_summary",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M02"
+  ]
+ },
+ {
+  "key": "Pothisitthiporn2016",
+  "title": "A comparative study of smiling facial expressions and display rules of the Thai and the Japanese",
+  "authors": "Pothisitthiporn, T.; Maiya, K.",
+  "year": 2016,
+  "url": "https://digital.car.chula.ac.th/arv/vol29/iss1/7",
+  "doi_isbn": "10.58837/CHULA.ARV.29.1.6",
+  "source_type": "empirical",
+  "tier": "B",
+  "key_findings": [
+   "Asian Review 29(1), 101-121. Interviews: when not happy, Thais smiled more when greeting or apologising; Japanese smiled more to fit in with a group; Thais raised cheeks (AU6) more when smiling with sadness."
+  ],
+  "practical_applications": [
+   "A Thai smile in a story is a social act (greeting, apology, kreng jai), not proof of joy."
+  ],
+  "limitations": [
+   "Abstract only; sample size not seen."
+  ],
+  "license": "unknown",
+  "access_status": "publisher_page",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M02"
+  ]
+ },
+ {
+  "key": "WyattPromkandorn2012",
+  "title": "A discourse analysis of the Thai experience of 'being krengjai'",
+  "authors": "Wyatt, B.; Promkandorn, S.",
+  "year": 2012,
+  "url": "https://www.degruyterbrill.com/document/doi/10.1515/ip-2012-0021/html",
+  "doi_isbn": "10.1515/ip-2012-0021",
+  "source_type": "empirical",
+  "tier": "A",
+  "key_findings": [
+   "Intercultural Pragmatics. Historical research + questionnaire of 471 Thai people mapping the many meanings of krengjai (consideration, deference, reluctance to impose)."
+  ],
+  "practical_applications": [
+   "Kreng jai lines need a relational context (status gap, debt, closeness)."
+  ],
+  "limitations": [
+   "Publisher page returned an error; known from search summary only."
+  ],
+  "license": "copyrighted",
+  "access_status": "search_summary",
+  "verification_status": "unverified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M02"
+  ]
+ },
+ {
+  "key": "Komin1990",
+  "title": "Psychology of the Thai People: Values and Behavioral Patterns",
+  "authors": "Komin, S.",
+  "year": 1990,
+  "url": "https://search.worldcat.org/oclc/35221306",
+  "doi_isbn": "",
+  "source_type": "textbook",
+  "tier": "B",
+  "key_findings": [
+   "Bangkok: NIDA. Nine Thai value clusters from a survey of 2,469 Thais (1978-81), including interdependence and fun-pleasure (sanuk) orientations (per secondary sources)."
+  ],
+  "practical_applications": [
+   "Sanuk and interdependence as content tones for the shop."
+  ],
+  "limitations": [
+   "Not read; year given as 1990 or 1991 in different records."
+  ],
+  "license": "copyrighted",
+  "access_status": "bibliographic",
+  "verification_status": "unverified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M02"
+  ]
+ },
+ {
+  "key": "ThaiEmotionWords2020",
+  "title": "Basic Emotion Words Derived from Physiological Effects in Thai",
+  "authors": "ต๊ะวิชัย ศ. (as listed on the journal page)",
+  "year": 2020,
+  "url": "https://so04.tci-thaijo.org/index.php/jasu/article/view/238677",
+  "doi_isbn": "",
+  "source_type": "empirical",
+  "tier": "B",
+  "key_findings": [
+   "Journal of the Faculty of Arts, Silpakorn University 37(2), 182-221. 195 Thai basic emotion words from the Royal Institute Dictionary 2011 + survey of 200 speakers; prototypes include ชื่นใจ (happiness), ต้องใจ (affection), น้ำตาตกใน (sorrow), เสียวสันหลัง (fear), เลือดพล่าน (anger); seven lexicalisation processes; meaning extended via metonymy/metaphor."
+  ],
+  "practical_applications": [
+   "Use bodily Thai idioms in captions and VO for vivid, culturally native emotion naming."
+  ],
+  "limitations": [
+   "Abstract only; issue labelled 2015 but published online 2020."
+  ],
+  "license": "unknown",
+  "access_status": "abstract",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M02"
+  ]
+ },
+ {
+  "key": "Bovonwiwat2023",
+  "title": "A Review of Studies in Heart or Jai Metaphor in Thai Language",
+  "authors": "Bovonwiwat, W.",
+  "year": 2023,
+  "url": "https://so06.tci-thaijo.org/index.php/mpjh/article/view/266644",
+  "doi_isbn": "",
+  "source_type": "review",
+  "tier": "B",
+  "key_findings": [
+   "Manutsat Paritat: Journal of Humanities 45(2), 68-85. Jai (heart) metaphors fall into four groups: heart as person, object, space, container; central to everyday Thai emotion talk."
+  ],
+  "practical_applications": [
+   "Visual metaphors for Thai emotion (a 'cool' or 'wide' heart) can be drawn from these mappings."
+  ],
+  "limitations": [
+   "Abstract only; DOI shown on page looked malformed, omitted."
+  ],
+  "license": "unknown",
+  "access_status": "abstract",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M02"
+  ]
+ },
+ {
+  "key": "ThaiES16_2026",
+  "title": "Assessing Equanimity in a Thai Buddhist Context: Psychometric Validation of the Thai Equanimity Scale-16",
+  "authors": "",
+  "year": 2026,
+  "url": "https://so04.tci-thaijo.org/index.php/JSBA/article/view/286333",
+  "doi_isbn": "",
+  "source_type": "empirical",
+  "tier": "B",
+  "key_findings": [
+   "Journal of Socio-Buddhist Analytics 11(1), 162-175 (Jan-Mar 2026). Thai Equanimity Scale-16 validated with 437 Thai mindfulness-oriented adults; 211 from monastic-university networks retested after one week.",
+   "Two-factor model (Experiential Acceptance, Non-Reactivity) fit well: CFI = 0.994, TLI = 0.990, RMSEA = 0.020; internal consistency .84; one-week test-retest r = .89.",
+   "Higher equanimity associated with greater benevolence and fewer aversive tendencies (SOFI); authors argue Western scales reduce upekkha to emotion regulation/reduced reactivity, missing its insight- and compassion-based meaning."
+  ],
+  "practical_applications": [
+   "'Jai yen'/equanimity is valued in Thai culture and is more than suppression."
+  ],
+  "limitations": [
+   "Search snippet only; authors not captured.",
+   "Sample is mindfulness-oriented Thai adults, not the general public."
+  ],
+  "license": "unknown",
+  "access_status": "full_text",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M02"
+  ]
+ },
+ {
+  "key": "Scroope2025",
+  "title": "Thai Culture: Core Concepts (The Cultural Atlas)",
+  "authors": "Scroope, C.",
+  "year": 2025,
+  "url": "https://theculturalatlas.org/thai-culture/thai-culture-core-concepts",
+  "doi_isbn": "",
+  "source_type": "docs",
+  "tier": "C",
+  "key_findings": [
+   "Describes face, hierarchy, harmony (calm demeanour, avoiding outbursts), sanuk (finding enjoyment in what one does) linked to 'mai pen rai'."
+  ],
+  "practical_applications": [
+   "Background for tone; not evidence about emotion processes."
+  ],
+  "limitations": [
+   "Cultural guide, no in-text citations; generalises a diverse country."
+  ],
+  "license": "copyrighted",
+  "access_status": "full_text",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M02"
+  ]
+ }
+]

@@ -1,0 +1,1373 @@
+[
+ {
+  "key": "PBRT4_va",
+  "title": "Physically Based Rendering: From Theory to Implementation, 4th ed. — §9.3 Specular Reflection and Transmission; §11.1 Volume Scattering Processes",
+  "authors": "Matt Pharr, Wenzel Jakob, Greg Humphreys",
+  "year": 2023,
+  "url": "https://pbr-book.org/4ed/Reflection_Models/Specular_Reflection_and_Transmission",
+  "doi_isbn": "ISBN 9780262048026",
+  "source_type": "textbook",
+  "tier": "A",
+  "key_findings": [
+   "Table 9.1 IOR: air 1.00029, ice 1.31, water 1.333, fused quartz 1.46, glass 1.5-1.6, sapphire 1.77, diamond 2.42",
+   "Critical angle for air-glass TIR roughly 42 degrees",
+   "Conductors use complex IOR; light absorbed within ~0.1 micrometre",
+   "Media: sigma_t = sigma_a + sigma_s; transmittance falls exponentially; single-scattering albedo = sigma_s/sigma_t; mean free path = 1/sigma_t"
+  ],
+  "practical_applications": [
+   "Lens Fresnel/TIR table in LIGHTING_PHYSICS",
+   "Volumetric light and fog vocabulary"
+  ],
+  "limitations": [
+   "Extends registry record PBRT4 (which was bibliographic only): two sections read in full this session; other chapters not read"
+  ],
+  "license": "copyrighted (free online)",
+  "access_status": "full_text",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M10",
+   "M34"
+  ]
+ },
+ {
+  "key": "Burley2012_va",
+  "title": "Physically-Based Shading at Disney (SIGGRAPH 2012 course notes v3)",
+  "authors": "Brent Burley",
+  "year": 2012,
+  "url": "https://media.disneyanimation.com/uploads/production/publication_asset/48/asset/s2012_pbs_disney_brdf_notes_v3.pdf",
+  "doi_isbn": "",
+  "source_type": "docs",
+  "tier": "A",
+  "key_findings": [
+   "Principles: intuitive not physical parameters, as few as possible, 0-1 over plausible range",
+   "Parameters: baseColor, subsurface, metallic, specular, specularTint, roughness, anisotropic, sheen, sheenTint, clearcoat, clearcoatGloss",
+   "specular 0-1 maps to incident specular 0-0.08 = IOR 1.0-1.8; 0.5 = IOR 1.5 default",
+   "Clearcoat fixed IOR 1.5 (polyurethane)",
+   "alpha = roughness^2 for perceptual linearity",
+   "Diffuse is tinted by subsurface absorption; specular not tinted unless metallic",
+   "MERL observations: some woods show specular modulation; fabrics odd grazing response"
+  ],
+  "practical_applications": [
+   "PBR parameter table; rule: non-metal highlights are white"
+  ],
+  "limitations": [
+   "Extends registry record Burley2012 (publisher page only); full notes read this session via PDF text extraction; production model, art-directable rather than strictly physical"
+  ],
+  "license": "copyrighted",
+  "access_status": "full_text",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M34",
+   "M10"
+  ]
+ },
+ {
+  "key": "Karis2013",
+  "title": "Real Shading in Unreal Engine 4 (SIGGRAPH 2013 course notes)",
+  "authors": "Brian Karis",
+  "year": 2013,
+  "url": "https://cdn2.unrealengine.com/Resources/files/2013SiggraphPresentationsNotes-26915738.pdf",
+  "doi_isbn": "",
+  "source_type": "docs",
+  "tier": "C",
+  "key_findings": [
+   "Base material: BaseColor, Metallic, Roughness, Cavity; Specular dropped, non-metal F0 constant 0.04",
+   "Variable IOR 'fairly unimportant for nonmetals'",
+   "Physically accurate inverse-square falloff windowed: saturate(1-(d/r)^4)^2/(d^2+1)",
+   "Sphere and tube area lights via representative point with energy conservation so materials look the same regardless of light size"
+  ],
+  "practical_applications": [
+   "Falloff explanation; why eyewear lenses are an exception to constant F0"
+  ],
+  "limitations": [
+   "Real-time production notes (industry); not peer reviewed"
+  ],
+  "license": "copyrighted",
+  "access_status": "full_text",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M34"
+  ]
+ },
+ {
+  "key": "Hoffman2013",
+  "title": "Background: Physics and Math of Shading (SIGGRAPH 2013 course notes)",
+  "authors": "Naty Hoffman",
+  "year": 2013,
+  "url": "https://cgvr.cs.uni-bremen.de/teaching/cg_literatur/Naty%20Hoffman%20-%20s2013_pbs_physics_math_notes.pdf",
+  "doi_isbn": "",
+  "source_type": "docs",
+  "tier": "A",
+  "key_findings": [
+   "Absorption, scattering and their combination set appearance; white = high scattering + low absorption",
+   "Ordinary diffuse is subsurface scattering at a scale smaller than a pixel",
+   "Schlick Fresnel F0 + (1-F0)(1-cos)^5; zones 0-45 / 45-75 / 75-90 degrees; red zone visible only at extreme edges",
+   "F0 table (from RTR3): water 0.02, plastic/glass low 0.03, plastic high 0.05, glass high/ruby 0.08, diamond 0.17, iron 0.56-0.58, copper 0.95/0.64/0.54, gold 1.00/0.71/0.29, aluminium 0.91-0.92, silver 0.95/0.93/0.88",
+   "Non-metals outside labs mostly 2-5% F0"
+  ],
+  "practical_applications": [
+   "F0 values in material library; prompt rule against 'highly reflective acetate'"
+  ],
+  "limitations": [
+   "Course notes hosted on a university teaching mirror"
+  ],
+  "license": "copyrighted",
+  "access_status": "full_text",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M34",
+   "M10"
+  ]
+ },
+ {
+  "key": "RTR4",
+  "title": "Real-Time Rendering, 4th ed.",
+  "authors": "Tomas Akenine-Möller, Eric Haines, Naty Hoffman, Angelo Pesce, Michał Iwanicki, Sébastien Hillaire",
+  "year": 2018,
+  "url": "https://www.realtimerendering.com/",
+  "doi_isbn": "ISBN 9781138627000",
+  "source_type": "textbook",
+  "tier": "A",
+  "key_findings": [
+   "Chapters include 7 Shadows, 8 Light and Color, 9 Physically Based Shading, 10 Local Illumination, 11 Global Illumination, 14 Volumetric and Translucency Rendering, 15 Non-Photorealistic Rendering"
+  ],
+  "practical_applications": [
+   "Pointer for deeper reading on shadows, GI, volumetrics"
+  ],
+  "limitations": [
+   "Only the book's website/table of contents read; content not read"
+  ],
+  "license": "copyrighted",
+  "access_status": "publisher_page",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M34"
+  ]
+ },
+ {
+  "key": "Hecht2017",
+  "title": "Optics, 5th ed.",
+  "authors": "Eugene Hecht",
+  "year": 2017,
+  "url": "https://www.pearson.com/en-us/subject-catalog/p/Hecht-Optics-5th-Edition/P200000006793",
+  "doi_isbn": "ISBN 9780133977226",
+  "source_type": "textbook",
+  "tier": "A",
+  "key_findings": [
+   "Standard optics textbook: propagation of light, geometrical optics, polarization, interference, diffraction (chapter list)"
+  ],
+  "practical_applications": [
+   "Reference for Fresnel/polarization/thin-film interference foundations"
+  ],
+  "limitations": [
+   "Bibliographic only (publisher listing); dates differ 2016/2017 between listings; no content cited from it"
+  ],
+  "license": "copyrighted",
+  "access_status": "bibliographic",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M10",
+   "M34"
+  ]
+ },
+ {
+  "key": "Walter2007",
+  "title": "Microfacet Models for Refraction through Rough Surfaces",
+  "authors": "Bruce Walter, Stephen R. Marschner, Hongsong Li, Kenneth E. Torrance",
+  "year": 2007,
+  "url": "https://www.cs.cornell.edu/~srm/publications/EGSR07-btdf.html",
+  "doi_isbn": "EGSR 2007, pp.195-206; 10.2312/EGWR/EGSR07/195-206",
+  "source_type": "empirical",
+  "tier": "A",
+  "key_findings": [
+   "Extends microfacet theory to rough transmission (e.g. etched/ground glass)",
+   "Introduces GGX distribution, closer match than Beckmann for some surfaces",
+   "GGX later identified with Trowbridge-Reitz"
+  ],
+  "practical_applications": [
+   "Frosted glass / satin acetate vocabulary; roughness on transmissive materials"
+  ],
+  "limitations": [
+   "Abstract and secondary descriptions only"
+  ],
+  "license": "copyrighted",
+  "access_status": "abstract",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M34"
+  ]
+ },
+ {
+  "key": "Ward1992",
+  "title": "Measuring and Modeling Anisotropic Reflection",
+  "authors": "Gregory J. Ward",
+  "year": 1992,
+  "url": "https://radsite.lbl.gov/radiance/papers/sg92/paper.html",
+  "doi_isbn": "SIGGRAPH 1992",
+  "source_type": "empirical",
+  "tier": "A",
+  "key_findings": [
+   "Introduces a reflectance measurement device and a mathematical model of anisotropic reflectance, fitted to measured surfaces"
+  ],
+  "practical_applications": [
+   "Brushed metal/hair anisotropy vocabulary"
+  ],
+  "limitations": [
+   "Only the abstract was readable; highlight direction vs groove direction NOT confirmed from this source"
+  ],
+  "license": "unknown",
+  "access_status": "abstract",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M34"
+  ]
+ },
+ {
+  "key": "EstevezKulla2017",
+  "title": "Production Friendly Microfacet Sheen BRDF",
+  "authors": "Alejandro Conty Estevez, Christopher Kulla",
+  "year": 2017,
+  "url": "https://blog.selfshadow.com/publications/s2017-shading-course/imageworks/s2017_pbs_imageworks_sheen.pdf",
+  "doi_isbn": "",
+  "source_type": "docs",
+  "tier": "C",
+  "key_findings": [
+   "Cheap, artist-friendly sheen lobe for cloth; layered via albedo scaling",
+   "Its distribution ('Charlie') adopted by glTF KHR_materials_sheen"
+  ],
+  "practical_applications": [
+   "Velvet/fabric sheen parameter in material library"
+  ],
+  "limitations": [
+   "Search summary only"
+  ],
+  "license": "copyrighted",
+  "access_status": "search_summary",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M34"
+  ]
+ },
+ {
+  "key": "Marschner2003",
+  "title": "Light Scattering from Human Hair Fibers",
+  "authors": "Stephen R. Marschner, Henrik Wann Jensen, Mike Cammarano, Steve Worley, Pat Hanrahan",
+  "year": 2003,
+  "url": "https://www.cs.cornell.edu/~srm/publications/SG03-hair-abstract.html",
+  "doi_isbn": "ACM TOG 22(3):780-791",
+  "source_type": "empirical",
+  "tier": "A",
+  "key_findings": [
+   "Fibre modelled as transparent elliptical cylinder with absorbing interior and tilted scales",
+   "Lobes R (surface), TT (transmission), TRT (internal reflection, secondary highlight)",
+   "Secondary highlight not present in black hair"
+  ],
+  "practical_applications": [
+   "Hair highlight rules for characters"
+  ],
+  "limitations": [
+   "Abstract + secondary excerpts; full paper not read"
+  ],
+  "license": "copyrighted",
+  "access_status": "abstract",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M34"
+  ]
+ },
+ {
+  "key": "dEon2007",
+  "title": "GPU Gems 3, Chapter 14: Advanced Techniques for Realistic Real-Time Skin Rendering",
+  "authors": "Eugene d'Eon, David Luebke",
+  "year": 2007,
+  "url": "https://developer.nvidia.com/gpugems/gpugems3/part-iii-rendering/chapter-14-advanced-techniques-realistic-real-time-skin",
+  "doi_isbn": "",
+  "source_type": "docs",
+  "tier": "C",
+  "key_findings": [
+   "Skin: oily layer + epidermis (narrow scatter) + dermis (wide scatter)",
+   "Specular F0 = 0.028 from assumed IOR 1.4; skin specular should be white",
+   "Red scatters much farther than green/blue (red profile ~16 mm wide in model)",
+   "Without SSS skin looks hard and dry; errors cause red glow around shadows, waxy ears"
+  ],
+  "practical_applications": [
+   "Skin rendering rules and AI artefact checks"
+  ],
+  "limitations": [
+   "Real-time technique chapter; final ~10% of page not read; author names from general knowledge of the book, page header not quoted"
+  ],
+  "license": "copyrighted (free online)",
+  "access_status": "full_text",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M34",
+   "M10"
+  ]
+ },
+ {
+  "key": "glTF_KHR_ior",
+  "title": "KHR_materials_ior (glTF 2.0 extension specification)",
+  "authors": "Khronos Group",
+  "year": 2021,
+  "url": "https://github.com/KhronosGroup/glTF/blob/main/extensions/2.0/Khronos/KHR_materials_ior/README.md",
+  "doi_isbn": "",
+  "source_type": "docs",
+  "tier": "S",
+  "key_findings": [
+   "Default ior 1.5; dielectric_f0 = ((ior-1)/(ior+1))^2 = 0.04 at 1.5",
+   "Example IORs: air 1.0, water 1.33, eyes 1.38, window glass 1.52, sapphire 1.76, diamond 2.42"
+  ],
+  "practical_applications": [
+   "F0 formula used to compute lens reflectance table"
+  ],
+  "limitations": [
+   "Year is approximate (extension ratification); page date not checked"
+  ],
+  "license": "CC BY 4.0 (Khronos spec, per repo)",
+  "access_status": "full_text",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M34"
+  ]
+ },
+ {
+  "key": "glTF_KHR_volume",
+  "title": "KHR_materials_volume (glTF 2.0 extension specification)",
+  "authors": "Khronos Group",
+  "year": 2022,
+  "url": "https://github.com/KhronosGroup/glTF/blob/main/extensions/2.0/Khronos/KHR_materials_volume/README.md",
+  "doi_isbn": "",
+  "source_type": "docs",
+  "tier": "S",
+  "key_findings": [
+   "thicknessFactor 0 = thin-walled; non-zero = volumetric (closed mesh)",
+   "attenuationColor/attenuationDistance: sigma_t = -ln(c)/d; T(x) = c^(x/d) (Beer-Lambert, scattering assumed zero)",
+   "Refraction requires KHR_materials_transmission; IOR default 1.5"
+  ],
+  "practical_applications": [
+   "Absorption rule: thicker coloured lens/acetate = darker; transmission vs opacity distinction"
+  ],
+  "limitations": [
+   "Year approximate; license as stated in repo not re-checked"
+  ],
+  "license": "CC BY 4.0 (Khronos spec, per repo)",
+  "access_status": "full_text",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M34"
+  ]
+ },
+ {
+  "key": "OpenPBR",
+  "title": "OpenPBR Surface specification",
+  "authors": "Academy Software Foundation (OpenPBR working group)",
+  "year": 2024,
+  "url": "https://academysoftwarefoundation.github.io/OpenPBR/",
+  "doi_isbn": "",
+  "source_type": "docs",
+  "tier": "S",
+  "key_findings": [
+   "Defaults: base_color 0.8, specular_roughness 0.3, specular_ior 1.5 (range 1-3), transmission_dispersion_abbe_number 20 (range 9-91)",
+   "subsurface_radius_scale default (1.0, 0.5, 0.25)",
+   "Thin-film thickness (micrometres) and IOR control intensity, spacing and hue of colour fringes",
+   "Higher Abbe number = less dispersion"
+  ],
+  "practical_applications": [
+   "Thin-film = AR/mirror coatings; dispersion for PC lenses; parameter vocabulary"
+  ],
+  "limitations": [
+   "Only first ~100k of 177k characters read; coat/fuzz/geometry defaults not read; year approximate"
+  ],
+  "license": "Apache 2.0 (ASWF; not re-checked)",
+  "access_status": "full_text",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M34"
+  ]
+ },
+ {
+  "key": "PhysicallyBased_DB",
+  "title": "Physically Based — the PBR values database",
+  "authors": "physicallybased.info contributors",
+  "year": null,
+  "url": "https://physicallybased.info/",
+  "doi_isbn": "",
+  "source_type": "docs",
+  "tier": "C",
+  "key_findings": [
+   "Linear colours + IOR: water 1.333; marble, concrete, office paper, porcelain 1.5; diamond 2.417; milk 1.348; ice 1.31",
+   "Metal colours: gold 1.059/0.773/0.307, silver 0.991/0.985/0.974, iron 0.530/0.513/0.494, copper 0.932/0.623/0.522, chromium 0.654/0.685/0.701"
+  ],
+  "practical_applications": [
+   "Base colour starting points in material library"
+  ],
+  "limitations": [
+   "Several entries (glass, titanium, skin, plastic) shown without values in fetched text; community-curated"
+  ],
+  "license": "unknown",
+  "access_status": "full_text",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M34"
+  ]
+ },
+ {
+  "key": "Sultanova2009",
+  "title": "Dispersion properties of optical polymers (polycarbonate data on refractiveindex.info)",
+  "authors": "N. Sultanova, S. Kasarova, I. Nikolov",
+  "year": 2009,
+  "url": "https://refractiveindex.info/?shelf=organic&book=polycarbonate&page=Sultanova",
+  "doi_isbn": "Acta Physica Polonica A 116, 585-587",
+  "source_type": "empirical",
+  "tier": "A",
+  "key_findings": [
+   "Polycarbonate n ~1.585 at 587.6 nm from Sellmeier fit (Polyanskiy)"
+  ],
+  "practical_applications": [
+   "Polycarbonate lens IOR"
+  ],
+  "limitations": [
+   "Read via refractiveindex.info data page, not the paper; Abbe not given there"
+  ],
+  "license": "CC0 (refractiveindex.info data) / paper copyrighted",
+  "access_status": "publisher_page",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M10",
+   "M34"
+  ]
+ },
+ {
+  "key": "SCHOTT_NBK7",
+  "title": "N-BK7 optical glass data (SCHOTT catalogue via refractiveindex.info)",
+  "authors": "SCHOTT AG; compiled by M. Polyanskiy",
+  "year": 2017,
+  "url": "https://refractiveindex.info/?shelf=specs&book=SCHOTT-optical&page=N-BK7",
+  "doi_isbn": "",
+  "source_type": "docs",
+  "tier": "C",
+  "key_findings": [
+   "nd (587.6 nm) = 1.5168, Vd = 64.17 at 293 K"
+  ],
+  "practical_applications": [
+   "Reference crown glass value; distinguishes optical crown from ophthalmic crown 1.523"
+  ],
+  "limitations": [
+   "Not an ophthalmic lens glass datasheet"
+  ],
+  "license": "CC0 (database) / SCHOTT data",
+  "access_status": "full_text",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M34"
+  ]
+ },
+ {
+  "key": "Mitsui_MR",
+  "title": "MR series lineup (lens monomers)",
+  "authors": "Mitsui Chemicals",
+  "year": null,
+  "url": "https://jp.mitsuichemicals.com/en/special/mr/lineup/",
+  "doi_isbn": "",
+  "source_type": "docs",
+  "tier": "C",
+  "key_findings": [
+   "MR-8 1.60 / Abbe ve 41; MR-160DG 1.60 / 39; MR-7 1.67 / 31; MR-10 1.67 / 31; MR-174 1.74 / 32",
+   "Values are representative, not guaranteed specifications"
+  ],
+  "practical_applications": [
+   "High-index lens IOR and Abbe values"
+  ],
+  "limitations": [
+   "Manufacturer marketing page; ve (e-line) Abbe, not vd"
+  ],
+  "license": "copyrighted",
+  "access_status": "publisher_page",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M34"
+  ]
+ },
+ {
+  "key": "CR39_PPG_summary",
+  "title": "CR-39 (Wikipedia) and PPG CR-39 monomer page — search summary",
+  "authors": "Wikipedia contributors; PPG Industries",
+  "year": null,
+  "url": "https://en.wikipedia.org/wiki/CR-39",
+  "doi_isbn": "",
+  "source_type": "encyclopedia",
+  "tier": "E",
+  "key_findings": [
+   "CR-39 n = 1.498, Abbe 58",
+   "Name from Columbia Resin #39 (1940 project); PPG trademark; first CR-39 spectacle lenses credited to Armorlite, 1947"
+  ],
+  "practical_applications": [
+   "CR-39 lens IOR"
+  ],
+  "limitations": [
+   "Search summary only; history dates rest on Wikipedia"
+  ],
+  "license": "CC BY-SA (Wikipedia)",
+  "access_status": "search_summary",
+  "verification_status": "unverified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M34"
+  ]
+ },
+ {
+  "key": "OphthalmicLensMaterials_summary",
+  "title": "Spectacle lens material comparisons (All About Vision; Ophthalmology Times) — search summary",
+  "authors": "various",
+  "year": null,
+  "url": "https://www.allaboutvision.com/eyewear/eyeglasses/lenses/polycarbonate-vs-trivex-lenses",
+  "doi_isbn": "",
+  "source_type": "practitioner",
+  "tier": "D",
+  "key_findings": [
+   "CR-39 ~1.498 / Abbe 58; polycarbonate 1.586 / ~30; Trivex 1.53 (some 1.54) / 43-45; high-index 1.60-1.74; crown glass ~1.523 / 58-59",
+   "Higher index reflects more; some high-index reflect up to 50% more than CR-39"
+  ],
+  "practical_applications": [
+   "Lens table cross-check"
+  ],
+  "limitations": [
+   "Consumer/trade sources; discrepancies between them; search summary only"
+  ],
+  "license": "copyrighted",
+  "access_status": "search_summary",
+  "verification_status": "unverified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M34"
+  ]
+ },
+ {
+  "key": "ARCoating_patents",
+  "title": "Anti-reflection coating residual colour (US patents 8425035 'colour-neutral AR coating', 7311938) and Zeiss coating pages — search summary",
+  "authors": "various assignees",
+  "year": null,
+  "url": "https://image-ppubs.uspto.gov/dirsearch-public/print/downloadPdf/8425035",
+  "doi_isbn": "US8425035",
+  "source_type": "primary_text",
+  "tier": "C",
+  "key_findings": [
+   "Finite layers cannot cancel reflection over the whole spectrum -> coloured residual reflection",
+   "Usual spectacle AR has green residual reflection (peak near eye sensitivity ~555 nm)",
+   "Multilayer stacks reduce total reflectance to <1-2%; per-surface ~0.75-1.5% at 500 nm cited"
+  ],
+  "practical_applications": [
+   "AR residual colour reveal setup; rule to match residual colour to the real lens"
+  ],
+  "limitations": [
+   "Search summary; the uncoated '8%' figure not found in these sources (computed from Fresnel instead)"
+  ],
+  "license": "public domain (US patents)",
+  "access_status": "search_summary",
+  "verification_status": "unverified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M34",
+   "M10"
+  ]
+ },
+ {
+  "key": "Brewster_Wiki",
+  "title": "Brewster's angle",
+  "authors": "Wikipedia contributors",
+  "year": null,
+  "url": "https://en.wikipedia.org/wiki/Brewster%27s_angle",
+  "doi_isbn": "",
+  "source_type": "encyclopedia",
+  "tier": "E",
+  "key_findings": [
+   "theta_B = arctan(n2/n1); ~56 degrees for air-glass",
+   "Polarizing filters remove reflections from water/glass; rotating the polarizer removes polarized reflected light"
+  ],
+  "practical_applications": [
+   "CPL use on lenses at oblique angles"
+  ],
+  "limitations": [
+   "Encyclopedia; physics is textbook-standard"
+  ],
+  "license": "CC BY-SA",
+  "access_status": "full_text",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M10"
+  ]
+ },
+ {
+  "key": "CrossPol_PetaPixel",
+  "title": "Cross Polarization: What It Is and Why It Matters; Derek Flood cross-polarization for textures — search summary",
+  "authors": "PetaPixel; Derek Flood",
+  "year": 2021,
+  "url": "https://petapixel.com/2021/01/19/cross-polarization-what-it-is-and-why-it-matters/",
+  "doi_isbn": "",
+  "source_type": "practitioner",
+  "tier": "D",
+  "key_findings": [
+   "Polarizer on light + polarizer on lens rotated perpendicular cancels specular reflection (still polarized after bouncing)",
+   "Process is not perfect"
+  ],
+  "practical_applications": [
+   "eyewear_cross_polarized_flat setup"
+  ],
+  "limitations": [
+   "Search summary; page itself not fetched"
+  ],
+  "license": "copyrighted",
+  "access_status": "search_summary",
+  "verification_status": "unverified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M10"
+  ]
+ },
+ {
+  "key": "Mamassian1998",
+  "title": "The perception of cast shadows",
+  "authors": "Pascal Mamassian, David C. Knill, Daniel Kersten",
+  "year": 1998,
+  "url": "https://experts.umn.edu/en/publications/the-perception-of-cast-shadows/",
+  "doi_isbn": "10.1016/S1364-6613(98)01204-2",
+  "source_type": "review",
+  "tier": "A",
+  "key_findings": [
+   "Cast shadows inform object shape, receiving-surface shape and spatial layout; strongest for spatial arrangement, especially when shadows move",
+   "Visual system likely assumes a stationary light source"
+  ],
+  "practical_applications": [
+   "Moving shadow = levitation cue in 2.5D clips; never move the light with the object"
+  ],
+  "limitations": [
+   "Abstract only"
+  ],
+  "license": "copyrighted",
+  "access_status": "abstract",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M04",
+   "M10"
+  ]
+ },
+ {
+  "key": "Gurney2010_LightForm",
+  "title": "Light and Form, Part 1 (Gurney Journey blog)",
+  "authors": "James Gurney",
+  "year": 2010,
+  "url": "https://gurneyjourney.blogspot.com/2010/02/light-and-form-part-1_15.html",
+  "doi_isbn": "",
+  "source_type": "practitioner",
+  "tier": "D",
+  "key_findings": [
+   "Form principle: analyse nature as geometric solids rendered by tonal contrast",
+   "Terms: center light, light/dark halftones, terminator (light tangent to form), highlight (reflection of source, not always at center light), cast shadow",
+   "Soft source -> gradual terminator; sun -> strong division",
+   "Comments: core usually just past terminator, not always present; darkest spot often the contact crack; 'model the lights or the shadows, not both'"
+  ],
+  "practical_applications": [
+   "Light-on-form sequence; charcoal three-value plan"
+  ],
+  "limitations": [
+   "Practitioner blog; some rules come from reader comments endorsed by the author. Gurney2010 book is a separate registry record"
+  ],
+  "license": "copyrighted",
+  "access_status": "full_text",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M07",
+   "M10"
+  ]
+ },
+ {
+  "key": "Proko_Elements",
+  "title": "Elements of Light and Shadow (course notes)",
+  "authors": "Stan Prokopenko",
+  "year": null,
+  "url": "https://www.proko.com/course-lesson/elements-of-light-and-shadow/notes",
+  "doi_isbn": "",
+  "source_type": "practitioner",
+  "tier": "D",
+  "key_findings": [
+   "Highlight: reflection of the source on shiny surfaces, absent on matte",
+   "Center light, halftones, terminator, core shadow (darkest part of form shadow near terminator), reflected light, cast shadow, occlusion shadow (darkest, in crevices)"
+  ],
+  "practical_applications": [
+   "Shadow family table"
+  ],
+  "limitations": [
+   "Practitioner teaching; no date"
+  ],
+  "license": "copyrighted",
+  "access_status": "full_text",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M07",
+   "M10"
+  ]
+ },
+ {
+  "key": "Gurney2007_WaterReflections",
+  "title": "Water Reflections, Part 1 (Gurney Journey blog)",
+  "authors": "James Gurney",
+  "year": 2007,
+  "url": "https://gurneyjourney.blogspot.com/2007/12/water-reflections-part-1.html",
+  "doi_isbn": "",
+  "source_type": "practitioner",
+  "tier": "D",
+  "key_findings": [
+   "Light tones reflect a little darker because some light enters the water",
+   "Water is near-perfect mirror only at a shallow viewing angle; looking steeply down little sky is reflected"
+  ],
+  "practical_applications": [
+   "Water reflection rules mapped to Fresnel"
+  ],
+  "limitations": [
+   "Practitioner; vertical alignment and ripples not covered in this post"
+  ],
+  "license": "copyrighted",
+  "access_status": "full_text",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M07",
+   "M10"
+  ]
+ },
+ {
+  "key": "HunterBiverFuqua",
+  "title": "Light — Science & Magic: An Introduction to Photographic Lighting (6th ed. adds Robin Reid)",
+  "authors": "Fil Hunter, Steven Biver, Paul Fuqua",
+  "year": 2021,
+  "url": "https://www.oreilly.com/library/view/light-science/9781000342673/chapter-30.html",
+  "doi_isbn": "",
+  "source_type": "practitioner",
+  "tier": "D",
+  "key_findings": [
+   "'Family of angles' = light positions that produce direct reflection; a larger source fills more of it",
+   "Glass chapter: bright-field and dark-field lighting; using both simultaneously causes most glass-photography failures"
+  ],
+  "practical_applications": [
+   "Eyewear lens/metal reflection planning; dark-field/bright-field rules"
+  ],
+  "limitations": [
+   "Only previews and search summaries; edition years differ"
+  ],
+  "license": "copyrighted",
+  "access_status": "search_summary",
+  "verification_status": "unverified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M10",
+   "M18"
+  ]
+ },
+ {
+  "key": "FiveTimesRule_sources",
+  "title": "Inverse-square law and the five-times rule for extended sources (CIE 2025 paper by Dotreppe et al.; PetaPixel 2021; photometry teaching notes) — search summary",
+  "authors": "various",
+  "year": 2025,
+  "url": "https://files.cie.co.at/x051_2025/P0217_ID241GuillaumeDotreppe_OA_with_cover.pdf",
+  "doi_isbn": "",
+  "source_type": "standard",
+  "tier": "B",
+  "key_findings": [
+   "Inverse-square valid only beyond the limiting photometric distance, which depends on source size, intensity distribution, luminance distribution and acceptable error",
+   "Minimum test distance 5x largest source dimension for near-Lambertian sources; at 10x radius error ~1%",
+   "Ignoring the rule gave deviations up to 32% for task lighting"
+  ],
+  "practical_applications": [
+   "Large-softbox exception to inverse square"
+  ],
+  "limitations": [
+   "Search summary across several sources; CIE paper not read"
+  ],
+  "license": "open access (CIE paper) / copyrighted",
+  "access_status": "search_summary",
+  "verification_status": "unverified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M10"
+  ]
+ },
+ {
+  "key": "Preetham1999",
+  "title": "A Practical Analytic Model for Daylight",
+  "authors": "A. J. Preetham, Peter Shirley, Brian Smits",
+  "year": 1999,
+  "url": "https://courses.cs.duke.edu/fall01/cps124/resources/p91-preetham.pdf",
+  "doi_isbn": "SIGGRAPH 1999, pp.91-100",
+  "source_type": "empirical",
+  "tier": "A",
+  "key_findings": [
+   "Rayleigh extinction ~ lambda^-4, verified experimentally; blue (400 nm) scattered ~10x red (700 nm); low sun yellow/orange from longer path",
+   "Haze = more scattering than molecules, less than fog; Mie particles scatter more uniformly -> whitening",
+   "Turbidity = (haze+molecular optical thickness)/molecular; linked to meteorological range (contrast threshold 0.02)",
+   "Cites psychology: aerial perspective a fundamental depth cue and the only absolute cue for distant unfamiliar objects; Leonardo's observations: horizon whitening, density near ground, hue shift"
+  ],
+  "practical_applications": [
+   "Aerial perspective, haze and turbidity control in scenes"
+  ],
+  "limitations": [
+   "Model has known weaknesses addressed by Hosek-Wilkie 2012"
+  ],
+  "license": "copyrighted",
+  "access_status": "full_text",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M10",
+   "M34"
+  ]
+ },
+ {
+  "key": "Bruneton2008",
+  "title": "Precomputed Atmospheric Scattering",
+  "authors": "Eric Bruneton, Fabrice Neyret",
+  "year": 2008,
+  "url": "https://hal.archives-ouvertes.fr/inria-00288758",
+  "doi_isbn": "10.1111/j.1467-8659.2008.01245.x",
+  "source_type": "empirical",
+  "tier": "A",
+  "key_findings": [
+   "Real-time Rayleigh+Mie multiple scattering from ground to space",
+   "Sky colour in daylight and twilight, aerial perspective for all view/sun directions, earth and mountain shadows as light shafts"
+  ],
+  "practical_applications": [
+   "Physics behind light shafts and twilight sky"
+  ],
+  "limitations": [
+   "Abstract only"
+  ],
+  "license": "copyrighted",
+  "access_status": "abstract",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M34"
+  ]
+ },
+ {
+  "key": "Leonardo_Richter",
+  "title": "The Notebooks of Leonardo da Vinci, ed. J. P. Richter, §295 (aerial perspective)",
+  "authors": "Leonardo da Vinci; ed. Jean Paul Richter",
+  "year": 1883,
+  "url": "https://www.fromoldbooks.org/Richter-NotebooksOfLeonardo/section-6/item-295.html",
+  "doi_isbn": "",
+  "source_type": "primary_text",
+  "tier": "B",
+  "key_findings": [
+   "Distant things appear blue 'in consequence of the great quantity of atmosphere between your eye and them'",
+   "'if one is to be five times as distant, make it five times bluer'"
+  ],
+  "practical_applications": [
+   "Painter's rule mapped to exponential extinction"
+  ],
+  "limitations": [
+   "Translation-dependent wording; one passage read"
+  ],
+  "license": "public domain",
+  "access_status": "full_text",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M07",
+   "M10"
+  ]
+ },
+ {
+  "key": "Britannica_AerialPerspective",
+  "title": "Aerial perspective (Encyclopaedia Britannica) — search summary",
+  "authors": "Encyclopaedia Britannica",
+  "year": null,
+  "url": "https://www.britannica.com/art/aerial-perspective",
+  "doi_isbn": "",
+  "source_type": "encyclopedia",
+  "tier": "C",
+  "key_findings": [
+   "Leonardo first used the term in the Treatise on Painting",
+   "Short wavelengths scattered most, so distant dark objects tend toward blue",
+   "Leonardo thought air not blue itself but water vapour lit by sun in front of dark mountains"
+  ],
+  "practical_applications": [
+   "Aerial perspective history"
+  ],
+  "limitations": [
+   "Page returned 403; search summary only"
+  ],
+  "license": "copyrighted",
+  "access_status": "search_summary",
+  "verification_status": "unverified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M07",
+   "M10"
+  ]
+ },
+ {
+  "key": "Atoptics_Crepuscular",
+  "title": "Crepuscular rays (Atmospheric Optics)",
+  "authors": "Les Cowley (atoptics.co.uk)",
+  "year": null,
+  "url": "https://atoptics.co.uk/atoptics/ray1.htm",
+  "doi_isbn": "",
+  "source_type": "practitioner",
+  "tier": "B",
+  "key_findings": [
+   "Crepuscular rays: sunbeams through cloud gaps separated by shadowed bands; divergence is a perspective illusion",
+   "Anticrepuscular rays appear opposite the sun",
+   "Visible because dust, salts, organic aerosols, droplets and molecules scatter light; more particles = stronger rays"
+  ],
+  "practical_applications": [
+   "Sun ray rules: converge to sun/antisolar point; need haze"
+  ],
+  "limitations": [
+   "Expert educational site, not peer reviewed; author attribution from site knowledge, not quoted on page"
+  ],
+  "license": "copyrighted",
+  "access_status": "full_text",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M10"
+  ]
+ },
+ {
+  "key": "Purkinje_sources",
+  "title": "Purkinje effect / mesopic vision (Wikipedia; Hanover ISLE simulation) — search summary",
+  "authors": "Wikipedia contributors; Hanover College",
+  "year": null,
+  "url": "https://en.wikipedia.org/wiki/Purkinje_effect",
+  "doi_isbn": "",
+  "source_type": "encyclopedia",
+  "tier": "E",
+  "key_findings": [
+   "Photopic peak 555 nm, scotopic peak 507 nm",
+   "As light dims reds look darker, blues/greens relatively brighter; mesopic ~0.01-3 cd/m2; colours desaturate",
+   "Max scotopic efficacy 1700 lm/W vs 683 lm/W photopic"
+  ],
+  "practical_applications": [
+   "Night/moonlight colour convention"
+  ],
+  "limitations": [
+   "Search summary of tertiary sources; underlying CIE standards not read"
+  ],
+  "license": "CC BY-SA",
+  "access_status": "search_summary",
+  "verification_status": "unverified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M04",
+   "M10"
+  ]
+ },
+ {
+  "key": "Moonlight_illuminance",
+  "title": "Orders of magnitude (illuminance) and related pages — search summary",
+  "authors": "Wikipedia contributors",
+  "year": null,
+  "url": "https://en.wikipedia.org/wiki/Orders_of_magnitude_(illuminance)",
+  "doi_isbn": "",
+  "source_type": "encyclopedia",
+  "tier": "E",
+  "key_findings": [
+   "Full moon ~0.05-0.1 lux typical; table 0.25 lux; up to ~0.32 lux for supermoon in tropics",
+   "Moonlight's blue look is perceptual (Purkinje)"
+  ],
+  "practical_applications": [
+   "Moonlight levels for night scenes"
+  ],
+  "limitations": [
+   "Values vary by source; direct sunlight lux not confirmed"
+  ],
+  "license": "CC BY-SA",
+  "access_status": "search_summary",
+  "verification_status": "unverified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M10"
+  ]
+ },
+ {
+  "key": "DayForNight_sources",
+  "title": "Day for night (Wikipedia; Ira Tiffen DFN filter article in StudentFilmmakers) — search summary",
+  "authors": "Wikipedia contributors; Ira Tiffen",
+  "year": null,
+  "url": "https://en.wikipedia.org/wiki/Day_for_night",
+  "doi_isbn": "",
+  "source_type": "encyclopedia",
+  "tier": "E",
+  "key_findings": [
+   "Underexpose ~2 stops (ND) and tint blue; warm filters on close shots to keep skin",
+   "Avoid showing bright sky",
+   "Blue-night convention from stage and silent film; moonlight looks bluish due to Purkinje"
+  ],
+  "practical_applications": [
+   "Night look in AI/HTML clips"
+  ],
+  "limitations": [
+   "Search summary; convention not physics"
+  ],
+  "license": "CC BY-SA / copyrighted",
+  "access_status": "search_summary",
+  "verification_status": "unverified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M18",
+   "M10"
+  ]
+ },
+ {
+  "key": "Zieger2017",
+  "title": "Revising the hygroscopicity of inorganic sea salt particles",
+  "authors": "P. Zieger et al.",
+  "year": 2017,
+  "url": "https://doi.org/10.1038/ncomms15883",
+  "doi_isbn": "10.1038/ncomms15883",
+  "source_type": "empirical",
+  "tier": "A",
+  "key_findings": [
+   "Inorganic sea salt hygroscopic growth 8-15% lower than pure NaCl, likely hydrates",
+   "Growth increases for particles <150 nm",
+   "Lower hygroscopicity reduced modelled aerosol optical depth by up to 15%"
+  ],
+  "practical_applications": [
+   "Sea-spray haze physics for Hua Hin beach scenes"
+  ],
+  "limitations": [
+   "Abstract via search; first author only verified"
+  ],
+  "license": "CC BY 4.0",
+  "access_status": "abstract",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M10"
+  ]
+ },
+ {
+  "key": "ThaiHaze_studies",
+  "title": "Northern Thailand dry-season PM2.5 / AOD studies (Atmosphere 2023 14(3):538; Int. J. Geoinformatics; Frontiers Env. Sci. 2024) — search summary",
+  "authors": "various",
+  "year": 2023,
+  "url": "https://www.mdpi.com/2073-4433/14/3/538",
+  "doi_isbn": "",
+  "source_type": "empirical",
+  "tier": "A",
+  "key_findings": [
+   "PM2.5 exceeds Thai standards annually in the dry season (Jan-Apr; other studies Nov-Apr or Feb-May), linked to open burning and satellite AOD",
+   "Haze reduces visibility"
+  ],
+  "practical_applications": [
+   "Dry-season haze look; avoid grading to clear sky in documentary images"
+  ],
+  "limitations": [
+   "Northern Thailand only, not Hua Hin; abstracts/excerpts only"
+  ],
+  "license": "CC BY (MDPI) / various",
+  "access_status": "search_summary",
+  "verification_status": "unverified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M10"
+  ]
+ },
+ {
+  "key": "BraunSmirnov1993",
+  "title": "Why Is Water Blue?",
+  "authors": "Charles L. Braun, Sergei N. Smirnov",
+  "year": 1993,
+  "url": "https://www.webexhibits.org/causesofcolor/ref/Braun-Smirnov.html",
+  "doi_isbn": "J. Chem. Educ. 70(8):612",
+  "source_type": "empirical",
+  "tier": "A",
+  "key_findings": [
+   "Water's intrinsic blue from absorption of red by O-H vibrational overtones/combination bands",
+   "Visible after several metres; 3 m tube transmits ~44% at 660 nm",
+   "Surface appearance also affected by scattering and reflected skylight"
+  ],
+  "practical_applications": [
+   "Sea colour rules for Hua Hin; shallow vs deep water"
+  ],
+  "limitations": [
+   "Read as an authorised reprint on webexhibits.org, not the journal page"
+  ],
+  "license": "copyrighted",
+  "access_status": "full_text",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M10"
+  ]
+ },
+ {
+  "key": "Caustic_optics",
+  "title": "Caustic (optics) (Wikipedia; Atmospheric Optics OPOD) — search summary",
+  "authors": "Wikipedia contributors",
+  "year": null,
+  "url": "https://en.wikipedia.org/wiki/Caustic_(optics)",
+  "doi_isbn": "",
+  "source_type": "encyclopedia",
+  "tier": "E",
+  "key_findings": [
+   "Caustic = envelope of rays reflected/refracted by a curved surface, or its projection; drinking glass nephroid; pool bottom fold/cusp caustics",
+   "Reflective caustics can concentrate sunlight (Vdara hotel)"
+  ],
+  "practical_applications": [
+   "Lens caustics in sun shadows; caustic projection setup"
+  ],
+  "limitations": [
+   "Search summary"
+  ],
+  "license": "CC BY-SA",
+  "access_status": "search_summary",
+  "verification_status": "unverified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M10"
+  ]
+ },
+ {
+  "key": "GargNayar2007",
+  "title": "Vision and Rain",
+  "authors": "Kshitiz Garg, Shree K. Nayar",
+  "year": 2007,
+  "url": "https://www.cs.columbia.edu/CAVE/publications/pdfs/Garg_TR04.pdf",
+  "doi_isbn": "10.1007/s11263-006-0028-6",
+  "source_type": "empirical",
+  "tier": "A",
+  "key_findings": [
+   "Photometric model of a rain streak and dynamic model of rain",
+   "Rain visibility depends strongly on exposure time and depth of field; camera settings can reduce or enhance it"
+  ],
+  "practical_applications": [
+   "Rain streak look in clips (shutter -> dots vs streaks)"
+  ],
+  "limitations": [
+   "Abstract/secondary only"
+  ],
+  "license": "copyrighted",
+  "access_status": "abstract",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M35",
+   "M10"
+  ]
+ },
+ {
+  "key": "Goral1984",
+  "title": "Modeling the Interaction of Light Between Diffuse Surfaces",
+  "authors": "Cindy M. Goral, Kenneth E. Torrance, Donald P. Greenberg, Bennett Battaile",
+  "year": 1984,
+  "url": "https://history.siggraph.org/?p=107463",
+  "doi_isbn": "10.1145/964965.808601",
+  "source_type": "empirical",
+  "tier": "A",
+  "key_findings": [
+   "Radiosity method from thermal engineering; includes finite-area diffuse sources and colour bleeding from diffuse interreflection; assumes ideal diffuse reflectors (Lambertian in modern terms)"
+  ],
+  "practical_applications": [
+   "Indirect light and colour bleeding rules"
+  ],
+  "limitations": [
+   "Abstract only",
+   "Spot-check 2026-11-25: original wording checked; finding corrected to match the source."
+  ],
+  "license": "copyrighted",
+  "access_status": "abstract",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M34"
+  ]
+ },
+ {
+  "key": "GoldenHour_timeanddate",
+  "title": "Golden hour (timeanddate.com) and equatorial golden-hour measurements — search summary",
+  "authors": "timeanddate.com; others",
+  "year": null,
+  "url": "https://www.timeanddate.com/astronomy/golden-hour.html",
+  "doi_isbn": "",
+  "source_type": "docs",
+  "tier": "C",
+  "key_findings": [
+   "Golden hour length depends on latitude and season; short near the equator",
+   "Measured ~24 min for Singapore at March equinox (0 to +6 degrees)"
+  ],
+  "practical_applications": [
+   "Cross-check of derived ~25 min golden hour at Hua Hin"
+  ],
+  "limitations": [
+   "Search summary; definitions vary"
+  ],
+  "license": "copyrighted",
+  "access_status": "search_summary",
+  "verification_status": "unverified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M10"
+  ]
+ },
+ {
+  "key": "RakingLight_conservation",
+  "title": "Raking light (National Gallery glossary; Canadian Conservation Institute; Conservation Wiki) — search summary",
+  "authors": "National Gallery London; CCI; AIC wiki",
+  "year": null,
+  "url": "https://www.nationalgallery.org.uk/paintings/glossary/raking-light",
+  "doi_isbn": "",
+  "source_type": "docs",
+  "tier": "B",
+  "key_findings": [
+   "Single light at a very low angle (~5-10 degrees, CCI) reveals texture/relief by shadows",
+   "Use a narrow/point source for crisp shadows; shoot from more than one direction because features parallel to the beam vanish"
+  ],
+  "practical_applications": [
+   "raking_texture_light setup"
+  ],
+  "limitations": [
+   "Search summary"
+  ],
+  "license": "copyrighted",
+  "access_status": "search_summary",
+  "verification_status": "unverified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M10",
+   "M18"
+  ]
+ },
+ {
+  "key": "BookLight_sources",
+  "title": "Book light (StudioBinder; Shane Hurlbut ASC via No Film School; PremiumBeat) — search summary",
+  "authors": "various",
+  "year": null,
+  "url": "https://www.studiobinder.com/blog/what-is-book-lighting-definition/",
+  "doi_isbn": "",
+  "source_type": "practitioner",
+  "tier": "D",
+  "key_findings": [
+   "Bounce a hard source into a board, then pass through diffusion: very soft source that keeps shape",
+   "Too much gap between bounce and diffusion causes hotspots"
+  ],
+  "practical_applications": [
+   "book_light_soft_key setup"
+  ],
+  "limitations": [
+   "Search summary"
+  ],
+  "license": "copyrighted",
+  "access_status": "search_summary",
+  "verification_status": "unverified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M18",
+   "M10"
+  ]
+ },
+ {
+  "key": "OpenShade_scrim_sources",
+  "title": "Noon portraits: open shade and scrims (SLR Lounge; Fstoppers; The Phoblographer) — search summary",
+  "authors": "various",
+  "year": null,
+  "url": "https://fstoppers.com/bts/say-yes-noon-sun-create-amazing-portraits-one-simple-tool-7951",
+  "doi_isbn": "",
+  "source_type": "practitioner",
+  "tier": "D",
+  "key_findings": [
+   "Move subject from overhead noon sun into open shade near its edge",
+   "Scrim between sun and subject softens; a scrim can be closer than a reflector so it is softer",
+   "Large scrims blow over in wind"
+  ],
+  "practical_applications": [
+   "tropical_open_shade_sand_bounce and beach_noon_overhead_silk setups"
+  ],
+  "limitations": [
+   "Search summary; nothing beach-specific"
+  ],
+  "license": "copyrighted",
+  "access_status": "search_summary",
+  "verification_status": "unverified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M18",
+   "M10"
+  ]
+ },
+ {
+  "key": "CelluloseAcetate_patents",
+  "title": "Cellulose ester refractive index (patent literature) — search summary",
+  "authors": "various",
+  "year": null,
+  "url": "https://image-ppubs.uspto.gov/dirsearch-public/print/downloadPdf/8735572",
+  "doi_isbn": "",
+  "source_type": "primary_text",
+  "tier": "C",
+  "key_findings": [
+   "Cellulose esters ~1.46-1.50; cellulose acylate 1.48; depends on acetyl substitution; films birefringent"
+  ],
+  "practical_applications": [
+   "Acetate frame IOR range"
+  ],
+  "limitations": [
+   "Not eyewear acetate sheet data; search summary"
+  ],
+  "license": "public domain (US patents)",
+  "access_status": "search_summary",
+  "verification_status": "unverified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M34"
+  ]
+ },
+ {
+  "key": "WHO_UVI_2002",
+  "title": "Global Solar UV Index: A Practical Guide",
+  "authors": "WHO, WMO, UNEP, ICNIRP",
+  "year": 2002,
+  "url": "https://www.who.int/publications/i/item/9241590076",
+  "doi_isbn": "ISBN 9241590076",
+  "source_type": "standard",
+  "tier": "S",
+  "key_findings": [
+   "UVI grouped into low, moderate, high, very high, extreme with colour codes",
+   "UV higher closer to the equator; peaks around solar noon"
+  ],
+  "practical_applications": [
+   "Hua Hin harsh noon context for UV/sun-lens stories"
+  ],
+  "limitations": [
+   "Numeric category cut-offs not verified (archive PDF failed); equator/noon statements from secondary scans"
+  ],
+  "license": "WHO copyright",
+  "access_status": "publisher_page",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M10"
+  ]
+ }
+]

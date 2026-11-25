@@ -1,0 +1,542 @@
+[
+ {
+  "key": "ITU2023_BS1770_5",
+  "title": "Recommendation ITU-R BS.1770-5: Algorithms to measure audio programme loudness and true-peak audio level",
+  "authors": "ITU-R",
+  "year": 2023,
+  "url": "https://www.itu.int/rec/R-REC-BS.1770-5-202311-I",
+  "doi_isbn": "",
+  "source_type": "docs",
+  "tier": "S",
+  "key_findings": [
+   "Current in-force version approved 2023-11; defines programme loudness (LKFS = LUFS) and true-peak measurement.",
+   "Annex 2 gives guidelines for accurate true-peak measurement (oversampling) because sample peaks miss inter-sample overs.",
+   "It is the measurement basis cited by EBU R128, Spotify, Apple Podcasts."
+  ],
+  "practical_applications": [
+   "Every loudness number in our pipeline (ffmpeg ebur128/loudnorm) should be BS.1770 based so platform figures are comparable."
+  ],
+  "limitations": [
+   "Only the ITU product page and search snippets were read; Annex details not checked."
+  ],
+  "license": "copyrighted (ITU, free download)",
+  "access_status": "publisher_page",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M24"
+  ]
+ },
+ {
+  "key": "EBU2020_R128",
+  "title": "EBU R 128 (2020, v4.0): Loudness normalisation and permitted maximum level of audio signals",
+  "authors": "EBU",
+  "year": 2020,
+  "url": "https://tech.ebu.ch/docs/r/r128v4_0.pdf",
+  "doi_isbn": "",
+  "source_type": "docs",
+  "tier": "S",
+  "key_findings": [
+   "Normalise to Programme Loudness; Target Level -23.0 LUFS, tolerance +/-1.0 LU where target not practically achievable (live).",
+   "Measure the whole programme, not only speech or music (no 'anchor' emphasis); gated measurement per BS.1770 eq. 7.",
+   "Maximum True Peak -1 dBTP in production; lower limits may apply for distribution systems / data reduction (see EBU Tech 3344).",
+   "Loudness Range (Tech 3342), max momentary and max short-term loudness are descriptors, not targets."
+  ],
+  "practical_applications": [
+   "Use -23 LUFS only for broadcast deliveries; social video uses streaming targets but the same metering method.",
+   "Keep TP <= -1 dBTP as an absolute ceiling; lower before lossy encoding."
+  ],
+  "limitations": [
+   "Broadcast standard, not a social-platform spec. A 2023 v5.0 exists (seen in search, not read)."
+  ],
+  "license": "EBU, free download",
+  "access_status": "full_text",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M24"
+  ]
+ },
+ {
+  "key": "Spotify_Loudness",
+  "title": "Loudness normalization on Spotify (Spotify for Artists support)",
+  "authors": "Spotify",
+  "year": null,
+  "url": "https://support.spotify.com/artists/article/loudness-normalization/",
+  "doi_isbn": "",
+  "source_type": "docs",
+  "tier": "C",
+  "key_findings": [
+   "Default playback target -14 LUFS (ITU 1770); user modes Loud -11, Normal -14, Quiet -19 LUFS.",
+   "Positive gain is capped by the track's peak with 1 dB headroom for lossy encoding; loud mode uses a limiter (-1 dB, 5 ms attack, 100 ms release).",
+   "Advice: master to about -14 LUFS, keep true peak below -1 dBTP; if louder than -14 LUFS keep below -2 dBTP.",
+   "No normalization on the web player and some third-party devices."
+  ],
+  "practical_applications": [
+   "Good reference for 'loud masters get turned down, quiet masters may not be fully raised' logic that also applies to video platforms."
+  ],
+  "limitations": [
+   "Music-streaming platform, not a video platform. Undated support page; values can change."
+  ],
+  "license": "copyrighted",
+  "access_status": "full_text",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M24"
+  ]
+ },
+ {
+  "key": "Apple_PodcastAudio",
+  "title": "Apple Podcasts for Creators: Audio requirements",
+  "authors": "Apple",
+  "year": null,
+  "url": "https://podcasters.apple.com/support/audio-requirements",
+  "doi_isbn": "",
+  "source_type": "docs",
+  "tier": "C",
+  "key_findings": [
+   "Target around -16 LKFS +/-1 dB, true peak not above -1 dBFS, both per ITU-R BS.1770-5; condition loudness before encoding.",
+   "WAV/FLAC min 44.1 kHz, 16- or 24-bit; 24-bit recommended; mono masters must be delivered as dual-mono stereo for WAV/FLAC."
+  ],
+  "practical_applications": [
+   "Use -16 LUFS for speech-only audio deliverables (podcast-style VO, audio-only posts)."
+  ],
+  "limitations": [
+   "Podcast spec; not a video-platform rule."
+  ],
+  "license": "copyrighted",
+  "access_status": "full_text",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M24"
+  ]
+ },
+ {
+  "key": "AES2021_TD1008",
+  "title": "AES TD1008: Recommendations for loudness of internet audio streaming and on-demand distribution (republished as AES77-2023)",
+  "authors": "Audio Engineering Society Technical Committee on Broadcast and Online Delivery",
+  "year": 2021,
+  "url": "https://aes.org/publications/standards/preview.cfm?ID=114",
+  "doi_isbn": "",
+  "source_type": "docs",
+  "tier": "S",
+  "key_findings": [
+   "Guidance for distributors (not producers) on distribution loudness for music streams, radio-style streams and podcasts; supersedes TD1004.",
+   "Per Shepherd's summary: music -16 LUFS distribution loudness (album/loudest-track at ~-14), speech-only and assorted content -18 LUFS."
+  ],
+  "practical_applications": [
+   "Explains why platform targets cluster at -14 to -18 LUFS and why speech-only content is often played quieter than music."
+  ],
+  "limitations": [
+   "Numbers taken from a practitioner summary (ProductionAdvice), not read in the AES document itself."
+  ],
+  "license": "copyrighted (AES)",
+  "access_status": "bibliographic",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M24"
+  ]
+ },
+ {
+  "key": "Shepherd_TD1008",
+  "title": "AES TD1008 summary (ProductionAdvice)",
+  "authors": "Shepherd, Ian",
+  "year": null,
+  "url": "https://productionadvice.co.uk/td1008/",
+  "doi_isbn": "",
+  "source_type": "practitioner",
+  "tier": "D",
+  "key_findings": [
+   "Summarises TD1008: music -16 LUFS; speech/podcast/'assorted' -18 LUFS; interstitials and assistant audio -18 LUFS."
+  ],
+  "practical_applications": [
+   "Secondary reference for speech-only targets."
+  ],
+  "limitations": [
+   "Practitioner summary; no true-peak figure stated in the summary."
+  ],
+  "license": "copyrighted",
+  "access_status": "full_text",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M24"
+  ]
+ },
+ {
+  "key": "Shepherd2017_StatsForNerds",
+  "title": "Are you confused about exactly what YouTube's playback volume normalization is doing to your music?",
+  "authors": "Shepherd, Ian",
+  "year": 2017,
+  "url": "https://productionadvice.co.uk/stats-for-nerds/",
+  "doi_isbn": "",
+  "source_type": "practitioner",
+  "tier": "D",
+  "key_findings": [
+   "YouTube 'Stats for nerds' shows 'content loudness' = difference between a video's loudness and YouTube's reference.",
+   "YouTube only turns loud videos down; quieter videos are not turned up."
+  ],
+  "practical_applications": [
+   "Check an uploaded clip: right-click > Stats for nerds; positive content loudness means YouTube is attenuating it."
+  ],
+  "limitations": [
+   "2017 article; YouTube publishes no official loudness target (no Google help page found this session). The often-quoted -14 LUFS reference is practitioner-reported (e.g. MeterPlugs 2019)."
+  ],
+  "license": "copyrighted",
+  "access_status": "full_text",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M24"
+  ]
+ },
+ {
+  "key": "Meta2023_xHEAAC",
+  "title": "How Meta brought high-quality audio to Facebook and Instagram with the xHE-AAC codec",
+  "authors": "Meta Engineering",
+  "year": 2023,
+  "url": "https://engineering.fb.com/2023/04/11/video-engineering/high-quality-audio-xhe-aac-codec-meta/",
+  "doi_isbn": "",
+  "source_type": "docs",
+  "tier": "C",
+  "key_findings": [
+   "xHE-AAC with MPEG-D DRC deployed for Facebook and Instagram Reels/Stories: loudness metadata, original audio untouched, client applies a context-dependent target loudness and DRC (headphones, speaker, noise).",
+   "No target LUFS value is published."
+  ],
+  "practical_applications": [
+   "On Reels/Stories the final playback loudness is decided by the app; deliver a consistent, well-limited master and do not rely on extreme loudness."
+  ],
+  "limitations": [
+   "Engineering blog, not a spec; no numbers."
+  ],
+  "license": "copyrighted",
+  "access_status": "full_text",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M24"
+  ]
+ },
+ {
+  "key": "ForaSoft2026_PlatformLUFS",
+  "title": "LUFS targets per platform 2026",
+  "authors": "Sapunov, Nikolay (Fora Soft)",
+  "year": 2026,
+  "url": "https://www.forasoft.com/learn/audio-for-video/articles-audio/lufs-targets-per-platform-2026",
+  "doi_isbn": "",
+  "source_type": "practitioner",
+  "tier": "D",
+  "key_findings": [
+   "Lists TikTok / Instagram / Meta as having no published loudness target (approx. -14 internal, context-adaptive), -1 dBTP advised."
+  ],
+  "practical_applications": [
+   "Supports our position: for TikTok/IG use a sensible default, not a 'required' number."
+  ],
+  "limitations": [
+   "Vendor blog; snippets only; internal values are estimates."
+  ],
+  "license": "copyrighted",
+  "access_status": "search_summary",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M24"
+  ]
+ },
+ {
+  "key": "Torcoli2019_Ducking",
+  "title": "Preferred levels for background ducking to produce esthetically pleasing audio for TV with clear speech",
+  "authors": "Torcoli, M.; Freke-Morin, A.; Paulus, J.; Simon, C.; Shirley, B.",
+  "year": 2019,
+  "url": "https://cris.fau.de/publications/234640600",
+  "doi_isbn": "10.17743/jaes.2019.0052",
+  "source_type": "empirical",
+  "tier": "A",
+  "key_findings": [
+   "J. Audio Eng. Soc. 67(12) 2019: for a pleasant mix with clear speech, recommends at least 10 LU between commentary and music, and at least 15 LU between commentary and ambience; non-experts preferred about 4 LU more than experts.",
+   "Recommendation: at least 10 LU between commentary and music, at least 15 LU between commentary and ambience.",
+   "Non-experts preferred LDs about 4 LU higher than experts (significant); preferences varied widely between listeners.",
+   "Earlier convention version: listeners over 50 preferred at least 7 LU (under 50 no clear preference)."
+  ],
+  "practical_applications": [
+   "Core number for our VO mix: music bed >= 10 LU below VO while speaking, ambience >= 15 LU below; we are 'experts' so err louder VO than we like."
+  ],
+  "limitations": [
+   "22 listeners, normal hearing, TV documentary material, German lab; LD measured on short items.",
+   "Spot-check 2026-11-25: target is preference with clear speech; venue JAES."
+  ],
+  "license": "open access (JAES)",
+  "access_status": "abstract",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M24"
+  ]
+ },
+ {
+  "key": "WardShirley2019",
+  "title": "[exact title not confirmed] JAES review of object-based audio personalisation for hard-of-hearing listeners",
+  "authors": "Ward, L.; Shirley, B.",
+  "year": 2019,
+  "url": "https://doi.org/10.17743/jaes.2019.0021",
+  "doi_isbn": "10.17743/jaes.2019.0021",
+  "source_type": "review",
+  "tier": "A",
+  "key_findings": [
+   "Systematic review: spatial separation, speech-to-noise ratio and redundancy are evidenced to improve intelligibility; no single solution fits all hearing-impaired listeners."
+  ],
+  "practical_applications": [
+   "Use all three levers in VO mixes: level difference, keep music out of the VO's centre/frequency space, redundancy (on-screen text = subtitles)."
+  ],
+  "limitations": [
+   "Exact title not confirmed; JAES vol. 67 pp. 584-597 per search snippets; content read only from snippets."
+  ],
+  "license": "copyrighted",
+  "access_status": "search_summary",
+  "verification_status": "unverified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M24"
+  ]
+ },
+ {
+  "key": "ISO2023_226",
+  "title": "ISO 226:2023 Acoustics - Normal equal-loudness-level contours",
+  "authors": "ISO/TC 43",
+  "year": 2023,
+  "url": "https://www.iso.org/standard/83117.html",
+  "doi_isbn": "",
+  "source_type": "docs",
+  "tier": "S",
+  "key_findings": [
+   "Third edition (2023): equal-loudness contours for pure tones 20 Hz-12.5 kHz, otologically normal listeners aged 18-25."
+  ],
+  "practical_applications": [
+   "Explains why bass and very high treble sound quieter at low playback levels -> mixes checked only loud sound thin when quiet on a phone."
+  ],
+  "limitations": [
+   "Standard not read; product page/snippets only."
+  ],
+  "license": "copyrighted (ISO, paid)",
+  "access_status": "search_summary",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M24"
+  ]
+ },
+ {
+  "key": "Suzuki2024_ISO226",
+  "title": "[exact title not confirmed] Review of the ISO 226:2023 revision (Acoustical Science and Technology 45(1) 1-8)",
+  "authors": "Suzuki, Y.; Takeshima, H.; Kurakata, K.",
+  "year": 2024,
+  "url": "https://doi.org/10.1250/ast.e23.66",
+  "doi_isbn": "10.1250/ast.e23.66",
+  "source_type": "review",
+  "tier": "A",
+  "key_findings": [
+   "2023 revision differs from 2003 by at most 0.6 dB; motivated by a 0.4 dB lower threshold at 20 Hz (ISO 389-7:2019) and an updated loudness exponent."
+  ],
+  "practical_applications": [
+   "The 2003 curves remain fine for mixing intuition."
+  ],
+  "limitations": [
+   "Title paraphrased from search result; snippets only."
+  ],
+  "license": "unknown",
+  "access_status": "search_summary",
+  "verification_status": "unverified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M24"
+  ]
+ },
+ {
+  "key": "Moore_PsychHearing",
+  "title": "An Introduction to the Psychology of Hearing (6th ed.)",
+  "authors": "Moore, Brian C. J.",
+  "year": null,
+  "url": "https://web.uvic.ca/~aschloss/course_mat/MUS%20511/articles/An%20Introduction%20to%20the%20Psychology%20of%20Hearing%20by%20Brian%20Moore%206th%20Edition.pdf",
+  "doi_isbn": "",
+  "source_type": "textbook",
+  "tier": "A",
+  "key_findings": [
+   "Ch.3 'Frequency selectivity, masking and the critical band': auditory filters, power-spectrum model of masking.",
+   "Masking spreads more upward in frequency than downward; critical bandwidth grows with centre frequency."
+  ],
+  "practical_applications": [
+   "Why a bass-heavy or mid-heavy music bed masks VO consonants more than its level suggests; carve the music where the VO lives."
+  ],
+  "limitations": [
+   "Only table of contents / search snippets read."
+  ],
+  "license": "copyrighted",
+  "access_status": "bibliographic",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M24"
+  ]
+ },
+ {
+  "key": "Giannoulis2012_Compressor",
+  "title": "Digital dynamic range compressor design - a tutorial and analysis",
+  "authors": "Giannoulis, D.; Massberg, M.; Reiss, J. D.",
+  "year": 2012,
+  "url": "https://www.aes.org/e-lib/browse.cfm?elib=16354",
+  "doi_isbn": "",
+  "source_type": "review",
+  "tier": "A",
+  "key_findings": [
+   "Compressors are nonlinear systems with memory; compares peak vs RMS detection, feed-forward vs feedback; recommends feed-forward designs as stable and predictable."
+  ],
+  "practical_applications": [
+   "Explains threshold / ratio / knee / attack / release used in our acompressor settings."
+  ],
+  "limitations": [
+   "Abstract only. JAES 60(6) 399-408."
+  ],
+  "license": "copyrighted (AES)",
+  "access_status": "abstract",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M24"
+  ]
+ },
+ {
+  "key": "NielsenLund2000_0dBFSplus",
+  "title": "0 dBFS+ levels in digital mastering",
+  "authors": "Nielsen, S. H.; Lund, T.",
+  "year": 2000,
+  "url": "https://aes2.org/publications/elibrary-page/?id=9087",
+  "doi_isbn": "",
+  "source_type": "empirical",
+  "tier": "A",
+  "key_findings": [
+   "Inter-sample peaks can be considerably higher than 0 dBFS; consumer CD players reproduce such signals with distortion."
+  ],
+  "practical_applications": [
+   "Reason to meter true peak (dBTP), not sample peak, and to leave >= 1 dB headroom before AAC encoding."
+  ],
+  "limitations": [
+   "AES convention paper, abstract only."
+  ],
+  "license": "copyrighted (AES)",
+  "access_status": "abstract",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M24"
+  ]
+ },
+ {
+  "key": "FFmpeg_Filters",
+  "title": "FFmpeg Filters Documentation (loudnorm, ebur128, sidechaincompress, acompressor, afftdn, agate, deesser, alimiter)",
+  "authors": "FFmpeg developers",
+  "year": null,
+  "url": "https://ffmpeg.org/ffmpeg-filters.html",
+  "doi_isbn": "",
+  "source_type": "docs",
+  "tier": "C",
+  "key_findings": [
+   "loudnorm: EBU R128 normalisation with dynamic and linear modes; single pass and two pass; defaults I=-24, LRA=7, TP=-2; dynamic mode upsamples to 192 kHz so set -ar explicitly.",
+   "linear=true needs all measured_* values; reverts to dynamic if target LRA < source LRA or the gain would exceed target TP.",
+   "acompressor/sidechaincompress defaults: threshold 0.125, ratio 2, attack 20 ms, release 250 ms; afftdn default nr 12 dB, nf -50 dB."
+  ],
+  "practical_applications": [
+   "All command examples in MIX_PLAYBOOK.md were run on ffmpeg 9.0 (gyan.dev build) on synthetic audio this session."
+  ],
+  "limitations": [
+   "In our test, loudnorm pass-1 input_i differed from ebur128 by about 0.9 LU on a synthetic signal - always re-measure the output."
+  ],
+  "license": "LGPL/GPL documentation",
+  "access_status": "full_text",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M24"
+  ]
+ },
+ {
+  "key": "SOS_Sibilance",
+  "title": "Managing sibilance / Vocal de-essing (Sound On Sound techniques)",
+  "authors": "Sound On Sound",
+  "year": null,
+  "url": "https://www.soundonsound.com/techniques/managing-sibilance",
+  "doi_isbn": "",
+  "source_type": "practitioner",
+  "tier": "D",
+  "key_findings": [
+   "Offending sibilance usually 5-8 kHz (SOS review); many vocal mics have a presence boost around 5 kHz; over-de-essing dulls the voice."
+  ],
+  "practical_applications": [
+   "De-esser band for Thai/English TTS: start 5-8 kHz, then listen."
+  ],
+  "limitations": [
+   "Snippets only; craft advice."
+  ],
+  "license": "copyrighted",
+  "access_status": "search_summary",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M24"
+  ]
+ },
+ {
+  "key": "YorkU_DigitizingAudio",
+  "title": "Digitizing audio (EECS 4462 course notes)",
+  "authors": "York University EECS",
+  "year": null,
+  "url": "https://wiki.eecs.yorku.ca/course_archive/2018-19/F/4462/_media/module06-digitizingaudio.pdf",
+  "doi_isbn": "",
+  "source_type": "course",
+  "tier": "B",
+  "key_findings": [
+   "Sampling theorem: sample rate must exceed twice the highest frequency; bit depth sets quantisation noise floor ~6.02 dB per bit (+1.76 dB for a full-scale sine), 16-bit ~ 96 dB."
+  ],
+  "practical_applications": [
+   "48 kHz / 24-bit (or 32-bit float) for production files; 16-bit is fine for final delivery."
+  ],
+  "limitations": [
+   "Read via search snippets only."
+  ],
+  "license": "unknown",
+  "access_status": "search_summary",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M24"
+  ]
+ },
+ {
+  "key": "GSMArena_SpeakerTest",
+  "title": "GSMArena labs: smartphone loudspeaker test methodology",
+  "authors": "GSMArena",
+  "year": null,
+  "url": "https://m.gsmarena.com/gsmarena_labs_new_loudspeaker_test-news-41789.php",
+  "doi_isbn": "",
+  "source_type": "practitioner",
+  "tier": "E",
+  "key_findings": [
+   "Measures phone speaker frequency response with a sweep and reports loudness in LUFS; shows strong bass roll-off on phone speakers."
+  ],
+  "practical_applications": [
+   "Motivation for a phone-speaker check (high-pass ~150 Hz preview) in QC."
+  ],
+  "limitations": [
+   "No published cut-off numbers in what we saw; consumer-review methodology."
+  ],
+  "license": "copyrighted",
+  "access_status": "search_summary",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M24"
+  ]
+ }
+]

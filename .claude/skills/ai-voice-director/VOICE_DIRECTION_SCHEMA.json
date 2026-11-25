@@ -1,0 +1,157 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "ai-voice-director/voice-direction.schema.json",
+  "title": "Voice Direction",
+  "description": "Provider-neutral direction for one line (or a list of lines) of dialogue / narration. Conceptual values (relative to the character's baseline) — a provider adapter turns them into real API parameters (see TTS_PROVIDER_ADAPTERS.md). Validate with tools/validate.py before generating audio.",
+  "type": "object",
+  "required": ["schema_version", "project", "lines"],
+  "additionalProperties": false,
+  "properties": {
+    "schema_version": { "const": "1.0" },
+    "project": { "type": "string", "minLength": 1 },
+    "scene": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "id": { "type": "string" },
+        "location": { "type": "string" },
+        "acoustic_space": { "enum": ["dry_studio", "small_room", "large_room", "outdoor", "phone", "radio", "inner_voice", "other"] },
+        "situation": { "type": "string", "description": "What just happened / what is at stake." },
+        "previous_beat": { "type": "string" },
+        "next_beat": { "type": "string" }
+      }
+    },
+    "characters": {
+      "type": "array",
+      "description": "Characters used in this file; each must exist in CHARACTER_VOICE_BIBLE.md (or be defined inline here).",
+      "items": { "$ref": "#/$defs/characterRef" }
+    },
+    "lines": {
+      "type": "array",
+      "minItems": 1,
+      "items": { "$ref": "#/$defs/line" }
+    }
+  },
+  "$defs": {
+    "level5": { "enum": ["very_low", "low", "medium", "high", "very_high"] },
+    "relative": { "enum": ["much_lower", "lower", "slightly_lower", "baseline", "slightly_higher", "higher", "much_higher"] },
+    "characterRef": {
+      "type": "object",
+      "required": ["id"],
+      "additionalProperties": false,
+      "properties": {
+        "id": { "type": "string", "pattern": "^[a-z0-9_\\-]+$" },
+        "voice_by_provider": {
+          "type": "object",
+          "description": "Fixed voice per provider, e.g. {\"gemini\": \"Puck\"}. Never change it between lines of one character.",
+          "additionalProperties": { "type": "string" }
+        }
+      }
+    },
+    "analysis": {
+      "type": "object",
+      "description": "SCRIPT_ANALYSIS.md — filled BEFORE choosing the emotion.",
+      "required": ["speaker", "listener", "goal", "subtext"],
+      "additionalProperties": false,
+      "properties": {
+        "speaker": { "type": "string" },
+        "listener": { "type": "string" },
+        "relationship": { "type": "string" },
+        "goal": { "type": "string", "description": "What the speaker wants from the listener (a verb: to calm, to warn, to win back…)." },
+        "wants_listener_to_feel": { "type": "string" },
+        "unsaid": { "type": "string", "description": "What the speaker does not dare to say." },
+        "outer_emotion": { "type": "string" },
+        "inner_emotion": { "type": "string" },
+        "subtext": { "type": "string" },
+        "turning_point": { "type": "boolean", "default": false }
+      }
+    },
+    "emotion": {
+      "type": "object",
+      "required": ["primary", "intensity"],
+      "additionalProperties": false,
+      "properties": {
+        "primary": { "type": "string", "description": "id from EMOTION_LIBRARY.json (e.g. sadness.melancholy)" },
+        "secondary": { "type": "string" },
+        "masked_by": { "type": "string", "description": "Outer emotion shown on top of the primary (suppressed / hidden emotion)." },
+        "intensity": { "type": "number", "minimum": 0, "maximum": 1 },
+        "transition_to": { "type": "string", "description": "Emotion at the end of the line, if it changes inside the line." },
+        "transition_at": { "type": "string", "description": "Word where the change happens." }
+      }
+    },
+    "prosody": {
+      "type": "object",
+      "additionalProperties": false,
+      "description": "All values are relative to the character's baseline in CHARACTER_VOICE_BIBLE.md. Thai: no prosody value may change a lexical tone (PROSODY_RULES.md §Thai).",
+      "properties": {
+        "pitch_baseline": { "$ref": "#/$defs/relative" },
+        "pitch_range": { "enum": ["very_narrow", "narrow", "baseline", "wide", "very_wide"] },
+        "rate": { "enum": ["very_slow", "slow", "slightly_slow", "baseline", "slightly_fast", "fast", "very_fast"] },
+        "rhythm": { "enum": ["even", "conversational", "clipped", "drawn_out", "halting", "rushed", "sing_song"] },
+        "energy": { "$ref": "#/$defs/level5" },
+        "loudness": { "enum": ["whisper", "soft", "conversational", "projected", "shout"] },
+        "breathiness": { "$ref": "#/$defs/level5" },
+        "resonance": { "enum": ["chest", "balanced", "head", "nasal", "pharyngeal_tight"] },
+        "articulation": { "enum": ["slurred", "relaxed", "clear", "crisp", "over_articulated"] },
+        "voice_quality": { "enum": ["modal", "breathy", "tense", "creaky", "harsh", "falsetto", "trembling", "smiling"] },
+        "tremor": { "$ref": "#/$defs/level5" },
+        "ending": { "enum": ["fall", "soft_fall", "level", "rise", "trail_off", "cut_off", "smile_ending"] }
+      }
+    },
+    "pause": {
+      "type": "object",
+      "required": ["after", "ms", "kind"],
+      "additionalProperties": false,
+      "properties": {
+        "after": { "type": "string", "description": "Exact text (word/phrase) the pause follows." },
+        "ms": { "type": "integer", "minimum": 50, "maximum": 3000 },
+        "kind": { "enum": ["micro", "breath", "dramatic", "hesitation", "comic"] }
+      }
+    },
+    "emphasis": {
+      "type": "object",
+      "required": ["word", "how"],
+      "additionalProperties": false,
+      "properties": {
+        "word": { "type": "string" },
+        "how": { "enum": ["louder", "longer", "higher_register", "lower_register", "softer", "pause_before", "crisp_onset"] },
+        "why": { "type": "string" }
+      }
+    },
+    "line": {
+      "type": "object",
+      "required": ["id", "character", "language", "text", "emotion", "direction"],
+      "additionalProperties": false,
+      "properties": {
+        "id": { "type": "string" },
+        "character": { "type": "string" },
+        "language": { "enum": ["th", "en", "th-en"] },
+        "text": { "type": "string", "minLength": 1, "description": "Script text as written (shown in subtitles)." },
+        "spoken_text": { "type": "string", "description": "What the TTS actually reads after PRONUNCIATION_DICTIONARY / number normalisation (if different)." },
+        "politeness": { "enum": ["intimate", "casual", "polite", "formal", "royal_or_ceremonial"] },
+        "analysis": { "$ref": "#/$defs/analysis" },
+        "emotion": { "$ref": "#/$defs/emotion" },
+        "intention": { "type": "string", "description": "Playable action verb, e.g. 'to comfort without showing her own fear'." },
+        "direction": { "type": "string", "minLength": 10, "description": "Actor-facing note: action + intent + how, never just an emotion name." },
+        "prosody": { "$ref": "#/$defs/prosody" },
+        "pauses": { "type": "array", "items": { "$ref": "#/$defs/pause" } },
+        "emphasis": { "type": "array", "items": { "$ref": "#/$defs/emphasis" } },
+        "nonverbal": {
+          "type": "array",
+          "items": { "enum": ["breath_in", "sigh", "laugh_soft", "laugh", "sob", "sniff", "gasp", "hum", "tsk", "swallow", "clear_throat"] }
+        },
+        "target_duration_s": { "type": "number", "minimum": 0.2, "maximum": 60 },
+        "provider_overrides": { "type": "object", "description": "Raw, provider-specific fields an adapter may pass through (see TTS_PROVIDER_ADAPTERS.md).", "additionalProperties": true },
+        "qc": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "status": { "enum": ["todo", "generated", "pass", "fail"] },
+            "score": { "type": "number", "minimum": 0, "maximum": 100 },
+            "notes": { "type": "string" }
+          }
+        }
+      }
+    }
+  }
+}

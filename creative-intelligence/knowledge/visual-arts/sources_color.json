@@ -1,0 +1,1249 @@
+[
+ {
+  "key": "LaferSousa2015",
+  "title": "Striking individual differences in color perception uncovered by 'the dress' photograph",
+  "authors": "Rosa Lafer-Sousa, Katherine L. Hermann, Bevil R. Conway",
+  "year": 2015,
+  "url": "https://www1.wellesley.edu/sites/default/files/assets/departments/neuroscience/images/lafersousahermannconway_thedress_2015_withsupp-1.pdf",
+  "doi_isbn": "10.1016/j.cub.2015.04.053",
+  "source_type": "empirical",
+  "tier": "A",
+  "key_findings": [
+   "Free-response survey N=1401 (313 naive): 57% blue/black, 30% white/gold, 11% blue/brown, 2% other.",
+   "Women and older people reported white/gold more; some observers switched on re-test (multistable); colour matches showed three peaks = three stable percepts.",
+   "Hypothesis: different priors about the illuminant along the daylight locus (cool prior -> white/gold, warm prior -> blue/black, neutral -> blue/brown).",
+   "Embedding the dress in scenes with a global warm or cool tint (including the model's skin) flipped most observers: 64% of W/G switched to B/K under warm light, 80% of B/K switched to W/G under cool light.",
+   "Larger image size increased W/G reports; blurring decreased them; chronotype trend not significant."
+  ],
+  "practical_applications": [
+   "Product colours on the blue-yellow axis (navy, tortoise, brown/blue tints) need unambiguous illumination cues.",
+   "A tint applied to the whole scene incl. skin is read as light; check images at thumbnail size."
+  ],
+  "limitations": [
+   "Short correspondence + supplement; online sample mostly US; mechanism partly hypothetical."
+  ],
+  "license": "copyrighted (author copy hosted by Wellesley)",
+  "access_status": "full_text",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M09",
+   "M04"
+  ]
+ },
+ {
+  "key": "WitzelGegenfurtner2018",
+  "title": "Color Perception: Objects, Constancy, and Categories",
+  "authors": "Christoph Witzel, Karl R. Gegenfurtner",
+  "year": 2018,
+  "url": "https://www.allpsych.uni-giessen.de/rauisch/readings/Witzel_Gegenfurtner.2018.pdf",
+  "doi_isbn": "10.1146/annurev-vision-091517-034231",
+  "source_type": "review",
+  "tier": "A",
+  "key_findings": [
+   "Natural objects have polychromatic colour distributions; observers estimate object lightness from the brightest parts excluding highlights.",
+   "Chromatic and luminance contrast are statistically independent in natural scenes; chroma tends to mark objects while luminance also varies with shading.",
+   "Memory colour effect: colour-diagnostic objects (e.g. a grey banana) look tinted toward their typical colour; strongest along blue-yellow; observers most uncertain along the daylight axis.",
+   "Constancy indices across 30 years range from near zero to near perfect; >=90% when adaptation is possible or naturalistic cues exist; index rises with publication year r(64)=0.43; appearance vs surface-match instructions matter.",
+   "Cues: adaptation and local contrast (major), interreflection/shading, depth, specular highlights, memory colour; full adaptation takes several minutes.",
+   "Metamer mismatching (clothing in a badly lit store vs daylight) makes constancy impossible but is rare in natural scenes.",
+   "#TheDress pixels lie along the daylight locus; rotating them off-axis reduces individual differences; percept can be primed but not voluntarily changed.",
+   "Number of basic colour terms varies by language (11 English/German, 12 Russian, 15 Korean, 5 Himba/Berinmo); category effects are high-level and reduced by verbal interference."
+  ],
+  "practical_applications": [
+   "Judge product colour in the plane lit directly but non-specularly; keep cue-rich scenes for true colour; fix green-magenta errors before warm-cool (derived)."
+  ],
+  "limitations": [
+   "Review; individual claims rest on cited studies not read here."
+  ],
+  "license": "copyrighted (course reading copy)",
+  "access_status": "full_text",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M09",
+   "M04",
+   "M35"
+  ]
+ },
+ {
+  "key": "Foster2011",
+  "title": "Color constancy",
+  "authors": "David H. Foster",
+  "year": 2011,
+  "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC3249236",
+  "doi_isbn": "10.1016/j.visres.2010.09.006",
+  "source_type": "review",
+  "tier": "A",
+  "key_findings": [
+   "Review of human colour constancy in Vision Research 51(7):674-700; excludes colour-vision deficiency and lightness constancy.",
+   "Author's site documents constancy indices (incl. Brunswik ratio) and a table of 80 indices from published studies."
+  ],
+  "practical_applications": [
+   "Background for why constancy measurements vary with method (see WitzelGegenfurtner2018)."
+  ],
+  "limitations": [
+   "Full text not read; findings here only from search summaries and Witzel & Gegenfurtner's use of it."
+  ],
+  "license": "open access (PMC)",
+  "access_status": "search_summary",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M09",
+   "M04"
+  ]
+ },
+ {
+  "key": "Li2017_CAM16",
+  "title": "Comprehensive color solutions: CAM16, CAT16, and CAM16-UCS",
+  "authors": "Changjun Li, Zhiqiang Li, Zhifeng Wang, Yang Xu, Ming Ronnier Luo, Guihua Cui, Manuel Melgosa, Michael H. Brill, Michael Pointer",
+  "year": 2017,
+  "url": "https://library.imaging.org/cic/articles/24/1/art00035",
+  "doi_isbn": "Color Research & Application 42(6):703-718",
+  "source_type": "empirical",
+  "tier": "A",
+  "key_findings": [
+   "CAM16 is a simpler revision of CIECAM02; CAT16 replaces CAT02 for chromatic adaptation alone; CAM16-UCS replaces CAM02-UCS for colour difference.",
+   "The 2016 conference version reports CAM16 solves the mathematical problems of CIECAM02 and performs as well or better.",
+   "Follow-up work (Gao et al. 2021) compensates the size effect in the CAT16 cone-like space."
+  ],
+  "practical_applications": [
+   "Current appearance-model framework; supports the rule 'judge colour in final context and size'."
+  ],
+  "limitations": [
+   "Abstract-level only; journal DOI not confirmed in this session; URL is the 2016 CIC conference version (A Revision of CIECAM02 and its CAT and UCS); follow-up only from search summary."
+  ],
+  "license": "copyrighted",
+  "access_status": "abstract",
+  "verification_status": "unverified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M09"
+  ]
+ },
+ {
+  "key": "Bloj1999",
+  "title": "Perception of three-dimensional shape influences colour perception through mutual illumination",
+  "authors": "Marina G. Bloj, Daniel Kersten, Anya C. Hurlbert",
+  "year": 1999,
+  "url": "https://www.doi.org/10.1038/47245",
+  "doi_isbn": "10.1038/47245",
+  "source_type": "empirical",
+  "tier": "A",
+  "key_findings": [
+   "Chromatic Mach card (magenta and white halves): the white side's perceived colour changes from pale pink to deep magenta when perceived shape flips concave/convex.",
+   "Visual system incorporates knowledge of mutual illumination early in colour processing."
+  ],
+  "practical_applications": [
+   "Reflected colour (colour bleed) must be consistent with shape; cutouts need ground-colour bounce."
+  ],
+  "limitations": [
+   "Abstract/summary level; PDF link returned 404."
+  ],
+  "license": "copyrighted",
+  "access_status": "abstract",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M09",
+   "M04",
+   "M10"
+  ]
+ },
+ {
+  "key": "SochorovaJamriska2021",
+  "title": "Practical Pigment Mixing for Digital Painting",
+  "authors": "Sarka Sochorova, Ondrej Jamriska",
+  "year": 2021,
+  "url": "https://dcgi.fel.cvut.cz/wp-content/wpallimport-dist/publications/pdf/publications-2021-sochorova-tog-pigments-paper.pdf",
+  "doi_isbn": "10.1145/3478513.3480549",
+  "source_type": "empirical",
+  "tier": "A",
+  "key_findings": [
+   "RGB painting software mixes like light: blue + yellow -> grey instead of green.",
+   "Kubelka-Munk (1931) predicts pigment mixing (repeated absorption and scattering) but was never adopted by painting software.",
+   "Latent space: RGB as mixture of 4 primary pigments + additive residual, enabling K-M mixing with RGB in/out (Mixbox).",
+   "Plain subtractive mixing (as used by CMYK) gives results too dark or wrong in colour compared with K-M."
+  ],
+  "practical_applications": [
+   "Do not fake paint overlaps with CSS blend; use AI-painted overlaps or a pigment mixer for watercolour styles."
+  ],
+  "limitations": [
+   "Mixbox licence reported as CC BY-NC in secondary sources (not checked)."
+  ],
+  "license": "copyrighted (author PDF)",
+  "access_status": "full_text",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M09",
+   "M34"
+  ]
+ },
+ {
+  "key": "KubelkaMunk1931",
+  "title": "Ein Beitrag zur Optik der Farbanstriche",
+  "authors": "Paul Kubelka, Franz Munk",
+  "year": 1931,
+  "url": "https://cir.nii.ac.jp/crid/1574231875094727936",
+  "doi_isbn": "Zeitschrift fur technische Physik 12:593-601",
+  "source_type": "primary_text",
+  "tier": "A",
+  "key_findings": [
+   "Original two-flux model of light in paint layers (absorption K and scattering S), still widely used in industry."
+  ],
+  "practical_applications": [
+   "Theoretical basis for pigment-mixing behaviour vs light mixing."
+  ],
+  "limitations": [
+   "Not read; existence and page range from bibliographic records; English translation by S. Westin exists."
+  ],
+  "license": "public domain status unknown",
+  "access_status": "bibliographic",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M09",
+   "M34"
+  ]
+ },
+ {
+  "key": "ODonovan2011",
+  "title": "Color Compatibility From Large Datasets",
+  "authors": "Peter O'Donovan, Aseem Agarwala, Aaron Hertzmann",
+  "year": 2011,
+  "url": "https://www.dgp.toronto.edu/~donovan/color/colorcomp.pdf",
+  "doi_isbn": "10.1145/2010324.1964958",
+  "source_type": "empirical",
+  "tier": "A",
+  "key_findings": [
+   "Analysed Kuler and COLOURLovers themes (>2 million created) and an MTurk rating set of 5-colour themes.",
+   "Little evidence that people gravitate to hue templates naturally or that matching a template gives higher scores; themes closely matching templates scored slightly lower.",
+   "Preference for hue entropy corresponding to about 2-3 hues per 5-colour theme.",
+   "Learned L1-regularised regression over features in several colour spaces predicts theme ratings; demographic groups rate differently."
+  ],
+  "practical_applications": [
+   "Treat hue templates as idea generators; limit to 2-3 hue families; judge in context."
+  ],
+  "limitations": [
+   "Context-free palettes rated online; interface bias in Kuler data acknowledged by authors."
+  ],
+  "license": "copyrighted (author PDF); data/code CC BY-NC-SA",
+  "access_status": "full_text",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M09",
+   "M26",
+   "M06"
+  ]
+ },
+ {
+  "key": "CohenOr2006",
+  "title": "Color Harmonization",
+  "authors": "Daniel Cohen-Or, Olga Sorkine, Ran Gal, Tommer Leyvand, Ying-Qing Xu",
+  "year": 2006,
+  "url": "https://www.microsoft.com/en-us/research/wp-content/uploads/2006/07/harmonization.pdf",
+  "doi_isbn": "ACM TOG 25(3):624-630",
+  "source_type": "empirical",
+  "tier": "A",
+  "key_findings": [
+   "Finds the best-fitting harmonic hue template (8 types after Tokumaru et al. 2002 / Matsuda) and shifts image hues toward it with spatial coherence."
+  ],
+  "practical_applications": [
+   "Tool for automatic palette unification of AI images; not evidence that templates are preferred."
+  ],
+  "limitations": [
+   "Search summary only; PDF download failed in this session."
+  ],
+  "license": "copyrighted",
+  "access_status": "search_summary",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M09",
+   "M34"
+  ]
+ },
+ {
+  "key": "Ou2011_Additivity",
+  "title": "Additivity of colour harmony",
+  "authors": "Li-Chen Ou, Patrick Chong, M. Ronnier Luo, Carl Minchew",
+  "year": 2011,
+  "url": "https://zendy.io/title/10.1002/col.20624",
+  "doi_isbn": "10.1002/col.20624",
+  "source_type": "empirical",
+  "tier": "A",
+  "key_findings": [
+   "Harmony of a three-colour combination can be predicted by averaging the harmony of its three colour pairs (two-colour model).",
+   "Experiments in UK and US: 6545 three-colour wheels on a calibrated CRT and 111 interior images; simple and fairly robust predictor; may extend to more colours."
+  ],
+  "practical_applications": [
+   "Check multi-colour palettes pair by pair, especially adjacent pairs."
+  ],
+  "limitations": [
+   "Abstract only; lab and interior stimuli."
+  ],
+  "license": "copyrighted",
+  "access_status": "abstract",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M09",
+   "M06"
+  ]
+ },
+ {
+  "key": "Westland2007",
+  "title": "Colour harmony",
+  "authors": "Stephen Westland, Kevin Laycock, Vien Cheung, Phil Henry, Forough Mahyar",
+  "year": 2007,
+  "url": "https://eprints.whiterose.ac.uk/83854",
+  "doi_isbn": "Colour: Design & Creativity 1(1):1-15",
+  "source_type": "review",
+  "tier": "A",
+  "key_findings": [
+   "Review of major colour-harmony theories; asks whether fundamental laws of harmony exist; covers hue circularity, primaries and complementary colours."
+  ],
+  "practical_applications": [
+   "Supports treating harmony schemes as conventions to test, not laws."
+  ],
+  "limitations": [
+   "Search summary only."
+  ],
+  "license": "unknown (repository copy)",
+  "access_status": "search_summary",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M09",
+   "M06"
+  ]
+ },
+ {
+  "key": "Mahyar2007",
+  "title": "Investigation of complementary colour harmony in CIELAB colour space",
+  "authors": "Forough Mahyar, Vien Cheung, Stephen Westland, et al.",
+  "year": 2007,
+  "url": "https://eprints.whiterose.ac.uk/83854",
+  "doi_isbn": "",
+  "source_type": "empirical",
+  "tier": "B",
+  "key_findings": [
+   "AIC 2007 Midterm (Hangzhou) paper: opposite hues in CIELAB do not accurately predict perceived complementary relationships."
+  ],
+  "practical_applications": [
+   "Do not treat 180-degree rotation in Lab/OKLCH as an exact complement."
+  ],
+  "limitations": [
+   "Conference paper known only from a search summary; URL is the related review record."
+  ],
+  "license": "unknown",
+  "access_status": "search_summary",
+  "verification_status": "unverified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M09"
+  ]
+ },
+ {
+  "key": "Lehmann2018",
+  "title": "Meta-Analysis of the Effect of Red on Perceived Attractiveness",
+  "authors": "Gabrielle K. Lehmann, Andrew J. Elliot, Robert J. Calin-Jageman",
+  "year": 2018,
+  "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10480976",
+  "doi_isbn": "10.1177/1474704918802412",
+  "source_type": "meta-analysis",
+  "tier": "S",
+  "key_findings": [
+   "Adversarial collaboration (original proponent + replicators).",
+   "Men rating women: d=0.26 [0.12, 0.40], N=2961, I2=89%; women rating men: d=0.13 [0.01, 0.25], N=2739.",
+   "Publication-bias indicators significant for women (and for men without one outlier); effects decline with publication year.",
+   "Preregistered studies of women rating men: d=-0.10 vs 0.21 non-preregistered."
+  ],
+  "practical_applications": [
+   "Never claim red 'makes' models or products more attractive."
+  ],
+  "limitations": [
+   "Discussion section only partly read (page truncated)."
+  ],
+  "license": "CC BY (Evolutionary Psychology, open access)",
+  "access_status": "full_text",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M09",
+   "M04"
+  ]
+ },
+ {
+  "key": "Elliot2015",
+  "title": "Color and psychological functioning: a review of theoretical and empirical work",
+  "authors": "Andrew J. Elliot",
+  "year": 2015,
+  "url": "https://www.frontiersin.org/articles/10.3389/fpsyg.2015.00368/full",
+  "doi_isbn": "10.3389/fpsyg.2015.00368",
+  "source_type": "review",
+  "tier": "A",
+  "key_findings": [
+   "Lists effects reported by >=5 labs (red before challenging tasks undermines performance; red in sport; red and attraction; blue light alertness; blue logos and trust appraisals).",
+   "Weaknesses: underpowered samples overestimate effects; colour rarely controlled at spectral level; theory either too specific or too general; focus on red.",
+   "Concludes it is 'premature to offer any bold theoretical statements, definitive empirical pronouncements'."
+  ],
+  "practical_applications": [
+   "Use association language in briefs; avoid applied colour-psychology promises."
+  ],
+  "limitations": [
+   "Pre-dates the 2018-2020 meta-analyses that weakened red effects."
+  ],
+  "license": "CC BY",
+  "access_status": "full_text",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M09",
+   "M04"
+  ]
+ },
+ {
+  "key": "Gnambs2020",
+  "title": "Limited evidence for the effect of red color on cognitive performance: A meta-analysis",
+  "authors": "Timo Gnambs",
+  "year": 2020,
+  "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7704521/",
+  "doi_isbn": "10.3758/s13423-020-01772-1",
+  "source_type": "meta-analysis",
+  "tier": "S",
+  "key_findings": [
+   "67 effect sizes, 38 samples, 22 publications (Psychonomic Bulletin & Review 27(6):1374-1382).",
+   "Anagram d=-0.06, knowledge d=-0.04 (n.s.); reasoning d=-0.34 [-0.61, -0.06].",
+   "Strong decline effect (early reasoning estimate ~-0.86) and publication bias; bias-adjusted effects near zero.",
+   "Casts doubt on a robust colour-priming effect in achievement situations."
+  ],
+  "practical_applications": [
+   "Do not cite 'red impairs thinking/focus' in eye-care content."
+  ],
+  "limitations": [
+   "Covers red and cognitive tests only."
+  ],
+  "license": "CC BY",
+  "access_status": "full_text",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M09",
+   "M04"
+  ]
+ },
+ {
+  "key": "Schloss2024",
+  "title": "Color Semantics in Human Cognition",
+  "authors": "Karen B. Schloss",
+  "year": 2024,
+  "url": "https://schlosslab.discovery.wisc.edu/wp-content/uploads/2024/06/Schloss2024.pdf",
+  "doi_isbn": "10.1177/09637214231208189",
+  "source_type": "review",
+  "tier": "A",
+  "key_findings": [
+   "Colour-concept associations and colour meaning (semantics) are not the same and can conflict.",
+   "Color inference framework: pooling inference produces colour preferences (ecological valence; ~80% of variance in average US preferences); assignment inference maps colours to concepts considering the whole set.",
+   "Even abstract concepts have systematic colour associations; semantics is flexible and context dependent."
+  ],
+  "practical_applications": [
+   "Choose legend/code colours so each concept's best match is distinct within the set; motif colours must not be reused for other meanings."
+  ],
+  "limitations": [
+   "Mainly US/Western samples; visualisation context."
+  ],
+  "license": "copyrighted (author copy)",
+  "access_status": "full_text",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M09",
+   "M04",
+   "M26"
+  ]
+ },
+ {
+  "key": "ShevellKingdom2008",
+  "title": "Color in Complex Scenes",
+  "authors": "Steven K. Shevell, Frederick A. A. Kingdom",
+  "year": 2008,
+  "url": "https://mvr.mcgill.ca/Fred/Papers/Shevell&Kingdom_2008.pdf",
+  "doi_isbn": "10.1146/annurev.psych.59.103006.093619",
+  "source_type": "review",
+  "tier": "A",
+  "key_findings": [
+   "In complex scenes an object's colour is not fully determined by the light from that object; chromatic representation also shapes texture, segmentation, depth, motion.",
+   "No variant of the equivalent-uniform-background hypothesis explains colour in complex scenes; chromatic variation in the surround alters perceived contrast (Brown & MacLeod 1997).",
+   "Cone signals cannot separate illuminant SPD from reflectance; gray-world and brightest-patch estimates miss cues such as specular reflections, shadows, mutual interreflections, luminance-chromaticity correlation.",
+   "Cites von Kries (1905) adaptation as classic baseline."
+  ],
+  "practical_applications": [
+   "Busy colourful surrounds mute a product; cue-rich lighting supports true product colour."
+  ],
+  "limitations": [
+   "Read in part (abstract, constancy section, figure notes)."
+  ],
+  "license": "copyrighted (author copy)",
+  "access_status": "full_text",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M09",
+   "M04"
+  ]
+ },
+ {
+  "key": "MonnierShevell2003",
+  "title": "Large shifts in color appearance from patterned chromatic backgrounds",
+  "authors": "Patrick Monnier, Steven K. Shevell",
+  "year": 2003,
+  "url": "https://scilit.com/publications/83a51037c9833e72e52fd33a3ac7c71a",
+  "doi_isbn": "Nature Neuroscience 6(8):801-802",
+  "source_type": "empirical",
+  "tier": "A",
+  "key_findings": [
+   "Two-chromaticity patterned backgrounds shift perceived colour more than a uniform background of either chromaticity.",
+   "Follow-ups explain shifts by S-cone spatially antagonistic receptive fields; assimilation and simultaneous contrast can act together."
+  ],
+  "practical_applications": [
+   "Hatching over tints shifts the tint toward the line colour (assimilation)."
+  ],
+  "limitations": [
+   "Abstract and citing papers only."
+  ],
+  "license": "copyrighted",
+  "access_status": "abstract",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M09",
+   "M04"
+  ]
+ },
+ {
+  "key": "Zaidi2012",
+  "title": "Neural locus of color afterimages",
+  "authors": "Qasim Zaidi, Robert Ennis, Dingcai Cao, Barry Lee",
+  "year": 2012,
+  "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC3562597",
+  "doi_isbn": "Current Biology 22(3):220-224",
+  "source_type": "empirical",
+  "tier": "A",
+  "key_findings": [
+   "Recordings from macaque retinal ganglion cells: afterimage signals originate in the retina (slow adaptation of RGC population) and may be modified by cortical processes."
+  ],
+  "practical_applications": [
+   "Successive contrast between shots/slides is a low-level effect: preview sequences, not single stills."
+  ],
+  "limitations": [
+   "Abstract via search; PMC page blocked by verification."
+  ],
+  "license": "copyrighted (PMC author manuscript)",
+  "access_status": "abstract",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M09",
+   "M04"
+  ]
+ },
+ {
+  "key": "Corney2009",
+  "title": "The Brightness of Colour",
+  "authors": "David Corney, John-Dylan Haynes, Geraint Rees, R. Beau Lotto",
+  "year": 2009,
+  "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC2659800/",
+  "doi_isbn": "10.1371/journal.pone.0005091",
+  "source_type": "empirical",
+  "tier": "A",
+  "key_findings": [
+   "More saturated stimuli appear brighter at equal luminance (Helmholtz-Kohlrausch); blues and reds brighter than equiluminant yellows/greens, blue slightly more than red.",
+   "Bayesian ideal-observer model trained on natural surface statistics reproduces the effect; V1 fMRI responses track brightness, not luminance."
+  ],
+  "practical_applications": [
+   "Eye overrates contrast of saturated red/blue text; always measure."
+  ],
+  "limitations": [
+   "Effect sizes for humans described qualitatively; fMRI N=3; mechanism one proposal among several."
+  ],
+  "license": "CC BY",
+  "access_status": "full_text",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M09",
+   "M04",
+   "M05"
+  ]
+ },
+ {
+  "key": "HurvichJameson1957",
+  "title": "An Opponent-Process Theory of Color Vision",
+  "authors": "Leo M. Hurvich, Dorothea Jameson",
+  "year": 1957,
+  "url": "https://chromaticcabinet.swarthmore.edu/wp-content/uploads/2017/02/AnOpponentTheoryOfColorVision.pdf",
+  "doi_isbn": "Psychological Review 64(6)",
+  "source_type": "empirical",
+  "tier": "A",
+  "key_findings": [
+   "Three opponent channels (red-green, blue-yellow, black-white) supported psychophysically with hue cancellation; helped reconcile Hering with trichromacy."
+  ],
+  "practical_applications": [
+   "Conceptual basis for complementary afterimages and opponent contrast vocabulary."
+  ],
+  "limitations": [
+   "Not read (PDF download failed); later work shows unique hues do not map neatly onto cone-opponent channels (search summary)."
+  ],
+  "license": "copyrighted",
+  "access_status": "bibliographic",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M09",
+   "M04"
+  ]
+ },
+ {
+  "key": "Gijsenij2011",
+  "title": "Computational Color Constancy: Survey and Experiments",
+  "authors": "Arjan Gijsenij, Theo Gevers, Joost van de Weijer",
+  "year": 2011,
+  "url": "https://staff.fnwi.uva.nl/th.gevers/pub/GeversTIP11.pdf",
+  "doi_isbn": "10.1109/TIP.2011.2118224",
+  "source_type": "review",
+  "tier": "A",
+  "key_findings": [
+   "Taxonomy: static methods (gray-world, white-patch, gray-edge; unified in a Minkowski framework), gamut-based, learning-based.",
+   "Gray-world assumes the average scene reflectance under neutral light is achromatic; deviations are attributed to the illuminant.",
+   "Computational models cannot fully explain human constancy."
+  ],
+  "practical_applications": [
+   "Explains why auto-WB fails in one-colour scenes (sea, foliage); shoot a neutral reference."
+  ],
+  "limitations": [
+   "2011 state of the art; deep-learning AWB since then not covered."
+  ],
+  "license": "copyrighted (author copy)",
+  "access_status": "full_text",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M09",
+   "M35"
+  ]
+ },
+ {
+  "key": "W3C_WCAG22_Understanding143",
+  "title": "Understanding Success Criterion 1.4.3: Contrast (Minimum) - WCAG 2.2",
+  "authors": "W3C WAI",
+  "year": 2023,
+  "url": "https://www.w3.org/WAI/WCAG22/Understanding/contrast-minimum.html",
+  "doi_isbn": "",
+  "source_type": "docs",
+  "tier": "S",
+  "key_findings": [
+   "4.5:1 normal text, 3:1 large text (>=18pt or >=14pt bold, ~24px / ~18.5px).",
+   "4.5:1 compensates contrast-sensitivity loss of about 20/40 acuity (typical around age 80).",
+   "Ratios are not rounded (4.499 fails); logotypes exempt but brand guidelines do not exempt ordinary text; background images with insufficient contrast fail."
+  ],
+  "practical_applications": [
+   "Eyewear customers skew older: treat 4.5:1 as floor; measure text over photos on the worst patch."
+  ],
+  "limitations": [
+   "Web-oriented; social images apply it by analogy. Year = WCAG 2.2 Recommendation year."
+  ],
+  "license": "W3C Document License",
+  "access_status": "full_text",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M09",
+   "M26"
+  ]
+ },
+ {
+  "key": "APCA_Nutshell",
+  "title": "APCA in a Nutshell",
+  "authors": "Andrew Somers / Myndex (APCA project)",
+  "year": null,
+  "url": "https://git.apcacontrast.com/documentation/APCA_in_a_Nutshell.html",
+  "doi_isbn": "",
+  "source_type": "practitioner",
+  "tier": "D",
+  "key_findings": [
+   "Lc 90 preferred body text; 75 minimum body text; 60 other content text; 45 headlines/large heavy text and detailed icons; 30 absolute minimum other text; 15 minimum non-text.",
+   "Developer describes APCA as candidate contrast method for WCAG 3; APCA Readability Criterion maintained separately, still in development."
+  ],
+  "practical_applications": [
+   "Supplementary check for text on dark backgrounds."
+  ],
+  "limitations": [
+   "Developer's own document; W3C draft says WCAG 3 contrast algorithm is yet to be determined (see W3C_WCAG3_WD)."
+  ],
+  "license": "unknown (repository licence not checked)",
+  "access_status": "publisher_page",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M09",
+   "M26"
+  ]
+ },
+ {
+  "key": "ICC_Profiles",
+  "title": "Introduction to the ICC profile format (color.org profile page)",
+  "authors": "International Color Consortium",
+  "year": null,
+  "url": "https://www.color.org/profile/",
+  "doi_isbn": "",
+  "source_type": "docs",
+  "tier": "S",
+  "key_findings": [
+   "An ICC profile provides data to convert between a device colour space and the device-independent PCS based on the CIE 1931 observer; PCS is 'virtual destination for input transforms and virtual source for output transforms'.",
+   "Four intents: media-relative colorimetric, ICC-absolute colorimetric (spot colours, proofing), saturation (vendor-specific, charts), perceptual (vendor-specific, photographs).",
+   "Current specification v4.4; iccMAX also exists."
+  ],
+  "practical_applications": [
+   "Photos perceptual; brand colours relative colorimetric with proof; P3 -> sRGB conversion needs a deliberate intent."
+  ],
+  "limitations": [
+   "Overview page, not the normative ICC.1 text."
+  ],
+  "license": "copyrighted",
+  "access_status": "publisher_page",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M09",
+   "M34"
+  ]
+ },
+ {
+  "key": "ICC_BT709_Registry",
+  "title": "ITU-R BT.709 entry, ICC characterization data registry (with BT.1886 notes)",
+  "authors": "International Color Consortium / ITU-R",
+  "year": 2015,
+  "url": "https://registry.color.org/rgb-registry/bt709",
+  "doi_isbn": "",
+  "source_type": "docs",
+  "tier": "S",
+  "key_findings": [
+   "BT.709-6 (2015) primaries R(0.64,0.33) G(0.30,0.60) B(0.15,0.06), D65 white (0.3127, 0.3290).",
+   "BT.709 defines a camera OETF (4.5L below 0.018, 0.45 power above), not a display EOTF; BT.1886 defines the display EOTF approx. power 2.4 deviating near black."
+  ],
+  "practical_applications": [
+   "Export SDR clips as Rec.709; test on real phones because platforms interpret 709 differently."
+  ],
+  "limitations": [
+   "Values from search summaries of the registry and secondary pages; ITU PDFs not opened."
+  ],
+  "license": "copyrighted",
+  "access_status": "search_summary",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M09",
+   "M18"
+  ]
+ },
+ {
+  "key": "MDN_DisplayP3",
+  "title": "Color space (MDN glossary) / Apple CGColorSpace displayP3",
+  "authors": "Mozilla MDN; Apple",
+  "year": null,
+  "url": "https://developer.mozilla.org/en-US/docs/Glossary/Color_space",
+  "doi_isbn": "",
+  "source_type": "docs",
+  "tier": "C",
+  "key_findings": [
+   "Display P3 uses DCI-P3 primaries, D65 white point and the sRGB transfer function (original DCI-P3: ~6300K white, gamma 2.6).",
+   "Gamut about 25% larger than sRGB in area and ~50% in volume (secondary); CSS Color 4 predefines display-p3; color-gamut: p3 media query."
+  ],
+  "practical_applications": [
+   "iPhone photos of saturated frames may clip when forced to sRGB; gamut-map deliberately."
+  ],
+  "limitations": [
+   "Search summary of MDN/Apple/Wikipedia; Apple page fetch returned only the title."
+  ],
+  "license": "CC BY-SA (MDN)",
+  "access_status": "search_summary",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M09",
+   "M34"
+  ]
+ },
+ {
+  "key": "Morovic2008",
+  "title": "Color Gamut Mapping",
+  "authors": "Jan Morovic",
+  "year": 2008,
+  "url": "https://www.wiley-vch.de/en/areas-interest/engineering/color-gamut-mapping-978-0-470-03032-5",
+  "doi_isbn": "ISBN 978-0-470-03032-5",
+  "source_type": "textbook",
+  "tier": "A",
+  "key_findings": [
+   "Survey of 90+ gamut-mapping algorithms and ISO/CIE approaches; chapter on evaluating gamut-mapping algorithms.",
+   "Author chaired CIE TC 8-03 and helped create CIE guidelines for evaluating gamut-mapping algorithms."
+  ],
+  "practical_applications": [
+   "Clip vs compress decision when moving P3 or sRGB content to print/smaller gamuts."
+  ],
+  "limitations": [
+   "Publisher listing only."
+  ],
+  "license": "copyrighted",
+  "access_status": "publisher_page",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M09",
+   "M34"
+  ]
+ },
+ {
+  "key": "Newhall1943",
+  "title": "Final Report of the O.S.A. Subcommittee on the Spacing of the Munsell Colors",
+  "authors": "Sidney M. Newhall, Dorothy Nickerson, Deane B. Judd",
+  "year": 1943,
+  "url": "https://doi.org/10.1364/JOSA.33.000385",
+  "doi_isbn": "10.1364/JOSA.33.000385",
+  "source_type": "empirical",
+  "tier": "A",
+  "key_findings": [
+   "Describes a modified and enlarged Munsell solid from 1940 visual estimates (Munsell renotation), defined in the CIE (ICI) system under Illuminant C (JOSA 33(7):385-418)."
+  ],
+  "practical_applications": [
+   "Munsell H V/C vocabulary is tied to CIE colorimetry; usable in critique and convertible."
+  ],
+  "limitations": [
+   "Abstract only; Munsell polar spacing cannot be perfectly uniform (secondary)."
+  ],
+  "license": "copyrighted",
+  "access_status": "abstract",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M09",
+   "M07"
+  ]
+ },
+ {
+  "key": "Amidi2011",
+  "title": "The Art of Pixar: The Complete Color Scripts and Select Art from 25 Years of Animation",
+  "authors": "Amid Amidi (foreword John Lasseter)",
+  "year": 2011,
+  "url": "https://www.chroniclebooks.com/products/the-art-of-pixar",
+  "doi_isbn": "",
+  "source_type": "practitioner",
+  "tier": "D",
+  "key_findings": [
+   "Collects the colour scripts of Pixar features; reviews/interviews credit Ralph Eggleston with starting colour scripts on Toy Story (small pastel drawings per scene focusing on basic colour).",
+   "Revised 2020 edition with foreword by Eggleston and introductions by Sharon Calahan and Harley Jessup."
+  ],
+  "practical_applications": [
+   "Model for one-thumbnail-per-beat colour scripts."
+  ],
+  "limitations": [
+   "Book not read; claims from publisher page, reviews and author interview summaries; dates of first colour script differ (1993 vs 1995)."
+  ],
+  "license": "copyrighted",
+  "access_status": "bibliographic",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M09",
+   "M18"
+  ]
+ },
+ {
+  "key": "PixarInABox_ColorScripts",
+  "title": "Pixar in a Box - The Art of Lighting: Color scripts (Khan Academy)",
+  "authors": "Pixar / Khan Academy",
+  "year": null,
+  "url": "https://www.khanacademy.org/computing/pixar/lighting/lighting-intro/v/color-scripts",
+  "doi_isbn": "",
+  "source_type": "course",
+  "tier": "C",
+  "key_findings": [
+   "A colour script is a snapshot of the whole film with a frame painted from each scene, showing how each story moment will be lit and its overall colour and value structure (~7 min video).",
+   "Series also contains 'The Art of Lighting' and 'Learning Color Science from a Pixar Color Scientist'."
+  ],
+  "practical_applications": [
+   "Basis for our per-beat colour-script template."
+  ],
+  "limitations": [
+   "Khan Academy page failed to render in fetch; content from secondary listings."
+  ],
+  "license": "copyrighted (free to view)",
+  "access_status": "search_summary",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M09",
+   "M18"
+  ]
+ },
+ {
+  "key": "Bellantoni2005",
+  "title": "If It's Purple, Someone's Gonna Die: The Power of Color in Visual Storytelling",
+  "authors": "Patti Bellantoni",
+  "year": 2005,
+  "url": "https://shop.elsevier.com/books/if-its-purple-someones-gonna-die/bellantoni/9780240806884",
+  "doi_isbn": "ISBN 9780240806884",
+  "source_type": "practitioner",
+  "tier": "D",
+  "key_findings": [
+   "Practitioner book on colour in film storytelling (Focal Press)."
+  ],
+  "practical_applications": [
+   "Craft reference for motif colours; specific claims not usable until read."
+  ],
+  "limitations": [
+   "Not read; bibliographic only."
+  ],
+  "license": "copyrighted",
+  "access_status": "bibliographic",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M09",
+   "M18"
+  ]
+ },
+ {
+  "key": "Deakins2000_ASC",
+  "title": "O Brother, Where Art Thou? - cinematography by Roger Deakins (American Cinematographer)",
+  "authors": "American Society of Cinematographers",
+  "year": 2000,
+  "url": "https://theasc.com/article/o-brother-cinematography-deakins",
+  "doi_isbn": "",
+  "source_type": "practitioner",
+  "tier": "C",
+  "key_findings": [
+   "Shot in summer with lush greens; bleach-bypass/bi-pack tests could not desaturate selectively.",
+   "Deakins and Cinesite colorist Julius Friede selected the greens of trees/grass and turned them into 'dry browns and yellows' for the look of 'old, hand-tinted postcards'; little else changed; windows on only a couple of shots.",
+   "About 10 weeks in the digital suite; more manipulation added noise/artifacts."
+  ],
+  "practical_applications": [
+   "Selective hue-range grading that protects skin; minimal secondaries on AI images."
+  ],
+  "limitations": [
+   "Practitioner account; 'first DI' priority disputed (Pleasantville cited as earlier DI timing)."
+  ],
+  "license": "copyrighted",
+  "access_status": "full_text",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M09",
+   "M18"
+  ]
+ },
+ {
+  "key": "ACES_Docs",
+  "title": "ACES documentation - background/overview",
+  "authors": "Academy of Motion Picture Arts and Sciences (ACES Central)",
+  "year": null,
+  "url": "https://docs.acescentral.com/background/overview/",
+  "doi_isbn": "",
+  "source_type": "docs",
+  "tier": "C",
+  "key_findings": [
+   "Scene-referred framework; encodings ACES2065-1 (SMPTE ST 2065-1), ACEScg (linear AP1 for CG/compositing), ACEScct (log AP1 for grading).",
+   "Pipeline: input transform -> grading -> optional look -> rendering/output transform to display; ACES 1.3 added gamut compression (secondary)."
+  ],
+  "practical_applications": [
+   "Composite in linear light, grade, convert to display last."
+  ],
+  "limitations": [
+   "Search summary of the docs and secondary guides."
+  ],
+  "license": "unknown",
+  "access_status": "search_summary",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M09",
+   "M18",
+   "M34"
+  ]
+ },
+ {
+  "key": "CIE224_2017",
+  "title": "CIE 224:2017 Colour Fidelity Index for accurate scientific use",
+  "authors": "CIE TC 1-90",
+  "year": 2017,
+  "url": "https://cie.co.at/publications/colour-fidelity-index-accurate-scientific-use",
+  "doi_isbn": "",
+  "source_type": "docs",
+  "tier": "S",
+  "key_findings": [
+   "Defines general colour fidelity index Rf with 99 test colour samples and updated colour space; shares calculation framework with IES TM-30-18.",
+   "Rf is explicitly not a replacement for CRI Ra (CIE 13.3-1995) for product rating, specification or regulation."
+  ],
+  "practical_applications": [
+   "Prefer lamps reported with Rf/TM-30 data for product photography and try-on mirrors."
+  ],
+  "limitations": [
+   "Publisher page; full report paywalled."
+  ],
+  "license": "copyrighted",
+  "access_status": "publisher_page",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M09",
+   "M10"
+  ]
+ },
+ {
+  "key": "Royer2017_TM30",
+  "title": "TM-30: What have we learned in the past two years? (DOE presentation)",
+  "authors": "Michael Royer (PNNL, U.S. DOE)",
+  "year": 2017,
+  "url": "https://www.energy.gov/sites/prod/files/2017/09/f36/TM-30_What%20Learned_09-12-17.pdf",
+  "doi_isbn": "",
+  "source_type": "docs",
+  "tier": "C",
+  "key_findings": [
+   "TM-30-15: CAM02-UCS, 99 colour evaluation samples, Planckian/D-series reference; Rf, Rg, 16 Rcs,hj, 16 Rf,hj, colour vector graphic.",
+   "Summarising Royer et al. 2016 (Lighting Research & Technology): normalness and preference driven by red chroma + average fidelity; proposed criteria normalness Rf>=80 with 0%<=Rcs,h1<=8%; preference Rf>=74 with Rg>=100 or 0%<=Rcs,h16/h1<=15%."
+  ],
+  "practical_applications": [
+   "Light specification for shop try-on and product photography."
+  ],
+  "limitations": [
+   "Slide deck summarising peer-reviewed work; original LRT papers not read."
+  ],
+  "license": "public domain (US government work, presumed)",
+  "access_status": "full_text",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M09",
+   "M10"
+  ]
+ },
+ {
+  "key": "ISO_CIE_11664_2_2022",
+  "title": "ISO/CIE 11664-2:2022 Colorimetry - Part 2: CIE standard illuminants",
+  "authors": "ISO / CIE",
+  "year": 2022,
+  "url": "https://www.iso.org/standard/77215.html",
+  "doi_isbn": "",
+  "source_type": "docs",
+  "tier": "S",
+  "key_findings": [
+   "D65 represents average daylight with CCT about 6500 K (6504 K exact after the c2 change); defined as a tabulated SPD, no recommended physical source."
+  ],
+  "practical_applications": [
+   "D65 is the white of sRGB/BT.709/Display P3; 'daylight' lamps only approximate it."
+  ],
+  "limitations": [
+   "Publisher page and secondary sources."
+  ],
+  "license": "copyrighted",
+  "access_status": "publisher_page",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M09",
+   "M10"
+  ]
+ },
+ {
+  "key": "Berns2000_Metamerism",
+  "title": "Billmeyer and Saltzman's Principles of Color Technology (3rd ed.) - definitions of metamerism",
+  "authors": "Roy S. Berns",
+  "year": 2000,
+  "url": "https://lists.apple.com/archives/colorsync-users/2001/Oct/msg00595.html",
+  "doi_isbn": "",
+  "source_type": "textbook",
+  "tier": "A",
+  "key_findings": [
+   "Metamerism: different spectra with identical colorimetric coordinates for a single viewing condition; illuminant metamerism (match fails when light changes); observer metamerism (match fails for another observer)."
+  ],
+  "practical_applications": [
+   "Explains why frame parts/cases can match in the shop and differ in daylight."
+  ],
+  "limitations": [
+   "Definitions quoted second-hand in a mailing-list post; book not read; 4th edition not checked."
+  ],
+  "license": "copyrighted",
+  "access_status": "search_summary",
+  "verification_status": "unverified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M09"
+  ]
+ },
+ {
+  "key": "Wiki_ThaiDayColours",
+  "title": "Colors of the day in Thailand",
+  "authors": "Wikipedia contributors (plus travel/culture pages in the same search)",
+  "year": null,
+  "url": "https://en.wikipedia.org/wiki/Colors_of_the_day_in_Thailand",
+  "doi_isbn": "",
+  "source_type": "encyclopedia",
+  "tier": "E",
+  "key_findings": [
+   "Sunday red, Monday yellow, Tuesday pink, Wednesday green, Thursday orange, Friday blue, Saturday purple; derived from Hindu astrology (navagraha), linked to Buddha images of the day; birth-day colour treated as lucky; royal ceremonies honour birthday colours.",
+   "Details vary between sources (Wednesday day/night)."
+  ],
+  "practical_applications": [
+   "Optional day-themed content; respect royal associations."
+  ],
+  "limitations": [
+   "Tier E; not verified against Thai scholarly sources."
+  ],
+  "license": "CC BY-SA",
+  "access_status": "search_summary",
+  "verification_status": "unverified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M09"
+  ]
+ },
+ {
+  "key": "AlJazeera2016_Mourning",
+  "title": "Thailand: One-year period of mourning declared",
+  "authors": "Al Jazeera (and other news reports in the same search)",
+  "year": 2016,
+  "url": "https://www.aljazeera.com/news/2016/10/14/thailand-one-year-period-of-mourning-declared",
+  "doi_isbn": "",
+  "source_type": "practitioner",
+  "tier": "C",
+  "key_findings": [
+   "After King Bhumibol's death (13 Oct 2016) the government declared one year of mourning; black and white worn nationwide; black clothing shortages; reports say other subdued colours were later accepted."
+  ],
+  "practical_applications": [
+   "Use monochrome/black-white for condolence posts; pause festive palettes during national mourning."
+  ],
+  "limitations": [
+   "News summaries; exact official wording not read."
+  ],
+  "license": "copyrighted",
+  "access_status": "search_summary",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M09"
+  ]
+ },
+ {
+  "key": "Unthanon2020",
+  "title": "Thai Color Terms and Their Structures",
+  "authors": "Kanyarat Unthanon, Rattana Chanthao",
+  "year": 2020,
+  "url": "https://so04.tci-thaijo.org/index.php/JSBA/article/download/240941/165707/842615",
+  "doi_isbn": "",
+  "source_type": "empirical",
+  "tier": "B",
+  "key_findings": [
+   "Thai National Corpus (novels 2008-2017), 13 key colour words incl. separate 'blue' and 'light blue'; 332 non-basic colour terms found.",
+   "Applying Berlin & Kay strictly, concludes Thai is at stage 4 with 5 basic terms (white, black, red, yellow, green); blue, light blue, brown, purple, pink, orange, grey treated as non-basic because named after things."
+  ],
+  "practical_applications": [
+   "Thai colour words in briefs carry object references; distinguish fa and nam-ngoen explicitly."
+  ],
+  "limitations": [
+   "Corpus-linguistic, not perceptual; conclusion conflicts with other Thai studies (9-12 terms)."
+  ],
+  "license": "unknown (Thai journal, open download)",
+  "access_status": "abstract",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M09"
+  ]
+ },
+ {
+  "key": "Laophairoj2005",
+  "title": "A comparison of Thai and Vietnamese color terms",
+  "authors": "Laophairoj (Mahidol University thesis)",
+  "year": 2005,
+  "url": "https://repository.li.mahidol.ac.th/handle/123456789/107742",
+  "doi_isbn": "",
+  "source_type": "empirical",
+  "tier": "B",
+  "key_findings": [
+   "Reports 12 Thai basic colour terms (stage 7 of Berlin & Kay) and 9 Vietnamese."
+  ],
+  "practical_applications": [
+   "Shows Thai basic-term count depends on criteria."
+  ],
+  "limitations": [
+   "Search summary of repository record only; author's full name not confirmed."
+  ],
+  "license": "unknown",
+  "access_status": "search_summary",
+  "verification_status": "unverified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M09"
+  ]
+ },
+ {
+  "key": "Harlan1986_Discord",
+  "title": "Vision & Invention - chapter on colour discord (web edition)",
+  "authors": "Calvin Harlan",
+  "year": 1986,
+  "url": "https://noteaccess.com/Texts/Harlan/HaDiscord.htm",
+  "doi_isbn": "",
+  "source_type": "practitioner",
+  "tier": "D",
+  "key_findings": [
+   "Discord = relational effect when a colour's value runs against its natural order (raised toward tint or lowered toward shade) next to another colour; types light, dark, double, muted discord.",
+   "Natural order: yellow lightest, violet darkest (after Rood/Carpenter); examples Bonnard, Vuillard, Impressionist light blue/violet shadows.",
+   "Use light discord sparingly to enliven; afterimages and simultaneous contrast strengthen discord."
+  ],
+  "practical_applications": [
+   "Small value inversions for tension in story scenes."
+  ],
+  "limitations": [
+   "Craft text; no empirical support."
+  ],
+  "license": "copyrighted",
+  "access_status": "full_text",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M09",
+   "M07"
+  ]
+ },
+ {
+  "key": "Ottosson2021_Okhsv",
+  "title": "Okhsv and Okhsl - two new color spaces for color picking",
+  "authors": "Bjorn Ottosson",
+  "year": null,
+  "url": "https://bottosson.github.io/posts/colorpicker/",
+  "doi_isbn": "",
+  "source_type": "practitioner",
+  "tier": "C",
+  "key_findings": [
+   "HSL lightness 'does not match the perception of lightness well at all for saturated colors'; HSV hue has severe distortions; both built on sRGB without appearance research and not continuously differentiable.",
+   "Okhsv/Okhsl keep OKLab hue with cylindrical sRGB mapping; goals (perceptual L/h, cylinder, smooth variation) conflict; sRGB only."
+  ],
+  "practical_applications": [
+   "Use Okhsl-style pickers or OKLCH, never HSL S/L to judge equal lightness/vividness."
+  ],
+  "limitations": [
+   "Author's blog, not peer-reviewed; publication date not confirmed on page."
+  ],
+  "license": "unknown (blog; code MIT per author, not checked)",
+  "access_status": "full_text",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M09",
+   "M34"
+  ]
+ }
+]

@@ -1,0 +1,818 @@
+{
+ "schema_version": "1.0",
+ "module": "M44",
+ "note": "Rendering recipes for cartoon/illustration (line, colour, shading, texture, background). All untested in our pipeline. extends_style_ids point to .claude/skills/ai-visual-artist/ART_STYLE_LIBRARY.json; recipes add rendering detail, they do not duplicate those entries. FLUX prompts describe qualities, never artist or studio names. Numbers are starting points (craft/derived) unless a source key says otherwise.",
+ "recipes": [
+  {
+   "id": "cel_1tone_tv",
+   "name": "TV anime cel, one shadow tone",
+   "line": "Dark line, one weight family: silhouette 3-4 px, inner 1.5-2 px @1080; line colour = very dark warm brown, not #000.",
+   "shading": "One hard-edged shadow shape per colour region (shadow = designed shape, not computed); light from one side; no gradients.",
+   "colour": "Base fills + one shadow colour per base: shift hue 10-25 deg toward blue/violet, raise chroma slightly, drop OKLCH L by 0.12-0.18.",
+   "texture": "None; perfectly flat fills.",
+   "background_approach": "Painted or flat BG with lower contrast than the character; BG has no black outlines.",
+   "build_html_css_svg": "SVG: base path fill; shadow = second path clipped (clip-path) to the base shape; outline group on top. Shadow colour from a CSS var per base (--skin, --skin-sh).",
+   "flux_prompt": "clean anime cel shading, flat colours, single hard-edged shadow tone, crisp dark brown line art, no gradients, simple shapes",
+   "limits": "Shadow shapes that cover eyes/mouth read as dirt - delete or redesign them (Todo2007). Weak on blobby forms if lines are the only cue (Cole2009).",
+   "use_for": [
+    "story clip characters",
+    "explainer puppets",
+    "mascots"
+   ],
+   "source_keys": [
+    "Todo2007",
+    "Lake2000",
+    "ClipStudio_AnimeSkin"
+   ],
+   "extends_style_ids": [
+    "anime_cel"
+   ],
+   "test_status": "untested"
+  },
+  {
+   "id": "cel_2tone_hueshift",
+   "name": "Two-tone cel with hue-shifted shadows and designed highlights",
+   "line": "As cel_1tone_tv; inner lines may be coloured (darker version of local fill).",
+   "shading": "Shadow 1 (large) + shadow 2 (small, in creases/occlusion) + one designed highlight shape (bar on hair, dot/rectangle in eyes).",
+   "colour": "Shadow 1: hue toward cool, L -0.12; shadow 2: hue further, L -0.25; highlight warm-white, never pure #fff on skin. Saturation rises near the terminator (warm red edge on skin).",
+   "texture": "Optional: soften only the shadow edge 1-2 px.",
+   "background_approach": "Painted BG (anime_painterly_bg) or soft gradient BG.",
+   "build_html_css_svg": "SVG: three stacked clipped paths per region; terminator = 1 px saturated warm stroke along the shadow edge; highlights as separate paths on top, shape keyed per pose.",
+   "flux_prompt": "anime illustration, two-tone cel shading with cool violet shadows, warm terminator edge, glossy hair highlight band, sparkling eye highlights, clean line art",
+   "limits": "Second tone adds work per pose; at small sizes shadow 2 becomes noise - drop it below ~300 px character height.",
+   "use_for": [
+    "hero frames",
+    "thumbnails",
+    "character sheets"
+   ],
+   "source_keys": [
+    "Mitchell2007_TF2",
+    "AnjyoHiramitsu2003",
+    "ClipStudio_AnimeSkin",
+    "Todo2007"
+   ],
+   "extends_style_ids": [
+    "anime_cel",
+    "webtoon_digital"
+   ],
+   "test_status": "untested"
+  },
+  {
+   "id": "gooch_cool_warm",
+   "name": "Cool-to-warm illustration shading (lines + mid-tone fills)",
+   "line": "Black edge lines on silhouette, creases and occlusions only.",
+   "shading": "Smooth shading kept in mid-tones; orientation shown by hue (cool facing away, warm facing light), not darkness. No cast shadows.",
+   "colour": "Blue undertone on shadow side, yellow undertone on lit side; local colour stays recognisable; white only for the specular highlight.",
+   "texture": "None.",
+   "background_approach": "Plain light neutral or very simple ground so black lines and white highlights stay the extremes.",
+   "build_html_css_svg": "SVG linearGradient per shape from k_cool to k_warm (start: k_cool = blue 0.4 + 0.2*base, k_warm = yellow 0.4 + 0.6*base); 3D: Gooch formula in a shader.",
+   "flux_prompt": "technical illustration style, cool blue to warm yellow shading, black outlines, white specular highlights, no cast shadows, clean background",
+   "limits": "Hue shift distorts true colour - bad when product colour must be exact. Appeal untested with our audience.",
+   "use_for": [
+    "how-it-works diagrams",
+    "product anatomy explainers"
+   ],
+   "source_keys": [
+    "Gooch1998",
+    "BenardHertzmann2019"
+   ],
+   "extends_style_ids": [
+    "technical_blueprint",
+    "editorial_conceptual"
+   ],
+   "test_status": "untested"
+  },
+  {
+   "id": "rim_no_outline",
+   "name": "Rim light instead of outline (commercial-illustration look)",
+   "line": "No dark outline; silhouette defined by a bright rim on the side away from the key light, plus value contrast to BG.",
+   "shading": "Painterly or 2-3 band shading with warm-to-cool shift; shadows cool, terminator saturated/reddened.",
+   "colour": "Muted dominant palette with small saturated accents; rim colour = colour of the back light.",
+   "texture": "Loose visible brush strokes in BG; characters cleaner.",
+   "background_approach": "Dark or mid-value BG so the rim reads; low detail and low repetition.",
+   "build_html_css_svg": "SVG: copy the silhouette, flood rim colour, subtract an offset copy (feOffset toward the key light + feComposite operator='out'), blur 0.5 px, place on top.",
+   "flux_prompt": "stylised illustration, strong rim light outlining the figure, no black outlines, warm-to-cool shading, painterly muted background",
+   "limits": "Needs a darker background; on white feeds the silhouette disappears.",
+   "use_for": [
+    "night scenes",
+    "drama",
+    "product hero on dark BG"
+   ],
+   "source_keys": [
+    "Mitchell2007_TF2",
+    "Mitchell2008_GDC",
+    "Barla2006_XToon"
+   ],
+   "extends_style_ids": [
+    "digital_painting_painterly",
+    "stylized_3d_animation"
+   ],
+   "test_status": "untested"
+  },
+  {
+   "id": "ligne_claire",
+   "name": "Clear line (uniform line, flat colour)",
+   "line": "One uniform line weight everywhere, characters and BG alike; no hatching, no taper.",
+   "shading": "No modelling, or flat cast-shadow shapes only.",
+   "colour": "Flat bright local colours; depth from overlap and colour.",
+   "texture": "None.",
+   "background_approach": "Detailed, fully lined BG at the same weight; characters separated by stronger local colour, BG lighter/greyer.",
+   "build_html_css_svg": "SVG: vector-effect='non-scaling-stroke', one stroke-width var for all paths; flat fills.",
+   "flux_prompt": "clear-line comic illustration, uniform thin black outlines on everything, flat colours, no hatching, no gradients, detailed clean background, bright daylight",
+   "limits": "Uniform weight loses depth cues (the deliberate exception in EDGE_CONTROL 2.4); busy BG can swallow the character unless colour separates them.",
+   "use_for": [
+    "travel/city stories",
+    "maps",
+    "adventure"
+   ],
+   "source_keys": [
+    "Walther2011",
+    "WangYu2020"
+   ],
+   "extends_style_ids": [
+    "ink_line_clean"
+   ],
+   "test_status": "untested"
+  },
+  {
+   "id": "brush_ink_tapered",
+   "name": "Brush inking with thick-thin taper and spotted blacks",
+   "line": "Tapered brush lines: thicker on shadow side and under forms, thin on light side, tapered free ends; solid black masses for big shadows.",
+   "shading": "Shading by black shapes (spotting blacks) and some feathering; no grey.",
+   "colour": "B/W, or B/W over one flat colour layer.",
+   "texture": "Dry-brush breaks at fast stroke ends.",
+   "background_approach": "BG in thinner pen line or lighter ink so characters lead.",
+   "build_html_css_svg": "SVG: draw strokes as filled variable-width outlines (pressure-style width); spotted blacks as filled paths; feTurbulence + feDisplacementMap scale 1-2 for slight wobble.",
+   "flux_prompt": "black brush ink illustration, expressive thick-to-thin tapered lines, spotted solid black shadows, dry brush texture, white paper",
+   "limits": "Width rules are craft; computational support from isophote-distance thickness (Hertzmann2010). Hard to keep consistent across frames.",
+   "use_for": [
+    "comic panels",
+    "dramatic quotes",
+    "action"
+   ],
+   "source_keys": [
+    "Hertzmann2010",
+    "SayimCavanagh2011"
+   ],
+   "extends_style_ids": [
+    "ink_brush_sumi_e",
+    "graphic_novel_noir"
+   ],
+   "test_status": "untested"
+  },
+  {
+   "id": "pen_hatching",
+   "name": "Pen and ink with form-following hatching",
+   "line": "Even technical-pen lines; contours plus hatching.",
+   "shading": "Value from hatch density and cross-hatching; direction follows form (cross-contour) or one global direction as a style.",
+   "colour": "Monochrome; optional single wash.",
+   "texture": "The hatch lines are the texture.",
+   "background_approach": "BG hatched in a different direction/density so characters separate by texture (EDGE_CONTROL 2.5).",
+   "build_html_css_svg": "SVG pattern of parallel lines rotated per region (patternTransform), masked by a luminance mask from the shading; or XDoG hatching on a render.",
+   "flux_prompt": "pen and ink illustration, fine cross-hatching following the form, technical pen lines, white paper, no colour",
+   "limits": "Dense hatching moires on video and downscaled images - keep spacing >= 3 px at final size.",
+   "use_for": [
+    "editorial",
+    "vintage instructions",
+    "serious explainers"
+   ],
+   "source_keys": [
+    "BenardHertzmann2019",
+    "Winnemoller2012_XDoG"
+   ],
+   "extends_style_ids": [
+    "ink_pen_crosshatch",
+    "etching_engraving"
+   ],
+   "test_status": "untested"
+  },
+  {
+   "id": "colour_held_lines",
+   "name": "Coloured line art (colour holds)",
+   "line": "Outer silhouette dark; inner lines recoloured to a darker version of the adjacent fill; shadow borders, if lined at all, in the shadow colour - never black.",
+   "shading": "Any cel or soft shading.",
+   "colour": "Line colour = fill hue, L -0.3 to -0.4, chroma slightly up.",
+   "texture": "None.",
+   "background_approach": "BG lines (if any) close to BG hue so they recede.",
+   "build_html_css_svg": "SVG: stroke=var(--region-line) per inner path; raster: lock line layer transparency and paint over it; or multiply a line layer over the fills.",
+   "flux_prompt": "soft coloured line art, outlines tinted to match each colour area, gentle illustration, warm palette",
+   "limits": "Inner lines that are too light lose form on small screens; keep the outer contour darkest.",
+   "use_for": [
+    "picture-book softness",
+    "kawaii characters",
+    "skin and hair detail"
+   ],
+   "source_keys": [
+    "SayimCavanagh2011",
+    "ClipStudio_AnimeSkin"
+   ],
+   "extends_style_ids": [
+    "chibi_kawaii",
+    "storybook_gouache"
+   ],
+   "test_status": "untested"
+  },
+  {
+   "id": "lineless_shapes",
+   "name": "Line-less flat shapes",
+   "line": "No outlines; edges are colour/value boundaries.",
+   "shading": "Flat or one shadow shape; overlap gives depth.",
+   "colour": "Every adjacent pair of shapes must differ in value, not only hue; test in greyscale.",
+   "texture": "Optional subtle grain.",
+   "background_approach": "BG in a different value band from the character (light BG / dark character or the reverse).",
+   "build_html_css_svg": "SVG fills only; a 0.5-1 px same-colour stroke hides anti-alias seams. Preview with CSS filter: grayscale(1).",
+   "flux_prompt": "flat illustration without outlines, solid colour shapes, clear value contrast between shapes, minimal, modern",
+   "limits": "Equiluminant neighbours vanish (greyscale, colour-vision deficiency); thin parts (glasses temples) need a value edge or they disappear.",
+   "use_for": [
+    "brand illustrations",
+    "posters",
+    "quote images"
+   ],
+   "source_keys": [
+    "SayimCavanagh2011",
+    "WangYu2020"
+   ],
+   "extends_style_ids": [
+    "flat_vector",
+    "papercut_layered"
+   ],
+   "test_status": "untested"
+  },
+  {
+   "id": "flat_vector_geometric",
+   "name": "Flat vector, geometric",
+   "line": "None or thin uniform; geometric primitives; one corner radius for the whole set.",
+   "shading": "Flat; optional one soft gradient or a long flat shadow at a fixed angle.",
+   "colour": "4-6 colours incl. one accent, defined as CSS tokens.",
+   "texture": "None (or very fine noise against gradient banding).",
+   "background_approach": "Flat colour fields / geometric shapes; no perspective, or isometric.",
+   "build_html_css_svg": "Pure SVG. Long shadow: polygon extruded at 45 deg with a linear-gradient to transparent. Corner radius as a token.",
+   "flux_prompt": "flat vector illustration, geometric shapes, limited palette, clean, minimal, smooth, no texture",
+   "limits": "Reads generic/corporate when overused; low warmth.",
+   "use_for": [
+    "infographics",
+    "how-to slides",
+    "UI-like explainers"
+   ],
+   "source_keys": [
+    "WangYu2020"
+   ],
+   "extends_style_ids": [
+    "flat_vector",
+    "flat_illustration_corporate"
+   ],
+   "test_status": "untested"
+  },
+  {
+   "id": "limited_palette_3p1",
+   "name": "Limited palette 3+1 (works with any line style)",
+   "line": "Any.",
+   "shading": "Any; shadows mixed from the palette, no new hues.",
+   "colour": "3 main colours (light, mid, dark) of one temperature + 1 accent reserved for the story object; mother colour mixed 5-10% into all.",
+   "texture": "Optional.",
+   "background_approach": "BG uses only the 3 main colours, at lower contrast.",
+   "build_html_css_svg": "CSS custom properties --c1..--c3, --accent; shadow tones via color-mix(in oklch, var(--c1), var(--c3) 30%).",
+   "flux_prompt": "illustration in a limited palette of three muted colours and one bright accent colour on the key object",
+   "limits": "Harmony evidence is weak (ADVANCED_COLOR_SCIENCE 5.1); this is craft for unity and focus.",
+   "use_for": [
+    "series bibles",
+    "colour scripts",
+    "product focus"
+   ],
+   "source_keys": [
+    "Mitchell2007_TF2"
+   ],
+   "extends_style_ids": [
+    "minimalism",
+    "screenprint_poster"
+   ],
+   "test_status": "untested"
+  },
+  {
+   "id": "duotone_spot",
+   "name": "Duotone spot colour",
+   "line": "Lines in the darker ink.",
+   "shading": "Values from tints (halftone or flat %) of 2 inks; overlaps make a third colour.",
+   "colour": "Two inks (e.g. dark blue + coral) plus paper colour.",
+   "texture": "Halftone dots or flat tints; paper tone.",
+   "background_approach": "BG in light tints of one ink; characters in the other ink + overlap.",
+   "build_html_css_svg": "Two grayscale layers tinted with SVG feColorMatrix to each ink, combined with mix-blend-mode: multiply over an off-white paper div.",
+   "flux_prompt": "two-colour screen print illustration, dark blue and coral ink, overprint, halftone tints, off-white paper",
+   "limits": "Skin and product colours cannot be accurate.",
+   "use_for": [
+    "posters",
+    "event promos",
+    "quote cards"
+   ],
+   "source_keys": [
+    "UIUC_RisoGuide",
+    "Lawley2016_BenDay"
+   ],
+   "extends_style_ids": [
+    "screenprint_poster",
+    "risograph"
+   ],
+   "test_status": "untested"
+  },
+  {
+   "id": "risograph_overprint",
+   "name": "Risograph overprint",
+   "line": "Line work printed over solid colour blocks (reads best).",
+   "shading": "Tints via machine halftone; overlaps make new colours.",
+   "colour": "2-3 spot inks (fluorescent pink, blue, yellow typical); light inks first, dark last.",
+   "texture": "Grain, uneven ink, small misregistration between layers.",
+   "background_approach": "Flat ink fields with lots of paper showing.",
+   "build_html_css_svg": "Each ink = grayscale layer -> feColorMatrix to ink colour -> mix-blend-mode: multiply; translate each layer 2-6 px randomly; feTurbulence grain masked by luminance; cap solids at 85-90%.",
+   "flux_prompt": "risograph print illustration, fluorescent pink and blue spot inks, overprinted colours, grainy texture, slight misregistration, uncoated paper",
+   "limits": "Fluorescent inks have no RGB/CMYK equivalent - the screen version is an approximation.",
+   "use_for": [
+    "zine-style carousels",
+    "event posters",
+    "playful promos"
+   ],
+   "source_keys": [
+    "UIUC_RisoGuide"
+   ],
+   "extends_style_ids": [
+    "risograph"
+   ],
+   "test_status": "untested"
+  },
+  {
+   "id": "vintage_halftone_comic",
+   "name": "Golden-age comic colour (64-colour CMY tints)",
+   "line": "Heavy black brush/pen line, slightly ragged.",
+   "shading": "Flat; tones only from CMY tints.",
+   "colour": "Only combinations of C, M, Y at 0 / ~20-25 / ~40-50 / 100% (64 colours incl. black); no gradients.",
+   "texture": "Small visible dots in light tints, slight misregistration, yellowed newsprint, ink spread.",
+   "background_approach": "Flat tinted BG (often one light tint) or speed lines.",
+   "build_html_css_svg": "Quantise fills to the 64-colour CMY palette; fill light tints with an SVG dot pattern (radius by tint); paper div #f2e8cf with multiply; offset the colour layer 1-2 px from the line layer.",
+   "flux_prompt": "1940s comic book panel, bold black ink lines, flat four-colour printing, small visible halftone dots, slight misregistration, aged newsprint",
+   "limits": "Modern pop-art dot sizes are far larger than real comic dots; pick one look deliberately.",
+   "use_for": [
+    "retro parody",
+    "nostalgia promos",
+    "comic carousels"
+   ],
+   "source_keys": [
+    "Lawley2016_BenDay"
+   ],
+   "extends_style_ids": [
+    "vintage_comic_halftone",
+    "pop_art"
+   ],
+   "test_status": "untested"
+  },
+  {
+   "id": "manga_screentone",
+   "name": "Black-and-white manga with screentone",
+   "line": "Black ink with nib taper; speed/impact lines.",
+   "shading": "Greys only from screentone patterns and solid black; gradient tone for skies/BG.",
+   "colour": "B/W.",
+   "texture": "Screentone patterns; white highlights scratched out of tone.",
+   "background_approach": "BG in finer lines, toned; characters with fewer tones so they pop.",
+   "build_html_css_svg": "SVG dot pattern (e.g. 6 px cell) for tone; gradient tone via a mask; scratch highlights = white strokes on top.",
+   "flux_prompt": "black and white manga panel, ink lines, screentone dot shading, speed lines, high contrast, white paper",
+   "limits": "Tone moire when resampled - render at final size.",
+   "use_for": [
+    "action/comedy",
+    "zombie series",
+    "dramatic reveal"
+   ],
+   "source_keys": [
+    "Lawley2016_BenDay"
+   ],
+   "extends_style_ids": [
+    "manga_bw_screentone"
+   ],
+   "test_status": "untested"
+  },
+  {
+   "id": "watercolor_picturebook",
+   "name": "Watercolour picture-book",
+   "line": "Light ink or coloured-pencil line, broken, or none.",
+   "shading": "Transparent glazes; edge darkening at shape borders; soft backruns; no hard cel edges.",
+   "colour": "Pastel to mid chroma; paper white is the lightest value.",
+   "texture": "Cold-press paper grain, granulation in shadows, wet edges.",
+   "background_approach": "Loose washes, lost edges toward the frame border; characters get the firmest edges.",
+   "build_html_css_svg": "SVG: fill opacity .7-.85 + mix-blend-mode: multiply; edge darkening = same path stroked 2-4 px darker, blurred, clipped inside; grain = feTurbulence (baseFrequency ~.8) as alpha mask; blooms = blurred blobs with a darker ring.",
+   "flux_prompt": "soft watercolor children's book illustration, transparent glazes, edge darkening, granulation, wet edges, cold-press paper texture, light ink line",
+   "limits": "For teaching real-object facts to very young children, realistic pictures transfer better (Strouse2018) - use for mood and story.",
+   "use_for": [
+    "gentle morals",
+    "family stories",
+    "eye-care stories for parents"
+   ],
+   "source_keys": [
+    "Curtis1997",
+    "Strouse2018"
+   ],
+   "extends_style_ids": [
+    "watercolor_loose",
+    "watercolor_botanical"
+   ],
+   "test_status": "untested"
+  },
+  {
+   "id": "gouache_flat_bg",
+   "name": "Opaque gouache backgrounds",
+   "line": "No lines in BG; characters may keep lines.",
+   "shading": "Flat opaque value steps (3-5 per object), slightly chalky; light painted over dark.",
+   "colour": "Muted, slightly desaturated, matte light colours.",
+   "texture": "Dry-brush edges, visible flat brush marks.",
+   "background_approach": "Flat posterised planes, atmospheric layering by value.",
+   "build_html_css_svg": "Posterise a FLUX BG: feComponentTransfer type='discrete' (4-5 steps) + feDisplacementMap scale 2 + grain; or prompt directly.",
+   "flux_prompt": "flat gouache painting background, opaque matte colours, visible dry brush strokes, simple planes, muted palette, empty scene with no people, no text",
+   "limits": "Chalky light values can look washed out next to dark-mode UI.",
+   "use_for": [
+    "storybook scenes",
+    "calm brand illustrations"
+   ],
+   "source_keys": [
+    "Mitchell2007_TF2"
+   ],
+   "extends_style_ids": [
+    "gouache_flat",
+    "storybook_gouache"
+   ],
+   "test_status": "untested"
+  },
+  {
+   "id": "crayon_picturebook",
+   "name": "Crayon / oil-pastel picture-book",
+   "line": "Waxy irregular outline with varying pressure.",
+   "shading": "Scribbled fill direction, layered colours, little modelling.",
+   "colour": "Bright primaries/secondaries.",
+   "texture": "Paper tooth showing as white flecks; wax build-up.",
+   "background_approach": "Simple scribbled BG, big empty paper areas.",
+   "build_html_css_svg": "Fill = colour x paper-tooth mask (feTurbulence thresholded); outline with feDisplacementMap scale 3-4, round caps; scribble hatch pattern rotated per area.",
+   "flux_prompt": "children's crayon drawing illustration, waxy textured strokes, paper grain showing through, bright colours, simple shapes, white background",
+   "limits": "Looks careless if the drawing is also careless - keep shapes solid, texture naive.",
+   "use_for": [
+    "kids content",
+    "nostalgic posts",
+    "hand-made feel"
+   ],
+   "source_keys": [
+    "Curtis1997"
+   ],
+   "extends_style_ids": [
+    "children_book_crayon"
+   ],
+   "test_status": "untested"
+  },
+  {
+   "id": "colored_pencil_soft",
+   "name": "Coloured pencil, soft",
+   "line": "Pencil line in a dark colour, lighter pressure on the light side.",
+   "shading": "Layered directional strokes; value by pressure.",
+   "colour": "Soft layered colours, optical mixing.",
+   "texture": "Paper tooth, visible stroke direction.",
+   "background_approach": "Light BG with vignette fade to paper.",
+   "build_html_css_svg": "Fine diagonal stroke pattern masked by value + feTurbulence tooth; or prompt.",
+   "flux_prompt": "colored pencil illustration, soft layered strokes, visible paper texture, gentle colours, light background fading to white",
+   "limits": "Fine strokes vanish under platform compression - check at final 1080 px.",
+   "use_for": [
+    "intimate stories",
+    "memories",
+    "Mint & Tao colour variant"
+   ],
+   "source_keys": [
+    "Gooch1998"
+   ],
+   "extends_style_ids": [
+    "colored_pencil"
+   ],
+   "test_status": "untested"
+  },
+  {
+   "id": "anime_painterly_bg_cel_char",
+   "name": "Painted anime BG + cel character",
+   "line": "Character: clean line; BG: no outlines, painted edges, sharpest edges near the focal area only.",
+   "shading": "Character cel 1-2 tones; BG fully painted with light shafts and atmosphere.",
+   "colour": "BG saturated skies/greenery with aerial perspective (far = lighter, bluer, lower contrast); character lit to match BG key direction and temperature.",
+   "texture": "BG painterly; character flat.",
+   "background_approach": "Art setting (line layout) -> art board (colour key) -> paint every angle from the board; reuse BGs across shots.",
+   "build_html_css_svg": "FLUX BG + SVG puppets; light match: radial glow on the puppet side facing the BG light; darken/blur BG behind the character; contact shadow.",
+   "flux_prompt": "lush painted anime background art, big cumulus clouds, summer light, soft light shafts, saturated sky and greenery, empty scene with no people, no text",
+   "limits": "Pasted look if light direction/colour differ; BG detail higher than the character steals focus.",
+   "use_for": [
+    "heartwarming clips",
+    "travel/sea",
+    "season changes"
+   ],
+   "source_keys": [
+    "StudioPablo_Interview",
+    "WangYu2020",
+    "ChenLaiLiu2018"
+   ],
+   "extends_style_ids": [
+    "anime_painterly_bg",
+    "anime_cel"
+   ],
+   "test_status": "untested"
+  },
+  {
+   "id": "tv_flat_bg",
+   "name": "Flat TV-cartoon background (modernist shapes)",
+   "line": "Characters outlined; BG mostly without outlines, or thin coloured lines.",
+   "shading": "BG flat colour fields, maybe one shadow shape; characters flat.",
+   "colour": "BG in 2-3 muted related hues; characters carry the saturated colours.",
+   "texture": "None or subtle print grain.",
+   "background_approach": "Stylised perspective; shapes and colour fields instead of rendered space; props as simple symbols.",
+   "build_html_css_svg": "Pure SVG/CSS polygons with tokens; one accent shape behind the character's head to frame it.",
+   "flux_prompt": "flat modern cartoon background, simple geometric shapes and colour fields, stylized perspective, muted palette, mid-century modern design, empty scene, no text",
+   "limits": "Too abstract for emotional realism; strong for comedy and explainers.",
+   "use_for": [
+    "comedy",
+    "explainers",
+    "series with many scenes (cheap)"
+   ],
+   "source_keys": [
+    "Bottini_UPA"
+   ],
+   "extends_style_ids": [
+    "modern_cartoon_tv",
+    "bauhaus_modernist"
+   ],
+   "test_status": "untested"
+  },
+  {
+   "id": "line_bg_light_char_heavy",
+   "name": "Line-drawn BG lighter than characters",
+   "line": "BG lines thinner (0.5-0.6x) and lighter/coloured; characters have the heaviest dark line.",
+   "shading": "BG flat light washes or none; characters cel.",
+   "colour": "BG low chroma; characters higher chroma.",
+   "texture": "Optional paper.",
+   "background_approach": "Keep long structural lines (horizon, walls, floor) and drop short detail lines first.",
+   "build_html_css_svg": "XDoG on a FLUX BG -> threshold -> recolour lines to the BG hue (feColorMatrix) -> opacity .6; puppets on top at full weight.",
+   "flux_prompt": "simple line drawing background, thin light grey lines, minimal detail, long perspective lines, empty room, white paper",
+   "limits": "Too few lines and the place becomes unreadable; long lines are the minimum (Walther2011).",
+   "use_for": [
+    "Mint & Tao settings",
+    "sketch storyboards",
+    "minimal carousels"
+   ],
+   "source_keys": [
+    "Walther2011",
+    "Winnemoller2012_XDoG",
+    "Cole2008"
+   ],
+   "extends_style_ids": [
+    "line_art_minimal",
+    "pencil_sketch_loose"
+   ],
+   "test_status": "untested"
+  },
+  {
+   "id": "sparse_suggestive_line",
+   "name": "Sparse line with suggestive contours",
+   "line": "Silhouette + interior occluding contours + a few short suggestive lines where the form turns away; tapered ends; soft features not fully outlined.",
+   "shading": "None, or one soft shadow shape for blobby forms.",
+   "colour": "Monochrome or one accent.",
+   "texture": "Optional pencil/charcoal grain.",
+   "background_approach": "Sparse or empty paper.",
+   "build_html_css_svg": "SVG paths, round caps, tapered width; delete-test each line - if the shape still reads without it, delete it.",
+   "flux_prompt": "minimal line drawing, few confident lines, silhouette and a few interior lines only, lots of white space",
+   "limits": "Lines alone read smooth shapes poorly (Cole2009) - add a shadow shape for bodies and cushions.",
+   "use_for": [
+    "faceless characters",
+    "quote images",
+    "icon-like marks"
+   ],
+   "source_keys": [
+    "DeCarlo2003",
+    "Cole2008",
+    "Cole2009"
+   ],
+   "extends_style_ids": [
+    "one_line_drawing",
+    "line_art_minimal"
+   ],
+   "test_status": "untested"
+  },
+  {
+   "id": "charcoal_story_accent",
+   "name": "Charcoal story frame + single accent colour",
+   "line": "Charcoal lines, continuous on characters, broken on BG.",
+   "shading": "Smudged soft values on characters; BG hatched in one direction, paler.",
+   "colour": "Warm grey monochrome + one accent hue on the story object only.",
+   "texture": "Paper grain, smudge, eraser lifts for light.",
+   "background_approach": "BG separated by texture direction and lower contrast, not by outline.",
+   "build_html_css_svg": "Existing carousel pipeline; accent via an overlay with mix-blend-mode: color on a mask of the object.",
+   "flux_prompt": "charcoal drawing on textured paper, soft smudges, expressive lines, monochrome warm grey, one small accent of colour on the key object",
+   "limits": "The accent loses power when it appears on several objects.",
+   "use_for": [
+    "story carousels",
+    "memory flashbacks"
+   ],
+   "source_keys": [
+    "SayimCavanagh2011",
+    "Walther2011"
+   ],
+   "extends_style_ids": [
+    "charcoal_expressive",
+    "pencil_sketch_loose"
+   ],
+   "test_status": "untested"
+  },
+  {
+   "id": "noir_spotted_black",
+   "name": "Graphic noir, spotted blacks",
+   "line": "Minimal lines; shapes defined by black masses.",
+   "shading": "Two values (black/white) or three (plus one grey); hard shadows define form.",
+   "colour": "B/W + one accent (red/amber).",
+   "texture": "Optional rain/grain.",
+   "background_approach": "BG mostly black; light shapes (windows, blinds) frame the character.",
+   "build_html_css_svg": "SVG: threshold a render with feComponentTransfer discrete tableValues='0 1'; accent on a separate layer.",
+   "flux_prompt": "graphic novel noir illustration, stark black and white, large solid black shadows, single red accent, high contrast",
+   "limits": "Faces lose expression in heavy black - keep eyes/mouth in light.",
+   "use_for": [
+    "mystery",
+    "tension beats",
+    "night drama"
+   ],
+   "source_keys": [
+    "SayimCavanagh2011"
+   ],
+   "extends_style_ids": [
+    "graphic_novel_noir",
+    "film_noir_photo"
+   ],
+   "test_status": "untested"
+  },
+  {
+   "id": "toon_ramp_3d_product",
+   "name": "Toon-ramp 3D (or 2D-posterised) product render",
+   "line": "Contours from depth/normal edges (image space) or inverted hull; crease lines on frame edges.",
+   "shading": "Light term posterised into 2-3 bands via a 1D ramp; a tiny bright band for a pseudo-highlight.",
+   "colour": "Frame colour exact in the lit band; shadow band hue-shifted.",
+   "texture": "None.",
+   "background_approach": "Flat colour or soft gradient; product dominant.",
+   "build_html_css_svg": "3D: normal/depth passes -> edge detect for lines + ramp shader. 2D: posterise a cutout's luminance with feComponentTransfer discrete '0 .55 1', then multiply with the colour layer.",
+   "flux_prompt": "cel-shaded 3D render of eyeglasses, flat toon shading in two tones, clean black outlines, simple background",
+   "limits": "Tiny normal changes create big shadow blotches (Motomura2015_GGXrd) - art-direct normals/shapes. Product colour can shift.",
+   "use_for": [
+    "product cartoon inserts",
+    "3D mascots"
+   ],
+   "source_keys": [
+    "Lake2000",
+    "Barla2006_XToon",
+    "BenardHertzmann2019",
+    "Motomura2015_GGXrd"
+   ],
+   "extends_style_ids": [
+    "cel_shaded_3d",
+    "toy_3d_render"
+   ],
+   "test_status": "untested"
+  },
+  {
+   "id": "depth_abstraction_bg",
+   "name": "Depth-based abstraction for layered BGs",
+   "line": "Near layers lined, far layers without lines.",
+   "shading": "Near: 2-3 tone bands; mid: 2; far: 1 flat tone.",
+   "colour": "Far layers lighter, cooler, lower chroma (aerial perspective).",
+   "texture": "Detail and texture fade with depth.",
+   "background_approach": "Parallax layers: FG dark and blurred, BG reduced, sky flat.",
+   "build_html_css_svg": "Per layer CSS: filter: saturate(.6) brightness(1.15) blur(var(--b)); fewer posterise steps on far layers.",
+   "flux_prompt": "layered cartoon landscape, detailed foreground with outlines, distant layers as flat pale blue silhouettes, atmospheric perspective",
+   "limits": "Overdone it looks foggy; the character layer must stay the crispest.",
+   "use_for": [
+    "parallax story clips",
+    "establishing shots"
+   ],
+   "source_keys": [
+    "Barla2006_XToon",
+    "Mitchell2007_TF2"
+   ],
+   "extends_style_ids": [
+    "anime_painterly_bg",
+    "papercut_layered"
+   ],
+   "test_status": "untested"
+  },
+  {
+   "id": "webtoon_soft_cel",
+   "name": "Webtoon soft cel + glow",
+   "line": "Thin clean digital line, often coloured.",
+   "shading": "Cel shadow with softened edges + airbrush gradients on hair/clothes; glow layers.",
+   "colour": "Bright, slightly pastel; screen-native saturated accents.",
+   "texture": "Smooth digital; additive glow for light.",
+   "background_approach": "Often blurred photo-based or gradient BG.",
+   "build_html_css_svg": "Shadow layer multiply with 1-2 px edge blur; radial gradients with mix-blend-mode: screen for glow.",
+   "flux_prompt": "webtoon style illustration, clean thin line art, soft cel shading, gentle glow, pastel colours, blurred background",
+   "limits": "Screen glow and neon tones die in CMYK print (Walsworth2024_ComicPrint).",
+   "use_for": [
+    "vertical-scroll stories",
+    "slice-of-life"
+   ],
+   "source_keys": [
+    "ClipStudio_AnimeSkin",
+    "Walsworth2024_ComicPrint"
+   ],
+   "extends_style_ids": [
+    "webtoon_digital"
+   ],
+   "test_status": "untested"
+  },
+  {
+   "id": "chibi_round_line",
+   "name": "Chibi kawaii, thick round line",
+   "line": "Thick round-capped, nearly uniform line, 1.3-1.5x normal weight.",
+   "shading": "Flat or one soft shadow; blush ellipses.",
+   "colour": "Pastel high-value palette; one saturated accent.",
+   "texture": "None.",
+   "background_approach": "Simple pattern or flat pastel BG, sparkle shapes.",
+   "build_html_css_svg": "SVG stroke-linejoin/linecap round; stroke 6-8 px @1080; blush = blurred ellipses with multiply.",
+   "flux_prompt": "cute chibi character, thick rounded outlines, pastel colours, simple flat shading, blush cheeks, plain pastel background",
+   "limits": "Childish register; clashes with serious health advice unless intended.",
+   "use_for": [
+    "stickers",
+    "reactions",
+    "light promos"
+   ],
+   "source_keys": [
+    "McCloud1993"
+   ],
+   "extends_style_ids": [
+    "chibi_kawaii"
+   ],
+   "test_status": "untested"
+  },
+  {
+   "id": "sticker_keyline",
+   "name": "Sticker keyline cutout",
+   "line": "Thick white (or paper-colour) keyline outside the silhouette; optional thin dark line inside it.",
+   "shading": "Any.",
+   "colour": "Any; the keyline must contrast with the BG.",
+   "texture": "Small drop shadow under the keyline for a peeled-sticker feel.",
+   "background_approach": "Works on busy or photographic BGs because the keyline separates the subject.",
+   "build_html_css_svg": "SVG filter: feMorphology operator='dilate' radius 6-10 on SourceAlpha -> feFlood white -> feComposite in -> feMerge under SourceGraphic.",
+   "flux_prompt": "die-cut sticker illustration, thick white border around the character, slight shadow, flat colours",
+   "limits": "Reads as merch/sticker, not cinematic.",
+   "use_for": [
+    "product cutouts on photos",
+    "social stickers",
+    "thumbnail subjects"
+   ],
+   "source_keys": [
+    "SayimCavanagh2011"
+   ],
+   "extends_style_ids": [
+    "flat_vector"
+   ],
+   "test_status": "untested"
+  },
+  {
+   "id": "print_cmyk_comic",
+   "name": "Print-safe cartoon colour (workflow recipe)",
+   "line": "Small text and balloon text in 100% K only.",
+   "shading": "No change.",
+   "colour": "Design in RGB, soft-proof to the printer's CMYK profile; avoid neon/electric colours or accept dulling; rich black only for large areas, within the printer's total ink limit (235-320% depending on press/paper).",
+   "texture": "Line screen and resolution per press (images 300-350 ppi).",
+   "background_approach": "Avoid large saturated BG fields near the CMYK gamut edge.",
+   "build_html_css_svg": "Soft-proof in Photoshop/Affinity/Krita; ImageMagick -profile for batch conversion; keep lines as a separate 100% K layer.",
+   "flux_prompt": "n/a (workflow)",
+   "limits": "Numbers are printer-specific - ask the printer.",
+   "use_for": [
+    "printed flyers",
+    "shop posters",
+    "printed comics"
+   ],
+   "source_keys": [
+    "Walsworth2024_ComicPrint",
+    "Lawley2016_BenDay"
+   ],
+   "extends_style_ids": [],
+   "test_status": "untested"
+  },
+  {
+   "id": "glasses_lineart_lens",
+   "name": "Glasses in line art with readable lenses",
+   "line": "Frame front thickest; temples thinner, tapering with distance; hinge crease lines; thin lens rims.",
+   "shading": "Background lines continue through the lens with a slight shift/value change (X-junction); one designed bar highlight across the lens.",
+   "colour": "Frame local colour exact; lens a faint tint (5-10% opacity).",
+   "texture": "None.",
+   "background_approach": "Any recipe above; the lens must show what is behind it.",
+   "build_html_css_svg": "SVG: clip a copy of the BG group to the lens shape, translate 1-2 px and lower its contrast; add a diagonal white bar (opacity .6) as the highlight shape.",
+   "flux_prompt": "line art illustration of eyeglasses, clear lenses showing the background through them, a single white highlight streak on each lens, clean lines",
+   "limits": "FLUX often fills lenses with reflections or leaves them empty - check every output.",
+   "use_for": [
+    "any cartoon with glasses",
+    "product inserts in story clips"
+   ],
+   "source_keys": [
+    "Gooch1998",
+    "AnjyoHiramitsu2003",
+    "SayimCavanagh2011"
+   ],
+   "extends_style_ids": [
+    "ink_line_clean",
+    "flat_vector"
+   ],
+   "test_status": "untested"
+  }
+ ]
+}

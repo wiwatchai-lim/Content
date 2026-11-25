@@ -1,0 +1,149 @@
+{
+ "file": "carousel/kits/2026-11-24_81-baby-bird/export/01.png",
+ "width": 1080,
+ "height": 1080,
+ "aspect": 1.0,
+ "value": {
+  "mean_L": 0.854,
+  "rms_contrast": 0.141,
+  "key": "high",
+  "clipped_highlights_pct": 0.0,
+  "crushed_shadows_pct": 0.18,
+  "notan_3_pct": [
+   2.7,
+   8.4,
+   88.9
+  ]
+ },
+ "color": {
+  "dominant": [
+   {
+    "hex": "#EED8C2",
+    "share_pct": 71.2,
+    "oklch": [
+     0.895,
+     0.039,
+     68.2
+    ]
+   },
+   {
+    "hex": "#FAF8F2",
+    "share_pct": 12.0,
+    "oklch": [
+     0.979,
+     0.008,
+     92.8
+    ]
+   },
+   {
+    "hex": "#BFAD9B",
+    "share_pct": 6.6,
+    "oklch": [
+     0.758,
+     0.032,
+     67.3
+    ]
+   },
+   {
+    "hex": "#4C443F",
+    "share_pct": 5.1,
+    "oklch": [
+     0.394,
+     0.013,
+     57.3
+    ]
+   },
+   {
+    "hex": "#86796D",
+    "share_pct": 4.8,
+    "oklch": [
+     0.585,
+     0.025,
+     64.8
+    ]
+   },
+   {
+    "hex": "#000000",
+    "share_pct": 0.2,
+    "oklch": [
+     0.016,
+     0.005,
+     293.7
+    ]
+   }
+  ],
+  "mean_chroma": 0.033,
+  "hue_spread_deg": 0,
+  "harmony_guess": "achromatic/neutral",
+  "warm_pct": 0,
+  "cool_pct": 0,
+  "proportion_top3_pct": [
+   71.2,
+   12.0,
+   6.6
+  ],
+  "proportion_note": "close to a 60-30-10 split"
+ },
+ "saliency_peaks": [
+  {
+   "x": 0.208,
+   "y": 0.131,
+   "strength": 0.719,
+   "nearest_guide_dist": {
+    "thirds": 0.238,
+    "phi": 0.305,
+    "centre": 0.471
+   }
+  },
+  {
+   "x": 0.806,
+   "y": 0.173,
+   "strength": 0.684,
+   "nearest_guide_dist": {
+    "thirds": 0.212,
+    "phi": 0.281,
+    "centre": 0.448
+   }
+  },
+  {
+   "x": 0.455,
+   "y": 0.787,
+   "strength": 0.632,
+   "nearest_guide_dist": {
+    "thirds": 0.171,
+    "phi": 0.184,
+    "centre": 0.291
+   }
+  }
+ ],
+ "balance": {
+  "weight_centre": [
+   0.509,
+   0.496
+  ],
+  "offset_from_centre": 0.01,
+  "reading": "centred/symmetrical"
+ },
+ "sharpness": {
+  "overall": 706.5,
+  "focal": 3102.0,
+  "background": 606.7,
+  "focal_vs_background": 5.11
+ },
+ "edge_density_thirds": {
+  "rows_top_mid_bottom": [
+   0.0358,
+   0.0581,
+   0.0677
+  ],
+  "cols_left_mid_right": [
+   0.0337,
+   0.0889,
+   0.0389
+  ]
+ },
+ "technical": {
+  "noise_sigma_est": 2.32
+ },
+ "overlay": ".claude/skills/ai-visual-artist/tests/real/babybird01_overlay.png"
+}

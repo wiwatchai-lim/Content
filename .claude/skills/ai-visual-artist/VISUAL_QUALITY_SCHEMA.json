@@ -1,0 +1,190 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "ai-visual-artist/visual-job.schema.json",
+  "title": "Visual Job (brief → blueprint → prompt → critique → score)",
+  "description": "One image (or one frame of a sequence). Filled in order: intent, references, direction, blueprint, palette, lighting, prompt; after generation: critique issues and the 100-point score. Validate with tools/validate_job.py.",
+  "type": "object",
+  "required": ["schema_version", "id", "intent", "format", "direction", "blueprint"],
+  "additionalProperties": false,
+  "properties": {
+    "schema_version": { "const": "1.0" },
+    "id": { "type": "string", "pattern": "^[A-Za-z0-9_\\-]+$" },
+    "intent": {
+      "type": "object",
+      "required": ["purpose", "audience", "message"],
+      "additionalProperties": false,
+      "properties": {
+        "purpose": { "enum": ["social_post", "carousel_slide", "reel_frame", "story_frame", "comic_panel", "storyboard", "key_visual", "product_ad", "poster", "web_banner", "cover", "presentation", "character_sheet", "environment_concept", "other"] },
+        "audience": { "type": "string" },
+        "message": { "type": "string", "minLength": 5, "description": "The one thing the viewer must get in 2 seconds." },
+        "call_to_action": { "type": "string" },
+        "story_context": { "type": "string" },
+        "scene_objective": { "type": "string" },
+        "subtext": { "type": "string" },
+        "constraints": { "type": "array", "items": { "type": "string" }, "description": "e.g. 'keep the real frame shape and colour', 'no text in the image', 'brand palette'" }
+      }
+    },
+    "references": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["path_or_url", "role"],
+        "additionalProperties": false,
+        "properties": {
+          "path_or_url": { "type": "string" },
+          "role": { "enum": ["product_must_match", "person_must_match", "logo_must_match", "style_reference", "composition_reference", "palette_reference", "mood_reference"] },
+          "license": { "type": "string" },
+          "locked_details": { "type": "array", "items": { "type": "string" }, "description": "Details that must not change without permission (frame shape, colour, logo, face)." }
+        }
+      }
+    },
+    "format": {
+      "type": "object",
+      "required": ["aspect"],
+      "additionalProperties": false,
+      "properties": {
+        "aspect": { "enum": ["1:1", "4:5", "9:16", "16:9", "3:2", "2:3", "21:9", "web_banner", "poster_a", "custom"] },
+        "width": { "type": "integer", "minimum": 64 },
+        "height": { "type": "integer", "minimum": 64 },
+        "safe_zones": { "type": "array", "items": { "type": "string" }, "description": "e.g. 'IG reel UI: top 220 px, bottom 420 px'" },
+        "text_layer": { "enum": ["none", "html_overlay", "in_image"], "default": "html_overlay" }
+      }
+    },
+    "direction": {
+      "type": "object",
+      "required": ["emotion", "style"],
+      "additionalProperties": false,
+      "properties": {
+        "emotion": { "type": "string", "description": "id from EMOTION_VISUAL_LIBRARY.json" },
+        "emotion_intensity": { "type": "number", "minimum": 0, "maximum": 1 },
+        "style": { "type": "string", "description": "id from ART_STYLE_LIBRARY.json" },
+        "visual_metaphor": { "type": "string" },
+        "mood_words": { "type": "array", "items": { "type": "string" }, "maxItems": 6 }
+      }
+    },
+    "blueprint": {
+      "type": "object",
+      "required": ["composition", "primary_focal_point", "viewing_path", "balance", "depth_layers", "negative_space", "camera"],
+      "additionalProperties": false,
+      "properties": {
+        "composition": { "type": "string", "description": "id from COMPOSITION_LIBRARY.json" },
+        "primary_focal_point": { "$ref": "#/$defs/point" },
+        "secondary_focal_point": { "$ref": "#/$defs/point" },
+        "viewing_path": { "type": "array", "items": { "type": "string" }, "minItems": 2, "description": "Ordered list of what the eye should hit." },
+        "balance": { "enum": ["symmetrical", "asymmetrical", "radial", "intentionally_unbalanced"] },
+        "subject_placement": { "type": "string" },
+        "depth_layers": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": { "foreground": { "type": "string" }, "midground": { "type": "string" }, "background": { "type": "string" } }
+        },
+        "negative_space": { "type": "string", "description": "Where and why (e.g. top third for headline)." },
+        "cropping": { "type": "string" },
+        "camera": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "shot_size": { "enum": ["extreme_wide", "wide", "full", "medium_wide", "medium", "medium_close", "close_up", "extreme_close_up", "macro", "insert"] },
+            "angle": { "enum": ["eye_level", "high", "low", "birds_eye", "worms_eye", "dutch", "over_shoulder", "pov", "top_down_flatlay"] },
+            "lens_mm": { "type": "number", "minimum": 8, "maximum": 800 },
+            "depth_of_field": { "enum": ["deep", "medium", "shallow"] }
+          }
+        },
+        "value_plan": { "type": "string", "description": "Where the lightest light and darkest dark go; value grouping (e.g. 3-value notan)." }
+      }
+    },
+    "palette": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "id": { "type": "string", "description": "id from COLOR_PALETTE_LIBRARY.json or 'brand' / 'custom'" },
+        "colors": { "type": "array", "items": { "type": "string", "pattern": "^#[0-9A-Fa-f]{6}$" } },
+        "proportion": { "type": "string", "description": "e.g. '≈60 dominant / 30 secondary / 10 accent' — a guide, not a rule" },
+        "temperature": { "enum": ["warm", "cool", "neutral", "warm_cool_contrast"] }
+      }
+    },
+    "lighting": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "id": { "type": "string", "description": "id from LIGHTING_LIBRARY.json" },
+        "key_direction": { "type": "string" },
+        "quality": { "enum": ["hard", "soft", "mixed"] },
+        "color_temperature_k": { "type": "integer", "minimum": 1000, "maximum": 20000 },
+        "notes": { "type": "string" }
+      }
+    },
+    "characters": { "type": "array", "items": { "type": "string" }, "description": "ids from a Character Bible; locked features apply" },
+    "environment": { "type": "string" },
+    "prompt": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "provider": { "enum": ["flux_local", "codex", "html_render", "other"] },
+        "positive": { "type": "string" },
+        "avoid": { "type": "string", "description": "Things to avoid, phrased for providers without negative prompts as positive constraints too." },
+        "seed": { "type": "integer" },
+        "steps": { "type": "integer" },
+        "init_image": { "type": "string" },
+        "denoise": { "type": "number", "minimum": 0, "maximum": 1 }
+      }
+    },
+    "outputs": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["path"],
+        "additionalProperties": false,
+        "properties": { "path": { "type": "string" }, "seed": { "type": "integer" }, "selected": { "type": "boolean" }, "generated_by": { "type": "string" } }
+      }
+    },
+    "critique": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["area", "where", "problem", "severity", "fix"],
+        "additionalProperties": false,
+        "properties": {
+          "area": { "enum": ["composition", "hierarchy", "color", "lighting", "perspective", "anatomy", "proportion", "expression", "balance", "storytelling", "emotion", "character_consistency", "brand_consistency", "text_legibility", "artifacts", "cropping", "technical", "art_style", "originality", "finishing"] },
+          "where": { "type": "string", "description": "Location: region (e.g. 'top-left third', 'right hand') or coordinates." },
+          "problem": { "type": "string" },
+          "severity": { "enum": ["critical", "major", "minor", "polish"] },
+          "likely_cause": { "type": "string" },
+          "fix": { "type": "string" },
+          "side_effects": { "type": "string", "description": "What else the fix may change." }
+        }
+      }
+    },
+    "score": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "weights_profile": { "type": "string", "description": "id of a weight profile in IMAGE_CRITIQUE_ENGINE.md (default, product_ad, character_sheet, …)" },
+        "criteria": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "composition": { "type": "number", "minimum": 0 }, "color_harmony": { "type": "number", "minimum": 0 }, "lighting": { "type": "number", "minimum": 0 },
+            "visual_hierarchy": { "type": "number", "minimum": 0 }, "emotional_impact": { "type": "number", "minimum": 0 }, "storytelling": { "type": "number", "minimum": 0 },
+            "art_style": { "type": "number", "minimum": 0 }, "technical_accuracy": { "type": "number", "minimum": 0 }, "originality": { "type": "number", "minimum": 0 }, "finishing": { "type": "number", "minimum": 0 }
+          }
+        },
+        "total": { "type": "number", "minimum": 0, "maximum": 100 },
+        "rater": { "type": "string", "description": "'claude' (AI judgement — never proof that people will like it), a person's role, or 'audience_test'" },
+        "pass": { "type": "boolean" }
+      }
+    }
+  },
+  "$defs": {
+    "point": {
+      "type": "object",
+      "required": ["what", "where"],
+      "additionalProperties": false,
+      "properties": {
+        "what": { "type": "string" },
+        "where": { "type": "string", "description": "e.g. 'right third, upper intersection' or 'x 0.66, y 0.33'" },
+        "how_emphasised": { "type": "string", "description": "contrast / colour / isolation / leading lines / sharpness / size" }
+      }
+    }
+  }
+}

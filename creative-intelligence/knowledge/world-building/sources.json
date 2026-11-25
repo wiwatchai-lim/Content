@@ -1,0 +1,480 @@
+[
+ {
+  "key": "Wolf2012",
+  "title": "Building Imaginary Worlds: The Theory and History of Subcreation",
+  "authors": "Mark J. P. Wolf",
+  "year": 2012,
+  "url": "https://www.routledge.com/Building-Imaginary-Worlds-The-Theory-and-History-of-Subcreation/Wolf/p/book/9780415631204",
+  "doi_isbn": "9780415631204",
+  "source_type": "textbook",
+  "tier": "A",
+  "key_findings": [
+   "Routledge, New York, 2012, xiv + 394 pp. Treats imaginary worlds as entities in their own right across literature, comics, film, TV, games and the internet, rather than as products of one narrative or medium.",
+   "Table of contents (catalogue record) includes a section 'Invention, Completeness, and Consistency' (p. 33ff). Content of that section is reported in BarkerWolf2016."
+  ],
+  "practical_applications": [
+   "Use invention / completeness / consistency as the three quality axes of any series world."
+  ],
+  "limitations": [
+   "Book not read; existence and structure confirmed via publisher and library catalogue; details come from the Barker review and Wolf's reply."
+  ],
+  "license": "copyrighted",
+  "access_status": "bibliographic",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M16"
+  ]
+ },
+ {
+  "key": "BarkerWolf2016",
+  "title": "Review and Response: Mark J. P. Wolf, Building Imaginary Worlds (review by Martin Barker; response by Mark J. P. Wolf)",
+  "authors": "Martin Barker; Mark J. P. Wolf",
+  "year": 2016,
+  "url": "https://www.participations.org/13-01-38-wolf.pdf",
+  "doi_isbn": "",
+  "source_type": "review",
+  "tier": "B",
+  "key_findings": [
+   "Participations 13(1), May 2016. Barker: Wolf's worlds seek three never-fully-achievable goals: completeness, coherence and consistency; narrative follows a 'principle of economy' while world-building follows an 'encyclopedic impulse' (Wolf p. 8).",
+   "Wolf lists four levels at which a world can alter the ordinary: nominal (naming), cultural, natural (species), ontological (rules of the universe); everything not changed is assumed to work as in the real world (people eat, travel takes time, people die).",
+   "Wolf (p. 42): casual audiences do not piece together world data but still sense how fleshed-out a world is, which can affect reception.",
+   "Wolf (p. 60): deliberate gaps, enigmas and unexplained references keep a work alive because they invite speculation.",
+   "Wolf's reply: incompleteness is inevitable, not a requirement; enigmas only work when there is already enough world data for an illusion of completeness, and must be used sparingly - too many and the audience loses interest or feels manipulated.",
+   "Barker's critique: Wolf privileges 'encyclopedic' fan engagement over character-driven immersion; Wolf replies few readers study a world without characters they like."
+  ],
+  "practical_applications": [
+   "Change as few real-world rules as possible and name them explicitly; leave a small number of planted mysteries, not many.",
+   "Build world data for coherence even if most viewers never see it."
+  ],
+  "limitations": [
+   "Review-and-reply format; second-hand view of the book."
+  ],
+  "license": "unknown (open-access journal)",
+  "access_status": "full_text",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M16"
+  ]
+ },
+ {
+  "key": "Jenkins2006",
+  "title": "Convergence Culture: Where Old and New Media Collide",
+  "authors": "Henry Jenkins",
+  "year": 2006,
+  "url": "https://cmsw.mit.edu/convergence-culture-where-old-and-new-media-collide/",
+  "doi_isbn": "",
+  "source_type": "textbook",
+  "tier": "A",
+  "key_findings": [
+   "NYU Press 2006 (revised 2008). Per catalogue descriptions: uses The Matrix as a case where consumers track bits of a story across multiple media channels; chapters on Survivor spoilers, American Idol, The Matrix, Star Wars fan films, Harry Potter fan writing."
+  ],
+  "practical_applications": [
+   "Foundational reference for 'transmedia storytelling'; see Jenkins2007 for the short principles."
+  ],
+  "limitations": [
+   "Book not read; existence, publisher and year confirmed via MIT CMS page and library catalogues."
+  ],
+  "license": "copyrighted",
+  "access_status": "bibliographic",
+  "verification_status": "unverified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M16"
+  ]
+ },
+ {
+  "key": "Jenkins2007",
+  "title": "Transmedia Storytelling 101",
+  "authors": "Henry Jenkins",
+  "year": 2007,
+  "url": "https://henryjenkins.org/blog/2007/03/transmedia_storytelling_101.html",
+  "doi_isbn": "",
+  "source_type": "practitioner",
+  "tier": "B",
+  "key_findings": [
+   "Transmedia story elements are dispersed across channels, each medium ideally making its own unique contribution.",
+   "Transmedia stories are usually built around complex fictional worlds rather than single characters or plots; worlds can support many interrelated stories and invite an 'encyclopedic impulse' to master a world that always exceeds the audience's grasp.",
+   "'Additive comprehension' (term credited to Neil Young): each new text adds information that revises understanding of the whole; tension between rewarding followers and staying accessible to newcomers.",
+   "Gaps and hints invite fan speculation and elaboration."
+  ],
+  "practical_applications": [
+   "Each episode/post should add one new fact about the world (additive), yet stand alone for a first-time viewer."
+  ],
+  "limitations": [
+   "Academic blog post by the field's founder; conceptual, no data."
+  ],
+  "license": "copyrighted",
+  "access_status": "full_text",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M16"
+  ]
+ },
+ {
+  "key": "Jenkins2004",
+  "title": "Game Design as Narrative Architecture",
+  "authors": "Henry Jenkins",
+  "year": 2004,
+  "url": "http://web.mit.edu/~21fms/People/henry3/games&narrative.html",
+  "doi_isbn": "",
+  "source_type": "primary_text",
+  "tier": "B",
+  "key_findings": [
+   "Designers as 'narrative architects': spaces carry narrative potential in four ways: evocative spaces (draw on stories audiences already know), enacted stories (micronarratives held together by broad goals and conflicts), embedded narratives (story information placed in objects and traces for the audience to reconstruct), emergent narratives (systems rich with narrative potential).",
+   "Embedded narrative needs redundancy because any single clue may be missed; the world becomes 'a memory palace'."
+  ],
+  "practical_applications": [
+   "Put backstory in set dressing (an old photo, a worn chair) and repeat the key clue in more than one form."
+  ],
+  "limitations": [
+   "Author web copy is undated; year is the standard citation (published in Wardrip-Fruin & Harrigan, First Person, MIT Press) not shown on the page.",
+   "About games; transfer to linear clips is by analogy."
+  ],
+  "license": "copyrighted",
+  "access_status": "full_text",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M16"
+  ]
+ },
+ {
+  "key": "Ryan2012PW",
+  "title": "Possible Worlds (the living handbook of narratology)",
+  "authors": "Marie-Laure Ryan",
+  "year": 2012,
+  "url": "https://www-archiv.fdm.uni-hamburg.de/lhn/node/54.html",
+  "doi_isbn": "",
+  "source_type": "encyclopedia",
+  "tier": "B",
+  "key_findings": [
+   "Created 2012, revised 2013. Principle of minimal departure: readers imagine a fictional world as close to the actual world as the text allows, changing only what the text requires (Walton: 'reality principle').",
+   "Doležel: fictional worlds are radically incomplete; a text's strategies of showing and hiding shape its aesthetic effect.",
+   "Storyworlds as modal systems: a textual actual world plus characters' private worlds (knowledge, obligations/desires, fantasies); conflict between these drives plot.",
+   "Accessibility typology: fictionalised history (shares real past/geography), realism (keeps natural laws), fantasy (breaks natural laws, keeps logic), nonsense (breaks logic)."
+  ],
+  "practical_applications": [
+   "State in the bible which real-world rules are suspended; audiences default everything else to reality.",
+   "Track each character's knowledge separately (who knows what, when) - a key continuity field."
+  ],
+  "limitations": [
+   "Theory entry; not empirical."
+  ],
+  "license": "unknown",
+  "access_status": "full_text",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M16"
+  ]
+ },
+ {
+  "key": "Ryan2015",
+  "title": "Transmedia Storytelling: Industry Buzzword or New Narrative Experience?",
+  "authors": "Marie-Laure Ryan",
+  "year": 2015,
+  "url": "https://muse.jhu.edu/article/602197/",
+  "doi_isbn": "10.5250/storyworlds.7.2.0001",
+  "source_type": "review",
+  "tier": "A",
+  "key_findings": [
+   "Storyworlds 7(2), 1-19. Asks whether transmedia storytelling is storytelling or mainly a marketing strategy, and whether it is new; contrasts it with adaptation using Jenkins's definition."
+  ],
+  "practical_applications": [
+   "A skeptical counterweight: spreading a world over many posts is not automatically a better story; each piece must still work as a story."
+  ],
+  "limitations": [
+   "Only the opening excerpt/abstract available; argument and conclusions not read."
+  ],
+  "license": "copyrighted",
+  "access_status": "abstract",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M16"
+  ]
+ },
+ {
+  "key": "Tolkien1947",
+  "title": "On Fairy-Stories",
+  "authors": "J. R. R. Tolkien",
+  "year": 1947,
+  "url": "https://www.supersummary.com/on-fairy-stories/summary/",
+  "doi_isbn": "",
+  "source_type": "primary_text",
+  "tier": "B",
+  "key_findings": [
+   "Per secondary summaries: a successful Secondary World needs the 'inner consistency of reality', which Tolkien places under Art (craft), not imagination alone; it produces Secondary Belief, as opposed to 'willing suspension of disbelief'.",
+   "Per secondary summaries: anyone can say 'the green sun'; making a world where it is credible takes labour and skill."
+  ],
+  "practical_applications": [
+   "Wonder is cheap; credibility is earned by consistency."
+  ],
+  "limitations": [
+   "Primary text not read; only search summaries/study guides. Year of first publication (1947, Essays Presented to Charles Williams) is the standard citation, not confirmed this session."
+  ],
+  "license": "copyrighted",
+  "access_status": "search_summary",
+  "verification_status": "unverified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M16"
+  ]
+ },
+ {
+  "key": "Sanderson2007",
+  "title": "Sanderson's First Law",
+  "authors": "Brandon Sanderson",
+  "year": 2007,
+  "url": "https://www.brandonsanderson.com/sandersons-first-law/",
+  "doi_isbn": "",
+  "source_type": "practitioner",
+  "tier": "D",
+  "key_findings": [
+   "'An author's ability to solve conflict with magic is DIRECTLY PROPORTIONAL to how well the reader understands said magic.'",
+   "Soft systems (vague rules) create wonder and should rarely solve problems; hard systems (clear rules) can solve problems; most writers sit between; prefers rules, costs and laws.",
+   "Don't add convenient new powers or laws to fit one situation."
+  ],
+  "practical_applications": [
+   "Any special rule in a series (immunity, ghosts visiting at 2 am, a glasses 'power') may only resolve a plot if it was set up earlier."
+  ],
+  "limitations": [
+   "Craft essay by a novelist; tier D, not science."
+  ],
+  "license": "copyrighted",
+  "access_status": "full_text",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M16"
+  ]
+ },
+ {
+  "key": "Carson2000",
+  "title": "Environmental Storytelling: Creating Immersive 3D Worlds Using Lessons Learned from the Theme Park Industry",
+  "authors": "Don Carson",
+  "year": 2000,
+  "url": "https://www.gamedeveloper.com/design/environmental-storytelling-creating-immersive-3d-worlds-using-lessons-learned-from-the-theme-park-industry",
+  "doi_isbn": "",
+  "source_type": "practitioner",
+  "tier": "D",
+  "key_findings": [
+   "The story is a 'big picture' set of rules guiding every texture and sound; breaking established rules leaves audiences feeling 'cheated'.",
+   "Audiences should know 'Where am I?' within about 15 seconds, from environmental clues rather than exposition.",
+   "Cause-and-effect vignettes (broken door, crashed vehicle) let viewers infer what happened and what danger is ahead; traces show time passing.",
+   "Use light and sparse placement to point at story props; avoid clutter."
+  ],
+  "practical_applications": [
+   "First 1-2 seconds of a clip must establish place; one aftermath detail can tell backstory without narration."
+  ],
+  "limitations": [
+   "Ex-Disney designer's practitioner article (tier D); the '15 seconds' figure is a rule of thumb."
+  ],
+  "license": "copyrighted",
+  "access_status": "full_text",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M16"
+  ]
+ },
+ {
+  "key": "Hemingway1932",
+  "title": "Death in the Afternoon (ch. 16, iceberg passage)",
+  "authors": "Ernest Hemingway",
+  "year": 1932,
+  "url": "https://www.wikipedia.org/wiki/Iceberg_theory",
+  "doi_isbn": "",
+  "source_type": "primary_text",
+  "tier": "D",
+  "key_findings": [
+   "As quoted by secondary sources: 'The dignity of movement of an ice-berg is due to only one-eighth of it being above water.'",
+   "As quoted: 'A writer who omits things because he does not know them only makes hollow places in his writing.'"
+  ],
+  "practical_applications": [
+   "Know far more of the world than you show; omit only what you know."
+  ],
+  "limitations": [
+   "Primary text not read; quotes from secondary web sources (tier E pages). A different 'seven-eighths' version comes from a later interview; do not conflate."
+  ],
+  "license": "copyrighted",
+  "access_status": "search_summary",
+  "verification_status": "unverified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M16"
+  ]
+ },
+ {
+  "key": "Macdonald2018",
+  "title": "Tablets of Stone or DNA? TV series bibles",
+  "authors": "Ian W. Macdonald",
+  "year": 2018,
+  "url": "https://eprints.whiterose.ac.uk/id/eprint/125213/",
+  "doi_isbn": "10.1386/josc.9.1.3_1",
+  "source_type": "empirical",
+  "tier": "A",
+  "key_findings": [
+   "Journal of Screenwriting 9(1), 3-23 (accepted manuscript read). Bible lengths vary widely: from a 3-page treatment worked up to 10 pages, 5-8 and 20-25 pages, to 50-60 pages (House of Cards) and 79 pages (The Wire); writers define bibles vaguely.",
+   "Types: selling bible, writer's bible, season bible (with storyline wall chart), production bible codifying 'case law', format bible for international sales; a 'walking bible' person may hold the memory.",
+   "'Less a tablet of stone, and more like a DNA code'; always ask 'which version?'.",
+   "Typical contents: premise/concept, place, locations, character biographies, rationale, structure & style, research, production detail (case law), episode storylines. Level of detail depends on what is culturally familiar versus new."
+  ],
+  "practical_applications": [
+   "Structure for STORY_BIBLE_TEMPLATE.md: DNA layer + case-law layer + episode layer, versioned."
+  ],
+  "limitations": [
+   "Small UK sample of writers and bibles.",
+   "Spot-check 2026-11-25: range wording corrected (separate examples)."
+  ],
+  "license": "copyrighted (accepted manuscript, self-archived)",
+  "access_status": "full_text",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M16",
+   "M38"
+  ]
+ },
+ {
+  "key": "Chee2012",
+  "title": "What is the Holocron?",
+  "authors": "Leland Chee",
+  "year": 2012,
+  "url": "https://www.starwars.com/news/what-is-the-holocron",
+  "doi_isbn": "",
+  "source_type": "docs",
+  "tier": "C",
+  "key_findings": [
+   "Lucasfilm's continuity database, created January 2000 (FileMaker per other sources) when licensed products needed to track new material; before it, lore lived in binders called 'bibles'.",
+   "Tracks stories, discrepancies, images, stats, pronunciations, translations, costume variations and behind-the-scenes info; plus style guides, timelines, spelling dictionaries, quote banks and maps.",
+   "Over 55,000 entries in 2012 (19,000+ characters, 2,900 species, 5,300 worlds)."
+  ],
+  "practical_applications": [
+   "Even a tiny studio benefits from one database of entities with IDs, a discrepancy log and a spelling list (Thai/English names)."
+  ],
+  "limitations": [
+   "Official blog post by the database keeper; 2012 snapshot."
+  ],
+  "license": "copyrighted",
+  "access_status": "full_text",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M16"
+  ]
+ },
+ {
+  "key": "Mittell2015",
+  "title": "Complex TV: The Poetics of Contemporary Television Storytelling - chapter 'Orienting Paratexts'",
+  "authors": "Jason Mittell",
+  "year": 2015,
+  "url": "https://scalar.usc.edu/works/complex-television/orienting-paratexts.8",
+  "doi_isbn": "",
+  "source_type": "textbook",
+  "tier": "A",
+  "key_findings": [
+   "NYU Press 2015. Chapter abstract: digital-era viewers use paratexts (wikis such as Lostpedia, infographics, character charts) to make sense of complex TV's temporality, characters, plot and spatial orientation.",
+   "Foregrounds 'forensic fandom' and 'drillability' as modes of spectatorship."
+  ],
+  "practical_applications": [
+   "For serial content, publish orienting aids (recap card, character card, map) - the audience will build them anyway."
+  ],
+  "limitations": [
+   "Only chapter abstract and examples read."
+  ],
+  "license": "copyrighted",
+  "access_status": "abstract",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M16"
+  ]
+ },
+ {
+  "key": "Busselle2008",
+  "title": "Fictionality and perceived realism in experiencing stories: A model of narrative comprehension and engagement",
+  "authors": "Rick Busselle, Helena Bilandzic",
+  "year": 2008,
+  "url": "https://opus.bibliothek.uni-augsburg.de/opus4/frontdoor/index/index/docId/39515",
+  "doi_isbn": "10.1111/j.1468-2885.2008.00322.x",
+  "source_type": "review",
+  "tier": "A",
+  "key_findings": [
+   "Per search summaries of the abstract: Communication Theory 18(2), 255-280. Distinguishes fictionality, external realism (match to the real world) and narrative realism (internal coherence).",
+   "Violations of external and narrative realism are inconsistencies among the viewer's mental models; they can lower online realism evaluations and reduce engagement; knowing a story is fiction does not by itself disrupt model construction."
+  ],
+  "practical_applications": [
+   "A fantastical premise is fine; internal contradictions are what break engagement."
+  ],
+  "limitations": [
+   "Repository PDF refused connection; only search-snippet abstract fragments available."
+  ],
+  "license": "copyrighted",
+  "access_status": "search_summary",
+  "verification_status": "unverified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M16",
+   "M38"
+  ]
+ },
+ {
+  "key": "ZwaanRadvansky1998",
+  "title": "Situation models in language comprehension and memory",
+  "authors": "Rolf A. Zwaan, Gabriel A. Radvansky",
+  "year": 1998,
+  "url": "https://cs.uky.edu/~sgware/reading/papers/zwaan1998situation.pdf",
+  "doi_isbn": "",
+  "source_type": "review",
+  "tier": "A",
+  "key_findings": [
+   "Psychological Bulletin 123(2), 162-185. Situation models are indexed on time, space, causation, intentionality and protagonist.",
+   "Readers notice when a protagonist's action contradicts an earlier trait (elevated reading times), citing Albrecht & O'Brien."
+  ],
+  "practical_applications": [
+   "World facts the audience tracks automatically: when, where, why, goals, who; these are the consistency priorities of a world bible."
+  ],
+  "limitations": [
+   "Text comprehension research; video transfer by analogy."
+  ],
+  "license": "copyrighted (course-hosted copy)",
+  "access_status": "full_text",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M16",
+   "M38"
+  ]
+ },
+ {
+  "key": "AlbrechtOBrien1993",
+  "title": "Updating a mental model: Maintaining both local and global coherence",
+  "authors": "Jason E. Albrecht, Edward J. O'Brien",
+  "year": 1993,
+  "url": "https://informahealthcare.com/doi/ref/10.3200/JRLP.139.3.261-272",
+  "doi_isbn": "",
+  "source_type": "empirical",
+  "tier": "A",
+  "key_findings": [
+   "Per later papers citing it: Journal of Experimental Psychology: Learning, Memory, and Cognition 19(5), 1061-1070. Readers slowed on a locally coherent sentence when it contradicted a backgrounded earlier trait of the protagonist (e.g. vegetarian), showing the trait was reactivated.",
+   "Hakala & O'Brien (1995) extended the effect."
+  ],
+  "practical_applications": [
+   "Character traits established once stay active in the audience's mind; contradicting them later is noticed even without a recent reminder."
+  ],
+  "limitations": [
+   "Full text not read; effect sizes unknown here; reading paradigm, not video."
+  ],
+  "license": "copyrighted",
+  "access_status": "search_summary",
+  "verification_status": "unverified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M16"
+  ]
+ }
+]

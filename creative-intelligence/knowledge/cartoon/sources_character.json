@@ -1,0 +1,818 @@
+[
+ {
+  "key": "Lorenz1943",
+  "title": "Die angeborenen Formen moeglicher Erfahrung",
+  "authors": "Konrad Lorenz",
+  "year": 1943,
+  "url": "",
+  "doi_isbn": "",
+  "source_type": "primary_text",
+  "tier": "A",
+  "key_findings": [
+   "Proposes the Kindchenschema (baby schema): large head relative to body, high forehead, large low-set eyes, round cheeks, short limbs, which releases caretaking/affection (as summarised by Glocker2009, Nittono2012, Borgi2014)."
+  ],
+  "practical_applications": [
+   "Origin of the cute-design levers used in chibi, kawaii, mascot and picture-book characters."
+  ],
+  "limitations": [
+   "Not read; content known only via secondary sources. Ethological claim of innateness is debated."
+  ],
+  "license": "copyrighted",
+  "access_status": "bibliographic",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M44"
+  ]
+ },
+ {
+  "key": "Glocker2009",
+  "title": "Baby Schema in Infant Faces Induces Cuteness Perception and Motivation for Caretaking in Adults",
+  "authors": "Melanie L. Glocker, Daniel D. Langleben, Kosha Ruparel, James W. Loughead, Ruben C. Gur, Norbert Sachser",
+  "year": 2009,
+  "url": "https://doi.org/10.1111/j.1439-0310.2008.01603.x",
+  "doi_isbn": "10.1111/j.1439-0310.2008.01603.x",
+  "source_type": "empirical",
+  "tier": "A",
+  "key_findings": [
+   "Parametric manipulation of real infant photos: high baby schema (round face, high forehead, big eyes, small nose/mouth) vs low (narrow face, low forehead).",
+   "n = 122 undergraduates: high-baby-schema infants rated cuter and elicited stronger caretaking motivation than unmanipulated and low versions.",
+   "Method (per Borgi2014): features adjusted within +/-2 SD of the natural range, so it does not test extreme cartoon exaggeration."
+  ],
+  "practical_applications": [
+   "Quantified checklist for 'make it cuter': widen face, raise forehead, enlarge eyes, shrink nose and mouth."
+  ],
+  "limitations": [
+   "Effects tested on photographic human infants inside natural range; generalisation to stylised cartoon proportions is inferred, not tested here."
+  ],
+  "license": "copyrighted (PMC author manuscript open)",
+  "access_status": "abstract",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M44"
+  ]
+ },
+ {
+  "key": "Borgi2014",
+  "title": "Baby schema in human and animal faces induces cuteness perception and gaze allocation in children",
+  "authors": "Marta Borgi, Irene Cogliati-Dezza, Victoria Brelsford, Kerstin Meints, Francesca Cirulli",
+  "year": 2014,
+  "url": "https://www.frontiersin.org/articles/10.3389/fpsyg.2014.00411/full",
+  "doi_isbn": "10.3389/fpsyg.2014.00411",
+  "source_type": "empirical",
+  "tier": "A",
+  "key_findings": [
+   "Six facial measures manipulated (face width, forehead length, eye width, nose length, nose width, mouth width) on human, dog and cat faces, following Glocker's method.",
+   "Children aged 3-6 (eye tracking, n = 50) looked longer at high-baby-schema faces across species; children (n = 32) and adults (n = 58) rated them cuter.",
+   "Eyes drew most fixations, then nose and mouth; children looked longer at the eye region of high-infantile faces."
+  ],
+  "practical_applications": [
+   "Baby schema works on animal characters and on child audiences, not only adults; the eyes are the main lever."
+  ],
+  "limitations": [
+   "Gaze effect near significance, driven by adult faces; photographic stimuli."
+  ],
+  "license": "CC BY",
+  "access_status": "full_text",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M44"
+  ]
+ },
+ {
+  "key": "Nittono2012",
+  "title": "The Power of Kawaii: Viewing Cute Images Promotes a Careful Behavior and Narrows Attentional Focus",
+  "authors": "Hiroshi Nittono, Michiko Fukushima, Akihiro Yano, Hiroki Moriya",
+  "year": 2012,
+  "url": "https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0046362",
+  "doi_isbn": "10.1371/journal.pone.0046362",
+  "source_type": "empirical",
+  "tier": "A",
+  "key_findings": [
+   "After viewing baby-animal images, fine-motor performance improved 43.9% vs 11.9% after adult animals (n = 48); visual search accuracy +15.7% vs +1.4% (adult) and +1.2% (pleasant food).",
+   "Global-precedence effect disappeared after cute images: attention narrowed to detail.",
+   "Pleasantness alone (food) did not produce the effect."
+  ],
+  "practical_applications": [
+   "Cute characters can make viewers look closer and more carefully - useful before a detail-heavy panel or product close-up (DERIVED)."
+  ],
+  "limitations": [
+   "Small samples; Japanese university students; photographic animals, not drawn characters; replication not checked in this batch."
+  ],
+  "license": "CC BY",
+  "access_status": "full_text",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M44"
+  ]
+ },
+ {
+  "key": "Nittono2016",
+  "title": "The two-layer model of 'kawaii': A behavioural science framework for understanding kawaii and cuteness",
+  "authors": "Hiroshi Nittono",
+  "year": 2016,
+  "url": "https://www.ingentaconnect.com/contentone/intellect/eapc/2016/00000002/00000001/art00007",
+  "doi_isbn": "10.1386/eapc.2.1.79_1",
+  "source_type": "review",
+  "tier": "B",
+  "key_findings": [
+   "Splits kawaii into two layers: an emotion and a social value.",
+   "The emotion is a positive feeling tied to social motivation to stay close to appealing people/objects; most typical toward infants but not limited to them.",
+   "Argues the biological trait is not culture-specific, but Japanese culture has cultivated it."
+  ],
+  "practical_applications": [
+   "Kawaii design need not rely only on baby proportions: approachability and closeness are the target feeling."
+  ],
+  "limitations": [
+   "Only the abstract was read; survey details not checked."
+  ],
+  "license": "copyrighted",
+  "access_status": "abstract",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M44"
+  ]
+ },
+ {
+  "key": "HindeBarden1985",
+  "title": "The evolution of the teddy bear",
+  "authors": "R. A. Hinde, L. A. Barden",
+  "year": 1985,
+  "url": "https://www.scilit.net/publications/f9c309d62800ec542bf419e1e5e0b827",
+  "doi_isbn": "",
+  "source_type": "empirical",
+  "tier": "A",
+  "key_findings": [
+   "(Per search summary of the paper and citing works) Museum teddy bears from 1903 onward show a trend toward a larger forehead and shorter snout; interpreted as selection by human preference for baby features.",
+   "(Per citing work Morris, Reddy & Bunting 1995) 6- and 8-year-olds preferred baby-featured bears; 4-year-olds did not."
+  ],
+  "practical_applications": [
+   "Commercial characters drift toward baby schema over time - a known pattern for mascots and toys."
+  ],
+  "limitations": [
+   "Not read directly; small museum sample; correlational."
+  ],
+  "license": "copyrighted",
+  "access_status": "search_summary",
+  "verification_status": "unverified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M44"
+  ]
+ },
+ {
+  "key": "Rhodes1987",
+  "title": "Identification and ratings of caricatures: Implications for mental representations of faces",
+  "authors": "Gillian Rhodes, Susan E. Brennan, Susan Carey",
+  "year": 1987,
+  "url": "https://doi.org/10.1016/0010-0285(87)90016-8",
+  "doi_isbn": "10.1016/0010-0285(87)90016-8",
+  "source_type": "empirical",
+  "tier": "A",
+  "key_findings": [
+   "Computer line-drawing caricatures (exaggerating all metric differences from a norm face) of familiar faces were identified faster than veridical drawings, which were faster than anticaricatures; accuracy did not differ.",
+   "The best likeness was judged to be a caricature (about +16% by interpolation, as reported by Frowd2007).",
+   "Supports norm-based (distance-from-average) face coding."
+  ],
+  "practical_applications": [
+   "Exaggerate what makes a character differ from the average face; pulling a design toward 'average' makes it slower to recognise."
+  ],
+  "limitations": [
+   "Familiar real faces as line drawings; does not test invented cartoon characters."
+  ],
+  "license": "copyrighted",
+  "access_status": "abstract",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M44"
+  ]
+ },
+ {
+  "key": "Frowd2007",
+  "title": "An application of caricature: how to improve the recognition of facial composites",
+  "authors": "Charlie Frowd, Vicki Bruce, David Ross, Alex McIntyre, Peter J. B. Hancock",
+  "year": 2007,
+  "url": "http://dspace.stir.ac.uk/bitstream/1893/295/1/caricature_VC_final.pdf",
+  "doi_isbn": "10.1080/13506280601058951",
+  "source_type": "empirical",
+  "tier": "A",
+  "key_findings": [
+   "Review section: best-likeness caricature level ~16% (Rhodes 1987) to ~42% (Benson & Perrett 1994) for line drawings, but only ~4-6% for photographs.",
+   "Caricatured line drawings are identified as well as or slightly better than veridical; anticaricatures less well.",
+   "For error-laden composites an anti-caricature was best - exaggeration also amplifies errors."
+  ],
+  "practical_applications": [
+   "Stylised/line work tolerates far more exaggeration than photoreal rendering; exaggerate only features that are correct/distinctive."
+  ],
+  "limitations": [
+   "Forensic composite context; effects for invented characters inferred."
+  ],
+  "license": "author manuscript (repository)",
+  "access_status": "full_text",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M44"
+  ]
+ },
+ {
+  "key": "Liu2019",
+  "title": "A Study of Facial Features of American and Japanese Cartoon Characters",
+  "authors": "Kun Liu, Junhong Chen, Kang-Ming Chang",
+  "year": 2019,
+  "url": "https://www.mdpi.com/2073-8994/11/5/664",
+  "doi_isbn": "10.3390/sym11050664",
+  "source_type": "empirical",
+  "tier": "B",
+  "key_findings": [
+   "100 American and Japanese animation characters measured against real faces (angles, lengths, areas).",
+   "Both traditions exaggerate eyes, nose, ears, forehead and chin.",
+   "Eye area: American characters ~2x human, Japanese characters ~3.4x human."
+  ],
+  "practical_applications": [
+   "Starting numbers for eye scale per style: Western TV/feature ~2x, anime/manga ~3.4x real eye area."
+  ],
+  "limitations": [
+   "Abstract only; sample selection and per-style variance not checked; Symmetry is an open-access MDPI journal (moderate tier)."
+  ],
+  "license": "CC BY",
+  "access_status": "abstract",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M44"
+  ]
+ },
+ {
+  "key": "Bisiecka2022",
+  "title": "The assessment of the biological age of children's characters created in the convention of Japanese animation in forensic practice",
+  "authors": "Agata Bisiecka, Krzysztof Boryslawski",
+  "year": 2022,
+  "url": "https://czasopisma.uni.lodz.pl/ar/article/download/13199/15130/37767",
+  "doi_isbn": "",
+  "source_type": "empirical",
+  "tier": "A",
+  "key_findings": [
+   "173 frontal anime faces (ages 10-18): eye-related ratios decrease and lower-face ratios (pupil-to-mouth, pupil-to-chin) increase with the character's stated age.",
+   "Age readable within +/-2 years for 67% of males but only 35% of females - female characters are drawn more paedomorphic.",
+   "Square chins appear only in the 16-18 male group; round/triangular chins in younger boys."
+  ],
+  "practical_applications": [
+   "In anime-style design, age is signalled by eye size vs lower-face length and chin shape - use these to make age readable."
+  ],
+  "limitations": [
+   "Forensic purpose; anime only; assigned ages imprecise."
+  ],
+  "license": "open access (journal)",
+  "access_status": "full_text",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M44"
+  ]
+ },
+ {
+  "key": "CohnEhly2016",
+  "title": "The vocabulary of manga: Visual morphology in dialects of Japanese Visual Language",
+  "authors": "Neil Cohn, Sean Ehly",
+  "year": 2016,
+  "url": "https://research.tilburguniversity.edu/en/publications/the-vocabulary-of-manga-visual-morphology-in-dialects-of-japanese/",
+  "doi_isbn": "10.1016/j.pragma.2015.11.008",
+  "source_type": "empirical",
+  "tier": "A",
+  "key_findings": [
+   "Catalogued 73 conventionalised graphic schemas in manga (e.g. nosebleed for arousal, nose bubble for sleep) across 20 shonen and shojo books.",
+   "Most schemas appear in both genres (shared Japanese Visual Language) but in different proportions - genres act as dialects."
+  ],
+  "practical_applications": [
+   "Manga-style expression sheets should include symbolic emblems, not only facial anatomy; shonen and shojo share the vocabulary."
+  ],
+  "limitations": [
+   "Abstract/publisher page only; frequencies per schema not read."
+  ],
+  "license": "copyrighted",
+  "access_status": "publisher_page",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M44"
+  ]
+ },
+ {
+  "key": "Mori2012",
+  "title": "The Uncanny Valley (translated by K. F. MacDorman and N. Kageki; original 1970)",
+  "authors": "Masahiro Mori",
+  "year": 2012,
+  "url": "https://spectrum.ieee.org/the-uncanny-valley",
+  "doi_isbn": "10.1109/MRA.2012.2192811",
+  "source_type": "primary_text",
+  "tier": "B",
+  "key_findings": [
+   "Affinity rises with human likeness, then dips sharply near (but short of) full human likeness; movement amplifies peaks and valleys.",
+   "Examples: toy robot (first hill), realistic prosthetic hand (valley), bunraku puppet (high affinity from a distance).",
+   "Recommends designers aim for the first peak - moderate human likeness - rather than risk the valley."
+  ],
+  "practical_applications": [
+   "Clearly stylised characters are the safe default; near-photoreal characters need flawless detail and motion."
+  ],
+  "limitations": [
+   "Essay/hypothesis, not data; the curve shape itself is weakly supported (see Katsyri2015)."
+  ],
+  "license": "copyrighted (IEEE)",
+  "access_status": "full_text",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M44"
+  ]
+ },
+ {
+  "key": "Katsyri2015",
+  "title": "A review of empirical evidence on different uncanny valley hypotheses: support for perceptual mismatch as one road to the valley of eeriness",
+  "authors": "Jari Katsyri, Klaus Forger, Meeri Makarainen, Tapio Takala",
+  "year": 2015,
+  "url": "https://www.frontiersin.org/articles/10.3389/fpsyg.2015.00390/full",
+  "doi_isbn": "10.3389/fpsyg.2015.00390",
+  "source_type": "review",
+  "tier": "S",
+  "key_findings": [
+   "Naive uncanny dip for any human-likeness increase: weak (1 of 8 studies); linear rise of affinity with human likeness: 7 of 9.",
+   "Inconsistent realism across features (e.g. realistic face with mismatched eyes, face-voice mismatch): strongest support (4 of 4).",
+   "Atypical features on humanlike faces (e.g. enlarged eyes on realistic faces): good support (3 of 4). Movement amplification: not supported."
+  ],
+  "practical_applications": [
+   "Keep one realism level across eyes, skin, shape, motion and voice; never put anime-size eyes on photoreal skin."
+  ],
+  "limitations": [
+   "Small, heterogeneous, mostly self-report evidence base; morphing artefacts may confound."
+  ],
+  "license": "CC BY",
+  "access_status": "full_text",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M44"
+  ]
+ },
+ {
+  "key": "Zell2015",
+  "title": "To Stylize or not to Stylize? The Effect of Shape and Material Stylization on the Perception of Computer-Generated Faces",
+  "authors": "Eduard Zell, Carlos Aliaga, Adrian Jarabo, Katja Zibrek, Diego Gutierrez, Rachel McDonnell, Mario Botsch",
+  "year": 2015,
+  "url": "https://ls7-gv.cs.tu-dortmund.de/publications/2015-stylize.pdf",
+  "doi_isbn": "10.1145/2816795.2818126",
+  "source_type": "empirical",
+  "tier": "A",
+  "key_findings": [
+   "Shape stylization drives perceived realism and expression intensity (expressions read as more intense on more stylised shapes); material/texture drives appeal, reassurance and attractiveness.",
+   "Strong mismatch between shape and material stylization lowers appeal and raises eeriness (abstract shapes + realistic materials = highly eerie).",
+   "Realism is a poor predictor of appeal (appeal and realism scales do not correlate); blurring realistic skin texture raises appeal and lowers eeriness with little realism loss."
+  ],
+  "practical_applications": [
+   "For AI images: if the shape is cartoon, keep the surface cartoon (flat/soft), and soften textures rather than adding pores."
+  ],
+  "limitations": [
+   "3D CG faces of two people; lab ratings; generalisation to 2D drawing inferred."
+  ],
+  "license": "copyrighted (author copy)",
+  "access_status": "full_text",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M44"
+  ]
+ },
+ {
+  "key": "McDonnell2012",
+  "title": "Render me Real? Investigating the Effect of Render Style on the Perception of Animated Virtual Humans",
+  "authors": "Rachel McDonnell, Martin Breidt, Heinrich H. Bulthoff",
+  "year": 2012,
+  "url": "https://doi.org/10.1145/2185520.2185587",
+  "doi_isbn": "10.1145/2185520.2185587",
+  "source_type": "empirical",
+  "tier": "A",
+  "key_findings": [
+   "(Per search summaries/citing papers) Render style affects appeal and perceived realism of animated humans; animation artefacts were more acceptable on cartoon-rendered than realistic characters; highly realistic and highly abstract styles were treated differently from middle styles."
+  ],
+  "practical_applications": [
+   "Cartoon rendering buys tolerance for imperfect motion - relevant to cheap rig/AI-video animation."
+  ],
+  "limitations": [
+   "Not read; details unverified."
+  ],
+  "license": "copyrighted",
+  "access_status": "search_summary",
+  "verification_status": "unverified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M44"
+  ]
+ },
+ {
+  "key": "Kendall2016",
+  "title": "Iconic faces are not real faces: enhanced emotion detection and altered neural processing as faces become more iconic",
+  "authors": "L. N. Kendall, Quentin Raffaelli, Alan Kingstone, Rebecca M. Todd",
+  "year": 2016,
+  "url": "https://cognitiveresearchjournal.springeropen.com/articles/10.1186/s41235-016-0021-8",
+  "doi_isbn": "10.1186/s41235-016-0021-8",
+  "source_type": "empirical",
+  "tier": "A",
+  "key_findings": [
+   "Five stimulus sets from photorealistic to fully iconic: at brief presentation, emotion identification was more accurate for more cartoonised faces; at the fastest times the simplest images were ~60% more accurate than realistic faces.",
+   "Higher contrast and lower featural complexity each improved accuracy independently.",
+   "Simpler/higher-contrast faces produced lower P1 amplitudes (less early cortical processing needed)."
+  ],
+  "practical_applications": [
+   "For feeds and thumbnails, simplified high-contrast cartoon faces communicate emotion faster than realistic faces."
+  ],
+  "limitations": [
+   "Lab task with brief exposures; small set of basic emotions."
+  ],
+  "license": "CC BY",
+  "access_status": "full_text",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M44"
+  ]
+ },
+ {
+  "key": "Ganea2008",
+  "title": "Transfer between Picture Books and the Real World by Very Young Children",
+  "authors": "Patricia A. Ganea, Megan Bloom Pickard, Judy S. DeLoache",
+  "year": 2008,
+  "url": "https://doi.org/10.1080/15248370701836592",
+  "doi_isbn": "10.1080/15248370701836592",
+  "source_type": "empirical",
+  "tier": "A",
+  "key_findings": [
+   "15- and 18-month-olds extended new labels between pictures and real objects more often with photographs and realistic drawings than with cartoons; iconicity aids transfer."
+  ],
+  "practical_applications": [
+   "For toddler educational content where real-world transfer matters, prefer realistic illustration over heavy cartoon stylisation."
+  ],
+  "limitations": [
+   "Very young children only; effect shrinks with age (Strouse2018)."
+  ],
+  "license": "copyrighted",
+  "access_status": "abstract",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M44"
+  ]
+ },
+ {
+  "key": "Strouse2018",
+  "title": "The Role of Book Features in Young Children's Transfer of Information from Picture Books to Real-World Contexts",
+  "authors": "Gabrielle A. Strouse, Angela Nyhout, Patricia A. Ganea",
+  "year": 2018,
+  "url": "https://www.frontiersin.org/articles/10.3389/fpsyg.2018.00050/full",
+  "doi_isbn": "10.3389/fpsyg.2018.00050",
+  "source_type": "review",
+  "tier": "A",
+  "key_findings": [
+   "Realism: photos easiest, cartoons hardest for 15-18-month transfer; iconicity still matters at age 3 in some tasks.",
+   "Anthropomorphic language/illustrations reduced factual learning and increased attribution of human traits to real animals (Ganea et al. 2014).",
+   "Sharing story with human characters increased children's sharing; the same story with a raccoon decreased it (Larsen et al. 2017).",
+   "Manipulative features (flaps, pop-ups) reduced learning in toddlers (Tare et al. 2010)."
+  ],
+  "practical_applications": [
+   "Teach facts or behaviours with human (or realistic) characters; keep talking-animal designs for entertainment/brand warmth."
+  ],
+  "limitations": [
+   "Few studies per domain; small samples; mostly Western urban children."
+  ],
+  "license": "CC BY",
+  "access_status": "full_text",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M44"
+  ]
+ },
+ {
+  "key": "ElliotMaier2014",
+  "title": "Color Psychology: Effects of Perceiving Color on Psychological Functioning in Humans",
+  "authors": "Andrew J. Elliot, Markus A. Maier",
+  "year": 2014,
+  "url": "https://doi.org/10.1146/annurev-psych-010213-115035",
+  "doi_isbn": "10.1146/annurev-psych-010213-115035",
+  "source_type": "review",
+  "tier": "S",
+  "key_findings": [
+   "Colour can carry meaning and affect affect, cognition and behaviour, but the literature is nascent; boundary conditions and real-world generalisability are needed before strong application recommendations."
+  ],
+  "practical_applications": [
+   "Treat character colour-personality coding as craft convention, not science."
+  ],
+  "limitations": [
+   "Abstract only; not specific to characters."
+  ],
+  "license": "copyrighted",
+  "access_status": "abstract",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M44"
+  ]
+ },
+ {
+  "key": "ThomasJohnston1981",
+  "title": "The Illusion of Life: Disney Animation",
+  "authors": "Frank Thomas, Ollie Johnston",
+  "year": 1981,
+  "url": "",
+  "doi_isbn": "ISBN 0-89659-233-2",
+  "source_type": "practitioner",
+  "tier": "D",
+  "key_findings": [
+   "Source of the 12 principles incl. 'appeal', 'exaggeration' and 'solid drawing' (as summarised in CHARACTER_DESIGN.md and SHAPE_LANGUAGE.md)."
+  ],
+  "practical_applications": [
+   "Vocabulary for appeal, exaggeration, twinning avoidance."
+  ],
+  "limitations": [
+   "Not read this session; practitioner (craft) knowledge."
+  ],
+  "license": "copyrighted",
+  "access_status": "bibliographic",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M44"
+  ]
+ },
+ {
+  "key": "McCloud1993",
+  "title": "Understanding Comics: The Invisible Art",
+  "authors": "Scott McCloud",
+  "year": 1993,
+  "url": "",
+  "doi_isbn": "ISBN 0-06-097625-X",
+  "source_type": "practitioner",
+  "tier": "D",
+  "key_findings": [
+   "Proposes 'amplification through simplification': simplified iconic faces invite reader identification (theory cited as motivation by Kendall2016, which tested a related claim)."
+  ],
+  "practical_applications": [
+   "Rationale for simple faces on protagonists + more detailed environments."
+  ],
+  "limitations": [
+   "Not read this session; theory, partly supported by Kendall2016 for emotion speed only."
+  ],
+  "license": "copyrighted",
+  "access_status": "bibliographic",
+  "verification_status": "unverified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M44"
+  ]
+ },
+ {
+  "key": "Robledo_ModelSheets",
+  "title": "Model Sheets for Character Designers (Clip Studio guide)",
+  "authors": "Julio Robledo",
+  "year": null,
+  "url": "https://www.clipstudio.net/how-to-draw/archives/164740",
+  "doi_isbn": "",
+  "source_type": "practitioner",
+  "tier": "D",
+  "key_findings": [
+   "A model sheet set = construction sheet (proportions in heads), head + body turnaround, colour sheet, expression sheet, pose sheet.",
+   "Turnaround minimum: front, back, profile, three-quarter; horizontal guide lines for eye centres, brows, chin, shoulders keep views aligned.",
+   "Expression sheet: at least joy, sadness, anger, surprise; ~6 samples; pose sheet 4-5 poses."
+  ],
+  "practical_applications": [
+   "Template for the turnaround/model-sheet section and AI master images."
+  ],
+  "limitations": [
+   "Single practitioner; numbers are recommendations, not standards."
+  ],
+  "license": "copyrighted",
+  "access_status": "full_text",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M44"
+  ]
+ },
+ {
+  "key": "Taberham2019",
+  "title": "Early studio animation before rubber hose (animationstudies 2.0 blog)",
+  "authors": "Paul Taberham",
+  "year": 2019,
+  "url": "https://blog.animationstudies.org/?p=2865",
+  "doi_isbn": "",
+  "source_type": "review",
+  "tier": "B",
+  "key_findings": [
+   "Pre-1928 studio style (from Bray, 1914) had single brisk speed, little squash/stretch, animation on 4s, cycles; rubber hose era marked by rubberised limbs and synchronised sound from 1928."
+  ],
+  "practical_applications": [
+   "Context for rubber hose spec card: fluid limbs paired with music timing."
+  ],
+  "limitations": [
+   "Blog by an animation scholar; brief."
+  ],
+  "license": "copyrighted",
+  "access_status": "full_text",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M44"
+  ]
+ },
+ {
+  "key": "Wikipedia_RubberHose",
+  "title": "Rubber hose animation",
+  "authors": "Wikipedia contributors",
+  "year": null,
+  "url": "https://en.wikipedia.org/wiki/Rubber_hose_animation",
+  "doi_isbn": "",
+  "source_type": "encyclopedia",
+  "tier": "E",
+  "key_findings": [
+   "Limbs drawn as flowing unjointed curves; rounder smoother bodies (Bill Nolan, Felix shorts, 1920s); style suited sound/music sync; declined in the 1930s with the move to anatomical realism; revived in later TV and games."
+  ],
+  "practical_applications": [
+   "Spec card for rubber-hose style."
+  ],
+  "limitations": [
+   "Community source; gloves/pie-eyes traits not covered and so not asserted."
+  ],
+  "license": "CC BY-SA",
+  "access_status": "full_text",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M44"
+  ]
+ },
+ {
+  "key": "Wikipedia_Chibi",
+  "title": "Chibi (style)",
+  "authors": "Wikipedia contributors",
+  "year": null,
+  "url": "https://en.wikipedia.org/wiki/Chibi_(style)",
+  "doi_isbn": "",
+  "source_type": "encyclopedia",
+  "tier": "E",
+  "key_findings": [
+   "Super deformed: head roughly 1/3 to 1/2 of total height vs ~7-8 heads for a typical anime character; oversized head and eyes, tiny nose, stubby limbs, details dropped, signature hair/accessory emphasised; widely used in merchandise and for exaggerated reactions."
+  ],
+  "practical_applications": [
+   "Spec card for chibi/SD."
+  ],
+  "limitations": [
+   "Community source; proportions are convention."
+  ],
+  "license": "CC BY-SA",
+  "access_status": "full_text",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M44"
+  ]
+ },
+ {
+  "key": "Chaitiamvong2025",
+  "title": "Character Design and Visual Development for LINE Stickers: 'Yoga Teacher'",
+  "authors": "Warakorn Chaitiamvong, Panuwat Sitheechoke",
+  "year": 2025,
+  "url": "https://so02.tci-thaijo.org/index.php/jdecho/article/download/278343/185609/1231717",
+  "doi_isbn": "",
+  "source_type": "empirical",
+  "tier": "C",
+  "key_findings": [
+   "Thai LINE sticker character built with persona research + silhouette-first design + Super Deformed proportion + split-complementary bright colours with grey/white; large face for clear emotion.",
+   "40 stickers; 30 target users: 93.3% understood the messages, 90.0% satisfied, 96.7% felt it could represent them."
+  ],
+  "practical_applications": [
+   "Workflow for Thai sticker/mascot characters: persona -> silhouette -> SD proportion -> palette -> expression set with short Thai phrases."
+  ],
+  "limitations": [
+   "Practice-based design research; satisfaction survey without control."
+  ],
+  "license": "open access (TCI journal)",
+  "access_status": "full_text",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M44"
+  ]
+ },
+ {
+  "key": "Pichedpan2020",
+  "title": "Brand Communication by Using Spoke-characters Featured in LINE Stickers in Thailand",
+  "authors": "Naris Pichedpan",
+  "year": 2020,
+  "url": "https://so05.tci-thaijo.org/index.php/pimjournal/article/view/228941",
+  "doi_isbn": "",
+  "source_type": "empirical",
+  "tier": "B",
+  "key_findings": [
+   "Content analysis of 5 popular 2018 sponsored LINE sticker sets: characters created specifically for stickers, usually more than one per brand, mostly gender-unidentifiable, all humorous.",
+   "Focus groups (n = 18): a duck character linked to a restaurant's roast-duck dish built brand association; characters with no link to the brand did not.",
+   "Users favour cute, funny, often animal characters behaving like everyday life (as reported)."
+  ],
+  "practical_applications": [
+   "A brand character must carry a visible link to the product/service; casts of 2+ characters are the norm in Thai brand stickers."
+  ],
+  "limitations": [
+   "Small sample; one year; qualitative."
+  ],
+  "license": "open access (TCI journal)",
+  "access_status": "full_text",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M44"
+  ]
+ },
+ {
+  "key": "Verstappen2017",
+  "title": "Thai Comics in the Twenty-First Century: Identity and Diversity of a New Generation of Thai Cartoonists (research project)",
+  "authors": "Nicolas Verstappen",
+  "year": 2017,
+  "url": "https://www.commarts.chula.ac.th/upload/2019/05/ThaiComicinthe21stCentury.pdf",
+  "doi_isbn": "",
+  "source_type": "review",
+  "tier": "B",
+  "key_findings": [
+   "Early Thai long-story comics (1930s) were stylistically inspired by American newspaper/animation cartoon strips; a realistic illustrative style was introduced by Hem Vejakorn (1938) via Siamese-Italian academic painting.",
+   "Kai Hua Roh (gag magazine, 1973, slogan 'household humour') and Maha Sanook (1976, younger readers, short comic stories) from Banlue; pocket format; one-baht comics with simple moral plots peaked in the late 1970s-80s.",
+   "Mainstream Thai comics of the 1990s-2000s were strongly manga-influenced; the 21st-century independent generation shows 'freedom of style' (European, American and Japanese influences); individual gag cartoonists' styles vary widely (one is compared with loose European illustrators)."
+  ],
+  "practical_applications": [
+   "Thai cartoon tradition = plural, not one look; when prompting 'Thai gag comic' describe concrete traits (format, line, humour) rather than a single house style."
+  ],
+  "limitations": [
+   "Academic research report; no systematic analysis of proportions or line in Kai Hua Roh."
+  ],
+  "license": "copyrighted (university upload)",
+  "access_status": "full_text",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M44"
+  ]
+ },
+ {
+  "key": "Wikipedia_KhanKluay",
+  "title": "Khan Kluay (2006 film)",
+  "authors": "Wikipedia contributors",
+  "year": 2006,
+  "url": "https://en.wikipedia.org/wiki/Khan_Kluay",
+  "doi_isbn": "",
+  "source_type": "encyclopedia",
+  "tier": "E",
+  "key_findings": [
+   "First Thai 3D animated feature (Kantana Animation, 2006), directed by a former Disney/Blue Sky animator; title character a brave blue elephant who becomes a royal war elephant; budget 115 M baht, 3-year production; multiple Thai and international awards."
+  ],
+  "practical_applications": [
+   "Reference point for Thai CG feature style: stylised animals in a historical Thai setting with non-natural signature colour."
+  ],
+  "limitations": [
+   "Encyclopedia; no design analysis available."
+  ],
+  "license": "CC BY-SA",
+  "access_status": "publisher_page",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M44"
+  ]
+ },
+ {
+  "key": "Han2017",
+  "title": "From Webtoon to Apptoon: Changes of Korean Webtoon's Displaying code",
+  "authors": "Sang-jung Han",
+  "year": 2017,
+  "url": "https://mediacommons.org/imr/2017/09/09/webtoon-apptoon-changes-korean-webtoons-displaying-code",
+  "doi_isbn": "",
+  "source_type": "review",
+  "tier": "B",
+  "key_findings": [
+   "First-generation webtoons used vertical layout for mouse scrolling with extended panels and creative gutters; app versions shrink frames to phone size and use zoom/pan/vertical movement transitions as directing grammar."
+  ],
+  "practical_applications": [
+   "Webtoon characters must read in small, tightly framed panels viewed one at a time while scrolling."
+  ],
+  "limitations": [
+   "Short essay; does not discuss character drawing directly."
+  ],
+  "license": "copyrighted",
+  "access_status": "full_text",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M44"
+  ]
+ }
+]

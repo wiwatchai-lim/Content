@@ -1,0 +1,3214 @@
+[
+ {
+  "id": "watercolor_loose",
+  "name": "Loose Watercolour",
+  "name_th": "สีน้ำแบบลื่นไหล",
+  "family": "traditional_media",
+  "historical_background": "Watercolour is a semi-transparent paint of pigment in a water-soluble binder, usually on paper, where the unpainted paper supplies the light (Tate, 'Watercolour'). Tate's examples run from Turner's The Blue Rigi, Sunrise (1842) to Klee (1927); the loose, wet-into-wet manner is a long-standing practice of plein-air sketchers rather than a named movement.",
+  "visual_characteristics": "Transparent washes, soft blooms and backruns, white paper left as highlights, edges that dissolve into the page.",
+  "line_characteristics": "Few or no outlines; edges come from wash boundaries; occasional dry-brush or thin pen accents.",
+  "shape_language": "Suggestive, broken silhouettes; lost-and-found edges; big simple masses.",
+  "color_characteristics": "Limited palette (3–5 pigments), colours mixed on the paper, granulation in blues and earths, high value range from paper white.",
+  "lighting_characteristics": "Light is the paper itself; soft diffuse daylight reads best; strong darks used sparingly.",
+  "texture_characteristics": "Cold-press paper tooth, pigment granulation, hard dried edges (cauliflowers) where wet meets damp.",
+  "composition_characteristics": "Large quiet wash areas plus one sharp focal zone; vignetted edges fading to white paper.",
+  "emotional_characteristics": "Fresh, airy, spontaneous, gentle; can turn melancholic in grey palettes.",
+  "use_cases": [
+   "seasonal greeting posts",
+   "soft lifestyle backgrounds",
+   "travel/location carousels",
+   "story-clip establishing shots"
+  ],
+  "time_optic_fit": "Good for soft backgrounds and seasonal moods behind a real frame photo; poor for showing frame detail itself (washes blur hinges and lens edges), so keep the product as a photo/cutout layer on top.",
+  "common_mistakes": [
+   "muddy watercolour from too many overlapping colours",
+   "uniform digital blur passing as wash",
+   "no white paper left, everything tinted",
+   "outlined cartoon plus watercolour fill that looks like colouring-book",
+   "AI text-like scribbles in the washes"
+  ],
+  "prompt_template": "Loose transparent watercolour painting of {subject} in {setting}, wet-into-wet washes with soft blooms, white paper left for highlights, limited {palette} palette, {lighting}, {composition}, visible cold-press paper texture, edges fading into the white page, no text.",
+  "prompt_example": "Loose transparent watercolour painting of a small corner optical shop in a quiet Bangkok soi in the morning, wet-into-wet washes with soft blooms, white paper left for highlights, limited palette of deep green, warm grey and a touch of peach, soft overcast daylight, shop placed on the left third with a large calm sky wash, visible cold-press paper texture, edges fading into the white page, no text.",
+  "avoid_phrases": [
+   "in the style of <any living artist>",
+   "masterpiece, trending on artstation",
+   "8k ultra detailed",
+   "watercolor splash explosion",
+   "vibrant watercolor splatter background"
+  ],
+  "flux_notes": "FLUX.1 schnell tends to produce a clean 'digital watercolour' with tidy edges and splatter clichés; ask for 'granulation', 'hard dried edges', 'white paper' and lower detail. img2img at denoise ~0.55 over a simple sketch keeps structure.",
+  "palette_suggestions": [
+   "pal.watercolor_morning_soi",
+   "pal.brand_timeoptic",
+   "pal.grey_green_rain"
+  ],
+  "lighting_ids": [
+   "overcast_soft",
+   "window_side",
+   "golden_hour"
+  ],
+  "composition_ids": [
+   "negative_space",
+   "rule_of_thirds",
+   "vignette_tunnel"
+  ],
+  "emotion_ids": [
+   "calm.serenity",
+   "nostalgia.nostalgia",
+   "joy.contentment",
+   "sadness.melancholy"
+  ],
+  "reference_sources": [
+   {
+    "key_or_url": "https://www.tate.org.uk/art/art-terms/w/watercolour",
+    "accessed": "page opened 2026-11-24 (Tate Art Terms glossary)"
+   },
+   {
+    "key_or_url": "Artistic",
+    "accessed": "practitioner craft, no external source"
+   }
+  ],
+  "evidence": "mixed"
+ },
+ {
+  "id": "watercolor_botanical",
+  "name": "Botanical Watercolour",
+  "name_th": "สีน้ำพฤกษศาสตร์",
+  "family": "traditional_media",
+  "historical_background": "Botanical illustration grew from herbals and scientific plant records, where accuracy of form, colour and structure mattered more than mood. The controlled, layered watercolour approach is craft practice; no museum page was opened for this entry, so details are given as practice, not history.",
+  "visual_characteristics": "Single specimen on white, precise contours, glazed layers building form, every vein and petal edge resolved.",
+  "line_characteristics": "Fine graphite underdrawing kept invisible or very faint; edges defined by colour, not ink.",
+  "shape_language": "Organic but exact; true proportions; leaves and stems as rhythmic curves.",
+  "color_characteristics": "Faithful local colour built in thin glazes; subtle temperature shifts in shadows; no artistic recolouring.",
+  "lighting_characteristics": "Even, soft, conventionally from upper left; gentle cast shadow or none.",
+  "texture_characteristics": "Smooth hot-press paper, almost invisible brush marks, dry-brush for fuzz and veins.",
+  "composition_characteristics": "Isolated specimen with generous white margin; sometimes detail insets of seed, flower section.",
+  "emotional_characteristics": "Calm, careful, trustworthy, quietly refined.",
+  "use_cases": [
+   "natural-ingredient or eco-material frames (acetate, wood)",
+   "spring/garden carousels",
+   "decorative borders around product"
+  ],
+  "time_optic_fit": "Fits as a decorative layer (leaves around a frame photo, nature-themed lens info) and suits the trusted-expert tone; not for scenes or people.",
+  "common_mistakes": [
+   "impossible plant anatomy (wrong leaf count, fused petals)",
+   "loud splatter added to 'make it watercolour'",
+   "flat airbrushed colour without glazing",
+   "cluttered background killing the specimen"
+  ],
+  "prompt_template": "Botanical watercolour study of {subject}, precise contours, thin layered glazes, accurate structure, {palette}, {lighting}, {composition}, isolated on white hot-press paper with generous margins, no text, no labels.",
+  "prompt_example": "Botanical watercolour study of a sprig of jasmine and pandan leaves arranged as a frame border, precise contours, thin layered glazes, accurate structure, fresh greens with creamy whites, soft even light from upper left, empty centre space for a glasses photo, isolated on white hot-press paper with generous margins, no text, no labels.",
+  "avoid_phrases": [
+   "in the style of <any living artist>",
+   "masterpiece, trending on artstation",
+   "8k ultra detailed",
+   "vintage botanical print with latin labels",
+   "splash"
+  ],
+  "flux_notes": "Usually good at clean botanical layouts but invents labels and pseudo-latin text; always add 'no text, no labels'. Leaf anatomy errors are common; check counts.",
+  "palette_suggestions": [
+   "pal.botanical_fresh_green",
+   "pal.brand_timeoptic"
+  ],
+  "lighting_ids": [
+   "overcast_soft",
+   "north_window",
+   "high_key"
+  ],
+  "composition_ids": [
+   "center",
+   "negative_space",
+   "subject_isolation"
+  ],
+  "emotion_ids": [
+   "calm.serenity",
+   "performance.trusted_expert",
+   "cognitive.interest"
+  ],
+  "reference_sources": [
+   {
+    "key_or_url": "Artistic",
+    "accessed": "practitioner craft, no external source"
+   }
+  ],
+  "evidence": "craft"
+ },
+ {
+  "id": "gouache_flat",
+  "name": "Flat Gouache",
+  "name_th": "สีกวอชแบนเรียบ",
+  "family": "traditional_media",
+  "historical_background": "Gouache is a water-soluble paint that, unlike watercolour, is opaque: more binder and added inert pigment such as chalk build a covering layer (Tate, 'Gouache'). Its matte, even coverage made it a long-time medium for designers' layouts and posters.",
+  "visual_characteristics": "Opaque matte colour shapes, crisp edges, minimal gradients, slight hand-made unevenness.",
+  "line_characteristics": "Edges formed by shape meeting shape; occasional thin brush line; no hard black outline.",
+  "shape_language": "Simplified, geometric-organic shapes; clear silhouettes; designed rather than observed.",
+  "color_characteristics": "Limited flat palette of 4–6 mixed colours, light over dark possible, chalky matte finish.",
+  "lighting_characteristics": "Light shown as one or two flat value steps; cast shadows as solid shapes.",
+  "texture_characteristics": "Faint brush streaks, dry edges, paper grain under thin areas.",
+  "composition_characteristics": "Graphic, poster-like; strong figure-ground; room for type.",
+  "emotional_characteristics": "Friendly, warm, modern-retro, approachable.",
+  "use_cases": [
+   "carousel illustrations",
+   "tips posts (how to clean lenses)",
+   "promo backgrounds with text space"
+  ],
+  "time_optic_fit": "Strong fit for carousels and tip posts; matches brand flat colours well (phthalo green, peach accent). Frame details must be simplified or kept as a photo layer.",
+  "common_mistakes": [
+   "vector-perfect fills that lose the paint feel",
+   "too many colours",
+   "gradient shading creeping in",
+   "glossy highlights that contradict matte gouache"
+  ],
+  "prompt_template": "Flat opaque gouache illustration of {subject} in {setting}, matte chalky colour shapes with crisp edges, faint brush streaks, limited {palette}, {lighting} shown as simple flat value steps, {composition}, space left for text, no text.",
+  "prompt_example": "Flat opaque gouache illustration of a person cleaning their glasses with a microfibre cloth at a café table, matte chalky colour shapes with crisp edges, faint brush streaks, limited palette of deep green, snow white, warm grey and a peach accent, soft window light shown as two flat value steps, subject on the right third with open space on the left, no text.",
+  "avoid_phrases": [
+   "in the style of <any living artist>",
+   "masterpiece, trending on artstation",
+   "8k ultra detailed",
+   "vector art",
+   "glossy"
+  ],
+  "flux_notes": "FLUX leans to clean vector-flat; adding 'matte gouache, brush streaks, paper grain' helps. Hands holding glasses often break; keep hands simple or out of frame.",
+  "palette_suggestions": [
+   "pal.brand_timeoptic",
+   "pal.gouache_retro_warm",
+   "pal.mint_peach"
+  ],
+  "lighting_ids": [
+   "flat_cartoon_cel",
+   "window_side",
+   "overcast_soft"
+  ],
+  "composition_ids": [
+   "rule_of_thirds",
+   "negative_space",
+   "figure_ground"
+  ],
+  "emotion_ids": [
+   "joy.contentment",
+   "care.reassurance",
+   "performance.storyteller_warmth"
+  ],
+  "reference_sources": [
+   {
+    "key_or_url": "https://www.tate.org.uk/art/art-terms/g/gouache",
+    "accessed": "page opened 2026-11-24 (Tate Art Terms glossary)"
+   },
+   {
+    "key_or_url": "Artistic",
+    "accessed": "practitioner craft, no external source"
+   }
+  ],
+  "evidence": "mixed"
+ },
+ {
+  "id": "storybook_gouache",
+  "name": "Storybook Gouache",
+  "name_th": "กวอชหนังสือนิทาน",
+  "family": "illustration",
+  "historical_background": "Picture-book illustration has long used gouache because its opacity allows layered, soft, controllable colour (Tate, 'Gouache' for the medium). The storybook look described here is an illustration practice, not a dated movement.",
+  "visual_characteristics": "Soft rounded forms, painterly but tidy, warm glowing light, cosy detailed settings.",
+  "line_characteristics": "Soft edges, occasional coloured-pencil line over paint; no harsh outlines.",
+  "shape_language": "Rounded, chunky, child-friendly proportions; big heads, small hands; soft corners.",
+  "color_characteristics": "Warm, slightly desaturated harmonious palette with a glowing accent; dusk blues against lamp oranges.",
+  "lighting_characteristics": "Warm practical light sources, soft glow, gentle rim light.",
+  "texture_characteristics": "Visible paper and dry-brush grain, light speckle, coloured-pencil hatching.",
+  "composition_characteristics": "Readable stage-like scenes, character centred in a framed environment, clear storytelling poses.",
+  "emotional_characteristics": "Cosy, tender, safe, wondering.",
+  "use_cases": [
+   "story clips (ร้านแว่นตีสอง backgrounds)",
+   "kids' eye-care carousels",
+   "holiday posts"
+  ],
+  "time_optic_fit": "Good for story clips and kids' first-glasses content; warmth suits a neighbourhood shop. Avoid for premium frame promos where it can feel childish.",
+  "common_mistakes": [
+   "generic plastic 3D-looking faces",
+   "oversaturated candy colour",
+   "glow everywhere so nothing is focal",
+   "copying a specific famous picture-book look"
+  ],
+  "prompt_template": "Storybook gouache illustration of {subject} in {setting}, soft rounded forms, warm painterly gouache with dry-brush and paper grain, {palette}, {lighting} with gentle glow, {composition}, cosy readable scene, no text.",
+  "prompt_example": "Storybook gouache illustration of a sleepy cat sitting on the counter of a tiny optical shop at 2 a.m., glasses displays glowing softly, soft rounded forms, warm painterly gouache with dry-brush and paper grain, dusk blue and lamp amber palette with deep green shelves, warm practical desk-lamp glow, cat centred within the shop window frame, cosy readable scene, no text.",
+  "avoid_phrases": [
+   "in the style of <any living artist>",
+   "masterpiece, trending on artstation",
+   "8k ultra detailed",
+   "Pixar style",
+   "Disney style",
+   "Ghibli style"
+  ],
+  "flux_notes": "FLUX does warm storybook well but drifts to glossy 3D faces; add 'flat painted faces, paper grain, gouache'. Keep characters consistent with img2img from a previous frame.",
+  "palette_suggestions": [
+   "pal.storybook_dusk_lamp",
+   "pal.brand_timeoptic"
+  ],
+  "lighting_ids": [
+   "storybook_soft_glow",
+   "practical_lamp",
+   "candle_fire"
+  ],
+  "composition_ids": [
+   "frame_within_frame",
+   "center",
+   "layered_depth"
+  ],
+  "emotion_ids": [
+   "visual.coziness",
+   "love.tenderness",
+   "awe.childlike_wonder",
+   "performance.storyteller_warmth"
+  ],
+  "reference_sources": [
+   {
+    "key_or_url": "https://www.tate.org.uk/art/art-terms/g/gouache",
+    "accessed": "page opened 2026-11-24 (Tate Art Terms glossary)"
+   },
+   {
+    "key_or_url": "Artistic",
+    "accessed": "practitioner craft, no external source"
+   }
+  ],
+  "evidence": "mixed"
+ },
+ {
+  "id": "oil_painting_classical",
+  "name": "Classical Oil Painting",
+  "name_th": "สีน้ำมันคลาสสิก",
+  "family": "traditional_media",
+  "historical_background": "Layered oil painting on panel and canvas dominated European art from the Renaissance, which began in Italy around 1400 with its High Renaissance c.1500–1530 (Tate, 'Renaissance'). The classical method of underpainting, glazing and blended modelling persisted in academies into the nineteenth century.",
+  "visual_characteristics": "Smooth blended modelling, deep transparent shadows, rich glazes, polished finish.",
+  "line_characteristics": "No visible line; forms turn through soft gradations; edges varied from soft to crisp.",
+  "shape_language": "Naturalistic, idealised proportions; stable pyramidal groupings.",
+  "color_characteristics": "Earth-based palette (ochres, umbers, vermilion, ultramarine), warm lights and cool transparent darks.",
+  "lighting_characteristics": "Single directional light, often north-window or chiaroscuro modelling.",
+  "texture_characteristics": "Fine canvas weave, smooth glaze surface, slight craquelure on aged look.",
+  "composition_characteristics": "Balanced, often triangular or centred; dark backgrounds isolating the subject.",
+  "emotional_characteristics": "Dignified, timeless, serious, prestigious.",
+  "use_cases": [
+   "premium/luxury frame mood images",
+   "'portrait with glasses' heritage concepts",
+   "anniversary posts"
+  ],
+  "time_optic_fit": "Can lend prestige to a luxury frame campaign (portrait wearing the frame), but heavy and old-fashioned for daily posts; keep sparse.",
+  "common_mistakes": [
+   "plastic airbrushed skin calling itself oil",
+   "fake craquelure everywhere",
+   "modern glasses rendered as melted shapes",
+   "orange-brown 'old master' filter instead of real temperature control"
+  ],
+  "prompt_template": "Classical oil painting of {subject} in {setting}, smooth blended modelling with transparent glazes, warm lights and cool deep shadows, {palette}, {lighting}, {composition}, fine canvas texture, no text.",
+  "prompt_example": "Classical oil painting portrait of a middle-aged Thai man wearing thin gold round glasses, seated in a dark-panelled study, smooth blended modelling with transparent glazes, warm lights and cool deep shadows, ochre, umber and deep green palette, single north-window light from the left, triangular half-length composition, fine canvas texture, no text.",
+  "avoid_phrases": [
+   "in the style of <any living artist>",
+   "masterpiece, trending on artstation",
+   "8k ultra detailed",
+   "like the Mona Lisa",
+   "Rembrandt painting of"
+  ],
+  "flux_notes": "Gets the general look; glasses on painted faces often lose a temple arm or warp lens shape. Use a real frame reference via Codex -i when the frame must be accurate.",
+  "palette_suggestions": [
+   "pal.old_master_earth",
+   "pal.brand_timeoptic"
+  ],
+  "lighting_ids": [
+   "north_window",
+   "rembrandt",
+   "chiaroscuro"
+  ],
+  "composition_ids": [
+   "triangular",
+   "center",
+   "subject_isolation"
+  ],
+  "emotion_ids": [
+   "will.confidence",
+   "performance.trusted_expert",
+   "awe.admiration"
+  ],
+  "reference_sources": [
+   {
+    "key_or_url": "https://www.tate.org.uk/art/art-terms/r/renaissance",
+    "accessed": "page opened 2026-11-24 (Tate Art Terms glossary)"
+   },
+   {
+    "key_or_url": "Gurney2010",
+    "accessed": "bibliographic"
+   }
+  ],
+  "evidence": "mixed"
+ },
+ {
+  "id": "oil_impasto",
+  "name": "Oil Impasto",
+  "name_th": "สีน้ำมันปาดหนา",
+  "family": "traditional_media",
+  "historical_background": "Impasto is paint laid on so thickly that it forms a raised, textured surface; Tate cites Titian, Tintoretto and Rubens, and modern examples such as Frank Auerbach's Head of E.O.W. I (1960), noting moderns valued it for expressing emotion (Tate, 'Impasto').",
+  "visual_characteristics": "Thick ridged strokes, palette-knife slabs, paint catching real light, energetic surface.",
+  "line_characteristics": "Lines are stroke edges; directional brushwork describes form.",
+  "shape_language": "Chunky, faceted planes; simplified masses.",
+  "color_characteristics": "Juicy, high-chroma strokes placed side by side, partially mixed on the canvas.",
+  "lighting_characteristics": "Strong directional light emphasising stroke relief.",
+  "texture_characteristics": "Raised paint ridges, knife marks, broken colour.",
+  "composition_characteristics": "Bold, simple; surface energy carries the image.",
+  "emotional_characteristics": "Energetic, passionate, tactile, bold.",
+  "use_cases": [
+   "bold art-poster backgrounds",
+   "abstract texture behind product",
+   "artist-collab posts"
+  ],
+  "time_optic_fit": "Works as an abstract textured background for colourful frames; poor for any detail-critical product or face.",
+  "common_mistakes": [
+   "uniform swirly 'Van Gogh filter'",
+   "texture without form",
+   "same stroke size everywhere"
+  ],
+  "prompt_template": "Thick oil impasto painting of {subject} in {setting}, heavy palette-knife and brush strokes with raised paint ridges, {palette}, {lighting} raking across the paint relief, {composition}, no text.",
+  "prompt_example": "Thick oil impasto painting of an abstract summer sea and sky as a backdrop, heavy palette-knife strokes with raised paint ridges, turquoise, deep green and peach palette, warm side light raking across the paint relief, low horizon with large sky area for a product cutout, no text.",
+  "avoid_phrases": [
+   "in the style of <any living artist>",
+   "masterpiece, trending on artstation",
+   "8k ultra detailed",
+   "Starry Night style",
+   "Van Gogh swirls"
+  ],
+  "flux_notes": "Decent texture but tends to generic swirls; 'palette knife slabs, varied stroke size' helps. Untested on faces in this project.",
+  "palette_suggestions": [
+   "pal.impasto_summer",
+   "pal.brand_timeoptic"
+  ],
+  "lighting_ids": [
+   "cross_light",
+   "golden_hour",
+   "midday_hard"
+  ],
+  "composition_ids": [
+   "low_horizon",
+   "negative_space",
+   "diagonal"
+  ],
+  "emotion_ids": [
+   "hope.excitement",
+   "will.determination",
+   "joy.elation"
+  ],
+  "reference_sources": [
+   {
+    "key_or_url": "https://www.tate.org.uk/art/art-terms/i/impasto",
+    "accessed": "page opened 2026-11-24 (Tate Art Terms glossary)"
+   }
+  ],
+  "evidence": "documented_history"
+ },
+ {
+  "id": "acrylic_bold",
+  "name": "Bold Acrylic",
+  "name_th": "สีอะคริลิกจัดจ้าน",
+  "family": "traditional_media",
+  "historical_background": "Acrylic is a fast-drying water-based paint with a synthetic resin binder; it emerged in the 1950s and was widely adopted in the 1960s, with David Hockney an early advocate (Tate, 'Acrylic paint').",
+  "visual_characteristics": "Bright, saturated, hard-edged or brushy areas; satin finish; clean overlays.",
+  "line_characteristics": "Crisp masking-tape edges or confident brush contours.",
+  "shape_language": "Bold, simplified, often hard-edge geometry or punchy organic forms.",
+  "color_characteristics": "High chroma, strong complementary pairs, flat or lightly graded fields.",
+  "lighting_characteristics": "Bright sunlight feel, hard shadows as shapes.",
+  "texture_characteristics": "Smooth to slightly brushy, satin sheen, little paper texture.",
+  "composition_characteristics": "Graphic, poster-like, strong colour blocks.",
+  "emotional_characteristics": "Cheerful, sunny, confident, modern.",
+  "use_cases": [
+   "summer promo backgrounds",
+   "sunglasses posts",
+   "colourful carousel covers"
+  ],
+  "time_optic_fit": "Good for sunglasses and summer content; brand palette is muted so use bold acrylic as an occasional accent.",
+  "common_mistakes": [
+   "neon oversaturation",
+   "muddy greys from over-mixing",
+   "too many competing colours"
+  ],
+  "prompt_template": "Bold acrylic painting of {subject} in {setting}, saturated flat colour fields and crisp edges, satin finish, {palette}, {lighting} with hard shadow shapes, {composition}, no text.",
+  "prompt_example": "Bold acrylic painting of a poolside deck with a sun lounger and a striped towel, saturated flat colour fields and crisp edges, turquoise, coral and cream palette, hard midday sun with sharp shadow shapes, high horizon and empty centre for sunglasses cutout, no text.",
+  "avoid_phrases": [
+   "in the style of <any living artist>",
+   "masterpiece, trending on artstation",
+   "8k ultra detailed",
+   "Hockney style",
+   "pool painting like"
+  ],
+  "flux_notes": "Handles flat bold colour well; may over-saturate. Untested for long series consistency.",
+  "palette_suggestions": [
+   "pal.summer_pool",
+   "pal.coral_turquoise"
+  ],
+  "lighting_ids": [
+   "midday_hard",
+   "high_key"
+  ],
+  "composition_ids": [
+   "high_horizon",
+   "center",
+   "figure_ground"
+  ],
+  "emotion_ids": [
+   "joy.happiness",
+   "hope.excitement",
+   "will.confidence"
+  ],
+  "reference_sources": [
+   {
+    "key_or_url": "https://www.tate.org.uk/art/art-terms/a/acrylic-paint",
+    "accessed": "page opened 2026-11-24 (Tate Art Terms glossary)"
+   }
+  ],
+  "evidence": "documented_history"
+ },
+ {
+  "id": "pastel_soft",
+  "name": "Soft Pastel",
+  "name_th": "สีชอล์กพาสเทลนุ่ม",
+  "family": "traditional_media",
+  "historical_background": "Pastel is pure pigment with a binder pressed into sticks, in soft, hard and pencil forms (Tate, 'Pastel'). The page opened gives no history, so no dates are claimed here.",
+  "visual_characteristics": "Velvety powdery colour, blended passages, broken strokes on toned paper.",
+  "line_characteristics": "Side-of-stick strokes and edge lines; soft, broken contours.",
+  "shape_language": "Soft, rounded masses; atmospheric edges.",
+  "color_characteristics": "Luminous pure pigment, light tints on mid-toned paper, paper colour showing through.",
+  "lighting_characteristics": "Soft diffuse light, glowing highlights laid last.",
+  "texture_characteristics": "Paper tooth catching pigment, dusty grain, smudges.",
+  "composition_characteristics": "Simple, intimate; vignette onto toned paper.",
+  "emotional_characteristics": "Gentle, dreamy, tender, nostalgic.",
+  "use_cases": [
+   "soft quote images",
+   "gentle eye-break clip stills",
+   "mother's/father's day posts"
+  ],
+  "time_optic_fit": "Suits calm quote and wellness content; too soft for crisp product shots.",
+  "common_mistakes": [
+   "'pastel colours' confused with pastel medium",
+   "smooth digital gradients without grain",
+   "chalky white haze over everything"
+  ],
+  "prompt_template": "Soft pastel drawing of {subject} in {setting}, velvety powdery strokes on mid-toned paper, paper tooth visible, blended passages and broken edges, {palette}, {lighting}, {composition}, no text.",
+  "prompt_example": "Soft pastel drawing of an elderly woman resting her eyes by a window with her reading glasses folded on her lap, velvety powdery strokes on warm grey toned paper, paper tooth visible, blended passages and broken edges, muted rose, sage and cream palette, soft window side light, figure off-centre with calm empty wall, no text.",
+  "avoid_phrases": [
+   "in the style of <any living artist>",
+   "masterpiece, trending on artstation",
+   "8k ultra detailed",
+   "pastel colors aesthetic"
+  ],
+  "flux_notes": "'Pastel' alone gives pale pastel-colour digital art; specify 'soft pastel sticks on toned paper, dusty grain'.",
+  "palette_suggestions": [
+   "pal.pastel_dawn",
+   "pal.timberwolf_sage"
+  ],
+  "lighting_ids": [
+   "window_side",
+   "overcast_soft",
+   "storybook_soft_glow"
+  ],
+  "composition_ids": [
+   "negative_space",
+   "asymmetrical_balance",
+   "vignette_tunnel"
+  ],
+  "emotion_ids": [
+   "love.tenderness",
+   "nostalgia.nostalgia",
+   "calm.serenity",
+   "low.drowsy"
+  ],
+  "reference_sources": [
+   {
+    "key_or_url": "https://www.tate.org.uk/art/art-terms/p/pastel",
+    "accessed": "page opened 2026-11-24 (Tate Art Terms glossary)"
+   },
+   {
+    "key_or_url": "Artistic",
+    "accessed": "practitioner craft, no external source"
+   }
+  ],
+  "evidence": "mixed"
+ },
+ {
+  "id": "pencil_graphite_realistic",
+  "name": "Realistic Graphite",
+  "name_th": "ดินสอเหมือนจริง",
+  "family": "traditional_media",
+  "historical_background": "Graphite pencil drawing is an academic and observational practice; careful tonal rendering in graded pencils (H to B) is taught as craft. No museum page was opened for this entry.",
+  "visual_characteristics": "Smooth tonal gradients, precise proportions, metallic sheen in darks, white paper highlights.",
+  "line_characteristics": "Fine controlled lines blended into tone; directional hatching where visible.",
+  "shape_language": "Accurate observed forms.",
+  "color_characteristics": "Monochrome grey scale; warm or cool paper tint optional.",
+  "lighting_characteristics": "Single clear light source to model form; cast shadows carefully rendered.",
+  "texture_characteristics": "Paper grain, blending-stump smoothness, graphite shine.",
+  "composition_characteristics": "Subject on white, often vignetted; close studies.",
+  "emotional_characteristics": "Patient, precise, serious, intimate.",
+  "use_cases": [
+   "frame design 'sketch to product' reveals",
+   "craftsmanship posts",
+   "Slowly Growing serious panels"
+  ],
+  "time_optic_fit": "Good for craftsmanship stories (a frame drawn then revealed as photo). AI rarely draws exact frame geometry; trace or img2img from the real cutout.",
+  "common_mistakes": [
+   "photo turned grey and called a drawing",
+   "smudged everywhere, no crisp edges",
+   "lens reflections drawn as solid white blobs"
+  ],
+  "prompt_template": "Realistic graphite pencil drawing of {subject} in {setting}, smooth tonal gradients, crisp edges where light meets form, paper grain visible, {lighting}, {composition}, monochrome on white paper, no text.",
+  "prompt_example": "Realistic graphite pencil drawing of a pair of thick acetate glasses folded on an open book, smooth tonal gradients, crisp edges where light meets form, paper grain visible, single soft window light from the left, three-quarter view centred with white margin, monochrome on white paper, no text.",
+  "avoid_phrases": [
+   "in the style of <any living artist>",
+   "masterpiece, trending on artstation",
+   "8k ultra detailed",
+   "hyperrealistic pencil photo"
+  ],
+  "flux_notes": "Good tonal drawings; glasses geometry may be asymmetric. Use img2img with the real cutout at denoise 0.45–0.6.",
+  "palette_suggestions": [
+   "pal.graphite_mono",
+   "pal.warm_paper"
+  ],
+  "lighting_ids": [
+   "window_side",
+   "north_window",
+   "top_light"
+  ],
+  "composition_ids": [
+   "center",
+   "subject_isolation",
+   "negative_space"
+  ],
+  "emotion_ids": [
+   "cognitive.interest",
+   "performance.trusted_expert",
+   "calm.serenity"
+  ],
+  "reference_sources": [
+   {
+    "key_or_url": "Artistic",
+    "accessed": "practitioner craft, no external source"
+   }
+  ],
+  "evidence": "craft"
+ },
+ {
+  "id": "pencil_sketch_loose",
+  "name": "Loose Pencil Sketch",
+  "name_th": "สเก็ตช์ดินสอหลวมๆ",
+  "family": "traditional_media",
+  "historical_background": "Quick pencil sketching for ideas and studies is a universal studio practice rather than a historical style. This project already uses a pencil duo look for the Slowly Growing channel. No external source opened.",
+  "visual_characteristics": "Energetic searching lines, construction lines left in, partial shading, unfinished edges.",
+  "line_characteristics": "Varied-weight gestural lines, repeated strokes, light construction underneath.",
+  "shape_language": "Gesture first; simple forms; open contours.",
+  "color_characteristics": "Graphite grey on off-white; optional single colour accent.",
+  "lighting_characteristics": "Shading suggested by quick hatching on one side only.",
+  "texture_characteristics": "Paper tooth, smudges, eraser marks.",
+  "composition_characteristics": "Vignetted sketch floating on the page; lots of white.",
+  "emotional_characteristics": "Honest, casual, warm, in-progress.",
+  "use_cases": [
+   "Slowly Growing story carousels",
+   "behind-the-scenes posts",
+   "quote images"
+  ],
+  "time_optic_fit": "Already proven in this project (pencil duo stories); good for gentle, human content. Keep text in HTML layer.",
+  "common_mistakes": [
+   "too clean, looks traced",
+   "AI scribble that never resolves into form",
+   "random hatching noise"
+  ],
+  "prompt_template": "Loose pencil sketch of {subject} in {setting}, gestural searching lines with construction lines left visible, quick hatching shadows, {lighting}, {composition}, graphite on off-white paper, lots of white space, no text.",
+  "prompt_example": "Loose pencil sketch of two friends laughing on a bench, one pushing up her glasses, gestural searching lines with construction lines left visible, quick hatching shadows, soft side light, figures on the lower third with lots of empty paper above for speech bubbles, graphite on off-white paper, no text.",
+  "avoid_phrases": [
+   "in the style of <any living artist>",
+   "masterpiece, trending on artstation",
+   "8k ultra detailed",
+   "detailed realistic"
+  ],
+  "flux_notes": "Used in this project via tools/flux.py; good results, faces vary between frames, so reuse seed/img2img for character consistency.",
+  "palette_suggestions": [
+   "pal.graphite_mono",
+   "pal.pencil_with_peach_accent"
+  ],
+  "lighting_ids": [
+   "window_side",
+   "overcast_soft"
+  ],
+  "composition_ids": [
+   "negative_space",
+   "low_horizon",
+   "odd_grouping"
+  ],
+  "emotion_ids": [
+   "joy.amusement",
+   "love.affection",
+   "nostalgia.nostalgia",
+   "performance.storyteller_warmth"
+  ],
+  "reference_sources": [
+   {
+    "key_or_url": "Artistic",
+    "accessed": "practitioner craft, no external source"
+   }
+  ],
+  "evidence": "craft"
+ },
+ {
+  "id": "colored_pencil",
+  "name": "Coloured Pencil",
+  "name_th": "ดินสอสี",
+  "family": "traditional_media",
+  "historical_background": "Coloured pencil is a wax- or oil-based pigment pencil used for layered, burnished illustration. No museum source opened; described as craft practice.",
+  "visual_characteristics": "Layered hatched colour, visible stroke direction, soft burnished blends, paper white sparkle.",
+  "line_characteristics": "Fine directional hatching; outlines in darker colour pencil.",
+  "shape_language": "Gentle, friendly; detailed but soft.",
+  "color_characteristics": "Optical mixing of layered strokes; slightly waxy, moderately saturated.",
+  "lighting_characteristics": "Soft, cheerful daylight; highlights left as paper.",
+  "texture_characteristics": "Paper tooth showing through, waxy sheen in burnished areas.",
+  "composition_characteristics": "Vignette or full scene; illustrative.",
+  "emotional_characteristics": "Warm, homely, playful, handmade.",
+  "use_cases": [
+   "kids' carousels",
+   "back-to-school eye check posts",
+   "hand-made feel cards"
+  ],
+  "time_optic_fit": "Good for family and kids' eye-test content; less premium.",
+  "common_mistakes": [
+   "looks like crayon or marker",
+   "no stroke direction",
+   "over-smooth digital fill"
+  ],
+  "prompt_template": "Coloured pencil illustration of {subject} in {setting}, layered directional hatching, burnished soft blends, paper tooth showing, {palette}, {lighting}, {composition}, no text.",
+  "prompt_example": "Coloured pencil illustration of a child trying on her first pair of round red glasses in front of a shop mirror, layered directional hatching, burnished soft blends, paper tooth showing, warm reds, deep green and cream palette, soft daylight from a front window, child on the right third looking at her reflection, no text.",
+  "avoid_phrases": [
+   "in the style of <any living artist>",
+   "masterpiece, trending on artstation",
+   "8k ultra detailed",
+   "crayon drawing"
+  ],
+  "flux_notes": "Untested in this project; expect a mix of pencil and marker looks; 'directional hatching, paper tooth' recommended.",
+  "palette_suggestions": [
+   "pal.school_warm",
+   "pal.brand_timeoptic"
+  ],
+  "lighting_ids": [
+   "window_side",
+   "overcast_soft",
+   "high_key"
+  ],
+  "composition_ids": [
+   "rule_of_thirds",
+   "frame_within_frame",
+   "over_shoulder"
+  ],
+  "emotion_ids": [
+   "joy.happiness",
+   "awe.childlike_wonder",
+   "selfconscious.shyness"
+  ],
+  "reference_sources": [
+   {
+    "key_or_url": "Artistic",
+    "accessed": "practitioner craft, no external source"
+   }
+  ],
+  "evidence": "craft"
+ },
+ {
+  "id": "charcoal_expressive",
+  "name": "Expressive Charcoal",
+  "name_th": "ถ่านแบบแสดงอารมณ์",
+  "family": "traditional_media",
+  "historical_background": "Charcoal is a crumbly carbon drawing material, traditionally willow twigs heated without oxygen, with compressed charcoal developed in the twentieth century; it is used for sketching, underdrawing and finished drawings (Tate, 'Charcoal'). The project's charcoal story carousels use the expressive variant.",
+  "visual_characteristics": "Deep velvety blacks, smudged greys, bold sweeping marks, erased highlights.",
+  "line_characteristics": "Thick-thin gestural strokes, side-of-stick sweeps, eraser lines cut into tone.",
+  "shape_language": "Big simple masses; silhouettes; forms emerging from darkness.",
+  "color_characteristics": "Black to paper white; optional single muted colour.",
+  "lighting_characteristics": "Dramatic, low-key; light drawn out with eraser.",
+  "texture_characteristics": "Paper grain, dust, finger smudges, fixative speckle.",
+  "composition_characteristics": "Strong value contrast; large dark areas; one lit focal zone.",
+  "emotional_characteristics": "Raw, emotional, moody, intimate.",
+  "use_cases": [
+   "charcoal story carousels",
+   "serious eye-health stories",
+   "IG Reels stills"
+  ],
+  "time_optic_fit": "Proven in project (story sets 1–80). Good for emotional storytelling; not for product colour accuracy.",
+  "common_mistakes": [
+   "uniform grey haze",
+   "faces lost in smudge",
+   "too many tiny marks (pencil look)",
+   "AI fake text in dark areas"
+  ],
+  "prompt_template": "Expressive charcoal drawing of {subject} in {setting}, deep velvety blacks and smudged greys, bold sweeping strokes, highlights lifted with an eraser, {lighting}, {composition}, visible paper grain and charcoal dust, monochrome, no text.",
+  "prompt_example": "Expressive charcoal drawing of a young man squinting at his phone late at night, deep velvety blacks and smudged greys, bold sweeping strokes, highlights lifted with an eraser on his face from the screen, screen glow on the face, figure off-centre with a large dark room, visible paper grain and charcoal dust, monochrome, no text.",
+  "avoid_phrases": [
+   "in the style of <any living artist>",
+   "masterpiece, trending on artstation",
+   "8k ultra detailed",
+   "dark gritty hyperdetailed"
+  ],
+  "flux_notes": "Works well in this project's pipeline; keep characters consistent via seed and img2img. Tends to add extra fingers in dark hand areas.",
+  "palette_suggestions": [
+   "pal.charcoal_mono",
+   "pal.charcoal_with_green_accent"
+  ],
+  "lighting_ids": [
+   "low_key",
+   "screen_glow_face",
+   "chiaroscuro",
+   "window_side"
+  ],
+  "composition_ids": [
+   "negative_space",
+   "subject_isolation",
+   "asymmetrical_balance"
+  ],
+  "emotion_ids": [
+   "sadness.loneliness",
+   "sadness.melancholy",
+   "nostalgia.longing",
+   "hope.hope"
+  ],
+  "reference_sources": [
+   {
+    "key_or_url": "https://www.tate.org.uk/art/art-terms/c/charcoal",
+    "accessed": "page opened 2026-11-24 (Tate Art Terms glossary)"
+   }
+  ],
+  "evidence": "mixed"
+ },
+ {
+  "id": "charcoal_academic",
+  "name": "Academic Charcoal",
+  "name_th": "ถ่านแบบวิชาการ",
+  "family": "traditional_media",
+  "historical_background": "Charcoal served for underdrawing and finished drawings (Tate, 'Charcoal'); academic cast and figure drawing taught measured proportion and tonal planes. The academic method is described here as craft.",
+  "visual_characteristics": "Measured proportions, planar tonal modelling, controlled gradients, clean background.",
+  "line_characteristics": "Light block-in lines, refined contours, varied edge control.",
+  "shape_language": "Simplified planes of form, then refined.",
+  "color_characteristics": "Monochrome; sometimes white chalk on toned paper.",
+  "lighting_characteristics": "Single studio light; clear light, half-tone, core shadow, reflected light, cast shadow.",
+  "texture_characteristics": "Fine paper grain, smooth stumped tones.",
+  "composition_characteristics": "Single subject, centred, ample margin.",
+  "emotional_characteristics": "Calm, studious, respectful, classical.",
+  "use_cases": [
+   "craft/heritage posts",
+   "portrait studies wearing frames",
+   "about-the-optometrist features"
+  ],
+  "time_optic_fit": "Fits trusted-expert content (optometrist portraits); slow and serious for daily feed.",
+  "common_mistakes": [
+   "no light logic",
+   "over-blending into mush",
+   "plaster-cast clichés unrelated to subject"
+  ],
+  "prompt_template": "Academic charcoal drawing of {subject}, measured proportions, planar tonal modelling with clear light, half-tone, core shadow and reflected light, {lighting}, {composition}, fine paper grain, monochrome, no text.",
+  "prompt_example": "Academic charcoal portrait of a calm female optometrist wearing slim black rectangular glasses, measured proportions, planar tonal modelling with clear light, half-tone, core shadow and reflected light, single studio light from upper left, head-and-shoulders centred with generous margin, fine paper grain, monochrome, no text.",
+  "avoid_phrases": [
+   "in the style of <any living artist>",
+   "masterpiece, trending on artstation",
+   "8k ultra detailed"
+  ],
+  "flux_notes": "Untested here; expect good tonal portraits; glasses may merge with eye sockets in shadow.",
+  "palette_suggestions": [
+   "pal.charcoal_mono",
+   "pal.toned_paper_chalk"
+  ],
+  "lighting_ids": [
+   "rembrandt",
+   "north_window",
+   "loop"
+  ],
+  "composition_ids": [
+   "center",
+   "subject_isolation",
+   "triangular"
+  ],
+  "emotion_ids": [
+   "performance.trusted_expert",
+   "calm.serenity",
+   "will.confidence"
+  ],
+  "reference_sources": [
+   {
+    "key_or_url": "https://www.tate.org.uk/art/art-terms/c/charcoal",
+    "accessed": "page opened 2026-11-24 (Tate Art Terms glossary)"
+   },
+   {
+    "key_or_url": "Loomis1943",
+    "accessed": "bibliographic"
+   }
+  ],
+  "evidence": "mixed"
+ },
+ {
+  "id": "ink_pen_crosshatch",
+  "name": "Pen and Ink Crosshatch",
+  "name_th": "ปากกาหมึกแรเงาไขว้",
+  "family": "traditional_media",
+  "historical_background": "Pen-and-ink hatching builds tone from line density; it is closely tied to the graphic language of engraving and etching (see Tate, 'Etching', for intaglio line printing from the early sixteenth century). As a drawing style it is craft practice.",
+  "visual_characteristics": "Tone built entirely from hatching and cross-hatching, crisp black on white.",
+  "line_characteristics": "Uniform or tapered pen lines; parallel, cross, contour hatching; stippling.",
+  "shape_language": "Clear contours; form described by hatch direction.",
+  "color_characteristics": "Black on white; optional sepia or one flat colour wash.",
+  "lighting_characteristics": "Clear directional light so hatch density maps value.",
+  "texture_characteristics": "Paper texture; slight ink bleed.",
+  "composition_characteristics": "Detailed focal area fading to open paper.",
+  "emotional_characteristics": "Literary, crafted, vintage, curious.",
+  "use_cases": [
+   "vintage-style frame ads",
+   "editorial explainers (how lenses work)",
+   "menu-like price boards in HTML"
+  ],
+  "time_optic_fit": "Good for heritage/craft messaging and lens-anatomy explainers; AI hatching is often noisy at small sizes on mobile.",
+  "common_mistakes": [
+   "random hatch noise not following form",
+   "grey digital shading instead of hatching",
+   "too dense to read at phone size"
+  ],
+  "prompt_template": "Pen and ink illustration of {subject} in {setting}, tone built only from parallel and cross-hatching that follows the form, crisp black lines on white paper, {lighting}, {composition}, no grey wash, no text.",
+  "prompt_example": "Pen and ink illustration of an old optician's workbench with a lens edger, tools and a pair of glasses being repaired, tone built only from parallel and cross-hatching that follows the form, crisp black lines on white paper, single lamp light from the right, detailed centre fading to open paper at the edges, no grey wash, no text.",
+  "avoid_phrases": [
+   "in the style of <any living artist>",
+   "masterpiece, trending on artstation",
+   "8k ultra detailed",
+   "Victorian engraving of a specific book"
+  ],
+  "flux_notes": "FLUX gives a convincing look at 1024 but hatch lines are often irregular; untested at scale in this project.",
+  "palette_suggestions": [
+   "pal.ink_mono",
+   "pal.sepia_ink"
+  ],
+  "lighting_ids": [
+   "practical_lamp",
+   "window_side",
+   "top_light"
+  ],
+  "composition_ids": [
+   "center",
+   "vignette_tunnel",
+   "negative_space"
+  ],
+  "emotion_ids": [
+   "cognitive.curiosity",
+   "nostalgia.nostalgia",
+   "performance.trusted_expert"
+  ],
+  "reference_sources": [
+   {
+    "key_or_url": "https://www.tate.org.uk/art/art-terms/e/etching",
+    "accessed": "page opened 2026-11-24 (Tate Art Terms glossary)"
+   },
+   {
+    "key_or_url": "Artistic",
+    "accessed": "practitioner craft, no external source"
+   }
+  ],
+  "evidence": "mixed"
+ },
+ {
+  "id": "ink_brush_sumi_e",
+  "name": "Ink Brush (Sumi-e)",
+  "name_th": "หมึกพู่กันซูมิเอะ",
+  "family": "regional_tradition",
+  "historical_background": "Ink-and-brush painting with graded black ink on paper or silk is an East Asian tradition (Chinese ink painting, Japanese sumi-e) tied to calligraphy. No museum page was opened for this entry, so dates are not claimed; technique is described respectfully as practice.",
+  "visual_characteristics": "Graded ink from black to pale grey, decisive single strokes, large empty paper.",
+  "line_characteristics": "Calligraphic strokes with pressure variation, dry-brush splits, wet bleeding edges.",
+  "shape_language": "Essential, suggested forms; economy of strokes.",
+  "color_characteristics": "Monochrome ink tones; rare light colour accent; red seal-like accent should not be faked.",
+  "lighting_characteristics": "Not depicted directly; mood from ink density and empty space.",
+  "texture_characteristics": "Absorbent paper bleed, dry-brush fibre marks.",
+  "composition_characteristics": "Asymmetric, much negative space, subject at edge or corner.",
+  "emotional_characteristics": "Calm, contemplative, poised, minimal.",
+  "use_cases": [
+   "calm/minimal quote images",
+   "eye-break stills (bamboo, mist)",
+   "new-year posts"
+  ],
+  "time_optic_fit": "Fits calm, mindful content; respect the tradition — do not add fake seals or pseudo-calligraphy, and don't turn it into a novelty filter.",
+  "common_mistakes": [
+   "fake red seal stamps and fake characters",
+   "too many strokes",
+   "uniform digital brush",
+   "orientalist clichés"
+  ],
+  "prompt_template": "Monochrome ink brush painting of {subject} in {setting}, graded ink washes from deep black to pale grey, decisive calligraphic strokes with dry-brush texture, ink bleeding into absorbent paper, {composition} with generous empty space, no seals, no writing, no text.",
+  "prompt_example": "Monochrome ink brush painting of a few bamboo stalks in morning mist, graded ink washes from deep black to pale grey, decisive calligraphic strokes with dry-brush texture, ink bleeding into absorbent paper, bamboo on the right edge with generous empty space on the left for an eye-rest message, no seals, no writing, no text.",
+  "avoid_phrases": [
+   "in the style of <any living artist>",
+   "masterpiece, trending on artstation",
+   "8k ultra detailed",
+   "chinese calligraphy text",
+   "red seal stamp",
+   "oriental"
+  ],
+  "flux_notes": "FLUX adds pseudo-characters and red seals by default; negate them in the prompt and remove in post if needed.",
+  "palette_suggestions": [
+   "pal.ink_mono",
+   "pal.ink_with_green_tint"
+  ],
+  "lighting_ids": [
+   "fog_atmospheric",
+   "overcast_soft"
+  ],
+  "composition_ids": [
+   "negative_space",
+   "asymmetrical_balance",
+   "low_horizon"
+  ],
+  "emotion_ids": [
+   "calm.serenity",
+   "calm.acceptance",
+   "visual.peaceful_solitude"
+  ],
+  "reference_sources": [
+   {
+    "key_or_url": "Artistic",
+    "accessed": "practitioner craft, no external source"
+   }
+  ],
+  "evidence": "craft"
+ },
+ {
+  "id": "ink_line_clean",
+  "name": "Clean Ink Line",
+  "name_th": "ลายเส้นหมึกสะอาด",
+  "family": "illustration",
+  "historical_background": "Clean, even-weight ink line illustration is a commercial and comics practice (McCloud discusses line economy in comics). Described here as craft.",
+  "visual_characteristics": "Even confident black lines, no shading or minimal spot blacks, lots of white.",
+  "line_characteristics": "Uniform or slightly tapered weight; closed contours; no sketchiness.",
+  "shape_language": "Clear simplified shapes; readable silhouettes.",
+  "color_characteristics": "Black on white, or line plus one or two flat fills.",
+  "lighting_characteristics": "Mostly none; occasional spot-black shadow.",
+  "texture_characteristics": "Minimal; clean paper.",
+  "composition_characteristics": "Icon-like or spot illustrations; easy to layer under text.",
+  "emotional_characteristics": "Clear, friendly, modern, calm.",
+  "use_cases": [
+   "line-art dialogue images",
+   "carousel spot illustrations",
+   "store line-art logo companion art"
+  ],
+  "time_optic_fit": "Strong fit — the brand already uses store line art and line-art dialogue styles; easy to recolour with brand tokens.",
+  "common_mistakes": [
+   "wobbly broken AI lines",
+   "accidental shading",
+   "inconsistent line weight between slides"
+  ],
+  "prompt_template": "Clean ink line illustration of {subject} in {setting}, even-weight confident black lines, closed contours, no shading, {composition}, pure white background, no text.",
+  "prompt_example": "Clean ink line illustration of a shopfront of a small optical store with a striped awning and glasses in the window, even-weight confident black lines, closed contours, no shading, front-on symmetric view centred, pure white background, no text.",
+  "avoid_phrases": [
+   "in the style of <any living artist>",
+   "masterpiece, trending on artstation",
+   "8k ultra detailed",
+   "sketchy",
+   "coloring book page"
+  ],
+  "flux_notes": "FLUX gives decent line art but sometimes adds grey shading; vectorise and clean in post for brand use.",
+  "palette_suggestions": [
+   "pal.ink_mono",
+   "pal.brand_timeoptic"
+  ],
+  "lighting_ids": [
+   "flat_cartoon_cel",
+   "high_key"
+  ],
+  "composition_ids": [
+   "center",
+   "symmetry",
+   "negative_space"
+  ],
+  "emotion_ids": [
+   "calm.serenity",
+   "joy.contentment",
+   "care.reassurance"
+  ],
+  "reference_sources": [
+   {
+    "key_or_url": "McCloud1993",
+    "accessed": "bibliographic"
+   },
+   {
+    "key_or_url": "Artistic",
+    "accessed": "practitioner craft, no external source"
+   }
+  ],
+  "evidence": "craft"
+ },
+ {
+  "id": "woodcut_print",
+  "name": "Woodcut Print",
+  "name_th": "ภาพพิมพ์แกะไม้",
+  "family": "printmaking",
+  "historical_background": "In woodcut the artist carves away wood around the design so the image stands raised, inks the block and presses paper on it; woodblock printing appeared in Europe in the twelfth century for textiles, with images printed on paper by the late fourteenth century (Tate, 'Woodcut').",
+  "visual_characteristics": "Bold black shapes, gouged white lines, visible wood grain in solids, high contrast.",
+  "line_characteristics": "Chunky carved lines with V- and U-gouge marks; tapered cuts.",
+  "shape_language": "Angular, simplified, blocky forms.",
+  "color_characteristics": "Black on off-white; optional one or two flat colours from extra blocks, slight mis-registration.",
+  "lighting_characteristics": "Expressed as black/white pattern rather than gradient.",
+  "texture_characteristics": "Wood grain, uneven ink coverage, paper texture.",
+  "composition_characteristics": "Strong graphic framing; dense pattern areas balanced by solids.",
+  "emotional_characteristics": "Rustic, bold, folk, earnest.",
+  "use_cases": [
+   "artisanal/handmade frame stories",
+   "posters",
+   "festival posts"
+  ],
+  "time_optic_fit": "Works for wooden/handmade frame stories and bold posters; low detail means the real frame should be a photo layer.",
+  "common_mistakes": [
+   "smooth digital gradients",
+   "too fine detail impossible to carve",
+   "fake grain overlay everywhere"
+  ],
+  "prompt_template": "Woodcut print of {subject} in {setting}, bold carved black shapes and gouged white lines, visible wood grain in solid areas, uneven ink, {palette} as one or two flat colours, {composition}, off-white paper, no text.",
+  "prompt_example": "Woodcut print of a craftsman filing a wooden eyeglass frame at a workbench, bold carved black shapes and gouged white lines, visible wood grain in solid areas, uneven ink, deep green as a second flat colour, craftsman on the left with tools forming a diagonal, off-white paper, no text.",
+  "avoid_phrases": [
+   "in the style of <any living artist>",
+   "masterpiece, trending on artstation",
+   "8k ultra detailed",
+   "Dürer woodcut"
+  ],
+  "flux_notes": "Untested here; expect convincing broad look but often too fine detail; ask for 'chunky gouge marks'.",
+  "palette_suggestions": [
+   "pal.woodcut_black_green",
+   "pal.brand_timeoptic"
+  ],
+  "lighting_ids": [
+   "flat_cartoon_cel",
+   "high_key"
+  ],
+  "composition_ids": [
+   "diagonal",
+   "figure_ground",
+   "repetition_rhythm"
+  ],
+  "emotion_ids": [
+   "will.determination",
+   "joy.pride",
+   "performance.storyteller_warmth"
+  ],
+  "reference_sources": [
+   {
+    "key_or_url": "https://www.tate.org.uk/art/art-terms/w/woodcut",
+    "accessed": "page opened 2026-11-24 (Tate Art Terms glossary)"
+   }
+  ],
+  "evidence": "documented_history"
+ },
+ {
+  "id": "linocut",
+  "name": "Linocut",
+  "name_th": "ภาพพิมพ์ลิโนเลียม",
+  "family": "printmaking",
+  "historical_background": "Linocut carves a design into linoleum (usually wood-mounted), inks the raised areas and presses them onto paper; linoleum has no grain so it cuts in any direction and inks evenly; invented in the nineteenth century as flooring, it became popular for printmaking in the twentieth (Tate, 'Linocut').",
+  "visual_characteristics": "Bold flat shapes, smooth even ink solids, carved line textures, graphic contrast.",
+  "line_characteristics": "Curved fluid cuts (no grain), parallel gouge textures.",
+  "shape_language": "Simplified, rhythmic, slightly rounded.",
+  "color_characteristics": "1–3 flat colours, reduction-print layering, slight registration offset.",
+  "lighting_characteristics": "Graphic; light as carved line patterns.",
+  "texture_characteristics": "Even ink with small speckles, paper texture, ink edge squash.",
+  "composition_characteristics": "Poster-like, patterned backgrounds, strong silhouettes.",
+  "emotional_characteristics": "Handmade, cheerful, folk-modern, earnest.",
+  "use_cases": [
+   "seasonal posts",
+   "eco frame campaigns",
+   "carousel covers"
+  ],
+  "time_optic_fit": "Good handmade accent style; two-colour brand version (phthalo + peach) is easy to keep on-brand.",
+  "common_mistakes": [
+   "wood grain added (lino has none)",
+   "photographic shading",
+   "too many colours"
+  ],
+  "prompt_template": "Linocut print of {subject} in {setting}, bold flat shapes with smooth even ink, fluid carved line textures, {palette} in two or three flat colours with slight registration offset, {composition}, textured paper, no text.",
+  "prompt_example": "Linocut print of a pair of sunglasses resting on a beach towel with palm leaf shadows, bold flat shapes with smooth even ink, fluid carved line textures, deep green and peach on cream paper with slight registration offset, top-down centred composition, textured paper, no text.",
+  "avoid_phrases": [
+   "in the style of <any living artist>",
+   "masterpiece, trending on artstation",
+   "8k ultra detailed",
+   "wood grain texture"
+  ],
+  "flux_notes": "Untested here; FLUX usually blends linocut and woodcut; specify 'no wood grain'.",
+  "palette_suggestions": [
+   "pal.brand_timeoptic",
+   "pal.lino_two_colour"
+  ],
+  "lighting_ids": [
+   "flat_cartoon_cel",
+   "dappled_foliage"
+  ],
+  "composition_ids": [
+   "center",
+   "flatlay_grid",
+   "repetition_rhythm"
+  ],
+  "emotion_ids": [
+   "joy.contentment",
+   "joy.happiness",
+   "nostalgia.nostalgia"
+  ],
+  "reference_sources": [
+   {
+    "key_or_url": "https://www.tate.org.uk/art/art-terms/l/linocut",
+    "accessed": "page opened 2026-11-24 (Tate Art Terms glossary)"
+   }
+  ],
+  "evidence": "documented_history"
+ },
+ {
+  "id": "etching_engraving",
+  "name": "Etching and Engraving",
+  "name_th": "ภาพพิมพ์กัดกรด/แกะโลหะ",
+  "family": "printmaking",
+  "historical_background": "Etching coats a metal plate (traditionally copper, now usually zinc) with an acid-resistant ground; lines scratched through it are bitten by acid, inked and printed; metal etching decoration dates from the fourteenth century and printmaking use became common in the early sixteenth (Tate, 'Etching'). Engraving cuts lines directly with a burin.",
+  "visual_characteristics": "Very fine dense lines, cross-hatching and stipple, plate tone, crisp blacks.",
+  "line_characteristics": "Hair-fine to swelling lines (engraving), freer wavering lines (etching).",
+  "shape_language": "Detailed, naturalistic.",
+  "color_characteristics": "Black, sepia or sanguine ink on cream paper; optional hand-tinting.",
+  "lighting_characteristics": "Value through line density; dramatic or even.",
+  "texture_characteristics": "Plate mark border, ink tone wiping, soft paper.",
+  "composition_characteristics": "Framed vignette, plate border, classical arrangement.",
+  "emotional_characteristics": "Antique, scholarly, refined, mysterious.",
+  "use_cases": [
+   "vintage optics/history posts",
+   "luxury frame heritage",
+   "ornamental borders"
+  ],
+  "time_optic_fit": "Nice for 'history of spectacles' content and premium heritage brands; detail breaks at phone size, so crop close.",
+  "common_mistakes": [
+   "banknote-like guilloche noise",
+   "fake text captions under image",
+   "too dark plate tone"
+  ],
+  "prompt_template": "Etching print of {subject} in {setting}, fine dense lines with cross-hatching and stipple, soft plate tone, crisp blacks, {palette} ink on cream paper, {lighting}, {composition}, faint plate-mark border, no text, no captions.",
+  "prompt_example": "Etching print of an antique pair of pince-nez spectacles lying beside a magnifying glass and an old book, fine dense lines with cross-hatching and stipple, soft plate tone, crisp blacks, sepia ink on cream paper, single side light, centred still life with faint plate-mark border, no text, no captions.",
+  "avoid_phrases": [
+   "in the style of <any living artist>",
+   "masterpiece, trending on artstation",
+   "8k ultra detailed",
+   "dollar bill engraving",
+   "Gustave Doré"
+  ],
+  "flux_notes": "Untested here; FLUX tends to add captions; negate text.",
+  "palette_suggestions": [
+   "pal.sepia_ink",
+   "pal.ink_mono"
+  ],
+  "lighting_ids": [
+   "window_side",
+   "chiaroscuro"
+  ],
+  "composition_ids": [
+   "center",
+   "vignette_tunnel",
+   "frame_within_frame"
+  ],
+  "emotion_ids": [
+   "nostalgia.nostalgia",
+   "cognitive.curiosity",
+   "visual.mystery"
+  ],
+  "reference_sources": [
+   {
+    "key_or_url": "https://www.tate.org.uk/art/art-terms/e/etching",
+    "accessed": "page opened 2026-11-24 (Tate Art Terms glossary)"
+   }
+  ],
+  "evidence": "documented_history"
+ },
+ {
+  "id": "risograph",
+  "name": "Risograph Print",
+  "name_th": "ภาพพิมพ์ริโซกราฟ",
+  "family": "printmaking",
+  "historical_background": "The RISOGRAPH stencil duplicator was introduced in 1980 by RISO (founded 1946 in Japan by Noboru Hayama) per the manufacturer's history page; it prints one ink colour per drum pass. Its use by zine and small-press makers is widely reported but was not verified on a primary page here.",
+  "visual_characteristics": "Spot-colour layers overprinting, grainy halftone, slight mis-registration, bright fluorescent inks.",
+  "line_characteristics": "Bold shapes and simple lines survive best; fine detail breaks up.",
+  "shape_language": "Flat graphic shapes, cut-paper simplicity.",
+  "color_characteristics": "2–3 spot inks (e.g. fluorescent pink, blue, yellow, green) whose overlaps create new colours.",
+  "lighting_characteristics": "Flat; light via halftone density.",
+  "texture_characteristics": "Grain, uneven ink coverage, uncoated paper.",
+  "composition_characteristics": "Zine/poster layouts, generous margins.",
+  "emotional_characteristics": "Indie, playful, youthful, DIY.",
+  "use_cases": [
+   "youth/student promo",
+   "event posters",
+   "fun carousel covers"
+  ],
+  "time_optic_fit": "Good for young-audience or event posts; fluorescent inks clash with the calm brand palette, so use a phthalo + peach two-ink version.",
+  "common_mistakes": [
+   "mis-registration so strong it looks broken",
+   "CMYK full colour instead of spot inks",
+   "grain applied uniformly as a filter"
+  ],
+  "prompt_template": "Risograph print of {subject} in {setting}, two or three overprinted spot inks in {palette}, grainy halftone, slight mis-registration, flat graphic shapes, {composition}, uncoated paper texture, no text.",
+  "prompt_example": "Risograph print of a student wearing oversized clear glasses reading in a library, two overprinted spot inks in deep green and warm peach, grainy halftone, slight mis-registration, flat graphic shapes, student centred with bookshelves as repeating stripes, uncoated paper texture, no text.",
+  "avoid_phrases": [
+   "in the style of <any living artist>",
+   "masterpiece, trending on artstation",
+   "8k ultra detailed",
+   "glitch"
+  ],
+  "flux_notes": "Untested here; may produce full-colour digital art with grain; emphasise 'two spot inks only'.",
+  "palette_suggestions": [
+   "pal.riso_green_peach",
+   "pal.riso_pink_blue"
+  ],
+  "lighting_ids": [
+   "flat_cartoon_cel"
+  ],
+  "composition_ids": [
+   "center",
+   "repetition_rhythm",
+   "negative_space"
+  ],
+  "emotion_ids": [
+   "joy.amusement",
+   "hope.excitement",
+   "cognitive.curiosity"
+  ],
+  "reference_sources": [
+   {
+    "key_or_url": "https://www.risoprinter.de/en/company/history",
+    "accessed": "page opened 2026-11-24 (manufacturer company history page)"
+   },
+   {
+    "key_or_url": "Artistic",
+    "accessed": "practitioner craft, no external source"
+   }
+  ],
+  "evidence": "mixed"
+ },
+ {
+  "id": "screenprint_poster",
+  "name": "Screenprint Poster",
+  "name_th": "โปสเตอร์ซิลค์สกรีน",
+  "family": "printmaking",
+  "historical_background": "Screenprinting pushes ink through a stencil on a mesh screen, one layer per colour; it became a prominent fine-art and poster method in mid-twentieth-century pop art (Tate, 'Pop art' covers the movement; no Tate screenprint page could be opened, so the process is described as craft).",
+  "visual_characteristics": "Flat opaque colour layers, crisp stencil edges, halftone photo layers, slight overlaps.",
+  "line_characteristics": "Stencil-cut edges; outlines as separate dark layer.",
+  "shape_language": "Bold, simplified, iconic.",
+  "color_characteristics": "3–6 flat opaque inks, strong contrasts, occasional fluorescent.",
+  "lighting_characteristics": "Flat; shading as halftone layer.",
+  "texture_characteristics": "Ink edge squeeze, slight mis-registration, paper or fabric texture.",
+  "composition_characteristics": "Poster hierarchy with central icon; text space (text added in HTML).",
+  "emotional_characteristics": "Bold, confident, pop, festive.",
+  "use_cases": [
+   "promo posters",
+   "event announcements",
+   "frame icon art"
+  ],
+  "time_optic_fit": "Good for promo posters with a bold single frame icon; keep text in HTML layer.",
+  "common_mistakes": [
+   "fake halftone everywhere",
+   "too many colours",
+   "gradient shading"
+  ],
+  "prompt_template": "Screenprint poster of {subject} in {setting}, flat opaque ink layers with crisp stencil edges, one halftone layer for shading, {palette} in four flat inks, slight registration overlap, {composition}, paper texture, no text.",
+  "prompt_example": "Screenprint poster of a single pair of bold black cat-eye glasses floating above a stylised Bangkok skyline at dusk, flat opaque ink layers with crisp stencil edges, one halftone layer for shading, deep green, peach, snow white and black inks, slight registration overlap, glasses centred with skyline at the bottom third, paper texture, no text.",
+  "avoid_phrases": [
+   "in the style of <any living artist>",
+   "masterpiece, trending on artstation",
+   "8k ultra detailed",
+   "Warhol style",
+   "Marilyn"
+  ],
+  "flux_notes": "FLUX often adds fake lettering in posters; negate text strongly.",
+  "palette_suggestions": [
+   "pal.brand_timeoptic",
+   "pal.screenprint_dusk"
+  ],
+  "lighting_ids": [
+   "flat_cartoon_cel",
+   "high_key"
+  ],
+  "composition_ids": [
+   "center",
+   "low_horizon",
+   "scale_contrast"
+  ],
+  "emotion_ids": [
+   "will.confidence",
+   "hope.excitement",
+   "performance.sales_enthusiasm"
+  ],
+  "reference_sources": [
+   {
+    "key_or_url": "https://www.tate.org.uk/art/art-terms/p/pop-art",
+    "accessed": "page opened 2026-11-24 (Tate Art Terms glossary)"
+   },
+   {
+    "key_or_url": "Artistic",
+    "accessed": "practitioner craft, no external source"
+   }
+  ],
+  "evidence": "mixed"
+ },
+ {
+  "id": "collage_mixed_media",
+  "name": "Collage / Mixed Media",
+  "name_th": "คอลลาจ/สื่อผสม",
+  "family": "traditional_media",
+  "historical_background": "Collage, from the French papiers collés, became an artists' technique in the early twentieth century; Tate's earliest example is Picasso's Bottle of Vieux Marc, Glass, Guitar and Newspaper (1913), with later work by Hausmann (1919–20), Schwitters and Paolozzi (1948) (Tate, 'Collage').",
+  "visual_characteristics": "Cut and torn paper, photo fragments, layered textures, tape and paint marks.",
+  "line_characteristics": "Cut edges, torn fibres, hand-drawn doodles over photos.",
+  "shape_language": "Fragmented, overlapping, juxtaposed scales.",
+  "color_characteristics": "Mixed sources unified by a limited accent palette.",
+  "lighting_characteristics": "Mixed; drop shadows from paper layers.",
+  "texture_characteristics": "Paper grain, halftone from printed scraps, tape, stains.",
+  "composition_characteristics": "Layered, scale contrast, deliberate pattern breaks.",
+  "emotional_characteristics": "Playful, curious, editorial, energetic.",
+  "use_cases": [
+   "promo images combining real frame photos with art",
+   "mood boards",
+   "carousel covers"
+  ],
+  "time_optic_fit": "Very good: lets real frame cutouts sit honestly inside an artistic layout; easy in HTML layering.",
+  "common_mistakes": [
+   "clutter with no focal point",
+   "using copyrighted printed images as scraps",
+   "random fake magazine text"
+  ],
+  "prompt_template": "Mixed-media collage of {subject} in {setting}, cut and torn paper layers, textured papers and painted marks, small paper drop shadows, {palette}, {composition}, scale contrast between elements, no readable text, no logos.",
+  "prompt_example": "Mixed-media collage background for an eyewear promo, torn kraft paper, deep green painted brush marks, a cut-paper sun and a Bangkok street scene in halftone, small paper drop shadows, deep green, peach and timberwolf palette, large empty centre left for a real glasses cutout, scale contrast between elements, no readable text, no logos.",
+  "avoid_phrases": [
+   "in the style of <any living artist>",
+   "masterpiece, trending on artstation",
+   "8k ultra detailed",
+   "magazine cutouts of celebrities",
+   "vintage newspaper text"
+  ],
+  "flux_notes": "FLUX makes collages with pseudo-text; better to generate paper textures and assemble in HTML.",
+  "palette_suggestions": [
+   "pal.brand_timeoptic",
+   "pal.kraft_green_peach"
+  ],
+  "lighting_ids": [
+   "flat_cartoon_cel",
+   "overcast_soft"
+  ],
+  "composition_ids": [
+   "layered_depth",
+   "scale_contrast",
+   "pattern_break"
+  ],
+  "emotion_ids": [
+   "cognitive.curiosity",
+   "joy.amusement",
+   "hope.excitement"
+  ],
+  "reference_sources": [
+   {
+    "key_or_url": "https://www.tate.org.uk/art/art-terms/c/collage",
+    "accessed": "page opened 2026-11-24 (Tate Art Terms glossary)"
+   }
+  ],
+  "evidence": "documented_history"
+ },
+ {
+  "id": "papercut_layered",
+  "name": "Layered Papercut",
+  "name_th": "กระดาษตัดซ้อนชั้น",
+  "family": "traditional_media",
+  "historical_background": "Paper cutting exists in many cultures; the layered shadow-box papercut look is a contemporary craft and digital illustration practice. No source opened.",
+  "visual_characteristics": "Stacked paper layers with soft drop shadows, clean cut edges, depth by layers.",
+  "line_characteristics": "Smooth cut contours; no drawn lines.",
+  "shape_language": "Simplified flat silhouettes, rounded organic forms.",
+  "color_characteristics": "Tonal gradient through layers (light front to dark back or reverse).",
+  "lighting_characteristics": "Soft top or back light producing small shadows between layers.",
+  "texture_characteristics": "Paper fibre, slight edge fuzz.",
+  "composition_characteristics": "Tunnel or stacked landscape depth; centred focal.",
+  "emotional_characteristics": "Whimsical, gentle, crafted, dreamy.",
+  "use_cases": [
+   "festival posts (Loy Krathong, New Year)",
+   "background layers for 2.5D clips",
+   "kids' content"
+  ],
+  "time_optic_fit": "Great for 2.5D parallax clips since layers separate naturally; frames as photo layer on top.",
+  "common_mistakes": [
+   "shadows inconsistent between layers",
+   "too many layers -> muddy",
+   "3D plastic look"
+  ],
+  "prompt_template": "Layered papercut illustration of {subject} in {setting}, stacked paper layers with clean cut edges and soft drop shadows between layers, {palette} graded from front to back, {lighting}, {composition}, paper fibre texture, no text.",
+  "prompt_example": "Layered papercut illustration of a river at night with floating krathong lanterns, stacked paper layers with clean cut edges and soft drop shadows between layers, deep green and navy graded to warm peach lights, soft glow from the lanterns, tunnel composition leading to the moon, paper fibre texture, no text.",
+  "avoid_phrases": [
+   "in the style of <any living artist>",
+   "masterpiece, trending on artstation",
+   "8k ultra detailed"
+  ],
+  "flux_notes": "FLUX handles papercut convincingly; layer separation for 2.5D still needs depth.py or manual masks.",
+  "palette_suggestions": [
+   "pal.papercut_night_river",
+   "pal.brand_timeoptic"
+  ],
+  "lighting_ids": [
+   "storybook_soft_glow",
+   "backlit_silhouette",
+   "moonlight_blue"
+  ],
+  "composition_ids": [
+   "layered_depth",
+   "vignette_tunnel",
+   "center"
+  ],
+  "emotion_ids": [
+   "awe.childlike_wonder",
+   "calm.serenity",
+   "hope.hope"
+  ],
+  "reference_sources": [
+   {
+    "key_or_url": "Artistic",
+    "accessed": "practitioner craft, no external source"
+   }
+  ],
+  "evidence": "craft"
+ },
+ {
+  "id": "embroidery_textile",
+  "name": "Embroidery / Textile",
+  "name_th": "งานปักผ้า",
+  "family": "traditional_media",
+  "historical_background": "Embroidery is decorative stitching on fabric found in nearly every culture; it is presented here as craft, no source opened.",
+  "visual_characteristics": "Visible thread stitches (satin, chain, French knots), fabric weave, raised texture.",
+  "line_characteristics": "Backstitch or chain-stitch outlines.",
+  "shape_language": "Simplified, stylised motifs.",
+  "color_characteristics": "Thread colours, slight sheen, limited palette.",
+  "lighting_characteristics": "Soft raking light shows stitch relief.",
+  "texture_characteristics": "Linen weave, thread sheen, hoop shadow.",
+  "composition_characteristics": "Centred motif in a hoop or patch; border patterns.",
+  "emotional_characteristics": "Homely, handmade, patient, warm.",
+  "use_cases": [
+   "handmade/crafted brand stories",
+   "Mother's Day posts",
+   "badge/patch graphics"
+  ],
+  "time_optic_fit": "Niche accent; a stitched glasses motif can work for a craft-themed post; little use for product detail.",
+  "common_mistakes": [
+   "stitches that don't follow direction",
+   "printed fabric look instead of thread",
+   "too many tiny details"
+  ],
+  "prompt_template": "Embroidery of {subject} on {setting} fabric, satin-stitch fills, chain-stitch outlines and small French knots, {palette} threads with soft sheen, {lighting} showing stitch relief, {composition}, no text.",
+  "prompt_example": "Embroidery of a simple pair of round glasses with tiny flowers around them on natural linen fabric, satin-stitch fills, chain-stitch outlines and small French knots, deep green and peach threads with soft sheen, soft raking window light showing stitch relief, motif centred in a wooden hoop, no text.",
+  "avoid_phrases": [
+   "in the style of <any living artist>",
+   "masterpiece, trending on artstation",
+   "8k ultra detailed"
+  ],
+  "flux_notes": "Untested here.",
+  "palette_suggestions": [
+   "pal.linen_threads",
+   "pal.brand_timeoptic"
+  ],
+  "lighting_ids": [
+   "window_side",
+   "cross_light"
+  ],
+  "composition_ids": [
+   "center",
+   "frame_within_frame",
+   "radial"
+  ],
+  "emotion_ids": [
+   "love.affection",
+   "visual.coziness",
+   "social.gratitude"
+  ],
+  "reference_sources": [
+   {
+    "key_or_url": "Artistic",
+    "accessed": "practitioner craft, no external source"
+   }
+  ],
+  "evidence": "craft"
+ },
+ {
+  "id": "mosaic",
+  "name": "Mosaic",
+  "name_th": "โมเสก",
+  "family": "traditional_media",
+  "historical_background": "Mosaic assembles small pieces (tesserae) of stone, glass or ceramic into images and has ancient roots across the Mediterranean and beyond. No museum page was opened for this entry, so no dates are claimed.",
+  "visual_characteristics": "Small tesserae with grout lines, flowing rows (andamento) following forms.",
+  "line_characteristics": "Outlines formed by rows of tiles; grout as line.",
+  "shape_language": "Stylised, bold, readable at distance.",
+  "color_characteristics": "Rich glass/stone colours, gold glints, flat per-tile colour.",
+  "lighting_characteristics": "Glass tiles catching light; flat image light.",
+  "texture_characteristics": "Uneven tile surfaces, grout, slight reflections.",
+  "composition_characteristics": "Frontal, symmetrical or patterned borders.",
+  "emotional_characteristics": "Monumental, decorative, timeless.",
+  "use_cases": [
+   "decorative borders",
+   "pattern backgrounds",
+   "Mediterranean-theme sunglasses posts"
+  ],
+  "time_optic_fit": "Limited: decorative background or tiled-wall setting for sunglasses; avoid religious mosaic imagery.",
+  "common_mistakes": [
+   "uniform square pixel grid (looks like pixel art)",
+   "tiles not following form",
+   "religious icons used decoratively"
+  ],
+  "prompt_template": "Mosaic of {subject} in {setting}, small irregular tesserae of glass and stone with grout lines, rows flowing along the forms, {palette}, {lighting}, {composition}, no text.",
+  "prompt_example": "Mosaic wall of a stylised sun and waves behind a café table, small irregular tesserae of glass and stone with grout lines, rows flowing along the forms, turquoise, cream and peach with a few gold glints, bright daylight, symmetrical design with empty lower area for a sunglasses product shot, no text.",
+  "avoid_phrases": [
+   "in the style of <any living artist>",
+   "masterpiece, trending on artstation",
+   "8k ultra detailed",
+   "byzantine saint",
+   "religious icon"
+  ],
+  "flux_notes": "Untested here; expect grid-like tiles; ask for 'irregular tesserae, andamento'.",
+  "palette_suggestions": [
+   "pal.mediterranean_tiles"
+  ],
+  "lighting_ids": [
+   "midday_hard",
+   "high_key"
+  ],
+  "composition_ids": [
+   "symmetry",
+   "radial",
+   "repetition_rhythm"
+  ],
+  "emotion_ids": [
+   "awe.admiration",
+   "joy.contentment",
+   "visual.majesty"
+  ],
+  "reference_sources": [
+   {
+    "key_or_url": "Artistic",
+    "accessed": "practitioner craft, no external source"
+   }
+  ],
+  "evidence": "craft"
+ },
+ {
+  "id": "renaissance_realism",
+  "name": "Renaissance Realism",
+  "name_th": "สัจนิยมเรอเนซองส์",
+  "family": "art_movement",
+  "historical_background": "The Renaissance began in Italy around 1400, driven by renewed interest in ancient art and culture, with the High Renaissance c.1500–1530 and Michelangelo, Leonardo and Raphael as key figures (Tate, 'Renaissance'). Linear perspective and sfumato are standard art-historical associations, not taken from the Tate page.",
+  "visual_characteristics": "Balanced idealised figures, linear perspective spaces, soft sfumato modelling, calm landscapes behind.",
+  "line_characteristics": "Contours softened by modelling; precise architecture lines.",
+  "shape_language": "Harmonious geometry, pyramidal figure groups, classical architecture.",
+  "color_characteristics": "Clear harmonious colour, blue distance (aerial perspective), warm flesh.",
+  "lighting_characteristics": "Even soft light, gentle modelling.",
+  "texture_characteristics": "Smooth panel/fresco surface.",
+  "composition_characteristics": "One-point perspective, central symmetry, triangular groups.",
+  "emotional_characteristics": "Serene, ideal, dignified, balanced.",
+  "use_cases": [
+   "parody-free 'heritage' concepts",
+   "premium brand mood",
+   "educational 'history of vision' posts"
+  ],
+  "time_optic_fit": "Occasional novelty or education; avoid parodying specific famous paintings or religious works for ads.",
+  "common_mistakes": [
+   "copying famous paintings",
+   "religious scenes used for selling",
+   "modern glasses awkwardly pasted on a saint"
+  ],
+  "prompt_template": "Painting in Italian Renaissance manner of {subject} in {setting}, idealised balanced figures, soft sfumato modelling, one-point perspective architecture, aerial perspective landscape, {palette}, {lighting}, {composition}, no text.",
+  "prompt_example": "Painting in Italian Renaissance manner of a scholar reading with early rivet spectacles in a study with an arched window, idealised balanced figure, soft sfumato modelling, one-point perspective architecture, distant blue hills through the window, warm earth and lapis blue palette, even soft daylight, centred symmetrical composition, no text.",
+  "avoid_phrases": [
+   "in the style of <any living artist>",
+   "masterpiece, trending on artstation",
+   "8k ultra detailed",
+   "Mona Lisa with glasses",
+   "Last Supper",
+   "Sistine"
+  ],
+  "flux_notes": "Untested in project; FLUX tends to produce generic 'old painting' with pseudo-religious elements; specify secular scene.",
+  "palette_suggestions": [
+   "pal.renaissance_lapis_earth"
+  ],
+  "lighting_ids": [
+   "overcast_soft",
+   "window_side",
+   "north_window"
+  ],
+  "composition_ids": [
+   "symmetry",
+   "center",
+   "triangular"
+  ],
+  "emotion_ids": [
+   "calm.serenity",
+   "awe.admiration",
+   "cognitive.interest"
+  ],
+  "reference_sources": [
+   {
+    "key_or_url": "https://www.tate.org.uk/art/art-terms/r/renaissance",
+    "accessed": "page opened 2026-11-24 (Tate Art Terms glossary)"
+   }
+  ],
+  "evidence": "documented_history"
+ },
+ {
+  "id": "baroque_dramatic",
+  "name": "Baroque Drama",
+  "name_th": "บาโรกเร้าอารมณ์",
+  "family": "art_movement",
+  "historical_background": "Baroque was the dominant seventeenth-century style, peaking in Rome c.1630–1680 and spreading across Europe, marked by dynamic movement, bold realism and strong emotional appeal suited to the Counter-Reformation; Bernini, Rubens and Van Dyck are key figures (Tate, 'Baroque').",
+  "visual_characteristics": "Dramatic diagonals, theatrical light, rich fabrics, figures in motion.",
+  "line_characteristics": "Lost edges in shadow, swirling contours.",
+  "shape_language": "Dynamic curves, spirals, diagonals.",
+  "color_characteristics": "Deep warm darks, rich reds and golds, glowing flesh.",
+  "lighting_characteristics": "Strong chiaroscuro / tenebrism, spotlight from one side.",
+  "texture_characteristics": "Lush paint, velvet, satin sheen.",
+  "composition_characteristics": "Diagonal, layered depth, moment-of-action staging.",
+  "emotional_characteristics": "Intense, theatrical, grand, passionate.",
+  "use_cases": [
+   "luxury still-life of frames on velvet",
+   "dramatic story-clip moments"
+  ],
+  "time_optic_fit": "Good for luxury frame still lifes (dark velvet, single spotlight); heavy for daily content.",
+  "common_mistakes": [
+   "everything orange-brown",
+   "melodrama without focal clarity",
+   "religious imagery used for ads"
+  ],
+  "prompt_template": "Baroque-manner painting of {subject} in {setting}, dramatic diagonal composition, strong chiaroscuro spotlight, rich velvet and gold, deep warm shadows, {palette}, {lighting}, {composition}, no text.",
+  "prompt_example": "Baroque-manner still life of a gold-rimmed pair of glasses on deep green velvet beside a silver tray of grapes and a pocket watch, strong chiaroscuro spotlight from the upper left, rich fabrics and deep warm shadows, phthalo green, gold and crimson palette, diagonal arrangement, no text.",
+  "avoid_phrases": [
+   "in the style of <any living artist>",
+   "masterpiece, trending on artstation",
+   "8k ultra detailed",
+   "Caravaggio painting of",
+   "Rubens"
+  ],
+  "flux_notes": "FLUX does dramatic still lifes well; reflective metal frames may warp — keep real frame as photo layer for accuracy.",
+  "palette_suggestions": [
+   "pal.baroque_velvet_green",
+   "pal.brand_timeoptic"
+  ],
+  "lighting_ids": [
+   "chiaroscuro",
+   "tenebrism",
+   "spotlight_theatrical"
+  ],
+  "composition_ids": [
+   "diagonal",
+   "layered_depth",
+   "triangular"
+  ],
+  "emotion_ids": [
+   "visual.majesty",
+   "awe.awe",
+   "visual.mystery"
+  ],
+  "reference_sources": [
+   {
+    "key_or_url": "https://www.tate.org.uk/art/art-terms/b/baroque",
+    "accessed": "page opened 2026-11-24 (Tate Art Terms glossary)"
+   }
+  ],
+  "evidence": "documented_history"
+ },
+ {
+  "id": "romanticism_landscape",
+  "name": "Romantic Landscape",
+  "name_th": "ภูมิทัศน์โรแมนติก",
+  "family": "art_movement",
+  "historical_background": "Romanticism was at its height c.1780–1830, marked by interest in the natural world and personal feeling against classical restraint; Constable (1776–1837) and Turner (1775–1851) were central in Britain (Tate, 'Romanticism'). The sublime is a common association not defined on that page.",
+  "visual_characteristics": "Vast skies, dramatic weather, tiny figures in large nature, atmospheric haze.",
+  "line_characteristics": "Soft dissolving edges; expressive brushwork.",
+  "shape_language": "Grand organic masses: mountains, clouds, seas.",
+  "color_characteristics": "Atmospheric golds, storm greys, luminous skies.",
+  "lighting_characteristics": "Sunbursts, god rays, storm light, sunsets.",
+  "texture_characteristics": "Oil glazes and scumbles, misty passages.",
+  "composition_characteristics": "Low horizon, scale contrast, figure seen from behind.",
+  "emotional_characteristics": "Awe, longing, solitude, sublime.",
+  "use_cases": [
+   "eye-break nature clip stills",
+   "travel/sunglasses mood images"
+  ],
+  "time_optic_fit": "Suits eye-break nature clips and travel sunglasses moods; figures must be tiny, so not for product focus.",
+  "common_mistakes": [
+   "over-HDR fantasy look",
+   "copying a famous figure-from-behind painting",
+   "too many god rays"
+  ],
+  "prompt_template": "Romantic landscape oil painting of {subject} in {setting}, vast atmospheric sky, dramatic weather and light, a small figure dwarfed by nature, soft glazed brushwork, {palette}, {lighting}, {composition}, no text.",
+  "prompt_example": "Romantic landscape oil painting of a lone traveller in sunglasses resting on a cliff above a misty sea at sunrise, vast atmospheric sky, dramatic light breaking through clouds, small figure dwarfed by nature, soft glazed brushwork, gold, slate and sea-green palette, low horizon with huge sky, no text.",
+  "avoid_phrases": [
+   "in the style of <any living artist>",
+   "masterpiece, trending on artstation",
+   "8k ultra detailed",
+   "Wanderer above the Sea of Fog",
+   "Turner painting of"
+  ],
+  "flux_notes": "FLUX makes attractive epic landscapes; tends to HDR digital rather than oil; add 'glazed oil, scumbled sky'.",
+  "palette_suggestions": [
+   "pal.romantic_sunrise",
+   "pal.storm_slate"
+  ],
+  "lighting_ids": [
+   "volumetric_god_rays",
+   "golden_hour",
+   "fog_atmospheric"
+  ],
+  "composition_ids": [
+   "low_horizon",
+   "scale_contrast",
+   "subject_isolation"
+  ],
+  "emotion_ids": [
+   "awe.awe",
+   "nostalgia.longing",
+   "visual.peaceful_solitude"
+  ],
+  "reference_sources": [
+   {
+    "key_or_url": "https://www.tate.org.uk/art/art-terms/r/romanticism",
+    "accessed": "page opened 2026-11-24 (Tate Art Terms glossary)"
+   }
+  ],
+  "evidence": "documented_history"
+ },
+ {
+  "id": "impressionism",
+  "name": "Impressionism",
+  "name_th": "อิมเพรสชันนิสม์",
+  "family": "art_movement",
+  "historical_background": "Impressionism developed among Paris-based artists from the early 1860s, with a first group exhibition in 1874 and seven more until 1886; Monet was central, with Renoir, Degas, Pissarro and Morisot; artists worked en plein air with quick broken dabs to catch fleeting light (Tate, 'Impressionism').",
+  "visual_characteristics": "Broken visible brushstrokes, shimmering light, everyday outdoor scenes, soft edges.",
+  "line_characteristics": "No outlines; forms built from dabs.",
+  "shape_language": "Loose, atmospheric, informal cropping.",
+  "color_characteristics": "Bright unmixed colour side by side, coloured shadows (violet/blue), little black.",
+  "lighting_characteristics": "Natural outdoor daylight, specific time of day, dappled sun.",
+  "texture_characteristics": "Thick-ish dabs, visible canvas.",
+  "composition_characteristics": "Snapshot-like cropping, everyday moments.",
+  "emotional_characteristics": "Light, pleasant, leisurely, fleeting.",
+  "use_cases": [
+   "weekend/lifestyle mood images",
+   "café/park scenes",
+   "sunglasses summer posts"
+  ],
+  "time_optic_fit": "Good lifestyle mood (people in sunlit cafés/parks); frames dissolve in dabs, so product must stay a photo layer.",
+  "common_mistakes": [
+   "blurry photo filter",
+   "black shadows",
+   "copying water-lily/haystack subjects"
+  ],
+  "prompt_template": "Impressionist oil painting of {subject} in {setting}, quick broken brushstrokes, shimmering natural light, coloured violet-blue shadows, unmixed colour dabs side by side, {palette}, {lighting}, {composition}, no text.",
+  "prompt_example": "Impressionist oil painting of friends at an outdoor riverside café in Bangkok, one in tortoiseshell sunglasses, quick broken brushstrokes, shimmering afternoon light on the water, coloured violet-blue shadows, unmixed colour dabs side by side, warm gold, river green and soft blue palette, dappled light through trees, snapshot-like cropping, no text.",
+  "avoid_phrases": [
+   "in the style of <any living artist>",
+   "masterpiece, trending on artstation",
+   "8k ultra detailed",
+   "Monet water lilies",
+   "Renoir"
+  ],
+  "flux_notes": "FLUX produces convincing impressionist textures; faces may smear; fine.",
+  "palette_suggestions": [
+   "pal.impressionist_afternoon",
+   "pal.river_gold"
+  ],
+  "lighting_ids": [
+   "dappled_foliage",
+   "golden_hour",
+   "midday_hard"
+  ],
+  "composition_ids": [
+   "asymmetrical_balance",
+   "rule_of_thirds",
+   "layered_depth"
+  ],
+  "emotion_ids": [
+   "joy.contentment",
+   "calm.serenity",
+   "nostalgia.nostalgia"
+  ],
+  "reference_sources": [
+   {
+    "key_or_url": "https://www.tate.org.uk/art/art-terms/i/impressionism",
+    "accessed": "page opened 2026-11-24 (Tate Art Terms glossary)"
+   },
+   {
+    "key_or_url": "Livingstone2002",
+    "accessed": "bibliographic"
+   }
+  ],
+  "evidence": "documented_history"
+ },
+ {
+  "id": "post_impressionism",
+  "name": "Post-Impressionism",
+  "name_th": "โพสต์อิมเพรสชันนิสม์",
+  "family": "art_movement",
+  "historical_background": "Post-impressionism names changes to Impressionism from about 1886; the term was coined by Roger Fry for his 1910 London exhibition Manet and the Post-Impressionists, and usually covers Cézanne, Seurat, Gauguin and Van Gogh, each pushing structure, scientific colour, imaginative subjects or emotional brushwork (Tate, 'Post-impressionism').",
+  "visual_characteristics": "Bold contours or structured planes, intense colour, expressive directional brushwork.",
+  "line_characteristics": "Visible contours (dark or coloured), rhythmic strokes.",
+  "shape_language": "Simplified, solid, sometimes geometric (structured planes).",
+  "color_characteristics": "Intense, emotional or symbolic colour; complementary contrasts.",
+  "lighting_characteristics": "Bright, often flattened; colour carries light.",
+  "texture_characteristics": "Thick directional strokes or flat areas.",
+  "composition_characteristics": "Tilted perspectives, flattened space, strong patterns.",
+  "emotional_characteristics": "Vivid, personal, emotional, intense.",
+  "use_cases": [
+   "artistic seasonal posts",
+   "colourful backgrounds",
+   "story-clip dream sequences"
+  ],
+  "time_optic_fit": "Fine as an occasional art post; avoid imitating Van Gogh's swirl clichés.",
+  "common_mistakes": [
+   "swirly sky cliché",
+   "everything sunflower yellow",
+   "copying famous canvases"
+  ],
+  "prompt_template": "Post-impressionist painting of {subject} in {setting}, bold contours, intense complementary colour, directional rhythmic brushstrokes, simplified solid forms, {palette}, {lighting}, {composition}, no text.",
+  "prompt_example": "Post-impressionist painting of a small optical shop counter with a vase of marigolds and a pair of green frames, bold contours, intense complementary colour, directional rhythmic brushstrokes, simplified solid forms, orange and deep green palette, bright afternoon light, tilted tabletop perspective, no text.",
+  "avoid_phrases": [
+   "in the style of <any living artist>",
+   "masterpiece, trending on artstation",
+   "8k ultra detailed",
+   "Starry Night",
+   "Van Gogh swirls",
+   "sunflowers like"
+  ],
+  "flux_notes": "FLUX defaults to Van Gogh swirls when asked for post-impressionism; describe 'structured planes' or 'flat colour areas' instead.",
+  "palette_suggestions": [
+   "pal.marigold_green"
+  ],
+  "lighting_ids": [
+   "midday_hard",
+   "golden_hour"
+  ],
+  "composition_ids": [
+   "diagonal",
+   "asymmetrical_balance",
+   "triangular"
+  ],
+  "emotion_ids": [
+   "joy.elation",
+   "hope.excitement",
+   "cognitive.interest"
+  ],
+  "reference_sources": [
+   {
+    "key_or_url": "https://www.tate.org.uk/art/art-terms/p/post-impressionism",
+    "accessed": "page opened 2026-11-24 (Tate Art Terms glossary)"
+   }
+  ],
+  "evidence": "documented_history"
+ },
+ {
+  "id": "pointillism",
+  "name": "Pointillism (Divisionism)",
+  "name_th": "พอยต์ทิลลิสม์",
+  "family": "art_movement",
+  "historical_background": "Neo-impressionism, led by Seurat and Signac, used divisionism, often called pointillism (a label Signac rejected): tiny adjacent dabs of colour that mix in the viewer's eye; it drew on Chevreul's colour theory published in Paris in 1839 (Tate, 'Neo-impressionism').",
+  "visual_characteristics": "Image made entirely of small dots of pure colour; luminous, still, orderly.",
+  "line_characteristics": "No lines; edges from dot density.",
+  "shape_language": "Simplified, stiff, geometric figures.",
+  "color_characteristics": "Pure hues placed side by side; complementary dots in shadows.",
+  "lighting_characteristics": "Bright even daylight, shimmering optical glow.",
+  "texture_characteristics": "Uniform dot texture.",
+  "composition_characteristics": "Static, balanced, horizontal bands.",
+  "emotional_characteristics": "Calm, orderly, luminous, dreamy.",
+  "use_cases": [
+   "colour-vision / optics explainer posts (optical mixing)",
+   "decorative backgrounds"
+  ],
+  "time_optic_fit": "Nice tie-in to vision science (colour mixing in the eye) for an optical shop; low detail.",
+  "common_mistakes": [
+   "dots on only part of image",
+   "dots too large like halftone",
+   "muddy mixed colours"
+  ],
+  "prompt_template": "Pointillist painting of {subject} in {setting}, made entirely of small dots of pure unmixed colour that mix optically, complementary dots in shadows, simplified still forms, {palette}, {lighting}, {composition}, no text.",
+  "prompt_example": "Pointillist painting of a park on a Sunday afternoon with a family picnicking, made entirely of small dots of pure unmixed colour that mix optically, complementary dots in shadows, simplified still forms, greens, oranges and blues, bright even daylight, horizontal bands of lawn, river and sky, no text.",
+  "avoid_phrases": [
+   "in the style of <any living artist>",
+   "masterpiece, trending on artstation",
+   "8k ultra detailed",
+   "La Grande Jatte"
+  ],
+  "flux_notes": "Untested here; FLUX often mixes dots with regular painting; add 'entirely of dots'.",
+  "palette_suggestions": [
+   "pal.pointillist_park"
+  ],
+  "lighting_ids": [
+   "midday_hard",
+   "high_key"
+  ],
+  "composition_ids": [
+   "repetition_rhythm",
+   "symmetry",
+   "low_horizon"
+  ],
+  "emotion_ids": [
+   "calm.serenity",
+   "joy.contentment",
+   "cognitive.curiosity"
+  ],
+  "reference_sources": [
+   {
+    "key_or_url": "https://www.tate.org.uk/art/art-terms/n/neo-impressionism",
+    "accessed": "page opened 2026-11-24 (Tate Art Terms glossary)"
+   },
+   {
+    "key_or_url": "Livingstone2002",
+    "accessed": "bibliographic"
+   }
+  ],
+  "evidence": "documented_history"
+ },
+ {
+  "id": "expressionism",
+  "name": "Expressionism",
+  "name_th": "เอ็กซ์เพรสชันนิสม์",
+  "family": "art_movement",
+  "historical_background": "Expressionism emerged among German artists in the early twentieth century, with groups Die Brücke and Der Blaue Reiter; it was persecuted after 1933 and denounced in the 1937 Degenerate Art exhibition; it uses vivid non-naturalistic colour, distorted forms, loose brushwork and thick paint to convey inner feeling (Tate, 'Expressionism').",
+  "visual_characteristics": "Distorted angular figures, clashing colour, raw brushwork, anxious atmosphere.",
+  "line_characteristics": "Thick jagged outlines, rough strokes.",
+  "shape_language": "Angular, exaggerated, distorted.",
+  "color_characteristics": "Non-naturalistic, acidic greens, reds, blues.",
+  "lighting_characteristics": "Unnatural, emotional; light not physically consistent.",
+  "texture_characteristics": "Thick, rough paint or woodcut-like marks.",
+  "composition_characteristics": "Tilted perspectives, crowded or claustrophobic space.",
+  "emotional_characteristics": "Anxiety, intensity, alienation, passion.",
+  "use_cases": [
+   "story clips about stress/eye strain",
+   "emotional moments in dark stories"
+  ],
+  "time_optic_fit": "Useful for showing eye strain/headache feelings in stories; too unsettling for promos.",
+  "common_mistakes": [
+   "random distortion without emotion",
+   "scream-face cliché",
+   "copying famous paintings"
+  ],
+  "prompt_template": "Expressionist painting of {subject} in {setting}, distorted angular forms, vivid non-naturalistic colour, thick rough brushwork, tilted perspective, {palette}, {lighting}, {composition}, emotional intensity, no text.",
+  "prompt_example": "Expressionist painting of an office worker rubbing tired eyes in front of a glowing monitor late at night, distorted angular forms, vivid non-naturalistic acid green and red, thick rough brushwork, tilted perspective of the room, harsh screen glow on the face, figure crowded into the lower corner, emotional intensity, no text.",
+  "avoid_phrases": [
+   "in the style of <any living artist>",
+   "masterpiece, trending on artstation",
+   "8k ultra detailed",
+   "The Scream"
+  ],
+  "flux_notes": "Untested here.",
+  "palette_suggestions": [
+   "pal.acid_green_red"
+  ],
+  "lighting_ids": [
+   "screen_glow_face",
+   "under_light_horror",
+   "low_key"
+  ],
+  "composition_ids": [
+   "diagonal",
+   "asymmetrical_balance",
+   "vignette_tunnel"
+  ],
+  "emotion_ids": [
+   "fear.anxiety",
+   "low.fatigue",
+   "anger.frustration",
+   "sadness.despair"
+  ],
+  "reference_sources": [
+   {
+    "key_or_url": "https://www.tate.org.uk/art/art-terms/e/expressionism",
+    "accessed": "page opened 2026-11-24 (Tate Art Terms glossary)"
+   }
+  ],
+  "evidence": "documented_history"
+ },
+ {
+  "id": "fauvism",
+  "name": "Fauvism",
+  "name_th": "โฟวิสม์",
+  "family": "art_movement",
+  "historical_background": "Fauvism flourished c.1905–1910; critic Louis Vauxcelles coined the name after seeing work by Matisse and Derain at the 1905 Salon d'Automne in Paris; it used unnatural vivid colour often straight from the tube, loose dabs and flat zones of hue rather than modelled space (Tate, 'Fauvism').",
+  "visual_characteristics": "Wild unnatural colour, flat colour zones, loose energetic strokes, simplified forms.",
+  "line_characteristics": "Loose coloured contours.",
+  "shape_language": "Simplified, flat, decorative.",
+  "color_characteristics": "Pure tube colour, complementary clashes (green faces, red trees).",
+  "lighting_characteristics": "Colour replaces light and shadow.",
+  "texture_characteristics": "Loose dabs, bare canvas patches.",
+  "composition_characteristics": "Flattened space, decorative arrangement.",
+  "emotional_characteristics": "Joyful, bold, exuberant.",
+  "use_cases": [
+   "colourful frame launch posts",
+   "summer/festival art backgrounds"
+  ],
+  "time_optic_fit": "Good for colourful frame collections and festive posts; clashes with the calm brand palette, so use sparingly.",
+  "common_mistakes": [
+   "neon digital colour",
+   "realistic shading under wild colours",
+   "copying specific Matisse works"
+  ],
+  "prompt_template": "Fauvist painting of {subject} in {setting}, wild unnatural pure colours in flat zones, loose energetic strokes, simplified forms, coloured contours, {palette}, {composition}, no text.",
+  "prompt_example": "Fauvist painting of a woman in round red glasses on a balcony overlooking a harbour, wild unnatural pure colours in flat zones (green shadows on her face, pink sea), loose energetic strokes, simplified forms, coloured contours, vermilion, emerald and ultramarine, flattened decorative space with the window as frame, no text.",
+  "avoid_phrases": [
+   "in the style of <any living artist>",
+   "masterpiece, trending on artstation",
+   "8k ultra detailed",
+   "Matisse style"
+  ],
+  "flux_notes": "FLUX gets vivid colour; may keep realistic shading; ask 'flat zones, no realistic shading'.",
+  "palette_suggestions": [
+   "pal.fauve_tube_colours"
+  ],
+  "lighting_ids": [
+   "flat_cartoon_cel",
+   "midday_hard"
+  ],
+  "composition_ids": [
+   "frame_within_frame",
+   "figure_ground",
+   "asymmetrical_balance"
+  ],
+  "emotion_ids": [
+   "joy.elation",
+   "joy.happiness",
+   "hope.excitement"
+  ],
+  "reference_sources": [
+   {
+    "key_or_url": "https://www.tate.org.uk/art/art-terms/f/fauvism",
+    "accessed": "page opened 2026-11-24 (Tate Art Terms glossary)"
+   }
+  ],
+  "evidence": "documented_history"
+ },
+ {
+  "id": "cubism",
+  "name": "Cubism",
+  "name_th": "คิวบิสม์",
+  "family": "art_movement",
+  "historical_background": "Cubism emerged c.1907–08 in Paris, founded by Picasso and Braque; subjects split into planes showing several viewpoints at once, flattening the canvas; analytical cubism (1908–12) used muted tones, synthetic cubism (c.1912–14) brighter colours, simpler shapes and collage (Tate, 'Cubism').",
+  "visual_characteristics": "Fragmented planes, multiple viewpoints, overlapping facets, flattened space.",
+  "line_characteristics": "Straight edges, grid-like facet lines.",
+  "shape_language": "Geometric facets, cylinders, cones, overlapping planes.",
+  "color_characteristics": "Analytical: browns/greys/ochres; synthetic: brighter flat colours and textures.",
+  "lighting_characteristics": "Shading per facet, inconsistent by design.",
+  "texture_characteristics": "Faceted brushwork; collage paper in synthetic phase.",
+  "composition_characteristics": "Central dense cluster fading to edges; grid scaffolding.",
+  "emotional_characteristics": "Intellectual, curious, modern, puzzling.",
+  "use_cases": [
+   "'see from every angle' concept for frames",
+   "artsy carousel covers"
+  ],
+  "time_optic_fit": "Clever tie-in: 'one frame, every angle' concept; keep real photos of angles as collage pieces for accuracy.",
+  "common_mistakes": [
+   "random triangles",
+   "faces with eyes in wrong places as cheap joke",
+   "copying specific Picasso works"
+  ],
+  "prompt_template": "Cubist painting of {subject} in {setting}, fragmented into overlapping geometric planes showing several viewpoints at once, flattened space, {palette}, faceted shading, {composition}, no text.",
+  "prompt_example": "Synthetic cubist still life of a pair of glasses, a coffee cup and a newspaper-textured paper scrap on a café table, fragmented into overlapping geometric planes showing several viewpoints at once, flattened space, deep green, ochre and cream palette with paper textures, faceted shading, dense central cluster fading to edges, no readable text.",
+  "avoid_phrases": [
+   "in the style of <any living artist>",
+   "masterpiece, trending on artstation",
+   "8k ultra detailed",
+   "Picasso style",
+   "Guernica"
+  ],
+  "flux_notes": "FLUX produces generic 'cubist' faces easily; still lifes give better control. Untested in project.",
+  "palette_suggestions": [
+   "pal.analytical_ochre_grey",
+   "pal.brand_timeoptic"
+  ],
+  "lighting_ids": [
+   "flat_cartoon_cel",
+   "overcast_soft"
+  ],
+  "composition_ids": [
+   "center",
+   "layered_depth",
+   "pattern_break"
+  ],
+  "emotion_ids": [
+   "cognitive.curiosity",
+   "cognitive.interest",
+   "cognitive.confusion"
+  ],
+  "reference_sources": [
+   {
+    "key_or_url": "https://www.tate.org.uk/art/art-terms/c/cubism",
+    "accessed": "page opened 2026-11-24 (Tate Art Terms glossary)"
+   }
+  ],
+  "evidence": "documented_history"
+ },
+ {
+  "id": "art_nouveau",
+  "name": "Art Nouveau",
+  "name_th": "อาร์ตนูโว",
+  "family": "art_movement",
+  "historical_background": "Art nouveau emerged in the 1890s, reached wide audiences after the 1900 Paris Exposition Universelle and flourished until the First World War; it is defined by sinuous lines and flowing organic plant-based shapes, seen in Guimard's Paris Métro entrances and Mackintosh's Glasgow work (Tate, 'Art nouveau').",
+  "visual_characteristics": "Whiplash curves, plant and flower ornaments, decorative borders, flowing hair.",
+  "line_characteristics": "Elegant flowing contour lines of varied weight.",
+  "shape_language": "Organic, sinuous, vertical elongation.",
+  "color_characteristics": "Muted naturals (sage, ochre, dusty rose) with gold.",
+  "lighting_characteristics": "Flat decorative, little shadow.",
+  "texture_characteristics": "Lithographic flat colour, fine linework.",
+  "composition_characteristics": "Central figure framed by ornamental arches/borders.",
+  "emotional_characteristics": "Elegant, romantic, graceful, decorative.",
+  "use_cases": [
+   "elegant frame borders",
+   "women's frame collection posts",
+   "decorative carousel covers"
+  ],
+  "time_optic_fit": "Good for decorative borders around frame photos and elegant women's frames; plant ornaments pair well with brand greens.",
+  "common_mistakes": [
+   "copying a specific famous poster",
+   "pseudo-lettering in the border",
+   "clutter of ornaments"
+  ],
+  "prompt_template": "Art nouveau decorative illustration of {subject} in {setting}, sinuous whiplash lines, flowing plant and flower ornament, ornamental arch frame, flat lithographic colour, {palette}, {composition}, no text, no lettering.",
+  "prompt_example": "Art nouveau decorative frame border of curling jasmine vines and lotus stems around an empty oval centre for a glasses photo, sinuous whiplash lines, flowing plant ornament, flat lithographic colour, sage green, deep green, peach and muted gold palette, symmetrical vertical composition, no text, no lettering.",
+  "avoid_phrases": [
+   "in the style of <any living artist>",
+   "masterpiece, trending on artstation",
+   "8k ultra detailed",
+   "Mucha style"
+  ],
+  "flux_notes": "FLUX adds fake lettering in nouveau 'posters'; frame as 'border' not 'poster'.",
+  "palette_suggestions": [
+   "pal.nouveau_sage_gold",
+   "pal.brand_timeoptic"
+  ],
+  "lighting_ids": [
+   "flat_cartoon_cel",
+   "high_key"
+  ],
+  "composition_ids": [
+   "symmetry",
+   "frame_within_frame",
+   "s_curve_flow"
+  ],
+  "emotion_ids": [
+   "love.romantic",
+   "awe.admiration",
+   "calm.serenity"
+  ],
+  "reference_sources": [
+   {
+    "key_or_url": "https://www.tate.org.uk/art/art-terms/a/art-nouveau",
+    "accessed": "page opened 2026-11-24 (Tate Art Terms glossary)"
+   }
+  ],
+  "evidence": "documented_history"
+ },
+ {
+  "id": "art_deco",
+  "name": "Art Deco",
+  "name_th": "อาร์ตเดโค",
+  "family": "art_movement",
+  "historical_background": "Art deco flourished in the 1920s–30s in furniture, decorative arts and architecture; it took its name from the 1925 Paris International Exhibition of Modern Decorative and Industrial Arts, and, unlike art nouveau, was shaped by cubism and drew on Egyptian and Central American art and modern transport design (Tate, 'Art deco').",
+  "visual_characteristics": "Geometric symmetry, sunbursts, stepped forms, chevrons, metallic accents.",
+  "line_characteristics": "Crisp straight lines, fine parallel pinstripes, arcs.",
+  "shape_language": "Geometric, streamlined, stepped, fan shapes.",
+  "color_characteristics": "Black, gold, cream, emerald/jade, deep teal.",
+  "lighting_characteristics": "Glossy highlights on metal and lacquer; dramatic uplight.",
+  "texture_characteristics": "Lacquer, brass, marble, glass.",
+  "composition_characteristics": "Symmetrical, vertical, radiating sunbursts.",
+  "emotional_characteristics": "Glamorous, luxurious, confident, elegant.",
+  "use_cases": [
+   "luxury frame promo backgrounds",
+   "premium gift-season posts",
+   "pattern frames"
+  ],
+  "time_optic_fit": "Strong fit for premium/gold frames — black, gold and deep green echo brand phthalo green.",
+  "common_mistakes": [
+   "overusing gold everywhere",
+   "kitschy Gatsby party cliché",
+   "fake lettering"
+  ],
+  "prompt_template": "Art deco design of {subject} in {setting}, geometric symmetry, sunburst and stepped motifs, fine gold pinstripes, lacquer and brass surfaces, {palette}, {lighting}, {composition}, no text.",
+  "prompt_example": "Art deco background panel for a luxury eyewear display, geometric symmetry with a stepped sunburst behind an empty central plinth, fine gold pinstripes on deep phthalo green lacquer, black and cream accents, soft uplight with glossy highlights, symmetrical vertical composition, no text.",
+  "avoid_phrases": [
+   "in the style of <any living artist>",
+   "masterpiece, trending on artstation",
+   "8k ultra detailed",
+   "Great Gatsby",
+   "1920s party flapper cliche"
+  ],
+  "flux_notes": "FLUX makes strong deco patterns; check symmetry and remove stray letters.",
+  "palette_suggestions": [
+   "pal.deco_green_gold",
+   "pal.brand_timeoptic"
+  ],
+  "lighting_ids": [
+   "product_gradient_sweep",
+   "spotlight_theatrical",
+   "jewelry_specular"
+  ],
+  "composition_ids": [
+   "symmetry",
+   "radial",
+   "center"
+  ],
+  "emotion_ids": [
+   "visual.majesty",
+   "will.confidence",
+   "awe.admiration"
+  ],
+  "reference_sources": [
+   {
+    "key_or_url": "https://www.tate.org.uk/art/art-terms/a/art-deco",
+    "accessed": "page opened 2026-11-24 (Tate Art Terms glossary)"
+   }
+  ],
+  "evidence": "documented_history"
+ },
+ {
+  "id": "bauhaus_modernist",
+  "name": "Bauhaus Modernist",
+  "name_th": "โมเดิร์นนิสม์บาวเฮาส์",
+  "family": "art_movement",
+  "historical_background": "The Bauhaus was founded by Walter Gropius in Weimar in 1919, moved to Dessau in 1925–26 and Berlin in 1932, and was closed by the Nazis in 1933; it gave architecture, design and applied arts equal weight with fine art, with teachers including Kandinsky, Klee, Moholy-Nagy and Albers (Tate, 'Bauhaus').",
+  "visual_characteristics": "Primary shapes (circle, square, triangle), grids, asymmetrical layouts, sans-serif-ready space.",
+  "line_characteristics": "Straight bars and rules, geometric arcs.",
+  "shape_language": "Pure geometric primitives.",
+  "color_characteristics": "Primary red, yellow, blue plus black/white/grey.",
+  "lighting_characteristics": "Flat, no illusionistic light.",
+  "texture_characteristics": "Smooth flat print, occasional paper grain.",
+  "composition_characteristics": "Asymmetrical grid balance, diagonals, functional hierarchy.",
+  "emotional_characteristics": "Rational, clean, modern, confident.",
+  "use_cases": [
+   "info-graphic carousels (lens types)",
+   "minimal posters",
+   "layout system for HTML posts"
+  ],
+  "time_optic_fit": "Very usable as a layout logic for HTML carousels (grids, geometric frame shapes = round/square/cat-eye); swap primaries for brand tokens.",
+  "common_mistakes": [
+   "random shapes with no grid",
+   "primary colours clashing with brand",
+   "fake Bauhaus lettering"
+  ],
+  "prompt_template": "Bauhaus-inspired modernist composition of {subject}, built from circles, squares, triangles and bars on an asymmetric grid, flat {palette} colours, {composition}, generous clean space, no text.",
+  "prompt_example": "Bauhaus-inspired modernist composition representing three frame shapes — a circle, a square and a soft triangle — built from flat geometric shapes and bars on an asymmetric grid, deep green, peach, snow white and raisin black, diagonal balance across the canvas, generous clean space, no text.",
+  "avoid_phrases": [
+   "in the style of <any living artist>",
+   "masterpiece, trending on artstation",
+   "8k ultra detailed",
+   "Bauhaus font lettering"
+  ],
+  "flux_notes": "Better built directly in HTML/SVG than generated; FLUX adds noise and text.",
+  "palette_suggestions": [
+   "pal.brand_timeoptic",
+   "pal.bauhaus_primary"
+  ],
+  "lighting_ids": [
+   "flat_cartoon_cel"
+  ],
+  "composition_ids": [
+   "asymmetrical_balance",
+   "diagonal",
+   "visual_weight_counterbalance"
+  ],
+  "emotion_ids": [
+   "will.confidence",
+   "cognitive.interest",
+   "performance.trusted_expert"
+  ],
+  "reference_sources": [
+   {
+    "key_or_url": "https://www.tate.org.uk/art/art-terms/b/bauhaus",
+    "accessed": "page opened 2026-11-24 (Tate Art Terms glossary)"
+   },
+   {
+    "key_or_url": "MullerBrockmann1981",
+    "accessed": "bibliographic"
+   }
+  ],
+  "evidence": "documented_history"
+ },
+ {
+  "id": "constructivism",
+  "name": "Constructivism",
+  "name_th": "คอนสตรักติวิสม์",
+  "family": "art_movement",
+  "historical_background": "Constructivism emerged in Russia around 1915, founded by Tatlin and Rodchenko; a manifesto appeared in Lef in 1923 and the movement was suppressed in Russia during the 1920s, with Gabo and Pevsner carrying its ideas west; it held art should reflect the modern industrial world (Tate, 'Constructivism').",
+  "visual_characteristics": "Diagonal bold geometry, photomontage, red/black on cream, dynamic angles.",
+  "line_characteristics": "Thick bars, rules, arrows.",
+  "shape_language": "Rectangles, circles, wedges in dynamic tension.",
+  "color_characteristics": "Red, black, cream, occasional grey.",
+  "lighting_characteristics": "Flat graphic; high-contrast photo fragments.",
+  "texture_characteristics": "Printed paper, halftone photo.",
+  "composition_characteristics": "Strong diagonals, low-angle photos, radial thrust.",
+  "emotional_characteristics": "Urgent, dynamic, forceful, industrial.",
+  "use_cases": [
+   "bold sale posters",
+   "dynamic announcements"
+  ],
+  "time_optic_fit": "Usable for urgent sale/announcement graphics with brand colours; historical political associations, so avoid propaganda imagery.",
+  "common_mistakes": [
+   "Soviet propaganda symbols",
+   "fake Cyrillic",
+   "aggressive tone unsuitable for a friendly shop"
+  ],
+  "prompt_template": "Constructivist-inspired graphic composition of {subject}, bold diagonal geometric bars and circles, high-contrast photomontage element, flat {palette} colours, {composition}, printed paper texture, no text, no political symbols.",
+  "prompt_example": "Constructivist-inspired graphic composition of a pair of glasses shot from a dramatic low angle, bold diagonal bars and a large circle, high-contrast black and white photo element, flat deep green, peach and black on cream, strong diagonal thrust from lower left to upper right, printed paper texture, no text, no political symbols.",
+  "avoid_phrases": [
+   "in the style of <any living artist>",
+   "masterpiece, trending on artstation",
+   "8k ultra detailed",
+   "Soviet propaganda poster",
+   "hammer and sickle",
+   "cyrillic"
+  ],
+  "flux_notes": "Untested; expect fake Cyrillic text — negate.",
+  "palette_suggestions": [
+   "pal.constructivist_red_black",
+   "pal.brand_timeoptic"
+  ],
+  "lighting_ids": [
+   "flat_cartoon_cel",
+   "midday_hard"
+  ],
+  "composition_ids": [
+   "diagonal",
+   "radial",
+   "scale_contrast"
+  ],
+  "emotion_ids": [
+   "will.urgency",
+   "will.determination",
+   "hope.excitement"
+  ],
+  "reference_sources": [
+   {
+    "key_or_url": "https://www.tate.org.uk/art/art-terms/c/constructivism",
+    "accessed": "page opened 2026-11-24 (Tate Art Terms glossary)"
+   }
+  ],
+  "evidence": "documented_history"
+ },
+ {
+  "id": "surrealism",
+  "name": "Surrealism",
+  "name_th": "เซอร์เรียลิสม์",
+  "family": "art_movement",
+  "historical_background": "Apollinaire coined 'surrealism' in a 1917 play preface, and André Breton's Surrealist Manifesto (1924) defined it as 'pure psychic automatism'; the Paris-based group drew on dreams and the unconscious through automatic drawing and writing (Tate, 'Surrealism').",
+  "visual_characteristics": "Dream logic, impossible juxtapositions, realistic rendering of irrational scenes, long shadows.",
+  "line_characteristics": "Precise rendering (veristic) or automatic loose line.",
+  "shape_language": "Familiar objects in unfamiliar scale or context.",
+  "color_characteristics": "Clear, often desert/sky tones; or dark dream palettes.",
+  "lighting_characteristics": "Low raking light, long shadows, eerie stillness.",
+  "texture_characteristics": "Smooth precise paint.",
+  "composition_characteristics": "Deep empty spaces, low horizon, scale contrast.",
+  "emotional_characteristics": "Mysterious, uncanny, curious, dreamlike.",
+  "use_cases": [
+   "conceptual frame ads (giant glasses in landscape)",
+   "dream sequences in story clips"
+  ],
+  "time_optic_fit": "Strong for conceptual product ads (eye/vision metaphors, giant lenses showing a sharp world); avoid copying famous melting clocks or apple-face images.",
+  "common_mistakes": [
+   "melting clocks cliché",
+   "random weird objects without idea",
+   "creepy eyes overload"
+  ],
+  "prompt_template": "Surrealist painting of {subject} in {setting}, dreamlike impossible juxtaposition rendered with precise realism, long raking shadows, eerie stillness, {palette}, {lighting}, {composition}, no text.",
+  "prompt_example": "Surrealist painting of a giant pair of round glasses standing upright in a calm desert, the lenses showing a sharp green forest while the world around is blurred, precise realism, long raking evening shadows, eerie stillness, sand, sky blue and deep green palette, low horizon with the glasses centred, no text.",
+  "avoid_phrases": [
+   "in the style of <any living artist>",
+   "masterpiece, trending on artstation",
+   "8k ultra detailed",
+   "Dalí melting clocks",
+   "Magritte apple face",
+   "bowler hat man"
+  ],
+  "flux_notes": "FLUX handles conceptual scenes well; lens contents often don't match the brief — use HTML compositing for the 'sharp through lens' effect.",
+  "palette_suggestions": [
+   "pal.desert_dream",
+   "pal.brand_timeoptic"
+  ],
+  "lighting_ids": [
+   "golden_hour",
+   "cross_light",
+   "moonlight_blue"
+  ],
+  "composition_ids": [
+   "low_horizon",
+   "scale_contrast",
+   "center"
+  ],
+  "emotion_ids": [
+   "visual.mystery",
+   "cognitive.curiosity",
+   "performance.eerie_calm"
+  ],
+  "reference_sources": [
+   {
+    "key_or_url": "https://www.tate.org.uk/art/art-terms/s/surrealism",
+    "accessed": "page opened 2026-11-24 (Tate Art Terms glossary)"
+   }
+  ],
+  "evidence": "documented_history"
+ },
+ {
+  "id": "pop_art",
+  "name": "Pop Art",
+  "name_th": "ป๊อปอาร์ต",
+  "family": "art_movement",
+  "historical_background": "Pop art emerged in the mid-1950s in Britain and the late 1950s in America and peaked in the 1960s, drawing imagery from popular and commercial culture — films, advertising, packaging, music, comics; American pop used recognisable imagery with hard edges (Tate, 'Pop art').",
+  "visual_characteristics": "Bright flat colours, bold outlines, Ben-Day/halftone dots, repeated commercial icons.",
+  "line_characteristics": "Thick black outlines.",
+  "shape_language": "Iconic, simplified consumer objects and faces.",
+  "color_characteristics": "Primary and fluorescent brights, high contrast.",
+  "lighting_characteristics": "Flat, graphic.",
+  "texture_characteristics": "Printed dots, screenprint layers.",
+  "composition_characteristics": "Central icon, grids of repetition.",
+  "emotional_characteristics": "Fun, ironic, loud, playful.",
+  "use_cases": [
+   "colourful frame grid posts",
+   "sale announcements",
+   "playful sunglasses ads"
+  ],
+  "time_optic_fit": "Good for playful frame-grid posts (same frame in 4 colourways); loud — balance with brand neutrals.",
+  "common_mistakes": [
+   "fake halftone everywhere",
+   "copying famous pop works or celebrities",
+   "speech-bubble fake text"
+  ],
+  "prompt_template": "Pop art image of {subject}, bold black outlines, flat bright colours, halftone dot shading in select areas, {palette}, {composition}, repeated icon layout, no text, no celebrities.",
+  "prompt_example": "Pop art image of the same pair of cat-eye sunglasses repeated in a four-panel grid, each panel a different flat colour background, bold black outlines, halftone dot shading only on the lenses, peach, deep green, pink and sky blue, flatlay grid composition, no text, no celebrities.",
+  "avoid_phrases": [
+   "in the style of <any living artist>",
+   "masterpiece, trending on artstation",
+   "8k ultra detailed",
+   "Warhol Marilyn",
+   "Lichtenstein comic panel",
+   "soup cans"
+  ],
+  "flux_notes": "Works but adds speech bubbles and fake words; negate. Better to repeat one real cutout in HTML with colour panels.",
+  "palette_suggestions": [
+   "pal.pop_brights",
+   "pal.brand_timeoptic"
+  ],
+  "lighting_ids": [
+   "flat_cartoon_cel",
+   "high_key"
+  ],
+  "composition_ids": [
+   "flatlay_grid",
+   "repetition_rhythm",
+   "center"
+  ],
+  "emotion_ids": [
+   "joy.amusement",
+   "performance.sales_enthusiasm",
+   "joy.mischief"
+  ],
+  "reference_sources": [
+   {
+    "key_or_url": "https://www.tate.org.uk/art/art-terms/p/pop-art",
+    "accessed": "page opened 2026-11-24 (Tate Art Terms glossary)"
+   }
+  ],
+  "evidence": "documented_history"
+ },
+ {
+  "id": "op_art",
+  "name": "Op Art",
+  "name_th": "อ็อปอาร์ต",
+  "family": "art_movement",
+  "historical_background": "Op art was a major 1960s painting movement using geometric forms to create optical effects based on colour theory and the psychology of perception, ranging from subtle to disorienting; Vasarely was among its originators (Tate, 'Op art').",
+  "visual_characteristics": "Precise repeated geometric patterns that appear to move, bulge or vibrate.",
+  "line_characteristics": "Crisp parallel lines, concentric rings, warped grids.",
+  "shape_language": "Geometric modules: squares, circles, waves.",
+  "color_characteristics": "Black and white or high-contrast complementary pairs.",
+  "lighting_characteristics": "None; illusion from pattern.",
+  "texture_characteristics": "Flat hard-edge paint.",
+  "composition_characteristics": "All-over patterns with a distortion zone.",
+  "emotional_characteristics": "Dizzying, energetic, playful, hypnotic.",
+  "use_cases": [
+   "vision-themed attention grabbers",
+   "eye-test themed posts",
+   "backgrounds for Reels hooks"
+  ],
+  "time_optic_fit": "Topical for an optical shop (optical illusions), but strong patterns can cause discomfort and moiré on phone screens; use subtly and never for eye-break content.",
+  "common_mistakes": [
+   "moiré from resizing",
+   "patterns that trigger discomfort",
+   "uneven geometry from AI"
+  ],
+  "prompt_template": "Op art pattern of {subject}, precise black and white geometric lines warping to create an illusion of {setting}, hard-edged flat paint, {composition}, no text.",
+  "prompt_example": "Op art pattern of concentric circles that subtly bulge outward like a lens magnifying the centre, precise black and white geometric lines with a deep green accent ring, hard-edged flat paint, centred radial composition, no text.",
+  "avoid_phrases": [
+   "in the style of <any living artist>",
+   "masterpiece, trending on artstation",
+   "8k ultra detailed",
+   "Vasarely",
+   "Bridget Riley"
+  ],
+  "flux_notes": "FLUX geometry is imprecise; generate op patterns with code (SVG/canvas) instead.",
+  "palette_suggestions": [
+   "pal.op_mono_green_accent"
+  ],
+  "lighting_ids": [
+   "flat_cartoon_cel"
+  ],
+  "composition_ids": [
+   "radial",
+   "repetition_rhythm",
+   "pattern_break"
+  ],
+  "emotion_ids": [
+   "surprise.pleasant",
+   "cognitive.curiosity",
+   "cognitive.confusion"
+  ],
+  "reference_sources": [
+   {
+    "key_or_url": "https://www.tate.org.uk/art/art-terms/o/op-art",
+    "accessed": "page opened 2026-11-24 (Tate Art Terms glossary)"
+   },
+   {
+    "key_or_url": "Livingstone2002",
+    "accessed": "bibliographic"
+   }
+  ],
+  "evidence": "documented_history"
+ },
+ {
+  "id": "minimalism",
+  "name": "Minimalism",
+  "name_th": "มินิมอลลิสม์",
+  "family": "art_movement",
+  "historical_background": "Minimalism emerged in the late 1950s in the USA and flourished in the 1960s–70s; Frank Stella's Black Paintings were shown at MoMA in 1959; works use simple geometric forms, make no attempt to depict outside reality, and drew on Russian constructivist and suprematist ideas (Tate, 'Minimalism').",
+  "visual_characteristics": "Very few elements, large empty fields, precise geometry, restrained palette.",
+  "line_characteristics": "Clean straight edges or none.",
+  "shape_language": "Pure rectangles, circles, single forms.",
+  "color_characteristics": "Monochrome or two-colour; neutral or one saturated field.",
+  "lighting_characteristics": "Even soft; in photography, gentle gradient.",
+  "texture_characteristics": "Smooth, matte.",
+  "composition_characteristics": "Negative space dominant; centred or strict grid.",
+  "emotional_characteristics": "Calm, confident, clean, premium.",
+  "use_cases": [
+   "premium frame product posts",
+   "announcement cards",
+   "quote images"
+  ],
+  "time_optic_fit": "Excellent: matches brand tokens (Snow, Timberwolf, Phthalo) and lets a single frame photo breathe.",
+  "common_mistakes": [
+   "empty but unbalanced",
+   "tiny product lost in space",
+   "adding decorative clutter 'to fill'"
+  ],
+  "prompt_template": "Minimalist composition of {subject} in {setting}, very few elements, large calm empty field, precise clean edges, {palette} in two or three tones, {lighting}, {composition}, no text.",
+  "prompt_example": "Minimalist composition for a single pair of glasses, a smooth timberwolf-coloured backdrop with one soft phthalo-green rectangle block as a plinth on the lower third, large calm empty field, precise clean edges, soft even light with a gentle gradient, centred placement for a product cutout, no text.",
+  "avoid_phrases": [
+   "in the style of <any living artist>",
+   "masterpiece, trending on artstation",
+   "8k ultra detailed",
+   "aesthetic minimalist vibes"
+  ],
+  "flux_notes": "FLUX is good at minimalist backdrops; tends to add props — say 'nothing else in frame'.",
+  "palette_suggestions": [
+   "pal.brand_timeoptic",
+   "pal.snow_timberwolf"
+  ],
+  "lighting_ids": [
+   "product_gradient_sweep",
+   "high_key",
+   "overcast_soft"
+  ],
+  "composition_ids": [
+   "negative_space",
+   "center",
+   "subject_isolation"
+  ],
+  "emotion_ids": [
+   "calm.serenity",
+   "will.confidence",
+   "performance.trusted_expert"
+  ],
+  "reference_sources": [
+   {
+    "key_or_url": "https://www.tate.org.uk/art/art-terms/m/minimalism",
+    "accessed": "page opened 2026-11-24 (Tate Art Terms glossary)"
+   }
+  ],
+  "evidence": "documented_history"
+ },
+ {
+  "id": "abstract_expressionism",
+  "name": "Abstract Expressionism",
+  "name_th": "แอบสแตรกต์เอ็กซ์เพรสชันนิสม์",
+  "family": "art_movement",
+  "historical_background": "Abstract expressionism emerged in the 1940s–50s among New York painters (the New York school), in two tendencies: action painting with sweeping gestural marks and colour field painting with large areas of single colour, drawing on surrealist automatism (Tate, 'Abstract expressionism').",
+  "visual_characteristics": "Large gestural marks, drips and splatters, or vast soft-edged colour fields.",
+  "line_characteristics": "Energetic gestural strokes, drips; or none in colour field.",
+  "shape_language": "Non-representational; organic gestures or soft rectangles.",
+  "color_characteristics": "Bold contrasts (action) or deep resonant fields (colour field).",
+  "lighting_characteristics": "Not depicted.",
+  "texture_characteristics": "Thick paint, drips, raw canvas stains.",
+  "composition_characteristics": "All-over or large stacked fields.",
+  "emotional_characteristics": "Energetic or contemplative; intense.",
+  "use_cases": [
+   "abstract textured backgrounds for products",
+   "artistic launch posts"
+  ],
+  "time_optic_fit": "Colour-field version makes calm premium backgrounds in brand colours; action-painting version suits bold launches. Never for informative content.",
+  "common_mistakes": [
+   "random noise with no rhythm",
+   "copying specific drip paintings",
+   "muddy mixing of all colours"
+  ],
+  "prompt_template": "Abstract expressionist painting, {subject}, {palette}, large gestural brushstrokes and drips OR soft-edged stacked colour fields, raw canvas texture, {composition}, non-representational, no text.",
+  "prompt_example": "Abstract expressionist colour field painting as a product backdrop, two soft-edged stacked fields of deep phthalo green over warm timberwolf with a thin glowing peach band between them, thin stained paint on raw canvas texture, horizontal stacked composition with the band on the lower third, non-representational, no text.",
+  "avoid_phrases": [
+   "in the style of <any living artist>",
+   "masterpiece, trending on artstation",
+   "8k ultra detailed",
+   "Pollock",
+   "Rothko painting"
+  ],
+  "flux_notes": "Colour fields are easy; gestural work can look like generic splatter. Untested in project.",
+  "palette_suggestions": [
+   "pal.brand_timeoptic",
+   "pal.colour_field_green_peach"
+  ],
+  "lighting_ids": [
+   "ambient_occlusion_only",
+   "flat_cartoon_cel"
+  ],
+  "composition_ids": [
+   "low_horizon",
+   "negative_space",
+   "repetition_rhythm"
+  ],
+  "emotion_ids": [
+   "calm.serenity",
+   "hope.excitement",
+   "awe.awe"
+  ],
+  "reference_sources": [
+   {
+    "key_or_url": "https://www.tate.org.uk/art/art-terms/a/abstract-expressionism",
+    "accessed": "page opened 2026-11-24 (Tate Art Terms glossary)"
+   }
+  ],
+  "evidence": "documented_history"
+ },
+ {
+  "id": "ukiyo_e_woodblock",
+  "name": "Ukiyo-e Woodblock",
+  "name_th": "ภาพพิมพ์แกะไม้อุกิโยเอะ",
+  "family": "regional_tradition",
+  "historical_background": "Ukiyo-e, 'pictures of the floating world', depicted the entertainment districts of Edo-period Japan (the V&A dates the period 1615–1868); in 1765 multi-block printing was perfected, producing full-colour nishiki-e ('brocade pictures'), each colour carved on its own block and aligned with registration marks, made by publisher, designer, block cutter and printer (V&A). Tate notes ukiyo-e were printed by hand pressure rather than a press (Tate, 'Woodcut').",
+  "visual_characteristics": "Flat areas of colour, elegant key-block outlines, patterned textiles, stylised waves and clouds, flattened space.",
+  "line_characteristics": "Fine, confident black key-block line with graceful taper.",
+  "shape_language": "Stylised, decorative, flowing silhouettes.",
+  "color_characteristics": "Soft natural-pigment tones (indigo/Prussian blue, vermilion, soft yellows) with gradient wiping in skies.",
+  "lighting_characteristics": "No cast shadows; flat decorative light.",
+  "texture_characteristics": "Washi paper fibre, embossing, woodgrain in flat areas.",
+  "composition_characteristics": "Asymmetric, high or tilted viewpoints, dramatic cropping, foreground framing elements.",
+  "emotional_characteristics": "Graceful, poetic, seasonal, lively.",
+  "use_cases": [
+   "seasonal travel posts (Japan trips)",
+   "rainy season posts",
+   "pattern backgrounds"
+  ],
+  "time_optic_fit": "Use respectfully as technique (flat colour, key line, gradient sky) for travel or rain-season content; avoid fake Japanese text/seals and imitations of famous prints (great wave).",
+  "common_mistakes": [
+   "copying the famous great-wave composition",
+   "fake kanji cartouches and seals",
+   "anime look mislabelled ukiyo-e",
+   "costume clichés"
+  ],
+  "prompt_template": "Japanese woodblock print technique depicting {subject} in {setting}, fine black key-block outlines, flat areas of colour, soft gradient-wiped sky, washi paper texture with slight woodgrain, {palette}, {composition} with dramatic cropping, no text, no seals, no cartouches.",
+  "prompt_example": "Japanese woodblock print technique depicting a person with an umbrella and round glasses crossing a small bridge in summer rain, fine black key-block outlines, flat areas of colour, rain as fine diagonal lines, soft gradient-wiped grey-blue sky, washi paper texture with slight woodgrain, indigo, deep green and soft peach, high viewpoint with the bridge cutting diagonally, no text, no seals, no cartouches.",
+  "avoid_phrases": [
+   "in the style of <any living artist>",
+   "masterpiece, trending on artstation",
+   "8k ultra detailed",
+   "The Great Wave",
+   "Hokusai style",
+   "Hiroshige style",
+   "kanji text"
+  ],
+  "flux_notes": "FLUX knows the look well but almost always adds pseudo-kanji cartouches and the wave cliché; negate both.",
+  "palette_suggestions": [
+   "pal.indigo_vermilion_washi",
+   "pal.brand_timeoptic"
+  ],
+  "lighting_ids": [
+   "flat_cartoon_cel",
+   "overcast_soft"
+  ],
+  "composition_ids": [
+   "diagonal",
+   "dominant_foreground",
+   "high_horizon"
+  ],
+  "emotion_ids": [
+   "calm.serenity",
+   "nostalgia.longing",
+   "awe.admiration"
+  ],
+  "reference_sources": [
+   {
+    "key_or_url": "https://www.vam.ac.uk/articles/japanese-woodblock-prints-ukiyo-e",
+    "accessed": "page opened 2026-11-24 (V&A article)"
+   },
+   {
+    "key_or_url": "https://www.tate.org.uk/art/art-terms/w/woodcut",
+    "accessed": "page opened 2026-11-24 (Tate Art Terms glossary)"
+   }
+  ],
+  "evidence": "documented_history"
+ },
+ {
+  "id": "thai_traditional_mural",
+  "name": "Thai Traditional Mural",
+  "name_th": "จิตรกรรมฝาผนังไทย",
+  "family": "regional_tradition",
+  "historical_background": "Siamese Buddhist murals in temples and palaces were standardised in the Rattanakosin (Bangkok) period after eighteenth-century experimentation, with marked change under King Rama III (c.1824–51); main subjects are Jataka tales of the Buddha's past lives, Traiphum cosmology and the Ramakien, arranged in bays between windows and divided by zig-zag sinthao lines (Royal Thai Embassy Seoul article). Recent scholarship analyses the oblique (diagonal) structure of early Rattanakosin compositions (Thai journal abstract).",
+  "visual_characteristics": "Continuous narrative scenes, flat figures in elegant gestures, pavilions and landscapes viewed obliquely, zig-zag dividers, gold accents.",
+  "line_characteristics": "Fine fluid contour lines defining figures, flame-like (kranok) ornament.",
+  "shape_language": "Stylised graceful figures; ornamented architecture; rocks and trees as patterns.",
+  "color_characteristics": "Earthy mineral reds, ochres, greens, dark backgrounds with gold leaf highlights (colour terms are general observation; the opened source does not detail pigments).",
+  "lighting_characteristics": "No cast shadows; flat even light.",
+  "texture_characteristics": "Aged wall plaster, fine cracks, gold leaf sheen.",
+  "composition_characteristics": "Many scenes on one wall, oblique bird's-eye layout, sinthao zig-zag separators, registers.",
+  "emotional_characteristics": "Reverent, storytelling, ornate, timeless.",
+  "use_cases": [
+   "Thai cultural heritage content (non-commercial, educational)",
+   "Songkran/cultural greetings using secular village-life motifs only",
+   "story clips set in old Thailand with secular scenes"
+  ],
+  "time_optic_fit": "Handle with care. Temple murals are sacred Buddhist art: never put the Buddha, monks, deities or Jataka scenes in a sales ad, never put glasses on sacred figures. Acceptable: secular village/market scenes, ornament-inspired borders, educational posts crediting the tradition. Prefer consulting the user before using it for promotion.",
+  "common_mistakes": [
+   "using Buddha or sacred figures as decoration in ads",
+   "putting sunglasses on deities or monks",
+   "mixing Khmer/Indian/Chinese motifs as 'Thai'",
+   "fake Thai script",
+   "generic 'Asian temple' kitsch"
+  ],
+  "prompt_template": "Painting in the manner of a traditional Thai mural (secular scene) of {subject} in {setting}, flat figures with fine fluid contours, elegant stylised gestures, oblique bird's-eye arrangement with zig-zag dividing lines, earthy reds, ochres and greens with small gold accents ({palette}), flat even light, {composition}, aged plaster texture, no religious figures, no text.",
+  "prompt_example": "Painting in the manner of a traditional Thai mural (secular scene) of a lively riverside floating market with villagers trading fruit from boats, flat figures with fine fluid contours, elegant stylised gestures, oblique bird's-eye arrangement with zig-zag dividing lines, earthy reds, ochres and deep greens with small gold accents, flat even light, several small scenes across a wide panel, aged plaster texture, no religious figures, no text.",
+  "avoid_phrases": [
+   "in the style of <any living artist>",
+   "masterpiece, trending on artstation",
+   "8k ultra detailed",
+   "Buddha with sunglasses",
+   "temple mural ad",
+   "monk wearing our glasses",
+   "Wat Phra Kaew mural copy"
+  ],
+  "flux_notes": "FLUX tends to produce generic 'Asian temple' art mixing Indian/Khmer elements and Buddha figures; check carefully and reject sacred content. Untested in project.",
+  "palette_suggestions": [
+   "pal.thai_mural_earth_gold"
+  ],
+  "lighting_ids": [
+   "flat_cartoon_cel",
+   "ambient_occlusion_only"
+  ],
+  "composition_ids": [
+   "diagonal",
+   "layered_depth",
+   "split_screen"
+  ],
+  "emotion_ids": [
+   "performance.storyteller_warmth",
+   "awe.admiration",
+   "nostalgia.nostalgia"
+  ],
+  "reference_sources": [
+   {
+    "key_or_url": "https://seoul.thaiembassy.org/en/content/take-a-closer-look-at-siamese-buddhist-murals",
+    "accessed": "page opened 2026-11-24 (Royal Thai Embassy Seoul article)"
+   },
+   {
+    "key_or_url": "https://so01.tci-thaijo.org/index.php/ajnu/article/view/270312",
+    "accessed": "page opened 2026-11-24 (abstract only: oblique structure in early Rattanakosin mural painting, 2025)"
+   },
+   {
+    "key_or_url": "Ringis, Thai Temples and Temple Murals (Oxford University Press, 1990)",
+    "accessed": "bibliographic only (seen in search results)"
+   }
+  ],
+  "evidence": "documented_history"
+ },
+ {
+  "id": "chinese_gongbi",
+  "name": "Chinese Gongbi",
+  "name_th": "ภาพจีนกงปี่ (เขียนละเอียด)",
+  "family": "regional_tradition",
+  "historical_background": "Gongbi is a Chinese painting style of meticulous brushwork and highly coloured palettes, often on silk (V&A, 'Chinese gongbi silk painting', which shows a recreation but gives no technical history). It is commonly contrasted with the freer xieyi manner; that contrast and the layered-colour method are described here as practice, not verified on an opened page.",
+  "visual_characteristics": "Fine even outlines, delicately layered flat colour, precise birds/flowers/figures, silk ground.",
+  "line_characteristics": "Thin, even, controlled 'iron-wire'-like contour lines.",
+  "shape_language": "Elegant, precise natural forms.",
+  "color_characteristics": "Mineral and plant colours built in many thin layers; soft gradations within outlines.",
+  "lighting_characteristics": "No cast shadows; even light.",
+  "texture_characteristics": "Silk weave or fine paper; aged tone.",
+  "composition_characteristics": "Asymmetric, open background, branch entering from edge.",
+  "emotional_characteristics": "Refined, serene, graceful, patient.",
+  "use_cases": [
+   "Chinese New Year posts (respectful, decorative flowers/birds)",
+   "elegant floral frame borders"
+  ],
+  "time_optic_fit": "Respectful decorative use for Lunar New Year (birds, peonies, plum blossom) works well; avoid fake calligraphy and seals.",
+  "common_mistakes": [
+   "fake calligraphy and red seals",
+   "thick cartoon outlines",
+   "oversaturated colours",
+   "generic 'oriental' mashups"
+  ],
+  "prompt_template": "Painting using Chinese gongbi technique of {subject} in {setting}, fine even contour lines, delicate colour built in thin layers within outlines, silk texture, {palette}, flat even light, {composition} with open background, no writing, no seals, no text.",
+  "prompt_example": "Painting using Chinese gongbi technique of a pair of birds on a blossoming plum branch, fine even contour lines, delicate colour built in thin layers within outlines, warm silk texture, soft pinks, deep greens and cream, flat even light, branch entering from the upper left with open background for a New Year greeting, no writing, no seals, no text.",
+  "avoid_phrases": [
+   "in the style of <any living artist>",
+   "masterpiece, trending on artstation",
+   "8k ultra detailed",
+   "chinese calligraphy",
+   "red seal",
+   "oriental"
+  ],
+  "flux_notes": "FLUX adds seals and calligraphy columns by default; negate; outlines may be too heavy.",
+  "palette_suggestions": [
+   "pal.gongbi_silk_blossom"
+  ],
+  "lighting_ids": [
+   "flat_cartoon_cel",
+   "overcast_soft"
+  ],
+  "composition_ids": [
+   "asymmetrical_balance",
+   "negative_space",
+   "diagonal"
+  ],
+  "emotion_ids": [
+   "calm.serenity",
+   "hope.hope",
+   "social.gratitude"
+  ],
+  "reference_sources": [
+   {
+    "key_or_url": "https://www.vam.ac.uk/articles/chinese-gongbi-silk-painting",
+    "accessed": "page opened 2026-11-24 (V&A short article page; no technical detail on page)"
+   },
+   {
+    "key_or_url": "Artistic",
+    "accessed": "practitioner craft, no external source"
+   }
+  ],
+  "evidence": "mixed"
+ },
+ {
+  "id": "persian_miniature",
+  "name": "Persian Miniature",
+  "name_th": "จิตรกรรมจิ๋วเปอร์เซีย",
+  "family": "regional_tradition",
+  "historical_background": "Persian manuscript painting flourished at Iranian courts over several centuries; for the Safavid era a Met Heilbrunn essay (The Arts of Iran, 1600–1800) was located by search but could not be opened (HTTP 429), so no specific dates are claimed from it here. Techniques below are described as general practice.",
+  "visual_characteristics": "Jewel-like colours, flat elevated viewpoint, intricate patterns, gardens and architecture, finely drawn figures.",
+  "line_characteristics": "Extremely fine, calligraphic contours.",
+  "shape_language": "Stylised figures, patterned tiles, carpets, rocks as decorative forms.",
+  "color_characteristics": "Lapis blue, vermilion, malachite green, gold; saturated and luminous.",
+  "lighting_characteristics": "No cast shadow; uniform light.",
+  "texture_characteristics": "Burnished paper, gold illumination, fine stippling.",
+  "composition_characteristics": "Stacked vertical space, multiple scenes, ornamental borders.",
+  "emotional_characteristics": "Ornate, poetic, courtly, enchanted.",
+  "use_cases": [
+   "decorative ornamental borders",
+   "luxury pattern backgrounds"
+  ],
+  "time_optic_fit": "Limited fit for a Thai eyewear shop; use only as respectful ornament or pattern inspiration, never with fake Persian script.",
+  "common_mistakes": [
+   "fake Persian/Arabic script",
+   "mixing Mughal/Ottoman motifs carelessly",
+   "religious content used decoratively"
+  ],
+  "prompt_template": "Painting in the manner of Persian manuscript miniature of {subject} in {setting}, extremely fine contours, jewel-like flat colours with gold, elevated flattened viewpoint, intricate tile and textile patterns, {palette}, {composition}, ornamental border, no script, no text.",
+  "prompt_example": "Painting in the manner of Persian manuscript miniature of a peaceful garden courtyard with a fountain, cypress trees and a reader in a pavilion, extremely fine contours, jewel-like flat colours with gold, elevated flattened viewpoint, intricate tile patterns, lapis blue, malachite green and gold, stacked vertical composition, ornamental border with empty central panel, no script, no text.",
+  "avoid_phrases": [
+   "in the style of <any living artist>",
+   "masterpiece, trending on artstation",
+   "8k ultra detailed",
+   "arabic calligraphy",
+   "religious figures"
+  ],
+  "flux_notes": "Untested; expect fake script — negate.",
+  "palette_suggestions": [
+   "pal.lapis_malachite_gold"
+  ],
+  "lighting_ids": [
+   "flat_cartoon_cel"
+  ],
+  "composition_ids": [
+   "high_horizon",
+   "frame_within_frame",
+   "layered_depth"
+  ],
+  "emotion_ids": [
+   "awe.admiration",
+   "calm.serenity",
+   "visual.majesty"
+  ],
+  "reference_sources": [
+   {
+    "key_or_url": "https://www.metmuseum.org/essays/the-arts-of-iran-1600-1800",
+    "accessed": "found in search results only; page fetch failed (HTTP 429), not read"
+   },
+   {
+    "key_or_url": "Artistic",
+    "accessed": "practitioner craft, no external source"
+   }
+  ],
+  "evidence": "craft"
+ },
+ {
+  "id": "folk_art_naive",
+  "name": "Folk / Naïve Art",
+  "name_th": "ศิลปะพื้นบ้าน/ไร้เดียงสา",
+  "family": "regional_tradition",
+  "historical_background": "Naïve art is simple work typically by makers without academy training, valued for its 'childlike simplicity of execution and vision'; Tate's examples include Henri Rousseau (c.1909–10), Alfred Wallis (c.1935–6) and André Bauchant (1940) (Tate, 'Naïve art'). Folk traditions worldwide share flat decorative qualities.",
+  "visual_characteristics": "Flat perspective, bright colours, repetitive patterns, figures and animals in frontal poses.",
+  "line_characteristics": "Simple outlines, hand-wobble.",
+  "shape_language": "Simplified, symmetrical, decorative.",
+  "color_characteristics": "Bright local colour, little shading.",
+  "lighting_characteristics": "Even, no cast shadows.",
+  "texture_characteristics": "Painted wood, board, canvas grain.",
+  "composition_characteristics": "Everything shown clearly; inconsistent scale by importance.",
+  "emotional_characteristics": "Joyful, sincere, communal, charming.",
+  "use_cases": [
+   "community/local market posts",
+   "festival posts",
+   "kids' content"
+  ],
+  "time_optic_fit": "Good for warm neighbourhood-shop community content (local market, festival); avoid appropriating a specific ethnic group's sacred patterns.",
+  "common_mistakes": [
+   "mocking childish look",
+   "random cultural motif mash-up",
+   "photo-realistic faces"
+  ],
+  "prompt_template": "Naïve folk-art painting of {subject} in {setting}, flat perspective, bright local colours, simple hand-drawn outlines, decorative repeating patterns, figures in frontal poses, {palette}, even light without shadows, {composition}, painted board texture, no text.",
+  "prompt_example": "Naïve folk-art painting of a Thai neighbourhood morning market with an optical shop among fruit stalls, flat perspective, bright local colours, simple hand-drawn outlines, decorative repeating patterns on awnings, figures in frontal poses, deep green, mango yellow and coral, even light without shadows, everything shown clearly from above, painted board texture, no text.",
+  "avoid_phrases": [
+   "in the style of <any living artist>",
+   "masterpiece, trending on artstation",
+   "8k ultra detailed",
+   "tribal pattern",
+   "Rousseau jungle"
+  ],
+  "flux_notes": "Untested here.",
+  "palette_suggestions": [
+   "pal.market_morning_folk",
+   "pal.brand_timeoptic"
+  ],
+  "lighting_ids": [
+   "flat_cartoon_cel",
+   "high_key"
+  ],
+  "composition_ids": [
+   "high_horizon",
+   "repetition_rhythm",
+   "symmetry"
+  ],
+  "emotion_ids": [
+   "joy.happiness",
+   "performance.storyteller_warmth",
+   "social.gratitude"
+  ],
+  "reference_sources": [
+   {
+    "key_or_url": "https://www.tate.org.uk/art/art-terms/n/naive-art",
+    "accessed": "page opened 2026-11-24 (Tate Art Terms glossary)"
+   }
+  ],
+  "evidence": "documented_history"
+ },
+ {
+  "id": "vintage_comic_halftone",
+  "name": "Vintage Comic Halftone",
+  "name_th": "คอมิกวินเทจฮาล์ฟโทน",
+  "family": "comic_animation",
+  "historical_background": "Mid-twentieth-century printed comics used limited process colour and mechanical dot screens on cheap paper; pop art later borrowed this comic imagery (Tate, 'Pop art' mentions comic books as a source). The printing details are given as craft knowledge.",
+  "visual_characteristics": "Bold inked outlines, flat CMY colours, coarse dot screens, slight off-register, yellowed paper.",
+  "line_characteristics": "Brush-inked bold contours with spot blacks.",
+  "shape_language": "Heroic, dynamic, exaggerated poses.",
+  "color_characteristics": "Limited CMYK, dot tints, primary-heavy.",
+  "lighting_characteristics": "Graphic shadows as black shapes.",
+  "texture_characteristics": "Paper yellowing, dot patterns, slight ink bleed.",
+  "composition_characteristics": "Panels, dramatic angles, speech-balloon space (text in HTML).",
+  "emotional_characteristics": "Fun, dramatic, retro, nostalgic.",
+  "use_cases": [
+   "playful 'superhero glasses' posts",
+   "comic-panel carousels",
+   "sale announcements"
+  ],
+  "time_optic_fit": "Fun for carousels (panel story of a lost pair of glasses); keep lettering in HTML in English per house rules.",
+  "common_mistakes": [
+   "fake halftone everywhere at uniform size",
+   "garbled speech-bubble text",
+   "copying real comic characters"
+  ],
+  "prompt_template": "Vintage comic book panel of {subject} in {setting}, bold brush-inked outlines and spot blacks, flat limited process colours, coarse halftone dots in mid-tones only, slight off-register printing, aged paper, {palette}, {composition}, empty balloon space, no text.",
+  "prompt_example": "Vintage comic book panel of a determined shop owner holding up a pair of glasses like a found treasure, dramatic low angle, bold brush-inked outlines and spot blacks, flat limited process colours, coarse halftone dots in mid-tones only, slight off-register printing, aged paper, red, yellow and teal, empty speech-balloon space top left, no text.",
+  "avoid_phrases": [
+   "in the style of <any living artist>",
+   "masterpiece, trending on artstation",
+   "8k ultra detailed",
+   "Marvel",
+   "DC",
+   "Superman",
+   "Lichtenstein"
+  ],
+  "flux_notes": "FLUX fills balloons with garbled text; ask for empty balloon or none, add text in HTML.",
+  "palette_suggestions": [
+   "pal.comic_cmy_aged"
+  ],
+  "lighting_ids": [
+   "flat_cartoon_cel",
+   "spotlight_theatrical"
+  ],
+  "composition_ids": [
+   "diagonal",
+   "split_screen",
+   "dominant_foreground"
+  ],
+  "emotion_ids": [
+   "will.triumph",
+   "joy.amusement",
+   "nostalgia.nostalgia",
+   "surprise.shock"
+  ],
+  "reference_sources": [
+   {
+    "key_or_url": "https://www.tate.org.uk/art/art-terms/p/pop-art",
+    "accessed": "page opened 2026-11-24 (Tate Art Terms glossary)"
+   },
+   {
+    "key_or_url": "McCloud1993",
+    "accessed": "bibliographic"
+   }
+  ],
+  "evidence": "mixed"
+ },
+ {
+  "id": "manga_bw_screentone",
+  "name": "Black-and-White Manga Screentone",
+  "name_th": "มังงะขาวดำสกรีนโทน",
+  "family": "comic_animation",
+  "historical_background": "Japanese black-and-white comics use pen inking with adhesive (now digital) screentone sheets for grey values; the conventions (speed lines, tone gradients, expressive panelling) are discussed in comics theory such as McCloud (1993). No museum page opened; described as craft.",
+  "visual_characteristics": "Crisp pen lines, dot and gradient screentones, speed lines, expressive eyes, dramatic panelling.",
+  "line_characteristics": "Tapered G-pen lines, fine hatching, varied weight.",
+  "shape_language": "Stylised characters, large expressive eyes, dynamic poses.",
+  "color_characteristics": "Black, white and screentone greys only.",
+  "lighting_characteristics": "Tone gradients and spot blacks; sparkle effects.",
+  "texture_characteristics": "Dot screens, gradient tones, white-out highlights.",
+  "composition_characteristics": "Multi-panel pages, close-ups for emotion, speed-line focus.",
+  "emotional_characteristics": "Dramatic, emotional, energetic, comedic.",
+  "use_cases": [
+   "comic-strip carousels",
+   "funny glasses mishap stories",
+   "Reels hooks"
+  ],
+  "time_optic_fit": "Good for comedic or emotional carousel stories (fogged glasses on noodles, first contact lens). Text must be English in HTML.",
+  "common_mistakes": [
+   "garbled Japanese text",
+   "copying known manga characters",
+   "muddy grey instead of screentone dots"
+  ],
+  "prompt_template": "Black and white manga panel of {subject} in {setting}, crisp tapered pen lines, dot and gradient screentones, speed lines, spot blacks, expressive character, {composition}, no colour, no text, no sound effects lettering.",
+  "prompt_example": "Black and white manga panel of a young woman whose glasses fog up as she leans over a steaming bowl of noodles, crisp tapered pen lines, dot and gradient screentones, radial speed lines, spot blacks, comedic exaggerated expression, close-up on her face with the bowl in the foreground, no colour, no text, no sound effects lettering.",
+  "avoid_phrases": [
+   "in the style of <any living artist>",
+   "masterpiece, trending on artstation",
+   "8k ultra detailed",
+   "Naruto",
+   "One Piece",
+   "japanese text"
+  ],
+  "flux_notes": "FLUX makes convincing manga panels but adds Japanese SFX lettering; negate; screentone sometimes becomes grey wash.",
+  "palette_suggestions": [
+   "pal.manga_mono"
+  ],
+  "lighting_ids": [
+   "two_tone_anime_shade",
+   "high_key",
+   "low_key"
+  ],
+  "composition_ids": [
+   "dominant_foreground",
+   "radial",
+   "split_screen"
+  ],
+  "emotion_ids": [
+   "selfconscious.embarrassment",
+   "joy.amusement",
+   "surprise.shock",
+   "mixed.nervous_laughter"
+  ],
+  "reference_sources": [
+   {
+    "key_or_url": "McCloud1993",
+    "accessed": "bibliographic"
+   },
+   {
+    "key_or_url": "Artistic",
+    "accessed": "practitioner craft, no external source"
+   }
+  ],
+  "evidence": "craft"
+ },
+ {
+  "id": "anime_cel",
+  "name": "Anime Cel Shading",
+  "name_th": "อนิเมะแบบเซล",
+  "family": "comic_animation",
+  "historical_background": "Cel animation painted characters on transparent celluloid over painted backgrounds; Japanese TV anime developed a two-tone shading convention (base colour plus one hard shadow, sometimes a highlight). Described as craft; no museum source opened.",
+  "visual_characteristics": "Clean line art, flat base colours with one hard-edged shadow tone, simple highlights, detailed painted background.",
+  "line_characteristics": "Thin, even, clean outlines.",
+  "shape_language": "Stylised characters with large eyes, simplified noses, expressive hair shapes.",
+  "color_characteristics": "Flat bright fills, coloured shadows (cool), consistent character model colours.",
+  "lighting_characteristics": "Two-tone hard shading, rim lights, lens flares sparingly.",
+  "texture_characteristics": "Smooth, no texture on characters; painterly backgrounds.",
+  "composition_characteristics": "Cinematic framing, character over detailed background, clear silhouettes.",
+  "emotional_characteristics": "Youthful, energetic, earnest, emotional.",
+  "use_cases": [
+   "story clip characters",
+   "young-audience Reels",
+   "mascot illustrations"
+  ],
+  "time_optic_fit": "Good for story clips and youth content; character consistency across frames needs reference sheets. Avoid imitating known studios.",
+  "common_mistakes": [
+   "copying a known studio look",
+   "inconsistent character between shots",
+   "glasses drawn without lenses or merged into face",
+   "over-sexualised styling"
+  ],
+  "prompt_template": "Anime cel-shaded illustration of {subject} in {setting}, clean thin line art, flat base colours with one hard-edged shadow tone, simple highlights, {palette}, {lighting}, {composition}, detailed painted background, no text.",
+  "prompt_example": "Anime cel-shaded illustration of a teenage boy pushing up his new rectangular glasses with a confident smile in a sunny school corridor, clean thin line art, flat base colours with one hard-edged cool shadow tone, simple lens highlights, deep green blazer, warm skin tones and soft blue sky, afternoon window light with rim light, medium shot on the left third with corridor perspective, detailed painted background, no text.",
+  "avoid_phrases": [
+   "in the style of <any living artist>",
+   "masterpiece, trending on artstation",
+   "8k ultra detailed",
+   "Studio Ghibli",
+   "Makoto Shinkai",
+   "Kyoto Animation style"
+  ],
+  "flux_notes": "FLUX does clean anime cels reasonably; glasses frames often lose one side or lenses vanish — inspect and inpaint; consistency needs seed/img2img.",
+  "palette_suggestions": [
+   "pal.anime_school_day",
+   "pal.brand_timeoptic"
+  ],
+  "lighting_ids": [
+   "two_tone_anime_shade",
+   "flat_cartoon_cel",
+   "window_side"
+  ],
+  "composition_ids": [
+   "rule_of_thirds",
+   "leading_lines",
+   "over_shoulder"
+  ],
+  "emotion_ids": [
+   "will.confidence",
+   "hope.excitement",
+   "selfconscious.shyness",
+   "joy.pride"
+  ],
+  "reference_sources": [
+   {
+    "key_or_url": "Artistic",
+    "accessed": "practitioner craft, no external source"
+   }
+  ],
+  "evidence": "craft"
+ }
+]

@@ -1,0 +1,865 @@
+[
+ {
+  "key": "Gooch1998",
+  "title": "A Non-Photorealistic Lighting Model for Automatic Technical Illustration",
+  "authors": "Amy Gooch, Bruce Gooch, Peter Shirley, Elaine Cohen",
+  "year": 1998,
+  "url": "https://users.cs.northwestern.edu/~bgooch/PDFs/gooch98.pdf",
+  "doi_isbn": "",
+  "source_type": "empirical",
+  "tier": "A",
+  "key_findings": [
+   "Observed in technical illustrations: edge lines (boundaries, silhouettes, discontinuities) drawn in black; matte objects shaded with intensities far from black or white, warmth/coolness indicating surface normal; single light gives white highlights; cast shadows usually not shown.",
+   "Core idea: if black edge lines and white highlights are drawn, shading must stay in the mid-tones or the lines and highlights get lost; hue shift (cool to warm) carries orientation instead of a large luminance range.",
+   "Model: I = ((1+l.n)/2) k_cool + (1-(1+l.n)/2) k_warm, with k_cool = k_blue + alpha*k_d and k_warm = k_yellow + beta*k_d; shown with b=0.4, y=0.4, alpha=0.2, beta=0.6 and also b=0.55, y=0.3, alpha=0.25, beta=0.5 - authors say exact values are not crucial.",
+   "Objects keep their colour name under tone shading, so colour can still code categories.",
+   "Metal convention: alternating dark/light anisotropic bands, used by illustrators even for smooth metal.",
+   "Light placed up and to the right because vision assumes light from above (cited, not tested here)."
+  ],
+  "practical_applications": [
+   "Cool-to-warm shading for any lined illustration: shadows go to cool hue, lit side to warm, never to black.",
+   "Reserve pure black for lines and pure white for highlights; clamp fills to mid-tones.",
+   "Metal glasses frames in line art: banded light/dark stripes along the frame."
+  ],
+  "limitations": [
+   "Exploratory model, no user study; claims about shape perception lean on cited perception studies.",
+   "Hue shift can interfere with albedo (true colour) perception - authors accept this for illustration."
+  ],
+  "license": "copyrighted (author copy)",
+  "access_status": "full_text",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M44"
+  ]
+ },
+ {
+  "key": "DeCarlo2003",
+  "title": "Suggestive Contours for Conveying Shape",
+  "authors": "Doug DeCarlo, Adam Finkelstein, Szymon Rusinkiewicz, Anthony Santella",
+  "year": 2003,
+  "url": "https://gfx.cs.princeton.edu/pubs/DeCarlo_2003_SCF/DeCarlo2003.pdf",
+  "doi_isbn": "ACM TOG 22(3):848-855",
+  "source_type": "empirical",
+  "tier": "A",
+  "key_findings": [
+   "Suggestive contours = lines on visible parts of a surface where a true contour would appear with a small change of viewpoint (zero crossings of radial curvature, filtered for stability).",
+   "Contours alone convey limited shape; adding suggestive contours makes sparse drawings easier to read - argued from images, not from a user study.",
+   "Artists draw view-dependent lines: a nose in profile gets a ridge line, in front view lines on the sides of the nose.",
+   "Not all viewpoints are equal - some views produce much clearer drawings."
+  ],
+  "practical_applications": [
+   "In minimal line art, add a few short lines where the form is about to turn away (side of nose, under cheek, fold of sleeve) instead of outlining every crease.",
+   "Pick the camera angle that makes the silhouette informative before adding interior lines."
+  ],
+  "limitations": [
+   "Needs good curvature estimates; noisy on scanned meshes.",
+   "Effectiveness shown qualitatively; quantitative test came later (Cole2009)."
+  ],
+  "license": "copyrighted (author copy)",
+  "access_status": "full_text",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M44"
+  ]
+ },
+ {
+  "key": "Cole2008",
+  "title": "Where Do People Draw Lines?",
+  "authors": "Forrester Cole, Aleksey Golovinskiy, Alex Limpaecher, Heather Stoddart Barros, Adam Finkelstein, Thomas Funkhouser, Szymon Rusinkiewicz",
+  "year": 2008,
+  "url": "https://pixl.cs.princeton.edu/pubs/Cole_2008_WDP/cole_2008_wdp.pdf",
+  "doi_isbn": "ACM TOG 27(3)",
+  "source_type": "empirical",
+  "tier": "A",
+  "key_findings": [
+   "Art students drew 3D models to 'convey the shape'; 75% of their line pixels were within 1 mm of another artist's line - strong agreement, especially along occluding contours.",
+   "Exterior boundary alone accounted for 35-50% of classified line pixels; interior occluding contours 10-20%.",
+   "Most non-contour lines lie on large image-intensity gradients and match CG definitions (apparent ridges, ridges/valleys, suggestive contours); no single definition matches all drawings.",
+   "Mechanical models: ridge/valley-like lines dominate the remaining lines; smooth/blobby models: fewer non-contour lines, suggestive contours relatively more.",
+   "About 14% of lines were not explained by any local property tested; artists differ in style (one artist had far more unexplained lines)."
+  ],
+  "practical_applications": [
+   "Line budget: silhouette first (it carries roughly half the lines), then interior occluding contours, then a few ridge/fold lines.",
+   "Hard-edged objects (glasses frames, furniture) need crease/ridge lines; soft forms (faces, cloth) need few interior lines."
+  ],
+  "limitations": [
+   "12 models, art students, drawings registered to a faint photoreal prompt - may bias toward shading-based lines.",
+   "Grey-scale, single lighting; no colour or cartoon stylisation."
+  ],
+  "license": "copyrighted (author copy)",
+  "access_status": "full_text",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M44"
+  ]
+ },
+ {
+  "key": "Cole2009",
+  "title": "How Well Do Line Drawings Depict Shape?",
+  "authors": "Forrester Cole, Kevin Sanik, Doug DeCarlo, Adam Finkelstein, Thomas Funkhouser, Szymon Rusinkiewicz, Manish Singh",
+  "year": 2009,
+  "url": "https://www.cs.princeton.edu/~funk/cole09.pdf",
+  "doi_isbn": "10.1145/1531326.1531334",
+  "source_type": "empirical",
+  "tier": "A",
+  "key_findings": [
+   "Gauge-figure study, about 275,000 surface-normal settings, 12 objects x 6 rendering styles (shaded, human drawing, contours only, apparent ridges, ridges/valleys, suggestive contours).",
+   "For some shapes people interpret line drawings almost as well as shaded images; computer line drawings can match artists' drawings.",
+   "Contours alone were considerably worse than the other line styles.",
+   "Smooth blobby shapes were hard to read even when shaded; errors for the best drawings were still around 35-40 degrees for difficult models; shaded prompts had lower average error."
+  ],
+  "practical_applications": [
+   "Outline-only cartoon art reads shape poorly on smooth forms - add a shadow shape or a few interior lines.",
+   "For blobby subjects (bodies, cushions, food), give shading or texture, not lines alone."
+  ],
+  "limitations": [
+   "Lab task with grey renderings of 3D models; not cartoon characters, colour or story context.",
+   "Measures shape reading, not appeal or emotion."
+  ],
+  "license": "copyrighted (author copy)",
+  "access_status": "full_text",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M44"
+  ]
+ },
+ {
+  "key": "BenardHertzmann2019",
+  "title": "Line Drawings from 3D Models: A Tutorial",
+  "authors": "Pierre Benard, Aaron Hertzmann",
+  "year": 2019,
+  "url": "https://arxiv.org/abs/1810.01175",
+  "doi_isbn": "Foundations and Trends in Computer Graphics and Vision; arXiv:1810.01175",
+  "source_type": "review",
+  "tier": "A",
+  "key_findings": [
+   "Tutorial/survey of occluding contours, visibility and stylisation of lines from 3D, plus a survey of other line types and artistic shading.",
+   "Occluding contours are the core of line rendering; suggestive contours, apparent ridges and highlight lines extend them; image-space edges from depth/normal buffers are a cheap alternative.",
+   "Hatching directions: principal curvature, texture or illumination gradients; perceptual work suggests hatching strokes are read as curvature directions (Mamassian & Landy 1998, as cited).",
+   "History: toon shading and contour edges spread into games and films after 2000."
+  ],
+  "practical_applications": [
+   "For 3D product renders of glasses: render a normal/depth pass and run edge detection to get clean contours, then composite over a toon-ramp shading pass.",
+   "Hatch along the form (cross-contour) when shading by lines."
+  ],
+  "limitations": [
+   "Technical; focuses on 3D input; I read the introduction and the shading/hatching sections, not every chapter."
+  ],
+  "license": "arXiv (author copy)",
+  "access_status": "full_text",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M44"
+  ]
+ },
+ {
+  "key": "Mitchell2007_TF2",
+  "title": "Illustrative Rendering in Team Fortress 2",
+  "authors": "Jason Mitchell, Moby Francke, Dhabih Eng",
+  "year": 2007,
+  "url": "https://www.cs.princeton.edu/courses/archive/fall07/cos597B/papers/mitchell-team-fortress.pdf",
+  "doi_isbn": "NPAR 2007 (ACM listing for SIGGRAPH 2007 course: 10.1145/1281500.1281666)",
+  "source_type": "empirical",
+  "tier": "C",
+  "key_findings": [
+   "Codified conventions of early-20th-century commercial illustration: warm-to-cool hue shift, shadows go cool not black; saturation rises at the terminator (often reddened); high-frequency detail omitted; interior folds echo silhouette shapes; silhouettes emphasised with rim highlights instead of dark outlines.",
+   "Characters designed to be identifiable in pure silhouette; this was used to validate designs.",
+   "World textures: painterly, loose visible brush strokes, minimal visual noise and minimal repetition; muted colours dominate with small saturated areas.",
+   "Shading: diffuse light warping (half-Lambert then a 1D warp ramp) plus a rim term."
+  ],
+  "practical_applications": [
+   "Rim light instead of outline for characters on dark backgrounds.",
+   "Silhouette test for every character and product shape.",
+   "Keep backgrounds lower in detail and saturation than characters."
+  ],
+  "limitations": [
+   "Industry paper for one game; claims about readability come from production experience, not controlled studies."
+  ],
+  "license": "copyrighted (course archive copy)",
+  "access_status": "full_text",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M44"
+  ]
+ },
+ {
+  "key": "Mitchell2008_GDC",
+  "title": "Stylization with a Purpose: The Illustrative World of Team Fortress 2 (GDC 2008 slides)",
+  "authors": "Jason Mitchell (Valve)",
+  "year": 2008,
+  "url": "https://cdn.fastly.steamstatic.com/apps/valve/2008/GDC2008_StylizationWithAPurpose_TF2.pdf",
+  "doi_isbn": "",
+  "source_type": "practitioner",
+  "tier": "C",
+  "key_findings": [
+   "Read hierarchy: team (colour) -> class (silhouette, proportions) -> selected weapon.",
+   "Value gradient on characters: dark feet to light chest; highest contrast at chest level where the weapon is held.",
+   "Character creation order: silhouette -> interior shapes solved with shadow shapes -> model sheet -> 3D.",
+   "Half-Lambert: scale the cosine term by 0.5, bias by 0.5 and square, to wrap light around the form."
+  ],
+  "practical_applications": [
+   "Put the highest value contrast where the story object is (hands holding glasses, face).",
+   "Design interior detail as shadow shapes, not extra lines."
+  ],
+  "limitations": [
+   "Slides, not a paper; practitioner claims."
+  ],
+  "license": "copyrighted",
+  "access_status": "full_text",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M44"
+  ]
+ },
+ {
+  "key": "SayimCavanagh2011",
+  "title": "What line drawings reveal about the visual brain",
+  "authors": "Bilge Sayim, Patrick Cavanagh",
+  "year": 2011,
+  "url": "https://www.frontiersin.org/articles/10.3389/fnhum.2011.00118",
+  "doi_isbn": "10.3389/fnhum.2011.00118",
+  "source_type": "review",
+  "tier": "B",
+  "key_findings": [
+   "There are no lines around objects in nature, yet line drawings are recognised by infants, people without picture experience and chimpanzees - evidence against a purely cultural account.",
+   "Orientation-tuned neurons that evolved for edges respond to lines too, so lines stand in for solid edges.",
+   "Lines in a drawing stand for depth or slant discontinuities ('object contours'); drawing shadow borders as lines promotes them to object contours and corrupts the image.",
+   "Artists' intuitions go beyond current vision science (perspective article)."
+  ],
+  "practical_applications": [
+   "Never outline cast-shadow or shading borders with the same black line as object edges - use a shape of colour (cel shadow) or a lighter, coloured line.",
+   "In line art, every line should mean an edge, fold or occlusion."
+  ],
+  "limitations": [
+   "Perspective/opinion article citing studies, not new data."
+  ],
+  "license": "CC BY (Frontiers)",
+  "access_status": "full_text",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M44"
+  ]
+ },
+ {
+  "key": "Walther2011",
+  "title": "Simple line drawings suffice for functional MRI decoding of natural scene categories",
+  "authors": "Dirk B. Walther, Barry Chai, Eamon Caddigan, Diane M. Beck, Li Fei-Fei",
+  "year": 2011,
+  "url": "https://cs.stanford.edu/groups/vision/pdf/WaltherChaiCaddiganBeckFei-Fei_full_PNAS2011.pdf",
+  "doi_isbn": "10.1073/pnas.1015666108",
+  "source_type": "empirical",
+  "tier": "A",
+  "key_findings": [
+   "Scene category (beach, city, forest, highway, mountain, office) decoded from fMRI as well from line drawings as from colour photos, from V1 to PPA and RSC; decoding was above chance, not perfect.",
+   "Error patterns for drawings resembled those for photos in PPA/RSC.",
+   "Behaviour: removing long contours hurt category matching more than removing short contours - long contours carry global scene structure."
+  ],
+  "practical_applications": [
+   "Background line art: keep the long structural lines (horizon, floor/wall edges, big masses) and drop short detail lines first.",
+   "A simple line BG is enough to tell 'where' the scene is."
+  ],
+  "limitations": [
+   "10 participants, 6 categories; line drawings traced from photos by trained people."
+  ],
+  "license": "copyrighted (author copy)",
+  "access_status": "full_text",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M44"
+  ]
+ },
+ {
+  "key": "Hertzmann2010",
+  "title": "Non-Photorealistic Rendering and the Science of Art",
+  "authors": "Aaron Hertzmann",
+  "year": 2010,
+  "url": "https://www.dgp.toronto.edu/~hertzman/ScienceOfArt/hertzmann-scienceOfArt.pdf",
+  "doi_isbn": "NPAR 2010",
+  "source_type": "review",
+  "tier": "B",
+  "key_findings": [
+   "NPR can serve as a 'third pillar' (simulation) for studying how artists make images and how viewers respond.",
+   "Theories must be tested against data, not judged by looking at pictures; Cole et al. 2008 cited as the model.",
+   "Line thickness example: stroke thickness proportional to isophote distance, clamped - nearer/less curved forms thicker, consistent with many illustrations (Goodwin et al. 2007)."
+  ],
+  "practical_applications": [
+   "Treat style rules as testable hypotheses: render A/B versions and measure, rather than trust a rule because it looks right once."
+  ],
+  "limitations": [
+   "Position paper."
+  ],
+  "license": "copyrighted (author copy)",
+  "access_status": "full_text",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M44"
+  ]
+ },
+ {
+  "key": "Curtis1997",
+  "title": "Computer-Generated Watercolor",
+  "authors": "Cassidy J. Curtis, Sean E. Anderson, Joshua E. Seims, Kurt W. Fleischer, David H. Salesin",
+  "year": 1997,
+  "url": "https://grail.cs.washington.edu/projects/watercolor/paper_small.pdf",
+  "doi_isbn": "SIGGRAPH 97",
+  "source_type": "empirical",
+  "tier": "A",
+  "key_findings": [
+   "Catalogue of watercolour effects from artists' practice: dry-brush, edge darkening, backruns, granulation and pigment separation, flow patterns, glazing.",
+   "Edge darkening: pigment migrates to the edge of a wet area as it dries, leaving a dark rim.",
+   "Granulation: pigment settles in the hollows of rough paper, strongest when the paper is very wet; varies by pigment.",
+   "Glazing = thin transparent layers over dry layers; layers composited optically with the Kubelka-Munk model."
+  ],
+  "practical_applications": [
+   "To fake watercolour in HTML/SVG: transparent fills (multiply), a darker rim at the edge of each shape, paper grain modulating opacity, and a few backrun blooms.",
+   "Prompt words that map to real effects: 'edge darkening, granulation on cold-press paper, soft backruns, transparent glazes'."
+  ],
+  "limitations": [
+   "Physical simulation, heavy; effects list is the transferable part."
+  ],
+  "license": "copyrighted (author copy)",
+  "access_status": "full_text",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M44"
+  ]
+ },
+ {
+  "key": "WangYu2020",
+  "title": "Learning to Cartoonize Using White-box Cartoon Representations",
+  "authors": "Xinrui Wang, Jinze Yu",
+  "year": 2020,
+  "url": "https://openaccess.thecvf.com/content_CVPR_2020/papers/Wang_Learning_to_Cartoonize_Using_White-Box_Cartoon_Representations_CVPR_2020_paper.pdf",
+  "doi_isbn": "10.1109/CVPR42600.2020.00811",
+  "source_type": "empirical",
+  "tier": "A",
+  "key_findings": [
+   "From observing cartoon painting and consulting artists, cartoon images are decomposed into: surface (smooth low-frequency colour, edges/details ignored), structure (sparse flat colour blocks, celluloid style), texture (high-frequency contours and details).",
+   "Common features of cartoon images: global structure of sparse colour blocks; details outlined by sharp clear edges; flat smooth surfaces.",
+   "Different workflows weight these differently (some palette-led, some colour-block-led)."
+  ],
+  "practical_applications": [
+   "A cartoon look = flatten colour into a few blocks + smooth surfaces + keep only clear edges; control each separately.",
+   "Code is CC BY-NC-SA (non-commercial) - do not use the model commercially; use the idea."
+  ],
+  "limitations": [
+   "GAN method trained on anime frames; user study scale small."
+  ],
+  "license": "CVF open access (paper); code CC BY-NC-SA 4.0",
+  "access_status": "full_text",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M44"
+  ]
+ },
+ {
+  "key": "ChenLaiLiu2018",
+  "title": "CartoonGAN: Generative Adversarial Networks for Photo Cartoonization",
+  "authors": "Yang Chen, Yu-Kun Lai, Yong-Jin Liu",
+  "year": 2018,
+  "url": "https://openaccess.thecvf.com/content_cvpr_2018/papers/Chen_CartoonGAN_Generative_Adversarial_CVPR_2018_paper.pdf",
+  "doi_isbn": "CVPR 2018",
+  "source_type": "empirical",
+  "tier": "A",
+  "key_findings": [
+   "Cartoon styles have high simplification and abstraction; cartoon images have clear edges, smooth colour shading and relatively simple textures.",
+   "These traits break texture-statistics style losses; an edge-promoting adversarial loss was needed to keep clear edges."
+  ],
+  "practical_applications": [
+   "When FLUX output looks 'painted not cartoon', the missing ingredients are usually clear edges and flatter shading - ask for them explicitly."
+  ],
+  "limitations": [
+   "Trained on specific anime directors' films; describes features, not perception."
+  ],
+  "license": "CVF open access",
+  "access_status": "full_text",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M44"
+  ]
+ },
+ {
+  "key": "Todo2007",
+  "title": "Locally Controllable Stylized Shading",
+  "authors": "Hideki Todo, Ken-ichi Anjyo, William Baxter, Takeo Igarashi",
+  "year": 2007,
+  "url": "https://www-ui.is.s.u-tokyo.ac.jp/~takeo/papers/todo_siggraph2007_shading.pdf",
+  "doi_isbn": "10.1145/1239451.1239468",
+  "source_type": "empirical",
+  "tier": "A",
+  "key_findings": [
+   "The canonical toon shader often creates unwanted shadow areas (e.g. a dark patch over an eye) from geometry or lighting complexity.",
+   "Directors want to remove some dark areas and add fictive ones (shade under an eye for fierceness, under the nose for depth) - shadow shapes are designed, not physically computed.",
+   "Paint-brush local edits integrated with global lighting and animated smoothly between keyframes."
+  ],
+  "practical_applications": [
+   "Cel shadow shapes are a design layer: delete shadows that cover eyes/mouth, add small designed shadows for expression.",
+   "For SVG puppets, draw shadow shapes per pose instead of computing them."
+  ],
+  "limitations": [
+   "Technical tool paper; artistic rationale from production (OLM Digital)."
+  ],
+  "license": "copyrighted (author copy)",
+  "access_status": "full_text",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M44"
+  ]
+ },
+ {
+  "key": "Strouse2018",
+  "title": "The Role of Book Features in Young Children's Transfer of Information from Picture Books to Real-World Contexts",
+  "authors": "Gabrielle A. Strouse, Angela Nyhout, Patricia A. Ganea",
+  "year": 2018,
+  "url": "https://www.frontiersin.org/articles/10.3389/fpsyg.2018.00050/full",
+  "doi_isbn": "10.3389/fpsyg.2018.00050",
+  "source_type": "review",
+  "tier": "B",
+  "key_findings": [
+   "Highly iconic (realistic) pictures help young children link book depictions to real objects; cartoons were the hardest for transfer in the reviewed studies, improving with age.",
+   "Simcock & DeLoache 2006 (as cited): 18-month-olds imitated actions from photo books more than from colour drawings; colour drawings worked by 24 months, black-and-white line drawings by 30 months.",
+   "Anthropomorphised animals and fantastical content can make it harder for children to separate facts that generalise from story-only features."
+  ],
+  "practical_applications": [
+   "For teaching real facts to small children (eye care, real objects), use more realistic depiction; cartoon stylisation is fine for story and emotion with older audiences.",
+   "For adult audiences this effect is not shown - do not overgeneralise."
+  ],
+  "limitations": [
+   "Review of toddler/preschool studies; not about adults, ads or social media."
+  ],
+  "license": "CC BY (Frontiers)",
+  "access_status": "full_text",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M44"
+  ]
+ },
+ {
+  "key": "Ganea2008",
+  "title": "Transfer between picture books and the real world by very young children",
+  "authors": "Patricia A. Ganea, Megan Bloom Pickard, Judy S. DeLoache",
+  "year": 2008,
+  "url": "",
+  "doi_isbn": "",
+  "source_type": "empirical",
+  "tier": "A",
+  "key_findings": [
+   "As described by Strouse2018: 15- and 18-month-olds extended a new word from a book to the real object more readily when the book had realistic drawings or photos rather than cartoons."
+  ],
+  "practical_applications": [
+   "Same as Strouse2018."
+  ],
+  "limitations": [
+   "Not read; only secondary description."
+  ],
+  "license": "copyrighted",
+  "access_status": "bibliographic",
+  "verification_status": "unverified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M44"
+  ]
+ },
+ {
+  "key": "Winnemoller2012_XDoG",
+  "title": "XDoG: An eXtended difference-of-Gaussians compendium including advanced image stylization",
+  "authors": "Holger Winnemoller, Jan Eric Kyprianidis, Sven C. Olsen",
+  "year": 2012,
+  "url": "https://www.kyprianidis.com/p/cag2012/winnemoeller-cag2012.pdf",
+  "doi_isbn": "Computers & Graphics 36(6)",
+  "source_type": "empirical",
+  "tier": "A",
+  "key_findings": [
+   "Extended DoG edge operator with soft thresholding gives line, pencil-shading, pastel, hatching and woodcut looks from one operator.",
+   "Canny gives lines whose thickness is independent of edge scale (looks mechanical); DoG lines vary in thickness with edge scale, closer to drawn lines.",
+   "Also produces negative edges, ghosting, speed-lines, indication and abstraction effects."
+  ],
+  "practical_applications": [
+   "To turn a FLUX/photo background into line art: DoG/XDoG (OpenCV GaussianBlur difference + threshold) rather than Canny for a hand-drawn line feel."
+  ],
+  "limitations": [
+   "Image-based; lines follow intensity edges, not object meaning (see SayimCavanagh2011 on shadow edges)."
+  ],
+  "license": "copyrighted (author copy)",
+  "access_status": "full_text",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M44"
+  ]
+ },
+ {
+  "key": "Lake2000",
+  "title": "Stylized Rendering Techniques for Scalable Real-Time 3D Animation",
+  "authors": "Adam Lake, Carl Marshall, Mark Harris, Marc Blackstein",
+  "year": 2000,
+  "url": "https://sci.utah.edu/~kpotter/Library/Papers/lake:2000:SRTA/index.html",
+  "doi_isbn": "NPAR 2000, pp. 13-20",
+  "source_type": "empirical",
+  "tier": "A",
+  "key_findings": [
+   "Real-time cartoon shading via a 1D texture indexed by the Lambertian term, simulating the limited palette of painted cels; pencil-sketch variant; silhouette inking (per indexed abstract and as summarised in Mitchell2007_TF2).",
+   "A few bright texels at the lit end of the ramp give a view-independent pseudo-highlight (per Mitchell2007_TF2)."
+  ],
+  "practical_applications": [
+   "Toon ramp = posterise the light term into 2-3 bands; in SVG use feComponentTransfer type='discrete'."
+  ],
+  "limitations": [
+   "Original paper not read; content from abstract index and a citing paper."
+  ],
+  "license": "copyrighted",
+  "access_status": "search_summary",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M44"
+  ]
+ },
+ {
+  "key": "Barla2006_XToon",
+  "title": "X-Toon: An Extended Toon Shader",
+  "authors": "Pascal Barla, Joelle Thollot, Lee Markosian",
+  "year": 2006,
+  "url": "https://hal.archives-ouvertes.fr/inria-00362888",
+  "doi_isbn": "NPAR 2006, pp. 127-132",
+  "source_type": "empirical",
+  "tier": "A",
+  "key_findings": [
+   "Extends the 1D toon ramp to a 2D lookup indexed by light and a second attribute (depth, orientation) to get level-of-abstraction, aerial perspective, depth-of-field, backlighting and specular effects (search summary of abstract).",
+   "Fresnel-like term gives a hard 'virtual backlight' = rim light (per Mitchell2007_TF2)."
+  ],
+  "practical_applications": [
+   "Depth-based abstraction: farther objects get fewer tone bands, lower contrast and lighter values - a rule for cartoon backgrounds."
+  ],
+  "limitations": [
+   "Abstract/summary only."
+  ],
+  "license": "copyrighted / HAL",
+  "access_status": "search_summary",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M44"
+  ]
+ },
+ {
+  "key": "AnjyoHiramitsu2003",
+  "title": "Stylized Highlights for Cartoon Rendering and Animation",
+  "authors": "Ken-ichi Anjyo, Katsuaki Hiramitsu",
+  "year": 2003,
+  "url": "https://isgwww.cs.uni-magdeburg.de/~stefans/npr/entry-Anjyo-2003-SHC.html",
+  "doi_isbn": "10.1109/MCG.2003.1210865",
+  "source_type": "empirical",
+  "tier": "A",
+  "key_findings": [
+   "Highlight shader for cel animation: starts from a Blinn specular shape, then artists translate, rotate, split and square the highlight shape per keyframe; animated automatically without texture maps (per search summary of abstract)."
+  ],
+  "practical_applications": [
+   "Cartoon highlights are designed shapes (squares, bars, split dots) - in SVG draw them as separate shapes on top, keyed per pose."
+  ],
+  "limitations": [
+   "Abstract only."
+  ],
+  "license": "copyrighted",
+  "access_status": "search_summary",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M44"
+  ]
+ },
+ {
+  "key": "Motomura2015_GGXrd",
+  "title": "GuiltyGearXrd's Art Style: The X Factor Between 2D and 3D (GDC 2015)",
+  "authors": "Junya Christopher Motomura (Arc System Works)",
+  "year": 2015,
+  "url": "https://gdcvault.com/play/1022031/GuiltyGearXrd-s-Art-Style-The",
+  "doi_isbn": "",
+  "source_type": "practitioner",
+  "tier": "D",
+  "key_findings": [
+   "Custom cel shaders plus 3D models built specifically for those shaders; in-engine shader editor for iteration (search snippet of handout).",
+   "Cel shading is hard because a surface is either lit or not; a tiny change in surface normal can create a large shadow blotch (search snippet)."
+  ],
+  "practical_applications": [
+   "In cel shading, shadow shapes must be art-directed (edit normals or paint shapes) - same lesson as Todo2007."
+  ],
+  "limitations": [
+   "Handout not reachable this session; only search snippets."
+  ],
+  "license": "copyrighted",
+  "access_status": "search_summary",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M44"
+  ]
+ },
+ {
+  "key": "BiedermanJu1988",
+  "title": "Surface versus edge-based determinants of visual recognition",
+  "authors": "Irving Biederman, Ginny Ju",
+  "year": 1988,
+  "url": "https://scilit.com/publications/dbada1cf2dd9b803d59b3ec01bec053c",
+  "doi_isbn": "10.1016/0010-0285(88)90024-2",
+  "source_type": "empirical",
+  "tier": "A",
+  "key_findings": [
+   "As cited by SayimCavanagh2011 and Gooch1998: line drawings of objects are recognised about as fast and accurately as colour photographs; surface colour/texture plays a secondary role in fast recognition of intact objects (per secondary summaries)."
+  ],
+  "practical_applications": [
+   "Clean line art is enough for fast object recognition at feed-scroll speed; colour serves mood and category, not recognition."
+  ],
+  "limitations": [
+   "Not read; objects with diagnostic colour (fruit, food) may depend more on colour - later work debated this."
+  ],
+  "license": "copyrighted",
+  "access_status": "search_summary",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M44"
+  ]
+ },
+ {
+  "key": "McCloud1993",
+  "title": "Understanding Comics: The Invisible Art",
+  "authors": "Scott McCloud",
+  "year": 1993,
+  "url": "https://www.ebsco.com/research-starters/literature-and-writing/understanding-comics-invisible-art-scott-mccloud",
+  "doi_isbn": "",
+  "source_type": "practitioner",
+  "tier": "D",
+  "key_findings": [
+   "'Amplification through simplification': cartooning focuses on chosen details rather than just removing detail; the simpler the icon the more universal (per secondary summaries).",
+   "Picture plane triangle: realistic - iconic - abstract.",
+   "Widely cited but debated; theoretical, not empirical."
+  ],
+  "practical_applications": [
+   "Simple faces (Mint & Tao) invite projection; render settings and objects more fully when they must feel real ('masking' idea - craft claim)."
+  ],
+  "limitations": [
+   "Book not read this session; claims about identification are untested craft theory."
+  ],
+  "license": "copyrighted",
+  "access_status": "search_summary",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M44"
+  ]
+ },
+ {
+  "key": "Bottini_UPA",
+  "title": "Redesigning Animation: United Productions of America (chapter: UPA Films as Case Studies for a Simplified Visual Language in Animation)",
+  "authors": "Cinzia Bottini",
+  "year": null,
+  "url": "https://www.taylorfrancis.com/books/9781351209588/chapters/10.1201%2F9781351209595-4",
+  "doi_isbn": "10.1201/9781351209595",
+  "source_type": "textbook",
+  "tier": "B",
+  "key_findings": [
+   "Book and chapter exist (CRC/Taylor & Francis); chapter title frames UPA films of the 1940s-50s as case studies of a simplified visual language influenced by modernist painting, graphic design and poster advertising (per publisher listing and search summaries)."
+  ],
+  "practical_applications": [
+   "Flat TV-style backgrounds descend from modernist graphic design: shapes and colour fields, not rendered space."
+  ],
+  "limitations": [
+   "Only listing seen; no content read."
+  ],
+  "license": "copyrighted",
+  "access_status": "bibliographic",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M44"
+  ]
+ },
+ {
+  "key": "StudioPablo_Interview",
+  "title": "The Vital Background Art: Interview with Background Company Studio Pablo Vol. 1",
+  "authors": "Otaku Mode (interview)",
+  "year": 2013,
+  "url": "https://otakumode.com/news/51b76057c16063b47e0196ec",
+  "doi_isbn": "",
+  "source_type": "practitioner",
+  "tier": "D",
+  "key_findings": [
+   "Anime background pipeline: art director sets world style -> art setting (line drawing, 'blueprint of the stage') -> art board (coloured version shared with staff) -> final backgrounds painted from the art board -> art director check.",
+   "A 30-minute episode has about 250-400 cuts; about 70-80% need new backgrounds (about 180-300 images); reuse ('multi-use' backgrounds) decided at storyboard to save time for key cuts."
+  ],
+  "practical_applications": [
+   "Make one line 'art setting' and one colour 'art board' per location, then generate all angles from them (matches STYLES.md 'write the place once')."
+  ],
+  "limitations": [
+   "Interview with one company; year 2013 inferred from the page id timestamp (0x51b76057 = June 2013), not printed on the page."
+  ],
+  "license": "copyrighted",
+  "access_status": "full_text",
+  "verification_status": "unverified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M44"
+  ]
+ },
+ {
+  "key": "DisneyAnimation_Layout",
+  "title": "Filmmaking Process: Layout",
+  "authors": "Walt Disney Animation Studios",
+  "year": null,
+  "url": "https://disneyanimation.com/process/layout/",
+  "doi_isbn": "",
+  "source_type": "docs",
+  "tier": "C",
+  "key_findings": [
+   "Layout turns storyboards into the first full staged version: lenses, camera moves, angles, composition, how shots cut; requires cinematography, staging and rough animation.",
+   "Layout finaling after animation: camera polish, framing, focus, continuity."
+  ],
+  "practical_applications": [
+   "Decide camera, horizon and floor line (layout) before painting or generating a background."
+  ],
+  "limitations": [
+   "Brief studio page; 3D pipeline."
+  ],
+  "license": "copyrighted",
+  "access_status": "full_text",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M44"
+  ]
+ },
+ {
+  "key": "Lawley2016_BenDay",
+  "title": "Ben Day Dots Part 8: 1930s to 1950s - the Golden Age of Comics",
+  "authors": "Guy Lawley",
+  "year": 2016,
+  "url": "https://legionofandy.com/2016/08/26/ben-day-dots-part-8-1930s-to-1950s-the-golden-age-of-comics/",
+  "doi_isbn": "",
+  "source_type": "practitioner",
+  "tier": "C",
+  "key_findings": [
+   "Golden Age comics (approx. 1938-1955) printed with Ben-Day tints of only 25% and 50% (colourists reported ~20%/40%): 63 colours plus white = 64 (65 counting black); 1948 Craftint names the plates red, yellow and blue.",
+   "Colourists marked colour guides with codes (e.g. YR2); separators made the plates; Craftint replaced hand-laid Ben Day for speed.",
+   "Some publishers limited the palette further (one avoided yellow tints until 1969, about 32 colours).",
+   "Interiors were line art (Ben Day = line etching, not halftone); line and dot irregularities came from etching, press pressure and newsprint, not intention."
+  ],
+  "practical_applications": [
+   "A real 'vintage comic' palette = CMY at 0/20-25/40-50/100% combinations only; dots visible in the light tints; slight misregistration and paper yellowing.",
+   "Avoid smooth gradients in a retro-comic recipe - they did not exist."
+  ],
+  "limitations": [
+   "Expert blog by a comics-printing researcher, not peer-reviewed; I read the first ~65% of the page.",
+   "Spot-check C1 2026-11-25: corrected."
+  ],
+  "license": "copyrighted",
+  "access_status": "full_text",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M44"
+  ]
+ },
+ {
+  "key": "UIUC_RisoGuide",
+  "title": "What's a Risograph? (print guide)",
+  "authors": "University of Illinois School of Art and Design",
+  "year": 2021,
+  "url": "https://web.faa.illinois.edu/app/uploads/sites/6/2021/05/riso_print_guide.pdf",
+  "doi_isbn": "",
+  "source_type": "course",
+  "tier": "C",
+  "key_findings": [
+   "Riso = stencil duplicator, one colour per pass, bright spot inks; uncoated paper only.",
+   "Files are separated into one grayscale image per ink; 100% black prints as 100% of that ink, 90% as 90%.",
+   "Ink is rice-oil based and never fully dries (smudges); large 100% areas cause set-off - use 80-90%.",
+   "Print light colours (yellow, pink) first, darker (blue, black) last; allow drying between layers."
+  ],
+  "practical_applications": [
+   "Digital riso look: 2-3 spot inks as separate grayscale layers combined with multiply, overprint colours where they overlap, slight registration offset, grain."
+  ],
+  "limitations": [
+   "One institution's machine guide; misregistration figures (1-3 mm) come from other vendor guides seen only in search snippets."
+  ],
+  "license": "unknown",
+  "access_status": "full_text",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M44"
+  ]
+ },
+ {
+  "key": "Walsworth2024_ComicPrint",
+  "title": "Nail Your Comic Book Artwork With Precision Color Printing",
+  "authors": "Walsworth Staff",
+  "year": 2024,
+  "url": "https://walsworth.com/blog/comic-book-precision-color-printing",
+  "doi_isbn": "",
+  "source_type": "docs",
+  "tier": "C",
+  "key_findings": [
+   "RGB shows a wider gamut than CMYK; CMYK cannot reproduce neon colours; RGB-to-CMYK conversion often looks flatter/duller.",
+   "Total ink limits differ by press/paper: sheetfed 300% (270% with UV), coldset web 260% offset / 245% groundwood / 235% newsprint, heatset web 310%, digital 320%.",
+   "Line screens: coldset 100-133, heatset 133-175, sheetfed 120-200; images at 1.5-2x line screen, 300-350 ppi default.",
+   "G7 grey balance and ICC profiles to keep colour consistent across devices; ask for a printed proof."
+  ],
+  "practical_applications": [
+   "Design screen-first cartoon colours knowing which ones will die in print (neon pinks, electric blues, saturated greens) and check a CMYK soft-proof before print jobs."
+  ],
+  "limitations": [
+   "Printer's blog; numbers are that printer's recommendations."
+  ],
+  "license": "copyrighted",
+  "access_status": "full_text",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M44"
+  ]
+ },
+ {
+  "key": "ClipStudio_AnimeSkin",
+  "title": "Anime Skin Tutorial: Makeup, Light, Colour, Tones",
+  "authors": "IntrinsicKayleigh (CLIP STUDIO TIPS)",
+  "year": null,
+  "url": "https://tips.clip-studio.com/en-us/articles/4358",
+  "doi_isbn": "",
+  "source_type": "practitioner",
+  "tier": "D",
+  "key_findings": [
+   "Use coloured shadows, not grey/black (which make skin dull); first shadow cel-shaded in a warm peach; optional second darker shadow; cool shadows in purple/blue.",
+   "Soften only the hard edge of the cel shadow with a small blending brush; blending the whole area looks smudged.",
+   "Small highlight dots/wavy lines on cheekbone, eyelid, lip, nose side; colour the line art locally (lighter/brighter at lashes, lips, skin lines)."
+  ],
+  "practical_applications": [
+   "Cel shadow colour = hue-shifted, more saturated darker version of the base, not base + black.",
+   "Coloured line art inside skin areas."
+  ],
+  "limitations": [
+   "Single practitioner tutorial (date not stated)."
+  ],
+  "license": "copyrighted",
+  "access_status": "full_text",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M44"
+  ]
+ }
+]

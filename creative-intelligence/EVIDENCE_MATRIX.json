@@ -1,0 +1,984 @@
+{
+ "schema_version": "1.0",
+ "strength_scale": "A = several studies/meta-analysis agree; B = one or two solid studies or official doc; C = single small/abstract-only/indirect; D = craft only",
+ "claims": [
+  {
+   "id": "V001",
+   "claim": "Arousal is the most reliably conveyed vocal dimension (F0 level/range, loudness, rate, HF energy rise together)",
+   "sources": [
+    "Scherer2003",
+    "BanzigerScherer2005",
+    "Laukka2005",
+    "JuslinLaukka2003",
+    "Pell2009"
+   ],
+   "strength": "A",
+   "craft_notes": "—",
+   "used_in": "PROSODY_RULES §1",
+   "modules": [
+    "M20",
+    "M02"
+   ],
+   "origin": "ai-voice-director"
+  },
+  {
+   "id": "V002",
+   "claim": "Valence is weakly coded by pitch/rate, more by voice quality / spectral balance",
+   "sources": [
+    "GoudbeekScherer2010",
+    "Laukka2005",
+    "Scherer2003"
+   ],
+   "strength": "B",
+   "craft_notes": "name the quality in prompts",
+   "used_in": "PROSODY_RULES §3.1",
+   "modules": [
+    "M20",
+    "M02"
+   ],
+   "origin": "ai-voice-director"
+  },
+  {
+   "id": "V003",
+   "claim": "Hot vs cold anger, panic vs anxiety, despair vs sadness differ acoustically",
+   "sources": [
+    "BanseScherer1996",
+    "Scherer2003"
+   ],
+   "strength": "A–B",
+   "craft_notes": "name the member + intensity",
+   "used_in": "EMOTION_LIBRARY",
+   "modules": [
+    "M20",
+    "M02"
+   ],
+   "origin": "ai-voice-director"
+  },
+  {
+   "id": "V004",
+   "claim": "Basic-emotion profiles (anger loud/high/fast; sadness low/slow/soft; boredom flat)",
+   "sources": [
+    "Scherer2003 (Table 1)",
+    "JuslinLaukka2003",
+    "MurrayArnott1993"
+   ],
+   "strength": "A (acted)",
+   "craft_notes": "tendencies, not recipes",
+   "used_in": "EMOTION_LIBRARY (high-confidence entries)",
+   "modules": [
+    "M20",
+    "M02"
+   ],
+   "origin": "ai-voice-director"
+  },
+  {
+   "id": "V005",
+   "claim": "Voice quality (breathy, tense, creaky) carries attitude & mild moods",
+   "sources": [
+    "GoblNiChasaide2003",
+    "Scherer1986"
+   ],
+   "strength": "B",
+   "craft_notes": "—",
+   "used_in": "PROSODY_RULES §3.5",
+   "modules": [
+    "M20",
+    "M02"
+   ],
+   "origin": "ai-voice-director"
+  },
+  {
+   "id": "V006",
+   "claim": "Lower/falling F0 = dominance; higher = deference/smallness (frequency code)",
+   "sources": [
+    "Ohala1984",
+    "Gussenhoven2002"
+   ],
+   "strength": "B",
+   "craft_notes": "character status",
+   "used_in": "bible, PROSODY §1",
+   "modules": [
+    "M20",
+    "M02"
+   ],
+   "origin": "ai-voice-director"
+  },
+  {
+   "id": "V007",
+   "claim": "Emotion is recognised across languages, better in-group",
+   "sources": [
+    "Pell2009",
+    "ElfenbeinAmbady2002",
+    "Scherer2001",
+    "LaukkaElfenbein2021",
+    "Laukka2016"
+   ],
+   "strength": "A",
+   "craft_notes": "don't import Western exaggeration into Thai",
+   "used_in": "PROSODY §4.9",
+   "modules": [
+    "M20",
+    "M02"
+   ],
+   "origin": "ai-voice-director"
+  },
+  {
+   "id": "V008",
+   "claim": "Non-verbal vocal bursts carry 20+ distinguishable emotions",
+   "sources": [
+    "Cowen2019",
+    "Sauter2010"
+   ],
+   "strength": "B",
+   "craft_notes": "script sighs/gasps separately",
+   "used_in": "schema `nonverbal`",
+   "modules": [
+    "M20",
+    "M02"
+   ],
+   "origin": "ai-voice-director"
+  },
+  {
+   "id": "V009",
+   "claim": "Emotions form blended gradients; categories > dimensions for labels",
+   "sources": [
+    "CowenKeltner2017",
+    "Cowen2019"
+   ],
+   "strength": "B",
+   "craft_notes": "mixed/transition entries",
+   "used_in": "EMOTION_LIBRARY types",
+   "modules": [
+    "M20",
+    "M02"
+   ],
+   "origin": "ai-voice-director"
+  },
+  {
+   "id": "V010",
+   "claim": "Emotion models: circumplex (valence × arousal), PAD",
+   "sources": [
+    "Russell1980",
+    "Mehrabian1996"
+   ],
+   "strength": "B (theory)",
+   "craft_notes": "`vad` is a rough placement only",
+   "used_in": "EMOTION_LIBRARY",
+   "modules": [
+    "M20",
+    "M02"
+   ],
+   "origin": "ai-voice-director"
+  },
+  {
+   "id": "V011",
+   "claim": "English sarcasm: slower, lower, less F0 variation",
+   "sources": [
+    "CheangPell2008",
+    "Rockwell2000",
+    "BryantFoxTree2005"
+   ],
+   "strength": "B",
+   "craft_notes": "—",
+   "used_in": "sarcasm entries",
+   "modules": [
+    "M20",
+    "M02"
+   ],
+   "origin": "ai-voice-director"
+  },
+  {
+   "id": "V012",
+   "claim": "Sarcasm cues differ by language (Cantonese higher; Thai faster/higher/wider)",
+   "sources": [
+    "CheangPell2009",
+    "KumwapeeJitwiriyanont2020 (n = 4)"
+   ],
+   "strength": "C for Thai",
+   "craft_notes": "A/B test two readings",
+   "used_in": "sarcasm entries, PROSODY §4.7",
+   "modules": [
+    "M20",
+    "M02"
+   ],
+   "origin": "ai-voice-director"
+  },
+  {
+   "id": "V013",
+   "claim": "Accent marks new/contrastive information; de-accent given",
+   "sources": [
+    "Gussenhoven2002",
+    "Cutler1997",
+    "PierrehumbertHirschberg1990 (content not read)"
+   ],
+   "strength": "B",
+   "craft_notes": "—",
+   "used_in": "PROSODY §3.4",
+   "modules": [
+    "M20",
+    "M02"
+   ],
+   "origin": "ai-voice-director"
+  },
+  {
+   "id": "V014",
+   "claim": "Thai has 5 contrastive tones; tone must be preserved",
+   "sources": [
+    "TingsabadhAbramson1993",
+    "GandourEtAl1999",
+    "MorenZsiga2006"
+   ],
+   "strength": "A",
+   "craft_notes": "—",
+   "used_in": "THAI_PRONUNCIATION §2.1",
+   "modules": [
+    "M20",
+    "M02"
+   ],
+   "origin": "ai-voice-director"
+  },
+  {
+   "id": "V015",
+   "claim": "Thai tones stay distinct in fast/connected speech (reduced, not neutralised)",
+   "sources": [
+    "GandourEtAl1999",
+    "MorenZsiga2006 (abstract)"
+   ],
+   "strength": "B",
+   "craft_notes": "—",
+   "used_in": "PROSODY §4.1",
+   "modules": [
+    "M20",
+    "M02"
+   ],
+   "origin": "ai-voice-director"
+  },
+  {
+   "id": "V016",
+   "claim": "Pitch-peak timing is part of Thai tone identity",
+   "sources": [
+    "ZsigaNitisaroj2007"
+   ],
+   "strength": "B–C",
+   "craft_notes": "never ask for word-level rises",
+   "used_in": "PROSODY §4.2",
+   "modules": [
+    "M20",
+    "M02"
+   ],
+   "origin": "ai-voice-director"
+  },
+  {
+   "id": "V017",
+   "claim": "Thai attitude intonation sits on sentence-final particles",
+   "sources": [
+    "Pittayaporn2007 (fragments)",
+    "Jiamsundutsadee2023 (abstract)"
+   ],
+   "strength": "C",
+   "craft_notes": "strongly matches practice",
+   "used_in": "PROSODY §4.3",
+   "modules": [
+    "M20",
+    "M02"
+   ],
+   "origin": "ai-voice-director"
+  },
+  {
+   "id": "V018",
+   "claim": "Thai emphasis via duration on the final syllable",
+   "sources": [
+    "PotisukGandourHarper1996"
+   ],
+   "strength": "C",
+   "craft_notes": "—",
+   "used_in": "PROSODY §4.4",
+   "modules": [
+    "M20",
+    "M02"
+   ],
+   "origin": "ai-voice-director"
+  },
+  {
+   "id": "V019",
+   "claim": "Thai vowel length is contrastive; duration is the main cue",
+   "sources": [
+    "Abramson1993ASA",
+    "Maspong2025"
+   ],
+   "strength": "B",
+   "craft_notes": "stretch proportionally",
+   "used_in": "THAI §2.2",
+   "modules": [
+    "M20",
+    "M02"
+   ],
+   "origin": "ai-voice-director"
+  },
+  {
+   "id": "V020",
+   "claim": "Spoken readings differ from spelling (เขา high, ฉัน high, r→l)",
+   "sources": [
+    "IwasakiIngkaphirom2005 (front matter)"
+   ],
+   "strength": "B",
+   "craft_notes": "dictionary `style: casual`",
+   "used_in": "PRONUNCIATION_DICTIONARY",
+   "modules": [
+    "M20",
+    "M02"
+   ],
+   "origin": "ai-voice-director"
+  },
+  {
+   "id": "V021",
+   "claim": "ค่ะ/คะ errors common after นะ in written scripts",
+   "sources": [
+    "Tiratanti2022"
+   ],
+   "strength": "C",
+   "craft_notes": "spelling check step",
+   "used_in": "THAI §1",
+   "modules": [
+    "M20",
+    "M02"
+   ],
+   "origin": "ai-voice-director"
+  },
+  {
+   "id": "V022",
+   "claim": "English loanword tones (CVN mid, CVN+stop high; RI spelling hides tones)",
+   "sources": [
+    "Gandour1979",
+    "KenstowiczSuchato2006",
+    "Sirikanerat2015",
+    "Kanchanawan2006"
+   ],
+   "strength": "B–C",
+   "craft_notes": "spell brands as said",
+   "used_in": "dictionary",
+   "modules": [
+    "M20",
+    "M02"
+   ],
+   "origin": "ai-voice-director"
+  },
+  {
+   "id": "V023",
+   "claim": "Thai TTS weak on numbers & code-switching → normalise",
+   "sources": [
+    "Lin2014",
+    "JaiTTS2026",
+    "Geng2025"
+   ],
+   "strength": "B",
+   "craft_notes": "thai_normalize.py",
+   "used_in": "THAI §2.7",
+   "modules": [
+    "M20",
+    "M02"
+   ],
+   "origin": "ai-voice-director"
+  },
+  {
+   "id": "V024",
+   "claim": "Thai number reading (เอ็ด, ยี่สิบ, decimals digit-by-digit, money units)",
+   "sources": [
+    "ThaiNumberReading_Textbook (secondary)"
+   ],
+   "strength": "C (RI rule page not found)",
+   "craft_notes": "tested in run_tests.py",
+   "used_in": "thai_normalize.py",
+   "modules": [
+    "M20",
+    "M02"
+   ],
+   "origin": "ai-voice-director"
+  },
+  {
+   "id": "V025",
+   "claim": "Even validated acted emotion is recognised ≈ 60 % audio-only",
+   "sources": [
+    "Livingstone2018"
+   ],
+   "strength": "B",
+   "craft_notes": "support emotion with picture/words",
+   "used_in": "PROSODY §3.9, QC",
+   "modules": [
+    "M20",
+    "M02"
+   ],
+   "origin": "ai-voice-director"
+  },
+  {
+   "id": "V026",
+   "claim": "Thai acted emotions: native listener agreement ≈ 0.77 after filtering",
+   "sources": [
+    "WongpithayadisaiEtAl2025"
+   ],
+   "strength": "B",
+   "craft_notes": "context matters",
+   "used_in": "QC",
+   "modules": [
+    "M20",
+    "M02"
+   ],
+   "origin": "ai-voice-director"
+  },
+  {
+   "id": "V027",
+   "claim": "Gemini TTS: style field + inline tags; ≤ 2 speakers; Thai on 3.8 Flash not Flash-Lite",
+   "sources": [
+    "GeminiTTSDocs (2026-11-24)"
+   ],
+   "strength": "B (vendor doc, changes often)",
+   "craft_notes": "re-check model list",
+   "used_in": "ADAPTERS §1",
+   "modules": [
+    "M20",
+    "M02"
+   ],
+   "origin": "ai-voice-director"
+  },
+  {
+   "id": "V028",
+   "claim": "Some style tags are spoken aloud",
+   "sources": [
+    "Google-CloudGeminiTTS",
+    "EL-Controls"
+   ],
+   "strength": "B",
+   "craft_notes": "QC listens for it; ASR catches inserted words",
+   "used_in": "QC, ADAPTERS",
+   "modules": [
+    "M20",
+    "M02"
+   ],
+   "origin": "ai-voice-director"
+  },
+  {
+   "id": "V029",
+   "claim": "SSML prosody/break/emphasis/phoneme semantics",
+   "sources": [
+    "W3C_SSML11 (full text)"
+   ],
+   "strength": "A (standard)",
+   "craft_notes": "engine support varies",
+   "used_in": "ADAPTERS §2",
+   "modules": [
+    "M20",
+    "M02"
+   ],
+   "origin": "ai-voice-director"
+  },
+  {
+   "id": "V030",
+   "claim": "Azure express-as styles & styledegree; th-TH HD voice styles",
+   "sources": [
+    "Azure-SSMLVoice",
+    "Azure-LangSupport"
+   ],
+   "strength": "B",
+   "craft_notes": "—",
+   "used_in": "ADAPTERS §2",
+   "modules": [
+    "M20",
+    "M02"
+   ],
+   "origin": "ai-voice-director"
+  },
+  {
+   "id": "V031",
+   "claim": "Stochastic TTS gives different rhythm per take → re-roll",
+   "sources": [
+    "Kim2021",
+    "EL-Settings"
+   ],
+   "strength": "B",
+   "craft_notes": "2–4 takes",
+   "used_in": "ADAPTERS §4",
+   "modules": [
+    "M20",
+    "M02"
+   ],
+   "origin": "ai-voice-director"
+  },
+  {
+   "id": "V032",
+   "claim": "Exaggerate slightly for animated characters",
+   "sources": [
+    "Schroder2001 (citing Bates 1994)"
+   ],
+   "strength": "C",
+   "craft_notes": "cartoon display rule",
+   "used_in": "PROSODY §3.8",
+   "modules": [
+    "M20",
+    "M02"
+   ],
+   "origin": "ai-voice-director"
+  },
+  {
+   "id": "V033",
+   "claim": "GeMAPS parameter definitions (F0 st, jitter, shimmer, HNR, alpha ratio, Hammarberg)",
+   "sources": [
+    "Eyben2016 (full text)"
+   ],
+   "strength": "A (standard set)",
+   "craft_notes": "—",
+   "used_in": "AUDIO_ANALYSIS",
+   "modules": [
+    "M20",
+    "M02"
+   ],
+   "origin": "ai-voice-director"
+  },
+  {
+   "id": "V034",
+   "claim": "Jitter/shimmer/HNR meant for sustained vowels",
+   "sources": [
+    "Praat-Manual"
+   ],
+   "strength": "B",
+   "craft_notes": "indicators only",
+   "used_in": "AUDIO_ANALYSIS",
+   "modules": [
+    "M20",
+    "M02"
+   ],
+   "origin": "ai-voice-director"
+  },
+  {
+   "id": "V035",
+   "claim": "MOS from different sessions is not comparable",
+   "sources": [
+    "ITU-T-P800.2 (via Wiki-MOS",
+    "secondary)"
+   ],
+   "strength": "C",
+   "craft_notes": "compare takes in one session",
+   "used_in": "QC",
+   "modules": [
+    "M20",
+    "M02"
+   ],
+   "origin": "ai-voice-director"
+  },
+  {
+   "id": "V036",
+   "claim": "Automatic MOS predictors correlate well at system level, only fairly per utterance",
+   "sources": [
+    "Lo2019",
+    "Saeki2022 (abstracts)"
+   ],
+   "strength": "C",
+   "craft_notes": "not used for pass/fail",
+   "used_in": "QC",
+   "modules": [
+    "M20",
+    "M02"
+   ],
+   "origin": "ai-voice-director"
+  },
+  {
+   "id": "V037",
+   "claim": "ASR (Whisper) usable as an intelligibility screen",
+   "sources": [
+    "Radford2022 (abstract)"
+   ],
+   "strength": "C",
+   "craft_notes": "CER after normalisation; confirm by ear",
+   "used_in": "qc.py",
+   "modules": [
+    "M20",
+    "M02"
+   ],
+   "origin": "ai-voice-director"
+  },
+  {
+   "id": "V038",
+   "claim": "Politeness / face as the reason for hedges and krengjai",
+   "sources": [
+    "BrownLevinson1987 (bibliographic)"
+   ],
+   "strength": "C (not read)",
+   "craft_notes": "Thai krengjai = cultural craft",
+   "used_in": "krengjai entries",
+   "modules": [
+    "M20",
+    "M02"
+   ],
+   "origin": "ai-voice-director"
+  },
+  {
+   "id": "V039",
+   "claim": "Script analysis (given circumstances, objective, subtext)",
+   "sources": [
+    "—"
+   ],
+   "strength": "D",
+   "craft_notes": "Stanislavski tradition; Alburger2024 (voice acting practice)",
+   "used_in": "SCRIPT_ANALYSIS",
+   "modules": [
+    "M20",
+    "M02"
+   ],
+   "origin": "ai-voice-director"
+  },
+  {
+   "id": "V040",
+   "claim": "Transition rules (trigger, breath before the change, one change per TTS unit)",
+   "sources": [
+    "—"
+   ],
+   "strength": "D",
+   "craft_notes": "craft + TTS practice",
+   "used_in": "EMOTION_TRANSITIONS",
+   "modules": [
+    "M20",
+    "M02"
+   ],
+   "origin": "ai-voice-director"
+  },
+  {
+   "id": "V041",
+   "claim": "Character consistency rules, voice bible",
+   "sources": [
+    "—"
+   ],
+   "strength": "D",
+   "craft_notes": "industry practice",
+   "used_in": "CHARACTER_VOICE_BIBLE",
+   "modules": [
+    "M20",
+    "M02"
+   ],
+   "origin": "ai-voice-director"
+  },
+  {
+   "id": "V042",
+   "claim": "Pause durations (micro/breath/dramatic)",
+   "sources": [
+    "—"
+   ],
+   "strength": "D",
+   "craft_notes": "working values",
+   "used_in": "PROSODY §2",
+   "modules": [
+    "M20",
+    "M02"
+   ],
+   "origin": "ai-voice-director"
+  },
+  {
+   "id": "V043",
+   "claim": "Relative-label thresholds in analyze_audio.py",
+   "sources": [
+    "—"
+   ],
+   "strength": "D",
+   "craft_notes": "chosen for this skill; tune with experience",
+   "used_in": "AUDIO_ANALYSIS §2",
+   "modules": [
+    "M20",
+    "M02"
+   ],
+   "origin": "ai-voice-director"
+  },
+  {
+   "id": "V044",
+   "claim": "100-point rubric weights and the 90 bar",
+   "sources": [
+    "—"
+   ],
+   "strength": "D",
+   "craft_notes": "the user's specification",
+   "used_in": "QUALITY_CONTROL",
+   "modules": [
+    "M20",
+    "M02"
+   ],
+   "origin": "ai-voice-director"
+  },
+  {
+   "id": "P2-001",
+   "claim": "Fear appeals work on average (d≈0.29, 127 papers) and work clearly better when paired with an efficacy message (how to act, that it works). Contrary to the popular rule, low-efficacy fear appeals did NOT backfire on average (significant negative effects 9/154 vs 3/94 studies); high fear did no better than moderate fear (d=0.02). Witte1992 predicts avoidance under high threat + low efficacy, but that is a theory proposition.",
+   "sources": [
+    "Tannenbaum2015",
+    "Witte1992"
+   ],
+   "strength": "A (Tannenbaum2015 read via the full dissertation version, same data; Witte1992 abstract only)",
+   "craft_notes": "Still pair risk with an easy action (it raises effect); use moderate, not extreme, fear; never exaggerate the risk (ethics + FACT_CHECK_WORKFLOW).",
+   "modules": [
+    "M01"
+   ],
+   "used_in": "knowledge/psychology 2.12",
+   "origin": "ci:P2, corrected U3 2026-11-25"
+  },
+  {
+   "id": "P2-002",
+   "claim": "Curiosity is an inverted-U of confidence: highest when people feel about 50% sure",
+   "sources": [
+    "Kang2009"
+   ],
+   "strength": "B (one study, full text checked 2026-11-25)",
+   "craft_notes": "hooks that pose a question the viewer half-knows",
+   "modules": [
+    "M01"
+   ],
+   "used_in": "knowledge/psychology",
+   "origin": "ci:P2"
+  },
+  {
+   "id": "P2-003",
+   "claim": "Facial-expression models differ across cultures; inner emotion cannot be read from a face alone",
+   "sources": [
+    "Jack2012",
+    "Barrett2019"
+   ],
+   "strength": "A",
+   "craft_notes": "direct emotion with context + action + voice, never face only",
+   "modules": [
+    "M02"
+   ],
+   "used_in": "knowledge/emotions 2.10",
+   "origin": "ci:P2"
+  },
+  {
+   "id": "P2-004",
+   "claim": "Audio may lag picture slightly but must not lead it (broadcast tolerance about +45 ms lead / -125 ms lag)",
+   "sources": [
+    "ITU-BT1359"
+   ],
+   "strength": "S (standard)",
+   "craft_notes": "SFX/lip-sync: never early; up to ~1 frame late is safe",
+   "modules": [
+    "M04"
+   ],
+   "used_in": "knowledge/cognitive-science 2.12",
+   "origin": "ci:P2"
+  },
+  {
+   "id": "P2-005",
+   "claim": "Narration + identical on-screen text costs very little (redundancy effect small); condensed keywords help",
+   "sources": [
+    "Mayer2023",
+    "Adesope2012"
+   ],
+   "strength": "B",
+   "craft_notes": "subtitles OK on story clips; extra headline 1-4 keywords",
+   "modules": [
+    "M04"
+   ],
+   "used_in": "knowledge/cognitive-science 2.7-2.8",
+   "origin": "ci:P2"
+  },
+  {
+   "id": "P2-006",
+   "claim": "Working memory holds about 4 chunks",
+   "sources": [
+    "Cowan2001"
+   ],
+   "strength": "A",
+   "craft_notes": "derived rule: ~4 meaning units per slide (heuristic, not tested here)",
+   "modules": [
+    "M04"
+   ],
+   "used_in": "knowledge/cognitive-science 2.4",
+   "origin": "ci:P2"
+  },
+  {
+   "id": "P2-007",
+   "claim": "Many popular quotes attributed to Buddha, Lao Tzu, Marcus Aurelius, Seneca, Frankl are misattributed",
+   "sources": [
+    "FBQ_Site",
+    "WQ_Buddha",
+    "WQ_Laozi",
+    "WQ_Marcus",
+    "WQ_Seneca",
+    "WQ_Epictetus"
+   ],
+   "strength": "C-D (quote-checking sites)",
+   "craft_notes": "use only lines from the genuine list; else write it as the character's own words",
+   "modules": [
+    "M03"
+   ],
+   "used_in": "knowledge/philosophy misattributed list",
+   "origin": "ci:P2"
+  },
+  {
+   "id": "VA-001",
+   "claim": "Colour-psychology effects are small or unreliable: red before a cognitive test has ~no effect after bias correction; red-attractiveness is small (d≈0.13–0.26) and shrinking. Write 'often associated with', never 'makes people…'.",
+   "sources": [
+    "Gnambs2020",
+    "Lehmann2018",
+    "Elliot2015"
+   ],
+   "strength": "strong (meta-analyses)",
+   "craft_notes": "Colour meaning still matters as convention and context; it is just not a reliable causal lever.",
+   "modules": [
+    "M09",
+    "M05"
+   ],
+   "used_in": [
+    "ai-visual-artist"
+   ],
+   "origin": "VA1 2026-11-25"
+  },
+  {
+   "id": "VA-002",
+   "claim": "Hue-harmony templates (complementary, triadic…) are not a quality rule: across >2 million user palettes people did not gravitate to them and template fit did not predict ratings; lightness contrast and hue similarity mattered more.",
+   "sources": [
+    "ODonovan2011",
+    "Ou2011_Additivity"
+   ],
+   "strength": "moderate",
+   "craft_notes": "Templates stay useful as starting points (CRAFT).",
+   "modules": [
+    "M09",
+    "M06"
+   ],
+   "used_in": [
+    "ai-visual-artist"
+   ],
+   "origin": "VA1 2026-11-25"
+  },
+  {
+   "id": "VA-003",
+   "claim": "People prefer curved over angular contours on average (meta-analysis g=0.39); the 'angular = danger' link shows mainly in implicit tests; 'square = stable' has no evidence.",
+   "sources": [
+    "Chuquichambi2022",
+    "BarNeta2006",
+    "Bertamini2016",
+    "PalumboRutaBertamini2015"
+   ],
+   "strength": "strong for curvature preference; weak for specific shape meanings",
+   "craft_notes": "Use round shapes for warm/safe characters (Mint & Tao); angular for tension — as tendency, not law.",
+   "modules": [
+    "M07",
+    "M15",
+    "M05"
+   ],
+   "used_in": [
+    "ai-visual-artist"
+   ],
+   "origin": "VA1 2026-11-25"
+  },
+  {
+   "id": "VA-004",
+   "claim": "Close camera distance (≈45 cm vs 135 cm) changes face proportions and lowers trust/attractiveness ratings — a camera-distance effect, not a lens effect.",
+   "sources": [
+    "BryanPeronaAdolphs2012",
+    "CooperPiazzaBanks2012"
+   ],
+   "strength": "moderate (single lab, full text read)",
+   "craft_notes": "Product/people portraits: step back and use a longer focal length for flattering faces.",
+   "modules": [
+    "M18",
+    "M07"
+   ],
+   "used_in": [
+    "ai-visual-artist"
+   ],
+   "origin": "VA1 2026-11-25"
+  },
+  {
+   "id": "VA-005",
+   "claim": "Luminance contrast outweighs chroma for pulling the eye: in our controlled grade test darkening the surround raised focal saliency +0.24 vs desaturating +0.05 (one image, model saliency).",
+   "sources": [
+    "Itti1998"
+   ],
+   "strength": "internal test (VA-002), weak alone",
+   "craft_notes": "Fix order: crop/remove competitor > darken surround > desaturate.",
+   "modules": [
+    "M08",
+    "M35"
+   ],
+   "used_in": [
+    "ai-visual-artist"
+   ],
+   "origin": "VA1 2026-11-25"
+  },
+  {
+   "id": "T1-001",
+   "claim": "The '8-second / goldfish' attention span figure has no traceable research source.",
+   "sources": [
+    "Maybin2017_BBC"
+   ],
+   "strength": "moderate (secondary)",
+   "craft_notes": "Never cite attention-span numbers; use our own Insights.",
+   "modules": [
+    "M28"
+   ],
+   "used_in": [
+    "master-creative-director"
+   ],
+   "origin": "T1 2026-11-25"
+  },
+  {
+   "id": "T1-002",
+   "claim": "Clickbait headlines did not raise curiosity or clicks over plain headlines in controlled experiments.",
+   "sources": [
+    "Molina2021"
+   ],
+   "strength": "moderate (one paper, 2 studies)",
+   "craft_notes": "Hooks should promise what the clip delivers.",
+   "modules": [
+    "M28",
+    "M29"
+   ],
+   "used_in": [
+    "master-creative-director"
+   ],
+   "origin": "T1 2026-11-25"
+  },
+  {
+   "id": "T1-003",
+   "claim": "Scheduled 20-second breaks during 40-min tablet reading did not reduce symptoms (small study); 20-20-20 is advice, not proven treatment.",
+   "sources": [
+    "Johnson2023OVS"
+   ],
+   "strength": "weak-moderate (n=30)",
+   "craft_notes": "Say 'พักสายตาช่วยให้สบายขึ้นได้' not 'ป้องกัน/รักษา'.",
+   "modules": [
+    "M43"
+   ],
+   "used_in": [
+    "master-creative-director"
+   ],
+   "origin": "T1 2026-11-25"
+  },
+  {
+   "id": "T1-004",
+   "claim": "UV-B exposure is associated with cortical cataract in most epidemiologic studies.",
+   "sources": [
+    "UVCataractReview2002"
+   ],
+   "strength": "moderate (review of 22 studies, association)",
+   "craft_notes": "Say 'ลดความเสี่ยง', never 'ป้องกันต้อ'.",
+   "modules": [
+    "M43"
+   ],
+   "used_in": [
+    "master-creative-director"
+   ],
+   "origin": "T1 2026-11-25"
+  },
+  {
+   "id": "T1-005",
+   "claim": "Generational differences in work attitudes are small to near zero in meta-analysis; avoid generation stereotypes.",
+   "sources": [
+    "Costanza2012"
+   ],
+   "strength": "moderate",
+   "craft_notes": "Segment by real audience data, not by age labels.",
+   "modules": [
+    "M28"
+   ],
+   "used_in": [
+    "master-creative-director"
+   ],
+   "origin": "T1 2026-11-25"
+  }
+ ]
+}

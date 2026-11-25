@@ -1,0 +1,192 @@
+{
+ "schema_version": "1.0",
+ "id": "real_test_golden_glasses",
+ "intent": {
+  "purpose": "story_frame",
+  "audience": "IG/TikTok followers of the ร้านแว่นตีสอง cartoon, Thai, phone viewing",
+  "message": "The grandmother's gold glasses wait on the counter at 2 a.m. — someone will come back for them.",
+  "story_context": "ร้านแว่นตีสอง EP01: a ghost grandma's cracked gold-rimmed glasses were never picked up; the young optician repairs them overnight.",
+  "scene_objective": "Insert shot that makes the glasses the emotional object of the episode.",
+  "subtext": "waiting, a promise kept across years",
+  "constraints": [
+   "no text in the image",
+   "headline space in the top area for the HTML layer",
+   "no people"
+  ]
+ },
+ "format": {
+  "aspect": "4:5",
+  "width": 896,
+  "height": 1120,
+  "text_layer": "html_overlay"
+ },
+ "direction": {
+  "emotion": "nostalgia.longing",
+  "emotion_intensity": 0.6,
+  "style": "storybook_gouache",
+  "visual_metaphor": "a pair of glasses waiting like a person waits",
+  "mood_words": [
+   "quiet",
+   "tender",
+   "late night"
+  ]
+ },
+ "blueprint": {
+  "composition": "negative_space",
+  "primary_focal_point": {
+   "what": "a pair of small round gold-rimmed reading glasses, folded, resting on an old wooden shop counter in a pool of warm light that falls from outside the picture",
+   "where": "lower half, slightly right of centre",
+   "how_emphasised": "brightest highlight and warmest colour in the frame, sharpest detail"
+  },
+  "secondary_focal_point": {
+   "what": "a small paper envelope with a yellowed edge beside the glasses",
+   "where": "left of the glasses, slightly behind"
+  },
+  "viewing_path": [
+   "gold glasses in the pool of warm light",
+   "yellowed envelope",
+   "dark glass cabinets fading into blue night"
+  ],
+  "balance": "asymmetrical",
+  "subject_placement": "glasses in the lower half just right of centre, warm light falling from the upper right",
+  "depth_layers": {
+   "foreground": "edge of the wooden counter, softly out of focus",
+   "midground": "the glasses and the envelope on the counter",
+   "background": "old glass display cabinets full of frames, dim and blue, with a wall clock"
+  },
+  "negative_space": "the top third of the picture is a plain dark wooden wall",
+  "cropping": "counter fills the lower 45 %; the light source stays outside the picture",
+  "camera": {
+   "shot_size": "insert",
+   "angle": "high",
+   "lens_mm": 50,
+   "depth_of_field": "shallow"
+  },
+  "value_plan": "low key: 70 % dark blue-brown masses, a single bright pool of warm light on the glasses"
+ },
+ "palette": {
+  "id": "pal.night_optic_amber_lamp",
+  "proportion": "≈ 70 dark night blues / 20 warm wood / 10 gold-amber highlight",
+  "temperature": "warm_cool_contrast"
+ },
+ "lighting": {
+  "id": "practical_lamp",
+  "key_direction": "from the upper right, out of frame",
+  "quality": "soft",
+  "color_temperature_k": 2700,
+  "notes": "cool blue moonlight from the shop window as fill on the far cabinets"
+ },
+ "environment": "the inside of an old wooden two-storey shophouse optician shop in Bangkok at 2 a.m.",
+ "prompt": {
+  "provider": "flux_local",
+  "seed": 11,
+  "steps": 4,
+  "avoid": "the image has no letters, no signs and no people; the glasses have exactly two round lenses joined by one thin bridge"
+ },
+ "outputs": [
+  {
+   "path": "tests/real/golden_v1-1.png",
+   "generated_by": "flux_local v1"
+  },
+  {
+   "path": "tests/real/golden_v1-2.png",
+   "generated_by": "flux_local v1"
+  },
+  {
+   "path": "tests/real/golden_v1-3.png",
+   "generated_by": "flux_local v1"
+  },
+  {
+   "path": "tests/real/golden_v2-1.png",
+   "generated_by": "flux_local v2 (illustration camera wording)"
+  },
+  {
+   "path": "tests/real/golden_v2-2.png",
+   "generated_by": "flux_local v2 (illustration camera wording)"
+  },
+  {
+   "path": "tests/real/golden_v3-1.png",
+   "generated_by": "flux_local v3 (light from outside the picture; \"no lamp\" wording)"
+  },
+  {
+   "path": "tests/real/golden_v3-2.png",
+   "generated_by": "flux_local v3 (light from outside the picture; \"no lamp\" wording)"
+  },
+  {
+   "path": "tests/real/golden_v4-1.png",
+   "generated_by": "flux_local v4 (every lamp word removed)"
+  },
+  {
+   "path": "tests/real/golden_v4-2.png",
+   "generated_by": "flux_local v4 (every lamp word removed)"
+  },
+  {
+   "path": "tests/real/golden_v5.png",
+   "selected": true,
+   "generated_by": "v4-1 + post: window darkened/desaturated (radial), fake signature inpainted (cv2)"
+  }
+ ],
+ "critique": [
+  {
+   "area": "hierarchy",
+   "where": "top-left window with the moon (x 0.27, y 0.25)",
+   "problem": "v4-1: the moonlit window was the most salient element (saliency 0.98), competing with the glasses",
+   "severity": "major",
+   "likely_cause": "cool-bright window + full moon = strongest local contrast",
+   "fix": "darken and desaturate the window area (done in v5: glasses become peaks 1–2)",
+   "side_effects": "less blue/warm contrast; keep a little blue so the night still reads"
+  },
+  {
+   "area": "storytelling",
+   "where": "counter, left of the glasses",
+   "problem": "the yellowed envelope (secondary focal point, story clue) is missing in every take",
+   "severity": "major",
+   "likely_cause": "build_prompt.py dropped the secondary sentence (priority 4) to fit the word budget",
+   "fix": "raise secondary focal point to priority 2 (fixed in build_prompt.py) and regenerate, or composite an envelope layer",
+   "side_effects": "longer prompt; may pull attention from the glasses — keep it smaller and darker"
+  },
+  {
+   "area": "art_style",
+   "where": "whole image",
+   "problem": "reads as painterly digital illustration / anime background rather than gouache storybook",
+   "severity": "minor",
+   "likely_cause": "FLUX default painterly look; gouache texture words weakly followed",
+   "fix": "add paper texture overlay in HTML, or try storybook_gouache with img2img from a gouache texture plate",
+   "side_effects": "texture may lower lens clarity"
+  },
+  {
+   "area": "composition",
+   "where": "glasses at x 0.37–0.56",
+   "problem": "glasses sit centre-left, not right of centre as planned",
+   "severity": "polish",
+   "likely_cause": "models centre subjects; placement words are weak",
+   "fix": "accept (centre is a strong default — PalmerLab-Spatial) or crop 6 % from the left",
+   "side_effects": "crop removes some window"
+  },
+  {
+   "area": "artifacts",
+   "where": "lower-left counter edge (x 0.02, y 0.74)",
+   "problem": "v4-1 had a tiny fake signature scribble",
+   "severity": "minor",
+   "likely_cause": "FLUX hallucinated signature",
+   "fix": "inpainted in v5",
+   "side_effects": "none visible"
+  }
+ ],
+ "score": {
+  "weights_profile": "story_frame",
+  "criteria": {
+   "composition": 8,
+   "color_harmony": 9,
+   "lighting": 8,
+   "visual_hierarchy": 9,
+   "emotional_impact": 8,
+   "storytelling": 6,
+   "art_style": 7,
+   "technical_accuracy": 9,
+   "originality": 6,
+   "finishing": 8
+  },
+  "rater": "claude (provisional AI judgement, no viewer test)"
+ }
+}

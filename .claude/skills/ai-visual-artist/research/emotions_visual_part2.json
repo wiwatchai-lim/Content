@@ -1,0 +1,6115 @@
+[
+ {
+  "id": "nostalgia.nostalgia",
+  "name_en": "Nostalgia",
+  "name_th": "คิดถึงวันวาน",
+  "core_read": "Warm, slightly faded memory of a past that feels safer than now; pleasure with a soft ache.",
+  "approaches": [
+   {
+    "name": "Faded keepsake still life",
+    "composition_ids": [
+     "flatlay_grid",
+     "layered_depth"
+    ],
+    "palette_direction": "Sun-faded warm neutrals with lifted blacks: cream #EFE3C8, faded ochre #C9A46A, dusty teal #6E8E88, sepia brown #7A5A3C",
+    "lighting_ids": [
+     "window_side",
+     "golden_hour"
+    ],
+    "camera_angle": "top-down",
+    "camera_distance": "close-up",
+    "character_expression": "No face; or a face only inside an old photo on the table",
+    "body_language": "A hand entering frame to touch a photo corner",
+    "environment": "Wooden table with old photos, a cassette, a school badge, a pair of old round frames",
+    "negative_space": "Wide margin of bare tabletop around the cluster",
+    "texture": "Paper grain, scratched print emulsion, light dust",
+    "visual_metaphor": "Objects as preserved time",
+    "symbolism": "Old photo = a moment kept; worn edges = years handled",
+    "style_ids_that_fit": [
+     "analog_film_35mm",
+     "polaroid_instant",
+     "photoreal_lifestyle"
+    ]
+   },
+   {
+    "name": "Remembered street at dusk",
+    "composition_ids": [
+     "leading_lines",
+     "low_horizon"
+    ],
+    "palette_direction": "Golden-orange haze over cool shadows: amber #E8A04C, rose #D98C7A, slate blue #4F6275",
+    "lighting_ids": [
+     "golden_hour",
+     "sunset_rim_warm_cool"
+    ],
+    "camera_angle": "eye-level",
+    "camera_distance": "wide",
+    "character_expression": "Figure seen from behind, face unreadable",
+    "body_language": "Standing still while others blur past, hands in pockets",
+    "environment": "Old shophouse soi, a closed noodle stall, a bicycle",
+    "negative_space": "Large glowing sky above the roofline",
+    "texture": "Soft bloom, gentle grain, halation on highlights",
+    "visual_metaphor": "The present self standing in the past",
+    "symbolism": "Low sun = something ending; shuttered shop = what is gone",
+    "style_ids_that_fit": [
+     "anime_painterly_bg",
+     "impressionism",
+     "cinematic_realism"
+    ]
+   },
+   {
+    "name": "Double memory overlay",
+    "composition_ids": [
+     "split_screen",
+     "figure_ground"
+    ],
+    "palette_direction": "Two-temperature duotone: present cool grey #8C9399, past warm sepia #B08860, shared cream #F2E8D5",
+    "lighting_ids": [
+     "overcast_soft",
+     "storybook_soft_glow"
+    ],
+    "camera_angle": "eye-level",
+    "camera_distance": "medium",
+    "character_expression": "Adult with soft, inward gaze, small half-smile",
+    "body_language": "Head tilted, looking at a child version of self in the overlay",
+    "environment": "Present room fading into a childhood room",
+    "negative_space": "Quiet blank wall carrying the overlaid image",
+    "texture": "Smooth present, grainy past",
+    "visual_metaphor": "Then and now sharing one body",
+    "symbolism": "Child figure = innocence; matching pose = continuity",
+    "style_ids_that_fit": [
+     "double_exposure",
+     "pencil_sketch_loose",
+     "watercolor_loose"
+    ]
+   }
+  ],
+  "contrast_levers": "Warm vs cool temperature split; sharp present vs soft/grainy past; saturation lower in the memory layer.",
+  "cultural_notes": "Thai nostalgia often reads through school uniforms, old shophouses, Thai-Chinese cafe tins, cassette/VCD era objects, 90s TV. Colour meanings depend on context (ElliotMaier2014).",
+  "cliches_to_avoid": [
+   "Generic sepia filter on everything",
+   "Vinyl record + typewriter stock set",
+   "Floating photos in the sky"
+  ],
+  "ai_mistakes": [
+   "Fake film borders with random text",
+   "Modern phones sneaking into a 'past' scene",
+   "Over-orange grade that kills skin tones"
+  ],
+  "eyewear_angle": "Old round frames among the keepsakes beside a modern Time Optic frame: 'the way you see changes, the memories stay'.",
+  "refs": [
+   "ElliotMaier2014",
+   "Gurney2010",
+   "Block2008",
+   "Artistic"
+  ],
+  "evidence": "craft"
+ },
+ {
+  "id": "nostalgia.longing",
+  "name_en": "Longing",
+  "name_th": "โหยหา",
+  "core_read": "Reaching toward something absent or far away; the gap itself is the subject.",
+  "approaches": [
+   {
+    "name": "Window gap",
+    "composition_ids": [
+     "frame_within_frame",
+     "negative_space"
+    ],
+    "palette_direction": "Cool interior blue-grey #3E4A57 against a warm distant light #F0B36B",
+    "lighting_ids": [
+     "window_side",
+     "blue_hour"
+    ],
+    "camera_angle": "eye-level",
+    "camera_distance": "medium",
+    "character_expression": "Eyes fixed beyond the glass, lips slightly parted",
+    "body_language": "Palm resting flat on the glass, body leaning toward it",
+    "environment": "Dim room, rain-specked window, distant lit city or village",
+    "negative_space": "The window space between figure and light",
+    "texture": "Condensation, soft rain streaks",
+    "visual_metaphor": "Glass = an invisible wall to what is wanted",
+    "symbolism": "Distant warm light = the thing longed for",
+    "style_ids_that_fit": [
+     "cinematic_realism",
+     "anime_painterly_bg",
+     "watercolor_loose"
+    ]
+   },
+   {
+    "name": "Small figure, far horizon",
+    "composition_ids": [
+     "low_horizon",
+     "scale_contrast"
+    ],
+    "palette_direction": "Pale washed sea and sky: mist #D7DEE0, sea grey #8FA3A8, a single small coral point #E07A5F",
+    "lighting_ids": [
+     "overcast_soft",
+     "fog_atmospheric"
+    ],
+    "camera_angle": "low angle",
+    "camera_distance": "extreme wide",
+    "character_expression": "Too small to read; posture carries it",
+    "body_language": "Standing at the edge of a pier, one foot forward",
+    "environment": "Empty pier into mist, a faint boat at the horizon",
+    "negative_space": "Huge empty sky and water",
+    "texture": "Soft atmospheric gradient",
+    "visual_metaphor": "Distance made physical",
+    "symbolism": "Departing boat = someone gone; pier end = the limit of reach",
+    "style_ids_that_fit": [
+     "romanticism_landscape",
+     "ink_brush_sumi_e",
+     "minimalism"
+    ]
+   },
+   {
+    "name": "Empty object close-up",
+    "composition_ids": [
+     "subject_isolation",
+     "asymmetrical_balance"
+    ],
+    "palette_direction": "Muted dusk lilac #9A8FA8, cold white #EDEFF2, one warm object #C98B5A",
+    "lighting_ids": [
+     "practical_lamp",
+     "low_key"
+    ],
+    "camera_angle": "high angle",
+    "camera_distance": "close-up",
+    "character_expression": "No face",
+    "body_language": "Absent person implied by objects",
+    "environment": "A second cup, a folded jacket on a chair, phone with an unanswered thread (no readable text)",
+    "negative_space": "Dark surrounding the lit object",
+    "texture": "Fabric folds, ceramic glaze",
+    "visual_metaphor": "What remains standing for who is missing",
+    "symbolism": "Second cup = an empty place",
+    "style_ids_that_fit": [
+     "photoreal_lifestyle",
+     "charcoal_expressive",
+     "colored_pencil"
+    ]
+   }
+  ],
+  "contrast_levers": "Near (dark, cool) vs far (lit, warm); scale of figure vs space; one warm accent in a cool field.",
+  "cultural_notes": "Long-distance family (work in Bangkok vs hometown in Isan) is a strong Thai longing theme; avoid cliché farewell-at-bus-station unless intended. Colour meanings depend on context (ElliotMaier2014).",
+  "cliches_to_avoid": [
+   "Hand reaching toward the moon",
+   "Tear on cheek at the window",
+   "Heart-shaped condensation"
+  ],
+  "ai_mistakes": [
+   "Both figures visible, which kills the absence",
+   "Window reflections that don't match the room",
+   "Readable fake chat text on phones"
+  ],
+  "eyewear_angle": "Subtle: reflection of the distant light in a lens; tagline about seeing clearly what matters. Keep low-key, not a hard sell.",
+  "refs": [
+   "Arnheim1974",
+   "Block2008",
+   "Artistic"
+  ],
+  "evidence": "craft"
+ },
+ {
+  "id": "vulnerable.vulnerability",
+  "name_en": "Vulnerability",
+  "name_th": "ความเปราะบาง",
+  "core_read": "Exposed, unguarded, without armour; the viewer is trusted with something fragile.",
+  "approaches": [
+   {
+    "name": "Bare close portrait",
+    "composition_ids": [
+     "center",
+     "subject_isolation"
+    ],
+    "palette_direction": "Soft unretouched skin tones on pale neutral: bone #EDE6DC, skin warm #D9B59A, shadow taupe #8C7B70",
+    "lighting_ids": [
+     "overcast_soft",
+     "key_fill_soft"
+    ],
+    "camera_angle": "eye-level",
+    "camera_distance": "extreme close-up",
+    "character_expression": "Eyes open and direct but not defiant, slight tension at the brow",
+    "body_language": "Shoulders bare or soft-collared, chin slightly down",
+    "environment": "Plain backdrop",
+    "negative_space": "Minimal background, face fills frame",
+    "texture": "Visible skin texture, pores, a stray hair",
+    "visual_metaphor": "Being seen without a mask",
+    "symbolism": "Nothing to hide behind",
+    "style_ids_that_fit": [
+     "photoreal_lifestyle",
+     "documentary_photo",
+     "pencil_graphite_realistic"
+    ]
+   },
+   {
+    "name": "Curled small in big space",
+    "composition_ids": [
+     "negative_space",
+     "high_horizon"
+    ],
+    "palette_direction": "Cold pale field #DCE3E8 with a single soft warm figure #E3B89A",
+    "lighting_ids": [
+     "high_key",
+     "top_light"
+    ],
+    "camera_angle": "high angle",
+    "camera_distance": "wide",
+    "character_expression": "Face partly hidden by knees",
+    "body_language": "Sitting curled on the floor, arms around legs",
+    "environment": "Large empty room with bare floor",
+    "negative_space": "Most of the frame is empty floor",
+    "texture": "Smooth floor, soft fabric",
+    "visual_metaphor": "Smallness under observation",
+    "symbolism": "High angle = viewer above, figure exposed",
+    "style_ids_that_fit": [
+     "minimalism",
+     "line_art_minimal",
+     "watercolor_loose"
+    ]
+   },
+   {
+    "name": "Cracked shell metaphor",
+    "composition_ids": [
+     "figure_ground",
+     "center"
+    ],
+    "palette_direction": "Porcelain white #F4F1EC, hairline gold #C8A35A, inner warm glow #F2C27B",
+    "lighting_ids": [
+     "rim_only",
+     "storybook_soft_glow"
+    ],
+    "camera_angle": "eye-level",
+    "camera_distance": "medium close-up",
+    "character_expression": "Calm, eyes lowered",
+    "body_language": "Hands open, palms up",
+    "environment": "Abstract dark field",
+    "negative_space": "Dark ground around a lit, fragile figure",
+    "texture": "Ceramic cracks repaired with gold (kintsugi-like) on a statue-like figure",
+    "visual_metaphor": "Fragility as something precious",
+    "symbolism": "Gold repair = cracks honoured",
+    "style_ids_that_fit": [
+     "editorial_conceptual",
+     "surrealism",
+     "digital_painting_painterly"
+    ]
+   }
+  ],
+  "contrast_levers": "Hard environment vs soft subject; high-angle exposure vs eye-level trust; detail texture vs smooth ground.",
+  "cultural_notes": "In Thai social context, open display of vulnerability in public is restrained; private settings (home, bedroom) read more natural. Colour meanings depend on context (ElliotMaier2014).",
+  "cliches_to_avoid": [
+   "Crying in the rain",
+   "Shattered glass person",
+   "Hands over face with dramatic backlight"
+  ],
+  "ai_mistakes": [
+   "Over-smoothed plastic skin defeats the 'unmasked' idea",
+   "Sexualising bare shoulders",
+   "Too-perfect symmetry face"
+  ],
+  "eyewear_angle": "Taking glasses off = unguarded moment; frame held in open hands. Good for gentle eye-care stories, not hard promo.",
+  "refs": [
+   "Livingstone2002",
+   "Arnheim1974",
+   "Artistic"
+  ],
+  "evidence": "craft"
+ },
+ {
+  "id": "care.empathy",
+  "name_en": "Empathy",
+  "name_th": "เข้าใจความรู้สึก",
+  "core_read": "Feeling with someone; two people matched in posture and level, attention fully on the other.",
+  "approaches": [
+   {
+    "name": "Mirrored listening",
+    "composition_ids": [
+     "symmetry",
+     "over_shoulder"
+    ],
+    "palette_direction": "Shared warm mid tones: clay #C08A6A, linen #EDE3D3, soft olive #8A8F6A",
+    "lighting_ids": [
+     "window_side",
+     "bounce_fill_warm"
+    ],
+    "camera_angle": "eye-level",
+    "camera_distance": "medium",
+    "character_expression": "Listener's brow slightly raised in concern, mirroring the speaker",
+    "body_language": "Both leaning in, same height, knees angled toward each other",
+    "environment": "Small kitchen table, two glasses of water",
+    "negative_space": "Little; closeness is the point",
+    "texture": "Matte fabrics, wood grain",
+    "visual_metaphor": "Mirroring = shared state",
+    "symbolism": "Same eye level = equality",
+    "style_ids_that_fit": [
+     "photoreal_lifestyle",
+     "storybook_gouache",
+     "pencil_sketch_loose"
+    ]
+   },
+   {
+    "name": "Shared colour bleed",
+    "composition_ids": [
+     "split_screen",
+     "figure_ground"
+    ],
+    "palette_direction": "Speaker's sad blue #5B7A99 bleeding into listener's warm #E2A87A, merging to lavender #A49AB8",
+    "lighting_ids": [
+     "flat_cartoon_cel",
+     "storybook_soft_glow"
+    ],
+    "camera_angle": "eye-level",
+    "camera_distance": "medium wide",
+    "character_expression": "Simple faces; the colour carries emotion",
+    "body_language": "Facing each other across the split line",
+    "environment": "Abstract two-colour field",
+    "negative_space": "Even fields of colour",
+    "texture": "Watercolour bleed at the seam",
+    "visual_metaphor": "Feeling crossing from one to another",
+    "symbolism": "Colour mixing = shared feeling",
+    "style_ids_that_fit": [
+     "watercolor_loose",
+     "flat_illustration_corporate",
+     "line_art_minimal"
+    ]
+   },
+   {
+    "name": "Hand on hand detail",
+    "composition_ids": [
+     "subject_isolation",
+     "diagonal"
+    ],
+    "palette_direction": "Low-key warm: deep umber #3B2A22, warm skin #C9936E, lamp gold #E8B86A",
+    "lighting_ids": [
+     "practical_lamp",
+     "low_key"
+    ],
+    "camera_angle": "high angle",
+    "camera_distance": "extreme close-up",
+    "character_expression": "No faces",
+    "body_language": "One hand resting over another on a table, thumb moving",
+    "environment": "Edge of a table, a tissue box blurred",
+    "negative_space": "Dark falloff around the hands",
+    "texture": "Skin creases, sleeve weave",
+    "visual_metaphor": "Touch as understanding",
+    "symbolism": "Covered hand = held",
+    "style_ids_that_fit": [
+     "cinematic_realism",
+     "charcoal_academic",
+     "oil_painting_classical"
+    ]
+   }
+  ],
+  "contrast_levers": "Level vs unequal heights; warm shared light vs cold separate light; distance between bodies.",
+  "cultural_notes": "Thai empathy often shown through small acts (bringing water, food) rather than hugging; touch between strangers is reserved. Colour meanings depend on context (ElliotMaier2014).",
+  "cliches_to_avoid": [
+   "Generic hug stock photo",
+   "Heart icon between heads",
+   "Therapist-couch cliché"
+  ],
+  "ai_mistakes": [
+   "Listener smiling inappropriately",
+   "Mismatched eyelines",
+   "Extra fingers on clasped hands"
+  ],
+  "eyewear_angle": "Optometrist really listening to an elderly customer at eye level; shows care, suits trust-building content.",
+  "refs": [
+   "ElliotMaier2014",
+   "Block2008",
+   "Artistic"
+  ],
+  "evidence": "craft"
+ },
+ {
+  "id": "care.compassion_consoling",
+  "name_en": "Compassion / consoling",
+  "name_th": "ปลอบโยน",
+  "core_read": "Actively comforting someone in pain; one body sheltering another.",
+  "approaches": [
+   {
+    "name": "Shelter embrace",
+    "composition_ids": [
+     "triangular",
+     "center"
+    ],
+    "palette_direction": "Warm protective tones around cool hurt: blanket ochre #C79A5B, cool grey-blue #6F8193, skin #D2A486",
+    "lighting_ids": [
+     "candle_fire",
+     "key_fill_soft"
+    ],
+    "camera_angle": "slightly high angle",
+    "camera_distance": "medium close-up",
+    "character_expression": "Consoler's eyes soft, closed or lowered; hurt person's face buried",
+    "body_language": "Arm wrapped around shoulders, heads touching",
+    "environment": "Floor of a dim room, a blanket",
+    "negative_space": "Dark corners framing the pair",
+    "texture": "Wool blanket, soft hair",
+    "visual_metaphor": "Arms as roof",
+    "symbolism": "Triangle of bodies = stability",
+    "style_ids_that_fit": [
+     "oil_painting_classical",
+     "charcoal_expressive",
+     "storybook_gouache"
+    ]
+   },
+   {
+    "name": "Umbrella offered",
+    "composition_ids": [
+     "asymmetrical_balance",
+     "rule_of_thirds"
+    ],
+    "palette_direction": "Rain grey-blue #5E6E7C with one warm umbrella #D9824B",
+    "lighting_ids": [
+     "overcast_soft",
+     "streetlight_sodium"
+    ],
+    "camera_angle": "eye-level",
+    "camera_distance": "wide",
+    "character_expression": "Surprised, softening face of the person receiving",
+    "body_language": "One person tilts the umbrella over the other, getting wet themselves",
+    "environment": "Rainy Bangkok sidewalk, puddles reflecting lights",
+    "negative_space": "Rainy grey street",
+    "texture": "Rain streaks, wet reflections",
+    "visual_metaphor": "Covering someone at your own cost",
+    "symbolism": "Umbrella = protection",
+    "style_ids_that_fit": [
+     "anime_painterly_bg",
+     "watercolor_loose",
+     "cinematic_realism"
+    ]
+   },
+   {
+    "name": "Light carried to the dark",
+    "composition_ids": [
+     "leading_lines",
+     "vignette_tunnel"
+    ],
+    "palette_direction": "Deep night navy #1B2433 and a small lantern amber #F2B045",
+    "lighting_ids": [
+     "practical_lamp",
+     "moonlight_blue"
+    ],
+    "camera_angle": "low angle",
+    "camera_distance": "medium wide",
+    "character_expression": "Consoler kneeling, face lit from the lamp",
+    "body_language": "Kneeling down to the level of a seated figure",
+    "environment": "Dark stairwell or temple step",
+    "negative_space": "Darkness around the warm pool",
+    "texture": "Soft glow falloff",
+    "visual_metaphor": "Bringing light to someone's darkness",
+    "symbolism": "Lamp = hope offered",
+    "style_ids_that_fit": [
+     "digital_painting_painterly",
+     "children_book_crayon",
+     "baroque_dramatic"
+    ]
+   }
+  ],
+  "contrast_levers": "Warm consoler vs cool sufferer; enclosing shapes vs open; light pool vs dark field.",
+  "cultural_notes": "Thai consoling is often quiet presence and touching the upper arm/back; monks or elders patting a head has specific hierarchy (head is sacred) — avoid a younger person touching an elder's head. Colour meanings depend on context (ElliotMaier2014).",
+  "cliches_to_avoid": [
+   "Shoulder to cry on with tissue stock",
+   "Glowing angel wings",
+   "Excessive tears"
+  ],
+  "ai_mistakes": [
+   "Arms merging into one another",
+   "Face of the hurt person showing a smile",
+   "Umbrella not actually covering"
+  ],
+  "eyewear_angle": "Gentle story: a staff member adjusting an elderly customer's new glasses with care. Never use grief itself to sell.",
+  "refs": [
+   "ElliotMaier2014",
+   "Arnheim1974",
+   "Artistic"
+  ],
+  "evidence": "craft"
+ },
+ {
+  "id": "care.sympathy",
+  "name_en": "Sympathy",
+  "name_th": "เห็นใจ",
+  "core_read": "Feeling sorry for someone from a respectful slight distance; concern without full merging.",
+  "approaches": [
+   {
+    "name": "Watching from a step away",
+    "composition_ids": [
+     "rule_of_thirds",
+     "layered_depth"
+    ],
+    "palette_direction": "Desaturated soft neutrals: stone #B8B3AA, dusty blue #8796A5, warm cardigan #B88A6A",
+    "lighting_ids": [
+     "overcast_soft",
+     "window_side"
+    ],
+    "camera_angle": "eye-level",
+    "camera_distance": "medium wide",
+    "character_expression": "Concerned brow, mouth closed, slight head tilt",
+    "body_language": "Standing a little apart, hands clasped in front",
+    "environment": "Hospital corridor or office, the other person seated in background focus",
+    "negative_space": "Corridor space between them",
+    "texture": "Clean surfaces, soft focus",
+    "visual_metaphor": "Distance kept with care",
+    "symbolism": "Clasped hands = wanting to help, holding back",
+    "style_ids_that_fit": [
+     "photoreal_lifestyle",
+     "documentary_photo",
+     "pencil_sketch_loose"
+    ]
+   },
+   {
+    "name": "Offered object",
+    "composition_ids": [
+     "diagonal",
+     "subject_isolation"
+    ],
+    "palette_direction": "Warm cup #D7A66F on cool grey table #9AA0A6",
+    "lighting_ids": [
+     "practical_lamp",
+     "key_fill_soft"
+    ],
+    "camera_angle": "high angle",
+    "camera_distance": "close-up",
+    "character_expression": "Out of frame",
+    "body_language": "Hand sliding a cup of tea across a table",
+    "environment": "Café or home table",
+    "negative_space": "Empty table around the cup",
+    "texture": "Steam, ceramic",
+    "visual_metaphor": "Small kindness",
+    "symbolism": "Tea = care offered",
+    "style_ids_that_fit": [
+     "gouache_flat",
+     "flat_illustration_corporate",
+     "colored_pencil"
+    ]
+   },
+   {
+    "name": "Soft rain line drawing",
+    "composition_ids": [
+     "negative_space",
+     "center"
+    ],
+    "palette_direction": "Ink on off-white #F5F2EA with one pale blue wash #A9C1D6",
+    "lighting_ids": [
+     "flat_cartoon_cel",
+     "overcast_soft"
+    ],
+    "camera_angle": "eye-level",
+    "camera_distance": "medium",
+    "character_expression": "Simple drawn eyes with lowered brows",
+    "body_language": "One figure patting the other's back lightly",
+    "environment": "Minimal: rain lines only",
+    "negative_space": "Most of page blank",
+    "texture": "Ink line, paper tooth",
+    "visual_metaphor": "Shared weather",
+    "symbolism": "Rain = trouble; patted back = 'I see you'",
+    "style_ids_that_fit": [
+     "line_art_minimal",
+     "ink_line_clean",
+     "sketchnote_doodle"
+    ]
+   }
+  ],
+  "contrast_levers": "Gap between figures (larger than empathy); mid-key softness vs high drama.",
+  "cultural_notes": "Thai 'เห็นใจ' is often expressed as 'สู้ๆ นะ' — small gesture, not big embrace. Colour meanings depend on context (ElliotMaier2014).",
+  "cliches_to_avoid": [
+   "Pity looking down on a beggar",
+   "Sad puppy eyes"
+  ],
+  "ai_mistakes": [
+   "Sympathiser smiling broadly",
+   "Ambiguous distance reading as indifference"
+  ],
+  "eyewear_angle": "Low suitability for ads; can be used in eye-health awareness (e.g. empathy with someone struggling to read).",
+  "refs": [
+   "Block2008",
+   "Artistic"
+  ],
+  "evidence": "craft"
+ },
+ {
+  "id": "stance.sarcasm",
+  "name_en": "Sarcasm",
+  "name_th": "ประชด",
+  "core_read": "Saying the opposite of what is meant; surface praise, visible mockery underneath.",
+  "approaches": [
+   {
+    "name": "Deadpan thumbs-up",
+    "composition_ids": [
+     "center",
+     "symmetry"
+    ],
+    "palette_direction": "Over-cheerful flat colours: candy pink #F4A6C0, sky #8FD3F4, with a flat unimpressed grey face lighting #9A9A9A",
+    "lighting_ids": [
+     "high_key",
+     "flat_cartoon_cel"
+    ],
+    "camera_angle": "eye-level",
+    "camera_distance": "medium",
+    "character_expression": "Half-lidded eyes, flat mouth, one eyebrow up",
+    "body_language": "Slow sarcastic clap or limp thumbs-up",
+    "environment": "Party decorations behind a disaster (spilled cake)",
+    "negative_space": "Flat bright background",
+    "texture": "Clean vector",
+    "visual_metaphor": "Celebration over failure",
+    "symbolism": "Confetti = fake praise",
+    "style_ids_that_fit": [
+     "flat_vector",
+     "modern_cartoon_tv",
+     "pop_art"
+    ]
+   },
+   {
+    "name": "Sign vs reality",
+    "composition_ids": [
+     "split_screen",
+     "pattern_break"
+    ],
+    "palette_direction": "Glossy ad palette #FFD54F #29B6F6 vs grim real #6D6D6D",
+    "lighting_ids": [
+     "midday_hard",
+     "product_softbox"
+    ],
+    "camera_angle": "eye-level",
+    "camera_distance": "wide",
+    "character_expression": "Figure standing in rain under a 'sunny day' sign, unamused",
+    "body_language": "Arms crossed",
+    "environment": "Billboard promising sunshine above a flooded soi",
+    "negative_space": "The billboard area",
+    "texture": "Glossy print vs rain grain",
+    "visual_metaphor": "Promise vs fact",
+    "symbolism": "Billboard = official optimism",
+    "style_ids_that_fit": [
+     "editorial_conceptual",
+     "pop_art",
+     "photoreal_lifestyle"
+    ]
+   },
+   {
+    "name": "Side-eye close-up",
+    "composition_ids": [
+     "rule_of_thirds",
+     "subject_isolation"
+    ],
+    "palette_direction": "Neutral desaturated #B0A9A0 with cool rim #7FA6C9",
+    "lighting_ids": [
+     "short",
+     "rim_only"
+    ],
+    "camera_angle": "eye-level",
+    "camera_distance": "close-up",
+    "character_expression": "Eyes slid sideways toward the target, corner of mouth pulled into a tight smirk",
+    "body_language": "Chin slightly raised",
+    "environment": "Blurred background with the person being mocked",
+    "negative_space": "Space on the side of the glance",
+    "texture": "Smooth",
+    "visual_metaphor": "Look that says the opposite of words",
+    "symbolism": "Side-eye = judgement",
+    "style_ids_that_fit": [
+     "webtoon_digital",
+     "anime_cel",
+     "cinematic_realism"
+    ]
+   }
+  ],
+  "contrast_levers": "Mismatch between bright set and flat face; text/sign vs reality; saturation used ironically.",
+  "cultural_notes": "Thai ประชด is common in memes; meme-face conventions (e.g. sticker-style side-eyes) read instantly online but keep it non-hostile for brand use. Colour meanings depend on context (ElliotMaier2014).",
+  "cliches_to_avoid": [
+   "Rolling eyes emoji literally",
+   "Air quotes"
+  ],
+  "ai_mistakes": [
+   "AI renders a genuine smile so sarcasm reads as real joy",
+   "Text in sign gets garbled — render sign text in HTML layer"
+  ],
+  "eyewear_angle": "Light humour: 'Sure, squinting is cool' with a squinting person, then clear glasses. Keep self-deprecating, not mocking customers.",
+  "refs": [
+   "McCloud1993",
+   "Artistic"
+  ],
+  "evidence": "craft"
+ },
+ {
+  "id": "stance.dry_irony",
+  "name_en": "Dry irony",
+  "name_th": "ประชดเรียบๆ",
+  "core_read": "Understated, knowing mismatch; no punchline face, the image itself is quietly absurd.",
+  "approaches": [
+   {
+    "name": "Deadpan tableau",
+    "composition_ids": [
+     "symmetry",
+     "center"
+    ],
+    "palette_direction": "Muted pastel Wes-style flatness without copying: mint #BFD8C8, salmon #E8A99A, cream #F3E9D2",
+    "lighting_ids": [
+     "high_key",
+     "overcast_soft"
+    ],
+    "camera_angle": "eye-level",
+    "camera_distance": "wide",
+    "character_expression": "Completely neutral face",
+    "body_language": "Stiff upright posture, hands at sides",
+    "environment": "Perfectly arranged room with one absurd detail (an umbrella open indoors)",
+    "negative_space": "Even, airy symmetric space",
+    "texture": "Matte, clean",
+    "visual_metaphor": "Order containing nonsense",
+    "symbolism": "Symmetry = composure",
+    "style_ids_that_fit": [
+     "flat_illustration_corporate",
+     "gouache_flat",
+     "minimalism"
+    ]
+   },
+   {
+    "name": "Small sign, big fact",
+    "composition_ids": [
+     "negative_space",
+     "pattern_break"
+    ],
+    "palette_direction": "Grey concrete #9C9C98 and a tiny yellow #E9C440",
+    "lighting_ids": [
+     "overcast_soft",
+     "midday_hard"
+    ],
+    "camera_angle": "eye-level",
+    "camera_distance": "extreme wide",
+    "character_expression": "No face",
+    "body_language": "None",
+    "environment": "Huge empty car park with one tiny 'reserved' cone",
+    "negative_space": "Vast emptiness",
+    "texture": "Concrete texture",
+    "visual_metaphor": "Rules in emptiness",
+    "symbolism": "Cone = pointless order",
+    "style_ids_that_fit": [
+     "documentary_photo",
+     "minimalism",
+     "analog_film_35mm"
+    ]
+   },
+   {
+    "name": "Understated line comic",
+    "composition_ids": [
+     "z_pattern",
+     "repetition_rhythm"
+    ],
+    "palette_direction": "Black ink on white #FFFFFF with one grey tone #BDBDBD",
+    "lighting_ids": [
+     "flat_cartoon_cel",
+     "high_key"
+    ],
+    "camera_angle": "eye-level",
+    "camera_distance": "medium",
+    "character_expression": "Same flat face across panels",
+    "body_language": "Same pose repeated while the world changes",
+    "environment": "Three-panel strip",
+    "negative_space": "Gutters and blank panel space",
+    "texture": "Clean line",
+    "visual_metaphor": "Unchanged reaction to escalating events",
+    "symbolism": "Repetition = deadpan",
+    "style_ids_that_fit": [
+     "line_art_minimal",
+     "ink_line_clean",
+     "one_line_drawing"
+    ]
+   }
+  ],
+  "contrast_levers": "Neutral face vs absurd context; symmetry vs a single break.",
+  "cultural_notes": "Subtle irony can be missed in Thai casual feed scrolling; pair with clear setup. Colour meanings depend on context (ElliotMaier2014).",
+  "cliches_to_avoid": [
+   "Winking at camera",
+   "Exaggerated comic expressions (that becomes sarcasm)"
+  ],
+  "ai_mistakes": [
+   "Model adds smiles",
+   "Too many absurd details dilute the joke"
+  ],
+  "eyewear_angle": "Clean symmetric shop counter, customer reading menu at arm's length with deadpan face. Light, tasteful.",
+  "refs": [
+   "McCloud1993",
+   "Arnheim1974",
+   "Artistic"
+  ],
+  "evidence": "craft"
+ },
+ {
+  "id": "stance.playful_teasing",
+  "name_en": "Playful teasing",
+  "name_th": "แซวเล่น",
+  "core_read": "Affectionate poking fun; grin, closeness, both parties in on the game.",
+  "approaches": [
+   {
+    "name": "Poke and grin",
+    "composition_ids": [
+     "diagonal",
+     "odd_grouping"
+    ],
+    "palette_direction": "Bright warm: tangerine #F59E4C, lemon #F7D35B, teal #3FB8AF",
+    "lighting_ids": [
+     "high_key",
+     "golden_hour"
+    ],
+    "camera_angle": "eye-level",
+    "camera_distance": "medium",
+    "character_expression": "Teaser grinning with scrunched eyes; target pretending offence but smiling",
+    "body_language": "Leaning in, finger poking a cheek or nudge with shoulder",
+    "environment": "Park bench or café",
+    "negative_space": "Minimal",
+    "texture": "Lively brush strokes",
+    "visual_metaphor": "Push-pull of friendship",
+    "symbolism": "Lean-in = affection",
+    "style_ids_that_fit": [
+     "modern_cartoon_tv",
+     "storybook_gouache",
+     "anime_cel"
+    ]
+   },
+   {
+    "name": "Stolen hat",
+    "composition_ids": [
+     "leading_lines",
+     "asymmetrical_balance"
+    ],
+    "palette_direction": "Sunny pastels: pink #F6B5C4, sky #A9D8F0, grass #9ED58C",
+    "lighting_ids": [
+     "golden_hour",
+     "dappled_foliage"
+    ],
+    "camera_angle": "low angle",
+    "camera_distance": "wide",
+    "character_expression": "Laughing",
+    "body_language": "One holding something above the other's reach",
+    "environment": "Grassy hill",
+    "negative_space": "Open sky",
+    "texture": "Soft",
+    "visual_metaphor": "Keep-away game",
+    "symbolism": "Raised object = power play, harmless",
+    "style_ids_that_fit": [
+     "chibi_kawaii",
+     "children_book_crayon",
+     "watercolor_loose"
+    ]
+   },
+   {
+    "name": "Whisper-to-camera",
+    "composition_ids": [
+     "rule_of_thirds",
+     "dominant_foreground"
+    ],
+    "palette_direction": "Candid warm #E3A077 with cool background #7AA0B8",
+    "lighting_ids": [
+     "window_side",
+     "practical_lamp"
+    ],
+    "camera_angle": "eye-level",
+    "camera_distance": "close-up",
+    "character_expression": "Cheeky smirk to viewer, eyebrows up",
+    "body_language": "Hand partly covering mouth, gesturing at friend behind",
+    "environment": "Friend in background unaware with food on face",
+    "negative_space": "Background shallow focus",
+    "texture": "Natural photo grain",
+    "visual_metaphor": "Viewer as accomplice",
+    "symbolism": "Cupped hand = secret joke",
+    "style_ids_that_fit": [
+     "photoreal_lifestyle",
+     "webtoon_digital",
+     "polaroid_instant"
+    ]
+   }
+  ],
+  "contrast_levers": "Warm bright palette vs cold mockery; closeness and mutual smiles distinguish it from mockery.",
+  "cultural_notes": "Thai 'แซว' is a core social bonding mode; online it pairs with playful stickers. Keep body contact appropriate. Colour meanings depend on context (ElliotMaier2014).",
+  "cliches_to_avoid": [
+   "Noogie stock photo",
+   "Bunny ears behind head"
+  ],
+  "ai_mistakes": [
+   "Target looks genuinely hurt (turns into bullying)",
+   "Too many limbs in the poke"
+  ],
+  "eyewear_angle": "Friend trying on each other's glasses and teasing — great for frame try-on posts.",
+  "refs": [
+   "McCloud1993",
+   "Artistic"
+  ],
+  "evidence": "craft"
+ },
+ {
+  "id": "stance.mockery",
+  "name_en": "Mockery",
+  "name_th": "เยาะเย้ย",
+  "core_read": "Belittling with contempt; power imbalance, laughter at someone, not with.",
+  "approaches": [
+   {
+    "name": "Laughing crowd vs one",
+    "composition_ids": [
+     "scale_contrast",
+     "high_horizon"
+    ],
+    "palette_direction": "Sour yellow-green #B5B84A, harsh white #F2F2F2, isolated cold figure #5A6B80",
+    "lighting_ids": [
+     "midday_hard",
+     "spotlight_theatrical"
+    ],
+    "camera_angle": "high angle",
+    "camera_distance": "wide",
+    "character_expression": "Crowd with open-mouth laughter, pointing; target small, head down",
+    "body_language": "Group leaning back, pointing",
+    "environment": "Schoolyard or stage",
+    "negative_space": "Space around the isolated target",
+    "texture": "Hard edges",
+    "visual_metaphor": "Group vs individual",
+    "symbolism": "Pointing fingers = accusation",
+    "style_ids_that_fit": [
+     "expressionism",
+     "graphic_novel_noir",
+     "vintage_comic_halftone"
+    ]
+   },
+   {
+    "name": "Mask grin",
+    "composition_ids": [
+     "center",
+     "figure_ground"
+    ],
+    "palette_direction": "Garish red #D7263D and black #111111 on paper white",
+    "lighting_ids": [
+     "under_light_horror",
+     "low_key"
+    ],
+    "camera_angle": "low angle",
+    "camera_distance": "close-up",
+    "character_expression": "Over-wide grin, narrowed eyes",
+    "body_language": "Head tilted back",
+    "environment": "Dark void",
+    "negative_space": "Dark around face",
+    "texture": "Woodcut gouges",
+    "visual_metaphor": "Grin as weapon",
+    "symbolism": "Mask = cruelty disguised as fun",
+    "style_ids_that_fit": [
+     "woodcut_print",
+     "linocut",
+     "expressionism"
+    ]
+   },
+   {
+    "name": "Caricature sketch",
+    "composition_ids": [
+     "subject_isolation",
+     "negative_space"
+    ],
+    "palette_direction": "Ink black on cream #F4EEDD",
+    "lighting_ids": [
+     "flat_cartoon_cel",
+     "high_key"
+    ],
+    "camera_angle": "eye-level",
+    "camera_distance": "medium",
+    "character_expression": "Drawn mocker smirking with chin up",
+    "body_language": "Hand mimicking a 'talking mouth' puppet",
+    "environment": "Plain",
+    "negative_space": "Blank page",
+    "texture": "Scratchy pen",
+    "visual_metaphor": "Imitation as insult",
+    "symbolism": "Hand puppet = belittling speech",
+    "style_ids_that_fit": [
+     "ink_pen_crosshatch",
+     "sketchnote_doodle",
+     "western_cartoon_rubberhose"
+    ]
+   }
+  ],
+  "contrast_levers": "Power: high angle on victim, low angle on mocker; harsh hard light vs soft.",
+  "cultural_notes": "Bullying imagery is sensitive; Thai platforms often report it. Use only in story context showing it as wrong. Colour meanings depend on context (ElliotMaier2014).",
+  "cliches_to_avoid": [
+   "Loser L sign",
+   "Clown makeup on victim"
+  ],
+  "ai_mistakes": [
+   "Laughter reads as friendly (becomes teasing)",
+   "Targeting real ethnic features — avoid"
+  ],
+  "eyewear_angle": "Not suitable for ads (except anti-bullying story, e.g. kid teased for glasses, later confident).",
+  "refs": [
+   "Arnheim1974",
+   "Artistic"
+  ],
+  "evidence": "craft"
+ },
+ {
+  "id": "stance.skepticism",
+  "name_en": "Skepticism",
+  "name_th": "กังขา",
+  "core_read": "Doubting a claim; examining, not believing yet.",
+  "approaches": [
+   {
+    "name": "Raised eyebrow inspection",
+    "composition_ids": [
+     "rule_of_thirds",
+     "subject_isolation"
+    ],
+    "palette_direction": "Cool neutral: grey-blue #7C8B99, paper #ECEAE4, a hint of mustard #C8A646",
+    "lighting_ids": [
+     "short",
+     "window_side"
+    ],
+    "camera_angle": "eye-level",
+    "camera_distance": "close-up",
+    "character_expression": "One eyebrow raised, lips pursed to one side",
+    "body_language": "Holding an object at arm's length, head pulled back",
+    "environment": "Desk with a flyer/product",
+    "negative_space": "Clean wall background",
+    "texture": "Crisp paper",
+    "visual_metaphor": "Holding something at a distance to judge it",
+    "symbolism": "Arm's length = not yet accepted",
+    "style_ids_that_fit": [
+     "photoreal_lifestyle",
+     "editorial_conceptual",
+     "webtoon_digital"
+    ]
+   },
+   {
+    "name": "Magnifier on claim",
+    "composition_ids": [
+     "center",
+     "scale_contrast"
+    ],
+    "palette_direction": "Monochrome blueprint #1F3A5F with white lines #E9F0F7",
+    "lighting_ids": [
+     "flat_cartoon_cel",
+     "top_light"
+    ],
+    "camera_angle": "top-down",
+    "camera_distance": "close-up",
+    "character_expression": "No face",
+    "body_language": "Hand holding a magnifier over fine print",
+    "environment": "Document flatlay",
+    "negative_space": "Blank document margins",
+    "texture": "Line art, grid",
+    "visual_metaphor": "Scrutiny",
+    "symbolism": "Magnifier = examination",
+    "style_ids_that_fit": [
+     "technical_blueprint",
+     "flat_vector",
+     "line_art_minimal"
+    ]
+   },
+   {
+    "name": "Crossed arms in shadow",
+    "composition_ids": [
+     "asymmetrical_balance",
+     "negative_space"
+    ],
+    "palette_direction": "Low-key slate #2E3438 and a pale key #D6D2C8",
+    "lighting_ids": [
+     "split",
+     "low_key"
+    ],
+    "camera_angle": "slightly low angle",
+    "camera_distance": "medium",
+    "character_expression": "Narrowed eyes, flat mouth",
+    "body_language": "Arms crossed, weight back on heels",
+    "environment": "Meeting room with blurred presenter",
+    "negative_space": "Dark side of frame",
+    "texture": "Film grain",
+    "visual_metaphor": "Half-lit judgement",
+    "symbolism": "Half shadow = undecided",
+    "style_ids_that_fit": [
+     "cinematic_realism",
+     "film_noir_photo",
+     "charcoal_academic"
+    ]
+   }
+  ],
+  "contrast_levers": "Distance between face and object; cool palette; half-light vs open light.",
+  "cultural_notes": "Thai consumers are skeptical of 'too good' promos; showing proof (lens test) answers skepticism. Colour meanings depend on context (ElliotMaier2014).",
+  "cliches_to_avoid": [
+   "Detective hat",
+   "Question marks floating"
+  ],
+  "ai_mistakes": [
+   "Eyebrow asymmetry rendered as a deformity",
+   "Confusion instead of doubt"
+  ],
+  "eyewear_angle": "Great setup: skeptical customer holding a lens to light, then a proof shot (lens reflection control). Suits product-truth content.",
+  "refs": [
+   "Yarbus1967",
+   "Artistic"
+  ],
+  "evidence": "craft"
+ },
+ {
+  "id": "stance.suspicion",
+  "name_en": "Suspicion",
+  "name_th": "ระแวง",
+  "core_read": "Distrust of someone's intent; watching, guarded, expecting a trick.",
+  "approaches": [
+   {
+    "name": "Through the blinds",
+    "composition_ids": [
+     "frame_within_frame",
+     "rule_of_thirds"
+    ],
+    "palette_direction": "Noir green-grey #3B4A42, sodium amber stripes #D9A441",
+    "lighting_ids": [
+     "noir_venetian",
+     "streetlight_sodium"
+    ],
+    "camera_angle": "eye-level",
+    "camera_distance": "medium close-up",
+    "character_expression": "Narrowed eyes peeking, face striped by shadow",
+    "body_language": "Fingers parting blinds",
+    "environment": "Dark apartment",
+    "negative_space": "Dark stripes",
+    "texture": "Grain, smoke",
+    "visual_metaphor": "Watching unseen",
+    "symbolism": "Bars of light = being trapped/guarded",
+    "style_ids_that_fit": [
+     "film_noir_photo",
+     "graphic_novel_noir",
+     "cinematic_realism"
+    ]
+   },
+   {
+    "name": "Over-shoulder glance",
+    "composition_ids": [
+     "over_shoulder",
+     "diagonal"
+    ],
+    "palette_direction": "Cold cyan night #2C5F73, magenta neon #C0397E",
+    "lighting_ids": [
+     "neon_night",
+     "rim_only"
+    ],
+    "camera_angle": "eye-level",
+    "camera_distance": "medium",
+    "character_expression": "Eyes turned back over shoulder, mouth tight",
+    "body_language": "Clutching a bag close, body turned away",
+    "environment": "Night street with a figure in the distance",
+    "negative_space": "Dark street depth",
+    "texture": "Wet reflections",
+    "visual_metaphor": "Followed",
+    "symbolism": "Distant figure = threat unknown",
+    "style_ids_that_fit": [
+     "cyberpunk_neon",
+     "anime_painterly_bg",
+     "cinematic_realism"
+    ]
+   },
+   {
+    "name": "Eyes in the dark",
+    "composition_ids": [
+     "negative_space",
+     "center"
+    ],
+    "palette_direction": "Near black #121314 with eye-level slit of light #E6E1D4",
+    "lighting_ids": [
+     "low_key",
+     "top_light"
+    ],
+    "camera_angle": "eye-level",
+    "camera_distance": "extreme close-up",
+    "character_expression": "Only eyes lit, side-glance",
+    "body_language": "None visible",
+    "environment": "Void",
+    "negative_space": "Almost all black",
+    "texture": "Charcoal smudge",
+    "visual_metaphor": "Watching eyes",
+    "symbolism": "Slit light = limited trust",
+    "style_ids_that_fit": [
+     "charcoal_expressive",
+     "manga_bw_screentone",
+     "ink_brush_sumi_e"
+    ]
+   }
+  ],
+  "contrast_levers": "Narrow slit light vs open; side-glance eyelines; tight framing.",
+  "cultural_notes": "Thai drama (ละคร) uses exaggerated suspicious side-glances; tone down for realism. Colour meanings depend on context (ElliotMaier2014).",
+  "cliches_to_avoid": [
+   "Trench coat and magnifier",
+   "Shifty cartoon eyes"
+  ],
+  "ai_mistakes": [
+   "Eyelines that don't point anywhere",
+   "Blinds shadows inconsistent with window"
+  ],
+  "eyewear_angle": "Lightly: a cat suspicious of new glasses on the table. Otherwise not suitable for ads.",
+  "refs": [
+   "Yarbus1967",
+   "Gurney2010",
+   "Artistic"
+  ],
+  "evidence": "craft"
+ },
+ {
+  "id": "stance.defensiveness",
+  "name_en": "Defensiveness",
+  "name_th": "ตั้งป้อมปกป้องตัวเอง",
+  "core_read": "Guarding self against criticism; closed body, barriers, pushed-back posture.",
+  "approaches": [
+   {
+    "name": "Barrier pose",
+    "composition_ids": [
+     "center",
+     "dominant_foreground"
+    ],
+    "palette_direction": "Tense cool: steel blue #4D6A84, harsh white #F0F0F0, flushed cheek #D58A7A",
+    "lighting_ids": [
+     "midday_hard",
+     "short"
+    ],
+    "camera_angle": "slightly low angle",
+    "camera_distance": "medium",
+    "character_expression": "Jaw set, chin tucked, eyes defensive",
+    "body_language": "Arms crossed high, shoulders raised, body angled away",
+    "environment": "Office or family dining table, an object (bag/laptop) held as shield",
+    "negative_space": "Little room around",
+    "texture": "Hard surfaces",
+    "visual_metaphor": "Body as wall",
+    "symbolism": "Held object = shield",
+    "style_ids_that_fit": [
+     "photoreal_lifestyle",
+     "webtoon_digital",
+     "cinematic_realism"
+    ]
+   },
+   {
+    "name": "Fortress metaphor",
+    "composition_ids": [
+     "radial",
+     "figure_ground"
+    ],
+    "palette_direction": "Stone grey #8A8580, brick #A0523D, sky #BFD0DC",
+    "lighting_ids": [
+     "overcast_soft",
+     "top_light"
+    ],
+    "camera_angle": "high angle",
+    "camera_distance": "wide",
+    "character_expression": "Tiny figure inside walls",
+    "body_language": "Standing in the centre of a self-built wall of books/boxes",
+    "environment": "Surreal plain",
+    "negative_space": "Open plain around fortress",
+    "texture": "Stone texture",
+    "visual_metaphor": "Walls built around self",
+    "symbolism": "Fortress = defence",
+    "style_ids_that_fit": [
+     "surrealism",
+     "isometric_3d",
+     "editorial_conceptual"
+    ]
+   },
+   {
+    "name": "Pointing back",
+    "composition_ids": [
+     "diagonal",
+     "asymmetrical_balance"
+    ],
+    "palette_direction": "Hot red #C9383A pushing against cool blue #3E6990",
+    "lighting_ids": [
+     "cross_light",
+     "low_key"
+    ],
+    "camera_angle": "eye-level",
+    "camera_distance": "medium close-up",
+    "character_expression": "Wide eyes, open mouth mid-protest",
+    "body_language": "Hand raised palm-out, other hand on chest",
+    "environment": "Two-tone background",
+    "negative_space": "Diagonal colour split",
+    "texture": "Comic halftone",
+    "visual_metaphor": "Deflection",
+    "symbolism": "Palm out = stop",
+    "style_ids_that_fit": [
+     "vintage_comic_halftone",
+     "pop_art",
+     "manga_bw_screentone"
+    ]
+   }
+  ],
+  "contrast_levers": "Closed vs open body; barrier objects; tight frames.",
+  "cultural_notes": "Thai face-saving (รักษาหน้า) makes defensiveness often quieter: smiling while stiff. Show stiffness in shoulders. Colour meanings depend on context (ElliotMaier2014).",
+  "cliches_to_avoid": [
+   "Literal shield and sword"
+  ],
+  "ai_mistakes": [
+   "Crossed arms with wrong number of hands",
+   "Defiance read as anger"
+  ],
+  "eyewear_angle": "Story only: a teen refusing glasses arms crossed, later chooses a frame they like. Light touch.",
+  "refs": [
+   "Arnheim1974",
+   "Loomis1943",
+   "Artistic"
+  ],
+  "evidence": "craft"
+ },
+ {
+  "id": "anger.indignation",
+  "name_en": "Indignation",
+  "name_th": "ขุ่นเคืองต่อความไม่ยุติธรรม",
+  "core_read": "Righteous anger at injustice; upright, principled, aimed at a wrong, not a person's ego.",
+  "approaches": [
+   {
+    "name": "Standing up",
+    "composition_ids": [
+     "low_horizon",
+     "center"
+    ],
+    "palette_direction": "Firm reds and deep blue: brick red #B23A2E, navy #1E2F4F, paper #EDE6D6",
+    "lighting_ids": [
+     "top_light",
+     "short"
+    ],
+    "camera_angle": "low angle",
+    "camera_distance": "medium",
+    "character_expression": "Brow lowered, eyes direct, mouth firm",
+    "body_language": "Standing straight, rising from a seat, one fist at side",
+    "environment": "Meeting hall, others seated",
+    "negative_space": "Space above head",
+    "texture": "Poster grain",
+    "visual_metaphor": "Rising against wrong",
+    "symbolism": "Rising figure = moral stance",
+    "style_ids_that_fit": [
+     "constructivism",
+     "screenprint_poster",
+     "cinematic_realism"
+    ]
+   },
+   {
+    "name": "Broken scale",
+    "composition_ids": [
+     "symmetry",
+     "pattern_break"
+    ],
+    "palette_direction": "Gold #C9A43B scales on black #151515",
+    "lighting_ids": [
+     "spotlight_theatrical",
+     "low_key"
+    ],
+    "camera_angle": "eye-level",
+    "camera_distance": "close-up",
+    "character_expression": "No face",
+    "body_language": "A hand slamming the higher pan of scales",
+    "environment": "Dark table",
+    "negative_space": "Black void",
+    "texture": "Metal glint",
+    "visual_metaphor": "Justice unbalanced",
+    "symbolism": "Tilted scale = injustice",
+    "style_ids_that_fit": [
+     "editorial_conceptual",
+     "art_deco",
+     "linocut"
+    ]
+   },
+   {
+    "name": "Protest crowd silhouette",
+    "composition_ids": [
+     "repetition_rhythm",
+     "low_horizon"
+    ],
+    "palette_direction": "Sunset orange #E86A33 sky behind black #161616 silhouettes",
+    "lighting_ids": [
+     "backlit_silhouette",
+     "sunset_rim_warm_cool"
+    ],
+    "camera_angle": "low angle",
+    "camera_distance": "wide",
+    "character_expression": "Silhouettes only",
+    "body_language": "Raised arms",
+    "environment": "Open square",
+    "negative_space": "Big sky",
+    "texture": "Flat screenprint",
+    "visual_metaphor": "Collective conscience",
+    "symbolism": "Raised arms = voice",
+    "style_ids_that_fit": [
+     "screenprint_poster",
+     "risograph",
+     "papercut_layered"
+    ]
+   }
+  ],
+  "contrast_levers": "Upright verticals vs slumped; warm/red accents controlled, not chaotic like rage.",
+  "cultural_notes": "Political protest imagery is sensitive in Thailand (raised three-finger salute etc.). Avoid real political symbols in brand work. Colour meanings depend on context (ElliotMaier2014).",
+  "cliches_to_avoid": [
+   "Steam from ears",
+   "Exploding head"
+  ],
+  "ai_mistakes": [
+   "Real political slogans/flags appearing",
+   "Rage expressions instead of controlled resolve"
+  ],
+  "eyewear_angle": "Not suitable for ads; maybe consumer-rights framing ('you deserve accurate lenses') without anger imagery.",
+  "refs": [
+   "Arnheim1974",
+   "Artistic"
+  ],
+  "evidence": "craft"
+ },
+ {
+  "id": "sadness.betrayal_hurt",
+  "name_en": "Betrayal hurt",
+  "name_th": "เจ็บเพราะถูกหักหลัง",
+  "core_read": "Shock and wound from someone trusted; trust broken, the betrayer often present or implied.",
+  "approaches": [
+   {
+    "name": "Turned back",
+    "composition_ids": [
+     "layered_depth",
+     "over_shoulder"
+    ],
+    "palette_direction": "Cold blue #3D5672, desaturated skin #C2A595, a fading warm memory #D7A37A",
+    "lighting_ids": [
+     "low_key",
+     "split"
+    ],
+    "camera_angle": "eye-level",
+    "camera_distance": "medium",
+    "character_expression": "Wounded, wide unfocused eyes, lips parted",
+    "body_language": "Hand to chest, body stepping back",
+    "environment": "Background figure walking away or embracing someone else",
+    "negative_space": "Gap between them",
+    "texture": "Cold glass, rain",
+    "visual_metaphor": "Back turned = trust leaving",
+    "symbolism": "Space widening",
+    "style_ids_that_fit": [
+     "cinematic_realism",
+     "anime_painterly_bg",
+     "graphic_novel_noir"
+    ]
+   },
+   {
+    "name": "Torn photo",
+    "composition_ids": [
+     "split_screen",
+     "center"
+    ],
+    "palette_direction": "Faded polaroid warm #E0C49C torn across to reveal grey #6E6E6E",
+    "lighting_ids": [
+     "window_side",
+     "overcast_soft"
+    ],
+    "camera_angle": "top-down",
+    "camera_distance": "close-up",
+    "character_expression": "Faces in photo split",
+    "body_language": "Hands holding the two halves",
+    "environment": "Table",
+    "negative_space": "Plain table",
+    "texture": "Paper fibre at tear",
+    "visual_metaphor": "Bond torn",
+    "symbolism": "Tear line = break",
+    "style_ids_that_fit": [
+     "polaroid_instant",
+     "photoreal_lifestyle",
+     "collage_mixed_media"
+    ]
+   },
+   {
+    "name": "Knife-shaped shadow",
+    "composition_ids": [
+     "figure_ground",
+     "diagonal"
+    ],
+    "palette_direction": "Black #101010, white #F4F4F4, a single red #B3262E",
+    "lighting_ids": [
+     "chiaroscuro",
+     "under_light_horror"
+    ],
+    "camera_angle": "low angle",
+    "camera_distance": "medium",
+    "character_expression": "Frozen shock",
+    "body_language": "Two figures hugging, one shadow on wall holds a blade",
+    "environment": "Plain wall",
+    "negative_space": "Large wall for shadow",
+    "texture": "Ink",
+    "visual_metaphor": "Hidden intent",
+    "symbolism": "Shadow = true nature",
+    "style_ids_that_fit": [
+     "graphic_novel_noir",
+     "manga_bw_screentone",
+     "woodcut_print"
+    ]
+   }
+  ],
+  "contrast_levers": "Warm-to-cold shift; distance increasing; truth in shadows vs surface.",
+  "cultural_notes": "Thai lakorn betrayal tropes (slap, tears) are overused; subtle stillness reads more modern. Colour meanings depend on context (ElliotMaier2014).",
+  "cliches_to_avoid": [
+   "Literal knife in back",
+   "Dramatic slap"
+  ],
+  "ai_mistakes": [
+   "Betrayer depicted ambiguous so story unclear",
+   "Garbled hands holding photo halves"
+  ],
+  "eyewear_angle": "Not suitable for ads.",
+  "refs": [
+   "Block2008",
+   "Artistic"
+  ],
+  "evidence": "craft"
+ },
+ {
+  "id": "anger.bitterness",
+  "name_en": "Bitterness",
+  "name_th": "ขมขื่น",
+  "core_read": "Long-held resentment gone sour; anger aged into a stale, sour stillness.",
+  "approaches": [
+   {
+    "name": "Cold coffee",
+    "composition_ids": [
+     "asymmetrical_balance",
+     "negative_space"
+    ],
+    "palette_direction": "Sour olive #6E6A3C, stale brown #5A4A3A, grey #8A8A86",
+    "lighting_ids": [
+     "overcast_soft",
+     "window_side"
+    ],
+    "camera_angle": "eye-level",
+    "camera_distance": "medium",
+    "character_expression": "Mouth turned down, tight lips, eyes looking off",
+    "body_language": "Slouched in chair, fingers drumming",
+    "environment": "Old kitchen, cold cup with skin on top, stacked bills",
+    "negative_space": "Empty chair opposite",
+    "texture": "Stained wood, dust",
+    "visual_metaphor": "Things left to go cold",
+    "symbolism": "Cold cup = time stuck",
+    "style_ids_that_fit": [
+     "documentary_photo",
+     "oil_impasto",
+     "charcoal_expressive"
+    ]
+   },
+   {
+    "name": "Withered plant",
+    "composition_ids": [
+     "center",
+     "subject_isolation"
+    ],
+    "palette_direction": "Dry ochre #A88A4A on grey-green #6B7564",
+    "lighting_ids": [
+     "midday_hard",
+     "top_light"
+    ],
+    "camera_angle": "eye-level",
+    "camera_distance": "close-up",
+    "character_expression": "No face",
+    "body_language": "Hand holding a dead flower stem",
+    "environment": "Windowsill",
+    "negative_space": "Blank wall",
+    "texture": "Crisp dry leaves",
+    "visual_metaphor": "Love left to rot",
+    "symbolism": "Wither = resentment",
+    "style_ids_that_fit": [
+     "botanical_scientific",
+     "etching_engraving",
+     "pencil_graphite_realistic"
+    ]
+   },
+   {
+    "name": "Sour face portrait",
+    "composition_ids": [
+     "rule_of_thirds",
+     "vignette_tunnel"
+    ],
+    "palette_direction": "Bilious green cast #8A9A5B over shadow #2B2B24",
+    "lighting_ids": [
+     "under_light_horror",
+     "low_key"
+    ],
+    "camera_angle": "slightly high angle",
+    "camera_distance": "close-up",
+    "character_expression": "Sneer-tight lips, deep set lines, narrowed eyes",
+    "body_language": "Head turned slightly away",
+    "environment": "Dark",
+    "negative_space": "Vignetted dark edges",
+    "texture": "Rough impasto",
+    "visual_metaphor": "Sourness in skin",
+    "symbolism": "Green cast = sickliness",
+    "style_ids_that_fit": [
+     "expressionism",
+     "oil_impasto",
+     "charcoal_expressive"
+    ]
+   }
+  ],
+  "contrast_levers": "Muted sour greens/browns vs hot reds of anger; stillness vs action.",
+  "cultural_notes": "In Thai culture, bitterness (แค้น) is a classic lakorn engine; family bitterness over inheritance etc. Colour meanings depend on context (ElliotMaier2014).",
+  "cliches_to_avoid": [
+   "Lemons",
+   "Literal poison bottle"
+  ],
+  "ai_mistakes": [
+   "Rendered as hot rage",
+   "Over-aged face as default for bitterness"
+  ],
+  "eyewear_angle": "Not suitable for ads.",
+  "refs": [
+   "ElliotMaier2014",
+   "Artistic"
+  ],
+  "evidence": "craft"
+ },
+ {
+  "id": "sadness.resignation",
+  "name_en": "Resignation",
+  "name_th": "ยอมจำนน",
+  "core_read": "Giving up; the fight is over, energy drained, quiet surrender to circumstance.",
+  "approaches": [
+   {
+    "name": "Slumped at the end",
+    "composition_ids": [
+     "high_horizon",
+     "negative_space"
+    ],
+    "palette_direction": "Washed grey #A7A9A9, beige #CFC6B5, dull blue #7D8C99",
+    "lighting_ids": [
+     "overcast_soft",
+     "top_light"
+    ],
+    "camera_angle": "high angle",
+    "camera_distance": "wide",
+    "character_expression": "Eyes lowered, face slack",
+    "body_language": "Sitting on stairs, hands hanging between knees",
+    "environment": "Empty stairwell or bus stop at dusk",
+    "negative_space": "Lots of empty stairs",
+    "texture": "Flat matte",
+    "visual_metaphor": "Stopped mid-climb",
+    "symbolism": "Descending stairs = losing",
+    "style_ids_that_fit": [
+     "documentary_photo",
+     "pencil_sketch_loose",
+     "minimalism"
+    ]
+   },
+   {
+    "name": "Drifting boat",
+    "composition_ids": [
+     "low_horizon",
+     "negative_space"
+    ],
+    "palette_direction": "Pale fog #D9DEDF and grey water #8E9A9C",
+    "lighting_ids": [
+     "fog_atmospheric",
+     "overcast_soft"
+    ],
+    "camera_angle": "eye-level",
+    "camera_distance": "extreme wide",
+    "character_expression": "No face",
+    "body_language": "Person lying back in an oarless boat",
+    "environment": "Still lake in fog",
+    "negative_space": "Fog everywhere",
+    "texture": "Soft",
+    "visual_metaphor": "Letting the current decide",
+    "symbolism": "No oars = no control",
+    "style_ids_that_fit": [
+     "ink_brush_sumi_e",
+     "watercolor_loose",
+     "romanticism_landscape"
+    ]
+   },
+   {
+    "name": "Dropped tools",
+    "composition_ids": [
+     "flatlay_grid",
+     "diagonal"
+    ],
+    "palette_direction": "Dusty earth #9C8A73 and rust #8A5A3C",
+    "lighting_ids": [
+     "midday_hard",
+     "overcast_soft"
+    ],
+    "camera_angle": "top-down",
+    "camera_distance": "medium",
+    "character_expression": "No face",
+    "body_language": "Hands resting open beside dropped tools/papers",
+    "environment": "Floor",
+    "negative_space": "Floor space",
+    "texture": "Dust",
+    "visual_metaphor": "Letting go of effort",
+    "symbolism": "Open hands = no grip",
+    "style_ids_that_fit": [
+     "photoreal_lifestyle",
+     "etching_engraving",
+     "charcoal_academic"
+    ]
+   }
+  ],
+  "contrast_levers": "Downward lines and slack shapes vs upright; desaturation.",
+  "cultural_notes": "Buddhist acceptance vs resignation differ: resignation is defeated, acceptance is at peace — keep the slump to read resignation. Colour meanings depend on context (ElliotMaier2014).",
+  "cliches_to_avoid": [
+   "White flag",
+   "Rain cloud over head"
+  ],
+  "ai_mistakes": [
+   "Rendered as calm serenity",
+   "Slump pose with broken anatomy"
+  ],
+  "eyewear_angle": "Not suitable for ads.",
+  "refs": [
+   "Arnheim1974",
+   "Artistic"
+  ],
+  "evidence": "craft"
+ },
+ {
+  "id": "calm.acceptance",
+  "name_en": "Acceptance",
+  "name_th": "ยอมรับได้",
+  "core_read": "Peaceful letting go; reality met with equanimity, not defeat.",
+  "approaches": [
+   {
+    "name": "Open palms at dawn",
+    "composition_ids": [
+     "center",
+     "low_horizon"
+    ],
+    "palette_direction": "Soft dawn: pale peach #F2D2B6, lavender #C9BEDD, mist #E7ECEE",
+    "lighting_ids": [
+     "golden_hour",
+     "backlit_silhouette"
+    ],
+    "camera_angle": "eye-level",
+    "camera_distance": "medium wide",
+    "character_expression": "Eyes closed or soft, faint smile, relaxed jaw",
+    "body_language": "Sitting upright, palms open on knees, shoulders dropped",
+    "environment": "Riverbank or temple courtyard at dawn",
+    "negative_space": "Calm open sky",
+    "texture": "Soft haze",
+    "visual_metaphor": "Breathing out",
+    "symbolism": "Dawn = new start after loss",
+    "style_ids_that_fit": [
+     "watercolor_loose",
+     "storybook_gouache",
+     "photoreal_lifestyle"
+    ]
+   },
+   {
+    "name": "Leaf on water",
+    "composition_ids": [
+     "s_curve_flow",
+     "negative_space"
+    ],
+    "palette_direction": "Jade water #6F9C8E and a golden leaf #D9A845",
+    "lighting_ids": [
+     "dappled_foliage",
+     "overcast_soft"
+    ],
+    "camera_angle": "top-down",
+    "camera_distance": "close-up",
+    "character_expression": "No face",
+    "body_language": "A hand releasing a leaf into a stream",
+    "environment": "Clear stream",
+    "negative_space": "Calm water",
+    "texture": "Ripples",
+    "visual_metaphor": "Letting go",
+    "symbolism": "Floating leaf = release",
+    "style_ids_that_fit": [
+     "ink_brush_sumi_e",
+     "chinese_gongbi",
+     "watercolor_botanical"
+    ]
+   },
+   {
+    "name": "Kintsugi bowl",
+    "composition_ids": [
+     "center",
+     "subject_isolation"
+    ],
+    "palette_direction": "Earth stoneware #8C7B6A with gold seam #C7A24A on linen #EDE6DA",
+    "lighting_ids": [
+     "window_side",
+     "product_softbox"
+    ],
+    "camera_angle": "eye-level",
+    "camera_distance": "close-up",
+    "character_expression": "No face",
+    "body_language": "Two hands cradling a repaired bowl",
+    "environment": "Wooden table",
+    "negative_space": "Soft blank background",
+    "texture": "Glaze, gold line",
+    "visual_metaphor": "Broken made whole",
+    "symbolism": "Repair = acceptance of history",
+    "style_ids_that_fit": [
+     "photoreal_product",
+     "macro_photography",
+     "oil_painting_classical"
+    ]
+   }
+  ],
+  "contrast_levers": "Upright relaxed posture vs slump; warm light returning vs cold flat.",
+  "cultural_notes": "Thai Buddhist ปล่อยวาง (letting go) imagery — lotus, monk, temple — is fitting but avoid using monks commercially. Colour meanings depend on context (ElliotMaier2014).",
+  "cliches_to_avoid": [
+   "Meditating silhouette on a mountain at sunset",
+   "Lotus clipart"
+  ],
+  "ai_mistakes": [
+   "Looks identical to resignation",
+   "Religious figures in ads"
+  ],
+  "eyewear_angle": "Gentle: older customer accepting reading glasses with a smile ('สายตายาวตามวัย'). Very suitable.",
+  "refs": [
+   "Arnheim1974",
+   "ElliotMaier2014",
+   "Artistic"
+  ],
+  "evidence": "craft"
+ },
+ {
+  "id": "cognitive.hesitation",
+  "name_en": "Hesitation",
+  "name_th": "ลังเล",
+  "core_read": "Paused between options; weight caught mid-shift, the moment before choosing.",
+  "approaches": [
+   {
+    "name": "Door threshold",
+    "composition_ids": [
+     "frame_within_frame",
+     "rule_of_thirds"
+    ],
+    "palette_direction": "Dim interior #4A4F55 vs bright doorway #F0E6CF",
+    "lighting_ids": [
+     "backlit_silhouette",
+     "window_side"
+    ],
+    "camera_angle": "eye-level",
+    "camera_distance": "medium wide",
+    "character_expression": "Face partly lit, lips pressed, eyes on the doorway",
+    "body_language": "Hand on the frame, one foot forward, weight back",
+    "environment": "Hallway to a bright room",
+    "negative_space": "Bright doorway",
+    "texture": "Soft",
+    "visual_metaphor": "Edge of decision",
+    "symbolism": "Threshold = choice",
+    "style_ids_that_fit": [
+     "cinematic_realism",
+     "anime_painterly_bg",
+     "charcoal_academic"
+    ]
+   },
+   {
+    "name": "Hovering hand",
+    "composition_ids": [
+     "subject_isolation",
+     "split_screen"
+    ],
+    "palette_direction": "Two clear options in cool #6BA3C9 and warm #E8A15A on neutral #E8E4DC",
+    "lighting_ids": [
+     "product_softbox",
+     "high_key"
+    ],
+    "camera_angle": "high angle",
+    "camera_distance": "close-up",
+    "character_expression": "No face",
+    "body_language": "Fingertip hovering between two objects (two frames)",
+    "environment": "Clean counter",
+    "negative_space": "Even neutral background",
+    "texture": "Clean product",
+    "visual_metaphor": "Not yet touching",
+    "symbolism": "Hover = undecided",
+    "style_ids_that_fit": [
+     "photoreal_product",
+     "flat_vector",
+     "isometric_3d"
+    ]
+   },
+   {
+    "name": "Forked path",
+    "composition_ids": [
+     "leading_lines",
+     "symmetry"
+    ],
+    "palette_direction": "Misty forest greens #5E7A62 and grey #B9C0BA",
+    "lighting_ids": [
+     "fog_atmospheric",
+     "volumetric_god_rays"
+    ],
+    "camera_angle": "eye-level",
+    "camera_distance": "wide",
+    "character_expression": "Small figure, no detail",
+    "body_language": "Standing at the fork",
+    "environment": "Forest path splitting",
+    "negative_space": "Fog ahead",
+    "texture": "Atmosphere",
+    "visual_metaphor": "Choosing direction",
+    "symbolism": "Fork = decision",
+    "style_ids_that_fit": [
+     "concept_art_fantasy",
+     "matte_painting",
+     "watercolor_loose"
+    ]
+   }
+  ],
+  "contrast_levers": "Balanced symmetric options vs a tilt toward one; light ahead vs dark behind.",
+  "cultural_notes": "Thai เกรงใจ often looks like hesitation too; context decides. Colour meanings depend on context (ElliotMaier2014).",
+  "cliches_to_avoid": [
+   "Angel/devil on shoulders",
+   "Giant question mark"
+  ],
+  "ai_mistakes": [
+   "Hand actually touching one option (decision already made)",
+   "Fork path looks like a road map clipart"
+  ],
+  "eyewear_angle": "Very suitable: customer's hand hovering between two frames, staff helping. Classic try-on content.",
+  "refs": [
+   "Arnheim1974",
+   "Yarbus1967",
+   "Artistic"
+  ],
+  "evidence": "craft"
+ },
+ {
+  "id": "fear.nervousness",
+  "name_en": "Nervousness",
+  "name_th": "ประหม่า",
+  "core_read": "Jittery anticipation; mild fear before something (interview, stage), fidgeting.",
+  "approaches": [
+   {
+    "name": "Fidget detail",
+    "composition_ids": [
+     "subject_isolation",
+     "rule_of_thirds"
+    ],
+    "palette_direction": "Cool pale greens #BFD3C4, sweaty skin #E0BFA8, clammy white #F4F4F0",
+    "lighting_ids": [
+     "overcast_soft",
+     "top_light"
+    ],
+    "camera_angle": "high angle",
+    "camera_distance": "close-up",
+    "character_expression": "Out of frame or biting lip",
+    "body_language": "Fingers twisting a strap, knee bouncing",
+    "environment": "Waiting room chairs",
+    "negative_space": "Empty chairs around",
+    "texture": "Plastic chairs, fluorescent flatness",
+    "visual_metaphor": "Small repeated motions",
+    "symbolism": "Fidget = energy with nowhere to go",
+    "style_ids_that_fit": [
+     "photoreal_lifestyle",
+     "documentary_photo",
+     "webtoon_digital"
+    ]
+   },
+   {
+    "name": "Backstage peek",
+    "composition_ids": [
+     "frame_within_frame",
+     "layered_depth"
+    ],
+    "palette_direction": "Dark wings #1E1E24 with stage light #F2D38A",
+    "lighting_ids": [
+     "stage_colour_gels",
+     "spotlight_theatrical"
+    ],
+    "camera_angle": "eye-level",
+    "camera_distance": "medium",
+    "character_expression": "Wide eyes, swallowing, forced breath",
+    "body_language": "Clutching a script to chest, peeking from curtain",
+    "environment": "Theatre wings",
+    "negative_space": "Curtain darkness",
+    "texture": "Velvet",
+    "visual_metaphor": "On the edge of exposure",
+    "symbolism": "Spotlight = being seen",
+    "style_ids_that_fit": [
+     "cinematic_realism",
+     "anime_cel",
+     "stylized_3d_animation"
+    ]
+   },
+   {
+    "name": "Wobbly line character",
+    "composition_ids": [
+     "center",
+     "negative_space"
+    ],
+    "palette_direction": "Pastel #CFE3F0 with sweat-drop blue #6FA8DC",
+    "lighting_ids": [
+     "flat_cartoon_cel",
+     "high_key"
+    ],
+    "camera_angle": "slightly high angle",
+    "camera_distance": "full body",
+    "character_expression": "Big eyes, wavy mouth, sweat drops",
+    "body_language": "Knees knocking, shoulders raised",
+    "environment": "Blank",
+    "negative_space": "Blank space",
+    "texture": "Shaky line",
+    "visual_metaphor": "Jitter",
+    "symbolism": "Sweat drop = anxiety (manga code)",
+    "style_ids_that_fit": [
+     "chibi_kawaii",
+     "line_art_minimal",
+     "western_cartoon_rubberhose"
+    ]
+   }
+  ],
+  "contrast_levers": "Tight raised shoulders vs relaxed; cool pale vs warm.",
+  "cultural_notes": "Manga sweat-drop conventions are widely understood in Thailand. Colour meanings depend on context (ElliotMaier2014).",
+  "cliches_to_avoid": [
+   "Knees literally knocking with motion lines everywhere (unless cartoon)",
+   "Butterfly stomach literal"
+  ],
+  "ai_mistakes": [
+   "Rendered as terror",
+   "Too many sweat drops"
+  ],
+  "eyewear_angle": "First eye exam for a child, slightly nervous, then smiling. Light, suitable.",
+  "refs": [
+   "McCloud1993",
+   "Artistic"
+  ],
+  "evidence": "craft"
+ },
+ {
+  "id": "anger.impatience",
+  "name_en": "Impatience",
+  "name_th": "หมดความอดทน / ใจร้อน",
+  "core_read": "Annoyed by waiting; time pressure turned into small irritated motions.",
+  "approaches": [
+   {
+    "name": "Watch tap",
+    "composition_ids": [
+     "subject_isolation",
+     "rule_of_thirds"
+    ],
+    "palette_direction": "Warm agitated orange #E07B39 on grey #9A9C9E",
+    "lighting_ids": [
+     "midday_hard",
+     "short"
+    ],
+    "camera_angle": "eye-level",
+    "camera_distance": "close-up",
+    "character_expression": "Lips pressed, eyes rolling up",
+    "body_language": "Tapping a wristwatch, foot tapping",
+    "environment": "Queue or bus stop",
+    "negative_space": "Blurred queue",
+    "texture": "Crisp",
+    "visual_metaphor": "Time made visible",
+    "symbolism": "Watch = pressure",
+    "style_ids_that_fit": [
+     "photoreal_lifestyle",
+     "webtoon_digital",
+     "modern_cartoon_tv"
+    ]
+   },
+   {
+    "name": "Endless queue",
+    "composition_ids": [
+     "repetition_rhythm",
+     "leading_lines"
+    ],
+    "palette_direction": "Flat bureaucratic beige #D8CFB8, fluorescent green #C9DCC0",
+    "lighting_ids": [
+     "top_light",
+     "overcast_soft"
+    ],
+    "camera_angle": "high angle",
+    "camera_distance": "wide",
+    "character_expression": "Front figure sighing, others bored",
+    "body_language": "Long line snaking",
+    "environment": "Government office",
+    "negative_space": "Ceiling and floor",
+    "texture": "Flat",
+    "visual_metaphor": "Waiting without end",
+    "symbolism": "Repetition = monotony",
+    "style_ids_that_fit": [
+     "isometric_3d",
+     "flat_illustration_corporate",
+     "pixel_art"
+    ]
+   },
+   {
+    "name": "Melting clock nod",
+    "composition_ids": [
+     "center",
+     "pattern_break"
+    ],
+    "palette_direction": "Hot red #D1453B and ticking black #1A1A1A",
+    "lighting_ids": [
+     "spotlight_theatrical",
+     "flat_cartoon_cel"
+    ],
+    "camera_angle": "eye-level",
+    "camera_distance": "medium",
+    "character_expression": "Steam lines, gritted teeth",
+    "body_language": "Arms crossed, toe tapping",
+    "environment": "Huge clock behind",
+    "negative_space": "Clock face",
+    "texture": "Graphic",
+    "visual_metaphor": "Time looming",
+    "symbolism": "Big clock = deadline",
+    "style_ids_that_fit": [
+     "pop_art",
+     "vintage_comic_halftone",
+     "flat_vector"
+    ]
+   }
+  ],
+  "contrast_levers": "Repetition and motion marks vs stillness; warm agitated accent.",
+  "cultural_notes": "Thai ใจร้อน is a known trait in traffic/queues; keep it humorous. Colour meanings depend on context (ElliotMaier2014).",
+  "cliches_to_avoid": [
+   "Skeleton waiting meme"
+  ],
+  "ai_mistakes": [
+   "Rendered as rage",
+   "Watch with garbled numbers"
+  ],
+  "eyewear_angle": "Light humour: customer impatient for glasses; 'ready in 1 hour' message in HTML layer. Suitable.",
+  "refs": [
+   "Artistic"
+  ],
+  "evidence": "craft"
+ },
+ {
+  "id": "will.urgency",
+  "name_en": "Urgency",
+  "name_th": "เร่งด่วน",
+  "core_read": "Act now; speed, forward motion, compressed time.",
+  "approaches": [
+   {
+    "name": "Running diagonal",
+    "composition_ids": [
+     "diagonal",
+     "leading_lines"
+    ],
+    "palette_direction": "Alarm red #D62828, white #FAFAFA, black #1B1B1B",
+    "lighting_ids": [
+     "midday_hard",
+     "rim_only"
+    ],
+    "camera_angle": "low angle",
+    "camera_distance": "medium wide",
+    "character_expression": "Focused, mouth open breathing",
+    "body_language": "Sprinting forward, body leaning, motion blur",
+    "environment": "Street or corridor",
+    "negative_space": "Space ahead of the runner",
+    "texture": "Motion blur, speed lines",
+    "visual_metaphor": "Racing time",
+    "symbolism": "Forward lean = momentum",
+    "style_ids_that_fit": [
+     "cinematic_realism",
+     "manga_bw_screentone",
+     "anime_cel"
+    ]
+   },
+   {
+    "name": "Countdown close",
+    "composition_ids": [
+     "center",
+     "scale_contrast"
+    ],
+    "palette_direction": "Black #111 with warning amber #F2A900",
+    "lighting_ids": [
+     "low_key",
+     "screen_glow_face"
+    ],
+    "camera_angle": "eye-level",
+    "camera_distance": "extreme close-up",
+    "character_expression": "Eyes darting, sweat",
+    "body_language": "Finger poised over button",
+    "environment": "Dashboard with timer (numbers in HTML layer)",
+    "negative_space": "Dark around",
+    "texture": "Glow",
+    "visual_metaphor": "Seconds left",
+    "symbolism": "Timer = pressure",
+    "style_ids_that_fit": [
+     "concept_art_scifi",
+     "cyberpunk_neon",
+     "cinematic_realism"
+    ]
+   },
+   {
+    "name": "Graphic arrows",
+    "composition_ids": [
+     "z_pattern",
+     "repetition_rhythm"
+    ],
+    "palette_direction": "Bold red #E63946 and yellow #FFD60A",
+    "lighting_ids": [
+     "flat_cartoon_cel",
+     "high_key"
+    ],
+    "camera_angle": "eye-level",
+    "camera_distance": "medium",
+    "character_expression": "None",
+    "body_language": "Stacked arrows pushing one way",
+    "environment": "Flat field",
+    "negative_space": "Clear lanes for text",
+    "texture": "Flat print",
+    "visual_metaphor": "Push forward",
+    "symbolism": "Arrows = direction now",
+    "style_ids_that_fit": [
+     "screenprint_poster",
+     "constructivism",
+     "flat_vector"
+    ]
+   }
+  ],
+  "contrast_levers": "Diagonals vs horizontals; warm alert colours; tight crops.",
+  "cultural_notes": "Red can mean luck/festive in Thai-Chinese contexts, not only alarm — pair with motion for urgency. Colour meanings depend on context (ElliotMaier2014).",
+  "cliches_to_avoid": [
+   "Exploding clocks",
+   "Fire everywhere"
+  ],
+  "ai_mistakes": [
+   "Fake timer digits",
+   "Motion blur smearing the face unreadably"
+  ],
+  "eyewear_angle": "Limited-time promo (price asked each time, text in HTML). Use urgency graphics sparingly to avoid cheapness.",
+  "refs": [
+   "Arnheim1974",
+   "Itti1998",
+   "Artistic"
+  ],
+  "evidence": "craft"
+ },
+ {
+  "id": "will.authority_command",
+  "name_en": "Authority / command",
+  "name_th": "สั่งการอย่างมีอำนาจ",
+  "core_read": "Calm power that expects obedience; stable, centred, elevated.",
+  "approaches": [
+   {
+    "name": "Low-angle leader",
+    "composition_ids": [
+     "center",
+     "low_horizon"
+    ],
+    "palette_direction": "Deep navy #1C2541, gold #C9A227, cool steel #8D99AE",
+    "lighting_ids": [
+     "top_light",
+     "rembrandt"
+    ],
+    "camera_angle": "low angle",
+    "camera_distance": "medium",
+    "character_expression": "Steady direct gaze, closed mouth",
+    "body_language": "Feet planted, hands behind back or one pointing",
+    "environment": "Command room or podium",
+    "negative_space": "Space above",
+    "texture": "Polished",
+    "visual_metaphor": "Elevation = power",
+    "symbolism": "Gold = rank",
+    "style_ids_that_fit": [
+     "cinematic_realism",
+     "baroque_dramatic",
+     "art_deco"
+    ]
+   },
+   {
+    "name": "Symmetry of order",
+    "composition_ids": [
+     "symmetry",
+     "repetition_rhythm"
+    ],
+    "palette_direction": "Monochrome greys #2B2D42 #EDF2F4 with a red accent #D90429",
+    "lighting_ids": [
+     "three_point",
+     "high_key"
+    ],
+    "camera_angle": "eye-level",
+    "camera_distance": "wide",
+    "character_expression": "Neutral",
+    "body_language": "Figure at head of a long table, everyone facing them",
+    "environment": "Boardroom",
+    "negative_space": "Long table perspective",
+    "texture": "Clean",
+    "visual_metaphor": "Order around a centre",
+    "symbolism": "Head of table = authority",
+    "style_ids_that_fit": [
+     "architectural_visualization",
+     "bauhaus_modernist",
+     "constructivism"
+    ]
+   },
+   {
+    "name": "Silhouetted hand",
+    "composition_ids": [
+     "figure_ground",
+     "negative_space"
+    ],
+    "palette_direction": "Bright backdrop #F2F2F2 and black silhouette #0E0E0E",
+    "lighting_ids": [
+     "backlit_silhouette",
+     "spotlight_theatrical"
+    ],
+    "camera_angle": "eye-level",
+    "camera_distance": "medium",
+    "character_expression": "Unseen",
+    "body_language": "Palm raised flat: stop",
+    "environment": "Plain",
+    "negative_space": "Large empty field",
+    "texture": "Flat",
+    "visual_metaphor": "One gesture controls",
+    "symbolism": "Palm = halt",
+    "style_ids_that_fit": [
+     "papercut_layered",
+     "screenprint_poster",
+     "minimalism"
+    ]
+   }
+  ],
+  "contrast_levers": "Vertical stable shapes, symmetry, low angle vs high-angle subordinates.",
+  "cultural_notes": "Thai hierarchy (ผู้ใหญ่/ผู้น้อย) shows in seating height and who speaks; uniforms signal authority. Avoid royal/military imagery. Colour meanings depend on context (ElliotMaier2014).",
+  "cliches_to_avoid": [
+   "Dictator balcony",
+   "Pointing at viewer recruitment poster copy"
+  ],
+  "ai_mistakes": [
+   "Real uniforms/insignia",
+   "Threat instead of authority"
+  ],
+  "eyewear_angle": "Trusted-expert variant: optometrist with confident stance — reframe as expertise, not command.",
+  "refs": [
+   "Arnheim1974",
+   "Artistic"
+  ],
+  "evidence": "craft"
+ },
+ {
+  "id": "care.pleading",
+  "name_en": "Pleading",
+  "name_th": "อ้อนวอน",
+  "core_read": "Begging for help or mercy; lowered body, upturned face, hands together.",
+  "approaches": [
+   {
+    "name": "Kneeling plea",
+    "composition_ids": [
+     "diagonal",
+     "triangular"
+    ],
+    "palette_direction": "Dim cool #45506A, warm face light #E3B48A",
+    "lighting_ids": [
+     "top_light",
+     "chiaroscuro"
+    ],
+    "camera_angle": "high angle",
+    "camera_distance": "medium",
+    "character_expression": "Brows pulled up and together, wet eyes",
+    "body_language": "Kneeling, hands clasped, leaning forward",
+    "environment": "Floor before a standing figure (partly out of frame)",
+    "negative_space": "Space above",
+    "texture": "Painterly",
+    "visual_metaphor": "Lowering self",
+    "symbolism": "Clasped hands = plea",
+    "style_ids_that_fit": [
+     "baroque_dramatic",
+     "oil_painting_classical",
+     "digital_painting_painterly"
+    ]
+   },
+   {
+    "name": "Hand reaching up",
+    "composition_ids": [
+     "leading_lines",
+     "vignette_tunnel"
+    ],
+    "palette_direction": "Dark #191A1F with a cold beam #BFD4E6",
+    "lighting_ids": [
+     "volumetric_god_rays",
+     "low_key"
+    ],
+    "camera_angle": "low angle",
+    "camera_distance": "close-up",
+    "character_expression": "No face",
+    "body_language": "Hand stretched up into light",
+    "environment": "Well or pit",
+    "negative_space": "Dark around beam",
+    "texture": "Dust in light",
+    "visual_metaphor": "Reaching for rescue",
+    "symbolism": "Light above = help",
+    "style_ids_that_fit": [
+     "concept_art_fantasy",
+     "matte_painting",
+     "charcoal_expressive"
+    ]
+   },
+   {
+    "name": "Wai of request",
+    "composition_ids": [
+     "center",
+     "subject_isolation"
+    ],
+    "palette_direction": "Soft warm neutrals #E9DCC9, #B5927A",
+    "lighting_ids": [
+     "key_fill_soft",
+     "window_side"
+    ],
+    "camera_angle": "eye-level",
+    "camera_distance": "medium close-up",
+    "character_expression": "Pleading eyes, slight forced smile",
+    "body_language": "Hands in wai at chest, slight bow",
+    "environment": "Plain wall",
+    "negative_space": "Clean background",
+    "texture": "Natural",
+    "visual_metaphor": "Polite request",
+    "symbolism": "Wai = respect + request",
+    "style_ids_that_fit": [
+     "photoreal_lifestyle",
+     "storybook_gouache",
+     "line_art_minimal"
+    ]
+   }
+  ],
+  "contrast_levers": "Low vs high positions; upward gaze; light from above.",
+  "cultural_notes": "Thai pleading often uses ไหว้ and soft voice; ขอร้อง gestures. Wai height signals hierarchy (higher = more respect). Colour meanings depend on context (ElliotMaier2014).",
+  "cliches_to_avoid": [
+   "Puppy-dog eyes everywhere"
+  ],
+  "ai_mistakes": [
+   "Wai hands rendered with fingers interlaced (wrong — palms flat together)",
+   "Prayer pose read as religious"
+  ],
+  "eyewear_angle": "Not suitable for ads (except comic 'please don't sit on my glasses').",
+  "refs": [
+   "Arnheim1974",
+   "Artistic"
+  ],
+  "evidence": "craft"
+ },
+ {
+  "id": "care.reassurance",
+  "name_en": "Reassurance",
+  "name_th": "ให้ความมั่นใจ / ปลอบให้สบายใจ",
+  "core_read": "Telling someone it will be okay; steady, warm, calm presence.",
+  "approaches": [
+   {
+    "name": "Steady hand on shoulder",
+    "composition_ids": [
+     "over_shoulder",
+     "rule_of_thirds"
+    ],
+    "palette_direction": "Warm calm: honey #E0B36E, sage #9DB09A, cream #F3EDE1",
+    "lighting_ids": [
+     "window_side",
+     "bounce_fill_warm"
+    ],
+    "camera_angle": "eye-level",
+    "camera_distance": "medium",
+    "character_expression": "Calm small smile, steady eye contact",
+    "body_language": "Hand resting on the other's shoulder, both relaxed",
+    "environment": "Clinic or home",
+    "negative_space": "Soft background",
+    "texture": "Soft fabric",
+    "visual_metaphor": "Grounding touch",
+    "symbolism": "Steady hand = 'I'm here'",
+    "style_ids_that_fit": [
+     "photoreal_lifestyle",
+     "storybook_gouache",
+     "pastel_soft"
+    ]
+   },
+   {
+    "name": "Lighthouse",
+    "composition_ids": [
+     "center",
+     "low_horizon"
+    ],
+    "palette_direction": "Night sea navy #1C2E4A, warm beam #F6C35B",
+    "lighting_ids": [
+     "moonlight_blue",
+     "volumetric_god_rays"
+    ],
+    "camera_angle": "eye-level",
+    "camera_distance": "wide",
+    "character_expression": "No face",
+    "body_language": "Small boat finding the beam",
+    "environment": "Rough sea and lighthouse",
+    "negative_space": "Night sky",
+    "texture": "Painterly waves",
+    "visual_metaphor": "Guide in darkness",
+    "symbolism": "Lighthouse = reliable help",
+    "style_ids_that_fit": [
+     "romanticism_landscape",
+     "anime_painterly_bg",
+     "children_book_crayon"
+    ]
+   },
+   {
+    "name": "Explaining calmly",
+    "composition_ids": [
+     "asymmetrical_balance",
+     "layered_depth"
+    ],
+    "palette_direction": "Clean bright #F7F7F5 with brand green #123A29 accent",
+    "lighting_ids": [
+     "high_key",
+     "key_fill_soft"
+    ],
+    "camera_angle": "eye-level",
+    "camera_distance": "medium close-up",
+    "character_expression": "Expert smiling gently, client's face relaxing",
+    "body_language": "Pointing to a simple diagram, open palm",
+    "environment": "Bright consultation desk",
+    "negative_space": "Clean wall",
+    "texture": "Clean",
+    "visual_metaphor": "Knowledge as comfort",
+    "symbolism": "Open palm = honesty",
+    "style_ids_that_fit": [
+     "photoreal_lifestyle",
+     "flat_illustration_corporate",
+     "line_art_minimal"
+    ]
+   }
+  ],
+  "contrast_levers": "Warm stable light vs cold uncertain; open hands; level eyes.",
+  "cultural_notes": "Thai 'ไม่เป็นไร' culture; reassurance is often smiling and light touch on arm. Colour meanings depend on context (ElliotMaier2014).",
+  "cliches_to_avoid": [
+   "Thumbs-up doctor stock"
+  ],
+  "ai_mistakes": [
+   "Too wide grin looks salesy",
+   "Hand on shoulder deforming the collarbone"
+  ],
+  "eyewear_angle": "Excellent: optometrist reassuring a nervous customer during an eye test. Strong brand fit.",
+  "refs": [
+   "ElliotMaier2014",
+   "Artistic"
+  ],
+  "evidence": "craft"
+ },
+ {
+  "id": "care.encouragement",
+  "name_en": "Encouragement",
+  "name_th": "ให้กำลังใจ",
+  "core_read": "Cheering someone on; upward energy, supporter behind or beside.",
+  "approaches": [
+   {
+    "name": "Hand-up on the climb",
+    "composition_ids": [
+     "diagonal",
+     "low_horizon"
+    ],
+    "palette_direction": "Bright optimistic: sunrise orange #F4A259, sky #8ECAE6, green #74A57F",
+    "lighting_ids": [
+     "golden_hour",
+     "backlit_silhouette"
+    ],
+    "camera_angle": "low angle",
+    "camera_distance": "wide",
+    "character_expression": "Supporter smiling, climber determined",
+    "body_language": "Helper reaching a hand down to a climber",
+    "environment": "Hill/stairs",
+    "negative_space": "Sky above",
+    "texture": "Soft",
+    "visual_metaphor": "Lifting up",
+    "symbolism": "Upward = progress",
+    "style_ids_that_fit": [
+     "watercolor_loose",
+     "flat_illustration_corporate",
+     "cinematic_realism"
+    ]
+   },
+   {
+    "name": "Cheering sidelines",
+    "composition_ids": [
+     "layered_depth",
+     "rule_of_thirds"
+    ],
+    "palette_direction": "Vivid: yellow #FFD166, teal #06D6A0, pink #EF476F",
+    "lighting_ids": [
+     "midday_hard",
+     "high_key"
+    ],
+    "camera_angle": "eye-level",
+    "camera_distance": "medium",
+    "character_expression": "Friends shouting with fists up",
+    "body_language": "Runner in foreground, cheerers behind",
+    "environment": "School sports day",
+    "negative_space": "Track",
+    "texture": "Energetic brush",
+    "visual_metaphor": "Community support",
+    "symbolism": "Fists up = 'you can'",
+    "style_ids_that_fit": [
+     "anime_cel",
+     "modern_cartoon_tv",
+     "children_book_crayon"
+    ]
+   },
+   {
+    "name": "Sprout and watering can",
+    "composition_ids": [
+     "center",
+     "subject_isolation"
+    ],
+    "palette_direction": "Fresh green #8BC34A on soft cream #FAF3E0",
+    "lighting_ids": [
+     "window_side",
+     "storybook_soft_glow"
+    ],
+    "camera_angle": "eye-level",
+    "camera_distance": "close-up",
+    "character_expression": "No face",
+    "body_language": "Hand watering a sprout",
+    "environment": "Pot on a sill",
+    "negative_space": "Plain wall",
+    "texture": "Soft",
+    "visual_metaphor": "Nurturing growth",
+    "symbolism": "Sprout = potential",
+    "style_ids_that_fit": [
+     "watercolor_botanical",
+     "children_book_crayon",
+     "colored_pencil"
+    ]
+   }
+  ],
+  "contrast_levers": "Upward directions, warm saturated accents vs droop.",
+  "cultural_notes": "Thai 'สู้ๆ' and fist pump; school sports day (กีฬาสี) colours are a strong reference. Colour meanings depend on context (ElliotMaier2014).",
+  "cliches_to_avoid": [
+   "Motivational poster eagle",
+   "Mountain peak flag"
+  ],
+  "ai_mistakes": [
+   "Helper pulling (becomes rescue)",
+   "Text on posters garbled"
+  ],
+  "eyewear_angle": "Kid trying first glasses, family cheering. Suitable for children's eyewear content.",
+  "refs": [
+   "Arnheim1974",
+   "Artistic"
+  ],
+  "evidence": "craft"
+ },
+ {
+  "id": "fear.quiet_menace",
+  "name_en": "Quiet menace",
+  "name_th": "คุกคามแบบเงียบ",
+  "core_read": "Calm, controlled threat; danger implied by stillness and what is not shown.",
+  "approaches": [
+   {
+    "name": "Figure in the doorway",
+    "composition_ids": [
+     "frame_within_frame",
+     "center"
+    ],
+    "palette_direction": "Sickly deep green #1E2B24, black #0A0A0A, pale face #D8D2C4",
+    "lighting_ids": [
+     "low_key",
+     "rim_only"
+    ],
+    "camera_angle": "eye-level",
+    "camera_distance": "medium wide",
+    "character_expression": "Faint smile, unblinking eyes",
+    "body_language": "Standing utterly still, hands loosely folded",
+    "environment": "Dark doorway at the end of a corridor",
+    "negative_space": "Long corridor emptiness",
+    "texture": "Grain",
+    "visual_metaphor": "Stillness = control",
+    "symbolism": "Doorway = no exit",
+    "style_ids_that_fit": [
+     "film_noir_photo",
+     "cinematic_realism",
+     "dark_fantasy_gothic"
+    ]
+   },
+   {
+    "name": "Too-polite tea",
+    "composition_ids": [
+     "symmetry",
+     "subject_isolation"
+    ],
+    "palette_direction": "Elegant cold: porcelain #EEF0F2, steel #6C7A89, a drop of red #8B1E2D",
+    "lighting_ids": [
+     "top_light",
+     "north_window"
+    ],
+    "camera_angle": "eye-level",
+    "camera_distance": "close-up",
+    "character_expression": "Smile that doesn't reach the eyes",
+    "body_language": "Pouring tea carefully, slow",
+    "environment": "Formal table",
+    "negative_space": "Clean table",
+    "texture": "Porcelain sheen",
+    "visual_metaphor": "Courtesy as threat",
+    "symbolism": "Red drop = hidden violence",
+    "style_ids_that_fit": [
+     "cinematic_realism",
+     "photoreal_product",
+     "chinese_gongbi"
+    ]
+   },
+   {
+    "name": "Shadow on the wall",
+    "composition_ids": [
+     "figure_ground",
+     "negative_space"
+    ],
+    "palette_direction": "Wall cream #E6DFD1 and long shadow #1E1E1E",
+    "lighting_ids": [
+     "under_light_horror",
+     "spotlight_theatrical"
+    ],
+    "camera_angle": "low angle",
+    "camera_distance": "wide",
+    "character_expression": "Unaware victim",
+    "body_language": "Small figure, huge shadow behind",
+    "environment": "Plain wall",
+    "negative_space": "Wall for shadow",
+    "texture": "Flat",
+    "visual_metaphor": "Something larger behind",
+    "symbolism": "Shadow = threat unseen",
+    "style_ids_that_fit": [
+     "graphic_novel_noir",
+     "expressionism",
+     "papercut_layered"
+    ]
+   }
+  ],
+  "contrast_levers": "Stillness, symmetry, calm faces vs dark palette; detail withheld.",
+  "cultural_notes": "Thai ghost/thriller (หนังผี) tropes are strong; quiet menace reads more 'Asian horror' than gore. Colour meanings depend on context (ElliotMaier2014).",
+  "cliches_to_avoid": [
+   "Bloody knife",
+   "Glowing red eyes"
+  ],
+  "ai_mistakes": [
+   "Over-gore",
+   "Menace face reads as cartoon villain"
+  ],
+  "eyewear_angle": "Not suitable for ads.",
+  "refs": [
+   "Block2008",
+   "Gurney2010",
+   "Artistic"
+  ],
+  "evidence": "craft"
+ },
+ {
+  "id": "social.deference_krengjai",
+  "name_en": "Deference / krengjai",
+  "name_th": "เกรงใจ",
+  "core_read": "Thai social consideration: not wanting to impose; lowering self, yielding space, softened requests.",
+  "approaches": [
+   {
+    "name": "Stepping back with a wai",
+    "composition_ids": [
+     "asymmetrical_balance",
+     "rule_of_thirds"
+    ],
+    "palette_direction": "Soft respectful warm neutrals: rice #F1E9DA, teak #8B6A4E, muted jade #8FAE9A",
+    "lighting_ids": [
+     "window_side",
+     "key_fill_soft"
+    ],
+    "camera_angle": "eye-level",
+    "camera_distance": "medium",
+    "character_expression": "Small polite smile, eyes slightly lowered",
+    "body_language": "Slight bow, hands together at chest (wai) or one hand raised palm-out declining, a half step back",
+    "environment": "Shop counter or home doorway with an elder/guest",
+    "negative_space": "Space yielded toward the other person",
+    "texture": "Natural wood, cotton",
+    "visual_metaphor": "Making oneself small for others",
+    "symbolism": "Half step back = giving way; lowered head = respect",
+    "style_ids_that_fit": [
+     "photoreal_lifestyle",
+     "storybook_gouache",
+     "line_art_minimal"
+    ]
+   },
+   {
+    "name": "Passing low",
+    "composition_ids": [
+     "low_horizon",
+     "layered_depth"
+    ],
+    "palette_direction": "Warm interior #E7D6BE with soft shadow #A4927E",
+    "lighting_ids": [
+     "global_illumination_interior",
+     "bounce_fill_warm"
+    ],
+    "camera_angle": "eye-level",
+    "camera_distance": "wide",
+    "character_expression": "Gentle, apologetic",
+    "body_language": "Bending low while walking past seated elders, one hand slightly forward",
+    "environment": "Living room with elders seated on floor/sofa",
+    "negative_space": "Room around",
+    "texture": "Soft",
+    "visual_metaphor": "Keeping head lower than elders",
+    "symbolism": "Lowered body = hierarchy honoured",
+    "style_ids_that_fit": [
+     "thai_traditional_mural",
+     "storybook_gouache",
+     "flat_illustration_corporate"
+    ]
+   },
+   {
+    "name": "Offered seat",
+    "composition_ids": [
+     "over_shoulder",
+     "diagonal"
+    ],
+    "palette_direction": "Cool train #9FB4C2 with warm figures #D8A47F",
+    "lighting_ids": [
+     "overcast_soft",
+     "top_light"
+    ],
+    "camera_angle": "slightly high angle",
+    "camera_distance": "medium wide",
+    "character_expression": "Both smiling politely, hesitant",
+    "body_language": "One gesturing 'please', other waving hand declining",
+    "environment": "BTS/MRT carriage",
+    "negative_space": "Empty seat",
+    "texture": "Clean",
+    "visual_metaphor": "Each yielding to the other",
+    "symbolism": "Empty seat = consideration",
+    "style_ids_that_fit": [
+     "webtoon_digital",
+     "anime_cel",
+     "photoreal_lifestyle"
+    ]
+   }
+  ],
+  "contrast_levers": "Height differences (head lower), space given, soft light; avoid power-contrast drama.",
+  "cultural_notes": "Krengjai (เกรงใจ) is a core Thai value; wai height rules: higher wai to elders/monks; walking bent past elders; never point feet at people or touch heads. Not equal to fear. Colour meanings depend on context (ElliotMaier2014).",
+  "cliches_to_avoid": [
+   "Exaggerated bowing like Japanese ojigi",
+   "Servile cowering"
+  ],
+  "ai_mistakes": [
+   "Wai with interlaced fingers",
+   "Bowing too deep (reads Japanese)",
+   "Shoes worn indoors in a Thai home"
+  ],
+  "eyewear_angle": "Very tasteful: customer politely hesitant to try many frames, staff warmly insisting 'ลองได้เลยครับ'. Thai-specific charm.",
+  "refs": [
+   "Arnheim1974",
+   "Artistic"
+  ],
+  "evidence": "craft"
+ },
+ {
+  "id": "social.krengjai_refusal",
+  "name_en": "Krengjai refusal",
+  "name_th": "ปฏิเสธแบบเกรงใจ",
+  "core_read": "Saying no without saying no: smiling, softening, deflecting to protect the relationship.",
+  "approaches": [
+   {
+    "name": "Smile and small wave",
+    "composition_ids": [
+     "rule_of_thirds",
+     "dominant_foreground"
+    ],
+    "palette_direction": "Polite warm #E8CDB0 with a cool undertone #9BAAB5",
+    "lighting_ids": [
+     "key_fill_soft",
+     "window_side"
+    ],
+    "camera_angle": "eye-level",
+    "camera_distance": "medium close-up",
+    "character_expression": "Apologetic smile, eyebrows tilted up, eyes slightly averted",
+    "body_language": "Hand waving low in front of chest (palm out, 'ไม่เป็นไร'), slight lean back, other hand on chest",
+    "environment": "Someone offering food/gift in foreground (out of focus)",
+    "negative_space": "Background soft",
+    "texture": "Soft",
+    "visual_metaphor": "Gentle wall",
+    "symbolism": "Low wave = refusal; hand on chest = sincerity",
+    "style_ids_that_fit": [
+     "photoreal_lifestyle",
+     "webtoon_digital",
+     "storybook_gouache"
+    ]
+   },
+   {
+    "name": "Plate pushed politely",
+    "composition_ids": [
+     "center",
+     "subject_isolation"
+    ],
+    "palette_direction": "Home-cooked colours #D48C4A #EFE3CF",
+    "lighting_ids": [
+     "practical_lamp",
+     "bounce_fill_warm"
+    ],
+    "camera_angle": "high angle",
+    "camera_distance": "close-up",
+    "character_expression": "Not shown",
+    "body_language": "Two hands gently sliding a full plate back, fingertips only",
+    "environment": "Dining table",
+    "negative_space": "Plain table",
+    "texture": "Ceramic",
+    "visual_metaphor": "Returning with care",
+    "symbolism": "Fingertips = soft force",
+    "style_ids_that_fit": [
+     "colored_pencil",
+     "gouache_flat",
+     "photoreal_lifestyle"
+    ]
+   },
+   {
+    "name": "Two-panel subtext",
+    "composition_ids": [
+     "split_screen",
+     "figure_ground"
+    ],
+    "palette_direction": "Outer bright #F6EBD9 vs inner grey #7E8790",
+    "lighting_ids": [
+     "flat_cartoon_cel",
+     "high_key"
+    ],
+    "camera_angle": "eye-level",
+    "camera_distance": "medium",
+    "character_expression": "Panel 1 smiling 'maybe'; panel 2 inner thought face 'no'",
+    "body_language": "Same pose, different inner state",
+    "environment": "Comic panels",
+    "negative_space": "Gutter",
+    "texture": "Line + flat colour",
+    "visual_metaphor": "Surface vs inner",
+    "symbolism": "Thought bubble (no text in image) = truth",
+    "style_ids_that_fit": [
+     "line_art_minimal",
+     "modern_cartoon_tv",
+     "webtoon_digital"
+    ]
+   }
+  ],
+  "contrast_levers": "Smiling face vs stepping-back body; warm surface vs cool inner panel.",
+  "cultural_notes": "Thai indirect refusal ('ไว้ก่อนนะ', 'ไม่เป็นไรค่ะ') is face-saving; viewers recognise the low palm wave and laugh-smile. Colour meanings depend on context (ElliotMaier2014).",
+  "cliches_to_avoid": [
+   "Hard X / hand-stop gesture (too blunt for krengjai)"
+  ],
+  "ai_mistakes": [
+   "Frown or blunt rejection",
+   "Hand gesture reading as 'hello' wave"
+  ],
+  "eyewear_angle": "Light humour: friend offers a garish frame, customer krengjai-refuses, staff suggests a better one. Suitable.",
+  "refs": [
+   "McCloud1993",
+   "Artistic"
+  ],
+  "evidence": "craft"
+ },
+ {
+  "id": "suppressed.forced_cheer",
+  "name_en": "Forced cheer",
+  "name_th": "ฝืนยิ้ม",
+  "core_read": "Smile on the outside, strain underneath; show both layers in one frame.",
+  "approaches": [
+   {
+    "name": "Bright set, clenched hands",
+    "composition_ids": [
+     "center",
+     "pattern_break"
+    ],
+    "palette_direction": "Over-bright party: lemon #FFE066, pink #FF9EBB, turquoise #6CD4C9 — and one cold shadow #44505C",
+    "lighting_ids": [
+     "high_key",
+     "top_light"
+    ],
+    "camera_angle": "eye-level",
+    "camera_distance": "medium",
+    "character_expression": "Wide smile, but eyes not crinkling, shadow falling across the eyes",
+    "body_language": "Hands clenched at sides or gripping a cup too tight, shoulders raised",
+    "environment": "Birthday/office party",
+    "negative_space": "Bright busy background",
+    "texture": "Glossy",
+    "visual_metaphor": "Mask of joy",
+    "symbolism": "Shadow on eyes = hidden truth",
+    "style_ids_that_fit": [
+     "photoreal_lifestyle",
+     "pop_art",
+     "cinematic_realism"
+    ]
+   },
+   {
+    "name": "Mirror reveal",
+    "composition_ids": [
+     "frame_within_frame",
+     "split_screen"
+    ],
+    "palette_direction": "Warm front #F2C58A vs mirror cold #6B7A8F",
+    "lighting_ids": [
+     "practical_lamp",
+     "split"
+    ],
+    "camera_angle": "eye-level",
+    "camera_distance": "medium close-up",
+    "character_expression": "Smiling at viewer; mirror reflection shows a tired face",
+    "body_language": "Fixing hair, posture upright",
+    "environment": "Bathroom mirror",
+    "negative_space": "Mirror",
+    "texture": "Glass",
+    "visual_metaphor": "Reflection shows truth",
+    "symbolism": "Mirror = inner self",
+    "style_ids_that_fit": [
+     "cinematic_realism",
+     "double_exposure",
+     "digital_painting_painterly"
+    ]
+   },
+   {
+    "name": "Smile mask held",
+    "composition_ids": [
+     "figure_ground",
+     "negative_space"
+    ],
+    "palette_direction": "Flat white mask #FAFAFA, grey body #8A8F94",
+    "lighting_ids": [
+     "flat_cartoon_cel",
+     "overcast_soft"
+    ],
+    "camera_angle": "slightly low angle",
+    "camera_distance": "full body",
+    "character_expression": "Holding a drawn smile in front of a neutral face",
+    "body_language": "Arm tired holding it up",
+    "environment": "Blank",
+    "negative_space": "Blank",
+    "texture": "Paper",
+    "visual_metaphor": "Effort of pretending",
+    "symbolism": "Mask = performance",
+    "style_ids_that_fit": [
+     "editorial_conceptual",
+     "line_art_minimal",
+     "paper_craft_3d"
+    ]
+   }
+  ],
+  "contrast_levers": "Warm bright environment vs cold shadow on eyes; smile vs tense hands.",
+  "cultural_notes": "Thai 'ยิ้มสยาม' (Land of Smiles) — smiling through difficulty is common; viewers read it with sympathy. Colour meanings depend on context (ElliotMaier2014).",
+  "cliches_to_avoid": [
+   "Clown makeup",
+   "Crying clown"
+  ],
+  "ai_mistakes": [
+   "AI renders a genuine Duchenne smile so layers vanish",
+   "Too-dark shadow looks like horror"
+  ],
+  "eyewear_angle": "Story context only (worker hiding tired eyes; later eye-break clip). Not for direct promo.",
+  "refs": [
+   "Livingstone2002",
+   "Artistic"
+  ],
+  "evidence": "craft"
+ },
+ {
+  "id": "suppressed.polite_anger",
+  "name_en": "Polite anger",
+  "name_th": "โกรธแต่ยังสุภาพ",
+  "core_read": "Anger held under courtesy; calm words, tense body.",
+  "approaches": [
+   {
+    "name": "Tight smile, white knuckles",
+    "composition_ids": [
+     "subject_isolation",
+     "rule_of_thirds"
+    ],
+    "palette_direction": "Composed neutrals #E2DDD5 with a heated cheek #D4776B and a red accent #B83A32",
+    "lighting_ids": [
+     "short",
+     "key_fill_soft"
+    ],
+    "camera_angle": "eye-level",
+    "camera_distance": "close-up",
+    "character_expression": "Stretched smile, flared nostrils, still eyes",
+    "body_language": "Hands folded too tightly, knuckles pale",
+    "environment": "Service counter",
+    "negative_space": "Clean background",
+    "texture": "Crisp",
+    "visual_metaphor": "Lid on pot",
+    "symbolism": "White knuckles = suppressed force",
+    "style_ids_that_fit": [
+     "photoreal_lifestyle",
+     "cinematic_realism",
+     "webtoon_digital"
+    ]
+   },
+   {
+    "name": "Kettle about to boil",
+    "composition_ids": [
+     "center",
+     "negative_space"
+    ],
+    "palette_direction": "Calm kitchen pastel #CFE0D8 with a steam/red element #D9463B",
+    "lighting_ids": [
+     "window_side",
+     "high_key"
+    ],
+    "camera_angle": "eye-level",
+    "camera_distance": "medium",
+    "character_expression": "No face",
+    "body_language": "A kettle lid rattling on a tidy stove",
+    "environment": "Neat kitchen",
+    "negative_space": "Calm space",
+    "texture": "Steam",
+    "visual_metaphor": "Pressure building",
+    "symbolism": "Steam = held anger",
+    "style_ids_that_fit": [
+     "gouache_flat",
+     "flat_vector",
+     "stylized_3d_animation"
+    ]
+   },
+   {
+    "name": "Formal bow with fist",
+    "composition_ids": [
+     "symmetry",
+     "split_screen"
+    ],
+    "palette_direction": "Upper body cool #8FA0B0, lower body hot #C2453C (split lighting)",
+    "lighting_ids": [
+     "cross_light",
+     "split"
+    ],
+    "camera_angle": "eye-level",
+    "camera_distance": "medium wide",
+    "character_expression": "Polite face",
+    "body_language": "Bowing/wai on top, hidden fist behind back",
+    "environment": "Office",
+    "negative_space": "Even",
+    "texture": "Clean",
+    "visual_metaphor": "Two halves of self",
+    "symbolism": "Hidden fist = true feeling",
+    "style_ids_that_fit": [
+     "graphic_novel_noir",
+     "anime_cel",
+     "modern_cartoon_tv"
+    ]
+   }
+  ],
+  "contrast_levers": "Neat composed environment vs one tense detail; cool vs hot split.",
+  "cultural_notes": "Thai culture values ใจเย็น (cool heart); public anger is shameful, so polite anger is very relatable. Colour meanings depend on context (ElliotMaier2014).",
+  "cliches_to_avoid": [
+   "Steam from ears (too cartoon unless intended)"
+  ],
+  "ai_mistakes": [
+   "Face fully angry (no politeness)",
+   "Hidden fist with wrong anatomy"
+  ],
+  "eyewear_angle": "Not suitable for ads.",
+  "refs": [
+   "Artistic"
+  ],
+  "evidence": "craft"
+ },
+ {
+  "id": "hidden.bravado_over_fear",
+  "name_en": "Bravado over fear",
+  "name_th": "ทำเป็นกล้าแต่กลัว",
+  "core_read": "Puffed-up confidence covering fear; big pose, small tells.",
+  "approaches": [
+   {
+    "name": "Hero pose, shaking knees",
+    "composition_ids": [
+     "center",
+     "low_horizon"
+    ],
+    "palette_direction": "Heroic warm #E8A24A over cool fearful shadow #3D4E66",
+    "lighting_ids": [
+     "rim_only",
+     "under_light_horror"
+    ],
+    "camera_angle": "low angle",
+    "camera_distance": "full body",
+    "character_expression": "Chin up grin, but eyes darting sideways, sweat at the temple",
+    "body_language": "Hands on hips, chest out — knees slightly bent and pressed together",
+    "environment": "Dark haunted corridor",
+    "negative_space": "Dark behind",
+    "texture": "Cel shading",
+    "visual_metaphor": "Pose vs tells",
+    "symbolism": "Shaking knees = truth",
+    "style_ids_that_fit": [
+     "modern_cartoon_tv",
+     "anime_cel",
+     "stylized_3d_animation"
+    ]
+   },
+   {
+    "name": "Big shadow, small kid",
+    "composition_ids": [
+     "figure_ground",
+     "scale_contrast"
+    ],
+    "palette_direction": "Night purple #2E2440, wall light #E9D8A6",
+    "lighting_ids": [
+     "practical_lamp",
+     "under_light_horror"
+    ],
+    "camera_angle": "eye-level",
+    "camera_distance": "wide",
+    "character_expression": "Kid's worried face",
+    "body_language": "Kid holding flashlight casting a huge monster-like heroic shadow",
+    "environment": "Bedroom at night",
+    "negative_space": "Wall",
+    "texture": "Storybook",
+    "visual_metaphor": "Projected courage",
+    "symbolism": "Shadow bigger than self",
+    "style_ids_that_fit": [
+     "children_book_crayon",
+     "storybook_gouache",
+     "papercut_layered"
+    ]
+   },
+   {
+    "name": "Split mirror bravado",
+    "composition_ids": [
+     "split_screen",
+     "symmetry"
+    ],
+    "palette_direction": "Left bold red #C8102E, right timid pale blue #A7C4DD",
+    "lighting_ids": [
+     "split",
+     "stage_colour_gels"
+    ],
+    "camera_angle": "eye-level",
+    "camera_distance": "close-up",
+    "character_expression": "Half face confident, half face scared",
+    "body_language": "Same body",
+    "environment": "Plain",
+    "negative_space": "Even",
+    "texture": "Graphic",
+    "visual_metaphor": "Two selves",
+    "symbolism": "Split face = conflict",
+    "style_ids_that_fit": [
+     "pop_art",
+     "editorial_conceptual",
+     "vintage_comic_halftone"
+    ]
+   }
+  ],
+  "contrast_levers": "Large posture vs small fear tells; warm front light vs cold under/back light.",
+  "cultural_notes": "Thai 'ทำเป็นเก่ง' humour is popular in ghost-comedy; play for laughs. Colour meanings depend on context (ElliotMaier2014).",
+  "cliches_to_avoid": [
+   "Chicken costume"
+  ],
+  "ai_mistakes": [
+   "Fear tells missing — reads pure confidence",
+   "Overlapping limbs in hero pose"
+  ],
+  "eyewear_angle": "Comedy: guy pretends he can read the far chart without glasses, squinting hard. Suitable light humour.",
+  "refs": [
+   "McCloud1993",
+   "Artistic"
+  ],
+  "evidence": "craft"
+ },
+ {
+  "id": "suppressed.holding_back_tears",
+  "name_en": "Holding back tears",
+  "name_th": "กลั้นน้ำตา",
+  "core_read": "Tears welling but not falling; effort of control visible.",
+  "approaches": [
+   {
+    "name": "Wet eyes, set jaw",
+    "composition_ids": [
+     "rule_of_thirds",
+     "subject_isolation"
+    ],
+    "palette_direction": "Soft cool #9EB0C0 with warm skin #D9AE92 and catchlight white",
+    "lighting_ids": [
+     "window_side",
+     "key_fill_soft"
+    ],
+    "camera_angle": "eye-level",
+    "camera_distance": "extreme close-up",
+    "character_expression": "Glossy rimmed eyes, tears pooled at lower lid, lips pressed, chin dimpled",
+    "body_language": "Looking up to stop tears, swallowing",
+    "environment": "Blurred background",
+    "negative_space": "Shallow focus",
+    "texture": "Detailed skin, moist eyes",
+    "visual_metaphor": "Dam about to break",
+    "symbolism": "Pooled tear = held",
+    "style_ids_that_fit": [
+     "cinematic_realism",
+     "photoreal_lifestyle",
+     "pencil_graphite_realistic"
+    ]
+   },
+   {
+    "name": "Turned away at the window",
+    "composition_ids": [
+     "over_shoulder",
+     "negative_space"
+    ],
+    "palette_direction": "Grey rainy #7F8B95 with a warm lamp #D9A56A",
+    "lighting_ids": [
+     "overcast_soft",
+     "practical_lamp"
+    ],
+    "camera_angle": "eye-level",
+    "camera_distance": "medium",
+    "character_expression": "Partial profile, eyes closed tight",
+    "body_language": "Back to the room, hand pressed to mouth",
+    "environment": "Room with someone talking behind",
+    "negative_space": "Window",
+    "texture": "Rain on glass",
+    "visual_metaphor": "Rain outside, none inside",
+    "symbolism": "Window rain = tears not shed",
+    "style_ids_that_fit": [
+     "anime_painterly_bg",
+     "watercolor_loose",
+     "cinematic_realism"
+    ]
+   },
+   {
+    "name": "Ceremony composure",
+    "composition_ids": [
+     "symmetry",
+     "repetition_rhythm"
+    ],
+    "palette_direction": "Formal black #1A1A1A and white #F3F3F3, single soft flower #EDE3C8",
+    "lighting_ids": [
+     "overcast_soft",
+     "top_light"
+    ],
+    "camera_angle": "eye-level",
+    "camera_distance": "medium wide",
+    "character_expression": "Composed face, red eyes",
+    "body_language": "Standing straight in a line, hands clasped tight",
+    "environment": "Ceremony",
+    "negative_space": "Formal space",
+    "texture": "Clean",
+    "visual_metaphor": "Duty over grief",
+    "symbolism": "Line = public role",
+    "style_ids_that_fit": [
+     "documentary_photo",
+     "charcoal_academic",
+     "film_noir_photo"
+    ]
+   }
+  ],
+  "contrast_levers": "Wet detail vs composed body; rain outside vs dry inside.",
+  "cultural_notes": "Thais often hold back tears in public/at funerals (white/black dress); crying openly is acceptable at farewells. Colour meanings depend on context (ElliotMaier2014).",
+  "cliches_to_avoid": [
+   "Single perfect tear rolling (that's falling, not held)"
+  ],
+  "ai_mistakes": [
+   "Tears rendered streaming",
+   "Red eyes look infected"
+  ],
+  "eyewear_angle": "Gentle story: grandparent sees grandchild clearly with new glasses, holding back happy tears. Suitable if warm.",
+  "refs": [
+   "Livingstone2002",
+   "Artistic"
+  ],
+  "evidence": "craft"
+ },
+ {
+  "id": "mixed.laughing_through_tears",
+  "name_en": "Laughing through tears",
+  "name_th": "หัวเราะทั้งน้ำตา",
+  "core_read": "Joy and sadness at once; laughing while crying, release.",
+  "approaches": [
+   {
+    "name": "Wet laugh close",
+    "composition_ids": [
+     "center",
+     "subject_isolation"
+    ],
+    "palette_direction": "Warm bright #F3C78A with cool tear highlights #BFD6E6",
+    "lighting_ids": [
+     "golden_hour",
+     "backlit_silhouette"
+    ],
+    "camera_angle": "eye-level",
+    "camera_distance": "close-up",
+    "character_expression": "Crinkled eyes with tears streaking, open laughing mouth",
+    "body_language": "Wiping tears with back of hand, head thrown back slightly",
+    "environment": "Outdoor reunion",
+    "negative_space": "Soft background",
+    "texture": "Glow",
+    "visual_metaphor": "Rain and sun together",
+    "symbolism": "Tears + laugh = release",
+    "style_ids_that_fit": [
+     "cinematic_realism",
+     "photoreal_lifestyle",
+     "anime_cel"
+    ]
+   },
+   {
+    "name": "Sunshower",
+    "composition_ids": [
+     "low_horizon",
+     "layered_depth"
+    ],
+    "palette_direction": "Gold sun #F4C152 with silver rain #C9D3DC and rainbow hint",
+    "lighting_ids": [
+     "golden_hour",
+     "backlit_silhouette"
+    ],
+    "camera_angle": "low angle",
+    "camera_distance": "wide",
+    "character_expression": "Small figures laughing",
+    "body_language": "Dancing in rain",
+    "environment": "Field in sunshower",
+    "negative_space": "Sky",
+    "texture": "Light rain streaks",
+    "visual_metaphor": "Weather of mixed feeling",
+    "symbolism": "Sunshower = both at once",
+    "style_ids_that_fit": [
+     "impressionism",
+     "watercolor_loose",
+     "anime_painterly_bg"
+    ]
+   },
+   {
+    "name": "Friends huddle",
+    "composition_ids": [
+     "triangular",
+     "odd_grouping"
+    ],
+    "palette_direction": "Mixed warm #E7A977 and cool #8EA6BD",
+    "lighting_ids": [
+     "practical_lamp",
+     "bounce_fill_warm"
+    ],
+    "camera_angle": "eye-level",
+    "camera_distance": "medium",
+    "character_expression": "Laughing and crying",
+    "body_language": "Three friends hugging, one wiping eyes",
+    "environment": "Graduation or farewell",
+    "negative_space": "Little",
+    "texture": "Snapshot grain",
+    "visual_metaphor": "Shared release",
+    "symbolism": "Three = group",
+    "style_ids_that_fit": [
+     "polaroid_instant",
+     "analog_film_35mm",
+     "storybook_gouache"
+    ]
+   }
+  ],
+  "contrast_levers": "Warm/cool temperature mix in one frame; tears + smile.",
+  "cultural_notes": "Thai graduations and farewells (เลี้ยงส่ง) are common contexts. Colour meanings depend on context (ElliotMaier2014).",
+  "cliches_to_avoid": [
+   "Comedy/tragedy masks"
+  ],
+  "ai_mistakes": [
+   "Only one emotion rendered",
+   "Tear streams like painted lines"
+  ],
+  "eyewear_angle": "Grandma laughs with tears after seeing clearly. Warm and suitable if handled sincerely.",
+  "refs": [
+   "Artistic"
+  ],
+  "evidence": "craft"
+ },
+ {
+  "id": "mixed.nervous_laughter",
+  "name_en": "Nervous laughter",
+  "name_th": "หัวเราะแห้งๆ",
+  "core_read": "Laughing to cover awkwardness or fear; smile with tense tells.",
+  "approaches": [
+   {
+    "name": "Awkward chuckle",
+    "composition_ids": [
+     "rule_of_thirds",
+     "subject_isolation"
+    ],
+    "palette_direction": "Awkward pastels #F4D6CC and sweat blue #A8C6DF",
+    "lighting_ids": [
+     "high_key",
+     "flat_cartoon_cel"
+    ],
+    "camera_angle": "eye-level",
+    "camera_distance": "medium close-up",
+    "character_expression": "Smile with teeth, eyebrows raised up and in, eyes sliding sideways",
+    "body_language": "Scratching back of head, shoulders up",
+    "environment": "Office after a mistake (spilled coffee)",
+    "negative_space": "Clean",
+    "texture": "Cel",
+    "visual_metaphor": "Covering a gaffe",
+    "symbolism": "Head scratch = awkward",
+    "style_ids_that_fit": [
+     "anime_cel",
+     "webtoon_digital",
+     "chibi_kawaii"
+    ]
+   },
+   {
+    "name": "Caught moment",
+    "composition_ids": [
+     "frame_within_frame",
+     "layered_depth"
+    ],
+    "palette_direction": "Fluorescent #E8EEE3 with red embarrassment #D97A6E",
+    "lighting_ids": [
+     "top_light",
+     "overcast_soft"
+    ],
+    "camera_angle": "eye-level",
+    "camera_distance": "medium wide",
+    "character_expression": "Laughing, eyes wide",
+    "body_language": "Hands raised palms out, stepping back",
+    "environment": "Doorway, others staring",
+    "negative_space": "Doorway",
+    "texture": "Photo",
+    "visual_metaphor": "Being watched",
+    "symbolism": "Stares = pressure",
+    "style_ids_that_fit": [
+     "photoreal_lifestyle",
+     "documentary_photo",
+     "modern_cartoon_tv"
+    ]
+   },
+   {
+    "name": "Wobbly grin sketch",
+    "composition_ids": [
+     "center",
+     "negative_space"
+    ],
+    "palette_direction": "Pencil grey on white #FFFFFF",
+    "lighting_ids": [
+     "flat_cartoon_cel",
+     "high_key"
+    ],
+    "camera_angle": "eye-level",
+    "camera_distance": "close-up",
+    "character_expression": "Wavy-line grin, sweat drop",
+    "body_language": "Hand at neck",
+    "environment": "Blank",
+    "negative_space": "Blank",
+    "texture": "Shaky line",
+    "visual_metaphor": "Instability",
+    "symbolism": "Wavy line = nerves",
+    "style_ids_that_fit": [
+     "pencil_sketch_loose",
+     "sketchnote_doodle",
+     "line_art_minimal"
+    ]
+   }
+  ],
+  "contrast_levers": "Smile vs raised shoulders/sweat; awkward stares in frame.",
+  "cultural_notes": "Thai 'หัวเราะแก้เขิน' is very common; also laughing when nervous in front of elders. Colour meanings depend on context (ElliotMaier2014).",
+  "cliches_to_avoid": [
+   "Laugh-cry emoji"
+  ],
+  "ai_mistakes": [
+   "Reads as genuine joy",
+   "Too many sweat drops"
+  ],
+  "eyewear_angle": "Light humour: putting glasses on upside down then laughing awkwardly. Suitable.",
+  "refs": [
+   "McCloud1993",
+   "Artistic"
+  ],
+  "evidence": "craft"
+ },
+ {
+  "id": "transition.fear_to_relief",
+  "name_en": "Fear → relief",
+  "name_th": "จากกลัวสู่โล่งใจ",
+  "core_read": "Tension releasing; show before/after with lighting change or sequential panels.",
+  "approaches": [
+   {
+    "name": "Two-panel exhale",
+    "composition_ids": [
+     "split_screen",
+     "repetition_rhythm"
+    ],
+    "palette_direction": "Panel A cold dark #2B3A4F, panel B warm bright #F4D7A1",
+    "lighting_ids": [
+     "low_key",
+     "high_key"
+    ],
+    "camera_angle": "eye-level",
+    "camera_distance": "medium close-up",
+    "character_expression": "A: wide eyes, held breath; B: eyes closed, exhale, shoulders drop",
+    "body_language": "Same pose, body softens",
+    "environment": "Same room, lights on in panel B",
+    "negative_space": "Gutter",
+    "texture": "Same texture both",
+    "visual_metaphor": "Lights coming on",
+    "symbolism": "Light = safety",
+    "style_ids_that_fit": [
+     "webtoon_digital",
+     "cinematic_realism",
+     "manga_bw_screentone"
+    ]
+   },
+   {
+    "name": "Split light across face",
+    "composition_ids": [
+     "center",
+     "figure_ground"
+    ],
+    "palette_direction": "Left half blue #3B5B7A, right half warm #F0B87A",
+    "lighting_ids": [
+     "split",
+     "cross_light"
+    ],
+    "camera_angle": "eye-level",
+    "camera_distance": "close-up",
+    "character_expression": "Dawning smile on warm side",
+    "body_language": "Hand releasing grip",
+    "environment": "Plain",
+    "negative_space": "Even",
+    "texture": "Painterly",
+    "visual_metaphor": "Crossing from dark to light",
+    "symbolism": "Split = transition",
+    "style_ids_that_fit": [
+     "digital_painting_painterly",
+     "oil_painting_classical",
+     "cinematic_realism"
+    ]
+   },
+   {
+    "name": "Storm clearing",
+    "composition_ids": [
+     "low_horizon",
+     "layered_depth"
+    ],
+    "palette_direction": "Storm grey #4E5965 breaking to blue #8EC5E8 and sun #F6D27A",
+    "lighting_ids": [
+     "volumetric_god_rays",
+     "overcast_soft"
+    ],
+    "camera_angle": "low angle",
+    "camera_distance": "wide",
+    "character_expression": "Small figure looking up",
+    "body_language": "Lowering umbrella",
+    "environment": "Street after storm",
+    "negative_space": "Sky clearing",
+    "texture": "Wet reflections",
+    "visual_metaphor": "Storm passes",
+    "symbolism": "Sun break = relief",
+    "style_ids_that_fit": [
+     "anime_painterly_bg",
+     "romanticism_landscape",
+     "matte_painting"
+    ]
+   }
+  ],
+  "contrast_levers": "Before/after: dark-to-light, tense-to-slack body; colour temperature shift is the main lever.",
+  "cultural_notes": "Thai 'โล่งอก' — hand on chest exhale is the recognised gesture. Colour meanings depend on context (ElliotMaier2014).",
+  "cliches_to_avoid": [
+   "Wiping sweat from brow cartoon only"
+  ],
+  "ai_mistakes": [
+   "Single frame shows only one state",
+   "Panels inconsistent character identity"
+  ],
+  "eyewear_angle": "Eye-test result fine: worried face → relieved smile. Suitable for eye-health content.",
+  "refs": [
+   "Block2008",
+   "McCloud1993",
+   "Artistic"
+  ],
+  "evidence": "craft"
+ },
+ {
+  "id": "transition.anger_to_sadness",
+  "name_en": "Anger → sadness",
+  "name_th": "จากโกรธกลายเป็นเศร้า",
+  "core_read": "Heat collapsing into hurt; anger revealed as the shell of sadness.",
+  "approaches": [
+   {
+    "name": "Fist opening",
+    "composition_ids": [
+     "split_screen",
+     "subject_isolation"
+    ],
+    "palette_direction": "Panel 1 red-orange #C9442E, panel 2 blue-grey #5E7186",
+    "lighting_ids": [
+     "cross_light",
+     "overcast_soft"
+    ],
+    "camera_angle": "eye-level",
+    "camera_distance": "close-up",
+    "character_expression": "Shouting → face crumpling",
+    "body_language": "Clenched fist → open hand dropping",
+    "environment": "Same kitchen",
+    "negative_space": "Gutter",
+    "texture": "Same",
+    "visual_metaphor": "Heat drains",
+    "symbolism": "Opening hand = surrender",
+    "style_ids_that_fit": [
+     "webtoon_digital",
+     "cinematic_realism",
+     "manga_bw_screentone"
+    ]
+   },
+   {
+    "name": "Temperature gradient",
+    "composition_ids": [
+     "diagonal",
+     "figure_ground"
+    ],
+    "palette_direction": "Gradient from hot red #B5332E (top) to cold blue #34506E (bottom)",
+    "lighting_ids": [
+     "sunset_rim_warm_cool",
+     "low_key"
+    ],
+    "camera_angle": "high angle",
+    "camera_distance": "medium",
+    "character_expression": "Wet eyes, mouth no longer shouting",
+    "body_language": "Slid down a wall to sit",
+    "environment": "Hallway",
+    "negative_space": "Wall",
+    "texture": "Painterly",
+    "visual_metaphor": "Falling down",
+    "symbolism": "Sliding down = collapse",
+    "style_ids_that_fit": [
+     "expressionism",
+     "digital_painting_painterly",
+     "charcoal_expressive"
+    ]
+   },
+   {
+    "name": "Broken plate aftermath",
+    "composition_ids": [
+     "flatlay_grid",
+     "negative_space"
+    ],
+    "palette_direction": "Shards white #F0EEE9 on grey #7D8288 floor",
+    "lighting_ids": [
+     "overcast_soft",
+     "top_light"
+    ],
+    "camera_angle": "top-down",
+    "camera_distance": "medium",
+    "character_expression": "Out of frame / hand",
+    "body_language": "Hand picking up shards slowly",
+    "environment": "Floor",
+    "negative_space": "Floor",
+    "texture": "Ceramic",
+    "visual_metaphor": "After the storm",
+    "symbolism": "Shards = damage done",
+    "style_ids_that_fit": [
+     "photoreal_lifestyle",
+     "documentary_photo",
+     "pencil_graphite_realistic"
+    ]
+   }
+  ],
+  "contrast_levers": "Warm-to-cool shift; vertical-to-collapsed posture; time sequencing.",
+  "cultural_notes": "Thai family drama context; keep non-violent. Colour meanings depend on context (ElliotMaier2014).",
+  "cliches_to_avoid": [
+   "Thrown objects mid-air with slow-mo"
+  ],
+  "ai_mistakes": [
+   "Only anger shown",
+   "Shards cut hands (gore)"
+  ],
+  "eyewear_angle": "Not suitable for ads.",
+  "refs": [
+   "Block2008",
+   "Artistic"
+  ],
+  "evidence": "craft"
+ },
+ {
+  "id": "transition.denial_to_acceptance",
+  "name_en": "Denial → acceptance",
+  "name_th": "จากปฏิเสธสู่ยอมรับ",
+  "core_read": "Refusing to see, then facing it; looking away → looking at.",
+  "approaches": [
+   {
+    "name": "Turning to the mirror",
+    "composition_ids": [
+     "repetition_rhythm",
+     "frame_within_frame"
+    ],
+    "palette_direction": "Three panels: grey #8A8F95 → cool dawn #B9C7D3 → soft warm #EED7B5",
+    "lighting_ids": [
+     "window_side",
+     "golden_hour"
+    ],
+    "camera_angle": "eye-level",
+    "camera_distance": "medium",
+    "character_expression": "Turned away → glancing → steady gaze with small smile",
+    "body_language": "Body rotates toward mirror across panels",
+    "environment": "Bedroom mirror",
+    "negative_space": "Gutters",
+    "texture": "Same",
+    "visual_metaphor": "Facing yourself",
+    "symbolism": "Mirror = truth",
+    "style_ids_that_fit": [
+     "webtoon_digital",
+     "storybook_gouache",
+     "pencil_sketch_loose"
+    ]
+   },
+   {
+    "name": "Blur to focus",
+    "composition_ids": [
+     "center",
+     "subject_isolation"
+    ],
+    "palette_direction": "Foggy grey-blue #A5B0B8 resolving to clear crisp colours #F2F2F0 #123A29",
+    "lighting_ids": [
+     "overcast_soft",
+     "high_key"
+    ],
+    "camera_angle": "eye-level",
+    "camera_distance": "medium close-up",
+    "character_expression": "Squint relaxes into calm",
+    "body_language": "Lowering a hand that covered the eyes",
+    "environment": "Bright clinic",
+    "negative_space": "Soft background",
+    "texture": "From soft blur to sharp",
+    "visual_metaphor": "Seeing clearly",
+    "symbolism": "Focus = acceptance",
+    "style_ids_that_fit": [
+     "photoreal_lifestyle",
+     "cinematic_realism",
+     "line_art_minimal"
+    ]
+   },
+   {
+    "name": "Hand on the door",
+    "composition_ids": [
+     "leading_lines",
+     "split_screen"
+    ],
+    "palette_direction": "Dark hallway #2F3440 to open garden light #CFE3C2",
+    "lighting_ids": [
+     "backlit_silhouette",
+     "golden_hour"
+    ],
+    "camera_angle": "eye-level",
+    "camera_distance": "wide",
+    "character_expression": "Back to door → walking out",
+    "body_language": "Leaning on closed door → opening it",
+    "environment": "Hallway to garden",
+    "negative_space": "Garden light",
+    "texture": "Soft",
+    "visual_metaphor": "Opening up",
+    "symbolism": "Open door = acceptance",
+    "style_ids_that_fit": [
+     "anime_painterly_bg",
+     "watercolor_loose",
+     "cinematic_realism"
+    ]
+   }
+  ],
+  "contrast_levers": "Blur→sharp, dark→warm, away→toward; sequential panels.",
+  "cultural_notes": "Presbyopia denial ('ยังไม่แก่') is very relatable for 40+ Thai customers. Colour meanings depend on context (ElliotMaier2014).",
+  "cliches_to_avoid": [
+   "Five-stages-of-grief infographic"
+  ],
+  "ai_mistakes": [
+   "Panels show different people",
+   "Blur applied to the whole image randomly"
+  ],
+  "eyewear_angle": "Excellent: 40+ customer holding menu far away (denial) → tries reading glasses → relaxed smile. Strong fit.",
+  "refs": [
+   "Livingstone2002",
+   "Block2008",
+   "Artistic"
+  ],
+  "evidence": "craft"
+ },
+ {
+  "id": "transition.calm_to_panic",
+  "name_en": "Calm → panic",
+  "name_th": "จากสงบสู่ตื่นตระหนก",
+  "core_read": "Order breaking suddenly; still frame to chaos.",
+  "approaches": [
+   {
+    "name": "Two-beat panels",
+    "composition_ids": [
+     "split_screen",
+     "pattern_break"
+    ],
+    "palette_direction": "Panel A calm pastel #CFE3E0, panel B alarm red #D7263D and black #121212",
+    "lighting_ids": [
+     "high_key",
+     "lightning_flash"
+    ],
+    "camera_angle": "eye-level",
+    "camera_distance": "medium",
+    "character_expression": "Relaxed sip → wide eyes, mouth open",
+    "body_language": "Seated → jumping up, cup dropping",
+    "environment": "Café; phone buzz (no text) in panel B",
+    "negative_space": "Gutter",
+    "texture": "Clean → speed lines",
+    "visual_metaphor": "Shattered calm",
+    "symbolism": "Speed lines = chaos",
+    "style_ids_that_fit": [
+     "manga_bw_screentone",
+     "webtoon_digital",
+     "modern_cartoon_tv"
+    ]
+   },
+   {
+    "name": "Dutch tilt chaos",
+    "composition_ids": [
+     "diagonal",
+     "layered_depth"
+    ],
+    "palette_direction": "Calm teal background #7FB7BE shattered by strobing red #E63946",
+    "lighting_ids": [
+     "stage_colour_gels",
+     "lightning_flash"
+    ],
+    "camera_angle": "dutch tilt",
+    "camera_distance": "medium wide",
+    "character_expression": "Panicked",
+    "body_language": "Running, hands on head",
+    "environment": "Room tilting, papers flying",
+    "negative_space": "None",
+    "texture": "Motion blur",
+    "visual_metaphor": "Ground shifting",
+    "symbolism": "Tilt = instability",
+    "style_ids_that_fit": [
+     "cinematic_realism",
+     "expressionism",
+     "graphic_novel_noir"
+    ]
+   },
+   {
+    "name": "Still water ripples",
+    "composition_ids": [
+     "center",
+     "radial"
+    ],
+    "palette_direction": "Mirror-still water #8FB4C4 breaking into dark ripples #24384A",
+    "lighting_ids": [
+     "overcast_soft",
+     "moonlight_blue"
+    ],
+    "camera_angle": "top-down",
+    "camera_distance": "close-up",
+    "character_expression": "No face",
+    "body_language": "A stone hitting the water",
+    "environment": "Pond",
+    "negative_space": "Water surface",
+    "texture": "Ripples",
+    "visual_metaphor": "Disturbance spreading",
+    "symbolism": "Ripples = panic spreading",
+    "style_ids_that_fit": [
+     "ink_brush_sumi_e",
+     "minimalism",
+     "photoreal_lifestyle"
+    ]
+   }
+  ],
+  "contrast_levers": "Horizontal calm → diagonal chaos; soft → hard flash light; pastel → red.",
+  "cultural_notes": "Thai social media uses 'ตกใจ' reaction stills widely. Colour meanings depend on context (ElliotMaier2014).",
+  "cliches_to_avoid": [
+   "Screaming face Munch homage"
+  ],
+  "ai_mistakes": [
+   "Chaos frame unreadable",
+   "Character changes between panels"
+  ],
+  "eyewear_angle": "Light: 'Where are my glasses?!' panic → found on head. Fun and suitable.",
+  "refs": [
+   "Arnheim1974",
+   "McCloud1993",
+   "Artistic"
+  ],
+  "evidence": "craft"
+ },
+ {
+  "id": "conflict.love_vs_anger",
+  "name_en": "Love vs anger",
+  "name_th": "รักแต่โกรธ",
+  "core_read": "Caring for someone while furious with them; push-pull in one frame.",
+  "approaches": [
+   {
+    "name": "Hug with clenched fist",
+    "composition_ids": [
+     "center",
+     "split_screen"
+    ],
+    "palette_direction": "Warm pink #E9A3A3 left, hot red #B3282D right, shared neutral #D9CFC4",
+    "lighting_ids": [
+     "cross_light",
+     "split"
+    ],
+    "camera_angle": "eye-level",
+    "camera_distance": "medium",
+    "character_expression": "Eyes closed in hug, jaw tight",
+    "body_language": "One arm hugging, other hand balled into fist behind their back",
+    "environment": "Doorway reunion after the person came home late",
+    "negative_space": "Little",
+    "texture": "Soft",
+    "visual_metaphor": "Holding and pushing",
+    "symbolism": "Fist behind back = anger hidden by love",
+    "style_ids_that_fit": [
+     "cinematic_realism",
+     "webtoon_digital",
+     "oil_painting_classical"
+    ]
+   },
+   {
+    "name": "Red thread tangle",
+    "composition_ids": [
+     "s_curve_flow",
+     "figure_ground"
+    ],
+    "palette_direction": "Red thread #C1272D on cream #F2EBDD",
+    "lighting_ids": [
+     "flat_cartoon_cel",
+     "high_key"
+    ],
+    "camera_angle": "eye-level",
+    "camera_distance": "wide",
+    "character_expression": "Two figures back to back",
+    "body_language": "Pulled apart but tied by a thread",
+    "environment": "Blank",
+    "negative_space": "Blank paper",
+    "texture": "Line",
+    "visual_metaphor": "Bound and fighting",
+    "symbolism": "Red thread = fate/bond (East Asian)",
+    "style_ids_that_fit": [
+     "line_art_minimal",
+     "ink_line_clean",
+     "papercut_layered"
+    ]
+   },
+   {
+    "name": "Mother scolding with food",
+    "composition_ids": [
+     "rule_of_thirds",
+     "dominant_foreground"
+    ],
+    "palette_direction": "Warm kitchen #E3B37C, steel #8C949A",
+    "lighting_ids": [
+     "practical_lamp",
+     "bounce_fill_warm"
+    ],
+    "camera_angle": "slightly high angle",
+    "camera_distance": "medium wide",
+    "character_expression": "Frowning, lecturing",
+    "body_language": "Wagging finger while setting a plate in front of the child",
+    "environment": "Thai home kitchen",
+    "negative_space": "Kitchen background",
+    "texture": "Real",
+    "visual_metaphor": "Scold and feed",
+    "symbolism": "Food = love",
+    "style_ids_that_fit": [
+     "photoreal_lifestyle",
+     "storybook_gouache",
+     "colored_pencil"
+    ]
+   }
+  ],
+  "contrast_levers": "Warm/hot split; gesture vs counter-gesture in one figure.",
+  "cultural_notes": "Thai parents often show love through food while scolding ('กินข้าวยัง' + ด่า); red thread of fate is shared East Asian myth. Colour meanings depend on context (ElliotMaier2014).",
+  "cliches_to_avoid": [
+   "Broken heart icon"
+  ],
+  "ai_mistakes": [
+   "Only one emotion shown",
+   "Violent gestures"
+  ],
+  "eyewear_angle": "Light: parent scolding kid for losing glasses while handing new pair. Gentle humour, suitable.",
+  "refs": [
+   "ElliotMaier2014",
+   "Artistic"
+  ],
+  "evidence": "craft"
+ },
+ {
+  "id": "conflict.pride_vs_hurt",
+  "name_en": "Pride vs hurt",
+  "name_th": "ทิฐิปะทะความเจ็บ",
+  "core_read": "Too proud to show the wound; chin up while something breaks inside.",
+  "approaches": [
+   {
+    "name": "Chin up, cracked reflection",
+    "composition_ids": [
+     "frame_within_frame",
+     "center"
+    ],
+    "palette_direction": "Regal cool navy #22304A and gold #B8933F, a cold crack line #DDE4EA",
+    "lighting_ids": [
+     "rembrandt",
+     "rim_only"
+    ],
+    "camera_angle": "slightly low angle",
+    "camera_distance": "close-up",
+    "character_expression": "Chin raised, eyes glassy, mouth firm",
+    "body_language": "Straight back, arms crossed loosely",
+    "environment": "Reflection in a cracked mirror/window",
+    "negative_space": "Dark surround",
+    "texture": "Glass crack",
+    "visual_metaphor": "Armour with a crack",
+    "symbolism": "Crack = hidden wound",
+    "style_ids_that_fit": [
+     "cinematic_realism",
+     "baroque_dramatic",
+     "digital_painting_painterly"
+    ]
+   },
+   {
+    "name": "Walking away straight",
+    "composition_ids": [
+     "leading_lines",
+     "negative_space"
+    ],
+    "palette_direction": "Grey street #8D9196, a coat in deep red #7E2430",
+    "lighting_ids": [
+     "overcast_soft",
+     "backlit_silhouette"
+    ],
+    "camera_angle": "eye-level",
+    "camera_distance": "wide",
+    "character_expression": "Back to camera; a hand wipes the face once",
+    "body_language": "Upright stride, never looking back",
+    "environment": "Long empty street",
+    "negative_space": "Street ahead",
+    "texture": "Film",
+    "visual_metaphor": "Not turning around",
+    "symbolism": "Straight walk = pride",
+    "style_ids_that_fit": [
+     "analog_film_35mm",
+     "anime_painterly_bg",
+     "film_noir_photo"
+    ]
+   },
+   {
+    "name": "Split figure",
+    "composition_ids": [
+     "split_screen",
+     "symmetry"
+    ],
+    "palette_direction": "Left gold armour #C9A23A, right bare skin under blue #6D86A3",
+    "lighting_ids": [
+     "split",
+     "stage_colour_gels"
+    ],
+    "camera_angle": "eye-level",
+    "camera_distance": "medium",
+    "character_expression": "Half stern, half pained",
+    "body_language": "Same stance",
+    "environment": "Plain",
+    "negative_space": "Even",
+    "texture": "Graphic",
+    "visual_metaphor": "Two selves",
+    "symbolism": "Armour = pride",
+    "style_ids_that_fit": [
+     "editorial_conceptual",
+     "art_deco",
+     "pop_art"
+    ]
+   }
+  ],
+  "contrast_levers": "Upright stance vs tears; warm armour vs cold skin.",
+  "cultural_notes": "Thai 'ทิฐิ' and face-saving; refusing to apologise is a lakorn staple. Colour meanings depend on context (ElliotMaier2014).",
+  "cliches_to_avoid": [
+   "Crown falling off"
+  ],
+  "ai_mistakes": [
+   "Pride rendered as arrogance only",
+   "No hurt tell"
+  ],
+  "eyewear_angle": "Not suitable for ads.",
+  "refs": [
+   "Arnheim1974",
+   "Artistic"
+  ],
+  "evidence": "craft"
+ },
+ {
+  "id": "mixed.bittersweet_farewell",
+  "name_en": "Bittersweet farewell",
+  "name_th": "อำลาแบบสุขปนเศร้า",
+  "core_read": "Leaving with gratitude and sadness; warm memories at an ending.",
+  "approaches": [
+   {
+    "name": "Last wave at the station",
+    "composition_ids": [
+     "low_horizon",
+     "rule_of_thirds"
+    ],
+    "palette_direction": "Golden afternoon #F0B366 with cool blue shadows #5D7A93",
+    "lighting_ids": [
+     "golden_hour",
+     "sunset_rim_warm_cool"
+    ],
+    "camera_angle": "eye-level",
+    "camera_distance": "wide",
+    "character_expression": "Smiling with wet eyes",
+    "body_language": "Waving from a train window / platform",
+    "environment": "Rural Thai train station (Hua Lamphong-like platform)",
+    "negative_space": "Sky over tracks",
+    "texture": "Film grain",
+    "visual_metaphor": "Departure",
+    "symbolism": "Train = life moving on",
+    "style_ids_that_fit": [
+     "anime_painterly_bg",
+     "analog_film_35mm",
+     "watercolor_loose"
+    ]
+   },
+   {
+    "name": "Empty desk with gifts",
+    "composition_ids": [
+     "flatlay_grid",
+     "negative_space"
+    ],
+    "palette_direction": "Soft pastels #F4E1D2 #CDE0D9 with paper white",
+    "lighting_ids": [
+     "window_side",
+     "overcast_soft"
+    ],
+    "camera_angle": "top-down",
+    "camera_distance": "medium",
+    "character_expression": "No face",
+    "body_language": "A box of belongings, a card, flowers",
+    "environment": "Office desk being cleared",
+    "negative_space": "Empty desk",
+    "texture": "Paper",
+    "visual_metaphor": "What remains",
+    "symbolism": "Card = goodbye thanks",
+    "style_ids_that_fit": [
+     "photoreal_lifestyle",
+     "colored_pencil",
+     "gouache_flat"
+    ]
+   },
+   {
+    "name": "Hug at dusk silhouette",
+    "composition_ids": [
+     "center",
+     "figure_ground"
+    ],
+    "palette_direction": "Dusk violet #6E5A8A to orange #E88B4A",
+    "lighting_ids": [
+     "backlit_silhouette",
+     "blue_hour"
+    ],
+    "camera_angle": "low angle",
+    "camera_distance": "medium",
+    "character_expression": "Silhouette",
+    "body_language": "Long embrace, one hand patting back",
+    "environment": "Pier/beach",
+    "negative_space": "Sky",
+    "texture": "Papercut",
+    "visual_metaphor": "Holding on",
+    "symbolism": "Dusk = ending but beautiful",
+    "style_ids_that_fit": [
+     "papercut_layered",
+     "screenprint_poster",
+     "cinematic_realism"
+    ]
+   }
+  ],
+  "contrast_levers": "Warm/cool in one frame; dusk light; smile + tears.",
+  "cultural_notes": "Thai เลี้ยงส่ง farewells, graduation, moving to Bangkok; garlands (พวงมาลัย) as gifts. Colour meanings depend on context (ElliotMaier2014).",
+  "cliches_to_avoid": [
+   "Waving handkerchief cliché"
+  ],
+  "ai_mistakes": [
+   "Only sadness or only joy",
+   "Train with garbled signage text"
+  ],
+  "eyewear_angle": "Shop's long-time customer moving away, final fitting. Warm but use sparingly.",
+  "refs": [
+   "Gurney2010",
+   "Artistic"
+  ],
+  "evidence": "craft"
+ },
+ {
+  "id": "social.schadenfreude",
+  "name_en": "Schadenfreude",
+  "name_th": "สะใจ",
+  "core_read": "Pleasure at someone else's misfortune; secret, slightly guilty grin.",
+  "approaches": [
+   {
+    "name": "Hidden grin",
+    "composition_ids": [
+     "rule_of_thirds",
+     "dominant_foreground"
+    ],
+    "palette_direction": "Mischievous yellow-green #B9C43A, purple shadow #5A3D6B",
+    "lighting_ids": [
+     "under_light_horror",
+     "short"
+    ],
+    "camera_angle": "eye-level",
+    "camera_distance": "close-up",
+    "character_expression": "Covering a grin with hand, eyes gleeful",
+    "body_language": "Hunched slightly, peeking",
+    "environment": "Background: rival slipping in a puddle (blurred)",
+    "negative_space": "Background",
+    "texture": "Cel",
+    "visual_metaphor": "Enjoying the fall",
+    "symbolism": "Covered mouth = trying to hide",
+    "style_ids_that_fit": [
+     "anime_cel",
+     "modern_cartoon_tv",
+     "webtoon_digital"
+    ]
+   },
+   {
+    "name": "Popcorn watcher",
+    "composition_ids": [
+     "over_shoulder",
+     "layered_depth"
+    ],
+    "palette_direction": "Cinema dark #1C1C24 with screen glow #8AB4F8",
+    "lighting_ids": [
+     "screen_glow_face",
+     "low_key"
+    ],
+    "camera_angle": "eye-level",
+    "camera_distance": "medium",
+    "character_expression": "Satisfied smirk",
+    "body_language": "Eating popcorn, leaning back",
+    "environment": "Watching drama on a phone",
+    "negative_space": "Dark",
+    "texture": "Glow",
+    "visual_metaphor": "Spectator",
+    "symbolism": "Popcorn = entertainment",
+    "style_ids_that_fit": [
+     "cinematic_realism",
+     "flat_vector",
+     "stylized_3d_animation"
+    ]
+   },
+   {
+    "name": "Karma cartoon",
+    "composition_ids": [
+     "diagonal",
+     "pattern_break"
+    ],
+    "palette_direction": "Bright comic #FFD23F #EE4266 #3BCEAC",
+    "lighting_ids": [
+     "flat_cartoon_cel",
+     "high_key"
+    ],
+    "camera_angle": "high angle",
+    "camera_distance": "wide",
+    "character_expression": "Bully slipping; small onlooker grinning",
+    "body_language": "Slapstick fall",
+    "environment": "Schoolyard",
+    "negative_space": "Ground",
+    "texture": "Halftone",
+    "visual_metaphor": "Comeuppance",
+    "symbolism": "Banana peel = karma",
+    "style_ids_that_fit": [
+     "vintage_comic_halftone",
+     "western_cartoon_rubberhose",
+     "pop_art"
+    ]
+   }
+  ],
+  "contrast_levers": "Hidden vs open grin; target in background; mischievous palette.",
+  "cultural_notes": "Thai 'สะใจ' is common in lakorn when villain gets karma (กรรมตามสนอง). Colour meanings depend on context (ElliotMaier2014).",
+  "cliches_to_avoid": [
+   "Evil laugh villain"
+  ],
+  "ai_mistakes": [
+   "Real injury shown",
+   "Malice too strong"
+  ],
+  "eyewear_angle": "Not suitable for ads.",
+  "refs": [
+   "McCloud1993",
+   "Artistic"
+  ],
+  "evidence": "craft"
+ },
+ {
+  "id": "social.gloating",
+  "name_en": "Gloating",
+  "name_th": "อวดเยาะ / ได้ใจ",
+  "core_read": "Open boasting over another's loss; superiority on display.",
+  "approaches": [
+   {
+    "name": "Smug pose",
+    "composition_ids": [
+     "center",
+     "low_horizon"
+    ],
+    "palette_direction": "Gaudy gold #D4AF37, purple #5B2A86",
+    "lighting_ids": [
+     "spotlight_theatrical",
+     "rim_only"
+    ],
+    "camera_angle": "low angle",
+    "camera_distance": "medium",
+    "character_expression": "Half-lidded eyes, smug lopsided grin, chin up",
+    "body_language": "Leaning back, arms behind head, feet up",
+    "environment": "Trophy beside, loser slumped in background",
+    "negative_space": "Space above",
+    "texture": "Glossy",
+    "visual_metaphor": "Lording over",
+    "symbolism": "Trophy = win flaunted",
+    "style_ids_that_fit": [
+     "pop_art",
+     "modern_cartoon_tv",
+     "cinematic_realism"
+    ]
+   },
+   {
+    "name": "Dancing over the scoreboard",
+    "composition_ids": [
+     "diagonal",
+     "scale_contrast"
+    ],
+    "palette_direction": "Neon #FF2E63 #08D9D6 on black",
+    "lighting_ids": [
+     "neon_night",
+     "stage_colour_gels"
+    ],
+    "camera_angle": "high angle",
+    "camera_distance": "wide",
+    "character_expression": "Mocking dance",
+    "body_language": "Victory dance in front of a sulking rival",
+    "environment": "Game room",
+    "negative_space": "Floor",
+    "texture": "Pixel",
+    "visual_metaphor": "Rubbing it in",
+    "symbolism": "Dance = display",
+    "style_ids_that_fit": [
+     "pixel_art",
+     "synthwave",
+     "vaporwave_retro"
+    ]
+   },
+   {
+    "name": "Peacock metaphor",
+    "composition_ids": [
+     "radial",
+     "center"
+    ],
+    "palette_direction": "Peacock teal #00798C, gold #E0B23B",
+    "lighting_ids": [
+     "high_key",
+     "product_softbox"
+    ],
+    "camera_angle": "eye-level",
+    "camera_distance": "medium",
+    "character_expression": "Proud",
+    "body_language": "Figure with an exaggerated peacock-tail cloak",
+    "environment": "Plain",
+    "negative_space": "Blank",
+    "texture": "Ornamental",
+    "visual_metaphor": "Display of vanity",
+    "symbolism": "Peacock = pride",
+    "style_ids_that_fit": [
+     "art_nouveau",
+     "persian_miniature",
+     "editorial_conceptual"
+    ]
+   }
+  ],
+  "contrast_levers": "Low angle on gloater; open display vs hidden (schadenfreude).",
+  "cultural_notes": "Overt gloating is socially frowned upon in Thailand; reads villainous. Colour meanings depend on context (ElliotMaier2014).",
+  "cliches_to_avoid": [
+   "Rich villain with cigar and money"
+  ],
+  "ai_mistakes": [
+   "Malice too harsh",
+   "Text on scoreboard garbled (put numbers in HTML)"
+  ],
+  "eyewear_angle": "Not suitable for ads.",
+  "refs": [
+   "Arnheim1974",
+   "Artistic"
+  ],
+  "evidence": "craft"
+ },
+ {
+  "id": "awe.childlike_wonder",
+  "name_en": "Childlike wonder",
+  "name_th": "ทึ่งแบบเด็กๆ",
+  "core_read": "Fresh amazement; wide eyes, open mouth, looking up at magic.",
+  "approaches": [
+   {
+    "name": "Looking up at lanterns",
+    "composition_ids": [
+     "low_horizon",
+     "scale_contrast"
+    ],
+    "palette_direction": "Night indigo #1E2A55 with warm lantern gold #F7C35F",
+    "lighting_ids": [
+     "candle_fire",
+     "storybook_soft_glow"
+    ],
+    "camera_angle": "low angle",
+    "camera_distance": "wide",
+    "character_expression": "Wide sparkling eyes, open mouth smile",
+    "body_language": "Child on tiptoe, arms reaching up",
+    "environment": "Yi Peng/Loy Krathong lanterns rising",
+    "negative_space": "Night sky full of lights",
+    "texture": "Soft bokeh",
+    "visual_metaphor": "World bigger than self",
+    "symbolism": "Lanterns = wishes",
+    "style_ids_that_fit": [
+     "anime_painterly_bg",
+     "storybook_gouache",
+     "digital_painting_painterly"
+    ]
+   },
+   {
+    "name": "Nose to the aquarium",
+    "composition_ids": [
+     "frame_within_frame",
+     "figure_ground"
+    ],
+    "palette_direction": "Underwater blues #1F6F8B #7CC6D8",
+    "lighting_ids": [
+     "underwater_caustics",
+     "backlit_silhouette"
+    ],
+    "camera_angle": "eye-level",
+    "camera_distance": "medium",
+    "character_expression": "Silhouette, face pressed to glass",
+    "body_language": "Hands on glass",
+    "environment": "Giant aquarium with a ray",
+    "negative_space": "Water",
+    "texture": "Caustics",
+    "visual_metaphor": "Discovery",
+    "symbolism": "Glass = window to wonder",
+    "style_ids_that_fit": [
+     "cinematic_realism",
+     "watercolor_loose",
+     "papercut_layered"
+    ]
+   },
+   {
+    "name": "Firefly jar",
+    "composition_ids": [
+     "center",
+     "subject_isolation"
+    ],
+    "palette_direction": "Dusk green #2E4A3A with firefly yellow #E8F06A",
+    "lighting_ids": [
+     "practical_lamp",
+     "dappled_foliage"
+    ],
+    "camera_angle": "high angle",
+    "camera_distance": "close-up",
+    "character_expression": "Glowing face lit from jar",
+    "body_language": "Holding a jar close",
+    "environment": "Garden at dusk",
+    "negative_space": "Dark around",
+    "texture": "Crayon",
+    "visual_metaphor": "Holding magic",
+    "symbolism": "Fireflies = small miracles",
+    "style_ids_that_fit": [
+     "children_book_crayon",
+     "colored_pencil",
+     "chibi_kawaii"
+    ]
+   }
+  ],
+  "contrast_levers": "Low angle up, light sources in frame, bokeh; scale contrast.",
+  "cultural_notes": "Thai festivals (ลอยกระทง, ยี่เป็ง) are natural wonder settings; avoid lantern fire safety issues being glamorised. Colour meanings depend on context (ElliotMaier2014).",
+  "cliches_to_avoid": [
+   "Sparkles everywhere",
+   "Rainbow unicorn"
+  ],
+  "ai_mistakes": [
+   "Extra fingers on reaching hands",
+   "Adult features on children"
+  ],
+  "eyewear_angle": "Child seeing clearly for first time with new glasses — wonder at leaves/stars. Very strong, tasteful.",
+  "refs": [
+   "Livingstone2002",
+   "Artistic"
+  ],
+  "evidence": "craft"
+ },
+ {
+  "id": "joy.mischief",
+  "name_en": "Mischief",
+  "name_th": "ซน",
+  "core_read": "Playful plotting; a sly grin and a small prank about to happen.",
+  "approaches": [
+   {
+    "name": "Tiptoe prank",
+    "composition_ids": [
+     "diagonal",
+     "rule_of_thirds"
+    ],
+    "palette_direction": "Playful saturated: tangerine #F28C28, purple #7B4FA0, lime #A6D94B",
+    "lighting_ids": [
+     "under_light_horror",
+     "practical_lamp"
+    ],
+    "camera_angle": "low angle",
+    "camera_distance": "medium",
+    "character_expression": "Sly grin, eyebrows raised, tongue poked",
+    "body_language": "Tiptoeing with a feather/whoopee cushion",
+    "environment": "Living room, sleeping dad on sofa",
+    "negative_space": "Space toward target",
+    "texture": "Cartoon",
+    "visual_metaphor": "Sneaking",
+    "symbolism": "Tiptoe = secret plan",
+    "style_ids_that_fit": [
+     "western_cartoon_rubberhose",
+     "modern_cartoon_tv",
+     "children_book_crayon"
+    ]
+   },
+   {
+    "name": "Peeking from cover",
+    "composition_ids": [
+     "frame_within_frame",
+     "dominant_foreground"
+    ],
+    "palette_direction": "Sunny garden #9ED36A with shade #3E6B48",
+    "lighting_ids": [
+     "dappled_foliage",
+     "golden_hour"
+    ],
+    "camera_angle": "eye-level",
+    "camera_distance": "close-up",
+    "character_expression": "Eyes peeking over a hedge, grin",
+    "body_language": "Hands holding a water pistol",
+    "environment": "Garden",
+    "negative_space": "Hedge",
+    "texture": "Leaves",
+    "visual_metaphor": "Ambush",
+    "symbolism": "Hiding = play",
+    "style_ids_that_fit": [
+     "anime_cel",
+     "storybook_gouache",
+     "photoreal_lifestyle"
+    ]
+   },
+   {
+    "name": "Cat and the glass",
+    "composition_ids": [
+     "subject_isolation",
+     "negative_space"
+    ],
+    "palette_direction": "Clean white #F7F7F7 with ginger cat #E08A3C",
+    "lighting_ids": [
+     "high_key",
+     "product_softbox"
+    ],
+    "camera_angle": "eye-level",
+    "camera_distance": "medium close-up",
+    "character_expression": "Cat staring at viewer",
+    "body_language": "Paw slowly pushing a glass to the table edge",
+    "environment": "Table edge",
+    "negative_space": "Blank",
+    "texture": "Clean",
+    "visual_metaphor": "About to happen",
+    "symbolism": "Edge = suspense",
+    "style_ids_that_fit": [
+     "photoreal_lifestyle",
+     "flat_vector",
+     "toy_3d_render"
+    ]
+   }
+  ],
+  "contrast_levers": "Under-light (play-sinister), diagonals, saturated playful palette.",
+  "cultural_notes": "Thai 'ซน' kids and pets are high-engagement content. Colour meanings depend on context (ElliotMaier2014).",
+  "cliches_to_avoid": [
+   "Devil horns emoji"
+  ],
+  "ai_mistakes": [
+   "Mischief read as malice",
+   "Pranks that look dangerous"
+  ],
+  "eyewear_angle": "Cat batting at glasses on a table; kid wearing dad's glasses. Very suitable.",
+  "refs": [
+   "McCloud1993",
+   "Artistic"
+  ],
+  "evidence": "craft"
+ },
+ {
+  "id": "low.drowsy",
+  "name_en": "Drowsy",
+  "name_th": "ง่วง",
+  "core_read": "Heavy-lidded sleepiness; softening edges, slumping posture.",
+  "approaches": [
+   {
+    "name": "Nodding off at desk",
+    "composition_ids": [
+     "rule_of_thirds",
+     "diagonal"
+    ],
+    "palette_direction": "Warm dim lamp #E1A65B on deep blue night #1F2A40",
+    "lighting_ids": [
+     "practical_lamp",
+     "screen_glow_face"
+    ],
+    "camera_angle": "eye-level",
+    "camera_distance": "medium",
+    "character_expression": "Half-closed eyes, mouth slack",
+    "body_language": "Head propped on hand, sliding",
+    "environment": "Desk with laptop at night",
+    "negative_space": "Dark room",
+    "texture": "Soft focus",
+    "visual_metaphor": "Sinking",
+    "symbolism": "Slide = sleep winning",
+    "style_ids_that_fit": [
+     "cinematic_realism",
+     "anime_painterly_bg",
+     "pastel_soft"
+    ]
+   },
+   {
+    "name": "Afternoon nap",
+    "composition_ids": [
+     "low_horizon",
+     "negative_space"
+    ],
+    "palette_direction": "Hazy siesta yellow #F2DFA7, soft green #B7CFA6",
+    "lighting_ids": [
+     "dappled_foliage",
+     "golden_hour"
+    ],
+    "camera_angle": "high angle",
+    "camera_distance": "wide",
+    "character_expression": "Eyes closed",
+    "body_language": "Lying in a hammock",
+    "environment": "Garden shade",
+    "negative_space": "Empty light",
+    "texture": "Soft",
+    "visual_metaphor": "Drifting",
+    "symbolism": "Hammock = rest",
+    "style_ids_that_fit": [
+     "impressionism",
+     "watercolor_loose",
+     "storybook_gouache"
+    ]
+   },
+   {
+    "name": "Blurry vision POV",
+    "composition_ids": [
+     "center",
+     "vignette_tunnel"
+    ],
+    "palette_direction": "Fuzzy pastel #D9D3E8 with dark vignette #2A2738",
+    "lighting_ids": [
+     "overcast_soft",
+     "low_key"
+    ],
+    "camera_angle": "POV",
+    "camera_distance": "medium",
+    "character_expression": "Not shown",
+    "body_language": "Eyelid shapes framing a blurry room",
+    "environment": "Office",
+    "negative_space": "Vignette",
+    "texture": "Blur",
+    "visual_metaphor": "Closing eyes",
+    "symbolism": "Vignette = eyelids",
+    "style_ids_that_fit": [
+     "digital_painting_painterly",
+     "pastel_soft",
+     "photoreal_lifestyle"
+    ]
+   }
+  ],
+  "contrast_levers": "Soft focus, low contrast, drooping diagonals.",
+  "cultural_notes": "Thai afternoon slump after lunch (ง่วงหลังกินข้าว) is relatable. Colour meanings depend on context (ElliotMaier2014).",
+  "cliches_to_avoid": [
+   "ZZZ letters everywhere"
+  ],
+  "ai_mistakes": [
+   "Looks like illness or intoxication",
+   "Blur on whole image unintended"
+  ],
+  "eyewear_angle": "Eye strain/blue-light angle: tired eyes after screens → eye-break clip or coating. Suitable, avoid overclaiming.",
+  "refs": [
+   "Artistic"
+  ],
+  "evidence": "craft"
+ },
+ {
+  "id": "stance.conspiratorial_whisper",
+  "name_en": "Conspiratorial whisper",
+  "name_th": "กระซิบเป็นความลับ",
+  "core_read": "Sharing a secret close; intimacy, exclusion of others, raised brows.",
+  "approaches": [
+   {
+    "name": "Hand-cupped whisper",
+    "composition_ids": [
+     "over_shoulder",
+     "subject_isolation"
+    ],
+    "palette_direction": "Warm shadowy #5A3E2B with golden key #E9B96E",
+    "lighting_ids": [
+     "practical_lamp",
+     "low_key"
+    ],
+    "camera_angle": "eye-level",
+    "camera_distance": "close-up",
+    "character_expression": "Whisperer's eyes darting, listener's eyes widening",
+    "body_language": "Hand cupped to ear, heads close",
+    "environment": "Café corner",
+    "negative_space": "Dark falloff",
+    "texture": "Film grain",
+    "visual_metaphor": "Intimacy",
+    "symbolism": "Cupped hand = secret",
+    "style_ids_that_fit": [
+     "cinematic_realism",
+     "film_noir_photo",
+     "webtoon_digital"
+    ]
+   },
+   {
+    "name": "Finger to lips at viewer",
+    "composition_ids": [
+     "center",
+     "negative_space"
+    ],
+    "palette_direction": "Deep teal #0F4C5C and a peach #EFCF9C accent",
+    "lighting_ids": [
+     "rim_only",
+     "short"
+    ],
+    "camera_angle": "eye-level",
+    "camera_distance": "medium close-up",
+    "character_expression": "Knowing smile, raised brow, eye contact",
+    "body_language": "Index finger to lips",
+    "environment": "Plain dark",
+    "negative_space": "Dark",
+    "texture": "Clean",
+    "visual_metaphor": "Viewer included",
+    "symbolism": "Shh = exclusivity",
+    "style_ids_that_fit": [
+     "fashion_editorial_photo",
+     "luxury_commercial",
+     "line_art_minimal"
+    ]
+   },
+   {
+    "name": "Huddle from above",
+    "composition_ids": [
+     "radial",
+     "high_horizon"
+    ],
+    "palette_direction": "Night purple #2D2340, lamp yellow #F2C14E",
+    "lighting_ids": [
+     "top_light",
+     "candle_fire"
+    ],
+    "camera_angle": "top-down",
+    "camera_distance": "wide",
+    "character_expression": "Faces turned in",
+    "body_language": "Kids huddled around a flashlight",
+    "environment": "Tent/blanket fort",
+    "negative_space": "Dark outside circle",
+    "texture": "Crayon",
+    "visual_metaphor": "Circle of trust",
+    "symbolism": "Circle = group",
+    "style_ids_that_fit": [
+     "children_book_crayon",
+     "storybook_gouache",
+     "isometric_3d"
+    ]
+   }
+  ],
+  "contrast_levers": "Closeness, darkness around, single warm light.",
+  "cultural_notes": "Thai gossip (เมาท์) culture is playful; keep it light. Colour meanings depend on context (ElliotMaier2014).",
+  "cliches_to_avoid": [
+   "Spy sunglasses"
+  ],
+  "ai_mistakes": [
+   "Mouth touching ear oddly",
+   "Faces merging"
+  ],
+  "eyewear_angle": "Brand: 'secret' new collection teaser with finger-to-lips, peach accent. Tasteful, suitable.",
+  "refs": [
+   "Artistic"
+  ],
+  "evidence": "craft"
+ },
+ {
+  "id": "performance.eerie_calm",
+  "name_en": "Eerie calm",
+  "name_th": "สงบจนน่าขนลุก",
+  "core_read": "Too still, too quiet; calm that signals something wrong.",
+  "approaches": [
+   {
+    "name": "Empty perfect room",
+    "composition_ids": [
+     "symmetry",
+     "center"
+    ],
+    "palette_direction": "Pale sterile #E9ECEB, mint #C6D9CF, a single black #111 doorway",
+    "lighting_ids": [
+     "high_key",
+     "overcast_soft"
+    ],
+    "camera_angle": "eye-level",
+    "camera_distance": "wide",
+    "character_expression": "Figure smiling softly, unblinking",
+    "body_language": "Sitting perfectly upright, hands on knees",
+    "environment": "Symmetric room, nothing out of place",
+    "negative_space": "Excess even space",
+    "texture": "Too-clean surfaces",
+    "visual_metaphor": "Over-perfection",
+    "symbolism": "Symmetry = unnatural",
+    "style_ids_that_fit": [
+     "minimalism",
+     "cinematic_realism",
+     "architectural_visualization"
+    ]
+   },
+   {
+    "name": "Fog lake with figure",
+    "composition_ids": [
+     "low_horizon",
+     "negative_space"
+    ],
+    "palette_direction": "Grey fog #C5CACC, black water #1F2427",
+    "lighting_ids": [
+     "fog_atmospheric",
+     "moonlight_blue"
+    ],
+    "camera_angle": "eye-level",
+    "camera_distance": "extreme wide",
+    "character_expression": "Too far",
+    "body_language": "Figure standing in still water",
+    "environment": "Lake at dawn",
+    "negative_space": "Fog",
+    "texture": "Soft",
+    "visual_metaphor": "Wrong place for a person",
+    "symbolism": "Still water = held breath",
+    "style_ids_that_fit": [
+     "ink_brush_sumi_e",
+     "matte_painting",
+     "film_noir_photo"
+    ]
+   },
+   {
+    "name": "Calm narrator under green light",
+    "composition_ids": [
+     "rule_of_thirds",
+     "vignette_tunnel"
+    ],
+    "palette_direction": "Sickly green #4A6B4F and black #0B0E0C",
+    "lighting_ids": [
+     "under_light_horror",
+     "low_key"
+    ],
+    "camera_angle": "slightly low angle",
+    "camera_distance": "close-up",
+    "character_expression": "Gentle smile, steady eyes",
+    "body_language": "Hands folded",
+    "environment": "Dark",
+    "negative_space": "Vignette",
+    "texture": "Grain",
+    "visual_metaphor": "Kindness that chills",
+    "symbolism": "Green underlight = unease",
+    "style_ids_that_fit": [
+     "dark_fantasy_gothic",
+     "film_noir_photo",
+     "charcoal_expressive"
+    ]
+   }
+  ],
+  "contrast_levers": "Excess symmetry/stillness; muted palette with one dark anomaly.",
+  "cultural_notes": "Thai horror often uses quiet spaces (old house, temple at night); avoid real temples in horror. Colour meanings depend on context (ElliotMaier2014).",
+  "cliches_to_avoid": [
+   "Creepy doll"
+  ],
+  "ai_mistakes": [
+   "Horror gore added",
+   "Calm reads as peaceful (needs one wrong detail)"
+  ],
+  "eyewear_angle": "Not suitable for ads.",
+  "refs": [
+   "Block2008",
+   "Artistic"
+  ],
+  "evidence": "craft"
+ },
+ {
+  "id": "performance.storyteller_warmth",
+  "name_en": "Storyteller warmth",
+  "name_th": "ความอบอุ่นของคนเล่าเรื่อง",
+  "core_read": "Grandparent-by-the-fire narration; inviting, cosy, audience leaning in.",
+  "approaches": [
+   {
+    "name": "Fireside circle",
+    "composition_ids": [
+     "triangular",
+     "radial"
+    ],
+    "palette_direction": "Ember orange #E2853C, deep brown #3E2A1F, cream #F3E5C8",
+    "lighting_ids": [
+     "candle_fire",
+     "bounce_fill_warm"
+    ],
+    "camera_angle": "eye-level",
+    "camera_distance": "medium wide",
+    "character_expression": "Teller smiling, eyebrows lifted mid-story; children rapt",
+    "body_language": "Teller's hand gesturing, listeners leaning in",
+    "environment": "Thai wooden house veranda at night",
+    "negative_space": "Dark beyond the circle",
+    "texture": "Wood grain, soft glow",
+    "visual_metaphor": "Light around a voice",
+    "symbolism": "Circle = belonging",
+    "style_ids_that_fit": [
+     "storybook_gouache",
+     "oil_painting_classical",
+     "anime_painterly_bg"
+    ]
+   },
+   {
+    "name": "Open storybook world",
+    "composition_ids": [
+     "layered_depth",
+     "figure_ground"
+    ],
+    "palette_direction": "Pages cream #F5ECD7 with a watercolour world rising #8FB9A8 #E9A87C",
+    "lighting_ids": [
+     "storybook_soft_glow",
+     "window_side"
+    ],
+    "camera_angle": "high angle",
+    "camera_distance": "close-up",
+    "character_expression": "Hands only",
+    "body_language": "Fingers turning a page, scene rising from book",
+    "environment": "Book on lap",
+    "negative_space": "Pages",
+    "texture": "Paper, watercolour",
+    "visual_metaphor": "Story coming alive",
+    "symbolism": "Pop-up = imagination",
+    "style_ids_that_fit": [
+     "paper_craft_3d",
+     "watercolor_loose",
+     "children_book_crayon"
+    ]
+   },
+   {
+    "name": "Narrator to camera",
+    "composition_ids": [
+     "rule_of_thirds",
+     "dominant_foreground"
+    ],
+    "palette_direction": "Brand-like: phthalo #123A29, peach #EFCF9C, snow #FAFAFA",
+    "lighting_ids": [
+     "practical_lamp",
+     "key_fill_soft"
+    ],
+    "camera_angle": "eye-level",
+    "camera_distance": "medium close-up",
+    "character_expression": "Warm eye contact, slight smile",
+    "body_language": "Leaning forward in armchair",
+    "environment": "Cosy shop corner at night",
+    "negative_space": "Soft background",
+    "texture": "Natural",
+    "visual_metaphor": "Invitation",
+    "symbolism": "Lamp = welcome",
+    "style_ids_that_fit": [
+     "photoreal_lifestyle",
+     "cinematic_realism",
+     "pencil_sketch_loose"
+    ]
+   }
+  ],
+  "contrast_levers": "Warm practical light, circular grouping, leaning bodies.",
+  "cultural_notes": "Thai grandparents' tales (นิทาน) on the veranda; ร้านแว่นตีสอง night-shop narrator fits. Colour meanings depend on context (ElliotMaier2014).",
+  "cliches_to_avoid": [
+   "Wizard with beard by fire"
+  ],
+  "ai_mistakes": [
+   "Fire placement unsafe",
+   "Children's faces repeated clones"
+  ],
+  "eyewear_angle": "Night-optic series narrator; brand storytelling. Very suitable.",
+  "refs": [
+   "Gurney2010",
+   "Artistic"
+  ],
+  "evidence": "craft"
+ },
+ {
+  "id": "performance.sales_enthusiasm",
+  "name_en": "Sales enthusiasm",
+  "name_th": "ขายของอย่างกระตือรือร้น",
+  "core_read": "Bright, energetic presenting of a product; open, inviting, high energy without being pushy.",
+  "approaches": [
+   {
+    "name": "Product hero with presenter",
+    "composition_ids": [
+     "rule_of_thirds",
+     "dominant_foreground"
+    ],
+    "palette_direction": "Clean bright with brand accent: snow #FAFAFA, phthalo #123A29, peach #EFCF9C",
+    "lighting_ids": [
+     "high_key",
+     "product_softbox"
+    ],
+    "camera_angle": "eye-level",
+    "camera_distance": "medium",
+    "character_expression": "Genuine smile with crinkled eyes, eyebrows raised",
+    "body_language": "Presenting frame on open palm toward camera, slight lean in",
+    "environment": "Clean shop counter",
+    "negative_space": "Clean wall for HTML text",
+    "texture": "Crisp",
+    "visual_metaphor": "Offering",
+    "symbolism": "Open palm = gift",
+    "style_ids_that_fit": [
+     "photoreal_lifestyle",
+     "luxury_commercial",
+     "fashion_editorial_photo"
+    ]
+   },
+   {
+    "name": "Energetic burst",
+    "composition_ids": [
+     "radial",
+     "center"
+    ],
+    "palette_direction": "Saturated pop #FFC93C #FF6F59 #43B0A8",
+    "lighting_ids": [
+     "flat_cartoon_cel",
+     "high_key"
+    ],
+    "camera_angle": "low angle",
+    "camera_distance": "medium close-up",
+    "character_expression": "Big grin",
+    "body_language": "Jumping with product raised",
+    "environment": "Burst background",
+    "negative_space": "Radial rays",
+    "texture": "Flat",
+    "visual_metaphor": "Excitement radiating",
+    "symbolism": "Rays = attention",
+    "style_ids_that_fit": [
+     "pop_art",
+     "flat_vector",
+     "stylized_3d_animation"
+    ]
+   },
+   {
+    "name": "Elegant demo",
+    "composition_ids": [
+     "center",
+     "subject_isolation"
+    ],
+    "palette_direction": "Dark gradient #212121 to #3A3A3A with lens glint",
+    "lighting_ids": [
+     "product_gradient_sweep",
+     "eyewear_lens_reflection_control"
+    ],
+    "camera_angle": "slightly high angle",
+    "camera_distance": "close-up",
+    "character_expression": "Hands only",
+    "body_language": "Hands unfolding temples with flourish",
+    "environment": "Black velvet",
+    "negative_space": "Dark sweep",
+    "texture": "Acetate shine",
+    "visual_metaphor": "Reveal",
+    "symbolism": "Unfolding = unveiling",
+    "style_ids_that_fit": [
+     "photoreal_product",
+     "luxury_commercial",
+     "macro_photography"
+    ]
+   }
+  ],
+  "contrast_levers": "Bright key vs dark luxury; energy (radial) vs elegance (centre).",
+  "cultural_notes": "Thai live-selling (ไลฟ์ขายของ) energy is familiar; keep brand calmer and premium. Ask price each time; text in HTML. Colour meanings depend on context (ElliotMaier2014).",
+  "cliches_to_avoid": [
+   "Infomercial shouting",
+   "Pointing at viewer with fingers guns"
+  ],
+  "ai_mistakes": [
+   "Garbled price tags in image",
+   "Frames melted/warped in hands",
+   "Lens reflection hiding eyes"
+  ],
+  "eyewear_angle": "Core use: presenting a frame. Prefer approach 1 or 3 for brand tone.",
+  "refs": [
+   "Itti1998",
+   "Artistic"
+  ],
+  "evidence": "craft"
+ },
+ {
+  "id": "performance.trusted_expert",
+  "name_en": "Trusted expert",
+  "name_th": "ผู้เชี่ยวชาญที่ไว้ใจได้",
+  "core_read": "Calm competence; clean environment, steady eye contact, tools of craft visible.",
+  "approaches": [
+   {
+    "name": "Optometrist portrait",
+    "composition_ids": [
+     "rule_of_thirds",
+     "layered_depth"
+    ],
+    "palette_direction": "Clean clinic whites #F7F7F5, phthalo green #123A29, timberwolf #D9D4CB",
+    "lighting_ids": [
+     "key_fill_soft",
+     "window_side"
+    ],
+    "camera_angle": "eye-level",
+    "camera_distance": "medium",
+    "character_expression": "Calm confident small smile, direct gaze",
+    "body_language": "Upright, arms relaxed, holding a trial frame",
+    "environment": "Clinic with phoropter softly blurred",
+    "negative_space": "Clean wall",
+    "texture": "Natural skin, clean fabrics",
+    "visual_metaphor": "Competence",
+    "symbolism": "Tools = expertise",
+    "style_ids_that_fit": [
+     "photoreal_lifestyle",
+     "cinematic_realism",
+     "documentary_photo"
+    ]
+   },
+   {
+    "name": "Hands at work",
+    "composition_ids": [
+     "subject_isolation",
+     "diagonal"
+    ],
+    "palette_direction": "Warm workshop #C9A27A with steel #9AA3A8",
+    "lighting_ids": [
+     "practical_lamp",
+     "top_light"
+    ],
+    "camera_angle": "high angle",
+    "camera_distance": "close-up",
+    "character_expression": "Hands only",
+    "body_language": "Adjusting a frame with precision pliers",
+    "environment": "Workbench",
+    "negative_space": "Dark surround",
+    "texture": "Metal, acetate",
+    "visual_metaphor": "Craft",
+    "symbolism": "Precision tools = care",
+    "style_ids_that_fit": [
+     "macro_photography",
+     "photoreal_product",
+     "pencil_graphite_realistic"
+    ]
+   },
+   {
+    "name": "Explaining diagram",
+    "composition_ids": [
+     "asymmetrical_balance",
+     "f_pattern"
+    ],
+    "palette_direction": "Light diagram style #FAFAFA with green #123A29 lines",
+    "lighting_ids": [
+     "flat_cartoon_cel",
+     "high_key"
+    ],
+    "camera_angle": "eye-level",
+    "camera_distance": "medium wide",
+    "character_expression": "Friendly",
+    "body_language": "Pointing at an eye diagram",
+    "environment": "Plain",
+    "negative_space": "Space for diagram",
+    "texture": "Line",
+    "visual_metaphor": "Clarity",
+    "symbolism": "Diagram = knowledge",
+    "style_ids_that_fit": [
+     "line_art_minimal",
+     "flat_illustration_corporate",
+     "technical_blueprint"
+    ]
+   }
+  ],
+  "contrast_levers": "Clean, even, stable light; eye-level; tools present.",
+  "cultural_notes": "Thai customers trust white coats and certificates; avoid implying medical claims you can't support. Colour meanings depend on context (ElliotMaier2014).",
+  "cliches_to_avoid": [
+   "Stock doctor with stethoscope pointing"
+  ],
+  "ai_mistakes": [
+   "Medical claims in imagery",
+   "Fake certificates with text"
+  ],
+  "eyewear_angle": "Core brand use for eye-test/lens advice. Very suitable.",
+  "refs": [
+   "ElliotMaier2014",
+   "Artistic"
+  ],
+  "evidence": "craft"
+ },
+ {
+  "id": "performance.formal_condolence",
+  "name_en": "Formal condolence",
+  "name_th": "แสดงความเสียใจอย่างเป็นทางการ",
+  "core_read": "Respectful, restrained mourning; formal, quiet, symbolic.",
+  "approaches": [
+   {
+    "name": "Black and white with single flower",
+    "composition_ids": [
+     "center",
+     "negative_space"
+    ],
+    "palette_direction": "Black #111111, white #F5F5F5, a single white jasmine/marigold accent",
+    "lighting_ids": [
+     "overcast_soft",
+     "top_light"
+    ],
+    "camera_angle": "eye-level",
+    "camera_distance": "medium",
+    "character_expression": "None or bowed head",
+    "body_language": "Hands in a low wai",
+    "environment": "Plain",
+    "negative_space": "Most of frame empty",
+    "texture": "Paper, soft",
+    "visual_metaphor": "Silence",
+    "symbolism": "White flower = respect",
+    "style_ids_that_fit": [
+     "minimalism",
+     "line_art_minimal",
+     "ink_brush_sumi_e"
+    ]
+   },
+   {
+    "name": "Ribbon",
+    "composition_ids": [
+     "symmetry",
+     "subject_isolation"
+    ],
+    "palette_direction": "Black ribbon on white #FFFFFF",
+    "lighting_ids": [
+     "high_key",
+     "flat_cartoon_cel"
+    ],
+    "camera_angle": "eye-level",
+    "camera_distance": "close-up",
+    "character_expression": "None",
+    "body_language": "None",
+    "environment": "Plain",
+    "negative_space": "Blank",
+    "texture": "Satin",
+    "visual_metaphor": "Mourning symbol",
+    "symbolism": "Black ribbon = condolence",
+    "style_ids_that_fit": [
+     "minimalism",
+     "flat_vector",
+     "line_art_minimal"
+    ]
+   },
+   {
+    "name": "Candle row",
+    "composition_ids": [
+     "repetition_rhythm",
+     "low_horizon"
+    ],
+    "palette_direction": "Dark #141414 with candle amber #E9A93D",
+    "lighting_ids": [
+     "candle_fire",
+     "low_key"
+    ],
+    "camera_angle": "eye-level",
+    "camera_distance": "wide",
+    "character_expression": "None",
+    "body_language": "Row of candles",
+    "environment": "Dark",
+    "negative_space": "Darkness",
+    "texture": "Wax glow",
+    "visual_metaphor": "Remembrance",
+    "symbolism": "Candles = memory",
+    "style_ids_that_fit": [
+     "cinematic_realism",
+     "charcoal_academic",
+     "documentary_photo"
+    ]
+   }
+  ],
+  "contrast_levers": "Restraint: desaturated, symmetric, minimal.",
+  "cultural_notes": "Thai mourning: black/white dress, national mourning periods require brands to use black-and-white posts; avoid commercial elements entirely. Royal mourning has specific conventions — follow official guidance. Colour meanings depend on context (ElliotMaier2014).",
+  "cliches_to_avoid": [
+   "Crying faces",
+   "Religious imagery used commercially"
+  ],
+  "ai_mistakes": [
+   "Adding products or logo big",
+   "Colour accents that look festive"
+  ],
+  "eyewear_angle": "Not suitable for ads. Condolence posts: no product, small logo only if appropriate.",
+  "refs": [
+   "Artistic"
+  ],
+  "evidence": "craft"
+ },
+ {
+  "id": "stance.indifference",
+  "name_en": "Indifference",
+  "name_th": "ไม่แยแส",
+  "core_read": "Not caring; flat affect, disengaged body, looking elsewhere.",
+  "approaches": [
+   {
+    "name": "Scrolling while world burns",
+    "composition_ids": [
+     "rule_of_thirds",
+     "layered_depth"
+    ],
+    "palette_direction": "Flat greys #9B9B9B with chaotic background orange #E67E22",
+    "lighting_ids": [
+     "screen_glow_face",
+     "overcast_soft"
+    ],
+    "camera_angle": "eye-level",
+    "camera_distance": "medium",
+    "character_expression": "Blank face, eyes on phone",
+    "body_language": "Slumped, one hand in pocket",
+    "environment": "Chaos behind (party/argument)",
+    "negative_space": "Background busy",
+    "texture": "Flat",
+    "visual_metaphor": "Disconnection",
+    "symbolism": "Phone = elsewhere",
+    "style_ids_that_fit": [
+     "editorial_conceptual",
+     "webtoon_digital",
+     "photoreal_lifestyle"
+    ]
+   },
+   {
+    "name": "Turned shoulder",
+    "composition_ids": [
+     "asymmetrical_balance",
+     "negative_space"
+    ],
+    "palette_direction": "Cool white #EEF0F1, black #1A1A1A",
+    "lighting_ids": [
+     "high_key",
+     "midday_hard"
+    ],
+    "camera_angle": "eye-level",
+    "camera_distance": "medium close-up",
+    "character_expression": "Eyes half lidded, looking away",
+    "body_language": "Shoulder turned to someone talking",
+    "environment": "Plain",
+    "negative_space": "Blank",
+    "texture": "Clean",
+    "visual_metaphor": "Cold shoulder",
+    "symbolism": "Turned shoulder = dismissal",
+    "style_ids_that_fit": [
+     "fashion_editorial_photo",
+     "minimalism",
+     "line_art_minimal"
+    ]
+   },
+   {
+    "name": "Shrug sketch",
+    "composition_ids": [
+     "center",
+     "subject_isolation"
+    ],
+    "palette_direction": "Pencil on cream #F3EEE3",
+    "lighting_ids": [
+     "flat_cartoon_cel",
+     "overcast_soft"
+    ],
+    "camera_angle": "eye-level",
+    "camera_distance": "full body",
+    "character_expression": "Flat mouth",
+    "body_language": "Shrug, palms up",
+    "environment": "Blank",
+    "negative_space": "Blank",
+    "texture": "Pencil",
+    "visual_metaphor": "Whatever",
+    "symbolism": "Shrug = not my concern",
+    "style_ids_that_fit": [
+     "pencil_sketch_loose",
+     "sketchnote_doodle",
+     "one_line_drawing"
+    ]
+   }
+  ],
+  "contrast_levers": "Flat light and low saturation on subject vs active background.",
+  "cultural_notes": "Thai 'ช่างมัน / เฉยๆ' can be laid-back rather than cold; context decides. Colour meanings depend on context (ElliotMaier2014).",
+  "cliches_to_avoid": [
+   "Yawning emoji"
+  ],
+  "ai_mistakes": [
+   "Reads as sadness or fatigue",
+   "Smirk added (becomes contempt)"
+  ],
+  "eyewear_angle": "Not suitable for ads (except contrast setup: indifferent → interested when trying a frame).",
+  "refs": [
+   "Artistic"
+  ],
+  "evidence": "craft"
+ },
+ {
+  "id": "visual.mystery",
+  "name_en": "Mystery",
+  "name_th": "ความลึกลับ",
+  "core_read": "Something withheld; partial information that pulls the viewer in.",
+  "approaches": [
+   {
+    "name": "Fog path",
+    "composition_ids": [
+     "leading_lines",
+     "layered_depth"
+    ],
+    "palette_direction": "Blue-grey fog #8A9BA8, deep pine #1F3A33",
+    "lighting_ids": [
+     "fog_atmospheric",
+     "volumetric_god_rays"
+    ],
+    "camera_angle": "eye-level",
+    "camera_distance": "wide",
+    "character_expression": "Distant figure",
+    "body_language": "Walking into fog",
+    "environment": "Forest path",
+    "negative_space": "Fog",
+    "texture": "Atmosphere",
+    "visual_metaphor": "Unknown ahead",
+    "symbolism": "Fog = unknown",
+    "style_ids_that_fit": [
+     "matte_painting",
+     "concept_art_fantasy",
+     "romanticism_landscape"
+    ]
+   },
+   {
+    "name": "Half-lit face",
+    "composition_ids": [
+     "rule_of_thirds",
+     "negative_space"
+    ],
+    "palette_direction": "Black #0D0D0D with warm key #D8A26A",
+    "lighting_ids": [
+     "split",
+     "chiaroscuro"
+    ],
+    "camera_angle": "eye-level",
+    "camera_distance": "close-up",
+    "character_expression": "Half face hidden",
+    "body_language": "Still",
+    "environment": "Dark",
+    "negative_space": "Darkness",
+    "texture": "Grain",
+    "visual_metaphor": "Half revealed",
+    "symbolism": "Shadow = secret",
+    "style_ids_that_fit": [
+     "film_noir_photo",
+     "baroque_dramatic",
+     "charcoal_expressive"
+    ]
+   },
+   {
+    "name": "Lit doorway in dark",
+    "composition_ids": [
+     "frame_within_frame",
+     "center"
+    ],
+    "palette_direction": "Deep indigo #1A1C3A, glowing doorway #F2D9A0",
+    "lighting_ids": [
+     "practical_lamp",
+     "low_key"
+    ],
+    "camera_angle": "low angle",
+    "camera_distance": "medium wide",
+    "character_expression": "None",
+    "body_language": "Door ajar with light",
+    "environment": "Old shophouse at night",
+    "negative_space": "Dark facade",
+    "texture": "Brick",
+    "visual_metaphor": "Invitation to enter",
+    "symbolism": "Door ajar = mystery",
+    "style_ids_that_fit": [
+     "anime_painterly_bg",
+     "graphic_novel_noir",
+     "digital_painting_painterly"
+    ]
+   }
+  ],
+  "contrast_levers": "Hide information: shadow, fog, crop; one light source.",
+  "cultural_notes": "Thai night shophouses, old wooden houses, mist in northern mountains (ทะเลหมอก). Colour meanings depend on context (ElliotMaier2014).",
+  "cliches_to_avoid": [
+   "Question marks",
+   "Hooded figure"
+  ],
+  "ai_mistakes": [
+   "Over-reveals everything",
+   "Too many light sources"
+  ],
+  "eyewear_angle": "Teaser: frame half in shadow, only lens edge glints. Suitable for launch teasers.",
+  "refs": [
+   "Gurney2010",
+   "Itti1998",
+   "Artistic"
+  ],
+  "evidence": "craft"
+ },
+ {
+  "id": "visual.warmth",
+  "name_en": "Warmth",
+  "name_th": "ความอบอุ่น",
+  "core_read": "Comfort, kindness, human closeness; warm light and soft forms.",
+  "approaches": [
+   {
+    "name": "Shared meal",
+    "composition_ids": [
+     "triangular",
+     "layered_depth"
+    ],
+    "palette_direction": "Warm ochre #E3A857, terracotta #C96F4A, cream #F5E8D0",
+    "lighting_ids": [
+     "practical_lamp",
+     "bounce_fill_warm"
+    ],
+    "camera_angle": "eye-level",
+    "camera_distance": "medium",
+    "character_expression": "Smiles",
+    "body_language": "Passing dishes",
+    "environment": "Family table",
+    "negative_space": "Little",
+    "texture": "Food steam",
+    "visual_metaphor": "Togetherness",
+    "symbolism": "Shared food = care",
+    "style_ids_that_fit": [
+     "photoreal_lifestyle",
+     "storybook_gouache",
+     "oil_painting_classical"
+    ]
+   },
+   {
+    "name": "Morning window light",
+    "composition_ids": [
+     "rule_of_thirds",
+     "negative_space"
+    ],
+    "palette_direction": "Soft gold #F4D59A on white linen #F7F3EA",
+    "lighting_ids": [
+     "window_side",
+     "golden_hour"
+    ],
+    "camera_angle": "high angle",
+    "camera_distance": "close-up",
+    "character_expression": "Peaceful",
+    "body_language": "Hands around mug",
+    "environment": "Kitchen",
+    "negative_space": "Window light",
+    "texture": "Linen",
+    "visual_metaphor": "Gentle start",
+    "symbolism": "Sunbeam = comfort",
+    "style_ids_that_fit": [
+     "photoreal_lifestyle",
+     "pastel_soft",
+     "watercolor_loose"
+    ]
+   },
+   {
+    "name": "Knitted illustration",
+    "composition_ids": [
+     "center",
+     "subject_isolation"
+    ],
+    "palette_direction": "Wool peach #EFCF9C, rust #B85C38",
+    "lighting_ids": [
+     "storybook_soft_glow",
+     "flat_cartoon_cel"
+    ],
+    "camera_angle": "eye-level",
+    "camera_distance": "close-up",
+    "character_expression": "Soft smile",
+    "body_language": "Wrapped in scarf",
+    "environment": "Plain",
+    "negative_space": "Plain",
+    "texture": "Knit texture",
+    "visual_metaphor": "Wrapped in care",
+    "symbolism": "Wool = warmth",
+    "style_ids_that_fit": [
+     "embroidery_textile",
+     "stop_motion_felt",
+     "children_book_crayon"
+    ]
+   }
+  ],
+  "contrast_levers": "Warm colour temperature, soft shadows, close grouping.",
+  "cultural_notes": "In Thai context warmth reads through family meals, เติมน้ำ gestures; heat itself isn't always pleasant — avoid harsh sun. Colour meanings depend on context (ElliotMaier2014).",
+  "cliches_to_avoid": [
+   "Fireplace in tropical Thailand"
+  ],
+  "ai_mistakes": [
+   "Orange cast on skin",
+   "Snow/winter cues mismatch Thai setting"
+  ],
+  "eyewear_angle": "Family choosing glasses together in warm light. Very suitable.",
+  "refs": [
+   "ElliotMaier2014",
+   "Gurney2010",
+   "Artistic"
+  ],
+  "evidence": "craft"
+ },
+ {
+  "id": "will.courage",
+  "name_en": "Courage",
+  "name_th": "ความกล้าหาญ",
+  "core_read": "Acting despite fear; facing a larger threat, stepping forward.",
+  "approaches": [
+   {
+    "name": "Small vs storm",
+    "composition_ids": [
+     "scale_contrast",
+     "low_horizon"
+    ],
+    "palette_direction": "Storm slate #3A4552 with a bright figure accent #E5A540",
+    "lighting_ids": [
+     "lightning_flash",
+     "rim_only"
+    ],
+    "camera_angle": "low angle",
+    "camera_distance": "wide",
+    "character_expression": "Determined",
+    "body_language": "Stepping forward into wind",
+    "environment": "Cliff/storm",
+    "negative_space": "Sky",
+    "texture": "Rain",
+    "visual_metaphor": "Facing the big",
+    "symbolism": "Storm = fear",
+    "style_ids_that_fit": [
+     "concept_art_fantasy",
+     "romanticism_landscape",
+     "cinematic_realism"
+    ]
+   },
+   {
+    "name": "First step",
+    "composition_ids": [
+     "leading_lines",
+     "rule_of_thirds"
+    ],
+    "palette_direction": "Dawn warm #F0B76E with shadow #3C3F4A",
+    "lighting_ids": [
+     "golden_hour",
+     "backlit_silhouette"
+    ],
+    "camera_angle": "eye-level",
+    "camera_distance": "medium",
+    "character_expression": "Breath in, eyes forward",
+    "body_language": "Foot stepping off the edge onto a bridge",
+    "environment": "Rope bridge",
+    "negative_space": "Space ahead",
+    "texture": "Rope, wood",
+    "visual_metaphor": "Committing",
+    "symbolism": "Bridge = crossing fear",
+    "style_ids_that_fit": [
+     "anime_painterly_bg",
+     "watercolor_loose",
+     "cinematic_realism"
+    ]
+   },
+   {
+    "name": "Raised hand in class",
+    "composition_ids": [
+     "center",
+     "repetition_rhythm"
+    ],
+    "palette_direction": "Classroom pastels #DDE8D0 with one bright uniform accent",
+    "lighting_ids": [
+     "window_side",
+     "high_key"
+    ],
+    "camera_angle": "high angle",
+    "camera_distance": "wide",
+    "character_expression": "Nervous but firm",
+    "body_language": "One hand up among seated kids",
+    "environment": "Classroom",
+    "negative_space": "Rows",
+    "texture": "Line",
+    "visual_metaphor": "Speaking up",
+    "symbolism": "Raised hand = courage",
+    "style_ids_that_fit": [
+     "line_art_minimal",
+     "flat_illustration_corporate",
+     "children_book_crayon"
+    ]
+   }
+  ],
+  "contrast_levers": "Small figure vs large threat; forward motion; light on the subject.",
+  "cultural_notes": "Thai 'กล้า' scenes: school, first job; avoid military heroics. Colour meanings depend on context (ElliotMaier2014).",
+  "cliches_to_avoid": [
+   "Superhero cape"
+  ],
+  "ai_mistakes": [
+   "Bravado instead of courage",
+   "Weapons"
+  ],
+  "eyewear_angle": "Shy kid confident in new glasses, raising hand. Suitable.",
+  "refs": [
+   "Arnheim1974",
+   "Artistic"
+  ],
+  "evidence": "craft"
+ },
+ {
+  "id": "visual.peaceful_solitude",
+  "name_en": "Peaceful solitude",
+  "name_th": "ความสงบเมื่ออยู่คนเดียว",
+  "core_read": "Alone and content; space as comfort, not loneliness.",
+  "approaches": [
+   {
+    "name": "Reading nook",
+    "composition_ids": [
+     "frame_within_frame",
+     "rule_of_thirds"
+    ],
+    "palette_direction": "Soft sage #A9BFA6, cream #F2ECDF, wood #9C7B5B",
+    "lighting_ids": [
+     "window_side",
+     "overcast_soft"
+    ],
+    "camera_angle": "eye-level",
+    "camera_distance": "medium",
+    "character_expression": "Relaxed, absorbed",
+    "body_language": "Curled with book and tea",
+    "environment": "Window seat with rain",
+    "negative_space": "Window",
+    "texture": "Linen, paper",
+    "visual_metaphor": "Own world",
+    "symbolism": "Book = inner life",
+    "style_ids_that_fit": [
+     "photoreal_lifestyle",
+     "watercolor_loose",
+     "storybook_gouache"
+    ]
+   },
+   {
+    "name": "Lone boat at dawn",
+    "composition_ids": [
+     "low_horizon",
+     "negative_space"
+    ],
+    "palette_direction": "Pastel dawn #F3D6C4 and lake #A7C4C9",
+    "lighting_ids": [
+     "golden_hour",
+     "fog_atmospheric"
+    ],
+    "camera_angle": "eye-level",
+    "camera_distance": "extreme wide",
+    "character_expression": "Tiny",
+    "body_language": "Fishing calmly",
+    "environment": "Mountain lake (northern Thailand)",
+    "negative_space": "Sky and water",
+    "texture": "Mist",
+    "visual_metaphor": "Harmony with space",
+    "symbolism": "Calm water = inner calm",
+    "style_ids_that_fit": [
+     "ink_brush_sumi_e",
+     "impressionism",
+     "anime_painterly_bg"
+    ]
+   },
+   {
+    "name": "Rooftop evening",
+    "composition_ids": [
+     "high_horizon",
+     "asymmetrical_balance"
+    ],
+    "palette_direction": "Blue hour #42567A with warm city lights #F2B860",
+    "lighting_ids": [
+     "blue_hour",
+     "practical_lamp"
+    ],
+    "camera_angle": "high angle",
+    "camera_distance": "wide",
+    "character_expression": "Content",
+    "body_language": "Sitting with headphones",
+    "environment": "Bangkok rooftop",
+    "negative_space": "City",
+    "texture": "Bokeh",
+    "visual_metaphor": "Above the noise",
+    "symbolism": "Height = perspective",
+    "style_ids_that_fit": [
+     "cinematic_realism",
+     "anime_painterly_bg",
+     "synthwave"
+    ]
+   }
+  ],
+  "contrast_levers": "Warm light on lone figure (vs cold for loneliness); open relaxed posture.",
+  "cultural_notes": "Solitude may read as loneliness in collectivist contexts; add contentment cues (smile, tea, hobby). Colour meanings depend on context (ElliotMaier2014).",
+  "cliches_to_avoid": [
+   "Sad lone silhouette"
+  ],
+  "ai_mistakes": [
+   "Reads lonely",
+   "Figure facing away with slumped back"
+  ],
+  "eyewear_angle": "Reading with comfortable glasses on a rainy afternoon. Very suitable.",
+  "refs": [
+   "ElliotMaier2014",
+   "Artistic"
+  ],
+  "evidence": "craft"
+ },
+ {
+  "id": "visual.majesty",
+  "name_en": "Majesty",
+  "name_th": "ความยิ่งใหญ่สง่างาม",
+  "core_read": "Grand, dignified scale; looking up at something noble.",
+  "approaches": [
+   {
+    "name": "Temple at golden hour",
+    "composition_ids": [
+     "symmetry",
+     "low_horizon"
+    ],
+    "palette_direction": "Gold #C99A2E, deep red #7D1F1F, sky blue #7FA7C9",
+    "lighting_ids": [
+     "golden_hour",
+     "volumetric_god_rays"
+    ],
+    "camera_angle": "low angle",
+    "camera_distance": "wide",
+    "character_expression": "None or tiny visitors",
+    "body_language": "Small figures at base",
+    "environment": "Grand architecture",
+    "negative_space": "Sky",
+    "texture": "Ornate",
+    "visual_metaphor": "Grandeur",
+    "symbolism": "Gold = sacred/royal",
+    "style_ids_that_fit": [
+     "matte_painting",
+     "thai_traditional_mural",
+     "architectural_visualization"
+    ]
+   },
+   {
+    "name": "Mountain range",
+    "composition_ids": [
+     "scale_contrast",
+     "layered_depth"
+    ],
+    "palette_direction": "Layered blue ridges #2F4A66 #6E8FAE #B7CBDD",
+    "lighting_ids": [
+     "fog_atmospheric",
+     "golden_hour"
+    ],
+    "camera_angle": "eye-level",
+    "camera_distance": "extreme wide",
+    "character_expression": "None",
+    "body_language": "Tiny hiker",
+    "environment": "Mountain ridges",
+    "negative_space": "Sky",
+    "texture": "Atmospheric perspective",
+    "visual_metaphor": "Nature's scale",
+    "symbolism": "Peaks = enduring",
+    "style_ids_that_fit": [
+     "romanticism_landscape",
+     "chinese_gongbi",
+     "ink_brush_sumi_e"
+    ]
+   },
+   {
+    "name": "Hero product monument",
+    "composition_ids": [
+     "center",
+     "symmetry"
+    ],
+    "palette_direction": "Black #141414 with gold rim #D4AF37",
+    "lighting_ids": [
+     "product_backlit_glass",
+     "rim_only"
+    ],
+    "camera_angle": "low angle",
+    "camera_distance": "close-up",
+    "character_expression": "None",
+    "body_language": "Frame standing upright like a monument",
+    "environment": "Plinth",
+    "negative_space": "Dark",
+    "texture": "Metal, acetate",
+    "visual_metaphor": "Elevated object",
+    "symbolism": "Plinth = status",
+    "style_ids_that_fit": [
+     "luxury_commercial",
+     "photoreal_product",
+     "art_deco"
+    ]
+   }
+  ],
+  "contrast_levers": "Low angle, symmetry, scale contrast, gold/deep tones.",
+  "cultural_notes": "Thai temples and royal imagery are sacred — never use royal symbols or Buddha images commercially; temple architecture in ads should be respectful. Colour meanings depend on context (ElliotMaier2014).",
+  "cliches_to_avoid": [
+   "Lion roaring on rock",
+   "Eagle"
+  ],
+  "ai_mistakes": [
+   "Buddha image misuse",
+   "Fake architecture details mixed from different cultures"
+  ],
+  "eyewear_angle": "Premium frame on plinth with gold rim light (approach 3). Suitable for luxury lines.",
+  "refs": [
+   "Arnheim1974",
+   "Artistic"
+  ],
+  "evidence": "craft"
+ },
+ {
+  "id": "visual.coziness",
+  "name_en": "Coziness",
+  "name_th": "ความอบอุ่นสบาย (cosy)",
+  "core_read": "Small, soft, safe, enclosed; comfort objects and warm low light.",
+  "approaches": [
+   {
+    "name": "Blanket and rain",
+    "composition_ids": [
+     "frame_within_frame",
+     "layered_depth"
+    ],
+    "palette_direction": "Warm cream #F2E3C6, cocoa #6B4A35, rain blue #7D93A8 outside",
+    "lighting_ids": [
+     "practical_lamp",
+     "candle_fire"
+    ],
+    "camera_angle": "eye-level",
+    "camera_distance": "medium",
+    "character_expression": "Content",
+    "body_language": "Wrapped in blanket with cocoa",
+    "environment": "Window with rain",
+    "negative_space": "Window",
+    "texture": "Knit, wood",
+    "visual_metaphor": "Inside vs outside",
+    "symbolism": "Rain outside = shelter",
+    "style_ids_that_fit": [
+     "photoreal_lifestyle",
+     "storybook_gouache",
+     "anime_painterly_bg"
+    ]
+   },
+   {
+    "name": "Tiny café isometric",
+    "composition_ids": [
+     "center",
+     "layered_depth"
+    ],
+    "palette_direction": "Pastel #F4D8C2 #C8DCC4 with lamp yellow #F7D27A",
+    "lighting_ids": [
+     "global_illumination_interior",
+     "storybook_soft_glow"
+    ],
+    "camera_angle": "high angle",
+    "camera_distance": "wide",
+    "character_expression": "Tiny figures",
+    "body_language": "Barista and customer",
+    "environment": "Small café diorama",
+    "negative_space": "Background plain",
+    "texture": "Soft 3D",
+    "visual_metaphor": "Small world",
+    "symbolism": "Diorama = safe space",
+    "style_ids_that_fit": [
+     "isometric_3d",
+     "toy_3d_render",
+     "claymation"
+    ]
+   },
+   {
+    "name": "Cat on lap close-up",
+    "composition_ids": [
+     "subject_isolation",
+     "rule_of_thirds"
+    ],
+    "palette_direction": "Ginger #D9894A, wool beige #E6D8C2",
+    "lighting_ids": [
+     "window_side",
+     "bounce_fill_warm"
+    ],
+    "camera_angle": "top-down",
+    "camera_distance": "close-up",
+    "character_expression": "Not shown",
+    "body_language": "Hand stroking a sleeping cat",
+    "environment": "Lap with blanket",
+    "negative_space": "Blanket",
+    "texture": "Fur, wool",
+    "visual_metaphor": "Comfort",
+    "symbolism": "Sleeping cat = safety",
+    "style_ids_that_fit": [
+     "colored_pencil",
+     "pastel_soft",
+     "photoreal_lifestyle"
+    ]
+   }
+  ],
+  "contrast_levers": "Enclosure, soft textures, warm small lights vs cold outside.",
+  "cultural_notes": "Thai rainy season (หน้าฝน) gives a natural cosy setting; tropical heat means blankets read as AC-room cosy. Colour meanings depend on context (ElliotMaier2014).",
+  "cliches_to_avoid": [
+   "Fireplace and snow in a Thai scene"
+  ],
+  "ai_mistakes": [
+   "Over-orange",
+   "Clutter overload"
+  ],
+  "eyewear_angle": "Reading glasses beside a book and cocoa on a rainy evening. Very suitable.",
+  "refs": [
+   "Gurney2010",
+   "Artistic"
+  ],
+  "evidence": "craft"
+ }
+]

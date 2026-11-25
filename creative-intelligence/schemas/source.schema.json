@@ -1,0 +1,29 @@
+{
+ "$schema": "https://json-schema.org/draft/2020-12/schema",
+ "$id": "creative-intelligence/source.schema.json",
+ "title": "Source record",
+ "type": "object",
+ "required": ["key", "title", "source_type", "tier", "access_status", "verification_status", "date_accessed", "modules"],
+ "properties": {
+  "id": {"type": "string", "description": "set by registry.py build (key, or key~n on collision)"},
+  "key": {"type": "string", "description": "AuthorYear style"},
+  "title": {"type": "string"},
+  "authors": {"type": "string"},
+  "year": {"type": ["integer", "null"]},
+  "url": {"type": "string"},
+  "doi_isbn": {"type": "string"},
+  "source_type": {"type": "string"},
+  "tier": {"enum": ["S", "A", "B", "C", "D", "E", "U"]},
+  "key_findings": {"type": "array", "items": {"type": "string"}},
+  "practical_applications": {"type": "array", "items": {"type": "string"}},
+  "limitations": {"type": "array", "items": {"type": "string"}},
+  "license": {"type": "string"},
+  "access_status": {"enum": ["full_text", "abstract", "publisher_page", "bibliographic", "search_summary", "web_page", "catalogue"]},
+  "verification_status": {"enum": ["verified", "unverified"]},
+  "date_accessed": {"type": "string"},
+  "modules": {"type": "array", "items": {"type": "string", "pattern": "^M[0-9]{2}$"}},
+  "origin": {"type": "string"},
+  "full_record": {"type": "string"},
+  "same_work_as": {"type": "array", "items": {"type": "string"}}
+ }
+}

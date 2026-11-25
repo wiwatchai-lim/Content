@@ -1,0 +1,886 @@
+[
+ {
+  "key": "McSweeney2002",
+  "title": "Hofstede's model of national cultural differences and their consequences: A triumph of faith - a failure of analysis",
+  "authors": "McSweeney, B.",
+  "year": 2002,
+  "url": "https://repository.royalholloway.ac.uk/items/dede6e3c-687c-afad-a442-16fbf84aa468/1/SoMWP1004BrendanMcSweeney.pdf",
+  "doi_isbn": "Human Relations 55(1):89-118",
+  "source_type": "review",
+  "tier": "A",
+  "key_findings": [
+   "Questionnaire was designed for workplace satisfaction, not culture; sample was IBM employees (educated, mostly male).",
+   "Rejects national culture as a systematically causal factor of behaviour (as summarised by Williamson 2002).",
+   "Hofstede's reply 'Dimensions do not exist' (Human Relations 55(11):1355-1361) says McSweeney misses the point; McSweeney calls the reply evasive.",
+   "McSweeney 2013 'Fashion founded on a flaw' extends the critique to GLOBE: applying national scores to individuals is an ecological fallacy."
+  ],
+  "practical_applications": [
+   "Use national dimensions only as rough hypotheses about a market, never to predict one customer."
+  ],
+  "limitations": [
+   "Abstract/search summary; the 2002 article itself was not read. Check 2026-11-25: the Royal Holloway PDF at this URL is a different paper (McSweeney, Brown & Iliopoulou 2010 working paper) - now a separate source McSweeneyBrownIliopoulou2010 (read in full)."
+  ],
+  "license": "copyrighted",
+  "access_status": "search_summary",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M30"
+  ]
+ },
+ {
+  "key": "TarasKirkmanSteel2010",
+  "title": "Examining the Impact of Culture's Consequences",
+  "authors": "Taras, V.; Kirkman, B. L.; Steel, P.",
+  "year": 2010,
+  "url": "https://prism.ucalgary.ca/handle/1880/47917",
+  "doi_isbn": "Journal of Applied Psychology 95(3):405-439",
+  "source_type": "meta-analysis",
+  "tier": "S",
+  "key_findings": [
+   "598 studies, >200,000 individuals; overall absolute weighted effect rho = 0.18 at individual level.",
+   "Values relate most to emotions, then attitudes, then behaviours, least to job performance.",
+   "Effects larger in culturally 'tight' countries, for managers vs students, older/male/more educated respondents.",
+   "Related Steel & Taras 2010: up to ~90% of variance in cultural values lies within countries."
+  ],
+  "practical_applications": [
+   "Culture shifts feelings/attitudes toward a message more than it decides behaviour: adapt tone and imagery, keep the offer clear."
+  ],
+  "limitations": [
+   "Figures from abstract and secondary citations, not full text."
+  ],
+  "license": "copyrighted",
+  "access_status": "abstract",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M30"
+  ]
+ },
+ {
+  "key": "House2004_GLOBE",
+  "title": "Culture, Leadership, and Organizations: The GLOBE Study of 62 Societies",
+  "authors": "House, R. J.; Hanges, P. J.; Javidan, M.; Dorfman, P. W.; Gupta, V. (eds.)",
+  "year": 2004,
+  "url": "https://us.sagepub.com/en-us/nam/book/culture-leadership-and-organizations",
+  "doi_isbn": "",
+  "source_type": "textbook",
+  "tier": "A",
+  "key_findings": [
+   "~17,000-18,000 middle managers in three industries across 62 societies.",
+   "Nine dimensions: performance orientation, uncertainty avoidance, humane orientation, institutional collectivism, in-group collectivism, assertiveness, gender egalitarianism, future orientation, power distance.",
+   "Each scored as 'as is' (practices) and 'should be' (values) - the two often diverge."
+  ],
+  "practical_applications": [
+   "Practices vs values gap is creatively useful: show the world the audience wishes for ('should be') rather than mirroring 'as is'."
+  ],
+  "limitations": [
+   "Publisher page and summaries only; Thailand scores not retrieved; same ecological-fallacy critique (McSweeney 2013)."
+  ],
+  "license": "copyrighted",
+  "access_status": "publisher_page",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M30"
+  ]
+ },
+ {
+  "key": "Cardon2008",
+  "title": "A Critique of Hall's Contexting Model",
+  "authors": "Cardon, P. W.",
+  "year": 2008,
+  "url": "https://www.bibsonomy.org/bibtex/17b3fccb0d9463886eaf729f010a3a837",
+  "doi_isbn": "10.1177/1050651908320361",
+  "source_type": "meta-analysis",
+  "tier": "A",
+  "key_findings": [
+   "Reviewed 224 articles (1990-2006): high/low context is the most-cited intercultural framework.",
+   "Few propositions tested empirically; the most-tested ones (esp. directness) largely failed to support the model.",
+   "Recommends measures, more countries, and studying when cultures use both HC and LC messages.",
+   "Related: Kittler, Rygl & Mackinnon 2011 review (Int. J. Cross Cultural Management) finds no valid, reliable country classification for HC/LC."
+  ],
+  "practical_applications": [
+   "Do not assume 'Thai = high-context so be vague'; context use depends on situation, relationship and channel."
+  ],
+  "limitations": [
+   "Abstract and a blog review; full text not read."
+  ],
+  "license": "copyrighted",
+  "access_status": "abstract",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M30"
+  ]
+ },
+ {
+  "key": "Komin1990",
+  "title": "Psychology of the Thai People: Values and Behavioral Patterns",
+  "authors": "Komin, S.",
+  "year": 1990,
+  "url": "https://search.worldcat.org/oclc/35221306",
+  "doi_isbn": "",
+  "source_type": "textbook",
+  "tier": "A",
+  "key_findings": [
+   "Survey 1978-1981 of 2,469 Thais (per secondary summary); a 2016 review lists ten value dimensions incl. self-centeredness/individual emphasis, debt of gratitude (bunkhun) and social relations; tourism papers cite it for 'caring-considerate', 'friendly' hospitality.",
+   "Attributes values more to agrarian, relationship-centred society than to Buddhism; rural respondents weighted gratitude, obedience, forgiveness more."
+  ],
+  "practical_applications": [
+   "Thai audiences respond to relationship, gratitude and face-saving framing; avoid humiliation humour."
+  ],
+  "limitations": [
+   "Book not read; NIDA Bangkok; dated 1990/1991 inconsistently; data are 40+ years old."
+  ],
+  "license": "copyrighted",
+  "access_status": "bibliographic",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M30"
+  ]
+ },
+ {
+  "key": "WyattPromkandorn2012",
+  "title": "A discourse analysis of the Thai experience of 'being krengjai'",
+  "authors": "Wyatt, B.; Promkandorn, S.",
+  "year": 2012,
+  "url": "https://www.degruyterbrill.com/document/doi/10.1515/ip-2012-0021/html?lang=en",
+  "doi_isbn": "10.1515/ip-2012-0021",
+  "source_type": "empirical",
+  "tier": "A",
+  "key_findings": [
+   "Krengjai described as the Thai concept hardest for Westerners to grasp.",
+   "Historical research + questionnaire: 15 general meanings identified, back-translated, rated by 471 Thai people."
+  ],
+  "practical_applications": [
+   "Characters who refuse indirectly or hesitate to ask are culturally legible to Thais; foreigners may read it as vague."
+  ],
+  "limitations": [
+   "Abstract only (same key used in knowledge/emotions/sources.json)."
+  ],
+  "license": "copyrighted",
+  "access_status": "abstract",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M30",
+   "M02"
+  ]
+ },
+ {
+  "key": "Wongkitrungrueng2019",
+  "title": "Customer deference to service providers in ordinary service encounters",
+  "authors": "Wongkitrungrueng, A. et al.",
+  "year": 2019,
+  "url": "https://emerald.com/insight/content/doi/10.1108/JSTP-02-2018-0031/full/html",
+  "doi_isbn": "10.1108/JSTP-02-2018-0031",
+  "source_type": "empirical",
+  "tier": "A",
+  "key_findings": [
+   "Critical incident technique, 253 Thai participants describing being deferential (kreng jai) to service providers.",
+   "Deference rises when customers perceive the provider's well-being is compromised; it involves aversive feelings, coping strategies and avoiding future contact."
+  ],
+  "practical_applications": [
+   "Thai customers may not complain - they leave. Messaging that makes asking easy ('ถามได้เลย ไม่ต้องเกรงใจ') removes a real barrier."
+  ],
+  "limitations": [
+   "Abstract; service-encounter setting."
+  ],
+  "license": "copyrighted",
+  "access_status": "abstract",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M30"
+  ]
+ },
+ {
+  "key": "Jittichanon2018",
+  "title": "Bunkhun: The Ideology Effect of Thai Business Management",
+  "authors": "Jittichanon, S.",
+  "year": 2018,
+  "url": "https://ojs.lib.buu.ac.th/index.php/commerce/article/view/5922/3097",
+  "doi_isbn": "",
+  "source_type": "review",
+  "tier": "B",
+  "key_findings": [
+   "Bunkhun translated as reciprocity of goodness / exchange of favours; strongly affects business relationships.",
+   "Related: corpus study of katanyu (gratitude) in the Thai National Corpus links gratitude discourse to reciprocity expectations and power inequality (doi 10.18848/2327-7882/CGP/v22i02/191-214); Chula thesis: speakers perform some face-threatening speech acts less toward people they owe bunkhun."
+  ],
+  "practical_applications": [
+   "Gratitude stories (parents, teachers, long-time customers) resonate; avoid framing a gift as creating debt or obligation pressure."
+  ],
+  "limitations": [
+   "Search summary; regional business journal."
+  ],
+  "license": "unknown (ThaiJO)",
+  "access_status": "search_summary",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M30"
+  ]
+ },
+ {
+  "key": "Persons2008",
+  "title": "The Anatomy of Thai Face",
+  "authors": "Persons, Larry Scott",
+  "year": 2008,
+  "url": "https://digital.car.chula.ac.th/manusya/vol11/iss1/5",
+  "doi_isbn": "Manusya, Journal of Humanities 11(1)",
+  "source_type": "empirical",
+  "tier": "A",
+  "key_findings": [
+   "Ethnographic social-anthropology study: five abstract social constructs - nata (หน้าตา), kiat (เกียรติ), saksi (ศักดิ์ศรี), chuesiang (ชื่อเสียง) and barami (บารมี) - form the 'anatomy' of Thai face.",
+   "Thais think of the five together, but field data show they are distinct though not mutually exclusive; the author offers a visual model of their dynamic relationship.",
+   "From earlier search only: Ukosakul's work on Thai face idioms and politeness."
+  ],
+  "practical_applications": [
+   "Never make a recognisable customer/staff member look foolish; humour targets situations, not people's status."
+  ],
+  "limitations": [
+   "Abstract only (Manusya 11(1):53-75); the model itself not read."
+  ],
+  "license": "unknown",
+  "access_status": "abstract",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M30"
+  ]
+ },
+ {
+  "key": "Scroope2025",
+  "title": "Thai Culture: Communication (The Cultural Atlas)",
+  "authors": "Scroope, C.",
+  "year": 2025,
+  "url": "https://theculturalatlas.org/thai-culture/thai-culture-communication",
+  "doi_isbn": "",
+  "source_type": "practitioner",
+  "tier": "C",
+  "key_findings": [
+   "Indirect refusals; bluntness only among close acquaintances.",
+   "Raising the voice implies loss of control and can cause loss of face.",
+   "Smiles can mask awkwardness/sadness; nodding = acknowledgement, not agreement.",
+   "Pointing with one finger is rude; beckon palm-down; never touch the head; feet are dirtiest - don't point with them or show soles; head higher than Buddha image is disrespectful; dramatic gestures may read as anger."
+  ],
+  "practical_applications": [
+   "Direction notes for actors/puppets and for foreign-facing etiquette content."
+  ],
+  "limitations": [
+   "Generalised cultural profile (Mosaica); not empirical."
+  ],
+  "license": "copyrighted",
+  "access_status": "full_text",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M30",
+   "M12"
+  ]
+ },
+ {
+  "key": "ThailandFoundation2024",
+  "title": "Feet Low, Head High: A Guide to Thai Etiquettes",
+  "authors": "Varapongsittikul, T. (Thailand Foundation)",
+  "year": 2024,
+  "url": "https://thailandfoundation.or.th/?p=518467",
+  "doi_isbn": "",
+  "source_type": "practitioner",
+  "tier": "C",
+  "key_findings": [
+   "Daily wai: palms at chest, slight head bow; deeper wai/prostration for revered persons and ceremonies.",
+   "Head most sacred - don't touch heads or pass things over heads; feet lowest - don't point soles at people or Buddha images, don't rest feet on tables, step over pillows/books.",
+   "Remove shoes in chapels; don't step on temple thresholds (guardian spirit); bow/crouch passing seated monks; keep Buddha images above head height."
+  ],
+  "practical_applications": [
+   "Staging rules for scenes with elders, monks, Buddha images and homes."
+  ],
+  "limitations": [
+   "States it does not reflect Royal Thai Government views; royal topics not covered."
+  ],
+  "license": "copyrighted",
+  "access_status": "full_text",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M30",
+   "M12"
+  ]
+ },
+ {
+  "key": "deMooijHofstede2010",
+  "title": "The Hofstede model: Applications to global branding and advertising strategy and research",
+  "authors": "de Mooij, M.; Hofstede, G.",
+  "year": 2010,
+  "url": "https://katalog.lib.cas.cz/KNAV/EdsRecord/edsair,edsair.doi...........6764e46da45112eb3555bfcf2972dcc0",
+  "doi_isbn": "10.2501/S026504870920104X",
+  "source_type": "review",
+  "tier": "A",
+  "key_findings": [
+   "Describes the dimensions most relevant to branding/advertising and reviews studies applying them.",
+   "Includes cautionary remarks on applying the model."
+  ],
+  "practical_applications": [
+   "Use as a vocabulary for briefing (e.g. collectivist family framing vs individual achievement), then test."
+  ],
+  "limitations": [
+   "Abstract only; written by the model's author (not independent)."
+  ],
+  "license": "copyrighted",
+  "access_status": "abstract",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M30"
+  ]
+ },
+ {
+  "key": "HornikxOKeefe2009",
+  "title": "(Meta-analysis of adapting advertising appeals to cultural values - exact title not captured)",
+  "authors": "Hornikx, J.; O'Keefe, D. J.",
+  "year": 2009,
+  "url": "https://theses.ubn.ru.nl/handle/123456789/7184",
+  "doi_isbn": "",
+  "source_type": "meta-analysis",
+  "tier": "S",
+  "key_findings": [
+   "Adapted cultural-value appeals are generally more persuasive and better liked than unadapted ones (as cited by later work).",
+   "No adaptation effects in studies with participants from Europe or Central/South America."
+  ],
+  "practical_applications": [
+   "Adapting to values helps a little on average; don't expect it to rescue a weak offer."
+  ],
+  "limitations": [
+   "Known via citing works (Radboud thesis page); exact title and statistics not verified."
+  ],
+  "license": "copyrighted",
+  "access_status": "search_summary",
+  "verification_status": "unverified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M30"
+  ]
+ },
+ {
+  "key": "CulturalAdaptationMeta2023",
+  "title": "Cultural Value Adaptation in Advertising is Effective, But Not Dependable (meta-analysis)",
+  "authors": "",
+  "year": 2023,
+  "url": "https://sage.cnpereading.com/doi/10.1177/23294884231199088",
+  "doi_isbn": "10.1177/23294884231199088",
+  "source_type": "meta-analysis",
+  "tier": "S",
+  "key_findings": [
+   "~120 comparisons, studies 1994-2018: adaptation effects exist but are small (persuasion mean r = .049; ad liking mean r = .055).",
+   "When researchers' cultural background matched the audience's, adapted appeals were significantly more persuasive (r = .081)."
+  ],
+  "practical_applications": [
+   "Local creators who share the audience's culture are a real asset - have a Thai (or target-market) reviewer, not just a translator."
+  ],
+  "limitations": [
+   "Publisher page blocked by bot check; numbers from search summaries; authors not captured."
+  ],
+  "license": "copyrighted",
+  "access_status": "search_summary",
+  "verification_status": "unverified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M30"
+  ]
+ },
+ {
+  "key": "ASA2019_GenderStereotypes",
+  "title": "Harm and offence: Gender stereotypes (CAP/BCAP rule, in force 14 June 2019) and 12-month review",
+  "authors": "Advertising Standards Authority (UK)",
+  "year": 2019,
+  "url": "https://www.asa.org.uk/advice-online/harm-and-offence-gender-stereotypes.html",
+  "doi_isbn": "",
+  "source_type": "docs",
+  "tier": "S",
+  "key_findings": [
+   "CAP announced the rule on 14 Dec 2018; CAP Code rule 4.9 and BCAP rule 4.14 took effect 14 June 2019: ads 'must not include gender stereotypes that are likely to cause harm, or serious or widespread offence', following an ASA review of gender stereotyping in ads.",
+   "Guidance: the rule is not intended to stop ads featuring glamorous, attractive, successful, aspirational or healthy people or lifestyles, one gender only, or stereotypes used to challenge their negative effects.",
+   "Guidance covers five problem areas: stereotypical roles and characteristics; sexualisation and objectification; humour; contrasting stereotypes; other stereotypical depictions.",
+   "From earlier search only (not on this page): 12-month review kept the rule; Eisend (2010) meta-analysis of gender roles in ads (bibliographic)."
+  ],
+  "practical_applications": [
+   "Test: does the scene imply a role is ONLY for one gender or mock someone for not fitting it? Rewrite."
+  ],
+  "limitations": [
+   "UK regulator advice page (CAP Executive, non-binding advice) - not Thai law; used as a good-practice benchmark."
+  ],
+  "license": "copyrighted (ASA)",
+  "access_status": "full_text",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M30"
+  ]
+ },
+ {
+  "key": "SEP_EthicsCulturalHeritage",
+  "title": "The Ethics of Cultural Heritage (sec. 4 Cultural Appropriation)",
+  "authors": "Stanford Encyclopedia of Philosophy (author not captured)",
+  "year": 2025,
+  "url": "https://plato.stanford.edu/entries/ethics-cultural-heritage/",
+  "doi_isbn": "",
+  "source_type": "encyclopedia",
+  "tier": "B",
+  "key_findings": [
+   "Appropriation = taking/using cultural products (stories, styles, motifs, artefacts, religion-related practices) by outsiders; wrongful cases usually sit on social inequality.",
+   "Arguments for wrongness: profound offence (prima facie, can be outweighed), harm/exploitation (profit without permission/reciprocity, stereotype, silencing), violation of group intimacy, oppression accounts.",
+   "Counterarguments: offence easily outweighed; insiders also misrepresent; cultural exchange is creative; essentialism about group boundaries."
+  ],
+  "practical_applications": [
+   "Appreciation test: credit, context, consent/collaboration, no caricature, no sacred items as decoration, share benefit."
+  ],
+  "limitations": [
+   "First published 2018, revised Sep 2025; ~100k of 130k characters read; authors not in fetched text."
+  ],
+  "license": "copyrighted (SEP)",
+  "access_status": "full_text",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M30"
+  ]
+ },
+ {
+  "key": "SlutskiyHamilton2017",
+  "title": "Correlates of Colorism: Freedom of Speech and Discriminatory Advertising in Thailand",
+  "authors": "Slutskiy, Pavel; Hamilton, Mark",
+  "year": 2017,
+  "url": "https://ideas.repec.org/a/sek/jijoss/v6y2017i2p63-76.html",
+  "doi_isbn": "International Journal of Social Sciences 6(2):63-76",
+  "source_type": "empirical",
+  "tier": "B",
+  "key_findings": [
+   "January 2016: Seoul Secret's 'Whiteness makes you win' skin-whitening ad went viral on Thai social media, drew international coverage (CNN, the Guardian) and local calls for legal action.",
+   "Content analysis of Thai print, online and social-media coverage: the value of free speech appears to be absent from Thai discourse about 'discriminatory advertising'.",
+   "From earlier search only: the ad was pulled and the company apologised; earlier Thai cosmetic/toothpaste ads were also criticised."
+  ],
+  "practical_applications": [
+   "Colourism (fair = winner) is a live backlash risk in Thailand; never use skin tone as before/after or status cue."
+  ],
+  "limitations": [
+   "Abstract only (International Journal of Social Sciences 6(2):63-76)."
+  ],
+  "license": "unknown",
+  "access_status": "abstract",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M30"
+  ]
+ },
+ {
+  "key": "MOTS2025_Nation",
+  "title": "Thailand welcomes 32.9m foreign tourists in 2025",
+  "authors": "The Nation Thailand (quoting Ministry of Tourism and Sports)",
+  "year": 2026,
+  "url": "https://nationthailand.com/news/40060860",
+  "doi_isbn": "",
+  "source_type": "docs",
+  "tier": "C",
+  "key_findings": [
+   "2025: 32,974,321 foreign arrivals; 1.53 trillion baht revenue (MOTS figures, published 6 Jan 2026).",
+   "Top 5 markets 2025: Malaysia 4,520,856; China 4,473,992; India 2,487,319; Russia 1,898,837; South Korea 1,555,227.",
+   "Arrivals down ~7% vs 2024; Malaysia overtook China from April 2025."
+  ],
+  "practical_applications": [
+   "Tourist-facing content: plan for Malay/Muslim, Chinese, Indian (Hindu/other), Russian and Korean viewers, not only 'Western'."
+  ],
+  "limitations": [
+   "News report of official figures; MOTS statistics page itself (mots.go.th/news/category/411) listed no data when fetched; markets 6-10 not captured. Hua Hin/local mix may differ."
+  ],
+  "license": "copyrighted",
+  "access_status": "full_text",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M30",
+   "M04"
+  ]
+ },
+ {
+  "key": "W3C_L10n",
+  "title": "Localization vs. Internationalization",
+  "authors": "Ishida, R. (W3C); Miller, S. K. (Boeing)",
+  "year": null,
+  "url": "https://www.w3.org/International/questions/qa-i18n.en.html",
+  "doi_isbn": "",
+  "source_type": "docs",
+  "tier": "B",
+  "key_findings": [
+   "Localization (l10n) = adapting content for a specific locale; internationalization = designing so localization is easy.",
+   "Localization covers number/date/time/currency formats, symbols, icons and colours, references that may be misread or insensitive, legal requirements, name/address order, script readability, and sometimes rethinking visual design and logic."
+  ],
+  "practical_applications": [
+   "Translation is one line of the localisation checklist, not the whole job."
+  ],
+  "limitations": [
+   "Web/software focus; no last-updated date."
+  ],
+  "license": "W3C document license",
+  "access_status": "full_text",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M30"
+  ]
+ },
+ {
+  "key": "ThaiPenalCode",
+  "title": "Criminal Code (Thailand), Wikisource translation of the 1956 (B.E. 2499) promulgated text",
+  "authors": "Kingdom of Thailand (trans. Wikisource)",
+  "year": 1956,
+  "url": "https://en.wikisource.org/wiki/Translation:Criminal_Code_Promulgation_Act,_2499_BE",
+  "doi_isbn": "",
+  "source_type": "primary_text",
+  "tier": "S",
+  "key_findings": [
+   "1956 text (Wikisource, read): s.112 defaming, insulting or expressing malice towards the King, Queen, Heir to the Throne or Regent - up to 7 years; s.118 any act against a flag or other symbol of the State in order to desecrate the Nation - up to 1 year / 2,000 baht; s.135 same for a friendly foreign state's flag; s.206 any act against an object or place of religious reverence that desecrates the religion - up to 3 years / 6,000 baht; s.207 disorder at a lawful religious meeting; s.208 wrongfully dressing as or using a symbol of a bhikkhu, novice, ascetic or cleric in order to make others believe one is such a person - up to 1 year / 2,000 baht.",
+   "Current consolidated Thai text (legardy.com / thailawonline.com, read 2026-11-25): s.112 imprisonment 3-15 years; s.118 and s.135 up to 2 years or 40,000 baht or both; s.206 1-7 years or 20,000-140,000 baht or both; s.208 up to 1 year or 20,000 baht or both - fines as amended by Criminal Code Amendment Act (No. 26) B.E. 2560 (2017).",
+   "s.208 needs intent to make others believe one is a monk/cleric; s.118/135 need intent to desecrate ('เพื่อเหยียดหยาม')."
+  ],
+  "practical_applications": [
+   "Any royal reference, Buddha image, monk costume or temple setting in content needs a respect check; satire of the monarchy is a criminal risk."
+  ],
+  "limitations": [
+   "Wikisource is an unofficial translation of the original 1956 text; current penalties taken from two private law-database sites quoting the Thai consolidated text (Krisdika not checked). Supreme Court has applied s.112 broadly (press summaries). Not legal advice."
+  ],
+  "license": "public domain (Thai govt works) / Wikisource",
+  "access_status": "full_text",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M30",
+   "M12"
+  ]
+ },
+ {
+  "key": "AVIA2024_ThaiAdMatrix",
+  "title": "Thailand 2024 Advertising Matrix",
+  "authors": "Asia Video Industry Association (Lapworth, J.)",
+  "year": 2025,
+  "url": "https://avia.org/wp-content/uploads/2024/07/Thailand-2024-Advertising-Matrix_Final-1.pdf",
+  "doi_isbn": "",
+  "source_type": "docs",
+  "tier": "C",
+  "key_findings": [
+   "Ads must not contain elements that denigrate or insult the King or other heads of state.",
+   "Ads should never insult or defame any religion or sacred person, place or thing.",
+   "All ads must follow the Consumer Protection Act 1979 as amended; Advertising Association of Thailand self-regulatory code also applies to broadcasters."
+  ],
+  "practical_applications": [
+   "Baseline content rules for any Thai-market ad, including social posts and boosted posts."
+  ],
+  "limitations": [
+   "Industry summary (PDF metadata dated Mar 2025); text extracted locally from the PDF."
+  ],
+  "license": "copyrighted",
+  "access_status": "full_text",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M30"
+  ]
+ },
+ {
+  "key": "Tilleke2026_AIAds",
+  "title": "Thailand's Advertising Guidelines Targeting AI-Generated Content",
+  "authors": "Tilleke & Gibbins",
+  "year": 2026,
+  "url": "https://www.tilleke.com/insights/thailands-advertising-guidelines-targeting-ai-generated-content/2/",
+  "doi_isbn": "",
+  "source_type": "docs",
+  "tier": "C",
+  "key_findings": [
+   "Law-firm summary (12 Mar 2026) of an OCPB notification under the Consumer Protection Act B.E. 2522, described as already in effect: AI/software-made or edited ad images/video that may cause material misunderstanding about the product must match real size/quantity/volume/composition, get regulator approval where the law requires, and carry clear disclosures; example labels include 'Image created by AI', 'Video created by AI', 'Real image or simulation edited using AI'.",
+   "Exact trigger is not fully clear from the summary: the label bullet speaks of AI used to create or edit images generally; safest practice = label any AI-made/edited ad image showing a product."
+  ],
+  "practical_applications": [
+   "Our AI scenes with real frames: label AI images; never AI-alter the product itself (shape, colour, lens) beyond reality."
+  ],
+  "limitations": [
+   "Law-firm summary; penalties not stated in fetched page.",
+   "Spot-check 2026-11-25: no in-force date given (12 Mar 2026 is the article date); label wordings are examples; trigger scope ambiguous - read the Royal Gazette notice before relying on details.",
+   "Primary check 2026-11-25: OCPB's own article (OCPB2025_AIAdGuidance) and OCPB news (OCPB2025_AINews) read in full - they confirm the three duties and the Thai label wordings; Gazette text still unread (Cloudflare block)."
+  ],
+  "license": "copyrighted",
+  "access_status": "full_text",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M30",
+   "M05"
+  ]
+ },
+ {
+  "key": "NationGaruda2021",
+  "title": "Garuda emblem on shoes clear violation of law: Wissanu",
+  "authors": "The Nation Thailand",
+  "year": 2021,
+  "url": "https://www.nationthailand.com/in-focus/30403768",
+  "doi_isbn": "",
+  "source_type": "practitioner",
+  "tier": "C",
+  "key_findings": [
+   "16 Mar 2021: Deputy PM Wissanu said using the national emblem on shoes violates the Garuda Emblem Act; anyone wanting to use it must first seek permission from the Prime Minister's Office.",
+   "The manufacturer would be summoned and face legal action in Thailand; people who wear the shoes would not face criminal charges. No penalty amounts given (see KhrutPhaAct2535: up to 1 year / 6,000 baht for unauthorised use implying right)."
+  ],
+  "practical_applications": [
+   "Never put the Garuda, royal crests or 'By Royal Appointment' style marks in our designs."
+  ],
+  "limitations": [
+   "News report of an official's statement."
+  ],
+  "license": "copyrighted",
+  "access_status": "full_text",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M30",
+   "M12"
+  ]
+ },
+ {
+  "key": "ChulaFlagThesis",
+  "title": "ปัญหาการกำหนดความผิดฐานเหยียดหยามธงชาติ (Problems of criminalizing flag desecration) - LL.M. thesis, Chulalongkorn University; also Chula Law Journal 42(1), March 2024",
+  "authors": "จินต์จุฑา บำเพ็ญวัฒนา (Bumpenvattana, Jinjutha)",
+  "year": 2022,
+  "url": "https://digital.car.chula.ac.th/chulaetd/12336",
+  "doi_isbn": "10.58837/CHULA.THE.2022.1144",
+  "source_type": "review",
+  "tier": "B",
+  "key_findings": [
+   "Thesis studies flag desecration under Penal Code ss.118 and 135 and Flag Act B.E. 2522 s.54, comparing the US, India, Germany and South Korea.",
+   "Finds four problems: out of step with social/political context, contrary to lex certa (vague wording), over-criminalised, and disproportionate limits on free expression.",
+   "PROPOSALS (not current law): repeal Flag Act s.54 as redundant with s.118; narrow the act to removing, destroying, damaging, rendering useless or defiling a flag/State symbol publicly or in a meeting; keep 'desecrate' as specific intent. Current s.118 covers 'any act' done to desecrate the nation."
+  ],
+  "practical_applications": [
+   "Show the Thai flag intact, upright and clean; no flag on floors, shoes, trash or as a wipe."
+  ],
+  "limitations": [
+   "Abstracts (Thai + English) read on Chula ETD and in the CLJ article PDF; the PDF body's Thai text could not be extracted (font encoding), so Flag Act s.54 wording and penalty remain unread. The earlier entry wrongly presented the proposed list of acts as the current law."
+  ],
+  "license": "unknown",
+  "access_status": "abstract",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M30",
+   "M12"
+  ]
+ },
+ {
+  "key": "Coconuts_BuddhaMisuse",
+  "title": "From tattoos to toilet seats, 'misused' Buddha images make some blood boil",
+  "authors": "Tuohy, Laurel (Coconuts Bangkok)",
+  "year": 2018,
+  "url": "https://coconuts.co/bangkok/features/tattoos-toilet-seats-misused-buddha-images-make-blood-boil",
+  "doi_isbn": "",
+  "source_type": "practitioner",
+  "tier": "C",
+  "key_findings": [
+   "27 Apr 2018 feature: Buddha images on tattoos, toilet seats, swimwear, flip-flops, rugs, beer bottles, mugs and keychains, cut-off heads/hands/feet as spa or home decor, items on or near the floor or in bathrooms, and nightlife branding (Buddha Bar) anger many Buddhists.",
+   "The billboard campaign was run by Knowing Buddha, a private group funded entirely by individual donations (founded about six years earlier, ~20,000 members in 25 countries) - not a government ministry.",
+   "Quotes: 'A cut-off head or hands is always wrong, it's like cutting your national flag into pieces'; Knowing Buddha: 'It's especially offensive to put those items on or near the floor.' A monk quoted: the image is 'only a symbol'.",
+   "Article says s.206 can bring up to 7 years and/or 14,000 baht; the Wat Arun 'butt bros' photographers were nearly charged and were deported after a fine."
+  ],
+  "practical_applications": [
+   "Buddha images: never as props, decor, product backgrounds, cropped heads, or comic elements."
+  ],
+  "limitations": [
+   "Feature journalism (2018); its s.206 fine figure predates/does not match the current text (20,000-140,000 baht after the 2017 amendment - see ThaiPenalCode)."
+  ],
+  "license": "copyrighted",
+  "access_status": "full_text",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M30",
+   "M12"
+  ]
+ },
+ {
+  "key": "FashionLaw2021_Supreme",
+  "title": "Thailand's National Office of Buddhism Calls Foul on Supreme for Using Photo of Late Monk",
+  "authors": "The Fashion Law",
+  "year": 2021,
+  "url": "https://www.thefashionlaw.com/?p=43629",
+  "doi_isbn": "",
+  "source_type": "practitioner",
+  "tier": "C",
+  "key_findings": [
+   "22 Feb 2021: the National Office of Buddhism (statement 19 Feb 2021) was weighing legal action against Supreme for using an image of the revered late monk Luang Phor Koon (d. 2015) and yant script on its 'Blessings Ripstop Shirt' (SS21) without seeking or receiving permission.",
+   "Department of Intellectual Property (DG Vittikrai Leewiraphan): no copyright registration exists for the image or yant; the temple would have to prove authorship; protection would last 50 years from creation.",
+   "No outcome reported; the temple planned to discuss the issue with Supreme first."
+  ],
+  "practical_applications": [
+   "Revered monks' faces, amulets and yant designs are off-limits for product design."
+  ],
+  "limitations": [
+   "Trade-press report; outcome unknown."
+  ],
+  "license": "copyrighted",
+  "access_status": "full_text",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M30",
+   "M12"
+  ]
+ },
+ {
+  "key": "OCPB2025_AIAdGuidance",
+  "title": "ชี้นำความคิด…ถูกผิดต้องรู้(กฎหมาย) [OCPB article on influencer/native ads and AI-made ad images]",
+  "authors": "กฤดิกร แจ่มตระกูล (นักประชาสัมพันธ์, สำนักงานคณะกรรมการคุ้มครองผู้บริโภค)",
+  "year": 2025,
+  "url": "https://www.ocpb.go.th/images/article/article_20251125093841.pdf",
+  "doi_isbn": "",
+  "source_type": "docs",
+  "tier": "S",
+  "key_findings": [
+   "OCPB's own article ties the AI rule to ประกาศคณะกรรมการว่าด้วยการโฆษณา เรื่อง แนวทางการใช้ข้อความโฆษณาที่มีลักษณะเป็นการยืนยันข้อเท็จจริงอันยากแก่การพิสูจน์ และแนวทางการพิสูจน์เพื่อแสดงความจริงเกี่ยวกับข้อความโฆษณา พ.ศ. ๒๕๖๕: it controls ads for goods or services whose still or moving images are created or edited with programs or AI so that the pictured product/service does not match what is actually sold, causing misunderstanding about its condition, quality, quantity or other material aspects.",
+   "Duties: (1) get permission from the relevant agency where a specific law already requires approval before advertising; (2) any size, quantity, volume, number or composition shown in still or moving images must match the product/service actually sold; (3) if a still or moving image is created or edited with programs or AI, the business/advertiser must show a message telling consumers so.",
+   "Example wordings (Thai, verbatim): 'ภาพจริงหรือภาพจำลองจากของจริง โดยใช้ปัญญาประดิษฐ์ (AI) ปรับแต่งภาพ'; 'ภาพถ่ายจากสถานที่จริง หรือภาพจำลองจากของจริงโดยใช้ปัญญาประดิษฐ์ (AI) ปรับแต่ง'; 'ภาพถ่ายจากสินค้าจริงหรือภาพจำลอง จากของจริง โดยมีการปรับแต่ง'; 'ภาพสร้างโดย AI'; 'ภาพเคลื่อนไหวสร้างโดย AI' - shown so it can be clearly seen, heard or read for the type of medium.",
+   "Same article: influencer posts without a 'Sponsored' disclosure are native advertising that can mislead."
+  ],
+  "practical_applications": [
+   "Any ad/promo post or clip whose image or video was made or edited with AI or editing software: put a clear Thai label such as 'ภาพสร้างโดย AI' / 'ภาพเคลื่อนไหวสร้างโดย AI' (an English line may be added) in the picture or caption, readable on a phone.",
+   "Never let AI change the real product's size, shape, colour, lens or what is included."
+  ],
+  "limitations": [
+   "Public-relations article by OCPB staff (1 page, Nov 2025), not the Gazette text. Wording 'created or edited with programs' is broad - read literally it covers ordinary retouching too; the examples include 'ภาพถ่ายจากสินค้าจริง... โดยมีการปรับแต่ง' for edited real photos.",
+   "The Royal Gazette PDF (ratchakitcha.soc.go.th) was blocked by a Cloudflare check on 2026-11-25, so the exact clause number and start date of the AI wording were not read. OPT News (28 Jul 2025) instead reports a NEW OCPB notification 'แนวทางการโฆษณาสินค้าหรือบริการที่อาจก่อให้เกิดความเข้าใจผิดในสาระสำคัญเกี่ยวกับสินค้าหรือบริการ ตามพระราชบัญญัติคุ้มครองผู้บริโภค พ.ศ. 2522' with the same three AI duties - the two descriptions of the instrument conflict."
+  ],
+  "license": "Thai government work",
+  "access_status": "full_text",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M30",
+   "M05"
+  ]
+ },
+ {
+  "key": "OCPB2025_AINews",
+  "title": "เลขาธิการคณะกรรมการคุ้มครองผู้บริโภคสั่งออกประกาศควบคุมการโฆษณา ภาพเสมือนจริงที่สร้างด้วย AI เพื่อคุ้มครองผู้บริโภค",
+  "authors": "สำนักงานคณะกรรมการคุ้มครองผู้บริโภค (สคบ.)",
+  "year": 2025,
+  "url": "https://www.ocpb.go.th/news_view.php?nid=16458",
+  "doi_isbn": "",
+  "source_type": "docs",
+  "tier": "S",
+  "key_findings": [
+   "OCPB news, 18 Jun 2025: NESDC data showed consumer complaints up almost 40% in a short period, mainly fake ads, especially AI-made images of goods, services or places that consumers could not tell from real.",
+   "Secretary-General Ronnarong Phoolpipat ordered Consumer Protection Division 1 to prepare a notification on advertising guidelines and to enforce strictly.",
+   "Using AI to create images or content that mislead consumers about material aspects of goods/services may be unfair advertising under section 22 of the Consumer Protection Act B.E. 2522.",
+   "Consumer tips: check the source, look for AI errors in backgrounds, faces, hands and text, read real reviews, avoid paying in advance; report via hotline 1166 / OCPB Connect."
+  ],
+  "practical_applications": [
+   "Even before any label rule, misleading AI product images are already actionable as unfair advertising (s.22)."
+  ],
+  "limitations": [
+   "Announcement of intent (June 2025), not the notification itself."
+  ],
+  "license": "Thai government work",
+  "access_status": "full_text",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M30",
+   "M05"
+  ]
+ },
+ {
+  "key": "OPTNews2025_OCPBAI",
+  "title": "สคบ.เตือนโฆษณาที่ใช้คนดัง/ภาพAIอย่าหลงเชื่อ",
+  "authors": "อปท.นิวส์ (OPT News)",
+  "year": 2025,
+  "url": "https://www.opt-news.com/news/51891",
+  "doi_isbn": "",
+  "source_type": "practitioner",
+  "tier": "C",
+  "key_findings": [
+   "28 Jul 2025 report: OCPB Secretary-General ordered a notification 'แนวทางการโฆษณาสินค้าหรือบริการที่อาจก่อให้เกิดความเข้าใจผิดในสาระสำคัญเกี่ยวกับสินค้าหรือบริการ ตามพระราชบัญญัติคุ้มครองผู้บริโภค พ.ศ. 2522', aimed at celebrity/influencer and AI-image ads.",
+   "Item 2 (AI or photo-editing images/clips): 2.1 get permission from the relevant agency before publishing; 2.2 size, quantity, number or composition must match reality; 2.3 state clearly if the image or clip was created or edited, e.g. 'ภาพจำลองโดยใช้ปัญญาประดิษฐ์ (AI)', 'ภาพเคลื่อนไหวสร้างโดย AI', 'ภาพถ่ายจริง หรือปรับแต่งด้วย AI', readable/audible/visible for the medium.",
+   "Item 1 (non-edible products imitating food): permission shown, Thai-language text (foreign text needs a Thai translation) and clear warnings such as 'สินค้านี้รับประทานไม่ได้'."
+  ],
+  "practical_applications": [
+   "Cross-check for OCPB2025_AIAdGuidance; note item 2.1 is phrased more broadly here than in OCPB's own article ('where a specific law requires')."
+  ],
+  "limitations": [
+   "Local news paraphrase; Gazette text not read; publication/in-force date of the notification not given."
+  ],
+  "license": "copyrighted",
+  "access_status": "full_text",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M30",
+   "M05"
+  ]
+ },
+ {
+  "key": "KhrutPhaAct2535",
+  "title": "Khrut Pha Emblem Act (No 2), 2535 BE (1992) - Wikisource translation of Royal Gazette vol. 109 issue 10, 14 Feb 1992",
+  "authors": "National Legislative Assembly of Thailand (trans. Wikisource)",
+  "year": 1992,
+  "url": "https://en.wikisource.org/wiki/Translation:Khrut_Pha_Emblem_Act_(No_2),_2535_BE",
+  "doi_isbn": "",
+  "source_type": "primary_text",
+  "tier": "S",
+  "key_findings": [
+   "Amended s.4: 'khrut pha emblem' = any emblem portraying a garuda, in whatever pose, with or without other text, picture or symbol; 'warrant of appointment emblem' = the khrut pha with the text 'by royal charter' (or foreign-script equivalent) usable only after receiving a warrant.",
+   "Warrants: apply to the Bureau of the Royal Household; after royal charter the Prime Minister (as commander of the Bureau) issues the warrant and publishes it in the Royal Gazette; it is personal and can be recalled or revoked.",
+   "Penalties: breaching the royal decrees on reproduction/use - up to 6 months and/or 3,000 baht (s.12); reproducing or using the khrut pha emblem, a warrant or the warrant emblem without right so as to make another person believe one has the right - up to 1 year and/or 6,000 baht (s.13)."
+  ],
+  "practical_applications": [
+   "No garuda (any style, even 'decorative') in logos, merch, posts or AI scenes."
+  ],
+  "limitations": [
+   "Unofficial translation of the 1992 amendment only; later amendments (if any) and the royal decrees not checked."
+  ],
+  "license": "public domain (Thai govt works) / Wikisource",
+  "access_status": "full_text",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M30",
+   "M12"
+  ]
+ },
+ {
+  "key": "McSweeneyBrownIliopoulou2010",
+  "title": "How not to do cross cultural analysis: predictive failure and construction flaws in Geert Hofstede's case study (Royal Holloway School of Management Working Paper SoMWP-1004)",
+  "authors": "McSweeney, B.; Brown, D.; Iliopoulou, S.",
+  "year": 2010,
+  "url": "https://repository.royalholloway.ac.uk/items/dede6e3c-687c-afad-a442-16fbf84aa468/1/SoMWP1004BrendanMcSweeney.pdf",
+  "doi_isbn": "ISBN 978-1-905846-45-0",
+  "source_type": "review",
+  "tier": "B",
+  "key_findings": [
+   "Tests Hofstede's 'validating' case study (masculine cultures such as the US, Britain and Ireland fight out industrial conflict; feminine cultures such as the Netherlands, Sweden and Denmark negotiate) against cross-sectional and longitudinal industrial-conflict and homicide data: no even weak association - neither explanatory nor predictive power; authors call it a 'projective fiction'.",
+   "Notes Hofstede's own figure that his four dimensions account for 49% of the variance in country mean scores of IBM survey answers - leaving 51% unexplained, and these are questionnaire answers, not behaviour.",
+   "Applying national averages to organisations or individuals is the ecological fallacy ('fallacy of the wrong level'); flaws also include non-equivalent country sets and asserted rather than demonstrated causality."
+  ],
+  "practical_applications": [
+   "Never write 'Thais are X' from a Hofstede score; test with the real audience."
+  ],
+  "limitations": [
+   "Working paper by a known Hofstede critic; one case study; refereed internally."
+  ],
+  "license": "copyrighted",
+  "access_status": "full_text",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M30"
+  ]
+ }
+]

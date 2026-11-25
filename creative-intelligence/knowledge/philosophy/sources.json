@@ -1,0 +1,1430 @@
+[
+ {
+  "key": "SEP_Stoicism",
+  "title": "Stoicism",
+  "authors": "Stanford Encyclopedia of Philosophy (author name not captured)",
+  "year": 2023,
+  "url": "https://plato.stanford.edu/entries/stoicism/",
+  "doi_isbn": "",
+  "source_type": "encyclopedia",
+  "tier": "B",
+  "key_findings": [
+   "Virtue (perfected reason) is necessary and sufficient for happiness; health, wealth, reputation are 'indifferents'",
+   "Some indifferents are 'preferred' (health) and it is appropriate to select them, but they do not decide happiness",
+   "Passions (pathe) are excessive impulses from false judgements; the sage has 'good feelings' (eupatheiai); pre-emotions (propatheiai) happen without assent",
+   "Assent is 'up to us' in a way that receiving an impression is not"
+  ],
+  "practical_applications": [
+   "Stoic characters may still prefer health/comfort; the point is not to stake happiness on them",
+   "A first flinch of fear is human (pre-emotion); the story beat is what the character assents to next"
+  ],
+  "limitations": [
+   "Read through a fetch summariser; long entry, only the first ~100k characters were processed",
+   "Author line not captured"
+  ],
+  "license": "copyrighted (Stanford Encyclopedia of Philosophy; free to read, not to republish)",
+  "access_status": "publisher_page",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M03"
+  ]
+ },
+ {
+  "key": "IEP_Epictetus",
+  "title": "Epictetus (Internet Encyclopedia of Philosophy)",
+  "authors": "Internet Encyclopedia of Philosophy",
+  "year": null,
+  "url": "https://iep.utm.edu/epictetu/",
+  "doi_isbn": "",
+  "source_type": "encyclopedia",
+  "tier": "B",
+  "key_findings": [
+   "Epictetus (c. 55-135 CE), former slave, taught at Nicopolis; wrote nothing; Discourses and Handbook (Enchiridion) come via his student Arrian",
+   "Handbook opens: some things are up to us (opinions, impulses, desires, aversions) and some are not (body, possessions, reputation, office)",
+   "Prohairesis = faculty of choice/moral character; key practice is testing impressions before assenting",
+   "Roles theory: our social 'names' (son, citizen...) point to appropriate acts; life as a play where we do not pick the part"
+  ],
+  "practical_applications": [
+   "Dichotomy-of-control dialogues for Mint & Tao",
+   "Stoicism is role-based and social, not detachment from people"
+  ],
+  "limitations": [
+   "Year and author of IEP entry not captured",
+   "Arrian vs Epictetus authorship debate unresolved"
+  ],
+  "license": "copyrighted (IEP)",
+  "access_status": "full_text",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M03"
+  ]
+ },
+ {
+  "key": "SEP_MarcusAurelius",
+  "title": "Marcus Aurelius",
+  "authors": "Rachana Kamtekar",
+  "year": 2010,
+  "url": "https://plato.stanford.edu/entries/marcus-aurelius/",
+  "doi_isbn": "",
+  "source_type": "encyclopedia",
+  "tier": "B",
+  "key_findings": [
+   "Meditations is a private Greek notebook written to himself; title given later by an editor (Casaubon)",
+   "Themes: imminence of death, cosmos as a city, acting justly and loving what is allotted, no hatred of others",
+   "Draws on Epictetus whom he names"
+  ],
+  "practical_applications": [
+   "Marcus suits 'notes to self' formats (journal page, pencil notebook) — matches how the text was written",
+   "Use his ideas as reminders the character tells themself, not as lectures to others"
+  ],
+  "limitations": [
+   "First published 2010, revised 2025 per fetch"
+  ],
+  "license": "copyrighted (Stanford Encyclopedia of Philosophy; free to read, not to republish)",
+  "access_status": "publisher_page",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M03"
+  ]
+ },
+ {
+  "key": "SEP_Seneca",
+  "title": "Seneca",
+  "authors": "Stanford Encyclopedia of Philosophy (author name not captured)",
+  "year": 2007,
+  "url": "https://plato.stanford.edu/entries/seneca/",
+  "doi_isbn": "",
+  "source_type": "encyclopedia",
+  "tier": "B",
+  "key_findings": [
+   "Works: Letters to Lucilius, On Anger, On the Shortness of Life, Natural Questions",
+   "Emotions are judgements; focus on the progressor (proficiens) rather than the perfect sage",
+   "Tension: he admits blushing at a humble carriage (Letter 87.4) — gap between knowing and feeling; also wealth and gender/class remarks"
+  ],
+  "practical_applications": [
+   "'Progressor' framing fits Slowly Growing: characters who are trying, not perfect",
+   "Seneca can be shown as imperfect — honest, relatable"
+  ],
+  "limitations": [
+   "Read through a fetch summariser; long entry, only the first ~100k characters were processed",
+   "Revised 2024"
+  ],
+  "license": "copyrighted (Stanford Encyclopedia of Philosophy; free to read, not to republish)",
+  "access_status": "publisher_page",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M03"
+  ]
+ },
+ {
+  "key": "SEP_Camus",
+  "title": "Albert Camus",
+  "authors": "Stanford Encyclopedia of Philosophy (author name not captured)",
+  "year": null,
+  "url": "https://plato.stanford.edu/entries/camus/",
+  "doi_isbn": "",
+  "source_type": "encyclopedia",
+  "tier": "B",
+  "key_findings": [
+   "The absurd = gap between the human demand for meaning and the silent world",
+   "Myth of Sisyphus ends 'One must imagine Sisyphus happy'; rejects escapes such as hope in an afterlife",
+   "The Rebel: 'I revolt, therefore we are'; limits and solidarity over utopian violence",
+   "The Plague: fighting a plague with 'common decency'",
+   "Camus rejected the existentialist label"
+  ],
+  "practical_applications": [
+   "Repetitive daily tasks (cleaning lenses, washing cups) as Sisyphus scenes — lucid, not falsely cheerful",
+   "Never label Camus 'existentialist' in captions"
+  ],
+  "limitations": [
+   "Entry year/author not captured"
+  ],
+  "license": "copyrighted (Stanford Encyclopedia of Philosophy; free to read, not to republish)",
+  "access_status": "publisher_page",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M03"
+  ]
+ },
+ {
+  "key": "SEP_Existentialism",
+  "title": "Existentialism",
+  "authors": "Stanford Encyclopedia of Philosophy (author name not captured)",
+  "year": null,
+  "url": "https://plato.stanford.edu/entries/existentialism/",
+  "doi_isbn": "",
+  "source_type": "encyclopedia",
+  "tier": "B",
+  "key_findings": [
+   "'Existence precedes essence' (Sartre): no fixed nature; we define ourselves through choices",
+   "Freedom is situated (facticity + transcendence), not 'do anything'",
+   "Anxiety reveals open possibilities; authenticity = owning one's projects; bad faith = self-deception that denies facticity or freedom",
+   "Beauvoir: willing oneself free is bound up with others' freedom"
+  ],
+  "practical_applications": [
+   "Mint saying 'I'm just not a person who...' = gentle bad-faith beat; Tao answers with situated freedom"
+  ],
+  "limitations": [
+   "Entry author/year not captured"
+  ],
+  "license": "copyrighted (Stanford Encyclopedia of Philosophy; free to read, not to republish)",
+  "access_status": "publisher_page",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M03"
+  ]
+ },
+ {
+  "key": "SEP_AristotleEthics",
+  "title": "Aristotle's Ethics",
+  "authors": "Stanford Encyclopedia of Philosophy (author name not captured)",
+  "year": 2001,
+  "url": "https://plato.stanford.edu/entries/aristotle-ethics/",
+  "doi_isbn": "",
+  "source_type": "encyclopedia",
+  "tier": "B",
+  "key_findings": [
+   "Eudaimonia = activity of the rational soul in accordance with virtue, sustained over a life — not a mood",
+   "Virtue is a mean between excess and deficiency, relative to circumstances, not a formula",
+   "Ethical virtue is built by habituation; completed by practical wisdom (phronesis)",
+   "Three bases of friendship: goodness, pleasure, advantage"
+  ],
+  "practical_applications": [
+   "Small repeated acts as growth = core Slowly Growing theme with a real source",
+   "Friendship-of-character is a good frame for Mint & Tao themselves"
+  ],
+  "limitations": [
+   "Read through a fetch summariser; long entry, only the first ~100k characters were processed",
+   "The 'one swallow' line was not in the processed part — do not quote it from this source"
+  ],
+  "license": "copyrighted (Stanford Encyclopedia of Philosophy; free to read, not to republish)",
+  "access_status": "publisher_page",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M03"
+  ]
+ },
+ {
+  "key": "SEP_AristotleAesthetics",
+  "title": "Aristotle's Aesthetics (Poetics)",
+  "authors": "Stanford Encyclopedia of Philosophy (author name not captured)",
+  "year": 2021,
+  "url": "https://plato.stanford.edu/entries/aristotle-aesthetics/",
+  "doi_isbn": "",
+  "source_type": "encyclopedia",
+  "tier": "B",
+  "key_findings": [
+   "Mimesis is central; plot (mythos) is the most important part of tragedy",
+   "Plot needs unity and a size that can be held in memory",
+   "Peripeteia (reversal) and anagnorisis (recognition) are key sources of emotional effect; should follow probability/necessity",
+   "Catharsis meaning is disputed (purgation, clarification, consolation, relief)"
+  ],
+  "practical_applications": [
+   "A 2-line Mint & Tao story = a micro recognition (anagnorisis): line 2 reframes line 1",
+   "Do not claim one fixed meaning of catharsis"
+  ],
+  "limitations": [
+   "Read through a fetch summariser; long entry, only the first ~100k characters were processed"
+  ],
+  "license": "copyrighted (Stanford Encyclopedia of Philosophy; free to read, not to republish)",
+  "access_status": "publisher_page",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M03"
+  ]
+ },
+ {
+  "key": "SEP_Zhuangzi",
+  "title": "Zhuangzi",
+  "authors": "Chad Hansen",
+  "year": 2014,
+  "url": "https://plato.stanford.edu/entries/zhuangzi/",
+  "doi_isbn": "",
+  "source_type": "encyclopedia",
+  "tier": "B",
+  "key_findings": [
+   "Perspectival relativism: daos 'are made by walking them'",
+   "Happy fish debate with Hui Shi; useless tree survives because useless",
+   "Exemplars are skilled craftsmen (Cook Ding) acting with ease; butterfly dream: 'things change'",
+   "Only the Inner Chapters (1-7) are linked to Zhuangzi's own period; text edited by Guo Xiang"
+  ],
+  "practical_applications": [
+   "Craft-skill flow (a lens fitter's hands) is a genuine Zhuangzi image",
+   "'Useless tree' for stories about not being productive"
+  ],
+  "limitations": [
+   "Revised 2024",
+   "Death-of-wife story not covered in processed text"
+  ],
+  "license": "copyrighted (Stanford Encyclopedia of Philosophy; free to read, not to republish)",
+  "access_status": "publisher_page",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M03"
+  ]
+ },
+ {
+  "key": "SEP_Laozi",
+  "title": "Laozi",
+  "authors": "Stanford Encyclopedia of Philosophy (author name not captured)",
+  "year": 2001,
+  "url": "https://plato.stanford.edu/entries/laozi/",
+  "doi_isbn": "",
+  "source_type": "encyclopedia",
+  "tier": "B",
+  "key_findings": [
+   "Laozi's historicity is doubtful; text is composite, gathered 4th c. BCE, stable by mid-3rd c. BCE (Guodian, Mawangdui)",
+   "Wu wei is not total inaction; it contrasts with action driven by self-serving desire",
+   "Water imagery (chs. 8, 78) = yielding, deep strength; ziran = 'self so'; simplicity, uncarved block (pu)"
+  ],
+  "practical_applications": [
+   "Write 'the Daodejing says' rather than inventing Laozi biography",
+   "Wu wei dialogues must show doing, not doing nothing"
+  ],
+  "limitations": [
+   "Read through a fetch summariser; long entry, only the first ~100k characters were processed",
+   "Revised 2025"
+  ],
+  "license": "copyrighted (Stanford Encyclopedia of Philosophy; free to read, not to republish)",
+  "access_status": "publisher_page",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M03"
+  ]
+ },
+ {
+  "key": "SEP_LifeMeaning",
+  "title": "The Meaning of Life",
+  "authors": "Thaddeus Metz",
+  "year": 2007,
+  "url": "https://plato.stanford.edu/entries/life-meaning/",
+  "doi_isbn": "",
+  "source_type": "encyclopedia",
+  "tier": "B",
+  "key_findings": [
+   "Meaning is logically distinct from happiness and rightness",
+   "Views: supernaturalism, naturalism (subjectivism, objectivism, hybrid), nihilism",
+   "Wolf's hybrid: 'Meaning arises when subjective attraction meets objective attractiveness'"
+  ],
+  "practical_applications": [
+   "Stories can separate 'happy' from 'meaningful' — a tiring task can still matter"
+  ],
+  "limitations": [
+   "Revised 2026; analytic tradition only"
+  ],
+  "license": "copyrighted (Stanford Encyclopedia of Philosophy; free to read, not to republish)",
+  "access_status": "publisher_page",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M03"
+  ]
+ },
+ {
+  "key": "SEP_WellBeing",
+  "title": "Well-Being",
+  "authors": "Roger Crisp (cited as Crisp 2026 in fetch)",
+  "year": null,
+  "url": "https://plato.stanford.edu/entries/well-being/",
+  "doi_isbn": "",
+  "source_type": "encyclopedia",
+  "tier": "B",
+  "key_findings": [
+   "Three theories: hedonism, desire-satisfaction, objective list",
+   "Nozick's experience machine objection to hedonism",
+   "Empirical happiness research mostly uses self-report life satisfaction (implicitly hedonic); Seligman's PERMA list"
+  ],
+  "practical_applications": [
+   "Distinguish 'feeling good' from 'living well' in captions"
+  ],
+  "limitations": [
+   "Year of first publication not captured"
+  ],
+  "license": "copyrighted (Stanford Encyclopedia of Philosophy; free to read, not to republish)",
+  "access_status": "publisher_page",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M03"
+  ]
+ },
+ {
+  "key": "SEP_Phenomenology",
+  "title": "Phenomenology",
+  "authors": "David Woodruff Smith",
+  "year": 2003,
+  "url": "https://plato.stanford.edu/entries/phenomenology/",
+  "doi_isbn": "",
+  "source_type": "encyclopedia",
+  "tier": "B",
+  "key_findings": [
+   "Phenomenology = study of structures of consciousness as experienced from the first-person point of view",
+   "Intentionality: experience is always of/about something",
+   "Heidegger: practical engagement with tools; Merleau-Ponty: the lived body"
+  ],
+  "practical_applications": [
+   "Visual storytelling of 'how the world appears' — e.g. world blurry vs sharp through lenses as lived experience"
+  ],
+  "limitations": [
+   "Revised 2013"
+  ],
+  "license": "copyrighted (Stanford Encyclopedia of Philosophy; free to read, not to republish)",
+  "access_status": "full_text",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M03"
+  ]
+ },
+ {
+  "key": "SEP_PersonalIdentity",
+  "title": "Personal Identity",
+  "authors": "Eric T. Olson",
+  "year": 2002,
+  "url": "https://plato.stanford.edu/entries/identity-personal/",
+  "doi_isbn": "",
+  "source_type": "encyclopedia",
+  "tier": "B",
+  "key_findings": [
+   "Psychological continuity vs animalism (we are organisms)",
+   "Parfit: identity is not what matters; connectedness/continuity is"
+  ],
+  "practical_applications": [
+   "'Who I was last year' stories"
+  ],
+  "limitations": [
+   "Revised 2023; no Buddhist account developed"
+  ],
+  "license": "copyrighted (Stanford Encyclopedia of Philosophy; free to read, not to republish)",
+  "access_status": "full_text",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M03"
+  ]
+ },
+ {
+  "key": "SEP_Death",
+  "title": "Death",
+  "authors": "Stanford Encyclopedia of Philosophy (author name not captured)",
+  "year": null,
+  "url": "https://plato.stanford.edu/entries/death/",
+  "doi_isbn": "",
+  "source_type": "encyclopedia",
+  "tier": "B",
+  "key_findings": [
+   "Epicurus: 'when we are, death is not...' — death is nothing to us",
+   "Lucretius' symmetry argument (pre-birth vs after death) and its critiques",
+   "Deprivation account (Nagel and others): death is bad because of goods it deprives us of"
+  ],
+  "practical_applications": [
+   "Mortality themes handled gently: deprivation view honours grief; Epicurus can soothe fear"
+  ],
+  "limitations": [
+   "Read through a fetch summariser; long entry, only the first ~100k characters were processed"
+  ],
+  "license": "copyrighted (Stanford Encyclopedia of Philosophy; free to read, not to republish)",
+  "access_status": "publisher_page",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M03"
+  ]
+ },
+ {
+  "key": "SEP_Epistemology",
+  "title": "Epistemology",
+  "authors": "Stanford Encyclopedia of Philosophy (author name not captured)",
+  "year": null,
+  "url": "https://plato.stanford.edu/entries/epistemology/",
+  "doi_isbn": "",
+  "source_type": "encyclopedia",
+  "tier": "B",
+  "key_findings": [
+   "Knowledge traditionally = justified true belief; Gettier cases show this is insufficient",
+   "Sources: perception, introspection, memory, reason, testimony",
+   "General vs selective skepticism"
+  ],
+  "practical_applications": [
+   "Testimony problem = why a quote needs a source"
+  ],
+  "limitations": [
+   "Read through a fetch summariser; long entry, only the first ~100k characters were processed",
+   "Revised 2024"
+  ],
+  "license": "copyrighted (Stanford Encyclopedia of Philosophy; free to read, not to republish)",
+  "access_status": "publisher_page",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M03"
+  ]
+ },
+ {
+  "key": "SEP_Consciousness",
+  "title": "Consciousness",
+  "authors": "Stanford Encyclopedia of Philosophy (author name not captured)",
+  "year": 2004,
+  "url": "https://plato.stanford.edu/entries/consciousness/",
+  "doi_isbn": "",
+  "source_type": "encyclopedia",
+  "tier": "B",
+  "key_findings": [
+   "Hard problem (Chalmers 1995); Nagel's 'something that it is like' criterion",
+   "Dualist vs physicalist families; eliminativism"
+  ],
+  "practical_applications": [
+   "Brief background only"
+  ],
+  "limitations": [
+   "Read through a fetch summariser; long entry, only the first ~100k characters were processed",
+   "Revised 2014"
+  ],
+  "license": "copyrighted (Stanford Encyclopedia of Philosophy; free to read, not to republish)",
+  "access_status": "publisher_page",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M03"
+  ]
+ },
+ {
+  "key": "SEP_VirtueEthics",
+  "title": "Virtue Ethics",
+  "authors": "Rosalind Hursthouse; Glen Pettigrove",
+  "year": null,
+  "url": "https://plato.stanford.edu/entries/ethics-virtue/",
+  "doi_isbn": "",
+  "source_type": "encyclopedia",
+  "tier": "B",
+  "key_findings": [
+   "Deontology emphasises duties/rules; consequentialism emphasises consequences; virtue ethics grounds ethics in character"
+  ],
+  "practical_applications": [
+   "Three lenses for 'what should Mint do?'"
+  ],
+  "limitations": [
+   "Only the intro was used; revised 2026"
+  ],
+  "license": "copyrighted (Stanford Encyclopedia of Philosophy; free to read, not to republish)",
+  "access_status": "publisher_page",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M03"
+  ]
+ },
+ {
+  "key": "SEP_FreeWill",
+  "title": "Free Will",
+  "authors": "Stanford Encyclopedia of Philosophy (author name not captured)",
+  "year": 2002,
+  "url": "https://plato.stanford.edu/entries/freewill/",
+  "doi_isbn": "",
+  "source_type": "encyclopedia",
+  "tier": "B",
+  "key_findings": [
+   "Compatibilism vs incompatibilism; libertarian views",
+   "Praise/blame tied to actions being 'up to' agents; Frankfurt cases"
+  ],
+  "practical_applications": [
+   "Responsibility themes without claiming the debate is settled"
+  ],
+  "limitations": [
+   "Read through a fetch summariser; long entry, only the first ~100k characters were processed",
+   "Revised 2022"
+  ],
+  "license": "copyrighted (Stanford Encyclopedia of Philosophy; free to read, not to republish)",
+  "access_status": "publisher_page",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M03"
+  ]
+ },
+ {
+  "key": "IEP_Fallacies",
+  "title": "Fallacies",
+  "authors": "Internet Encyclopedia of Philosophy (Bradley Dowden, not verified)",
+  "year": null,
+  "url": "https://iep.utm.edu/fallacy/",
+  "doi_isbn": "",
+  "source_type": "encyclopedia",
+  "tier": "B",
+  "key_findings": [
+   "A fallacy is a kind of error in reasoning, often persuasive",
+   "Ad hominem, false dilemma, appeal to (non-)authority, slippery slope (sometimes fine), hasty generalisation, post hoc, bandwagon, appeal to ignorance, begging the question, is-ought"
+  ],
+  "practical_applications": [
+   "Caption self-check: avoid appeal-to-authority via fake famous names"
+  ],
+  "limitations": [
+   "Long page; straw man entry not processed"
+  ],
+  "license": "copyrighted (IEP)",
+  "access_status": "publisher_page",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M03"
+  ]
+ },
+ {
+  "key": "Dhp_Buddharakkhita",
+  "title": "The Dhammapada: The Buddha's Path of Wisdom (chs. 1, 20, 24 on Access to Insight)",
+  "authors": "Acharya Buddharakkhita (tr.)",
+  "year": 1985,
+  "url": "https://www.accesstoinsight.org/tipitaka/kn/dhp/dhp.01.budd.html",
+  "doi_isbn": "",
+  "source_type": "primary_text",
+  "tier": "B",
+  "key_findings": [
+   "Dhp 1-2: 'Mind precedes all mental states. Mind is their chief; they are all mind-wrought.'",
+   "Dhp 5: 'Hatred is never appeased by hatred in this world. By non-hatred alone is hatred appeased. This is a law eternal.'",
+   "Dhp 276: 'You yourselves must strive; the Buddhas only point the way.'",
+   "Dhp 277-279: all conditioned things are impermanent / unsatisfactory; all things are not-self — seeing this with wisdom one turns away from suffering",
+   "Dhp 354: 'The gift of Dhamma excels all gifts'"
+  ],
+  "practical_applications": [
+   "Safe, citable lines for Buddhist-themed captions (cite verse number + translator)"
+  ],
+  "limitations": [
+   "Translation choices matter: Dhp 1 is NOT 'we become what we think'"
+  ],
+  "license": "copyrighted (Buddhist Publication Society); free distribution licence on Access to Insight: copies free of charge, max 50 reprints, credit source, include licence",
+  "access_status": "full_text",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M03"
+  ]
+ },
+ {
+  "key": "SN56_11_Thanissaro",
+  "title": "Dhammacakkappavattana Sutta (SN 56.11): Setting the Wheel of Dhamma in Motion",
+  "authors": "Thanissaro Bhikkhu (tr.)",
+  "year": 1993,
+  "url": "https://www.accesstoinsight.org/tipitaka/sn/sn56/sn56.011.than.html",
+  "doi_isbn": "",
+  "source_type": "primary_text",
+  "tier": "B",
+  "key_findings": [
+   "Middle way avoids two extremes: sensual indulgence and self-affliction",
+   "Dukkha (rendered 'stress') includes birth, aging, death, separation from the loved, not getting what one wants; the five clinging-aggregates",
+   "Eightfold path: right view, resolve, speech, action, livelihood, effort, mindfulness, concentration"
+  ],
+  "practical_applications": [
+   "Middle way in its original sense; any work-life 'balance' use is an analogy and should be framed as such"
+  ],
+  "limitations": [
+   "Thanissaro renders dukkha as 'stress' — other translators use 'suffering'/'unsatisfactoriness'"
+  ],
+  "license": "CC BY-NC 4.0",
+  "access_status": "full_text",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M03"
+  ]
+ },
+ {
+  "key": "SN22_59_Mendis",
+  "title": "Anatta-lakkhana Sutta (SN 22.59): The Discourse on the Not-self Characteristic",
+  "authors": "N.K.G. Mendis (tr.)",
+  "year": 1979,
+  "url": "https://www.accesstoinsight.org/tipitaka/sn/sn22/sn22.059.mend.html",
+  "doi_isbn": "",
+  "source_type": "primary_text",
+  "tier": "B",
+  "key_findings": [
+   "Each aggregate (form, feeling, perception, formations, consciousness) is not-self because it leads to affliction and cannot be made to be as one wishes",
+   "What is impermanent is unsatisfactory and not fit to be regarded as 'mine, I, my self'"
+  ],
+  "practical_applications": [
+   "Anatta is about not clinging to aggregates as 'me/mine' — not 'you don't exist'"
+  ],
+  "limitations": [
+   "Doctrinal; interpretations of anatta differ across schools"
+  ],
+  "license": "copyrighted (Buddhist Publication Society); free distribution licence on Access to Insight: copies free of charge, max 50 reprints, credit source, include licence",
+  "access_status": "full_text",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M03"
+  ]
+ },
+ {
+  "key": "Snp1_8_Metta",
+  "title": "Karaniya Metta Sutta (Snp 1.8): The Buddha's Words on Loving-Kindness",
+  "authors": "Amaravati Sangha (tr.)",
+  "year": 1994,
+  "url": "https://www.accesstoinsight.org/tipitaka/kn/snp/snp.1.08.amar.html",
+  "doi_isbn": "",
+  "source_type": "primary_text",
+  "tier": "B",
+  "key_findings": [
+   "'Even as a mother protects with her life / Her child, her only child' — so one cultivates a boundless heart",
+   "'Radiating kindness over the entire world'"
+  ],
+  "practical_applications": [
+   "Metta = active goodwill, wishing well; chanted widely in Thai temples (Karaniya Metta Sutta)"
+  ],
+  "limitations": [],
+  "license": "copyrighted (English Sangha Trust); free distribution with credit and licence text",
+  "access_status": "full_text",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M03"
+  ]
+ },
+ {
+  "key": "AN3_65_Kalama",
+  "title": "Kalama Sutta (AN 3.65): To the Kalamas",
+  "authors": "Thanissaro Bhikkhu (tr.)",
+  "year": 1994,
+  "url": "https://www.accesstoinsight.org/tipitaka/an/an03/an03.065.than.html",
+  "doi_isbn": "",
+  "source_type": "primary_text",
+  "tier": "B",
+  "key_findings": [
+   "Do not go by reports, legends, traditions, scripture, logical conjecture, inference, analogies, agreement through pondering views, probability, or 'this contemplative is our teacher'",
+   "Criterion: when you know for yourselves that qualities are skillful, blameless, praised by the wise, and lead to welfare and happiness — then adopt them"
+  ],
+  "practical_applications": [
+   "The real Kalama test is ethical-practical, not 'believe only what agrees with your own reason' (that popular version is a misquote)"
+  ],
+  "limitations": [],
+  "license": "CC BY-NC 4.0",
+  "access_status": "full_text",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M03"
+  ]
+ },
+ {
+  "key": "Bodhi_EightfoldPath",
+  "title": "The Noble Eightfold Path: The Way to the End of Suffering",
+  "authors": "Bhikkhu Bodhi",
+  "year": 1999,
+  "url": "https://www.accesstoinsight.org/lib/authors/bodhi/waytoend.html",
+  "doi_isbn": "",
+  "source_type": "textbook",
+  "tier": "B",
+  "key_findings": [
+   "Sati = 'presence of mind, attentiveness or awareness'; bare attention without judgement or clinging",
+   "Four foundations: body, feelings, states of mind, phenomena"
+  ],
+  "practical_applications": [
+   "Definition of sati for scripts; sati in Thai (สติ) usage is broader everyday 'presence of mind'"
+  ],
+  "limitations": [
+   "Long text; read via summariser chapters I-VI only",
+   "Terms-of-use not captured"
+  ],
+  "license": "copyrighted (BPS); free distribution terms (not captured)",
+  "access_status": "publisher_page",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M03"
+  ]
+ },
+ {
+  "key": "SuttaCentral_Sujato",
+  "title": "SuttaCentral translations by Bhikkhu Sujato (licence)",
+  "authors": "Bhikkhu Sujato / SuttaCentral",
+  "year": null,
+  "url": "https://suttacentral.net/",
+  "doi_isbn": "",
+  "source_type": "primary_text",
+  "tier": "B",
+  "key_findings": [
+   "Secondary sources state SuttaCentral original material and Sujato's translations are dedicated CC0; Thanissaro's are CC BY-NC; Bodhi's are under Wisdom Publications terms"
+  ],
+  "practical_applications": [
+   "Prefer Sujato (CC0) when we need to quote Pali texts in commercial posts"
+  ],
+  "limitations": [
+   "SuttaCentral's own licence page did not load (JS); confirm before reuse"
+  ],
+  "license": "CC0 (per secondary sources — unverified)",
+  "access_status": "search_summary",
+  "verification_status": "unverified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M03"
+  ]
+ },
+ {
+  "key": "Legge_DaoDeJing",
+  "title": "The Tao Teh King (Sacred Books of the East vol. 39), tr. James Legge",
+  "authors": "Laozi (attrib.); James Legge (tr.)",
+  "year": 1891,
+  "url": "https://www.gutenberg.org/ebooks/216",
+  "doi_isbn": "",
+  "source_type": "primary_text",
+  "tier": "B",
+  "key_findings": [
+   "Public-domain translation; ch. 8 opens 'The highest excellence is like (that of) water.'"
+  ],
+  "practical_applications": [
+   "Public-domain source for Daodejing lines in posts"
+  ],
+  "limitations": [
+   "Gutenberg returned 503 this session; text existence confirmed via search only",
+   "Victorian wording; check modern scholarly reading"
+  ],
+  "license": "public domain (US; Legge d. 1897)",
+  "access_status": "search_summary",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M03"
+  ]
+ },
+ {
+  "key": "Long_Meditations",
+  "title": "Thoughts of Marcus Aurelius Antoninus, tr. George Long",
+  "authors": "Marcus Aurelius; George Long (tr.)",
+  "year": null,
+  "url": "https://www.gutenberg.org/ebooks/15877",
+  "doi_isbn": "",
+  "source_type": "primary_text",
+  "tier": "B",
+  "key_findings": [
+   "Public-domain English translation available on Project Gutenberg (#15877, improved edition of #6920) and Standard Ebooks"
+  ],
+  "practical_applications": [
+   "Public-domain source for quoting Meditations (cite book.section)"
+  ],
+  "limitations": [
+   "Gutenberg 503 this session; existence confirmed by search only; translation year not confirmed"
+  ],
+  "license": "public domain (US)",
+  "access_status": "bibliographic",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M03"
+  ]
+ },
+ {
+  "key": "WQ_Buddha",
+  "title": "Gautama Buddha — Wikiquote (Misattributed section)",
+  "authors": "Wikiquote contributors",
+  "year": null,
+  "url": "https://en.wikiquote.org/wiki/Gautama_Buddha",
+  "doi_isbn": "",
+  "source_type": "practitioner",
+  "tier": "E",
+  "key_findings": [
+   "Misattributed: 'To understand everything is to forgive everything'; 'We are what we think' (Byrom 1993 rendering); 'You yourself... deserve your love and affection' (Sharon Salzberg 1989); 'There is no way to happiness; happiness is the way'; 'Believe nothing, no matter where you read it...' (distorted Kalama); 'A family is a place where minds come in contact...' (1962 BDK book); Chesterton line; Le Cercle Rouge epigraph"
+  ],
+  "practical_applications": [
+   "Do-not-use list"
+  ],
+  "limitations": [
+   "Community wiki; cross-checked against FakeBuddhaQuotes where possible",
+   "Only first ~100k chars processed"
+  ],
+  "license": "CC BY-SA 4.0 (Wikiquote)",
+  "access_status": "publisher_page",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M03"
+  ]
+ },
+ {
+  "key": "WQ_Laozi",
+  "title": "Laozi — Wikiquote (Misattributed/Disputed)",
+  "authors": "Wikiquote contributors",
+  "year": null,
+  "url": "https://en.wikiquote.org/wiki/Laozi",
+  "doi_isbn": "",
+  "source_type": "practitioner",
+  "tier": "E",
+  "key_findings": [
+   "Misattributed: 'Give a man a fish...'; 'Care about people's approval and you will be their prisoner' (Stephen Mitchell interpretation); 'When I am anxious it is because I am living in the future' (Jimmy R., 1987); 'Being deeply loved by someone gives you strength...' (Dean Koontz 1988); 'Be careful what you water your dreams with' (2004 book); 'An ant on the move...' (Mexican proverb); 'Life is a series of natural and spontaneous changes' (not in DDJ); 'What I hear, I forget...' (Xunzi idea)",
+   "Disputed: 'The mark of a moderate man is freedom from his own ideas' (Mitchell 1992)",
+   "Genuine: ch. 64 千里之行始於足下 'A journey of a thousand li starts beneath one's feet'"
+  ],
+  "practical_applications": [
+   "Do-not-use list; Mitchell 'versions' are interpretations, not translations"
+  ],
+  "limitations": [
+   "Community wiki"
+  ],
+  "license": "CC BY-SA 4.0 (Wikiquote)",
+  "access_status": "full_text",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M03"
+  ]
+ },
+ {
+  "key": "WQ_Marcus",
+  "title": "Marcus Aurelius — Wikiquote",
+  "authors": "Wikiquote contributors",
+  "year": null,
+  "url": "https://en.wikiquote.org/wiki/Marcus_Aurelius",
+  "doi_isbn": "",
+  "source_type": "practitioner",
+  "tier": "E",
+  "key_findings": [
+   "Genuine: Med. 10.16 'Waste no more time arguing what a good man should be. Be one.'; 4.3 'The universe is change; life is opinion' (various translations)",
+   "Misattributed: 'Everything we hear is an opinion, not a fact. Everything we see is a perspective, not the truth.'; 'You have power over your mind – not outside events...'; 'When you arise in the morning, think of what a precious privilege...' (Elbert Hubbard); 'Live a good life. If there are gods...' (online, post-2009); 'The object in life is not to be on the side of the majority...' (Tolstoy collection 1946)",
+   "Disputed: 'He who lives in harmony with himself lives in harmony with the universe' (Dan Millman 1995)"
+  ],
+  "practical_applications": [
+   "Do-not-use + safe-to-use list"
+  ],
+  "limitations": [
+   "Community wiki"
+  ],
+  "license": "CC BY-SA 4.0 (Wikiquote)",
+  "access_status": "full_text",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M03"
+  ]
+ },
+ {
+  "key": "WQ_Seneca",
+  "title": "Seneca the Younger — Wikiquote",
+  "authors": "Wikiquote contributors",
+  "year": null,
+  "url": "https://en.wikiquote.org/wiki/Seneca_the_Younger",
+  "doi_isbn": "",
+  "source_type": "practitioner",
+  "tier": "E",
+  "key_findings": [
+   "Genuine: Letter 13 'we suffer more often in imagination than in reality' (saepius opinione quam re laboramus, Gummere tr.); Letter 49 'the good in life does not depend upon life's length, but upon the use we make of it'; Letter 1 'Lay hold of today's task...'",
+   "Disputed: 'Luck is what happens when preparation meets opportunity' (1990s attribution); 'Religion is regarded by the common people as true...' (Gibbon)",
+   "Misattributed: 'Si vis amari, ama' — Seneca quotes Hecato; Octavia line (play not by Seneca)"
+  ],
+  "practical_applications": [
+   "Do-not-use + safe-to-use list"
+  ],
+  "limitations": [
+   "Community wiki"
+  ],
+  "license": "CC BY-SA 4.0 (Wikiquote)",
+  "access_status": "full_text",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M03"
+  ]
+ },
+ {
+  "key": "WQ_Epictetus",
+  "title": "Epictetus — Wikiquote",
+  "authors": "Wikiquote contributors",
+  "year": null,
+  "url": "https://en.wikiquote.org/wiki/Epictetus",
+  "doi_isbn": "",
+  "source_type": "practitioner",
+  "tier": "E",
+  "key_findings": [
+   "Genuine: Ench. 1 'Some things are in our control and others not.'; Ench. 5 'Men are disturbed, not by things, but by the principles and notions which they form concerning things.'",
+   "Misattributed: 'The greater the difficulty, the more glory in surmounting it' (Saint-Evremond 1712); 'You become what you give your attention to', 'Tentative efforts lead to tentative outcomes', 'Other people's views and troubles can be contagious' (Sharon Lebell, The Art of Living 1995); 'Don't explain your philosophy. Embody it.' (c.2016 paraphrase)"
+  ],
+  "practical_applications": [
+   "Do-not-use + safe-to-use list"
+  ],
+  "limitations": [
+   "Community wiki"
+  ],
+  "license": "CC BY-SA 4.0 (Wikiquote)",
+  "access_status": "full_text",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M03"
+  ]
+ },
+ {
+  "key": "FBQ_Site",
+  "title": "Fake Buddha Quotes (I Can't Believe It's Not Buddha!)",
+  "authors": "Bodhipaksa",
+  "year": null,
+  "url": "https://fakebuddhaquotes.com/",
+  "doi_isbn": "",
+  "source_type": "practitioner",
+  "tier": "D",
+  "key_findings": [
+   "Fake: 'To keep the body in good health is a duty...'; 'It is better to die fighting than to live as one vanquished' (Julius Evola); 'Be kind to all creatures. This is the true religion.' (no scripture match)"
+  ],
+  "practical_applications": [
+   "Check any Buddha caption here first"
+  ],
+  "limitations": [
+   "Practitioner research blog, well sourced but single author"
+  ],
+  "license": "copyrighted",
+  "access_status": "full_text",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M03"
+  ]
+ },
+ {
+  "key": "FBQ_HotCoal",
+  "title": "'Holding on to anger is like grasping a hot coal...' (Fake Buddha Quotes)",
+  "authors": "Bodhipaksa",
+  "year": null,
+  "url": "https://fakebuddhaquotes.com/holding-on-to-anger-is-like-grasping-a-hot-coal-with-the-intent-of-harming-another-you-end-up-getting-burned/",
+  "doi_isbn": "",
+  "source_type": "practitioner",
+  "tier": "D",
+  "key_findings": [
+   "Not the Buddha; paraphrase of Buddhaghosa, Visuddhimagga IX.23 (burning ember); modern wording via Joan Borysenko (1987/1988)"
+  ],
+  "practical_applications": [
+   "If needed, cite 'Buddhaghosa (5th c. commentator)' not 'Buddha'"
+  ],
+  "limitations": [],
+  "license": "copyrighted",
+  "access_status": "full_text",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M03"
+  ]
+ },
+ {
+  "key": "QI_HotCoal",
+  "title": "Anger Is Like Grasping a Hot Coal (Quote Investigator)",
+  "authors": "Garson O'Toole (Quote Investigator)",
+  "year": 2018,
+  "url": "https://quoteinvestigator.com/2018/06/18/hot/",
+  "doi_isbn": "",
+  "source_type": "practitioner",
+  "tier": "C",
+  "key_findings": [
+   "1988 Borysenko & Rothstein book ascribed the hot-coal analogy directly to the Buddha"
+  ],
+  "practical_applications": [
+   "Corroborates FBQ_HotCoal"
+  ],
+  "limitations": [
+   "Search snippet only"
+  ],
+  "license": "copyrighted",
+  "access_status": "search_summary",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M03"
+  ]
+ },
+ {
+  "key": "FBQ_PeaceWithin",
+  "title": "'Peace comes from within. Do not seek it without.' (Fake Buddha Quotes)",
+  "authors": "Bodhipaksa",
+  "year": null,
+  "url": "https://fakebuddhaquotes.com/peace-comes-from-within-do-not-seek-it-without/",
+  "doi_isbn": "",
+  "source_type": "practitioner",
+  "tier": "D",
+  "key_findings": [
+   "Not the Buddha; modern English maxim, Christian-context 19th c.; 1908 attributed to Marcus Aurelius; Buddha attribution from 1964+",
+   "Closest theme: Tuvataka Sutta (Snp) — one calm within does not seek peace from another"
+  ],
+  "practical_applications": [
+   "Do-not-use"
+  ],
+  "limitations": [],
+  "license": "copyrighted",
+  "access_status": "full_text",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M03"
+  ]
+ },
+ {
+  "key": "FBQ_WhatYouThink",
+  "title": "'What you think you become' (Fake Buddha Quotes)",
+  "authors": "Bodhipaksa",
+  "year": null,
+  "url": "https://fakebuddhaquotes.com/what-you-think-you-become/",
+  "doi_isbn": "",
+  "source_type": "practitioner",
+  "tier": "D",
+  "key_findings": [
+   "Earliest found: Ralph Waldo Trine, In Tune with the Infinite (1897) 'The mind is everything; what you think, you become'",
+   "Closest genuine: MN 19 — whatever one keeps thinking about becomes the inclination of awareness"
+  ],
+  "practical_applications": [
+   "Use MN 19 idea (habits of thought) instead"
+  ],
+  "limitations": [],
+  "license": "copyrighted",
+  "access_status": "full_text",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M03"
+  ]
+ },
+ {
+  "key": "FBQ_ThreeThings",
+  "title": "'Three things cannot be long hidden...' (Fake Buddha Quotes)",
+  "authors": "Bodhipaksa",
+  "year": null,
+  "url": "https://fakebuddhaquotes.com/three-things-cannot-be-long-hidden-the-sun-the-moon-and-the-truth/",
+  "doi_isbn": "",
+  "source_type": "practitioner",
+  "tier": "D",
+  "key_findings": [
+   "'Fakeish' paraphrase of AN 3.131: three things shine openly — moon, sun, the Tathagata's teaching (no secret doctrine); modern wording from 2003, via 1907 Narasu paraphrase"
+  ],
+  "practical_applications": [
+   "Do-not-use as worded"
+  ],
+  "limitations": [],
+  "license": "copyrighted",
+  "access_status": "full_text",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M03"
+  ]
+ },
+ {
+  "key": "QI_StimulusResponse",
+  "title": "Between Stimulus and Response There Is a Space (Quote Investigator)",
+  "authors": "Garson O'Toole (Quote Investigator)",
+  "year": 2018,
+  "url": "https://quoteinvestigator.com/2018/02/18/response/",
+  "doi_isbn": "",
+  "source_type": "practitioner",
+  "tier": "C",
+  "key_findings": [
+   "Not found in Frankl's works; popularised by Stephen Covey (1989/1994) who could not recall the source",
+   "Likely origin: Rollo May 1963 'gap between stimulus and response'; precursor Galloway 1917"
+  ],
+  "practical_applications": [
+   "Never caption it as Frankl"
+  ],
+  "limitations": [],
+  "license": "copyrighted",
+  "access_status": "full_text",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M03"
+  ]
+ },
+ {
+  "key": "QI_WatchThoughts",
+  "title": "Watch Your Thoughts, They Become Words (Quote Investigator)",
+  "authors": "Garson O'Toole (Quote Investigator)",
+  "year": 2013,
+  "url": "https://quoteinvestigator.com/2013/01/10/watch-your-thoughts/",
+  "doi_isbn": "",
+  "source_type": "practitioner",
+  "tier": "C",
+  "key_findings": [
+   "Most reasonably attributed to Frank Outlaw (Bi-Lo Stores), 1977 Texas newspaper; evolved from 19th-c. chain sayings",
+   "Lao Tzu attribution only from ~2010 (Goodreads); Emerson, Buddha, Thatcher's father attributions unsupported"
+  ],
+  "practical_applications": [
+   "Do-not-use as Lao Tzu/Buddha"
+  ],
+  "limitations": [],
+  "license": "copyrighted",
+  "access_status": "full_text",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M03"
+  ]
+ },
+ {
+  "key": "Kelland_Frankl",
+  "title": "Viktor Frankl and Logotherapy (Psychology of Adjustment, LibreTexts)",
+  "authors": "Mark D. Kelland",
+  "year": null,
+  "url": "https://socialsci.libretexts.org/Courses/Santa_Ana_College/Psychology_of_Adjustment/04%3A_Existential_Psychology/4.05%3A_Viktor_Frankl_and_Logotherapy",
+  "doi_isbn": "",
+  "source_type": "course",
+  "tier": "B",
+  "key_findings": [
+   "Frankl (1905-1997), Viennese psychiatrist, survivor of four camps; parents, brother, wife died",
+   "Logotherapy: will-to-meaning as primary motivation",
+   "Three ways to meaning: creating a work/deed; experiencing something or encountering someone (love); attitude toward unavoidable suffering",
+   "'Last of the human freedoms' = choosing one's attitude"
+  ],
+  "practical_applications": [
+   "Frankl framing for hardship stories — with care about scale (his context was the Holocaust)"
+  ],
+  "limitations": [
+   "Course text, not peer-reviewed; no criticism of Frankl included"
+  ],
+  "license": "Public Domain (per page, via OpenStax CNX)",
+  "access_status": "full_text",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M03"
+  ]
+ },
+ {
+  "key": "White2019_PPI",
+  "title": "Meta-analyses of positive psychology interventions: The effects are much smaller than previously reported",
+  "authors": "Carmela A. White; Bob Uttl; Mark D. Holder",
+  "year": 2019,
+  "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC6541265/",
+  "doi_isbn": "10.1371/journal.pone.0216588",
+  "source_type": "meta-analysis",
+  "tier": "S",
+  "key_findings": [
+   "Reanalysis of Sin & Lyubomirsky (2009) and Bolier et al. (2013) correcting for small-sample bias: well-being effect ~ r = .10 (small); depression effects variable, outlier-dependent, mostly non-significant",
+   "Calls for larger samples"
+  ],
+  "practical_applications": [
+   "Do not promise that gratitude lists etc. 'make you happy' — evidence of small effects"
+  ],
+  "limitations": [
+   "Read via summariser; first half of article"
+  ],
+  "license": "CC BY 4.0",
+  "access_status": "abstract",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M03"
+  ]
+ },
+ {
+  "key": "Goyal2014",
+  "title": "Meditation programs for psychological stress and well-being: a systematic review and meta-analysis",
+  "authors": "Madhav Goyal et al.",
+  "year": 2014,
+  "url": "https://pubmed.ncbi.nlm.nih.gov/24395196/",
+  "doi_isbn": "10.1001/jamainternmed.2013.13018",
+  "source_type": "meta-analysis",
+  "tier": "S",
+  "key_findings": [
+   "47 trials, 3515 participants; small-to-moderate reductions in negative dimensions of stress; mindfulness: moderate evidence for anxiety (ES 0.38 at 8 weeks)",
+   "Low/insufficient evidence for positive mood, attention, sleep, weight; not superior to active treatments"
+  ],
+  "practical_applications": [
+   "Mindfulness claims in captions must stay modest"
+  ],
+  "limitations": [
+   "PubMed blocked (cookies); details from search snippets"
+  ],
+  "license": "copyrighted (JAMA)",
+  "access_status": "search_summary",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M03"
+  ]
+ },
+ {
+  "key": "Killingsworth2023",
+  "title": "Income and emotional well-being: A conflict resolved",
+  "authors": "Matthew A. Killingsworth; Daniel Kahneman; Barbara Mellers",
+  "year": 2023,
+  "url": "https://www.pnas.org/doi/10.1073/pnas.2208661120",
+  "doi_isbn": "10.1073/pnas.2208661120",
+  "source_type": "empirical",
+  "tier": "A",
+  "key_findings": [
+   "Adversarial collaboration: happiness rises with log(income) for most; plateau only among the least happy group (~$100k)",
+   "Critics argue the threshold result depends on modelling assumptions"
+  ],
+  "practical_applications": [
+   "Money-happiness claims: nuanced, not 'money can't buy happiness'"
+  ],
+  "limitations": [
+   "PNAS returned 403; based on search summaries"
+  ],
+  "license": "unknown",
+  "access_status": "search_summary",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M03"
+  ]
+ },
+ {
+  "key": "MacBeth2012",
+  "title": "Exploring compassion: a meta-analysis of the association between self-compassion and psychopathology",
+  "authors": "Angus MacBeth; Andrew Gumley",
+  "year": 2012,
+  "url": "https://pubmed.ncbi.nlm.nih.gov/22796446/",
+  "doi_isbn": "",
+  "source_type": "meta-analysis",
+  "tier": "S",
+  "key_findings": [
+   "Large negative association r = -0.54 between self-compassion and depression/anxiety/stress; 14 studies, 20 samples; all used Neff's scale"
+  ],
+  "practical_applications": [
+   "Self-kindness stories are supported as correlated with lower distress — not proven causal"
+  ],
+  "limitations": [
+   "Correlational; single-scale dependence; search snippets only"
+  ],
+  "license": "copyrighted (Clinical Psychology Review)",
+  "access_status": "search_summary",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M03"
+  ]
+ },
+ {
+  "key": "Lyubomirsky2011_Hedonic",
+  "title": "Hedonic Adaptation to Positive and Negative Experiences",
+  "authors": "Sonja Lyubomirsky",
+  "year": 2011,
+  "url": "https://sonjalyubomirsky.com/wp-content/uploads/2024/03/Lyubomirsky-2011.pdf",
+  "doi_isbn": "",
+  "source_type": "review",
+  "tier": "A",
+  "key_findings": [
+   "Hedonic adaptation occurs for both positive and negative events; HAPNE model (with Sheldon); positive activities may slow adaptation"
+  ],
+  "practical_applications": [
+   "New-glasses joy fades — appreciation practices as story beat; empirical, not philosophical claim"
+  ],
+  "limitations": [
+   "Book chapter (Oxford Handbook of Stress, Health, and Coping); search snippet only"
+  ],
+  "license": "copyrighted",
+  "access_status": "search_summary",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M03"
+  ]
+ },
+ {
+  "key": "LoC_ThailandStudy",
+  "title": "Thailand: A Country Study — Buddhist Doctrine and Popular Religion",
+  "authors": "U.S. Library of Congress (Federal Research Division)",
+  "year": null,
+  "url": "https://countrystudies.us/thailand/55.htm",
+  "doi_isbn": "",
+  "source_type": "docs",
+  "tier": "C",
+  "key_findings": [
+   "Thai lay ethics centres on five precepts; merit (bun) vs demerit (bap); merit-making via alms, temple support, ordination",
+   "Many Thais focus on better conditions in this/next life more than nirvana; spirit beliefs (phi) coexist with Buddhism"
+  ],
+  "practical_applications": [
+   "Ground Thai stories in lived practice (tham bun, sai bat) without exoticising"
+  ],
+  "limitations": [
+   "Dated (likely late 1980s); year not shown"
+  ],
+  "license": "public domain (US government work)",
+  "access_status": "full_text",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M03"
+  ]
+ },
+ {
+  "key": "Tricycle_Buddhadasa",
+  "title": "Three Teachings by Buddhadasa (chit wang)",
+  "authors": "Tricycle (translated excerpts)",
+  "year": null,
+  "url": "https://tricycle.org/article/three-teachings-by-buddhadasa/",
+  "doi_isbn": "",
+  "source_type": "practitioner",
+  "tier": "D",
+  "key_findings": [
+   "Chit wang (จิตว่าง) is not a mind empty of all thought/feeling but free of the thinking that causes trouble (dukkha)",
+   "Term was controversial in Thailand for links to East Asian schools"
+  ],
+  "practical_applications": [
+   "Thai-specific concept: 'จิตว่าง' must not be written as 'ไม่คิดอะไรเลย'"
+  ],
+  "limitations": [
+   "Search snippets only"
+  ],
+  "license": "copyrighted",
+  "access_status": "search_summary",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M03"
+  ]
+ },
+ {
+  "key": "Jackson_Buddhadasa",
+  "title": "Buddhadasa: Theravada Buddhism and Modernist Reform in Thailand (review on Project MUSE)",
+  "authors": "Peter A. Jackson (book author)",
+  "year": null,
+  "url": "https://muse.jhu.edu/article/409464/pdf",
+  "doi_isbn": "",
+  "source_type": "textbook",
+  "tier": "A",
+  "key_findings": [
+   "Chit wang central to Buddhadasa's reinterpretation of Theravada; drew on Mahayana/Zen sources"
+  ],
+  "practical_applications": [
+   "Background for Thai modernist Buddhism"
+  ],
+  "limitations": [
+   "Bibliographic + snippet only"
+  ],
+  "license": "copyrighted",
+  "access_status": "bibliographic",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M03"
+  ]
+ },
+ {
+  "key": "Humanists_Amsterdam2022",
+  "title": "The Amsterdam Declaration 2022 (Declaration of Modern Humanism)",
+  "authors": "Humanists International",
+  "year": 2022,
+  "url": "https://humanists.international/policy/declaration-of-modern-humanism/",
+  "doi_isbn": "",
+  "source_type": "docs",
+  "tier": "C",
+  "key_findings": [
+   "Adopted by the 2022 General Assembly (Glasgow), replacing the 2002 declaration; sections on being ethical, rational, seeking fulfilment"
+  ],
+  "practical_applications": [
+   "Humanism = ethics and meaning grounded in human reason/experience, not anti-religious slogans"
+  ],
+  "limitations": [
+   "Full text not read; fetch 404 on one URL"
+  ],
+  "license": "unknown",
+  "access_status": "search_summary",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M03"
+  ]
+ }
+]

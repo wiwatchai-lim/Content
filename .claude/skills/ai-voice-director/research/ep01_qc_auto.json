@@ -1,0 +1,348 @@
+{
+ "direction": "../research/ep01_direction.json",
+ "lines": [
+  {
+   "line": "L01",
+   "auto": {
+    "technical_5": 5.0,
+    "timing_auto_5": 4.0,
+    "notes": [
+     "5 pauses — choppy?"
+    ],
+    "vs_baseline": {
+     "pitch_baseline": "baseline",
+     "pitch_diff_st": 0.0,
+     "pitch_range": "baseline",
+     "range_ratio": 1.0,
+     "rate": "baseline",
+     "rate_ratio": 1.0,
+     "intensity_diff_db": 0.0,
+     "ending": "fall"
+    },
+    "follows_direction": {
+     "pitch_baseline": {
+      "want": "baseline",
+      "got": "baseline",
+      "steps": 0
+     },
+     "rate": {
+      "want": "baseline",
+      "got": "baseline",
+      "steps": 0
+     },
+     "ending": {
+      "want": "fall",
+      "got": "fall",
+      "steps": 0
+     }
+    },
+    "asr_text": "ร้านแว้นของปู ปิดมา 10 ปี จนคืนที่ผมยายเข้ามาอยู่",
+    "cer": 0.062
+   }
+  },
+  {
+   "line": "L03",
+   "auto": {
+    "technical_5": 5.0,
+    "timing_auto_5": 5.0,
+    "notes": [],
+    "vs_baseline": {
+     "pitch_baseline": "lower",
+     "pitch_diff_st": -2.05,
+     "pitch_range": "narrow",
+     "range_ratio": 0.62,
+     "rate": "slightly_slow",
+     "rate_ratio": 0.88,
+     "intensity_diff_db": 2.93,
+     "ending": "fall"
+    },
+    "follows_direction": {
+     "pitch_baseline": {
+      "want": "baseline",
+      "got": "lower",
+      "steps": 2
+     },
+     "rate": {
+      "want": "baseline",
+      "got": "slightly_slow",
+      "steps": 1
+     },
+     "ending": {
+      "want": "fall",
+      "got": "fall",
+      "steps": 0
+     }
+    },
+    "asr_text": "กระดิงหน้าร้านดังขึ้น",
+    "cer": 0.417
+   }
+  },
+  {
+   "line": "L06",
+   "auto": {
+    "technical_5": 5.0,
+    "timing_auto_5": 5.0,
+    "notes": [],
+    "vs_baseline": {
+     "pitch_baseline": "slightly_lower",
+     "pitch_diff_st": -0.84,
+     "pitch_range": "baseline",
+     "range_ratio": 0.89,
+     "rate": "baseline",
+     "rate_ratio": 0.98,
+     "intensity_diff_db": -1.38,
+     "ending": "level"
+    },
+    "follows_direction": {
+     "pitch_baseline": {
+      "want": "slightly_higher",
+      "got": "slightly_lower",
+      "steps": 2
+     },
+     "rate": {
+      "want": "slow",
+      "got": "baseline",
+      "steps": 2
+     },
+     "ending": {
+      "want": "soft_fall",
+      "got": "level",
+      "steps": 1
+     }
+    },
+    "asr_text": "พอหนุ่ม ร้านเปิดอยู่ไหมจ๊ะ",
+    "cer": 0.038
+   }
+  },
+  {
+   "line": "L07",
+   "auto": {
+    "technical_5": 5.0,
+    "timing_auto_5": 4.0,
+    "notes": [
+     "3 pauses — choppy?"
+    ],
+    "vs_baseline": {
+     "pitch_baseline": "baseline",
+     "pitch_diff_st": 0.21,
+     "pitch_range": "very_narrow",
+     "range_ratio": 0.54,
+     "rate": "slow",
+     "rate_ratio": 0.8,
+     "intensity_diff_db": -1.28,
+     "ending": "rise"
+    },
+    "follows_direction": {
+     "pitch_baseline": {
+      "want": "slightly_higher",
+      "got": "baseline",
+      "steps": 1
+     },
+     "rate": {
+      "want": "baseline",
+      "got": "slow",
+      "steps": 2
+     },
+     "ending": {
+      "want": "soft_fall",
+      "got": "rise",
+      "steps": 1
+     }
+    },
+    "asr_text": "บิดแล้วครับ ยาย เอ่อ ยายเข้ามาได้ยังไงครับ",
+    "cer": 0.026
+   }
+  },
+  {
+   "line": "L09",
+   "auto": {
+    "technical_5": 5.0,
+    "timing_auto_5": 5.0,
+    "notes": [],
+    "vs_baseline": {
+     "pitch_baseline": "lower",
+     "pitch_diff_st": -2.53,
+     "pitch_range": "narrow",
+     "range_ratio": 0.71,
+     "rate": "slow",
+     "rate_ratio": 0.79,
+     "intensity_diff_db": 1.77,
+     "ending": "rise"
+    },
+    "follows_direction": {
+     "pitch_baseline": {
+      "want": "slightly_higher",
+      "got": "lower",
+      "steps": 3
+     },
+     "rate": {
+      "want": "slow",
+      "got": "slow",
+      "steps": 0
+     },
+     "ending": {
+      "want": "soft_fall",
+      "got": "rise",
+      "steps": 1
+     }
+    },
+    "asr_text": "ยายอาจจดหมายไม่ออกมาหลายปีแล้วชูดยายหน่อยนะ",
+    "cer": 0.111
+   }
+  },
+  {
+   "line": "L16",
+   "auto": {
+    "technical_5": 5.0,
+    "timing_auto_5": 4.0,
+    "notes": [
+     "4 pauses — choppy?"
+    ],
+    "vs_baseline": {
+     "pitch_baseline": "slightly_lower",
+     "pitch_diff_st": -1.42,
+     "pitch_range": "very_narrow",
+     "range_ratio": 0.53,
+     "rate": "very_slow",
+     "rate_ratio": 0.65,
+     "intensity_diff_db": -3.01,
+     "ending": "fall"
+    },
+    "follows_direction": {
+     "pitch_baseline": {
+      "want": "baseline",
+      "got": "slightly_lower",
+      "steps": 1
+     },
+     "rate": {
+      "want": "baseline",
+      "got": "very_slow",
+      "steps": 3
+     },
+     "ending": {
+      "want": "fall",
+      "got": "fall",
+      "steps": 0
+     }
+    },
+    "asr_text": "แม้ครับ ผมได้งานแล้ว ปีใหม่นี้ ผมจะจะกลับบ้าน",
+    "cer": 0.075
+   }
+  },
+  {
+   "line": "L18",
+   "auto": {
+    "technical_5": 5.0,
+    "timing_auto_5": 4.0,
+    "notes": [
+     "6 pauses — choppy?"
+    ],
+    "vs_baseline": {
+     "pitch_baseline": "slightly_lower",
+     "pitch_diff_st": -1.53,
+     "pitch_range": "narrow",
+     "range_ratio": 0.68,
+     "rate": "slightly_fast",
+     "rate_ratio": 1.08,
+     "intensity_diff_db": -1.28,
+     "ending": "rise"
+    },
+    "follows_direction": {
+     "pitch_baseline": {
+      "want": "slightly_higher",
+      "got": "slightly_lower",
+      "steps": 2
+     },
+     "rate": {
+      "want": "slow",
+      "got": "slightly_fast",
+      "steps": 3
+     },
+     "ending": {
+      "want": "soft_fall",
+      "got": "rise",
+      "steps": 1
+     }
+    },
+    "asr_text": "ขอบใจนะพ่อนุ่ม ข้าวแวน ยายฝากไว้ในสมุดของปูแล้ว",
+    "cer": 0.128
+   }
+  },
+  {
+   "line": "L22",
+   "auto": {
+    "technical_5": 5.0,
+    "timing_auto_5": 4.0,
+    "notes": [
+     "5 pauses — choppy?"
+    ],
+    "vs_baseline": {
+     "pitch_baseline": "baseline",
+     "pitch_diff_st": -0.56,
+     "pitch_range": "narrow",
+     "range_ratio": 0.73,
+     "rate": "fast",
+     "rate_ratio": 1.17,
+     "intensity_diff_db": -3.17,
+     "ending": "fall"
+    },
+    "follows_direction": {
+     "pitch_baseline": {
+      "want": "baseline",
+      "got": "baseline",
+      "steps": 0
+     },
+     "rate": {
+      "want": "baseline",
+      "got": "fast",
+      "steps": 2
+     },
+     "ending": {
+      "want": "fall",
+      "got": "fall",
+      "steps": 0
+     }
+    },
+    "asr_text": "คุณยายจัน วันกรอบทอง ยังไม่ได้มารับ ปี 2519",
+    "cer": 0.278
+   }
+  },
+  {
+   "line": "L25",
+   "auto": {
+    "technical_5": 5.0,
+    "timing_auto_5": 5.0,
+    "notes": [],
+    "vs_baseline": {
+     "pitch_baseline": "baseline",
+     "pitch_diff_st": 0.13,
+     "pitch_range": "narrow",
+     "range_ratio": 0.73,
+     "rate": "baseline",
+     "rate_ratio": 1.01,
+     "intensity_diff_db": 1.59,
+     "ending": "fall"
+    },
+    "follows_direction": {
+     "pitch_baseline": {
+      "want": "lower",
+      "got": "baseline",
+      "steps": 2
+     },
+     "rate": {
+      "want": "slow",
+      "got": "baseline",
+      "steps": 2
+     },
+     "ending": {
+      "want": "rise",
+      "got": "fall",
+      "steps": 1
+     }
+    },
+    "asr_text": "ผมตามหาบ้านของแม่มา 40 ปีใช่ที่นี่ไหมครับ",
+    "cer": 0.0
+   }
+  }
+ ]
+}

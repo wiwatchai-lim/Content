@@ -1,0 +1,2426 @@
+{
+  "schema_version": "1.0",
+  "lightings": [
+    {
+      "id": "three_point",
+      "name": "Three-point lighting",
+      "name_th": "ไฟสามจุด",
+      "category": "portrait",
+      "setup": "Key 30-45° off camera axis, slightly above eye level; fill on the opposite side near the lens axis, 1-2 stops under the key; back/rim light behind the subject opposite the camera, aimed at hair/shoulders.",
+      "key_direction": "45° camera-left or -right, 10-20° above eyes",
+      "source_size": "medium (softbox 60-90 cm) for key; larger/bounced fill; small hard rim",
+      "intensity_ratio": "key:fill 2:1 to 4:1; rim about equal to key on the edge",
+      "color_temperature_k": [
+        3200,
+        5600
+      ],
+      "color_temperature_note": "Usually one matched temperature; a cooler rim is a common creative variation.",
+      "shadow_quality": "moderate, defined nose/cheek shadow with readable detail",
+      "material_response": "Skin modelled with soft highlight; hair gets an edge line; metal frames show one key highlight and a rim streak; matte fabric reads evenly.",
+      "depth_and_form": "Key gives form, fill controls contrast, rim separates figure from background (figure-ground).",
+      "atmosphere": "clean, neutral, interview/studio",
+      "mood": "professional, clear, trustworthy",
+      "emotion_ids": [
+        "performance.trusted_expert",
+        "will.confidence",
+        "calm.serenity"
+      ],
+      "best_for": [
+        "interviews",
+        "optician/staff portraits",
+        "explainer frames",
+        "default starting point"
+      ],
+      "avoid_for": [
+        "horror",
+        "high-drama low-key",
+        "natural documentary look where three sources feel staged"
+      ],
+      "common_mistakes": [
+        "fill as bright as key (flat)",
+        "rim so hot it clips hair",
+        "key at eye level reflecting in glasses",
+        "unmotivated rim in a scene with no back source"
+      ],
+      "physics_notes": "Penumbra width scales with the source's apparent angular size seen from the subject: larger or closer = softer edges and smoother gradients. Raising power only changes brightness, not hardness. Inverse square: for a compact source, doubling the distance quarters the illuminance (-2 stops); a close source falls off fast across the scene (dark background), a far one lights everything evenly.",
+      "prompt_phrases": [
+        "classic three-point lighting: soft key from camera left at 45 degrees slightly above eye level, gentle fill, thin rim light on hair and shoulders",
+        "shadow side about one stop darker, subject clearly separated from a dark background"
+      ],
+      "eyewear_notes": "Glasses: keep the key above eye level and/or well off the lens axis so its mirror image bounces out of the lens toward floor or side; a slight chin-down or head turn away from the key moves it further; ask for 'clear anti-reflective lenses, eyes fully visible, no glare'. Do not remove every reflection: a faint edge highlight proves a lens is there (house 'lens layer' rule). The rim may draw a thin bright line along the top of the frame: keep it, it outlines the frame shape.",
+      "refs": [
+        "curriculum-04"
+      ],
+      "evidence": "craft"
+    },
+    {
+      "id": "key_fill_soft",
+      "name": "Soft key + fill",
+      "name_th": "ไฟหลักนุ่มกับไฟเสริม",
+      "category": "portrait",
+      "setup": "One large soft key (softbox 90-150 cm or diffused window) close at 30-45°, fill from a white bounce card or second soft source on the other side; no rim.",
+      "key_direction": "30-45° side, slightly above eyes",
+      "source_size": "large/soft",
+      "intensity_ratio": "key:fill 1.5:1 to 2:1",
+      "color_temperature_k": [
+        4500,
+        5600
+      ],
+      "color_temperature_note": "Daylight-balanced commercial default; go 3200-4000 K for warmth.",
+      "shadow_quality": "soft, long gradient, gentle nose shadow",
+      "material_response": "Forgiving on skin texture; glossy frames show large soft highlights; fabric texture subdued.",
+      "depth_and_form": "Gentle modelling; depth comes mostly from tone separation and lens blur rather than light.",
+      "atmosphere": "airy, friendly",
+      "mood": "approachable, gentle, commercial",
+      "emotion_ids": [
+        "joy.contentment",
+        "care.reassurance",
+        "love.tenderness"
+      ],
+      "best_for": [
+        "lens and eyewear ads with people",
+        "friendly staff photos",
+        "beauty",
+        "lifestyle"
+      ],
+      "avoid_for": [
+        "drama",
+        "thriller",
+        "anything needing strong texture"
+      ],
+      "common_mistakes": [
+        "source too far (loses softness)",
+        "no shadow side at all, face looks pasted",
+        "huge softbox reflected as a white square on lenses"
+      ],
+      "physics_notes": "Penumbra width scales with the source's apparent angular size seen from the subject: larger or closer = softer edges and smoother gradients. Raising power only changes brightness, not hardness.",
+      "prompt_phrases": [
+        "large soft key light from the left, white bounce fill on the right, gentle low-contrast shadows",
+        "soft even commercial portrait light, shadow side only slightly darker"
+      ],
+      "eyewear_notes": "Large close sources make a big but faint reflection; raise the box above the head and feather it so the lens shows a soft edge gradient, not a white panel. Glasses: keep the key above eye level and/or well off the lens axis so its mirror image bounces out of the lens toward floor or side; a slight chin-down or head turn away from the key moves it further; ask for 'clear anti-reflective lenses, eyes fully visible, no glare'. Do not remove every reflection: a faint edge highlight proves a lens is there (house 'lens layer' rule).",
+      "refs": [
+        "curriculum-04"
+      ],
+      "evidence": "craft"
+    },
+    {
+      "id": "broad",
+      "name": "Broad lighting",
+      "name_th": "ไฟส่องฝั่งหน้ากว้าง",
+      "category": "portrait",
+      "setup": "Face turned partly away from the key; the key lights the side of the face closest to camera (the broad side). Pattern (loop/Rembrandt) can be combined.",
+      "key_direction": "key on the same side the face is turned away from; ~45° from camera",
+      "source_size": "medium to large",
+      "intensity_ratio": "key:fill 2:1 to 3:1",
+      "color_temperature_k": [
+        3200,
+        5600
+      ],
+      "color_temperature_note": "Any; set by the scene.",
+      "shadow_quality": "small shadow area on the far cheek",
+      "material_response": "More lit skin area facing camera; frames' near temple arm catches the highlight.",
+      "depth_and_form": "Widens and flattens the face; less sculpting than short lighting.",
+      "atmosphere": "open, bright",
+      "mood": "open, sociable, approachable",
+      "emotion_ids": [
+        "joy.happiness",
+        "care.encouragement",
+        "performance.sales_enthusiasm"
+      ],
+      "best_for": [
+        "narrow faces",
+        "high-key friendly ads",
+        "portraits in glasses (helps glare)"
+      ],
+      "avoid_for": [
+        "round/wide faces you want slimmer",
+        "moody drama"
+      ],
+      "common_mistakes": [
+        "calling it a pattern instead of a side choice",
+        "lighting the broad side then adding equal fill (flat)"
+      ],
+      "physics_notes": "Which side is 'broad' depends on head turn relative to camera, not on light position alone. Penumbra width scales with the source's apparent angular size seen from the subject: larger or closer = softer edges and smoother gradients. Raising power only changes brightness, not hardness.",
+      "prompt_phrases": [
+        "broad lighting, the side of the face turned toward the camera is lit",
+        "face turned slightly away from a soft key light, near cheek brightly lit"
+      ],
+      "eyewear_notes": "Recommended for glasses: with the head turned away from the key, the key's reflection leaves the lens on the far side. Glasses: keep the key above eye level and/or well off the lens axis so its mirror image bounces out of the lens toward floor or side; a slight chin-down or head turn away from the key moves it further; ask for 'clear anti-reflective lenses, eyes fully visible, no glare'. Do not remove every reflection: a faint edge highlight proves a lens is there (house 'lens layer' rule).",
+      "refs": [
+        "curriculum-04"
+      ],
+      "evidence": "craft"
+    },
+    {
+      "id": "short",
+      "name": "Short lighting",
+      "name_th": "ไฟส่องฝั่งหน้าแคบ",
+      "category": "portrait",
+      "setup": "Face turned partly toward the key; the key lights the side turned away from camera (short side), the near cheek falls into shadow.",
+      "key_direction": "key on the side the face turns toward, ~45-60° from camera",
+      "source_size": "medium to large",
+      "intensity_ratio": "key:fill 3:1 to 6:1",
+      "color_temperature_k": [
+        3200,
+        5600
+      ],
+      "color_temperature_note": "Any.",
+      "shadow_quality": "larger shadow area facing camera",
+      "material_response": "Skin texture shown on the far side; near frame arm sits in shadow.",
+      "depth_and_form": "Slims and sculpts the face, strong 3D modelling.",
+      "atmosphere": "cinematic, moody",
+      "mood": "thoughtful, serious, intimate",
+      "emotion_ids": [
+        "cognitive.interest",
+        "sadness.melancholy",
+        "will.determination"
+      ],
+      "best_for": [
+        "character portraits",
+        "drama",
+        "slimming wide faces"
+      ],
+      "avoid_for": [
+        "bright friendly ads",
+        "glasses wearers facing the key directly (glare)"
+      ],
+      "common_mistakes": [
+        "turning the face into the key so the lenses mirror it",
+        "losing the near eye in darkness"
+      ],
+      "physics_notes": "Penumbra width scales with the source's apparent angular size seen from the subject: larger or closer = softer edges and smoother gradients. Raising power only changes brightness, not hardness.",
+      "prompt_phrases": [
+        "short lighting, the far side of the face lit, the side nearer the camera in soft shadow",
+        "sculpted face, key light on the side turned away from the lens"
+      ],
+      "eyewear_notes": "Face turned toward the key is the riskiest angle for lens glare; raise the key higher or move it further round so the reflection exits above/aside. Glasses: keep the key above eye level and/or well off the lens axis so its mirror image bounces out of the lens toward floor or side; a slight chin-down or head turn away from the key moves it further; ask for 'clear anti-reflective lenses, eyes fully visible, no glare'. Do not remove every reflection: a faint edge highlight proves a lens is there (house 'lens layer' rule).",
+      "refs": [
+        "curriculum-04"
+      ],
+      "evidence": "craft"
+    },
+    {
+      "id": "butterfly",
+      "name": "Butterfly / Paramount",
+      "name_th": "ไฟผีเสื้อ",
+      "category": "portrait",
+      "setup": "Key directly in front on the camera axis, high above the face (30-50° up), pointing down; small butterfly-shaped shadow under the nose.",
+      "key_direction": "frontal, high above eye line",
+      "source_size": "medium (beauty dish) to large",
+      "intensity_ratio": "key:fill 2:1 to 4:1 (fill often a reflector below)",
+      "color_temperature_k": [
+        4500,
+        5600
+      ],
+      "color_temperature_note": "Daylight beauty; tungsten for vintage Hollywood.",
+      "shadow_quality": "symmetrical, nose and under-cheekbone shadows, crisp with a dish",
+      "material_response": "Cheekbones and lips glossed; frames cast a shadow line on the cheeks below the rims.",
+      "depth_and_form": "Emphasises cheekbones and symmetry; flattens the sides.",
+      "atmosphere": "glamorous",
+      "mood": "glamour, poise, beauty",
+      "emotion_ids": [
+        "will.confidence",
+        "awe.admiration",
+        "love.romantic"
+      ],
+      "best_for": [
+        "beauty/fashion eyewear",
+        "symmetrical frontal portraits",
+        "vintage Hollywood look"
+      ],
+      "avoid_for": [
+        "deep-set eyes (eye sockets go dark)",
+        "low-key drama"
+      ],
+      "common_mistakes": [
+        "too high: eye sockets black",
+        "frame shadow cutting across the eyes"
+      ],
+      "physics_notes": "Penumbra width scales with the source's apparent angular size seen from the subject: larger or closer = softer edges and smoother gradients. Raising power only changes brightness, not hardness.",
+      "prompt_phrases": [
+        "butterfly lighting, key light high and directly in front, small butterfly shadow under the nose",
+        "glamorous Paramount-style portrait light"
+      ],
+      "eyewear_notes": "High frontal key reflects down and away from the lens if high enough, but the frame's top bar casts a shadow on the eyes; tilt chin slightly up or add under-fill. Check reflections of the dish as a round catch on the lens.",
+      "refs": [
+        "curriculum-04"
+      ],
+      "evidence": "craft"
+    },
+    {
+      "id": "loop",
+      "name": "Loop lighting",
+      "name_th": "ไฟลูป",
+      "category": "portrait",
+      "setup": "Key 30-45° to one side and a little above eye level; the nose shadow forms a small loop pointing down toward the mouth corner without touching the cheek shadow.",
+      "key_direction": "30-45° side, 15-30° above eyes",
+      "source_size": "medium to large",
+      "intensity_ratio": "key:fill 2:1 to 4:1",
+      "color_temperature_k": [
+        3200,
+        5600
+      ],
+      "color_temperature_note": "Any.",
+      "shadow_quality": "small soft loop shadow",
+      "material_response": "Natural skin modelling, one clear catchlight per eye; frames get a side highlight.",
+      "depth_and_form": "Flattering moderate modelling for most faces.",
+      "atmosphere": "natural",
+      "mood": "friendly, warm, everyday",
+      "emotion_ids": [
+        "joy.contentment",
+        "performance.storyteller_warmth",
+        "care.reassurance"
+      ],
+      "best_for": [
+        "most portraits",
+        "staff/customer photos",
+        "safe default"
+      ],
+      "avoid_for": [
+        "strong drama"
+      ],
+      "common_mistakes": [
+        "key too low, loop merges into flat light",
+        "fill killing the loop"
+      ],
+      "physics_notes": "Penumbra width scales with the source's apparent angular size seen from the subject: larger or closer = softer edges and smoother gradients. Raising power only changes brightness, not hardness. Exact loop position depends on face structure (curriculum-04).",
+      "prompt_phrases": [
+        "loop lighting, soft key from 40 degrees left slightly above eye level, small nose shadow angled down",
+        "natural flattering portrait light"
+      ],
+      "eyewear_notes": "Raise the key a bit more than usual (the loop still holds) so its reflection drops out of the lens. Glasses: keep the key above eye level and/or well off the lens axis so its mirror image bounces out of the lens toward floor or side; a slight chin-down or head turn away from the key moves it further; ask for 'clear anti-reflective lenses, eyes fully visible, no glare'. Do not remove every reflection: a faint edge highlight proves a lens is there (house 'lens layer' rule).",
+      "refs": [
+        "curriculum-04"
+      ],
+      "evidence": "craft"
+    },
+    {
+      "id": "rembrandt",
+      "name": "Rembrandt lighting",
+      "name_th": "ไฟเรมบรันต์",
+      "category": "portrait",
+      "setup": "Key ~45° side and higher than for loop; nose shadow meets the cheek shadow leaving a small lit triangle under the shadow-side eye. Little or no fill.",
+      "key_direction": "45° side, 30-45° above eyes",
+      "source_size": "medium (window, softbox) or hard for grit",
+      "intensity_ratio": "key:fill 4:1 to 8:1",
+      "color_temperature_k": [
+        2800,
+        5600
+      ],
+      "color_temperature_note": "Often warm for a painterly feel.",
+      "shadow_quality": "defined, triangle of light on the shadow cheek",
+      "material_response": "Skin texture visible; metal frames show one strong highlight; dark fabrics fall into shadow.",
+      "depth_and_form": "Strong sculpting, painterly chiaroscuro.",
+      "atmosphere": "painterly, intimate",
+      "mood": "reflective, storied, dramatic",
+      "emotion_ids": [
+        "sadness.melancholy",
+        "nostalgia.nostalgia",
+        "cognitive.interest",
+        "performance.storyteller_warmth"
+      ],
+      "best_for": [
+        "character portraits",
+        "old optician story frames",
+        "painterly looks"
+      ],
+      "avoid_for": [
+        "bright ads",
+        "comedy"
+      ],
+      "common_mistakes": [
+        "triangle too big (becomes loop) or missing (becomes split)",
+        "shadow eye with no catchlight looks dead"
+      ],
+      "physics_notes": "Penumbra width scales with the source's apparent angular size seen from the subject: larger or closer = softer edges and smoother gradients. Raising power only changes brightness, not hardness.",
+      "prompt_phrases": [
+        "Rembrandt lighting, key high at camera left, small triangle of light under the right eye, shadow side about two stops darker",
+        "painterly side light with deep but readable shadows"
+      ],
+      "eyewear_notes": "The lit triangle sits under the frame; make sure the rim does not cut through it. High key keeps the reflection out of the lens. Glasses: keep the key above eye level and/or well off the lens axis so its mirror image bounces out of the lens toward floor or side; a slight chin-down or head turn away from the key moves it further; ask for 'clear anti-reflective lenses, eyes fully visible, no glare'. Do not remove every reflection: a faint edge highlight proves a lens is there (house 'lens layer' rule).",
+      "refs": [
+        "curriculum-04"
+      ],
+      "evidence": "craft"
+    },
+    {
+      "id": "split",
+      "name": "Split lighting",
+      "name_th": "ไฟแบ่งครึ่งหน้า",
+      "category": "portrait",
+      "setup": "Key at 90° to the side, about eye level; one half of the face lit, the other in shadow; no fill or negative fill.",
+      "key_direction": "90° side",
+      "source_size": "small/hard or medium",
+      "intensity_ratio": "key:fill 8:1 or higher",
+      "color_temperature_k": [
+        2700,
+        6500
+      ],
+      "color_temperature_note": "Any; cool for menace, warm for introspection.",
+      "shadow_quality": "hard dividing line down the nose",
+      "material_response": "Skin texture strongly raked; metal and lens edge on the lit side flare.",
+      "depth_and_form": "Strong form on one side, mystery on the other.",
+      "atmosphere": "mysterious",
+      "mood": "conflict, secrecy, duality",
+      "emotion_ids": [
+        "visual.mystery",
+        "fear.quiet_menace",
+        "conflict.love_vs_anger",
+        "anger.cold"
+      ],
+      "best_for": [
+        "villain or inner conflict",
+        "night-optic mystery",
+        "dramatic posters"
+      ],
+      "avoid_for": [
+        "ads",
+        "friendly portraits",
+        "faces needing full detail"
+      ],
+      "common_mistakes": [
+        "shadow side fully black with nothing readable",
+        "using it on a sales portrait"
+      ],
+      "physics_notes": "Penumbra width scales with the source's apparent angular size seen from the subject: larger or closer = softer edges and smoother gradients. Raising power only changes brightness, not hardness. Raking light at 90° exaggerates surface relief.",
+      "prompt_phrases": [
+        "split lighting, hard light from 90 degrees camera right, half the face in shadow",
+        "half-lit face, the other half fading into darkness"
+      ],
+      "eyewear_notes": "Side key at eye level grazes the near lens: Fresnel reflectance is high there, so expect a bright edge on the lit lens and none on the shadow lens. Keep it as an edge highlight; avoid a full lens flare. Fresnel: reflectance of glass, skin oil and lacquer rises steeply toward grazing angles, so tilted lens surfaces and rims mirror bright surroundings strongly.",
+      "refs": [
+        "curriculum-04"
+      ],
+      "evidence": "craft"
+    },
+    {
+      "id": "clamshell",
+      "name": "Clamshell",
+      "name_th": "ไฟฝาหอย",
+      "category": "portrait",
+      "setup": "Butterfly key high in front plus a reflector or second soft light below the chin facing up; camera shoots between them.",
+      "key_direction": "frontal high + frontal low fill",
+      "source_size": "large/soft",
+      "intensity_ratio": "top:bottom 1.5:1 to 2:1",
+      "color_temperature_k": [
+        5000,
+        5600
+      ],
+      "color_temperature_note": "Daylight beauty standard.",
+      "shadow_quality": "almost shadowless, very soft",
+      "material_response": "Skin smooth and luminous; double catchlights; glossy frames shine top and bottom.",
+      "depth_and_form": "Low modelling; flat-glamorous.",
+      "atmosphere": "clean beauty",
+      "mood": "fresh, polished, flawless",
+      "emotion_ids": [
+        "joy.happiness",
+        "will.confidence",
+        "performance.sales_enthusiasm"
+      ],
+      "best_for": [
+        "high-key lens ads",
+        "beauty close-ups",
+        "clean commercial faces"
+      ],
+      "avoid_for": [
+        "drama",
+        "character storytelling"
+      ],
+      "common_mistakes": [
+        "bottom fill stronger than top (horror under-light)",
+        "both sources mirrored as white bars in lenses"
+      ],
+      "physics_notes": "Penumbra width scales with the source's apparent angular size seen from the subject: larger or closer = softer edges and smoother gradients. Raising power only changes brightness, not hardness.",
+      "prompt_phrases": [
+        "soft clamshell lighting, beauty dish above and white reflector below the chin, almost shadowless face, double catchlights",
+        "high-key beauty light"
+      ],
+      "eyewear_notes": "Two frontal sources = two chances of lens reflection; keep both large and slightly off-axis vertically, chin level, and request crystal-clear anti-reflective lenses. Used in curriculum-04 high-key lens ad example.",
+      "refs": [
+        "curriculum-04"
+      ],
+      "evidence": "craft"
+    },
+    {
+      "id": "rim_only",
+      "name": "Rim light only",
+      "name_th": "ไฟขอบอย่างเดียว",
+      "category": "portrait",
+      "setup": "One or two lights behind the subject, opposite the camera, just out of frame; no front light; edges glow, front stays dark.",
+      "key_direction": "behind subject, 120-170° from camera",
+      "source_size": "small/hard (sharp line) or strip box (wider soft edge)",
+      "intensity_ratio": "front almost unlit; rim 2-3 stops over the front",
+      "color_temperature_k": [
+        3200,
+        7000
+      ],
+      "color_temperature_note": "Cool rims read as night/moon; warm as sunset.",
+      "shadow_quality": "front mostly in shadow, bright edge outline",
+      "material_response": "Hair and fabric fuzz glow; glass and acetate edges light up; skin shows a thin line.",
+      "depth_and_form": "Pure outline; strong figure-ground but little interior form.",
+      "atmosphere": "dramatic, dark",
+      "mood": "mysterious, heroic, stylish",
+      "emotion_ids": [
+        "visual.mystery",
+        "will.courage",
+        "awe.awe"
+      ],
+      "best_for": [
+        "dark-background product edges",
+        "hero silhouettes",
+        "night scenes"
+      ],
+      "avoid_for": [
+        "face recognition needed",
+        "explaining product details"
+      ],
+      "common_mistakes": [
+        "light visible in frame causing flare",
+        "rim on one side only reading as a mistake"
+      ],
+      "physics_notes": "Fresnel: reflectance of glass, skin oil and lacquer rises steeply toward grazing angles, so tilted lens surfaces and rims mirror bright surroundings strongly. Edge glow is strongest where surfaces are seen at grazing angle.",
+      "prompt_phrases": [
+        "rim light only, subject outlined by a thin bright edge against a black background",
+        "backlit edges glowing, face mostly in shadow"
+      ],
+      "eyewear_notes": "Excellent for frames: lens edges and acetate rims glow and the frame outline reads on black. Lenses themselves stay dark; add a faint front fill or a single strip reflection so lenses do not look empty.",
+      "refs": [
+        "curriculum-04"
+      ],
+      "evidence": "craft"
+    },
+    {
+      "id": "backlit_silhouette",
+      "name": "Backlit silhouette",
+      "name_th": "ย้อนแสงเป็นเงาดำ",
+      "category": "cinematic",
+      "setup": "Bright background (sky, window, lit wall) exposed correctly; subject unlit in front, rendered as a dark shape. No fill.",
+      "key_direction": "behind subject, toward camera",
+      "source_size": "large (sky/backdrop)",
+      "intensity_ratio": "background 3-5+ stops brighter than subject",
+      "color_temperature_k": [
+        2500,
+        10000
+      ],
+      "color_temperature_note": "Set by the background: sunset warm, blue hour cool.",
+      "shadow_quality": "subject becomes the shadow",
+      "material_response": "Only outline and transparent parts (lenses, hair) carry light.",
+      "depth_and_form": "Form reduced to contour; shape must read on its own.",
+      "atmosphere": "graphic, emotional",
+      "mood": "mystery, longing, anonymity",
+      "emotion_ids": [
+        "nostalgia.longing",
+        "visual.peaceful_solitude",
+        "visual.mystery",
+        "sadness.loneliness"
+      ],
+      "best_for": [
+        "story carousels",
+        "faceless characters",
+        "emotional endings",
+        "Skyfall-like action frames (curriculum-03)"
+      ],
+      "avoid_for": [
+        "product detail",
+        "showing faces"
+      ],
+      "common_mistakes": [
+        "overlapping limbs make an unreadable blob",
+        "lifting shadows so it becomes a muddy grey figure"
+      ],
+      "physics_notes": "Camera dynamic range forces a choice: exposing for the bright background drops the subject to near black.",
+      "prompt_phrases": [
+        "strong backlit silhouette against a glowing sky, no fill light, the figure a clean dark shape",
+        "profile silhouette with clear readable outline"
+      ],
+      "eyewear_notes": "In profile, the frame and lens shape become part of the silhouette — a strong way to show a frame's outline. Light passing through the lens can glow slightly; keep it subtle.",
+      "refs": [
+        "curriculum-03",
+        "curriculum-04"
+      ],
+      "evidence": "craft"
+    },
+    {
+      "id": "high_key",
+      "name": "High key",
+      "name_th": "โทนสว่าง",
+      "category": "portrait",
+      "setup": "Low ratio key/fill, background lit separately 1-2 stops brighter than the subject, often to pure white; minimal shadows.",
+      "key_direction": "frontal or slightly side, large",
+      "source_size": "large/soft",
+      "intensity_ratio": "key:fill ≤ 2:1; background +1 to +2 stops",
+      "color_temperature_k": [
+        5000,
+        6500
+      ],
+      "color_temperature_note": "Neutral daylight.",
+      "shadow_quality": "few, very soft",
+      "material_response": "Whites glow; clear lenses and transparent acetate can disappear into white unless edged.",
+      "depth_and_form": "Low modelling; shape read from outline and colour.",
+      "atmosphere": "bright, clean",
+      "mood": "fresh, optimistic, clinical",
+      "emotion_ids": [
+        "joy.happiness",
+        "hope.hope",
+        "calm.serenity"
+      ],
+      "best_for": [
+        "lens ads",
+        "catalogue",
+        "health/clean messaging",
+        "light carousels"
+      ],
+      "avoid_for": [
+        "mystery",
+        "night",
+        "luxury moodiness"
+      ],
+      "common_mistakes": [
+        "background spill wrapping edges (loss of contrast)",
+        "clear frames vanishing",
+        "clipping skin"
+      ],
+      "physics_notes": "Background flare scatters back into the lens and lowers contrast; flag the backlights.",
+      "prompt_phrases": [
+        "high-key image, pure white background, soft shadowless light, bright and clean",
+        "very low contrast, airy bright studio"
+      ],
+      "eyewear_notes": "Clear/crystal frames need black cards beside them or a slightly grey background so edges stay visible; give each lens a soft grey edge reflection.",
+      "refs": [
+        "curriculum-04"
+      ],
+      "evidence": "craft"
+    },
+    {
+      "id": "low_key",
+      "name": "Low key",
+      "name_th": "โทนมืด",
+      "category": "cinematic",
+      "setup": "One hard or medium key, high ratio, negative fill on the shadow side, dark background; optional rim for separation.",
+      "key_direction": "side or top-side",
+      "source_size": "small/hard to medium",
+      "intensity_ratio": "key:fill ≥ 8:1",
+      "color_temperature_k": [
+        2700,
+        5600
+      ],
+      "color_temperature_note": "Warm practical key or cool moon key.",
+      "shadow_quality": "deep, large shadow areas",
+      "material_response": "Specular highlights on metal and lenses pop; skin texture raked; dark fabric disappears.",
+      "depth_and_form": "Strong form where lit; depth from pools of light.",
+      "atmosphere": "dark, dense",
+      "mood": "drama, mystery, luxury",
+      "emotion_ids": [
+        "visual.mystery",
+        "fear.dread",
+        "performance.eerie_calm"
+      ],
+      "best_for": [
+        "ร้านแว่นตีสอง night scenes",
+        "luxury product",
+        "noir"
+      ],
+      "avoid_for": [
+        "clean health messaging",
+        "small phone thumbnails where dark detail is lost"
+      ],
+      "common_mistakes": [
+        "no rim: dark hair merges with dark background",
+        "lifting exposure globally instead of adding motivated highlights"
+      ],
+      "physics_notes": "Inverse square: for a compact source, doubling the distance quarters the illuminance (-2 stops); a close source falls off fast across the scene (dark background), a far one lights everything evenly. Close key + distance to background = fast falloff.",
+      "prompt_phrases": [
+        "low-key lighting, single hard key light, deep shadows, dark background, thin rim light separating the subject",
+        "most of the frame in deep shadow, only the face and the glasses lit"
+      ],
+      "eyewear_notes": "Specular lens/rim highlights are the brightest points in a low-key frame and pull the eye: place them deliberately. Keep eyes visible behind lenses with a tiny eye-light.",
+      "refs": [
+        "curriculum-04"
+      ],
+      "evidence": "craft"
+    },
+    {
+      "id": "chiaroscuro",
+      "name": "Chiaroscuro",
+      "name_th": "แสงเงาตัดกัน (ภาพวาด)",
+      "category": "stylised",
+      "setup": "Single directional source modelling forms with a full value range: light, halftone, core shadow, reflected light, cast shadow; background mid-dark.",
+      "key_direction": "high side (classic upper-left)",
+      "source_size": "medium (window)",
+      "intensity_ratio": "about 4:1 to 8:1",
+      "color_temperature_k": [
+        2800,
+        5000
+      ],
+      "color_temperature_note": "Painterly warm light, cool shadows (Artistic convention).",
+      "shadow_quality": "gradual turning from light to shadow with a clear core shadow",
+      "material_response": "Fabrics show folds; skin a rich halftone; metal sparkle small.",
+      "depth_and_form": "Maximum volume: form described by the light-to-shadow sequence (Gurney2010).",
+      "atmosphere": "painterly, classical",
+      "mood": "contemplative, dignified",
+      "emotion_ids": [
+        "awe.admiration",
+        "nostalgia.nostalgia",
+        "sadness.melancholy"
+      ],
+      "best_for": [
+        "oil-painting styles",
+        "charcoal carousels",
+        "classical portraits"
+      ],
+      "avoid_for": [
+        "flat vector",
+        "bright ads"
+      ],
+      "common_mistakes": [
+        "skipping halftones so it looks like split light",
+        "black shadows with no reflected light"
+      ],
+      "physics_notes": "Shading follows Lambert's cosine: brightness falls as the surface turns away from the light; reflected light from nearby surfaces lifts the shadow edge.",
+      "prompt_phrases": [
+        "chiaroscuro lighting, single window light from upper left, rich gradation from light to deep shadow",
+        "painterly volume, strong modelling, warm light and cool shadows"
+      ],
+      "eyewear_notes": "Paint/ask for one small bright highlight on the frame front and a dim reflection in the lens; keep the eye legible inside the shadow.",
+      "refs": [
+        "Gurney2010",
+        "Livingstone2002",
+        "Artistic"
+      ],
+      "evidence": "mixed"
+    },
+    {
+      "id": "tenebrism",
+      "name": "Tenebrism",
+      "name_th": "แสงตัดมืดจัด",
+      "category": "stylised",
+      "setup": "Extreme version of chiaroscuro: a narrow, hard beam lights only the subject; most of the frame falls to near-black.",
+      "key_direction": "high side, spot-like",
+      "source_size": "small/hard",
+      "intensity_ratio": "16:1 or more",
+      "color_temperature_k": [
+        2500,
+        4000
+      ],
+      "color_temperature_note": "Warm candle/lamp feel is typical.",
+      "shadow_quality": "abrupt, black",
+      "material_response": "Lit skin glows against void; metal flashes; dark materials vanish.",
+      "depth_and_form": "Selected forms leap from darkness; background depth disappears.",
+      "atmosphere": "theatrical, sacred, intense",
+      "mood": "revelation, intensity, solemnity",
+      "emotion_ids": [
+        "awe.awe",
+        "fear.dread",
+        "performance.eerie_calm"
+      ],
+      "best_for": [
+        "dramatic story climaxes",
+        "posters",
+        "single hero product"
+      ],
+      "avoid_for": [
+        "informational posts",
+        "busy scenes"
+      ],
+      "common_mistakes": [
+        "too many lit areas",
+        "losing the silhouette in black"
+      ],
+      "physics_notes": "Inverse square: for a compact source, doubling the distance quarters the illuminance (-2 stops); a close source falls off fast across the scene (dark background), a far one lights everything evenly. A focused source plus dark surroundings gives almost no ambient bounce.",
+      "prompt_phrases": [
+        "tenebrism, a single narrow beam of warm light, everything else in near-total darkness",
+        "dramatic baroque-style light on one figure"
+      ],
+      "eyewear_notes": "The beam's reflection in the lens can become a hot spot; aim the beam high so lenses show only a thin edge highlight.",
+      "refs": [
+        "Artistic"
+      ],
+      "evidence": "craft"
+    },
+    {
+      "id": "golden_hour",
+      "name": "Golden hour",
+      "name_th": "แสงช่วงทอง",
+      "category": "natural",
+      "setup": "Sun low (roughly 0-10° elevation), side- or backlight; open sky acts as cool fill; long shadows.",
+      "key_direction": "low side or back",
+      "source_size": "small/hard sun softened by atmosphere; large sky fill",
+      "intensity_ratio": "sun:sky 2:1 to 4:1",
+      "color_temperature_k": [
+        2500,
+        4000
+      ],
+      "color_temperature_note": "Direct low sun; the sky fill is much cooler.",
+      "shadow_quality": "long, warm-lit edges, cool-blue shadows",
+      "material_response": "Skin warm and glowing; metal frames flare gold; lenses can flare toward camera when backlit.",
+      "depth_and_form": "Raking light reveals texture; backlight separates subject; haze adds aerial depth.",
+      "atmosphere": "warm haze",
+      "mood": "nostalgic, romantic, hopeful",
+      "emotion_ids": [
+        "nostalgia.nostalgia",
+        "hope.hope",
+        "love.romantic",
+        "visual.warmth"
+      ],
+      "best_for": [
+        "Hua Hin beach clips",
+        "lifestyle eyewear",
+        "emotional endings"
+      ],
+      "avoid_for": [
+        "clinical product accuracy",
+        "cool brand looks"
+      ],
+      "common_mistakes": [
+        "shooting straight into sun without exposing for face",
+        "orange everything with no cool contrast"
+      ],
+      "physics_notes": "Rayleigh scattering removes blue from the long low-sun path (warm direct light) while the sky that remains acts as a blue fill. Penumbra width scales with the source's apparent angular size seen from the subject: larger or closer = softer edges and smoother gradients. Raising power only changes brightness, not hardness.",
+      "prompt_phrases": [
+        "golden hour, low warm sun from behind and to the left, long soft shadows, glowing rim on hair",
+        "warm sunlight with cool blue shadows, gentle haze"
+      ],
+      "eyewear_notes": "Backlit sun hits the lens surfaces at grazing angles (Fresnel) and may flare across the eyes; turn the face so the sun is behind-side, and ask for 'no lens flare over the eyes'. Sunglasses: a small warm highlight on the lens is attractive.",
+      "refs": [
+        "curriculum-04"
+      ],
+      "evidence": "mixed"
+    },
+    {
+      "id": "blue_hour",
+      "name": "Blue hour",
+      "name_th": "แสงช่วงฟ้าคราม",
+      "category": "natural",
+      "setup": "Sun just below the horizon; whole sky is a large soft blue source; warm practicals (windows, streetlights) start to read.",
+      "key_direction": "diffuse from the sky, brighter toward the sunset side",
+      "source_size": "very large/soft",
+      "intensity_ratio": "low contrast ambient; practicals pop 1-3 stops over",
+      "color_temperature_k": [
+        9000,
+        15000
+      ],
+      "color_temperature_note": "Approximate sky appearance; practicals 2700-3500 K.",
+      "shadow_quality": "almost none from sky; small hard ones from practicals",
+      "material_response": "Skin cool; glossy surfaces mirror the blue sky; lenses show cool sky reflection.",
+      "depth_and_form": "Low form from sky; depth from warm practical pools against blue.",
+      "atmosphere": "quiet, cool",
+      "mood": "calm, melancholy, contemplative",
+      "emotion_ids": [
+        "sadness.melancholy",
+        "calm.serenity",
+        "visual.peaceful_solitude",
+        "nostalgia.longing"
+      ],
+      "best_for": [
+        "city/shopfront at dusk",
+        "calm story frames",
+        "warm/cool contrast"
+      ],
+      "avoid_for": [
+        "bright cheerful ads"
+      ],
+      "common_mistakes": [
+        "waiting too long (black sky)",
+        "white-balancing the blue away"
+      ],
+      "physics_notes": "After sunset the remaining scattered skylight is dominated by short wavelengths; there is no direct sun, so the source is the whole sky.",
+      "prompt_phrases": [
+        "blue hour dusk, deep blue sky, warm glowing shop windows",
+        "cool ambient twilight with small warm practical lights"
+      ],
+      "eyewear_notes": "Lenses mirror the blue sky; a warm shop-light catch on the frame adds a nice warm/cool accent. Keep the eye visible with a soft warm face light from a motivated window.",
+      "refs": [
+        "curriculum-04"
+      ],
+      "evidence": "mixed"
+    },
+    {
+      "id": "overcast_soft",
+      "name": "Overcast soft",
+      "name_th": "แสงฟ้าครึ้ม",
+      "category": "natural",
+      "setup": "Cloud layer diffuses the sun into a huge overhead softbox; use a roof edge or dark side (negative fill) to add direction.",
+      "key_direction": "top, slightly toward the brighter sky",
+      "source_size": "very large/soft",
+      "intensity_ratio": "1.5:1 to 2:1 (raise with negative fill)",
+      "color_temperature_k": [
+        6000,
+        7500
+      ],
+      "color_temperature_note": "Cool; warm up slightly for skin.",
+      "shadow_quality": "very soft, under-eye and under-chin shadows",
+      "material_response": "True colours, no glare; metal looks dull; matte fabric excellent.",
+      "depth_and_form": "Low modelling; can look flat without negative fill.",
+      "atmosphere": "muted, calm",
+      "mood": "quiet, honest, melancholic",
+      "emotion_ids": [
+        "calm.acceptance",
+        "sadness.melancholy",
+        "low.boredom"
+      ],
+      "best_for": [
+        "accurate product colour",
+        "documentary",
+        "calm carousels"
+      ],
+      "avoid_for": [
+        "drama",
+        "sparkle"
+      ],
+      "common_mistakes": [
+        "flat faces without negative fill",
+        "racoon eyes from pure top light"
+      ],
+      "physics_notes": "Penumbra width scales with the source's apparent angular size seen from the subject: larger or closer = softer edges and smoother gradients. Raising power only changes brightness, not hardness.",
+      "prompt_phrases": [
+        "soft overcast daylight, diffused even light, gentle shadows",
+        "cloudy-day light with true colours"
+      ],
+      "eyewear_notes": "Large uniform sky gives soft reflections over the whole lens; request 'clear lenses, minimal reflection' and show a darker area (trees, wall) mirrored in the lens so the eyes read.",
+      "refs": [
+        "curriculum-04"
+      ],
+      "evidence": "mixed"
+    },
+    {
+      "id": "midday_hard",
+      "name": "Midday hard sun",
+      "name_th": "แดดเที่ยงจัด",
+      "category": "natural",
+      "setup": "High sun (50-90° elevation), direct, with blue sky fill; optional scrim or bounce to control faces.",
+      "key_direction": "top",
+      "source_size": "small/hard",
+      "intensity_ratio": "up to 8:1+ without fill",
+      "color_temperature_k": [
+        5000,
+        6000
+      ],
+      "color_temperature_note": "Direct daylight around 5500 K.",
+      "shadow_quality": "short, black, sharp",
+      "material_response": "Intense speculars on metal, water, lenses; skin shine; saturated colours.",
+      "depth_and_form": "Top-down shadows hide eyes, emphasise top surfaces.",
+      "atmosphere": "hot, harsh",
+      "mood": "energetic, harsh, summery",
+      "emotion_ids": [
+        "hope.excitement",
+        "anger.irritation",
+        "low.fatigue"
+      ],
+      "best_for": [
+        "UV/sunglasses messaging",
+        "graphic hard-shadow fashion",
+        "beach energy"
+      ],
+      "avoid_for": [
+        "flattering faces",
+        "soft emotion"
+      ],
+      "common_mistakes": [
+        "eye sockets black",
+        "clipped speculars"
+      ],
+      "physics_notes": "The sun subtends about 0.5°, so even though it is huge it is effectively a small source: sharp shadows. Angle of incidence = angle of reflection: a highlight on glass, varnish or metal is a mirror image of the source; move the source or tilt the surface to move it.",
+      "prompt_phrases": [
+        "harsh midday sun, short hard shadows, intense bright light",
+        "hard graphic shadows on the ground, vivid saturated colours"
+      ],
+      "eyewear_notes": "Good context for UV/sunglass content (pterygium, glare). For readable eyes, shade the face or use sunglasses as the subject; frames cast crisp shadow shapes that can be a graphic element.",
+      "refs": [
+        "curriculum-04"
+      ],
+      "evidence": "mixed"
+    },
+    {
+      "id": "window_side",
+      "name": "Window side light",
+      "name_th": "แสงหน้าต่างด้านข้าง",
+      "category": "natural",
+      "setup": "Subject 0.5-2 m from a window, 45-90° to it; window acts as a large soft key; room or a white card fills the far side.",
+      "key_direction": "side, at window height",
+      "source_size": "large/soft (indirect skylight) or hard (direct sun)",
+      "intensity_ratio": "2:1 to 8:1 depending on distance to far wall",
+      "color_temperature_k": [
+        5000,
+        7000
+      ],
+      "color_temperature_note": "Skylight; direct sun warmer.",
+      "shadow_quality": "soft, quick falloff across the face",
+      "material_response": "Skin natural; frames get a long window-shaped highlight; lenses mirror the window shape.",
+      "depth_and_form": "Beautiful form via falloff; background darkens with distance from window.",
+      "atmosphere": "intimate, domestic",
+      "mood": "quiet, reflective, honest",
+      "emotion_ids": [
+        "calm.serenity",
+        "nostalgia.nostalgia",
+        "love.tenderness",
+        "visual.coziness"
+      ],
+      "best_for": [
+        "shop interior portraits",
+        "slow-living carousels",
+        "reading/near-vision clips"
+      ],
+      "avoid_for": [
+        "even catalogue lighting"
+      ],
+      "common_mistakes": [
+        "subject too far from window (dim, flat)",
+        "window blown out in frame with no control"
+      ],
+      "physics_notes": "Inverse square: for a compact source, doubling the distance quarters the illuminance (-2 stops); a close source falls off fast across the scene (dark background), a far one lights everything evenly. Penumbra width scales with the source's apparent angular size seen from the subject: larger or closer = softer edges and smoother gradients. Raising power only changes brightness, not hardness.",
+      "prompt_phrases": [
+        "soft window light from the left, gentle falloff into shadow on the right side of the face",
+        "natural side light from a large window, quiet interior"
+      ],
+      "eyewear_notes": "Lens shows a rectangular window reflection when the face turns toward it; turn the face 20-30° away or raise the subject so the reflection leaves the lens. A small window catch on the frame edge is welcome.",
+      "refs": [
+        "curriculum-04"
+      ],
+      "evidence": "mixed"
+    },
+    {
+      "id": "north_window",
+      "name": "North window (studio skylight)",
+      "name_th": "หน้าต่างทิศเหนือ",
+      "category": "natural",
+      "setup": "Large window receiving only skylight, never direct sun (north-facing in the northern hemisphere), often high; constant cool soft light for painters.",
+      "key_direction": "high side",
+      "source_size": "large/soft",
+      "intensity_ratio": "3:1 to 5:1",
+      "color_temperature_k": [
+        6500,
+        8000
+      ],
+      "color_temperature_note": "Cool skylight; colour stays consistent through the day.",
+      "shadow_quality": "soft but directional, cool light / warmer shadows in painting convention",
+      "material_response": "Accurate colour, gentle sheen on metal; matte surfaces modelled softly.",
+      "depth_and_form": "Classic atelier modelling, reliable form shadows.",
+      "atmosphere": "studio, quiet",
+      "mood": "calm, studious, timeless",
+      "emotion_ids": [
+        "calm.serenity",
+        "cognitive.interest",
+        "nostalgia.nostalgia"
+      ],
+      "best_for": [
+        "painterly portraits",
+        "still life",
+        "charcoal/oil styles"
+      ],
+      "avoid_for": [
+        "energetic ads"
+      ],
+      "common_mistakes": [
+        "mixing with warm room light unintentionally"
+      ],
+      "physics_notes": "No direct sun means the source is the sky patch seen through the opening: stable intensity and colour. In Thailand (low latitude) a north window still mostly avoids direct sun.",
+      "prompt_phrases": [
+        "cool north window light from high on the left, soft directional studio light",
+        "artist studio skylight, calm even modelling"
+      ],
+      "eyewear_notes": "High window keeps reflections in the upper lens; tilt the frames slightly down in product still lifes.",
+      "refs": [
+        "Gurney2010",
+        "Artistic"
+      ],
+      "evidence": "craft"
+    },
+    {
+      "id": "practical_lamp",
+      "name": "Practical lamp",
+      "name_th": "โคมไฟในฉาก",
+      "category": "practical",
+      "setup": "A visible lamp in frame motivates the key; a hidden film light matching its direction, colour and hardness does the real work; ambient kept low.",
+      "key_direction": "from the lamp's position",
+      "source_size": "small to medium (shade)",
+      "intensity_ratio": "4:1 to 8:1",
+      "color_temperature_k": [
+        2700,
+        3200
+      ],
+      "color_temperature_note": "Tungsten/warm LED.",
+      "shadow_quality": "warm pool, quick falloff",
+      "material_response": "Skin golden; metal frames warm-gold glints; lenses mirror the lamp as a small bright shape.",
+      "depth_and_form": "Pools of light create depth zones.",
+      "atmosphere": "cozy, intimate",
+      "mood": "warm, private, nocturnal",
+      "emotion_ids": [
+        "visual.coziness",
+        "visual.warmth",
+        "love.tenderness",
+        "performance.storyteller_warmth"
+      ],
+      "best_for": [
+        "ร้านแว่นตีสอง",
+        "reading scenes",
+        "night interiors"
+      ],
+      "avoid_for": [
+        "bright daytime ads"
+      ],
+      "common_mistakes": [
+        "face lit from a direction with no lamp",
+        "lamp blown out with no detail"
+      ],
+      "physics_notes": "Inverse square: for a compact source, doubling the distance quarters the illuminance (-2 stops); a close source falls off fast across the scene (dark background), a far one lights everything evenly. Motivated light must match source direction, colour and hardness (curriculum-04).",
+      "prompt_phrases": [
+        "lit only by a warm table lamp beside her, soft pool of 2700K light, the rest of the room in shadow",
+        "motivated practical lighting from a desk lamp"
+      ],
+      "eyewear_notes": "Lamp in frame will appear in lenses facing it; place it beside rather than in front, or let a tiny lamp reflection sit at the lens edge. Glasses: keep the key above eye level and/or well off the lens axis so its mirror image bounces out of the lens toward floor or side; a slight chin-down or head turn away from the key moves it further; ask for 'clear anti-reflective lenses, eyes fully visible, no glare'. Do not remove every reflection: a faint edge highlight proves a lens is there (house 'lens layer' rule).",
+      "refs": [
+        "curriculum-04"
+      ],
+      "evidence": "craft"
+    },
+    {
+      "id": "candle_fire",
+      "name": "Candle / firelight",
+      "name_th": "แสงเทียน/ไฟกองไฟ",
+      "category": "practical",
+      "setup": "Low warm flicker source close to the face, usually below or at chin height; deep surrounding dark.",
+      "key_direction": "low front/side",
+      "source_size": "small (candle) to medium (fire)",
+      "intensity_ratio": "8:1+",
+      "color_temperature_k": [
+        1800,
+        2000
+      ],
+      "color_temperature_note": "Flame around 1800-2000 K.",
+      "shadow_quality": "soft-ish near, flickering edges",
+      "material_response": "Skin deep orange; metal warm glints; lenses glow orange.",
+      "depth_and_form": "Strong falloff; only near surfaces lit.",
+      "atmosphere": "intimate, primal",
+      "mood": "intimacy, storytelling, secrecy",
+      "emotion_ids": [
+        "visual.coziness",
+        "love.romantic",
+        "performance.storyteller_warmth",
+        "visual.mystery"
+      ],
+      "best_for": [
+        "ghost/folk tales",
+        "romantic scenes",
+        "festival frames"
+      ],
+      "avoid_for": [
+        "accurate product colour"
+      ],
+      "common_mistakes": [
+        "flame bright but face unrealistically even",
+        "no flicker in video"
+      ],
+      "physics_notes": "Inverse square: for a compact source, doubling the distance quarters the illuminance (-2 stops); a close source falls off fast across the scene (dark background), a far one lights everything evenly. Strong falloff because the source is so close.",
+      "prompt_phrases": [
+        "lit only by candlelight, warm flickering 1800K glow on the face, deep darkness around",
+        "firelight dancing on faces"
+      ],
+      "eyewear_notes": "Candle in front makes twin flame reflections in the lenses: cute in a story frame, distracting in a product frame. Move the flame off-axis.",
+      "refs": [
+        "curriculum-04"
+      ],
+      "evidence": "mixed"
+    },
+    {
+      "id": "neon_night",
+      "name": "Neon night",
+      "name_th": "ไฟนีออนกลางคืน",
+      "category": "practical",
+      "setup": "Coloured signs (magenta, cyan, red) as motivated keys and rims; wet ground reflects; low ambient.",
+      "key_direction": "side or back from signs",
+      "source_size": "linear tubes = medium/soft in one axis",
+      "intensity_ratio": "high, 8:1",
+      "color_temperature_k": null,
+      "color_temperature_note": "Saturated non-white colours, not on the Kelvin scale; mix with a 3000 K warm practical for skin.",
+      "shadow_quality": "coloured, soft-edged along tube length",
+      "material_response": "Skin takes colour casts; glossy frames carry coloured streaks; lenses mirror signs.",
+      "depth_and_form": "Colour separates planes (teal BG, magenta key).",
+      "atmosphere": "urban, wet, electric",
+      "mood": "edgy, lonely, energetic",
+      "emotion_ids": [
+        "sadness.loneliness",
+        "hope.excitement",
+        "visual.mystery"
+      ],
+      "best_for": [
+        "cyberpunk styles",
+        "night Bangkok soi",
+        "Reels hooks"
+      ],
+      "avoid_for": [
+        "accurate frame colour"
+      ],
+      "common_mistakes": [
+        "too many colours, green-purple skin patches",
+        "dry ground with no reflections"
+      ],
+      "physics_notes": "Angle of incidence = angle of reflection: a highlight on glass, varnish or metal is a mirror image of the source; move the source or tilt the surface to move it. Wet surfaces turn diffuse into specular, doubling the light sources in frame.",
+      "prompt_phrases": [
+        "neon night, magenta and cyan sign light on her face, wet asphalt reflections",
+        "rainy street lit by red neon, deep shadows"
+      ],
+      "eyewear_notes": "Neon streaks on lenses look stylish; keep them on the lens edge and the eyes clear. Real frame colour will shift — state 'true frame colour kept' or do a separate product shot.",
+      "refs": [
+        "curriculum-04"
+      ],
+      "evidence": "craft"
+    },
+    {
+      "id": "streetlight_sodium",
+      "name": "Sodium streetlight",
+      "name_th": "ไฟถนนโซเดียม",
+      "category": "practical",
+      "setup": "High overhead orange-yellow streetlights in pools along a street; little fill between pools.",
+      "key_direction": "top",
+      "source_size": "small/hard at distance",
+      "intensity_ratio": "high, pools vs dark",
+      "color_temperature_k": [
+        1900,
+        2200
+      ],
+      "color_temperature_note": "Low-pressure sodium is near-monochromatic (~589 nm) so a Kelvin value is only an approximation; high-pressure sodium ~2000-2200 K.",
+      "shadow_quality": "hard, top-down",
+      "material_response": "Colours collapse toward orange/brown (monochromatic light kills colour discrimination); metal yellow.",
+      "depth_and_form": "Pools mark depth along the street.",
+      "atmosphere": "gritty, late night",
+      "mood": "loneliness, nostalgia, unease",
+      "emotion_ids": [
+        "sadness.loneliness",
+        "nostalgia.nostalgia",
+        "fear.anxiety"
+      ],
+      "best_for": [
+        "night story frames",
+        "retro city"
+      ],
+      "avoid_for": [
+        "product colour",
+        "ads"
+      ],
+      "common_mistakes": [
+        "mixing with white LED unintentionally",
+        "faces with black eye sockets"
+      ],
+      "physics_notes": "Near-monochromatic light means surfaces differ only in lightness, not hue.",
+      "prompt_phrases": [
+        "orange sodium streetlight from above, pools of light on an empty street",
+        "late-night sodium-vapour glow, gritty"
+      ],
+      "eyewear_notes": "Top light shadows the eyes under the frame bar; tilt face up toward the lamp or add a faint cool fill. Lenses mirror lamp pools as orange dots.",
+      "refs": [
+        "Fairchild2013",
+        "Artistic"
+      ],
+      "evidence": "mixed"
+    },
+    {
+      "id": "moonlight_blue",
+      "name": "Moonlight (blue)",
+      "name_th": "แสงจันทร์สีน้ำเงิน",
+      "category": "practical",
+      "setup": "Cinematic convention: a cool, often high backlight or side light suggests the moon; warm practicals inside; underexposed overall but readable.",
+      "key_direction": "high back or side",
+      "source_size": "hard (single moon) or soft (large lit sky)",
+      "intensity_ratio": "8:1 with rim",
+      "color_temperature_k": [
+        5600,
+        8000
+      ],
+      "color_temperature_note": "Real moonlight is reflected sunlight (slightly warmer); the blue look is a film/perception convention (low-light vision shifts toward blue).",
+      "shadow_quality": "hard edges when single source",
+      "material_response": "Skin cool, desaturated; metal silver; lenses mirror cool highlights.",
+      "depth_and_form": "Rims and edges carry form.",
+      "atmosphere": "cold, still",
+      "mood": "quiet, eerie, romantic",
+      "emotion_ids": [
+        "performance.eerie_calm",
+        "visual.mystery",
+        "visual.peaceful_solitude"
+      ],
+      "best_for": [
+        "ร้านแว่นตีสอง",
+        "ghost scenes",
+        "night exteriors"
+      ],
+      "avoid_for": [
+        "daylight product"
+      ],
+      "common_mistakes": [
+        "blue everywhere with no warm accent",
+        "too dark to read on phone"
+      ],
+      "physics_notes": "Under dim (mesopic) conditions human vision shifts sensitivity toward shorter wavelengths (Purkinje shift), one reason blue reads as night.",
+      "prompt_phrases": [
+        "cool blue moonlight backlighting the scene, warm window glow inside",
+        "night lit by pale blue moonlight, silver rim light on shoulders"
+      ],
+      "eyewear_notes": "Cool rim along the frame top outlines it nicely; keep a warm eye-light so the eyes behind the lens stay alive.",
+      "refs": [
+        "curriculum-04",
+        "Livingstone2002"
+      ],
+      "evidence": "mixed"
+    },
+    {
+      "id": "volumetric_god_rays",
+      "name": "Volumetric god rays",
+      "name_th": "ลำแสงทะลุหมอก",
+      "category": "cinematic",
+      "setup": "Hard source (sun, spot) through gaps (window, trees, blinds) into haze/dust/smoke; camera looks across or toward the beams.",
+      "key_direction": "side/back, toward camera",
+      "source_size": "small/hard",
+      "intensity_ratio": "beams 2-4 stops over haze",
+      "color_temperature_k": [
+        3000,
+        6000
+      ],
+      "color_temperature_note": "Warm sun shafts or cool spot.",
+      "shadow_quality": "crisp shafts with shadow gaps",
+      "material_response": "Dust glitters; skin edge-lit; lenses may flare when beams enter them.",
+      "depth_and_form": "Beams describe 3D space and distance.",
+      "atmosphere": "hazy, sacred",
+      "mood": "awe, hope, revelation",
+      "emotion_ids": [
+        "awe.awe",
+        "hope.hope",
+        "visual.majesty"
+      ],
+      "best_for": [
+        "revelation moments",
+        "forest/temple scenes",
+        "story openers"
+      ],
+      "avoid_for": [
+        "clean product",
+        "flat graphics"
+      ],
+      "common_mistakes": [
+        "rays from several directions",
+        "fog so dense the subject is lost"
+      ],
+      "physics_notes": "Visible beams need scattering particles (Mie scattering from dust/droplets); scattering is strongest looking toward the source (forward scattering).",
+      "prompt_phrases": [
+        "volumetric god rays through a window into dusty air",
+        "sunbeams cutting through haze, visible light shafts"
+      ],
+      "eyewear_notes": "Beams that hit the lens can create flare; place the subject beside the beam, with a shaft crossing the background.",
+      "refs": [
+        "Artistic"
+      ],
+      "evidence": "mixed"
+    },
+    {
+      "id": "fog_atmospheric",
+      "name": "Fog / atmospheric haze",
+      "name_th": "หมอกและบรรยากาศ",
+      "category": "natural",
+      "setup": "Haze or fog reduces contrast with distance; backlight increases glow; subject close to camera stays clear.",
+      "key_direction": "back or side",
+      "source_size": "large/soft (fog scatters light)",
+      "intensity_ratio": "low",
+      "color_temperature_k": [
+        4000,
+        8000
+      ],
+      "color_temperature_note": "Takes the colour of the light sources.",
+      "shadow_quality": "weak, blurred",
+      "material_response": "Distant objects lose saturation; near metal still glints.",
+      "depth_and_form": "Aerial perspective: distance = lighter, lower contrast, bluer (curriculum-03).",
+      "atmosphere": "soft, mysterious",
+      "mood": "mystery, melancholy, calm",
+      "emotion_ids": [
+        "visual.mystery",
+        "sadness.melancholy",
+        "calm.serenity"
+      ],
+      "best_for": [
+        "layered depth compositions",
+        "dreamy story frames"
+      ],
+      "avoid_for": [
+        "product detail"
+      ],
+      "common_mistakes": [
+        "fog equal everywhere (no depth)",
+        "subject also fogged"
+      ],
+      "physics_notes": "Scattering adds veiling light and reduces contrast in proportion to distance (aerial perspective).",
+      "prompt_phrases": [
+        "morning fog, layers fading into soft grey distance",
+        "atmospheric haze, distant mountains pale and blue"
+      ],
+      "eyewear_notes": "Keep the eyewear in the near, clear layer; fog behind makes frame edges read.",
+      "refs": [
+        "curriculum-03",
+        "Artistic"
+      ],
+      "evidence": "mixed"
+    },
+    {
+      "id": "underwater_caustics",
+      "name": "Underwater caustics",
+      "name_th": "ลายแสงใต้น้ำ",
+      "category": "natural",
+      "setup": "Sunlight refracted by a moving water surface forms bright dancing lines on surfaces below; blue-green colour, light from above.",
+      "key_direction": "top",
+      "source_size": "sun (hard) modulated by waves",
+      "intensity_ratio": "high local contrast in caustic lines",
+      "color_temperature_k": null,
+      "color_temperature_note": "Water absorbs red first, leaving blue-cyan; not a single Kelvin value.",
+      "shadow_quality": "rippling network of light",
+      "material_response": "Skin patterned; metal shimmer; glass refracts further.",
+      "depth_and_form": "Pattern drapes over form, revealing contours.",
+      "atmosphere": "liquid, dreamy",
+      "mood": "dreamy, calm, playful",
+      "emotion_ids": [
+        "calm.serenity",
+        "awe.childlike_wonder",
+        "visual.peaceful_solitude"
+      ],
+      "best_for": [
+        "pool/beach themes",
+        "summer sunglasses",
+        "dreamy nature clips"
+      ],
+      "avoid_for": [
+        "accurate colour"
+      ],
+      "common_mistakes": [
+        "caustics on surfaces above water",
+        "static pattern in video"
+      ],
+      "physics_notes": "Refraction at a curved surface focuses light into caustic curves; water absorbs long wavelengths with depth.",
+      "prompt_phrases": [
+        "sunlight caustics rippling across the sandy pool floor",
+        "shimmering water light patterns on skin"
+      ],
+      "eyewear_notes": "Rippling light over sunglasses on a poolside table is a good summer product idea; caustic patterns on the frame read as motion.",
+      "refs": [
+        "Artistic"
+      ],
+      "evidence": "mixed"
+    },
+    {
+      "id": "dappled_foliage",
+      "name": "Dappled foliage light",
+      "name_th": "แสงลอดใบไม้",
+      "category": "natural",
+      "setup": "Sun through leaves; gaps act as pinhole cameras projecting round/elliptical sun spots; shade elsewhere.",
+      "key_direction": "top side",
+      "source_size": "hard spots",
+      "intensity_ratio": "spots 3-4 stops over shade",
+      "color_temperature_k": [
+        4500,
+        6000
+      ],
+      "color_temperature_note": "Shade is green-tinted by leaf bounce.",
+      "shadow_quality": "mottled",
+      "material_response": "Skin speckled; frames sparkle where hit.",
+      "depth_and_form": "Breaks form into patches; can confuse faces.",
+      "atmosphere": "lively, natural",
+      "mood": "playful, peaceful, summery",
+      "emotion_ids": [
+        "calm.serenity",
+        "joy.contentment",
+        "nostalgia.nostalgia"
+      ],
+      "best_for": [
+        "nature eye-break clips",
+        "summer lifestyle"
+      ],
+      "avoid_for": [
+        "clear face reading",
+        "precise product"
+      ],
+      "common_mistakes": [
+        "bright spot on a cheek or on the lens",
+        "green colour cast on skin"
+      ],
+      "physics_notes": "Small leaf gaps act as pinholes, so spots are images of the sun disc (ellipses on angled ground).",
+      "prompt_phrases": [
+        "dappled sunlight through leaves, round sun spots on the ground",
+        "soft shade with flecks of sunlight"
+      ],
+      "eyewear_notes": "Avoid a sun spot on the lens; place the face in open shade with dapples on background or shoulders.",
+      "refs": [
+        "Artistic"
+      ],
+      "evidence": "mixed"
+    },
+    {
+      "id": "spotlight_theatrical",
+      "name": "Theatrical spotlight",
+      "name_th": "สปอตไลต์เวที",
+      "category": "stylised",
+      "setup": "Hard spot with a crisp circular pool on a dark stage, from above-front; nothing else lit.",
+      "key_direction": "high front",
+      "source_size": "small/hard (focused)",
+      "intensity_ratio": "pool vs dark ≥ 16:1",
+      "color_temperature_k": [
+        3000,
+        5600
+      ],
+      "color_temperature_note": "Tungsten or daylight spot.",
+      "shadow_quality": "hard, cast shadow inside the pool",
+      "material_response": "Subject glows; metal glints.",
+      "depth_and_form": "Pool isolates subject; ground circle anchors it.",
+      "atmosphere": "theatrical",
+      "mood": "announcement, loneliness, focus",
+      "emotion_ids": [
+        "will.triumph",
+        "selfconscious.shyness",
+        "sadness.loneliness"
+      ],
+      "best_for": [
+        "product reveal",
+        "single message slides",
+        "comedy beat"
+      ],
+      "avoid_for": [
+        "natural scenes"
+      ],
+      "common_mistakes": [
+        "pool edge cutting the subject",
+        "spill lighting the background"
+      ],
+      "physics_notes": "A focusing optic (ellipsoidal/fresnel lens) narrows the beam: pool edge sharpness depends on focus.",
+      "prompt_phrases": [
+        "single theatrical spotlight from above, crisp circle of light on a dark stage",
+        "one product under a hard spotlight, darkness around"
+      ],
+      "eyewear_notes": "Frames on a pedestal under a spot: aim slightly behind to rim the frame and avoid a hot spot in the lens.",
+      "refs": [
+        "Artistic"
+      ],
+      "evidence": "craft"
+    },
+    {
+      "id": "top_light",
+      "name": "Top light",
+      "name_th": "แสงจากด้านบน",
+      "category": "cinematic",
+      "setup": "Source directly above the subject; little fill; eyes fall into shadow.",
+      "key_direction": "overhead",
+      "source_size": "small/hard (ominous) or large (soft overhead office)",
+      "intensity_ratio": "4:1 to 16:1",
+      "color_temperature_k": [
+        3000,
+        6500
+      ],
+      "color_temperature_note": "Any.",
+      "shadow_quality": "under brows, nose, chin",
+      "material_response": "Tops of hair, shoulders, frame top bar lit; lenses in shadow.",
+      "depth_and_form": "Strong vertical modelling; hides eyes.",
+      "atmosphere": "interrogation, isolation",
+      "mood": "menace, secrecy, oppression",
+      "emotion_ids": [
+        "fear.quiet_menace",
+        "sadness.despair",
+        "visual.mystery"
+      ],
+      "best_for": [
+        "interrogation/villain frames",
+        "overhead product flatlay (soft)"
+      ],
+      "avoid_for": [
+        "faces in ads"
+      ],
+      "common_mistakes": [
+        "eyes completely lost when a story needs them"
+      ],
+      "physics_notes": "Penumbra width scales with the source's apparent angular size seen from the subject: larger or closer = softer edges and smoother gradients. Raising power only changes brightness, not hardness.",
+      "prompt_phrases": [
+        "hard top light, eyes in shadow under the brow",
+        "single overhead lamp, dark surroundings"
+      ],
+      "eyewear_notes": "Frame top bar shadows the eyes; with soft overhead light on a flatlay, reflections sit as one long soft panel across both lenses — usually attractive.",
+      "refs": [
+        "Artistic"
+      ],
+      "evidence": "craft"
+    },
+    {
+      "id": "under_light_horror",
+      "name": "Under light (horror)",
+      "name_th": "ไฟจากด้านล่าง (สยอง)",
+      "category": "stylised",
+      "setup": "Source below the face pointing up (flashlight, campfire); shadows go upward, against everyday experience of top light.",
+      "key_direction": "below",
+      "source_size": "small/hard",
+      "intensity_ratio": "8:1+",
+      "color_temperature_k": [
+        2000,
+        6500
+      ],
+      "color_temperature_note": "Flashlight white or warm fire.",
+      "shadow_quality": "upward hard shadows over brows and nose",
+      "material_response": "Under-surfaces lit; lenses catch light from below.",
+      "depth_and_form": "Inverted form, unsettling.",
+      "atmosphere": "spooky",
+      "mood": "horror, campfire tale, comedy-spooky",
+      "emotion_ids": [
+        "fear.fear",
+        "performance.eerie_calm",
+        "joy.mischief"
+      ],
+      "best_for": [
+        "ghost story frames",
+        "campfire jokes"
+      ],
+      "avoid_for": [
+        "any sales or friendly portrait"
+      ],
+      "common_mistakes": [
+        "accidental under-light from a bright floor or a too-strong reflector"
+      ],
+      "physics_notes": "Perception tends to assume light from above (shape-from-shading 'light-from-above' prior); breaking it reads as wrong/unnatural.",
+      "prompt_phrases": [
+        "flashlight under the chin lighting the face from below, spooky shadows going upward",
+        "eerie under-lighting"
+      ],
+      "eyewear_notes": "Light from below reflects up out of the lens toward the forehead, so lenses usually stay clear; the frame casts an upward shadow onto the brow.",
+      "refs": [
+        "Livingstone2002",
+        "Artistic"
+      ],
+      "evidence": "mixed"
+    },
+    {
+      "id": "cross_light",
+      "name": "Cross light",
+      "name_th": "ไฟไขว้",
+      "category": "cinematic",
+      "setup": "Two sources from opposite sides, each partly behind the subject (kicker/key pair), often for two people facing each other: each one's key is the other's rim.",
+      "key_direction": "two opposite sides, 90-135°",
+      "source_size": "medium/hard",
+      "intensity_ratio": "each side ~1:1, centre of face darker",
+      "color_temperature_k": [
+        3200,
+        6500
+      ],
+      "color_temperature_note": "Often one warm and one cool.",
+      "shadow_quality": "central shadow stripe down the face",
+      "material_response": "Both edges lit; textures raked from two sides.",
+      "depth_and_form": "Strong edge separation, dramatic volume.",
+      "atmosphere": "tense",
+      "mood": "confrontation, energy",
+      "emotion_ids": [
+        "anger.hot",
+        "conflict.pride_vs_hurt",
+        "will.determination"
+      ],
+      "best_for": [
+        "two-character confrontations",
+        "sports/action",
+        "dark product edges"
+      ],
+      "avoid_for": [
+        "soft portraits"
+      ],
+      "common_mistakes": [
+        "double nose shadows",
+        "both lights in frame flaring"
+      ],
+      "physics_notes": "Penumbra width scales with the source's apparent angular size seen from the subject: larger or closer = softer edges and smoother gradients. Raising power only changes brightness, not hardness.",
+      "prompt_phrases": [
+        "cross lighting, two hard lights from opposite sides behind the subject, bright edges on both sides",
+        "warm light from the left and cool light from the right, centre of the face in shadow"
+      ],
+      "eyewear_notes": "Both temple arms and rim edges catch a line — a strong way to show frame thickness. Lenses often reflect one source: check each.",
+      "refs": [
+        "Artistic"
+      ],
+      "evidence": "craft"
+    },
+    {
+      "id": "bounce_fill_warm",
+      "name": "Warm bounce fill",
+      "name_th": "เติมแสงสะท้อนโทนอุ่น",
+      "category": "portrait",
+      "setup": "Key as needed; fill comes from a gold/warm card or a warm-coloured wall bounce on the shadow side.",
+      "key_direction": "key side any; fill opposite near camera",
+      "source_size": "large/soft (bounce)",
+      "intensity_ratio": "key:fill 2:1 to 3:1",
+      "color_temperature_k": [
+        3000,
+        4000
+      ],
+      "color_temperature_note": "Fill warmer than the key by design.",
+      "shadow_quality": "soft, warm shadows",
+      "material_response": "Skin healthy glow; gold frames enriched.",
+      "depth_and_form": "Shadows stay luminous, less contrast.",
+      "atmosphere": "sunny, cozy",
+      "mood": "warm, healthy, friendly",
+      "emotion_ids": [
+        "visual.warmth",
+        "joy.contentment",
+        "care.reassurance"
+      ],
+      "best_for": [
+        "outdoor portraits",
+        "gold/tortoise frames",
+        "warm brand content"
+      ],
+      "avoid_for": [
+        "cool clinical looks"
+      ],
+      "common_mistakes": [
+        "gold card too strong (orange skin)",
+        "fill colour clashing with the key"
+      ],
+      "physics_notes": "A bounce surface becomes a large source tinted by its reflectance spectrum; nearby coloured walls do this unintentionally.",
+      "prompt_phrases": [
+        "warm golden bounce light filling the shadows",
+        "soft warm fill from a gold reflector"
+      ],
+      "eyewear_notes": "Gold card below can reflect as a warm arc in the lower lens: keep it off-axis or low.",
+      "refs": [
+        "curriculum-04"
+      ],
+      "evidence": "craft"
+    },
+    {
+      "id": "ambient_occlusion_only",
+      "name": "Ambient occlusion only",
+      "name_th": "เงาจากการบังแสงรอบทิศ",
+      "category": "rendering",
+      "setup": "CG concept: shade each point by how much of the surrounding hemisphere is blocked by nearby geometry under uniform sky light; no direct light, no colour bleed.",
+      "key_direction": "none (uniform hemisphere)",
+      "source_size": "infinite uniform sky",
+      "intensity_ratio": "contact shadows only",
+      "color_temperature_k": null,
+      "color_temperature_note": "Usually rendered grey/neutral; colour is not part of the concept.",
+      "shadow_quality": "soft dark contact shadows in creases and where objects meet",
+      "material_response": "All materials look like uniform clay; no reflections.",
+      "depth_and_form": "Shows contact and crevices clearly; good for reading shape.",
+      "atmosphere": "clinical, model-like",
+      "mood": "neutral, technical, calm",
+      "emotion_ids": [
+        "calm.serenity",
+        "cognitive.interest",
+        "stance.indifference"
+      ],
+      "best_for": [
+        "clay renders",
+        "isometric_3d",
+        "technical explainers",
+        "shape previews"
+      ],
+      "avoid_for": [
+        "photoreal product",
+        "emotional scenes"
+      ],
+      "common_mistakes": [
+        "over-dark AO halos",
+        "mistaking AO for full lighting"
+      ],
+      "physics_notes": "AO is an approximation of occluded skylight, not physically correct light transport (no bounce).",
+      "prompt_phrases": [
+        "clay render with ambient occlusion only, uniform white material, soft contact shadows, neutral grey studio",
+        "untextured grey model, soft occlusion shading"
+      ],
+      "eyewear_notes": "Useful for a frame shape study: all-white clay frame on white with soft contact shadow shows the silhouette without reflections. Not suitable for lens realism.",
+      "refs": [
+        "Artistic"
+      ],
+      "evidence": "craft"
+    },
+    {
+      "id": "global_illumination_interior",
+      "name": "Global illumination interior",
+      "name_th": "แสงสะท้อนรอบทิศในห้อง",
+      "category": "rendering",
+      "setup": "CG concept: light from windows/lamps bounces between surfaces; walls and floors become secondary sources that tint and soften the room.",
+      "key_direction": "from windows/practicals, then indirect everywhere",
+      "source_size": "large/soft (indirect)",
+      "intensity_ratio": "2:1 to 4:1 indoors",
+      "color_temperature_k": [
+        3000,
+        6500
+      ],
+      "color_temperature_note": "Daylight windows + warm practicals typical.",
+      "shadow_quality": "soft, colour-bled",
+      "material_response": "White walls pick up floor colour; wood warms the room; metals mirror the bright window.",
+      "depth_and_form": "Natural depth through light gradient from window to back of room.",
+      "atmosphere": "lived-in, realistic",
+      "mood": "calm, homely, aspirational",
+      "emotion_ids": [
+        "visual.coziness",
+        "calm.serenity",
+        "joy.contentment"
+      ],
+      "best_for": [
+        "interior_render",
+        "shop interior concepts",
+        "architectural_visualization"
+      ],
+      "avoid_for": [
+        "flat stylised looks"
+      ],
+      "common_mistakes": [
+        "over-bright bounce (flat)",
+        "missing colour bleed so it looks like AO only"
+      ],
+      "physics_notes": "Rendering equation: radiance at a point includes light arriving from all other surfaces; diffuse inter-reflection causes colour bleeding.",
+      "prompt_phrases": [
+        "bright interior with realistic global illumination, sunlight from a large window bouncing softly off white walls and warm wooden floor",
+        "soft indirect light, natural colour bleeding, architectural visualisation"
+      ],
+      "eyewear_notes": "For a shop interior render, mirrored display glass and frames reflect the window: keep the camera off the window's reflection angle.",
+      "refs": [
+        "Artistic"
+      ],
+      "evidence": "mixed"
+    },
+    {
+      "id": "product_softbox",
+      "name": "Product softbox",
+      "name_th": "ไฟซอฟต์บ็อกซ์ถ่ายสินค้า",
+      "category": "product",
+      "setup": "Two large softboxes either side at ~45° (or one overhead scrim) close to the product; white/grey sweep; black cards for edge definition.",
+      "key_direction": "both sides 45°, slightly above",
+      "source_size": "large/soft",
+      "intensity_ratio": "1:1 to 2:1",
+      "color_temperature_k": [
+        5000,
+        5600
+      ],
+      "color_temperature_note": "Daylight for accurate colour.",
+      "shadow_quality": "soft, small contact shadow",
+      "material_response": "Even colour on acetate; metal shows long soft gradients; lenses show controlled strip reflections.",
+      "depth_and_form": "Gentle; form from gradients and contact shadow.",
+      "atmosphere": "clean catalogue",
+      "mood": "trustworthy, clear",
+      "emotion_ids": [
+        "performance.trusted_expert",
+        "calm.serenity"
+      ],
+      "best_for": [
+        "frame catalogue images",
+        "kits",
+        "e-commerce"
+      ],
+      "avoid_for": [
+        "moody luxury"
+      ],
+      "common_mistakes": [
+        "boxes reflected as two white squares in lenses",
+        "no edge definition on clear frames"
+      ],
+      "physics_notes": "Angle of incidence = angle of reflection: a highlight on glass, varnish or metal is a mirror image of the source; move the source or tilt the surface to move it. Penumbra width scales with the source's apparent angular size seen from the subject: larger or closer = softer edges and smoother gradients. Raising power only changes brightness, not hardness.",
+      "prompt_phrases": [
+        "studio product photo, two large softboxes at 45 degrees, clean white seamless background, soft contact shadow",
+        "evenly lit eyeglasses with controlled reflections"
+      ],
+      "eyewear_notes": "Recommended starting setup for sunglasses (curriculum-04). Feather the boxes so each lens shows one soft strip, not a full white panel; black cards beside clear frames.",
+      "refs": [
+        "curriculum-04"
+      ],
+      "evidence": "craft"
+    },
+    {
+      "id": "product_gradient_sweep",
+      "name": "Product gradient sweep",
+      "name_th": "ไฟไล่เฉดบนสินค้า",
+      "category": "product",
+      "setup": "Large scrim/softbox angled close above/behind; product on acrylic or a curved sweep; the source's falloff creates a light-to-dark gradient on surfaces and backdrop; black cards both sides.",
+      "key_direction": "top/back, angled",
+      "source_size": "large/soft with falloff",
+      "intensity_ratio": "gradient 2-3 stops across",
+      "color_temperature_k": [
+        5000,
+        5600
+      ],
+      "color_temperature_note": "Neutral; gels on the backdrop for colour gradients.",
+      "shadow_quality": "almost none; tonal gradients instead",
+      "material_response": "Metal rims show a smooth highlight-to-dark gradient defining curvature; acrylic shows a mirror reflection.",
+      "depth_and_form": "Gradients describe curvature and transparency (curriculum-04).",
+      "atmosphere": "premium, sleek",
+      "mood": "luxury, precision, calm",
+      "emotion_ids": [
+        "awe.admiration",
+        "will.confidence"
+      ],
+      "best_for": [
+        "titanium/metal frames",
+        "hero product",
+        "dark luxury posts"
+      ],
+      "avoid_for": [
+        "busy lifestyle"
+      ],
+      "common_mistakes": [
+        "gradient running the wrong way (bright at bottom)",
+        "mirror reflection doubled and messy"
+      ],
+      "physics_notes": "Inverse square: for a compact source, doubling the distance quarters the illuminance (-2 stops); a close source falls off fast across the scene (dark background), a far one lights everything evenly. Falloff across a large close source gives the gradient. Fresnel: reflectance of glass, skin oil and lacquer rises steeply toward grazing angles, so tilted lens surfaces and rims mirror bright surroundings strongly.",
+      "prompt_phrases": [
+        "controlled gradient highlight along the top of the rim, black cards on both sides",
+        "large scrim angled above, smooth dark-to-light gradient background, subtle mirror reflection below"
+      ],
+      "eyewear_notes": "Curriculum-04 titanium setup: scrim above + black cards. Each clear lens should show one soft white strip reflection.",
+      "refs": [
+        "curriculum-04"
+      ],
+      "evidence": "craft"
+    },
+    {
+      "id": "product_backlit_glass",
+      "name": "Backlit glass/transparent",
+      "name_th": "ย้อนแสงวัสดุใส",
+      "category": "product",
+      "setup": "Light passes through a diffuser or white panel behind the transparent product (bright-field); black cards/flags at the sides make dark edges; or reverse: black background with two strip lights behind sides (dark-field) for bright edges.",
+      "key_direction": "behind",
+      "source_size": "large/soft",
+      "intensity_ratio": "background 1-2 stops over subject",
+      "color_temperature_k": [
+        5000,
+        5600
+      ],
+      "color_temperature_note": "Neutral to show material colour.",
+      "shadow_quality": "none; edges defined by refraction",
+      "material_response": "Transparent acetate shows colour and depth; glass lenses show thickness as dark (bright-field) or bright (dark-field) edges.",
+      "depth_and_form": "Thickness and curvature read through refraction at edges.",
+      "atmosphere": "pure, crisp",
+      "mood": "clean, precise, fresh",
+      "emotion_ids": [
+        "calm.serenity",
+        "awe.admiration"
+      ],
+      "best_for": [
+        "clear/crystal acetate",
+        "lens thickness demonstration",
+        "tinted sunglasses colour"
+      ],
+      "avoid_for": [
+        "opaque metal-only frames"
+      ],
+      "common_mistakes": [
+        "edges vanish without black cards",
+        "front light reflections spoiling the transparency"
+      ],
+      "physics_notes": "At the edges light strikes glass near grazing angles and is refracted/totally internally reflected away from the camera, producing the dark or bright outline.",
+      "prompt_phrases": [
+        "clear acetate frames backlit through white diffusion, crisp dark edges defined by black cards",
+        "transparent glass on black with two bright strip lights tracing its edges"
+      ],
+      "eyewear_notes": "Best way to show crystal frames and lens thinness (curriculum-04 acetate example). Great for 'thin high-index lens' content: side-by-side edges.",
+      "refs": [
+        "curriculum-04"
+      ],
+      "evidence": "mixed"
+    },
+    {
+      "id": "jewelry_specular",
+      "name": "Jewellery specular",
+      "name_th": "ไฟประกายเครื่องประดับ",
+      "category": "product",
+      "setup": "Small hard sources or LED pins placed to hit facets/polished metal, plus a soft tent for base; black/white cards placed to put clean reflections on curved metal.",
+      "key_direction": "several angles chosen per highlight",
+      "source_size": "small/hard sparkle + large soft base",
+      "intensity_ratio": "specular points clipped intentionally; base 2:1",
+      "color_temperature_k": [
+        5000,
+        5600
+      ],
+      "color_temperature_note": "Neutral to keep gold/silver true.",
+      "shadow_quality": "tiny, controlled",
+      "material_response": "Polished metal = mirror of the environment; facets sparkle; matte metal soft sheen.",
+      "depth_and_form": "Highlights and dark reflections alternate to show curvature.",
+      "atmosphere": "luxurious, sparkling",
+      "mood": "luxury, delight",
+      "emotion_ids": [
+        "awe.admiration",
+        "joy.elation",
+        "love.romantic"
+      ],
+      "best_for": [
+        "gold/titanium frame details",
+        "hinge and logo macro",
+        "luxury_commercial"
+      ],
+      "avoid_for": [
+        "matte everyday shots"
+      ],
+      "common_mistakes": [
+        "mirror-polished metal reflecting the room/camera",
+        "too many sparkles = noise"
+      ],
+      "physics_notes": "Angle of incidence = angle of reflection: a highlight on glass, varnish or metal is a mirror image of the source; move the source or tilt the surface to move it. Polished metal has no diffuse colour: what you see is what it reflects.",
+      "prompt_phrases": [
+        "macro of a polished gold hinge with crisp specular highlights and clean dark reflections",
+        "jewellery-style lighting, controlled sparkle on metal details"
+      ],
+      "eyewear_notes": "Use for detail punch-ins of metal temples, nose pads and engraved logos; keep the lens out of the sparkle zone.",
+      "refs": [
+        "curriculum-04"
+      ],
+      "evidence": "craft"
+    },
+    {
+      "id": "eyewear_lens_reflection_control",
+      "name": "Eyewear lens reflection control",
+      "name_th": "คุมเงาสะท้อนเลนส์แว่น",
+      "category": "product",
+      "setup": "Sources placed outside the lens's mirror angle (high and wide); feathered large softboxes; black flags to absorb unwanted reflections; one intended soft strip reflection per lens; for portraits: key high, broad, chin slightly down.",
+      "key_direction": "high and off-axis (above 30° or beyond 45° side)",
+      "source_size": "large/soft and close (faint, soft reflection)",
+      "intensity_ratio": "per scene; lens reflection kept ~1-2 stops below skin highlight",
+      "color_temperature_k": [
+        5000,
+        5600
+      ],
+      "color_temperature_note": "Neutral, or match the scene.",
+      "shadow_quality": "as scene",
+      "material_response": "Lens reads as glass through a faint gradient or strip; eyes clearly visible; AR coatings show a faint tinted (often green/violet) residual reflection.",
+      "depth_and_form": "A controlled reflection shows lens curvature; zero reflection looks like an empty frame.",
+      "atmosphere": "clean, controlled",
+      "mood": "clarity, trust",
+      "emotion_ids": [
+        "performance.trusted_expert",
+        "will.confidence",
+        "calm.serenity"
+      ],
+      "best_for": [
+        "every eyewear portrait",
+        "lens coating ads",
+        "kit images"
+      ],
+      "avoid_for": [
+        "none — apply whenever lenses are visible; relax only for stylised silhouettes"
+      ],
+      "common_mistakes": [
+        "key at eye level in front (full glare)",
+        "removing every reflection (no lens)",
+        "AI empty lenses or random reflections"
+      ],
+      "physics_notes": "Angle of incidence = angle of reflection: a highlight on glass, varnish or metal is a mirror image of the source; move the source or tilt the surface to move it. Fresnel: reflectance of glass, skin oil and lacquer rises steeply toward grazing angles, so tilted lens surfaces and rims mirror bright surroundings strongly. Moving a source closer makes its reflection larger but dimmer per area, so glare softens (curriculum-04).",
+      "prompt_phrases": [
+        "clear anti-reflective lenses, eyes fully visible through the lenses, no glare",
+        "each lens showing one soft white strip reflection, controlled reflections"
+      ],
+      "eyewear_notes": "Core rule of this shop: Glasses: keep the key above eye level and/or well off the lens axis so its mirror image bounces out of the lens toward floor or side; a slight chin-down or head turn away from the key moves it further; ask for 'clear anti-reflective lenses, eyes fully visible, no glare'. Do not remove every reflection: a faint edge highlight proves a lens is there (house 'lens layer' rule). Last resort: shoot with and without glasses and composite. AR coating is itself a selling point to show.",
+      "refs": [
+        "curriculum-04"
+      ],
+      "evidence": "mixed"
+    },
+    {
+      "id": "flat_cartoon_cel",
+      "name": "Flat cartoon cel",
+      "name_th": "แสงการ์ตูนสีเรียบ",
+      "category": "stylised",
+      "setup": "One key direction per scene; shadows as flat colour shapes with hard terminator; optional pale rim line on the lit-opposite edge.",
+      "key_direction": "chosen once per scene, consistent for all characters",
+      "source_size": "treated as hard",
+      "intensity_ratio": "2 tones (light/shadow)",
+      "color_temperature_k": null,
+      "color_temperature_note": "Stylised: shadow is a chosen colour (often cooler/purple), not a temperature.",
+      "shadow_quality": "hard flat shapes",
+      "material_response": "Materials suggested by shape of highlight (metal = sharp white shape, matte = none).",
+      "depth_and_form": "Simple form; depth from overlap and colour value.",
+      "atmosphere": "clean, readable",
+      "mood": "playful, clear",
+      "emotion_ids": [
+        "joy.amusement",
+        "joy.happiness",
+        "awe.childlike_wonder"
+      ],
+      "best_for": [
+        "night-optic cartoon",
+        "flat_vector",
+        "explainers"
+      ],
+      "avoid_for": [
+        "photoreal"
+      ],
+      "common_mistakes": [
+        "soft gradient characters on cel background",
+        "shadows on different sides per character"
+      ],
+      "physics_notes": "Stylised quantisation of Lambert shading into two bands; direction must still be consistent.",
+      "prompt_phrases": [
+        "2D cel-shaded cartoon, flat colours, hard-edged shadows all falling to the right from a lamp at frame left",
+        "no gradients on characters, thin pale rim line"
+      ],
+      "eyewear_notes": "Draw lens as a pale tinted shape with one or two white diagonal glints; keep the eyes visible through it.",
+      "refs": [
+        "curriculum-04"
+      ],
+      "evidence": "craft"
+    },
+    {
+      "id": "two_tone_anime_shade",
+      "name": "Two-tone anime shade",
+      "name_th": "แสงอนิเมะสองโทน",
+      "category": "stylised",
+      "setup": "Base + one shadow tone (sometimes a second darker accent), hard edges, stylised hair highlights, often a strong rim and bloom on backlight.",
+      "key_direction": "consistent per scene, often back-side for rim",
+      "source_size": "stylised hard",
+      "intensity_ratio": "2-3 tones",
+      "color_temperature_k": null,
+      "color_temperature_note": "Colour-scripted; warm/cool shadow tints chosen per scene.",
+      "shadow_quality": "hard, graphic, sometimes with soft gradient overlay",
+      "material_response": "Hair band highlight, eye highlights, glossy lens glint lines.",
+      "depth_and_form": "Graphic form, depth via colour and atmosphere in painterly backgrounds.",
+      "atmosphere": "vivid, emotional",
+      "mood": "youthful, emotional, dramatic",
+      "emotion_ids": [
+        "nostalgia.longing",
+        "hope.hope",
+        "selfconscious.shyness"
+      ],
+      "best_for": [
+        "anime_cel",
+        "webtoon_digital",
+        "emotional story frames"
+      ],
+      "avoid_for": [
+        "photoreal ads"
+      ],
+      "common_mistakes": [
+        "too many shadow tones",
+        "inconsistent light across panels"
+      ],
+      "physics_notes": "Stylised banding of shading; keep one light logic.",
+      "prompt_phrases": [
+        "anime cel shading with a single shadow tone, crisp shadow edges, bright rim light",
+        "two-tone shading, glossy highlights"
+      ],
+      "eyewear_notes": "Classic anime 'glasses glint' (opaque white lens) hides the eyes — use only for comedy/mystery beats; otherwise keep eyes visible with a small diagonal glint.",
+      "refs": [
+        "Artistic"
+      ],
+      "evidence": "craft"
+    },
+    {
+      "id": "storybook_soft_glow",
+      "name": "Storybook soft glow",
+      "name_th": "แสงนิทานนุ่มฟุ้ง",
+      "category": "stylised",
+      "setup": "Warm soft light with gentle bloom around light sources, low contrast, painterly gradients; shadows tinted warm/violet.",
+      "key_direction": "soft side/top, from a motivated window or lantern",
+      "source_size": "large/soft with bloom",
+      "intensity_ratio": "1.5:1 to 3:1",
+      "color_temperature_k": [
+        2800,
+        4500
+      ],
+      "color_temperature_note": "Warm dominant, cool accents.",
+      "shadow_quality": "soft, coloured",
+      "material_response": "Everything slightly matte and textured (paper/gouache).",
+      "depth_and_form": "Soft form; atmosphere creates depth.",
+      "atmosphere": "warm, dreamy",
+      "mood": "tender, safe, magical",
+      "emotion_ids": [
+        "visual.coziness",
+        "love.tenderness",
+        "awe.childlike_wonder",
+        "performance.storyteller_warmth"
+      ],
+      "best_for": [
+        "storybook_gouache",
+        "children_book",
+        "Slowly Growing duo"
+      ],
+      "avoid_for": [
+        "hard product"
+      ],
+      "common_mistakes": [
+        "bloom everywhere = haze",
+        "no darks so image looks washed"
+      ],
+      "physics_notes": "Bloom mimics light scattering in the eye/lens around bright sources (veiling glare).",
+      "prompt_phrases": [
+        "soft warm storybook glow, gentle bloom around the lantern, painterly gradients",
+        "cozy low-contrast warm light"
+      ],
+      "eyewear_notes": "Paint a soft warm glint on the lens, no hard reflection.",
+      "refs": [
+        "Artistic"
+      ],
+      "evidence": "craft"
+    },
+    {
+      "id": "noir_venetian",
+      "name": "Noir venetian blinds",
+      "name_th": "แสงนัวร์ผ่านมู่ลี่",
+      "category": "stylised",
+      "setup": "Hard source outside a window shining through venetian blinds, projecting parallel bar shadows across subject and wall; low ambient; smoke optional.",
+      "key_direction": "side, from window",
+      "source_size": "small/hard (needed for crisp bars)",
+      "intensity_ratio": "8:1+",
+      "color_temperature_k": [
+        3200,
+        5600
+      ],
+      "color_temperature_note": "Often rendered black-and-white.",
+      "shadow_quality": "crisp striped shadows",
+      "material_response": "Bars wrap over form, revealing contour; metal and lenses catch stripes.",
+      "depth_and_form": "Stripes bend over shapes: strong 3D cue.",
+      "atmosphere": "smoky, tense",
+      "mood": "suspicion, secrecy, noir",
+      "emotion_ids": [
+        "stance.suspicion",
+        "visual.mystery",
+        "fear.quiet_menace"
+      ],
+      "best_for": [
+        "graphic_novel_noir",
+        "film_noir_photo",
+        "detective beats"
+      ],
+      "avoid_for": [
+        "friendly ads"
+      ],
+      "common_mistakes": [
+        "soft source → blurry stripes",
+        "stripes across the eyes when the face matters"
+      ],
+      "physics_notes": "Penumbra width scales with the source's apparent angular size seen from the subject: larger or closer = softer edges and smoother gradients. Raising power only changes brightness, not hardness. Distance between blind and subject also blurs stripes (penumbra grows with distance).",
+      "prompt_phrases": [
+        "film noir, hard light through venetian blinds casting striped shadows across his face",
+        "black and white, smoky office, slatted shadows"
+      ],
+      "eyewear_notes": "A stripe falling exactly across the lenses hides the eyes; let it cross the forehead or cheek instead, a bright bar on the frame reads as stylish.",
+      "refs": [
+        "Artistic"
+      ],
+      "evidence": "craft"
+    },
+    {
+      "id": "sunset_rim_warm_cool",
+      "name": "Sunset rim, warm/cool",
+      "name_th": "ขอบแสงอุ่นตัดเย็น",
+      "category": "cinematic",
+      "setup": "Warm low sun or warm light as rim from behind; cool sky or cool-gelled fill on the front; complementary temperature contrast.",
+      "key_direction": "rim from back-side; fill front",
+      "source_size": "hard rim, soft fill",
+      "intensity_ratio": "rim 1-2 stops over front",
+      "color_temperature_k": [
+        2500,
+        7500
+      ],
+      "color_temperature_note": "Warm rim ~2500-3500 K vs cool fill ~6500-7500 K.",
+      "shadow_quality": "soft front, glowing edge",
+      "material_response": "Hair and frame edges glow orange; skin front cool.",
+      "depth_and_form": "Temperature contrast separates planes.",
+      "atmosphere": "cinematic",
+      "mood": "hopeful, bittersweet, romantic",
+      "emotion_ids": [
+        "mixed.bittersweet_farewell",
+        "hope.hope",
+        "love.romantic"
+      ],
+      "best_for": [
+        "ending frames",
+        "beach clips",
+        "cinematic posters"
+      ],
+      "avoid_for": [
+        "true colour product"
+      ],
+      "common_mistakes": [
+        "front too blue (cold skin)",
+        "rim flare across the face"
+      ],
+      "physics_notes": "Rayleigh scattering removes blue from the long low-sun path (warm direct light) while the sky that remains acts as a blue fill. Warm/cool contrast is a perceptual/colour-appearance effect strengthened by simultaneous contrast.",
+      "prompt_phrases": [
+        "warm orange sunset rim light on hair and shoulders, cool blue fill on the face",
+        "teal and orange temperature contrast"
+      ],
+      "eyewear_notes": "Warm rim lights the frame outline; cool front fill should stay soft and high so the lens stays clear.",
+      "refs": [
+        "curriculum-04",
+        "Fairchild2013"
+      ],
+      "evidence": "mixed"
+    },
+    {
+      "id": "screen_glow_face",
+      "name": "Screen glow on face",
+      "name_th": "แสงจอบนใบหน้า",
+      "category": "practical",
+      "setup": "Phone/monitor is the only key: close, below or in front of the face; cool, flickering; dark room.",
+      "key_direction": "front-low (phone) or front (monitor)",
+      "source_size": "small (phone) to medium (monitor) but very close = fairly soft",
+      "intensity_ratio": "8:1+",
+      "color_temperature_k": [
+        6500,
+        9000
+      ],
+      "color_temperature_note": "Screens typically D65-ish; reads cool against warm room light.",
+      "shadow_quality": "soft but fast falloff",
+      "material_response": "Skin cool, eyes reflect the screen rectangle; lenses mirror the screen.",
+      "depth_and_form": "Only the front of the face lit; strong falloff.",
+      "atmosphere": "late-night, isolated",
+      "mood": "fatigue, loneliness, focus",
+      "emotion_ids": [
+        "low.fatigue",
+        "sadness.loneliness",
+        "fear.anxiety"
+      ],
+      "best_for": [
+        "digital eye strain content",
+        "eye-break clips",
+        "late-night story frames"
+      ],
+      "avoid_for": [
+        "bright ads"
+      ],
+      "common_mistakes": [
+        "screen light hitting the wall behind (wrong falloff)",
+        "warm screen colour"
+      ],
+      "physics_notes": "Inverse square: for a compact source, doubling the distance quarters the illuminance (-2 stops); a close source falls off fast across the scene (dark background), a far one lights everything evenly. A screen 30 cm away falls off steeply across the face.",
+      "prompt_phrases": [
+        "face lit only by the cool blue glow of a phone screen in a dark room",
+        "late-night laptop glow on her face"
+      ],
+      "eyewear_notes": "The screen reflection in the lenses is the story here (blue-light / eye strain content). Keep it to a small rectangle at the lens bottom so eyes stay visible.",
+      "refs": [
+        "curriculum-04"
+      ],
+      "evidence": "mixed"
+    },
+    {
+      "id": "lightning_flash",
+      "name": "Lightning flash",
+      "name_th": "แสงฟ้าแลบ",
+      "category": "cinematic",
+      "setup": "Very brief, very bright cool flash from a window or the sky; hard shadows; between flashes the scene is dark; in video 2-3 flicker frames.",
+      "key_direction": "from window/sky, side or back",
+      "source_size": "hard (distant) or large (lit clouds)",
+      "intensity_ratio": "flash 4-6 stops over ambient",
+      "color_temperature_k": [
+        7000,
+        10000
+      ],
+      "color_temperature_note": "Approximate; reads as blue-white.",
+      "shadow_quality": "sudden hard shadows",
+      "material_response": "All glossy surfaces flash; rain streaks lit.",
+      "depth_and_form": "Momentary reveal of shape.",
+      "atmosphere": "stormy",
+      "mood": "shock, dread, revelation",
+      "emotion_ids": [
+        "surprise.shock",
+        "fear.fear",
+        "transition.calm_to_panic"
+      ],
+      "best_for": [
+        "horror reveals",
+        "zombie series",
+        "dramatic beats"
+      ],
+      "avoid_for": [
+        "calm content"
+      ],
+      "common_mistakes": [
+        "flash lasting too long",
+        "no dark frames between flashes"
+      ],
+      "physics_notes": "Real strokes last microseconds to milliseconds, so a 1-3 frame flash with decay reads correctly.",
+      "prompt_phrases": [
+        "sudden lightning flash through the window, blue-white light and hard shadows",
+        "storm night, lightning illuminating the room"
+      ],
+      "eyewear_notes": "Lenses become bright mirrors for one frame — a good horror beat (eyes hidden). In product use, avoid.",
+      "refs": [
+        "Artistic"
+      ],
+      "evidence": "mixed"
+    },
+    {
+      "id": "snow_bounce",
+      "name": "Snow bounce",
+      "name_th": "แสงสะท้อนจากหิมะ",
+      "category": "natural",
+      "setup": "Snow acts as a huge white reflector filling from below; overcast sky above or sun; very bright overall.",
+      "key_direction": "top (sky) + bottom (snow)",
+      "source_size": "very large/soft",
+      "intensity_ratio": "1.5:1",
+      "color_temperature_k": [
+        6500,
+        10000
+      ],
+      "color_temperature_note": "Cool in shade; very blue shadows.",
+      "shadow_quality": "very open, blue shadows",
+      "material_response": "Skin lit from under the chin; lenses mirror white ground; sunglasses justified.",
+      "depth_and_form": "Low form; under-light from the ground.",
+      "atmosphere": "crisp, cold, bright",
+      "mood": "fresh, clean, quiet",
+      "emotion_ids": [
+        "calm.serenity",
+        "awe.childlike_wonder",
+        "visual.peaceful_solitude"
+      ],
+      "best_for": [
+        "winter travel sunglasses",
+        "bright minimal posts"
+      ],
+      "avoid_for": [
+        "Thai local scenes (unlikely setting)"
+      ],
+      "common_mistakes": [
+        "underexposed grey snow",
+        "losing white detail"
+      ],
+      "physics_notes": "Fresh snow reflects a large fraction of visible light (high albedo), so the ground becomes the fill; UV is reflected too.",
+      "prompt_phrases": [
+        "bright snowy landscape, soft light bouncing up from the snow, cool blue shadows",
+        "crisp winter light"
+      ],
+      "eyewear_notes": "Strong lower reflections in lenses (white ground); sunglasses/UV message fits. Ask for 'eyes visible through lightly tinted lenses' if needed.",
+      "refs": [
+        "Artistic"
+      ],
+      "evidence": "mixed"
+    },
+    {
+      "id": "stage_colour_gels",
+      "name": "Stage colour gels",
+      "name_th": "ไฟเวทีเจลสี",
+      "category": "stylised",
+      "setup": "Two or more coloured gelled lights (e.g. magenta key from one side, cyan from the other) on a dark background; colours mix where they overlap.",
+      "key_direction": "two sides or side + back",
+      "source_size": "medium/hard",
+      "intensity_ratio": "each colour ~1:1, background dark",
+      "color_temperature_k": null,
+      "color_temperature_note": "Saturated gel colours; not on the Kelvin scale. CTO/CTB are the temperature gels (curriculum-04).",
+      "shadow_quality": "coloured shadows (each shadow lit by the other colour)",
+      "material_response": "Skin takes both hues; white frames turn colourful; metal shows two-coloured edges.",
+      "depth_and_form": "Colour separates planes and sides.",
+      "atmosphere": "concert, party",
+      "mood": "energy, excitement, fun",
+      "emotion_ids": [
+        "hope.excitement",
+        "joy.elation",
+        "joy.amusement"
+      ],
+      "best_for": [
+        "beat clips",
+        "party/promo",
+        "synthwave/vaporwave"
+      ],
+      "avoid_for": [
+        "true frame colour",
+        "calm health topics"
+      ],
+      "common_mistakes": [
+        "skin turning green",
+        "three+ colours = mud"
+      ],
+      "physics_notes": "Additive light mixing: overlapping red/blue gives magenta etc.; coloured shadows appear where one source is blocked.",
+      "prompt_phrases": [
+        "magenta light from the left and cyan light from the right on a dark background",
+        "colourful stage gels, coloured shadows, energetic"
+      ],
+      "eyewear_notes": "Coloured edge lines on the frame look great for beat-clip hooks; show the true colour in a separate neutral punch-in.",
+      "refs": [
+        "curriculum-04"
+      ],
+      "evidence": "craft"
+    }
+  ]
+}
