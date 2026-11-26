@@ -1,0 +1,1176 @@
+[
+ {
+  "key": "ZacksEtAl2007",
+  "title": "Event perception: a mind-brain perspective",
+  "authors": "Jeffrey M. Zacks, Nicole K. Speer, Khena M. Swallow, Todd S. Braver, Jeremy R. Reynolds",
+  "year": 2007,
+  "url": "https://pubmed.ncbi.nlm.nih.gov/17338600/",
+  "doi_isbn": "10.1037/0033-2909.133.2.273",
+  "source_type": "review",
+  "tier": "A",
+  "key_findings": [
+   "Proposes Event Segmentation Theory (EST): perceptual systems continuously predict what happens next; a transient rise in prediction error is perceived as an event boundary",
+   "Event perception depends on sensory cues and on knowledge structures about event parts and actors' goals/plans",
+   "Boundaries regulate attention and memory"
+  ],
+  "practical_applications": [
+   "Scene/beat breaks in a carousel or clip should coincide with a real change (goal, place, character) so the viewer's boundary and ours line up"
+  ],
+  "limitations": [
+   "Read abstract only (Europe PMC); neural claims are model-level"
+  ],
+  "license": "copyrighted (APA)",
+  "access_status": "abstract",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-26",
+  "modules": [
+   "M16",
+   "M38"
+  ]
+ },
+ {
+  "key": "ZwaanLangstonGraesser1995",
+  "title": "The Construction of Situation Models in Narrative Comprehension: An Event-Indexing Model",
+  "authors": "Rolf A. Zwaan, Mark C. Langston, Arthur C. Graesser",
+  "year": 1995,
+  "url": "https://doi.org/10.1111/j.1467-9280.1995.tb00513.x",
+  "doi_isbn": "10.1111/j.1467-9280.1995.tb00513.x",
+  "source_type": "empirical",
+  "tier": "A",
+  "key_findings": [
+   "Events are the focal points of situation models and are connected in memory along five dimensions: time, space, protagonist, causality, intentionality",
+   "Verb-clustering task supported the model"
+  ],
+  "practical_applications": [
+   "Use the five indices as the minimum fields of a continuity record per episode"
+  ],
+  "limitations": [
+   "Abstract only (OpenAlex); simple text narratives, not film"
+  ],
+  "license": "copyrighted",
+  "access_status": "abstract",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-26",
+  "modules": [
+   "M16",
+   "M38"
+  ]
+ },
+ {
+  "key": "ZacksSpeerReynolds2009",
+  "title": "Segmentation in reading and film comprehension",
+  "authors": "Jeffrey M. Zacks, Nicole K. Speer, Jeremy R. Reynolds",
+  "year": 2009,
+  "url": "https://doi.org/10.1037/a0015305",
+  "doi_isbn": "10.1037/a0015305",
+  "source_type": "empirical",
+  "tier": "A",
+  "key_findings": [
+   "Changes in characters, locations, object interactions and goals predict where readers/viewers mark event boundaries, in both texts and films",
+   "Clauses with event boundaries are read more slowly; situational change partly mediates this",
+   "Predictability of incoming information may influence reading rate and segmentation"
+  ],
+  "practical_applications": [
+   "Each situational change costs processing; stack few changes per slide/shot in short-form"
+  ],
+  "limitations": [
+   "Abstract only (Europe PMC)"
+  ],
+  "license": "copyrighted (APA)",
+  "access_status": "abstract",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-26",
+  "modules": [
+   "M16",
+   "M38"
+  ]
+ },
+ {
+  "key": "SwallowZacksAbrams2009",
+  "title": "Event boundaries in perception affect memory encoding and updating",
+  "authors": "Khena M. Swallow, Jeffrey M. Zacks, Richard A. Abrams",
+  "year": 2009,
+  "url": "https://doi.org/10.1037/a0015631",
+  "doi_isbn": "10.1037/a0015631",
+  "source_type": "empirical",
+  "tier": "A",
+  "key_findings": [
+   "Objects present when an event boundary occurred were better recognized 5 s later",
+   "Memory contents appear to be updated at event boundaries"
+  ],
+  "practical_applications": [
+   "Place the hero prop / key clue on screen AT a boundary (scene change, reveal) to make it memorable"
+  ],
+  "limitations": [
+   "Abstract only; lab movie clips of goal-directed activity"
+  ],
+  "license": "copyrighted (APA)",
+  "access_status": "abstract",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-26",
+  "modules": [
+   "M16",
+   "M38"
+  ]
+ },
+ {
+  "key": "RadvanskyZacks2017",
+  "title": "Event Boundaries in Memory and Cognition",
+  "authors": "Gabriel A. Radvansky, Jeffrey M. Zacks",
+  "year": 2017,
+  "url": "https://doi.org/10.1016/j.cobeha.2017.08.006",
+  "doi_isbn": "10.1016/j.cobeha.2017.08.006",
+  "source_type": "review",
+  "tier": "A",
+  "key_findings": [
+   "Outlines the Event Horizon Model: current event model highly available, prior event models less available; boundaries affect working and long-term memory and event model updating"
+  ],
+  "practical_applications": [
+   "After a scene change viewers lose easy access to details of the previous scene: re-show critical info after cuts"
+  ],
+  "limitations": [
+   "Abstract only; doorway-forgetting effect not found in every experiment (per secondary reports)"
+  ],
+  "license": "copyrighted",
+  "access_status": "abstract",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-26",
+  "modules": [
+   "M16",
+   "M38"
+  ]
+ },
+ {
+  "key": "KurbyZacks2008",
+  "title": "Segmentation in the perception and memory of events",
+  "authors": "Christopher A. Kurby, Jeffrey M. Zacks",
+  "year": 2008,
+  "url": "https://doi.org/10.1016/j.tics.2007.11.004",
+  "doi_isbn": "10.1016/j.tics.2007.11.004",
+  "source_type": "review",
+  "tier": "A",
+  "key_findings": [
+   "(Per search summary) EST: segmentation is a side effect of trying to anticipate upcoming information; posterior temporal, parietal and lateral frontal cortex show transient increases at boundaries"
+  ],
+  "practical_applications": [
+   "Background review for EST"
+  ],
+  "limitations": [
+   "Only search snippet read; PMC blocked bots"
+  ],
+  "license": "copyrighted",
+  "access_status": "search_summary",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-26",
+  "modules": [
+   "M16",
+   "M38"
+  ]
+ },
+ {
+  "key": "Loschky2019SPECT",
+  "title": "The Scene Perception & Event Comprehension Theory (SPECT) Applied to Visual Narratives",
+  "authors": "Lester C. Loschky, Adam M. Larson, Tim J. Smith, Joseph P. Magliano",
+  "year": 2019,
+  "url": "https://doi.org/10.1111/tops.12455",
+  "doi_isbn": "10.1111/tops.12455",
+  "source_type": "review",
+  "tier": "A",
+  "key_findings": [
+   "Distinguishes front-end processes (attentional selection, information extraction within fixations) from back-end processes (event model construction in working memory and episodic memory)",
+   "Medium-specific differences (picture stories vs film) likely vary these processes"
+  ],
+  "practical_applications": [
+   "Carousels are picture stories: each slide must let the eye find the key info in 1-2 fixations (front end) before the story can update (back end)"
+  ],
+  "limitations": [
+   "Abstract only (Wiley PDF returned 403); Topics in Cognitive Science (online 2019)"
+  ],
+  "license": "open access (Wiley)",
+  "access_status": "abstract",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-26",
+  "modules": [
+   "M16",
+   "M38"
+  ]
+ },
+ {
+  "key": "Magliano2016",
+  "title": "The relative roles of visuospatial and linguistic working memory systems in generating inferences during visual narrative comprehension",
+  "authors": "Joseph P. Magliano, Adam M. Larson, Karyn Higgs, Lester C. Loschky",
+  "year": 2016,
+  "url": "https://link.springer.com/content/pdf/10.3758/s13421-015-0558-7.pdf",
+  "doi_isbn": "10.3758/s13421-015-0558-7",
+  "source_type": "empirical",
+  "tier": "A",
+  "key_findings": [
+   "When a bridging-event image is omitted from a picture story, viewers look longer at the end-state image (online bridging inference); think-aloud protocols contained more inferred actions",
+   "Both visuospatial and linguistic WM loads attenuated the inference effect (shared systems); articulatory suppression did not",
+   "Picture viewing times are sensitive to mental model construction"
+  ],
+  "practical_applications": [
+   "Omitting an easily inferable action between slides engages viewers but costs processing time: give the end-state slide dwell time and never omit non-inferable steps"
+  ],
+  "limitations": [
+   "Lab picture stories, student samples"
+  ],
+  "license": "open access (Springer)",
+  "access_status": "full_text",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-26",
+  "modules": [
+   "M16",
+   "M38"
+  ]
+ },
+ {
+  "key": "Hutson2018",
+  "title": "Understanding Moment-to-Moment Processing of Visual Narratives",
+  "authors": "John P. Hutson, Joseph P. Magliano, Lester C. Loschky",
+  "year": 2018,
+  "url": "https://doi.org/10.1111/cogs.12699",
+  "doi_isbn": "10.1111/cogs.12699",
+  "source_type": "empirical",
+  "tier": "A",
+  "key_findings": [
+   "Eye-tracking test of SPECT: when inferable actions are missing, viewing time on the next image rises; tests computational-load vs visual-search accounts"
+  ],
+  "practical_applications": [
+   "Design the image after a gap so the inference cue is easy to find"
+  ],
+  "limitations": [
+   "Abstract only"
+  ],
+  "license": "open access (Wiley)",
+  "access_status": "abstract",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-26",
+  "modules": [
+   "M16",
+   "M38"
+  ]
+ },
+ {
+  "key": "Cohn2020Universal",
+  "title": "Visual narrative comprehension: Universal or not?",
+  "authors": "Neil Cohn",
+  "year": 2020,
+  "url": "https://link.springer.com/content/pdf/10.3758/s13423-019-01670-1.pdf",
+  "doi_isbn": "10.3758/s13423-019-01670-1",
+  "source_type": "review",
+  "tier": "A",
+  "key_findings": [
+   "Sequential images are not universally transparent: comprehension requires fluency acquired through exposure and practice",
+   "Cross-cultural reports (Papua New Guinea, Aboriginal Australian, Kenya) of people reading each image as its own story; familiarity with comics improved sequential reading",
+   "Fluency matures developmentally and can be asymmetric for comprehension vs production"
+  ],
+  "practical_applications": [
+   "Do not assume every audience reads a carousel as one sequence; add continuity cues (same characters, same place, slide numbers) for less comic-fluent audiences"
+  ],
+  "limitations": [
+   "Review; many cross-cultural sources are old and small"
+  ],
+  "license": "CC BY 4.0",
+  "access_status": "full_text",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-26",
+  "modules": [
+   "M16",
+   "M38"
+  ]
+ },
+ {
+  "key": "Kachkovski2019",
+  "title": "Exploring the Effects of Violating the 180-Degree Rule on Film Viewing Preferences",
+  "authors": "George V. Kachkovski, Daniil Vasilyev, Michael Kuk, Alan Kingstone, Chris N. H. Street",
+  "year": 2019,
+  "url": "https://doi.org/10.31219/osf.io/vqn5a",
+  "doi_isbn": "10.1177/0093650219838959",
+  "source_type": "empirical",
+  "tier": "A",
+  "key_findings": [
+   "Naive viewers detected 180-degree violations (responded to .42 of violating cuts vs .08 of matched control cuts)",
+   "Violations can confuse and disorient viewers",
+   "Violations did not change liking: viewers were as likely to prefer the violating video"
+  ],
+  "practical_applications": [
+   "Keep screen sides for clarity, but a single slip is a comprehension risk, not a liking disaster"
+  ],
+  "limitations": [
+   "Read OSF preprint; Communication Research 2019; short clips, student samples"
+  ],
+  "license": "preprint open (OSF)",
+  "access_status": "full_text",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-26",
+  "modules": [
+   "M16",
+   "M38"
+  ]
+ },
+ {
+  "key": "Upadhyayula2023",
+  "title": "Spatiotemporal jump detection during continuous film viewing",
+  "authors": "Aditya Upadhyayula, John M. Henderson",
+  "year": 2023,
+  "url": "https://doi.org/10.1167/jov.23.2.13",
+  "doi_isbn": "10.1167/jov.23.2.13",
+  "source_type": "empirical",
+  "tier": "A",
+  "key_findings": [
+   "Viewers instructed to detect disruptions missed jumps in minute-long movie clips about 10-30% of the time depending on jump size",
+   "Detection about 10% lower for forward jumps than backward jumps"
+  ],
+  "practical_applications": [
+   "Forward time skips (ellipsis) are tolerated; backward jumps (flashbacks) are noticed more and need clear marking"
+  ],
+  "limitations": [
+   "Abstract only (JOV); related 2024 APP paper not read"
+  ],
+  "license": "open access (ARVO)",
+  "access_status": "abstract",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-26",
+  "modules": [
+   "M16",
+   "M38"
+  ]
+ },
+ {
+  "key": "Wirz2022",
+  "title": "The Role of Cliffhangers in Serial Entertainment: An Experiment on Cliffhangers' Effects on Enjoyment, Arousal, and Intention to Continue Watching",
+  "authors": "Dominique S. Wirz, Alexander Ort, Bjorn Rasch, Andreas Fahr",
+  "year": 2022,
+  "url": "https://sonar.ch/documents/319990/files/2022_Wirz_Role.pdf",
+  "doi_isbn": "",
+  "source_type": "empirical",
+  "tier": "A",
+  "key_findings": [
+   "Lab experiment N=133, 3-4 episodes of a drama ending with or without a cliffhanger; self-report plus electrodermal activity and cortisol",
+   "Cliffhangers raised arousal but did not increase enjoyment or intention to continue watching compared with mere unfinished narration",
+   "Authors note cliffhangers might matter more for immediate continuation within a session"
+  ],
+  "practical_applications": [
+   "Do not rely on a cliffhanger as the main retention tool; an unresolved overall arc may do the same work"
+  ],
+  "limitations": [
+   "Read accepted-manuscript PDF (University of Fribourg repository); journal per search: Psychology of Popular Media; one series, Swiss sample"
+  ],
+  "license": "repository copy",
+  "access_status": "full_text",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-26",
+  "modules": [
+   "M16",
+   "M38"
+  ]
+ },
+ {
+  "key": "Schibler2023",
+  "title": "Investigating Responses to Narrative Cliffhangers Using Affective Disposition Theory",
+  "authors": "Katherine Schibler, Lindsay Hahn, Melanie C. Green",
+  "year": 2023,
+  "url": "https://doi.org/10.1080/15213269.2023.2219456",
+  "doi_isbn": "10.1080/15213269.2023.2219456",
+  "source_type": "empirical",
+  "tier": "A",
+  "key_findings": [
+   "Two experiments (N=202, N=273) with written narratives: cliffhanger readers desired a future installment more than readers of protagonist-victory endings (both studies) and antagonist-victory endings (Study 2)",
+   "No significant differences in enjoyment or suspense"
+  ],
+  "practical_applications": [
+   "Cliffhangers may raise desire for the next part without costing enjoyment - complements Wirz2022's null on intention"
+  ],
+  "limitations": [
+   "Abstract only; written stories, not video"
+  ],
+  "license": "copyrighted",
+  "access_status": "abstract",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-26",
+  "modules": [
+   "M16",
+   "M38"
+  ]
+ },
+ {
+  "key": "Tukachinsky2020",
+  "title": "Antecedents and Effects of Parasocial Relationships: A Meta-Analysis",
+  "authors": "Riva Tukachinsky, Nathan Walter, Camille J. Saucier",
+  "year": 2020,
+  "url": "https://doi.org/10.1093/joc/jqaa034",
+  "doi_isbn": "10.1093/joc/jqaa034",
+  "source_type": "meta-analysis",
+  "tier": "S",
+  "key_findings": [
+   "(Per search summary of abstract) k=120 over four decades; PSR and PSI only moderately correlated (distinct constructs)",
+   "PSRs a stronger predictor of media involvement",
+   "Social deficiencies (e.g., loneliness) not significantly related to PSRs"
+  ],
+  "practical_applications": [
+   "Recurring characters build relationship-like attachment that predicts involvement - protect their consistency"
+  ],
+  "limitations": [
+   "Only abstract-level snippets read"
+  ],
+  "license": "copyrighted (OUP)",
+  "access_status": "search_summary",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-26",
+  "modules": [
+   "M16",
+   "M38"
+  ]
+ },
+ {
+  "key": "HartmannGoldhoorn2011",
+  "title": "Horton and Wohl Revisited: Exploring Viewers' Experience of Parasocial Interaction",
+  "authors": "Tilo Hartmann, Charlotte Goldhoorn",
+  "year": 2011,
+  "url": "https://doi.org/10.1111/j.1460-2466.2011.01595.x",
+  "doi_isbn": "10.1111/j.1460-2466.2011.01595.x",
+  "source_type": "empirical",
+  "tier": "A",
+  "key_findings": [
+   "2x2 experiment N=198: bodily and verbal addressing by a TV performer intensified parasocial experience; stronger PSI led to greater enjoyment"
+  ],
+  "practical_applications": [
+   "A recurring narrator addressing the viewer strengthens PSI; a faceless duo who never address the viewer relies on observed relationship instead"
+  ],
+  "limitations": [
+   "Abstract only; real performer, not fictional character"
+  ],
+  "license": "copyrighted",
+  "access_status": "abstract",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-26",
+  "modules": [
+   "M16",
+   "M38"
+  ]
+ },
+ {
+  "key": "Allen1985",
+  "title": "Speaking of Soap Operas (ch. 'A Reader-Oriented Poetics of the Soap Opera')",
+  "authors": "Robert C. Allen",
+  "year": 1985,
+  "url": "https://worldradiohistory.com/Bookshelf/Radio-Programming/Speaking-of-Soap-Operas-Allen-1985.pdf",
+  "doi_isbn": "ISBN 9780807841297",
+  "source_type": "textbook",
+  "tier": "A",
+  "key_findings": [
+   "Soap opera is predicated on the impossibility of final closure; trades a telos for overlapping 'mini-closures'",
+   "Its uniqueness is paradigmatic complexity: a community of 40+ interrelated characters; who a character is depends on their place in the network",
+   "Interepisodic redundancy keeps non-daily viewers up to date; intraepisodic redundancy (same news passed character to character) is meaningful to experienced viewers because of relationship history",
+   "Soap characters have histories and memories; reading time spans years, so long-time viewers read scenes against decades of history",
+   "Relationships can be transformed by revelations ('a discovered birth certificate')"
+  ],
+  "practical_applications": [
+   "For long-running series keep a relationship registry; repeat key facts for newcomers by passing them through different characters"
+  ],
+  "limitations": [
+   "1985 US daytime soaps; humanities analysis, not experimental"
+  ],
+  "license": "copyrighted (UNC Press); scan hosted by worldradiohistory.com",
+  "access_status": "full_text",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-26",
+  "modules": [
+   "M16",
+   "M38"
+  ]
+ },
+ {
+  "key": "Mittell2006",
+  "title": "Narrative Complexity in Contemporary American Television",
+  "authors": "Jason Mittell",
+  "year": 2006,
+  "url": "https://muse.jhu.edu/article/204769",
+  "doi_isbn": "",
+  "source_type": "primary_text",
+  "tier": "A",
+  "key_findings": [
+   "(Bibliographic; per secondary summary) narrative complexity as a redefinition of episodic forms under the influence of serial narration; Velvet Light Trap 58, 29-40"
+  ],
+  "practical_applications": [
+   "Background for the episodic/serial hybrid"
+  ],
+  "limitations": [
+   "Full text blocked (Project MUSE verification)"
+  ],
+  "license": "copyrighted",
+  "access_status": "bibliographic",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-26",
+  "modules": [
+   "M16",
+   "M38"
+  ]
+ },
+ {
+  "key": "StarWars2014Legends",
+  "title": "The Legendary Star Wars Expanded Universe Turns a New Page",
+  "authors": "StarWars.com / Lucasfilm",
+  "year": 2014,
+  "url": "https://www.starwars.com/news/the-legendary-star-wars-expanded-universe-turns-a-new-page",
+  "doi_isbn": "",
+  "source_type": "docs",
+  "tier": "C",
+  "key_findings": [
+   "25 Apr 2014: the six films and The Clone Wars are the canon all stories must align with; prior Expanded Universe reissued under the 'Legends' banner",
+   "Lucasfilm formed a story group to 'oversee and coordinate all Star Wars creative development'",
+   "Creators keep full access to EU material (Rebels reused the Inquisitor, ISB, Sienar from 1980s RPG material)"
+  ],
+  "practical_applications": [
+   "Canon tiers: declare what is canon vs archived; archived material stays a quarry for new canon"
+  ],
+  "limitations": [
+   "Corporate announcement; motives partly commercial"
+  ],
+  "license": "copyrighted",
+  "access_status": "full_text",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-26",
+  "modules": [
+   "M16",
+   "M38"
+  ]
+ },
+ {
+  "key": "Lussier2015",
+  "title": "How The Lucasfilm Story Group Figures Out The Star Wars Canon",
+  "authors": "Germain Lussier (SlashFilm)",
+  "year": 2015,
+  "url": "https://www.slashfilm.com/537322/lucasfilm-story-group-star-wars-canon/",
+  "doi_isbn": "",
+  "source_type": "practitioner",
+  "tier": "C",
+  "key_findings": [
+   "Report of Star Wars Celebration 2015 'One Big Story' panel (Pablo Hidalgo, Leland Chee); group headed by Kiri Hart",
+   "Plans major story beats years ahead; checks pitches fit; may say 'come back in six years'; commissions stories; approval for 'authenticity' does not always mean canon (e.g., multi-ending games)",
+   "Hidalgo: Boba Fett is 'both simultaneously alive and dead in the Sarlacc pit until a story pulls him out'"
+  ],
+  "practical_applications": [
+   "Keep a list of deliberately undetermined facts; separate 'on-brand' from 'canon'"
+  ],
+  "limitations": [
+   "Journalistic report of a panel"
+  ],
+  "license": "copyrighted",
+  "access_status": "full_text",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-26",
+  "modules": [
+   "M16",
+   "M38"
+  ]
+ },
+ {
+  "key": "Wolf2013Interview",
+  "title": "Building Imaginary Worlds: An Interview with Mark J. P. Wolf (Part Three)",
+  "authors": "Henry Jenkins (interviewer), Mark J. P. Wolf",
+  "year": 2013,
+  "url": "http://henryjenkins.org/blog/2013/09/building-imaginary-worlds-an-interview-with-mark-j-p-wolf-part-three.html",
+  "doi_isbn": "",
+  "source_type": "practitioner",
+  "tier": "B",
+  "key_findings": [
+   "Basic infrastructures of a world: maps (space), timelines (time), genealogies (characters); also nature, culture, language, mythology, philosophy, narrative",
+   "Fans police continuity - a sign they care; creators should be clear about what is canonical",
+   "Secondary belief needs consistency; fans explain away minor inconsistencies; quality of detail matters as much as quantity; 'there are always ways of expanding a world that do not disrupt its consistency'"
+  ],
+  "practical_applications": [
+   "Registry structure = map + timeline + genealogy/relationship graph"
+  ],
+  "limitations": [
+   "Interview; author's own summary of his book"
+  ],
+  "license": "copyrighted (blog)",
+  "access_status": "full_text",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-26",
+  "modules": [
+   "M16",
+   "M38"
+  ]
+ },
+ {
+  "key": "Sanderson2011",
+  "title": "Sanderson's Second Law",
+  "authors": "Brandon Sanderson",
+  "year": 2011,
+  "url": "https://www.brandonsanderson.com/blogs/blog/sandersons-second-law",
+  "doi_isbn": "",
+  "source_type": "practitioner",
+  "tier": "D",
+  "key_findings": [
+   "'Limitations > Powers': characters and magic are interesting for what they cannot do",
+   "Costs can be abstract (gradual madness) or concrete (ingredients); too severe a cost means the magic is rarely used"
+  ],
+  "practical_applications": [
+   "Every world rule records its limit/cost; character 'never' lists matter as much as abilities"
+  ],
+  "limitations": [
+   "Craft opinion of a novelist; first printed in Leading Edge #61"
+  ],
+  "license": "copyrighted",
+  "access_status": "full_text",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-26",
+  "modules": [
+   "M16",
+   "M38"
+  ]
+ },
+ {
+  "key": "SandersonThirdLaw",
+  "title": "Sanderson's Third Law of Magic",
+  "authors": "Brandon Sanderson",
+  "year": null,
+  "url": "https://www.brandonsanderson.com/blogs/blog/sandersons-third-law-of-magic",
+  "doi_isbn": "",
+  "source_type": "practitioner",
+  "tier": "D",
+  "key_findings": [
+   "'Expand what you already have before you add something new' - deep rather than wide worldbuilding",
+   "Extrapolate, interconnect, streamline; example of cutting an underused character and giving the role to others"
+  ],
+  "practical_applications": [
+   "Before adding a new character/place to a long series, check whether an existing one can carry the role"
+  ],
+  "limitations": [
+   "Craft opinion; posting date not shown on page"
+  ],
+  "license": "copyrighted",
+  "access_status": "full_text",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-26",
+  "modules": [
+   "M16",
+   "M38"
+  ]
+ },
+ {
+  "key": "Flieger_TolkienEstate",
+  "title": "On Fairy Stories (commentary on Tolkien's essay)",
+  "authors": "Verlyn Flieger (Tolkien Estate website)",
+  "year": null,
+  "url": "https://www.tolkienestate.com/?p=35367",
+  "doi_isbn": "",
+  "source_type": "practitioner",
+  "tier": "B",
+  "key_findings": [
+   "Essay is Tolkien's definitive statement of 'sub-creation'; the power of words to create a Secondary World",
+   "Lecture March 1939 (Andrew Lang Lecture, St Andrews); expanded in Essays Presented to Charles Williams (1947); Tree and Leaf (1964); expanded edition by Flieger & Anderson (2008)",
+   "Fantasy offers Recovery, Escape, Consolation; 'eucatastrophe'"
+  ],
+  "practical_applications": [
+   "Historical anchor for 'sub-creation' and 'Secondary World' vocabulary"
+  ],
+  "limitations": [
+   "Secondary commentary; did not cover the Secondary Belief passage"
+  ],
+  "license": "copyrighted",
+  "access_status": "full_text",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-26",
+  "modules": [
+   "M16",
+   "M38"
+  ]
+ },
+ {
+  "key": "Proctor2012",
+  "title": "Regeneration & Rebirth: Anatomy of the Franchise Reboot",
+  "authors": "William Proctor",
+  "year": 2012,
+  "url": "https://www.nottingham.ac.uk/scope/documents/2012/february-2012/proctor.pdf",
+  "doi_isbn": "",
+  "source_type": "empirical",
+  "tier": "A",
+  "key_findings": [
+   "A reboot is a franchise-specific concept: it disavows prior continuity and restarts from 'year one'; a single film cannot be rebooted, only remade",
+   "DC's Crisis on Infinite Earths (1986) destroyed the multiverse to escape a convoluted, contradictory continuity; Infinite Crisis (2006) partly reversed it",
+   "Uses Hills' 'hyperdiegesis' for a vast, consistent storyworld"
+  ],
+  "practical_applications": [
+   "Options when continuity breaks: fix, retcon, soft reboot, hard reboot - each with a different cost"
+  ],
+  "limitations": [
+   "Film/TV studies essay (Scope, Nottingham); qualitative"
+  ],
+  "license": "open access (Scope)",
+  "access_status": "full_text",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-26",
+  "modules": [
+   "M16",
+   "M38"
+  ]
+ },
+ {
+  "key": "Friedenthal_RetconGame",
+  "title": "Retcon Game: Retroactive Continuity and the Hyperlinking of America",
+  "authors": "Andrew J. Friedenthal",
+  "year": null,
+  "url": "https://muse.jhu.edu/book/60613",
+  "doi_isbn": "",
+  "source_type": "textbook",
+  "tier": "A",
+  "key_findings": [
+   "(Per publisher/catalogue summary) treats retconning as a force shaping how Americans view history and culture; chapter 'Crisis Control' on DC's unified comic universe"
+  ],
+  "practical_applications": [
+   "Background on retcon as a deliberate tool"
+  ],
+  "limitations": [
+   "Only catalogue/search snippets read; year not confirmed"
+  ],
+  "license": "copyrighted (University Press of Mississippi)",
+  "access_status": "search_summary",
+  "verification_status": "unverified",
+  "date_accessed": "2026-11-26",
+  "modules": [
+   "M16",
+   "M38"
+  ]
+ },
+ {
+  "key": "Jenkins2011",
+  "title": "Transmedia 202: Further Reflections",
+  "authors": "Henry Jenkins",
+  "year": 2011,
+  "url": "http://henryjenkins.org/blog/2011/08/defining_transmedia_further_re.html",
+  "doi_isbn": "",
+  "source_type": "practitioner",
+  "tier": "B",
+  "key_findings": [
+   "Contrasts continuity (consistent world) with multiplicity (same characters told differently, alternate versions)",
+   "Seriality = chunking and dispersal with hooks; most transmedia is serial but not all serials are transmedia",
+   "Worldbuilding as one function of additive comprehension"
+  ],
+  "practical_applications": [
+   "Mark spin-offs/what-ifs explicitly as 'multiplicity' so they don't contaminate canon"
+  ],
+  "limitations": [
+   "Blog essay"
+  ],
+  "license": "copyrighted (blog)",
+  "access_status": "full_text",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-26",
+  "modules": [
+   "M16",
+   "M38"
+  ]
+ },
+ {
+  "key": "Zhou2024StoryDiffusion",
+  "title": "StoryDiffusion: Consistent Self-Attention for Long-Range Image and Video Generation",
+  "authors": "Yupeng Zhou, Daquan Zhou, Ming-Ming Cheng, Jiashi Feng, Qibin Hou",
+  "year": 2024,
+  "url": "https://arxiv.org/abs/2405.01434",
+  "doi_isbn": "arXiv:2405.01434",
+  "source_type": "empirical",
+  "tier": "A",
+  "key_findings": [
+   "Training-free Consistent Self-Attention shares sampled tokens across images in a batch to keep subjects consistent; sliding window for long stories; Semantic Motion Predictor for video",
+   "NeurIPS 2024 spotlight"
+  ],
+  "practical_applications": [
+   "Batch-generate all panels of one story together when the tool allows"
+  ],
+  "limitations": [
+   "Abstract/HTML only; consistency is within one generated sequence"
+  ],
+  "license": "arXiv license",
+  "access_status": "abstract",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-26",
+  "modules": [
+   "M16",
+   "M38"
+  ]
+ },
+ {
+  "key": "Zhuang2025ViStoryBench",
+  "title": "ViStoryBench: Comprehensive Benchmark Suite for Story Visualization",
+  "authors": "Cailin Zhuang, Ailin Huang, Yaoqi Hu, Jingwei Wu, Wei Cheng, Jiaqi Liao, et al.",
+  "year": 2025,
+  "url": "https://arxiv.org/html/2505.24862v4",
+  "doi_isbn": "arXiv:2505.24862",
+  "source_type": "empirical",
+  "tier": "A",
+  "key_findings": [
+   "80 stories, 344 characters, 509 reference images, 10 styles, 1,317 shots; 30+ configurations incl. StoryDiffusion, UNO, OmniGen2, GPT-4o, Gemini, Seedream, Sora2 and commercial tools",
+   "Clear trade-off between character consistency and prompt adherence/creativity; image references raise consistency but limit novelty",
+   "A copy-paste baseline scores well on some consistency metrics but poorly on prompt alignment -> 'Copy-Paste Rate' metric",
+   "Models often add or omit characters (OCCM metric)",
+   "Self-consistency metric correlated best with human ratings (Kendall tau .50); aesthetics weakest"
+  ],
+  "practical_applications": [
+   "QC must check identity AND whether the panel does what the script says; watch for missing/extra characters in two-character scenes"
+  ],
+  "limitations": [
+   "Read first ~100k characters of HTML v4 (main results); benchmark lacks background-reference and video metrics; vendor versions change fast"
+  ],
+  "license": "arXiv license",
+  "access_status": "full_text",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-26",
+  "modules": [
+   "M16",
+   "M38"
+  ]
+ },
+ {
+  "key": "AnumanRajadhon1954",
+  "title": "The \"Phi\"",
+  "authors": "Phya Anuman Rajadhon (ed. Margaret Coughlin)",
+  "year": 1954,
+  "url": "https://thesiamsociety.org/wp-content/uploads/1954/03/JSS_041_2c_PhyaAnumanRajathon_ThePhi.pdf",
+  "doi_isbn": "Journal of the Siam Society 41.2",
+  "source_type": "primary_text",
+  "tier": "B",
+  "key_findings": [
+   "'Phi' once covered good and bad supernatural beings; after Khmer/Hindu influence good phi became thevada and phi narrowed to ghost/evil spirit",
+   "Chao phi: guardian spirits of a place, with shrines; addressed as chao phaw/chao mae",
+   "Phi ruan: a dead family member who stays invisibly in the house and looks after the family; a sacred, tabooed place in the house; the family asks its permission on important occasions",
+   "A person who dies a violent death becomes phi tai hong; a woman dying in childbirth becomes phi tai thang klom; such corpses customarily buried, not cremated"
+  ],
+  "practical_applications": [
+   "Ghost rules for a Thai ghost series can be grounded in documented Thai belief (phi ruan = protective ancestor presence) instead of Western ghost tropes"
+  ],
+  "limitations": [
+   "1954 folklorist's account of mainly Central Thai belief; regional variation; beliefs have changed since"
+  ],
+  "license": "Siam Society (free online)",
+  "access_status": "full_text",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-26",
+  "modules": [
+   "M16",
+   "M38"
+  ]
+ },
+ {
+  "key": "Angkasuparakul2025",
+  "title": "Western-styled Buildings in Bangkok: Shophouses and Commercial Buildings in Khlong Khu Mueang Doem Canal Area",
+  "authors": "Pichit Angkasuparakul",
+  "year": 2025,
+  "url": "https://so01.tci-thaijo.org/index.php/damrong/article/view/282766",
+  "doi_isbn": "",
+  "source_type": "empirical",
+  "tier": "A",
+  "key_findings": [
+   "Shophouses along the former city-moat canal developed after the Bowring Treaty and new road construction (from around Rama V); Western ornament on facades, gradually moving to modern style; land owned by elites or the state enabled steady building"
+  ],
+  "practical_applications": [
+   "External-realism anchor for a canal-side shophouse setting: period cues must match era"
+  ],
+  "limitations": [
+   "Abstract only (English); Thai-language article; Damrong Journal 24(2)"
+  ],
+  "license": "journal (TCI)",
+  "access_status": "abstract",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-26",
+  "modules": [
+   "M16",
+   "M38"
+  ]
+ },
+ {
+  "key": "Winet2025",
+  "title": "How Marketers Can Harness the Power of 'Callbacks'",
+  "authors": "Duke Fuqua Insights (on research by Yuji Winet and colleagues)",
+  "year": 2025,
+  "url": "https://www.fuqua.duke.edu/duke-fuqua-insights/how-marketers-can-harness-power-of-callbacks",
+  "doi_isbn": "",
+  "source_type": "practitioner",
+  "tier": "C",
+  "key_findings": [
+   "Callback = something familiar returns in a new context that changes its meaning",
+   "5,500+ jokes from Netflix specials: callbacks drew ~8 s of laughter/applause vs ~3 s",
+   "748 participants, 17 commercials: after two weeks callback ads remembered better than ads shown twice",
+   "LLM-generated callback score correlated with IMDb ratings/box office (correlational)"
+  ],
+  "practical_applications": [
+   "Running gags should return in a new context (callback), not as identical repetition"
+  ],
+  "limitations": [
+   "Unpublished 'ongoing research' described in a university press article; one brand's ads; LLM-rated scores"
+  ],
+  "license": "copyrighted",
+  "access_status": "publisher_page",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-26",
+  "modules": [
+   "M16",
+   "M38"
+  ]
+ },
+ {
+  "key": "ITVCorrieScriptEditor",
+  "title": "Assistant Script Editor - Coronation Street (job listing)",
+  "authors": "ITV / ProductionBase",
+  "year": null,
+  "url": "https://www.productionbase.co.uk/film-tv-jobs/assistant-script-editor-manchester-11.21.0220866",
+  "doi_isbn": "",
+  "source_type": "docs",
+  "tier": "C",
+  "key_findings": [
+   "(Per search summary) role reads scripts to keep established characters treated consistently; requires knowledge of storyline, plots and characters; related ITV listings: script supervisor notes continuity, makeup continuity across filming blocks"
+  ],
+  "practical_applications": [
+   "Real soap productions assign continuity to named roles (script editing, script supervision, makeup)"
+  ],
+  "limitations": [
+   "Search snippet only; job listings"
+  ],
+  "license": "copyrighted",
+  "access_status": "search_summary",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-26",
+  "modules": [
+   "M16",
+   "M38"
+  ]
+ },
+ {
+  "key": "Sanderson2007",
+  "title": "Sanderson's First Law",
+  "authors": "Brandon Sanderson",
+  "year": 2007,
+  "url": "https://www.brandonsanderson.com/sandersons-first-law/",
+  "doi_isbn": "",
+  "source_type": "practitioner",
+  "tier": "D",
+  "key_findings": [
+   "'An author's ability to solve conflict with magic is DIRECTLY PROPORTIONAL to how well the reader understands said magic.'",
+   "Soft systems (vague rules) create wonder and should rarely solve problems; hard systems (clear rules) can solve problems; most writers sit between; prefers rules, costs and laws.",
+   "Don't add convenient new powers or laws to fit one situation."
+  ],
+  "practical_applications": [
+   "Any special rule in a series (immunity, ghosts visiting at 2 am, a glasses 'power') may only resolve a plot if it was set up earlier."
+  ],
+  "limitations": [
+   "Craft essay by a novelist; tier D, not science."
+  ],
+  "license": "copyrighted",
+  "access_status": "full_text",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M16",
+   "M38"
+  ]
+ },
+ {
+  "key": "Macdonald2018",
+  "title": "Tablets of Stone or DNA? TV series bibles",
+  "authors": "Ian W. Macdonald",
+  "year": 2018,
+  "url": "https://eprints.whiterose.ac.uk/id/eprint/125213/",
+  "doi_isbn": "10.1386/josc.9.1.3_1",
+  "source_type": "empirical",
+  "tier": "A",
+  "key_findings": [
+   "Journal of Screenwriting 9(1), 3-23 (accepted manuscript read). Bible lengths vary widely: from a 3-page treatment worked up to 10 pages, 5-8 and 20-25 pages, to 50-60 pages (House of Cards) and 79 pages (The Wire); writers define bibles vaguely.",
+   "Types: selling bible, writer's bible, season bible (with storyline wall chart), production bible codifying 'case law', format bible for international sales; a 'walking bible' person may hold the memory.",
+   "'Less a tablet of stone, and more like a DNA code'; always ask 'which version?'.",
+   "Typical contents: premise/concept, place, locations, character biographies, rationale, structure & style, research, production detail (case law), episode storylines. Level of detail depends on what is culturally familiar versus new."
+  ],
+  "practical_applications": [
+   "Structure for STORY_BIBLE_TEMPLATE.md: DNA layer + case-law layer + episode layer, versioned."
+  ],
+  "limitations": [
+   "Small UK sample of writers and bibles.",
+   "Spot-check 2026-11-25: range wording corrected (separate examples)."
+  ],
+  "license": "copyrighted (accepted manuscript, self-archived)",
+  "access_status": "full_text",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M16",
+   "M38"
+  ]
+ },
+ {
+  "key": "Chee2012",
+  "title": "What is the Holocron?",
+  "authors": "Leland Chee",
+  "year": 2012,
+  "url": "https://www.starwars.com/news/what-is-the-holocron",
+  "doi_isbn": "",
+  "source_type": "docs",
+  "tier": "C",
+  "key_findings": [
+   "Lucasfilm's continuity database, created January 2000 (FileMaker per other sources) when licensed products needed to track new material; before it, lore lived in binders called 'bibles'.",
+   "Tracks stories, discrepancies, images, stats, pronunciations, translations, costume variations and behind-the-scenes info; plus style guides, timelines, spelling dictionaries, quote banks and maps.",
+   "Over 55,000 entries in 2012 (19,000+ characters, 2,900 species, 5,300 worlds)."
+  ],
+  "practical_applications": [
+   "Even a tiny studio benefits from one database of entities with IDs, a discrepancy log and a spelling list (Thai/English names)."
+  ],
+  "limitations": [
+   "Official blog post by the database keeper; 2012 snapshot."
+  ],
+  "license": "copyrighted",
+  "access_status": "full_text",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M16",
+   "M38"
+  ]
+ },
+ {
+  "key": "Mittell2015",
+  "title": "Complex TV: The Poetics of Contemporary Television Storytelling - chapter 'Orienting Paratexts'",
+  "authors": "Jason Mittell",
+  "year": 2015,
+  "url": "https://scalar.usc.edu/works/complex-television/orienting-paratexts.8",
+  "doi_isbn": "",
+  "source_type": "textbook",
+  "tier": "A",
+  "key_findings": [
+   "NYU Press 2015. Chapter abstract: digital-era viewers use paratexts (wikis such as Lostpedia, infographics, character charts) to make sense of complex TV's temporality, characters, plot and spatial orientation.",
+   "Foregrounds 'forensic fandom' and 'drillability' as modes of spectatorship.",
+   "Comprehension chapter (Scalar companion abstract): serials keep viewers oriented across viewing practices; play with knowledge gaps between characters and viewers; trigger or exploit fading viewer memory for surprise"
+  ],
+  "practical_applications": [
+   "For serial content, publish orienting aids (recap card, character card, map) - the audience will build them anyway."
+  ],
+  "limitations": [
+   "Only chapter abstract and examples read."
+  ],
+  "license": "copyrighted",
+  "access_status": "abstract",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-26",
+  "modules": [
+   "M16",
+   "M38"
+  ]
+ },
+ {
+  "key": "ZwaanRadvansky1998",
+  "title": "Situation models in language comprehension and memory",
+  "authors": "Rolf A. Zwaan, Gabriel A. Radvansky",
+  "year": 1998,
+  "url": "https://cs.uky.edu/~sgware/reading/papers/zwaan1998situation.pdf",
+  "doi_isbn": "",
+  "source_type": "review",
+  "tier": "A",
+  "key_findings": [
+   "Psychological Bulletin 123(2), 162-185. Situation models are indexed on time, space, causation, intentionality and protagonist.",
+   "Readers notice when a protagonist's action contradicts an earlier trait (elevated reading times), citing Albrecht & O'Brien."
+  ],
+  "practical_applications": [
+   "World facts the audience tracks automatically: when, where, why, goals, who; these are the consistency priorities of a world bible."
+  ],
+  "limitations": [
+   "Text comprehension research; video transfer by analogy."
+  ],
+  "license": "copyrighted (course-hosted copy)",
+  "access_status": "full_text",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M16",
+   "M38"
+  ]
+ },
+ {
+  "key": "SmithHenderson2008",
+  "title": "Edit Blindness: The relationship between attention and global change blindness in dynamic scenes",
+  "authors": "Tim J. Smith, John M. Henderson",
+  "year": 2008,
+  "url": "https://bop.unibe.ch/JEMR/article/view/2264",
+  "doi_isbn": "10.16910/jemr.2.2.6",
+  "source_type": "empirical",
+  "tier": "A",
+  "key_findings": [
+   "Journal of Eye Movement Research 2(2):6. Viewers asked to detect edits in excerpts of seven feature films while eye-tracked.",
+   "Overall 15.8% of edits were missed even when viewers were explicitly looking for them.",
+   "Within-scene cuts (25.1% missed) and match-action cuts (32.4% missed) produced more edit blindness than between-scene cuts (9.4%) and gaze-match cuts (10.9%).",
+   "Blinks coincided with very few missed cuts (about 1%); most edit blindness is attributed to attention being absorbed by the narrative, not to blinks/saccades.",
+   "Cut detection time averaged 489 ms."
+  ],
+  "practical_applications": [
+   "Cut on action and keep spatial continuity within a scene to make cuts invisible; between-scene jumps are noticed and should be signalled deliberately.",
+   "In 2D puppet/AI clips, a match-action cut is a cheap way to hide a change of generated image."
+  ],
+  "limitations": [
+   "Small sample of films and participants; viewers were instructed to detect edits, so free-viewing blindness is likely higher."
+  ],
+  "license": "CC BY 4.0",
+  "access_status": "full_text",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M16",
+   "M38"
+  ]
+ },
+ {
+  "key": "MaglianoZacks2011",
+  "title": "The impact of continuity editing in narrative film on event segmentation",
+  "authors": "Joseph P. Magliano, Jeffrey M. Zacks",
+  "year": 2011,
+  "url": "https://doi.org/10.1111/j.1551-6709.2011.01202.x",
+  "doi_isbn": "10.1111/j.1551-6709.2011.01202.x",
+  "source_type": "empirical",
+  "tier": "A",
+  "key_findings": [
+   "fMRI + segmentation of a commercial film; three degrees of continuity at edits: continuous in space/time/action; discontinuous in space or time but continuous in action; discontinuous in action",
+   "Discontinuities in action had the biggest effect on event segmentation; space/time discontinuities had minor effects",
+   "Specialized higher-order mechanisms maintain continuity of action across spatiotemporal discontinuities"
+  ],
+  "practical_applications": [
+   "Viewers chunk a story by action; a jump in location/time inside the same action reads as continuous, while breaking the action reads as a new event."
+  ],
+  "limitations": [
+   "Abstract read via OpenAlex (upgraded from search_summary); one film"
+  ],
+  "license": "unknown (author manuscript on PMC)",
+  "access_status": "abstract",
+  "verification_status": "unverified",
+  "date_accessed": "2026-11-26",
+  "modules": [
+   "M16",
+   "M38"
+  ]
+ },
+ {
+  "key": "Tewel2024",
+  "title": "Training-Free Consistent Text-to-Image Generation (ConsiStory)",
+  "authors": "Yoad Tewel, Omri Kaduri, Rinon Gal, Yoni Kasten, Lior Wolf, Gal Chechik, Yuval Atzmon",
+  "year": 2024,
+  "url": "https://arxiv.org/abs/2402.03286",
+  "doi_isbn": "arXiv:2402.03286",
+  "source_type": "empirical",
+  "tier": "A",
+  "key_findings": [
+   "SIGGRAPH 2024 (TOG). Generates a consistent subject across a batch of images by sharing internal activations (subject-driven shared attention, feature injection) with no optimisation step.",
+   "Claims state-of-the-art subject consistency and text alignment versus baselines; prior methods need per-subject optimisation or large-scale pre-training and struggle with multi-subject scenes."
+  ],
+  "practical_applications": [
+   "Tool class 'batch-shared attention': generate all frames of one episode in one batch to keep the subject aligned."
+  ],
+  "limitations": [
+   "Abstract only; consistency holds within a batch, not necessarily across separate sessions/episodes."
+  ],
+  "license": "arXiv non-exclusive",
+  "access_status": "abstract",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M16",
+   "M38"
+  ]
+ }
+]

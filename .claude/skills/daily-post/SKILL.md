@@ -5,6 +5,10 @@ description: Create the daily Facebook/Instagram post for an eyewear shop — pa
 
 # Daily eyewear post
 
+> **Studio loop (2026-11-26):** before the job `python creative-intelligence/tools/memory.py brief --job "<job>" --tags post,time-optic`
+> (obey past rejections, characters, known errors) · before delivery run skill `creative-critic` (independent sub-agent) and
+> fix critical/major findings · after the user reacts `memory.py add --type approval|rejection` with their exact words.
+
 The user wants this to be effortless: no forms to fill in, and the shop logo goes on every post. Two goals: the image must be **beautiful** and must **borrow the structure of the style's reference image without looking like a copy of it**. Only ask the user something when you are truly blocked, and keep it short.
 
 ## Inputs

@@ -1,0 +1,1320 @@
+[
+ {
+  "key": "ParasuramanManzey2010",
+  "title": "Complacency and Bias in Human Use of Automation: An Attentional Integration",
+  "authors": "Raja Parasuraman; Dietrich Manzey",
+  "year": 2010,
+  "url": "https://doi.org/10.14279/depositonce-8052",
+  "doi_isbn": "10.1177/0018720810376055",
+  "source_type": "review",
+  "tier": "A",
+  "key_findings": [
+   "Automation complacency appears under multiple-task load, in naive and expert users, and is not removed by simple practice (up to 60 min of training did not reduce it, Singh, Sharma & Parasuraman 2001).",
+   "Constant-reliability automation: 33% of automation failures detected vs 82% under variable reliability (Parasuraman, Molloy & Singh 1993); single-task detection ~97%.",
+   "Automation bias produces omission and commission errors; not prevented by training or instructions to verify; affects individuals and teams.",
+   "Mosier et al. 1992: 75% of pilots followed a wrong automated-checklist recommendation vs 25% with a paper checklist; Mosier et al. 1998: 100% shut down an engine on a false EICAS alert and 67% reported a 'phantom memory' of confirming cues.",
+   "Felt accountability reduces automation bias (Skitka, Mosier & Burdick 2000); experiencing automation failures during training reduces commission errors (Bahner, Huper & Manzey 2008); 20-50% commission errors at the first wrong diagnosis.",
+   "Aids that give information/status show less automation bias than aids that give specific commands; trial-by-trial confidence information reduced decrements (McGuirl & Sarter 2006)."
+  ],
+  "practical_applications": [
+   "Design human checkpoints so the human must look at the raw output, not only at a green tick.",
+   "Seed review batches with known-bad items so reviewers meet automation failures early.",
+   "Show the check's evidence (status) rather than only a verdict (command)."
+  ],
+  "limitations": [
+   "Mostly aviation, medicine and process-control lab studies; transfer to creative media is an inference.",
+   "Some effects (first-failure effect, command vs status) did not replicate consistently."
+  ],
+  "license": "author repository copy (DepositOnce); copyrighted",
+  "access_status": "full_text",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-26",
+  "modules": [
+   "M37"
+  ]
+ },
+ {
+  "key": "Bainbridge1983",
+  "title": "Ironies of automation",
+  "authors": "Lisanne Bainbridge",
+  "year": 1983,
+  "url": "https://gwern.net/doc/sociology/technology/1983-bainbridge.pdf",
+  "doi_isbn": "10.1016/0005-1098(83)90046-8",
+  "source_type": "primary_text",
+  "tier": "A",
+  "key_findings": [
+   "The designer who tries to eliminate the operator still leaves the operator the tasks the designer cannot think how to automate - an arbitrary collection with little support.",
+   "Vigilance: humans cannot keep effective visual attention on a source where little happens for more than about half an hour; rare abnormalities must be caught by alarms, which raises the question of who notices when the alarm system is not working.",
+   "Automatic control can 'camouflage' failure until trends are beyond control; 'automatic systems should fail obviously'.",
+   "Manual skills deteriorate when not used; takeover needs a more, not less, skilled operator.",
+   "'Perhaps the final irony is that it is the most successful automated systems, with rare need for manual intervention, which may need the greatest investment in human operator training.'",
+   "The human must know which tasks the computer is dealing with and how."
+  ],
+  "practical_applications": [
+   "Make pipeline steps fail loudly (non-zero exit, stop the batch) instead of silently producing a plausible file.",
+   "Keep the human doing some manual picks so the skill of judging seeds stays sharp.",
+   "Log what each automated step did so the human knows what the machine handled."
+  ],
+  "limitations": [
+   "Process-control context (1983); argument paper, not an experiment."
+  ],
+  "license": "copyrighted (Elsevier); free copy hosted by third party",
+  "access_status": "full_text",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-26",
+  "modules": [
+   "M37"
+  ]
+ },
+ {
+  "key": "ParasuramanRiley1997",
+  "title": "Humans and Automation: Use, Misuse, Disuse, Abuse",
+  "authors": "Raja Parasuraman; Victor Riley",
+  "year": 1997,
+  "url": "https://doi.org/10.1518/001872097778543886",
+  "doi_isbn": "10.1518/001872097778543886",
+  "source_type": "review",
+  "tier": "A",
+  "key_findings": [
+   "Misuse = over-reliance (monitoring failures, decision biases); disuse = neglect, commonly caused by false alarms when base rates are ignored; abuse = automating functions without regard for consequences to human performance.",
+   "Monitoring of automation is affected by workload, automation reliability and consistency, and the saliency of automation state indicators."
+  ],
+  "practical_applications": [
+   "Tune automated checks for false-alarm rate, or people stop reading them (disuse).",
+   "Do not automate a step just because it can be automated (abuse)."
+  ],
+  "limitations": [
+   "Read as abstract only."
+  ],
+  "license": "copyrighted",
+  "access_status": "abstract",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-26",
+  "modules": [
+   "M37"
+  ]
+ },
+ {
+  "key": "ParasuramanSheridanWickens2000",
+  "title": "A model for types and levels of human interaction with automation",
+  "authors": "Raja Parasuraman; Thomas B. Sheridan; Christopher D. Wickens",
+  "year": 2000,
+  "url": "https://doi.org/10.1109/3468.844354",
+  "doi_isbn": "10.1109/3468.844354",
+  "source_type": "empirical",
+  "tier": "A",
+  "key_findings": [
+   "Automation can apply to four function classes - information acquisition, information analysis, decision/action selection, action implementation - each on a continuum from manual to fully automatic.",
+   "Automation does not merely supplant but changes human activity and imposes new coordination demands; primary evaluative criterion = human performance consequences; secondary = automation reliability and cost of decision/action consequences."
+  ],
+  "practical_applications": [
+   "Map each pipeline step to the four classes and choose a level per step (auto-generate, human-select, auto-finish, human-publish)."
+  ],
+  "limitations": [
+   "Model paper; read as abstract only."
+  ],
+  "license": "copyrighted",
+  "access_status": "abstract",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-26",
+  "modules": [
+   "M37"
+  ]
+ },
+ {
+  "key": "LeeSee2004",
+  "title": "Trust in Automation: Designing for Appropriate Reliance",
+  "authors": "John D. Lee; Katrina A. See",
+  "year": 2004,
+  "url": "https://doi.org/10.1518/hfes.46.1.50_30392",
+  "doi_isbn": "10.1518/hfes.46.1.50_30392",
+  "source_type": "review",
+  "tier": "A",
+  "key_findings": [
+   "People fail to rely on automation appropriately; trust guides reliance when complexity makes a complete understanding impractical.",
+   "Conceptual model of trust dynamics, context and display characteristics; the goal is appropriate (calibrated) reliance, not maximal trust."
+  ],
+  "practical_applications": [
+   "Show per-run evidence (contact sheet, metrics) so trust in a script tracks its real reliability."
+  ],
+  "limitations": [
+   "Abstract only."
+  ],
+  "license": "copyrighted",
+  "access_status": "abstract",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-26",
+  "modules": [
+   "M37"
+  ]
+ },
+ {
+  "key": "Strauch2017",
+  "title": "Ironies of Automation: Still Unresolved After All These Years",
+  "authors": "Barry Strauch",
+  "year": 2017,
+  "url": "https://doi.org/10.1109/THMS.2017.2732506",
+  "doi_isbn": "10.1109/THMS.2017.2732506",
+  "source_type": "review",
+  "tier": "A",
+  "key_findings": [
+   "Bainbridge's ironies remain relevant, are recognisable in later automation-related accidents, and still inspire researchers, accident investigators, regulators and managers."
+  ],
+  "practical_applications": [
+   "Treat the ironies as current, not historical."
+  ],
+  "limitations": [
+   "Abstract only; accident-focused."
+  ],
+  "license": "copyrighted",
+  "access_status": "abstract",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-26",
+  "modules": [
+   "M37"
+  ]
+ },
+ {
+  "key": "Goddard2012",
+  "title": "Automation bias: a systematic review of frequency, effect mediators, and mitigators",
+  "authors": "Kate Goddard; Abdul Roudsari; Jeremy C. Wyatt",
+  "year": 2012,
+  "url": "https://europepmc.org/articles/PMC3240751",
+  "doi_isbn": "10.1136/amiajnl-2011-000089",
+  "source_type": "review",
+  "tier": "S",
+  "key_findings": [
+   "74 of 13,821 retrieved papers included; automation bias mediated by cognitive style, task-specific experience, trust and confidence; environmental mediators are workload, task complexity and time constraint.",
+   "Mitigators: training, emphasising user accountability, position of advice on screen, updated confidence levels, providing information rather than recommendation."
+  ],
+  "practical_applications": [
+   "Review gates under time pressure (end of a long batch, late at night) are the most bias-prone; schedule review when not rushed."
+  ],
+  "limitations": [
+   "Healthcare focus; abstract only."
+  ],
+  "license": "open access (PMC)",
+  "access_status": "abstract",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-26",
+  "modules": [
+   "M37"
+  ]
+ },
+ {
+  "key": "ToyotaTPS",
+  "title": "Toyota Production System (Toyota global website)",
+  "authors": "Toyota Motor Corporation",
+  "year": null,
+  "url": "https://global.toyota/en/company/vision-and-philosophy/production-system/",
+  "doi_isbn": "",
+  "source_type": "docs",
+  "tier": "C",
+  "key_findings": [
+   "Jidoka = 'automation with a human touch': the line stops immediately when abnormalities are detected to prevent defective products; traced to Sakichi Toyoda's automatic loom which 'built the capability to make judgments into the machine itself'.",
+   "Andon signals abnormality so 'people need only respond when there is an abnormality'; Just-in-Time = make only what is needed, when it is needed, in the amount needed."
+  ],
+  "practical_applications": [
+   "Stop the batch at the first abnormal output instead of finishing 100 bad images.",
+   "Generate only the sets that will be scheduled soon (JIT) rather than a large unscheduled backlog."
+  ],
+  "limitations": [
+   "Corporate self-description."
+  ],
+  "license": "copyrighted",
+  "access_status": "full_text",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-26",
+  "modules": [
+   "M37"
+  ]
+ },
+ {
+  "key": "LEI_PokaYoke",
+  "title": "Poka yoke (Lean Lexicon entry)",
+  "authors": "Lean Enterprise Institute",
+  "year": null,
+  "url": "https://www.lean.org/lexicon-terms/poka-yoke/",
+  "doi_isbn": "",
+  "source_type": "encyclopedia",
+  "tier": "B",
+  "key_findings": [
+   "Poka-yoke = simple, inexpensive error-proofing devices; purpose is 100% quality by finding defects at their source.",
+   "Shutdown devices (strongest: the machine will not start if the workpiece is set wrong) vs warning devices (buzzer/light); contrasted with sampling inspection (can miss defects) and 100% inspection (costly, after the fact)."
+  ],
+  "practical_applications": [
+   "Scripts refuse to run with wrong inputs (shutdown) or print loud warnings (warning)."
+  ],
+  "limitations": [
+   "The page does not name Shingo; attribution to Shigeo Shingo comes from secondary sources (search summary)."
+  ],
+  "license": "copyrighted",
+  "access_status": "full_text",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-26",
+  "modules": [
+   "M37"
+  ]
+ },
+ {
+  "key": "NIST_SQC_History",
+  "title": "NIST/SEMATECH e-Handbook of Statistical Methods, 6.1.1 How did Statistical Quality Control begin?",
+  "authors": "NIST/SEMATECH",
+  "year": null,
+  "url": "https://itl.nist.gov/div898/handbook/pmc/section1/pmc11.htm",
+  "doi_isbn": "",
+  "source_type": "textbook",
+  "tier": "B",
+  "key_findings": [
+   "Shewhart memo of 16 May 1924 with a sketch of a modern control chart; 1931 book Economic Control of Quality of Manufactured Product; Dodge and Romig (Bell Labs) led sampling inspection."
+  ],
+  "practical_applications": [
+   "History anchor for control charts and sampling."
+  ],
+  "limitations": [
+   "Brief history page."
+  ],
+  "license": "public domain (US government)",
+  "access_status": "full_text",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-26",
+  "modules": [
+   "M37"
+  ]
+ },
+ {
+  "key": "NIST_AcceptanceSampling",
+  "title": "NIST/SEMATECH e-Handbook, 6.2.1 What is acceptance sampling?",
+  "authors": "NIST/SEMATECH",
+  "year": null,
+  "url": "https://www.itl.nist.gov/div898/handbook/pmc/section2/pmc21.htm",
+  "doi_isbn": "",
+  "source_type": "textbook",
+  "tier": "B",
+  "key_findings": [
+   "Acceptance sampling inspects a random sample of a lot and accepts or rejects the lot; its purpose is to decide acceptability, not to estimate quality.",
+   "Used when testing is destructive, or 100% inspection is very costly or too slow; plans are 'one-shot deals' for short-run effects; long-run quality needs control charts."
+  ],
+  "practical_applications": [
+   "When a batch is too large to check every frame, sample randomly and redo the batch on a defect."
+  ],
+  "limitations": [
+   "AQL tables not reproduced here."
+  ],
+  "license": "public domain (US government)",
+  "access_status": "full_text",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-26",
+  "modules": [
+   "M37"
+  ]
+ },
+ {
+  "key": "NIST_ControlCharts",
+  "title": "NIST/SEMATECH e-Handbook, 6.3.2 What are Variables Control Charts?",
+  "authors": "NIST/SEMATECH",
+  "year": null,
+  "url": "https://www.itl.nist.gov/div898/handbook/pmc/section3/pmc32.htm",
+  "doi_isbn": "",
+  "source_type": "textbook",
+  "tier": "B",
+  "key_findings": [
+   "3-sigma control limits are the accepted industry standard; control limits are not specification limits.",
+   "Western Electric run rules (e.g., 8 consecutive points on one side of the centre line) flag non-random patterns; adding them raises false alarms from about 1 per 371 points to about 1 per 91.75."
+  ],
+  "practical_applications": [
+   "Track reject rate per batch (FLUX seeds rejected per set) and look for runs, not single bad days."
+  ],
+  "limitations": [
+   "Assumes roughly normal, independent data; small-count reject rates need p-charts."
+  ],
+  "license": "public domain (US government)",
+  "access_status": "full_text",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-26",
+  "modules": [
+   "M37"
+  ]
+ },
+ {
+  "key": "Shewhart1931",
+  "title": "Economic Control of Quality of Manufactured Product",
+  "authors": "Walter A. Shewhart",
+  "year": 1931,
+  "url": "https://itl.nist.gov/div898/handbook/pmc/section1/pmc11.htm",
+  "doi_isbn": "",
+  "source_type": "textbook",
+  "tier": "A",
+  "key_findings": [
+   "Founding text of statistical process control (as described by NIST)."
+  ],
+  "practical_applications": [
+   "Common vs special cause framing."
+  ],
+  "limitations": [
+   "Not read; existence and role per NIST."
+  ],
+  "license": "copyrighted (1931)",
+  "access_status": "bibliographic",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-26",
+  "modules": [
+   "M37"
+  ]
+ },
+ {
+  "key": "HenneEtAl1996",
+  "title": "The Making of Toy Story",
+  "authors": "Mark Henne; Hal Hickel; Ewan Johnson; Sonoko Konishi",
+  "year": 1996,
+  "url": "https://people.uncw.edu/ricanekk/teaching/spring09/csc100/lectures/pattersone/TheMakingOfToyStory.pdf",
+  "doi_isbn": "Proceedings of COMPCON Spring '96 (41st IEEE International Computer Conference), pp. 463-468",
+  "source_type": "primary_text",
+  "tier": "A",
+  "key_findings": [
+   "Animated film creation is so sequential that efficient management of the pipeline is crucial; more than 1,500 shots kept logically consistent with sets and a shot database.",
+   "Ringmaster: relational database with inventories of models, textures and images; routes rendering requests to available machines on the RenderFarm, keeps status, then invokes compositing of layers.",
+   "RenderFarm of over 300 Sun processors plus SGI machines; idle personal workstations drawn into the batch pool; ~260 GB DiskFarm with ~140,000 image files."
+  ],
+  "practical_applications": [
+   "A production database (asset inventory + job status) is the core of a pipeline, not the renderer.",
+   "Use idle machine time for batch jobs (overnight FLUX)."
+  ],
+  "limitations": [
+   "Practitioner conference paper; figures as reported by Pixar staff in 1996."
+  ],
+  "license": "copyrighted (IEEE); course-hosted copy",
+  "access_status": "full_text",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-26",
+  "modules": [
+   "M37"
+  ]
+ },
+ {
+  "key": "OpenUSD_Intro",
+  "title": "Introduction to USD (OpenUSD documentation)",
+  "authors": "Pixar Animation Studios / OpenUSD project",
+  "year": null,
+  "url": "https://openusd.org/release/intro.html",
+  "doi_isbn": "",
+  "source_type": "docs",
+  "tier": "C",
+  "key_findings": [
+   "USD is roughly the fourth generation of composed scene description at Pixar (after Marionette, Presto, TidScene), initiated 2012.",
+   "Artists work in separate layers combined in a strength order, so each can work without overwriting others; stronger layers override weaker ones non-destructively; referencing assembles reusable assets."
+  ],
+  "practical_applications": [
+   "Separate files per responsibility (story text, prompts, picks, finish settings) so parallel work does not overwrite."
+  ],
+  "limitations": [
+   "Vendor documentation."
+  ],
+  "license": "Modified Apache 2.0 (project) - unverified",
+  "access_status": "full_text",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-26",
+  "modules": [
+   "M37"
+  ]
+ },
+ {
+  "key": "VFXRefPlatform",
+  "title": "VFX Reference Platform",
+  "authors": "Visual Effects Society Technology Committee",
+  "year": null,
+  "url": "https://vfxplatform.com/",
+  "doi_isbn": "",
+  "source_type": "docs",
+  "tier": "C",
+  "key_findings": [
+   "Yearly set of target tool and library versions (compiler, Python, Qt, OpenEXR, OpenVDB) to minimise incompatibilities between software packages; CY2027 platform feature complete per 1 Nov 2026 update."
+  ],
+  "practical_applications": [
+   "Pin one set of tool versions per season (Python, ComfyUI, model files) and change them on purpose."
+  ],
+  "limitations": [
+   "Start year not stated on the page."
+  ],
+  "license": "unknown",
+  "access_status": "full_text",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-26",
+  "modules": [
+   "M37"
+  ]
+ },
+ {
+  "key": "Feldman1979",
+  "title": "Make - a program for maintaining computer programs",
+  "authors": "Stuart I. Feldman",
+  "year": 1979,
+  "url": "https://doi.org/10.1002/spe.4380090402",
+  "doi_isbn": "10.1002/spe.4380090402",
+  "source_type": "primary_text",
+  "tier": "A",
+  "key_findings": [
+   "Make keeps track of relationships between parts of a program and issues the commands needed to make the parts consistent after changes; in use on UNIX since 1975; the idea adapts to many environments."
+  ],
+  "practical_applications": [
+   "Dependency-aware 'skip if up to date' steps (gen.sh skips existing images) descend from make."
+  ],
+  "limitations": [
+   "Abstract only."
+  ],
+  "license": "copyrighted (Wiley)",
+  "access_status": "abstract",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-26",
+  "modules": [
+   "M37"
+  ]
+ },
+ {
+  "key": "Fowler2024_CI",
+  "title": "Continuous Integration",
+  "authors": "Martin Fowler",
+  "year": 2024,
+  "url": "https://martinfowler.com/articles/continuousIntegration.html",
+  "doi_isbn": "",
+  "source_type": "practitioner",
+  "tier": "B",
+  "key_findings": [
+   "Practices: single source repository, automate the build, self-testing build, everyone commits to mainline daily, fix broken builds immediately, keep the build fast (~10 min). First published 10 Sep 2000, revised 18 Jan 2024."
+  ],
+  "practical_applications": [
+   "One command builds a kit end to end; a red check stops everything until fixed."
+  ],
+  "limitations": [
+   "Software practice; evidence is experiential."
+  ],
+  "license": "copyrighted",
+  "access_status": "full_text",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-26",
+  "modules": [
+   "M37"
+  ]
+ },
+ {
+  "key": "DORA_Metrics",
+  "title": "DORA's software delivery metrics (guide)",
+  "authors": "DORA (Google Cloud)",
+  "year": null,
+  "url": "https://dora.dev/guides/dora-metrics/",
+  "doi_isbn": "",
+  "source_type": "docs",
+  "tier": "C",
+  "key_findings": [
+   "Five metrics: change lead time, deployment frequency, failed deployment recovery time (throughput); change fail rate, deployment rework rate (instability).",
+   "'DORA's research has repeatedly demonstrated that speed and stability are not tradeoffs.'"
+  ],
+  "practical_applications": [
+   "Studio analogues: brief-to-publish lead time, redo rate after publish, time to fix a bad post."
+  ],
+  "limitations": [
+   "Survey-based research programme; causal reading contested (not examined here)."
+  ],
+  "license": "unknown",
+  "access_status": "full_text",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-26",
+  "modules": [
+   "M37"
+  ]
+ },
+ {
+  "key": "ReproBuilds_Def",
+  "title": "Definitions (Reproducible Builds project)",
+  "authors": "Reproducible Builds project",
+  "year": null,
+  "url": "https://reproducible-builds.org/docs/definition/",
+  "doi_isbn": "",
+  "source_type": "docs",
+  "tier": "C",
+  "key_findings": [
+   "A build is reproducible if, given the same source code, build environment and build instructions, any party can recreate bit-by-bit identical copies of all specified artifacts; verified by hash comparison."
+  ],
+  "practical_applications": [
+   "Record source (story file + commit), environment (model files, versions) and instructions (command line) per kit."
+  ],
+  "limitations": [
+   "Bit-identical output is often impossible for GPU generative models; aim for 'same within tolerance'."
+  ],
+  "license": "unknown",
+  "access_status": "full_text",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-26",
+  "modules": [
+   "M37"
+  ]
+ },
+ {
+  "key": "DiffusersReproDocs",
+  "title": "Reproducibility (Diffusers documentation, v0.43)",
+  "authors": "Hugging Face",
+  "year": null,
+  "url": "https://huggingface.co/docs/diffusers/using-diffusers/reusing_seeds",
+  "doi_isbn": "",
+  "source_type": "docs",
+  "tier": "C",
+  "key_findings": [
+   "Use a seeded Generator; a CPU generator is more stable across machines; a GPU generator can diverge from CPU results.",
+   "Deterministic algorithms (enable_full_determinism) may be slower; reproducibility 'is not guaranteed even with an identical seed'."
+  ],
+  "practical_applications": [
+   "A seed is a recipe ingredient, not a guarantee; keep the accepted image itself."
+  ],
+  "limitations": [
+   "Library-specific; ComfyUI behaviour may differ."
+  ],
+  "license": "Apache 2.0",
+  "access_status": "full_text",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-26",
+  "modules": [
+   "M37"
+  ]
+ },
+ {
+  "key": "He2025_Nondeterminism",
+  "title": "Defeating Nondeterminism in LLM Inference",
+  "authors": "Horace He; Thinking Machines Lab",
+  "year": 2025,
+  "url": "https://thinkingmachines.ai/blog/defeating-nondeterminism-in-llm-inference/",
+  "doi_isbn": "",
+  "source_type": "practitioner",
+  "tier": "C",
+  "key_findings": [
+   "Temperature-0 nondeterminism mainly comes from kernels lacking batch invariance (server load changes batch size), not simply concurrency plus floating point.",
+   "1,000 temperature-0 completions of one prompt gave 80 unique outputs; with batch-invariant kernels all 1,000 were identical; cost 26 s -> 42-55 s."
+  ],
+  "practical_applications": [
+   "Do not expect a hosted LLM/TTS to return the same output twice; save the accepted output, not just the prompt."
+  ],
+  "limitations": [
+   "Industry lab blog, not peer reviewed; one model/server stack."
+  ],
+  "license": "copyrighted",
+  "access_status": "full_text",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-26",
+  "modules": [
+   "M37"
+  ]
+ },
+ {
+  "key": "Sculley2015",
+  "title": "Hidden Technical Debt in Machine Learning Systems",
+  "authors": "D. Sculley; Gary Holt; Daniel Golovin; Eugene Davydov; Todd Phillips; et al.",
+  "year": 2015,
+  "url": "https://proceedings.neurips.cc/paper/2015/file/86df7dcfd896fcaf2674f757a2463eba-Paper.pdf",
+  "doi_isbn": "NIPS 2015, pp. 2503-2511",
+  "source_type": "empirical",
+  "tier": "A",
+  "key_findings": [
+   "A mature ML system might be at most 5% ML code and at least 95% glue code.",
+   "Pipeline jungles: scrapes, joins and sampling steps with intermediate files; detecting errors and recovering from failures is difficult and costly; avoided only by holistic redesign.",
+   "Dead experimental codepaths accumulate; Knight Capital lost $465M in 45 minutes apparently due to obsolete experimental codepaths; configuration debt."
+  ],
+  "practical_applications": [
+   "Per-day one-off tmp/*.py scripts (picks24, sigs25, finish26) are pipeline-jungle risk: promote stable ones into tools/ and delete dead ones."
+  ],
+  "limitations": [
+   "Position paper from Google experience; not a controlled study."
+  ],
+  "license": "NeurIPS proceedings (free to read); copyrighted",
+  "access_status": "full_text",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-26",
+  "modules": [
+   "M37"
+  ]
+ },
+ {
+  "key": "Anthropic2024_Agents",
+  "title": "Building effective agents",
+  "authors": "Erik Schluntz; Barry Zhang (Anthropic)",
+  "year": 2024,
+  "url": "https://www.anthropic.com/engineering/building-effective-agents",
+  "doi_isbn": "",
+  "source_type": "practitioner",
+  "tier": "C",
+  "key_findings": [
+   "Workflows = LLMs and tools orchestrated through predefined code paths; agents = the LLM dynamically directs its own process and tool use.",
+   "Patterns: prompt chaining with programmatic gates, routing, parallelization (sectioning/voting), orchestrator-workers, evaluator-optimizer.",
+   "Start with the simplest solution and add complexity only when it measurably improves results; agents need stopping conditions, sandbox testing and guardrails."
+  ],
+  "practical_applications": [
+   "Prefer fixed scripts (workflows) for repeat jobs like carousels; keep agent freedom for one-off creative judgement."
+  ],
+  "limitations": [
+   "Vendor guidance dated 19 Dec 2024; page notes tooling has changed since. Author surname 'Schluntz' from prior knowledge; page showed 'Erik S.'"
+  ],
+  "license": "copyrighted",
+  "access_status": "full_text",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-26",
+  "modules": [
+   "M37"
+  ]
+ },
+ {
+  "key": "Cemri2025_MAST",
+  "title": "Why Do Multi-Agent LLM Systems Fail?",
+  "authors": "Mert Cemri; Melissa Z. Pan; Shuyi Yang; et al.",
+  "year": 2025,
+  "url": "https://arxiv.org/abs/2503.13657",
+  "doi_isbn": "arXiv:2503.13657 (NeurIPS 2025 poster)",
+  "source_type": "empirical",
+  "tier": "A",
+  "key_findings": [
+   "MAST taxonomy: 14 failure modes in 3 categories from 1,642 traces of 7 MAS frameworks; human inter-annotator kappa 0.88; LLM annotator kappa 0.77.",
+   "Frequent modes: step repetition 15.7%, reasoning-action mismatch 13.2%, unaware of termination 12.4%, disobey task specification 11.8%, incorrect verification 9.1%, no/incomplete verification 8.2%.",
+   "Explicit verifiers help but are not a silver bullet - a ChatDev chess program passed superficial checks (compiles) but violated game rules."
+  ],
+  "practical_applications": [
+   "Verification must test the real requirement (faceless figures, correct text), not a proxy (file exists, renders)."
+  ],
+  "limitations": [
+   "Coding/math tasks; percentages come from the LLM annotator."
+  ],
+  "license": "arXiv non-exclusive licence",
+  "access_status": "full_text",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-26",
+  "modules": [
+   "M37"
+  ]
+ },
+ {
+  "key": "Kapoor2024_AgentsMatter",
+  "title": "AI Agents That Matter",
+  "authors": "Sayash Kapoor; Benedikt Stroebl; Zachary S. Siegel; Nitya Nadgir; Arvind Narayanan",
+  "year": 2024,
+  "url": "https://arxiv.org/abs/2407.01502",
+  "doi_isbn": "arXiv:2407.01502",
+  "source_type": "empirical",
+  "tier": "A",
+  "key_findings": [
+   "Agent benchmarks focus too narrowly on accuracy, so state-of-the-art agents are needlessly complex and costly; jointly optimise cost and accuracy.",
+   "Weak holdouts lead to overfitting and shortcuts; non-standard evaluation practice causes widespread reproducibility problems."
+  ],
+  "practical_applications": [
+   "Track cost per accepted output (quota, GPU minutes, human minutes), not only success rate."
+  ],
+  "limitations": [
+   "Preprint; abstract read."
+  ],
+  "license": "arXiv licence",
+  "access_status": "abstract",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-26",
+  "modules": [
+   "M37"
+  ]
+ },
+ {
+  "key": "Shankar2024_EvalGen",
+  "title": "Who Validates the Validators? Aligning LLM-Assisted Evaluation of LLM Outputs with Human Preferences",
+  "authors": "Shreya Shankar; J.D. Zamfirescu-Pereira; Bjorn Hartmann; Aditya G. Parameswaran; Ian Arawjo",
+  "year": 2024,
+  "url": "https://arxiv.org/abs/2404.12272",
+  "doi_isbn": "arXiv:2404.12272 (UIST 2024)",
+  "source_type": "empirical",
+  "tier": "A",
+  "key_findings": [
+   "Criteria drift: users need criteria to grade outputs, but grading outputs helps them define criteria; some criteria cannot be defined before seeing outputs.",
+   "LLM-generated evaluators inherit LLM problems and need human validation; EvalGen selects evaluators that match a subset of human grades."
+  ],
+  "practical_applications": [
+   "Expect the reject list (noose-like rope, faces in windows) to grow as batches are seen; update the checklist after each batch."
+  ],
+  "limitations": [
+   "Qualitative user study; abstract read."
+  ],
+  "license": "arXiv licence",
+  "access_status": "abstract",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-26",
+  "modules": [
+   "M37"
+  ]
+ },
+ {
+  "key": "AWS_Brooker2019_Retries",
+  "title": "Timeouts, retries, and backoff with jitter (Amazon Builders' Library)",
+  "authors": "Marc Brooker (AWS)",
+  "year": 2019,
+  "url": "https://builder.aws.com/content/3EumjoZascWd1oZiEgL8ORlv3qE/timeouts-retries-and-backoff-with-jitter",
+  "doi_isbn": "",
+  "source_type": "practitioner",
+  "tier": "C",
+  "key_findings": [
+   "Retries are 'selfish'; retrying at every layer multiplies load (example: 243x on a database).",
+   "Exponential backoff with a cap plus jitter; limit retries locally with a token bucket; 'APIs with side effects aren't safe to retry unless they provide idempotency'."
+  ],
+  "practical_applications": [
+   "For quota-limited APIs a retry is a spend: cap retries and never retry a daily-quota error."
+  ],
+  "limitations": [
+   "High-traffic service context; page showed author first name only."
+  ],
+  "license": "copyrighted",
+  "access_status": "full_text",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-26",
+  "modules": [
+   "M37"
+  ]
+ },
+ {
+  "key": "GoogleSRE_Cascading",
+  "title": "Site Reliability Engineering, Ch. 22: Addressing Cascading Failures",
+  "authors": "Mike Ulrich; eds. Betsy Beyer, Chris Jones, Jennifer Petoff, Niall Richard Murphy",
+  "year": 2016,
+  "url": "https://sre.google/sre-book/addressing-cascading-failures/",
+  "doi_isbn": "ISBN 978-1491929124",
+  "source_type": "textbook",
+  "tier": "B",
+  "key_findings": [
+   "Always use randomized exponential backoff; cap retries per request; use a server-wide retry budget; retry at only one layer (3 retries x 4 layers = 64 attempts).",
+   "Distinguish retriable from non-retriable errors; always set deadlines and propagate them."
+  ],
+  "practical_applications": [
+   "Classify API errors: per-minute 429 = wait and retry once; per-day 429 = stop for the day."
+  ],
+  "limitations": [
+   "Large-scale service context."
+  ],
+  "license": "CC BY-NC-ND 4.0 (online edition)",
+  "access_status": "full_text",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-26",
+  "modules": [
+   "M37"
+  ]
+ },
+ {
+  "key": "GoogleSRE2016",
+  "title": "Site Reliability Engineering, Ch. 15: Postmortem Culture: Learning from Failure",
+  "authors": "Beyer, Jones, Petoff, Murphy (eds.), Google",
+  "year": 2016,
+  "url": "https://sre.google/sre-book/postmortem-culture/",
+  "doi_isbn": "ISBN 978-1491929124",
+  "source_type": "textbook",
+  "tier": "B",
+  "key_findings": [
+   "A blameless postmortem records impact, mitigation, root causes and follow-up actions; triggers are defined in advance (data loss, manual intervention, a monitoring failure that led to manual discovery)."
+  ],
+  "practical_applications": [
+   "Studio incidents (Codex race, TTS quota burn) become short blameless postmortems in LEARNING-LOG."
+  ],
+  "limitations": [
+   "Organisational practice; evidence experiential."
+  ],
+  "license": "CC BY-NC-ND 4.0 (online edition)",
+  "access_status": "full_text",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-26",
+  "modules": [
+   "M37"
+  ]
+ },
+ {
+  "key": "Stripe_Idempotency",
+  "title": "Idempotent requests (Stripe API reference)",
+  "authors": "Stripe",
+  "year": null,
+  "url": "https://docs.stripe.com/api/idempotent_requests",
+  "doi_isbn": "",
+  "source_type": "docs",
+  "tier": "C",
+  "key_findings": [
+   "Idempotency keys let clients retry safely without performing the operation twice; the first result is saved and returned on retries; reuse with different parameters errors; keys pruned after >=24 h; do not use personal data as keys."
+  ],
+  "practical_applications": [
+   "Name outputs by deterministic keys (kit/slide/seed) so re-running a step skips or overwrites instead of duplicating."
+  ],
+  "limitations": [
+   "Payment-API specifics."
+  ],
+  "license": "copyrighted",
+  "access_status": "full_text",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-26",
+  "modules": [
+   "M37"
+  ]
+ },
+ {
+  "key": "CWE362",
+  "title": "CWE-362: Concurrent Execution using Shared Resource with Improper Synchronization ('Race Condition')",
+  "authors": "MITRE",
+  "year": null,
+  "url": "https://cwe.mitre.org/data/definitions/362.html",
+  "doi_isbn": "",
+  "source_type": "docs",
+  "tier": "B",
+  "key_findings": [
+   "Race condition: code needs temporary exclusive access to a shared resource but a concurrent code sequence can modify it in a timing window; parent of CWE-367 (TOCTOU).",
+   "Mitigations: synchronization primitives, atomic operations, mutexes, minimise shared resources."
+  ],
+  "practical_applications": [
+   "Parallel Codex runs that copy the 'newest file' from one shared folder race on a shared resource: give each run its own output path."
+  ],
+  "limitations": [
+   "Security-oriented catalogue."
+  ],
+  "license": "MITRE CWE terms of use",
+  "access_status": "full_text",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-26",
+  "modules": [
+   "M37"
+  ]
+ },
+ {
+  "key": "TwelveFactor_Config",
+  "title": "The Twelve-Factor App - III. Config",
+  "authors": "Adam Wiggins (Heroku)",
+  "year": null,
+  "url": "https://12factor.net/config",
+  "doi_isbn": "",
+  "source_type": "practitioner",
+  "tier": "C",
+  "key_findings": [
+   "Store config in environment variables; strict separation of config from code; litmus test: could the codebase be made open source at any moment without compromising credentials?"
+  ],
+  "practical_applications": [
+   "GEMINI_API_KEY stays in the user environment, never in kit files or logs."
+  ],
+  "limitations": [
+   "Web-app context; author attribution from prior knowledge."
+  ],
+  "license": "MIT - unverified",
+  "access_status": "full_text",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-26",
+  "modules": [
+   "M37"
+  ]
+ },
+ {
+  "key": "OWASP_Secrets",
+  "title": "Secrets Management Cheat Sheet",
+  "authors": "OWASP Cheat Sheet Series",
+  "year": null,
+  "url": "https://cheatsheetseries.owasp.org/cheatsheets/Secrets_Management_Cheat_Sheet.html",
+  "doi_isbn": "",
+  "source_type": "docs",
+  "tier": "C",
+  "key_findings": [
+   "Avoid hardcoded secrets; detect secrets before commit (pre-commit hooks, more than one tool); rotate regularly; never log secrets - a secret in a log is exposed; avoid long-lived, broad CI credentials."
+  ],
+  "practical_applications": [
+   "Add a pre-commit secret scan; scrub keys from tmp/ logs before git add."
+  ],
+  "limitations": [
+   "Enterprise-oriented."
+  ],
+  "license": "CC BY-SA 4.0",
+  "access_status": "full_text",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-26",
+  "modules": [
+   "M37"
+  ]
+ },
+ {
+  "key": "WriteTheDocs_DocsAsCode",
+  "title": "Docs as Code",
+  "authors": "Write the Docs community",
+  "year": null,
+  "url": "https://www.writethedocs.org/guide/docs-as-code/",
+  "doi_isbn": "",
+  "source_type": "practitioner",
+  "tier": "D",
+  "key_findings": [
+   "Documentation written with the same tools as code: issue trackers, version control, plain-text markup, code review, automated tests; teams can block merges that lack documentation."
+  ],
+  "practical_applications": [
+   "SKILL.md / kit.md updated in the same commit as the script change."
+  ],
+  "limitations": [
+   "Community guide; no outcome data."
+  ],
+  "license": "unknown",
+  "access_status": "full_text",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-26",
+  "modules": [
+   "M37"
+  ]
+ },
+ {
+  "key": "SemVer",
+  "title": "Semantic Versioning 2.0.0",
+  "authors": "Tom Preston-Werner",
+  "year": null,
+  "url": "https://semver.org/",
+  "doi_isbn": "",
+  "source_type": "docs",
+  "tier": "C",
+  "key_findings": [
+   "MAJOR.MINOR.PATCH; once a versioned package has been released, its contents MUST NOT be modified - changes ship as a new version."
+  ],
+  "practical_applications": [
+   "Never overwrite a published export; redo as v2 / 04r-1 and keep the original."
+  ],
+  "limitations": [
+   "Software API context."
+  ],
+  "license": "CC BY 3.0",
+  "access_status": "full_text",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-26",
+  "modules": [
+   "M37"
+  ]
+ },
+ {
+  "key": "HMS_FileNaming",
+  "title": "File naming conventions (Harvard Medical School Data Management)",
+  "authors": "Harvard Medical School Office of Research Data Management",
+  "year": null,
+  "url": "https://datamanagement.hms.harvard.edu/collect/file-naming-conventions",
+  "doi_isbn": "",
+  "source_type": "course",
+  "tier": "B",
+  "key_findings": [
+   "Set the convention before collecting files; dates as YYYYMMDD; versions v01/v02; no spaces (use dashes/underscores); 40-50 characters; leading zeros for sequences; extra metadata in a master spreadsheet."
+  ],
+  "practical_applications": [
+   "Kit folders already follow YYYY-MM-DD_NN-slug; keep slide numbers zero-padded and set numbers 3-digit-safe."
+  ],
+  "limitations": [
+   "Research-data guidance."
+  ],
+  "license": "unknown",
+  "access_status": "full_text",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-26",
+  "modules": [
+   "M37"
+  ]
+ },
+ {
+  "key": "C2PA_Explainer22",
+  "title": "C2PA Explainer, version 2.2",
+  "authors": "Coalition for Content Provenance and Authenticity (C2PA)",
+  "year": null,
+  "url": "https://spec.c2pa.org/specifications/specifications/2.2/explainer/Explainer.html",
+  "doi_isbn": "",
+  "source_type": "docs",
+  "tier": "S",
+  "key_findings": [
+   "Content Credential (C2PA manifest) = cryptographically bound record of provenance; assertions; claim signature with X.509; hard binding (hash) and soft binding (watermark/fingerprint); durable credentials combine both.",
+   "'Provenance information alone cannot tell you whether the digital content is true, accurate or factual'; metadata can be stripped; missing credentials do not by themselves mean untrustworthy."
+  ],
+  "practical_applications": [
+   "Treat provenance as disclosure, not proof of quality; expect platforms to strip or re-encode metadata."
+  ],
+  "limitations": [
+   "Explainer; spec versions up to 2.5 exist."
+  ],
+  "license": "CC BY 4.0",
+  "access_status": "full_text",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-26",
+  "modules": [
+   "M37"
+  ]
+ },
+ {
+  "key": "IPTC_DigitalSourceType",
+  "title": "IPTC NewsCodes: Digital Source Type vocabulary",
+  "authors": "IPTC",
+  "year": null,
+  "url": "https://cv.iptc.org/newscodes/digitalsourcetype/",
+  "doi_isbn": "",
+  "source_type": "docs",
+  "tier": "S",
+  "key_findings": [
+   "20 terms incl. trainedAlgorithmicMedia ('Created using Generative AI'), compositeWithTrainedAlgorithmicMedia ('Edited using Generative AI', e.g., inpainting/outpainting), compositeSynthetic (composite with at least one generative AI element), digitalCapture, algorithmicallyEnhanced, minorHumanEdits."
+  ],
+  "practical_applications": [
+   "Story carousel slides = trainedAlgorithmicMedia finished by code; product posts with a real cutout in an AI scene = compositeSynthetic."
+  ],
+  "limitations": [
+   "Vocabulary only; embedding tools not covered."
+  ],
+  "license": "CC BY 4.0 - unverified",
+  "access_status": "full_text",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-26",
+  "modules": [
+   "M37"
+  ]
+ },
+ {
+  "key": "Meta2024_AILabels",
+  "title": "Our Approach to Labeling AI-Generated Content and Manipulated Media (Meta Newsroom, with updates)",
+  "authors": "Meta (Newsroom)",
+  "year": 2024,
+  "url": "https://about.fb.com/news/2024/04/metas-approach-to-labeling-ai-generated-content-and-manipulated-media/",
+  "doi_isbn": "",
+  "source_type": "docs",
+  "tier": "C",
+  "key_findings": [
+   "Announced 5 Apr 2024; 'Made with AI' renamed 'AI info' on 1 Jul 2024; labels based on industry-standard AI image indicators or self-disclosure; from 12 Sep 2024 the label for content only edited with AI moved to the post menu."
+  ],
+  "practical_applications": [
+   "Turn the AI label on yourself for AI-made Reels instead of relying on detection."
+  ],
+  "limitations": [
+   "Policy drifts; re-check before relying. Page summary did not mention C2PA/IPTC by name."
+  ],
+  "license": "copyrighted",
+  "access_status": "full_text",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-26",
+  "modules": [
+   "M37"
+  ]
+ },
+ {
+  "key": "W3C_PROV_Overview2013",
+  "title": "PROV-Overview: An Overview of the PROV Family of Documents (W3C Working Group Note)",
+  "authors": "W3C Provenance Working Group",
+  "year": 2013,
+  "url": "https://www.w3.org/TR/prov-overview/",
+  "doi_isbn": "",
+  "source_type": "docs",
+  "tier": "S",
+  "key_findings": [
+   "Provenance = information about entities, activities and people involved in producing a piece of data or thing, usable to assess quality, reliability or trustworthiness; PROV-DM and PROV-O are W3C Recommendations dated 30 April 2013."
+  ],
+  "practical_applications": [
+   "Model each kit log as entity (raw/04-2.png) - activity (flux.py, seed) - agent (FLUX schnell, human picker)."
+  ],
+  "limitations": [
+   "Overview only; formal definitions in PROV-DM."
+  ],
+  "license": "W3C document licence",
+  "access_status": "full_text",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-26",
+  "modules": [
+   "M37"
+  ]
+ },
+ {
+  "key": "EU_AIAct_Art50_FLI",
+  "title": "The EU AI Act's Transparency Rules: A Practical Guide to Article 50",
+  "authors": "Future of Life Institute (artificialintelligenceact.eu)",
+  "year": 2026,
+  "url": "https://artificialintelligenceact.eu/transparency-rules-article-50/",
+  "doi_isbn": "",
+  "source_type": "docs",
+  "tier": "C",
+  "key_findings": [
+   "Providers of generative AI must mark outputs in a machine-readable format; deployers of deepfakes must disclose; evidently artistic/fictional works may disclose in a way that does not hamper enjoyment; applies from 2 Aug 2026; systems already on the market get until 2 Dec 2026 for marking (AI Omnibus provisional agreement)."
+  ],
+  "practical_applications": [
+   "Direction of travel even outside the EU: label AI media and keep machine-readable marks."
+  ],
+  "limitations": [
+   "Secondary guide, not the Official Journal text; Omnibus dates provisional."
+  ],
+  "license": "unknown",
+  "access_status": "full_text",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-26",
+  "modules": [
+   "M37"
+  ]
+ },
+ {
+  "key": "Tilleke2026_AIAds",
+  "title": "Thailand's Advertising Guidelines Targeting AI-Generated Content",
+  "authors": "Tilleke & Gibbins",
+  "year": 2026,
+  "url": "https://www.tilleke.com/insights/thailands-advertising-guidelines-targeting-ai-generated-content/",
+  "doi_isbn": "",
+  "source_type": "docs",
+  "tier": "C",
+  "key_findings": [
+   "Office of the Consumer Protection Board notification (article dated 12 Mar 2026): when AI edits make a depicted product differ from the real one, advertisers must ensure size/quantity/composition match and show clear labels such as 'Image created by AI'."
+  ],
+  "practical_applications": [
+   "Product posts: the real frame stays real; AI scene labelled."
+  ],
+  "limitations": [
+   "Law-firm summary; binding status not explicit on the page."
+  ],
+  "license": "copyrighted",
+  "access_status": "full_text",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-26",
+  "modules": [
+   "M37"
+  ]
+ },
+ {
+  "key": "Meta_ADCTerms2024",
+  "title": "Automated Data Collection Terms (Meta)",
+  "authors": "Meta Platforms",
+  "year": 2024,
+  "url": "https://www.facebook.com/legal/automated_data_collection_terms",
+  "doi_isbn": "",
+  "source_type": "docs",
+  "tier": "C",
+  "key_findings": [
+   "Effective 7 Oct 2024: no Automated Data Collection without Meta's express written permission; defined as collecting data from Meta products via automated or programmatic tools (scrapers, bots, spiders, crawlers)."
+  ],
+  "practical_applications": [
+   "Scripts that only post the user's own content are not data collection, but they automate the product UI - keep them minimal and prefer official tools."
+  ],
+  "limitations": [
+   "Covers collection; posting automation falls under other terms."
+  ],
+  "license": "copyrighted",
+  "access_status": "full_text",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-26",
+  "modules": [
+   "M37"
+  ]
+ },
+ {
+  "key": "IG_TermsOfUse",
+  "title": "Instagram Terms of Use (clause on unauthorized/automated access)",
+  "authors": "Instagram (Meta)",
+  "year": null,
+  "url": "https://help.instagram.com/581066165581870",
+  "doi_isbn": "",
+  "source_type": "docs",
+  "tier": "C",
+  "key_findings": [
+   "Per court-filed copies and Instagram help summaries found in search: users may not create accounts or access or collect information in unauthorized ways, including automated collection without express permission."
+  ],
+  "practical_applications": [
+   "Treat UI automation of Instagram as a ToS grey zone; official routes are the Meta Business Suite scheduler or the Content Publishing API."
+  ],
+  "limitations": [
+   "The current official text could not be loaded (JavaScript page); wording from search results only."
+  ],
+  "license": "copyrighted",
+  "access_status": "search_summary",
+  "verification_status": "unverified",
+  "date_accessed": "2026-11-26",
+  "modules": [
+   "M37"
+  ]
+ },
+ {
+  "key": "IG_ContentPublishingAPI",
+  "title": "Instagram Platform: Content Publishing",
+  "authors": "Meta for Developers",
+  "year": null,
+  "url": "https://developers.facebook.com/docs/instagram-platform/content-publishing/",
+  "doi_isbn": "",
+  "source_type": "docs",
+  "tier": "C",
+  "key_findings": [
+   "Publishes to professional accounts: JPEG images, videos, Reels (media_type=REELS), Stories, carousels up to 20 items; limit 100 API-published posts per 24 h (another section says 50); apps that schedule must enforce the limit themselves."
+  ],
+  "practical_applications": [
+   "The sanctioned alternative to browser automation for scheduling Reels."
+  ],
+  "limitations": [
+   "Needs a Meta app and token; internal inconsistency on the limit."
+  ],
+  "license": "copyrighted",
+  "access_status": "full_text",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-26",
+  "modules": [
+   "M37"
+  ]
+ },
+ {
+  "key": "GeminiRateLimits",
+  "title": "Rate limits (Gemini API documentation)",
+  "authors": "Google",
+  "year": null,
+  "url": "https://aistudio.google.com/docs/rate-limits",
+  "doi_isbn": "",
+  "source_type": "docs",
+  "tier": "C",
+  "key_findings": [
+   "Limits on RPM, TPM and RPD; exceeding any one triggers a rate-limit error; limits apply per project, not per API key; RPD resets at midnight Pacific; tiers by cumulative spend; limits not guaranteed."
+  ],
+  "practical_applications": [
+   "Midnight Pacific = 15:00 Thai time in US winter (PST), 14:00 in US summer (PDT); a second key in the same project adds no quota."
+  ],
+  "limitations": [
+   "Free-tier interactive TTS limits not listed on the page; live values in AI Studio."
+  ],
+  "license": "CC BY 4.0 (Google docs) - unverified",
+  "access_status": "full_text",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-26",
+  "modules": [
+   "M37"
+  ]
+ },
+ {
+  "key": "GWG_Preflight",
+  "title": "Everything you need to know about commercial print (Ghent Workgroup)",
+  "authors": "Ghent Workgroup (GWG)",
+  "year": null,
+  "url": "https://gwg.org/commercial-print/",
+  "doi_isbn": "",
+  "source_type": "docs",
+  "tier": "C",
+  "key_findings": [
+   "GWG application settings in a preflight tool 'ensure problems are discovered early'; poorly configured files cause production problems, delays and unexpected costs; Ghent Output Suite helps diagnose issues."
+  ],
+  "practical_applications": [
+   "Print preflight = an automated gate at handoff; same idea for exports (size, safe zone, loudness) before upload."
+  ],
+  "limitations": [
+   "Trade-body page; PDF/X-4 basis from search summary."
+  ],
+  "license": "copyrighted",
+  "access_status": "publisher_page",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-26",
+  "modules": [
+   "M37"
+  ]
+ },
+ {
+  "key": "XKCD1205",
+  "title": "Is It Worth the Time? (xkcd 1205)",
+  "authors": "Randall Munroe",
+  "year": 2013,
+  "url": "https://xkcd.com/1205/",
+  "doi_isbn": "",
+  "source_type": "practitioner",
+  "tier": "E",
+  "key_findings": [
+   "Chart of how long you can spend making a routine task more efficient before spending more time than you save over five years (e.g., 1 s saved daily ~ 30 min; 1 min saved weekly ~ 4 h)."
+  ],
+  "practical_applications": [
+   "Rough craft heuristic only; ignores error reduction and maintenance cost."
+  ],
+  "limitations": [
+   "Webcomic, not research; year from prior knowledge."
+  ],
+  "license": "CC BY-NC 2.5",
+  "access_status": "full_text",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-26",
+  "modules": [
+   "M37"
+  ]
+ }
+]

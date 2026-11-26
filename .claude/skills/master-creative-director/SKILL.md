@@ -11,11 +11,27 @@ CLAUDE.md house rules and `creative-intelligence/USER_PREFERENCES.md` always app
 ## 1. Understand (always)
 Purpose · audience · platform/format · the one feeling and the one message · locked assets (real frames, characters,
 logo) · deadline · quota cost (Codex, Gemini TTS = ask first). Missing price for a promo → ask.
+Then pull real experience: `python creative-intelligence/tools/memory.py brief --job "<job>" --tags <series,job-type,tool>`
+and obey what it returns (taste, brand style, characters, past rejections, known errors). No match → say there is no history.
+
+## 1b. Domain guides (v2, 2026-11-26) — `creative-intelligence/domains/README.md`
+15 deep guides with the same sections; load only §11 (decision guide) and §13 (checklist) of the domains the job's
+recipe lists (README "Cross-discipline recipes"), §5 before stating a fact, §14 for critique.
+01 creative thinking · 02 psychology & EI · 03 aesthetics & taste · 04 visual grammar · 05 semiotics & metaphor ·
+06 character psychology · 07 worldbuilding & continuity · 08 philosophy, literature & poetry · 09 culture ·
+10 psychoacoustics · 11 consumer psychology & marketing · 12 criticism · 13 QA & evaluation · 14 knowledge & experience ·
+15 workflow automation.
 
 ## 2. Route — load only the rows the job needs
 | the job needs… | go to |
 |---|---|
 | frame kit / Codex prompts for a frame | skill `frame-kit` |
+| critique / review / "งานนี้ดีไหม" / check before delivery | skill `creative-critic` |
+| what the user liked/rejected before, characters, known errors | `python creative-intelligence/tools/memory.py brief …` (store: `creative-intelligence/memory/`) |
+| free FLUX redraw of a Codex picture | skill `flux-like-chatgpt` |
+| remove small marks from a video | skill `remove-spots` |
+| finished FB/IG post (only when asked) | skill `daily-post` |
+| promo image set ("ทำภาพโปรโมท") | memory `bra-20261109-001` (3 cinematic Codex scenes, partner logos top, spaced TIME OPTIC) |
 | one image, poster, character sheet, critique | skill `ai-visual-artist` |
 | deep visual craft (colour science, value, perspective, lens maths, light physics, materials) | `creative-intelligence/knowledge/visual-arts/README.md` |
 | voice-over, Thai TTS, voice emotion | skill `ai-voice-director` |
@@ -55,8 +71,12 @@ Write a one-page brief in the job folder: emotional timeline (beat → image, li
 then hand each part to its skill.
 
 ## 4. QC and learn
+- **Independent critique before delivery:** skill `creative-critic` (fresh sub-agent, packet from `tools/critic.py`). The
+  maker never grades its own work; fix critical/major findings first.
 - Before handing over anything factual or important: `creative-intelligence/knowledge/critical-thinking/PRE_DELIVERY_CHECK.md`
   (assumptions · evidence · criteria · what could be wrong · who could be misled).
+- After the user reacts: `memory.py add --type approval|rejection` with their exact words; accepted critic findings →
+  `critic.py record`; a fix that proved itself → `--type fix`. This is the learning loop — nothing is "learned" unless stored.
 - Score with `creative-intelligence/evaluations/MASTER_QUALITY_SCORE.md` — critical failures first; automated and human
   scores in separate columns; every number has a reason.
 - After delivery: add lessons (DESIGN_PATTERNS / ANTI_PATTERNS / the area log), the user's words to

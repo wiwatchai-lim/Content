@@ -5,6 +5,10 @@ description: Redraw a ChatGPT/Codex picture with the free local FLUX (tools/flux
 
 # FLUX that looks like ChatGPT
 
+> **Studio loop (2026-11-26):** before the job `python creative-intelligence/tools/memory.py brief --job "<job>" --tags flux,img2img,style-match`
+> (obey past rejections, characters, known errors) · before delivery run skill `creative-critic` (independent sub-agent) and
+> fix critical/major findings · after the user reacts `memory.py add --type approval|rejection` with their exact words.
+
 Text-to-image FLUX alone never matched the Codex/ChatGPT look closely enough for the user (2026-11-13: "ยังไม่เหมือน"). What worked was **img2img**: give FLUX the ChatGPT picture as the starting image and let it redraw only a little.
 
 Needs ComfyUI + FLUX set up (CLAUDE.md step 8.6). No quota, about 1–2 min per image on the RTX 3050.

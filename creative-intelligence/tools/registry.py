@@ -113,7 +113,9 @@ def legacy_curriculum():
 
 
 def new_batches():
-    for p in sorted(glob.glob(os.path.join(CI, "knowledge", "*", "sources*.json"))):
+    paths = sorted(glob.glob(os.path.join(CI, "knowledge", "*", "sources*.json")))
+    paths += sorted(glob.glob(os.path.join(CI, "domains", "sources", "*.json")))  # v2 domain guides (2026-11-26)
+    for p in paths:
         try:
             arr = json.load(open(p, encoding="utf-8"))
         except Exception as e:
@@ -121,7 +123,8 @@ def new_batches():
         for s in arr:
             s = dict(s)
             s["access_status"] = norm_access(s.get("access_status"))
-            s.setdefault("origin", "ci:" + os.path.basename(os.path.dirname(p)))
+            folder = os.path.basename(os.path.dirname(p))
+            s.setdefault("origin", "ci:domain-" + os.path.basename(p)[:2] if folder == "sources" else "ci:" + folder)
             s.setdefault("full_record", os.path.relpath(p, ROOT).replace("\\", "/"))
             yield s
 

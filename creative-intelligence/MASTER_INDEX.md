@@ -8,7 +8,12 @@ which picks the few files a job needs.
 | need | file |
 |---|---|
 | Resume work / what's next | `RESUME.md` |
-| Which module lives where (42 modules → files) | `KNOWLEDGE_MAP.md` |
+| Which module lives where (45 modules → files) | `KNOWLEDGE_MAP.md` |
+| **15 deep domain guides (v2, 2026-11-26)** — same 15 sections each, job recipes | `domains/README.md` (`python creative-intelligence/tools/domains.py status`) |
+| **Creative Memory** — approvals, rejections, taste, brand styles, characters, tested prompts, errors, fixes, ratings | `memory/README.md` (`tools/memory.py brief/add`) · readable: `memory/MEMORY_DIGEST.md` |
+| **Independent critic** | skill `.claude/skills/creative-critic/` (`tools/critic.py`) |
+| Before/after test of the studio | `evaluations/studio-benchmark/` (RESULTS.md) |
+| Skill audit + v2 change plan + log | `SKILL_AUDIT.md` · `CHANGE_PLAN.md` · `UPGRADE_LOG.md` |
 | Status of every module | `LEARNING_PROGRESS.json` (`python creative-intelligence/tools/registry.py stats`) |
 | Every source, tier, access level | `SOURCE_REGISTRY.json` (generated — `registry.py build`) · how to research: `RESEARCH_INDEX.md` |
 | Claims and how strong the evidence is | `EVIDENCE_MATRIX.json` |

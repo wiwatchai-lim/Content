@@ -1,0 +1,1109 @@
+[
+ {
+  "key": "Helmholtz1875_SensationsTone",
+  "title": "On the Sensations of Tone as a Physiological Basis for the Theory of Music (trans. A. J. Ellis; German orig. 1863)",
+  "authors": "Hermann von Helmholtz",
+  "year": 1875,
+  "url": "https://archive.org/details/onsensationsofto00helmrich/mode/2up",
+  "doi_isbn": "",
+  "source_type": "primary_text",
+  "tier": "A",
+  "key_findings": [
+   "Founding text of physiological acoustics: German original 1863; Ellis English translation 1875 (from 3rd German ed.), revised 1885 (4th ed.); 1895 reprint on archive.org (public domain)"
+  ],
+  "practical_applications": [
+   "Historical anchor for timbre-as-harmonics and roughness/beats as the basis of dissonance"
+  ],
+  "limitations": [
+   "Existence and edition history confirmed; content not re-read this session; resonance-place theory later superseded in detail"
+  ],
+  "license": "public domain",
+  "access_status": "bibliographic",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-26",
+  "modules": [
+   "M22",
+   "M24"
+  ]
+ },
+ {
+  "key": "FletcherMunson1933_Loudness",
+  "title": "Loudness, Its Definition, Measurement and Calculation",
+  "authors": "Harvey Fletcher; W. A. Munson",
+  "year": 1933,
+  "url": "https://archive.org/details/bstj12-4-377/bstj12-4-377",
+  "doi_isbn": "10.1121/1.1915637",
+  "source_type": "empirical",
+  "tier": "A",
+  "key_findings": [
+   "Defines loudness level of any sound as the intensity level of an equally loud 1000 Hz reference tone (listener facing a small source, both ears)",
+   "Argues loudness is psychological: if it depended only on intensity, physical measurement would determine it; measured loudness levels of pure tones and complex sounds to build an empirical loudness formula",
+   "First equal-loudness contours (the 'Fletcher-Munson curves'); later redeterminations (Churcher & King 1937, Robinson & Dadson 1956) led to ISO 226"
+  ],
+  "practical_applications": [
+   "Explains why mixes sound bass-thin at low playback level"
+  ],
+  "limitations": [
+   "1930s headphone/equipment calibration; superseded numerically by ISO 226:2023"
+  ],
+  "license": "copyrighted (BSTJ scan on archive.org)",
+  "access_status": "abstract",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-26",
+  "modules": [
+   "M22",
+   "M24"
+  ]
+ },
+ {
+  "key": "Stevens1957_PsychophysicalLaw",
+  "title": "On the psychophysical law",
+  "authors": "S. S. Stevens",
+  "year": 1957,
+  "url": "https://terhardt.userweb.mwn.de/ter/ref/Stevens1957a.html",
+  "doi_isbn": "10.1037/h0046162",
+  "source_type": "empirical",
+  "tier": "A",
+  "key_findings": [
+   "Revived the power law (sensation = k * stimulus^n) from magnitude-estimation data; loudness is a 'prothetic' (Class I) continuum where JNDs grow in subjective size up the scale",
+   "Secondary sources list loudness exponent ~0.67 re sound pressure (about 0.3 re intensity) for a 3 kHz tone: +10 dB is roughly a doubling of loudness (sone scale)"
+  ],
+  "practical_applications": [
+   "A 10 dB cut sounds like 'half as loud', not 'a bit quieter' -> plan ducking depth in dB with that in mind"
+  ],
+  "limitations": [
+   "Method critiqued: averaging across observers then fitting a power function does not directly test the law; exponents context-dependent"
+  ],
+  "license": "copyrighted",
+  "access_status": "bibliographic",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-26",
+  "modules": [
+   "M22",
+   "M24"
+  ]
+ },
+ {
+  "key": "Zwicker1961_CriticalBands",
+  "title": "Subdivision of the Audible Frequency Range into Critical Bands (Frequenzgruppen)",
+  "authors": "Eberhard Zwicker",
+  "year": 1961,
+  "url": "https://en.wikipedia.org/wiki/Bark_scale",
+  "doi_isbn": "10.1121/1.1908630",
+  "source_type": "empirical",
+  "tier": "A",
+  "key_findings": [
+   "Tabulated 24 critical bands (Bark scale 1-24); bands roughly 100 Hz wide below ~500 Hz, roughly proportional (log-like) above (per secondary sources)"
+  ],
+  "practical_applications": [
+   "Masking and loudness summation work per critical band: sounds in the same band fight; spreading sounds across bands raises loudness without raising level"
+  ],
+  "limitations": [
+   "Content via secondary sources (Wikipedia, Siemens KB); later ERB scale (Glasberg & Moore 1990) is the modern alternative"
+  ],
+  "license": "copyrighted",
+  "access_status": "bibliographic",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-26",
+  "modules": [
+   "M22",
+   "M24"
+  ]
+ },
+ {
+  "key": "Bregman1990_ASA",
+  "title": "Auditory Scene Analysis: The Perceptual Organization of Sound",
+  "authors": "Albert S. Bregman",
+  "year": 1990,
+  "url": "https://en.wikipedia.org/wiki/Auditory_scene_analysis",
+  "doi_isbn": "MIT Press 1990",
+  "source_type": "textbook",
+  "tier": "A",
+  "key_findings": [
+   "Founded auditory scene analysis: the brain groups sound elements into 'streams' (one per source) by sequential and simultaneous integration; alternating tones split into two streams when far apart in pitch/fast",
+   "MIT Press 1990 (pb 1994); companion audio demonstrations with P. Ahad"
+  ],
+  "practical_applications": [
+   "Make VO a separate 'stream' from music: different register, timbre, location (centre), onset timing"
+  ],
+  "limitations": [
+   "Book content summarised from secondary pages; McGill site being discontinued"
+  ],
+  "license": "copyrighted",
+  "access_status": "bibliographic",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-26",
+  "modules": [
+   "M22",
+   "M24"
+  ]
+ },
+ {
+  "key": "ISO2023_226",
+  "title": "ISO 226:2023 Acoustics - Normal equal-loudness-level contours",
+  "authors": "ISO/TC 43",
+  "year": 2023,
+  "url": "https://www.iso.org/standard/83117.html",
+  "doi_isbn": "ISO 226:2023",
+  "source_type": "docs",
+  "tier": "S",
+  "key_findings": [
+   "3rd edition (2023-03): contours for pure tones, one-third-octave frequencies 20 Hz-12.5 kHz, otologically normal listeners aged 18-25, frontal free progressive plane wave, binaural",
+   "Differs from 2003 edition by up to 0.6 dB (improved loudness model); 20 Hz values changed with ISO 389-7:2019"
+  ],
+  "practical_applications": [
+   "Judge balance at moderate level and check low level; low and very high frequencies need more level to sound equally loud"
+  ],
+  "limitations": [
+   "Pure tones, young listeners only - not broadband programme or older/hearing-impaired audiences"
+  ],
+  "license": "copyrighted (paywalled)",
+  "access_status": "search_summary",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-26",
+  "modules": [
+   "M22",
+   "M24"
+  ]
+ },
+ {
+  "key": "ITU2023_BS1770_5",
+  "title": "Recommendation ITU-R BS.1770-5: Algorithms to measure audio programme loudness and true-peak audio level",
+  "authors": "ITU-R",
+  "year": 2023,
+  "url": "https://www.itu.int/dms_pubrec/itu-r/rec/bs/R-REC-BS.1770-5-202311-I!!PDF-E.pdf",
+  "doi_isbn": "ITU-R BS.1770-5 (11/2023)",
+  "source_type": "docs",
+  "tier": "S",
+  "key_findings": [
+   "Loudness = K-weighting (stage 1 shelving filter modelling the head, stage 2 RLB high-pass) -> mean square per channel -> channel-weighted sum (LFE excluded) -> gating",
+   "True-peak measured by oversampling + interpolation (secondary source: x4 oversampler) because peaks can fall between samples"
+  ],
+  "practical_applications": [
+   "LUFS approximates perceived loudness of whole programmes; dBTP guards against inter-sample clipping after codecs"
+  ],
+  "limitations": [
+   "ITU PDF blocked to our client this session; details from search snippets; K-weighting is a simple model, not a full loudness model (no masking, no ISO 226 shape)"
+  ],
+  "license": "ITU (free download)",
+  "access_status": "search_summary",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-26",
+  "modules": [
+   "M22",
+   "M24"
+  ]
+ },
+ {
+  "key": "EBU2020_R128",
+  "title": "EBU R 128: Loudness normalisation and permitted maximum level of audio signals (v4.0, 2020)",
+  "authors": "EBU Technical Committee (PLOUD)",
+  "year": 2020,
+  "url": "https://tech.ebu.ch/docs/r/r128.pdf",
+  "doi_isbn": "EBU R 128 v4.0",
+  "source_type": "docs",
+  "tier": "S",
+  "key_findings": [
+   "Recommends Programme Loudness (gated per BS.1770, i.e. foreground loudness) for normalisation and Maximum True Peak for headroom; peak normalisation causes loudness jumps",
+   "Max Momentary / Short-term loudness (Tech 3341) may be used to check upper tolerance; Loudness Range not recommended for programmes under 1 minute (based on 3 s short-term values)",
+   "Relative gate changed from -8 to -10 LU (2010)"
+  ],
+  "practical_applications": [
+   "For Reels/TikTok (<60 s) do not trust LRA; use short-term max to catch loud SFX moments"
+  ],
+  "limitations": [
+   "Broadcast target -23 LUFS not used by social platforms"
+  ],
+  "license": "EBU (free)",
+  "access_status": "full_text",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-26",
+  "modules": [
+   "M22",
+   "M24"
+  ]
+ },
+ {
+  "key": "web:tech.ebu.ch:278",
+  "title": "EBU Tech 3341: Loudness Metering 'EBU Mode' metering to supplement EBU R 128",
+  "authors": "EBU",
+  "year": 2023,
+  "url": "https://tech.ebu.ch/docs/tech/tech3341.pdf",
+  "doi_isbn": "EBU Tech 3341",
+  "source_type": "docs",
+  "tier": "S",
+  "key_findings": [
+   "Three time scales: Momentary (0.4 s sliding window, ungated), Short-term (3 s window, ungated), Integrated (gated)",
+   "Gating: absolute -70 LUFS 'silence' gate, then relative gate 10 LU below absolute-gated level, on 400 ms blocks with 75% overlap; 1 LU = 1 dB; LRA unstable in first 60 s"
+  ],
+  "practical_applications": [
+   "Silent pauses do not lower Integrated loudness much (gated) -> designed silence is 'free' in LUFS terms"
+  ],
+  "limitations": [
+   "Meter spec, not a perception study"
+  ],
+  "license": "EBU (free)",
+  "access_status": "full_text",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-26",
+  "modules": [
+   "M22",
+   "M24"
+  ]
+ },
+ {
+  "key": "EBU2007_R37",
+  "title": "EBU R37-2007: The relative timing of the sound and vision components of a television signal",
+  "authors": "EBU Committee PMC",
+  "year": 2007,
+  "url": "https://tech.ebu.ch/files/live/sites/tech/files/shared/r/r037.pdf",
+  "doi_isbn": "EBU R37-2007",
+  "source_type": "docs",
+  "tier": "S",
+  "key_findings": [
+   "End-to-end limits at emission: sound may lead picture by at most 40 ms and lag by at most 60 ms",
+   "Per-stage accuracy: 5 ms early to 15 ms late; values from subjective tests where lip-sync failure becomes perceptible to 50% of observers; HD needs extra care"
+  ],
+  "practical_applications": [
+   "Our render chain should keep VO-to-mouth offset inside +40/-60 ms; prefer sound slightly late over early"
+  ],
+  "limitations": [
+   "Broadcast viewing conditions (EBU R28); 50% detection threshold, so sensitive viewers notice smaller errors"
+  ],
+  "license": "EBU (free)",
+  "access_status": "full_text",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-26",
+  "modules": [
+   "M22",
+   "M24"
+  ]
+ },
+ {
+  "key": "FastlZwicker2007_Psychoacoustics",
+  "title": "Psychoacoustics: Facts and Models (3rd ed.)",
+  "authors": "Hugo Fastl; Eberhard Zwicker",
+  "year": 2007,
+  "url": "https://link.springer.com/book/10.1007/978-3-540-68888-4",
+  "doi_isbn": "",
+  "source_type": "textbook",
+  "tier": "A",
+  "key_findings": [
+   "Standard reference for masking, critical bands, loudness (sone), roughness, sharpness; secondary sources cite: forward (post-) masking lasts up to ~200 ms after masker end, backward (pre-) masking only ~5-20 ms"
+  ],
+  "practical_applications": [
+   "A loud hit can hide the first ~100-200 ms of a following word -> leave a gap after big SFX before VO"
+  ],
+  "limitations": [
+   "Book not read; temporal-masking durations taken from search summaries of papers citing it; values vary with level and method"
+  ],
+  "license": "copyrighted",
+  "access_status": "search_summary",
+  "verification_status": "unverified",
+  "date_accessed": "2026-11-26",
+  "modules": [
+   "M22",
+   "M24"
+  ]
+ },
+ {
+  "key": "McGurkMacDonald1976",
+  "title": "Hearing lips and seeing voices",
+  "authors": "Harry McGurk; John MacDonald",
+  "year": 1976,
+  "url": "https://www.doi.org/10.1038/264746A0",
+  "doi_isbn": "10.1038/264746a0",
+  "source_type": "empirical",
+  "tier": "A",
+  "key_findings": [
+   "Audio [ba] dubbed onto lip movements of [ga] was reported as [da] by most adults; reverse dubbing gave [bagba]/[gaba]; audio alone or undubbed film identified correctly"
+  ],
+  "practical_applications": [
+   "Mouth shapes of a talking character change what syllable is heard -> lip-sync shapes matter, especially for closed-lip consonants (b/p/m)"
+  ],
+  "limitations": [
+   "Effect size varies greatly across individuals, languages and stimuli; later work shows weaker effect in some language groups"
+  ],
+  "license": "copyrighted",
+  "access_status": "search_summary",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-26",
+  "modules": [
+   "M22",
+   "M24"
+  ]
+ },
+ {
+  "key": "vanWassenhove2007_TWI",
+  "title": "Temporal window of integration in auditory-visual speech perception",
+  "authors": "Virginie van Wassenhove; Ken W. Grant; David Poeppel",
+  "year": 2007,
+  "url": "https://scholar.usuhs.edu/en/publications/temporal-window-of-integration-in-auditory-visual-speech-percepti/",
+  "doi_isbn": "Neuropsychologia 45(3):598-607",
+  "source_type": "empirical",
+  "tier": "A",
+  "key_findings": [
+   "43 normal-hearing participants; McGurk fusion persisted from about -30 ms (audio lead) to +170 ms (audio lag) across asynchronies tested from -467 to +467 ms",
+   "Simultaneity and fusion windows similar: an asymmetric ~200 ms audio-visual integration window favouring visual lead"
+  ],
+  "practical_applications": [
+   "Speech can be up to ~1-4 frames late and still fuse, but only ~1 frame early"
+  ],
+  "limitations": [
+   "Syllables in lab; abstract only"
+  ],
+  "license": "copyrighted",
+  "access_status": "abstract",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-26",
+  "modules": [
+   "M22",
+   "M24"
+  ]
+ },
+ {
+  "key": "AlaisBurr2004_Ventriloquist",
+  "title": "The ventriloquist effect results from near-optimal bimodal integration",
+  "authors": "David Alais; David Burr",
+  "year": 2004,
+  "url": "https://flore.unifi.it/handle/2158/202581",
+  "doi_isbn": "10.1016/j.cub.2004.01.029",
+  "source_type": "empirical",
+  "tier": "A",
+  "key_findings": [
+   "When visual localisation is good, vision captures sound location; with heavily blurred visuals, sound captures vision; at intermediate blur perception follows the reliability-weighted mean (MLE); bimodal precision better than either sense (6 subjects)"
+  ],
+  "practical_applications": [
+   "Mono phone speaker sound is 'pulled' to the on-screen source -> no need to pan for location; whichever sense is more reliable dominates"
+  ],
+  "limitations": [
+   "Small n, simple blobs and clicks; full text PDF blocked (403) to our client"
+  ],
+  "license": "copyrighted (OA postprint exists)",
+  "access_status": "search_summary",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-26",
+  "modules": [
+   "M22",
+   "M24"
+  ]
+ },
+ {
+  "key": "Spence2011_Crossmodal",
+  "title": "Crossmodal correspondences: A tutorial review",
+  "authors": "Charles Spence",
+  "year": 2011,
+  "url": "https://link.springer.com/content/pdf/10.3758/s13414-010-0073-7.pdf",
+  "doi_isbn": "10.3758/s13414-010-0073-7",
+  "source_type": "review",
+  "tier": "A",
+  "key_findings": [
+   "Crossmodal correspondences (e.g. high pitch <-> small, bright, high in space) act as a constraint on crossmodal binding alongside spatial, temporal and semantic congruency",
+   "Three classes: structural (e.g. loudness-brightness; possibly innate, from neural coding of magnitude), statistical (pitch-elevation, pitch-size, loudness-size; learned from environmental regularities), semantic (via shared words like 'high/low'; emerge with language)",
+   "Effects show in speeded classification (faster when congruent) and in integration; children match loud sounds with large shapes by age 2"
+  ],
+  "practical_applications": [
+   "Map sound to visual size/brightness/height consistently: small bright thing = higher, brighter sound; big heavy = lower"
+  ],
+  "limitations": [
+   "Some correspondences relative not absolute; semantic ones language-dependent"
+  ],
+  "license": "copyrighted (Springer OA PDF)",
+  "access_status": "full_text",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-26",
+  "modules": [
+   "M22",
+   "M24"
+  ]
+ },
+ {
+  "key": "PariseSpence2009_BirdsFeather",
+  "title": "'When Birds of a Feather Flock Together': Synesthetic Correspondences Modulate Audiovisual Integration in Non-Synesthetes",
+  "authors": "Cesare V. Parise; Charles Spence",
+  "year": 2009,
+  "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC2680950",
+  "doi_isbn": "10.1371/journal.pone.0005664",
+  "source_type": "empirical",
+  "tier": "A",
+  "key_findings": [
+   "Three experiments: pitch-size (temporal), pitch/waveform-shape (angular star with high/square tone vs curvy with low), pitch-size (spatial; 300 Hz vs 4500 Hz tones, 12 participants in Exp 3)",
+   "Temporal order and spatial discrepancy judgments were less precise for congruent pairs -> congruent pairs are integrated more strongly (first psychophysical evidence)"
+  ],
+  "practical_applications": [
+   "A sound that 'matches' the object's size/shape fuses with it better and hides small sync errors"
+  ],
+  "limitations": [
+   "Correspondences likely relative to the stimulus set; lab stimuli"
+  ],
+  "license": "CC BY 4.0",
+  "access_status": "full_text",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-26",
+  "modules": [
+   "M22",
+   "M24"
+  ]
+ },
+ {
+  "key": "Cwiek2022",
+  "title": "The bouba/kiki effect is robust across cultures and writing systems",
+  "authors": "Aleksandra Cwiek et al. (22 authors)",
+  "year": 2022,
+  "url": "https://doi.org/10.1098/rstb.2020.0390",
+  "doi_isbn": "10.1098/rstb.2020.0390",
+  "source_type": "empirical",
+  "tier": "A",
+  "key_findings": [
+   "Online experiment, speakers of 25 languages, 9 families, 10 writing systems: strong overall effect; bouba gave more congruent responses than kiki",
+   "Roman-script users only marginally more likely to show the effect; not stronger where letter shapes match -> rooted in voice-shape correspondence, largely independent of orthography"
+  ],
+  "practical_applications": [
+   "Round soft shapes <-> rounded voiced sounds (b, m, o, u); spiky <-> k, t, i - for naming, SFX and logo motion"
+  ],
+  "limitations": [
+   "Online sample, pseudowords; strength varies by language"
+  ],
+  "license": "CC BY 4.0",
+  "access_status": "abstract",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-26",
+  "modules": [
+   "M22",
+   "M24"
+  ]
+ },
+ {
+  "key": "Palmer2013_MusicColor",
+  "title": "Music-color associations are mediated by emotion",
+  "authors": "Stephen E. Palmer; Karen B. Schloss; Zoe Xu; Lilia R. Prado-Leon",
+  "year": 2013,
+  "url": "https://www.pnas.org/content/pnas/110/22/8836.full.pdf",
+  "doi_isbn": "10.1073/pnas.1212562110",
+  "source_type": "empirical",
+  "tier": "A",
+  "key_findings": [
+   "US and Mexican participants matched colours to 18 classical pieces: faster major-mode music -> lighter, more saturated, yellower; slower minor -> darker, desaturated, bluer",
+   "Emotional associations of music and chosen colours correlated 0.89 < r < 0.99 in both cultures; same pattern for faces"
+  ],
+  "practical_applications": [
+   "Pick grade/palette and music together by shared emotion: upbeat track + warm saturated light; slow minor + desaturated blue"
+  ],
+  "limitations": [
+   "Western classical music only; two cultures; later work suggests synaesthetes map differently"
+  ],
+  "license": "copyrighted (PMC free)",
+  "access_status": "abstract",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-26",
+  "modules": [
+   "M22",
+   "M24"
+  ]
+ },
+ {
+  "key": "Spence2021_SonicSeasoningCommercial",
+  "title": "Commercializing Sonic Seasoning in Multisensory Offline Experiential Events and Online Tasting Experiences",
+  "authors": "Charles Spence; Qian Janice Wang; Felipe Reinoso-Carvalho; Steve Keller",
+  "year": 2021,
+  "url": "https://www.frontiersin.org/articles/10.3389/fpsyg.2021.740354/full",
+  "doi_isbn": "10.3389/fpsyg.2021.740354",
+  "source_type": "review",
+  "tier": "B",
+  "key_findings": [
+   "Defines sonic seasoning (deliberate sound-taste pairing); reviews ~30 brand activations 2011-2021",
+   "Measured cases are few: The Singleton Sensorium 2013 (~500 guests; grassiness rated higher in 'grassy' sound room); Courvoisier 2013 only partly matched composer intent; most activations (Beck's Frequency 2020 Cannes Lions etc.) report no taste evidence",
+   "Effects strongest when sound comes before/during tasting; background noise can harm taste"
+  ],
+  "practical_applications": [
+   "Use crossmodal sound as a supporting cue, test it, never claim a measured effect without data"
+  ],
+  "limitations": [
+   "Narrative review relying on press/brand reports; one author works for an audio agency; read first ~40% of the page text"
+  ],
+  "license": "CC BY 4.0",
+  "access_status": "full_text",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-26",
+  "modules": [
+   "M22",
+   "M24"
+  ]
+ },
+ {
+  "key": "Eerola2012_TimbreAffect",
+  "title": "Timbre and affect dimensions: Evidence from affect and similarity ratings and acoustic correlates of isolated instrument sounds",
+  "authors": "Tuomas Eerola; Rafael Ferrer; Vinoo Alluri",
+  "year": 2012,
+  "url": "https://jyx.jyu.fi/bitstreams/33c4638f-38ea-40c1-94cd-952258621ff4/download",
+  "doi_isbn": "10.1525/mp.2012.30.1.49",
+  "source_type": "empirical",
+  "tier": "A",
+  "key_findings": [
+   "110 then 105 isolated instrument sounds (same pitch, duration, dynamics) rated reliably on valence and energy arousal; 50-57% of variance predicted by few acoustic features",
+   "Valence correlated r = -.74 with ratio of high- to low-frequency energy (brighter/sharper = less pleasant); attack slope and spectral flux tied to energy arousal; preference and valence nearly identical (r = .97)"
+  ],
+  "practical_applications": [
+   "Soft attack + darker spectrum = calmer, more pleasant (eye-break, heartwarming); bright fast-attack = energetic/edgy (beat clips, alerts)"
+  ],
+  "limitations": [
+   "Isolated Western instrument tones, not mixes or voices; correlational"
+  ],
+  "license": "copyrighted (author OA copy)",
+  "access_status": "full_text",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-26",
+  "modules": [
+   "M22",
+   "M24"
+  ]
+ },
+ {
+  "key": "Arnal2015_Screams",
+  "title": "Human Screams Occupy a Privileged Niche in the Communication Soundscape",
+  "authors": "Luc H. Arnal; Adeen Flinker; Andreas Kleinschmidt; Anne-Lise Giraud; David Poeppel",
+  "year": 2015,
+  "url": "https://www.mpg.de/9323826/acoustic-signature-screams",
+  "doi_isbn": "10.1016/j.cub.2015.06.043",
+  "source_type": "empirical",
+  "tier": "A",
+  "key_findings": [
+   "Screams carry fast amplitude modulation ~30-150 Hz ('roughness') unused by normal speech (~4-5 Hz modulation); rougher sounds rated more frightening and increased amygdala response",
+   "Artificial alarms and dissonant intervals also fall in the roughness range"
+  ],
+  "practical_applications": [
+   "Roughness = alarm/fear tool: use for horror/zombie, never under calm VO or eye-break clips"
+  ],
+  "limitations": [
+   "Read via Max Planck press release; lab ratings"
+  ],
+  "license": "copyrighted (PMC author manuscript)",
+  "access_status": "publisher_page",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-26",
+  "modules": [
+   "M22",
+   "M24"
+  ]
+ },
+ {
+  "key": "Bach2008_RisingIntensity",
+  "title": "Rising Sound Intensity: An Intrinsic Warning Cue Activating the Amygdala",
+  "authors": "Dominik R. Bach; Hartmut Schaechinger; John G. Neuhoff; et al.",
+  "year": 2008,
+  "url": "https://boris.unibe.ch/21529/1/bhm040.pdf",
+  "doi_isbn": "10.1093/cercor/bhm040",
+  "source_type": "empirical",
+  "tier": "A",
+  "key_findings": [
+   "Rising vs falling intensity sounds: rising facilitates autonomic orienting and phasic alertness; activates amygdala plus intraparietal sulcus, STS and temporal plane (event-related fMRI)"
+  ],
+  "practical_applications": [
+   "Crescendo/riser = attention grab; a fade-in is not neutral"
+  ],
+  "limitations": [
+   "Lab tones; a 2015 follow-up: rising intensity read as approach only for complex (not white-noise) carriers"
+  ],
+  "license": "copyrighted (repository copy)",
+  "access_status": "abstract",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-26",
+  "modules": [
+   "M22",
+   "M24"
+  ]
+ },
+ {
+  "key": "Escera1998_Novelty",
+  "title": "Neural mechanisms of involuntary attention to acoustic novelty and change",
+  "authors": "Carles Escera; Kimmo Alho; Istvan Winkler; Risto Naatanen",
+  "year": 1998,
+  "url": "https://doi.org/10.1162/089892998562997",
+  "doi_isbn": "10.1162/089892998562997",
+  "source_type": "empirical",
+  "tier": "A",
+  "key_findings": [
+   "Irrelevant novel sounds (10%) slowed responses to a visual task by 17 ms vs standard tones; slightly deviant tones (10%) lowered hit rate",
+   "Two mechanisms: transient detector (N1) for novel onsets and change detector (MMN ~150 ms; P3a 230/315 ms) for deviance"
+  ],
+  "practical_applications": [
+   "Unexpected sound onsets pull attention involuntarily -> powerful for hooks, costly when they interrupt reading of on-screen text"
+  ],
+  "limitations": [
+   "Lab oddball paradigm; small ms effects"
+  ],
+  "license": "copyrighted",
+  "access_status": "abstract",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-26",
+  "modules": [
+   "M22",
+   "M24"
+  ]
+ },
+ {
+  "key": "BrummZollinger2011_Lombard",
+  "title": "The evolution of the Lombard effect: 100 years of psychoacoustic research",
+  "authors": "Henrik Brumm; Sue Anne Zollinger",
+  "year": 2011,
+  "url": "https://doi.org/10.1163/000579511X605759",
+  "doi_isbn": "10.1163/000579511X605759",
+  "source_type": "review",
+  "tier": "A",
+  "key_findings": [
+   "Centenary review of noise-dependent vocal amplitude regulation (Lombard effect) in humans and animals; may be >300 million years old if shared by all amniotes"
+  ],
+  "practical_applications": [
+   "Speech recorded or synthesised as if in quiet sounds 'wrong' over loud music; a slightly raised, clearer delivery suits noisy scenes"
+  ],
+  "limitations": [
+   "Review of vocal production, not of listener benefit; abstract only"
+  ],
+  "license": "copyrighted",
+  "access_status": "abstract",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-26",
+  "modules": [
+   "M22",
+   "M24"
+  ]
+ },
+ {
+  "key": "Killion2004_QuickSIN",
+  "title": "Development of a quick speech-in-noise test for measuring signal-to-noise ratio loss in normal-hearing and hearing-impaired listeners",
+  "authors": "Mead C. Killion; Patricia A. Niquette; Gail I. Gudmundsen; Lawrence J. Revit; Shilpi Banerjee",
+  "year": 2004,
+  "url": "https://doi.org/10.1121/1.1784440",
+  "doi_isbn": "10.1121/1.1784440",
+  "source_type": "empirical",
+  "tier": "A",
+  "key_findings": [
+   "QuickSIN measures the SNR needed for 50% key words in four-talker babble; SNRs 25 to 0 dB; single-list SD 1.4 dB for hearing-impaired; accuracy +/-2.7 dB (95%)",
+   "Secondary (canadianaudiologist): normal hearing needs about +2 dB SNR for 50% words; SNR loss = extra dB a listener needs"
+  ],
+  "practical_applications": [
+   "50% words is far from comfortable; for easy listening aim many dB above that (VO 10-20 dB over bed)"
+  ],
+  "limitations": [
+   "Babble masker in English; clinical test not media mix target"
+  ],
+  "license": "copyrighted",
+  "access_status": "abstract",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-26",
+  "modules": [
+   "M22",
+   "M24"
+  ]
+ },
+ {
+  "key": "Poerio2018_ASMR",
+  "title": "More than a feeling: Autonomous sensory meridian response (ASMR) is characterized by reliable changes in affect and physiology",
+  "authors": "Giulia Lara Poerio; Emma Blakey; Thomas J. Hostler; Theresa Veltri",
+  "year": 2018,
+  "url": "https://eprints.whiterose.ac.uk/132445",
+  "doi_isbn": "10.1371/journal.pone.0196645",
+  "source_type": "empirical",
+  "tier": "A",
+  "key_findings": [
+   "Study 1 online (ASMR n=813, non-ASMR n=189), Study 2 lab (55 + 55): ASMR videos raised pleasant affect only in people who experience ASMR",
+   "Lab: ASMR group heart rate fell on average 3.41 bpm (d = 0.39) and skin conductance rose 0.30 uS - relaxing yet arousing (excitement, connectedness)"
+  ],
+  "practical_applications": [
+   "Whisper/close-mic textures work only for a subset of viewers; never rely on them as the only calming device"
+  ],
+  "limitations": [
+   "Self-selected experiencers; modest effects; short exposure"
+  ],
+  "license": "CC BY 4.0",
+  "access_status": "full_text",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-26",
+  "modules": [
+   "M22",
+   "M24"
+  ]
+ },
+ {
+  "key": "BarrattDavis2015_ASMR",
+  "title": "Autonomous Sensory Meridian Response (ASMR): a flow-like mental state",
+  "authors": "Emma L. Barratt; Nick J. Davis",
+  "year": 2015,
+  "url": "https://peerj.com/articles/851",
+  "doi_isbn": "10.7717/peerj.851",
+  "source_type": "empirical",
+  "tier": "B",
+  "key_findings": [
+   "Online survey of 475 self-identified experiencers: triggers whispering 75%, personal attention 69%, crisp sounds 64%, slow movements 53%; 98% use for relaxation, 82% for sleep, 81% watch before sleep; many prefer binaural headphones",
+   "Synaesthesia prevalence 5.9% in sample; temporary relief of depression/chronic pain symptoms self-reported"
+  ],
+  "practical_applications": [
+   "Calm clip triggers: soft close sounds, slow movement, personal address; quiet listening context"
+  ],
+  "limitations": [
+   "Self-selected online sample, self-report, correlational"
+  ],
+  "license": "CC BY 4.0",
+  "access_status": "full_text",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-26",
+  "modules": [
+   "M22",
+   "M24"
+  ]
+ },
+ {
+  "key": "Lohaus2023_ASMRReview",
+  "title": "Autonomous sensory meridian response (ASMR): A PRISMA-guided systematic review",
+  "authors": "Tobias Lohaus; Sarah C. Schreckenberg; Silja Bellingrath; Patrizia Thoma",
+  "year": 2023,
+  "url": "https://news.rub.de/english/press-releases/2023-11-09-psychology-whats-story-behind-asmr-clips",
+  "doi_isbn": "10.1037/cns0000368",
+  "source_type": "review",
+  "tier": "S",
+  "key_findings": [
+   "Systematic review (search to March 2022) of 54 quantitative studies; physiological changes such as heart-rate reduction; many studies small and low-diversity; no study shows long-term mental-health effects (per press release)"
+  ],
+  "practical_applications": [
+   "Treat ASMR calm as short-term and audience-dependent"
+  ],
+  "limitations": [
+   "Read via press release only; online-first Nov 2023, print vol. 12(4) 2025"
+  ],
+  "license": "copyrighted",
+  "access_status": "search_summary",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-26",
+  "modules": [
+   "M22",
+   "M24"
+  ]
+ },
+ {
+  "key": "Bernardi2006_Silence",
+  "title": "Cardiovascular, cerebrovascular, and respiratory changes induced by different types of music in musicians and non-musicians: the importance of silence",
+  "authors": "Luciano Bernardi; Cesare Porta; Peter Sleight",
+  "year": 2006,
+  "url": "https://doi.org/10.1136/hrt.2005.064600",
+  "doi_isbn": "10.1136/hrt.2005.064600",
+  "source_type": "empirical",
+  "tier": "A",
+  "key_findings": [
+   "12 musicians + 12 controls; six styles with a random 2-min pause: faster tempo and simpler rhythm raised ventilation, BP and HR; the pause reduced HR, BP and minute ventilation even below baseline",
+   "Musicians more respiration-sensitive to tempo; no habituation"
+  ],
+  "practical_applications": [
+   "Silence after sound is a relaxation tool: build pauses into calm clips instead of continuous music"
+  ],
+  "limitations": [
+   "n = 24, young healthy, Western music; physiological not emotional ratings"
+  ],
+  "license": "copyrighted (free full text at Heart)",
+  "access_status": "abstract",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-26",
+  "modules": [
+   "M22",
+   "M24"
+  ]
+ },
+ {
+  "key": "WHO2021_WorldReportHearing",
+  "title": "World report on hearing (news release 'WHO: 1 in 4 people projected to have hearing problems by 2050')",
+  "authors": "World Health Organization",
+  "year": 2021,
+  "url": "https://www.who.int/news/item/02-03-2021-who-1-in-4-people-projected-to-have-hearing-problems-by-2050",
+  "doi_isbn": "",
+  "source_type": "docs",
+  "tier": "S",
+  "key_findings": [
+   "2 March 2021: nearly 2.5 billion people (1 in 4) projected to have some hearing loss by 2050; at least 700 million will need ear/hearing care; report states >1.5 billion now, 430 million moderate or worse (secondary)"
+  ],
+  "practical_applications": [
+   "Design every clip for imperfect hearing: captions, high VO-to-bed ratio, no information carried only by sound"
+  ],
+  "limitations": [
+   "Global projections; definitions of 'hearing loss' vary"
+  ],
+  "license": "CC BY-NC-SA 3.0 IGO (WHO)",
+  "access_status": "publisher_page",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-26",
+  "modules": [
+   "M22",
+   "M24"
+  ]
+ },
+ {
+  "key": "Ruencharoen2024_BangkokHearing",
+  "title": "Hearing health survey of the population in Bangkok",
+  "authors": "Suwimol Ruencharoen; Krisna Lertsukprasert; Ravin Suvanich; et al.",
+  "year": 2024,
+  "url": "https://bmcpublichealth.biomedcentral.com/counter/pdf/10.1186/s12889-024-18424-x",
+  "doi_isbn": "10.1186/s12889-024-18424-x",
+  "source_type": "empirical",
+  "tier": "A",
+  "key_findings": [
+   "Random survey of 2,463 Bangkok adults aged 15-96 with pure-tone audiometry: hearing loss (any >25 dB HL) 53.02%, rising with age; moderate or worse 2.8%; 65+ had 8.56x odds; men 2x; >8 h/day noise work 1.56x"
+  ],
+  "practical_applications": [
+   "Thai audiences include many mild-loss listeners -> clear VO, captions"
+  ],
+  "limitations": [
+   "Bangkok only; 'any frequency >25 dB HL' is a broad definition"
+  ],
+  "license": "CC BY 4.0",
+  "access_status": "abstract",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-26",
+  "modules": [
+   "M22",
+   "M24"
+  ]
+ },
+ {
+  "key": "Chayaopas2021_ThaiElderlyHearing",
+  "title": "The effective screening tools for detecting hearing loss in elderly population: HHIE-ST Versus TSQ",
+  "authors": "Nichtima Chayaopas; Pornthep Kasemsiri; Panida Thanawirattananit; Patorn Piromchai; Kwanchanok Yimtae",
+  "year": 2021,
+  "url": "https://link.springer.com/10.1186/s12877-020-01996-9",
+  "doi_isbn": "10.1186/s12877-020-01996-9",
+  "source_type": "empirical",
+  "tier": "A",
+  "key_findings": [
+   "1,109 Thai adults aged 60+ in four (north-eastern) provinces, audiometry 250-8000 Hz as gold standard: hearing disability prevalence 38.34%"
+  ],
+  "practical_applications": [
+   "Older Thai viewers (presbyopia/eyewear audience) often have hearing disability -> design VO and captions for them"
+  ],
+  "limitations": [
+   "Regional community sample; screening-tool study"
+  ],
+  "license": "CC BY 4.0",
+  "access_status": "abstract",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-26",
+  "modules": [
+   "M22",
+   "M24"
+  ]
+ },
+ {
+  "key": "Meng2022_ToneNoise",
+  "title": "Age-Related Differences of Mandarin Tone and Consonant Aspiration Perception in Babble Noise",
+  "authors": "Yaru Meng; Fei Chen; Feng Yan; Gang Peng; Wei Zheng",
+  "year": 2022,
+  "url": "http://ira.lib.polyu.edu.hk/bitstream/10397/99499/1/Meng_Age-Related_Differences_Mandarin.pdf",
+  "doi_isbn": "10.1044/2022_JSLHR-21-00564",
+  "source_type": "empirical",
+  "tier": "A",
+  "key_findings": [
+   "24 adults + 20 adolescents: in babble, consonant aspiration categorisation degraded more than tone perception; tone perception more robust to noise"
+  ],
+  "practical_applications": [
+   "For tonal languages (Thai by analogy, unverified) the fragile part in noise is consonants, i.e. the 2-8 kHz detail -> keep that band clear of music"
+  ],
+  "limitations": [
+   "Mandarin, not Thai; no direct Thai speech-in-noise study found this session"
+  ],
+  "license": "copyrighted (repository copy)",
+  "access_status": "abstract",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-26",
+  "modules": [
+   "M22",
+   "M24"
+  ]
+ },
+ {
+  "key": "Gernsbacher2015",
+  "title": "Video Captions Benefit Everyone",
+  "authors": "Morton Ann Gernsbacher",
+  "year": 2015,
+  "url": "https://successforkidswithhearingloss.com/wp-content/uploads/2020/04/Video-Captions-Benefit-Everyone_2015.pdf",
+  "doi_isbn": "10.1177/2372732215602130",
+  "source_type": "review",
+  "tier": "A",
+  "key_findings": [
+   "More than 100 empirical studies: same-language captions improve comprehension of, attention to and memory for video; biggest benefits for non-native viewers, learners to read, D/deaf and hard-of-hearing",
+   "Captions also carry sound effects ('footsteps approaching') and speaker identity; ASR captions not yet error-free"
+  ],
+  "practical_applications": [
+   "Burn-in captions for VO clips; caption key SFX in story clips for sound-off viewers"
+  ],
+  "limitations": [
+   "Critique (WatsonLB): evidence base leans on L2, non-neurotypical and self-report studies; 'everyone' overstated for neurotypical native viewers"
+  ],
+  "license": "copyrighted (author-posted PDF)",
+  "access_status": "full_text",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-26",
+  "modules": [
+   "M22",
+   "M24"
+  ]
+ },
+ {
+  "key": "VerizonPublicis2019_SoundOff",
+  "title": "Verizon Media and Publicis Media survey on captions and sound-off viewing (reported by 3Play Media / MarketingCharts)",
+  "authors": "Verizon Media; Publicis Media (reported by 3Play Media)",
+  "year": 2019,
+  "url": "https://www.3playmedia.com/blog/verizon-media-and-publicis-media-find-viewers-want-captions/",
+  "doi_isbn": "",
+  "source_type": "docs",
+  "tier": "C",
+  "key_findings": [
+   "Online survey of 5,616 US adults 18-54, April 2019: 69% watch video with sound off in public places, 25% in private (secondary: Kapwing, MarketingCharts); 80% more likely to finish a captioned video (secondary)",
+   "3Play page: 41% of videos incomprehensible without sound; 80% of caption users are not D/deaf or hard of hearing (citing Ofcom)"
+  ],
+  "practical_applications": [
+   "Every clip must make sense on mute: text layer + captions + visual storytelling"
+  ],
+  "limitations": [
+   "Industry-commissioned survey, US only, self-report; numbers relayed by vendors; not Thailand"
+  ],
+  "license": "copyrighted",
+  "access_status": "publisher_page",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-26",
+  "modules": [
+   "M22",
+   "M24"
+  ]
+ },
+ {
+  "key": "TikTok2021_EvolutionSound",
+  "title": "Evolution of Sound, Volume 1 (TikTok for Business blog, 21 Dec 2021)",
+  "authors": "TikTok for Business",
+  "year": 2021,
+  "url": "https://ads.tiktok.com/business/en-US/blog/evolution-of-sound-volume-1",
+  "doi_isbn": "",
+  "source_type": "docs",
+  "tier": "C",
+  "key_findings": [
+   "88% of users say sound is vital to the TikTok experience (Nielsen Marketing Science US Authenticity Study, July 2020); Kantar cross-platform sound research Jan 2021: brand awareness lifts for sound-on ads"
+  ],
+  "practical_applications": [
+   "TikTok is sound-on by culture; Reels/FB feeds are more often muted -> design for both"
+  ],
+  "limitations": [
+   "Platform-commissioned, self-interested, no sample sizes; contradicts sound-off surveys because of platform and setting"
+  ],
+  "license": "copyrighted",
+  "access_status": "publisher_page",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-26",
+  "modules": [
+   "M22",
+   "M24"
+  ]
+ },
+ {
+  "key": "W3C_WCAG22_SC147",
+  "title": "Understanding Success Criterion 1.4.7: Low or No Background Audio (WCAG 2.2, Level AAA)",
+  "authors": "W3C WAI",
+  "year": 2023,
+  "url": "https://www.w3.org/WAI/WCAG22/Understanding/low-or-no-background-audio.html",
+  "doi_isbn": "WCAG 2.2 SC 1.4.7",
+  "source_type": "docs",
+  "tier": "S",
+  "key_findings": [
+   "Prerecorded speech-foreground audio: no background, or background can be turned off, or background at least 20 dB below foreground speech; sounds of 1-2 s exempt; intent: hard-of-hearing users separate speech from background"
+  ],
+  "practical_applications": [
+   "Accessibility version of a clip: bed >= 20 dB under VO (stricter than the 10 LU Torcoli minimum)"
+  ],
+  "limitations": [
+   "Written for audio-only web content; dB measurement method loosely specified"
+  ],
+  "license": "W3C document licence",
+  "access_status": "full_text",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-26",
+  "modules": [
+   "M22",
+   "M24"
+  ]
+ },
+ {
+  "key": "FCC_CALM",
+  "title": "Loud Commercials / CALM Act (Commercial Advertisement Loudness Mitigation Act)",
+  "authors": "US Federal Communications Commission",
+  "year": 2010,
+  "url": "https://www.fcc.gov/general/loud-commercials-0",
+  "doi_isbn": "Public Law 111-311",
+  "source_type": "docs",
+  "tier": "S",
+  "key_findings": [
+   "Enacted 15 Dec 2010 after consumer complaints about loud ads; FCC rules effective 13 Dec 2012 adopt ATSC A/85: a commercial's average loudness must not exceed the programme's; no absolute cap; A/85:2013 adds gating; FCC 25-16 (2025) notes an uptick in complaints in 2024"
+  ],
+  "practical_applications": [
+   "Documented failure of 'louder sells': regulators had to force loudness parity"
+  ],
+  "limitations": [
+   "Read via search snippets (FCC site 403 to our client)"
+  ],
+  "license": "public domain (US gov)",
+  "access_status": "search_summary",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-26",
+  "modules": [
+   "M22",
+   "M24"
+  ]
+ },
+ {
+  "key": "ChangWang2019_Microspeaker",
+  "title": "Bass extension of microspeaker system on mobile device",
+  "authors": "J. R. Chang; C. N. Wang",
+  "year": 2019,
+  "url": "https://www.cambridge.org/core/journals/journal-of-mechanics/article/bass-extension-of-microspeaker-system-on-mobile-device/2F765A1986D3D93F3D8A365ACC4C8A7A",
+  "doi_isbn": "Journal of Mechanics 35(4)",
+  "source_type": "empirical",
+  "tier": "A",
+  "key_findings": [
+   "In a 10-inch tablet, a front chamber + pipe port extended the microspeaker's low-frequency limit from 630 Hz to 300 Hz"
+  ],
+  "practical_applications": [
+   "Even good mobile speakers reproduce little below ~300-600 Hz: bass-only cues (sub drops, kick fundamentals) vanish on phone speakers; carry weight with harmonics/mid-range"
+  ],
+  "limitations": [
+   "One device design paper, not a survey of handsets; patents found cite ~1 kHz microspeaker resonance and steep roll-off below ~300 Hz (not peer reviewed)"
+  ],
+  "license": "copyrighted",
+  "access_status": "abstract",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-26",
+  "modules": [
+   "M22",
+   "M24"
+  ]
+ },
+ {
+  "key": "Nolan_DialogueMix",
+  "title": "Press coverage of 'inaudible dialogue' complaints about Christopher Nolan's Interstellar (2014) and Tenet (2020)",
+  "authors": "Various (Yahoo/The Playlist/RedShark News; Nolan quoted from T. Shone 'The Nolan Variations' and THR 2014)",
+  "year": 2020,
+  "url": "https://theplaylist.net/christopher-nolan-sound-design-complaints-20201113/",
+  "doi_isbn": "",
+  "source_type": "practitioner",
+  "tier": "E",
+  "key_findings": [
+   "Viewers and critics reported dialogue buried under music/effects in Tenet; Nolan said other filmmakers called to complain and defended the mix as a deliberate choice ('right approach for an experimental film', on Interstellar, THR 2014)"
+  ],
+  "practical_applications": [
+   "Case of deliberate low intelligibility: an aesthetic choice that a mass mobile audience will read as an error"
+  ],
+  "limitations": [
+   "Press/anecdotal; attribution of quotes between films unclear in coverage"
+  ],
+  "license": "copyrighted",
+  "access_status": "search_summary",
+  "verification_status": "unverified",
+  "date_accessed": "2026-11-26",
+  "modules": [
+   "M22",
+   "M24"
+  ]
+ }
+]

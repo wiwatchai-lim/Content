@@ -125,6 +125,12 @@
    "sources_added": 120,
    "spot_check": "8: 6 confirmed, 2 partly (corrected), 0 wrong",
    "notes": "All cartoon styles; FLUX style sweep experiments."
+  },
+  {
+   "id": "V2",
+   "date": "2026-11-26",
+   "scope": "15 domain guides (creative-intelligence/domains/), Creative Memory, creative-critic",
+   "by": "10 research agents + main"
   }
  ],
  "modules": [
@@ -136,9 +142,10 @@
    "status": "SOURCE VERIFIED",
    "files": [
     "creative-intelligence/knowledge/psychology/README.md",
-    "creative-intelligence/knowledge/psychology/sources.json"
+    "creative-intelligence/knowledge/psychology/sources.json",
+    "creative-intelligence/domains/02-human-psychology-emotional-intelligence.md"
    ],
-   "notes": "P2 2026-11-25: 18 concepts, 48 sources but only 25% read beyond search snippets (PMC captcha). Upgrade: read Tannenbaum2015, Carstensen, Loewenstein1994 full text. No Thai-sample studies. | U3: full-text upgrade -> 60% read; independent spot-check of 18 (2/module): 0 wrong.",
+   "notes": "P2 2026-11-25: 18 concepts, 48 sources but only 25% read beyond search snippets (PMC captcha). Upgrade: read Tannenbaum2015, Carstensen, Loewenstein1994 full text. No Thai-sample studies. | U3: full-text upgrade -> 60% read; independent spot-check of 18 (2/module): 0 wrong. | v2 domain guide 02 (2026-11-26)",
    "human_review": null,
    "updated": "2026-11-25"
   },
@@ -153,11 +160,13 @@
     "creative-intelligence/knowledge/emotions/sources.json",
     "creative-intelligence/knowledge/emotions/emotion_crosswalk.json",
     ".claude/skills/ai-voice-director/EMOTION_LIBRARY.json",
-    ".claude/skills/ai-visual-artist/EMOTION_VISUAL_LIBRARY.json"
+    ".claude/skills/ai-visual-artist/EMOTION_VISUAL_LIBRARY.json",
+    "creative-intelligence/domains/05-semiotics-symbolism-metaphor.md",
+    "creative-intelligence/domains/02-human-psychology-emotional-intelligence.md"
    ],
-   "notes": "P2 2026-11-25: theory + crosswalk (114 rows; libraries share 108 ids) + 22 missing emotions found. 44% read. Upgrade: full text of Barrett2017, Hatfield1993, Webb2012, Tsai2006. | U3: full-text upgrade -> 70% read; independent spot-check of 18 (2/module): 0 wrong.",
+   "notes": "P2 2026-11-25: theory + crosswalk (114 rows; libraries share 108 ids) + 22 missing emotions found. 44% read. Upgrade: full text of Barrett2017, Hatfield1993, Webb2012, Tsai2006. | U3: full-text upgrade -> 70% read; independent spot-check of 18 (2/module): 0 wrong. | v2 domain guide(s) 2026-11-26: 05 | v2 domain guide 02 (2026-11-26)",
    "human_review": null,
-   "updated": "2026-11-25"
+   "updated": "2026-11-26"
   },
   {
    "id": "M03",
@@ -167,11 +176,12 @@
    "status": "SOURCE VERIFIED",
    "files": [
     "creative-intelligence/knowledge/philosophy/README.md",
-    "creative-intelligence/knowledge/philosophy/sources.json"
+    "creative-intelligence/knowledge/philosophy/sources.json",
+    "creative-intelligence/domains/08-philosophy-literature-poetry.md"
    ],
-   "notes": "P2 2026-11-25: 52 sources, 79% read (SEP/IEP/Access to Insight); 40 misattributed quotes listed; 12 Mint & Tao examples. Gap: Gutenberg down (primary texts not read in full), no Thai primary sources (Buddhadasa, Payutto).",
+   "notes": "P2 2026-11-25: 52 sources, 79% read (SEP/IEP/Access to Insight); 40 misattributed quotes listed; 12 Mint & Tao examples. Gap: Gutenberg down (primary texts not read in full), no Thai primary sources (Buddhadasa, Payutto). | v2 domain guide(s) 2026-11-26: 08",
    "human_review": null,
-   "updated": "2026-11-25"
+   "updated": "2026-11-26"
   },
   {
    "id": "M04",
@@ -182,11 +192,13 @@
    "files": [
     "creative-intelligence/knowledge/cognitive-science/README.md",
     "creative-intelligence/knowledge/cognitive-science/sources.json",
-    ".claude/skills/ai-visual-artist/research/R1_fundamentals_perception.md"
+    ".claude/skills/ai-visual-artist/research/R1_fundamentals_perception.md",
+    "creative-intelligence/domains/01-creative-thinking-cognitive-science.md",
+    "creative-intelligence/domains/05-semiotics-symbolism-metaphor.md"
    ],
-   "notes": "P2 2026-11-25: 17 concepts with EVIDENCE/DERIVED/INDUSTRY rules, 51 sources, 61% read. Gap: no peer-reviewed Thai subtitle reading speed; no IG/TikTok eye-tracking.",
+   "notes": "P2 2026-11-25: 17 concepts with EVIDENCE/DERIVED/INDUSTRY rules, 51 sources, 61% read. Gap: no peer-reviewed Thai subtitle reading speed; no IG/TikTok eye-tracking. | v2 domain guide(s) 2026-11-26: 01, 05",
    "human_review": null,
-   "updated": "2026-11-25"
+   "updated": "2026-11-26"
   },
   {
    "id": "M05",
@@ -197,11 +209,13 @@
    "files": [
     ".claude/skills/ai-visual-artist/research/R1_fundamentals_perception.md",
     ".claude/skills/ai-visual-artist/ART_FUNDAMENTALS.md",
-    "creative-intelligence/knowledge/neuroaesthetics/README.md"
+    "creative-intelligence/knowledge/neuroaesthetics/README.md",
+    "creative-intelligence/domains/03-aesthetic-intelligence-taste.md",
+    "creative-intelligence/domains/05-semiotics-symbolism-metaphor.md"
    ],
-   "notes": "Partial: balance/preference studies in R1. No dedicated pass yet | U2: 62% read, spot-check clean (12/12 supported, 2 wording fixes).",
+   "notes": "Partial: balance/preference studies in R1. No dedicated pass yet | U2: 62% read, spot-check clean (12/12 supported, 2 wording fixes). | v2 domain guide(s) 2026-11-26: 03, 05",
    "human_review": null,
-   "updated": "2026-11-25"
+   "updated": "2026-11-26"
   },
   {
    "id": "M06",
@@ -214,11 +228,13 @@
     ".claude/skills/ai-visual-artist/MASTER_KNOWLEDGE.md",
     "creative-intelligence/knowledge/aesthetics/README.md",
     "creative-intelligence/knowledge/aesthetics/LOOK_DICTIONARY.md",
-    "creative-intelligence/knowledge/aesthetics/CRITIQUE_PROTOCOL.md"
+    "creative-intelligence/knowledge/aesthetics/CRITIQUE_PROTOCOL.md",
+    "creative-intelligence/domains/03-aesthetic-intelligence-taste.md",
+    "creative-intelligence/domains/12-independent-creative-criticism.md"
    ],
-   "notes": "Critique + taste rules exist; no taste study with human raters | U2: 52% read, spot-check clean (12/12 supported, 2 wording fixes).",
+   "notes": "Critique + taste rules exist; no taste study with human raters | U2: 52% read, spot-check clean (12/12 supported, 2 wording fixes). | v2 domain guide(s) 2026-11-26: 03, 12",
    "human_review": null,
-   "updated": "2026-11-25"
+   "updated": "2026-11-26"
   },
   {
    "id": "M07",
@@ -236,11 +252,12 @@
     "creative-intelligence/knowledge/visual-arts/PERSPECTIVE_MASTERY.md",
     "creative-intelligence/knowledge/visual-arts/PERSPECTIVE_ERROR_LIBRARY.json",
     "creative-intelligence/knowledge/visual-arts/form_libraries.json",
-    "creative-intelligence/knowledge/visual-arts/form_errors.json"
+    "creative-intelligence/knowledge/visual-arts/form_errors.json",
+    "creative-intelligence/domains/04-visual-language-grammar.md"
    ],
-   "notes": "VA1 2026-11-25: deep files in knowledge/visual-arts/ (see README).",
+   "notes": "VA1 2026-11-25: deep files in knowledge/visual-arts/ (see README). | v2 domain guide(s) 2026-11-26: 04",
    "human_review": null,
-   "updated": "2026-11-25"
+   "updated": "2026-11-26"
   },
   {
    "id": "M08",
@@ -252,11 +269,12 @@
     ".claude/skills/ai-visual-artist/COMPOSITION_LIBRARY.json",
     "story-clips/_craft/curriculum/03-composition.md",
     "creative-intelligence/knowledge/visual-arts/VISUAL_ERROR_LIBRARY.json",
-    "creative-intelligence/knowledge/visual-arts/VISUAL_EXPERIMENTS.json"
+    "creative-intelligence/knowledge/visual-arts/VISUAL_EXPERIMENTS.json",
+    "creative-intelligence/domains/04-visual-language-grammar.md"
    ],
-   "notes": "30 of 100 target; tested with FLUX + analyze_image (golden glasses job) | VA1 2026-11-25: deep files in knowledge/visual-arts/ (see README).",
+   "notes": "30 of 100 target; tested with FLUX + analyze_image (golden glasses job) | VA1 2026-11-25: deep files in knowledge/visual-arts/ (see README). | v2 domain guide(s) 2026-11-26: 04",
    "human_review": null,
-   "updated": "2026-11-25"
+   "updated": "2026-11-26"
   },
   {
    "id": "M09",
@@ -271,11 +289,12 @@
     "creative-intelligence/knowledge/visual-arts/ADVANCED_COLOR_SCIENCE.md",
     "creative-intelligence/knowledge/visual-arts/COLOR_RELATIVITY.md",
     "creative-intelligence/knowledge/visual-arts/COLOR_SCRIPTING.md",
-    "creative-intelligence/knowledge/visual-arts/color_relationships.json"
+    "creative-intelligence/knowledge/visual-arts/color_relationships.json",
+    "creative-intelligence/domains/05-semiotics-symbolism-metaphor.md"
    ],
-   "notes": "204 of 300 palettes | VA1 2026-11-25: deep files in knowledge/visual-arts/ (see README).",
+   "notes": "204 of 300 palettes | VA1 2026-11-25: deep files in knowledge/visual-arts/ (see README). | v2 domain guide(s) 2026-11-26: 05",
    "human_review": null,
-   "updated": "2026-11-25"
+   "updated": "2026-11-26"
   },
   {
    "id": "M10",
@@ -317,11 +336,12 @@
    "files": [
     ".claude/skills/ai-visual-artist/VISUAL_STORYTELLING.md",
     "creative-intelligence/knowledge/semiotics/README.md",
-    "creative-intelligence/knowledge/semiotics/SYMBOL_LIBRARY.json"
+    "creative-intelligence/knowledge/semiotics/SYMBOL_LIBRARY.json",
+    "creative-intelligence/domains/05-semiotics-symbolism-metaphor.md"
    ],
-   "notes": "Only scattered metaphor notes | U1: 27% read. | U3: full-text upgrade -> 63% read; independent spot-check of 18 (2/module): 0 wrong.",
+   "notes": "Only scattered metaphor notes | U1: 27% read. | U3: full-text upgrade -> 63% read; independent spot-check of 18 (2/module): 0 wrong. | v2 domain guide(s) 2026-11-26: 05",
    "human_review": null,
-   "updated": "2026-11-25"
+   "updated": "2026-11-26"
   },
   {
    "id": "M13",
@@ -333,11 +353,12 @@
     ".claude/skills/ai-visual-artist/VISUAL_STORYTELLING.md",
     "story-clips/_craft/curriculum/08-storyboard.md",
     "creative-intelligence/knowledge/storytelling/README.md",
-    "creative-intelligence/knowledge/storytelling/STORY_TEMPLATES.md"
+    "creative-intelligence/knowledge/storytelling/STORY_TEMPLATES.md",
+    "creative-intelligence/domains/08-philosophy-literature-poetry.md"
    ],
-   "notes": "120 story carousels produced in practice, but no sourced story-pattern library | U1: 25% read -> DRAFTED. | U3: full-text upgrade -> 55% read; independent spot-check of 18 (2/module): 0 wrong.",
+   "notes": "120 story carousels produced in practice, but no sourced story-pattern library | U1: 25% read -> DRAFTED. | U3: full-text upgrade -> 55% read; independent spot-check of 18 (2/module): 0 wrong. | v2 domain guide(s) 2026-11-26: 08",
    "human_review": null,
-   "updated": "2026-11-25"
+   "updated": "2026-11-26"
   },
   {
    "id": "M14",
@@ -362,11 +383,13 @@
    "status": "SOURCE VERIFIED",
    "files": [
     ".claude/skills/ai-visual-artist/CHARACTER_DESIGN.md",
-    ".claude/skills/ai-visual-artist/CHARACTER_BIBLE_TEMPLATE.md"
+    ".claude/skills/ai-visual-artist/CHARACTER_BIBLE_TEMPLATE.md",
+    "creative-intelligence/domains/06-character-psychology-development.md",
+    "creative-intelligence/domains/08-philosophy-literature-poetry.md"
    ],
-   "notes": "",
+   "notes": "v2 domain guide(s) 2026-11-26: 06, 08",
    "human_review": null,
-   "updated": "2026-11-25"
+   "updated": "2026-11-26"
   },
   {
    "id": "M16",
@@ -376,11 +399,12 @@
    "status": "SOURCE VERIFIED",
    "files": [
     "creative-intelligence/knowledge/world-building/README.md",
-    "creative-intelligence/knowledge/world-building/STORY_BIBLE_TEMPLATE.md"
+    "creative-intelligence/knowledge/world-building/STORY_BIBLE_TEMPLATE.md",
+    "creative-intelligence/domains/07-worldbuilding-narrative-continuity.md"
    ],
-   "notes": "Series exist (eyesight, zombie, night-optic, slowly-growing) without a lore/continuity store | U2: 65% read, spot-check clean (12/12 supported, 2 wording fixes).",
+   "notes": "Series exist (eyesight, zombie, night-optic, slowly-growing) without a lore/continuity store | U2: 65% read, spot-check clean (12/12 supported, 2 wording fixes). | v2 domain guide(s) 2026-11-26: 07",
    "human_review": null,
-   "updated": "2026-11-25"
+   "updated": "2026-11-26"
   },
   {
    "id": "M17",
@@ -393,11 +417,13 @@
     "story-clips/_craft/rig.js",
     "creative-intelligence/knowledge/acting/README.md",
     "creative-intelligence/knowledge/acting/ACTING_GUIDE.md",
-    "creative-intelligence/knowledge/acting/POSE_LIBRARY.json"
+    "creative-intelligence/knowledge/acting/POSE_LIBRARY.json",
+    "creative-intelligence/domains/06-character-psychology-development.md",
+    "creative-intelligence/domains/08-philosophy-literature-poetry.md"
    ],
-   "notes": "GUIDE section 5 + rig emotes; no FACS-sourced library | U2: 82% read, spot-check clean (12/12 supported, 2 wording fixes).",
+   "notes": "GUIDE section 5 + rig emotes; no FACS-sourced library | U2: 82% read, spot-check clean (12/12 supported, 2 wording fixes). | v2 domain guide(s) 2026-11-26: 06, 08",
    "human_review": null,
-   "updated": "2026-11-25"
+   "updated": "2026-11-26"
   },
   {
    "id": "M18",
@@ -412,11 +438,12 @@
     "story-clips/_craft/GUIDE.md",
     "creative-intelligence/knowledge/visual-arts/CAMERA_ANGLE_LIBRARY.json",
     "creative-intelligence/knowledge/visual-arts/LENS_OPTICS.md",
-    "creative-intelligence/knowledge/visual-arts/lens_examples.json"
+    "creative-intelligence/knowledge/visual-arts/lens_examples.json",
+    "creative-intelligence/domains/04-visual-language-grammar.md"
    ],
-   "notes": "Shot library not yet a structured file | VA1 2026-11-25: deep files in knowledge/visual-arts/ (see README).",
+   "notes": "Shot library not yet a structured file | VA1 2026-11-25: deep files in knowledge/visual-arts/ (see README). | v2 domain guide(s) 2026-11-26: 04",
    "human_review": null,
-   "updated": "2026-11-25"
+   "updated": "2026-11-26"
   },
   {
    "id": "M19",
@@ -478,11 +505,12 @@
     "story-clips/_craft/sound.py",
     "story-clips/_craft/sfxlib/CREDITS.md",
     "creative-intelligence/knowledge/sound/README.md",
-    "creative-intelligence/knowledge/sound/SOUND_DESIGN_LIBRARY.md"
+    "creative-intelligence/knowledge/sound/SOUND_DESIGN_LIBRARY.md",
+    "creative-intelligence/domains/10-psychoacoustics-sensory-experience.md"
    ],
-   "notes": "83 CC0 SFX in use; no sourced theory | U1: 20% read. | U3: full-text upgrade -> 60% read; independent spot-check of 18 (2/module): 0 wrong.",
+   "notes": "83 CC0 SFX in use; no sourced theory | U1: 20% read. | U3: full-text upgrade -> 60% read; independent spot-check of 18 (2/module): 0 wrong. | v2 domain guide(s) 2026-11-26: 10",
    "human_review": null,
-   "updated": "2026-11-25"
+   "updated": "2026-11-26"
   },
   {
    "id": "M23",
@@ -508,11 +536,12 @@
     ".claude/skills/ai-voice-director/QUALITY_CONTROL.md",
     ".claude/skills/ai-voice-director/tools/qc.py",
     "creative-intelligence/knowledge/audio-engineering/README.md",
-    "creative-intelligence/knowledge/audio-engineering/MIX_PLAYBOOK.md"
+    "creative-intelligence/knowledge/audio-engineering/MIX_PLAYBOOK.md",
+    "creative-intelligence/domains/10-psychoacoustics-sensory-experience.md"
    ],
-   "notes": "Voice loudness QC exists; no mix/master guide | U1: 55% read; ffmpeg commands run on test audio; Torcoli wording corrected (partly, not wrong).",
+   "notes": "Voice loudness QC exists; no mix/master guide | U1: 55% read; ffmpeg commands run on test audio; Torcoli wording corrected (partly, not wrong). | v2 domain guide(s) 2026-11-26: 10",
    "human_review": null,
-   "updated": "2026-11-25"
+   "updated": "2026-11-26"
   },
   {
    "id": "M25",
@@ -552,11 +581,13 @@
     "CLAUDE.md",
     "creative-intelligence/knowledge/branding/README.md",
     "creative-intelligence/knowledge/branding/BRAND_GUIDE_TEMPLATE.md",
-    "creative-intelligence/knowledge/branding/BRAND_CHECK.md"
+    "creative-intelligence/knowledge/branding/BRAND_CHECK.md",
+    "creative-intelligence/domains/05-semiotics-symbolism-metaphor.md",
+    "creative-intelligence/domains/11-consumer-psychology-creative-marketing.md"
    ],
-   "notes": "House rules only; no Brand Bible file | U2: 73% read, spot-check clean (12/12 supported, 2 wording fixes).",
+   "notes": "House rules only; no Brand Bible file | U2: 73% read, spot-check clean (12/12 supported, 2 wording fixes). | v2 domain guide(s) 2026-11-26: 05, 11",
    "human_review": null,
-   "updated": "2026-11-25"
+   "updated": "2026-11-26"
   },
   {
    "id": "M28",
@@ -566,11 +597,12 @@
    "status": "SOURCE VERIFIED",
    "files": [
     "creative-intelligence/knowledge/audience/README.md",
-    "creative-intelligence/knowledge/audience/RETENTION_REVIEW.md"
+    "creative-intelligence/knowledge/audience/RETENTION_REVIEW.md",
+    "creative-intelligence/domains/11-consumer-psychology-creative-marketing.md"
    ],
-   "notes": "T1: 73% read, spot-check clean.",
+   "notes": "T1: 73% read, spot-check clean. | v2 domain guide(s) 2026-11-26: 11",
    "human_review": null,
-   "updated": "2026-11-25"
+   "updated": "2026-11-26"
   },
   {
    "id": "M29",
@@ -581,11 +613,12 @@
    "files": [
     "creative-intelligence/knowledge/marketing/README.md",
     "creative-intelligence/knowledge/marketing/CONTENT_TYPES.md",
-    "creative-intelligence/knowledge/marketing/ETHICS_AND_THAI_AD_RULES.md"
+    "creative-intelligence/knowledge/marketing/ETHICS_AND_THAI_AD_RULES.md",
+    "creative-intelligence/domains/11-consumer-psychology-creative-marketing.md"
    ],
-   "notes": "ads-meta skill reads real ad results; no strategy knowledge | T1: 57% read (Thai CPA + PDPA + Meta policies full text), spot-check clean. Thai FDA device-ad scope still unconfirmed.",
+   "notes": "ads-meta skill reads real ad results; no strategy knowledge | T1: 57% read (Thai CPA + PDPA + Meta policies full text), spot-check clean. Thai FDA device-ad scope still unconfirmed. | v2 domain guide(s) 2026-11-26: 11",
    "human_review": null,
-   "updated": "2026-11-25"
+   "updated": "2026-11-26"
   },
   {
    "id": "M30",
@@ -595,11 +628,13 @@
    "status": "SOURCE VERIFIED",
    "files": [
     "creative-intelligence/knowledge/culture/README.md",
-    "creative-intelligence/knowledge/culture/CULTURAL_CHECK.md"
+    "creative-intelligence/knowledge/culture/CULTURAL_CHECK.md",
+    "creative-intelligence/domains/05-semiotics-symbolism-metaphor.md",
+    "creative-intelligence/domains/09-cultural-studies-cross-cultural.md"
    ],
-   "notes": "U1: 54% read BUT spot-check found 1 wrong citation (Coconuts: campaign by private group, not Culture Ministry) - corrected; stays DRAFTED until a clean re-check. | U3: full-text upgrade -> 84% read; independent spot-check of 18 (2/module): 0 wrong.",
+   "notes": "U1: 54% read BUT spot-check found 1 wrong citation (Coconuts: campaign by private group, not Culture Ministry) - corrected; stays DRAFTED until a clean re-check. | U3: full-text upgrade -> 84% read; independent spot-check of 18 (2/module): 0 wrong. | v2 domain guide(s) 2026-11-26: 05, 09",
    "human_review": null,
-   "updated": "2026-11-25"
+   "updated": "2026-11-26"
   },
   {
    "id": "M31",
@@ -625,11 +660,12 @@
     ".claude/skills/ai-voice-director/EMOTION_TRANSITIONS.md",
     "creative-intelligence/knowledge/emotional-architecture/README.md",
     "creative-intelligence/knowledge/emotional-architecture/EMOTION_DESIGN_MATRIX.md",
-    "creative-intelligence/knowledge/emotional-architecture/ARC_TEMPLATES.md"
+    "creative-intelligence/knowledge/emotional-architecture/ARC_TEMPLATES.md",
+    "creative-intelligence/domains/05-semiotics-symbolism-metaphor.md"
    ],
-   "notes": "Only voice transitions | U1: 50% read, spot-check clean.",
+   "notes": "Only voice transitions | U1: 50% read, spot-check clean. | v2 domain guide(s) 2026-11-26: 05",
    "human_review": null,
-   "updated": "2026-11-25"
+   "updated": "2026-11-26"
   },
   {
    "id": "M33",
@@ -639,11 +675,12 @@
    "status": "SOURCE VERIFIED",
    "files": [
     "creative-intelligence/knowledge/creative-thinking/README.md",
-    "creative-intelligence/knowledge/creative-thinking/IDEATION_PLAYBOOK.md"
+    "creative-intelligence/knowledge/creative-thinking/IDEATION_PLAYBOOK.md",
+    "creative-intelligence/domains/01-creative-thinking-cognitive-science.md"
    ],
-   "notes": "T1: 72% read, spot-check clean.",
+   "notes": "T1: 72% read, spot-check clean. | v2 domain guide(s) 2026-11-26: 01",
    "human_review": null,
-   "updated": "2026-11-25"
+   "updated": "2026-11-26"
   },
   {
    "id": "M34",
@@ -698,11 +735,12 @@
    "files": [
     "story-clips/_craft/curriculum/12-production-qc.md",
     "tools/render.mjs",
-    "tools/video.mjs"
+    "tools/video.mjs",
+    "creative-intelligence/domains/15-creative-workflow-automation.md"
    ],
-   "notes": "",
+   "notes": "v2 domain guide(s) 2026-11-26: 15",
    "human_review": null,
-   "updated": "2026-11-25"
+   "updated": "2026-11-26"
   },
   {
    "id": "M38",
@@ -714,11 +752,12 @@
     ".claude/skills/ai-visual-artist/CHARACTER_BIBLE_TEMPLATE.md",
     "creative-intelligence/knowledge/continuity/README.md",
     "creative-intelligence/knowledge/continuity/CONTINUITY_SYSTEM.md",
-    "creative-intelligence/knowledge/continuity/continuity.schema.json"
+    "creative-intelligence/knowledge/continuity/continuity.schema.json",
+    "creative-intelligence/domains/07-worldbuilding-narrative-continuity.md"
    ],
-   "notes": "U2: 90% read, spot-check clean (12/12 supported, 2 wording fixes).",
+   "notes": "U2: 90% read, spot-check clean (12/12 supported, 2 wording fixes). | v2 domain guide(s) 2026-11-26: 07",
    "human_review": null,
-   "updated": "2026-11-25"
+   "updated": "2026-11-26"
   },
   {
    "id": "M39",
@@ -740,14 +779,15 @@
    "name": "Knowledge Management",
    "folder": "creative-intelligence/knowledge/knowledge-management",
    "phase": 9,
-   "status": "DRAFTED",
+   "status": "SOURCE VERIFIED",
    "files": [
     "creative-intelligence/MASTER_INDEX.md",
-    "creative-intelligence/tools/registry.py"
+    "creative-intelligence/tools/registry.py",
+    "creative-intelligence/domains/14-knowledge-management-experience-learning.md"
    ],
-   "notes": "This system, started 2026-11-25",
+   "notes": "This system, started 2026-11-25 | v2 domain guide(s) 2026-11-26: 14 | status DRAFTED→SOURCE VERIFIED 2026-11-26 via domain 14 (53 sources, 89% read as full text/abstract).",
    "human_review": null,
-   "updated": "2026-11-25"
+   "updated": "2026-11-26"
   },
   {
    "id": "M41",
@@ -773,11 +813,13 @@
     ".claude/skills/ai-visual-artist/tools/score.py",
     ".claude/skills/ai-voice-director/tools/qc.py",
     ".claude/skills/ai-visual-artist/TEST_CASES.json",
-    ".claude/skills/ai-voice-director/TEST_CASES.json"
+    ".claude/skills/ai-voice-director/TEST_CASES.json",
+    "creative-intelligence/domains/12-independent-creative-criticism.md",
+    "creative-intelligence/domains/13-quality-assurance-evaluation.md"
    ],
-   "notes": "Automated scores only; no inter-rater human evaluation",
+   "notes": "Automated scores only; no inter-rater human evaluation | v2 domain guide(s) 2026-11-26: 12, 13",
    "human_review": null,
-   "updated": "2026-11-25"
+   "updated": "2026-11-26"
   },
   {
    "id": "M43",
@@ -814,6 +856,20 @@
    "notes": "Added 2026-11-25: user asked to learn every cartoon style (เรียนเลย ทุกแนว). Batch C1. | C1: 120 sources, 87% read; spot-check 8: 6 confirmed, 2 partly (corrected), 0 wrong. Experiments C1-001, C1-002 run.",
    "human_review": null,
    "updated": "2026-11-25"
+  },
+  {
+   "id": "M45",
+   "name": "Literature and Poetry",
+   "folder": "creative-intelligence/domains",
+   "phase": 4,
+   "status": "SOURCE VERIFIED",
+   "files": [
+    "creative-intelligence/domains/08-philosophy-literature-poetry.md",
+    "creative-intelligence/domains/sources/08-philosophy-literature-poetry.json"
+   ],
+   "notes": "v2 2026-11-26: created with domain guide 08 (46 sources, 65% read). Gaps: no Thai reader studies; khlong/kap rules from tier D/E need checking before publishing a full poem. | v2 domain guide(s) 2026-11-26: 08",
+   "human_review": null,
+   "updated": "2026-11-26"
   }
  ]
 }

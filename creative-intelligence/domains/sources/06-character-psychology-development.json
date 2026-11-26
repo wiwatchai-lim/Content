@@ -1,0 +1,1289 @@
+[
+ {
+  "key": "Aristotle_Poetics_Butcher",
+  "title": "Poetics (trans. S. H. Butcher), Parts VI and XV",
+  "authors": "Aristotle; trans. S. H. Butcher",
+  "year": null,
+  "url": "http://classics.mit.edu/Aristotle/poetics.2.2.html",
+  "doi_isbn": "",
+  "source_type": "primary_text",
+  "tier": "B",
+  "key_findings": [
+   "Part VI: 'Character is that which reveals moral purpose, showing what kind of things a man chooses or avoids'; tragedy is an imitation 'not of men, but of an action and of life'; plot = arrangement of incidents.",
+   "Part XV: four aims for character - good, propriety (appropriate to type), true to life, consistent; even an inconsistent model must be 'consistently inconsistent'; speech and action should follow necessity or probability."
+  ],
+  "practical_applications": [
+   "Define character by the choices the person makes under pressure, not by a list of adjectives.",
+   "Use 'consistently inconsistent' as the rule for erratic characters: the inconsistency itself must be patterned."
+  ],
+  "limitations": [
+   "Ancient prescriptive poetics, not empirical; 'propriety' reflects ancient gender/class norms (e.g. manly courage unsuited to a woman) that must not be copied."
+  ],
+  "license": "public domain (translation); MIT Internet Classics Archive",
+  "access_status": "full_text",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-26",
+  "modules": [
+   "M15",
+   "M17"
+  ]
+ },
+ {
+  "key": "Forster1927",
+  "title": "Aspects of the Novel, chapter IV 'People (continued)'",
+  "authors": "E. M. Forster",
+  "year": 1927,
+  "url": "https://standardebooks.org/ebooks/e-m-forster/aspects-of-the-novel/text/chapter-4",
+  "doi_isbn": "",
+  "source_type": "primary_text",
+  "tier": "B",
+  "key_findings": [
+   "Flat characters are 'constructed round a single idea or quality'; 'the really flat character can be expressed in one sentence' (Mrs Micawber).",
+   "Advantages of flat characters: easily recognised and easily remembered; best when comic; 'a serious or tragic flat character is apt to be a bore'.",
+   "'The test of a round character is whether it is capable of surprising in a convincing way. If it never surprises, it is flat. If it does not convince, it is a flat pretending to be round.'"
+  ],
+  "practical_applications": [
+   "Short-form series (20 s clips, carousels) can rely on flat supporting characters; leads need at least one convincing surprise per arc.",
+   "Use the 'surprise that convinces' test in script review."
+  ],
+  "limitations": [
+   "Literary criticism from lectures, not empirical."
+  ],
+  "license": "public domain (US) / Standard Ebooks CC0 markup",
+  "access_status": "full_text",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-26",
+  "modules": [
+   "M15",
+   "M17"
+  ]
+ },
+ {
+  "key": "Campbell2022_Stanislavsky",
+  "title": "Stanislavsky Method (Stanislavsky's System) - EBSCO Research Starter",
+  "authors": "Josephine Campbell",
+  "year": 2022,
+  "url": "https://www.ebsco.com/research-starters/arts-and-entertainment/stanislavsky-method-stanislavskis-system",
+  "doi_isbn": "",
+  "source_type": "encyclopedia",
+  "tier": "C",
+  "key_findings": [
+   "Lists given circumstances, emotional memory, method of physical actions, subtext, 'if', objective ('I wish to...'), super-objective (core purpose of the whole play) and through line (direct path to the super-objective).",
+   "Dates: My Life in Art 1924, An Actor Prepares 1936, Building a Character 1949."
+  ],
+  "practical_applications": [
+   "Write each character's objective per scene as 'I want to + verb' and a super-objective for the season.",
+   "Use 'given circumstances' as the bible section listing facts the actor/voice must respect."
+  ],
+  "limitations": [
+   "Secondary reference summary; Stanislavski's original texts not read."
+  ],
+  "license": "copyrighted",
+  "access_status": "full_text",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-26",
+  "modules": [
+   "M15",
+   "M17"
+  ]
+ },
+ {
+  "key": "Egri1946",
+  "title": "The Art of Dramatic Writing: Its Basis in the Creative Interpretation of Human Motives",
+  "authors": "Lajos Egri",
+  "year": 1946,
+  "url": "https://openlibrary.org/works/OL15133270W",
+  "doi_isbn": "",
+  "source_type": "textbook",
+  "tier": "D",
+  "key_findings": [
+   "Revised 1946 edition of How to Write a Play (1942) (per Open Library / Wikipedia).",
+   "Secondary sources reproduce Egri's three-dimensional character chart: physiology (sex, age, appearance, defects, heredity), sociology (class, religion, place in community), psychology (moral standards, ambition, temperament)."
+  ],
+  "practical_applications": [
+   "Use the three dimensions as a backstory checklist so behaviour has causes."
+  ],
+  "limitations": [
+   "Book not read this session; content known only from secondary summaries (blog, thesis chapter). Practitioner theory, not research."
+  ],
+  "license": "copyrighted",
+  "access_status": "bibliographic",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-26",
+  "modules": [
+   "M15",
+   "M17"
+  ]
+ },
+ {
+  "key": "Smith1995_EngagingCharacters",
+  "title": "Engaging Characters: Fiction, Emotion, and the Cinema",
+  "authors": "Murray Smith",
+  "year": 1995,
+  "url": "https://academic.oup.com/book/1376/chapter/140690958",
+  "doi_isbn": "",
+  "source_type": "textbook",
+  "tier": "A",
+  "key_findings": [
+   "Proposes the 'structure of sympathy' as an alternative to the vague term identification: recognition (building a character as an agent), alignment (access to the character's actions, knowledge and feelings via narration) and allegiance (moral evaluation, sympathetic or antipathetic)."
+  ],
+  "practical_applications": [
+   "Diagnose engagement problems by level: can viewers tell who is who (recognition)? whose knowledge do we share (alignment)? do we approve of them (allegiance)?"
+  ],
+  "limitations": [
+   "Book not read; described via secondary academic sources (Kent repository, 2024 philosophy paper, Screening Characters introduction). Critics argue the levels are gradations of empathy rather than steps."
+  ],
+  "license": "copyrighted",
+  "access_status": "search_summary",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-26",
+  "modules": [
+   "M15",
+   "M17"
+  ]
+ },
+ {
+  "key": "Cohen2001",
+  "title": "Defining identification: A theoretical look at the identification of audiences with media characters",
+  "authors": "Jonathan Cohen",
+  "year": 2001,
+  "url": "http://www.communicationcache.com/uploads/1/0/8/8/10887248/defining_identification-_a_theoretical_look_at_the_identification_of_audiences_with_media_characters.pdf",
+  "doi_isbn": "10.1207/S15327825MCS0403_01",
+  "source_type": "review",
+  "tier": "A",
+  "key_findings": [
+   "Identification = experiencing the text 'from the inside' as if events happened to oneself, adopting the character's goals and perspective; distinct from spectatorship, liking, similarity, imitation and parasocial interaction."
+  ],
+  "practical_applications": [
+   "Separate 'do they like her' from 'do they feel from inside her' when testing a character."
+  ],
+  "limitations": [
+   "Theoretical article; reused from registry (full text read by storytelling module)."
+  ],
+  "license": "copyrighted",
+  "access_status": "full_text",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-26",
+  "modules": [
+   "M15",
+   "M17"
+  ]
+ },
+ {
+  "key": "TalOrCohen2010",
+  "title": "Understanding audience involvement: Conceptualizing and manipulating identification and transportation",
+  "authors": "Nurit Tal-Or; Jonathan Cohen",
+  "year": 2010,
+  "url": "https://cris.haifa.ac.il/en/publications/understanding-audience-involvement-conceptualizing-and-manipulati/",
+  "doi_isbn": "10.1016/j.poetic.2010.05.004",
+  "source_type": "empirical",
+  "tier": "A",
+  "key_findings": [
+   "Valence of information about the hero changed identification but not transportation; timing of the hero's deeds changed transportation but not identification.",
+   "Transportation predicted enjoyment; identification did not add once transportation was controlled."
+  ],
+  "practical_applications": [
+   "Make the lead's moral information clear to raise identification; control pacing/timing of reveals for transportation - different levers."
+  ],
+  "limitations": [
+   "Abstract and secondary summary only (Poetics 38:402-418); single film, Israeli student sample."
+  ],
+  "license": "copyrighted",
+  "access_status": "search_summary",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-26",
+  "modules": [
+   "M15",
+   "M17"
+  ]
+ },
+ {
+  "key": "HoffnerBuchanan2005",
+  "title": "Young adults' wishful identification with television characters: The role of perceived similarity and character attributes",
+  "authors": "Cynthia A. Hoffner; Martha Buchanan",
+  "year": 2005,
+  "url": "https://doi.org/10.1207/S1532785XMEP0704_2",
+  "doi_isbn": "10.1207/S1532785XMEP0704_2",
+  "source_type": "empirical",
+  "tier": "A",
+  "key_findings": [
+   "N = 208 young adults; wishful identification (wanting to be like the character) higher for same-gender characters and characters perceived as attitudinally similar.",
+   "Successful and admired characters attracted wishful identification; men: successful, intelligent, violent male characters; women: successful, intelligent, attractive, admired female characters; humour was the only attribute unrelated to wishful identification."
+  ],
+  "practical_applications": [
+   "For aspirational characters give visible competence and success; humour builds liking but not 'I want to be like them'."
+  ],
+  "limitations": [
+   "Self-report survey of favourite characters (correlational), US college sample."
+  ],
+  "license": "copyrighted",
+  "access_status": "abstract",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-26",
+  "modules": [
+   "M15",
+   "M17"
+  ]
+ },
+ {
+  "key": "HortonWohl1956",
+  "title": "Mass Communication and Para-Social Interaction: Observations on Intimacy at a Distance",
+  "authors": "Donald Horton; R. Richard Wohl",
+  "year": 1956,
+  "url": "https://doi.org/10.1080/00332747.1956.11023049",
+  "doi_isbn": "10.1080/00332747.1956.11023049",
+  "source_type": "primary_text",
+  "tier": "A",
+  "key_findings": [
+   "Coined para-social interaction/relationship: media personae address the audience as intimate friends, producing an illusion of face-to-face relationship (per secondary encyclopedia and journal summaries)."
+  ],
+  "practical_applications": [
+   "A recurring character who talks to camera / to the reader cultivates parasocial bonds over episodes."
+  ],
+  "limitations": [
+   "Original not read (paywalled); content from secondary summaries; observational essay, not experiment."
+  ],
+  "license": "copyrighted",
+  "access_status": "search_summary",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-26",
+  "modules": [
+   "M15",
+   "M17"
+  ]
+ },
+ {
+  "key": "Dibble2016",
+  "title": "Parasocial Interaction and Parasocial Relationship: Conceptual Clarification and a Critical Assessment of Measures",
+  "authors": "Jayson L. Dibble; Tilo Hartmann; Sarah F. Rosaen",
+  "year": 2016,
+  "url": "https://research.vu.nl/en/publications/90e64b5c-68c8-434c-b768-8a4222e1905a",
+  "doi_isbn": "10.1111/hcre.12063",
+  "source_type": "empirical",
+  "tier": "A",
+  "key_findings": [
+   "PSI (in-viewing sense of mutual awareness) and PSR (lasting bond) are often conflated.",
+   "N = 383: a woman who bodily addressed the viewer vs did not; the EPSI scale captured PSI better; the older PSI-Scale may measure liking."
+  ],
+  "practical_applications": [
+   "Direct bodily address (turning toward camera) raises the in-the-moment sense of being addressed - a lever even for faceless characters (body orientation)."
+  ],
+  "limitations": [
+   "Abstract only; brief video stimulus."
+  ],
+  "license": "copyrighted",
+  "access_status": "abstract",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-26",
+  "modules": [
+   "M15",
+   "M17"
+  ]
+ },
+ {
+  "key": "SchiappaGreggHewes2005",
+  "title": "The Parasocial Contact Hypothesis",
+  "authors": "Edward Schiappa; Peter B. Gregg; Dean E. Hewes",
+  "year": 2005,
+  "url": "https://doi.org/10.1080/0363775052000342544",
+  "doi_isbn": "10.1080/0363775052000342544",
+  "source_type": "empirical",
+  "tier": "A",
+  "key_findings": [
+   "Three studies (Six Feet Under, Queer Eye for the Straight Guy, Eddie Izzard): parasocial contact with minority characters/performers associated with lower prejudice; mechanisms generally supported."
+  ],
+  "practical_applications": [
+   "Well-written minority characters can reduce prejudice - argument for respectful, non-token representation."
+  ],
+  "limitations": [
+   "Abstract only; mostly correlational/pre-post with student samples; US context."
+  ],
+  "license": "copyrighted",
+  "access_status": "abstract",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-26",
+  "modules": [
+   "M15",
+   "M17"
+  ]
+ },
+ {
+  "key": "GreenBrock2000",
+  "title": "The role of transportation in the persuasiveness of public narratives",
+  "authors": "Melanie C. Green; Timothy C. Brock",
+  "year": 2000,
+  "url": "https://gwern.net/docs/www/pdfs.semanticscholar.org/39691cee32e52fbfc33f1a0316aa0d008cb699a4.pdf",
+  "doi_isbn": "10.1037/0022-3514.79.5.701",
+  "source_type": "empirical",
+  "tier": "A",
+  "key_findings": [
+   "Transportation = absorption (attention, imagery, feelings); more-transported readers held more story-consistent beliefs and evaluated protagonists more positively; fiction vs fact label made little difference."
+  ],
+  "practical_applications": [
+   "Character-led stories change beliefs even when labelled fiction - health facts in stories must be correct."
+  ],
+  "limitations": [
+   "Reused from registry."
+  ],
+  "license": "copyrighted",
+  "access_status": "full_text",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-26",
+  "modules": [
+   "M15",
+   "M17"
+  ]
+ },
+ {
+  "key": "VanLaer2014",
+  "title": "The Extended Transportation-Imagery Model: A Meta-Analysis of the Antecedents and Consequences of Consumers' Narrative Transportation",
+  "authors": "Tom van Laer; Ko de Ruyter; Luca M. Visconti; Martin Wetzels",
+  "year": 2014,
+  "url": "https://openaccess.city.ac.uk/id/eprint/6755/1/SSRN-id2033192.pdf",
+  "doi_isbn": "10.1086/673383",
+  "source_type": "meta-analysis",
+  "tier": "S",
+  "key_findings": [
+   "132 effect sizes / 76 articles: identifiable character correlates with transportation (rho about .20), imaginable plot .29, verisimilitude .27."
+  ],
+  "practical_applications": [
+   "An identifiable character is one of the few story-side levers of transportation - but small."
+  ],
+  "limitations": [
+   "Correlational; reused from registry."
+  ],
+  "license": "copyrighted",
+  "access_status": "full_text",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-26",
+  "modules": [
+   "M15",
+   "M17"
+  ]
+ },
+ {
+  "key": "Raney2004",
+  "title": "Expanding Disposition Theory: Reconsidering Character Liking, Moral Evaluations, and Enjoyment",
+  "authors": "Arthur A. Raney",
+  "year": 2004,
+  "url": "https://doi.org/10.1111/j.1468-2885.2004.tb00319.x",
+  "doi_isbn": "10.1111/j.1468-2885.2004.tb00319.x",
+  "source_type": "review",
+  "tier": "A",
+  "key_findings": [
+   "Re-examines how viewers form and maintain strong feelings toward characters (disposition theory of drama); uses schema theory for how bonds form quickly and attitude/perception theories for how viewers defend them for the sake of enjoyment."
+  ],
+  "practical_applications": [
+   "Establish moral alignment fast in short formats because viewers use schemas to judge characters within seconds."
+  ],
+  "limitations": [
+   "Theoretical; abstract only."
+  ],
+  "license": "copyrighted",
+  "access_status": "abstract",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-26",
+  "modules": [
+   "M15",
+   "M17"
+  ]
+ },
+ {
+  "key": "MarOatley2008",
+  "title": "The Function of Fiction is the Abstraction and Simulation of Social Experience",
+  "authors": "Raymond A. Mar; Keith Oatley",
+  "year": 2008,
+  "url": "https://doi.org/10.1111/j.1745-6924.2008.00073.x",
+  "doi_isbn": "10.1111/j.1745-6924.2008.00073.x",
+  "source_type": "review",
+  "tier": "A",
+  "key_findings": [
+   "Argues fiction models the social world via abstraction, simplification and compression; immersive simulation may aid understanding of others and empathy."
+  ],
+  "practical_applications": [
+   "Theoretical rationale for character-driven educational stories."
+  ],
+  "limitations": [
+   "Theory paper; causal claims later tested with mixed results (see Panero2016, DodellFederTamir2018)."
+  ],
+  "license": "copyrighted",
+  "access_status": "abstract",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-26",
+  "modules": [
+   "M15",
+   "M17"
+  ]
+ },
+ {
+  "key": "SEP_Empathy",
+  "title": "Empathy (Stanford Encyclopedia of Philosophy)",
+  "authors": "Karsten Stueber",
+  "year": 2025,
+  "url": "https://plato.stanford.edu/entries/empathy/",
+  "doi_isbn": "",
+  "source_type": "encyclopedia",
+  "tier": "B",
+  "key_findings": [
+   "Distinguishes contagion, empathy, cognitive perspective taking, sympathy/empathic concern and personal distress; critics (Prinz, Bloom) note empathy is biased toward the near, similar, cute and in-group."
+  ],
+  "practical_applications": [
+   "Cute/similar characters attract empathy more easily - and that bias is an ethical issue in who gets designed as cute."
+  ],
+  "limitations": [
+   "Reused from registry."
+  ],
+  "license": "copyrighted",
+  "access_status": "full_text",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-26",
+  "modules": [
+   "M15",
+   "M17"
+  ]
+ },
+ {
+  "key": "KiddCastano2013",
+  "title": "Reading Literary Fiction Improves Theory of Mind",
+  "authors": "David Comer Kidd; Emanuele Castano",
+  "year": 2013,
+  "url": "http://hdl.handle.net/11572/289277",
+  "doi_isbn": "10.1126/science.1239918",
+  "source_type": "empirical",
+  "tier": "A",
+  "key_findings": [
+   "Five experiments: reading literary fiction (vs nonfiction, popular fiction or nothing) briefly improved affective (and in exps 4-5 cognitive) theory-of-mind test performance."
+  ],
+  "practical_applications": [
+   "Historical example of a viral fiction/character claim that later largely failed to replicate."
+  ],
+  "limitations": [
+   "Abstract only; see Panero2016, Camerer2018, FORRT_KiddCastano."
+  ],
+  "license": "copyrighted",
+  "access_status": "abstract",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-26",
+  "modules": [
+   "M15",
+   "M17"
+  ]
+ },
+ {
+  "key": "Panero2016",
+  "title": "Does reading a single passage of literary fiction really improve theory of mind? An attempt at replication",
+  "authors": "Maria Eugenia Panero; Deena Skolnick Weisberg; Jessica Black; Thalia R. Goldstein; Jennifer L. Barnes; Hiram Brownell; Ellen Winner",
+  "year": 2016,
+  "url": "https://www.gwern.net/doc/culture/2016-panero.pdf",
+  "doi_isbn": "10.1037/pspa0000064",
+  "source_type": "empirical",
+  "tier": "A",
+  "key_findings": [
+   "Three independent groups, N = 792, four conditions: no significant RMET advantage for literary fiction.",
+   "Author Recognition Test (lifetime fiction exposure) consistently predicted RMET across conditions; most plausible: people with strong ToM are drawn to fiction and/or lifetime reading slowly builds ToM; verbal ability may confound."
+  ],
+  "practical_applications": [
+   "Do not claim a single story makes viewers more empathic."
+  ],
+  "limitations": [
+   "RMET is a narrow ToM measure; correlational ART link cannot show direction."
+  ],
+  "license": "copyrighted",
+  "access_status": "full_text",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-26",
+  "modules": [
+   "M15",
+   "M17"
+  ]
+ },
+ {
+  "key": "Camerer2018",
+  "title": "Evaluating the replicability of social science experiments in Nature and Science between 2010 and 2015",
+  "authors": "Colin F. Camerer; Anna Dreber; Felix Holzmeister; et al.",
+  "year": 2018,
+  "url": "https://www.gwern.net/doc/statistics/bias/2018-camerer.pdf",
+  "doi_isbn": "10.1038/s41562-018-0399-z",
+  "source_type": "empirical",
+  "tier": "A",
+  "key_findings": [
+   "21 experiments replicated with ~5x samples: 13 (62%) significant in same direction; replication effects about 50% of originals; non-replicating effects averaged ~0.3% relative size.",
+   "Kidd & Castano (2013) was among the 21; the original authors published a Correspondence arguing a different experiment should have been replicated."
+  ],
+  "practical_applications": [
+   "Treat single striking findings about fiction/characters as provisional."
+  ],
+  "limitations": [
+   "The per-study outcome for Kidd & Castano is in figures/supplement, not stated in running text; recorded as failed stage-1 replication per FORRT_KiddCastano."
+  ],
+  "license": "copyrighted",
+  "access_status": "full_text",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-26",
+  "modules": [
+   "M15",
+   "M17"
+  ]
+ },
+ {
+  "key": "FORRT_KiddCastano",
+  "title": "FLoRA replication atlas entry: Reading Literary Fiction Improves Theory of Mind",
+  "authors": "FORRT (Framework for Open and Reproducible Research Training)",
+  "year": null,
+  "url": "https://forrt.org/flora-replication-atlas/doi/10.1126/science.1239918/",
+  "doi_isbn": "",
+  "source_type": "docs",
+  "tier": "C",
+  "key_findings": [
+   "Lists 6 replications of Kidd & Castano 2013: Dijkstra et al. 2015 failed, Panero et al. 2016 failed, Samur et al. 2017 failed, van Kuijk et al. 2018 successful (close replication of Exp 5), Kidd & Castano 2018 mixed, Camerer et al. 2018 failed (supplementary Table 4, unsuccessful stage 1)."
+  ],
+  "practical_applications": [
+   "Quick status check before citing a famous psychology finding."
+  ],
+  "limitations": [
+   "Volunteer-curated database; individual replications not all read here."
+  ],
+  "license": "unknown",
+  "access_status": "publisher_page",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-26",
+  "modules": [
+   "M15",
+   "M17"
+  ]
+ },
+ {
+  "key": "DodellFederTamir2018",
+  "title": "Fiction reading has a small positive impact on social cognition: A meta-analysis",
+  "authors": "David Dodell-Feder; Diana I. Tamir",
+  "year": 2018,
+  "url": "https://doi.org/10.1037/xge0000395",
+  "doi_isbn": "10.1037/xge0000395",
+  "source_type": "meta-analysis",
+  "tier": "S",
+  "key_findings": [
+   "53 effect sizes from 14 studies: fiction reading vs nonfiction/no reading gave a small improvement in social-cognitive performance (g = .15-.16), robust to sensitivity analyses, no clear publication bias.",
+   "Authors call for stronger manipulations and tests of real-world transfer."
+  ],
+  "practical_applications": [
+   "Honest claim: fiction may slightly and briefly help social cognition; nothing about lasting empathy."
+  ],
+  "limitations": [
+   "Abstract only; few studies; short-term lab tasks."
+  ],
+  "license": "copyrighted",
+  "access_status": "abstract",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-26",
+  "modules": [
+   "M15",
+   "M17"
+  ]
+ },
+ {
+  "key": "McCraeJohn1992",
+  "title": "An Introduction to the Five-Factor Model and Its Applications",
+  "authors": "Robert R. McCrae; Oliver P. John",
+  "year": 1992,
+  "url": "https://doi.org/10.1111/j.1467-6494.1992.tb00970.x",
+  "doi_isbn": "10.1111/j.1467-6494.1992.tb00970.x",
+  "source_type": "review",
+  "tier": "A",
+  "key_findings": [
+   "Five-factor model: hierarchical organisation of traits in Extraversion, Agreeableness, Conscientiousness, Neuroticism, Openness; supported by natural-language adjectives and questionnaires across observers and cultures."
+  ],
+  "practical_applications": [
+   "Use the Big Five as a character's trait profile (high/low on each) instead of type labels."
+  ],
+  "limitations": [
+   "Abstract only; FFM describes traits, not motives or arcs."
+  ],
+  "license": "copyrighted",
+  "access_status": "abstract",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-26",
+  "modules": [
+   "M15",
+   "M17"
+  ]
+ },
+ {
+  "key": "Soto2019",
+  "title": "How Replicable Are Links Between Personality Traits and Consequential Life Outcomes? The Life Outcomes of Personality Replication Project",
+  "authors": "Christopher J. Soto",
+  "year": 2019,
+  "url": "https://doi.org/10.1177/0956797619831612",
+  "doi_isbn": "10.1177/0956797619831612",
+  "source_type": "empirical",
+  "tier": "A",
+  "key_findings": [
+   "78 preregistered replications (median N = 1,504): 87% significant in expected direction; effects ~77% of original strength."
+  ],
+  "practical_applications": [
+   "Big Five trait-outcome links are fairly trustworthy - plausible behaviour for a trait profile."
+  ],
+  "limitations": [
+   "Abstract read this session (registry entry was search_summary)."
+  ],
+  "license": "copyrighted",
+  "access_status": "abstract",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-26",
+  "modules": [
+   "M15",
+   "M17"
+  ]
+ },
+ {
+  "key": "Fleeson2001",
+  "title": "Toward a structure- and process-integrated view of personality: Traits as density distributions of states",
+  "authors": "William Fleeson",
+  "year": 2001,
+  "url": "https://doi.org/10.1037/0022-3514.80.6.1011",
+  "doi_isbn": "10.1037/0022-3514.80.6.1011",
+  "source_type": "empirical",
+  "tier": "A",
+  "key_findings": [
+   "Experience sampling over 2-3 weeks: within-person variability was high - a typical person routinely shows nearly all levels of all Big Five traits; individual averages of these distributions were almost perfectly stable; amount of variability is itself a stable difference."
+  ],
+  "practical_applications": [
+   "A consistent character still varies scene to scene; consistency lives in the average and the pattern, not in identical behaviour every time."
+  ],
+  "limitations": [
+   "Abstract only; student samples."
+  ],
+  "license": "copyrighted",
+  "access_status": "abstract",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-26",
+  "modules": [
+   "M15",
+   "M17"
+  ]
+ },
+ {
+  "key": "MischelShoda1995",
+  "title": "A cognitive-affective system theory of personality",
+  "authors": "Walter Mischel; Yuichi Shoda",
+  "year": 1995,
+  "url": "https://doi.org/10.1037/0033-295X.102.2.246",
+  "doi_isbn": "10.1037/0033-295X.102.2.246",
+  "source_type": "review",
+  "tier": "A",
+  "key_findings": [
+   "CAPS: people differ in stable if...then behavioural signatures ('if A then she X, but if B then she Y'); variability across situations is itself an expression of a stable personality system."
+  ],
+  "practical_applications": [
+   "Write character bibles as if-then signatures - consistency with room for surprise."
+  ],
+  "limitations": [
+   "Abstract only; theory."
+  ],
+  "license": "copyrighted",
+  "access_status": "abstract",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-26",
+  "modules": [
+   "M15",
+   "M17"
+  ]
+ },
+ {
+  "key": "Pittenger2005",
+  "title": "Cautionary comments regarding the Myers-Briggs Type Indicator",
+  "authors": "David J. Pittenger",
+  "year": 2005,
+  "url": "https://www.Indiana.edu/~jobtalk/Articles/develop/mbti.pdf",
+  "doi_isbn": "Consulting Psychology Journal (2005)",
+  "source_type": "review",
+  "tier": "A",
+  "key_findings": [
+   "Insufficient evidence for MBTI tenets; dichotomous types weaken validity; reported 5-week retest type stability 39-76% depending on dichotomy."
+  ],
+  "practical_applications": [
+   "Use MBTI labels only as audience-familiar shorthand, never as a psychological model of a character."
+  ],
+  "limitations": [
+   "Reused from registry; search summary only."
+  ],
+  "license": "copyrighted",
+  "access_status": "search_summary",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-26",
+  "modules": [
+   "M15",
+   "M17"
+  ]
+ },
+ {
+  "key": "Hook2021",
+  "title": "The Enneagram: A systematic review of the literature and directions for future research",
+  "authors": "Joshua N. Hook; Todd W. Hall; Don E. Davis; Daryl R. Van Tongeren; Mackenzie N. Conner",
+  "year": 2021,
+  "url": "https://doi.org/10.1002/jclp.23097",
+  "doi_isbn": "10.1002/jclp.23097",
+  "source_type": "review",
+  "tier": "S",
+  "key_findings": [
+   "104 independent samples: mixed reliability and validity; factor analyses usually find fewer than nine factors; no clustering work derives the nine types; little support for wings and intertype movement; subscales relate to Big Five as theory expects; some studies report usefulness for personal/spiritual growth."
+  ],
+  "practical_applications": [
+   "Enneagram 'core fear/desire' prompts can inspire writing but are not evidence about people."
+  ],
+  "limitations": [
+   "Abstract only; Journal of Clinical Psychology 77(4), online 2020."
+  ],
+  "license": "copyrighted",
+  "access_status": "abstract",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-26",
+  "modules": [
+   "M15",
+   "M17"
+  ]
+ },
+ {
+  "key": "HeiderSimmel1944",
+  "title": "An Experimental Study of Apparent Behavior",
+  "authors": "Fritz Heider; Marianne L. Simmel",
+  "year": 1944,
+  "url": "https://doi.org/10.2307/1416950",
+  "doi_isbn": "10.2307/1416950",
+  "source_type": "empirical",
+  "tier": "A",
+  "key_findings": [
+   "Observers perceived simple animated geometric shapes as characters with emotions, intentions and other social attributes (as summarised in Ratajska2020 abstract)."
+  ],
+  "practical_applications": [
+   "Motion and relative position alone create characters - basis for faceless and minimal designs."
+  ],
+  "limitations": [
+   "Original not read; known via the 2020 replication abstract."
+  ],
+  "license": "copyrighted",
+  "access_status": "bibliographic",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-26",
+  "modules": [
+   "M15",
+   "M17"
+  ]
+ },
+ {
+  "key": "Ratajska2020",
+  "title": "Attributing Social Meaning to Animated Shapes: A New Experimental Study of Apparent Behavior",
+  "authors": "Adrianna M. Ratajska; Matt I. Brown; Christopher F. Chabris",
+  "year": 2020,
+  "url": "https://doi.org/10.5406/amerjpsyc.133.3.0295",
+  "doi_isbn": "10.5406/amerjpsyc.133.3.0295",
+  "source_type": "empirical",
+  "tier": "A",
+  "key_findings": [
+   "32 new coloured animated-shape videos (13-23 s) with social plots; N = 66 wrote narratives; participants spontaneously attributed social meaning, similar to responses to the 1944 film; people varied in how many social attributions they made."
+  ],
+  "practical_applications": [
+   "Even 13-23 s of shape motion is enough for viewers to read a social plot - relevant to 20 s clips with faceless characters."
+  ],
+  "limitations": [
+   "Abstract only; small sample."
+  ],
+  "license": "copyrighted",
+  "access_status": "abstract",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-26",
+  "modules": [
+   "M15",
+   "M17"
+  ]
+ },
+ {
+  "key": "Barratt2016",
+  "title": "Does the Kuleshov Effect Really Exist? Revisiting a Classic Film Experiment on Facial Expressions and Emotional Contexts",
+  "authors": "Daniel Barratt; Anna Cabak Redei; Ase Innes-Ker; Joost van de Weijer",
+  "year": 2016,
+  "url": "https://doi.org/10.1177/0301006616638595",
+  "doi_isbn": "10.1177/0301006616638595",
+  "source_type": "empirical",
+  "tier": "A",
+  "key_findings": [
+   "36 participants, 24 sequences of neutral faces in six emotional contexts: category choices and valence/arousal ratings tended to follow the context - 'some sort of Kuleshov effect does in fact exist'; eye tracking showed no expected condition differences."
+  ],
+  "practical_applications": [
+   "Context (what we just saw) colours how a blank/neutral face is read - a main lever for faceless characters."
+  ],
+  "limitations": [
+   "Abstract only; hedged result; earlier replications conflicting."
+  ],
+  "license": "copyrighted",
+  "access_status": "abstract",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-26",
+  "modules": [
+   "M15",
+   "M17"
+  ]
+ },
+ {
+  "key": "Calbi2017",
+  "title": "How Context Influences Our Perception of Emotional Faces: A Behavioral Study on the Kuleshov Effect",
+  "authors": "Marta Calbi; Katrin Heimann; Daniel Barratt; Francesca Siri; Maria A. Umilta; Vittorio Gallese",
+  "year": 2017,
+  "url": "https://www.frontiersin.org/articles/10.3389/fpsyg.2017.01684/full",
+  "doi_isbn": "10.3389/fpsyg.2017.01684",
+  "source_type": "empirical",
+  "tier": "A",
+  "key_findings": [
+   "N = 28 Italians; neutral faces before/after fear, happy or neutral scenes: fear context made faces more negative and arousing (valence -1.25 vs neutral context); happy context shifted only category choices, not ratings; model explained ~10% of variance.",
+   "Notes only three earlier replications; Prince & Hensley 1992 found no effect."
+  ],
+  "practical_applications": [
+   "Negative/fearful context transfers to a neutral figure more reliably than happy context - faceless happiness needs body cues too."
+  ],
+  "limitations": [
+   "Small single-nation sample; some text/table inconsistencies."
+  ],
+  "license": "CC BY 4.0",
+  "access_status": "full_text",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-26",
+  "modules": [
+   "M15",
+   "M17"
+  ]
+ },
+ {
+  "key": "Aviezer2012",
+  "title": "Body cues, not facial expressions, discriminate between intense positive and negative emotions",
+  "authors": "Hillel Aviezer; Yaacov Trope; Alexander Todorov",
+  "year": 2012,
+  "url": "https://doi.org/10.1126/science.1224313",
+  "doi_isbn": "10.1126/science.1224313",
+  "source_type": "empirical",
+  "tier": "A",
+  "key_findings": [
+   "At peak intensity, positive vs negative situations were discriminated from isolated bodies but not faces; perceived face affect shifted with the body."
+  ],
+  "practical_applications": [
+   "For faceless characters the body carries valence."
+  ],
+  "limitations": [
+   "Abstract only."
+  ],
+  "license": "copyrighted",
+  "access_status": "abstract",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-26",
+  "modules": [
+   "M15",
+   "M17"
+  ]
+ },
+ {
+  "key": "BarNeta2006",
+  "title": "Humans Prefer Curved Visual Objects",
+  "authors": "Moshe Bar; Maital Neta",
+  "year": 2006,
+  "url": "https://doi.org/10.1111/j.1467-9280.2006.01759.x",
+  "doi_isbn": "10.1111/j.1467-9280.2006.01759.x",
+  "source_type": "empirical",
+  "tier": "A",
+  "key_findings": [
+   "Sharp-angled contours led to more negative attitudes toward objects than curved contours; authors hypothesise sharp transitions convey threat."
+  ],
+  "practical_applications": [
+   "Partial evidence base for the 'round = friendly, angular = threatening' shape-language convention."
+  ],
+  "limitations": [
+   "Abstract only; objects, not characters."
+  ],
+  "license": "copyrighted",
+  "access_status": "abstract",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-26",
+  "modules": [
+   "M15",
+   "M17"
+  ]
+ },
+ {
+  "key": "McCloud1993",
+  "title": "Understanding Comics: The Invisible Art",
+  "authors": "Scott McCloud",
+  "year": 1993,
+  "url": "https://www.ebsco.com/research-starters/literature-and-writing/understanding-comics-invisible-art-scott-mccloud",
+  "doi_isbn": "",
+  "source_type": "practitioner",
+  "tier": "D",
+  "key_findings": [
+   "'Amplification through simplification': the simpler the face, the more universal; a realistic face is seen as another person while a cartoon face invites the reader to project themselves (via secondary summaries)."
+  ],
+  "practical_applications": [
+   "Rationale (craft) for faceless Mint & Tao: blank faces invite projection."
+  ],
+  "limitations": [
+   "Book not read; claims are theory/craft, partly contested (the abstraction scale mixes two kinds of simplification)."
+  ],
+  "license": "copyrighted",
+  "access_status": "search_summary",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-26",
+  "modules": [
+   "M15",
+   "M17"
+  ]
+ },
+ {
+  "key": "Weiland_CharacterArcs",
+  "title": "How to Write Character Arcs (helpingwritersbecomeauthors.com; book 'Creating Character Arcs', 2016)",
+  "authors": "K. M. Weiland",
+  "year": 2016,
+  "url": "https://www.helpingwritersbecomeauthors.com/write-character-arcs/",
+  "doi_isbn": "",
+  "source_type": "practitioner",
+  "tier": "D",
+  "key_findings": [
+   "Change arc built on the Lie the character believes vs the Truth; Want = conscious goal ('the perceived cure for the symptoms of the Lie'), Need = the Truth; Ghost = past event explaining the Lie.",
+   "Arc types: positive change (Lie -> Truth), flat/testing arc (holds Truth, changes the world), negative change: disillusionment, fall, corruption."
+  ],
+  "practical_applications": [
+   "Template for multi-episode arcs and single-carousel micro-arcs."
+  ],
+  "limitations": [
+   "Craft framework, untested empirically."
+  ],
+  "license": "copyrighted",
+  "access_status": "publisher_page",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-26",
+  "modules": [
+   "M15",
+   "M17"
+  ]
+ },
+ {
+  "key": "Gilligan2011_NPR",
+  "title": "'Breaking Bad': Vince Gilligan On Meth And Morals (Fresh Air interview)",
+  "authors": "NPR Fresh Air; Vince Gilligan",
+  "year": 2011,
+  "url": "https://www.npr.org/2011/09/19/140111200/breaking-bad-vince-gilligan-on-meth-and-morals",
+  "doi_isbn": "",
+  "source_type": "primary_text",
+  "tier": "C",
+  "key_findings": [
+   "Gilligan pitched the series as taking 'Mr. Chips' and turning him into 'Scarface'; Walter actively chooses crime; a finite run lets characters change (per outlets quoting him, incl. TV Guide)."
+  ],
+  "practical_applications": [
+   "Documented example of a planned negative arc."
+  ],
+  "limitations": [
+   "Page timed out; content from search results quoting the interview; exact wording varies across retellings."
+  ],
+  "license": "copyrighted",
+  "access_status": "search_summary",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-26",
+  "modules": [
+   "M15",
+   "M17"
+  ]
+ },
+ {
+  "key": "HelloKitty_Wikipedia",
+  "title": "Hello Kitty (Wikipedia article)",
+  "authors": "Wikipedia contributors",
+  "year": null,
+  "url": "https://en.wikipedia.org/wiki/Hello_Kitty",
+  "doi_isbn": "",
+  "source_type": "encyclopedia",
+  "tier": "E",
+  "key_findings": [
+   "Sanrio spokespeople have said Hello Kitty has no drawn mouth so people can project their feelings onto her; other statements say she 'speaks from the heart' or that her mouth is hidden in fur; the 1987 animated series gave her a mouth."
+  ],
+  "practical_applications": [
+   "Documented commercial use of a minimal face to invite projection."
+  ],
+  "limitations": [
+   "Tier E; press quotes partly contradictory."
+  ],
+  "license": "CC BY-SA 4.0",
+  "access_status": "search_summary",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-26",
+  "modules": [
+   "M15",
+   "M17"
+  ]
+ },
+ {
+  "key": "Sonic2019_Redesign",
+  "title": "Sonic the Hedgehog movie delayed to redesign the title character (TechCrunch, 24 May 2019) + NBC News 2025 report",
+  "authors": "TechCrunch; NBC News/CNBC",
+  "year": 2019,
+  "url": "https://techcrunch.com/2019/05/24/sonic-the-hedgehog-movie-is-getting-delayed-to-redesign-the-title-character",
+  "doi_isbn": "",
+  "source_type": "docs",
+  "tier": "C",
+  "key_findings": [
+   "First trailer 30 Apr 2019 drew heavy criticism of the realistic CGI design; director Jeff Fowler promised a redesign days later; release moved from Nov 2019 to 14 Feb 2020; reported redesign cost ~US$5 million (anonymous source; early rumour $35 m); redesigned film opened to ~$58 m."
+  ],
+  "practical_applications": [
+   "Case: a stylised character pushed toward realism broke recognition and appeal; listening and redesigning recovered it."
+  ],
+  "limitations": [
+   "News reports via search results; cost figure unofficial."
+  ],
+  "license": "copyrighted",
+  "access_status": "search_summary",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-26",
+  "modules": [
+   "M15",
+   "M17"
+  ]
+ },
+ {
+  "key": "Azaria2020_Apu",
+  "title": "Hank Azaria on decision to stop voicing Apu (Rolling Stone 2020) - coverage of The Problem with Apu (2017)",
+  "authors": "Rolling Stone; Cartoon Brew",
+  "year": 2020,
+  "url": "https://www.rollingstone.com/tv-movies/tv-movie-news/hank-azaria-apu-controversy-simpsons-interview-957873/",
+  "doi_isbn": "",
+  "source_type": "docs",
+  "tier": "C",
+  "key_findings": [
+   "Hari Kondabolu's 2017 documentary The Problem with Apu criticised Apu as a caricature of South Asian Americans; Azaria announced he would no longer voice Apu ('it just didn't feel right') after educating himself on representation."
+  ],
+  "practical_applications": [
+   "Case: a long-running stereotyped character voice becomes a liability decades later."
+  ],
+  "limitations": [
+   "Press coverage via search results; exact announcement date not confirmed (reported as January 2020)."
+  ],
+  "license": "copyrighted",
+  "access_status": "search_summary",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-26",
+  "modules": [
+   "M15",
+   "M17"
+  ]
+ },
+ {
+  "key": "Google2024_Gemini",
+  "title": "Gemini image generation got it wrong. We'll do better.",
+  "authors": "Prabhakar Raghavan (Google)",
+  "year": 2024,
+  "url": "https://blog.google/products-and-platforms/products/gemini/gemini-image-generation-issue/",
+  "doi_isbn": "",
+  "source_type": "docs",
+  "tier": "C",
+  "key_findings": [
+   "23 Feb 2024: tuning to show a range of people 'failed to account for cases that should clearly not show a range', and the model became 'way more cautious than we intended'; image generation of people paused."
+  ],
+  "practical_applications": [
+   "Case: blanket diversity rules in AI character generation without context produce inaccurate output; casting must be decided per story."
+  ],
+  "limitations": [
+   "Company blog (self-report)."
+  ],
+  "license": "copyrighted",
+  "access_status": "full_text",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-26",
+  "modules": [
+   "M15",
+   "M17"
+  ]
+ },
+ {
+  "key": "Bianchi2023",
+  "title": "Easily Accessible Text-to-Image Generation Amplifies Demographic Stereotypes at Large Scale",
+  "authors": "Federico Bianchi; Pratyusha Kalluri; Esin Durmus; Faisal Ladhak; et al.",
+  "year": 2023,
+  "url": "https://arxiv.org/abs/2211.03759",
+  "doi_isbn": "10.1145/3593013.3594095",
+  "source_type": "empirical",
+  "tier": "A",
+  "key_findings": [
+   "Ordinary prompts naming traits, descriptors, occupations or objects produced stereotyped images; stereotypes persisted despite counter-stereotype requests and guardrails."
+  ],
+  "practical_applications": [
+   "Never trust default AI 'casting'; specify age, body, skin, setting deliberately and review for stereotype."
+  ],
+  "limitations": [
+   "Abstract read (arXiv); models tested in 2022."
+  ],
+  "license": "CC BY 4.0 (arXiv)",
+  "access_status": "abstract",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-26",
+  "modules": [
+   "M15",
+   "M17"
+  ]
+ },
+ {
+  "key": "Townsend2016",
+  "title": "Prisoner of love: sexual violence on Thai television",
+  "authors": "Rebecca Townsend",
+  "year": 2016,
+  "url": "https://doi.org/10.1080/14672715.2016.1231011",
+  "doi_isbn": "10.1080/14672715.2016.1231011",
+  "source_type": "empirical",
+  "tier": "A",
+  "key_findings": [
+   "Sexual violence is a prevalent plot device in Thai primetime lakhon; the hero raping the heroine within a 'fated' romance is common and framed as legitimate; lakhon help regulate gendered behaviour (abstract).",
+   "Per search snippet: besides phra-ek and nang-ek, the nang rai (female antagonist) is the only other necessary character, with no male equivalent."
+  ],
+  "practical_applications": [
+   "Thai archetypes (phra-ek, nang-ek, nang rai) are culturally legible but carry harmful scripts - borrow the legibility, not the violence or misogyny."
+  ],
+  "limitations": [
+   "Abstract + snippet; Critical Asian Studies 48(4)."
+  ],
+  "license": "copyrighted",
+  "access_status": "abstract",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-26",
+  "modules": [
+   "M15",
+   "M17"
+  ]
+ },
+ {
+  "key": "ZhangIntaraporn2024",
+  "title": "Representations of the Ideal Male in Thai Television Dramas, from 2013 to 2022",
+  "authors": "Zhang Liqun; Weerawat Intaraporn",
+  "year": 2024,
+  "url": "https://so04.tci-thaijo.org/index.php/larhcu/article/view/274753",
+  "doi_isbn": "",
+  "source_type": "empirical",
+  "tier": "B",
+  "key_findings": [
+   "Content analysis of 12 romance dramas: ideal phra-ek shown through plot (virtues set up early, solves problems, ends in marriage), appearance (handsome, uniformed, professional) and inner traits (wise, brave, generous, gentlemanly, responsible, kind, humorous, helps with housework)."
+  ],
+  "practical_applications": [
+   "Checklist of what Thai audiences are trained to read as 'the good man' - use or subvert knowingly."
+  ],
+  "limitations": [
+   "Abstract only; small descriptive sample."
+  ],
+  "license": "unknown (TCI Thai journal)",
+  "access_status": "abstract",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-26",
+  "modules": [
+   "M15",
+   "M17"
+  ]
+ },
+ {
+  "key": "TanarojChansatitporn",
+  "title": "Main Character's Type of the Romantic Comedy Television Dramas of Channel 7HD",
+  "authors": "Jidapa Tanaroj; Prapassorn Chansatitporn",
+  "year": null,
+  "url": "https://so03.tci-thaijo.org/index.php/JournalofMUSPAKKU/article/download/249025/176881/1029233",
+  "doi_isbn": "",
+  "source_type": "empirical",
+  "tier": "B",
+  "key_findings": [
+   "Five Channel 7HD romantic comedies (Jan 2019-Mar 2020): leads mostly round characters; male leads gentlemanly, family-loving, forthright, reasonable, brave, with added playful/cheeky traits; female leads assertive, forthright, clever, strong yet sensitive in love.",
+   "Example: a near-flat 'good' hero (Phacharamontra) gains dimension through stubborn rationalism and cluelessness about love."
+  ],
+  "practical_applications": [
+   "Thai mainstream leads use a 'good core + one comic flaw' formula - a useful local baseline."
+  ],
+  "limitations": [
+   "Journal of Music and Performing Arts, Khon Kaen University; year not captured; qualitative analysis."
+  ],
+  "license": "unknown (TCI Thai journal)",
+  "access_status": "full_text",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-26",
+  "modules": [
+   "M15",
+   "M17"
+  ]
+ },
+ {
+  "key": "SinghRana2026",
+  "title": "Queer Negotiations: Triadic Critical Discourse Analysis of Gender and Power in Thai Media Representations",
+  "authors": "Pushpraj Singh; Ekta Rana",
+  "year": 2026,
+  "url": "https://so06.tci-thaijo.org/index.php/KUTH/article/download/289416/195116/1366622",
+  "doi_isbn": "",
+  "source_type": "empirical",
+  "tier": "B",
+  "key_findings": [
+   "Desk-based CDA of Thai LGBTQ+ series, digital content and fan discourse 2018-2025: increased visibility coincides with persistent tokenism, commodification and regulatory intervention; communities subvert and localise global scripts."
+  ],
+  "practical_applications": [
+   "Visibility is not the same as respectful characterisation; avoid token or comic-relief-only queer characters."
+  ],
+  "limitations": [
+   "Abstract and introduction read; qualitative CDA, not audience research."
+  ],
+  "license": "unknown (TCI Thai journal)",
+  "access_status": "abstract",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-26",
+  "modules": [
+   "M15",
+   "M17"
+  ]
+ },
+ {
+  "key": "Mittell2015",
+  "title": "Complex TV: The Poetics of Contemporary Television Storytelling - chapter 'Orienting Paratexts'",
+  "authors": "Jason Mittell",
+  "year": 2015,
+  "url": "https://scalar.usc.edu/works/complex-television/orienting-paratexts.8",
+  "doi_isbn": "",
+  "source_type": "textbook",
+  "tier": "A",
+  "key_findings": [
+   "Viewers use paratexts (wikis, character charts) to orient themselves among complex TV characters and timelines; 'forensic fandom'."
+  ],
+  "practical_applications": [
+   "Series need internal character references (bible) and sometimes audience-facing ones (cast cards)."
+  ],
+  "limitations": [
+   "Reused from registry (abstract)."
+  ],
+  "license": "copyrighted",
+  "access_status": "abstract",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-26",
+  "modules": [
+   "M15",
+   "M17"
+  ]
+ },
+ {
+  "key": "OkamuraUra2017",
+  "title": "The effect of the shape of eyeglasses on judgements of personality",
+  "authors": "Yasuhiro Okamura; Mitsuhiro Ura",
+  "year": 2017,
+  "url": "https://www.europeanproceedings.com/article/10.15405/epsbs.2017.11.11",
+  "doi_isbn": "10.15405/epsbs.2017.11.11",
+  "source_type": "empirical",
+  "tier": "B",
+  "key_findings": [
+   "39 Japanese undergraduates: imagining round glasses -> warmer self-rating; square -> more competent and stubborn."
+  ],
+  "practical_applications": [
+   "Glasses shape as a character-trait cue in eyewear content (weak evidence)."
+  ],
+  "limitations": [
+   "Reused from registry; tiny sample."
+  ],
+  "license": "copyrighted",
+  "access_status": "full_text",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-26",
+  "modules": [
+   "M15",
+   "M17"
+  ]
+ }
+]

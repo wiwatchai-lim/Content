@@ -1,0 +1,1 @@
+{"type": "rating", "id": "rat-20261124-001", "date": "2026-11-24", "summary": "Golden glasses v5 — provisional AI score", "source": ".claude/skills/ai-visual-artist/tests/real/", "evidence": "ai-judgement", "tags": ["flux", "glasses", "score"], "rater": "claude (ai-visual-artist score.py)", "score": 77, "scale": "0-100", "artifact": ".claude/skills/ai-visual-artist/tests/real/"}

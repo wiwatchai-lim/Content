@@ -5,6 +5,10 @@ description: Make the 15-second "eye break" clips (close your eyes, follow a voi
 
 # Eye-break clip (15 s)
 
+> **Studio loop (2026-11-26):** before the job `python creative-intelligence/tools/memory.py brief --job "<job>" --tags eye-break,clip,voice`
+> (obey past rejections, characters, known errors) · before delivery run skill `creative-critic` (independent sub-agent) and
+> fix critical/major findings · after the user reacts `memory.py add --type approval|rejection` with their exact words.
+
 A vertical 1080×1920 follow-along clip: the viewer closes their eyes and a calm voice leads them through six neck moves, then "Open your eyes" and the TIMEOPTIC wordmark. Unlike beat clips, the **sound is part of the upload file** (voice + tick or nature sound); the user posts it with the original sound on. Talk to the user in Thai, short. Everything on screen, the voice and the captions are **English**.
 
 Everything needed is in this file and in the reference kit; nothing depends on Claude's memory on the owner's machine.

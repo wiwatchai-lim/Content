@@ -2,6 +2,10 @@
 
 งาน carousel (หลายสไลด์ปัดได้) แยกจากโพสต์เดี่ยว (`posts/`), kit แว่น (`kits/`) และคลิป
 
+> **หมายเหตุ (2026-11-26):** style ทั้งหมดอยู่ใน `styles/` (มีมากกว่า 1 แบบ) · story carousel ชุด 1–160 (`kits/2026-11-16_*` เป็นต้นไป) เป็น **1:1 ภาษาไทย ไม่มีโลโก้**
+> (ข้อยกเว้นจาก English-only) และทำ Reel 9:16 จากชุดนั้น — ขั้นตอนจริงอยู่ใน `stories/` (gen.sh → sheet.py → finish.py → render → reel.sh)
+> ก่อนทำชุดใหม่: `python creative-intelligence/tools/memory.py brief --job "story carousel" --tags carousel,story-carousel,charcoal` · ก่อนส่ง: skill `creative-critic`
+
 ```
 carousel/
   styles/<ชื่อลายเส้น>/    ref*.jpg (ดูลายเส้นเท่านั้น) + style.md (กติกา + prompt พื้นฐาน)

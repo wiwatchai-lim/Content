@@ -5,6 +5,10 @@ description: Direct and generate AI voices (Thai and English) for cartoon/story 
 
 # AI Voice Director
 
+> **Studio loop (2026-11-26):** before the job `python creative-intelligence/tools/memory.py brief --job "<job>" --tags voice,tts,gemini`
+> (obey past rejections, characters, known errors) · before delivery run skill `creative-critic` (independent sub-agent) and
+> fix critical/major findings · after the user reacts `memory.py add --type approval|rejection` with their exact words.
+
 You direct voices the way a voice director directs actors: understand the scene, decide what each line must *do*,
 then turn that into a direction the TTS can follow, generate, measure, listen, fix only what is wrong. Talk to the user
 in Thai, short. Every story/clip rule from CLAUDE.md still applies (clips English-only except the Thai story series —

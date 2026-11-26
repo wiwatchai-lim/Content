@@ -1,0 +1,38 @@
+{"judge": "J3-decisions", "tasks": {
+"D1": {
+ "X": {"points": [2,2,2,2,2,2,0], "wrong_claims": 0, "notes": "Asks price/promo; routes to beat-clip; English-only; Ray-Ban logo top-left, moving spaced wordmark, no line art; angles+punch-ins, calm bg, lens layer; SFX-only upload, user adds song; never mentions asking before quota use."},
+ "Y": {"points": [2,2,2,2,2,2,0], "wrong_claims": 0, "notes": "Same coverage as X (price asked, beat-clip, English, logo/wordmark/no line art, angles/calm/lens layer, music by user); no mention of asking before quota use."}},
+"D2": {
+ "X": {"points": [2,2,2], "wrong_claims": 0, "notes": "Confirms once before batch citing ChatGPT quota; mentions free local FLUX for drafts; states 5 images = 5 quota uses."},
+ "Y": {"points": [2,2,2], "wrong_claims": 0, "notes": "Confirms before running with quota reason; offers FLUX alternative in same message; states 5 images = 5 quota uses."}},
+"D3": {
+ "X": {"points": [1,2,2,2], "wrong_claims": 0, "notes": "Keeps Puck as a candidate but explicitly warns it collides with the shop's male promo voice; avoids narrator voice but never mentions Sulafat; 2-3 candidates auditioned; asks before Gemini quota; locks in voice bible."},
+ "Y": {"points": [0,2,2,2], "wrong_claims": 1, "notes": "Puts Puck first because it is the Thai male promo voice, the opposite of the key (wrong claim); no Sulafat; shortlist+audition, asks before quota, records/locks in bible."}},
+"D4": {
+ "X": {"points": [2,2,2,2], "wrong_claims": 0, "notes": "Refuses as written; no evidence for myopia prevention, cites Cochrane 2023/AAO; offers accurate wording and myopia-control lens alternative with consult; cites CPA and Meta health-ad rules."},
+ "Y": {"points": [2,2,2,2], "wrong_claims": 0, "notes": "Refuses; explains no evidence (unsupported, eye-strain claim also unsupported) though no Cochrane name; offers manufacturer wording, outdoor time and eye exam; CPA/Meta rules."}},
+"D5": {
+ "X": {"points": [2,2,2,2,2], "wrong_claims": 0, "notes": "1:1 1080; Thai; no logo/wordmark; pencil faceless Mint oatmeal sweater, Tao charcoal coat + brown scarf; text in HTML layer, art text-free."},
+ "Y": {"points": [2,2,2,2,2], "wrong_claims": 0, "notes": "1080x1080; Thai in HTML only; no logo; pencil on cream, faceless, correct outfits (also flags hoodie/coat ambiguity); text in HTML layer."}},
+"D6": {
+ "X": {"points": [2,2,2,2], "wrong_claims": 0, "notes": "Keeps 9:16; AI label ON; text out of caption/buttons area checked on contact sheet; user's music track with loudnorm."},
+ "Y": {"points": [2,2,2,2], "wrong_claims": 0, "notes": "Keeps 9:16; AI label on every time; safe zone x60-940/y220-1480; user's music added."}},
+"D7": {
+ "X": {"points": [2,2,2,2], "wrong_claims": 0, "notes": "Won't use living artist name; translate liked traits to medium/line/palette/composition; ethics/copyright reason; offers 2 original directions via FLUX, or commission the artist."},
+ "Y": {"points": [2,2,2,2], "wrong_claims": 0, "notes": "Won't use name; breaks style into traits; explains permission/copyright complaints; trait prompt mixed with own choices = original, FLUX seeds."}},
+"D8": {
+ "X": {"points": [2,2,2,2], "wrong_claims": 0, "notes": "Answers no; Palmer 2008 centre + inward bias, Amirshahi 2014; heuristic not law; when to use off-centre."},
+ "Y": {"points": [2,2,2,2], "wrong_claims": 0, "notes": "Answers no; Palmer centre/inward bias, Amirshahi; calls it a convention, notes study limits; use as one option with reasons."}},
+"D9": {
+ "X": {"points": [2,2,2], "wrong_claims": 0, "notes": "Picks (b); one CTA, large type, EPPM fear-without-efficacy, slang/fast cuts mismatch; risks: frail stereotype, elderspeak, claim checks, cliche scenes (blandness-adjacent)."},
+ "Y": {"points": [2,2,2], "wrong_claims": 0, "notes": "Picks (b); benefit + one CTA, large type, EPPM, register; risks: blandness, age stereotypes, claims, consent/AI label."}},
+"D10": {
+ "X": {"points": [2,2], "wrong_claims": 0, "notes": "beat-clip; frame-kit only for kits/Codex prompts."},
+ "Y": {"points": [2,2], "wrong_claims": 0, "notes": "beat-clip; frame-kit only for kit/prompt/2.5D."}},
+"D11": {
+ "X": {"points": [2,2,2,2], "wrong_claims": 0, "notes": "Copies shop FB notice (silver waves, megaphone pill, green calendar, red text, black bar); TH+EN one image; 1080x1080; closed day biggest element."},
+ "Y": {"points": [2,2,2,2], "wrong_claims": 0, "notes": "Same template and elements; TH+EN; 1080x1080; red date most prominent."}},
+"D12": {
+ "X": {"points": [2,2,2,1,0], "wrong_claims": 0, "notes": "Exact words+date+job in FEEDBACK_HISTORY; prompt/seed/model/settings/path in PROMPT_EXPERIMENTS; persistent store; approval logged but reuse marking only conditional; does not propose asking what was liked."},
+ "Y": {"points": [2,2,2,2,2], "wrong_claims": 0, "notes": "approval record with exact words/date/job/path+seed; prompt record with model/settings/seed; memory store + digest; outcome approved + use_when marks reuse; asks one short question about what was liked."}}
+}}

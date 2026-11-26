@@ -1,0 +1,38 @@
+{"judge": "J5-create-YX", "tasks": {
+"G1": {
+ "Y": {"rubric": {"in-character dialogue (Mint worry, Tao short warm)": 4, "faceless pencil look + correct outfits": 3, "1:1, 4 slides, no logo": 4, "Thai copy quality and brevity": 4, "emotional arc (not preachy)": 4, "caption fits channel": 4},
+  "critical_failures": [],
+  "notes": "Dialogue short and warm, worried-then-reassured pairing works but answers lean on stock reassurance ('เสียใจได้', 'บทเรียนทั้งนั้น'). Charcoal faceless look and QC for dot eyes stated; outfits are the series hoodie/coat duo, not Mint/Tao, with no acknowledgement of the ambiguity. 1:1 and no logo; 5 slides follows the 160 kits (count ambiguous per key). Clear arc loss→reflection→fear→step→reframe, ending line slightly told rather than shown. Caption fits, hashtag list a bit generic. Prompts use many 'no ...' phrases."},
+ "X": {"rubric": {"in-character dialogue (Mint worry, Tao short warm)": 5, "faceless pencil look + correct outfits": 4, "1:1, 4 slides, no logo": 4, "Thai copy quality and brevity": 5, "emotional arc (not preachy)": 5, "caption fits channel": 5},
+  "critical_failures": [],
+  "notes": "Coat character acts instead of preaching (buys the first cup); lines fresh and short ('มือจำได้ก่อนใจอีก', 'สามแก้ว มากกว่าเมื่อวาน'), explicitly avoids 'ต้อง/จง'. Faceless charcoal look and QC; flags the Mint&Tao vs hoodie/coat outfit question and gives the correct Mint/Tao outfits if confirmed. 1:1, no logo, 5 slides (ambiguous). Arc shown with concrete evidence, not preachy. Captions add a new angle, channel kept separate from shop."},
+ "preferred": "X", "preferred_reason": "X's dialogue shows the restart through action and a concrete small win, fresher and less preachy than Y, and it handles the outfit ambiguity."
+},
+"G2": {
+ "Y": {"rubric": {"hook at t=0": 5, "several angles + punch-ins": 5, "English text, safe zone": 5, "wordmark/partner logo/no line art/lens layer": 4, "price asked, not invented": 5, "sound plan (SFX; music by user)": 5, "QC checks listed (contact sheet, safe zone, loudness)": 5},
+  "critical_failures": [],
+  "notes": "Hook on the nylor thread/groove macro at t=0 with slam-in. Front/3-4/side plus four punch-ins and colour line-up. English only, explicit safe zone. Partner logo top-left, spaced TIMEOPTIC wordmark, no line art, lens layer mentioned but no half-rim-specific handling. Asks price once and leaves it out. SFX-only upload + preview-with-song, loudness targets. QC: contact sheet with drawn safe zone, LUFS/TP, retention, critic."},
+ "X": {"rubric": {"hook at t=0": 5, "several angles + punch-ins": 5, "English text, safe zone": 5, "wordmark/partner logo/no line art/lens layer": 5, "price asked, not invented": 5, "sound plan (SFX; music by user)": 5, "QC checks listed (contact sheet, safe zone, loudness)": 5},
+  "critical_failures": [],
+  "notes": "Hinge macro slam at t=0. Multiple macros, front, 3/4, side, four punch-ins with varied mask reveals. English, safe zone stated. Partner logo, wordmark gap, no line art, and a concrete fix for the lens layer failing on an open half-rim bottom edge. No price until the user answers. SFX-only upload, preview with song, LUFS/TP targets. Full QC list incl. contact sheet, safe zone box, ebur128, user listens."},
+ "preferred": "X", "preferred_reason": "Near equal; X adds the half-rim lens-layer gotcha that would otherwise ship a visibly broken lens."
+},
+"G3": {
+ "Y": {"rubric": {"three distinct cinematic scenes": 5, "text-free images + HTML text": 5, "partner logos top, spaced TIME OPTIC": 5, "UV400 claim worded accurately and verification step (lens spec from data, no medical overclaim)": 5, "ask before Codex": 5},
+  "critical_failures": [],
+  "notes": "Noon sand / shade-line metaphor / golden hour boats, each with eye-path notes; prompts written positively with one guard line. Text in HTML only. Partner logos top, white spaced wordmark bottom. UV400 line conditional on a saved spec for the exact SKU, claims-library wording (risk factor, tint≠UV, polarised≠UV), CPA proof. Asks before every Codex run and runs them sequentially. Real contact details used; Thai AI label added."},
+ "X": {"rubric": {"three distinct cinematic scenes": 5, "text-free images + HTML text": 5, "partner logos top, spaced TIME OPTIC": 5, "UV400 claim worded accurately and verification step (lens spec from data, no medical overclaim)": 5, "ask before Codex": 5},
+  "critical_failures": [],
+  "notes": "Noon sand / umbrella shade / golden hat scenes, distinct and cinematic; prompts lean on 'no text, no people, no temples' negations (minor). HTML text layer, partner logo top, spaced wordmark bottom. Notes no UV400 entry in data so proof is needed; claim wording correct. Explicitly asks OK for 3 Codex runs and explains why not FLUX. Good culture/place and endorsement checks; S3 spec line 'HUA HIN SUN, COVERED' is weak."},
+ "preferred": "Y", "preferred_reason": "Both excellent; Y's prompts follow the positive-phrasing rule and it ships a ready caption with the shop's real contacts and a conditional UV400 line."
+},
+"G4": {
+ "Y": {"rubric": {"removes false/over claims": 5, "clear concrete info + one CTA": 5, "natural Thai register": 3, "relevant hashtags only": 5, "explanations accurate": 4},
+  "critical_failures": [],
+  "notes": "Removes 'best in the world', FOMO, 24/7 promise, 'cheap'. Gives real hours (flagged to confirm) and real LINE/phone; one CTA. Main rewrite is English; the Thai version is a short optional add-on, polite but thin. Brand/place hashtags. Explanations accurate and one line each; the English-only switch for a Thai caption rewrite is defensible but drifts from the brief."},
+ "X": {"rubric": {"removes false/over claims": 5, "clear concrete info + one CTA": 4, "natural Thai register": 5, "relevant hashtags only": 5, "explanations accurate": 4},
+  "critical_failures": [],
+  "notes": "Removes all over-claims and pressure; adds drip-pricing caution. Concrete structure but hours/contact left as placeholders. One polite CTA (ทักแชทถามรุ่นหรือจองเวลาลอง...นะคะ), natural shop register. Relevant local/brand tags. Explanations accurate; 'อย. banned-word list' is a slightly off authority for eyewear (minor)."},
+ "preferred": "X", "preferred_reason": "X delivers a natural Thai rewrite of the Thai caption with one soft CTA plus an English version; Y swaps the language and its Thai version is thin."
+}
+}}

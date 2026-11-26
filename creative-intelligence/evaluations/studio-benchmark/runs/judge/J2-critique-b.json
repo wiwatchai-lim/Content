@@ -1,0 +1,26 @@
+{"judge": "J2-critique-b", "tasks": {
+ "C5": {
+  "X": {"found": [1,2,3,4,5,6,7], "found_critical": [1,3,4,5], "partial": [], "extra_valid": 1, "extra_invalid": 1, "fix_quality": 2.0, "reason_quality": 2.0,
+        "notes": "All 7 found with concrete fixes and cited rules; extra English-only house-rule flag valid; AI-label finding is speculative (no image in artifact) -> invalid."},
+  "Y": {"found": [1,2,3,4,5,6,7], "found_critical": [1,3,4,5], "partial": [], "extra_valid": 2, "extra_invalid": 0, "fix_quality": 2.0, "reason_quality": 2.0,
+        "notes": "All 7 found with concrete fixes; quote rated major not critical (severity only); extras English-only rule and fear emoji are defensible."}
+ },
+ "C6": {
+  "X": {"found": [1,2,3,4,6,7,8], "found_critical": [1,2,3,6], "partial": [], "extra_valid": 1, "extra_invalid": 2, "fix_quality": 2.0, "reason_quality": 2.0,
+        "notes": "All scored items found with concrete fixes; glasses marked major not critical; naming optician Ton valid (SERIES.md); shot-1 motion note and VOID insert critique are padding -> invalid."},
+  "Y": {"found": [1,2,3,4,6,7,8], "found_critical": [1,2,3,6], "partial": [], "extra_valid": 1, "extra_invalid": 0, "fix_quality": 2.0, "reason_quality": 2.0,
+        "notes": "All scored items found (glasses+hair combined) with concrete fixes; 180 and timing marked major not critical; correctly praises the VOID insert; Ton naming extra valid."}
+ },
+ "C7": {
+  "X": {"found": [1,2,3,4,5,6,7], "found_critical": [1,2,3,6], "partial": [], "extra_valid": 0, "extra_invalid": 1, "fix_quality": 2.0, "reason_quality": 2.0,
+        "notes": "All 7 found with concrete targets (-14 LUFS, <=-1.5 dBTP, >=10 LU duck, 48 kHz, licensed music/user adds); extra UV-script content check is off-artifact padding."},
+  "Y": {"found": [1,2,3,4,5,6,7], "found_critical": [1,2,3,6], "partial": [], "extra_valid": 0, "extra_invalid": 0, "fix_quality": 2.0, "reason_quality": 2.0,
+        "notes": "All 7 found with concrete fixes; loudness rated major not critical; dither/resample clarification is part of item 5; no padding."}
+ },
+ "C8": {
+  "X": {"found": [1,2,3,4,5,6], "found_critical": [1,2], "partial": [], "extra_valid": 1, "extra_invalid": 0, "fix_quality": 2.0, "reason_quality": 2.0,
+        "notes": "All 6 found (monk and feet as separate findings), cites CULTURAL_CHECK, Penal Code s.206, ask-for-promo rule; extra line-art/AI-label/real-product note valid."},
+  "Y": {"found": [1,2,3,4,5,6], "found_critical": [1,2], "partial": [], "extra_valid": 1, "extra_invalid": 0, "fix_quality": 2.0, "reason_quality": 2.0,
+        "notes": "All 6 found (monk+feet combined), concrete fixes and correct reasons; extra line-art/AI-label note valid."}
+ }
+}}

@@ -1,0 +1,20 @@
+Files consulted: [hidden for blind judging]
+
+**Look:** a copy of the shop's own FB holiday notice, built from the template `posts/2026-11-23_saturday-closed/notice-sq.html`, Prompt font, 1080×1080. From top to bottom:
+1. White-silver wave background with the TIMEOPTIC logo at the top.
+2. Megaphone and black pill: "แจ้งวันหยุดร้าน".
+3. Red sub-headline.
+4. Green-topped calendar with a big red "5" (ธ.ค.).
+5. Bold Thai line: "ปิดทำการ วันเสาร์ที่ 5 ธันวาคม 2569".
+6. Red English date line: "Closed: Saturday, 5 December 2026", with small English text: "Open as usual Monday, 7 December".
+7. Grey rule, then "ขออภัยในความไม่สะดวกค่ะ".
+8. Black bottom bar: LINE @timeoptichuahin · 032-511-360 · FB timeoptichuahin.
+
+Thai and English go in the same image (the notice is the exception to English-only). **The closed day must be the biggest thing on the image.**
+
+**Content rules:**
+- 5 Dec 2026 is a Saturday. Sunday is always closed, so I don't announce 6 Dec as an extra closed day; I just say the shop reopens Monday 7 Dec (confirm opening hours with the user, last time 09:30–18:00).
+- 5 Dec is วันพ่อแห่งชาติ. If the user wants the reason shown ("เนื่องในวันพ่อแห่งชาติ"), keep it formal: no royal images, no Garuda emblem, and **no promotions in this post** (cultural check B2). Otherwise I leave the reason out.
+- Formal register.
+
+**Caption:** short TH and EN versions in the same structure as the 28 Nov caption. Exports are also copied into the user's working folder. I render it and check it with Read before handing it over.

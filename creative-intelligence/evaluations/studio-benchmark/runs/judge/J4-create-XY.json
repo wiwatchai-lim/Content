@@ -1,0 +1,38 @@
+{"judge": "J4-create-XY", "tasks": {
+ "G1": {
+  "X": {"rubric": {"in-character dialogue (Mint worry, Tao short warm)": 5, "faceless pencil look + correct outfits": 3, "1:1, 4 slides, no logo": 3, "Thai copy quality and brevity": 5, "emotional arc (not preachy)": 5, "caption fits channel": 4},
+        "critical_failures": [],
+        "notes": "Dialogue: left voices real fears, right answers in short warm lines and acts (buys first cup) instead of lecturing. Outfits: uses series hoodie/coat duo, not Mint oatmeal sweater/Tao coat+scarf, but explicitly flags the question to the user. Format: 1:1 and no logo correct, but 5 slides instead of 4. Copy: very short, natural, one fresh image (มือจำได้ก่อนใจ). Arc: acknowledge -> small step -> concrete reframe (3 cups > yesterday), no slogans. Caption: three channel-appropriate options, no shop tie-in, moderate hashtags, some generic."},
+  "Y": {"rubric": {"in-character dialogue (Mint worry, Tao short warm)": 4, "faceless pencil look + correct outfits": 2, "1:1, 4 slides, no logo": 3, "Thai copy quality and brevity": 4, "emotional arc (not preachy)": 3, "caption fits channel": 3},
+        "critical_failures": [],
+        "notes": "Dialogue: right side is warm and short (เสียใจได้) but leans on lesson lines. Outfits: hoodie/coat duo with no Mint/Tao check, so the outfit mismatch is not flagged. Format: 1:1 and no logo, but 5 slides. Copy: brief, but บทเรียน repeats and the ending is the familiar 'not from zero' line. Arc: clear loss->reflection->fear->step->reframe, but slides 2/4/5 drift toward moralising. Caption: restates the moral and carries 10 hashtags, several generic (#แคปชั่นซึ้งๆ #คำคม)."},
+  "preferred": "X", "preferred_reason": "X's story is more concrete and less preachy (three cups beat yesterday), and it flags the Mint/Tao outfit question."
+ },
+ "G2": {
+  "X": {"rubric": {"hook at t=0": 5, "several angles + punch-ins": 5, "English text, safe zone": 5, "wordmark/partner logo/no line art/lens layer": 5, "price asked, not invented": 5, "sound plan (SFX; music by user)": 5, "QC checks listed (contact sheet, safe zone, loudness)": 5},
+        "critical_failures": [],
+        "notes": "Hook: macro hinge slam at 0.00 s. Angles: front, 3/4 and side plus 4 detail punch-ins. Text: English only, data-sourced, safe zone x60-940/y220-1480. Branding: partner logo top-left, spaced moving wordmark, no line art. Lens layer: plans it and catches the real half-rim pitfall (open lens bottom, so the hole-fill mask fails). Price: asked, none shown. Sound: SFX-only upload plus a song preview, -14 LUFS / -1.5 dBTP. QC: full list (contact sheet, safe-zone box, ebur128, alpha check)."},
+  "Y": {"rubric": {"hook at t=0": 5, "several angles + punch-ins": 5, "English text, safe zone": 5, "wordmark/partner logo/no line art/lens layer": 5, "price asked, not invented": 5, "sound plan (SFX; music by user)": 5, "QC checks listed (contact sheet, safe zone, loudness)": 5},
+        "critical_failures": [],
+        "notes": "Hook: groove/brow-bar macro slam at t=0. Angles: front, 3/4 and side plus 4 punch-ins and a colour line-up. Text: English, safe zone stated, partner logo, wordmark, no line art. Lens layer: present, but no half-rim-specific handling. Price: asked. Sound: SFX upload + song preview with loudness targets. QC: contact sheet, retention review, independent critic, loudness. Also notes half-rim lenses need a groovable material."},
+  "preferred": "X", "preferred_reason": "The two are nearly equal; X wins on the practical half-rim lens-layer fix that would otherwise ship empty-looking lenses."
+ },
+ "G3": {
+  "X": {"rubric": {"three distinct cinematic scenes": 5, "text-free images + HTML text": 5, "partner logos top, spaced TIME OPTIC": 5, "UV400 claim worded accurately and verification step (lens spec from data, no medical overclaim)": 5, "ask before Codex": 5},
+        "critical_failures": [],
+        "notes": "Scenes: noon sand / shade line / golden hour are distinct, each with the -i real product and keep-product wording. Text: all in the HTML overlay, prompts text-free. Branding: partner logo top centre, white spaced TIME OPTIC at the bottom. Claims: UV400 proof required per exact model, risk-factor wording, tint≠UV and polarized≠UV covered. Codex: asks before all 3 runs, says each uses quota."},
+  "Y": {"rubric": {"three distinct cinematic scenes": 5, "text-free images + HTML text": 5, "partner logos top, spaced TIME OPTIC": 5, "UV400 claim worded accurately and verification step (lens spec from data, no medical overclaim)": 5, "ask before Codex": 5},
+        "critical_failures": [],
+        "notes": "Scenes: noon / half-shade metaphor / golden hour with fishing boats are distinct, with reusable KEEP/STYLE blocks and mostly positive phrasing. Text: HTML overlay only, 72 px margins. Branding: partner logos top, spaced wordmark. Claims: UV400 text only if a source exists for the SKU, caption fact-checked, real shop contacts. Codex: asks before every run, runs sequentially, md5 check. Avoids the Khao Takiab Buddha as backdrop."},
+  "preferred": "Y", "preferred_reason": "Y is closer to ready to run: reusable prompt blocks, an explicit fallback when there is no UV400 source, margins, and a caption with real contacts."
+ },
+ "G4": {
+  "X": {"rubric": {"removes false/over claims": 5, "clear concrete info + one CTA": 4, "natural Thai register": 5, "relevant hashtags only": 5, "explanations accurate": 4},
+        "critical_failures": [],
+        "notes": "Claims: removes best-in-world, 24/7, FOMO and vague 'cheap'. Info: placeholder-heavy (hours, price), with one soft CTA. Thai: natural, polite นะคะ register, and an English version is added. Hashtags: brand/place/product. Explanations: mostly accurate; the drip-pricing and อย. banned-word points are a slight stretch."},
+  "Y": {"rubric": {"removes false/over claims": 5, "clear concrete info + one CTA": 5, "natural Thai register": 3, "relevant hashtags only": 4, "explanations accurate": 4},
+        "critical_failures": [],
+        "notes": "Claims: removes all false claims. Info: real hours and contacts from the shop's 2026-11-23 notice (verified to exist in the repo), one try-on CTA, and lens pairing. Thai: the main rewrite is English, the Thai version is brief and natural but secondary, and the เกรงใจ tone is not developed. Hashtags: #Glasses and #NewArrivals are a little generic. Explanations: accurate apart from the same อย. banned-list stretch."},
+  "preferred": "Y", "preferred_reason": "Y is nearly paste-ready, with the shop's real hours, LINE and phone, while X still needs the hours and contact details filled in."
+ }
+}}

@@ -1,5 +1,21 @@
 # Changelog — Creative Intelligence
 
+## 2026-11-26 — v2: 15 domain guides, Creative Memory, independent critic, before/after benchmark
+- Audit first (`SKILL_AUDIT.md`), plan (`CHANGE_PLAN.md`), backup (git tag `backup/pre-creative-upgrade-2026-11-26` +
+  `C:/timeoptic-backups\skills-ci-2026-11-26.tgz`), step log (`UPGRADE_LOG.md`).
+- `domains/` — 15 guides × 15 sections (history → rubric → references), 604–925 lines each, 715 sources in
+  `domains/sources/*.json` (registry now 2379; validate 0 errors). All 15 SOURCE VERIFIED (53–93% of sources read as full
+  text/abstract). 3 DOIs per guide checked against Crossref: 45/45 real (2 lookups failed on malformed ISBN strings).
+  New module M45 Literature & Poetry; M40 DRAFTED → SOURCE VERIFIED (via domain 14). Graph: D01–D15 nodes in
+  CROSS_DOMAIN_RELATIONSHIPS.json (`tools/domains.py graph`).
+- Creative Memory: `memory/store/*.jsonl` + `tools/memory.py` (brief/add/recall/validate/digest, usage log, review_by);
+  47 records seeded only from existing real sources.
+- Skill `creative-critic` + `tools/critic.py` (packet without the maker's reasoning; critique schema; record → memory).
+- Routing: master-creative-director (memory brief, domain table, critic), studio-loop note in 7 production skills,
+  CLAUDE.md note; stale READMEs of carousel/ and slowly-growing/ annotated (not rewritten).
+- Found: slowly-growing README's Mint & Tao vs the 160 story kits' unnamed hoodie/coat duo — open question for the user.
+- Benchmark `evaluations/studio-benchmark/` (24 tasks, answer key, blind judging): results in RESULTS.md.
+
 ## 2026-11-25 — "Learn everything, general-purpose" (user): batches U1–U3
 - The user said the knowledge is for every field, not only eyewear, so RESEARCH_BRIEF is now domain-neutral and has a
   "getting full text" section (OpenAlex, Europe PMC). Preference saved.

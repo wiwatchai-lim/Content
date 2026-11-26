@@ -1,0 +1,1219 @@
+[
+ {
+  "key": "LederBelke2004",
+  "title": "A model of aesthetic appreciation and aesthetic judgments",
+  "authors": "Helmut Leder, Benno Belke, Andries Oeberst, Dorothee Augustin",
+  "year": 2004,
+  "url": "https://pubmed.ncbi.nlm.nih.gov/15527534/",
+  "doi_isbn": "10.1348/0007126042369811",
+  "source_type": "empirical",
+  "tier": "A",
+  "key_findings": [
+   "Information-processing box model: perception, implicit memory integration, explicit classification, cognitive mastering, evaluation, with continuous emotional evaluation (as described in LederNadal2014)",
+   "Two outputs: aesthetic judgement and aesthetic emotion",
+   "Focus on modern art, where style recognition and meaning-making matter"
+  ],
+  "practical_applications": [
+   "Use the stages as a critique order: what is seen -> what it reminds of -> what kind/style it is -> what it means -> how well it was mastered"
+  ],
+  "limitations": [
+   "Original not read; content taken from abstract metadata and the 2014 retrospective",
+   "Mainly visual art, mainly modern art"
+  ],
+  "license": "copyrighted",
+  "access_status": "search_summary",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-26",
+  "modules": [
+   "M05",
+   "M06"
+  ]
+ },
+ {
+  "key": "LederNadal2014",
+  "title": "Ten years of a model of aesthetic appreciation and aesthetic judgments: The aesthetic episode - Developments and challenges in empirical aesthetics",
+  "authors": "Helmut Leder, Marcos Nadal",
+  "year": 2014,
+  "url": "https://cognitivescience.univie.ac.at/fileadmin/user_upload/p_cogsci/Literature/Leder_Nadal_2014_Ten_years_of_a_model.pdf",
+  "doi_isbn": "10.1111/bjop.12084",
+  "source_type": "review",
+  "tier": "A",
+  "key_findings": [
+   "Revised model: emotion is no longer external; early stages overlap in time",
+   "Experts use style to classify artworks by similarity, non-experts do not (Augustin & Leder 2006); non-experts like representational more than abstract art",
+   "Context effects: labels 'gallery' vs 'computer' change liking and brain activity (Kirk et al. 2009); museum viewing raises liking, interest and viewing time vs lab (Brieber et al. 2014)",
+   "Museum viewing time per artwork: mean 27 s, median 17 s (Smith & Smith 2001); median 11 s (Troendle et al. 2012)",
+   "Shift away from single-factor explanations (complexity, arousal, prototypicality) to interaction of cognition and affect; Berlyne's arousal framework dominated 1970s"
+  ],
+  "practical_applications": [
+   "Context and framing are part of the work: caption, venue and label change judgement",
+   "Design for seconds of attention, not minutes"
+  ],
+  "limitations": [
+   "Authors' own review; many cited studies small lab samples",
+   "Lab vs real-world gap acknowledged"
+  ],
+  "license": "copyrighted (author copy)",
+  "access_status": "full_text",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-26",
+  "modules": [
+   "M05",
+   "M06"
+  ]
+ },
+ {
+  "key": "Pelowski2017",
+  "title": "Move me, astonish me... delight my eyes and brain: The Vienna Integrated Model of top-down and bottom-up processes in Art Perception (VIMAP) and corresponding affective, evaluative, and neurophysiological correlates",
+  "authors": "Matthew Pelowski, Patrick S. Markey, Michael Forster, Gernot Gerger, Helmut Leder",
+  "year": 2017,
+  "url": "https://doi.org/10.1016/j.plrev.2017.02.003",
+  "doi_isbn": "10.1016/j.plrev.2017.02.003",
+  "source_type": "review",
+  "tier": "A",
+  "key_findings": [
+   "Integrates bottom-up artwork-driven processing with top-down processes by which viewers adapt or change",
+   "Built around three processing checks that delineate outcomes from mundane to moving, disturbing or transformative",
+   "Addresses chills, awe, thrills, sublime and aesthetic vs everyday emotion; links stages to brain networks"
+  ],
+  "practical_applications": [
+   "Plan for mismatch: a piece that breaks expectation needs a route to resolution or it ends in rejection"
+  ],
+  "limitations": [
+   "Theoretical; many predictions untested",
+   "Brain mappings are hypotheses"
+  ],
+  "license": "copyrighted",
+  "access_status": "abstract",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-26",
+  "modules": [
+   "M05",
+   "M06"
+  ]
+ },
+ {
+  "key": "OrtliebFechner2020",
+  "title": "Fechner (1866): The Aesthetic Association Principle - A Commented Translation",
+  "authors": "Stefan A. Ortlieb, Werner A. Kuegel, Claus-Christian Carbon",
+  "year": 2020,
+  "url": "https://journals.sagepub.com/doi/10.1177/2041669520920309",
+  "doi_isbn": "10.1177/2041669520920309",
+  "source_type": "primary_text",
+  "tier": "A",
+  "key_findings": [
+   "Fechner (1801-1887) founded empirical aesthetics ('aesthetics from below')",
+   "Aesthetic choices are largely shaped by the observer's learning history (associative factor) rather than formal properties (direct factor)",
+   "Commentators: role of content and personal meaning still underrated in empirical aesthetics"
+  ],
+  "practical_applications": [
+   "Ask what the audience associates with a colour/material/motif before judging its form"
+  ],
+  "limitations": [
+   "Thought experiments, not data; read abstract only"
+  ],
+  "license": "CC BY (open access, i-Perception)",
+  "access_status": "abstract",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-26",
+  "modules": [
+   "M05",
+   "M06"
+  ]
+ },
+ {
+  "key": "Bornstein1989",
+  "title": "Exposure and affect: Overview and meta-analysis of research, 1968-1987",
+  "authors": "Robert F. Bornstein",
+  "year": 1989,
+  "url": "https://proquest.com/docview/614332207",
+  "doi_isbn": "",
+  "source_type": "meta-analysis",
+  "tier": "S",
+  "key_findings": [
+   "(secondary) ~208 experiments, r about .26; effect stronger for complex than simple stimuli and when many stimuli are shown; stronger without awareness/recognition"
+  ],
+  "practical_applications": [
+   "Repeated brand assets (colour, shape, motif) build liking, but only with variation"
+  ],
+  "limitations": [
+   "Not read; numbers from secondary summaries only",
+   "Lab stimuli"
+  ],
+  "license": "copyrighted",
+  "access_status": "search_summary",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-26",
+  "modules": [
+   "M05",
+   "M06"
+  ]
+ },
+ {
+  "key": "Montoya2017",
+  "title": "A re-examination of the mere exposure effect: The influence of repeated exposure on recognition, familiarity, and liking",
+  "authors": "R. Matthew Montoya, Robert S. Horton, Jack L. Vevea, Martyna Citkowicz, Elissa A. Lauber",
+  "year": 2017,
+  "url": "https://www.pubmed.gov/28263645/",
+  "doi_isbn": "10.1037/bul0000085",
+  "source_type": "meta-analysis",
+  "tier": "S",
+  "key_findings": [
+   "268 curve estimates from 81 articles: positive slope + negative quadratic = inverted-U between exposure and liking",
+   "Inverted-U for visual (not auditory) stimuli, for exposure durations <10 s and >1 min",
+   "Existing models of mere exposure do not adequately account for the findings"
+  ],
+  "practical_applications": [
+   "Familiarity helps up to a point, then wears out: rotate executions of a recurring format"
+  ],
+  "limitations": [
+   "Lab stimuli; abstract only"
+  ],
+  "license": "copyrighted",
+  "access_status": "abstract",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-26",
+  "modules": [
+   "M05",
+   "M06"
+  ]
+ },
+ {
+  "key": "Cutting2003",
+  "title": "Gustave Caillebotte, French Impressionism, and mere exposure",
+  "authors": "James E. Cutting",
+  "year": 2003,
+  "url": "https://link.springer.com/article/10.3758/BF03196493",
+  "doi_isbn": "10.3758/BF03196493",
+  "source_type": "empirical",
+  "tier": "A",
+  "key_findings": [
+   "132 Impressionist images; cultural exposure indexed by 4,232 appearances in 980 Cornell library books",
+   "Adult preferences correlated with image frequency, not with recognition, complexity or prototypicality; children's preferences not correlated with frequency",
+   "Lab exposure interacted with prior cultural exposure; conclusion: mere exposure helps maintain an artistic canon"
+  ],
+  "practical_applications": [
+   "What a culture sees repeatedly becomes 'good taste': reference libraries shape the eye, so curate them deliberately"
+  ],
+  "limitations": [
+   "Only high-quality works tested (critique by Meskin et al. 2013)",
+   "Correlational for cultural exposure"
+  ],
+  "license": "copyrighted",
+  "access_status": "abstract",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-26",
+  "modules": [
+   "M05",
+   "M06"
+  ]
+ },
+ {
+  "key": "Meskin2013",
+  "title": "Mere Exposure to Bad Art",
+  "authors": "Aaron Meskin, Mark Phelan, Margaret Moore, Matthew Kieran",
+  "year": 2013,
+  "url": "https://blog.oup.com/2013/07/what-makes-art-bad-exposure-effect/",
+  "doi_isbn": "",
+  "source_type": "empirical",
+  "tier": "A",
+  "key_findings": [
+   "(press/blog summaries) Repeated exposure to Thomas Kinkade paintings lowered liking, while Millais ratings did not drop",
+   "Authors: exposure does not operate independently of artistic quality"
+  ],
+  "practical_applications": [
+   "Repetition amplifies whatever quality is there: repeating a weak template makes it worse"
+  ],
+  "limitations": [
+   "Read only press/blog summaries; sample size reported differently (57 vs >100)",
+   "Student sample, UK"
+  ],
+  "license": "copyrighted",
+  "access_status": "search_summary",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-26",
+  "modules": [
+   "M05",
+   "M06"
+  ]
+ },
+ {
+  "key": "PetersonKern1996",
+  "title": "Changing Highbrow Taste: From Snob to Omnivore",
+  "authors": "Richard A. Peterson, Roger M. Kern",
+  "year": 1996,
+  "url": "https://doi.org/10.2307/2096460",
+  "doi_isbn": "10.2307/2096460",
+  "source_type": "empirical",
+  "tier": "A",
+  "key_findings": [
+   "US survey data: highbrows increasingly 'omnivorous' (open to middle and lowbrow forms), via cohort replacement and change within cohorts during the 1980s",
+   "Challenges Bourdieu's assumption that elite and popular taste exclude each other"
+  ],
+  "practical_applications": [
+   "Mixing high and popular references is itself a status signal now; don't assume 'premium' means only highbrow codes"
+  ],
+  "limitations": [
+   "Read via search summaries; omnivore concept criticised as flexible/ambiguous and possibly still a form of distinction"
+  ],
+  "license": "copyrighted",
+  "access_status": "search_summary",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-26",
+  "modules": [
+   "M05",
+   "M06"
+  ]
+ },
+ {
+  "key": "Bourdieu1984",
+  "title": "Distinction: A Social Critique of the Judgement of Taste (trans. Richard Nice; French orig. 1979)",
+  "authors": "Pierre Bourdieu",
+  "year": 1984,
+  "url": "https://en.wikipedia.org/wiki/Distinction_(book)",
+  "doi_isbn": "",
+  "source_type": "textbook",
+  "tier": "A",
+  "key_findings": [
+   "(via secondary) Taste is learned in childhood, tied to habitus and cultural capital, and works as a class marker; 'taste classifies, and it classifies the classifier'",
+   "Dominant 'aesthetic disposition' (form over function) vs popular aesthetic expecting function; data from 1960s French surveys with correspondence analysis"
+  ],
+  "practical_applications": [
+   "Treat 'good taste' claims as social positioning; ask whose taste a brief is coded for"
+  ],
+  "limitations": [
+   "Book not read; France 1960s data; later critiques (omnivore thesis)"
+  ],
+  "license": "copyrighted",
+  "access_status": "bibliographic",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-26",
+  "modules": [
+   "M05",
+   "M06"
+  ]
+ },
+ {
+  "key": "Wikipedia_Distinction",
+  "title": "Distinction (book) - Wikipedia",
+  "authors": "Wikipedia contributors",
+  "year": null,
+  "url": "https://en.wikipedia.org/wiki/Distinction_(book)",
+  "doi_isbn": "",
+  "source_type": "encyclopedia",
+  "tier": "E",
+  "key_findings": [
+   "Summary of Bourdieu's argument: cultural capital, habitus, symbolic violence, working-class functional aesthetic vs aesthetic gaze; surveys 1963 (Kodak) and 1967 (taste)"
+  ],
+  "practical_applications": [
+   "Orientation only"
+  ],
+  "limitations": [
+   "Community encyclopedia; lists no criticisms"
+  ],
+  "license": "CC BY-SA",
+  "access_status": "full_text",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-26",
+  "modules": [
+   "M05",
+   "M06"
+  ]
+ },
+ {
+  "key": "SEP_DeweyAesthetics",
+  "title": "Dewey's Aesthetics (Stanford Encyclopedia of Philosophy)",
+  "authors": "",
+  "year": null,
+  "url": "https://plato.stanford.edu/entries/dewey-aesthetics/",
+  "doi_isbn": "",
+  "source_type": "encyclopedia",
+  "tier": "B",
+  "key_findings": [
+   "Art as Experience (1934): aesthetic experience = 'an experience' with inception, development, fulfilment, vs inchoate/anaesthetic experience",
+   "Continuity of art and everyday life; critique of the 'museum conception of art'; enemies of the aesthetic are the humdrum and mechanical routine",
+   "Doing and undergoing; functional (not tick-tock) rhythm; audience re-creates the work; 'science states meanings; art expresses them'",
+   "Critiques: Carroll (works like 4'33'' don't fit), Shusterman (concept too slippery), Saito (everyday aesthetics)"
+  ],
+  "practical_applications": [
+   "A post/clip should be one complete experience with build and resolution; rhythm = each beat carries the previous one forward"
+  ],
+  "limitations": [
+   "Philosophy, not empirical"
+  ],
+  "license": "SEP copyright",
+  "access_status": "full_text",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-26",
+  "modules": [
+   "M05",
+   "M06"
+  ]
+ },
+ {
+  "key": "SEP_JapaneseAesthetics",
+  "title": "Japanese Aesthetics (Stanford Encyclopedia of Philosophy), rev. 2023-12-06",
+  "authors": "Graham Parkes, Adam Loughnane",
+  "year": 2023,
+  "url": "https://plato.stanford.edu/entries/japanese-aesthetics/",
+  "doi_isbn": "",
+  "source_type": "encyclopedia",
+  "tier": "B",
+  "key_findings": [
+   "Concepts: mono no aware (pathos of impermanence), wabi (understated austere beauty), sabi (rustic patina, solitude), yugen (mysterious depth by suggestion), iki (refined urban style), kire (cut-continuity)",
+   "Cautions: Japanese aesthetics as a discipline began in the 19th century; Kuki's iki uses European phenomenology; concepts were appropriated for nationalism"
+  ],
+  "practical_applications": [
+   "Use these words only with their documented meaning; 'wabi-sabi' is not a filter preset"
+  ],
+  "limitations": [
+   "Philosophical overview; not a preference study"
+  ],
+  "license": "SEP copyright",
+  "access_status": "full_text",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-26",
+  "modules": [
+   "M05",
+   "M06"
+  ]
+ },
+ {
+  "key": "Vitsoe_Rams",
+  "title": "Good design - Dieter Rams's ten principles for good design (Vitsoe)",
+  "authors": "Dieter Rams (via Vitsoe)",
+  "year": null,
+  "url": "https://vitsoe.com/us/about/good-design",
+  "doi_isbn": "",
+  "source_type": "practitioner",
+  "tier": "C",
+  "key_findings": [
+   "Ten principles: innovative, useful, aesthetic, understandable, unobtrusive, honest, long-lasting, thorough, environmentally friendly, as little design as possible ('less, but better')",
+   "Formulated late 1970s in reaction to an 'impenetrable confusion of forms, colours and noises'"
+  ],
+  "practical_applications": [
+   "Use as a craft checklist for restraint and honesty, not as science"
+  ],
+  "limitations": [
+   "Industrial-design ethos; not empirically tested as rules"
+  ],
+  "license": "CC BY-NC-ND 4.0",
+  "access_status": "full_text",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-26",
+  "modules": [
+   "M05",
+   "M06"
+  ]
+ },
+ {
+  "key": "Greenberg1939",
+  "title": "Avant-Garde and Kitsch (Partisan Review 6:5, 1939)",
+  "authors": "Clement Greenberg",
+  "year": 1939,
+  "url": "https://www.bu.edu/partisanreview/books/PR1939V6N5/HTML/files/assets/basic-html/page38.html",
+  "doi_isbn": "",
+  "source_type": "primary_text",
+  "tier": "B",
+  "key_findings": [
+   "(via secondary) Kitsch as ersatz culture that copies the surface effects of art; 'vicarious experience and faked sensations'",
+   "Greenberg later distanced himself from parts of the essay"
+  ],
+  "practical_applications": [
+   "Kitsch test: does the image give the effect without the work that earns it?"
+  ],
+  "limitations": [
+   "Original scan not read; summaries via Wikipedia/Britannica"
+  ],
+  "license": "copyrighted",
+  "access_status": "bibliographic",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-26",
+  "modules": [
+   "M05",
+   "M06"
+  ]
+ },
+ {
+  "key": "Kulka1996",
+  "title": "Kitsch and Art",
+  "authors": "Tomas Kulka",
+  "year": 1996,
+  "url": "https://www.psupress.org/books/titles/0-271-01556-X.html",
+  "doi_isbn": "ISBN 0-271-01556-X",
+  "source_type": "textbook",
+  "tier": "A",
+  "key_findings": [
+   "Three conditions of kitsch: (1) emotionally charged stock themes triggering unreflective emotion, (2) instantly identifiable objects/themes, (3) does not substantially enrich associations"
+  ],
+  "practical_applications": [
+   "Use the three conditions as a cliché detector for emotional content (sunsets, babies, couples)"
+  ],
+  "limitations": [
+   "Book not read; conditions from publisher blurb and citing papers"
+  ],
+  "license": "copyrighted",
+  "access_status": "search_summary",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-26",
+  "modules": [
+   "M05",
+   "M06"
+  ]
+ },
+ {
+  "key": "OrtliebCarbon2019",
+  "title": "A Functional Model of Kitsch and Art: Linking Aesthetic Appreciation to the Dynamics of Social Motivation",
+  "authors": "Stefan A. Ortlieb, Claus-Christian Carbon",
+  "year": 2019,
+  "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC6360167",
+  "doi_isbn": "10.3389/fpsyg.2018.02437",
+  "source_type": "review",
+  "tier": "A",
+  "key_findings": [
+   "Kitsch = fluent, quick positive gratification; art = disfluent, effortful, insight; preference linked to safety vs arousal/autonomy motives",
+   "Threat, prevention focus, sad mood -> preference for familiar/fluent; safety and self-efficacy -> appetite for novelty",
+   "Art training reduces preference for conventional harmony (several cited studies)"
+  ],
+  "practical_applications": [
+   "Comfort content (kitsch-like fluency) and challenging content serve different moods; match to audience state"
+  ],
+  "limitations": [
+   "Theoretical, largely untested as a whole; ~60% of text read"
+  ],
+  "license": "CC BY 4.0",
+  "access_status": "full_text",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-26",
+  "modules": [
+   "M05",
+   "M06"
+  ]
+ },
+ {
+  "key": "Vessel2018",
+  "title": "Stronger shared taste for natural aesthetic domains than for artifacts of human culture",
+  "authors": "Edward A. Vessel, Natalia Maurer, Alexander H. Denker, G. Gabrielle Starr",
+  "year": 2018,
+  "url": "https://doi.org/10.1016/j.cognition.2018.06.009",
+  "doi_isbn": "10.1016/j.cognition.2018.06.009",
+  "source_type": "empirical",
+  "tier": "A",
+  "key_findings": [
+   "Agreement high for faces and natural landscapes; strong individual differences for exterior/interior architecture and artworks",
+   "Within-subject: agreement higher for landscapes than exterior architecture, with equal reliability"
+  ],
+  "practical_applications": [
+   "Nature/faces: crowd-pleasing defaults work; designed artefacts and art styles: expect split audiences, test with target group"
+  ],
+  "limitations": [
+   "Western online samples; photographs"
+  ],
+  "license": "copyrighted",
+  "access_status": "abstract",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-26",
+  "modules": [
+   "M05",
+   "M06"
+  ]
+ },
+ {
+  "key": "Germine2015",
+  "title": "Individual Aesthetic Preferences for Faces Are Shaped Mostly by Environments, Not Genes",
+  "authors": "Laura Germine, Richard Russell, P. Matthew Bronstad, et al., Jeremy B. Wilmer",
+  "year": 2015,
+  "url": "https://www.ocf.berkeley.edu/~knakayama/wp-content/uploads/2019/03/185Germine2015.pdf",
+  "doi_isbn": "10.1016/j.cub.2015.08.048",
+  "source_type": "empirical",
+  "tier": "A",
+  "key_findings": [
+   "547 MZ + 214 DZ twin pairs: individual face preferences A = 22%, C = 0%, E (unshared environment + error) = 78%",
+   "Individual taste for faces reliably measurable and driven by personal life history, not family"
+  ],
+  "practical_applications": [
+   "Personal taste is real and learned; a reviewer's private face/style preference is not a universal rule"
+  ],
+  "limitations": [
+   "E includes measurement error; faces only"
+  ],
+  "license": "copyrighted (author copy)",
+  "access_status": "full_text",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-26",
+  "modules": [
+   "M05",
+   "M06"
+  ]
+ },
+ {
+  "key": "ReineckeGajos2014",
+  "title": "Quantifying Visual Preferences Around the World",
+  "authors": "Katharina Reinecke, Krzysztof Z. Gajos",
+  "year": 2014,
+  "url": "https://iis.seas.harvard.edu/papers/reinecke14visual.pdf",
+  "doi_isbn": "10.1145/2556288.2557052",
+  "source_type": "empirical",
+  "tier": "A",
+  "key_findings": [
+   "2.4 million ratings, ~40,000 participants, 430 websites",
+   "Peak-appeal colourfulness 6.1/9 on average but 3.6-7.6 across groups; complexity peaks 2.5-4.8",
+   "Women liked colourful sites more; 41+ liked more colourful/complex; higher education -> less colourful/complex",
+   "Neighbouring countries similar; Finland/Russia lowest complexity and colourfulness; former Yugoslav countries highly colourful; North < South Europe in colourfulness"
+  ],
+  "practical_applications": [
+   "There is no universal 'clean' level: set colour/complexity for the target group and test"
+  ],
+  "limitations": [
+   "Websites only; volunteer LabintheWild sample; causes speculative; Thailand not reported separately"
+  ],
+  "license": "ACM copyright (author copy)",
+  "access_status": "full_text",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-26",
+  "modules": [
+   "M05",
+   "M06"
+  ]
+ },
+ {
+  "key": "Lee2025CrossCultural",
+  "title": "Visual and Auditory Aesthetic Preferences Across Cultures",
+  "authors": "Harin Lee, Eline Van Geert, Elif Celen, Raja Marjieh, Pol van Rijn, Minsu Park, Nori Jacoby",
+  "year": 2025,
+  "url": "https://arxiv.org/abs/2502.14439",
+  "doi_isbn": "arXiv:2502.14439",
+  "source_type": "empirical",
+  "tier": "A",
+  "key_findings": [
+   "401,403 judgements from 4,835 participants in 10 countries across shape, curvature, colour, harmony, melody",
+   "Symmetry preferred everywhere; squares (1:1) peak; no preference peak at the golden ratio in any country",
+   "Japanese participants uniquely preferred straight lines; melody most culturally variable; geographic proximity not always similar"
+  ],
+  "practical_applications": [
+   "Symmetry is a safe universal; colour ratios, curvature and melody need local testing; drop golden-ratio claims"
+  ],
+  "limitations": [
+   "Conference paper/preprint; online panel; Thailand not among the countries"
+  ],
+  "license": "arXiv licence",
+  "access_status": "full_text",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-26",
+  "modules": [
+   "M05",
+   "M06"
+  ]
+ },
+ {
+  "key": "Masuda2008",
+  "title": "Culture and aesthetic preference: comparing the attention to context of East Asians and Americans",
+  "authors": "Takahiko Masuda, Richard Gonzalez, Letty Kwan, Richard E. Nisbett",
+  "year": 2008,
+  "url": "https://journals.sagepub.com/doi/full/10.1177/0146167208320555",
+  "doi_isbn": "10.1177/0146167208320555",
+  "source_type": "empirical",
+  "tier": "A",
+  "key_findings": [
+   "Traditional East Asian art predominantly context-inclusive, Western art object-focused (museum archives)",
+   "Contemporary East Asians draw landscapes and take portraits with more context; preferences for portraits follow the same pattern"
+  ],
+  "practical_applications": [
+   "For East Asian audiences, test wider framings with environment, not only tight product isolation"
+  ],
+  "limitations": [
+   "Japan/US samples mainly; Thailand not tested; abstract only"
+  ],
+  "license": "copyrighted",
+  "access_status": "abstract",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-26",
+  "modules": [
+   "M05",
+   "M06"
+  ]
+ },
+ {
+  "key": "Che2018",
+  "title": "Cross-cultural empirical aesthetics",
+  "authors": "Jiajia Che, Xiaolei Sun, Victor Gallardo, Marcos Nadal",
+  "year": 2018,
+  "url": "https://doi.org/10.1016/bs.pbr.2018.03.002",
+  "doi_isbn": "10.1016/bs.pbr.2018.03.002",
+  "source_type": "review",
+  "tier": "A",
+  "key_findings": [
+   "Critical review of whether processes underlying aesthetic preference are universal; field dominated by Western samples (as cited by later papers)"
+  ],
+  "practical_applications": [
+   "Treat Western findings as hypotheses for Thai audiences"
+  ],
+  "limitations": [
+   "Not read; abstract-level information only"
+  ],
+  "license": "copyrighted",
+  "access_status": "search_summary",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-26",
+  "modules": [
+   "M05",
+   "M06"
+  ]
+ },
+ {
+  "key": "KornellBjork2008",
+  "title": "Learning Concepts and Categories: Is Spacing the 'Enemy of Induction'?",
+  "authors": "Nate Kornell, Robert A. Bjork",
+  "year": 2008,
+  "url": "https://www.gwern.net/docs/spaced-repetition/2008-kornell.pdf",
+  "doi_isbn": "Psychological Science 19(6)",
+  "source_type": "empirical",
+  "tier": "A",
+  "key_findings": [
+   "Learning painters' styles: interleaved (spaced) study beat massed study for classifying new paintings (Exp 1a .61 vs .35, d = 0.99)",
+   "Learners judged massing more effective even after their own test showed the opposite"
+  ],
+  "practical_applications": [
+   "Train taste by mixing references from several styles side by side, not one style at a time; don't trust the feeling of fluency"
+  ],
+  "limitations": [
+   "Student samples; style recognition, not quality judgement"
+  ],
+  "license": "copyrighted",
+  "access_status": "full_text",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-26",
+  "modules": [
+   "M05",
+   "M06"
+  ]
+ },
+ {
+  "key": "Goldstone1998",
+  "title": "Perceptual learning",
+  "authors": "Robert L. Goldstone",
+  "year": 1998,
+  "url": "https://doi.org/10.1146/annurev.psych.49.1.585",
+  "doi_isbn": "10.1146/annurev.psych.49.1.585",
+  "source_type": "review",
+  "tier": "A",
+  "key_findings": [
+   "Four mechanisms: attention weighting, stimulus imprinting, differentiation, unitization",
+   "Draws on expert/novice and cross-cultural evidence"
+  ],
+  "practical_applications": [
+   "Taste training = learning where to look (weights), what differences exist (differentiation), seeing configurations as units"
+  ],
+  "limitations": [
+   "Read via abstract snippets and SEP summary"
+  ],
+  "license": "copyrighted",
+  "access_status": "search_summary",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-26",
+  "modules": [
+   "M05",
+   "M06"
+  ]
+ },
+ {
+  "key": "SEP_PerceptualLearning",
+  "title": "Perceptual Learning (Stanford Encyclopedia of Philosophy)",
+  "authors": "",
+  "year": null,
+  "url": "https://plato.stanford.edu/entries/perceptual-learning/",
+  "doi_isbn": "",
+  "source_type": "encyclopedia",
+  "tier": "B",
+  "key_findings": [
+   "Explains Goldstone's four mechanisms with examples (wine, /r/-/l/, expert athletes' gaze)",
+   "Ransom (2022): attention weighting and imprinting let experts perceive aesthetic properties; Nanay (2017): mere exposure undermines the argument from agreement",
+   "Debate whether training changes perception itself or only judgement (Fodor sceptical)"
+  ],
+  "practical_applications": [
+   "Expert eye is partly perceptual and domain-bound; train it on the domain you work in"
+  ],
+  "limitations": [
+   "Philosophical review"
+  ],
+  "license": "SEP copyright",
+  "access_status": "full_text",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-26",
+  "modules": [
+   "M05",
+   "M06"
+  ]
+ },
+ {
+  "key": "RansomGoldstone2024",
+  "title": "Bias in perceptual learning",
+  "authors": "Madeleine Ransom, Robert L. Goldstone",
+  "year": 2024,
+  "url": "https://doi.org/10.1002/wcs.1683",
+  "doi_isbn": "10.1002/wcs.1683",
+  "source_type": "review",
+  "tier": "A",
+  "key_findings": [
+   "Perceptual learning benefits are tied to the learner's narrow interests and training environment; when either changes, benefits can become liabilities (often temporary)"
+  ],
+  "practical_applications": [
+   "An eye trained on one platform/style can misjudge another: re-calibrate with fresh references when switching format"
+  ],
+  "limitations": [
+   "Abstract only"
+  ],
+  "license": "copyrighted",
+  "access_status": "abstract",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-26",
+  "modules": [
+   "M05",
+   "M06"
+  ]
+ },
+ {
+  "key": "HekkertVanWieringen1996",
+  "title": "Beauty in the Eye of Expert and Nonexpert Beholders: A Study in the Appraisal of Art",
+  "authors": "Paul Hekkert, Piet C. W. van Wieringen",
+  "year": 1996,
+  "url": "https://bvbvf1.bib-bvb.de/vufind/PrimoRecord/cdi_proquest_miscellaneous_57565259",
+  "doi_isbn": "",
+  "source_type": "empirical",
+  "tier": "A",
+  "key_findings": [
+   "Experts and non-experts agreed on originality but not on craftsmanship or quality",
+   "Originality-quality correlation r = .88 for experts vs .40 for non-experts"
+  ],
+  "practical_applications": [
+   "Experts reward originality much more than general audiences: decide which audience you design for"
+  ],
+  "limitations": [
+   "Abstract via search summary only; URL is the JSTOR stable link pattern and DOI not confirmed",
+   "Dutch sample of young artists' slides"
+  ],
+  "license": "copyrighted",
+  "access_status": "search_summary",
+  "verification_status": "unverified",
+  "date_accessed": "2026-11-26",
+  "modules": [
+   "M05",
+   "M06"
+  ]
+ },
+ {
+  "key": "LederGerger2014",
+  "title": "What makes an art expert? Emotion and evaluation in art appreciation",
+  "authors": "Helmut Leder, Gernot Gerger, David Brieber, Norbert Schwarz",
+  "year": 2014,
+  "url": "https://doi.org/10.1080/02699931.2013.870132",
+  "doi_isbn": "10.1080/02699931.2013.870132",
+  "source_type": "empirical",
+  "tier": "A",
+  "key_findings": [
+   "Experts showed attenuated emotional reactions (less extreme valence, less corrugator EMG) and liked negative art more; same for IAPS control pictures"
+  ],
+  "practical_applications": [
+   "Experts tolerate (and like) difficult/negative content more than general viewers: don't use a designer's comfort as proxy for audience comfort"
+  ],
+  "limitations": [
+   "Lab study, Vienna; abstract only"
+  ],
+  "license": "copyrighted",
+  "access_status": "abstract",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-26",
+  "modules": [
+   "M05",
+   "M06"
+  ]
+ },
+ {
+  "key": "Hekkert2006",
+  "title": "Design aesthetics: principles of pleasure in design",
+  "authors": "Paul Hekkert",
+  "year": 2006,
+  "url": "https://pure.tudelft.nl/ws/portalfiles/portal/54686438/Hekkert_P._Design_aesthetics_principles_of_pleasure_in_design.pdf",
+  "doi_isbn": "Psychology Science 48(2), 157-172",
+  "source_type": "review",
+  "tier": "A",
+  "key_findings": [
+   "Four principles: maximum effect for minimum means, unity in variety, MAYA (most advanced yet acceptable; Loewy), optimal match across senses",
+   "Typicality and novelty highly negatively correlated but not perfectly, so novelty can be raised while keeping typicality (Hekkert et al. 2003)",
+   "Agreement expected for unity-in-variety; MAYA leads to individual differences because typicality/novelty depend on exposure"
+  ],
+  "practical_applications": [
+   "Design-taste checklist: economy, unity with variety, novelty within the category frame, all senses saying the same thing"
+  ],
+  "limitations": [
+   "Theoretical/evolutionary framing; evidence mostly visual product studies"
+  ],
+  "license": "author copy (TU Delft)",
+  "access_status": "full_text",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-26",
+  "modules": [
+   "M05",
+   "M06"
+  ]
+ },
+ {
+  "key": "Hekkert2003",
+  "title": "'Most advanced, yet acceptable': Typicality and novelty as joint predictors of aesthetic preference in industrial design",
+  "authors": "Paul Hekkert, Dirk Snelders, Piet C. W. van Wieringen",
+  "year": 2003,
+  "url": "https://research.vu.nl/en/publications/most-advanced-yet-acceptable-typicality-and-novelty-as-joint-pred/",
+  "doi_isbn": "",
+  "source_type": "empirical",
+  "tier": "A",
+  "key_findings": [
+   "Typicality and novelty jointly predict preference for products (telephones, teakettles, cars) - as summarised in Hekkert2006"
+  ],
+  "practical_applications": [
+   "Push novelty only as far as the category stays recognisable"
+  ],
+  "limitations": [
+   "Not re-read this session beyond Hekkert2006 summary"
+  ],
+  "license": "copyrighted",
+  "access_status": "search_summary",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-26",
+  "modules": [
+   "M05",
+   "M06"
+  ]
+ },
+ {
+  "key": "Chamberlain2018",
+  "title": "Putting the Art in Artificial: Aesthetic Responses to Computer-generated Art",
+  "authors": "Rebecca Chamberlain, Caitlin Mullin, Bram Scheerlinck, Johan Wagemans",
+  "year": 2018,
+  "url": "https://research.gold.ac.uk/id/eprint/20443",
+  "doi_isbn": "",
+  "source_type": "empirical",
+  "tier": "A",
+  "key_findings": [
+   "Bias against art categorised as computer-generated; explicit prejudice driven largely by beliefs about what algorithms can produce; reproduced for robotic art"
+  ],
+  "practical_applications": [
+   "Viewers' beliefs about the maker change value; show human intent/process when AI is involved"
+  ],
+  "limitations": [
+   "Pre-diffusion era; abstract via search"
+  ],
+  "license": "copyrighted",
+  "access_status": "search_summary",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-26",
+  "modules": [
+   "M05",
+   "M06"
+  ]
+ },
+ {
+  "key": "ZhouLee2024",
+  "title": "Generative artificial intelligence, human creativity, and art",
+  "authors": "Eric Zhou, Dokyun Lee",
+  "year": 2024,
+  "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10914360",
+  "doi_isbn": "10.1093/pnasnexus/pgae052",
+  "source_type": "empirical",
+  "tier": "A",
+  "key_findings": [
+   "4M+ artworks, ~53,000 artists, ~5,800 AI adopters; difference-in-differences",
+   "Productivity up (~50% in adoption month); favourites per view up from ~2% to ~3% by month 6",
+   "Average content novelty and average + peak visual novelty declined (convergence to a preferred style); peak content novelty marginally rose",
+   "Artists rewarded for exploring new concepts with AI, penalised for using AI to explore new visual styles"
+  ],
+  "practical_applications": [
+   "The 'AI look' is measurable convergence of visual style: put novelty in the idea and keep a deliberate house style"
+  ],
+  "limitations": [
+   "Observational; one platform; adoption detected by tags; process not observed"
+  ],
+  "license": "CC BY (PNAS Nexus)",
+  "access_status": "full_text",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-26",
+  "modules": [
+   "M05",
+   "M06"
+  ]
+ },
+ {
+  "key": "Holzner2025",
+  "title": "Generative AI and Creativity: A Systematic Literature Review and Meta-Analysis",
+  "authors": "Niklas Holzner, Sebastian Maier, Stefan Feuerriegel",
+  "year": 2025,
+  "url": "https://arxiv.org/abs/2505.17241",
+  "doi_isbn": "arXiv:2505.17241",
+  "source_type": "meta-analysis",
+  "tier": "S",
+  "key_findings": [
+   "28 studies, 8,214 participants: GenAI alone vs humans g = -0.05 (ns); humans+GenAI vs humans alone g = 0.27; diversity of ideas g = -0.86 (homogenisation)"
+  ],
+  "practical_applications": [
+   "Use AI to raise individual output but add explicit diversity steps (many directions, human selection, references outside the model)"
+  ],
+  "limitations": [
+   "Preprint; mostly text/ideation tasks, not images"
+  ],
+  "license": "arXiv licence",
+  "access_status": "abstract",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-26",
+  "modules": [
+   "M05",
+   "M06"
+  ]
+ },
+ {
+  "key": "Taylor2026LAP",
+  "title": "The Algorithmic Gaze of Image Quality Assessment: An Audit and Trace Ethnography of the LAION-Aesthetics Predictor",
+  "authors": "Jordan Taylor, William Agnew, Maarten Sap, Sarah E. Fox, Haiyi Zhu",
+  "year": 2026,
+  "url": "https://arxiv.org/abs/2601.09896",
+  "doi_isbn": "10.1145/3805689.3806462",
+  "source_type": "empirical",
+  "tier": "A",
+  "key_findings": [
+   "LAION-Aesthetics Predictor (CLIP + MLP) curated LAION-Aesthetics used to pre-train early Stable Diffusion",
+   "Favours realistic landscapes, cityscapes and portraits, Western and Japanese 2-D art; abstract art and 3-D artefacts score low; no African/Native American/Oceanic MET object scored >= 6.5",
+   "Captions mentioning women more likely kept at 6.5+; men and LGBTQ+ more likely filtered out",
+   "Training ratings from English-speaking photographers (AVA) and Western AI enthusiasts; model built largely by one person's choices"
+  ],
+  "practical_applications": [
+   "Generic 'AI beauty' partly comes from what aesthetic filters rewarded: realistic, pretty, Western-photographic; counter it deliberately"
+  ],
+  "limitations": [
+   "Preprint to appear at FAccT 2026; one predictor; correlational caption analysis"
+  ],
+  "license": "CC BY 4.0",
+  "access_status": "full_text",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-26",
+  "modules": [
+   "M05",
+   "M06"
+  ]
+ },
+ {
+  "key": "Murray2012",
+  "title": "AVA: A large-scale database for aesthetic visual analysis",
+  "authors": "Naila Murray, Luca Marchesotti, Florent Perronnin",
+  "year": 2012,
+  "url": "https://mlanthology.org/cvpr/2012/murray2012cvpr-ava",
+  "doi_isbn": "10.1109/CVPR.2012.6247954",
+  "source_type": "empirical",
+  "tier": "A",
+  "key_findings": [
+   "250,000+ images with aesthetic scores, 60+ semantic labels and photographic style labels"
+  ],
+  "practical_applications": [
+   "Know that most aesthetic-score models are trained on photo-contest ratings"
+  ],
+  "limitations": [
+   "Not read; abstract via search"
+  ],
+  "license": "copyrighted",
+  "access_status": "search_summary",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-26",
+  "modules": [
+   "M05",
+   "M06"
+  ]
+ },
+ {
+  "key": "Talebi2018",
+  "title": "NIMA: Neural Image Assessment",
+  "authors": "Hossein Talebi, Peyman Milanfar",
+  "year": 2018,
+  "url": "https://arxiv.org/abs/1709.05424",
+  "doi_isbn": "arXiv:1709.05424",
+  "source_type": "empirical",
+  "tier": "A",
+  "key_findings": [
+   "Predicts the distribution of 1-10 ratings rather than one mean; AVA ~255,000 photos, ~200 raters each; about half of AVA photos have rating SD > 1.4"
+  ],
+  "practical_applications": [
+   "High rater disagreement is built into 'aesthetic score': use scores to filter technical junk, not to pick the creative winner"
+  ],
+  "limitations": [
+   "Search summary only (Google Research blog + arXiv listing)"
+  ],
+  "license": "copyrighted",
+  "access_status": "search_summary",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-26",
+  "modules": [
+   "M05",
+   "M06"
+  ]
+ },
+ {
+  "key": "PreferenceModeCollapse2025",
+  "title": "Taming Preference Mode Collapse via Directional Decoupling Alignment (arXiv:2512.24146)",
+  "authors": "",
+  "year": 2025,
+  "url": "https://arxiv.org/abs/2512.24146",
+  "doi_isbn": "arXiv:2512.24146",
+  "source_type": "empirical",
+  "tier": "B",
+  "key_findings": [
+   "Names 'preference mode collapse': reward-driven fine-tuning of text-to-image models pushes outputs toward narrow high-scoring styles (e.g. monolithic styles, overexposure); proposes DivGenBench"
+  ],
+  "practical_applications": [
+   "Expect default outputs of preference-tuned models to converge; prompt and select against the default"
+  ],
+  "limitations": [
+   "Preprint; authors not recorded; search summary only"
+  ],
+  "license": "arXiv licence",
+  "access_status": "search_summary",
+  "verification_status": "unverified",
+  "date_accessed": "2026-11-26",
+  "modules": [
+   "M05",
+   "M06"
+  ]
+ },
+ {
+  "key": "Jory_ThaiManners",
+  "title": "A History of Manners and Civility in Thailand (Introduction: Manners and the Thai Habitus)",
+  "authors": "Patrick Jory",
+  "year": null,
+  "url": "https://assets.cambridge.org/97811084/91242/excerpt/9781108491242_excerpt.pdf",
+  "doi_isbn": "ISBN 978-1-108-49124-2",
+  "source_type": "textbook",
+  "tier": "A",
+  "key_findings": [
+   "Official Thai conception of manners linked to deference, discipline and orderliness (khwam riap roi)",
+   "Kepner: 'nearly obsessive concern with how people look, move, stand, walk, sit, dress'; Van Esterik: kala thesa = heightened awareness of social context guiding dress, talk, action",
+   "Uses Bourdieu/Elias habitus; Thai near-equivalent jarit"
+  ],
+  "practical_applications": [
+   "Thai visual taste for public-facing work: neatness, appropriateness to occasion (kalatesa), respect cues - test before going 'raw/messy'"
+  ],
+  "limitations": [
+   "Read only the publisher excerpt (introduction); history of manners, not a preference study; year not confirmed"
+  ],
+  "license": "copyrighted (excerpt)",
+  "access_status": "publisher_page",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-26",
+  "modules": [
+   "M05",
+   "M06"
+  ]
+ },
+ {
+  "key": "Pittayamatee2020",
+  "title": "Aesthetic Experience from Thai Colors",
+  "authors": "Pairoj Pittayamatee",
+  "year": 2020,
+  "url": "https://so02.tci-thaijo.org/index.php/jfa/article/view/240983",
+  "doi_isbn": "",
+  "source_type": "empirical",
+  "tier": "B",
+  "key_findings": [
+   "Documents traditional Thai pigments (names, largely obsolete production), links colours to Buddhist symbolism (e.g. red/vermillion and heaven), builds a colour reference and three installations"
+  ],
+  "practical_applications": [
+   "Source for a Thai traditional palette with meanings, instead of generic 'Thai = gold + red'"
+  ],
+  "limitations": [
+   "Practice-based research; abstract only"
+  ],
+  "license": "unknown",
+  "access_status": "abstract",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-26",
+  "modules": [
+   "M05",
+   "M06"
+  ]
+ },
+ {
+  "key": "Glass_TasteGap",
+  "title": "The Taste Gap: Ira Glass on the Secret of Creative Success (The Marginalian)",
+  "authors": "Maria Popova (quoting Ira Glass)",
+  "year": 2014,
+  "url": "https://www.themarginalian.org/2014/01/29/ira-glass-success-daniel-sax/",
+  "doi_isbn": "",
+  "source_type": "practitioner",
+  "tier": "D",
+  "key_findings": [
+   "Glass: beginners have good taste but early work falls short; 'everybody goes through that'; remedy is a large volume of work on deadlines"
+  ],
+  "practical_applications": [
+   "Use volume + deadlines + comparison to close the gap; not a research finding"
+  ],
+  "limitations": [
+   "Anecdotal craft advice; original interview date/place not given on the page"
+  ],
+  "license": "copyrighted",
+  "access_status": "full_text",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-26",
+  "modules": [
+   "M05",
+   "M06"
+  ]
+ },
+ {
+  "key": "SEP_HumeAesthetics",
+  "title": "Hume's Aesthetics (Stanford Encyclopedia of Philosophy)",
+  "authors": "",
+  "year": null,
+  "url": "https://plato.stanford.edu/entries/hume-aesthetics/",
+  "doi_isbn": "",
+  "source_type": "encyclopedia",
+  "tier": "B",
+  "key_findings": [
+   "Standard of taste = joint verdict of true judges: strong sense, delicacy, practice, comparison, freedom from prejudice (read 2026-11-25 for M06)"
+  ],
+  "practical_applications": [
+   "Basis of critique protocol"
+  ],
+  "limitations": [
+   "Reused from M06; not re-read this session"
+  ],
+  "license": "SEP copyright",
+  "access_status": "full_text",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-26",
+  "modules": [
+   "M05",
+   "M06"
+  ]
+ },
+ {
+  "key": "SEP_KantAesthetics",
+  "title": "Kant's Aesthetics and Teleology (Stanford Encyclopedia of Philosophy)",
+  "authors": "",
+  "year": null,
+  "url": "https://plato.stanford.edu/entries/kant-aesthetics/",
+  "doi_isbn": "",
+  "source_type": "encyclopedia",
+  "tier": "B",
+  "key_findings": [
+   "Judgement of beauty: disinterested, claims universal validity without rules; free vs adherent beauty (read 2026-11-25 for M06)"
+  ],
+  "practical_applications": [
+   "Commercial work = adherent beauty, judged against purpose"
+  ],
+  "limitations": [
+   "Reused from M06; not re-read this session"
+  ],
+  "license": "SEP copyright",
+  "access_status": "full_text",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-26",
+  "modules": [
+   "M05",
+   "M06"
+  ]
+ }
+]

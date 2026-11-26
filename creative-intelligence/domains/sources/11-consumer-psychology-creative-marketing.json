@@ -1,0 +1,1603 @@
+[
+ {
+  "key": "Scott1903",
+  "title": "The Theory of Advertising: A Simple Exposition of the Principles of Psychology in Their Relation to Successful Advertising",
+  "authors": "Scott, W. D.",
+  "year": 1903,
+  "url": "https://www.ebsco.com/research-starters/history/scott-publishes-theory-advertising",
+  "doi_isbn": "",
+  "source_type": "primary_text",
+  "tier": "B",
+  "key_findings": [
+   "(EBSCO research starter / catalogue records) One of the first books applying psychology to advertising; offers rules for attracting attention. Later editions retitled (Psychology of Advertising, 1908). Reviewed by E. L. Thorndike in 1904."
+  ],
+  "practical_applications": [
+   "History: advertising psychology began as applied attention/suggestion psychology, long before modern evidence standards."
+  ],
+  "limitations": [
+   "Content not read; edition/title confusion across scans."
+  ],
+  "license": "public domain (1903)",
+  "access_status": "search_summary",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-26",
+  "modules": [
+   "M27",
+   "M28",
+   "M29"
+  ]
+ },
+ {
+  "key": "Bernays1928",
+  "title": "Propaganda",
+  "authors": "Bernays, E. L.",
+  "year": 1928,
+  "url": "https://www.gutenberg.org/ebooks/78634",
+  "doi_isbn": "",
+  "source_type": "primary_text",
+  "tier": "B",
+  "key_findings": [
+   "Chapter I 'Organizing Chaos' opens by calling 'the conscious and intelligent manipulation of the organized habits and opinions of the masses' an important element in democratic society (quoted in search excerpts; text on Project Gutenberg #78634)."
+  ],
+  "practical_applications": [
+   "History/ethics: the founding text of PR openly frames persuasion as manipulation by an elite - the reason modern codes insist on transparency."
+  ],
+  "limitations": [
+   "Only the opening passage seen via search; full text not read this session."
+  ],
+  "license": "public domain (Project Gutenberg)",
+  "access_status": "search_summary",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-26",
+  "modules": [
+   "M27",
+   "M28",
+   "M29"
+  ]
+ },
+ {
+  "key": "Ogilvy1963",
+  "title": "Confessions of an Advertising Man",
+  "authors": "Ogilvy, D.",
+  "year": 1963,
+  "url": "https://en.wikipedia.org/wiki/Confessions_of_an_Advertising_Man",
+  "doi_isbn": "",
+  "source_type": "practitioner",
+  "tier": "D",
+  "key_findings": [
+   "Published by Atheneum, 1963; >1,000,000 copies printed by 2008; widely assigned in advertising courses (secondary listings)."
+  ],
+  "practical_applications": [
+   "History: practitioner canon of research-led copy (headlines, facts, brand image)."
+  ],
+  "limitations": [
+   "Practitioner memoir, not evidence; the famous 'consumer isn't a moron' line could not be verified in the text this session."
+  ],
+  "license": "copyrighted",
+  "access_status": "search_summary",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-26",
+  "modules": [
+   "M27",
+   "M28",
+   "M29"
+  ]
+ },
+ {
+  "key": "AdAge1999_Century",
+  "title": "Ad Age Advertising Century: Top 100 Advertising Campaigns",
+  "authors": "Advertising Age",
+  "year": 1999,
+  "url": "https://www.appstate.edu/~bodorw/Ad%20News%20&%20Articles/Ad_News%20_Articles/Ad%20Age%20Advertising%20Century_%20Top%20100%20Advertising%20Campaigns.pdf",
+  "doi_isbn": "",
+  "source_type": "docs",
+  "tier": "C",
+  "key_findings": [
+   "Ranks Volkswagen 'Think Small' (Doyle Dane Bernbach, 1959) as no. 1 campaign of the 20th century (list dated 29 March 1999 per secondary sources)."
+  ],
+  "practical_applications": [
+   "Case: the 'creative revolution' (Bernbach) - honest, self-deprecating copy and art+copy teams."
+  ],
+  "limitations": [
+   "Industry ranking by jury opinion, not an effectiveness measure; original adage.com page not retrieved (reprint only via search)."
+  ],
+  "license": "copyrighted",
+  "access_status": "search_summary",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-26",
+  "modules": [
+   "M27",
+   "M28",
+   "M29"
+  ]
+ },
+ {
+  "key": "KotlerLevy1969",
+  "title": "Broadening the Concept of Marketing",
+  "authors": "Kotler, P.; Levy, S. J.",
+  "year": 1969,
+  "url": "https://doi.org/10.1177/002224296903300103",
+  "doi_isbn": "10.1177/002224296903300103",
+  "source_type": "empirical",
+  "tier": "A",
+  "key_findings": [
+   "Argues marketing is a pervasive societal activity beyond selling goods; asks whether marketing principles transfer to non-business organisations, persons and ideas."
+  ],
+  "practical_applications": [
+   "History: why 'marketing' now covers clinics, causes, creators and personal brands - and why the same ethics apply."
+  ],
+  "limitations": [
+   "Conceptual essay, no data."
+  ],
+  "license": "copyrighted",
+  "access_status": "abstract",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-26",
+  "modules": [
+   "M27",
+   "M28",
+   "M29"
+  ]
+ },
+ {
+  "key": "KahnemanTversky1979",
+  "title": "Prospect Theory: An Analysis of Decision under Risk",
+  "authors": "Kahneman, D.; Tversky, A.",
+  "year": 1979,
+  "url": "https://doi.org/10.2307/1914185",
+  "doi_isbn": "10.2307/1914185",
+  "source_type": "empirical",
+  "tier": "A",
+  "key_findings": [
+   "Value assigned to gains and losses relative to a reference point; value function concave for gains, convex for losses, steeper for losses; certainty and isolation effects; same choice in different forms gives inconsistent preferences."
+  ],
+  "practical_applications": [
+   "Framing of offers (gain vs loss, reference price) - basis of behavioural-economics marketing."
+  ],
+  "limitations": [
+   "Lab choices over money gambles; transfer to ad copy is indirect."
+  ],
+  "license": "copyrighted",
+  "access_status": "abstract",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-26",
+  "modules": [
+   "M27",
+   "M28",
+   "M29"
+  ]
+ },
+ {
+  "key": "Thaler2017Nobel",
+  "title": "The Prize in Economic Sciences 2017 - Press release",
+  "authors": "Royal Swedish Academy of Sciences",
+  "year": 2017,
+  "url": "https://www.nobelprize.org/prizes/economic-sciences/2017/press-release/",
+  "doi_isbn": "",
+  "source_type": "docs",
+  "tier": "B",
+  "key_findings": [
+   "Thaler awarded 'for his contributions to behavioural economics': limited rationality, social preferences, self-control; mental accounting; endowment effect; coined 'nudge'."
+  ],
+  "practical_applications": [
+   "History: behavioural economics entered marketing practice mainly through Thaler/Kahneman popularisation."
+  ],
+  "limitations": [
+   "Press release; prize is not evidence that every nudge works (see Maier2022)."
+  ],
+  "license": "unknown",
+  "access_status": "search_summary",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-26",
+  "modules": [
+   "M27",
+   "M28",
+   "M29"
+  ]
+ },
+ {
+  "key": "PettyCacioppo1986",
+  "title": "The Elaboration Likelihood Model of Persuasion",
+  "authors": "Petty, R. E.; Cacioppo, J. T.",
+  "year": 1986,
+  "url": "https://doi.org/10.1016/S0065-2601(08)60214-2",
+  "doi_isbn": "10.1016/S0065-2601(08)60214-2",
+  "source_type": "review",
+  "tier": "A",
+  "key_findings": [
+   "Original ELM statement (Advances in Experimental Social Psychology 19): central vs peripheral routes depending on motivation and ability to elaborate (bibliographic; >11,000 citations per OpenAlex)."
+  ],
+  "practical_applications": [
+   "Diagnose each piece: is the viewer able/motivated to think (high-involvement purchase) or scrolling (peripheral cues)?"
+  ],
+  "limitations": [
+   "Chapter not read this session; content stated only as commonly summarised by Kitchen2014."
+  ],
+  "license": "copyrighted",
+  "access_status": "bibliographic",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-26",
+  "modules": [
+   "M27",
+   "M28",
+   "M29"
+  ]
+ },
+ {
+  "key": "Chaiken1980",
+  "title": "Heuristic versus systematic information processing and the use of source versus message cues in persuasion",
+  "authors": "Chaiken, S.",
+  "year": 1980,
+  "url": "https://doi.org/10.1037/0022-3514.39.5.752",
+  "doi_isbn": "10.1037/0022-3514.39.5.752",
+  "source_type": "empirical",
+  "tier": "A",
+  "key_findings": [
+   "High involvement: opinion change driven by number of arguments, not communicator likability; low involvement: driven by likable communicator, not arguments.",
+   "Content-mediated (systematic) opinion change persisted longer than source-mediated change."
+  ],
+  "practical_applications": [
+   "Low-involvement scroll content: likable, credible source matters; consideration content (lens choice, price): real arguments matter and last longer."
+  ],
+  "limitations": [
+   "Student samples, 1980 print messages."
+  ],
+  "license": "copyrighted",
+  "access_status": "abstract",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-26",
+  "modules": [
+   "M27",
+   "M28",
+   "M29"
+  ]
+ },
+ {
+  "key": "Kitchen2014",
+  "title": "The elaboration likelihood model: review, critique and research agenda",
+  "authors": "Kitchen, P. J.; Kerr, G.; Schultz, D. E.; McColl, R.; Pals, H.",
+  "year": 2014,
+  "url": "https://doi.org/10.1108/EJM-12-2011-0776",
+  "doi_isbn": "10.1108/EJM-12-2011-0776",
+  "source_type": "review",
+  "tier": "A",
+  "key_findings": [
+   "Critiques ELM: descriptive nature, continuum questions (how people move between routes), multi-channel processing, mediating variables, need for replication; questions relevance to modern multi-media contexts.",
+   "Companion JAR replication (Kerr, Schultz & Kitchen) suggested planning frameworks built on ELM may not reflect digital consumers (search summary)."
+  ],
+  "practical_applications": [
+   "Use ELM as a diagnostic lens, not a predictive law; both routes can run at once."
+  ],
+  "limitations": [
+   "Conceptual review."
+  ],
+  "license": "copyrighted",
+  "access_status": "abstract",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-26",
+  "modules": [
+   "M27",
+   "M28",
+   "M29"
+  ]
+ },
+ {
+  "key": "MacKenzie1986",
+  "title": "The Role of Attitude toward the Ad as a Mediator of Advertising Effectiveness: A Test of Competing Explanations",
+  "authors": "MacKenzie, S. B.; Lutz, R. J.; Belch, G. E.",
+  "year": 1986,
+  "url": "https://doi.org/10.1177/002224378602300205",
+  "doi_isbn": "10.1177/002224378602300205",
+  "source_type": "empirical",
+  "tier": "A",
+  "key_findings": [
+   "Structural-equation test of four models; dual mediation (A-ad affects brand attitude directly and via brand cognitions) fit best in a commercial pretest setting."
+  ],
+  "practical_applications": [
+   "Liking the ad itself transfers to the brand - craft quality is not decoration."
+  ],
+  "limitations": [
+   "Pretest setting; conditions specific."
+  ],
+  "license": "copyrighted",
+  "access_status": "abstract",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-26",
+  "modules": [
+   "M27",
+   "M28",
+   "M29"
+  ]
+ },
+ {
+  "key": "BrownStayman1992",
+  "title": "Antecedents and Consequences of Attitude Toward the Ad: A Meta-Analysis",
+  "authors": "Brown, S. P.; Stayman, D. M.",
+  "year": 1992,
+  "url": "https://doi.org/10.1086/209284",
+  "doi_isbn": "10.1086/209284",
+  "source_type": "meta-analysis",
+  "tier": "S",
+  "key_findings": [
+   "Meta-analysis of A-ad relationships; significant between-study variance moderated by method variables; supports dual-mediation model with a larger indirect path (A-ad -> brand cognitions -> brand attitude)."
+  ],
+  "practical_applications": [
+   "Ad liking matters most when it makes people think better of the brand's attributes."
+  ],
+  "limitations": [
+   "Mostly lab studies with forced exposure; 1992."
+  ],
+  "license": "copyrighted",
+  "access_status": "abstract",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-26",
+  "modules": [
+   "M27",
+   "M28",
+   "M29"
+  ]
+ },
+ {
+  "key": "HeathNairn2005",
+  "title": "Measuring affective advertising: Implications of low attention processing on recall",
+  "authors": "Heath, R.; Nairn, A.",
+  "year": 2005,
+  "url": "https://doi.org/10.1017/S0021849905050282",
+  "doi_isbn": "10.1017/S0021849905050282",
+  "source_type": "empirical",
+  "tier": "A",
+  "key_findings": [
+   "JAR 45(2):269-281. Proponent paper: argues claimed ad awareness (recall) underestimates the effect of emotional advertising compared with recognition-based measures (per search summary)."
+  ],
+  "practical_applications": [
+   "Recall-only metrics can undervalue emotional/brand pieces."
+  ],
+  "limitations": [
+   "Abstract not retrieved; findings stated from search summary only."
+  ],
+  "license": "copyrighted",
+  "access_status": "bibliographic",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-26",
+  "modules": [
+   "M27",
+   "M28",
+   "M29"
+  ]
+ },
+ {
+  "key": "Ipsos2006_HAP",
+  "title": "High Attention Processing: The Real Power of Advertising",
+  "authors": "Ipsos ASI (reprinted from Admap)",
+  "year": 2006,
+  "url": "https://www.ipsos.com/en-us/high-attention-processing-real-power-advertising",
+  "doi_isbn": "",
+  "source_type": "practitioner",
+  "tier": "C",
+  "key_findings": [
+   "Pre-test database: 97,083 respondents, 512 ads, 65 categories, US FMCG. Ads processed with high attention (recalled) had >2.5x the brand-choice impact of low-attention (recognised only) and ~6x ultra-low; new products: 9.8% vs 3.2% vs 1.4%.",
+   "States Heath's evidence was mainly case studies/anecdotes ('paucity of hard evidence')."
+  ],
+  "practical_applications": [
+   "Counter-evidence to over-reading 'low attention is enough'."
+  ],
+  "limitations": [
+   "Commercial research firm with a stake in recall-based testing; not peer-reviewed; forced TV-program exposure."
+  ],
+  "license": "copyrighted",
+  "access_status": "full_text",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-26",
+  "modules": [
+   "M27",
+   "M28",
+   "M29"
+  ]
+ },
+ {
+  "key": "Pham2013_IJRM",
+  "title": "The influence of ad-evoked feelings on brand evaluations: Empirical generalizations from consumer responses to more than 1000 TV commercials",
+  "authors": "Pham, M. T.; Geuens, M.; De Pelsmacker, P.",
+  "year": 2013,
+  "url": "https://doi.org/10.1016/j.ijresmar.2013.04.004",
+  "doi_isbn": "10.1016/j.ijresmar.2013.04.004",
+  "source_type": "empirical",
+  "tier": "A",
+  "key_findings": [
+   "1,576 Belgian consumers x 1,070 TV commercials, 150+ categories: ad-evoked feelings substantially affect brand evaluations, directly and via attitude toward the ad; not dependent on category involvement; somewhat stronger for hedonic than utilitarian products."
+  ],
+  "practical_applications": [
+   "Feelings matter even for 'rational' categories like optical; a bit more for fashion frames/sunglasses than for lens tech."
+  ],
+  "limitations": [
+   "Read via search summaries of abstract (author PDF exists, not opened); TV, Belgium."
+  ],
+  "license": "copyrighted",
+  "access_status": "search_summary",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-26",
+  "modules": [
+   "M27",
+   "M28",
+   "M29"
+  ]
+ },
+ {
+  "key": "Ehrenberg1990_DJ",
+  "title": "Double Jeopardy Revisited",
+  "authors": "Ehrenberg, A. S. C.; Goodhardt, G. J.; Barwise, T. P.",
+  "year": 1990,
+  "url": "https://doi.org/10.1177/002224299005400307",
+  "doi_isbn": "10.1177/002224299005400307",
+  "source_type": "review",
+  "tier": "A",
+  "key_findings": [
+   "Small brands have far fewer buyers and those buyers buy slightly less often ('double jeopardy'); reviews wide empirical evidence, theories, exceptions and implications."
+  ],
+  "practical_applications": [
+   "Growth for a small shop mostly means more buyers (reach/penetration), not squeezing loyalty from a few."
+  ],
+  "limitations": [
+   "Repeat-purchase categories; eyewear is infrequent purchase - pattern plausible but untested for it."
+  ],
+  "license": "copyrighted",
+  "access_status": "abstract",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-26",
+  "modules": [
+   "M27",
+   "M28",
+   "M29"
+  ]
+ },
+ {
+  "key": "RomaniukSharp2004",
+  "title": "Conceptualizing and measuring brand salience",
+  "authors": "Romaniuk, J.; Sharp, B.",
+  "year": 2004,
+  "url": "https://doi.org/10.1177/1470593104047643",
+  "doi_isbn": "10.1177/1470593104047643",
+  "source_type": "review",
+  "tier": "A",
+  "key_findings": [
+   "Brand salience = the brand's propensity to be noticed or come to mind in buying situations; reflects quantity and quality of memory structures; broader than top-of-mind awareness."
+  ],
+  "practical_applications": [
+   "Plan content around buying situations (category entry points), not just 'awareness'."
+  ],
+  "limitations": [
+   "Conceptual; measurement proposed, not validated here."
+  ],
+  "license": "copyrighted",
+  "access_status": "abstract",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-26",
+  "modules": [
+   "M27",
+   "M28",
+   "M29"
+  ]
+ },
+ {
+  "key": "Sharp2010",
+  "title": "How Brands Grow: What Marketers Don't Know",
+  "authors": "Sharp, B.",
+  "year": 2010,
+  "url": "https://www.oup.com.au/books/higher-education/business-marketing/9780195573565",
+  "doi_isbn": "9780195573565",
+  "source_type": "textbook",
+  "tier": "B",
+  "key_findings": [
+   "(Bibliographic + review summaries) Brands grow mainly via penetration; double jeopardy; mental and physical availability; distinctiveness over perceived differentiation. Reviewers note partial use of evidence and that it does not study how brands become established."
+  ],
+  "practical_applications": [
+   "Reach broadly, be easy to notice/recognise/buy; keep distinctive assets constant."
+  ],
+  "limitations": [
+   "Book not read; critiques came from reviews (search summary)."
+  ],
+  "license": "copyrighted",
+  "access_status": "bibliographic",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-26",
+  "modules": [
+   "M27",
+   "M28",
+   "M29"
+  ]
+ },
+ {
+  "key": "EBI_AnsweringCritics",
+  "title": "Answering critics",
+  "authors": "Sharp, B. (Ehrenberg-Bass Institute)",
+  "year": null,
+  "url": "https://marketingscience.info/news-and-insights/answering-critics",
+  "doi_isbn": "",
+  "source_type": "practitioner",
+  "tier": "C",
+  "key_findings": [
+   "Rebuts critiques: growth is mainly penetration but bigger brands also have slightly higher loyalty (the 'double' in DJ); cites longitudinal work (McDonald & Ehrenberg 2003; Graham 2012; JBR 2014); says attitude-predicts-behaviour findings reflect regression to the mean; asks critics to publish data."
+  ],
+  "practical_applications": [
+   "Use the laws as base rates; treat 'loyalty is dead' as a misreading."
+  ],
+  "limitations": [
+   "Self-defence by the school's director; undated (~10 years old)."
+  ],
+  "license": "copyrighted",
+  "access_status": "full_text",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-26",
+  "modules": [
+   "M27",
+   "M28",
+   "M29"
+  ]
+ },
+ {
+  "key": "BinetField2013",
+  "title": "The Long and the Short of It: Balancing Short and Long-Term Marketing Strategies (and follow-ups, as described by IPA)",
+  "authors": "Binet, L.; Field, P. (IPA); blog by Hoad, A.",
+  "year": 2013,
+  "url": "https://ipa.co.uk/knowledge/ipa-blog/the-next-chapter-for-the-long-and-the-short-of-it/",
+  "doi_isbn": "",
+  "source_type": "practitioner",
+  "tier": "C",
+  "key_findings": [
+   "IPA (2013) report found ~60:40 brand-building:activation budget sweet spot; Effectiveness in Context (2018) 62:38; as short-term campaigns rose, very large business effects in IPA cases fell; cited in 70+ academic works (IPA blog, 13 Sep 2023)."
+  ],
+  "practical_applications": [
+   "Keep a standing brand-building line (story carousels, brand clips) beside promos."
+  ],
+  "limitations": [
+   "Report itself not read; ratio is an average across categories (Field), not a rule; data pre-COVID."
+  ],
+  "license": "copyrighted",
+  "access_status": "publisher_page",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-26",
+  "modules": [
+   "M27",
+   "M28",
+   "M29"
+  ]
+ },
+ {
+  "key": "Murrell_LongShort",
+  "title": "Les Binet and Peter Field: The Long and the Short of It (summary)",
+  "authors": "Murrell, A.",
+  "year": null,
+  "url": "https://www.alexmurrell.co.uk/summaries/les-binet-and-peter-field-the-long-and-the-short-of-it",
+  "doi_isbn": "",
+  "source_type": "practitioner",
+  "tier": "D",
+  "key_findings": [
+   "Summary: 996 IPA-entered campaigns 1980-2010; emotional campaigns ~2x as likely to give top-box profit growth long-term; recruitment beats loyalty campaigns; share of voice above market share predicts growth; fame campaigns strongest."
+  ],
+  "practical_applications": [
+   "Emotional/fame-oriented brand work for long-term; activation for now."
+  ],
+  "limitations": [
+   "Blog summary with an internal contradiction; no methods; correlational IPA data."
+  ],
+  "license": "copyrighted",
+  "access_status": "full_text",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-26",
+  "modules": [
+   "M27",
+   "M28",
+   "M29"
+  ]
+ },
+ {
+  "key": "IPA_GuildCritique",
+  "title": "Good, better, best and f*** the rest? (IPA blog, Binet response to Harry Guild's critique)",
+  "authors": "Binet, L. (IPA blog)",
+  "year": null,
+  "url": "https://ipa.co.uk/knowledge/ipa-blog/good-better-best-and-fstarstarstar-the-rest/",
+  "doi_isbn": "",
+  "source_type": "practitioner",
+  "tier": "C",
+  "key_findings": [
+   "Critic (Guild, BBH) argues IPA databank is a biased sample of award entries and correlations mislead; Binet concedes sample 'still somewhat biased' even including rejected cases, defends variation as sufficient."
+  ],
+  "practical_applications": [
+   "Treat IPA findings as strong practitioner evidence, not causal proof."
+  ],
+  "limitations": [
+   "Search summary only."
+  ],
+  "license": "copyrighted",
+  "access_status": "search_summary",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-26",
+  "modules": [
+   "M27",
+   "M28",
+   "M29"
+  ]
+ },
+ {
+  "key": "ReinartzSaffert2013",
+  "title": "Creativity in Advertising: When It Works and When It Doesn't",
+  "authors": "Reinartz, W. J.; Saffert, P.",
+  "year": 2013,
+  "url": "https://hbr.org/2013/06/creativity-in-advertising-when-it-works-and-when-it-doesnt",
+  "doi_isbn": "R1306H",
+  "source_type": "practitioner",
+  "tier": "B",
+  "key_findings": [
+   "HBR June 2013 (page metadata read). Per secondary summaries: 437 German TV campaigns for 90 FMCG brands (2005-2010) rated on five creativity dimensions (originality, flexibility, elaboration, synthesis, artistic value) and linked to sales; elaboration had a stronger sales effect than originality; creativity paid most in low-creativity categories."
+  ],
+  "practical_applications": [
+   "Elaboration = rich, detailed execution of one idea: detail punch-ins, material close-ups, worked-out scenes."
+  ],
+  "limitations": [
+   "Body text paywalled; numbers from student slides/summaries only - do not quote figures; FMCG Germany."
+  ],
+  "license": "copyrighted",
+  "access_status": "search_summary",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-26",
+  "modules": [
+   "M27",
+   "M28",
+   "M29"
+  ]
+ },
+ {
+  "key": "Rosengren2020",
+  "title": "A Meta-Analysis of When and How Advertising Creativity Works",
+  "authors": "Rosengren, S.; Eisend, M.; Koslow, S.; Dahlen, M.",
+  "year": 2020,
+  "url": "https://doi.org/10.1177/0022242920929288",
+  "doi_isbn": "10.1177/0022242920929288",
+  "source_type": "meta-analysis",
+  "tier": "S",
+  "key_findings": [
+   "93 data sets, 67 papers, 878 effect sizes: robust positive effects of ad creativity; both originality and appropriateness matter; stronger for high-involvement products; affect transfer, processing and signalling jointly explain effects (originality -> affect transfer, appropriateness -> signalling); calls for sales and digital research."
+  ],
+  "practical_applications": [
+   "Novel AND on-brief; for considered purchases (lenses, premium frames) creativity pays more."
+  ],
+  "limitations": [
+   "Mostly ad/brand reactions, few sales outcomes; little digital-video data."
+  ],
+  "license": "CC BY / open access (per OpenAlex OA link)",
+  "access_status": "abstract",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-26",
+  "modules": [
+   "M27",
+   "M28",
+   "M29"
+  ]
+ },
+ {
+  "key": "CialdiniGoldstein2004",
+  "title": "Social Influence: Compliance and Conformity",
+  "authors": "Cialdini, R. B.; Goldstein, N. J.",
+  "year": 2004,
+  "url": "https://doi.org/10.1146/annurev.psych.55.090902.142015",
+  "doi_isbn": "10.1146/annurev.psych.55.090902.142015",
+  "source_type": "review",
+  "tier": "A",
+  "key_findings": [
+   "Reviews 1997-2002 compliance/conformity research: susceptibility driven by goals of accuracy, affiliation and positive self-concept; influence often subtle and outside awareness."
+  ],
+  "practical_applications": [
+   "Principles (social proof, reciprocity, commitment, authority, liking, scarcity) work through these goals - use them truthfully."
+  ],
+  "limitations": [
+   "Review of mostly Western lab/field work."
+  ],
+  "license": "copyrighted",
+  "access_status": "abstract",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-26",
+  "modules": [
+   "M27",
+   "M28",
+   "M29"
+  ]
+ },
+ {
+  "key": "Goldstein2008",
+  "title": "A Room with a Viewpoint: Using Social Norms to Motivate Environmental Conservation in Hotels",
+  "authors": "Goldstein, N. J.; Cialdini, R. B.; Griskevicius, V.",
+  "year": 2008,
+  "url": "https://doi.org/10.1086/586910",
+  "doi_isbn": "10.1086/586910",
+  "source_type": "empirical",
+  "tier": "A",
+  "key_findings": [
+   "Two hotel field experiments: descriptive-norm signs beat standard environmental appeal; 'provincial' norms (guests in this room) most effective."
+  ],
+  "practical_applications": [
+   "Truthful, local social proof ('many Hua Hin customers choose...') is a candidate - if true and countable."
+  ],
+  "limitations": [
+   "See BohnerSchluter2014 for failed replication."
+  ],
+  "license": "copyrighted",
+  "access_status": "abstract",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-26",
+  "modules": [
+   "M27",
+   "M28",
+   "M29"
+  ]
+ },
+ {
+  "key": "BohnerSchluter2014",
+  "title": "A Room with a Viewpoint Revisited: Descriptive Norms and Hotel Guests' Towel Reuse Behavior",
+  "authors": "Bohner, G.; Schlueter, L. E.",
+  "year": 2014,
+  "url": "https://doi.org/10.1371/journal.pone.0104086",
+  "doi_isbn": "10.1371/journal.pone.0104086",
+  "source_type": "empirical",
+  "tier": "A",
+  "key_findings": [
+   "Two German hotels (N=724; N=204): both standard and norm messages raised reuse vs no message, but descriptive-norm messages were NOT more effective than the standard message; proximity effects inconsistent."
+  ],
+  "practical_applications": [
+   "Social proof is not a guaranteed upgrade; test it."
+  ],
+  "limitations": [
+   "Cultural context differs (Germany); high baseline reuse."
+  ],
+  "license": "CC BY 4.0",
+  "access_status": "abstract",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-26",
+  "modules": [
+   "M27",
+   "M28",
+   "M29"
+  ]
+ },
+ {
+  "key": "Barton2022",
+  "title": "Scarcity tactics in marketing: A meta-analysis of product scarcity effects on consumer purchase intentions",
+  "authors": "Barton, B.; Zlatevska, N.; Oppewal, H.",
+  "year": 2022,
+  "url": "https://doi.org/10.1016/j.jretai.2022.06.003",
+  "doi_isbn": "10.1016/j.jretai.2022.06.003",
+  "source_type": "meta-analysis",
+  "tier": "S",
+  "key_findings": [
+   "416 effect sizes, 131 studies: scarcity cues generally raise purchase intentions; demand-based scarcity best for utilitarian products, supply-based for experiences, time-based for high-involvement products."
+  ],
+  "practical_applications": [
+   "Real limits (genuine end date, real stock) can be stated; type of scarcity should fit product."
+  ],
+  "limitations": [
+   "Purchase intention, not behaviour; does not address deception/trust costs."
+  ],
+  "license": "open access (per OpenAlex)",
+  "access_status": "abstract",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-26",
+  "modules": [
+   "M27",
+   "M28",
+   "M29"
+  ]
+ },
+ {
+  "key": "Biraglia2021",
+  "title": "The downside of scarcity: Scarcity appeals can trigger consumer anger and brand switching intentions",
+  "authors": "Biraglia, A.; Usrey, B.; Ulqinaku, A.",
+  "year": 2021,
+  "url": "https://doi.org/10.1002/mar.21489",
+  "doi_isbn": "10.1002/mar.21489",
+  "source_type": "empirical",
+  "tier": "A",
+  "key_findings": [
+   "Two studies (experimental + correlational): consumers who fail to get a product advertised with limited-quantity appeals show higher intention to switch to competitors, mediated by anger."
+  ],
+  "practical_applications": [
+   "If you announce 'limited', make sure people who miss out get an alternative (waitlist, similar frame)."
+  ],
+  "limitations": [
+   "Psychology & Marketing; two studies; intentions."
+  ],
+  "license": "CC BY (White Rose repository copy)",
+  "access_status": "full_text",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-26",
+  "modules": [
+   "M27",
+   "M28",
+   "M29"
+  ]
+ },
+ {
+  "key": "Shaw2019_BehavSci",
+  "title": "Consumers Are Becoming Wise to Your Nudge",
+  "authors": "Shaw, S. (Trinity McQueen)",
+  "year": 2019,
+  "url": "https://behavioralscientist.org/consumers-are-becoming-wise-to-your-nudge/",
+  "doi_isbn": "",
+  "source_type": "practitioner",
+  "tier": "D",
+  "key_findings": [
+   "Survey-experiment, 2,102 UK adults shown nine real hotel-booking scarcity/social-proof claims: 65% saw them as sales pressure, 49% likely to distrust the company, 34% negative emotion, only 16% believed the claims."
+  ],
+  "practical_applications": [
+   "Fake-feeling urgency costs trust."
+  ],
+  "limitations": [
+   "Consultancy study, not peer-reviewed; hypothetical booking; self-report."
+  ],
+  "license": "copyrighted",
+  "access_status": "full_text",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-26",
+  "modules": [
+   "M27",
+   "M28",
+   "M29"
+  ]
+ },
+ {
+  "key": "Mathur2019",
+  "title": "Dark Patterns at Scale: Findings from a Crawl of 11K Shopping Websites",
+  "authors": "Mathur, A.; Acar, G.; Friedman, M. J.; Lucherini, E.; Mayer, J.; Chetty, M.; Narayanan, A.",
+  "year": 2019,
+  "url": "https://doi.org/10.1145/3359183",
+  "doi_isbn": "10.1145/3359183",
+  "source_type": "empirical",
+  "tier": "A",
+  "key_findings": [
+   "~53K product pages, ~11K sites: 1,818 dark-pattern instances, 15 types in 7 categories (incl. urgency, scarcity, social proof); 183 sites deceptive; 22 third parties sell dark patterns as turnkey."
+  ],
+  "practical_applications": [
+   "Countdown timers, fake stock and fake 'X people viewing' are documented deceptive patterns - never use."
+  ],
+  "limitations": [
+   "Web shops; detection automated."
+  ],
+  "license": "copyrighted",
+  "access_status": "abstract",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-26",
+  "modules": [
+   "M27",
+   "M28",
+   "M29"
+  ]
+ },
+ {
+  "key": "FTC2022",
+  "title": "Bringing Dark Patterns to Light (FTC Staff Report)",
+  "authors": "US Federal Trade Commission",
+  "year": 2022,
+  "url": "https://www.ftc.gov/system/files/ftc_gov/pdf/P214800%20Dark%20Patterns%20Report%209.14.2022%20-%20FINAL.pdf",
+  "doi_isbn": "",
+  "source_type": "docs",
+  "tier": "S",
+  "key_findings": [
+   "Sept 2022 staff report: 'design elements that induce false beliefs' include countdown timers on offers that are not time-limited, false sold-out claims, false claims that others are viewing/buying."
+  ],
+  "practical_applications": [
+   "Regulator view: false urgency/scarcity is deception, not 'growth hacking'."
+  ],
+  "limitations": [
+   "Read only via law-firm summaries this session; US jurisdiction (Thai law: see ETHICS file)."
+  ],
+  "license": "public domain (US government)",
+  "access_status": "search_summary",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-26",
+  "modules": [
+   "M27",
+   "M28",
+   "M29"
+  ]
+ },
+ {
+  "key": "Scheibehenne2010",
+  "title": "Can There Ever Be Too Many Options? A Meta-Analytic Review of Choice Overload",
+  "authors": "Scheibehenne, B.; Greifeneder, R.; Todd, P. M.",
+  "year": 2010,
+  "url": "https://doi.org/10.1086/651235",
+  "doi_isbn": "10.1086/651235",
+  "source_type": "meta-analysis",
+  "tier": "S",
+  "key_findings": [
+   "63 conditions, 50 experiments, N=5,036: mean choice-overload effect virtually zero with considerable variance; no sufficient conditions identified."
+  ],
+  "practical_applications": [
+   "Do not assume 'fewer options always sells more'."
+  ],
+  "limitations": [
+   "Later meta (Chernev2015) finds moderated effects."
+  ],
+  "license": "copyrighted",
+  "access_status": "abstract",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-26",
+  "modules": [
+   "M27",
+   "M28",
+   "M29"
+  ]
+ },
+ {
+  "key": "Chernev2015",
+  "title": "Choice overload: A conceptual review and meta-analysis",
+  "authors": "Chernev, A.; Boeckenholt, U.; Goodman, J. K.",
+  "year": 2015,
+  "url": "https://doi.org/10.1016/j.jcps.2014.08.002",
+  "doi_isbn": "10.1016/j.jcps.2014.08.002",
+  "source_type": "meta-analysis",
+  "tier": "S",
+  "key_findings": [
+   "99 observations, N=7,202: overload depends on choice-set complexity, task difficulty, preference uncertainty and effort-minimising goal; with moderators the effect is significant."
+  ],
+  "practical_applications": [
+   "Overload is likely when customers lack preferences and options are hard to compare (e.g. lens coatings) - curate 2-3 and explain."
+  ],
+  "limitations": [
+   "Mostly lab tasks."
+  ],
+  "license": "copyrighted",
+  "access_status": "abstract",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-26",
+  "modules": [
+   "M27",
+   "M28",
+   "M29"
+  ]
+ },
+ {
+  "key": "IyengarLepper2000",
+  "title": "When choice is demotivating: Can one desire too much of a good thing?",
+  "authors": "Iyengar, S. S.; Lepper, M. R.",
+  "year": 2000,
+  "url": "https://doi.org/10.1037/0022-3514.79.6.995",
+  "doi_isbn": "10.1037/0022-3514.79.6.995",
+  "source_type": "empirical",
+  "tier": "A",
+  "key_findings": [
+   "Three studies: more people bought jam/chocolate or did essays when offered 6 vs 24-30 options; higher satisfaction with limited sets."
+  ],
+  "practical_applications": [
+   "Origin of the 'jam study' - cite with Scheibehenne2010 null meta."
+  ],
+  "limitations": [
+   "Classic single studies; replication mixed."
+  ],
+  "license": "copyrighted",
+  "access_status": "abstract",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-26",
+  "modules": [
+   "M27",
+   "M28",
+   "M29"
+  ]
+ },
+ {
+  "key": "Huber1982",
+  "title": "Adding Asymmetrically Dominated Alternatives: Violations of Regularity and the Similarity Hypothesis",
+  "authors": "Huber, J.; Payne, J. W.; Puto, C.",
+  "year": 1982,
+  "url": "https://doi.org/10.1086/208899",
+  "doi_isbn": "10.1086/208899",
+  "source_type": "empirical",
+  "tier": "A",
+  "key_findings": [
+   "Adding an option dominated by one item but not another can increase choice of the dominating item (decoy/attraction effect)."
+  ],
+  "practical_applications": [
+   "Origin of decoy pricing."
+  ],
+  "limitations": [
+   "Stylised numeric attributes; see Frederick2014, Trendl2021."
+  ],
+  "license": "copyrighted",
+  "access_status": "abstract",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-26",
+  "modules": [
+   "M27",
+   "M28",
+   "M29"
+  ]
+ },
+ {
+  "key": "Frederick2014",
+  "title": "The Limits of Attraction",
+  "authors": "Frederick, S.; Lee, L.; Baskin, E.",
+  "year": 2014,
+  "url": "https://doi.org/10.1509/jmr.12.0061",
+  "doi_isbn": "10.1509/jmr.12.0061",
+  "source_type": "empirical",
+  "tier": "A",
+  "key_findings": [
+   "Attraction effect may be restricted to stylised numeric product descriptions; typically absent when products are experienced or when even one attribute is shown perceptually (e.g. photo); questions practical significance."
+  ],
+  "practical_applications": [
+   "Decoys on visual product posts (frames shown as photos) are unlikely to work - and look manipulative."
+  ],
+  "limitations": [
+   "Disputed by Huber et al. 2014 (not read)."
+  ],
+  "license": "copyrighted",
+  "access_status": "abstract",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-26",
+  "modules": [
+   "M27",
+   "M28",
+   "M29"
+  ]
+ },
+ {
+  "key": "Trendl2021",
+  "title": "A zero attraction effect in naturalistic choice",
+  "authors": "Trendl, A.; Stewart, N.; Mullett, T. L.",
+  "year": 2021,
+  "url": "https://doi.org/10.1037/dec0000145",
+  "doi_isbn": "10.1037/dec0000145",
+  "source_type": "empirical",
+  "tier": "A",
+  "key_findings": [
+   "First experiment meeting Huber et al.'s (2014) criteria for naturalistic tests found a precisely zero attraction effect."
+  ],
+  "practical_applications": [
+   "Same: do not build promos on decoy tricks."
+  ],
+  "limitations": [
+   "One experiment; Decision journal."
+  ],
+  "license": "copyrighted",
+  "access_status": "abstract",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-26",
+  "modules": [
+   "M27",
+   "M28",
+   "M29"
+  ]
+ },
+ {
+  "key": "Maier2022",
+  "title": "No evidence for nudging after adjusting for publication bias",
+  "authors": "Maier, M.; Bartos, F.; Stanley, T. D.; Shanks, D. R.; Harris, A. J. L.; Wagenmakers, E.-J.",
+  "year": 2022,
+  "url": "https://doi.org/10.1073/pnas.2200300119",
+  "doi_isbn": "10.1073/pnas.2200300119",
+  "source_type": "meta-analysis",
+  "tier": "A",
+  "key_findings": [
+   "PNAS letter re-analysing Mertens et al. (2022) nudge meta-analysis with robust Bayesian meta-analysis: after adjusting for publication bias, no evidence remains for nudging overall; authors later said 'no overall evidence' (heterogeneity, some domains may work)."
+  ],
+  "practical_applications": [
+   "Behavioural 'hacks' have small, variable effects - test, don't assume."
+  ],
+  "limitations": [
+   "Read via search summaries (PNAS blocked); letter, debated by Mertens et al."
+  ],
+  "license": "CC BY (PNAS open access)",
+  "access_status": "search_summary",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-26",
+  "modules": [
+   "M27",
+   "M28",
+   "M29"
+  ]
+ },
+ {
+  "key": "Tannenbaum2015",
+  "title": "Appealing to fear: A meta-analysis of fear appeal effectiveness and theories",
+  "authors": "Tannenbaum, M. B.; Hepler, J.; Zimmerman, R. S.; Saul, L.; Jacobs, S.; Wilson, K.; Albarracin, D.",
+  "year": 2015,
+  "url": "https://doi.org/10.1037/a0039729",
+  "doi_isbn": "10.1037/a0039729",
+  "source_type": "meta-analysis",
+  "tier": "S",
+  "key_findings": [
+   "127 articles, 248 samples, N=27,372: fear appeals positively affect attitudes, intentions, behaviours (random-effects d=0.29); stronger with efficacy statements, high depicted susceptibility and severity, one-time behaviours, more female audiences; very few backfire circumstances."
+  ],
+  "practical_applications": [
+   "UV/pterygium or presbyopia messages: show risk honestly + an easy one-time action (eye test, UV lens)."
+  ],
+  "limitations": [
+   "Mostly health domains; d is small-to-moderate."
+  ],
+  "license": "copyrighted",
+  "access_status": "abstract",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-26",
+  "modules": [
+   "M27",
+   "M28",
+   "M29"
+  ]
+ },
+ {
+  "key": "Hovland1951",
+  "title": "The Influence of Source Credibility on Communication Effectiveness",
+  "authors": "Hovland, C. I.; Weiss, W.",
+  "year": 1951,
+  "url": "https://doi.org/10.1086/266350",
+  "doi_isbn": "10.1086/266350",
+  "source_type": "empirical",
+  "tier": "A",
+  "key_findings": [
+   "Subjects discounted material from untrustworthy sources at exposure, but over time dissociated content from source and scepticism faded (sleeper effect)."
+  ],
+  "practical_applications": [
+   "Credibility of the speaker matters at exposure; long-term, the message content travels on its own - so the content must be true."
+  ],
+  "limitations": [
+   "1951; sleeper effect later found fragile."
+  ],
+  "license": "copyrighted",
+  "access_status": "abstract",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-26",
+  "modules": [
+   "M27",
+   "M28",
+   "M29"
+  ]
+ },
+ {
+  "key": "Pornpitakpan2004",
+  "title": "The Persuasiveness of Source Credibility: A Critical Review of Five Decades' Evidence",
+  "authors": "Pornpitakpan, C.",
+  "year": 2004,
+  "url": "https://doi.org/10.1111/j.1559-1816.2004.tb02547.x",
+  "doi_isbn": "10.1111/j.1559-1816.2004.tb02547.x",
+  "source_type": "review",
+  "tier": "A",
+  "key_findings": [
+   "Main-effect studies show high-credibility sources beat low; interaction studies show credibility can be a liability under some conditions; moderators: source, message, channel, receiver, destination variables."
+  ],
+  "practical_applications": [
+   "Use the real optometrist/staff as source for health facts; credibility is conditional, not magic."
+  ],
+  "limitations": [
+   "Narrative review."
+  ],
+  "license": "copyrighted",
+  "access_status": "abstract",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-26",
+  "modules": [
+   "M27",
+   "M28",
+   "M29"
+  ]
+ },
+ {
+  "key": "FriestadWright1994",
+  "title": "The Persuasion Knowledge Model: How People Cope with Persuasion Attempts",
+  "authors": "Friestad, M.; Wright, P.",
+  "year": 1994,
+  "url": "https://doi.org/10.1086/209380",
+  "doi_isbn": "10.1086/209380",
+  "source_type": "review",
+  "tier": "A",
+  "key_findings": [
+   "People develop knowledge about persuasion agents' goals and tactics and use it to cope; this shapes attitudes toward products and marketers."
+  ],
+  "practical_applications": [
+   "When a tactic is recognised (fake urgency, hidden ad), it changes how the whole brand is judged."
+  ],
+  "limitations": [
+   "Conceptual model."
+  ],
+  "license": "copyrighted",
+  "access_status": "abstract",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-26",
+  "modules": [
+   "M27",
+   "M28",
+   "M29"
+  ]
+ },
+ {
+  "key": "Boerman2017",
+  "title": "'This Post is Sponsored': Effects of Sponsorship Disclosure on Persuasion Knowledge and Electronic Word of Mouth in the Context of Facebook",
+  "authors": "Boerman, S. C.; Willemsen, L. M.; Van Der Aa, E. P.",
+  "year": 2017,
+  "url": "https://doi.org/10.1016/j.intmar.2016.12.002",
+  "doi_isbn": "10.1016/j.intmar.2016.12.002",
+  "source_type": "empirical",
+  "tier": "A",
+  "key_findings": [
+   "2x2 experiment: 'Sponsored' disclosure activated persuasion knowledge only when a celebrity (not the brand) posted; recognition of advertising -> distrusting beliefs -> lower eWOM intention."
+  ],
+  "practical_applications": [
+   "Own-brand posts are already understood as ads; partner/creator posts must disclose."
+  ],
+  "limitations": [
+   "Single Dutch experiment."
+  ],
+  "license": "copyrighted",
+  "access_status": "abstract",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-26",
+  "modules": [
+   "M27",
+   "M28",
+   "M29"
+  ]
+ },
+ {
+  "key": "Eisend2020_Disclosure",
+  "title": "A Meta-Analysis of the Effects of Disclosing Sponsored Content",
+  "authors": "Eisend, M.; van Reijmersdal, E. A.; Boerman, S. C.; Tarrahi, F.",
+  "year": 2020,
+  "url": "https://doi.org/10.1080/00913367.2020.1765909",
+  "doi_isbn": "10.1080/00913367.2020.1765909",
+  "source_type": "meta-analysis",
+  "tier": "S",
+  "key_findings": [
+   "61 papers, 57 data sets: disclosure lowers brand attitudes, credibility and source evaluation but raises recognition, persuasion knowledge, resistance - and memory; content, timing, awareness moderate effects."
+  ],
+  "practical_applications": [
+   "Disclosure costs a little persuasion but is legally/ethically required; it can even aid memory."
+  ],
+  "limitations": [
+   "Mostly Western experiments."
+  ],
+  "license": "open access (per OpenAlex)",
+  "access_status": "abstract",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-26",
+  "modules": [
+   "M27",
+   "M28",
+   "M29"
+  ]
+ },
+ {
+  "key": "FTC2023_Endorsement",
+  "title": "Guides Concerning the Use of Endorsements and Testimonials in Advertising (16 CFR Part 255, revised)",
+  "authors": "US Federal Trade Commission",
+  "year": 2023,
+  "url": "https://www.federalregister.gov/documents/2023/07/26/2023-14795/guides-concerning-the-use-of-endorsements-and-testimonials-in-advertising",
+  "doi_isbn": "88 FR 48092",
+  "source_type": "docs",
+  "tier": "S",
+  "key_findings": [
+   "Revised 26 July 2023: material connections must be disclosed clearly and conspicuously (defined); platform built-in tools may be inadequate; disclosure behind 'more' is not unavoidable; virtual influencers count as endorsers; advertisers expected to monitor influencers."
+  ],
+  "practical_applications": [
+   "International benchmark for creator/partner posts and AI characters."
+  ],
+  "limitations": [
+   "US rules; read via law-firm summaries; Thai rules in ETHICS file."
+  ],
+  "license": "public domain (US government)",
+  "access_status": "search_summary",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-26",
+  "modules": [
+   "M27",
+   "M28",
+   "M29"
+  ]
+ },
+ {
+  "key": "Teixeira2010",
+  "title": "Moment-to-Moment Optimal Branding in TV Commercials: Preventing Avoidance by Pulsing",
+  "authors": "Teixeira, T. S.; Wedel, M.; Pieters, R.",
+  "year": 2010,
+  "url": "https://doi.org/10.1287/mksc.1100.0567",
+  "doi_isbn": "10.1287/mksc.1100.0567",
+  "source_type": "empirical",
+  "tier": "A",
+  "key_findings": [
+   "Eye tracking on 31 commercials, ~2,000 participants, zapping data: attention dispersion predicts avoidance; central on-screen brand positions (not brand size) promote avoidance; brand 'pulsing' (short repeated brand appearances, same total exposure) significantly reduced avoidance (simulation + controlled experiment)."
+  ],
+  "practical_applications": [
+   "Brand early AND repeatedly in short pulses, small and integrated - not one big centred logo slab."
+  ],
+  "limitations": [
+   "TV ads, 2010; zapping in lab."
+  ],
+  "license": "copyrighted",
+  "access_status": "abstract",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-26",
+  "modules": [
+   "M27",
+   "M28",
+   "M29"
+  ]
+ },
+ {
+  "key": "MetaRealeyes2023",
+  "title": "Decoding Digital Video Environments",
+  "authors": "Meta + Realeyes (with eye square, Bill Harvey Consulting)",
+  "year": 2023,
+  "url": "https://www.iab.com/wp-content/uploads/2023/08/Meta-Realeyes-Decoding-Digital-Video-Environments.pdf",
+  "doi_isbn": "",
+  "source_type": "docs",
+  "tier": "C",
+  "key_findings": [
+   "Meta-commissioned lab study, 16,835 ad impressions from 6,076 US mobile users (Dec 2022), simulated Facebook, Instagram, TikTok, YouTube, Hulu, Snapchat, Twitter.",
+   "Feed and short-form show an intense initial burst of attention; ads with the strongest creative branding in those seconds scored highest in brand recognition; recommends a 'first second strategy'.",
+   "Brand recognition similar across environments; feed/short form ~0.16-0.17 brand recallers per attentive second vs stream ~0.07; causal impact of attention on recall cannot be measured in this design."
+  ],
+  "practical_applications": [
+   "Put product + brand cue in the first 1-2 s of Reels/TikTok; do not save the logo for the end."
+  ],
+  "limitations": [
+   "Platform-commissioned; US; lab simulation; correlational on attention."
+  ],
+  "license": "copyrighted",
+  "access_status": "full_text",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-26",
+  "modules": [
+   "M27",
+   "M28",
+   "M29"
+  ]
+ },
+ {
+  "key": "MetaToluna2026",
+  "title": "What actually makes short-form video ads work? (Meta x Toluna study)",
+  "authors": "Toluna (blog)",
+  "year": 2026,
+  "url": "https://tolunacorporate.com/what-makes-short-form-video-ads-work-meta-toluna-study/",
+  "doi_isbn": "",
+  "source_type": "docs",
+  "tier": "C",
+  "key_findings": [
+   "~100 ads x 100 viewers each in DE, UK, IT, TR; 65+ creative variables; top 20% vs average: brand + core message in first 5 s -> 1.7x more likely strong purchase intent; branding repeated through the ad (vs end logo only) 1.8x; audio+visual beats visual only; native/lower-fidelity, direct-to-camera performed well; for conversion ads, branding under ~25% of duration better."
+  ],
+  "practical_applications": [
+   "Recurrent, integrated branding; native style; sound on."
+  ],
+  "limitations": [
+   "Blog post (4 Aug 2026) summarising commissioned study; small ad sample; purchase intent; 'probability drivers, not rules'."
+  ],
+  "license": "copyrighted",
+  "access_status": "publisher_page",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-26",
+  "modules": [
+   "M27",
+   "M28",
+   "M29"
+  ]
+ },
+ {
+  "key": "web:support.google.com:197",
+  "title": "About the ABCDs of effective video ads (Google Ads Help)",
+  "authors": "Google",
+  "year": null,
+  "url": "https://support.google.com/google-ads/answer/14783551",
+  "doi_isbn": "",
+  "source_type": "docs",
+  "tier": "C",
+  "key_findings": [
+   "Attention, Branding, Connection, Direction. Branding: 'show up early and throughout'; audio brand mentions improve onscreen brand visuals. Claims up to 30% lift in short-term sales likelihood and 17% in long-term brand contribution (Google/Kantar, April 2021)."
+  ],
+  "practical_applications": [
+   "Brand early + throughout + say the name in VO."
+  ],
+  "limitations": [
+   "Platform guidance; methods of the Kantar study not described."
+  ],
+  "license": "copyrighted",
+  "access_status": "full_text",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-26",
+  "modules": [
+   "M27",
+   "M28",
+   "M29"
+  ]
+ },
+ {
+  "key": "Gordon2019",
+  "title": "A Comparison of Approaches to Advertising Measurement: Evidence from Big Field Experiments at Facebook",
+  "authors": "Gordon, B. R.; Zettelmeyer, F.; Bhargava, N.; Chapsky, D.",
+  "year": 2019,
+  "url": "https://doi.org/10.1287/mksc.2018.1135",
+  "doi_isbn": "10.1287/mksc.2018.1135",
+  "source_type": "empirical",
+  "tier": "A",
+  "key_findings": [
+   "Observational methods often fail to recover the treatment effects measured by randomised advertising experiments on Facebook."
+  ],
+  "practical_applications": [
+   "Only a randomised holdout (lift test) shows incrementality; platform attribution is not proof."
+  ],
+  "limitations": [
+   "Large advertisers; abstract only."
+  ],
+  "license": "copyrighted",
+  "access_status": "abstract",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-26",
+  "modules": [
+   "M27",
+   "M28",
+   "M29"
+  ]
+ },
+ {
+  "key": "LewisRao2015",
+  "title": "The Unfavorable Economics of Measuring the Returns to Advertising",
+  "authors": "Lewis, R. A.; Rao, J. M.",
+  "year": 2015,
+  "url": "https://doi.org/10.1093/qje/qjv023",
+  "doi_isbn": "10.1093/qje/qjv023",
+  "source_type": "empirical",
+  "tier": "A",
+  "key_findings": [
+   "25 field experiments ($2.8M spend): median ROI confidence interval >100 percentage points wide; sales very volatile relative to ad cost; informative experiments may need >10 million person-weeks; selection bias cripples observational methods."
+  ],
+  "practical_applications": [
+   "A small shop cannot measure sales ROI of one ad precisely - use leading indicators + long-run tracking, be humble."
+  ],
+  "limitations": [
+   "US retailers/brokerages."
+  ],
+  "license": "copyrighted",
+  "access_status": "abstract",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-26",
+  "modules": [
+   "M27",
+   "M28",
+   "M29"
+  ]
+ },
+ {
+  "key": "VisionCouncil2024",
+  "title": "Survey shows most optical products purchased in store (Vision Council Focused inSights 2024)",
+  "authors": "Healio (reporting The Vision Council)",
+  "year": 2024,
+  "url": "https://www.healio.com/news/optometry/20240321/survey-shows-most-optical-products-purchased-in-store",
+  "doi_isbn": "",
+  "source_type": "docs",
+  "tier": "C",
+  "key_findings": [
+   "121,288 US adults (Jan 2022-Dec 2023): 85% of prescription eyeglasses, 79% of non-Rx readers, 77% of non-Rx sunglasses bought in person; 37% of contact lenses acquired online; no data on 'why'."
+  ],
+  "practical_applications": [
+   "Eyewear is still a physical-store purchase: content's job is to bring people to the shop (physical availability)."
+  ],
+  "limitations": [
+   "US; news report of industry survey."
+  ],
+  "license": "copyrighted",
+  "access_status": "full_text",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-26",
+  "modules": [
+   "M27",
+   "M28",
+   "M29"
+  ]
+ },
+ {
+  "key": "Jobson2013",
+  "title": "New Report Examines Consumers' Eyewear Purchasing Decisions (Jobson 2013 Eyewear & Eyecare Consumer Patterns)",
+  "authors": "Vision Monday (reporting Jobson Optical Research)",
+  "year": 2013,
+  "url": "https://visionmonday.com/latest-news/article/new-report-examines-consumers-eyewear-purchasing-decisions-1",
+  "doi_isbn": "",
+  "source_type": "docs",
+  "tier": "C",
+  "key_findings": [
+   "US Rx wearers (VisionWatch, March 2013): 66% bought eyeglasses where they had the exam; 72% chose frames in under an hour; 55% said the dispenser was very/somewhat important in the final decision; 83% rated dispenser help excellent/good."
+  ],
+  "practical_applications": [
+   "Staff advice and the exam are the decisive touchpoints - show the people and the fitting process."
+  ],
+  "limitations": [
+   "US, 2013, insurance-driven market unlike Thailand."
+  ],
+  "license": "copyrighted",
+  "access_status": "full_text",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-26",
+  "modules": [
+   "M27",
+   "M28",
+   "M29"
+  ]
+ },
+ {
+  "key": "IPA_Specsavers2024",
+  "title": "Specsavers: I Don't Go (IPA Effectiveness Awards Gold)",
+  "authors": "IPA; MG OMD; Specsavers Creative",
+  "year": 2024,
+  "url": "https://ipa.co.uk/knowledge/case-studies/Specsavers-I-Dont-Go",
+  "doi_isbn": "",
+  "source_type": "docs",
+  "tier": "C",
+  "key_findings": [
+   "Campaign played off the long-running 'Should've gone to Specsavers' line by addressing rejecters ('I don't go to Specsavers'); Home Visits volumes +32%; ~582,000 previous rejecters booked an eye test; est. GBP 19.8m incremental profit."
+  ],
+  "practical_applications": [
+   "Consistent distinctive line for decades, then a twist that targets non-buyers."
+  ],
+  "limitations": [
+   "Award entry written by agency/client; method not shown on page."
+  ],
+  "license": "copyrighted",
+  "access_status": "publisher_page",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-26",
+  "modules": [
+   "M27",
+   "M28",
+   "M29"
+  ]
+ },
+ {
+  "key": "WARC_Specsavers2014",
+  "title": "Should've gone to Specsavers: A far-sighted view of advertising's role in building a business over 30 years (IPA 2014 Gold)",
+  "authors": "Philip, M. (Manning Gottlieb OMD) for Specsavers",
+  "year": 2014,
+  "url": "https://www.warc.com/en/article/should%26%2339%3Bve-gone-to-specsavers%3A-a-far-sighted-view-of-advertising%26%2339%3Bs-role-in-building-a-business-over-30-years-974bbd1c3d5747d990109ee37059e685",
+  "doi_isbn": "",
+  "source_type": "docs",
+  "tier": "C",
+  "key_findings": [
+   "IPA Effectiveness Gold 2014: how Specsavers grew from 1984 launch to the largest UK optical market share via long-term advertising (search summary)."
+  ],
+  "practical_applications": [
+   "Long-term humour-based brand line in optical retail."
+  ],
+  "limitations": [
+   "Paywalled; only listing seen."
+  ],
+  "license": "copyrighted",
+  "access_status": "search_summary",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-26",
+  "modules": [
+   "M27",
+   "M28",
+   "M29"
+  ]
+ },
+ {
+  "key": "Pepsi2017_NPR",
+  "title": "After Uproar, Pepsi Halts Rollout Of Controversial Protest-Themed Ad",
+  "authors": "NPR",
+  "year": 2017,
+  "url": "https://www.npr.org/sections/thetwo-way/2017/04/05/522750764/after-uproar-pepsi-halts-rollout-of-controversial-protest-themed-ad",
+  "doi_isbn": "",
+  "source_type": "docs",
+  "tier": "C",
+  "key_findings": [
+   "Pepsi pulled its Kendall Jenner protest-themed ad on 5 April 2017, about a day after release: 'Clearly we missed the mark, and we apologize'; criticised for trivialising social-justice protests."
+  ],
+  "practical_applications": [
+   "Failure case: borrowing a serious cause without earning it."
+  ],
+  "limitations": [
+   "News reports via search; sales impact not documented."
+  ],
+  "license": "copyrighted",
+  "access_status": "search_summary",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-26",
+  "modules": [
+   "M27",
+   "M28",
+   "M29"
+  ]
+ }
+]

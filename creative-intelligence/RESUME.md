@@ -17,6 +17,11 @@
   **Next "เรียนรู้ต่อ": U4** = those 3 modules → then T2 integration → VA2–VA4 → P11 practical tests + the user's ratings.
 - 2026-11-25: cartoon batch C1 → new module M44 (SOURCE VERIFIED, 120 sources, experiments C1-001..003). Remaining
   cartoon tests: AI_CARTOON_GENERATION.md ai_tests T1-T3, T5-T9 (free FLUX).
+- 2026-11-26: **v2 upgrade** (user directive: 15 domains, critic, memory, before/after test). Done: `domains/` 15 guides
+  (all SOURCE VERIFIED, 715 sources), Creative Memory (`tools/memory.py`, 47 real records), skill `creative-critic`,
+  benchmark (`evaluations/studio-benchmark/RESULTS.md`: small gains in precision + memory decisions; recall at ceiling).
+  Log: `UPGRADE_LOG.md`. **Next:** benchmark v2 (harder, domain-specific tasks) + first human ratings from the user;
+  then U4 (M35, M39) and T2 integration as before. Open question for the user: Mint & Tao vs the hoodie/coat duo.
 - Check state: `python creative-intelligence/tools/registry.py stats` and `validate`.
 
 ## How to run a batch

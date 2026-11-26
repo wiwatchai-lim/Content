@@ -5,6 +5,10 @@ description: Pick a random in-stock frame (or the one the user names), pair a co
 
 # Frame kit
 
+> **Studio loop (2026-11-26):** before the job `python creative-intelligence/tools/memory.py brief --job "<job>" --tags frame-kit,codex,glasses`
+> (obey past rejections, characters, known errors) · before delivery run skill `creative-critic` (independent sub-agent) and
+> fix critical/major findings · after the user reacts `memory.py add --type approval|rejection` with their exact words.
+
 The user (and a friend who uses the output) no longer wants finished posts from Claude. They want the **raw material**: a randomly picked frame with its data, clean photos from several angles, background-free layers, and a set of prompts they paste into Codex to make the images themselves. Talk to the user in Thai; prompts are in English (image models follow English best).
 
 Never invent specs, colours or claims that are not in `data/`. Never upscale a photo to make it look "sharp" — sharp means the largest real file we have.

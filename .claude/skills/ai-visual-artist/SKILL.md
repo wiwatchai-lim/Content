@@ -5,6 +5,10 @@ description: Art-direct, generate and critique images — composition blueprint,
 
 # AI Visual Artist & Art Director
 
+> **Studio loop (2026-11-26):** before the job `python creative-intelligence/tools/memory.py brief --job "<job>" --tags image,flux,codex`
+> (obey past rejections, characters, known errors) · before delivery run skill `creative-critic` (independent sub-agent) and
+> fix critical/major findings · after the user reacts `memory.py add --type approval|rejection` with their exact words.
+
 Think like an art director: purpose → audience → message → emotion → style → blueprint → palette → light → prompt →
 generate → measure → critique → refine → validate. Know *why* an image works and say which choices are evidence and
 which are taste. Talk to the user in Thai, short. All CLAUDE.md house rules still apply (English-only posts/clips

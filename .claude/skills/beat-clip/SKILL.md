@@ -5,6 +5,10 @@ description: Make or edit vertical beat clips (kinetic type + real glasses cut t
 
 # Beat clip
 
+> **Studio loop (2026-11-26):** before the job `python creative-intelligence/tools/memory.py brief --job "<job>" --tags beat-clip,clip,glasses`
+> (obey past rejections, characters, known errors) · before delivery run skill `creative-critic` (independent sub-agent) and
+> fix critical/major findings · after the user reacts `memory.py add --type approval|rejection` with their exact words.
+
 A 10–15 s vertical clip (1080×1920) where glasses, type and backgrounds move on the beat of a song from `music/`. The upload file has **no song**: the user adds the same sound in the TikTok app. Talk to the user in Thai, short. On-screen text and captions are English.
 
 The user calls these "คลิปตัวหนังสือเด้ง" / "คลิปเด้งๆ"; the agreed name is **beat clip**, and the look they want to repeat is the **"privatejet"** style. Everything needed is in this file and the project folder; nothing depends on Claude's memory on the original machine. First time on a new machine: run the "Ready check" in `README.md` before the first clip.

@@ -1,0 +1,26 @@
+{"judge": "J1-critique-a", "tasks": {
+ "C1": {
+  "X": {"found": [1,2,3,4,5,6,7,8,9,11], "found_critical": [1,2,3,4,5,7], "partial": [], "extra_valid": 0, "extra_invalid": 1, "fix_quality": 2.0, "reason_quality": 1.9,
+        "notes": "All 10 scored items found; 11 via #8 (Tao lectures) + #12 (both from front). #13 cover-line 'is OK' is padding (invalid). Format/outfit rated major not critical; fixes concrete."},
+  "Y": {"found": [1,2,3,4,5,6,7,8,9,11], "found_critical": [1,2,3,4,5,7], "partial": [], "extra_valid": 1, "extra_invalid": 0, "fix_quality": 2.0, "reason_quality": 2.0,
+        "notes": "All 10 scored items found; 11 via #5 fix (Tao's own short warm line) + #10 layout. Slide-count mention ignored (VOID). Extra #11 EP numbering/series ambiguity is defensible (valid)."}
+ },
+ "C2": {
+  "X": {"found": [1,2,3,4,5,6,7,8,9,10,11], "found_critical": [1,3,5,6,9,11], "partial": [], "extra_valid": 0, "extra_invalid": 0, "fix_quality": 2.0, "reason_quality": 2.0,
+        "notes": "All 11 found plus 11b partner logo (#10). Moving wordmark noted. Concrete fixes with existing kit files."},
+  "Y": {"found": [1,2,3,4,5,6,7,8,9,10,11], "found_critical": [1,3,5,6,9,11], "partial": [], "extra_valid": 2, "extra_invalid": 0, "fix_quality": 2.0, "reason_quality": 2.0,
+        "notes": "All 11 found plus 11b partner logo (#12). Wordmark rated minor and moving animation not explicit, but fix correct. Extras #13 no beat grid and #14 no QC step are valid."}
+ },
+ "C3": {
+  "X": {"found": [1,2,3,4,6,7,8], "found_critical": [1,2,4,7,8], "partial": [], "extra_valid": 1, "extra_invalid": 0, "fix_quality": 1.9, "reason_quality": 2.0,
+        "notes": "Missed 5 (ISO date normalisation not mentioned). 7 includes brand pronunciation (#10). Extra #7 English-only clip rule is valid. Puck fix slightly hedged."},
+  "Y": {"found": [1,2,3,4,5,6,7,8], "found_critical": [1,2,4,7,8], "partial": [], "extra_valid": 2, "extra_invalid": 0, "fix_quality": 2.0, "reason_quality": 1.9,
+        "notes": "All 8 found; 5 via 'raw date digits read badly without normalisation' in #3. Item 3 framed as fear/EPPM rather than calm-clip mismatch (still clear). Extras #7 language and #8 emotion arc valid."}
+ },
+ "C4": {
+  "X": {"found": [1,2,3,4,5,6,7,8], "found_critical": [1,2,3,5,6], "partial": [9], "extra_valid": 2, "extra_invalid": 1, "fix_quality": 1.8, "reason_quality": 1.75,
+        "notes": "Line art hedged as 'depends on job type' (partial). Margin fix 60-80 px, no house 72 px rule (fix/reason 1). Extras: partner logo/product data and AI label valid; #12 'no critique pass' is process padding."},
+  "Y": {"found": [1,2,3,4,5,6,7,8,9], "found_critical": [1,2,3,5,6], "partial": [], "extra_valid": 2, "extra_invalid": 0, "fix_quality": 2.0, "reason_quality": 2.0,
+        "notes": "All 9 found; cites Peach-never-text and 72 px margin. Extras #9 logo + AI label and #10 under-specified model/contact are valid."}
+ }
+}}

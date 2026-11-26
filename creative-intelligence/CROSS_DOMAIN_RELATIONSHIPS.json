@@ -331,6 +331,101 @@
    "id": "M44",
    "type": "module",
    "name": "Cartoon, Comics and Illustration"
+  },
+  {
+   "id": "skill:creative-critic",
+   "type": "skill",
+   "name": "creative-critic"
+  },
+  {
+   "id": "D01",
+   "type": "domain",
+   "name": "Domain 01 — Creative Thinking & Cognitive Science (การคิดสร้างสรรค์และวิทยาศาสตร์การรู้คิด)",
+   "file": "creative-intelligence/domains/01-creative-thinking-cognitive-science.md"
+  },
+  {
+   "id": "D02",
+   "type": "domain",
+   "name": "Domain 02 — Human Psychology & Emotional Intelligence (จิตวิทยามนุษย์และความฉลาดทางอารมณ์)",
+   "file": "creative-intelligence/domains/02-human-psychology-emotional-intelligence.md"
+  },
+  {
+   "id": "D03",
+   "type": "domain",
+   "name": "Domain 03 — Aesthetic Intelligence & Artistic Taste (สุนทรียปัญญาและรสนิยมทางศิลปะ)",
+   "file": "creative-intelligence/domains/03-aesthetic-intelligence-taste.md"
+  },
+  {
+   "id": "D04",
+   "type": "domain",
+   "name": "Domain 04 — Advanced Visual Language & Visual Grammar (ภาษาภาพและไวยากรณ์ภาพขั้นสูง)",
+   "file": "creative-intelligence/domains/04-visual-language-grammar.md"
+  },
+  {
+   "id": "D05",
+   "type": "domain",
+   "name": "Domain 05 — Semiotics, Symbolism & Metaphor (สัญศาสตร์ สัญลักษณ์ และอุปมา)",
+   "file": "creative-intelligence/domains/05-semiotics-symbolism-metaphor.md"
+  },
+  {
+   "id": "D06",
+   "type": "domain",
+   "name": "Domain 06 — Character Psychology & Character Development (จิตวิทยาตัวละครและการพัฒนาตัวละคร)",
+   "file": "creative-intelligence/domains/06-character-psychology-development.md"
+  },
+  {
+   "id": "D07",
+   "type": "domain",
+   "name": "07 — Worldbuilding and Narrative Continuity (การสร้างโลกและความต่อเนื่องของเรื่องเล่า)",
+   "file": "creative-intelligence/domains/07-worldbuilding-narrative-continuity.md"
+  },
+  {
+   "id": "D08",
+   "type": "domain",
+   "name": "Domain 08 — Philosophy, Literature & Poetry (ปรัชญา วรรณกรรม และกวีนิพนธ์)",
+   "file": "creative-intelligence/domains/08-philosophy-literature-poetry.md"
+  },
+  {
+   "id": "D09",
+   "type": "domain",
+   "name": "09 — Cultural Studies & Cross-cultural Communication (วัฒนธรรมศึกษาและการสื่อสารข้ามวัฒนธรรม)",
+   "file": "creative-intelligence/domains/09-cultural-studies-cross-cultural.md"
+  },
+  {
+   "id": "D10",
+   "type": "domain",
+   "name": "Domain 10: Psychoacoustics and Sensory Experience (จิตสวนศาสตร์และประสบการณ์ทางประสาทสัมผัส)",
+   "file": "creative-intelligence/domains/10-psychoacoustics-sensory-experience.md"
+  },
+  {
+   "id": "D11",
+   "type": "domain",
+   "name": "Domain 11 — Consumer Psychology & Creative Marketing (จิตวิทยาผู้บริโภคและการตลาดเชิงสร้างสรรค์)",
+   "file": "creative-intelligence/domains/11-consumer-psychology-creative-marketing.md"
+  },
+  {
+   "id": "D12",
+   "type": "domain",
+   "name": "Domain 12 — Independent Creative Criticism (การวิจารณ์งานสร้างสรรค์อย่างเป็นอิสระ)",
+   "file": "creative-intelligence/domains/12-independent-creative-criticism.md"
+  },
+  {
+   "id": "D13",
+   "type": "domain",
+   "name": "Domain 13 — Quality Assurance & Evaluation (QA/QC และการประเมินผลงานสร้างสรรค์/สื่อ)",
+   "file": "creative-intelligence/domains/13-quality-assurance-evaluation.md"
+  },
+  {
+   "id": "D14",
+   "type": "domain",
+   "name": "14 — Knowledge Management and Experience Learning (การจัดการความรู้และการเรียนรู้จากประสบการณ์)",
+   "file": "creative-intelligence/domains/14-knowledge-management-experience-learning.md"
+  },
+  {
+   "id": "D15",
+   "type": "domain",
+   "name": "Domain 15 — Creative Workflow Automation (ระบบอัตโนมัติในงานผลิตสร้างสรรค์: pipeline, ความทำซ้ำได้, คนตรวจ, ความเสี่ยง)",
+   "file": "creative-intelligence/domains/15-creative-workflow-automation.md"
   }
  ],
  "edges": [
@@ -879,6 +974,1980 @@
    "relation": "combined_with",
    "use_case": "comic storytelling",
    "evidence": "design decision (not a research finding)"
+  },
+  {
+   "from": "D01",
+   "to": "D02",
+   "relation": "cross-discipline",
+   "use_case": "see §10 of 01-creative-thinking-cognitive-science.md",
+   "evidence": "link stated in the guide"
+  },
+  {
+   "from": "D01",
+   "to": "D03",
+   "relation": "cross-discipline",
+   "use_case": "see §10 of 01-creative-thinking-cognitive-science.md",
+   "evidence": "link stated in the guide"
+  },
+  {
+   "from": "D01",
+   "to": "D04",
+   "relation": "cross-discipline",
+   "use_case": "see §10 of 01-creative-thinking-cognitive-science.md",
+   "evidence": "link stated in the guide"
+  },
+  {
+   "from": "D01",
+   "to": "D05",
+   "relation": "cross-discipline",
+   "use_case": "see §10 of 01-creative-thinking-cognitive-science.md",
+   "evidence": "link stated in the guide"
+  },
+  {
+   "from": "D01",
+   "to": "D06",
+   "relation": "cross-discipline",
+   "use_case": "see §10 of 01-creative-thinking-cognitive-science.md",
+   "evidence": "link stated in the guide"
+  },
+  {
+   "from": "D01",
+   "to": "D07",
+   "relation": "cross-discipline",
+   "use_case": "see §10 of 01-creative-thinking-cognitive-science.md",
+   "evidence": "link stated in the guide"
+  },
+  {
+   "from": "D01",
+   "to": "D08",
+   "relation": "cross-discipline",
+   "use_case": "see §10 of 01-creative-thinking-cognitive-science.md",
+   "evidence": "link stated in the guide"
+  },
+  {
+   "from": "D01",
+   "to": "D09",
+   "relation": "cross-discipline",
+   "use_case": "see §10 of 01-creative-thinking-cognitive-science.md",
+   "evidence": "link stated in the guide"
+  },
+  {
+   "from": "D01",
+   "to": "D10",
+   "relation": "cross-discipline",
+   "use_case": "see §10 of 01-creative-thinking-cognitive-science.md",
+   "evidence": "link stated in the guide"
+  },
+  {
+   "from": "D01",
+   "to": "D11",
+   "relation": "cross-discipline",
+   "use_case": "see §10 of 01-creative-thinking-cognitive-science.md",
+   "evidence": "link stated in the guide"
+  },
+  {
+   "from": "D01",
+   "to": "D12",
+   "relation": "cross-discipline",
+   "use_case": "see §10 of 01-creative-thinking-cognitive-science.md",
+   "evidence": "link stated in the guide"
+  },
+  {
+   "from": "D01",
+   "to": "D13",
+   "relation": "cross-discipline",
+   "use_case": "see §10 of 01-creative-thinking-cognitive-science.md",
+   "evidence": "link stated in the guide"
+  },
+  {
+   "from": "D01",
+   "to": "D14",
+   "relation": "cross-discipline",
+   "use_case": "see §10 of 01-creative-thinking-cognitive-science.md",
+   "evidence": "link stated in the guide"
+  },
+  {
+   "from": "D01",
+   "to": "D15",
+   "relation": "cross-discipline",
+   "use_case": "see §10 of 01-creative-thinking-cognitive-science.md",
+   "evidence": "link stated in the guide"
+  },
+  {
+   "from": "D01",
+   "to": "M04",
+   "relation": "deepens",
+   "use_case": "domain guide builds on the module",
+   "evidence": "reference in the guide"
+  },
+  {
+   "from": "D01",
+   "to": "M05",
+   "relation": "deepens",
+   "use_case": "domain guide builds on the module",
+   "evidence": "reference in the guide"
+  },
+  {
+   "from": "D01",
+   "to": "M33",
+   "relation": "deepens",
+   "use_case": "domain guide builds on the module",
+   "evidence": "reference in the guide"
+  },
+  {
+   "from": "D01",
+   "to": "M41",
+   "relation": "deepens",
+   "use_case": "domain guide builds on the module",
+   "evidence": "reference in the guide"
+  },
+  {
+   "from": "D01",
+   "to": "skill:creative-critic",
+   "relation": "used by",
+   "use_case": "skill applies this domain",
+   "evidence": "named in the guide"
+  },
+  {
+   "from": "D01",
+   "to": "skill:ai-visual-artist",
+   "relation": "used by",
+   "use_case": "skill applies this domain",
+   "evidence": "named in the guide"
+  },
+  {
+   "from": "D02",
+   "to": "D01",
+   "relation": "cross-discipline",
+   "use_case": "see §10 of 02-human-psychology-emotional-intelligence.md",
+   "evidence": "link stated in the guide"
+  },
+  {
+   "from": "D02",
+   "to": "D03",
+   "relation": "cross-discipline",
+   "use_case": "see §10 of 02-human-psychology-emotional-intelligence.md",
+   "evidence": "link stated in the guide"
+  },
+  {
+   "from": "D02",
+   "to": "D04",
+   "relation": "cross-discipline",
+   "use_case": "see §10 of 02-human-psychology-emotional-intelligence.md",
+   "evidence": "link stated in the guide"
+  },
+  {
+   "from": "D02",
+   "to": "D05",
+   "relation": "cross-discipline",
+   "use_case": "see §10 of 02-human-psychology-emotional-intelligence.md",
+   "evidence": "link stated in the guide"
+  },
+  {
+   "from": "D02",
+   "to": "D06",
+   "relation": "cross-discipline",
+   "use_case": "see §10 of 02-human-psychology-emotional-intelligence.md",
+   "evidence": "link stated in the guide"
+  },
+  {
+   "from": "D02",
+   "to": "D07",
+   "relation": "cross-discipline",
+   "use_case": "see §10 of 02-human-psychology-emotional-intelligence.md",
+   "evidence": "link stated in the guide"
+  },
+  {
+   "from": "D02",
+   "to": "D08",
+   "relation": "cross-discipline",
+   "use_case": "see §10 of 02-human-psychology-emotional-intelligence.md",
+   "evidence": "link stated in the guide"
+  },
+  {
+   "from": "D02",
+   "to": "D09",
+   "relation": "cross-discipline",
+   "use_case": "see §10 of 02-human-psychology-emotional-intelligence.md",
+   "evidence": "link stated in the guide"
+  },
+  {
+   "from": "D02",
+   "to": "D10",
+   "relation": "cross-discipline",
+   "use_case": "see §10 of 02-human-psychology-emotional-intelligence.md",
+   "evidence": "link stated in the guide"
+  },
+  {
+   "from": "D02",
+   "to": "D11",
+   "relation": "cross-discipline",
+   "use_case": "see §10 of 02-human-psychology-emotional-intelligence.md",
+   "evidence": "link stated in the guide"
+  },
+  {
+   "from": "D02",
+   "to": "D12",
+   "relation": "cross-discipline",
+   "use_case": "see §10 of 02-human-psychology-emotional-intelligence.md",
+   "evidence": "link stated in the guide"
+  },
+  {
+   "from": "D02",
+   "to": "D13",
+   "relation": "cross-discipline",
+   "use_case": "see §10 of 02-human-psychology-emotional-intelligence.md",
+   "evidence": "link stated in the guide"
+  },
+  {
+   "from": "D02",
+   "to": "D14",
+   "relation": "cross-discipline",
+   "use_case": "see §10 of 02-human-psychology-emotional-intelligence.md",
+   "evidence": "link stated in the guide"
+  },
+  {
+   "from": "D02",
+   "to": "D15",
+   "relation": "cross-discipline",
+   "use_case": "see §10 of 02-human-psychology-emotional-intelligence.md",
+   "evidence": "link stated in the guide"
+  },
+  {
+   "from": "D02",
+   "to": "M01",
+   "relation": "deepens",
+   "use_case": "domain guide builds on the module",
+   "evidence": "reference in the guide"
+  },
+  {
+   "from": "D02",
+   "to": "M02",
+   "relation": "deepens",
+   "use_case": "domain guide builds on the module",
+   "evidence": "reference in the guide"
+  },
+  {
+   "from": "D02",
+   "to": "M30",
+   "relation": "deepens",
+   "use_case": "domain guide builds on the module",
+   "evidence": "reference in the guide"
+  },
+  {
+   "from": "D02",
+   "to": "M32",
+   "relation": "deepens",
+   "use_case": "domain guide builds on the module",
+   "evidence": "reference in the guide"
+  },
+  {
+   "from": "D02",
+   "to": "skill:creative-critic",
+   "relation": "used by",
+   "use_case": "skill applies this domain",
+   "evidence": "named in the guide"
+  },
+  {
+   "from": "D02",
+   "to": "skill:ai-voice-director",
+   "relation": "used by",
+   "use_case": "skill applies this domain",
+   "evidence": "named in the guide"
+  },
+  {
+   "from": "D03",
+   "to": "D01",
+   "relation": "cross-discipline",
+   "use_case": "see §10 of 03-aesthetic-intelligence-taste.md",
+   "evidence": "link stated in the guide"
+  },
+  {
+   "from": "D03",
+   "to": "D02",
+   "relation": "cross-discipline",
+   "use_case": "see §10 of 03-aesthetic-intelligence-taste.md",
+   "evidence": "link stated in the guide"
+  },
+  {
+   "from": "D03",
+   "to": "D04",
+   "relation": "cross-discipline",
+   "use_case": "see §10 of 03-aesthetic-intelligence-taste.md",
+   "evidence": "link stated in the guide"
+  },
+  {
+   "from": "D03",
+   "to": "D05",
+   "relation": "cross-discipline",
+   "use_case": "see §10 of 03-aesthetic-intelligence-taste.md",
+   "evidence": "link stated in the guide"
+  },
+  {
+   "from": "D03",
+   "to": "D06",
+   "relation": "cross-discipline",
+   "use_case": "see §10 of 03-aesthetic-intelligence-taste.md",
+   "evidence": "link stated in the guide"
+  },
+  {
+   "from": "D03",
+   "to": "D07",
+   "relation": "cross-discipline",
+   "use_case": "see §10 of 03-aesthetic-intelligence-taste.md",
+   "evidence": "link stated in the guide"
+  },
+  {
+   "from": "D03",
+   "to": "D08",
+   "relation": "cross-discipline",
+   "use_case": "see §10 of 03-aesthetic-intelligence-taste.md",
+   "evidence": "link stated in the guide"
+  },
+  {
+   "from": "D03",
+   "to": "D09",
+   "relation": "cross-discipline",
+   "use_case": "see §10 of 03-aesthetic-intelligence-taste.md",
+   "evidence": "link stated in the guide"
+  },
+  {
+   "from": "D03",
+   "to": "D10",
+   "relation": "cross-discipline",
+   "use_case": "see §10 of 03-aesthetic-intelligence-taste.md",
+   "evidence": "link stated in the guide"
+  },
+  {
+   "from": "D03",
+   "to": "D11",
+   "relation": "cross-discipline",
+   "use_case": "see §10 of 03-aesthetic-intelligence-taste.md",
+   "evidence": "link stated in the guide"
+  },
+  {
+   "from": "D03",
+   "to": "D12",
+   "relation": "cross-discipline",
+   "use_case": "see §10 of 03-aesthetic-intelligence-taste.md",
+   "evidence": "link stated in the guide"
+  },
+  {
+   "from": "D03",
+   "to": "D13",
+   "relation": "cross-discipline",
+   "use_case": "see §10 of 03-aesthetic-intelligence-taste.md",
+   "evidence": "link stated in the guide"
+  },
+  {
+   "from": "D03",
+   "to": "D14",
+   "relation": "cross-discipline",
+   "use_case": "see §10 of 03-aesthetic-intelligence-taste.md",
+   "evidence": "link stated in the guide"
+  },
+  {
+   "from": "D03",
+   "to": "D15",
+   "relation": "cross-discipline",
+   "use_case": "see §10 of 03-aesthetic-intelligence-taste.md",
+   "evidence": "link stated in the guide"
+  },
+  {
+   "from": "D03",
+   "to": "M05",
+   "relation": "deepens",
+   "use_case": "domain guide builds on the module",
+   "evidence": "reference in the guide"
+  },
+  {
+   "from": "D03",
+   "to": "M06",
+   "relation": "deepens",
+   "use_case": "domain guide builds on the module",
+   "evidence": "reference in the guide"
+  },
+  {
+   "from": "D03",
+   "to": "skill:ai-visual-artist",
+   "relation": "used by",
+   "use_case": "skill applies this domain",
+   "evidence": "named in the guide"
+  },
+  {
+   "from": "D04",
+   "to": "D01",
+   "relation": "cross-discipline",
+   "use_case": "see §10 of 04-visual-language-grammar.md",
+   "evidence": "link stated in the guide"
+  },
+  {
+   "from": "D04",
+   "to": "D02",
+   "relation": "cross-discipline",
+   "use_case": "see §10 of 04-visual-language-grammar.md",
+   "evidence": "link stated in the guide"
+  },
+  {
+   "from": "D04",
+   "to": "D03",
+   "relation": "cross-discipline",
+   "use_case": "see §10 of 04-visual-language-grammar.md",
+   "evidence": "link stated in the guide"
+  },
+  {
+   "from": "D04",
+   "to": "D05",
+   "relation": "cross-discipline",
+   "use_case": "see §10 of 04-visual-language-grammar.md",
+   "evidence": "link stated in the guide"
+  },
+  {
+   "from": "D04",
+   "to": "D06",
+   "relation": "cross-discipline",
+   "use_case": "see §10 of 04-visual-language-grammar.md",
+   "evidence": "link stated in the guide"
+  },
+  {
+   "from": "D04",
+   "to": "D07",
+   "relation": "cross-discipline",
+   "use_case": "see §10 of 04-visual-language-grammar.md",
+   "evidence": "link stated in the guide"
+  },
+  {
+   "from": "D04",
+   "to": "D08",
+   "relation": "cross-discipline",
+   "use_case": "see §10 of 04-visual-language-grammar.md",
+   "evidence": "link stated in the guide"
+  },
+  {
+   "from": "D04",
+   "to": "D09",
+   "relation": "cross-discipline",
+   "use_case": "see §10 of 04-visual-language-grammar.md",
+   "evidence": "link stated in the guide"
+  },
+  {
+   "from": "D04",
+   "to": "D10",
+   "relation": "cross-discipline",
+   "use_case": "see §10 of 04-visual-language-grammar.md",
+   "evidence": "link stated in the guide"
+  },
+  {
+   "from": "D04",
+   "to": "D11",
+   "relation": "cross-discipline",
+   "use_case": "see §10 of 04-visual-language-grammar.md",
+   "evidence": "link stated in the guide"
+  },
+  {
+   "from": "D04",
+   "to": "D12",
+   "relation": "cross-discipline",
+   "use_case": "see §10 of 04-visual-language-grammar.md",
+   "evidence": "link stated in the guide"
+  },
+  {
+   "from": "D04",
+   "to": "D13",
+   "relation": "cross-discipline",
+   "use_case": "see §10 of 04-visual-language-grammar.md",
+   "evidence": "link stated in the guide"
+  },
+  {
+   "from": "D04",
+   "to": "D14",
+   "relation": "cross-discipline",
+   "use_case": "see §10 of 04-visual-language-grammar.md",
+   "evidence": "link stated in the guide"
+  },
+  {
+   "from": "D04",
+   "to": "D15",
+   "relation": "cross-discipline",
+   "use_case": "see §10 of 04-visual-language-grammar.md",
+   "evidence": "link stated in the guide"
+  },
+  {
+   "from": "D04",
+   "to": "M04",
+   "relation": "deepens",
+   "use_case": "domain guide builds on the module",
+   "evidence": "reference in the guide"
+  },
+  {
+   "from": "D04",
+   "to": "M05",
+   "relation": "deepens",
+   "use_case": "domain guide builds on the module",
+   "evidence": "reference in the guide"
+  },
+  {
+   "from": "D04",
+   "to": "M07",
+   "relation": "deepens",
+   "use_case": "domain guide builds on the module",
+   "evidence": "reference in the guide"
+  },
+  {
+   "from": "D04",
+   "to": "M08",
+   "relation": "deepens",
+   "use_case": "domain guide builds on the module",
+   "evidence": "reference in the guide"
+  },
+  {
+   "from": "D04",
+   "to": "M18",
+   "relation": "deepens",
+   "use_case": "domain guide builds on the module",
+   "evidence": "reference in the guide"
+  },
+  {
+   "from": "D04",
+   "to": "M44",
+   "relation": "deepens",
+   "use_case": "domain guide builds on the module",
+   "evidence": "reference in the guide"
+  },
+  {
+   "from": "D04",
+   "to": "skill:ai-visual-artist",
+   "relation": "used by",
+   "use_case": "skill applies this domain",
+   "evidence": "named in the guide"
+  },
+  {
+   "from": "D05",
+   "to": "D01",
+   "relation": "cross-discipline",
+   "use_case": "see §10 of 05-semiotics-symbolism-metaphor.md",
+   "evidence": "link stated in the guide"
+  },
+  {
+   "from": "D05",
+   "to": "D02",
+   "relation": "cross-discipline",
+   "use_case": "see §10 of 05-semiotics-symbolism-metaphor.md",
+   "evidence": "link stated in the guide"
+  },
+  {
+   "from": "D05",
+   "to": "D03",
+   "relation": "cross-discipline",
+   "use_case": "see §10 of 05-semiotics-symbolism-metaphor.md",
+   "evidence": "link stated in the guide"
+  },
+  {
+   "from": "D05",
+   "to": "D04",
+   "relation": "cross-discipline",
+   "use_case": "see §10 of 05-semiotics-symbolism-metaphor.md",
+   "evidence": "link stated in the guide"
+  },
+  {
+   "from": "D05",
+   "to": "D06",
+   "relation": "cross-discipline",
+   "use_case": "see §10 of 05-semiotics-symbolism-metaphor.md",
+   "evidence": "link stated in the guide"
+  },
+  {
+   "from": "D05",
+   "to": "D07",
+   "relation": "cross-discipline",
+   "use_case": "see §10 of 05-semiotics-symbolism-metaphor.md",
+   "evidence": "link stated in the guide"
+  },
+  {
+   "from": "D05",
+   "to": "D08",
+   "relation": "cross-discipline",
+   "use_case": "see §10 of 05-semiotics-symbolism-metaphor.md",
+   "evidence": "link stated in the guide"
+  },
+  {
+   "from": "D05",
+   "to": "D09",
+   "relation": "cross-discipline",
+   "use_case": "see §10 of 05-semiotics-symbolism-metaphor.md",
+   "evidence": "link stated in the guide"
+  },
+  {
+   "from": "D05",
+   "to": "D10",
+   "relation": "cross-discipline",
+   "use_case": "see §10 of 05-semiotics-symbolism-metaphor.md",
+   "evidence": "link stated in the guide"
+  },
+  {
+   "from": "D05",
+   "to": "D11",
+   "relation": "cross-discipline",
+   "use_case": "see §10 of 05-semiotics-symbolism-metaphor.md",
+   "evidence": "link stated in the guide"
+  },
+  {
+   "from": "D05",
+   "to": "D12",
+   "relation": "cross-discipline",
+   "use_case": "see §10 of 05-semiotics-symbolism-metaphor.md",
+   "evidence": "link stated in the guide"
+  },
+  {
+   "from": "D05",
+   "to": "D13",
+   "relation": "cross-discipline",
+   "use_case": "see §10 of 05-semiotics-symbolism-metaphor.md",
+   "evidence": "link stated in the guide"
+  },
+  {
+   "from": "D05",
+   "to": "D14",
+   "relation": "cross-discipline",
+   "use_case": "see §10 of 05-semiotics-symbolism-metaphor.md",
+   "evidence": "link stated in the guide"
+  },
+  {
+   "from": "D05",
+   "to": "D15",
+   "relation": "cross-discipline",
+   "use_case": "see §10 of 05-semiotics-symbolism-metaphor.md",
+   "evidence": "link stated in the guide"
+  },
+  {
+   "from": "D05",
+   "to": "M02",
+   "relation": "deepens",
+   "use_case": "domain guide builds on the module",
+   "evidence": "reference in the guide"
+  },
+  {
+   "from": "D05",
+   "to": "M12",
+   "relation": "deepens",
+   "use_case": "domain guide builds on the module",
+   "evidence": "reference in the guide"
+  },
+  {
+   "from": "D05",
+   "to": "skill:creative-critic",
+   "relation": "used by",
+   "use_case": "skill applies this domain",
+   "evidence": "named in the guide"
+  },
+  {
+   "from": "D05",
+   "to": "skill:ai-visual-artist",
+   "relation": "used by",
+   "use_case": "skill applies this domain",
+   "evidence": "named in the guide"
+  },
+  {
+   "from": "D06",
+   "to": "D01",
+   "relation": "cross-discipline",
+   "use_case": "see §10 of 06-character-psychology-development.md",
+   "evidence": "link stated in the guide"
+  },
+  {
+   "from": "D06",
+   "to": "D02",
+   "relation": "cross-discipline",
+   "use_case": "see §10 of 06-character-psychology-development.md",
+   "evidence": "link stated in the guide"
+  },
+  {
+   "from": "D06",
+   "to": "D03",
+   "relation": "cross-discipline",
+   "use_case": "see §10 of 06-character-psychology-development.md",
+   "evidence": "link stated in the guide"
+  },
+  {
+   "from": "D06",
+   "to": "D04",
+   "relation": "cross-discipline",
+   "use_case": "see §10 of 06-character-psychology-development.md",
+   "evidence": "link stated in the guide"
+  },
+  {
+   "from": "D06",
+   "to": "D05",
+   "relation": "cross-discipline",
+   "use_case": "see §10 of 06-character-psychology-development.md",
+   "evidence": "link stated in the guide"
+  },
+  {
+   "from": "D06",
+   "to": "D07",
+   "relation": "cross-discipline",
+   "use_case": "see §10 of 06-character-psychology-development.md",
+   "evidence": "link stated in the guide"
+  },
+  {
+   "from": "D06",
+   "to": "D08",
+   "relation": "cross-discipline",
+   "use_case": "see §10 of 06-character-psychology-development.md",
+   "evidence": "link stated in the guide"
+  },
+  {
+   "from": "D06",
+   "to": "D09",
+   "relation": "cross-discipline",
+   "use_case": "see §10 of 06-character-psychology-development.md",
+   "evidence": "link stated in the guide"
+  },
+  {
+   "from": "D06",
+   "to": "D10",
+   "relation": "cross-discipline",
+   "use_case": "see §10 of 06-character-psychology-development.md",
+   "evidence": "link stated in the guide"
+  },
+  {
+   "from": "D06",
+   "to": "D11",
+   "relation": "cross-discipline",
+   "use_case": "see §10 of 06-character-psychology-development.md",
+   "evidence": "link stated in the guide"
+  },
+  {
+   "from": "D06",
+   "to": "D12",
+   "relation": "cross-discipline",
+   "use_case": "see §10 of 06-character-psychology-development.md",
+   "evidence": "link stated in the guide"
+  },
+  {
+   "from": "D06",
+   "to": "D13",
+   "relation": "cross-discipline",
+   "use_case": "see §10 of 06-character-psychology-development.md",
+   "evidence": "link stated in the guide"
+  },
+  {
+   "from": "D06",
+   "to": "D14",
+   "relation": "cross-discipline",
+   "use_case": "see §10 of 06-character-psychology-development.md",
+   "evidence": "link stated in the guide"
+  },
+  {
+   "from": "D06",
+   "to": "D15",
+   "relation": "cross-discipline",
+   "use_case": "see §10 of 06-character-psychology-development.md",
+   "evidence": "link stated in the guide"
+  },
+  {
+   "from": "D06",
+   "to": "M13",
+   "relation": "deepens",
+   "use_case": "domain guide builds on the module",
+   "evidence": "reference in the guide"
+  },
+  {
+   "from": "D06",
+   "to": "M14",
+   "relation": "deepens",
+   "use_case": "domain guide builds on the module",
+   "evidence": "reference in the guide"
+  },
+  {
+   "from": "D06",
+   "to": "M15",
+   "relation": "deepens",
+   "use_case": "domain guide builds on the module",
+   "evidence": "reference in the guide"
+  },
+  {
+   "from": "D06",
+   "to": "M17",
+   "relation": "deepens",
+   "use_case": "domain guide builds on the module",
+   "evidence": "reference in the guide"
+  },
+  {
+   "from": "D06",
+   "to": "M44",
+   "relation": "deepens",
+   "use_case": "domain guide builds on the module",
+   "evidence": "reference in the guide"
+  },
+  {
+   "from": "D06",
+   "to": "skill:creative-critic",
+   "relation": "used by",
+   "use_case": "skill applies this domain",
+   "evidence": "named in the guide"
+  },
+  {
+   "from": "D06",
+   "to": "skill:ai-visual-artist",
+   "relation": "used by",
+   "use_case": "skill applies this domain",
+   "evidence": "named in the guide"
+  },
+  {
+   "from": "D06",
+   "to": "skill:ai-voice-director",
+   "relation": "used by",
+   "use_case": "skill applies this domain",
+   "evidence": "named in the guide"
+  },
+  {
+   "from": "D07",
+   "to": "D01",
+   "relation": "cross-discipline",
+   "use_case": "see §10 of 07-worldbuilding-narrative-continuity.md",
+   "evidence": "link stated in the guide"
+  },
+  {
+   "from": "D07",
+   "to": "D02",
+   "relation": "cross-discipline",
+   "use_case": "see §10 of 07-worldbuilding-narrative-continuity.md",
+   "evidence": "link stated in the guide"
+  },
+  {
+   "from": "D07",
+   "to": "D03",
+   "relation": "cross-discipline",
+   "use_case": "see §10 of 07-worldbuilding-narrative-continuity.md",
+   "evidence": "link stated in the guide"
+  },
+  {
+   "from": "D07",
+   "to": "D04",
+   "relation": "cross-discipline",
+   "use_case": "see §10 of 07-worldbuilding-narrative-continuity.md",
+   "evidence": "link stated in the guide"
+  },
+  {
+   "from": "D07",
+   "to": "D05",
+   "relation": "cross-discipline",
+   "use_case": "see §10 of 07-worldbuilding-narrative-continuity.md",
+   "evidence": "link stated in the guide"
+  },
+  {
+   "from": "D07",
+   "to": "D06",
+   "relation": "cross-discipline",
+   "use_case": "see §10 of 07-worldbuilding-narrative-continuity.md",
+   "evidence": "link stated in the guide"
+  },
+  {
+   "from": "D07",
+   "to": "D08",
+   "relation": "cross-discipline",
+   "use_case": "see §10 of 07-worldbuilding-narrative-continuity.md",
+   "evidence": "link stated in the guide"
+  },
+  {
+   "from": "D07",
+   "to": "D09",
+   "relation": "cross-discipline",
+   "use_case": "see §10 of 07-worldbuilding-narrative-continuity.md",
+   "evidence": "link stated in the guide"
+  },
+  {
+   "from": "D07",
+   "to": "D10",
+   "relation": "cross-discipline",
+   "use_case": "see §10 of 07-worldbuilding-narrative-continuity.md",
+   "evidence": "link stated in the guide"
+  },
+  {
+   "from": "D07",
+   "to": "D11",
+   "relation": "cross-discipline",
+   "use_case": "see §10 of 07-worldbuilding-narrative-continuity.md",
+   "evidence": "link stated in the guide"
+  },
+  {
+   "from": "D07",
+   "to": "D12",
+   "relation": "cross-discipline",
+   "use_case": "see §10 of 07-worldbuilding-narrative-continuity.md",
+   "evidence": "link stated in the guide"
+  },
+  {
+   "from": "D07",
+   "to": "D13",
+   "relation": "cross-discipline",
+   "use_case": "see §10 of 07-worldbuilding-narrative-continuity.md",
+   "evidence": "link stated in the guide"
+  },
+  {
+   "from": "D07",
+   "to": "D14",
+   "relation": "cross-discipline",
+   "use_case": "see §10 of 07-worldbuilding-narrative-continuity.md",
+   "evidence": "link stated in the guide"
+  },
+  {
+   "from": "D07",
+   "to": "D15",
+   "relation": "cross-discipline",
+   "use_case": "see §10 of 07-worldbuilding-narrative-continuity.md",
+   "evidence": "link stated in the guide"
+  },
+  {
+   "from": "D07",
+   "to": "M16",
+   "relation": "deepens",
+   "use_case": "domain guide builds on the module",
+   "evidence": "reference in the guide"
+  },
+  {
+   "from": "D07",
+   "to": "M38",
+   "relation": "deepens",
+   "use_case": "domain guide builds on the module",
+   "evidence": "reference in the guide"
+  },
+  {
+   "from": "D07",
+   "to": "M44",
+   "relation": "deepens",
+   "use_case": "domain guide builds on the module",
+   "evidence": "reference in the guide"
+  },
+  {
+   "from": "D07",
+   "to": "skill:ai-voice-director",
+   "relation": "used by",
+   "use_case": "skill applies this domain",
+   "evidence": "named in the guide"
+  },
+  {
+   "from": "D08",
+   "to": "D01",
+   "relation": "cross-discipline",
+   "use_case": "see §10 of 08-philosophy-literature-poetry.md",
+   "evidence": "link stated in the guide"
+  },
+  {
+   "from": "D08",
+   "to": "D02",
+   "relation": "cross-discipline",
+   "use_case": "see §10 of 08-philosophy-literature-poetry.md",
+   "evidence": "link stated in the guide"
+  },
+  {
+   "from": "D08",
+   "to": "D03",
+   "relation": "cross-discipline",
+   "use_case": "see §10 of 08-philosophy-literature-poetry.md",
+   "evidence": "link stated in the guide"
+  },
+  {
+   "from": "D08",
+   "to": "D04",
+   "relation": "cross-discipline",
+   "use_case": "see §10 of 08-philosophy-literature-poetry.md",
+   "evidence": "link stated in the guide"
+  },
+  {
+   "from": "D08",
+   "to": "D05",
+   "relation": "cross-discipline",
+   "use_case": "see §10 of 08-philosophy-literature-poetry.md",
+   "evidence": "link stated in the guide"
+  },
+  {
+   "from": "D08",
+   "to": "D06",
+   "relation": "cross-discipline",
+   "use_case": "see §10 of 08-philosophy-literature-poetry.md",
+   "evidence": "link stated in the guide"
+  },
+  {
+   "from": "D08",
+   "to": "D07",
+   "relation": "cross-discipline",
+   "use_case": "see §10 of 08-philosophy-literature-poetry.md",
+   "evidence": "link stated in the guide"
+  },
+  {
+   "from": "D08",
+   "to": "D09",
+   "relation": "cross-discipline",
+   "use_case": "see §10 of 08-philosophy-literature-poetry.md",
+   "evidence": "link stated in the guide"
+  },
+  {
+   "from": "D08",
+   "to": "D10",
+   "relation": "cross-discipline",
+   "use_case": "see §10 of 08-philosophy-literature-poetry.md",
+   "evidence": "link stated in the guide"
+  },
+  {
+   "from": "D08",
+   "to": "D11",
+   "relation": "cross-discipline",
+   "use_case": "see §10 of 08-philosophy-literature-poetry.md",
+   "evidence": "link stated in the guide"
+  },
+  {
+   "from": "D08",
+   "to": "D12",
+   "relation": "cross-discipline",
+   "use_case": "see §10 of 08-philosophy-literature-poetry.md",
+   "evidence": "link stated in the guide"
+  },
+  {
+   "from": "D08",
+   "to": "D13",
+   "relation": "cross-discipline",
+   "use_case": "see §10 of 08-philosophy-literature-poetry.md",
+   "evidence": "link stated in the guide"
+  },
+  {
+   "from": "D08",
+   "to": "D14",
+   "relation": "cross-discipline",
+   "use_case": "see §10 of 08-philosophy-literature-poetry.md",
+   "evidence": "link stated in the guide"
+  },
+  {
+   "from": "D08",
+   "to": "D15",
+   "relation": "cross-discipline",
+   "use_case": "see §10 of 08-philosophy-literature-poetry.md",
+   "evidence": "link stated in the guide"
+  },
+  {
+   "from": "D08",
+   "to": "M03",
+   "relation": "deepens",
+   "use_case": "domain guide builds on the module",
+   "evidence": "reference in the guide"
+  },
+  {
+   "from": "D08",
+   "to": "M14",
+   "relation": "deepens",
+   "use_case": "domain guide builds on the module",
+   "evidence": "reference in the guide"
+  },
+  {
+   "from": "D08",
+   "to": "M15",
+   "relation": "deepens",
+   "use_case": "domain guide builds on the module",
+   "evidence": "reference in the guide"
+  },
+  {
+   "from": "D08",
+   "to": "M17",
+   "relation": "deepens",
+   "use_case": "domain guide builds on the module",
+   "evidence": "reference in the guide"
+  },
+  {
+   "from": "D08",
+   "to": "M20",
+   "relation": "deepens",
+   "use_case": "domain guide builds on the module",
+   "evidence": "reference in the guide"
+  },
+  {
+   "from": "D08",
+   "to": "M21",
+   "relation": "deepens",
+   "use_case": "domain guide builds on the module",
+   "evidence": "reference in the guide"
+  },
+  {
+   "from": "D08",
+   "to": "skill:ai-voice-director",
+   "relation": "used by",
+   "use_case": "skill applies this domain",
+   "evidence": "named in the guide"
+  },
+  {
+   "from": "D09",
+   "to": "D01",
+   "relation": "cross-discipline",
+   "use_case": "see §10 of 09-cultural-studies-cross-cultural.md",
+   "evidence": "link stated in the guide"
+  },
+  {
+   "from": "D09",
+   "to": "D02",
+   "relation": "cross-discipline",
+   "use_case": "see §10 of 09-cultural-studies-cross-cultural.md",
+   "evidence": "link stated in the guide"
+  },
+  {
+   "from": "D09",
+   "to": "D03",
+   "relation": "cross-discipline",
+   "use_case": "see §10 of 09-cultural-studies-cross-cultural.md",
+   "evidence": "link stated in the guide"
+  },
+  {
+   "from": "D09",
+   "to": "D04",
+   "relation": "cross-discipline",
+   "use_case": "see §10 of 09-cultural-studies-cross-cultural.md",
+   "evidence": "link stated in the guide"
+  },
+  {
+   "from": "D09",
+   "to": "D05",
+   "relation": "cross-discipline",
+   "use_case": "see §10 of 09-cultural-studies-cross-cultural.md",
+   "evidence": "link stated in the guide"
+  },
+  {
+   "from": "D09",
+   "to": "D06",
+   "relation": "cross-discipline",
+   "use_case": "see §10 of 09-cultural-studies-cross-cultural.md",
+   "evidence": "link stated in the guide"
+  },
+  {
+   "from": "D09",
+   "to": "D07",
+   "relation": "cross-discipline",
+   "use_case": "see §10 of 09-cultural-studies-cross-cultural.md",
+   "evidence": "link stated in the guide"
+  },
+  {
+   "from": "D09",
+   "to": "D08",
+   "relation": "cross-discipline",
+   "use_case": "see §10 of 09-cultural-studies-cross-cultural.md",
+   "evidence": "link stated in the guide"
+  },
+  {
+   "from": "D09",
+   "to": "D10",
+   "relation": "cross-discipline",
+   "use_case": "see §10 of 09-cultural-studies-cross-cultural.md",
+   "evidence": "link stated in the guide"
+  },
+  {
+   "from": "D09",
+   "to": "D11",
+   "relation": "cross-discipline",
+   "use_case": "see §10 of 09-cultural-studies-cross-cultural.md",
+   "evidence": "link stated in the guide"
+  },
+  {
+   "from": "D09",
+   "to": "D12",
+   "relation": "cross-discipline",
+   "use_case": "see §10 of 09-cultural-studies-cross-cultural.md",
+   "evidence": "link stated in the guide"
+  },
+  {
+   "from": "D09",
+   "to": "D13",
+   "relation": "cross-discipline",
+   "use_case": "see §10 of 09-cultural-studies-cross-cultural.md",
+   "evidence": "link stated in the guide"
+  },
+  {
+   "from": "D09",
+   "to": "D14",
+   "relation": "cross-discipline",
+   "use_case": "see §10 of 09-cultural-studies-cross-cultural.md",
+   "evidence": "link stated in the guide"
+  },
+  {
+   "from": "D09",
+   "to": "D15",
+   "relation": "cross-discipline",
+   "use_case": "see §10 of 09-cultural-studies-cross-cultural.md",
+   "evidence": "link stated in the guide"
+  },
+  {
+   "from": "D09",
+   "to": "M17",
+   "relation": "deepens",
+   "use_case": "domain guide builds on the module",
+   "evidence": "reference in the guide"
+  },
+  {
+   "from": "D09",
+   "to": "M30",
+   "relation": "deepens",
+   "use_case": "domain guide builds on the module",
+   "evidence": "reference in the guide"
+  },
+  {
+   "from": "D09",
+   "to": "M31",
+   "relation": "deepens",
+   "use_case": "domain guide builds on the module",
+   "evidence": "reference in the guide"
+  },
+  {
+   "from": "D09",
+   "to": "skill:ai-voice-director",
+   "relation": "used by",
+   "use_case": "skill applies this domain",
+   "evidence": "named in the guide"
+  },
+  {
+   "from": "D10",
+   "to": "D01",
+   "relation": "cross-discipline",
+   "use_case": "see §10 of 10-psychoacoustics-sensory-experience.md",
+   "evidence": "link stated in the guide"
+  },
+  {
+   "from": "D10",
+   "to": "D02",
+   "relation": "cross-discipline",
+   "use_case": "see §10 of 10-psychoacoustics-sensory-experience.md",
+   "evidence": "link stated in the guide"
+  },
+  {
+   "from": "D10",
+   "to": "D03",
+   "relation": "cross-discipline",
+   "use_case": "see §10 of 10-psychoacoustics-sensory-experience.md",
+   "evidence": "link stated in the guide"
+  },
+  {
+   "from": "D10",
+   "to": "D04",
+   "relation": "cross-discipline",
+   "use_case": "see §10 of 10-psychoacoustics-sensory-experience.md",
+   "evidence": "link stated in the guide"
+  },
+  {
+   "from": "D10",
+   "to": "D05",
+   "relation": "cross-discipline",
+   "use_case": "see §10 of 10-psychoacoustics-sensory-experience.md",
+   "evidence": "link stated in the guide"
+  },
+  {
+   "from": "D10",
+   "to": "D06",
+   "relation": "cross-discipline",
+   "use_case": "see §10 of 10-psychoacoustics-sensory-experience.md",
+   "evidence": "link stated in the guide"
+  },
+  {
+   "from": "D10",
+   "to": "D07",
+   "relation": "cross-discipline",
+   "use_case": "see §10 of 10-psychoacoustics-sensory-experience.md",
+   "evidence": "link stated in the guide"
+  },
+  {
+   "from": "D10",
+   "to": "D08",
+   "relation": "cross-discipline",
+   "use_case": "see §10 of 10-psychoacoustics-sensory-experience.md",
+   "evidence": "link stated in the guide"
+  },
+  {
+   "from": "D10",
+   "to": "D09",
+   "relation": "cross-discipline",
+   "use_case": "see §10 of 10-psychoacoustics-sensory-experience.md",
+   "evidence": "link stated in the guide"
+  },
+  {
+   "from": "D10",
+   "to": "D11",
+   "relation": "cross-discipline",
+   "use_case": "see §10 of 10-psychoacoustics-sensory-experience.md",
+   "evidence": "link stated in the guide"
+  },
+  {
+   "from": "D10",
+   "to": "D12",
+   "relation": "cross-discipline",
+   "use_case": "see §10 of 10-psychoacoustics-sensory-experience.md",
+   "evidence": "link stated in the guide"
+  },
+  {
+   "from": "D10",
+   "to": "D13",
+   "relation": "cross-discipline",
+   "use_case": "see §10 of 10-psychoacoustics-sensory-experience.md",
+   "evidence": "link stated in the guide"
+  },
+  {
+   "from": "D10",
+   "to": "D14",
+   "relation": "cross-discipline",
+   "use_case": "see §10 of 10-psychoacoustics-sensory-experience.md",
+   "evidence": "link stated in the guide"
+  },
+  {
+   "from": "D10",
+   "to": "D15",
+   "relation": "cross-discipline",
+   "use_case": "see §10 of 10-psychoacoustics-sensory-experience.md",
+   "evidence": "link stated in the guide"
+  },
+  {
+   "from": "D10",
+   "to": "M22",
+   "relation": "deepens",
+   "use_case": "domain guide builds on the module",
+   "evidence": "reference in the guide"
+  },
+  {
+   "from": "D10",
+   "to": "M23",
+   "relation": "deepens",
+   "use_case": "domain guide builds on the module",
+   "evidence": "reference in the guide"
+  },
+  {
+   "from": "D10",
+   "to": "M24",
+   "relation": "deepens",
+   "use_case": "domain guide builds on the module",
+   "evidence": "reference in the guide"
+  },
+  {
+   "from": "D10",
+   "to": "skill:ai-visual-artist",
+   "relation": "used by",
+   "use_case": "skill applies this domain",
+   "evidence": "named in the guide"
+  },
+  {
+   "from": "D10",
+   "to": "skill:ai-voice-director",
+   "relation": "used by",
+   "use_case": "skill applies this domain",
+   "evidence": "named in the guide"
+  },
+  {
+   "from": "D10",
+   "to": "skill:eye-break-clip",
+   "relation": "used by",
+   "use_case": "skill applies this domain",
+   "evidence": "named in the guide"
+  },
+  {
+   "from": "D11",
+   "to": "D01",
+   "relation": "cross-discipline",
+   "use_case": "see §10 of 11-consumer-psychology-creative-marketing.md",
+   "evidence": "link stated in the guide"
+  },
+  {
+   "from": "D11",
+   "to": "D02",
+   "relation": "cross-discipline",
+   "use_case": "see §10 of 11-consumer-psychology-creative-marketing.md",
+   "evidence": "link stated in the guide"
+  },
+  {
+   "from": "D11",
+   "to": "D03",
+   "relation": "cross-discipline",
+   "use_case": "see §10 of 11-consumer-psychology-creative-marketing.md",
+   "evidence": "link stated in the guide"
+  },
+  {
+   "from": "D11",
+   "to": "D04",
+   "relation": "cross-discipline",
+   "use_case": "see §10 of 11-consumer-psychology-creative-marketing.md",
+   "evidence": "link stated in the guide"
+  },
+  {
+   "from": "D11",
+   "to": "D05",
+   "relation": "cross-discipline",
+   "use_case": "see §10 of 11-consumer-psychology-creative-marketing.md",
+   "evidence": "link stated in the guide"
+  },
+  {
+   "from": "D11",
+   "to": "D06",
+   "relation": "cross-discipline",
+   "use_case": "see §10 of 11-consumer-psychology-creative-marketing.md",
+   "evidence": "link stated in the guide"
+  },
+  {
+   "from": "D11",
+   "to": "D07",
+   "relation": "cross-discipline",
+   "use_case": "see §10 of 11-consumer-psychology-creative-marketing.md",
+   "evidence": "link stated in the guide"
+  },
+  {
+   "from": "D11",
+   "to": "D08",
+   "relation": "cross-discipline",
+   "use_case": "see §10 of 11-consumer-psychology-creative-marketing.md",
+   "evidence": "link stated in the guide"
+  },
+  {
+   "from": "D11",
+   "to": "D09",
+   "relation": "cross-discipline",
+   "use_case": "see §10 of 11-consumer-psychology-creative-marketing.md",
+   "evidence": "link stated in the guide"
+  },
+  {
+   "from": "D11",
+   "to": "D10",
+   "relation": "cross-discipline",
+   "use_case": "see §10 of 11-consumer-psychology-creative-marketing.md",
+   "evidence": "link stated in the guide"
+  },
+  {
+   "from": "D11",
+   "to": "D12",
+   "relation": "cross-discipline",
+   "use_case": "see §10 of 11-consumer-psychology-creative-marketing.md",
+   "evidence": "link stated in the guide"
+  },
+  {
+   "from": "D11",
+   "to": "D13",
+   "relation": "cross-discipline",
+   "use_case": "see §10 of 11-consumer-psychology-creative-marketing.md",
+   "evidence": "link stated in the guide"
+  },
+  {
+   "from": "D11",
+   "to": "D14",
+   "relation": "cross-discipline",
+   "use_case": "see §10 of 11-consumer-psychology-creative-marketing.md",
+   "evidence": "link stated in the guide"
+  },
+  {
+   "from": "D11",
+   "to": "D15",
+   "relation": "cross-discipline",
+   "use_case": "see §10 of 11-consumer-psychology-creative-marketing.md",
+   "evidence": "link stated in the guide"
+  },
+  {
+   "from": "D11",
+   "to": "M01",
+   "relation": "deepens",
+   "use_case": "domain guide builds on the module",
+   "evidence": "reference in the guide"
+  },
+  {
+   "from": "D11",
+   "to": "M27",
+   "relation": "deepens",
+   "use_case": "domain guide builds on the module",
+   "evidence": "reference in the guide"
+  },
+  {
+   "from": "D11",
+   "to": "M28",
+   "relation": "deepens",
+   "use_case": "domain guide builds on the module",
+   "evidence": "reference in the guide"
+  },
+  {
+   "from": "D11",
+   "to": "M29",
+   "relation": "deepens",
+   "use_case": "domain guide builds on the module",
+   "evidence": "reference in the guide"
+  },
+  {
+   "from": "D12",
+   "to": "D01",
+   "relation": "cross-discipline",
+   "use_case": "see §10 of 12-independent-creative-criticism.md",
+   "evidence": "link stated in the guide"
+  },
+  {
+   "from": "D12",
+   "to": "D02",
+   "relation": "cross-discipline",
+   "use_case": "see §10 of 12-independent-creative-criticism.md",
+   "evidence": "link stated in the guide"
+  },
+  {
+   "from": "D12",
+   "to": "D03",
+   "relation": "cross-discipline",
+   "use_case": "see §10 of 12-independent-creative-criticism.md",
+   "evidence": "link stated in the guide"
+  },
+  {
+   "from": "D12",
+   "to": "D04",
+   "relation": "cross-discipline",
+   "use_case": "see §10 of 12-independent-creative-criticism.md",
+   "evidence": "link stated in the guide"
+  },
+  {
+   "from": "D12",
+   "to": "D05",
+   "relation": "cross-discipline",
+   "use_case": "see §10 of 12-independent-creative-criticism.md",
+   "evidence": "link stated in the guide"
+  },
+  {
+   "from": "D12",
+   "to": "D06",
+   "relation": "cross-discipline",
+   "use_case": "see §10 of 12-independent-creative-criticism.md",
+   "evidence": "link stated in the guide"
+  },
+  {
+   "from": "D12",
+   "to": "D07",
+   "relation": "cross-discipline",
+   "use_case": "see §10 of 12-independent-creative-criticism.md",
+   "evidence": "link stated in the guide"
+  },
+  {
+   "from": "D12",
+   "to": "D08",
+   "relation": "cross-discipline",
+   "use_case": "see §10 of 12-independent-creative-criticism.md",
+   "evidence": "link stated in the guide"
+  },
+  {
+   "from": "D12",
+   "to": "D09",
+   "relation": "cross-discipline",
+   "use_case": "see §10 of 12-independent-creative-criticism.md",
+   "evidence": "link stated in the guide"
+  },
+  {
+   "from": "D12",
+   "to": "D10",
+   "relation": "cross-discipline",
+   "use_case": "see §10 of 12-independent-creative-criticism.md",
+   "evidence": "link stated in the guide"
+  },
+  {
+   "from": "D12",
+   "to": "D11",
+   "relation": "cross-discipline",
+   "use_case": "see §10 of 12-independent-creative-criticism.md",
+   "evidence": "link stated in the guide"
+  },
+  {
+   "from": "D12",
+   "to": "D13",
+   "relation": "cross-discipline",
+   "use_case": "see §10 of 12-independent-creative-criticism.md",
+   "evidence": "link stated in the guide"
+  },
+  {
+   "from": "D12",
+   "to": "D14",
+   "relation": "cross-discipline",
+   "use_case": "see §10 of 12-independent-creative-criticism.md",
+   "evidence": "link stated in the guide"
+  },
+  {
+   "from": "D12",
+   "to": "D15",
+   "relation": "cross-discipline",
+   "use_case": "see §10 of 12-independent-creative-criticism.md",
+   "evidence": "link stated in the guide"
+  },
+  {
+   "from": "D12",
+   "to": "M06",
+   "relation": "deepens",
+   "use_case": "domain guide builds on the module",
+   "evidence": "reference in the guide"
+  },
+  {
+   "from": "D12",
+   "to": "M42",
+   "relation": "deepens",
+   "use_case": "domain guide builds on the module",
+   "evidence": "reference in the guide"
+  },
+  {
+   "from": "D12",
+   "to": "skill:creative-critic",
+   "relation": "used by",
+   "use_case": "skill applies this domain",
+   "evidence": "named in the guide"
+  },
+  {
+   "from": "D12",
+   "to": "skill:ai-visual-artist",
+   "relation": "used by",
+   "use_case": "skill applies this domain",
+   "evidence": "named in the guide"
+  },
+  {
+   "from": "D13",
+   "to": "D01",
+   "relation": "cross-discipline",
+   "use_case": "see §10 of 13-quality-assurance-evaluation.md",
+   "evidence": "link stated in the guide"
+  },
+  {
+   "from": "D13",
+   "to": "D02",
+   "relation": "cross-discipline",
+   "use_case": "see §10 of 13-quality-assurance-evaluation.md",
+   "evidence": "link stated in the guide"
+  },
+  {
+   "from": "D13",
+   "to": "D03",
+   "relation": "cross-discipline",
+   "use_case": "see §10 of 13-quality-assurance-evaluation.md",
+   "evidence": "link stated in the guide"
+  },
+  {
+   "from": "D13",
+   "to": "D04",
+   "relation": "cross-discipline",
+   "use_case": "see §10 of 13-quality-assurance-evaluation.md",
+   "evidence": "link stated in the guide"
+  },
+  {
+   "from": "D13",
+   "to": "D05",
+   "relation": "cross-discipline",
+   "use_case": "see §10 of 13-quality-assurance-evaluation.md",
+   "evidence": "link stated in the guide"
+  },
+  {
+   "from": "D13",
+   "to": "D06",
+   "relation": "cross-discipline",
+   "use_case": "see §10 of 13-quality-assurance-evaluation.md",
+   "evidence": "link stated in the guide"
+  },
+  {
+   "from": "D13",
+   "to": "D07",
+   "relation": "cross-discipline",
+   "use_case": "see §10 of 13-quality-assurance-evaluation.md",
+   "evidence": "link stated in the guide"
+  },
+  {
+   "from": "D13",
+   "to": "D08",
+   "relation": "cross-discipline",
+   "use_case": "see §10 of 13-quality-assurance-evaluation.md",
+   "evidence": "link stated in the guide"
+  },
+  {
+   "from": "D13",
+   "to": "D09",
+   "relation": "cross-discipline",
+   "use_case": "see §10 of 13-quality-assurance-evaluation.md",
+   "evidence": "link stated in the guide"
+  },
+  {
+   "from": "D13",
+   "to": "D10",
+   "relation": "cross-discipline",
+   "use_case": "see §10 of 13-quality-assurance-evaluation.md",
+   "evidence": "link stated in the guide"
+  },
+  {
+   "from": "D13",
+   "to": "D11",
+   "relation": "cross-discipline",
+   "use_case": "see §10 of 13-quality-assurance-evaluation.md",
+   "evidence": "link stated in the guide"
+  },
+  {
+   "from": "D13",
+   "to": "D12",
+   "relation": "cross-discipline",
+   "use_case": "see §10 of 13-quality-assurance-evaluation.md",
+   "evidence": "link stated in the guide"
+  },
+  {
+   "from": "D13",
+   "to": "D14",
+   "relation": "cross-discipline",
+   "use_case": "see §10 of 13-quality-assurance-evaluation.md",
+   "evidence": "link stated in the guide"
+  },
+  {
+   "from": "D13",
+   "to": "D15",
+   "relation": "cross-discipline",
+   "use_case": "see §10 of 13-quality-assurance-evaluation.md",
+   "evidence": "link stated in the guide"
+  },
+  {
+   "from": "D13",
+   "to": "M42",
+   "relation": "deepens",
+   "use_case": "domain guide builds on the module",
+   "evidence": "reference in the guide"
+  },
+  {
+   "from": "D13",
+   "to": "skill:creative-critic",
+   "relation": "used by",
+   "use_case": "skill applies this domain",
+   "evidence": "named in the guide"
+  },
+  {
+   "from": "D13",
+   "to": "skill:ai-visual-artist",
+   "relation": "used by",
+   "use_case": "skill applies this domain",
+   "evidence": "named in the guide"
+  },
+  {
+   "from": "D13",
+   "to": "skill:ai-voice-director",
+   "relation": "used by",
+   "use_case": "skill applies this domain",
+   "evidence": "named in the guide"
+  },
+  {
+   "from": "D14",
+   "to": "D01",
+   "relation": "cross-discipline",
+   "use_case": "see §10 of 14-knowledge-management-experience-learning.md",
+   "evidence": "link stated in the guide"
+  },
+  {
+   "from": "D14",
+   "to": "D02",
+   "relation": "cross-discipline",
+   "use_case": "see §10 of 14-knowledge-management-experience-learning.md",
+   "evidence": "link stated in the guide"
+  },
+  {
+   "from": "D14",
+   "to": "D03",
+   "relation": "cross-discipline",
+   "use_case": "see §10 of 14-knowledge-management-experience-learning.md",
+   "evidence": "link stated in the guide"
+  },
+  {
+   "from": "D14",
+   "to": "D04",
+   "relation": "cross-discipline",
+   "use_case": "see §10 of 14-knowledge-management-experience-learning.md",
+   "evidence": "link stated in the guide"
+  },
+  {
+   "from": "D14",
+   "to": "D05",
+   "relation": "cross-discipline",
+   "use_case": "see §10 of 14-knowledge-management-experience-learning.md",
+   "evidence": "link stated in the guide"
+  },
+  {
+   "from": "D14",
+   "to": "D06",
+   "relation": "cross-discipline",
+   "use_case": "see §10 of 14-knowledge-management-experience-learning.md",
+   "evidence": "link stated in the guide"
+  },
+  {
+   "from": "D14",
+   "to": "D07",
+   "relation": "cross-discipline",
+   "use_case": "see §10 of 14-knowledge-management-experience-learning.md",
+   "evidence": "link stated in the guide"
+  },
+  {
+   "from": "D14",
+   "to": "D08",
+   "relation": "cross-discipline",
+   "use_case": "see §10 of 14-knowledge-management-experience-learning.md",
+   "evidence": "link stated in the guide"
+  },
+  {
+   "from": "D14",
+   "to": "D09",
+   "relation": "cross-discipline",
+   "use_case": "see §10 of 14-knowledge-management-experience-learning.md",
+   "evidence": "link stated in the guide"
+  },
+  {
+   "from": "D14",
+   "to": "D10",
+   "relation": "cross-discipline",
+   "use_case": "see §10 of 14-knowledge-management-experience-learning.md",
+   "evidence": "link stated in the guide"
+  },
+  {
+   "from": "D14",
+   "to": "D11",
+   "relation": "cross-discipline",
+   "use_case": "see §10 of 14-knowledge-management-experience-learning.md",
+   "evidence": "link stated in the guide"
+  },
+  {
+   "from": "D14",
+   "to": "D12",
+   "relation": "cross-discipline",
+   "use_case": "see §10 of 14-knowledge-management-experience-learning.md",
+   "evidence": "link stated in the guide"
+  },
+  {
+   "from": "D14",
+   "to": "D13",
+   "relation": "cross-discipline",
+   "use_case": "see §10 of 14-knowledge-management-experience-learning.md",
+   "evidence": "link stated in the guide"
+  },
+  {
+   "from": "D14",
+   "to": "D15",
+   "relation": "cross-discipline",
+   "use_case": "see §10 of 14-knowledge-management-experience-learning.md",
+   "evidence": "link stated in the guide"
+  },
+  {
+   "from": "D14",
+   "to": "M40",
+   "relation": "deepens",
+   "use_case": "domain guide builds on the module",
+   "evidence": "reference in the guide"
+  },
+  {
+   "from": "D14",
+   "to": "skill:master-creative-director",
+   "relation": "used by",
+   "use_case": "skill applies this domain",
+   "evidence": "named in the guide"
+  },
+  {
+   "from": "D15",
+   "to": "D01",
+   "relation": "cross-discipline",
+   "use_case": "see §10 of 15-creative-workflow-automation.md",
+   "evidence": "link stated in the guide"
+  },
+  {
+   "from": "D15",
+   "to": "D02",
+   "relation": "cross-discipline",
+   "use_case": "see §10 of 15-creative-workflow-automation.md",
+   "evidence": "link stated in the guide"
+  },
+  {
+   "from": "D15",
+   "to": "D03",
+   "relation": "cross-discipline",
+   "use_case": "see §10 of 15-creative-workflow-automation.md",
+   "evidence": "link stated in the guide"
+  },
+  {
+   "from": "D15",
+   "to": "D04",
+   "relation": "cross-discipline",
+   "use_case": "see §10 of 15-creative-workflow-automation.md",
+   "evidence": "link stated in the guide"
+  },
+  {
+   "from": "D15",
+   "to": "D05",
+   "relation": "cross-discipline",
+   "use_case": "see §10 of 15-creative-workflow-automation.md",
+   "evidence": "link stated in the guide"
+  },
+  {
+   "from": "D15",
+   "to": "D06",
+   "relation": "cross-discipline",
+   "use_case": "see §10 of 15-creative-workflow-automation.md",
+   "evidence": "link stated in the guide"
+  },
+  {
+   "from": "D15",
+   "to": "D07",
+   "relation": "cross-discipline",
+   "use_case": "see §10 of 15-creative-workflow-automation.md",
+   "evidence": "link stated in the guide"
+  },
+  {
+   "from": "D15",
+   "to": "D08",
+   "relation": "cross-discipline",
+   "use_case": "see §10 of 15-creative-workflow-automation.md",
+   "evidence": "link stated in the guide"
+  },
+  {
+   "from": "D15",
+   "to": "D09",
+   "relation": "cross-discipline",
+   "use_case": "see §10 of 15-creative-workflow-automation.md",
+   "evidence": "link stated in the guide"
+  },
+  {
+   "from": "D15",
+   "to": "D10",
+   "relation": "cross-discipline",
+   "use_case": "see §10 of 15-creative-workflow-automation.md",
+   "evidence": "link stated in the guide"
+  },
+  {
+   "from": "D15",
+   "to": "D11",
+   "relation": "cross-discipline",
+   "use_case": "see §10 of 15-creative-workflow-automation.md",
+   "evidence": "link stated in the guide"
+  },
+  {
+   "from": "D15",
+   "to": "D12",
+   "relation": "cross-discipline",
+   "use_case": "see §10 of 15-creative-workflow-automation.md",
+   "evidence": "link stated in the guide"
+  },
+  {
+   "from": "D15",
+   "to": "D13",
+   "relation": "cross-discipline",
+   "use_case": "see §10 of 15-creative-workflow-automation.md",
+   "evidence": "link stated in the guide"
+  },
+  {
+   "from": "D15",
+   "to": "D14",
+   "relation": "cross-discipline",
+   "use_case": "see §10 of 15-creative-workflow-automation.md",
+   "evidence": "link stated in the guide"
+  },
+  {
+   "from": "D15",
+   "to": "M37",
+   "relation": "deepens",
+   "use_case": "domain guide builds on the module",
+   "evidence": "reference in the guide"
+  },
+  {
+   "from": "D15",
+   "to": "skill:creative-critic",
+   "relation": "used by",
+   "use_case": "skill applies this domain",
+   "evidence": "named in the guide"
+  },
+  {
+   "from": "D15",
+   "to": "skill:beat-clip",
+   "relation": "used by",
+   "use_case": "skill applies this domain",
+   "evidence": "named in the guide"
   }
  ]
 }

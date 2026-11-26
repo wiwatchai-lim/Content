@@ -1,0 +1,1851 @@
+[
+ {
+  "key": "Galton1869",
+  "title": "Hereditary Genius: An Inquiry into Its Laws and Consequences",
+  "authors": "Francis Galton",
+  "year": 1869,
+  "url": "https://psychclassics.yorku.ca/Galton/wozniak.htm",
+  "doi_isbn": "",
+  "source_type": "primary_text",
+  "tier": "B",
+  "key_findings": [
+   "(via Wozniak introduction, read) used eminence/reputation as a proxy for ability; found eminence far more common among relatives of eminent men, declining with kinship distance; first statistical treatment of genius"
+  ],
+  "practical_applications": [
+   "History only: origin of the quantitative / individual-differences study of exceptional achievement"
+  ],
+  "limitations": [
+   "Eminence confounds ability with opportunity, class and family environment; tied to the eugenics programme; Wozniak intro does not cover critiques; book itself not read"
+  ],
+  "license": "public domain (book)",
+  "access_status": "bibliographic",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-26",
+  "modules": [
+   "M33",
+   "M04"
+  ]
+ },
+ {
+  "key": "Wallas1926",
+  "title": "The Art of Thought",
+  "authors": "Graham Wallas",
+  "year": 1926,
+  "url": "https://archive.org/stream/theartofthought/The%20art%20of%20thought_djvu.txt",
+  "doi_isbn": "",
+  "source_type": "primary_text",
+  "tier": "B",
+  "key_findings": [
+   "Ch. 4 (read): names four stages Preparation, Incubation, Illumination (with its accompaniments) and Verification, built from Helmholtz and Poincare self-reports; adds Intimation as the fringe-conscious feeling that precedes the flash",
+   "Quotes Poincare: unconscious work only gives points of departure; the working-out must be done consciously in Verification"
+  ],
+  "practical_applications": [
+   "Use stages as a scheduling heuristic (prepare hard, step away, verify consciously), not as a fixed law"
+  ],
+  "limitations": [
+   "Built on anecdotes of eminent men, not experiments; only chapter 4 read"
+  ],
+  "license": "public domain (archive.org scan)",
+  "access_status": "full_text",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-26",
+  "modules": [
+   "M33",
+   "M04"
+  ]
+ },
+ {
+  "key": "Guilford1950",
+  "title": "Creativity",
+  "authors": "Guilford, J. P.",
+  "year": 1950,
+  "url": "https://www.Wikipedia.org/wiki/JP_Guilford",
+  "doi_isbn": "",
+  "source_type": "primary_text",
+  "tier": "A",
+  "key_findings": [
+   "APA presidential address (American Psychologist 5(9):444-454) credited with starting psychological creativity research; Guilford's later Structure-of-Intellect model separates divergent from convergent production."
+  ],
+  "practical_applications": [
+   "Separate a 'generate many' phase from a 'pick one' phase."
+  ],
+  "limitations": [
+   "Known through secondary sources only; full text not read.",
+   "Reused record from an earlier batch (key kept); not re-read in this session."
+  ],
+  "license": "copyrighted",
+  "access_status": "bibliographic",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-26",
+  "modules": [
+   "M33",
+   "M04"
+  ]
+ },
+ {
+  "key": "Osborn1953",
+  "title": "Applied Imagination: Principles and Procedures of Creative Thinking",
+  "authors": "Alex F. Osborn",
+  "year": 1953,
+  "url": "https://en.wikipedia.org/wiki/Brainstorming",
+  "doi_isbn": "",
+  "source_type": "practitioner",
+  "tier": "D",
+  "key_findings": [
+   "(via secondary summaries) brainstorming rests on two principles, defer judgment and reach for quantity; four rules: no criticism, quantity, welcome wild ideas, combine and improve"
+  ],
+  "practical_applications": [
+   "Keep the two principles (defer judgment, quantity) but drop the group-talk format: generate alone first"
+  ],
+  "limitations": [
+   "Book not read; the claim that groups produce more ideas was later refuted by nominal-group studies"
+  ],
+  "license": "copyrighted",
+  "access_status": "search_summary",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-26",
+  "modules": [
+   "M33",
+   "M04"
+  ]
+ },
+ {
+  "key": "Kim2011",
+  "title": "The Creativity Crisis: The Decrease in Creative Thinking Scores on the Torrance Tests of Creative Thinking",
+  "authors": "Kyung Hee Kim",
+  "year": 2011,
+  "url": "https://doi.org/10.1080/10400419.2011.627805",
+  "doi_isbn": "10.1080/10400419.2011.627805",
+  "source_type": "empirical",
+  "tier": "A",
+  "key_findings": [
+   "TTCT developed 1966, renormed 1974-2008; 272,599 K-12 students and adults in six normative samples",
+   "Scores static or falling from 6th grade; since 1990 scores fell while IQ rose; largest drop K-3"
+  ],
+  "practical_applications": [
+   "Background for why TTCT matters; do not use as proof of any cause"
+  ],
+  "limitations": [
+   "Normative samples are not the same cohorts; causes not tested"
+  ],
+  "license": "copyrighted",
+  "access_status": "abstract",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-26",
+  "modules": [
+   "M33",
+   "M04"
+  ]
+ },
+ {
+  "key": "Runco2010_TTCT",
+  "title": "Torrance Tests of Creative Thinking as Predictors of Personal and Public Achievement: A Fifty-Year Follow-Up",
+  "authors": "Mark A. Runco, Garnet Millar, Selcuk Acar, Bonnie Cramond",
+  "year": 2010,
+  "url": "https://doi.org/10.1080/10400419.2010.523393",
+  "doi_isbn": "10.1080/10400419.2010.523393",
+  "source_type": "empirical",
+  "tier": "A",
+  "key_findings": [
+   "TTCT given late 1950s; 50 years later scores moderately correlated with personal but not public achievement",
+   "Intelligence x creativity interaction related to public achievement; \"love of work\", tolerance of mistakes, \"minority of one\" related to public achievement"
+  ],
+  "practical_applications": [
+   "Divergent-thinking scores are a weak, partial predictor; persistence and tolerance of mistakes matter for public output"
+  ],
+  "limitations": [
+   "Single longitudinal cohort; attrition; self-reported achievement"
+  ],
+  "license": "copyrighted",
+  "access_status": "abstract",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-26",
+  "modules": [
+   "M33",
+   "M04"
+  ]
+ },
+ {
+  "key": "Amabile1983",
+  "title": "The social psychology of creativity: A componential conceptualization",
+  "authors": "Teresa M. Amabile",
+  "year": 1983,
+  "url": "https://doi.org/10.1037/0022-3514.45.2.357",
+  "doi_isbn": "10.1037/0022-3514.45.2.357",
+  "source_type": "review",
+  "tier": "A",
+  "key_findings": [
+   "Componential framework: domain-relevant skills, creativity-relevant skills and task motivation as necessary components; social environment affects stages of the process"
+  ],
+  "practical_applications": [
+   "Diagnose a stuck project by component: missing domain skill, missing technique, or missing motivation"
+  ],
+  "limitations": [
+   "A framework, not a tested causal model; later revised (Amabile & Pratt 2016, not read)"
+  ],
+  "license": "copyrighted",
+  "access_status": "abstract",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-26",
+  "modules": [
+   "M33",
+   "M04"
+  ]
+ },
+ {
+  "key": "Amabile1982_CAT",
+  "title": "Social psychology of creativity: A consensual assessment technique",
+  "authors": "Teresa M. Amabile",
+  "year": 1982,
+  "url": "https://doi.org/10.1037/0022-3514.43.5.997",
+  "doi_isbn": "10.1037/0022-3514.43.5.997",
+  "source_type": "empirical",
+  "tier": "A",
+  "key_findings": [
+   "(via Cseh & Jeffries) independent expert judges rating relative to the sample reach acceptable agreement; collage study: psychologists .73, art teachers .88"
+  ],
+  "practical_applications": [
+   "Use several independent judges who rate without discussion, items in different random orders"
+  ],
+  "limitations": [
+   "Not read directly",
+   "Existence and DOI confirmed via Crossref this session; content via Cseh & Jeffries 2019 and Kaufman et al. 2009 abstracts."
+  ],
+  "license": "copyrighted",
+  "access_status": "bibliographic",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-26",
+  "modules": [
+   "M33",
+   "M04"
+  ]
+ },
+ {
+  "key": "Csikszentmihalyi1988",
+  "title": "Society, Culture, and Person: A Systems View of Creativity (in Sternberg ed., The Nature of Creativity; reprinted 2014 in The Systems Model of Creativity)",
+  "authors": "Mihaly Csikszentmihalyi",
+  "year": 1988,
+  "url": "https://doi.org/10.1007/978-94-017-9085-7_4",
+  "doi_isbn": "10.1007/978-94-017-9085-7_4",
+  "source_type": "primary_text",
+  "tier": "A",
+  "key_findings": [
+   "(via search summaries) creativity arises from the interaction of person, domain (symbolic rules) and field (gatekeepers who select what enters the domain)"
+  ],
+  "practical_applications": [
+   "Treat audience, client, platform and peers as the field that decides what counts as creative"
+  ],
+  "limitations": [
+   "Chapter not read; theoretical, not experimentally tested"
+  ],
+  "license": "copyrighted",
+  "access_status": "search_summary",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-26",
+  "modules": [
+   "M33",
+   "M04"
+  ]
+ },
+ {
+  "key": "Boden1998",
+  "title": "Creativity and artificial intelligence",
+  "authors": "Margaret A. Boden",
+  "year": 1998,
+  "url": "https://boyoyon.github.io/HTMLs_translated_to_Japanese/papers/1998_Creativity_and_AI/Creativity_and_artificial_intelligence.html",
+  "doi_isbn": "10.1016/s0004-3702(98)00055-1",
+  "source_type": "review",
+  "tier": "A",
+  "key_findings": [
+   "Three types: combinational (improbable combinations of familiar ideas), exploratory (search within a conceptual space), transformational (changing dimensions of the space so previously impossible ideas become possible)",
+   "P-creativity (new to the person/system) vs H-creativity (new to history); P is the more fundamental notion",
+   "AI handles exploratory best; the hardest part is automating evaluation, not generation"
+  ],
+  "practical_applications": [
+   "Label each direction as combinational / exploratory / transformational to check the set is really different; keep evaluation with humans"
+  ],
+  "limitations": [
+   "Read via a mirror HTML copy (publisher page returned 403); 1998 view predates LLMs"
+  ],
+  "license": "copyrighted (mirror copy)",
+  "access_status": "full_text",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-26",
+  "modules": [
+   "M33",
+   "M04"
+  ]
+ },
+ {
+  "key": "Simonton2011",
+  "title": "Creativity and Discovery as Blind Variation: Campbell's (1960) BVSR Model after the Half-Century Mark",
+  "authors": "Dean Keith Simonton",
+  "year": 2011,
+  "url": "https://doi.org/10.1037/a0022912",
+  "doi_isbn": "10.1037/a0022912",
+  "source_type": "review",
+  "tier": "A",
+  "key_findings": [
+   "Defends and extends Campbell 1960 BVSR; defines blind variation by superfluity and backtracking and by processes such as associative richness, defocused attention, tinkering and heuristic search"
+  ],
+  "practical_applications": [
+   "Generate more variants than you need and expect to throw most away; selection is a separate step"
+  ],
+  "limitations": [
+   "Contested: see Gabora 2011; \"blindness\" is hard to operationalise"
+  ],
+  "license": "copyrighted",
+  "access_status": "abstract",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-26",
+  "modules": [
+   "M33",
+   "M04"
+  ]
+ },
+ {
+  "key": "Gabora2011",
+  "title": "An Analysis of the Blind Variation and Selective Retention Theory of Creativity",
+  "authors": "Liane Gabora",
+  "year": 2011,
+  "url": "https://arxiv.org/abs/1309.4692",
+  "doi_isbn": "10.1080/10400419.2011.571187",
+  "source_type": "review",
+  "tier": "A",
+  "key_findings": [
+   "Using Picasso Guernica sketches: lack of similarity between successive sketches is not evidence of selection; ideas are modified as they are thought through, so a selectionist frame does not fit; biases from expertise and remote association make variation non-blind"
+  ],
+  "practical_applications": [
+   "Iteration is honing of one idea, not only picking among random variants: keep both modes"
+  ],
+  "limitations": [
+   "Theoretical critique; Simonton replied (sightedness)"
+  ],
+  "license": "arXiv preprint (author copy)",
+  "access_status": "abstract",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-26",
+  "modules": [
+   "M33",
+   "M04"
+  ]
+ },
+ {
+  "key": "KaufmanBeghetto2009",
+  "title": "Beyond Big and Little: The Four C Model of Creativity",
+  "authors": "James C. Kaufman, Ronald A. Beghetto",
+  "year": 2009,
+  "url": "https://doi.org/10.1037/a0013688",
+  "doi_isbn": "10.1037/a0013688",
+  "source_type": "review",
+  "tier": "A",
+  "key_findings": [
+   "Adds mini-c (creativity in learning) and Pro-c (professional-level) to little-c (everyday) and Big-C (eminent)"
+  ],
+  "practical_applications": [
+   "Studio work is Pro-c: judged by a professional field and audience, not by eminence"
+  ],
+  "limitations": [
+   "Conceptual model"
+  ],
+  "license": "copyrighted",
+  "access_status": "abstract",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-26",
+  "modules": [
+   "M33",
+   "M04"
+  ]
+ },
+ {
+  "key": "Mueller2012",
+  "title": "The Bias Against Creativity: Why People Desire but Reject Creative Ideas",
+  "authors": "Jennifer S. Mueller, Shimul Melwani, Jack A. Goncalo",
+  "year": 2012,
+  "url": "https://harrt.ucla.edu/wp-content/uploads/2015/12/Bias-against-Creativity.pdf",
+  "doi_isbn": "10.1177/0956797611421018",
+  "source_type": "empirical",
+  "tier": "A",
+  "key_findings": [
+   "Creative ideas are defined as both novel and useful",
+   "Exp 1 (N=73): uncertainty (lottery) produced an implicit (IAT) bias against creativity relative to practicality; explicit attitudes unchanged",
+   "Exp 2 (N=140): low tolerance for uncertainty raised implicit bias and lowered creativity ratings of a pre-tested creative idea (5.06 vs 5.76 on 7-pt); partial mediation"
+  ],
+  "practical_applications": [
+   "When the client/user is anxious or rushed, novel options are under-rated: reduce uncertainty (show a mock-up, a reference, a test plan) before presenting the bold option"
+  ],
+  "limitations": [
+   "Two small student samples; IAT measure validity debated; no large replication found in this search"
+  ],
+  "license": "copyrighted (author manuscript)",
+  "access_status": "full_text",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-26",
+  "modules": [
+   "M33",
+   "M04"
+  ]
+ },
+ {
+  "key": "Mednick1962",
+  "title": "The associative basis of the creative process",
+  "authors": "Mednick, S. A.",
+  "year": 1962,
+  "url": "https://pubmed.ncbi.nlm.nih.gov/14472013/",
+  "doi_isbn": "10.1037/h0048850",
+  "source_type": "primary_text",
+  "tier": "A",
+  "key_findings": [
+   "Creativity = combining associative elements into new useful combinations; the more remote the elements, the more creative; proposed flatter associative hierarchies in creative people (basis of the Remote Associates Test).",
+   "Benedek & Neubauer (2013, PMC3924568) found hierarchies did not differ, but creative people showed higher associative fluency and more uncommon responses."
+  ],
+  "practical_applications": [
+   "Deliberately pair distant domains (eyewear x temple fair, glasses x weather) to push past first associations."
+  ],
+  "limitations": [
+   "No abstract; content via secondary sources; core hierarchy hypothesis only partly supported.",
+   "DOI confirmed via Crossref this session; content from earlier batch."
+  ],
+  "license": "copyrighted",
+  "access_status": "bibliographic",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-26",
+  "modules": [
+   "M33",
+   "M04"
+  ]
+ },
+ {
+  "key": "Gentner1983",
+  "title": "Structure-mapping: A theoretical framework for analogy",
+  "authors": "Dedre Gentner",
+  "year": 1983,
+  "url": "https://doi.org/10.1016/s0364-0213(83)80009-3",
+  "doi_isbn": "10.1016/s0364-0213(83)80009-3",
+  "source_type": "empirical",
+  "tier": "A",
+  "key_findings": [
+   "Analogy maps relations between objects, not object attributes, from base to target",
+   "Which relations map is governed by systematicity (connected higher-order relations)"
+  ],
+  "practical_applications": [
+   "A good analogy for a story or ad shares a relational structure (cause, conflict, change), not surface looks"
+  ],
+  "limitations": [
+   "Theory of interpretation, not of how analogies are found"
+  ],
+  "license": "copyrighted",
+  "access_status": "abstract",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-26",
+  "modules": [
+   "M33",
+   "M04"
+  ]
+ },
+ {
+  "key": "FauconnierTurner1998",
+  "title": "Conceptual Integration Networks",
+  "authors": "Fauconnier, G.; Turner, M.",
+  "year": 1998,
+  "url": "https://www.neurohumanitiestudies.eu/archive/paper/?id=22",
+  "doi_isbn": "",
+  "source_type": "primary_text",
+  "tier": "A",
+  "key_findings": [
+   "Blending is a general cognitive operation: two input spaces, a generic space and a blended space with emergent structure; network types simplex, mirror, single-scope, double-scope. Cognitive Science 22(2):133-187."
+  ],
+  "practical_applications": [
+   "Visual metaphors (lens = window, frame = character) as deliberate blends; check the blend's emergent meaning reads clearly."
+  ],
+  "limitations": [
+   "Secondary summaries only; theory, little predictive experimental test.",
+   "Reused record from an earlier batch (key kept); not re-read in this session."
+  ],
+  "license": "copyrighted",
+  "access_status": "search_summary",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-26",
+  "modules": [
+   "M33",
+   "M04"
+  ]
+ },
+ {
+  "key": "GickHolyoak1980",
+  "title": "Analogical problem solving",
+  "authors": "Gick, M. L.; Holyoak, K. J.",
+  "year": 1980,
+  "url": "https://deepblue.lib.umich.edu/handle/2027.42/23210",
+  "doi_isbn": "",
+  "source_type": "empirical",
+  "tier": "A",
+  "key_findings": [
+   "People who read a military story often transferred its solution to Duncker's radiation problem only when hinted; without a hint analogous solutions dropped markedly; Gick & Holyoak 1983: two analogues improve transfer (schema induction)."
+  ],
+  "practical_applications": [
+   "Analogies do not arrive by themselves: explicitly ask 'what else works like this?' and give 2+ source examples from different domains."
+  ],
+  "limitations": [
+   "Abstract and secondary summaries; exact transfer rates not captured.",
+   "Reused record from an earlier batch (key kept); not re-read in this session."
+  ],
+  "license": "copyrighted (repository copy)",
+  "access_status": "abstract",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-26",
+  "modules": [
+   "M33",
+   "M04"
+  ]
+ },
+ {
+  "key": "SioOrmerod2009",
+  "title": "Does Incubation Enhance Problem Solving? A Meta-Analytic Review",
+  "authors": "Sio, U. N.; Ormerod, T. C.",
+  "year": 2009,
+  "url": "https://pubmed.ncbi.nlm.nih.gov/19210055/",
+  "doi_isbn": "10.1037/a0014212",
+  "source_type": "meta-analysis",
+  "tier": "S",
+  "key_findings": [
+   "117 studies, 3,606 participants; weighted mean incubation effect 0.29 (95% CI 0.21-0.39); no publication bias detected by regression of effect on sample size",
+   "Divergent-thinking (creative) tasks benefit more than linguistic or visual insight tasks",
+   "Longer preparation periods give larger effects; high-demand incubation tasks give smaller effects; low-demand tasks beat rest for linguistic problems"
+  ],
+  "practical_applications": [
+   "Work the brief hard first, then switch to a low-demand task and come back before final selection."
+  ],
+  "limitations": [
+   "Abstract and secondary summaries; lab puzzles.",
+   "Full text read this session (author PDF)."
+  ],
+  "license": "copyrighted",
+  "access_status": "full_text",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-26",
+  "modules": [
+   "M33",
+   "M04"
+  ]
+ },
+ {
+  "key": "Baird2012",
+  "title": "Inspired by Distraction: Mind Wandering Facilitates Creative Incubation",
+  "authors": "Benjamin Baird, Jonathan Smallwood, Michael D. Mrazek, Julia W. Y. Kam, Michael S. Franklin, Jonathan W. Schooler",
+  "year": 2012,
+  "url": "https://doi.org/10.1177/0956797612446024",
+  "doi_isbn": "10.1177/0956797612446024",
+  "source_type": "empirical",
+  "tier": "A",
+  "key_findings": [
+   "An undemanding task during incubation improved Unusual Uses performance on previously seen problems, versus demanding task, rest or no break; associated with more mind wandering, not more explicit thought about the task"
+  ],
+  "practical_applications": [
+   "Historical claim behind \"take a walk\"; see failed replications"
+  ],
+  "limitations": [
+   "Conceptual replications failed (Murray et al. 2024)"
+  ],
+  "license": "copyrighted",
+  "access_status": "abstract",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-26",
+  "modules": [
+   "M33",
+   "M04"
+  ]
+ },
+ {
+  "key": "Murray2024",
+  "title": "What are the benefits of mind wandering to creativity?",
+  "authors": "Samuel Murray, Nathan Liang, Nicholaus Brosowsky, Paul Seli",
+  "year": 2024,
+  "url": "https://philpapers.org/archive/MURWAT-5.pdf",
+  "doi_isbn": "10.1037/aca0000420",
+  "source_type": "empirical",
+  "tier": "A",
+  "key_findings": [
+   "Conceptual replication of Baird et al. 2012 across two studies (N=443): no evidence that mind wandering during incubation helps divergent thinking",
+   "Argue task-unrelated thought is unlikely to be causally related to creativity"
+  ],
+  "practical_applications": [
+   "Keep the break (incubation has meta-analytic support) but do not claim mind wandering is the mechanism"
+  ],
+  "limitations": [
+   "Conceptual not direct replication; DT tasks only"
+  ],
+  "license": "copyrighted (preprint on PhilArchive)",
+  "access_status": "abstract",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-26",
+  "modules": [
+   "M33",
+   "M04"
+  ]
+ },
+ {
+  "key": "KouniosBeeman2014",
+  "title": "The Cognitive Neuroscience of Insight",
+  "authors": "John Kounios, Mark Beeman",
+  "year": 2014,
+  "url": "https://doi.org/10.1146/annurev-psych-010213-115154",
+  "doi_isbn": "10.1146/annurev-psych-010213-115154",
+  "source_type": "review",
+  "tier": "A",
+  "key_findings": [
+   "Insight = sudden reinterpretation producing a nonobvious, nondominant interpretation (solution, joke, metaphor, ambiguous percept)",
+   "Linked to right-hemisphere coarse semantic coding and internally focused attention; resting-state differences between insightful and analytic solvers"
+  ],
+  "practical_applications": [
+   "A punchline or story twist works as engineered insight: set up the dominant reading, then allow the non-dominant one"
+  ],
+  "limitations": [
+   "Neuroimaging of insight has been critiqued (Weisberg 2013, title seen only); hemisphere claims should not be overstated"
+  ],
+  "license": "copyrighted",
+  "access_status": "abstract",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-26",
+  "modules": [
+   "M33",
+   "M04"
+  ]
+ },
+ {
+  "key": "Salvi2016",
+  "title": "Insight solutions are correct more often than analytic solutions",
+  "authors": "Carola Salvi, Emanuela Bricolo, John Kounios, Edward Bowden, Mark Beeman",
+  "year": 2016,
+  "url": "https://doi.org/10.1080/13546783.2016.1141798",
+  "doi_isbn": "10.1080/13546783.2016.1141798",
+  "source_type": "empirical",
+  "tier": "A",
+  "key_findings": [
+   "In four experiments self-judged insight solutions were more accurate than analytic ones; analytic responses had more errors of commission"
+  ],
+  "practical_applications": [
+   "An \"aha\" on a small puzzle is informative, but it does not validate a whole campaign idea: still test with the audience"
+  ],
+  "limitations": [
+   "Lab puzzles; does not transfer to judging creative quality"
+  ],
+  "license": "open access (PMC)",
+  "access_status": "abstract",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-26",
+  "modules": [
+   "M33",
+   "M04"
+  ]
+ },
+ {
+  "key": "JanssonSmith1991",
+  "title": "Design fixation",
+  "authors": "Jansson, D. G.; Smith, S. M.",
+  "year": 1991,
+  "url": "https://core.ac.uk/download/237398528.pdf",
+  "doi_isbn": "",
+  "source_type": "empirical",
+  "tier": "A",
+  "key_findings": [
+   "Showing an example solution made designers (incl. professionals) repeat its features, even flawed ones; instructions to avoid the features did not reduce fixation.",
+   "Mixed later evidence: Purcell et al. 1993 replications largely unsuccessful, effects tied to familiarity; Chrysikou & Weisberg found defixation instructions helped."
+  ],
+  "practical_applications": [
+   "Reference images and AI drafts anchor us; generate own directions before looking at references or AI output."
+  ],
+  "limitations": [
+   "Known via secondary papers (Design Studies); replication mixed - medium confidence.",
+   "Existence/DOI 10.1016/0142-694x(91)90003-f confirmed via Crossref this session; summaries via design-fixation literature search (Purcell & Gero 1996: fixation in mechanical-engineering but not industrial-design students)."
+  ],
+  "license": "copyrighted",
+  "access_status": "search_summary",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-26",
+  "modules": [
+   "M33",
+   "M04"
+  ]
+ },
+ {
+  "key": "SmithWardSchumacher1993",
+  "title": "Constraining effects of examples in a creative generation task",
+  "authors": "Steven M. Smith, Thomas B. Ward, Jay S. Schumacher",
+  "year": 1993,
+  "url": "https://doi.org/10.3758/bf03202751",
+  "doi_isbn": "10.3758/bf03202751",
+  "source_type": "empirical",
+  "tier": "A",
+  "key_findings": [
+   "(via search summaries of the paper) in three experiments, people who saw examples produced designs containing more example features; instructions to make designs unlike the examples did not reduce conformity; a 23-minute interpolated task reduced it"
+  ],
+  "practical_applications": [
+   "Do the first idea round before opening references or AI images; if you must see examples, wait before generating"
+  ],
+  "limitations": [
+   "Not read directly; lab drawing task with students"
+  ],
+  "license": "copyrighted",
+  "access_status": "search_summary",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-26",
+  "modules": [
+   "M33",
+   "M04"
+  ]
+ },
+ {
+  "key": "VasconcelosCrilly2016",
+  "title": "Inspiration and fixation: Questions, methods, findings, and challenges",
+  "authors": "Luis A. Vasconcelos, Nathan Crilly",
+  "year": 2016,
+  "url": "https://doi.org/10.1016/j.destud.2015.11.001",
+  "doi_isbn": "10.1016/j.destud.2015.11.001",
+  "source_type": "review",
+  "tier": "A",
+  "key_findings": [
+   "Review of 25 experimental studies: 14 manipulated variables; great variety in methods and results; calls for harmonised methods"
+  ],
+  "practical_applications": [
+   "Treat \"examples cause fixation\" as a real risk with uncertain size, not a law"
+  ],
+  "limitations": [
+   "Narrative review, not meta-analysis"
+  ],
+  "license": "copyrighted",
+  "access_status": "abstract",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-26",
+  "modules": [
+   "M33",
+   "M04"
+  ]
+ },
+ {
+  "key": "Acar2019",
+  "title": "Creativity and Innovation Under Constraints: A Cross-Disciplinary Integrative Review",
+  "authors": "Acar, O. A.; Tarakci, M.; van Knippenberg, D.",
+  "year": 2019,
+  "url": "https://openaccess.city.ac.uk/id/eprint/20459/",
+  "doi_isbn": "10.1177/0149206318805832",
+  "source_type": "review",
+  "tier": "A",
+  "key_findings": [
+   "Constraint research across management fields is fragmented with conflicting findings; builds a taxonomy of constraints and mediating mechanisms (motivation, cognition, social context)."
+  ],
+  "practical_applications": [
+   "Constraints are not automatically good or bad; pick constraints that force search away from defaults (e.g., 'no coffee shop, no sunset')."
+  ],
+  "limitations": [
+   "Abstract only; taxonomy categories not verified; the common 'inverted-U' summary was not confirmed this session.",
+   "Reused record from an earlier batch (key kept); not re-read in this session."
+  ],
+  "license": "copyrighted (accepted manuscript open access)",
+  "access_status": "abstract",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-26",
+  "modules": [
+   "M33",
+   "M04"
+  ]
+ },
+ {
+  "key": "HaughtTromp2017",
+  "title": "The Green Eggs and Ham hypothesis: How constraints facilitate creativity",
+  "authors": "Catrinel Haught-Tromp",
+  "year": 2017,
+  "url": "https://doi.org/10.1037/aca0000061",
+  "doi_isbn": "10.1037/aca0000061",
+  "source_type": "empirical",
+  "tier": "A",
+  "key_findings": [
+   "(via search summaries) two experiments: 2-line rhymes that had to include given nouns were rated more creative than unconstrained ones; constraints cut choices to a manageable subset"
+  ],
+  "practical_applications": [
+   "Give each direction one precise constraint (a required object/word) rather than \"anything goes\""
+  ],
+  "limitations": [
+   "Not read directly; student samples, one task type"
+  ],
+  "license": "copyrighted",
+  "access_status": "search_summary",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-26",
+  "modules": [
+   "M33",
+   "M04"
+  ]
+ },
+ {
+  "key": "Ericsson1993",
+  "title": "The role of deliberate practice in the acquisition of expert performance",
+  "authors": "K. Anders Ericsson; Ralf Th. Krampe; Clemens Tesch-Roemer",
+  "year": 1993,
+  "url": "https://doi.org/10.1037/0033-295X.100.3.363",
+  "doi_isbn": "10.1037/0033-295X.100.3.363",
+  "source_type": "empirical",
+  "tier": "A",
+  "key_findings": [
+   "Expert performance explained as the result of prolonged deliberate practice: effortful activities designed to improve performance",
+   "Individual differences even among elites closely related to assessed amounts of deliberate practice"
+  ],
+  "practical_applications": [
+   "Design practice that targets a weakness with feedback, not just more output"
+  ],
+  "limitations": [
+   "Retrospective practice estimates; core finding not replicated by Macnamara & Maitra 2019",
+   "Abstract read this session via OpenAlex."
+  ],
+  "license": "copyrighted",
+  "access_status": "abstract",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-26",
+  "modules": [
+   "M33",
+   "M04"
+  ]
+ },
+ {
+  "key": "Macnamara2014",
+  "title": "Deliberate Practice and Performance in Music, Games, Sports, Education, and Professions: A Meta-Analysis",
+  "authors": "Brooke N. Macnamara; David Z. Hambrick; Frederick L. Oswald",
+  "year": 2014,
+  "url": "https://doi.org/10.1177/0956797614535810",
+  "doi_isbn": "10.1177/0956797614535810",
+  "source_type": "meta-analysis",
+  "tier": "S",
+  "key_findings": [
+   "Deliberate practice explained 26% of performance variance in games, 21% music, 18% sports, 4% education, <1% professions",
+   "Deliberate practice is important but not as important as argued"
+  ],
+  "practical_applications": [
+   "Do not promise that logging lessons alone makes a studio excellent; measure outcomes"
+  ],
+  "limitations": [
+   "Definition of deliberate practice disputed by Ericsson & Harwell 2019",
+   "Abstract read this session via Crossref."
+  ],
+  "license": "copyrighted",
+  "access_status": "abstract",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-26",
+  "modules": [
+   "M33",
+   "M04"
+  ]
+ },
+ {
+  "key": "MacnamaraMaitra2019",
+  "title": "The role of deliberate practice in expert performance: revisiting Ericsson, Krampe & Tesch-Romer (1993)",
+  "authors": "Brooke N. Macnamara, Megha Maitra",
+  "year": 2019,
+  "url": "https://doi.org/10.1098/rsos.190327",
+  "doi_isbn": "10.1098/rsos.190327",
+  "source_type": "empirical",
+  "tier": "A",
+  "key_findings": [
+   "Double-blind replication with violinists did not replicate the core finding that accumulated deliberate practice corresponded to each skill level"
+  ],
+  "practical_applications": [
+   "Do not promise \"10,000 hours\" or \"10 years\" to anyone"
+  ],
+  "limitations": [
+   "Single domain, small sample of violinists"
+  ],
+  "license": "CC BY 4.0",
+  "access_status": "abstract",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-26",
+  "modules": [
+   "M33",
+   "M04"
+  ]
+ },
+ {
+  "key": "Hayes1989",
+  "title": "Cognitive Processes in Creativity (in Glover, Ronning & Reynolds eds., Handbook of Creativity)",
+  "authors": "John R. Hayes",
+  "year": 1989,
+  "url": "https://doi.org/10.1007/978-1-4757-5356-1_7",
+  "doi_isbn": "10.1007/978-1-4757-5356-1_7",
+  "source_type": "empirical",
+  "tier": "A",
+  "key_findings": [
+   "(via secondary summaries) of 76 classical composers almost all needed at least ten years of intensive study before a first masterwork; three exceptions at years 8-9"
+  ],
+  "practical_applications": [
+   "Long apprenticeship in a domain is the norm for masterworks"
+  ],
+  "limitations": [
+   "Chapter not read; eminence sample; date given as 1989 or 1990 in different sources"
+  ],
+  "license": "copyrighted",
+  "access_status": "search_summary",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-26",
+  "modules": [
+   "M33",
+   "M04"
+  ]
+ },
+ {
+  "key": "Simonton2000",
+  "title": "Creative Development as Acquired Expertise: Theoretical Issues and an Empirical Test",
+  "authors": "Dean Keith Simonton",
+  "year": 2000,
+  "url": "https://doi.org/10.1006/drev.1999.0504",
+  "doi_isbn": "10.1006/drev.1999.0504",
+  "source_type": "empirical",
+  "tier": "A",
+  "key_findings": [
+   "(via secondary summaries) in classical composers the expertise period is an average with large variance; the most eminent took less time than average"
+  ],
+  "practical_applications": [
+   "The 10-year rule is an average, not a rule"
+  ],
+  "limitations": [
+   "Not read directly; historiometric sample of famous composers"
+  ],
+  "license": "copyrighted",
+  "access_status": "search_summary",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-26",
+  "modules": [
+   "M33",
+   "M04"
+  ]
+ },
+ {
+  "key": "DeDreu2012",
+  "title": "Working Memory Benefits Creative Insight, Musical Improvisation, and Original Ideation Through Maintained Task-Focused Attention",
+  "authors": "Carsten K. W. De Dreu, Bernard A. Nijstad, Matthijs Baas, Inge Wolsink, Marieke Roskes",
+  "year": 2012,
+  "url": "https://doi.org/10.1177/0146167211435795",
+  "doi_isbn": "10.1177/0146167211435795",
+  "source_type": "empirical",
+  "tier": "A",
+  "key_findings": [
+   "Under cognitive load people did worse on a creative insight task",
+   "Working-memory capacity predicted creativity via persistence (focused, systematic combining), including in cellists' improvisations"
+  ],
+  "practical_applications": [
+   "Do not ideate while juggling render queues and chats; protect a focused block for generation"
+  ],
+  "limitations": [
+   "Four studies, moderate samples; dual-pathway model"
+  ],
+  "license": "copyrighted",
+  "access_status": "abstract",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-26",
+  "modules": [
+   "M33",
+   "M04"
+  ]
+ },
+ {
+  "key": "Benedek2014",
+  "title": "Intelligence, creativity, and cognitive control: The common and differential involvement of executive functions in intelligence and creativity",
+  "authors": "Mathias Benedek, Emanuel Jauk, Markus Sommer, Martin Arendasy, Aljoscha C. Neubauer",
+  "year": 2014,
+  "url": "https://doi.org/10.1016/j.intell.2014.05.007",
+  "doi_isbn": "10.1016/j.intell.2014.05.007",
+  "source_type": "empirical",
+  "tier": "A",
+  "key_findings": [
+   "Latent-variable study: divergent thinking predicted by updating and inhibition, not shifting; updating (and openness) explains shared variance between intelligence and creativity"
+  ],
+  "practical_applications": [
+   "Originality needs suppression of the obvious answer (inhibition): write down and ban the default first"
+  ],
+  "limitations": [
+   "Cross-sectional; DT tasks as the creativity measure"
+  ],
+  "license": "open access",
+  "access_status": "abstract",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-26",
+  "modules": [
+   "M33",
+   "M04"
+  ]
+ },
+ {
+  "key": "Beaty2018",
+  "title": "Robust prediction of individual creative ability from brain functional connectivity",
+  "authors": "Roger E. Beaty, Yoed N. Kenett, Alexander P. Christensen, Monica D. Rosenberg, Mathias Benedek, et al.",
+  "year": 2018,
+  "url": "https://doi.org/10.1073/pnas.1713532115",
+  "doi_isbn": "10.1073/pnas.1713532115",
+  "source_type": "empirical",
+  "tier": "A",
+  "key_findings": [
+   "A network spanning default, salience and executive systems predicted originality of ideas across four independent datasets"
+  ],
+  "practical_applications": [
+   "Supports the view that creative ideation combines spontaneous generation with controlled evaluation"
+  ],
+  "limitations": [
+   "Correlational; DT task as criterion; not a training recipe"
+  ],
+  "license": "copyrighted",
+  "access_status": "abstract",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-26",
+  "modules": [
+   "M33",
+   "M04"
+  ]
+ },
+ {
+  "key": "DietrichKanso2010",
+  "title": "A review of EEG, ERP, and neuroimaging studies of creativity and insight",
+  "authors": "Arne Dietrich, Riam Kanso",
+  "year": 2010,
+  "url": "https://doi.org/10.1037/a0019749",
+  "doi_isbn": "10.1037/a0019749",
+  "source_type": "review",
+  "tier": "S",
+  "key_findings": [
+   "72 experiments in 63 articles; divergent-thinking and artistic-creativity neural findings inconsistent; insight findings more consistent (anterior cingulate, prefrontal); creativity not localised in one region"
+  ],
+  "practical_applications": [
+   "Reject \"right-brain creative\" claims in copy and training"
+  ],
+  "limitations": [
+   "Pre-2010 literature; qualitative synthesis"
+  ],
+  "license": "copyrighted",
+  "access_status": "abstract",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-26",
+  "modules": [
+   "M33",
+   "M04"
+  ]
+ },
+ {
+  "key": "NijstadStroebe2006",
+  "title": "How the Group Affects the Mind: A Cognitive Model of Idea Generation in Groups",
+  "authors": "Bernard A. Nijstad, Wolfgang Stroebe",
+  "year": 2006,
+  "url": "https://doi.org/10.1207/s15327957pspr1003_1",
+  "doi_isbn": "10.1207/s15327957pspr1003_1",
+  "source_type": "review",
+  "tier": "A",
+  "key_findings": [
+   "SIAM model: idea generation = repeated search of associative memory (knowledge activation, then idea production); turn-taking (production blocking) interferes with both stages; others' ideas can aid activation; cognitive failures drive persistence and satisfaction"
+  ],
+  "practical_applications": [
+   "Read others' ideas only after your own round, as stimulation for a second round"
+  ],
+  "limitations": [
+   "Model; tested mostly in lab groups"
+  ],
+  "license": "copyrighted",
+  "access_status": "abstract",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-26",
+  "modules": [
+   "M33",
+   "M04"
+  ]
+ },
+ {
+  "key": "DiehlStroebe1987",
+  "title": "Productivity Loss in Brainstorming Groups: Toward the Solution of a Riddle",
+  "authors": "Diehl, M.; Stroebe, W.",
+  "year": 1987,
+  "url": "https://homepages.se.edu/cvonbergen/files/2013/01/Productivity-Loss-In-Brainstorming_Toward-the-Solution-of-a-Riddle.pdf",
+  "doi_isbn": "10.1037/0022-3514.53.3.497",
+  "source_type": "empirical",
+  "tier": "A",
+  "key_findings": [
+   "Four experiments: production blocking (waiting to speak) accounted for most of the productivity loss of interactive vs nominal groups; free riding and evaluation apprehension were minor."
+  ],
+  "practical_applications": [
+   "Generate alone first, then pool (nominal group / brainwriting)."
+  ],
+  "limitations": [
+   "Abstract/secondary only; lab tasks, students.",
+   "Reused record from an earlier batch (key kept); not re-read in this session."
+  ],
+  "license": "copyrighted",
+  "access_status": "abstract",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-26",
+  "modules": [
+   "M33",
+   "M04"
+  ]
+ },
+ {
+  "key": "Mullen1991",
+  "title": "Productivity Loss in Brainstorming Groups: A Meta-Analytic Integration",
+  "authors": "Mullen, B.; Johnson, C.; Salas, E.",
+  "year": 1991,
+  "url": "https://informahealthcare.com/doi/abs/10.1207/s15324834basp1201_3",
+  "doi_isbn": "10.1207/s15324834basp1201_3",
+  "source_type": "meta-analysis",
+  "tier": "S",
+  "key_findings": [
+   "Interactive brainstorming groups produce fewer and lower-quality ideas than nominal groups; losses grow with group size, experimenter presence and spoken (vs written) ideas."
+  ],
+  "practical_applications": [
+   "Classic 'everyone shout ideas' brainstorming is the weakest format; write ideas individually."
+  ],
+  "limitations": [
+   "Abstract only; Diehl & Stroebe disputed some mechanism conclusions.",
+   "Reused record from an earlier batch (key kept); not re-read in this session."
+  ],
+  "license": "copyrighted",
+  "access_status": "abstract",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-26",
+  "modules": [
+   "M33",
+   "M04"
+  ]
+ },
+ {
+  "key": "Girotra2010",
+  "title": "Idea Generation and the Quality of the Best Idea",
+  "authors": "Girotra, K.; Terwiesch, C.; Ulrich, K. T.",
+  "year": 2010,
+  "url": "https://repository.upenn.edu/oid_papers/191",
+  "doi_isbn": "10.1287/mnsc.1090.1144",
+  "source_type": "empirical",
+  "tier": "A",
+  "key_findings": [
+   "Hybrid structure (work alone, then pool and evaluate as a team) beat team-only on number of ideas, quality, and ability to discern the best idea; building on others' ideas did not yield more or better ideas.",
+   "Best-idea quality depends on mean quality, number, variance, and selection ability."
+  ],
+  "practical_applications": [
+   "We need the best idea, not the average: maximise variance in generation, then select carefully with criteria."
+  ],
+  "limitations": [
+   "Abstract only; lab product-idea task.",
+   "Reused record from an earlier batch (key kept); not re-read in this session."
+  ],
+  "license": "copyrighted",
+  "access_status": "abstract",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-26",
+  "modules": [
+   "M33",
+   "M04"
+  ]
+ },
+ {
+  "key": "Berg2016_CreativeHighwire",
+  "title": "Balancing on the Creative Highwire: Forecasting the Success of Novel Ideas in Organizations",
+  "authors": "Justin M. Berg",
+  "year": 2016,
+  "url": "https://www.gsb.stanford.edu/insights/managers-are-not-best-judge-creative-ideas",
+  "doi_isbn": "10.1177/0001839216642211",
+  "source_type": "empirical",
+  "tier": "A",
+  "key_findings": [
+   "339 circus professionals forecast audience success of new acts, checked against 13,248 audience members",
+   "Creators forecast peers' novel ideas more accurately than managers, but overestimated their own",
+   "Managers undervalued novel acts; best judges were peers who generate ideas but did not make the one judged; lab study: creator mindset improved ranking of novel ideas"
+  ],
+  "practical_applications": [
+   "Use peer creators (another agent/person who also makes work) as critics; never the author alone"
+  ],
+  "limitations": [
+   "Circus domain; read via Stanford GSB summary, not the ASQ paper",
+   "Abstract read this session via Crossref."
+  ],
+  "license": "copyrighted",
+  "access_status": "abstract",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-26",
+  "modules": [
+   "M33",
+   "M04"
+  ]
+ },
+ {
+  "key": "Licuanan2007",
+  "title": "Idea evaluation: Error in evaluating highly original ideas",
+  "authors": "Brian F. Licuanan, Lesley R. Dailey, Michael D. Mumford",
+  "year": 2007,
+  "url": "https://doi.org/10.1002/j.2162-6057.2007.tb01279.x",
+  "doi_isbn": "10.1002/j.2162-6057.2007.tb01279.x",
+  "source_type": "empirical",
+  "tier": "A",
+  "key_findings": [
+   "181 undergraduates evaluating marketing campaigns tended to underestimate the originality of highly novel ideas; active analysis of product originality and of team process reduced the error"
+  ],
+  "practical_applications": [
+   "Score originality explicitly as its own criterion instead of an overall gut rating"
+  ],
+  "limitations": [
+   "Student raters; one task"
+  ],
+  "license": "copyrighted",
+  "access_status": "abstract",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-26",
+  "modules": [
+   "M33",
+   "M04"
+  ]
+ },
+ {
+  "key": "BlairMumford2007",
+  "title": "Errors in Idea Evaluation: Preference for the Unoriginal?",
+  "authors": "Cassie S. Blair, Michael D. Mumford",
+  "year": 2007,
+  "url": "https://doi.org/10.1002/j.2162-6057.2007.tb01288.x",
+  "doi_isbn": "10.1002/j.2162-6057.2007.tb01288.x",
+  "source_type": "empirical",
+  "tier": "A",
+  "key_findings": [
+   "Evaluators preferred ideas that were easy to understand, gave short-term benefits to many and fit social norms, and disregarded risky, time-consuming, original ideas; original/risky ideas were preferred more when criteria were less stringent and time pressure high"
+  ],
+  "practical_applications": [
+   "Expect clients to pick the safest option; present the bold one with its risk handled"
+  ],
+  "limitations": [
+   "Student samples, foundation-funding scenario"
+  ],
+  "license": "copyrighted",
+  "access_status": "abstract",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-26",
+  "modules": [
+   "M33",
+   "M04"
+  ]
+ },
+ {
+  "key": "KaufmanBaerCole2009",
+  "title": "Expertise, Domains, and the Consensual Assessment Technique",
+  "authors": "James C. Kaufman, John Baer, Jason C. Cole",
+  "year": 2009,
+  "url": "https://doi.org/10.1002/j.2162-6057.2009.tb01316.x",
+  "doi_isbn": "10.1002/j.2162-6057.2009.tb01316.x",
+  "source_type": "empirical",
+  "tier": "A",
+  "key_findings": [
+   "Expert vs novice ratings of short fiction correlated only .71; experts far more consistent; novice inter-rater reliability potentially problematic; (via summary) CAT reliability typically .80-.90 and rises with number of judges"
+  ],
+  "practical_applications": [
+   "Use several independent raters, ideally with domain experience; do not trust one rater"
+  ],
+  "limitations": [
+   "One domain (fiction)"
+  ],
+  "license": "copyrighted",
+  "access_status": "abstract",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-26",
+  "modules": [
+   "M33",
+   "M04"
+  ]
+ },
+ {
+  "key": "CsehJeffries2019_ScatteredCAT",
+  "title": "A scattered CAT: A critical evaluation of the Consensual Assessment Technique for creativity research",
+  "authors": "Genevieve M. Cseh, Karl K. Jeffries",
+  "year": 2019,
+  "url": "https://knowledge.lancashire.ac.uk/id/eprint/28402/",
+  "doi_isbn": "10.1037/aca0000220",
+  "source_type": "review",
+  "tier": "A",
+  "key_findings": [
+   "CAT guidelines: judges with domain experience, rate independently without training or discussion, rate relative to the sample, see items in different random orders, rate other dimensions (technical, aesthetic) separately",
+   "Expert vs novice agreement is equivocal and domain-dependent; adding judges (>10) can inflate alpha; <5 judges risks both error types",
+   "Reporting of CAT procedures is inconsistent; calls for harmonised protocol"
+  ],
+  "practical_applications": [
+   "Studio panel: 3-5 independent raters (human + different AI models) rating relatively, before any discussion"
+  ],
+  "limitations": [
+   "Review of research use, not of studio practice",
+   "Abstract read this session via OpenAlex."
+  ],
+  "license": "author accepted manuscript",
+  "access_status": "abstract",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-26",
+  "modules": [
+   "M33",
+   "M04"
+  ]
+ },
+ {
+  "key": "Silvia2008",
+  "title": "Assessing creativity with divergent thinking tasks: Exploring the reliability and validity of new subjective scoring methods",
+  "authors": "Paul J. Silvia, Beate P. Winterstein, John T. Willse, Christopher M. Barona, Joshua T. Cram, et al.",
+  "year": 2008,
+  "url": "https://doi.org/10.1037/1931-3896.2.2.68",
+  "doi_isbn": "10.1037/1931-3896.2.2.68",
+  "source_type": "empirical",
+  "tier": "A",
+  "key_findings": [
+   "Top-2 scoring: participants circle their two most creative responses, raters score 1-5; 2-3 raters give dependable scores; n=226; over half of DT variance explained by personality"
+  ],
+  "practical_applications": [
+   "Let the creator nominate their best 2 of N before others judge; rate on a 1-5 scale with 2-3 raters"
+  ],
+  "limitations": [
+   "Student sample; lab DT tasks"
+  ],
+  "license": "copyrighted",
+  "access_status": "abstract",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-26",
+  "modules": [
+   "M33",
+   "M04"
+  ]
+ },
+ {
+  "key": "Hekkert2003",
+  "title": "\"Most advanced, yet acceptable\": Typicality and novelty as joint predictors of aesthetic preference in industrial design",
+  "authors": "Paul Hekkert, Dirk Snelders, Piet C. W. van Wieringen",
+  "year": 2003,
+  "url": "https://doi.org/10.1348/000712603762842147",
+  "doi_isbn": "10.1348/000712603762842147",
+  "source_type": "empirical",
+  "tier": "A",
+  "key_findings": [
+   "Typicality and novelty jointly and equally predict preference for products but suppress each other; people prefer novel designs as long as the novelty does not hurt typicality; expertise did not change this"
+  ],
+  "practical_applications": [
+   "Audience test for a bold direction: is it still recognisable as its category (a glasses ad, a Mint & Tao story)?"
+  ],
+  "limitations": [
+   "Product designs; samples from one country"
+  ],
+  "license": "copyrighted",
+  "access_status": "abstract",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-26",
+  "modules": [
+   "M33",
+   "M04"
+  ]
+ },
+ {
+  "key": "DoshiHauser2024",
+  "title": "Generative AI enhances individual creativity but reduces the collective diversity of novel content",
+  "authors": "Doshi, A. R.; Hauser, O. P.",
+  "year": 2024,
+  "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11244532",
+  "doi_isbn": "10.1126/sciadv.adn5290",
+  "source_type": "empirical",
+  "tier": "A",
+  "key_findings": [
+   "293 writers, 600 evaluators; conditions 0, 1 or 5 GPT-4 ideas. Novelty +5.4% (1 idea) and +8.1% (5 ideas); usefulness +3.7% / +9.0%.",
+   "Gains largest for less creative writers (novelty up to +10.7%), roughly equalising them with more creative writers.",
+   "Stories became more similar to each other (+10.7% / +8.9% of similarity range) and about 5% more similar to the AI ideas - a social dilemma: individuals better off, collective diversity down."
+  ],
+  "practical_applications": [
+   "AI ideas raise the floor but pull everyone toward the same stories: use AI for volume/critique, but force divergence (different seeds, constraints, human-first idea) and check against our own past output."
+  ],
+  "limitations": [
+   "8-sentence stories, one LLM, no interaction with the model, UK online sample, opt-in idea use.",
+   "Reused record from an earlier batch (key kept); not re-read in this session."
+  ],
+  "license": "unknown (open access)",
+  "access_status": "full_text",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-26",
+  "modules": [
+   "M33",
+   "M04"
+  ]
+ },
+ {
+  "key": "Holzner2025",
+  "title": "Generative AI and Creativity: A Systematic Literature Review and Meta-Analysis",
+  "authors": "Niklas Holzner, Sebastian Maier, Stefan Feuerriegel",
+  "year": 2025,
+  "url": "https://arxiv.org/abs/2505.17241",
+  "doi_isbn": "arXiv:2505.17241",
+  "source_type": "meta-analysis",
+  "tier": "S",
+  "key_findings": [
+   "28 studies, 8,214 participants: GenAI alone vs humans g = -0.05 (ns); humans+GenAI vs humans alone g = 0.27; diversity of ideas g = -0.86 (homogenisation)"
+  ],
+  "practical_applications": [
+   "Use AI to raise individual output but add explicit diversity steps (many directions, human selection, references outside the model)"
+  ],
+  "limitations": [
+   "Preprint; mostly text/ideation tasks, not images",
+   "Abstract read this session (arXiv preprint, not peer reviewed)."
+  ],
+  "license": "arXiv licence",
+  "access_status": "abstract",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-26",
+  "modules": [
+   "M33",
+   "M04"
+  ]
+ },
+ {
+  "key": "Wadinambiarachchi2024",
+  "title": "The Effects of Generative AI on Design Fixation and Divergent Thinking",
+  "authors": "Samangi Wadinambiarachchi, Ryan M. Kelly, Saumya Pareek, Qiushi Zhou, Eduardo Velloso",
+  "year": 2024,
+  "url": "https://arxiv.org/abs/2403.11164",
+  "doi_isbn": "10.1145/3613904.3642919",
+  "source_type": "empirical",
+  "tier": "A",
+  "key_findings": [
+   "Between-participants (N=60) visual ideation: AI image generator support led to higher fixation on the initial example, fewer ideas, less variety and lower originality than baseline",
+   "Outcome depended on how people wrote prompts and used AI suggestions; (via search snippet) fixation can shift from the exemplar onto the AI outputs"
+  ],
+  "practical_applications": [
+   "Sketch/write own directions before prompting an image model; use AI after, to execute or to stress-test"
+  ],
+  "limitations": [
+   "Small N; one task; Midjourney 2023 version"
+  ],
+  "license": "CC BY 4.0",
+  "access_status": "abstract",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-26",
+  "modules": [
+   "M33",
+   "M04"
+  ]
+ },
+ {
+  "key": "Kumar2025",
+  "title": "Human Creativity in the Age of LLMs: Randomized Experiments on Divergent and Convergent Thinking",
+  "authors": "Harsh Kumar, Jonathan Vincentius, Ewan Jordan, Ashton Anderson",
+  "year": 2025,
+  "url": "https://arxiv.org/abs/2410.03703",
+  "doi_isbn": "10.1145/3706598.3714198",
+  "source_type": "empirical",
+  "tier": "A",
+  "key_findings": [
+   "Two pre-registered experiments (1,100 participants): standard LLM or coach-like LLM help boosted performance while assisted but could hurt later unassisted creative performance"
+  ],
+  "practical_applications": [
+   "Keep regular no-AI ideation rounds so own skill does not decay"
+  ],
+  "limitations": [
+   "Short online tasks; effects on professionals unknown"
+  ],
+  "license": "copyrighted (arXiv copy open)",
+  "access_status": "abstract",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-26",
+  "modules": [
+   "M33",
+   "M04"
+  ]
+ },
+ {
+  "key": "Ashkinaze2024",
+  "title": "How AI Ideas Affect the Creativity, Diversity, and Evolution of Human Ideas: Evidence From a Large, Dynamic Experiment",
+  "authors": "Joshua Ashkinaze, Julia Mendelsohn, Li Qiwei, Ceren Budak, Eric Gilbert",
+  "year": 2024,
+  "url": "https://arxiv.org/abs/2401.13481",
+  "doi_isbn": "",
+  "source_type": "empirical",
+  "tier": "A",
+  "key_findings": [
+   "800+ participants, 40+ countries; high exposure to ChatGPT example ideas did not change individual creativity but increased collective idea diversity; disclosure of AI source had no main effect"
+  ],
+  "practical_applications": [
+   "AI ideas shown as varied stimuli (not as answers to copy) can widen a pool"
+  ],
+  "limitations": [
+   "Preprint; one task family"
+  ],
+  "license": "arXiv",
+  "access_status": "abstract",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-26",
+  "modules": [
+   "M33",
+   "M04"
+  ]
+ },
+ {
+  "key": "LeeChung2024",
+  "title": "An empirical investigation of the impact of ChatGPT on creativity",
+  "authors": "Byung Cheol Lee, Jaeyeon Chung",
+  "year": 2024,
+  "url": "https://ideas.repec.org/a/nat/nathum/v8y2024i10d10.1038_s41562-024-01953-1.html",
+  "doi_isbn": "10.1038/s41562-024-01953-1",
+  "source_type": "empirical",
+  "tier": "A",
+  "key_findings": [
+   "Five experiments: ideas made with ChatGPT (GPT-3.5) rated more creative than with Google or no technology; most effective for incremental, not radically new, ideas; ChatGPT combines remote concepts into a cohesive, articulated form"
+  ],
+  "practical_applications": [
+   "Use LLMs to polish and articulate incremental ideas; do not rely on them for the radical direction"
+  ],
+  "limitations": [
+   "Set diversity contested by Meincke et al. 2025 (authors replied, 2025)"
+  ],
+  "license": "copyrighted",
+  "access_status": "abstract",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-26",
+  "modules": [
+   "M33",
+   "M04"
+  ]
+ },
+ {
+  "key": "Meincke2025",
+  "title": "ChatGPT decreases idea diversity in brainstorming",
+  "authors": "Lennart Meincke, Gideon Nave, Christian Terwiesch",
+  "year": 2025,
+  "url": "https://mackinstitute.wharton.upenn.edu/2025/new-in-nature-chatgpt-decreases-idea-diversity-in-brainstorming/",
+  "doi_isbn": "10.1038/s41562-025-02173-x",
+  "source_type": "empirical",
+  "tier": "A",
+  "key_findings": [
+   "(via Wharton Mack Institute summary) across five experiments ChatGPT-assisted brainstorming produced less diverse idea sets; 37 of 45 comparisons significant; in one task 94% of ChatGPT-assisted ideas shared overlapping concepts and nine participants named their toy \"Build-a-Breeze Castle\"; one experiment showed no clear drop"
+  ],
+  "practical_applications": [
+   "Measure set diversity, not just individual idea quality; ask the model for many ideas that differ from each other"
+  ],
+  "limitations": [
+   "Paper not read; institutional summary only"
+  ],
+  "license": "copyrighted",
+  "access_status": "search_summary",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-26",
+  "modules": [
+   "M33",
+   "M04"
+  ]
+ },
+ {
+  "key": "ZhouLee2024",
+  "title": "Generative artificial intelligence, human creativity, and art",
+  "authors": "Eric Zhou, Dokyun Lee",
+  "year": 2024,
+  "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10914360",
+  "doi_isbn": "10.1093/pnasnexus/pgae052",
+  "source_type": "empirical",
+  "tier": "A",
+  "key_findings": [
+   "4M+ artworks, ~53,000 artists, ~5,800 AI adopters; difference-in-differences",
+   "Productivity up (~50% in adoption month); favourites per view up from ~2% to ~3% by month 6",
+   "Average content novelty and average + peak visual novelty declined (convergence to a preferred style); peak content novelty marginally rose",
+   "Artists rewarded for exploring new concepts with AI, penalised for using AI to explore new visual styles"
+  ],
+  "practical_applications": [
+   "The 'AI look' is measurable convergence of visual style: put novelty in the idea and keep a deliberate house style"
+  ],
+  "limitations": [
+   "Observational; one platform; adoption detected by tags; process not observed",
+   "Abstract read this session via Crossref (registry has a full_text record from an earlier batch)."
+  ],
+  "license": "CC BY (PNAS Nexus)",
+  "access_status": "abstract",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-26",
+  "modules": [
+   "M33",
+   "M04"
+  ]
+ },
+ {
+  "key": "Meincke2024",
+  "title": "Prompting Diverse Ideas: Increasing AI Idea Variance",
+  "authors": "Meincke, L.; Mollick, E.; Terwiesch, C.",
+  "year": 2024,
+  "url": "https://arxiv.org/abs/2402.01727",
+  "doi_isbn": "",
+  "source_type": "empirical",
+  "tier": "B",
+  "key_findings": [
+   "GPT-4 with minimal prompting produced less diverse idea pools than groups of humans; personas and creativity-technique prompts helped somewhat; chain-of-thought prompting gave the highest diversity, close to human groups.",
+   "Authors suggest using multiple models to add variety."
+  ],
+  "practical_applications": [
+   "Ask the model to first list many distinct concepts briefly, then develop each; mix models (Claude/Codex/FLUX) and seeds."
+  ],
+  "limitations": [
+   "Working paper (SSRN/arXiv); diversity measured by embeddings, not by audience response; product-idea domain.",
+   "Reused record from an earlier batch (key kept); not re-read in this session."
+  ],
+  "license": "arXiv (license not checked)",
+  "access_status": "abstract",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-26",
+  "modules": [
+   "M33",
+   "M04"
+  ]
+ },
+ {
+  "key": "Anderson2024",
+  "title": "Homogenization Effects of Large Language Models on Human Creative Ideation",
+  "authors": "Anderson, B. R.; Shah, J. H.; Kreminski, M.",
+  "year": 2024,
+  "url": "https://arxiv.org/abs/2402.01536v2",
+  "doi_isbn": "",
+  "source_type": "empirical",
+  "tier": "A",
+  "key_findings": [
+   "36 participants, four TTCT-style divergent tasks: different users produced less semantically distinct ideas with ChatGPT than with a non-AI creativity support tool (ACM Creativity & Cognition 2024)."
+  ],
+  "practical_applications": [
+   "Same model + similar prompt = similar ideas across users; vary the input, not just ask again."
+  ],
+  "limitations": [
+   "Small sample; abstract only.",
+   "Reused record from an earlier batch (key kept); not re-read in this session."
+  ],
+  "license": "arXiv (license not checked)",
+  "access_status": "abstract",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-26",
+  "modules": [
+   "M33",
+   "M04"
+  ]
+ },
+ {
+  "key": "SioLortieForgues2024",
+  "title": "The Impact of Creativity Training on Creative Performance",
+  "authors": "Sio, U. N.; Lortie-Forgues, H.",
+  "year": 2024,
+  "url": "https://eprints.whiterose.ac.uk/209749/",
+  "doi_isbn": "10.1037/bul0000432",
+  "source_type": "meta-analysis",
+  "tier": "S",
+  "key_findings": [
+   "169 studies (844 effect sizes, 48 unpublished); unadjusted 0.53 SD; converging evidence of strong publication bias, adjusted estimates 0.29-0.32 SD; many methodological shortcomings, little improvement over time."
+  ],
+  "practical_applications": [
+   "Expect modest gains from any named creativity method; don't promise big effects."
+  ],
+  "limitations": [
+   "Abstract/preprint summary only.",
+   "Reused record from an earlier batch (key kept); not re-read in this session."
+  ],
+  "license": "copyrighted (accepted manuscript open access)",
+  "access_status": "abstract",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-26",
+  "modules": [
+   "M33",
+   "M04"
+  ]
+ },
+ {
+  "key": "VernonHocking2014",
+  "title": "Thinking hats and good men: Structured techniques in a problem construction task",
+  "authors": "Vernon, D.; Hocking, I.",
+  "year": 2014,
+  "url": "https://pure.canterbury.ac.uk/en/publications/thinking-hats-and-good-men-structured-techniques-in-a-problem-con-2/",
+  "doi_isbn": "10.1016/j.tsc.2014.07.001",
+  "source_type": "empirical",
+  "tier": "A",
+  "key_findings": [
+   "Six hats and 'six men' (5W1H) both improved fluency and originality in problem construction vs controls; published abstract and preprint disagree on which technique had the more robust effect.",
+   "Authors' 2016 follow-ups: order of hats had no effect (possibly underpowered); a placebo-controlled study found active techniques beat placebo."
+  ],
+  "practical_applications": [
+   "Six hats is acceptable as a perspective-switching prompt, but evidence is a handful of small studies; 5W1H questions work about as well."
+  ],
+  "limitations": [
+   "Small samples, one lab; search summaries only; no large independent trial found.",
+   "Reused record from an earlier batch (key kept); not re-read in this session."
+  ],
+  "license": "copyrighted (repository copy)",
+  "access_status": "abstract",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-26",
+  "modules": [
+   "M33",
+   "M04"
+  ]
+ },
+ {
+  "key": "Dow2010",
+  "title": "Parallel Prototyping Leads to Better Design Results, More Divergence, and Increased Self-Efficacy",
+  "authors": "Dow, S. P.; Glassco, A.; Kass, J.; Schwarz, M.; Schwartz, D. L.; Klemmer, S. R.",
+  "year": 2010,
+  "url": "https://cs303.stanford.edu/papers/ParallelPrototyping2010-final.pdf",
+  "doi_isbn": "10.1145/1879831.1879836",
+  "source_type": "empirical",
+  "tier": "A",
+  "key_findings": [
+   "Novices designing web ads: parallel prototyping beat serial on all performance measures, produced more diverse prototypes (independent raters), increased self-efficacy, and more positive reactions to critique.",
+   "Murphy et al. 2022 reports similar advantages in engineering design."
+  ],
+  "practical_applications": [
+   "Make 3 rough directions side by side before polishing one; compare, then iterate the winner."
+  ],
+  "limitations": [
+   "Abstract/summaries only; novice sample; one task type.",
+   "Reused record from an earlier batch (key kept); not re-read in this session."
+  ],
+  "license": "copyrighted (author copy)",
+  "access_status": "abstract",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-26",
+  "modules": [
+   "M33",
+   "M04"
+  ]
+ },
+ {
+  "key": "Catmull2008",
+  "title": "How Pixar Fosters Collective Creativity",
+  "authors": "Ed Catmull",
+  "year": 2008,
+  "url": "https://hbr.org/2008/09/how-pixar-fosters-collective-creativity",
+  "doi_isbn": "Harvard Business Review, Sept 2008",
+  "source_type": "practitioner",
+  "tier": "C",
+  "key_findings": [
+   "People learn from postmortems but dislike them, prefer to praise and move on, and 'game the system to avoid confronting the unpleasant'",
+   "Techniques: vary the postmortem format (same format finds the same lessons); each group lists top five things to do again and top five not to; use lots of data (rework rates, completeness at handoff)",
+   "Dailies: show unfinished work daily so people do not polish the wrong thing in private"
+  ],
+  "practical_applications": [
+   "Per job: keep-3 / change-3 with data (rerenders, quota used, user verdict)"
+  ],
+  "limitations": [
+   "Executive's own account; no independent evaluation",
+   "Found via search this session (HBR Sept 2008); registry holds a full_text record from an earlier batch; details here from search summaries only."
+  ],
+  "license": "copyrighted",
+  "access_status": "search_summary",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-26",
+  "modules": [
+   "M33",
+   "M04"
+  ]
+ },
+ {
+  "key": "Sweller2019",
+  "title": "Cognitive architecture and instructional design: 20 years later",
+  "authors": "John Sweller; Jeroen J. G. van Merrienboer; Fred Paas",
+  "year": 2019,
+  "url": "https://link.springer.com/article/10.1007/s10648-019-09465-5",
+  "doi_isbn": "10.1007/s10648-019-09465-5",
+  "source_type": "review",
+  "tier": "A",
+  "key_findings": [
+   "Reviews 20 years of cognitive load theory: manage load so processing irrelevant to learning is minimised and germane processing optimised within capacity",
+   "Grounds the theory in evolutionary psychology and extends it to course-level design and measurement"
+  ],
+  "practical_applications": [
+   "Cut extraneous load: split-attention, redundancy, transient information"
+  ],
+  "limitations": [
+   "Full text not reached (login redirect); effects come from instructional settings",
+   "Reused record from an earlier batch (key kept); not re-read in this session."
+  ],
+  "license": "unknown",
+  "access_status": "search_summary",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-26",
+  "modules": [
+   "M33",
+   "M04"
+  ]
+ },
+ {
+  "key": "RuncoAcar2012",
+  "title": "Divergent Thinking as an Indicator of Creative Potential",
+  "authors": "Runco, M. A.; Acar, S.",
+  "year": 2012,
+  "url": "https://markrunco.squarespace.com/articles/divergent-thinking-as-an-indicator-of-creative-potential",
+  "doi_isbn": "10.1080/10400419.2012.652929",
+  "source_type": "review",
+  "tier": "A",
+  "key_findings": [
+   "Divergent-thinking (DT) tests estimate creative potential, not achievement; DT is not the same as creative thinking; tests are reliable and moderately predictive, 'far from perfect'."
+  ],
+  "practical_applications": [
+   "Many ideas is a means, not the goal: judge final work on originality + fit, not idea count."
+  ],
+  "limitations": [
+   "Abstract/excerpts only; later papers flag psychometric problems of DT scores.",
+   "Reused record from an earlier batch (key kept); not re-read in this session."
+  ],
+  "license": "copyrighted",
+  "access_status": "abstract",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-26",
+  "modules": [
+   "M33",
+   "M04"
+  ]
+ },
+ {
+  "key": "Cowan2001",
+  "title": "The magical number 4 in short-term memory: A reconsideration of mental storage capacity",
+  "authors": "Nelson Cowan",
+  "year": 2001,
+  "url": "https://memory.psych.missouri.edu/assets/doc/articles/2001/cowan-bbs-2001.pdf",
+  "doi_isbn": "10.1017/S0140525X01003922",
+  "source_type": "review",
+  "tier": "A",
+  "key_findings": [
+   "When rehearsal and long-term-memory chunking are prevented, a single central capacity limit averages about 4 chunks (population range about 3 to 5)",
+   "Miller's 7 reflects rehearsal and grouping; capacity is counted in chunks, not raw items",
+   "Some theories place the limit in duration/decay rather than number (debated in the article)"
+  ],
+  "practical_applications": [
+   "Max ~4 meaning units per slide/shot",
+   "Lists of 3-4 items; group longer lists into categories",
+   "Limit new names/numbers per spoken sentence"
+  ],
+  "limitations": [
+   "Lab tasks with digits/words/shapes, not narratives",
+   "Defining a 'chunk' in real sentences is hard",
+   "Reused record from an earlier batch (key kept); not re-read in this session."
+  ],
+  "license": "copyrighted",
+  "access_status": "full_text",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-26",
+  "modules": [
+   "M33",
+   "M04"
+  ]
+ },
+ {
+  "key": "VargasHernandez2013",
+  "title": "Experimental assessment of TRIZ effectiveness in idea generation (J. Mechanical Design version: TRIZ ideation effectiveness study)",
+  "authors": "Vargas Hernandez, N.; Schmidt, L. C.; Okudan Kremer, G. E.",
+  "year": 2013,
+  "url": "https://peer.asee.org/experimental-assessment-of-triz-effectiveness-in-idea-generation",
+  "doi_isbn": "10.1115/1.4024976",
+  "source_type": "empirical",
+  "tier": "A",
+  "key_findings": [
+   "TRIZ improved novelty and variety but slightly reduced quantity vs ad-hoc ideation; conference version: method fit depends on the outcome sought."
+  ],
+  "practical_applications": [
+   "TRIZ suits engineering contradictions (lens thin AND strong); limited relevance to story ideation."
+  ],
+  "limitations": [
+   "Search summary only; engineering students; exact JMD title not captured.",
+   "Reused record from an earlier batch (key kept); not re-read in this session."
+  ],
+  "license": "copyrighted",
+  "access_status": "search_summary",
+  "verification_status": "unverified",
+  "date_accessed": "2026-11-26",
+  "modules": [
+   "M33",
+   "M04"
+  ]
+ }
+]

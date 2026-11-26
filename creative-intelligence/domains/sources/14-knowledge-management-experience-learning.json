@@ -1,0 +1,1417 @@
+[
+ {
+  "key": "TannenbaumCerasoli2013",
+  "title": "Do Team and Individual Debriefs Enhance Performance? A Meta-Analysis",
+  "authors": "Scott I. Tannenbaum; Christopher P. Cerasoli",
+  "year": 2013,
+  "url": "https://doi.org/10.1177/0018720812448394",
+  "doi_isbn": "10.1177/0018720812448394",
+  "source_type": "meta-analysis",
+  "tier": "S",
+  "key_findings": [
+   "46 samples (N=2,136): debriefs improve effectiveness over control by ~25% on average (d=.67)",
+   "Effects similar for teams and individuals, simulated and real settings, medical and non-medical samples",
+   "Alignment of participants, focus and level of measurement bolsters the effect; facilitation and structure may help"
+  ],
+  "practical_applications": [
+   "Run a short structured debrief after each job; align it to the unit that did the work"
+  ],
+  "limitations": [
+   "Mostly training/simulation settings; outcome is task performance, not long-term organisational learning"
+  ],
+  "license": "copyrighted",
+  "access_status": "abstract",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-26",
+  "modules": [
+   "M40"
+  ]
+ },
+ {
+  "key": "KeiserArthur2021",
+  "title": "A meta-analysis of the effectiveness of the after-action review (or debrief) and factors that influence its effectiveness",
+  "authors": "Nathanael L. Keiser; Winfred Arthur Jr.",
+  "year": 2021,
+  "url": "https://doi.org/10.1037/apl0000821",
+  "doi_isbn": "10.1037/apl0000821",
+  "source_type": "meta-analysis",
+  "tier": "S",
+  "key_findings": [
+   "61 studies (107 ds; 915 teams, 3,499 individuals): overall d=0.79 across training criteria",
+   "Alignment (individual vs team) and objective performance review media consistently raise effectiveness",
+   "Facilitation effects interactive: self-led + team-aligned and self-led + objective media most effective; high structure helped in military, not in healthcare"
+  ],
+  "practical_applications": [
+   "Base the review on objective records (renders, metrics, the user's words), not memory"
+  ],
+  "limitations": [
+   "Bare-bones meta-analysis; training-evaluation context"
+  ],
+  "license": "copyrighted",
+  "access_status": "abstract",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-26",
+  "modules": [
+   "M40"
+  ]
+ },
+ {
+  "key": "EllisDavidi2005",
+  "title": "After-Event Reviews: Drawing Lessons From Successful and Failed Experience",
+  "authors": "Shmuel Ellis; Inbar Davidi",
+  "year": 2005,
+  "url": "https://doi.org/10.1037/0021-9010.90.5.857",
+  "doi_isbn": "10.1037/0021-9010.90.5.857",
+  "source_type": "empirical",
+  "tier": "A",
+  "key_findings": [
+   "Soldiers debriefed on failures AND successes after each navigation day improved more than those reviewing failures only",
+   "Before the manipulation mental models of failed events were richer than of successful events; the gap closed with success reviews"
+  ],
+  "practical_applications": [
+   "Every review asks what worked and why; log approved works with their causes"
+  ],
+  "limitations": [
+   "Quasi-field experiment, one military task"
+  ],
+  "license": "copyrighted",
+  "access_status": "abstract",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-26",
+  "modules": [
+   "M40"
+  ]
+ },
+ {
+  "key": "Ericsson1993",
+  "title": "The role of deliberate practice in the acquisition of expert performance",
+  "authors": "K. Anders Ericsson; Ralf Th. Krampe; Clemens Tesch-Roemer",
+  "year": 1993,
+  "url": "https://doi.org/10.1037/0033-295X.100.3.363",
+  "doi_isbn": "10.1037/0033-295X.100.3.363",
+  "source_type": "empirical",
+  "tier": "A",
+  "key_findings": [
+   "Expert performance explained as the result of prolonged deliberate practice: effortful activities designed to improve performance",
+   "Individual differences even among elites closely related to assessed amounts of deliberate practice"
+  ],
+  "practical_applications": [
+   "Design practice that targets a weakness with feedback, not just more output"
+  ],
+  "limitations": [
+   "Retrospective practice estimates; core finding not replicated by Macnamara & Maitra 2019"
+  ],
+  "license": "copyrighted",
+  "access_status": "abstract",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-26",
+  "modules": [
+   "M40"
+  ]
+ },
+ {
+  "key": "Macnamara2014",
+  "title": "Deliberate Practice and Performance in Music, Games, Sports, Education, and Professions: A Meta-Analysis",
+  "authors": "Brooke N. Macnamara; David Z. Hambrick; Frederick L. Oswald",
+  "year": 2014,
+  "url": "https://doi.org/10.1177/0956797614535810",
+  "doi_isbn": "10.1177/0956797614535810",
+  "source_type": "meta-analysis",
+  "tier": "S",
+  "key_findings": [
+   "Deliberate practice explained 26% of performance variance in games, 21% music, 18% sports, 4% education, <1% professions",
+   "Deliberate practice is important but not as important as argued"
+  ],
+  "practical_applications": [
+   "Do not promise that logging lessons alone makes a studio excellent; measure outcomes"
+  ],
+  "limitations": [
+   "Definition of deliberate practice disputed by Ericsson & Harwell 2019"
+  ],
+  "license": "copyrighted",
+  "access_status": "abstract",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-26",
+  "modules": [
+   "M40"
+  ]
+ },
+ {
+  "key": "MacnamaraMaitra2019",
+  "title": "The role of deliberate practice in expert performance: revisiting Ericsson, Krampe & Tesch-Roemer (1993)",
+  "authors": "Brooke N. Macnamara; Megha Maitra",
+  "year": 2019,
+  "url": "https://doi.org/10.1098/rsos.190327",
+  "doi_isbn": "10.1098/rsos.190327",
+  "source_type": "empirical",
+  "tier": "A",
+  "key_findings": [
+   "Double-blind replication did not replicate the core finding that accumulated deliberate practice corresponded to each violin skill level",
+   "Effect substantial but considerably smaller than original; teacher-designed practice did not explain more variance than practice alone"
+  ],
+  "practical_applications": [
+   "Treat the 10,000-hour story as contested"
+  ],
+  "limitations": [
+   "Single domain (violin), retrospective estimates"
+  ],
+  "license": "CC BY 4.0",
+  "access_status": "abstract",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-26",
+  "modules": [
+   "M40"
+  ]
+ },
+ {
+  "key": "EricssonHarwell2019",
+  "title": "Deliberate Practice and Proposed Limits on the Effects of Practice on the Acquisition of Expert Performance",
+  "authors": "K. Anders Ericsson; Kyle W. Harwell",
+  "year": 2019,
+  "url": "https://doi.org/10.3389/fpsyg.2019.02396",
+  "doi_isbn": "10.3389/fpsyg.2019.02396",
+  "source_type": "review",
+  "tier": "A",
+  "key_findings": [
+   "Argues Macnamara 2014 measured 'structured practice', not deliberate practice in the original sense (teacher-guided, individualised)",
+   "Reanalysis restricted to studies meeting their criteria: practice explains 29% and 61% (after attenuation correction)"
+  ],
+  "practical_applications": [
+   "Practice counts when goals are specific and feedback comes from a qualified source"
+  ],
+  "limitations": [
+   "Authors are the theory's originators; criteria chosen after the fact are open to dispute"
+  ],
+  "license": "CC BY 4.0",
+  "access_status": "abstract",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-26",
+  "modules": [
+   "M40"
+  ]
+ },
+ {
+  "key": "AamodtPlaza1994",
+  "title": "Case-Based Reasoning: Foundational Issues, Methodological Variations, and System Approaches",
+  "authors": "Agnar Aamodt; Enric Plaza",
+  "year": 1994,
+  "url": "https://doi.org/10.3233/AIC-1994-7104",
+  "doi_isbn": "10.3233/AIC-1994-7104",
+  "source_type": "review",
+  "tier": "A",
+  "key_findings": [
+   "General CBR framework: case retrieval, reuse, solution testing (revise) and learning (retain)",
+   "CBR as one reasoning-and-learning method inside integrated architectures"
+  ],
+  "practical_applications": [
+   "Store each finished job as a case (problem, solution, outcome) and retrieve the nearest one before a new job"
+  ],
+  "limitations": [
+   "Pre-LLM; 'retain' needs judged outcomes or the case base fills with unvalidated solutions"
+  ],
+  "license": "copyrighted",
+  "access_status": "abstract",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-26",
+  "modules": [
+   "M40"
+  ]
+ },
+ {
+  "key": "Weber2000",
+  "title": "Active Case-Based Reasoning for Lessons Delivery Systems",
+  "authors": "Rosina Weber; David W. Aha; L. Karl Branting; J. Robert Lucas; Irma Becerra-Fernandez",
+  "year": 2000,
+  "url": "https://cdn.aaai.org/FLAIRS/2000/FLAIRS00-033.pdf",
+  "doi_isbn": "FLAIRS-00 Proceedings (AAAI)",
+  "source_type": "empirical",
+  "tier": "A",
+  "key_findings": [
+   "Most lessons-learned repositories are passive stand-alone systems that assume users have time, know where to look, can use the retrieval software and can interpret lessons",
+   "Authors' interviews suggest most military LL repositories are viewed by potential users as useless",
+   "Proposes active delivery: a monitor pushes the most relevant lessons into the decision process (HICAP planning); JULLS lessons had 43 attributes"
+  ],
+  "practical_applications": [
+   "Push the few most relevant lessons into the job's start step instead of hoping someone searches a log"
+  ],
+  "limitations": [
+   "Prototype demonstration, no controlled outcome study"
+  ],
+  "license": "copyrighted (AAAI)",
+  "access_status": "full_text",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-26",
+  "modules": [
+   "M40"
+  ]
+ },
+ {
+  "key": "Weber2001",
+  "title": "Intelligent lessons learned systems",
+  "authors": "Rosina Weber; David W. Aha; Irma Becerra-Fernandez",
+  "year": 2001,
+  "url": "https://doi.org/10.1016/S0957-4174(00)00046-4",
+  "doi_isbn": "10.1016/S0957-4174(00)00046-4",
+  "source_type": "review",
+  "tier": "A",
+  "key_findings": [
+   "(per search summary of the abstract) Studies show lesson-dissemination software does not effectively promote knowledge sharing; surveys LL processes, systems, design issues and AI support"
+  ],
+  "practical_applications": [
+   "Background for lesson capture + delivery design"
+  ],
+  "limitations": [
+   "Content not read; search snippet only"
+  ],
+  "license": "copyrighted",
+  "access_status": "search_summary",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-26",
+  "modules": [
+   "M40"
+  ]
+ },
+ {
+  "key": "GAO2002",
+  "title": "NASA: Better Mechanisms Needed for Sharing Lessons Learned (GAO-02-195)",
+  "authors": "U.S. General Accounting Office",
+  "year": 2002,
+  "url": "https://www.govinfo.gov/content/pkg/GAOREPORTS-GAO-02-195/html/GAOREPORTS-GAO-02-195.htm",
+  "doi_isbn": "GAO-02-195",
+  "source_type": "primary_text",
+  "tier": "S",
+  "key_findings": [
+   "Survey of 192 managers (115 usable): 23% had submitted a lesson to LLIS in 2 years, 43% had not; 27% unaware of LLIS; 58% cannot retrieve the right lessons at the right time; 53% found lessons useful <25% of the time",
+   "Barriers: no perceived benefit, intolerance of mistakes, fear of negative lessons, no time, hard to search ('weed through irrelevant lessons')",
+   "Recommendations: incentives, more positive lessons, mentoring/storytelling, better coding/search, user feedback, objective effectiveness metrics"
+  ],
+  "practical_applications": [
+   "Design for retrieval at the moment of need; include positive lessons; measure use"
+  ],
+  "limitations": [
+   "Single agency; 2001 self-report survey"
+  ],
+  "license": "public domain (US Gov)",
+  "access_status": "full_text",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-26",
+  "modules": [
+   "M40"
+  ]
+ },
+ {
+  "key": "NASAOIG2012",
+  "title": "Review of NASA's Lessons Learned Information System (IG-12-012)",
+  "authors": "NASA Office of Inspector General",
+  "year": 2012,
+  "url": "https://www.oversight.gov/sites/default/files/oig-reports/IG-12-012.pdf",
+  "doi_isbn": "IG-12-012",
+  "source_type": "primary_text",
+  "tier": "S",
+  "key_findings": [
+   "Only 16 of 28 project managers (57%) used LLIS; 12 of 28 (43%) contributed",
+   "Policy weakened: since 2007 lessons required only at closeout, not throughout the lifecycle; 8 of 10 Centers not fully compliant; 6 of 10 did not cross-reference lessons to standards",
+   "FY2011 cost $782,000; little correlation between funding and lessons contributed (JPL $70k -> 35 lessons vs Glenn ~$470k -> 5, FY2008-10)",
+   "LLIS marginalised in favour of Ask Magazine and seminars; users found it outdated, not user friendly"
+  ],
+  "practical_applications": [
+   "Capture lessons during the job, link each lesson to the standard/skill it changes, monitor use"
+  ],
+  "limitations": [
+   "Audit of one system; managers' self-report"
+  ],
+  "license": "public domain (US Gov)",
+  "access_status": "full_text",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-26",
+  "modules": [
+   "M40"
+  ]
+ },
+ {
+  "key": "CAIB2003",
+  "title": "Columbia Accident Investigation Board Report, Volume I (Ch. 8 'History as Cause: Columbia and Challenger')",
+  "authors": "Columbia Accident Investigation Board",
+  "year": 2003,
+  "url": "https://www.nasa.gov/wp-content/uploads/static/history/columbia/reports/CAIBreportv1.pdf",
+  "doi_isbn": "",
+  "source_type": "primary_text",
+  "tier": "S",
+  "key_findings": [
+   "(per search summary) Board concluded the institutional causes of Challenger had not been fixed and saw 'echoes' of Challenger in Columbia; history treated as a cause"
+  ],
+  "practical_applications": [
+   "A lesson recorded is not a lesson learned until practice changes"
+  ],
+  "limitations": [
+   "Read only through search snippets; chapter not read this session"
+  ],
+  "license": "public domain (US Gov)",
+  "access_status": "search_summary",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-26",
+  "modules": [
+   "M40"
+  ]
+ },
+ {
+  "key": "GoogleSRE2016",
+  "title": "Site Reliability Engineering, Ch. 15: Postmortem Culture: Learning from Failure",
+  "authors": "Google SRE (B. Beyer, C. Jones, J. Petoff, N. R. Murphy eds.)",
+  "year": 2016,
+  "url": "https://sre.google/sre-book/postmortem-culture/",
+  "doi_isbn": "ISBN 9781491929124",
+  "source_type": "docs",
+  "tier": "C",
+  "key_findings": [
+   "Blameless postmortem: focus on contributing causes; assume people acted on the information they had",
+   "Triggers defined in advance; contents: impact, mitigation, root causes, follow-up actions; reviewed by seniors; 'an unreviewed postmortem might as well never have existed'",
+   "Kept in use via postmortem of the month, reading clubs, Wheel of Misfortune role-play, recognition, surveys"
+  ],
+  "practical_applications": [
+   "Define triggers for a studio review (user rejects, rerender >2x, quota wasted)"
+  ],
+  "limitations": [
+   "Practice description, no outcome data"
+  ],
+  "license": "CC BY-NC-ND 4.0",
+  "access_status": "full_text",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-26",
+  "modules": [
+   "M40"
+  ]
+ },
+ {
+  "key": "Catmull2008",
+  "title": "How Pixar Fosters Collective Creativity",
+  "authors": "Ed Catmull",
+  "year": 2008,
+  "url": "https://hbr.org/2008/09/how-pixar-fosters-collective-creativity",
+  "doi_isbn": "Harvard Business Review, Sept 2008",
+  "source_type": "practitioner",
+  "tier": "C",
+  "key_findings": [
+   "People learn from postmortems but dislike them, prefer to praise and move on, and 'game the system to avoid confronting the unpleasant'",
+   "Techniques: vary the postmortem format (same format finds the same lessons); each group lists top five things to do again and top five not to; use lots of data (rework rates, completeness at handoff)",
+   "Dailies: show unfinished work daily so people do not polish the wrong thing in private"
+  ],
+  "practical_applications": [
+   "Per job: keep-3 / change-3 with data (rerenders, quota used, user verdict)"
+  ],
+  "limitations": [
+   "Executive's own account; no independent evaluation"
+  ],
+  "license": "copyrighted",
+  "access_status": "full_text",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-26",
+  "modules": [
+   "M40"
+  ]
+ },
+ {
+  "key": "Nonaka1994",
+  "title": "A Dynamic Theory of Organizational Knowledge Creation",
+  "authors": "Ikujiro Nonaka",
+  "year": 1994,
+  "url": "https://doi.org/10.1287/orsc.5.1.14",
+  "doi_isbn": "10.1287/orsc.5.1.14",
+  "source_type": "primary_text",
+  "tier": "A",
+  "key_findings": [
+   "Organisational knowledge is created through continuous dialogue between tacit and explicit knowledge; four patterns of interaction",
+   "New knowledge is developed by individuals; organisations articulate and amplify it"
+  ],
+  "practical_applications": [
+   "Plan how a tacit preference becomes an explicit rule, then a tool default, then habit"
+  ],
+  "limitations": [
+   "Conceptual; weak empirical support (Gourlay 2006; Farnese 2019)"
+  ],
+  "license": "copyrighted",
+  "access_status": "abstract",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-26",
+  "modules": [
+   "M40"
+  ]
+ },
+ {
+  "key": "Gourlay2006",
+  "title": "Conceptualizing Knowledge Creation: A Critique of Nonaka's Theory",
+  "authors": "Stephen Gourlay",
+  "year": 2006,
+  "url": "https://doi.org/10.1111/j.1467-6486.2006.00637.x",
+  "doi_isbn": "10.1111/j.1467-6486.2006.00637.x",
+  "source_type": "review",
+  "tier": "A",
+  "key_findings": [
+   "Of SECI's four conversion modes three appear plausible but none is supported by evidence that cannot be explained more simply",
+   "Omits inherently tacit knowledge; radically subjective definition (knowledge in effect created by managers)",
+   "Proposes: non-reflective behaviour ~ tacit, reflective behaviour ~ explicit (after Dewey)"
+  ],
+  "practical_applications": [
+   "Keep examples (cases) beside rules; not all taste can be written down"
+  ],
+  "limitations": [
+   "Conceptual critique"
+  ],
+  "license": "copyrighted",
+  "access_status": "abstract",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-26",
+  "modules": [
+   "M40"
+  ]
+ },
+ {
+  "key": "Farnese2019",
+  "title": "Managing Knowledge in Organizations: A Nonaka's SECI Model Operationalization",
+  "authors": "Maria Luisa Farnese; Barbara Barbieri; Antonio Chirumbolo; Gerardo Patriotta",
+  "year": 2019,
+  "url": "https://doi.org/10.3389/fpsyg.2019.02730",
+  "doi_isbn": "10.3389/fpsyg.2019.02730",
+  "source_type": "empirical",
+  "tier": "A",
+  "key_findings": [
+   "SECI modes: socialization (tacit-tacit), externalization (tacit-explicit), combination (explicit-explicit), internalization (explicit-tacit)",
+   "8-factor KMSP-Q (mentoring, knowledge sharing, team reflexivity, organizational memory, communication, technological support, HR training, HR development) validated on 372 + 466 employees",
+   "Reviews critiques: anecdotal evidence, hard to measure, limited predictive validity, cross-cultural generalisation questioned, tacit/explicit dichotomy vs continuum"
+  ],
+  "practical_applications": [
+   "Use the 8 dimensions as an audit list for the studio memory"
+  ],
+  "limitations": [
+   "Self-report, Italian samples, cross-sectional"
+  ],
+  "license": "CC BY 4.0",
+  "access_status": "full_text",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-26",
+  "modules": [
+   "M40"
+  ]
+ },
+ {
+  "key": "Polanyi1966",
+  "title": "The Tacit Dimension",
+  "authors": "Michael Polanyi",
+  "year": 1966,
+  "url": "https://doi.org/10.1007/s11016-010-9328-0",
+  "doi_isbn": "ISBN 9780226672984",
+  "source_type": "primary_text",
+  "tier": "A",
+  "key_findings": [
+   "Bibliographic: origin of 'tacit knowledge' (reissued Univ. of Chicago Press 2009 with foreword by Amartya Sen; review record French 2010). Content cited only via Farnese 2019"
+  ],
+  "practical_applications": [
+   "Name the tacit layer: the user's 'feels right' judgments"
+  ],
+  "limitations": [
+   "Book not read this session"
+  ],
+  "license": "copyrighted",
+  "access_status": "bibliographic",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-26",
+  "modules": [
+   "M40"
+  ]
+ },
+ {
+  "key": "Kolb1984",
+  "title": "Experiential Learning: Experience as the Source of Learning and Development",
+  "authors": "David A. Kolb",
+  "year": 1984,
+  "url": "https://doi.org/10.1002/job.4030080408",
+  "doi_isbn": "ISBN 9780132952613",
+  "source_type": "textbook",
+  "tier": "A",
+  "key_findings": [
+   "Bibliographic (existence confirmed via 1987 review record). Content stated only via Healey & Jenkins 2000 and Bergsteiner 2010"
+  ],
+  "practical_applications": [],
+  "limitations": [
+   "Book not read"
+  ],
+  "license": "copyrighted",
+  "access_status": "bibliographic",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-26",
+  "modules": [
+   "M40"
+  ]
+ },
+ {
+  "key": "HealeyJenkins2000",
+  "title": "Kolb's Experiential Learning Theory and Its Application in Geography in Higher Education",
+  "authors": "Mick Healey; Alan Jenkins",
+  "year": 2000,
+  "url": "https://doi.org/10.1080/00221340008978967",
+  "doi_isbn": "10.1080/00221340008978967",
+  "source_type": "review",
+  "tier": "B",
+  "key_findings": [
+   "Kolb's theory structures a session or course as a learning cycle; stages are associated with learning styles"
+  ],
+  "practical_applications": [
+   "Use the cycle as a session structure, not a personality type"
+  ],
+  "limitations": [
+   "Application paper; learning-style claims contested (Pashler 2008)"
+  ],
+  "license": "copyrighted",
+  "access_status": "abstract",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-26",
+  "modules": [
+   "M40"
+  ]
+ },
+ {
+  "key": "Bergsteiner2010",
+  "title": "Kolb's experiential learning model: critique from a modelling perspective",
+  "authors": "Harald Bergsteiner; Gayle C. Avery; Ruth Neumann",
+  "year": 2010,
+  "url": "https://doi.org/10.1080/01580370903534355",
+  "doi_isbn": "10.1080/01580370903534355",
+  "source_type": "review",
+  "tier": "A",
+  "key_findings": [
+   "Kolb's graphical model shows graphic syntax errors, fails sufficiency/simplification tests, has categorisation and definition problems, misconstrued bi-polarities and flawed logic"
+  ],
+  "practical_applications": [
+   "Treat the Kolb cycle as a checklist, not a validated causal model"
+  ],
+  "limitations": [
+   "Conceptual critique"
+  ],
+  "license": "copyrighted",
+  "access_status": "abstract",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-26",
+  "modules": [
+   "M40"
+  ]
+ },
+ {
+  "key": "Pashler2008",
+  "title": "Learning Styles: Concepts and Evidence",
+  "authors": "Harold Pashler; Mark A. McDaniel; Doug Rohrer; Robert A. Bjork",
+  "year": 2008,
+  "url": "https://doi.org/10.1111/j.1539-6053.2009.01038.x",
+  "doi_isbn": "10.1111/j.1539-6053.2009.01038.x",
+  "source_type": "review",
+  "tier": "S",
+  "key_findings": [
+   "Credible validation of learning-styles instruction (meshing hypothesis) requires classifying by style, random assignment to methods and a crossover interaction",
+   "Found virtually no evidence for that interaction; several adequate studies contradicted meshing; concluded no adequate evidence base for learning-styles assessment in general practice (many versions simply untested)"
+  ],
+  "practical_applications": [
+   "Do not tag lessons or users by 'learning style'; tag by task and failure mode"
+  ],
+  "limitations": [
+   "Education focus"
+  ],
+  "license": "copyrighted",
+  "access_status": "abstract",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-26",
+  "modules": [
+   "M40"
+  ]
+ },
+ {
+  "key": "Argyris1976",
+  "title": "Single-Loop and Double-Loop Models in Research on Decision Making",
+  "authors": "Chris Argyris",
+  "year": 1976,
+  "url": "https://doi.org/10.2307/2391848",
+  "doi_isbn": "10.2307/2391848",
+  "source_type": "primary_text",
+  "tier": "A",
+  "key_findings": [
+   "An espoused theory of action based on single-loop learning is the most general model of action; a double-loop model gives feedback and more effective decisions"
+  ],
+  "practical_applications": [
+   "When the same fix recurs, question the governing rule or goal, not only the action"
+  ],
+  "limitations": [
+   "Conceptual"
+  ],
+  "license": "copyrighted",
+  "access_status": "abstract",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-26",
+  "modules": [
+   "M40"
+  ]
+ },
+ {
+  "key": "ArgyrisSchon1978",
+  "title": "Organizational Learning: A Theory of Action Perspective",
+  "authors": "Chris Argyris; Donald A. Schoen",
+  "year": 1978,
+  "url": "https://doi.org/10.2307/40183951",
+  "doi_isbn": "10.2307/40183951",
+  "source_type": "textbook",
+  "tier": "A",
+  "key_findings": [
+   "Bibliographic: foundational book on single/double-loop organisational learning (record confirmed; content not read)"
+  ],
+  "practical_applications": [],
+  "limitations": [
+   "Not read"
+  ],
+  "license": "copyrighted",
+  "access_status": "bibliographic",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-26",
+  "modules": [
+   "M40"
+  ]
+ },
+ {
+  "key": "LevittMarch1988",
+  "title": "Organizational Learning",
+  "authors": "Barbara Levitt; James G. March",
+  "year": 1988,
+  "url": "https://doi.org/10.1146/annurev.so.14.080188.001535",
+  "doi_isbn": "10.1146/annurev.so.14.080188.001535",
+  "source_type": "review",
+  "tier": "A",
+  "key_findings": [
+   "Organisations learn by encoding inferences from history into routines that guide behaviour",
+   "Organisational memory: encoding, storage and retrieval of lessons despite turnover and time; limits of learning as intelligence"
+  ],
+  "practical_applications": [
+   "A lesson becomes organisational only when encoded in a routine (skill step, tool default)"
+  ],
+  "limitations": [
+   "1988 review"
+  ],
+  "license": "copyrighted",
+  "access_status": "abstract",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-26",
+  "modules": [
+   "M40"
+  ]
+ },
+ {
+  "key": "WalshUngson1991",
+  "title": "Organizational Memory",
+  "authors": "James P. Walsh; Gerardo R. Ungson",
+  "year": 1991,
+  "url": "https://doi.org/10.5465/amr.1991.4278992",
+  "doi_isbn": "10.5465/amr.1991.4278992",
+  "source_type": "review",
+  "tier": "A",
+  "key_findings": [
+   "Defines organisational memory and its structure; processes of acquisition, retention, retrieval; memory can be used, misused or abused"
+  ],
+  "practical_applications": [
+   "Map where studio memory lives: people, files, tools, routines"
+  ],
+  "limitations": [
+   "Conceptual"
+  ],
+  "license": "copyrighted",
+  "access_status": "abstract",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-26",
+  "modules": [
+   "M40"
+  ]
+ },
+ {
+  "key": "ArgoteEpple1990",
+  "title": "Learning Curves in Manufacturing",
+  "authors": "Linda Argote; Dennis Epple",
+  "year": 1990,
+  "url": "https://doi.org/10.1126/science.247.4945.920",
+  "doi_isbn": "10.1126/science.247.4945.920",
+  "source_type": "review",
+  "tier": "A",
+  "key_findings": [
+   "Productivity rises with experience but learning rates vary greatly between organisations",
+   "Variation explained by organisational forgetting, turnover, knowledge transfer, economies of scale"
+  ],
+  "practical_applications": [
+   "Track a learning curve per job type (time or rerenders per accepted output)"
+  ],
+  "limitations": [
+   "Manufacturing data"
+  ],
+  "license": "copyrighted",
+  "access_status": "abstract",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-26",
+  "modules": [
+   "M40"
+  ]
+ },
+ {
+  "key": "Darr1995",
+  "title": "The Acquisition, Transfer, and Depreciation of Knowledge in Service Organizations: Productivity in Franchises",
+  "authors": "Eric D. Darr; Linda Argote; Dennis Epple",
+  "year": 1995,
+  "url": "https://doi.org/10.1287/mnsc.41.11.1750",
+  "doi_isbn": "10.1287/mnsc.41.11.1750",
+  "source_type": "empirical",
+  "tier": "A",
+  "key_findings": [
+   "36 pizza stores, weekly data over 1.5 years: unit cost declines with experience",
+   "Knowledge acquired through learning by doing depreciates rapidly",
+   "Knowledge transfers across stores of the same franchisee but not across different franchisees"
+  ],
+  "practical_applications": [
+   "Lessons decay unless embedded; transfer works inside a connected group (same pipeline/skills)"
+  ],
+  "limitations": [
+   "One industry, one region"
+  ],
+  "license": "copyrighted",
+  "access_status": "abstract",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-26",
+  "modules": [
+   "M40"
+  ]
+ },
+ {
+  "key": "AlaviLeidner2001",
+  "title": "Knowledge Management and Knowledge Management Systems: Conceptual Foundations and Research Issues",
+  "authors": "Maryam Alavi; Dorothy E. Leidner",
+  "year": 2001,
+  "url": "https://doi.org/10.2307/3250961",
+  "doi_isbn": "10.2307/3250961",
+  "source_type": "review",
+  "tier": "A",
+  "key_findings": [
+   "KMS support creation, transfer and application of knowledge; process view of organisational KM and the role of IT"
+  ],
+  "practical_applications": [
+   "Design memory around create-store-transfer-apply, with 'apply' measured"
+  ],
+  "limitations": [
+   "Pre-LLM"
+  ],
+  "license": "copyrighted",
+  "access_status": "abstract",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-26",
+  "modules": [
+   "M40"
+  ]
+ },
+ {
+  "key": "Wenger2000",
+  "title": "Communities of Practice and Social Learning Systems",
+  "authors": "Etienne Wenger",
+  "year": 2000,
+  "url": "https://doi.org/10.1177/135050840072002",
+  "doi_isbn": "10.1177/135050840072002",
+  "source_type": "review",
+  "tier": "A",
+  "key_findings": [
+   "Organisations succeed by designing themselves as social learning systems; three modes of belonging; communities of practice, boundary processes, identities"
+  ],
+  "practical_applications": [
+   "User + agents + skills as one community; shared files as boundary objects"
+  ],
+  "limitations": [
+   "Conceptual essay"
+  ],
+  "license": "copyrighted",
+  "access_status": "abstract",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-26",
+  "modules": [
+   "M40"
+  ]
+ },
+ {
+  "key": "LaveWenger1991",
+  "title": "Situated Learning: Legitimate Peripheral Participation",
+  "authors": "Jean Lave; Etienne Wenger",
+  "year": 1991,
+  "url": "https://doi.org/10.1017/CBO9780511815355",
+  "doi_isbn": "10.1017/CBO9780511815355",
+  "source_type": "textbook",
+  "tier": "A",
+  "key_findings": [
+   "Learning is a social process; newcomers move from peripheral to full participation in a community of practice (midwives, tailors, quartermasters, butchers, recovering alcoholics)"
+  ],
+  "practical_applications": [
+   "New agents learn from worked examples of real past jobs"
+  ],
+  "limitations": [
+   "Ethnographic; generalised by argument"
+  ],
+  "license": "copyrighted",
+  "access_status": "abstract",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-26",
+  "modules": [
+   "M40"
+  ]
+ },
+ {
+  "key": "Edmondson1999",
+  "title": "Psychological Safety and Learning Behavior in Work Teams",
+  "authors": "Amy C. Edmondson",
+  "year": 1999,
+  "url": "https://doi.org/10.2307/2666999",
+  "doi_isbn": "10.2307/2666999",
+  "source_type": "empirical",
+  "tier": "A",
+  "key_findings": [
+   "51 work teams: team psychological safety associated with learning behaviour; team efficacy not, when controlling for safety",
+   "Learning behaviour mediates between psychological safety and team performance"
+  ],
+  "practical_applications": [
+   "Make it easy and safe for the user to say 'not this'; log the words without defending"
+  ],
+  "limitations": [
+   "One manufacturing company; cross-sectional"
+  ],
+  "license": "copyrighted",
+  "access_status": "abstract",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-26",
+  "modules": [
+   "M40"
+  ]
+ },
+ {
+  "key": "KlugerDeNisi1996",
+  "title": "Effects of feedback intervention on performance: A historical review, a meta-analysis, and a preliminary feedback intervention theory",
+  "authors": "Avraham N. Kluger; Angelo S. DeNisi",
+  "year": 1996,
+  "url": "https://doi.org/10.1037/0033-2909.119.2.254",
+  "doi_isbn": "10.1037/0033-2909.119.2.254",
+  "source_type": "meta-analysis",
+  "tier": "S",
+  "key_findings": [
+   "607 effect sizes: feedback improved performance on average (d=.41) but over one third of feedback interventions decreased performance",
+   "Effectiveness decreases as attention moves from the task toward the self"
+  ],
+  "practical_applications": [
+   "Lessons and critiques address the work, never the maker"
+  ],
+  "limitations": [
+   "Heterogeneous studies; moderators poorly understood"
+  ],
+  "license": "copyrighted",
+  "access_status": "abstract",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-26",
+  "modules": [
+   "M40"
+  ]
+ },
+ {
+  "key": "Guilbault2004",
+  "title": "A Meta-Analysis of Research on Hindsight Bias",
+  "authors": "Rebecca L. Guilbault; Fred B. Bryant; Jennifer Howard Brockway; Emil J. Posavac",
+  "year": 2004,
+  "url": "https://doi.org/10.1080/01973533.2004.9646399",
+  "doi_isbn": "10.1080/01973533.2004.9646399",
+  "source_type": "meta-analysis",
+  "tier": "S",
+  "key_findings": [
+   "95 studies, 252 effect sizes: mean hindsight effect d=.39 (95% CI .36-.42)",
+   "Manipulations intended to reduce hindsight bias did not produce lower effect sizes"
+  ],
+  "practical_applications": [
+   "Write the expectation before the result so the review compares against a record, not memory"
+  ],
+  "limitations": [
+   "Mostly lab tasks"
+  ],
+  "license": "copyrighted",
+  "access_status": "abstract",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-26",
+  "modules": [
+   "M40"
+  ]
+ },
+ {
+  "key": "BaronHershey1988",
+  "title": "Outcome bias in decision evaluation",
+  "authors": "Jonathan Baron; John C. Hershey",
+  "year": 1988,
+  "url": "https://doi.org/10.1037/0022-3514.54.4.569",
+  "doi_isbn": "10.1037/0022-3514.54.4.569",
+  "source_type": "empirical",
+  "tier": "A",
+  "key_findings": [
+   "Decision quality and decision-maker competence rated higher when outcomes were favourable, with identical information, even though subjects said outcomes should not count"
+  ],
+  "practical_applications": [
+   "Judge a choice by the information available at the time; one lucky viral post does not prove the recipe"
+  ],
+  "limitations": [
+   "Student samples, vignettes"
+  ],
+  "license": "copyrighted",
+  "access_status": "abstract",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-26",
+  "modules": [
+   "M40"
+  ]
+ },
+ {
+  "key": "TourishRobson2003",
+  "title": "Critical upward feedback in organisations: Processes, problems and implications for communication management",
+  "authors": "Dennis Tourish; Paul Robson",
+  "year": 2003,
+  "url": "https://doi.org/10.1108/13632540410807628",
+  "doi_isbn": "10.1108/13632540410807628",
+  "source_type": "empirical",
+  "tier": "A",
+  "key_findings": [
+   "Health-care organisation (146 surveyed, 15 interviews, 6 focus groups): informal upward feedback mostly absent and inaccurately positive; senior managers unaware, overestimated how much they received, and discouraged critical feedback"
+  ],
+  "practical_applications": [
+   "Silence is not approval; ask a cheap, specific question"
+  ],
+  "limitations": [
+   "One UK organisation"
+  ],
+  "license": "copyrighted",
+  "access_status": "abstract",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-26",
+  "modules": [
+   "M40"
+  ]
+ },
+ {
+  "key": "AndrewsChompusri2013",
+  "title": "Understanding Organizational Practice Adoption at the Thai Subsidiary Corporation: Antecedents and Consequences of Kreng Jai",
+  "authors": "Tim G. Andrews; Nartnalin Chompusri",
+  "year": 2013,
+  "url": "https://doi.org/10.1007/s11575-012-0163-y",
+  "doi_isbn": "10.1007/s11575-012-0163-y",
+  "source_type": "empirical",
+  "tier": "A",
+  "key_findings": [
+   "Qualitative study (interviews, observation, company documents) of a Thai subsidiary adopting European parent practices: e-communication, performance appraisal, empowerment",
+   "Kreng jai sometimes complements, reinforces, elaborates or contradicts what comparative cultural dimensions predict; ignoring it carries hidden risks"
+  ],
+  "practical_applications": [
+   "Capture feedback in ways that do not require blunt criticism (pick A/B, 1-5 rating)"
+  ],
+  "limitations": [
+   "Single case; abstract read via RePEc paraphrase"
+  ],
+  "license": "copyrighted",
+  "access_status": "abstract",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-26",
+  "modules": [
+   "M40"
+  ]
+ },
+ {
+  "key": "Slovic1995",
+  "title": "The construction of preference",
+  "authors": "Paul Slovic",
+  "year": 1995,
+  "url": "https://doi.org/10.1037/0003-066X.50.5.364",
+  "doi_isbn": "10.1037/0003-066X.50.5.364",
+  "source_type": "review",
+  "tier": "A",
+  "key_findings": [
+   "Preferences are often constructed in the process of elicitation; normatively equivalent elicitation methods give systematically different responses (preference reversals)"
+  ],
+  "practical_applications": [
+   "Record how and in what context a preference was given; one answer is not a fixed taste"
+  ],
+  "limitations": [
+   "Mainly lab gambles"
+  ],
+  "license": "copyrighted",
+  "access_status": "abstract",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-26",
+  "modules": [
+   "M40"
+  ]
+ },
+ {
+  "key": "Hu2008",
+  "title": "Collaborative Filtering for Implicit Feedback Datasets",
+  "authors": "Yifan Hu; Yehuda Koren; Chris Volinsky",
+  "year": 2008,
+  "url": "https://doi.org/10.1109/ICDM.2008.22",
+  "doi_isbn": "10.1109/ICDM.2008.22",
+  "source_type": "empirical",
+  "tier": "A",
+  "key_findings": [
+   "Implicit feedback lacks direct evidence of dislikes; treat observations as positive/negative preference with widely varying confidence levels"
+  ],
+  "practical_applications": [
+   "Store a confidence with each taste record: explicit praise > used without comment > silence"
+  ],
+  "limitations": [
+   "TV recommender data"
+  ],
+  "license": "copyrighted",
+  "access_status": "abstract",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-26",
+  "modules": [
+   "M40"
+  ]
+ },
+ {
+  "key": "Lewis2020",
+  "title": "Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks",
+  "authors": "Patrick Lewis; Ethan Perez; Aleksandra Piktus; Fabio Petroni; Vladimir Karpukhin; et al.",
+  "year": 2020,
+  "url": "https://arxiv.org/abs/2005.11401",
+  "doi_isbn": "arXiv:2005.11401",
+  "source_type": "empirical",
+  "tier": "A",
+  "key_findings": [
+   "RAG combines parametric memory (seq2seq) with non-parametric memory (dense Wikipedia index); state of the art on three open-domain QA tasks",
+   "More specific, diverse and factual generation than a parametric-only baseline; provenance and updating knowledge named as open problems for parametric models"
+  ],
+  "practical_applications": [
+   "Keep studio knowledge in updatable files outside the model and cite them"
+  ],
+  "limitations": [
+   "Wikipedia QA benchmarks"
+  ],
+  "license": "arXiv non-exclusive",
+  "access_status": "abstract",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-26",
+  "modules": [
+   "M40"
+  ]
+ },
+ {
+  "key": "Liu2024",
+  "title": "Lost in the Middle: How Language Models Use Long Contexts",
+  "authors": "Nelson F. Liu; Kevin Lin; John Hewitt; Ashwin Paranjape; Michele Bevilacqua; Fabio Petroni; Percy Liang",
+  "year": 2024,
+  "url": "https://doi.org/10.1162/tacl_a_00638",
+  "doi_isbn": "10.1162/tacl_a_00638",
+  "source_type": "empirical",
+  "tier": "A",
+  "key_findings": [
+   "Performance often highest when relevant information is at the beginning or end of the input; degrades significantly when it is in the middle, even for long-context models"
+  ],
+  "practical_applications": [
+   "Put the few most relevant rules at the top of a brief; do not dump the whole memory"
+  ],
+  "limitations": [
+   "QA and key-value tasks; newer models may differ"
+  ],
+  "license": "CC BY 4.0",
+  "access_status": "abstract",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-26",
+  "modules": [
+   "M40"
+  ]
+ },
+ {
+  "key": "Shi2023",
+  "title": "Large Language Models Can Be Easily Distracted by Irrelevant Context",
+  "authors": "Freda Shi; Xinyun Chen; Kanishka Misra; Nathan Scales; David Dohan; et al.",
+  "year": 2023,
+  "url": "https://arxiv.org/abs/2302.00093",
+  "doi_isbn": "arXiv:2302.00093",
+  "source_type": "empirical",
+  "tier": "A",
+  "key_findings": [
+   "GSM-IC: model accuracy dramatically decreases when irrelevant information is included; mitigations include self-consistency and an instruction to ignore irrelevant information"
+  ],
+  "practical_applications": [
+   "Retrieve few, relevant lessons; irrelevant lessons are not free"
+  ],
+  "limitations": [
+   "Arithmetic tasks, 2023 models"
+  ],
+  "license": "arXiv non-exclusive",
+  "access_status": "abstract",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-26",
+  "modules": [
+   "M40"
+  ]
+ },
+ {
+  "key": "Park2023",
+  "title": "Generative Agents: Interactive Simulacra of Human Behavior",
+  "authors": "Joon Sung Park; Joseph C. O'Brien; Carrie J. Cai; Meredith Ringel Morris; Percy Liang; Michael S. Bernstein",
+  "year": 2023,
+  "url": "https://doi.org/10.1145/3586183.3606763",
+  "doi_isbn": "10.1145/3586183.3606763",
+  "source_type": "empirical",
+  "tier": "A",
+  "key_findings": [
+   "Memory stream retrieval = recency (exponential decay 0.995 per game hour) + importance (LLM-rated 1-10) + relevance (embedding cosine), equal weights",
+   "Reflection triggered when summed importance of recent events exceeds 150 (about 2-3 times a day); reflections stored as memories citing evidence",
+   "TrueSkill believability (100 raters): full 29.89 > no reflection 26.88 > no reflection/planning 25.64 > human crowdworkers 22.95 > no memory 21.21",
+   "Failure modes: retrieval misses, embellishment (~1.3% of 453 relationship answers hallucinated), overly formal/cooperative behaviour, cost of thousands of dollars for 25 agents x 2 days"
+  ],
+  "practical_applications": [
+   "Score studio memories by recency + importance + relevance; periodic reflections with links to evidence"
+  ],
+  "limitations": [
+   "Measures believability, not correctness; sandbox; expensive"
+  ],
+  "license": "copyrighted (ACM) / arXiv",
+  "access_status": "full_text",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-26",
+  "modules": [
+   "M40"
+  ]
+ },
+ {
+  "key": "Shinn2023",
+  "title": "Reflexion: Language Agents with Verbal Reinforcement Learning",
+  "authors": "Noah Shinn; Federico Cassano; Edward Berman; Ashwin Gopinath; Karthik Narasimhan; Shunyu Yao",
+  "year": 2023,
+  "url": "https://arxiv.org/abs/2303.11366",
+  "doi_isbn": "arXiv:2303.11366",
+  "source_type": "empirical",
+  "tier": "A",
+  "key_findings": [
+   "Actor + evaluator + self-reflection; verbal lessons kept in episodic memory (usually 1-3 reflections)",
+   "HumanEval pass@1 91% vs 80.1% GPT-4; ALFWorld 130/134 tasks; but MBPP Python 77.1% vs 80.1% baseline",
+   "Limits: no gain on WebShop (needs diverse exploration); depends on evaluator quality (MBPP generated-test false positives 16.3% vs 1.4% HumanEval); no gain with a weaker model"
+  ],
+  "practical_applications": [
+   "A lesson loop works only with a trustworthy evaluator (user verdict, measurable check)"
+  ],
+  "limitations": [
+   "Benchmarks with clear success signals"
+  ],
+  "license": "arXiv non-exclusive",
+  "access_status": "full_text",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-26",
+  "modules": [
+   "M40"
+  ]
+ },
+ {
+  "key": "HuangSelfCorrect2023",
+  "title": "Large Language Models Cannot Self-Correct Reasoning Yet",
+  "authors": "Jie Huang; Xinyun Chen; Swaroop Mishra; Huaixiu Steven Zheng; Adams Wei Yu; Xinying Song; Denny Zhou",
+  "year": 2023,
+  "url": "https://arxiv.org/abs/2310.01798",
+  "doi_isbn": "arXiv:2310.01798",
+  "source_type": "empirical",
+  "tier": "A",
+  "key_findings": [
+   "Without external feedback LLMs struggle to self-correct reasoning; performance sometimes degrades after self-correction"
+  ],
+  "practical_applications": [
+   "Do not let the agent write lessons from its own opinion alone; anchor on external signals"
+  ],
+  "limitations": [
+   "Reasoning benchmarks, 2023 models"
+  ],
+  "license": "arXiv non-exclusive",
+  "access_status": "abstract",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-26",
+  "modules": [
+   "M40"
+  ]
+ },
+ {
+  "key": "Zhao2023",
+  "title": "ExpeL: LLM Agents Are Experiential Learners",
+  "authors": "Andrew Zhao; Daniel Huang; Quentin Xu; Matthieu Lin; Yong-Jin Liu; Gao Huang",
+  "year": 2023,
+  "url": "https://arxiv.org/abs/2308.10144",
+  "doi_isbn": "arXiv:2308.10144",
+  "source_type": "empirical",
+  "tier": "A",
+  "key_findings": [
+   "Agent gathers experiences on training tasks, extracts natural-language insights, and recalls insights plus past experiences at inference; performance improves as experience accumulates"
+  ],
+  "practical_applications": [
+   "Two layers: raw cases + distilled insights"
+  ],
+  "limitations": [
+   "Benchmarks with success signals"
+  ],
+  "license": "arXiv non-exclusive",
+  "access_status": "abstract",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-26",
+  "modules": [
+   "M40"
+  ]
+ },
+ {
+  "key": "Packer2023",
+  "title": "MemGPT: Towards LLMs as Operating Systems",
+  "authors": "Charles Packer; Sarah Wooders; Kevin Lin; Vivian Fang; Shishir G. Patil; Ion Stoica; Joseph E. Gonzalez",
+  "year": 2023,
+  "url": "https://arxiv.org/abs/2310.08560",
+  "doi_isbn": "arXiv:2310.08560",
+  "source_type": "empirical",
+  "tier": "A",
+  "key_findings": [
+   "Virtual context management: memory tiers paged into a limited context window, inspired by OS hierarchical memory; evaluated on large-document analysis and multi-session chat"
+  ],
+  "practical_applications": [
+   "Small always-loaded index; details paged in on demand"
+  ],
+  "limitations": [
+   "Abstract only"
+  ],
+  "license": "arXiv non-exclusive",
+  "access_status": "abstract",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-26",
+  "modules": [
+   "M40"
+  ]
+ },
+ {
+  "key": "Sumers2023",
+  "title": "Cognitive Architectures for Language Agents",
+  "authors": "Theodore R. Sumers; Shunyu Yao; Karthik Narasimhan; Thomas L. Griffiths",
+  "year": 2023,
+  "url": "https://arxiv.org/abs/2309.02427",
+  "doi_isbn": "arXiv:2309.02427",
+  "source_type": "review",
+  "tier": "A",
+  "key_findings": [
+   "CoALA: language agents with modular memory components, a structured action space over internal memory and environment, and a decision process"
+  ],
+  "practical_applications": [
+   "Separate working, episodic, semantic and procedural memory"
+  ],
+  "limitations": [
+   "Framework, not empirical test"
+  ],
+  "license": "arXiv non-exclusive",
+  "access_status": "abstract",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-26",
+  "modules": [
+   "M40"
+  ]
+ },
+ {
+  "key": "Zhang2024",
+  "title": "A Survey on the Memory Mechanism of Large Language Model based Agents",
+  "authors": "Zeyu Zhang; Xiaohe Bo; Chen Ma; Rui Li; Xu Chen; et al.",
+  "year": 2024,
+  "url": "https://arxiv.org/abs/2404.13501",
+  "doi_isbn": "arXiv:2404.13501",
+  "source_type": "review",
+  "tier": "B",
+  "key_findings": [
+   "Survey: what agent memory is, why it is needed, how to design and evaluate it; limitations and future directions"
+  ],
+  "practical_applications": [
+   "Checklist for memory design and evaluation"
+  ],
+  "limitations": [
+   "Abstract only; fast-moving field"
+  ],
+  "license": "arXiv non-exclusive",
+  "access_status": "abstract",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-26",
+  "modules": [
+   "M40"
+  ]
+ },
+ {
+  "key": "Magesh2024",
+  "title": "Hallucination-Free? Assessing the Reliability of Leading AI Legal Research Tools",
+  "authors": "Varun Magesh; Faiz Surani; Matthew Dahl; Mirac Suzgun; Christopher D. Manning; Daniel E. Ho",
+  "year": 2024,
+  "url": "https://arxiv.org/abs/2405.20362",
+  "doi_isbn": "arXiv:2405.20362",
+  "source_type": "empirical",
+  "tier": "A",
+  "key_findings": [
+   "Preregistered evaluation: RAG-based legal tools hallucinate less than GPT-4 but still 17-33% of the time; vendor 'hallucination-free' claims overstated"
+  ],
+  "practical_applications": [
+   "Retrieval reduces but does not remove invented facts; cite file paths and check"
+  ],
+  "limitations": [
+   "Legal domain; 2024 products"
+  ],
+  "license": "arXiv non-exclusive",
+  "access_status": "abstract",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-26",
+  "modules": [
+   "M40"
+  ]
+ },
+ {
+  "key": "W3CPROVO2013",
+  "title": "PROV-O: The PROV Ontology (W3C Recommendation, 30 April 2013)",
+  "authors": "W3C Provenance Working Group (T. Lebo, S. Sahoo, D. McGuinness eds.)",
+  "year": 2013,
+  "url": "https://www.w3.org/TR/prov-o/",
+  "doi_isbn": "",
+  "source_type": "docs",
+  "tier": "S",
+  "key_findings": [
+   "Starting-point classes Entity, Activity, Agent; properties wasGeneratedBy, used, wasDerivedFrom, wasAttributedTo, wasAssociatedWith"
+  ],
+  "practical_applications": [
+   "Each lesson/taste record notes output (entity), job (activity), judge (agent), and what it was derived from"
+  ],
+  "limitations": [
+   "Only the first part of the spec read"
+  ],
+  "license": "W3C Document License",
+  "access_status": "publisher_page",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-26",
+  "modules": [
+   "M40"
+  ]
+ },
+ {
+  "key": "GDPRArt5",
+  "title": "Regulation (EU) 2016/679 (GDPR), Article 5: Principles relating to processing of personal data",
+  "authors": "European Parliament and Council of the EU",
+  "year": 2016,
+  "url": "https://gdpr-info.eu/art-5-gdpr/",
+  "doi_isbn": "",
+  "source_type": "primary_text",
+  "tier": "S",
+  "key_findings": [
+   "Principles: lawfulness, fairness and transparency; purpose limitation; data minimisation ('adequate, relevant and limited to what is necessary'); accuracy; storage limitation; integrity and confidentiality"
+  ],
+  "practical_applications": [
+   "Store only what the purpose needs; no customer personal data in lessons; prune stale records"
+  ],
+  "limitations": [
+   "EU law; Thai PDPA is the local law but was not read this session"
+  ],
+  "license": "EU legal text (reuse permitted)",
+  "access_status": "full_text",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-26",
+  "modules": [
+   "M40"
+  ]
+ }
+]

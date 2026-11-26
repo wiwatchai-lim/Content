@@ -1,0 +1,1164 @@
+[
+ {
+  "key": "KressVanLeeuwen2021",
+  "title": "Reading Images: The Grammar of Visual Design (3rd ed.)",
+  "authors": "Gunther Kress; Theo van Leeuwen",
+  "year": 2021,
+  "url": "https://www.routledge.com/Reading-Images-The-Grammar-of-Visual-Design/Kress-Leeuwen/p/book/9780415672573",
+  "doi_isbn": "ISBN 9780415672573 / 9780415672566",
+  "source_type": "textbook",
+  "tier": "A",
+  "key_findings": [
+   "Systematic social-semiotic 'grammar' of images: representational (narrative vs conceptual), interactive (contact demand/offer, social distance, attitude/angle), modality, compositional (information value given-new / ideal-real / centre-margin, salience, framing).",
+   "3rd ed. adds material on diagrams/data visualisation and a new approach to modality; chapters on materiality and the third dimension (publisher page).",
+   "Per secondary quotations of the 2006 ed. (p.181): coding orientations are culturally specific on the horizontal axis; in right-to-left writing cultures the given is on the right. KvL (1998:218) admit the epistemological status of their claim is the major challenge."
+  ],
+  "practical_applications": [
+   "Vocabulary for briefing and critique: name what each slide/frame does (demand vs offer, given vs new, framing strength)."
+  ],
+  "limitations": [
+   "Theory from analyst readings, not experiments.",
+   "Book content not read this session beyond publisher listing; framework details from it and secondary sources."
+  ],
+  "license": "copyrighted",
+  "access_status": "publisher_page",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-26",
+  "modules": [
+   "M07",
+   "M08",
+   "M18"
+  ]
+ },
+ {
+  "key": "Forceville1999",
+  "title": "Educating the eye? Kress and Van Leeuwen's Reading Images: The Grammar of Visual Design (1996)",
+  "authors": "Charles Forceville",
+  "year": 1999,
+  "url": "https://doi.org/10.1177/096394709900800204",
+  "doi_isbn": "10.1177/096394709900800204",
+  "source_type": "review",
+  "tier": "A",
+  "key_findings": [
+   "Review praises innovative, bold proposals but discusses weaknesses that follow from the semiotic/ideological approach: classification and interpretation of images and how far the concepts generalise.",
+   "Suggests links to the emerging cognitivist paradigm."
+  ],
+  "practical_applications": [
+   "Treat KvL categories as analytic lenses, not laws; check generalisation per genre/culture."
+  ],
+  "limitations": [
+   "Only abstract read."
+  ],
+  "license": "copyrighted",
+  "access_status": "abstract",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-26",
+  "modules": [
+   "M07",
+   "M08",
+   "M18"
+  ]
+ },
+ {
+  "key": "Hiippala2012",
+  "title": "Reading paths and visual perception in multimodal research, psychology and brain sciences",
+  "authors": "Tuomo Hiippala",
+  "year": 2012,
+  "url": "https://www.mv.helsinki.fi/home/thiippal/publications/2012-readingpaths.pdf",
+  "doi_isbn": "10.1016/j.pragma.2011.12.008",
+  "source_type": "review",
+  "tier": "A",
+  "key_findings": [
+   "Argues the multimodal concept of 'reading path' is not sufficiently reliable for lack of empirical testing.",
+   "Notes Holsanova & Holmqvist eye-tracking gave only limited support to influential social-semiotic reading-path hypotheses (KvL).",
+   "Eye-movement research contradicts a separate 'scanning then reading' stage; perception is task-driven (Yarbus, Rayner).",
+   "van Leeuwen (1993) listed three needed inputs: cultural reading direction, perceptual salience, semantic factors that may override salience (e.g. the human figure)."
+  ],
+  "practical_applications": [
+   "Design reading paths as hypotheses and test them (eye-tracking, heat data, or at least a 5-viewer first-look test)."
+  ],
+  "limitations": [
+   "Methodological position paper; no new data."
+  ],
+  "license": "copyrighted (author's personal copy)",
+  "access_status": "full_text",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-26",
+  "modules": [
+   "M07",
+   "M08",
+   "M18"
+  ]
+ },
+ {
+  "key": "HolsanovaRahmHolmqvist2006",
+  "title": "Entry points and reading paths on newspaper spreads: comparing a semiotic analysis with eye-tracking measurements",
+  "authors": "Jana Holsanova; Henrik Rahm; Kenneth Holmqvist",
+  "year": 2006,
+  "url": "https://lup.lub.lu.se/record/793207",
+  "doi_isbn": "Visual Communication 5(1):65-93",
+  "source_type": "empirical",
+  "tier": "A",
+  "key_findings": [
+   "Semiotic predictions about a newspaper spread compared with eye-tracking (order of attention, dwell time, reading depth).",
+   "Data confirm some assumptions only; five participants showed three reader types: editorial, overview, focused readers.",
+   "Quoted in Hiippala2012: readers do not scan the semiotic space before taking a closer look at certain units."
+  ],
+  "practical_applications": [
+   "Expect different reader types; a layout must work for skimmers and committed readers."
+  ],
+  "limitations": [
+   "n=5; one spread; newspapers not social feeds."
+  ],
+  "license": "copyrighted",
+  "access_status": "abstract",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-26",
+  "modules": [
+   "M07",
+   "M08",
+   "M18"
+  ]
+ },
+ {
+  "key": "HolmqvistWartenberg2005",
+  "title": "The role of local design factors for newspaper reading behaviour - an eye-tracking perspective (LUCS 127)",
+  "authors": "Kenneth Holmqvist; Constanze Wartenberg",
+  "year": 2005,
+  "url": "https://www.lucs.lu.se/fileadmin/user_upload/project/lucs/LUCS-pub/LUCS-127.pdf",
+  "doi_isbn": "Lund University Cognitive Studies 127, ISSN 1101-8453",
+  "source_type": "empirical",
+  "tier": "B",
+  "key_findings": [
+   "Pictures attract earlier attention than picture-less areas: 'perhaps the most stable result in all types of images' in newspaper eye-tracking.",
+   "Large pictures looked at significantly earlier than medium/small ones.",
+   "Attention concentrates just left of the spread's middle; when ads are excluded the leftward dominance disappears, i.e. texts read independently of position.",
+   "Larger texts are looked at longer but not read deeper (Hansen's rule cited: triple length -> half reading depth).",
+   "Readers do not all start top-left; they switch between texts and pictures."
+  ],
+  "practical_applications": [
+   "Image first, then short text; size is the strongest lever for entry point; do not rely on 'left = read first' alone."
+  ],
+  "limitations": [
+   "Authors call it a case study, not a controlled experiment; Swedish newspapers."
+  ],
+  "license": "author copyright",
+  "access_status": "full_text",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-26",
+  "modules": [
+   "M07",
+   "M08",
+   "M18"
+  ]
+ },
+ {
+  "key": "HolsanovaHolmbergHolmqvist2009",
+  "title": "Reading information graphics: The role of spatial contiguity and dual attentional guidance",
+  "authors": "Jana Holsanova; Nils Holmberg; Kenneth Holmqvist",
+  "year": 2009,
+  "url": "https://doi.org/10.1002/acp.1525",
+  "doi_isbn": "10.1002/acp.1525",
+  "source_type": "empirical",
+  "tier": "A",
+  "key_findings": [
+   "Integrated format (text placed next to the picture part it explains) facilitates integration.",
+   "Serial format with dual scripting (layout suggests a reading path + conceptual pre-structuring) significantly enhances reading; attracts and sustains attention, deeper processing."
+  ],
+  "practical_applications": [
+   "Put each caption next to the image part it refers to; number steps in an explainer carousel."
+  ],
+  "limitations": [
+   "Newspaper info graphics, Swedish readers; online 2008, print 2009."
+  ],
+  "license": "copyrighted",
+  "access_status": "abstract",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-26",
+  "modules": [
+   "M07",
+   "M08",
+   "M18"
+  ]
+ },
+ {
+  "key": "MartinecSalway2005",
+  "title": "A system for image-text relations in new (and old) media",
+  "authors": "Radan Martinec; Andrew Salway",
+  "year": 2005,
+  "url": "https://doi.org/10.1177/1470357205055928",
+  "doi_isbn": "10.1177/1470357205055928",
+  "source_type": "primary_text",
+  "tier": "A",
+  "key_findings": [
+   "Generalised system combining (1) relative status of image and text and (2) logico-semantic relations, building on Barthes and Halliday (secondary sources: equal status split into independent/complementary; logico-semantics elaboration/extension/enhancement, projection).",
+   "Units and realisations specified for human analysts and machines."
+  ],
+  "practical_applications": [
+   "Label each text-image pair: does the line restate (elaborate), add (extend), give time/cause/place (enhance) or voice/thought (project)?"
+  ],
+  "limitations": [
+   "Abstract only; sub-category details from secondary sources."
+  ],
+  "license": "copyrighted",
+  "access_status": "abstract",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-26",
+  "modules": [
+   "M07",
+   "M08",
+   "M18"
+  ]
+ },
+ {
+  "key": "Barthes1977",
+  "title": "Rhetoric of the Image (in Image-Music-Text, trans. S. Heath; French original 1964)",
+  "authors": "Roland Barthes",
+  "year": 1977,
+  "url": "https://www.mat.ucsb.edu/~g.legrady/rsc/barthes/rhetoric.html",
+  "doi_isbn": "Image-Music-Text, Hill and Wang 1977",
+  "source_type": "primary_text",
+  "tier": "A",
+  "key_findings": [
+   "Linguistic message relates to the image as anchorage (text fixes one of the image's possible meanings; common in press photos and ads) or relay (text and image complementary, text supplies what the image lacks; typical of cartoons/comics).",
+   "Panzani ad analysis: connoted 'Italianicity'."
+  ],
+  "practical_applications": [
+   "Ads/product posts: caption anchors; story carousels: dialogue relays."
+  ],
+  "limitations": [
+   "Semiotic essay, not empirical. Read this session only via course summaries (registry holds full text)."
+  ],
+  "license": "copyrighted",
+  "access_status": "search_summary",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-26",
+  "modules": [
+   "M07",
+   "M08",
+   "M18"
+  ]
+ },
+ {
+  "key": "Bateman2014",
+  "title": "Text and Image: A Critical Introduction to the Visual/Verbal Divide",
+  "authors": "John A. Bateman",
+  "year": 2014,
+  "url": "https://www.routledge.com/9780415841986",
+  "doi_isbn": "ISBN 9780415841986",
+  "source_type": "textbook",
+  "tier": "A",
+  "key_findings": [
+   "Survey of text-image approaches: socio-semiotics, visual communication, psycholinguistic discourse, rhetoric of advertising, cognitive metaphor; applied to ads, picture books, comics, textbooks."
+  ],
+  "practical_applications": [
+   "Reference for choosing a text-image framework by genre."
+  ],
+  "limitations": [
+   "Only publisher/catalogue pages read."
+  ],
+  "license": "copyrighted",
+  "access_status": "publisher_page",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-26",
+  "modules": [
+   "M07",
+   "M08",
+   "M18"
+  ]
+ },
+ {
+  "key": "BatemanWildfeuer2014",
+  "title": "A multimodal discourse theory of visual narrative",
+  "authors": "John A. Bateman; Janina Wildfeuer",
+  "year": 2014,
+  "url": "https://www.bohrium.com/paper-details/a-multimodal-discourse-theory-of-visual-narrative/814683555765420032-7137",
+  "doi_isbn": "10.1016/j.pragma.2014.10.001",
+  "source_type": "primary_text",
+  "tier": "A",
+  "key_findings": [
+   "Extends Segmented Discourse Representation Theory to visual narrative (discourse-pragmatic inference between panels).",
+   "Reported by Cohn (2018) as arguing that a grammar for sequential images is unnecessary."
+  ],
+  "practical_applications": [
+   "Alternative to Cohn's grammar: panels linked by discourse relations (inference) rather than syntax."
+  ],
+  "limitations": [
+   "Search summary only."
+  ],
+  "license": "copyrighted",
+  "access_status": "search_summary",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-26",
+  "modules": [
+   "M07",
+   "M08",
+   "M18"
+  ]
+ },
+ {
+  "key": "Arnheim1974",
+  "title": "Art and Visual Perception: A Psychology of the Creative Eye (The New Version)",
+  "authors": "Rudolf Arnheim",
+  "year": 1974,
+  "url": "https://www.ucpress.edu/books/art-and-visual-perception-second-edition/paper",
+  "doi_isbn": "ISBN 9780520243835 (2004 ed.)",
+  "source_type": "textbook",
+  "tier": "A",
+  "key_findings": [
+   "Gestalt account of art: perception organises visual material by psychological premises; chapter 1 'Balance' with 'The Structural Skeleton' of the frame (axes and centre).",
+   "First edition 1954; revised 1974."
+  ],
+  "practical_applications": [
+   "Vocabulary of visual forces, balance, structural skeleton for critique."
+  ],
+  "limitations": [
+   "Primary text not read; contents via publisher and secondary sources."
+  ],
+  "license": "copyrighted",
+  "access_status": "publisher_page",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-26",
+  "modules": [
+   "M07",
+   "M08",
+   "M18"
+  ]
+ },
+ {
+  "key": "Dondis1973",
+  "title": "A Primer of Visual Literacy",
+  "authors": "Donis A. Dondis",
+  "year": 1973,
+  "url": "https://openlibrary.org/works/OL7139504W",
+  "doi_isbn": "MIT Press 1973",
+  "source_type": "textbook",
+  "tier": "A",
+  "key_findings": [
+   "Treats composition principles as 'syntactical guidelines for visual literacy' (per a CUNY course reading); builds from basic elements to combinations and finished works (publisher description)."
+  ],
+  "practical_applications": [
+   "Historical root of 'visual literacy' and visual syntax as teachable."
+  ],
+  "limitations": [
+   "Bibliographic and secondary descriptions only."
+  ],
+  "license": "copyrighted",
+  "access_status": "bibliographic",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-26",
+  "modules": [
+   "M07",
+   "M08",
+   "M18"
+  ]
+ },
+ {
+  "key": "McManusStoverKim2011",
+  "title": "Arnheim's Gestalt theory of visual balance: Examining the compositional structure of art photographs and abstract images",
+  "authors": "I. C. McManus; Katharina Stöver; Do Kim",
+  "year": 2011,
+  "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC3485801",
+  "doi_isbn": "10.1068/i0445aap",
+  "source_type": "empirical",
+  "tier": "A",
+  "key_findings": [
+   "Art photographs' centre of mass slightly more often on a symmetry axis than random photos (46.6% vs 39.7%, p=.028); people's crops too.",
+   "When only CoM position changed, no preference for on-axis (48.4%, n.s.); in another study a significant preference for the off-axis image (42.6% on-axis).",
+   "Physicalist reading of Arnheim's balance not supported; features driving preference unidentified."
+  ],
+  "practical_applications": [
+   "Do not justify a layout by 'centre of mass balance'; test real versions."
+  ],
+  "limitations": [
+   "Subtle stimulus differences; one book of art photos."
+  ],
+  "license": "CC BY (i-Perception OA)",
+  "access_status": "full_text",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-26",
+  "modules": [
+   "M07",
+   "M08",
+   "M18"
+  ]
+ },
+ {
+  "key": "PalmerGuidi2011",
+  "title": "Mapping the perceptual structure of rectangles through goodness-of-fit ratings",
+  "authors": "Stephen E. Palmer; Stefano Guidi",
+  "year": 2011,
+  "url": "https://doi.org/10.1068/p7021",
+  "doi_isbn": "10.1068/p7021",
+  "source_type": "empirical",
+  "tier": "A",
+  "key_findings": [
+   "Probe-fit ratings at 77 positions highest at centre, elevated along vertical/horizontal symmetry axes and local symmetry axes; six symmetry factors explained 95% of variance.",
+   "Dividing a frame into subframes makes position within the local subframe the main determinant.",
+   "Consistent with Arnheim's structural skeleton, but explainable by Gestalt figural goodness."
+  ],
+  "practical_applications": [
+   "Split-screen/panel layouts create new local skeletons: compose inside each panel."
+  ],
+  "limitations": [
+   "Fit ratings for a circle, not complex images."
+  ],
+  "license": "copyrighted",
+  "access_status": "abstract",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-26",
+  "modules": [
+   "M07",
+   "M08",
+   "M18"
+  ]
+ },
+ {
+  "key": "Smith2012",
+  "title": "The Attentional Theory of Cinematic Continuity",
+  "authors": "Tim J. Smith",
+  "year": 2012,
+  "url": "https://ualresearchonline.arts.ac.uk/id/eprint/21187/",
+  "doi_isbn": "10.3167/proj.2012.060102",
+  "source_type": "primary_text",
+  "tier": "A",
+  "key_findings": [
+   "Continuity is a viewer outcome: CE rules use natural attentional cues (off-screen sound, conversational turns, motion, gaze, pointing) pre-cut and match minimal expectations post-cut.",
+   "Over 90% of surveyed Hollywood shots follow CE rules (citing Bordwell et al. 1985; Levin & Wang 2009).",
+   "Match-action cuts hardest to detect: about a third missed in a cut-detection task (Smith & Henderson 2008).",
+   "Levin & Simons 1997: only 33% noticed an actor swap across a matched exit/entrance."
+  ],
+  "practical_applications": [
+   "Cut on motion/gaze; put the post-cut target where the eye already is; keep spatiotemporal continuity of characters."
+  ],
+  "limitations": [
+   "Theory plus selected evidence; mostly Western narrative film."
+  ],
+  "license": "author copy (repository)",
+  "access_status": "full_text",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-26",
+  "modules": [
+   "M07",
+   "M08",
+   "M18"
+  ]
+ },
+ {
+  "key": "SmithHenderson2008",
+  "title": "Edit Blindness: The relationship between attention and global change blindness in dynamic scenes",
+  "authors": "Tim J. Smith; John M. Henderson",
+  "year": 2008,
+  "url": "",
+  "doi_isbn": "Journal of Eye Movement Research (as cited in Smith2012)",
+  "source_type": "empirical",
+  "tier": "A",
+  "key_findings": [
+   "As reported in Smith2012: match-action cuts were the hardest cut type to detect; about one third missed."
+  ],
+  "practical_applications": [
+   "Hide cuts inside actions."
+  ],
+  "limitations": [
+   "Not read this session; cited via Smith2012."
+  ],
+  "license": "unknown",
+  "access_status": "bibliographic",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-26",
+  "modules": [
+   "M07",
+   "M08",
+   "M18"
+  ]
+ },
+ {
+  "key": "MaglianoZacks2011",
+  "title": "The impact of continuity editing in narrative film on event segmentation",
+  "authors": "Joseph P. Magliano; Jeffrey M. Zacks",
+  "year": 2011,
+  "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC3208769",
+  "doi_isbn": "Cognitive Science 35(8):1489-1517",
+  "source_type": "empirical",
+  "tier": "A",
+  "key_findings": [
+   "The Red Balloon, 211 edits coded: continuity (111), spatial-temporal discontinuity (81), action discontinuity (19).",
+   "Action discontinuities had the biggest impact on event segmentation (coarse regression weight 0.96); spatial/temporal jumps had small or no effect; continuity edits raised only fine segmentation.",
+   "fMRI: regions that increased at edits and decreased at action discontinuities interpreted as bridging visual discontinuities while keeping action continuity."
+  ],
+  "practical_applications": [
+   "A new 'scene' for viewers = a change of action/goal, not a change of camera; place boundaries (slide changes, chapter cards) at action changes."
+  ],
+  "limitations": [
+   "One film; n=41 and 24; fMRI interpretation is reverse inference."
+  ],
+  "license": "PMC author manuscript",
+  "access_status": "full_text",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-26",
+  "modules": [
+   "M07",
+   "M08",
+   "M18"
+  ]
+ },
+ {
+  "key": "Zacks2007EST",
+  "title": "Event perception: A mind-brain perspective",
+  "authors": "Jeffrey M. Zacks; Nicole K. Speer; Khena M. Swallow; Todd S. Braver; Jeremy R. Reynolds",
+  "year": 2007,
+  "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC2852534/",
+  "doi_isbn": "10.1037/0033-2909.133.2.273",
+  "source_type": "review",
+  "tier": "A",
+  "key_findings": [
+   "Event Segmentation Theory: perceptual systems predict what happens next; transient prediction errors are perceived as event boundaries, which regulate attention and memory.",
+   "Event perception uses sensory cues and knowledge of event parts and actors' goals."
+  ],
+  "practical_applications": [
+   "Make each slide/shot either continue the prediction (mapping) or break it on purpose (boundary, punchline)."
+  ],
+  "limitations": [
+   "Abstract read."
+  ],
+  "license": "PMC author manuscript",
+  "access_status": "abstract",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-26",
+  "modules": [
+   "M07",
+   "M08",
+   "M18"
+  ]
+ },
+ {
+  "key": "Loschky2020SPECT",
+  "title": "The Scene Perception & Event Comprehension Theory (SPECT) applied to visual narratives",
+  "authors": "Lester C. Loschky; Adam M. Larson; Tim J. Smith; Joseph P. Magliano",
+  "year": 2020,
+  "url": "https://www.k-state.edu/psych/vcl/basic-research/Loschky_Larson_Smith_Magliano_2020_SPECT.pdf",
+  "doi_isbn": "10.1111/tops.12455",
+  "source_type": "review",
+  "tier": "A",
+  "key_findings": [
+   "Front-end (within a fixation: attentional selection, information extraction) vs back-end (event model in working memory: laying foundation, mapping, shifting).",
+   "Missing bridging image in a picture story -> longer viewing, about 20% more fixations (not longer fixations), aimed at inference-relevant regions (Magliano et al. 2016; Hutson et al. 2018).",
+   "'Tyranny of film': edited film produces high attentional synchrony; event-model differences barely change gaze except in a static, motion-free shot; a map-drawing task can reduce it.",
+   "Self-paced static narratives allow more back-end influence on gaze than film."
+  ],
+  "practical_applications": [
+   "Carousels (self-paced) can leave gaps for inference; clips (fast, motion) must steer attention explicitly."
+  ],
+  "limitations": [
+   "Largely the authors' own lab studies; Western stimuli."
+  ],
+  "license": "CC BY-NC (Wiley OA)",
+  "access_status": "full_text",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-26",
+  "modules": [
+   "M07",
+   "M08",
+   "M18"
+  ]
+ },
+ {
+  "key": "Cohn2013VLC",
+  "title": "The Visual Language of Comics: Introduction to the Structure and Cognition of Sequential Images",
+  "authors": "Neil Cohn",
+  "year": 2013,
+  "url": "https://doi.org/10.5040/9781472542175",
+  "doi_isbn": "10.5040/9781472542175",
+  "source_type": "textbook",
+  "tier": "A",
+  "key_findings": [
+   "Drawings and sequential images structured like language: lexicon of stored patterns, combination strategies, hierarchic narrative grammar; cross-cultural visual languages."
+  ],
+  "practical_applications": [
+   "Treat a series style as a 'visual vocabulary' to keep stable."
+  ],
+  "limitations": [
+   "Abstract only; strong claim contested (Bateman & Wildfeuer 2014)."
+  ],
+  "license": "copyrighted",
+  "access_status": "abstract",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-26",
+  "modules": [
+   "M07",
+   "M08",
+   "M18"
+  ]
+ },
+ {
+  "key": "Cohn2014Grammar",
+  "title": "The grammar of visual narrative: Neural evidence for constituent structure in sequential image comprehension",
+  "authors": "Neil Cohn; Ray Jackendoff; Phillip J. Holcomb; Gina R. Kuperberg",
+  "year": 2014,
+  "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC4364919/",
+  "doi_isbn": "10.1016/j.neuropsychologia.2014.09.018",
+  "source_type": "empirical",
+  "tier": "A",
+  "key_findings": [
+   "Blank panels inside a narrative constituent (vs at its boundary) evoked a left anterior negativity (500-700 ms); inside the second constituent also a P600.",
+   "Suggests readers build hierarchic constituents in wordless strips, similar to syntax."
+  ],
+  "practical_applications": [
+   "Put pauses/beat panels at constituent boundaries, not mid-sequence."
+  ],
+  "limitations": [
+   "n=24; some marginal effects; Peanuts strips; one lab."
+  ],
+  "license": "PMC author manuscript",
+  "access_status": "full_text",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-26",
+  "modules": [
+   "M07",
+   "M08",
+   "M18"
+  ]
+ },
+ {
+  "key": "Cohn2020PINS",
+  "title": "Your brain on comics: a cognitive model of visual narrative comprehension",
+  "authors": "Neil Cohn",
+  "year": 2020,
+  "url": "https://doi.org/10.1111/tops.12421",
+  "doi_isbn": "10.1111/tops.12421",
+  "source_type": "review",
+  "tier": "A",
+  "key_findings": [
+   "Parallel Interfacing Narrative-Semantics (PINS) model; details in creative-intelligence/knowledge/cartoon/COMICS_AND_SEQUENTIAL_ART.md."
+  ],
+  "practical_applications": [
+   "See M44 file."
+  ],
+  "limitations": [
+   "Not re-read this session; cited for linkage only."
+  ],
+  "license": "CC BY",
+  "access_status": "bibliographic",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-26",
+  "modules": [
+   "M07",
+   "M08",
+   "M18"
+  ]
+ },
+ {
+  "key": "Aleixo2025",
+  "title": "How readers navigate comic book pages: evidence from eye movements",
+  "authors": "Paul A. Aleixo; Jane L. Morgan; Diarmuid B. Verrier",
+  "year": 2025,
+  "url": "https://shura.shu.ac.uk/36392/",
+  "doi_isbn": "10.1080/21504857.2025.2591045",
+  "source_type": "empirical",
+  "tier": "A",
+  "key_findings": [
+   "90 participants, textless Watchmen page: Z-path is an accurate prototype of panel order but with much variation.",
+   "Only 49% first fixated panel 1; panel 1->2 transition 58%; after panel 2, 43% went on to panel 3 and 34% back to panel 1 (regressions, read by authors as context checking).",
+   "Previous Z-path evidence was limited to self-report."
+  ],
+  "practical_applications": [
+   "Z-order works as a default for grids, but expect back-checks: repeat key cues across adjacent panels."
+  ],
+  "limitations": [
+   "One page, 9-panel grid, no text; UK sample."
+  ],
+  "license": "author accepted manuscript",
+  "access_status": "abstract",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-26",
+  "modules": [
+   "M07",
+   "M08",
+   "M18"
+  ]
+ },
+ {
+  "key": "McCloud1993",
+  "title": "Understanding Comics: The Invisible Art",
+  "authors": "Scott McCloud",
+  "year": 1993,
+  "url": "",
+  "doi_isbn": "ISBN 006097625X",
+  "source_type": "practitioner",
+  "tier": "D",
+  "key_findings": [
+   "Craft theory of closure in the gutter and six panel-transition types (see cartoon/COMICS_AND_SEQUENTIAL_ART.md)."
+  ],
+  "practical_applications": [
+   "Planning vocabulary for transitions."
+  ],
+  "limitations": [
+   "Craft, not evidence; Cohn critiques transition theory."
+  ],
+  "license": "copyrighted",
+  "access_status": "bibliographic",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-26",
+  "modules": [
+   "M07",
+   "M08",
+   "M18"
+  ]
+ },
+ {
+  "key": "BordwellThompson-FilmArt",
+  "title": "Film Art: An Introduction",
+  "authors": "David Bordwell; Kristin Thompson",
+  "year": 2010,
+  "url": "",
+  "doi_isbn": "9th ed., McGraw-Hill",
+  "source_type": "textbook",
+  "tier": "A",
+  "key_findings": [
+   "Standard textbook of film form, mise-en-scene, cinematography, editing (continuity system); quoted in Smith2012: continuity editing aims to tell a story coherently with a smooth flow from shot to shot."
+  ],
+  "practical_applications": [
+   "Shared vocabulary for 16:9 story scenes."
+  ],
+  "limitations": [
+   "Not read this session."
+  ],
+  "license": "copyrighted",
+  "access_status": "bibliographic",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-26",
+  "modules": [
+   "M07",
+   "M08",
+   "M18"
+  ]
+ },
+ {
+  "key": "HendersonHayes2017",
+  "title": "Meaning-based guidance of attention in scenes as revealed by meaning maps",
+  "authors": "John M. Henderson; Taylor R. Hayes",
+  "year": 2017,
+  "url": "https://doi.org/10.1038/s41562-017-0208-0",
+  "doi_isbn": "10.1038/s41562-017-0208-0",
+  "source_type": "empirical",
+  "tier": "A",
+  "key_findings": [
+   "40 scenes; meaning (crowd-rated patches, 165 raters) and saliency correlated r=0.80.",
+   "Meaning explained 53% vs saliency 38% of fixation-density variance; unique variance 19% vs 4% (n.s. for saliency).",
+   "Meaning advantage present from the first fixation."
+  ],
+  "practical_applications": [
+   "The eye goes to what is informative (face, hands, the product), not only to bright spots."
+  ],
+  "limitations": [
+   "Free-viewing tasks; meaning maps' validity disputed (Pedziwiatr2021)."
+  ],
+  "license": "copyrighted (author reprint)",
+  "access_status": "full_text",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-26",
+  "modules": [
+   "M07",
+   "M08",
+   "M18"
+  ]
+ },
+ {
+  "key": "Pedziwiatr2021",
+  "title": "Meaning maps and saliency models based on deep convolutional neural networks are insensitive to image meaning when predicting human fixations",
+  "authors": "Marek A. Pedziwiatr; Matthias Kümmerer; Thomas S. A. Wallis; Matthias Bethge; Christoph Teufel",
+  "year": 2021,
+  "url": "https://orca.cardiff.ac.uk/135011",
+  "doi_isbn": "10.1016/j.cognition.2020.104465",
+  "source_type": "empirical",
+  "tier": "A",
+  "key_findings": [
+   "Deep saliency model DeepGaze II predicted fixations better than meaning maps; neither responded to meaning manipulations that changed human gaze.",
+   "Argues meaning maps index visual features; Henderson's group replied; debate continues."
+  ],
+  "practical_applications": [
+   "Neither 'salience' nor 'meaning' maps alone predict the eye; test real viewers."
+  ],
+  "limitations": [
+   "Search summary only."
+  ],
+  "license": "copyrighted",
+  "access_status": "search_summary",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-26",
+  "modules": [
+   "M07",
+   "M08",
+   "M18"
+  ]
+ },
+ {
+  "key": "CoutrotGuyader2014",
+  "title": "How saliency, faces, and sound influence gaze in dynamic social scenes",
+  "authors": "Antoine Coutrot; Nathalie Guyader",
+  "year": 2014,
+  "url": "https://doi.org/10.1167/14.8.5",
+  "doi_isbn": "10.1167/14.8.5",
+  "source_type": "empirical",
+  "tier": "A",
+  "key_findings": [
+   "In conversation videos, viewers look more at faces, especially talking faces, regardless of soundtrack; the original soundtrack makes gaze follow speech turn-taking more closely.",
+   "Classical saliency models fail in conversation scenes without face and sound terms."
+  ],
+  "practical_applications": [
+   "In dialogue scenes the speaking character is the attention anchor; voice and mouth cues steer gaze."
+  ],
+  "limitations": [
+   "Abstract only."
+  ],
+  "license": "CC BY-NC-ND (JOV)",
+  "access_status": "abstract",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-26",
+  "modules": [
+   "M07",
+   "M08",
+   "M18"
+  ]
+ },
+ {
+  "key": "NNG-Pernice2017",
+  "title": "F-Shaped Pattern of Reading on the Web: Misunderstood, But Still Relevant (Even on Mobile)",
+  "authors": "Kara Pernice (Nielsen Norman Group)",
+  "year": 2017,
+  "url": "https://www.nngroup.com/articles/f-shaped-pattern-reading-web-content/",
+  "doi_isbn": "",
+  "source_type": "practitioner",
+  "tier": "C",
+  "key_findings": [
+   "F-pattern occurs when three conditions hold: little formatting (wall of text), user wants efficiency, user not committed to read every word; default when no strong cues guide the eye.",
+   "Mirrored in Arabic; also seen on mobile.",
+   "Considered bad for users and businesses; antidotes: key points first, informative headings starting with key words, bold, lists."
+  ],
+  "practical_applications": [
+   "F-pattern is a failure mode of text pages, not a layout to imitate."
+  ],
+  "limitations": [
+   "Commercial UX research; heatmap samples ~45-47 users; method details limited."
+  ],
+  "license": "copyrighted",
+  "access_status": "full_text",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-26",
+  "modules": [
+   "M07",
+   "M08",
+   "M18"
+  ]
+ },
+ {
+  "key": "NNG-Pernice2019Scanning",
+  "title": "Text Scanning Patterns: Eyetracking Evidence",
+  "authors": "Kara Pernice (Nielsen Norman Group)",
+  "year": 2019,
+  "url": "https://www.nngroup.com/articles/text-scanning-patterns-eyetracking/",
+  "doi_isbn": "",
+  "source_type": "practitioner",
+  "tier": "C",
+  "key_findings": [
+   "Four patterns: F, spotted, layer-cake (most effective), commitment; driven by task, prior experience, layout/content type, motivation, efficiency."
+  ],
+  "practical_applications": [
+   "Design caption/subtitle text for layer-cake and spotted scanning: strong headings, distinctive key words."
+  ],
+  "limitations": [
+   "Web text, not images; commercial."
+  ],
+  "license": "copyrighted",
+  "access_status": "full_text",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-26",
+  "modules": [
+   "M07",
+   "M08",
+   "M18"
+  ]
+ },
+ {
+  "key": "MaassRusso2003",
+  "title": "Directional bias in the mental representation of spatial events: Nature or culture?",
+  "authors": "Anne Maass; Aurore Russo",
+  "year": 2003,
+  "url": "https://doi.org/10.1111/1467-9280.14421",
+  "doi_isbn": "10.1111/1467-9280.14421",
+  "source_type": "empirical",
+  "tier": "A",
+  "key_findings": [
+   "Italians drew sentence subject left of object; Arabs reversed (right).",
+   "Picture-sentence matching faster when subject in script-typical position; plus a language-independent facilitation for left-to-right action, suggesting both hemispheric and scanning-habit factors."
+  ],
+  "practical_applications": [
+   "For left-to-right readers (Thai, English), agent-on-left and motion left-to-right read as default/forward; reversing it is a marked choice."
+  ],
+  "limitations": [
+   "Abstract read; lab tasks with simple drawings."
+  ],
+  "license": "copyrighted",
+  "access_status": "abstract",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-26",
+  "modules": [
+   "M07",
+   "M08",
+   "M18"
+  ]
+ },
+ {
+  "key": "SuitnerMaass2016",
+  "title": "Spatial agency bias review (Advances in Experimental Social Psychology vol. 53, pp. 245-301)",
+  "authors": "Caterina Suitner; Anne Maass",
+  "year": 2016,
+  "url": "https://www.research.unipd.it/handle/11577/165462",
+  "doi_isbn": "AESP 53:245-301",
+  "source_type": "review",
+  "tier": "A",
+  "key_findings": [
+   "As described by citing papers: agency represented on the left with left-to-right trajectory in rightward-script cultures; reverses in right-to-left cultures; script and visuo-motor accounts."
+  ],
+  "practical_applications": [
+   "Who is placed left/right and which way they move carries agency connotations."
+  ],
+  "limitations": [
+   "Known only via citing papers; exact chapter title not verified."
+  ],
+  "license": "copyrighted",
+  "access_status": "search_summary",
+  "verification_status": "unverified",
+  "date_accessed": "2026-11-26",
+  "modules": [
+   "M07",
+   "M08",
+   "M18"
+  ]
+ },
+ {
+  "key": "Chahboun2016",
+  "title": "Reading and writing direction effects on the aesthetic appreciation of photographs",
+  "authors": "Sobh Chahboun; Andrea Flumini; Carmen Pérez González; I. Chris McManus; Julio Santiago",
+  "year": 2016,
+  "url": "https://discovery.ucl.ac.uk/id/eprint/1503492/",
+  "doi_isbn": "10.1080/1357650X.2016.1196214",
+  "source_type": "empirical",
+  "tier": "A",
+  "key_findings": [
+   "Spanish (L-R) vs Moroccan (R-L) viewers: no directional effect in single ratings (Exp 1); in paired original-vs-mirror choice, Spaniards preferred rightward and Moroccans leftward versions (Exp 2).",
+   "Effect appears when people attend to the lateral dimension; not moderated by model sex."
+  ],
+  "practical_applications": [
+   "Mirror-flipping a picture is mostly harmless for single viewing but matters when versions are compared or direction is salient."
+  ],
+  "limitations": [
+   "Abstract read."
+  ],
+  "license": "author accepted manuscript",
+  "access_status": "abstract",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-26",
+  "modules": [
+   "M07",
+   "M08",
+   "M18"
+  ]
+ },
+ {
+  "key": "Tversky1991",
+  "title": "Cross-cultural and developmental trends in graphic productions",
+  "authors": "Barbara Tversky; Sol Kugelmass; Atalia Winter",
+  "year": 1991,
+  "url": "https://doi.org/10.1016/0010-0285(91)90005-9",
+  "doi_isbn": "10.1016/0010-0285(91)90005-9",
+  "source_type": "empirical",
+  "tier": "A",
+  "key_findings": [
+   "About 1200 English, Hebrew, Arabic speakers: writing direction affected only temporal representations (L-R English, R-L Arabic, Hebrew between); quantity and preference used all directions except top-to-bottom about equally; more/better mapped upward."
+  ],
+  "practical_applications": [
+   "Timelines and before/after go left-to-right for Thai readers; 'more/better = up' is safer than left/right for value."
+  ],
+  "limitations": [
+   "Abstract read."
+  ],
+  "license": "copyrighted",
+  "access_status": "abstract",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-26",
+  "modules": [
+   "M07",
+   "M08",
+   "M18"
+  ]
+ },
+ {
+  "key": "ToPatrick2021",
+  "title": "How the eyes connect to the heart: The influence of eye gaze direction on advertising effectiveness",
+  "authors": "Rita Ngoc To; Vanessa M. Patrick; Margaret C. Campbell; JoAndrea Hoegg",
+  "year": 2021,
+  "url": "https://ideas.repec.org/a/oup/jconrs/v48y2021i1p123-146..html",
+  "doi_isbn": "10.1093/jcr/ucaa063",
+  "source_type": "empirical",
+  "tier": "A",
+  "key_findings": [
+   "Five experiments incl. a Facebook field study: averted model gaze increases narrative transportation and effectiveness of emotional ads; direct gaze better for informational ads (credibility) and when viewers do not want to identify with negative emotion."
+  ],
+  "practical_applications": [
+   "KvL 'demand' (direct gaze) is not automatically stronger; choose gaze by appeal type."
+  ],
+  "limitations": [
+   "Abstract read; author list varies across indexes (IDEAS lists four)."
+  ],
+  "license": "copyrighted",
+  "access_status": "abstract",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-26",
+  "modules": [
+   "M07",
+   "M08",
+   "M18"
+  ]
+ },
+ {
+  "key": "SajjacholapuntBall2014",
+  "title": "The influence of banner advertisements on attention and memory: human faces with averted gaze can enhance advertising effectiveness",
+  "authors": "Pitch Sajjacholapunt; Linden J. Ball",
+  "year": 2014,
+  "url": "https://doi.org/10.3389/fpsyg.2014.00166",
+  "doi_isbn": "10.3389/fpsyg.2014.00166",
+  "source_type": "empirical",
+  "tier": "A",
+  "key_findings": [
+   "Faces with averted gaze in banners increased attention to the banner, its text and product, and improved memory for brand and message; mutual gaze localised attention on the face, weakening memory benefit."
+  ],
+  "practical_applications": [
+   "If a model looks at the viewer, the product loses looks; aim the gaze at the product when the product is the message."
+  ],
+  "limitations": [
+   "Banner ads on web pages; abstract read."
+  ],
+  "license": "CC BY",
+  "access_status": "abstract",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-26",
+  "modules": [
+   "M07",
+   "M08",
+   "M18"
+  ]
+ },
+ {
+  "key": "Winskel2009",
+  "title": "Eye movements when reading spaced and unspaced Thai and English: A comparison of Thai-English bilinguals and English monolinguals",
+  "authors": "Heather Winskel; Ralph Radach; Sudaporn Luksaneeyanawin",
+  "year": 2009,
+  "url": "https://doi.org/10.1016/j.jml.2009.07.002",
+  "doi_isbn": "10.1016/j.jml.2009.07.002",
+  "source_type": "empirical",
+  "tier": "A",
+  "key_findings": [
+   "In Thai, interword spaces facilitated word recognition but did not change eye guidance or landing positions; removing spaces severely disrupted English reading."
+  ],
+  "practical_applications": [
+   "Thai overlay text: short phrases with line breaks at word boundaries help recognition."
+  ],
+  "limitations": [
+   "Abstract text seen via search summary; sentence reading, not image overlays."
+  ],
+  "license": "copyrighted",
+  "access_status": "search_summary",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-26",
+  "modules": [
+   "M07",
+   "M08",
+   "M18"
+  ]
+ },
+ {
+  "key": "DTCG2025",
+  "title": "Design Tokens Specification 2025.10 (Format, Color, Resolver modules)",
+  "authors": "W3C Design Tokens Community Group",
+  "year": 2025,
+  "url": "https://www.designtokens.org/tr/2025.10/",
+  "doi_isbn": "",
+  "source_type": "docs",
+  "tier": "C",
+  "key_findings": [
+   "Design tokens = indivisible pieces of a design system such as colours, spacing, typography scale; first stable version 2025.10 (28 Oct 2025); Community Group report, not a W3C Standard."
+  ],
+  "practical_applications": [
+   "Store a series' visual constants (palette, type scale, margins, line weight) as named tokens read by HTML templates."
+  ],
+  "limitations": [
+   "Index page read; module details not read."
+  ],
+  "license": "W3C Community Final Specification Agreement",
+  "access_status": "publisher_page",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-26",
+  "modules": [
+   "M07",
+   "M08",
+   "M18"
+  ]
+ },
+ {
+  "key": "Frost2016",
+  "title": "Atomic Design",
+  "authors": "Brad Frost",
+  "year": 2016,
+  "url": "https://atomicdesign.bradfrost.com/chapter-2/",
+  "doi_isbn": "",
+  "source_type": "practitioner",
+  "tier": "D",
+  "key_findings": [
+   "Atoms -> molecules -> organisms -> templates -> pages; templates are layout skeletons, pages are templates with real content."
+  ],
+  "practical_applications": [
+   "Model a carousel system: tokens/atoms (colour, type), molecules (bubble+name), organisms (panel), template (4-slide layout), page (one story)."
+  ],
+  "limitations": [
+   "Craft method; secondary summaries read."
+  ],
+  "license": "copyrighted (free online)",
+  "access_status": "search_summary",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-26",
+  "modules": [
+   "M07",
+   "M08",
+   "M18"
+  ]
+ },
+ {
+  "key": "SocialinsiderSEJ",
+  "title": "Instagram carousels engagement study (Socialinsider data, reported by Search Engine Journal)",
+  "authors": "Search Engine Journal (reporting Socialinsider)",
+  "year": null,
+  "url": "https://www.searchenginejournal.com/instagram-carousels/379311/",
+  "doi_isbn": "",
+  "source_type": "docs",
+  "tier": "D",
+  "key_findings": [
+   "Reported: 22M posts; carousels 1.92% engagement vs 1.74% images, 1.45% video; most carousels 2-4 slides; 10-slide highest; 'swipe' prompts 1.83%->2%."
+  ],
+  "practical_applications": [
+   "Weak hint only: carousel format is not penalised; test slide count yourself."
+  ],
+  "limitations": [
+   "Vendor data, methodology unknown, correlational; year not confirmed; secondary report."
+  ],
+  "license": "copyrighted",
+  "access_status": "search_summary",
+  "verification_status": "unverified",
+  "date_accessed": "2026-11-26",
+  "modules": [
+   "M07",
+   "M08",
+   "M18"
+  ]
+ }
+]

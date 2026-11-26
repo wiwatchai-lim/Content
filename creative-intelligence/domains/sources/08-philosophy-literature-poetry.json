@@ -1,0 +1,1365 @@
+[
+ {
+  "key": "MiallKuiken1994",
+  "title": "Foregrounding, defamiliarization, and affect: Response to literary stories",
+  "authors": "David S. Miall; Don Kuiken",
+  "year": 1994,
+  "url": "https://sites.ualberta.ca/~dmiall/reading/foregrd.htm",
+  "doi_isbn": "10.1016/0304-422X(94)00011-5",
+  "source_type": "empirical",
+  "tier": "A",
+  "key_findings": [
+   "4 studies, 3 short stories (O'Faolain, Mansfield, Woolf) split into 77-86 segments; N = 60, 60, 48, 30",
+   "Foregrounding index (phonetic + grammatical + semantic) correlated with segment reading time (r ~ .27-.39), strikingness (~.22-.45) and affect (~.23-.33)",
+   "Effects appeared for psychology students as well as English students -> not dependent on literary training (though psych students gave lower ratings)",
+   "Model: foregrounding -> defamiliarization -> affect -> 'refamiliarizing' interpretation"
+  ],
+  "practical_applications": [
+   "Put one deviating phrase (sound/image) at the turning line of a 2-line dialogue: it is where readers slow down",
+   "Do not foreground every line; contrast with plain lines is what makes one line strike"
+  ],
+  "limitations": [
+   "Correlational, not manipulated",
+   "Only 3 stories; grammatical foregrounding inconsistent",
+   "Refamiliarization stage inferred, not measured"
+  ],
+  "license": "copyrighted (author copy online)",
+  "access_status": "full_text",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-26",
+  "modules": [
+   "M03",
+   "M45"
+  ]
+ },
+ {
+  "key": "Koopman2016",
+  "title": "Effects of 'literariness' on emotions and on empathy and reflection after reading",
+  "authors": "Eva Maria (Emy) Koopman",
+  "year": 2016,
+  "url": "https://repub.eur.nl/pub/89355/Article_Foregrounding-and-empathy_Author-version.pdf",
+  "doi_isbn": "10.1037/aca0000041",
+  "source_type": "empirical",
+  "tier": "A",
+  "key_findings": [
+   "N = 142 randomly read 1 of 3 versions of a literary excerpt about losing a child: original (high foregrounding), without imagery, without foregrounding",
+   "Original > no-foregrounding on empathic understanding after reading; original vs no-imagery not significant",
+   "Original evoked more ambivalent (mixed beauty + sorrow) emotions; reflection not affected by foregrounding",
+   "Effects on emotion during reading disappeared when trait empathy/gender were controlled; reviews prior evidence as 'inconclusive' (van Peer et al. 2007 single-line study found no emotion effect)"
+  ],
+  "practical_applications": [
+   "Stripping all literary texture from a sad story flattens it; keep sound + image + rhythm together, not only metaphor",
+   "Expect mixed feelings (bittersweet) rather than more intense sadness from well-made lines"
+  ],
+  "limitations": [
+   "One text, Dutch students and parents",
+   "Between-subjects pre/post with different people",
+   "Small, partly null effects"
+  ],
+  "license": "copyrighted (author version)",
+  "access_status": "full_text",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-26",
+  "modules": [
+   "M03",
+   "M45"
+  ]
+ },
+ {
+  "key": "Menninghaus2023",
+  "title": "Parallelisms and deviations: two fundamentals of an aesthetics of poetic diction",
+  "authors": "Winfried Menninghaus; Valentin Wagner; Ines Schindler; Christine A. Knoop; Stefan Blohm; Klaus Frieler; Mathias Scharinger",
+  "year": 2023,
+  "url": "https://doi.org/10.1098/rstb.2022.0424",
+  "doi_isbn": "10.1098/rstb.2022.0424",
+  "source_type": "empirical",
+  "tier": "A",
+  "key_findings": [
+   "Across poems, humorous couplets and proverbs: higher parallelism scores (rhyme, metre, alliteration) raised comprehensibility and liking",
+   "Higher deviation scores reduced both comprehensibility and liking",
+   "Positive parallelism effects were significantly stronger than negative deviation effects; framed as prediction-error minimisation -> fluency -> liking"
+  ],
+  "practical_applications": [
+   "For short wise lines, parallel structure (repetition, rhyme, mirrored clauses) is the safer bet than odd/deviant wording",
+   "Use deviation sparingly and only when parallelism carries the line"
+  ],
+  "limitations": [
+   "German stimuli",
+   "Liking is not the same as being moved or remembering"
+  ],
+  "license": "CC BY (Royal Society open access)",
+  "access_status": "abstract",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-26",
+  "modules": [
+   "M03",
+   "M45"
+  ]
+ },
+ {
+  "key": "Menninghaus2017",
+  "title": "The emotional and aesthetic powers of parallelistic diction",
+  "authors": "Winfried Menninghaus; Valentin Wagner; Eugen Wassiliwizky; Thomas Jacobsen; Christine A. Knoop",
+  "year": 2017,
+  "url": "https://doi.org/10.1016/j.poetic.2016.12.001",
+  "doi_isbn": "10.1016/j.poetic.2016.12.001",
+  "source_type": "empirical",
+  "tier": "A",
+  "key_findings": [
+   "(per MPI summary) Parallelistic features intensified all measured emotion dimensions (joy, sadness, being moved, intensity, positive affect) and aesthetic dimensions (beauty, liking, melodiousness) for 40 poems",
+   "Authors note parallelism also occurs in ritual language, ads, slogans and everyday talk"
+  ],
+  "practical_applications": [
+   "Rhyme/repetition in a caption line likely raises felt intensity and 'melodiousness'"
+  ],
+  "limitations": [
+   "Only search snippet / institute summary read; design details not verified"
+  ],
+  "license": "copyrighted",
+  "access_status": "search_summary",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-26",
+  "modules": [
+   "M03",
+   "M45"
+  ]
+ },
+ {
+  "key": "Obermeier2013",
+  "title": "Aesthetic and emotional effects of meter and rhyme in poetry",
+  "authors": "Christian Obermeier; Winfried Menninghaus; Martin von Koppenfels; Tim Raettig; Maren Schmidt-Kassow; Sascha Otterbein; Sonja A. Kotz",
+  "year": 2013,
+  "url": "https://www.frontiersin.org/articles/10.3389/fpsyg.2013.00010/full",
+  "doi_isbn": "10.3389/fpsyg.2013.00010",
+  "source_type": "empirical",
+  "tier": "A",
+  "key_findings": [
+   "17 German listeners rated 60 four-line stanzas in metre x rhyme versions, with real words and pseudo-words (480 recordings)",
+   "Rhyme raised liking, intensity, perceived and felt positive emotion; metre raised liking and intensity",
+   "Effects roughly independent; interpreted via cognitive fluency (not measured directly)"
+  ],
+  "practical_applications": [
+   "Spoken VO lines that rhyme or keep a steady beat are liked more - useful for TTS taglines"
+  ],
+  "limitations": [
+   "N = 17, exploratory",
+   "Some effects borderline (p ~ .05)",
+   "German lyric stanzas only"
+  ],
+  "license": "CC BY",
+  "access_status": "full_text",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-26",
+  "modules": [
+   "M03",
+   "M45"
+  ]
+ },
+ {
+  "key": "McGloneTofighbakhsh2000",
+  "title": "Birds of a feather flock conjointly (?): Rhyme as reason in aphorisms",
+  "authors": "Matthew S. McGlone; Jessica Tofighbakhsh",
+  "year": 2000,
+  "url": "https://doi.org/10.1111/1467-9280.00282",
+  "doi_isbn": "10.1111/1467-9280.00282",
+  "source_type": "empirical",
+  "tier": "A",
+  "key_findings": [
+   "Unfamiliar rhyming aphorisms ('What sobriety conceals, alcohol reveals') judged more accurate than non-rhyming equivalents ('...alcohol unmasks')",
+   "Advantage shrank when people were told to separate poetic quality from content",
+   "Interpretation: rhyme adds processing fluency that is misattributed to truth"
+  ],
+  "practical_applications": [
+   "Rhyme makes a line feel truer -> ethical duty: never use rhyme to make a weak health/product claim feel true",
+   "Rhyme is fine for feelings and reflections, not for factual claims"
+  ],
+  "limitations": [
+   "Single paper; English; a 2019-era replication status not checked in this session"
+  ],
+  "license": "copyrighted",
+  "access_status": "abstract",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-26",
+  "modules": [
+   "M03",
+   "M45"
+  ]
+ },
+ {
+  "key": "Wassiliwizky2017",
+  "title": "The emotional power of poetry: neural circuitry, psychophysiology and compositional principles",
+  "authors": "Eugen Wassiliwizky; Stefan Koelsch; Valentin Wagner; Thomas Jacobsen; Winfried Menninghaus",
+  "year": 2017,
+  "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC5597896/",
+  "doi_isbn": "10.1093/scan/nsx069",
+  "source_type": "empirical",
+  "tier": "A",
+  "key_findings": [
+   "27 participants listened to recited poems; all reported chills (1.33/min); goosebumps on video in 40.7%",
+   "Chills clustered at ends of lines, stanzas and whole poems; linked to direct social address (second person, quoted speech)",
+   "fMRI (n = 17): reward-related regions; nucleus accumbens active in the build-up (prechill) period"
+  ],
+  "practical_applications": [
+   "Put the emotional payoff at the END of the line/slide/clip, and let it be direct address ('you...')",
+   "Second line of a Mint & Tao pair should end on the key word"
+  ],
+  "limitations": [
+   "Small fMRI sample",
+   "Mostly poetry enthusiasts, German poems",
+   "Rhyme/metre role only proposed"
+  ],
+  "license": "CC BY-NC",
+  "access_status": "full_text",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-26",
+  "modules": [
+   "M03",
+   "M45"
+  ]
+ },
+ {
+  "key": "vanPeer2021_Foregrounding",
+  "title": "Foregrounding (Handbook of Empirical Literary Studies)",
+  "authors": "Willie van Peer; Paul Sopcak; Davide Castiglione; Olivia Fialho; Arthur M. Jacobs; Frank Hakemulder",
+  "year": 2021,
+  "url": "https://doi.org/10.1515/9783110645958-007",
+  "doi_isbn": "10.1515/9783110645958-007",
+  "source_type": "review",
+  "tier": "A",
+  "key_findings": [
+   "Foregrounding = stylistic deviation and parallelism; traced from Aristotle through Russian Formalism/Prague School to an empirical turn",
+   "Qualitative (think-aloud, interviews) and quantitative (experiments, neurocognitive) lines; possible carry-over effects (e.g. critical thinking)",
+   "Many problems remain open"
+  ],
+  "practical_applications": [
+   "Use as the map of the field; foregrounding is two tools (deviation + parallelism), not one"
+  ],
+  "limitations": [
+   "Only abstract read; chapter pp. 145-176"
+  ],
+  "license": "copyrighted",
+  "access_status": "abstract",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-26",
+  "modules": [
+   "M03",
+   "M45"
+  ]
+ },
+ {
+  "key": "Jacobs2015",
+  "title": "Neurocognitive poetics: methods and models for investigating the neuronal and cognitive-affective bases of literature reception",
+  "authors": "Arthur M. Jacobs",
+  "year": 2015,
+  "url": "https://www.frontiersin.org/articles/10.3389/fnhum.2015.00186/full",
+  "doi_isbn": "10.3389/fnhum.2015.00186",
+  "source_type": "review",
+  "tier": "A",
+  "key_findings": [
+   "Reviews methods/models for literary reading; presents the Neurocognitive Poetics Model (fiction feeling hypothesis; foregrounding vs backgrounding/immersion)",
+   "Still little known about how the brain processes literary texts"
+  ],
+  "practical_applications": [
+   "Familiar 'background' text supports immersion; foregrounded spots trigger aesthetic attention - alternate them"
+  ],
+  "limitations": [
+   "Hypothesis & theory paper; critiqued (Dixon & Bortolussi 2016 comment, not read)"
+  ],
+  "license": "CC BY",
+  "access_status": "abstract",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-26",
+  "modules": [
+   "M03",
+   "M45"
+  ]
+ },
+ {
+  "key": "Scapin2023",
+  "title": "The role of processing foregrounding in empathic reactions in literary reading",
+  "authors": "Giulia Scapin; Cristina Loi; Frank Hakemulder; Katalin Balint; Elly A. Konijn",
+  "year": 2023,
+  "url": "https://doi.org/10.1080/0163853X.2023.2198813",
+  "doi_isbn": "10.1080/0163853X.2023.2198813",
+  "source_type": "empirical",
+  "tier": "A",
+  "key_findings": [
+   "N = 78 marked 'striking' passages; Full processing of foregrounding associated with higher state empathy than Failed processing",
+   "Depth of the reader's processing, rather than devices per se, may drive empathy"
+  ],
+  "practical_applications": [
+   "A striking line only works if the audience has time and cues to process it (hold the slide long enough)"
+  ],
+  "limitations": [
+   "Correlational categories; small N"
+  ],
+  "license": "copyrighted",
+  "access_status": "abstract",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-26",
+  "modules": [
+   "M03",
+   "M45"
+  ]
+ },
+ {
+  "key": "Bonasera2025",
+  "title": "Does literariness influence negative empathy? A study on the effects of foregrounding on readers' affective and aesthetic reactions",
+  "authors": "Carmen Bonasera",
+  "year": 2025,
+  "url": "https://doi.org/10.61645/ssol.198",
+  "doi_isbn": "10.61645/ssol.198",
+  "source_type": "empirical",
+  "tier": "A",
+  "key_findings": [
+   "N = 59 read original vs stylistically flattened excerpts (Lolita, The Kindly Ones); originals raised state empathy; aesthetic appreciation partly mediated",
+   "Empathic distress unaffected by style, predicted by trait empathy"
+  ],
+  "practical_applications": [
+   "Supports Koopman 2016: literary texture raises understanding, not raw distress"
+  ],
+  "limitations": [
+   "Small N; morally extreme texts; new journal platform"
+  ],
+  "license": "unknown (open journal)",
+  "access_status": "abstract",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-26",
+  "modules": [
+   "M03",
+   "M45"
+  ]
+ },
+ {
+  "key": "HakemulderKoopman2010",
+  "title": "Readers closing in on immoral characters' consciousness: Effects of free indirect discourse on response to literary narratives",
+  "authors": "Jemeljan (Frank) Hakemulder; Emy Koopman",
+  "year": 2010,
+  "url": "https://jltonline.de/articles/04.1/hakemulder-readers-closing-abstract.en.pdf",
+  "doi_isbn": "",
+  "source_type": "empirical",
+  "tier": "A",
+  "key_findings": [
+   "4 studies with rewritten versions of Borowski's 'The Record'",
+   "FID raised perceived visibility of the character's inner life although information was identical; increased situational (external) attribution of the character's behaviour",
+   "Reader background (field of study) could override text effects; overall FID effects limited"
+  ],
+  "practical_applications": [
+   "Writing a caption in the character's inner voice (FID) rather than narrator summary makes the audience feel they 'see inside' - same facts"
+  ],
+  "limitations": [
+   "Abstract only; JLT 4(1)"
+  ],
+  "license": "copyrighted",
+  "access_status": "abstract",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-26",
+  "modules": [
+   "M03",
+   "M45"
+  ]
+ },
+ {
+  "key": "OKeefeHoeken2021",
+  "title": "Message design choices don't make much difference to persuasiveness and can't be counted on, not even when moderating conditions are specified",
+  "authors": "Daniel J. O'Keefe; Hans Hoeken",
+  "year": 2021,
+  "url": "https://www.frontiersin.org/articles/10.3389/fpsyg.2021.664160/full",
+  "doi_isbn": "10.3389/fpsyg.2021.664160",
+  "source_type": "meta-analysis",
+  "tier": "S",
+  "key_findings": [
+   "Review of 30 meta-analyses of message variations; median mean effect r = .10; narrative vs non-narrative r = .067",
+   "95% prediction intervals for 28 of 30 effects include both positive and negative values; moderators barely narrow them",
+   "Includes conclusion present vs omitted (O'Keefe 2002) among variations"
+  ],
+  "practical_applications": [
+   "No single stylistic rule (narrative, explicit moral, metaphor) reliably wins; test with our audience"
+  ],
+  "limitations": [
+   "Read ~55% of page (results + conclusions); persuasion, not aesthetic outcomes"
+  ],
+  "license": "CC BY",
+  "access_status": "full_text",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-26",
+  "modules": [
+   "M03",
+   "M45"
+  ]
+ },
+ {
+  "key": "Shklovsky1917",
+  "title": "Art as Technique (Iskusstvo kak priem), trans. Lemon & Reis 1965 (course reprint)",
+  "authors": "Viktor Shklovsky",
+  "year": 1917,
+  "url": "https://www.cbpbu.ac.in/userfiles/file/2020/STUDY_MAT/ENGLISH/JS/30-04-20/Art%20as%20Technique%20-%20Shklovsky.pdf",
+  "doi_isbn": "",
+  "source_type": "primary_text",
+  "tier": "B",
+  "key_findings": [
+   "'Habitualization devours work, clothes, furniture, one's wife, and the fear of war'",
+   "Art exists 'to make the stone stony'; 'impart the sensation of things as they are perceived and not as they are known'",
+   "Technique: make objects 'unfamiliar', make forms difficult, increase length of perception; Tolstoy's 'Kholstomer' (horse narrator) as example"
+  ],
+  "practical_applications": [
+   "Describe an everyday object as if seen for the first time (e.g., glasses as 'two windows you carry')"
+  ],
+  "limitations": [
+   "Translation wording varies (Technique/Device; 'the'/'a' stone)",
+   "Theory, not empirical"
+  ],
+  "license": "copyrighted translation (course copy)",
+  "access_status": "full_text",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-26",
+  "modules": [
+   "M03",
+   "M45"
+  ]
+ },
+ {
+  "key": "Niederhoff2013_Focalization",
+  "title": "Focalization (the living handbook of narratology)",
+  "authors": "Burkhard Niederhoff",
+  "year": 2013,
+  "url": "https://www-archiv.fdm.uni-hamburg.de/lhn/printpdf/article/focalization",
+  "doi_isbn": "",
+  "source_type": "encyclopedia",
+  "tier": "B",
+  "key_findings": [
+   "Focalization (Genette 1972) = selection/restriction of narrative information relative to a narrator, character or other entity",
+   "Zero (narrator > character), internal (= character), external (narrator < character) - Todorov formulas",
+   "Genette separates focalization from voice (who speaks); debate with Klauk & Koppe on internal focalization"
+  ],
+  "practical_applications": [
+   "Choose whose knowledge a caption is limited to before writing it"
+  ],
+  "limitations": [
+   "Read the first part of the entry only"
+  ],
+  "license": "copyrighted (open access)",
+  "access_status": "publisher_page",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-26",
+  "modules": [
+   "M03",
+   "M45"
+  ]
+ },
+ {
+  "key": "Robinson2011_Bakhtin",
+  "title": "In Theory: Bakhtin - Dialogism, Polyphony and Heteroglossia",
+  "authors": "Andrew Robinson",
+  "year": 2011,
+  "url": "https://ceasefiremagazine.co.uk/in-theory-bakhtin-1/",
+  "doi_isbn": "",
+  "source_type": "practitioner",
+  "tier": "C",
+  "key_findings": [
+   "Dialogism: meaning arises between voices; each utterance answers earlier speech and anticipates replies",
+   "Polyphony (Dostoevsky): characters' voices not subordinated to the author; monologism: one consciousness absorbs all",
+   "Heteroglossia: diversity of social speech styles within one language; unfinalizability of persons"
+  ],
+  "practical_applications": [
+   "Tao must not be the author's mouthpiece: give Mint a reply that partly holds its ground"
+  ],
+  "limitations": [
+   "Expert explainer in a magazine, not peer-reviewed; Bakhtin primaries not read"
+  ],
+  "license": "copyrighted",
+  "access_status": "full_text",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-26",
+  "modules": [
+   "M03",
+   "M45"
+  ]
+ },
+ {
+  "key": "SEP_EverydayAesthetics",
+  "title": "Aesthetics of the Everyday (Stanford Encyclopedia of Philosophy)",
+  "authors": "Yuriko Saito",
+  "year": 2015,
+  "url": "https://plato.stanford.edu/entries/aesthetics-of-everyday/",
+  "doi_isbn": "",
+  "source_type": "encyclopedia",
+  "tier": "B",
+  "key_findings": [
+   "Everyday aesthetics covers daily artefacts, chores, eating, walking, social interaction; roots in Dewey's Art as Experience",
+   "Debate: everyday value via defamiliarization vs. valuing familiarity/comfort itself",
+   "Negative aesthetics (boredom, mess), atmosphere, action-oriented and social aesthetics; aesthetic-ethical link"
+  ],
+  "practical_applications": [
+   "Mint & Tao stories can find meaning in ordinary acts (waiting for a bus, folding laundry) without making them exotic"
+  ],
+  "limitations": [
+   "Long entry; read ~75%; revised 2025"
+  ],
+  "license": "copyrighted (SEP)",
+  "access_status": "publisher_page",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-26",
+  "modules": [
+   "M03",
+   "M45"
+  ]
+ },
+ {
+  "key": "Rosenblatt1982",
+  "title": "The literary transaction: Evocation and response",
+  "authors": "Louise M. Rosenblatt",
+  "year": 1982,
+  "url": "https://doi.org/10.1080/00405848209543018",
+  "doi_isbn": "10.1080/00405848209543018",
+  "source_type": "empirical",
+  "tier": "A",
+  "key_findings": [
+   "(per secondary summaries) Reading is a transaction (Dewey's term): the 'poem' is an event between reader and text",
+   "Efferent stance (what to carry away) vs aesthetic stance (what is lived through) form a continuum"
+  ],
+  "practical_applications": [
+   "Captions should invite an aesthetic stance (feel) for stories, efferent (take away) for eye-care tips - do not mix in one line"
+  ],
+  "limitations": [
+   "Not read; Theory Into Practice 21(4) 268-277; conceptual essay"
+  ],
+  "license": "copyrighted",
+  "access_status": "bibliographic",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-26",
+  "modules": [
+   "M03",
+   "M45"
+  ]
+ },
+ {
+  "key": "Rosenblatt2005_MMWT",
+  "title": "Making Meaning with Texts: Selected Essays",
+  "authors": "Louise M. Rosenblatt",
+  "year": 2005,
+  "url": "https://s3.amazonaws.com/arena-attachments/356641/c3f8abaee7f825866a86e753ebb40392.pdf",
+  "doi_isbn": "",
+  "source_type": "textbook",
+  "tier": "A",
+  "key_findings": [
+   "Teaching subject-matter is 'the transactions between readers and books'; literary experience must first be brought about",
+   "Warns against replacing the experience with facts about literature and against sentimentalising"
+  ],
+  "practical_applications": [
+   "Ask 'what will the viewer live through?' before 'what will they learn?'"
+  ],
+  "limitations": [
+   "Only a 14-page preview read (Heinemann)"
+  ],
+  "license": "copyrighted",
+  "access_status": "publisher_page",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-26",
+  "modules": [
+   "M03",
+   "M45"
+  ]
+ },
+ {
+  "key": "Iser1972",
+  "title": "The Reading Process: A Phenomenological Approach",
+  "authors": "Wolfgang Iser",
+  "year": 1972,
+  "url": "https://proquest.com/scholarly-journals/reading-process-phenomenological-approach/docview/1297360753/se-2",
+  "doi_isbn": "",
+  "source_type": "primary_text",
+  "tier": "A",
+  "key_findings": [
+   "(per secondary sources) Gaps/blanks between textual segments invite the reader to make connections; 'tempt' the reader onward",
+   "Contrasted with Ingarden, who saw such indeterminacy as flaws; New Literary History 3(2) 279ff; later in The Implied Reader"
+  ],
+  "practical_applications": [
+   "Leave the link between Mint's line and Tao's line for the reader to make"
+  ],
+  "limitations": [
+   "Not read; summary from search snippets"
+  ],
+  "license": "copyrighted",
+  "access_status": "search_summary",
+  "verification_status": "unverified",
+  "date_accessed": "2026-11-26",
+  "modules": [
+   "M03",
+   "M45"
+  ]
+ },
+ {
+  "key": "Hudak1986_MetaRhymes",
+  "title": "Meta-Rhymes in Classical Thai Poetry",
+  "authors": "Thomas John Hudak",
+  "year": 1986,
+  "url": "https://thesiamsociety.org/knowledge-hub/uploads/research/170/663f7a3893ac1.pdf",
+  "doi_isbn": "",
+  "source_type": "empirical",
+  "tier": "A",
+  "key_findings": [
+   "Chanthalak describe khana (structure), phayang (syllable count), samphat (rhyme); wak -> baat -> bot",
+   "External rhyme (samphat nok) compulsory: syllables alike except tone and initial; internal rhyme (samphat nai) optional, where poets show skill; alliteration counts as internal rhyme",
+   "Without rhyme a Thai poem 'cannot exist' (Bidyalankarana blank-verse anecdote via Mosel)",
+   "All 5 forms (rai, khlong, kap, chan, klon) reduce to 3 couplet meta-patterns; khlong developed from rai; khlong rhymes keep same tone",
+   "External rhyme marks rhythmic groups and builds stanzas (ruat yai / ruat lek); rhyme is what makes poetry 'phairo'"
+  ],
+  "practical_applications": [
+   "Thai two-line dialogue gains 'phairo' from one cross-line vowel rhyme (last word of line 1 -> early word of line 2)"
+  ],
+  "limitations": [
+   "Scanned 1986 text, transcription garbled in places",
+   "Structural, not reader-response data"
+  ],
+  "license": "copyrighted (Siam Society open archive)",
+  "access_status": "full_text",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-26",
+  "modules": [
+   "M03",
+   "M45"
+  ]
+ },
+ {
+  "key": "Wiki_ThaiPoetry",
+  "title": "Thai poetry (Wikipedia)",
+  "authors": "Wikipedia contributors",
+  "year": 2026,
+  "url": "https://en.wikipedia.org/wiki/Thai_poetry",
+  "doi_isbn": "",
+  "source_type": "encyclopedia",
+  "tier": "E",
+  "key_findings": [
+   "Five forms khlong, chan, kap, klon, rai; chanthalak",
+   "Kap yani 11 = 5+6 syllables; kap chabang 16 = 6+4+6; kap surangkhanang 28 = 7x4",
+   "Khlong si suphap: mai ek x7, mai tho x4 positions; chan uses heavy/light (khru/lahu) syllables from Pali/Sanskrit metres",
+   "Klon: syllables per wak name the metre; klon paet most common in Rattanakosin"
+  ],
+  "practical_applications": [
+   "Quick lookup of syllable counts only; verify with Thai prosody textbook"
+  ],
+  "limitations": [
+   "Tier E; draws on Hudak 1990"
+  ],
+  "license": "CC BY-SA",
+  "access_status": "full_text",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-26",
+  "modules": [
+   "M03",
+   "M45"
+  ]
+ },
+ {
+  "key": "TPP_KlonSuphap",
+  "title": "กลอนสุภาพ กลอนดอกสร้อย กลอนสักวา (TrueplookPanya)",
+  "authors": "อลงกรณ์ พลอยแก้ว และทีมงานทรูปลูกปัญญา",
+  "year": null,
+  "url": "https://www.trueplookpanya.com/learning/detail/34193",
+  "doi_isbn": "",
+  "source_type": "course",
+  "tier": "D",
+  "key_findings": [
+   "กลอนสุภาพ 1 วรรค 8 คำ (7-9 ได้); 2 วรรค = 1 คำกลอน; 2 คำกลอน = 1 บท",
+   "เสียงท้ายวรรค: สดับ ใช้ได้ทุกเสียงแต่ไม่นิยมสามัญ; รับ ห้ามสามัญ/ตรี นิยมจัตวา; รอง/ส่ง นิยมสามัญหรือตรี ห้ามเอก โท จัตวา",
+   "สัมผัสนอก (สัมผัสสระ) บังคับ; สัมผัสใน (สระหรือพยัญชนะ) เพิ่มความไพเราะ"
+  ],
+  "practical_applications": [
+   "Checklist when writing a Thai klon line for a caption"
+  ],
+  "limitations": [
+   "School-level educational page; other sources phrase tone rules as 'นิยม/ไม่ควร' rather than 'ห้าม'"
+  ],
+  "license": "copyrighted",
+  "access_status": "full_text",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-26",
+  "modules": [
+   "M03",
+   "M45"
+  ]
+ },
+ {
+  "key": "Phikhatphairee2026_ThaiSongTone",
+  "title": "การออกแบบทำนองในการขับร้องเพลงไทยด้วยหลักสัทศาสตร์: กรณีศึกษาเพลง รู้มั้ยจ๊ะ",
+  "authors": "พิฆาตไพรี พ.",
+  "year": 2026,
+  "url": "https://so06.tci-thaijo.org/index.php/wiwitwannasan/article/view/292361",
+  "doi_isbn": "",
+  "source_type": "empirical",
+  "tier": "B",
+  "key_findings": [
+   "Composers avoid melody moving opposite to the lexical tone direction, but exact match on every syllable is not required",
+   "High tone (ตรี) tends to be flattened to a level pitch in singing"
+  ],
+  "practical_applications": [
+   "Thai TTS/sung taglines: avoid pitch contours that contradict word tone, or meaning blurs"
+  ],
+  "limitations": [
+   "Single-song case study; abstract only"
+  ],
+  "license": "copyrighted",
+  "access_status": "abstract",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-26",
+  "modules": [
+   "M03",
+   "M45"
+  ]
+ },
+ {
+  "key": "Limapichart2011",
+  "title": "Literature for Life: The Context and Conditions of Its Emergence in Thailand, 1940s-50s",
+  "authors": "Thanapol Limapichart",
+  "year": 2011,
+  "url": "https://journals.iium.edu.my/asiatic/index.php/ajell/article/download/542/509/1038",
+  "doi_isbn": "",
+  "source_type": "empirical",
+  "tier": "A",
+  "key_findings": [
+   "'Literature for life' (wannakham phuea chiwit) emerged from contests among conservative, liberal and communist writers and critics, 1940s-50s",
+   "1970s radical students defined it as literature serving common people and social justice; some called for 'burning' classics"
+  ],
+  "practical_applications": [
+   "Thai readers have a long tradition of expecting literature to carry social meaning - didactic expectation is cultural, not only a cliché"
+  ],
+  "limitations": [
+   "Read abstract + introduction only"
+  ],
+  "license": "copyrighted (open journal)",
+  "access_status": "abstract",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-26",
+  "modules": [
+   "M03",
+   "M45"
+  ]
+ },
+ {
+  "key": "Hiramatsu2007_KyotoReview",
+  "title": "Thai Literary Trends: From Seni Saowaphong to Chart Kobjitti",
+  "authors": "Hiramatsu Hideki",
+  "year": 2007,
+  "url": "https://kyotoreview.org/?p=3315",
+  "doi_isbn": "",
+  "source_type": "review",
+  "tier": "B",
+  "key_findings": [
+   "Seni Saowaphong's Ghosts (1953-54) reframes karma as something people act on; 1970s shift from social revolution to inner consciousness after 1976",
+   "Chart Korbjitti's The Judgement (1981; SEA Write 1982) critiques attributing suffering to karma and merit-making; existentialist influence"
+  ],
+  "practical_applications": [
+   "Buddhist concepts in Thai fiction can be questioned, not only preached"
+  ],
+  "limitations": [
+   "Short essay; novels not short stories"
+  ],
+  "license": "copyrighted (open)",
+  "access_status": "full_text",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-26",
+  "modules": [
+   "M03",
+   "M45"
+  ]
+ },
+ {
+  "key": "BakerPhongpaichit2010_KCKP",
+  "title": "The Tale of Khun Chang Khun Phaen: Siam's Great Folk Epic of Love and War",
+  "authors": "Chris Baker; Pasuk Phongpaichit (trans., eds.)",
+  "year": 2010,
+  "url": "https://silkwormbooks.com/products/kckp-main-pb",
+  "doi_isbn": "",
+  "source_type": "textbook",
+  "tier": "A",
+  "key_findings": [
+   "First complete English prose translation, based on Prince Damrong's Library Edition plus earlier passages; A. L. Becker translation prize 2010"
+  ],
+  "practical_applications": [
+   "Reference edition when quoting KCKP in English"
+  ],
+  "limitations": [
+   "Publisher page and search summaries only"
+  ],
+  "license": "copyrighted",
+  "access_status": "bibliographic",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-26",
+  "modules": [
+   "M03",
+   "M45"
+  ]
+ },
+ {
+  "key": "Wiki_KCKP",
+  "title": "Khun Chang Khun Phaen (Wikipedia)",
+  "authors": "Wikipedia contributors",
+  "year": 2026,
+  "url": "https://en.wikipedia.org/wiki/Khun_Chang_Khun_Phaen",
+  "doi_isbn": "",
+  "source_type": "encyclopedia",
+  "tier": "E",
+  "key_findings": [
+   "Over 20,000 couplets; oral sepha performance from ~17th c.; written in klon (klon paet)",
+   "Standard edition 1917-18 (Wachirayan Library, Prince Damrong); some chapters attributed to Rama II, future Rama III, Sunthorn Phu",
+   "Feminist critique of Wanthong's portrayal in the 1970s; characters entered everyday speech"
+  ],
+  "practical_applications": [
+   "Archetype source for Thai love-rivalry stories; handle Wanthong respectfully"
+  ],
+  "limitations": [
+   "Tier E; cites Baker & Pasuk"
+  ],
+  "license": "CC BY-SA",
+  "access_status": "full_text",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-26",
+  "modules": [
+   "M03",
+   "M45"
+  ]
+ },
+ {
+  "key": "ThaiFoundation_SunthornPhu",
+  "title": "Sunthorn Phu: Thailand's Beloved Poet",
+  "authors": "Thailand Foundation",
+  "year": null,
+  "url": "https://www.thailandfoundation.or.th/sunthorn-phu-thailands-beloved-poet/",
+  "doi_isbn": "",
+  "source_type": "docs",
+  "tier": "C",
+  "key_findings": [
+   "Born 1786; UNESCO honoured him as a world poet in 1986; Sunthorn Phu Day 26 June",
+   "Phra Aphai Mani named best verse fable, Nirat Phukhao Thong best nirat by the 'Thai Royal Society of Literature' (as the page words it); Nirat Mueang Klaeng",
+   "Known for klon paet with rhymes linking across and within lines; easy, memorable language"
+  ],
+  "practical_applications": [
+   "Model for accessible klon with heavy internal rhyme"
+  ],
+  "limitations": [
+   "Promotional cultural body; secondary"
+  ],
+  "license": "copyrighted",
+  "access_status": "full_text",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-26",
+  "modules": [
+   "M03",
+   "M45"
+  ]
+ },
+ {
+  "key": "Wiki_SEAWrite",
+  "title": "S.E.A. Write Award (Wikipedia)",
+  "authors": "Wikipedia contributors",
+  "year": 2026,
+  "url": "https://en.wikipedia.org/wiki/SEA_Write_Award",
+  "doi_isbn": "",
+  "source_type": "encyclopedia",
+  "tier": "E",
+  "key_findings": [
+   "Annual since 1979; conceived by The Oriental hotel Bangkok, backed by Thai Airways and others",
+   "Thai winners include Kampoon Boonthawee (1979), Naowarat Pongpaiboon (1980), Chart Korbjitti (1982, 1994), Angkarn Kalayanapong (1986), Prabda Yoon (2002); 2020 Jadet Kamjorndej"
+  ],
+  "practical_applications": [
+   "Reading list of Thai short-story/poetry craft"
+  ],
+  "limitations": [
+   "Tier E; works not listed for early years"
+  ],
+  "license": "CC BY-SA",
+  "access_status": "full_text",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-26",
+  "modules": [
+   "M03",
+   "M45"
+  ]
+ },
+ {
+  "key": "HSA_Definitions",
+  "title": "Haiku Society of America Definitions",
+  "authors": "Haiku Society of America",
+  "year": 2026,
+  "url": "https://hsa-haiku.org/hsa-definitions.html",
+  "doi_isbn": "",
+  "source_type": "docs",
+  "tier": "C",
+  "key_findings": [
+   "Haiku: short poem using imagistic language to convey the essence of an experience of nature or the season (linked to the human condition)",
+   "Senryu: brief poem highlighting the human condition",
+   "5-7-5 'not wrong' but rests on a misunderstanding that Japanese 'on' equal English syllables; a cut suggests a relationship between images"
+  ],
+  "practical_applications": [
+   "Mint & Tao pair can work like a haiku cut: image line + human line"
+  ],
+  "limitations": [
+   "Definitions updated 2026; quoted text truncated"
+  ],
+  "license": "copyrighted",
+  "access_status": "full_text",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-26",
+  "modules": [
+   "M03",
+   "M45"
+  ]
+ },
+ {
+  "key": "Morson2012",
+  "title": "The Long and Short of It: From Aphorism to Novel",
+  "authors": "Gary Saul Morson",
+  "year": 2012,
+  "url": "https://www.sup.org/books/title/?id=20199",
+  "doi_isbn": "9780804781893",
+  "source_type": "textbook",
+  "tier": "A",
+  "key_findings": [
+   "Short genres each have their own brevity; apothegms (Heraclitus, Laozi, Wittgenstein) leave mystery, dicta (Spinoza, Marx, Freud) claim to solve it",
+   "A dictum allows no qualification and applies 'always and everywhere'; witticisms depend on timing"
+  ],
+  "practical_applications": [
+   "Prefer apothegm-like lines (open question) over dicta (final verdict) to avoid preachiness"
+  ],
+  "limitations": [
+   "Publisher page + reviews only"
+  ],
+  "license": "copyrighted",
+  "access_status": "publisher_page",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-26",
+  "modules": [
+   "M03",
+   "M45"
+  ]
+ },
+ {
+  "key": "QI_BabyShoes",
+  "title": "Quote Origin: For Sale, Baby Shoes, Never Worn",
+  "authors": "Garson O'Toole (Quote Investigator)",
+  "year": 2013,
+  "url": "https://quoteinvestigator.com/2013/01/28/baby-shoes/",
+  "doi_isbn": "",
+  "source_type": "practitioner",
+  "tier": "C",
+  "key_findings": [
+   "No substantive evidence Hemingway wrote it; precursors 1906 (baby carriage ad), 1910 Spokane, 1917 Kane 'Little Shoes, Never Worn', 1921 Moulton",
+   "Earliest Hemingway link: De Groot play (1984/1989); Miller 1991 book presents bet as fact",
+   "Method: search digitised newspapers/books (Chronicling America, NewspaperArchive, HathiTrust, Google Books), find earliest instance, follow attribution drift"
+  ],
+  "practical_applications": [
+   "Never caption 'Hemingway's six-word story'; say 'a famous six-word story, often misattributed to Hemingway'"
+  ],
+  "limitations": [
+   "Single investigator, though well documented"
+  ],
+  "license": "copyrighted",
+  "access_status": "full_text",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-26",
+  "modules": [
+   "M03",
+   "M45"
+  ]
+ },
+ {
+  "key": "BigThink_OToole",
+  "title": "How viral misquotes evolve and replicate (interview with Garson O'Toole)",
+  "authors": "Kevin Dickinson (Big Think)",
+  "year": 2024,
+  "url": "https://bigthink.com/high-culture/how-viral-misquotes-evolve-and-replicate/",
+  "doi_isbn": "",
+  "source_type": "practitioner",
+  "tier": "C",
+  "key_findings": [
+   "Misattribution mechanisms: textual proximity, synthesis and streamlining, proverbial wisdom, real-world proximity, similar names, concoctions"
+  ],
+  "practical_applications": [
+   "Checklist of how fake quotes are born"
+  ],
+  "limitations": [
+   "Search snippets only (page 403)"
+  ],
+  "license": "copyrighted",
+  "access_status": "search_summary",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-26",
+  "modules": [
+   "M03",
+   "M45"
+  ]
+ },
+ {
+  "key": "IGEL_About",
+  "title": "International Society for the Empirical Study of Literature (IGEL) - About",
+  "authors": "IGEL",
+  "year": null,
+  "url": "https://igelsociety.org/about-us/",
+  "doi_isbn": "",
+  "source_type": "docs",
+  "tier": "C",
+  "key_findings": [
+   "Founded 1987 (Siegfried J. Schmidt, Siegen); promotes empirical study of literature and media; journal Scientific Study of Literature"
+  ],
+  "practical_applications": [
+   "Where to look for new reader-response evidence"
+  ],
+  "limitations": [
+   "Search summary only"
+  ],
+  "license": "copyrighted",
+  "access_status": "search_summary",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-26",
+  "modules": [
+   "M03",
+   "M45"
+  ]
+ },
+ {
+  "key": "Botha2016_Microfiction",
+  "title": "Microfiction (draft chapter for The Cambridge Companion to the English Short Story)",
+  "authors": "Marc Botha",
+  "year": 2016,
+  "url": "https://durham-repository.worktribe.com/OutputFile/1661971",
+  "doi_isbn": "",
+  "source_type": "textbook",
+  "tier": "B",
+  "key_findings": [
+   "Terms sudden, flash, quick, micro fiction form a 'polemical field'; history of very short fiction precedes the labels"
+  ],
+  "practical_applications": [
+   "Word-count labels are conventions, not definitions"
+  ],
+  "limitations": [
+   "Search snippet only; draft"
+  ],
+  "license": "copyrighted",
+  "access_status": "search_summary",
+  "verification_status": "unverified",
+  "date_accessed": "2026-11-26",
+  "modules": [
+   "M03",
+   "M45"
+  ]
+ },
+ {
+  "key": "SmartHistory_Ramakien",
+  "title": "Ramakien murals, Wat Phra Kaew (Smarthistory) and JSS 'Lacquer Pavilion in its First Reign Context'",
+  "authors": "Smarthistory; Journal of the Siam Society",
+  "year": null,
+  "url": "https://smarthistory.org/?p=67753",
+  "doi_isbn": "",
+  "source_type": "docs",
+  "tier": "C",
+  "key_findings": [
+   "(per search) Ramakien composed 1797 under Rama I's supervision, partly by him; Rama II rewrote parts for khon",
+   "Wat Phra Kaew murals first painted in Rama I's reign, repeatedly restored; murals present Rama as ideal king"
+  ],
+  "practical_applications": [
+   "Ramakien is shared cultural heritage - reference with respect, not as decoration"
+  ],
+  "limitations": [
+   "Search summaries only"
+  ],
+  "license": "copyrighted",
+  "access_status": "search_summary",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-26",
+  "modules": [
+   "M03",
+   "M45"
+  ]
+ },
+ {
+  "key": "SEP_AristotleAesthetics",
+  "title": "Aristotle's Aesthetics (Poetics)",
+  "authors": "Stanford Encyclopedia of Philosophy (author name not captured)",
+  "year": 2021,
+  "url": "https://plato.stanford.edu/entries/aristotle-aesthetics/",
+  "doi_isbn": "",
+  "source_type": "encyclopedia",
+  "tier": "B",
+  "key_findings": [
+   "Mimesis is central; plot (mythos) is the most important part of tragedy",
+   "Plot needs unity and a size that can be held in memory",
+   "Peripeteia (reversal) and anagnorisis (recognition) are key sources of emotional effect; should follow probability/necessity",
+   "Catharsis meaning is disputed (purgation, clarification, consolation, relief)"
+  ],
+  "practical_applications": [
+   "A 2-line Mint & Tao story = a micro recognition (anagnorisis): line 2 reframes line 1",
+   "Do not claim one fixed meaning of catharsis"
+  ],
+  "limitations": [
+   "Read through a fetch summariser; long entry, only the first ~100k characters were processed"
+  ],
+  "license": "copyrighted (Stanford Encyclopedia of Philosophy; free to read, not to republish)",
+  "access_status": "publisher_page",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-26",
+  "modules": [
+   "M03",
+   "M45"
+  ],
+  "origin": "ci:philosophy",
+  "full_record": "creative-intelligence/knowledge/philosophy/sources.json",
+  "id": "SEP_AristotleAesthetics"
+ },
+ {
+  "key": "SN56_11_Thanissaro",
+  "title": "Dhammacakkappavattana Sutta (SN 56.11): Setting the Wheel of Dhamma in Motion",
+  "authors": "Thanissaro Bhikkhu (tr.)",
+  "year": 1993,
+  "url": "https://www.accesstoinsight.org/tipitaka/sn/sn56/sn56.011.than.html",
+  "doi_isbn": "",
+  "source_type": "primary_text",
+  "tier": "B",
+  "key_findings": [
+   "Middle way avoids two extremes: sensual indulgence and self-affliction",
+   "Dukkha (rendered 'stress') includes birth, aging, death, separation from the loved, not getting what one wants; the five clinging-aggregates",
+   "Eightfold path: right view, resolve, speech, action, livelihood, effort, mindfulness, concentration"
+  ],
+  "practical_applications": [
+   "Middle way in its original sense; any work-life 'balance' use is an analogy and should be framed as such"
+  ],
+  "limitations": [
+   "Thanissaro renders dukkha as 'stress' — other translators use 'suffering'/'unsatisfactoriness'"
+  ],
+  "license": "CC BY-NC 4.0",
+  "access_status": "full_text",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-26",
+  "modules": [
+   "M03",
+   "M45"
+  ],
+  "origin": "ci:philosophy",
+  "full_record": "creative-intelligence/knowledge/philosophy/sources.json",
+  "id": "SN56_11_Thanissaro"
+ },
+ {
+  "key": "SN22_59_Mendis",
+  "title": "Anatta-lakkhana Sutta (SN 22.59): The Discourse on the Not-self Characteristic",
+  "authors": "N.K.G. Mendis (tr.)",
+  "year": 1979,
+  "url": "https://www.accesstoinsight.org/tipitaka/sn/sn22/sn22.059.mend.html",
+  "doi_isbn": "",
+  "source_type": "primary_text",
+  "tier": "B",
+  "key_findings": [
+   "Each aggregate (form, feeling, perception, formations, consciousness) is not-self because it leads to affliction and cannot be made to be as one wishes",
+   "What is impermanent is unsatisfactory and not fit to be regarded as 'mine, I, my self'"
+  ],
+  "practical_applications": [
+   "Anatta is about not clinging to aggregates as 'me/mine' — not 'you don't exist'"
+  ],
+  "limitations": [
+   "Doctrinal; interpretations of anatta differ across schools"
+  ],
+  "license": "copyrighted (Buddhist Publication Society); free distribution licence on Access to Insight: copies free of charge, max 50 reprints, credit source, include licence",
+  "access_status": "full_text",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-26",
+  "modules": [
+   "M03",
+   "M45"
+  ],
+  "origin": "ci:philosophy",
+  "full_record": "creative-intelligence/knowledge/philosophy/sources.json",
+  "id": "SN22_59_Mendis"
+ },
+ {
+  "key": "QI_HotCoal",
+  "title": "Anger Is Like Grasping a Hot Coal (Quote Investigator)",
+  "authors": "Garson O'Toole (Quote Investigator)",
+  "year": 2018,
+  "url": "https://quoteinvestigator.com/2018/06/18/hot/",
+  "doi_isbn": "",
+  "source_type": "practitioner",
+  "tier": "C",
+  "key_findings": [
+   "1988 Borysenko & Rothstein book ascribed the hot-coal analogy directly to the Buddha"
+  ],
+  "practical_applications": [
+   "Corroborates FBQ_HotCoal"
+  ],
+  "limitations": [
+   "Search snippet only"
+  ],
+  "license": "copyrighted",
+  "access_status": "search_summary",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-26",
+  "modules": [
+   "M03",
+   "M45"
+  ],
+  "origin": "ci:philosophy",
+  "full_record": "creative-intelligence/knowledge/philosophy/sources.json",
+  "id": "QI_HotCoal"
+ },
+ {
+  "key": "LHN_Narratology",
+  "title": "The living handbook of narratology - entries 'Narratology' and 'Narrative Constitution'",
+  "authors": "Jan Christoph Meister; Michael Scheffel (living handbook of narratology, University of Hamburg)",
+  "year": 2014,
+  "url": "https://www-archiv.fdm.uni-hamburg.de/lhn/printpdf/article/narrative-constitution",
+  "doi_isbn": "",
+  "source_type": "encyclopedia",
+  "tier": "B",
+  "key_findings": [
+   "Meister, 'Narratology' (rev. 2014): narratology is a humanities discipline dedicated to the study of the logic, principles and practices of narrative representation.",
+   "Scheffel, 'Narrative Constitution' (rev. 2013): fabula/sujet comes from Russian formalism (Shklovsky); Tomashevsky: fabula = 'the totality of motifs in their logical causal-temporal chain', sujet = the same motifs in the sequence in which they are presented; later pairs histoire/discours (Todorov), story/plot (Forster)."
+  ],
+  "practical_applications": [
+   "Separate WHAT happens (fabula) from HOW/ORDER it is told (syuzhet) when planning a clip - the same events can be told as suspense, curiosity or surprise."
+  ],
+  "limitations": [
+   "Read via the handbook's print PDFs (archive site)."
+  ],
+  "license": "unknown (open academic handbook)",
+  "access_status": "full_text",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-26",
+  "modules": [
+   "M03",
+   "M13",
+   "M45"
+  ],
+  "origin": "ci:storytelling",
+  "full_record": "creative-intelligence/knowledge/storytelling/sources.json",
+  "id": "LHN_Narratology"
+ },
+ {
+  "key": "Panero2016",
+  "title": "Replication of Kidd & Castano (2013) literary-fiction / theory-of-mind effect (3 labs)",
+  "authors": "Maria Eugenia Panero and colleagues",
+  "year": 2016,
+  "url": "https://www.bps.org.uk/research-digest/three-labs-just-failed-replicate-finding-quick-read-literary-fiction-boosts-your",
+  "doi_isbn": "",
+  "source_type": "empirical",
+  "tier": "A",
+  "key_findings": [
+   "Replication of Kidd & Castano (2013, Science) across 3 labs, N = 792: no RMET advantage for literary fiction after one passage.",
+   "Lifetime fiction exposure still predicted RMET.",
+   "Kidd & Castano disputed it; van Kuijk et al. reported a replication largely consistent with the original - mixed."
+  ],
+  "practical_applications": [
+   "Do not claim 'one story makes people more empathic' in content."
+  ],
+  "limitations": [
+   "Read via BPS digest and summaries."
+  ],
+  "license": "copyrighted",
+  "access_status": "search_summary",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-26",
+  "modules": [
+   "M03",
+   "M13",
+   "M45"
+  ],
+  "origin": "ci:storytelling",
+  "full_record": "creative-intelligence/knowledge/storytelling/sources.json",
+  "id": "Panero2016"
+ },
+ {
+  "key": "Aristotle_Poetics_Butcher",
+  "title": "Poetics (trans. S. H. Butcher), Parts VI and XV",
+  "authors": "Aristotle; trans. S. H. Butcher",
+  "year": null,
+  "url": "http://classics.mit.edu/Aristotle/poetics.2.2.html",
+  "doi_isbn": "",
+  "source_type": "primary_text",
+  "tier": "B",
+  "key_findings": [
+   "Part VI: 'Character is that which reveals moral purpose, showing what kind of things a man chooses or avoids'; tragedy is an imitation 'not of men, but of an action and of life'; plot = arrangement of incidents.",
+   "Part XV: four aims for character - good, propriety (appropriate to type), true to life, consistent; even an inconsistent model must be 'consistently inconsistent'; speech and action should follow necessity or probability."
+  ],
+  "practical_applications": [
+   "Define character by the choices the person makes under pressure, not by a list of adjectives.",
+   "Use 'consistently inconsistent' as the rule for erratic characters: the inconsistency itself must be patterned."
+  ],
+  "limitations": [
+   "Ancient prescriptive poetics, not empirical; 'propriety' reflects ancient gender/class norms (e.g. manly courage unsuited to a woman) that must not be copied."
+  ],
+  "license": "public domain (translation); MIT Internet Classics Archive",
+  "access_status": "full_text",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-26",
+  "modules": [
+   "M03",
+   "M15",
+   "M17",
+   "M45"
+  ],
+  "origin": "ci:domain-06",
+  "full_record": "creative-intelligence/domains/sources/06-character-psychology-development.json",
+  "id": "Aristotle_Poetics_Butcher"
+ },
+ {
+  "key": "KiddCastano2013",
+  "title": "Reading Literary Fiction Improves Theory of Mind",
+  "authors": "David Comer Kidd; Emanuele Castano",
+  "year": 2013,
+  "url": "http://hdl.handle.net/11572/289277",
+  "doi_isbn": "10.1126/science.1239918",
+  "source_type": "empirical",
+  "tier": "A",
+  "key_findings": [
+   "Five experiments: reading literary fiction (vs nonfiction, popular fiction or nothing) briefly improved affective (and in exps 4-5 cognitive) theory-of-mind test performance."
+  ],
+  "practical_applications": [
+   "Historical example of a viral fiction/character claim that later largely failed to replicate."
+  ],
+  "limitations": [
+   "Abstract only; see Panero2016, Camerer2018, FORRT_KiddCastano."
+  ],
+  "license": "copyrighted",
+  "access_status": "abstract",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-26",
+  "modules": [
+   "M03",
+   "M15",
+   "M17",
+   "M45"
+  ],
+  "origin": "ci:domain-06",
+  "full_record": "creative-intelligence/domains/sources/06-character-psychology-development.json",
+  "id": "KiddCastano2013"
+ },
+ {
+  "key": "FORRT_KiddCastano",
+  "title": "FLoRA replication atlas entry: Reading Literary Fiction Improves Theory of Mind",
+  "authors": "FORRT (Framework for Open and Reproducible Research Training)",
+  "year": null,
+  "url": "https://forrt.org/flora-replication-atlas/doi/10.1126/science.1239918/",
+  "doi_isbn": "",
+  "source_type": "docs",
+  "tier": "C",
+  "key_findings": [
+   "Lists 6 replications of Kidd & Castano 2013: Dijkstra et al. 2015 failed, Panero et al. 2016 failed, Samur et al. 2017 failed, van Kuijk et al. 2018 successful (close replication of Exp 5), Kidd & Castano 2018 mixed, Camerer et al. 2018 failed (supplementary Table 4, unsuccessful stage 1)."
+  ],
+  "practical_applications": [
+   "Quick status check before citing a famous psychology finding."
+  ],
+  "limitations": [
+   "Volunteer-curated database; individual replications not all read here."
+  ],
+  "license": "unknown",
+  "access_status": "publisher_page",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-26",
+  "modules": [
+   "M03",
+   "M15",
+   "M17",
+   "M45"
+  ],
+  "origin": "ci:domain-06",
+  "full_record": "creative-intelligence/domains/sources/06-character-psychology-development.json",
+  "id": "FORRT_KiddCastano"
+ }
+]

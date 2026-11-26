@@ -1,0 +1,1246 @@
+[
+ {
+  "key": "NIST_SQC_History",
+  "title": "NIST/SEMATECH e-Handbook of Statistical Methods, 6.1.1 How did Statistical Quality Control begin?",
+  "authors": "NIST/SEMATECH",
+  "year": null,
+  "url": "https://itl.nist.gov/div898/handbook/pmc/section1/pmc11.htm",
+  "doi_isbn": "",
+  "source_type": "course",
+  "tier": "B",
+  "key_findings": [
+   "Shewhart memo with sketch of a modern control chart dated 16 May 1924 (Bell Labs).",
+   "Shewhart 1931 book Economic Control of Quality of Manufactured Product (Van Nostrand).",
+   "Dodge and Romig applied statistics to sampling inspection; medieval guilds relied on apprenticeship."
+  ],
+  "practical_applications": [
+   "History timeline for QA training; separates process control from inspection."
+  ],
+  "limitations": [
+   "Short overview; no WWII/Deming coverage on this page."
+  ],
+  "license": "US government work (public domain likely)",
+  "access_status": "full_text",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-26",
+  "modules": [
+   "M42"
+  ]
+ },
+ {
+  "key": "Shewhart1931",
+  "title": "Economic Control of Quality of Manufactured Product",
+  "authors": "Walter A. Shewhart",
+  "year": 1931,
+  "url": "https://itl.nist.gov/div898/handbook/pmc/section1/pmc11.htm",
+  "doi_isbn": "",
+  "source_type": "textbook",
+  "tier": "A",
+  "key_findings": [
+   "Introduced control charts and the distinction between chance (common) and assignable (special) causes of variation (per NIST handbook and secondary summaries)."
+  ],
+  "practical_applications": [
+   "Do not react to a single bad post/clip as if it were a special cause; look for patterns first."
+  ],
+  "limitations": [
+   "Book not read; content from secondary sources."
+  ],
+  "license": "copyrighted",
+  "access_status": "bibliographic",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-26",
+  "modules": [
+   "M42"
+  ]
+ },
+ {
+  "key": "Deming1986",
+  "title": "Out of the Crisis (14 points for management)",
+  "authors": "W. Edwards Deming",
+  "year": 1986,
+  "url": "https://deming.org/fourteen-points",
+  "doi_isbn": "",
+  "source_type": "textbook",
+  "tier": "A",
+  "key_findings": [
+   "Point 3: cease dependence on inspection to achieve quality; build quality in from the start (wording consistent across quoted editions, 1982 MIT CAES / 1986).",
+   "Deming Institute: the 14 points are not meant to be applied as a stand-alone checklist."
+  ],
+  "practical_applications": [
+   "Prevent defects with briefs, validators and templates rather than only final review."
+  ],
+  "limitations": [
+   "Edition year differs between sources (1982 vs 1986); book not read; Deming Institute page returned 403."
+  ],
+  "license": "copyrighted",
+  "access_status": "bibliographic",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-26",
+  "modules": [
+   "M42"
+  ]
+ },
+ {
+  "key": "Juran1986",
+  "title": "The Quality Trilogy",
+  "authors": "J. M. Juran",
+  "year": 1986,
+  "url": "https://asq.org/-/media/ASQ-Supplemental-Media-Import/E/F/7/9/D/7188.pdf",
+  "doi_isbn": "",
+  "source_type": "primary_text",
+  "tier": "B",
+  "key_findings": [
+   "Quality Progress 19(8):19-24; quality planning, quality control, quality improvement as a continuing cycle (per ASQ record and secondary summaries)."
+  ],
+  "practical_applications": [
+   "Map studio QA to plan (criteria) / control (checks) / improve (lessons log)."
+  ],
+  "limitations": [
+   "Full text not read."
+  ],
+  "license": "copyrighted",
+  "access_status": "bibliographic",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-26",
+  "modules": [
+   "M42"
+  ]
+ },
+ {
+  "key": "ISO_QMP",
+  "title": "Quality management principles (ISO 9000 family)",
+  "authors": "ISO",
+  "year": null,
+  "url": "https://www.iso.org/quality-management/principles",
+  "doi_isbn": "",
+  "source_type": "docs",
+  "tier": "S",
+  "key_findings": [
+   "Seven principles: customer focus, leadership, engagement of people, process approach, improvement, evidence-based decision making, relationship management (per search results quoting ISO brochure).",
+   "Search results suggest ISO 9001:2026 / ISO 9000:2026 editions now exist; status of 2015 edition unconfirmed."
+  ],
+  "practical_applications": [
+   "Evidence-based decision making as a house principle for creative QC."
+  ],
+  "limitations": [
+   "iso.org returned 403; content from search summary only."
+  ],
+  "license": "copyrighted",
+  "access_status": "search_summary",
+  "verification_status": "unverified",
+  "date_accessed": "2026-11-26",
+  "modules": [
+   "M42"
+  ]
+ },
+ {
+  "key": "Myers1979",
+  "title": "The Art of Software Testing",
+  "authors": "Glenford J. Myers",
+  "year": 1979,
+  "url": "https://www.oreilly.com/library/view/the-art-of/9780471469124/9780471469124_the_psychology_of_testing.html",
+  "doi_isbn": "ISBN 9780471469124 (2nd ed.)",
+  "source_type": "textbook",
+  "tier": "A",
+  "key_findings": [
+   "Defines testing as 'the process of executing a program with the intent of finding errors'; a successful test is one that finds an error (per O'Reilly excerpt and secondary sources)."
+  ],
+  "practical_applications": [
+   "Critic role is to make the work fail, not to reassure the maker."
+  ],
+  "limitations": [
+   "Read only via search excerpts; one source misdates to 1977."
+  ],
+  "license": "copyrighted",
+  "access_status": "search_summary",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-26",
+  "modules": [
+   "M42"
+  ]
+ },
+ {
+  "key": "Breck2017",
+  "title": "The ML Test Score: A Rubric for ML Production Readiness and Technical Debt Reduction",
+  "authors": "Eric Breck, Shanqing Cai, Eric Nielsen, Michael Salib, D. Sculley",
+  "year": 2017,
+  "url": "https://research.google/pubs/the-ml-test-score-a-rubric-for-ml-production-readiness-and-technical-debt-reduction/",
+  "doi_isbn": "10.1109/BigData.2017.8258038",
+  "source_type": "empirical",
+  "tier": "A",
+  "key_findings": [
+   "28 specific tests and monitoring needs for production ML systems, drawn from Google experience.",
+   "Model prediction behaviour is hard to specify a priori, so tests and monitoring must be designed explicitly."
+  ],
+  "practical_applications": [
+   "Golden-set and regression testing for AI-driven creative pipelines (data, prompt/model, tools, post-release monitoring)."
+  ],
+  "limitations": [
+   "Practitioner experience paper; scoring details only from secondary source."
+  ],
+  "license": "copyrighted",
+  "access_status": "abstract",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-26",
+  "modules": [
+   "M42"
+  ]
+ },
+ {
+  "key": "Cohen1960",
+  "title": "A coefficient of agreement for nominal scales",
+  "authors": "Jacob Cohen",
+  "year": 1960,
+  "url": "https://doi.org/10.1177/001316446002000104",
+  "doi_isbn": "10.1177/001316446002000104",
+  "source_type": "empirical",
+  "tier": "A",
+  "key_findings": [
+   "Introduced kappa: chance-corrected agreement between two raters on nominal categories (Educational and Psychological Measurement 20:37-46)."
+  ],
+  "practical_applications": [
+   "Pass/fail agreement between two reviewers."
+  ],
+  "limitations": [
+   "Not read; limited to two raters and nominal data (per Hayes & Krippendorff)."
+  ],
+  "license": "copyrighted",
+  "access_status": "bibliographic",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-26",
+  "modules": [
+   "M42"
+  ]
+ },
+ {
+  "key": "LandisKoch1977",
+  "title": "The measurement of observer agreement for categorical data",
+  "authors": "J. Richard Landis, Gary G. Koch",
+  "year": 1977,
+  "url": "https://doi.org/10.2307/2529310",
+  "doi_isbn": "10.2307/2529310",
+  "source_type": "empirical",
+  "tier": "A",
+  "key_findings": [
+   "General statistical methodology for multivariate categorical observer-reliability data; generalized kappa-type statistics and tests for interobserver bias (abstract).",
+   "Best known for kappa interpretation bands in 0.20 steps; secondary sources note the bands rest on opinion, not evidence."
+  ],
+  "practical_applications": [
+   "Use bands only as shared vocabulary, not as pass thresholds."
+  ],
+  "limitations": [
+   "Bands are conventional; full text not read."
+  ],
+  "license": "copyrighted",
+  "access_status": "abstract",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-26",
+  "modules": [
+   "M42"
+  ]
+ },
+ {
+  "key": "ShroutFleiss1979",
+  "title": "Intraclass correlations: Uses in assessing rater reliability",
+  "authors": "Patrick E. Shrout, Joseph L. Fleiss",
+  "year": 1979,
+  "url": "https://pubmed.ncbi.nlm.nih.gov/18839484/",
+  "doi_isbn": "10.1037/0033-2909.86.2.420",
+  "source_type": "empirical",
+  "tier": "A",
+  "key_findings": [
+   "Guidelines for choosing among six ICC forms for n targets rated by k judges; choice depends on statistical model and intended use; confidence intervals reviewed (abstract)."
+  ],
+  "practical_applications": [
+   "Pick ICC form for continuous 0-100 quality scores."
+  ],
+  "limitations": [
+   "Abstract only."
+  ],
+  "license": "copyrighted",
+  "access_status": "abstract",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-26",
+  "modules": [
+   "M42"
+  ]
+ },
+ {
+  "key": "FeinsteinCicchetti1990",
+  "title": "High agreement but low kappa: I. The problems of two paradoxes (and II. Resolving the paradoxes)",
+  "authors": "Alvan R. Feinstein, Domenic V. Cicchetti",
+  "year": 1990,
+  "url": "https://doi.org/10.1016/0895-4356(90)90158-L",
+  "doi_isbn": "10.1016/0895-4356(90)90158-L",
+  "source_type": "empirical",
+  "tier": "A",
+  "key_findings": [
+   "Kappa can be low despite high observed agreement when marginals are imbalanced; asymmetric imbalance can yield higher kappa than balanced.",
+   "Part II proposes reporting separate positive and negative agreement indices (p_pos, p_neg) alongside kappa."
+  ],
+  "practical_applications": [
+   "When almost all items pass, report p_pos/p_neg or alpha instead of kappa alone."
+  ],
+  "limitations": [
+   "Only search summaries read."
+  ],
+  "license": "copyrighted",
+  "access_status": "search_summary",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-26",
+  "modules": [
+   "M42"
+  ]
+ },
+ {
+  "key": "HayesKrippendorff2007",
+  "title": "Answering the call for a standard reliability measure for coding data",
+  "authors": "Andrew F. Hayes, Klaus Krippendorff",
+  "year": 2007,
+  "url": "https://www.asc.upenn.edu/sites/default/files/2021-03/Answering%20the%20Call%20for%20a%20Standard%20Reliability%20Measure%20for%20Coding%20Data.pdf",
+  "doi_isbn": "10.1080/19312450709336664",
+  "source_type": "empirical",
+  "tier": "A",
+  "key_findings": [
+   "Five criteria for a good reliability index: any number of independent observers, grounded in categories actually used, meaningful 0/1 scale points, appropriate to level of measurement, known sampling behaviour.",
+   "Percent agreement fails most criteria; Cohen's kappa defines zero as statistical independence of observers and can be inflated by systematic disagreement; Scott's pi limited to two coders/nominal.",
+   "Krippendorff's alpha satisfies all; works for nominal/ordinal/interval/ratio, any number of observers, missing data; bootstrap CI and probability of falling below alpha_min.",
+   "Worked example: nominal alpha 0.4765 vs ordinal 0.7598 on the same data; 95% CI 0.708-0.808; q=0.9473 of failing alpha_min 0.80 vs q=0.0125 for 0.70."
+  ],
+  "practical_applications": [
+   "Studio standard: ordinal Krippendorff's alpha with bootstrap CI for rubric pilots."
+  ],
+  "limitations": [
+   "Communication/content-analysis context; macro tooling dated."
+  ],
+  "license": "copyrighted (author preprint)",
+  "access_status": "full_text",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-26",
+  "modules": [
+   "M42"
+  ]
+ },
+ {
+  "key": "KooLi2016",
+  "title": "A Guideline of Selecting and Reporting Intraclass Correlation Coefficients for Reliability Research",
+  "authors": "Terry K. Koo, Mae Y. Li",
+  "year": 2016,
+  "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC4913118/",
+  "doi_isbn": "10.1016/j.jcm.2016.02.012",
+  "source_type": "review",
+  "tier": "A",
+  "key_findings": [
+   "ICC forms defined by model (one-way random, two-way random, two-way mixed), type (single vs mean of k), definition (consistency vs absolute agreement).",
+   "Report software, model, type, definition, estimate and 95% CI.",
+   "Cutoffs: <0.5 poor, 0.5-0.75 moderate, 0.75-0.9 good, >0.9 excellent, judged on the 95% CI not the point estimate.",
+   "Aim for at least 30 heterogeneous samples and at least 3 raters; low ICC can come from low between-subject variability."
+  ],
+  "practical_applications": [
+   "Reporting template for continuous quality scores."
+  ],
+  "limitations": [
+   "Clinical-research guideline; cutoffs conventional."
+  ],
+  "license": "PMC open access (licence not checked)",
+  "access_status": "full_text",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-26",
+  "modules": [
+   "M42"
+  ]
+ },
+ {
+  "key": "tenHove2024",
+  "title": "Updated guidelines on selecting an intraclass correlation coefficient for interrater reliability, with applications to incomplete observational designs",
+  "authors": "Debby ten Hove, Terrence D. Jorgensen, L. Andries van der Ark",
+  "year": 2024,
+  "url": "https://doi.org/10.1037/met0000516",
+  "doi_isbn": "10.1037/met0000516",
+  "source_type": "review",
+  "tier": "A",
+  "key_findings": [
+   "Existing ICC guidelines ignore incomplete designs, lack a coherent account of error variance, and misunderstand fixed vs random raters.",
+   "Generalizability-theory based guidelines; raters should seldom if ever be considered fixed; flowchart of four choices."
+  ],
+  "practical_applications": [
+   "When raters differ across items, use G-theory ICC guidance."
+  ],
+  "limitations": [
+   "Abstract only; online 2022, issue 2024."
+  ],
+  "license": "copyrighted (OA per OpenAlex)",
+  "access_status": "abstract",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-26",
+  "modules": [
+   "M42"
+  ]
+ },
+ {
+  "key": "Messick1995",
+  "title": "Validity of psychological assessment: Validation of inferences from persons' responses and performances as scientific inquiry into score meaning",
+  "authors": "Samuel Messick",
+  "year": 1995,
+  "url": "https://www.ets.org/research/policy_research_reports/publications/article/1995/buwh.html",
+  "doi_isbn": "10.1037/0003-066X.50.9.741",
+  "source_type": "review",
+  "tier": "A",
+  "key_findings": [
+   "Traditional content/criterion/construct split is fragmented; unified construct validity covers score meaning, value implications and social consequences of score use.",
+   "Six aspects: content, substantive, structural, generalizability, external, consequential (abstract and secondary sources)."
+  ],
+  "practical_applications": [
+   "Check that a creative rubric measures the intended construct and consider side effects of using it."
+  ],
+  "limitations": [
+   "Abstract only; threats terminology from general knowledge of the article."
+  ],
+  "license": "copyrighted",
+  "access_status": "abstract",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-26",
+  "modules": [
+   "M42"
+  ]
+ },
+ {
+  "key": "JonssonSvingby2007",
+  "title": "The use of scoring rubrics: Reliability, validity and educational consequences",
+  "authors": "Anders Jonsson, Gunilla Svingby",
+  "year": 2007,
+  "url": "https://doi.org/10.1016/j.edurev.2007.05.002",
+  "doi_isbn": "10.1016/j.edurev.2007.05.002",
+  "source_type": "review",
+  "tier": "A",
+  "key_findings": [
+   "Per citing papers: rubric studies focused mostly on reliability; rubrics may enhance reliable scoring, but a rubric alone does not guarantee reliability or validity."
+  ],
+  "practical_applications": [
+   "Pilot rubrics and measure agreement before relying on them."
+  ],
+  "limitations": [
+   "Neither abstract nor full text read; findings via secondary descriptions."
+  ],
+  "license": "copyrighted",
+  "access_status": "bibliographic",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-26",
+  "modules": [
+   "M42"
+  ]
+ },
+ {
+  "key": "Brookhart2018",
+  "title": "Appropriate Criteria: Key to Effective Rubrics",
+  "authors": "Susan M. Brookhart",
+  "year": 2018,
+  "url": "https://www.frontiersin.org/journals/education/articles/10.3389/feduc.2018.00022/full",
+  "doi_isbn": "10.3389/feduc.2018.00022",
+  "source_type": "review",
+  "tier": "A",
+  "key_findings": [
+   "A rubric = criteria + performance level descriptions; checklists and rating scales lack the latter.",
+   "Analytic rubrics score criteria one at a time (better for feedback); holistic give one judgement (faster).",
+   "Generality is 'perhaps the most important characteristic'; descriptive level language helps learners more than evaluative.",
+   "Higher-education rubrics 2005-2017 mostly analytic with 4-5 levels; no discernible pattern between rubric type and reliability/validity.",
+   "Compliance criteria ('has three sources') misdirect effort and mis-measure learning."
+  ],
+  "practical_applications": [
+   "Write observable descriptors; separate checks from quality criteria."
+  ],
+  "limitations": [
+   "Education context; ~87% of page read."
+  ],
+  "license": "CC BY 4.0",
+  "access_status": "full_text",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-26",
+  "modules": [
+   "M42"
+  ]
+ },
+ {
+  "key": "Chen1995_ResponseStyle",
+  "title": "Response style and cross-cultural comparisons of rating scales among East Asian and North American students",
+  "authors": "Chuansheng Chen, Shin-ying Lee, Harold W. Stevenson",
+  "year": 1995,
+  "url": "https://escholarship.org/uc/item/1b00n182",
+  "doi_isbn": "10.1111/j.1467-9280.1995.tb00327.x",
+  "source_type": "empirical",
+  "tier": "A",
+  "key_findings": [
+   "Japanese and Chinese (Taiwan) students used scale midpoints more; US students used extremes more (57 seven-point Likert items, about 5,000 students).",
+   "Individualism related to extreme responding; differences small and generally did not alter comparisons of item means."
+  ],
+  "practical_applications": [
+   "Consider forced-choice or even-numbered scales when collecting Thai/Asian ratings."
+  ],
+  "limitations": [
+   "Not Thai data; abstract only."
+  ],
+  "license": "copyrighted",
+  "access_status": "abstract",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-26",
+  "modules": [
+   "M42"
+  ]
+ },
+ {
+  "key": "KohaviTangXu2020",
+  "title": "Trustworthy Online Controlled Experiments: A Practical Guide to A/B Testing",
+  "authors": "Ron Kohavi, Diane Tang, Ya Xu",
+  "year": 2020,
+  "url": "https://www.cambridge.org/core/books/trustworthy-online-controlled-experiments/D97B26382EB0EB2DC2019A7A7B518F59",
+  "doi_isbn": "10.1017/9781108653985; ISBN 978-1-108-72426-5",
+  "source_type": "textbook",
+  "tier": "A",
+  "key_findings": [
+   "Covers OEC definition, trustworthiness checks and a chapter 'Twyman's Law and Experimentation Trustworthiness' (any figure that looks interesting or different is usually wrong).",
+   "Authors drew on companies each running 20,000+ controlled experiments a year (publisher blurb)."
+  ],
+  "practical_applications": [
+   "Pre-register the OEC; distrust surprising wins until the pipeline is checked."
+  ],
+  "limitations": [
+   "Publisher pages only; Twyman 'usually wrong' is a heuristic, not a measured rate."
+  ],
+  "license": "copyrighted",
+  "access_status": "publisher_page",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-26",
+  "modules": [
+   "M42"
+  ]
+ },
+ {
+  "key": "Kohavi2009_DMKD",
+  "title": "Controlled experiments on the web: survey and practical guide",
+  "authors": "Ron Kohavi, Roger Longbotham, Dan Sommerfield, Randal M. Henne",
+  "year": 2009,
+  "url": "https://link.springer.com/content/pdf/10.1007/s10618-008-0114-1.pdf",
+  "doi_isbn": "10.1007/s10618-008-0114-1",
+  "source_type": "review",
+  "tier": "A",
+  "key_findings": [
+   "Controlled experiments are the best scientific design for establishing causality of a change on user behaviour; listen to customers, not the HiPPO.",
+   "OEC defined in advance; A/A (null) tests validate the system; robots can skew results.",
+   "Minimum sample size per variant at 95% confidence / 80% power: n = 16 sigma^2 / Delta^2 (from van Belle).",
+   "Limitations: no 'why', short-term vs long-term, primacy and newness effects, features must be implemented, consistency, launch events."
+  ],
+  "practical_applications": [
+   "Power calculation before ad split tests; run tests for multiple weeks when novelty is likely."
+  ],
+  "limitations": [
+   "Large-traffic web context; formula symbols garbled in text extraction (standard form stated)."
+  ],
+  "license": "copyrighted (open access PDF)",
+  "access_status": "full_text",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-26",
+  "modules": [
+   "M42"
+  ]
+ },
+ {
+  "key": "Kohavi2009_ThinkWeek",
+  "title": "Online Experimentation at Microsoft (ThinkWeek paper, public version)",
+  "authors": "Ron Kohavi, Thomas Crook, Roger Longbotham, Brian Frasca, Randy Henne, Juan Lavista Ferres, Tamir Melamed",
+  "year": 2009,
+  "url": "https://ai.stanford.edu/~ronnyk/ExPThinkWeek2009Public.pdf",
+  "doi_isbn": "",
+  "source_type": "practitioner",
+  "tier": "C",
+  "key_findings": [
+   "ExP estimate: of ideas tested, about 1/3 good, 1/3 flat, 1/3 negative; ideas thought good that hurt metrics are about one third of experiments.",
+   "Failed A/A tests revealed bugs (page cache key, cookie assignment) that biased experiments.",
+   "HiPPO awareness campaign; OEC should favour long-term value."
+  ],
+  "practical_applications": [
+   "Validate the evaluation system (A/A, golden set) before trusting it; expect many ideas to fail."
+  ],
+  "limitations": [
+   "Internal company estimates; not peer-reviewed."
+  ],
+  "license": "copyrighted",
+  "access_status": "full_text",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-26",
+  "modules": [
+   "M42"
+  ]
+ },
+ {
+  "key": "Fabijan2019",
+  "title": "Diagnosing Sample Ratio Mismatch in Online Controlled Experiments: A Taxonomy and Rules of Thumb for Practitioners",
+  "authors": "Aleksander Fabijan, Jayant Gupchup, Somit Gupta, Jeff Omhover, Wen Qin, Lukas Vermeer, Pavel Dmitriev",
+  "year": 2019,
+  "url": "https://www.lukasvermeer.nl/publications/papers/2019/07/25/diagnosing-sample-ratio-mismatch-in-online-controlled-experiments.html",
+  "doi_isbn": "10.1145/3292500.3330722",
+  "source_type": "empirical",
+  "tier": "A",
+  "key_findings": [
+   "SRM = observed sample ratio differs from expected; a symptom of many data-quality issues, like a fever.",
+   "Ignoring SRM without root cause can make a bad change look good; taxonomy of causes by experiment stage."
+  ],
+  "practical_applications": [
+   "Check that ad split tests deliver the intended split before reading results."
+  ],
+  "limitations": [
+   "Abstract only."
+  ],
+  "license": "copyrighted",
+  "access_status": "abstract",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-26",
+  "modules": [
+   "M42"
+  ]
+ },
+ {
+  "key": "Button2013",
+  "title": "Power failure: why small sample size undermines the reliability of neuroscience",
+  "authors": "Katherine S. Button, John P. A. Ioannidis, Claire Mokrysz, Brian A. Nosek, Jonathan Flint, Emma S. J. Robinson, Marcus R. Munafo",
+  "year": 2013,
+  "url": "https://www.gwern.net/doc/statistics/bias/2013-button.pdf",
+  "doi_isbn": "10.1038/nrn3475",
+  "source_type": "meta-analysis",
+  "tier": "A",
+  "key_findings": [
+   "Median statistical power in neuroscience about 21% (about 8-31% by subfield).",
+   "Low power reduces chance of detecting true effects, lowers positive predictive value, and inflates effect estimates (winner's curse)."
+  ],
+  "practical_applications": [
+   "Treat small-sample A/B wins as hypotheses; replicate."
+  ],
+  "limitations": [
+   "Later reanalysis argued power varies widely by subfield (per critiques in search results)."
+  ],
+  "license": "copyrighted",
+  "access_status": "full_text",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-26",
+  "modules": [
+   "M42"
+  ]
+ },
+ {
+  "key": "ShadishCookCampbell2002",
+  "title": "Experimental and Quasi-Experimental Designs for Generalized Causal Inference",
+  "authors": "William R. Shadish, Thomas D. Cook, Donald T. Campbell",
+  "year": 2002,
+  "url": "https://www.jmu.edu/assessment/sass/_files/threats-to-validity-handout.pdf",
+  "doi_isbn": "",
+  "source_type": "textbook",
+  "tier": "A",
+  "key_findings": [
+   "Standard taxonomy of validity threats; history, maturation, regression, testing and instrumentation are especially relevant to pre-post designs without comparison (per secondary sources)."
+  ],
+  "practical_applications": [
+   "Design before/after benchmarks with blinding, held-out tasks and concurrent baselines."
+  ],
+  "limitations": [
+   "Book not read."
+  ],
+  "license": "copyrighted",
+  "access_status": "bibliographic",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-26",
+  "modules": [
+   "M42"
+  ]
+ },
+ {
+  "key": "Ries2009",
+  "title": "Vanity Metrics vs. Actionable Metrics (guest post)",
+  "authors": "Eric Ries",
+  "year": 2009,
+  "url": "https://tim.blog/blog/2009/05/19/vanity-metrics-vs-actionable-metrics/",
+  "doi_isbn": "",
+  "source_type": "practitioner",
+  "tier": "D",
+  "key_findings": [
+   "Vanity metrics make you feel good but give no clear guidance; actionable metrics show clear cause and effect.",
+   "Use split tests, per-customer/segment metrics, cohort and funnel analysis; 'the key to actionable metrics is having as few as possible'."
+  ],
+  "practical_applications": [
+   "Judge shop content by chats/appointments by cohort, not likes."
+  ],
+  "limitations": [
+   "Practitioner opinion; vanity metrics can be leading indicators."
+  ],
+  "license": "copyrighted",
+  "access_status": "full_text",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-26",
+  "modules": [
+   "M42"
+  ]
+ },
+ {
+  "key": "Strathern1997",
+  "title": "'Improving ratings': audit in the British University system",
+  "authors": "Marilyn Strathern",
+  "year": 1997,
+  "url": "https://www.gwern.net/doc/statistics/decision/1997-strathern.pdf",
+  "doi_isbn": "European Review 5(3):305-321",
+  "source_type": "empirical",
+  "tier": "A",
+  "key_findings": [
+   "'When a measure becomes a target, it ceases to be a good measure' (generalising Goodhart's law via Hoskin).",
+   "Audit has a life of its own; 'Measurement and target rise together'; expected grades lose power to discriminate."
+  ],
+  "practical_applications": [
+   "Separate scorers from beneficiaries of scores; refresh golden sets to avoid overfitting."
+  ],
+  "limitations": [
+   "Anthropological essay, not quantitative; Campbell's law may have priority."
+  ],
+  "license": "copyrighted",
+  "access_status": "full_text",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-26",
+  "modules": [
+   "M42"
+  ]
+ },
+ {
+  "key": "ITU-T-P800",
+  "title": "ITU-T P.800 (08/96) Methods for subjective determination of transmission quality",
+  "authors": "ITU-T",
+  "year": 1996,
+  "url": "https://www.itu.int/rec/T-REC-P.800-199608-I",
+  "doi_isbn": "",
+  "source_type": "docs",
+  "tier": "S",
+  "key_findings": [
+   "In force; approved 30 Aug 1996; methods and procedures for subjective evaluation of transmission quality; this version added an annex on Comparison Category Rating (CCR)."
+  ],
+  "practical_applications": [
+   "Basis for ACR-style listening tests of TTS lines."
+  ],
+  "limitations": [
+   "Only catalogue/summary pages read; ACR 5-point details not verified this session."
+  ],
+  "license": "copyrighted",
+  "access_status": "publisher_page",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-26",
+  "modules": [
+   "M42"
+  ]
+ },
+ {
+  "key": "ITU-T-P808",
+  "title": "ITU-T P.808 (06/2021) Subjective evaluation of speech quality with a crowdsourcing approach",
+  "authors": "ITU-T",
+  "year": 2021,
+  "url": "https://www.itu.int/rec/T-REC-P.808",
+  "doi_isbn": "",
+  "source_type": "docs",
+  "tier": "S",
+  "key_findings": [
+   "Crowdsourcing approach where participants rate speech in their own environments; complements lab methods in P.800 and P.835; annex on ACR listening tests (summary)."
+  ],
+  "practical_applications": [
+   "Run cheap listener panels with qualification and quality control."
+  ],
+  "limitations": [
+   "Summary only."
+  ],
+  "license": "copyrighted",
+  "access_status": "publisher_page",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-26",
+  "modules": [
+   "M42"
+  ]
+ },
+ {
+  "key": "NaderiCutler2020",
+  "title": "An Open Source Implementation of ITU-T Recommendation P.808 with Validation",
+  "authors": "Babak Naderi, Ross Cutler",
+  "year": 2020,
+  "url": "https://arxiv.org/abs/2005.08138",
+  "doi_isbn": "arXiv:2005.08138",
+  "source_type": "empirical",
+  "tier": "B",
+  "key_findings": [
+   "Open-source P.808 on Mechanical Turk incl. ACR, DCR, CCR; qualification merged into rating task.",
+   "Validated against lab P.800 MOS and assessed reproducibility; quantified impact of environment tests, gold and trapping questions, rating-pattern checks, headset test."
+  ],
+  "practical_applications": [
+   "Gold/trap questions in listener forms for TTS."
+  ],
+  "limitations": [
+   "Abstract only; correlation numbers not read; preprint."
+  ],
+  "license": "unknown",
+  "access_status": "abstract",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-26",
+  "modules": [
+   "M42"
+  ]
+ },
+ {
+  "key": "ITU-R_BT500",
+  "title": "Recommendation ITU-R BT.500-15 (05/2023) Methodologies for the subjective assessment of the quality of television images",
+  "authors": "ITU-R",
+  "year": 2023,
+  "url": "https://www.itu.int/rec/R-REC-BT.500",
+  "doi_isbn": "",
+  "source_type": "docs",
+  "tier": "S",
+  "key_findings": [
+   "In force since 2023-05; methods incl. DSCQS, SSCQE, SDSCE, SAMVIQ; lab and home viewing environments; quality vs impairment assessments.",
+   "Objective measurement alone may not fully characterise system performance; subjective tests supplement it."
+  ],
+  "practical_applications": [
+   "Rationale for human panels when judging images/video."
+  ],
+  "limitations": [
+   "Search summary only."
+  ],
+  "license": "copyrighted",
+  "access_status": "search_summary",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-26",
+  "modules": [
+   "M42"
+  ]
+ },
+ {
+  "key": "Wang2004_SSIM",
+  "title": "Image quality assessment: from error visibility to structural similarity",
+  "authors": "Zhou Wang, Alan C. Bovik, Hamid R. Sheikh, Eero P. Simoncelli",
+  "year": 2004,
+  "url": "https://ece.uwaterloo.ca/~z70wang/publications/ssim.html",
+  "doi_isbn": "10.1109/TIP.2003.819861",
+  "source_type": "empirical",
+  "tier": "A",
+  "key_findings": [
+   "Proposes SSIM, a full-reference measure of degradation of structural information, compared with subjective ratings on a JPEG/JPEG2000 database."
+  ],
+  "practical_applications": [
+   "Check export/compression damage against the master; not an aesthetic score."
+  ],
+  "limitations": [
+   "Needs a reference image; abstract only."
+  ],
+  "license": "copyrighted",
+  "access_status": "abstract",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-26",
+  "modules": [
+   "M42"
+  ]
+ },
+ {
+  "key": "Jayasumana2024",
+  "title": "Rethinking FID: Towards a Better Evaluation Metric for Image Generation",
+  "authors": "Sadeep Jayasumana et al.",
+  "year": 2024,
+  "url": "https://arxiv.org/abs/2401.09603",
+  "doi_isbn": "arXiv:2401.09603",
+  "source_type": "empirical",
+  "tier": "A",
+  "key_findings": [
+   "FID's Inception features poorly represent modern T2I content, rely on a normality assumption, need many samples, contradict human raters, miss gradual improvements and distortion levels.",
+   "Proposes CMMD (CLIP embeddings + MMD, RBF kernel)."
+  ],
+  "practical_applications": [
+   "Never judge single generated images with FID; validate any metric against human ratings."
+  ],
+  "limitations": [
+   "Authors propose a competing metric; abstract only."
+  ],
+  "license": "unknown",
+  "access_status": "abstract",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-26",
+  "modules": [
+   "M42"
+  ]
+ },
+ {
+  "key": "Zheng2023",
+  "title": "Judging LLM-as-a-Judge with MT-Bench and Chatbot Arena",
+  "authors": "Lianmin Zheng et al.",
+  "year": 2023,
+  "url": "https://arxiv.org/html/2306.05685v4",
+  "doi_isbn": "arXiv:2306.05685",
+  "source_type": "empirical",
+  "tier": "A",
+  "key_findings": [
+   "GPT-4 judge agreement with experts 85% excluding ties (human-human 81%); 66% vs 63% including ties.",
+   "Position consistency on swap: GPT-4 65.0%, GPT-3.5 46.2%, Claude-v1 23.8%; repetitive-list verbosity attack fooled Claude-v1 and GPT-3.5 91.3%, GPT-4 8.7%; self-enhancement about 10% (GPT-4), 25% (Claude-v1) with limited data.",
+   "Mitigations: swap positions and count only consistent wins, few-shot (65% to 77.5% consistency), reference-guided grading (math failures 70% to 15%); chain-of-thought helped less."
+  ],
+  "practical_applications": [
+   "Run AI critics pairwise twice with swapped order and with references (brief, product photo)."
+  ],
+  "limitations": [
+   "Single study, English chat helpfulness; judged models now outdated."
+  ],
+  "license": "unknown",
+  "access_status": "full_text",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-26",
+  "modules": [
+   "M42"
+  ]
+ },
+ {
+  "key": "Clark2021",
+  "title": "All That's 'Human' Is Not Gold: Evaluating Human Evaluation of Generated Text",
+  "authors": "Elizabeth Clark, Tal August, Sofia Serrano, Nikita Haduong, Suchin Gururangan, Noah A. Smith",
+  "year": 2021,
+  "url": "https://aclanthology.org/2021.acl-long.565",
+  "doi_isbn": "arXiv:2107.00061",
+  "source_type": "empirical",
+  "tier": "A",
+  "key_findings": [
+   "Untrained evaluators distinguished GPT-3 from human text (stories, news, recipes) at about chance.",
+   "Three training methods raised accuracy to about 55%, not significant; raters gave contradictory reasons."
+  ],
+  "practical_applications": [
+   "Use lay viewers for preference/comprehension, not technical authenticity judgements."
+  ],
+  "limitations": [
+   "English text, GPT-2/3 era; abstract only."
+  ],
+  "license": "CC BY 4.0 (ACL Anthology)",
+  "access_status": "abstract",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-26",
+  "modules": [
+   "M42"
+  ]
+ },
+ {
+  "key": "vanderLee2021",
+  "title": "Human evaluation of automatically generated text: Current trends and best practice guidelines",
+  "authors": "Chris van der Lee, Albert Gatt, Emiel van Miltenburg, Emiel Krahmer",
+  "year": 2021,
+  "url": "https://www.sciencedirect.com/science/article/pii/S088523082030084X",
+  "doi_isbn": "10.1016/j.csl.2020.101151",
+  "source_type": "review",
+  "tier": "A",
+  "key_findings": [
+   "Little agreement on how NLG should be evaluated; high variation in human evaluation practice.",
+   "Best practices linked to planning stage and execution & release stage."
+  ],
+  "practical_applications": [
+   "Plan human evaluations of captions/scripts in advance: criteria, scale, raters, agreement reporting."
+  ],
+  "limitations": [
+   "Abstract only."
+  ],
+  "license": "open access per OpenAlex (licence not checked)",
+  "access_status": "abstract",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-26",
+  "modules": [
+   "M42"
+  ]
+ },
+ {
+  "key": "ITU2023_BS1770_5",
+  "title": "Recommendation ITU-R BS.1770-5: Algorithms to measure audio programme loudness and true-peak audio level",
+  "authors": "ITU-R",
+  "year": 2023,
+  "url": "https://www.itu.int/rec/R-REC-BS.1770",
+  "doi_isbn": "",
+  "source_type": "docs",
+  "tier": "S",
+  "key_findings": [
+   "Current version BS.1770-5, approved 11/2023, in force.",
+   "Defines programme loudness (LKFS = LUFS) and true-peak measurement (per existing registry entry)."
+  ],
+  "practical_applications": [
+   "Measure every clip's integrated loudness and true peak with a BS.1770 meter (ffmpeg ebur128/loudnorm)."
+  ],
+  "limitations": [
+   "Status page only this session."
+  ],
+  "license": "copyrighted",
+  "access_status": "publisher_page",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-26",
+  "modules": [
+   "M42"
+  ]
+ },
+ {
+  "key": "EBU2020_R128",
+  "title": "EBU R 128: Loudness normalisation and permitted maximum level of audio signals",
+  "authors": "EBU",
+  "year": 2020,
+  "url": "https://tech.ebu.ch/publications/r128",
+  "doi_isbn": "",
+  "source_type": "docs",
+  "tier": "S",
+  "key_findings": [
+   "Target -23 LUFS programme loudness; tolerance tightened to +/-0.5 LU in v3.0 (June 2014).",
+   "Publication page shows v5.0 dated 21 Nov 2023 (adds cinematic-content reference).",
+   "Max true peak -1 dBTP (from registry record of v4.0 full text read earlier)."
+  ],
+  "practical_applications": [
+   "Broadcast reference point; social targets differ."
+  ],
+  "limitations": [
+   "Page did not show the true-peak number; key reused from SOURCE_REGISTRY (v4.0, 2020)."
+  ],
+  "license": "copyrighted (free download)",
+  "access_status": "publisher_page",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-26",
+  "modules": [
+   "M42"
+  ]
+ },
+ {
+  "key": "Spotify_Loudness",
+  "title": "Loudness normalization on Spotify (Spotify for Artists support)",
+  "authors": "Spotify",
+  "year": null,
+  "url": "https://support.spotify.com/us/artists/article/loudness-normalization/",
+  "doi_isbn": "",
+  "source_type": "docs",
+  "tier": "C",
+  "key_findings": [
+   "Default normalisation -14 LUFS (Normal); Premium Loud -11, Quiet -19; measured per ITU 1770.",
+   "Keep true peak below -1 dBTP for lossy formats; below -2 dBTP if master is louder than -14 LUFS."
+  ],
+  "practical_applications": [
+   "External justification for the studio's -14 LUFS social target."
+  ],
+  "limitations": [
+   "Spotify only; not IG/TikTok/YouTube."
+  ],
+  "license": "copyrighted",
+  "access_status": "full_text",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-26",
+  "modules": [
+   "M42"
+  ]
+ },
+ {
+  "key": "Haynes2009",
+  "title": "A surgical safety checklist to reduce morbidity and mortality in a global population",
+  "authors": "Alex B. Haynes, Thomas G. Weiser, William R. Berry, Stuart R. Lipsitz, et al.",
+  "year": 2009,
+  "url": "https://pubmed.ncbi.nlm.nih.gov/19144931/",
+  "doi_isbn": "10.1056/NEJMsa0810119",
+  "source_type": "empirical",
+  "tier": "A",
+  "key_findings": [
+   "8 hospitals in 8 cities (WHO Safe Surgery Saves Lives), 3,733 patients before vs 3,955 after a 19-item checklist.",
+   "Death 1.5% to 0.8% (P=0.003); inpatient complications 11.0% to 7.0% (P<0.001); 'associated with' reductions."
+  ],
+  "practical_applications": [
+   "Short checklists at natural pause points (sign-in, time-out, sign-out)."
+  ],
+  "limitations": [
+   "Pre-post without concurrent control; Hawthorne and secular trends possible."
+  ],
+  "license": "copyrighted",
+  "access_status": "abstract",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-26",
+  "modules": [
+   "M42"
+  ]
+ },
+ {
+  "key": "Urbach2014",
+  "title": "Introduction of surgical safety checklists in Ontario, Canada",
+  "authors": "David R. Urbach, Anand Govindarajan, Refik Saskin, Andrew S. Wilton, Nancy N. Baxter",
+  "year": 2014,
+  "url": "https://pubmed.ncbi.nlm.nih.gov/24620866/",
+  "doi_isbn": "10.1056/NEJMsa1308261",
+  "source_type": "empirical",
+  "tier": "A",
+  "key_findings": [
+   "Natural experiment: 101 hospitals, 109,341 procedures before vs 106,370 after checklist adoption.",
+   "Mortality 0.71% to 0.65% (OR 0.91, 95% CI 0.80-1.03, P=0.13); complications 3.86% to 3.82% (OR 0.97, P=0.29); no significant reduction."
+  ],
+  "practical_applications": [
+   "Mandated checklists without local adaptation may become ritual; evaluate QA tools with controls."
+  ],
+  "limitations": [
+   "Administrative data; 3-month windows."
+  ],
+  "license": "copyrighted",
+  "access_status": "abstract",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-26",
+  "modules": [
+   "M42"
+  ]
+ },
+ {
+  "key": "Bergs2014",
+  "title": "Systematic review and meta-analysis of the effect of the World Health Organization surgical safety checklist on postoperative complications",
+  "authors": "J. Bergs, J. Hellings, I. Cleemput, O. Zurel, V. De Troyer, M. Van Hiel, J.-L. Demeere, D. Claeys, D. Vandijck",
+  "year": 2014,
+  "url": "https://documentserver.uhasselt.be/handle/1942/16492",
+  "doi_isbn": "10.1002/bjs.9381",
+  "source_type": "meta-analysis",
+  "tier": "S",
+  "key_findings": [
+   "7 of 723 studies included; marked methodological heterogeneity.",
+   "RR any complication 0.59 (0.47-0.74), mortality 0.77 (0.60-0.98), SSI 0.57 (0.41-0.79); effect correlated with adherence (Q=0.82, P=0.042).",
+   "Evidence 'highly suggestive' but not definitive without higher-quality studies."
+  ],
+  "practical_applications": [
+   "Checklist effect depends on adherence to the embedded care steps."
+  ],
+  "limitations": [
+   "Mostly observational primary studies."
+  ],
+  "license": "copyrighted",
+  "access_status": "abstract",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-26",
+  "modules": [
+   "M42"
+  ]
+ },
+ {
+  "key": "deJager2016",
+  "title": "Postoperative Adverse Events Inconsistently Improved by the World Health Organization Surgical Safety Checklist: A Systematic Literature Review of 25 Studies",
+  "authors": "Elzerie de Jager, Chris McKenna, Lynne Bartlett, Ronny Gunnarsson, Yik-Hong Ho",
+  "year": 2016,
+  "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC4943979/",
+  "doi_isbn": "10.1007/s00268-016-3519-9",
+  "source_type": "review",
+  "tier": "S",
+  "key_findings": [
+   "25 studies (2 RCTs, 13 prospective, 10 retrospective); no meta-analysis because pooling heterogeneous observational studies may be biased.",
+   "Only 4 had concurrent controls; many underpowered; teamwork training confounded; effects inconsistent; mortality decreased in no developed-nation study but in 75% of developing-nation studies.",
+   "Positive changes may reflect temporal changes, confounding and publication bias."
+  ],
+  "practical_applications": [
+   "Before/after QA claims need concurrent controls."
+  ],
+  "limitations": [
+   "Abstract only."
+  ],
+  "license": "unknown",
+  "access_status": "abstract",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-26",
+  "modules": [
+   "M42"
+  ]
+ },
+ {
+  "key": "GonzalezMarino2024",
+  "title": "Safety of surgery: quality assessment of meta-analyses on the WHO checklist",
+  "authors": "Mario Alberto Gonzalez Marino",
+  "year": 2024,
+  "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11060208/",
+  "doi_isbn": "10.1097/MS9.0000000000002006",
+  "source_type": "review",
+  "tier": "A",
+  "key_findings": [
+   "Three meta-analyses rated with AMSTAR 2: all associated the checklist with lower complications/mortality, but overall confidence was critically low (mostly observational, biased studies)."
+  ],
+  "practical_applications": [
+   "Distinguish 'many studies agree' from 'strong evidence'."
+  ],
+  "limitations": [
+   "Single author; abstract only."
+  ],
+  "license": "unknown",
+  "access_status": "abstract",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-26",
+  "modules": [
+   "M42"
+  ]
+ },
+ {
+  "key": "Pronovost2006",
+  "title": "An intervention to decrease catheter-related bloodstream infections in the ICU",
+  "authors": "Peter Pronovost, Dale Needham, Sean Berenholtz, et al.",
+  "year": 2006,
+  "url": "https://doi.org/10.1056/NEJMoa061115",
+  "doi_isbn": "10.1056/NEJMoa061115",
+  "source_type": "empirical",
+  "tier": "A",
+  "key_findings": [
+   "108 ICUs agreed, 103 reported; 375,757 catheter-days; median CRBSI per 1000 catheter-days 2.7 to 0 at 3 months; mean 7.7 to 1.4 at 16-18 months; IRR 0.62 to 0.34; up to 66% sustained reduction."
+  ],
+  "practical_applications": [
+   "Combined checklist + data feedback + team authority as a QA system."
+  ],
+  "limitations": [
+   "Collaborative cohort, no randomised control."
+  ],
+  "license": "copyrighted",
+  "access_status": "abstract",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-26",
+  "modules": [
+   "M42"
+  ]
+ },
+ {
+  "key": "DixonWoods2011",
+  "title": "Explaining Michigan: Developing an Ex Post Theory of a Quality Improvement Program",
+  "authors": "Mary Dixon-Woods, Charles L. Bosk, Emma Louise Aveling, Christine A. Goeschel, Peter J. Pronovost",
+  "year": 2011,
+  "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC3142336/",
+  "doi_isbn": "10.1111/j.1468-0009.2011.00625.x",
+  "source_type": "empirical",
+  "tier": "A",
+  "key_findings": [
+   "Michigan success came from a complex social intervention, not a 'simple checklist': isomorphic pressure, networked community, reframing the problem, multiple interventions, infection data as disciplinary force, 'hard edges' (e.g. nurses empowered to challenge doctors).",
+   "Copying surface features risks 'cargo cult' imitation; data discipline depends on legitimacy; gaming/underreporting is a risk."
+  ],
+  "practical_applications": [
+   "Give the studio critic real stop authority; build QA as a team practice, not paperwork."
+  ],
+  "limitations": [
+   "Ex post theory from insiders + social scientists; about 73% of page read."
+  ],
+  "license": "PMC open access (licence not checked)",
+  "access_status": "full_text",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-26",
+  "modules": [
+   "M42"
+  ]
+ },
+ {
+  "key": "Gawande2009",
+  "title": "The Checklist Manifesto: How to Get Things Right",
+  "authors": "Atul Gawande",
+  "year": 2009,
+  "url": "https://books.google.com/books/about/The_Checklist_Manifesto.html?id=x3IcNujwHxcC",
+  "doi_isbn": "ISBN 978-0-8050-9174-8",
+  "source_type": "practitioner",
+  "tier": "D",
+  "key_findings": [
+   "Distinguishes DO-CONFIRM (work from memory, then pause to confirm) and READ-DO (do each step as read) checklists, from Boeing's Dan Boorman; WHO surgical checklist used DO-CONFIRM (per secondary summaries)."
+  ],
+  "practical_applications": [
+   "Use DO-CONFIRM at studio pause points; READ-DO for rare complex setups."
+  ],
+  "limitations": [
+   "Book not read; secondary summaries only; popular non-fiction."
+  ],
+  "license": "copyrighted",
+  "access_status": "bibliographic",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-26",
+  "modules": [
+   "M42"
+  ]
+ }
+]

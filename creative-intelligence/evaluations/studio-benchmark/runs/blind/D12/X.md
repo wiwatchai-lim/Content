@@ -1,0 +1,11 @@
+Files consulted: [hidden for blind judging]
+
+I record facts that are real and can be checked, not "the user liked it" in general:
+
+1. **`creative-intelligence/memory/FEEDBACK_HISTORY.json`:** `{date, job, words: "อันนี้ใช้ได้เลย ชอบ", action: "approved as final"}`, with the user's exact words and no personal data.
+2. **`creative-intelligence/memory/PROMPT_EXPERIMENTS.json`:** one record for this real run: id, date, model `flux-schnell-local`, the exact prompt, seed, size, steps and any init/denoise settings, output path, which seed was picked out of how many, the automated result (inspect_views/analyze_image flags, the `score.py` number marked `rater: claude`), and `human: "approved — 'ใช้ได้เลย ชอบ'"` in a **separate column** from the AI score.
+3. **The job folder:** in `kit.md` or `job.json`, mark the picked file as final (raw → slide) and add the human approval to `critique/score`.
+4. **Pattern files, only if something general was learned:** if the image worked because of something reusable (a prompt phrase, a style id or palette, a fix that worked), add it to `creative-intelligence/DESIGN_PATTERNS.md` or the skill's `CHANGELOG.md` with the evidence (this run's id). One approval is a single data point, so I label it as such rather than a rule.
+5. **Auto-memory, only if it reveals a lasting preference** (e.g. "the user prefers X look for Y"), as a feedback memory with **Why** and **How to apply**. A one-off "ชอบ" does not go there.
+
+I don't invent extra runs or ratings that didn't happen.

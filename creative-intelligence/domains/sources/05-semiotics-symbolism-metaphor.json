@@ -1,0 +1,1403 @@
+[
+ {
+  "key": "LakoffJohnson1980",
+  "title": "Metaphors We Live By",
+  "authors": "Lakoff, G.; Johnson, M.",
+  "year": 1980,
+  "url": "https://en.wikipedia.org/wiki/Metaphors_We_Live_By",
+  "doi_isbn": "University of Chicago Press",
+  "source_type": "primary_text",
+  "tier": "A",
+  "key_findings": [
+   "Founding text of conceptual metaphor theory (CMT): people understand abstract domains through more concrete ones; linguistic metaphors are surface traces of conceptual mappings.",
+   "Examples (seen in excerpts): ARGUMENT IS WAR ('he attacked every weak point'), TIME IS MONEY ('wasting my time', 'invested time'), orientational HAPPY IS UP / SAD IS DOWN ('feeling up/down').",
+   "The authors say TIME IS MONEY is culture-bound, not a necessary way to conceptualise time."
+  ],
+  "practical_applications": [
+   "Map the source domain an audience already uses for an abstract topic before inventing a new image.",
+   "Use orientational schemas (up/down, in/out, near/far) as layout logic."
+  ],
+  "limitations": [
+   "Only excerpts and secondary summaries read this session; claims about thought are inferred mainly from language (see Murphy1996)."
+  ],
+  "license": "copyrighted",
+  "access_status": "search_summary",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-26",
+  "modules": [
+   "M12"
+  ]
+ },
+ {
+  "key": "Murphy1996",
+  "title": "On metaphoric representation",
+  "authors": "Murphy, G. L.",
+  "year": 1996,
+  "url": "https://doi.org/10.1016/0010-0277(96)00711-1",
+  "doi_isbn": "Cognition 60(2):173-204",
+  "source_type": "empirical",
+  "tier": "A",
+  "key_findings": [
+   "Distinguishes a strong reading of CMT (target understood only via the source) - argued incoherent - from a weaker reading (metaphor shapes a separate target representation), which faces empirical and theoretical problems.",
+   "Main objection: metaphoric representations are inferred from linguistic data and then used to explain the same data (circularity); much evidence can be explained by structural similarity between domains.",
+   "Replied to by Gibbs (1996) and rejoined by Murphy (1997)."
+  ],
+  "practical_applications": [
+   "Treat 'people think in metaphor X' as a hypothesis to test with non-linguistic measures, not a fact."
+  ],
+  "limitations": [
+   "Read via abstract wording quoted in search results and secondary summaries only."
+  ],
+  "license": "copyrighted",
+  "access_status": "search_summary",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-26",
+  "modules": [
+   "M12"
+  ]
+ },
+ {
+  "key": "LynottEtAl2014",
+  "title": "Replication of 'Experiencing physical warmth promotes interpersonal warmth' by Williams & Bargh (2008)",
+  "authors": "Lynott, D.; Corker, K. S.; Wortman, J.; Connell, L.; Donnellan, M. B.; Lucas, R. E.; O'Brien, K.",
+  "year": 2014,
+  "url": "https://eprints.lancs.ac.uk/id/eprint/69546/",
+  "doi_isbn": "Social Psychology 45(3):216-222",
+  "source_type": "empirical",
+  "tier": "A",
+  "key_findings": [
+   "Three high-powered independent replications of Williams & Bargh (2008, Science) Study 2 (warm vs cold therapeutic pack -> prosocial reward choice), total N = 861.",
+   "Effect did not replicate in any lab or in the pooled analysis: no evidence that brief physical warmth increases prosocial choice.",
+   "Original studies had small samples (N in the dozens) and large, barely significant effects; Williams wrote a commentary citing conceptual replications."
+  ],
+  "practical_applications": [
+   "Do not claim warm colours/props 'make viewers kinder'. Warmth imagery is a code (association), not a proven causal lever."
+  ],
+  "limitations": [
+   "Abstract page read; per-lab Ns not read."
+  ],
+  "license": "copyrighted",
+  "access_status": "abstract",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-26",
+  "modules": [
+   "M12"
+  ]
+ },
+ {
+  "key": "JohnsonCheungDonnellan2014",
+  "title": "Does cleanliness influence moral judgments? A direct replication of Schnall, Benton, and Harvey (2008)",
+  "authors": "Johnson, D. J.; Cheung, F.; Donnellan, M. B.",
+  "year": 2014,
+  "url": "https://doi.org/10.1027/1864-9335/a000186",
+  "doi_isbn": "Social Psychology 45(3):209-215",
+  "source_type": "empirical",
+  "tier": "A",
+  "key_findings": [
+   "Registered direct replication with >.99 power to detect the original effect sizes: no evidence that cleanliness priming reduces severity of moral judgments.",
+   "Schnall replied that the replication data showed a ceiling effect; the dispute became a public case in the replication debate."
+  ],
+  "practical_applications": [
+   "Clean/white imagery as 'moral purity' is a cultural code; do not cite it as a behavioural effect."
+  ],
+  "limitations": [
+   "Publisher page blocked (403); content from search summaries of the abstract and the reply."
+  ],
+  "license": "copyrighted",
+  "access_status": "search_summary",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-26",
+  "modules": [
+   "M12"
+  ]
+ },
+ {
+  "key": "EarpEtAl2014",
+  "title": "Out, Damned Spot: Can the 'Macbeth Effect' Be Replicated?",
+  "authors": "Earp, B. D.; Everett, J. A. C.; Madva, E. N.; Hamlin, J. K.",
+  "year": 2014,
+  "url": "https://ora.ox.ac.uk/objects/uuid:a9374625-a9a5-4ebd-8e3b-d24c8fbc97e4",
+  "doi_isbn": "Basic and Applied Social Psychology 36:91-98",
+  "source_type": "empirical",
+  "tier": "A",
+  "key_findings": [
+   "Direct replications of Zhong & Liljenquist (2006) Study 2 (writing about an unethical deed -> higher desirability of cleansing products) in the UK (N = 153 vs original N = 27), US MTurk and India: no Macbeth effect in any study.",
+   "Original Study 2 implied Cohen's d about 1.08 - on the high end even for priming literature; the authors powered for d = 0.5.",
+   "An Indian sample (culture with strong purity discourse) also showed no effect."
+  ],
+  "practical_applications": [
+   "Moral-cleansing metaphors work as storytelling codes (washing hands = guilt) but are not evidence of automatic behaviour."
+  ],
+  "limitations": [],
+  "license": "copyrighted (author repository copy)",
+  "access_status": "full_text",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-26",
+  "modules": [
+   "M12"
+  ]
+ },
+ {
+  "key": "MacGiolla2024",
+  "title": "Evaluating the Replicability of Social Priming Studies",
+  "authors": "Mac Giolla, E.; Karlsson, S.; Neequaye, D. A.; Bergquist, M.",
+  "year": 2024,
+  "url": "https://doi.org/10.15626/MP.2022.3308",
+  "doi_isbn": "Meta-Psychology 8, MP.2022.3308",
+  "source_type": "meta-analysis",
+  "tier": "S",
+  "key_findings": [
+   "70 close replications of 49 social-priming findings (search included 'embodied cognition'): 94% had smaller effects than the original; only 17% significant in the original direction.",
+   "Replications including an original author: 12/18 significant, pooled d = 0.40 [0.23, 0.58]. Independent teams: 0/52 significant, pooled d = 0.002 [-0.03, 0.03].",
+   "Authors: burden of proof is back on advocates of social priming."
+  ],
+  "practical_applications": [
+   "Any 'prime the viewer' claim (warm cup -> warm feelings, clean -> moral) should be treated as unproven; design for meaning and clarity instead."
+  ],
+  "limitations": [
+   "Social priming broadly; individual embodiment paradigms not broken out in what was read."
+  ],
+  "license": "CC BY 4.0",
+  "access_status": "full_text",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-26",
+  "modules": [
+   "M12"
+  ]
+ },
+ {
+  "key": "Morey2022",
+  "title": "A pre-registered, multi-lab non-replication of the action-sentence compatibility effect (ACE)",
+  "authors": "Morey, R. D.; Kaschak, M. P.; Diez-Alamo, A. M.; Glenberg, A. M.; Zwaan, R. A.; Lakens, D.; et al.",
+  "year": 2022,
+  "url": "https://doi.org/10.3758/s13423-021-01927-8",
+  "doi_isbn": "Psychonomic Bulletin & Review 29:613-626",
+  "source_type": "empirical",
+  "tier": "A",
+  "key_findings": [
+   "Pre-registered replication across 18 labs (including the original authors) of the ACE - a flagship embodied-language effect: no lab found a reliable ACE; meta-analytic estimate essentially zero.",
+   "Original Glenberg & Kaschak (2002) Exp. 1 (n = 35) had reported a 155 ms effect."
+  ],
+  "practical_applications": [
+   "Embodiment claims about language-motor links are weaker than textbooks suggest; keep them as hypotheses."
+  ],
+  "limitations": [
+   "Abstract and introduction read; detailed results not read."
+  ],
+  "license": "CC BY 4.0",
+  "access_status": "abstract",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-26",
+  "modules": [
+   "M12"
+  ]
+ },
+ {
+  "key": "Brugman2019",
+  "title": "Metaphorical framing in political discourse through words vs. concepts: a meta-analysis",
+  "authors": "Brugman, B. C.; Burgers, C.; Vis, B.",
+  "year": 2019,
+  "url": "https://doi.org/10.1017/langcog.2019.5",
+  "doi_isbn": "Language and Cognition 11(1):41-65",
+  "source_type": "meta-analysis",
+  "tier": "S",
+  "key_findings": [
+   "k = 91 studies, N = 34,783. Metaphorical frames vs literal: overall d = 0.11; beliefs d = 0.29, attitudes d = 0.10, intentions n.s.",
+   "Metaphorical-concepts frames (whole message logic, e.g. strategy/conflict frame = POLITICS IS WAR) d = 0.22 vs metaphorical-words frames (single words) d = 0.04.",
+   "Publication-bias tests mixed (Begg and Egger significant; trim-and-fill adds one study); journal studies larger (d = 0.13) than grey literature (d = 0.05); effects may have declined over time.",
+   "Challenges claims that metaphors are 'home runs of persuasion'."
+  ],
+  "practical_applications": [
+   "A metaphor only moves people when it organises the whole message (scenario), not when it is a decorative word.",
+   "Expect small effects; never promise persuasion from a single clever image or word."
+  ],
+  "limitations": [
+   "Political discourse and verbal stimuli only; not visual ads."
+  ],
+  "license": "CC BY-NC-ND 4.0",
+  "access_status": "full_text",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-26",
+  "modules": [
+   "M12"
+  ]
+ },
+ {
+  "key": "ThibodeauBoroditsky2011",
+  "title": "Metaphors We Think With: The Role of Metaphor in Reasoning",
+  "authors": "Thibodeau, P. H.; Boroditsky, L.",
+  "year": 2011,
+  "url": "https://doi.org/10.1371/journal.pone.0016782",
+  "doi_isbn": "PLOS ONE 6(2):e16782",
+  "source_type": "empirical",
+  "tier": "A",
+  "key_findings": [
+   "Five experiments: crime framed as a 'beast' vs a 'virus' shifted proposed solutions toward enforcement vs reform (e.g. 74% vs 56% enforcement in Exp. 1; 18-22 point shifts).",
+   "A bare word prime without the metaphor had no effect (Exp. 3); the metaphor had no effect when placed at the end of the text (Exp. 5).",
+   "Few participants (3-15%) named the metaphor as influential - authors call the effect covert."
+  ],
+  "practical_applications": [
+   "Position matters: put the framing metaphor early so it organises what follows."
+  ],
+  "limitations": [
+   "Effect later disputed (SteenReijnierseBurgers2014); no literal control condition."
+  ],
+  "license": "CC BY 4.0",
+  "access_status": "full_text",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-26",
+  "modules": [
+   "M12"
+  ]
+ },
+ {
+  "key": "SteenReijnierseBurgers2014",
+  "title": "When do natural language metaphors influence reasoning? A follow-up study to Thibodeau and Boroditsky (2013)",
+  "authors": "Steen, G. J.; Reijnierse, W. G.; Burgers, C.",
+  "year": 2014,
+  "url": "https://doi.org/10.1371/journal.pone.0113536",
+  "doi_isbn": "PLOS ONE 9(12):e113536",
+  "source_type": "empirical",
+  "tier": "A",
+  "key_findings": [
+   "Four experiments (N = 253, 259, 252, 1,026) adding a literal control ('crime is a problem'): no metaphorical framing effect in any experiment.",
+   "Simply reading about a crime surge shifted preferences toward enforcement regardless of frame.",
+   "Proposes boundary conditions: novelty/deliberateness, awareness, topic familiarity, prior opinion; Thibodeau & Boroditsky (2015) re-analysed and argued the effect persists."
+  ],
+  "practical_applications": [
+   "Always compare a metaphor version with a plain version before claiming the metaphor did the work."
+  ],
+  "limitations": [],
+  "license": "CC BY 4.0",
+  "access_status": "full_text",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-26",
+  "modules": [
+   "M12"
+  ]
+ },
+ {
+  "key": "SoporyDillard2002",
+  "title": "The Persuasive Effects of Metaphor: A Meta-Analysis",
+  "authors": "Sopory, P.; Dillard, J. P.",
+  "year": 2002,
+  "url": "https://pure.psu.edu/en/publications/the-persuasive-effects-of-metaphor-a-meta-analysis/",
+  "doi_isbn": "Human Communication Research 28(3):382-419",
+  "source_type": "meta-analysis",
+  "tier": "S",
+  "key_findings": [
+   "Meta-analysis of metaphor vs literal messages: metaphors modestly more persuasive; of six theories the 'superior organization' account (metaphor structures the argument) was best supported; seven moderators tested.",
+   "A later meta-analysis (studies 2001-2015, cited in search results) reports r = 0.09 [0.06, 0.12]."
+  ],
+  "practical_applications": [
+   "Use one extended metaphor that organises the argument rather than many decorative ones."
+  ],
+  "limitations": [
+   "Abstract-level via repository and citing papers; study count and moderators not verified."
+  ],
+  "license": "copyrighted",
+  "access_status": "search_summary",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-26",
+  "modules": [
+   "M12"
+  ]
+ },
+ {
+  "key": "MeierRobinson2004",
+  "title": "Why the Sunny Side Is Up: Associations between Affect and Vertical Position",
+  "authors": "Meier, B. P.; Robinson, M. D.",
+  "year": 2004,
+  "url": "https://doi.org/10.1111/j.0956-7976.2004.00659.x",
+  "doi_isbn": "Psychological Science 15(4):243-247",
+  "source_type": "empirical",
+  "tier": "A",
+  "key_findings": [
+   "Positive words evaluated faster at the top of the screen, negative words faster at the bottom; evaluations activated space but space did not activate evaluations (one-directional).",
+   "A later replication report (core.ac.uk, not readable here) is described in search results as not supporting the effect."
+  ],
+  "practical_applications": [
+   "Up = good is a plausible layout code (rising arrows, hopeful character higher in frame) but its measurable effect is small and contested."
+  ],
+  "limitations": [
+   "Abstract via search summaries; replication paper not read (403)."
+  ],
+  "license": "copyrighted",
+  "access_status": "search_summary",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-26",
+  "modules": [
+   "M12"
+  ]
+ },
+ {
+  "key": "Gottwald2015",
+  "title": "Good is up - spatial metaphors in action observation",
+  "authors": "Gottwald, J. M.; Elsner, B.; Pollatos, O.",
+  "year": 2015,
+  "url": "https://doi.org/10.3389/fpsyg.2015.01605",
+  "doi_isbn": "Frontiers in Psychology 6:1605",
+  "source_type": "empirical",
+  "tier": "A",
+  "key_findings": [
+   "Three studies (N = 41, 48, 40): watching a neutral cup placed upward vs downward raised gift likelihood and willingness to pay; effects small (r about 0.10-0.16) and inconsistent across measures; 'bad is down' slightly stronger.",
+   "Same-lab studies with mostly female German students; not independent replications."
+  ],
+  "practical_applications": [
+   "If using vertical movement for valence (product rises into frame), expect at most a small nudge; clarity matters more."
+  ],
+  "limitations": [],
+  "license": "CC BY 4.0",
+  "access_status": "full_text",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-26",
+  "modules": [
+   "M12"
+  ]
+ },
+ {
+  "key": "LandauMeierKeefer2010",
+  "title": "A Metaphor-Enriched Social Cognition",
+  "authors": "Landau, M. J.; Meier, B. P.; Keefer, L. A.",
+  "year": 2010,
+  "url": "https://doi.org/10.1037/a0020970",
+  "doi_isbn": "Psychological Bulletin 136(6):1045-1067",
+  "source_type": "review",
+  "tier": "A",
+  "key_findings": [
+   "Review arguing conceptual metaphor is a distinct mechanism in social cognition; proposes a 'metaphoric transfer strategy' to test whether metaphors shape processing beyond schemas.",
+   "Comment by IJzerman & Koole (2011) argued for more bottom-up (perceptual) constraints."
+  ],
+  "practical_applications": [
+   "Useful theory map of metaphor-in-social-judgement research - read alongside the replication record (MacGiolla2024)."
+  ],
+  "limitations": [
+   "Pre-replication-crisis review; many reviewed effects later failed independent replication. Only abstract-level info read."
+  ],
+  "license": "copyrighted",
+  "access_status": "search_summary",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-26",
+  "modules": [
+   "M12"
+  ]
+ },
+ {
+  "key": "Giora2004",
+  "title": "Weapons of Mass Distraction: Optimal Innovation and Pleasure Ratings",
+  "authors": "Giora, R.; Fein, O.; Kronrod, A.; Elnatan, I.; Shuval, N.; Zur, A.",
+  "year": 2004,
+  "url": "https://www.tau.ac.il/~giorar/files/Weapons%20of%20mass%20destruction2004.pdf",
+  "doi_isbn": "Metaphor and Symbol 19(2):115-141",
+  "source_type": "empirical",
+  "tier": "A",
+  "key_findings": [
+   "Optimal Innovation Hypothesis: a stimulus that gives a novel response while letting the familiar (salient) one be recovered ('a peace of paper', 'Curl up and Dye') is rated more pleasing than the familiar original, a mere variant, or a pure innovation ('a pill of pepper').",
+   "Second most pleasing = the familiar; least = the least familiar. Holds for literal and figurative items and for visual (nonverbal) stimuli (Exp. 6).",
+   "Six experiments, Hebrew speakers."
+  ],
+  "practical_applications": [
+   "Fresh metaphor = twist a familiar phrase/image so the original is still recognisable; avoid both clichés and riddles.",
+   "Pun names, twisted idioms and 'altered familiar objects' are the safe zone."
+  ],
+  "limitations": [
+   "Hebrew-speaking student samples; pleasure ratings, not persuasion or recall."
+  ],
+  "license": "copyrighted (author copy)",
+  "access_status": "full_text",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-26",
+  "modules": [
+   "M12"
+  ]
+ },
+ {
+  "key": "BowdleGentner2005",
+  "title": "The Career of Metaphor",
+  "authors": "Bowdle, B. F.; Gentner, D.",
+  "year": 2005,
+  "url": "https://doi.org/10.1037/0033-295X.112.1.193",
+  "doi_isbn": "Psychological Review 112(1):193-216",
+  "source_type": "empirical",
+  "tier": "A",
+  "key_findings": [
+   "Career of metaphor hypothesis: novel metaphors are processed as comparisons (A is like B), and as they become conventional they shift to categorisation; three experiments support a preference for simile form with novel figures.",
+   "Estes (2006, cited in search results) argues aptness, not conventionality, better predicts processing."
+  ],
+  "practical_applications": [
+   "Novel image metaphors may need a 'like' cue (side-by-side juxtaposition, caption) before audiences accept a fused version."
+  ],
+  "limitations": [
+   "Abstract and secondary descriptions only."
+  ],
+  "license": "copyrighted",
+  "access_status": "search_summary",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-26",
+  "modules": [
+   "M12"
+  ]
+ },
+ {
+  "key": "Pragglejaz2007",
+  "title": "MIP: A Method for Identifying Metaphorically Used Words in Discourse",
+  "authors": "Pragglejaz Group",
+  "year": 2007,
+  "url": "https://doi.org/10.1080/10926480709336752",
+  "doi_isbn": "Metaphor and Symbol 22(1):1-39",
+  "source_type": "empirical",
+  "tier": "A",
+  "key_findings": [
+   "Four-step procedure: (1) read the whole text; (2) determine lexical units; (3) for each, establish contextual meaning and whether a more basic contemporary meaning exists (more concrete, bodily, precise, historically older) that contrasts with but can be understood in comparison with the context; (4) if yes, mark as metaphorical.",
+   "Reports reliability with Cohen's kappa and Cochran's Q; in case studies 70-80% of words are never metaphorical and <5% unanimously metaphorical.",
+   "Asks analysts to report texts, readership, resources (dictionary), number of coders and reliability."
+  ],
+  "practical_applications": [
+   "Use MIP to audit captions and dialogue: list which words are metaphorical, which are clichés, and whether two metaphors clash."
+  ],
+  "limitations": [],
+  "license": "copyrighted (author copy)",
+  "access_status": "full_text",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-26",
+  "modules": [
+   "M12"
+  ]
+ },
+ {
+  "key": "Kovecses2005",
+  "title": "Metaphor in Culture: Universality and Variation",
+  "authors": "Kovecses, Z.",
+  "year": 2005,
+  "url": "https://assets.cambridge.org/052184/4479/frontmatter/0521844479_frontmatter.htm",
+  "doi_isbn": "Cambridge University Press, ISBN 0521844479",
+  "source_type": "textbook",
+  "tier": "A",
+  "key_findings": [
+   "Theory of metaphor variation: dimensions of variation (cross-cultural, within-culture), which components of conceptual metaphors vary, and causes (embodiment vs cultural context).",
+   "Later Kovecses work (search summaries): AN ANGRY PERSON IS A PRESSURIZED CONTAINER appears in many unrelated languages (English, Japanese, Chinese, Hungarian, Wolof, Zulu, Polish) but its details vary; a 2024 paper notes few systematic contrastive studies."
+  ],
+  "practical_applications": [
+   "Generic-level metaphors (pressure, heat, up/down) travel; specific-level details (which container, which animal) must be checked per culture."
+  ],
+  "limitations": [
+   "Front matter and secondary summaries only."
+  ],
+  "license": "copyrighted",
+  "access_status": "search_summary",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-26",
+  "modules": [
+   "M12"
+  ]
+ },
+ {
+  "key": "Forceville1996",
+  "title": "Pictorial Metaphor in Advertising",
+  "authors": "Forceville, C.",
+  "year": 1996,
+  "url": "https://www.taylorfrancis.com/books/9780415186766",
+  "doi_isbn": "Routledge, London",
+  "source_type": "textbook",
+  "tier": "A",
+  "key_findings": [
+   "Applies interaction theory of metaphor to pictures; analyses about thirty ads and billboards; target and source of a pictorial metaphor must be identifiable and the mapping is from source to target.",
+   "Forceville later reclassified 'verbo-pictorial' metaphor as a sub-type of multimodal metaphor (target and source rendered in different modes)."
+  ],
+  "practical_applications": [
+   "When building a visual metaphor, check: what is the target (product/idea)? what is the source? which features map? which mode carries each?"
+  ],
+  "limitations": [
+   "Book not read; via secondary descriptions and Forceville's own later summaries seen in search results."
+  ],
+  "license": "copyrighted",
+  "access_status": "search_summary",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-26",
+  "modules": [
+   "M12"
+  ]
+ },
+ {
+  "key": "ForcevilleUrios2009",
+  "title": "Multimodal Metaphor",
+  "authors": "Forceville, C.; Urios-Aparisi, E. (eds.)",
+  "year": 2009,
+  "url": "https://www.degruyterbrill.com/",
+  "doi_isbn": "Mouton de Gruyter, Berlin",
+  "source_type": "textbook",
+  "tier": "A",
+  "key_findings": [
+   "Edited volume establishing multimodal metaphor: metaphors whose target and source are rendered exclusively or predominantly in different modes (image, text, sound, gesture, music).",
+   "Related chapter 'Pictorial and multimodal metaphor in commercials' (2008) analyses nine commercials."
+  ],
+  "practical_applications": [
+   "In clips, a sound (rain SFX) or VO line can be the source domain for a visual target - plan metaphors across modes, not only in the picture."
+  ],
+  "limitations": [
+   "Bibliographic and secondary only."
+  ],
+  "license": "copyrighted",
+  "access_status": "bibliographic",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-26",
+  "modules": [
+   "M12"
+  ]
+ },
+ {
+  "key": "Phillips2000",
+  "title": "The Impact of Verbal Anchoring on Consumer Response to Image Ads",
+  "authors": "Phillips, B. J.",
+  "year": 2000,
+  "url": "https://doi.org/10.1080/00913367.2000.10673600",
+  "doi_isbn": "Journal of Advertising 29(1):15-24",
+  "source_type": "empirical",
+  "tier": "A",
+  "key_findings": [
+   "Headlines that hint at a pictorial metaphor's meaning raised liking by improving comprehension; headlines that fully spell it out improved comprehension but lowered liking (less pleasure of interpretation)."
+  ],
+  "practical_applications": [
+   "Caption rule: anchor with a hint, not an explanation. 'Give the key, not the answer'."
+  ],
+  "limitations": [
+   "Search summary of the abstract; US student sample (not verified)."
+  ],
+  "license": "copyrighted",
+  "access_status": "search_summary",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-26",
+  "modules": [
+   "M12"
+  ]
+ },
+ {
+  "key": "Hall1973",
+  "title": "Encoding/Decoding (orig. 'Encoding and Decoding in the Television Discourse', 1973; repr. in Culture, Media, Language 1980 and The Cultural Studies Reader)",
+  "authors": "Hall, S.",
+  "year": 1973,
+  "url": "https://ia600601.us.archive.org/10/items/StuartHallEncodingDecoding/StuartHall-Encoding-Decoding.pdf",
+  "doi_isbn": "The Cultural Studies Reader (ed. S. During), Routledge",
+  "source_type": "primary_text",
+  "tier": "A",
+  "key_findings": [
+   "Encoding and decoding are not symmetrical: 'meaning structures 1' (producer) and '2' (audience) may differ; the degree of 'understanding' depends on how far codes are shared.",
+   "Naturalised codes: visual signs look 'natural' only because the codes are learned early and widely; even apparently natural visual codes are culture-specific.",
+   "Connotation is where ideology works; polysemy is not pluralism - cultures have 'preferred readings'.",
+   "Three hypothetical decoding positions: dominant-hegemonic (accepts the preferred reading), negotiated (accepts the frame, applies local exceptions), oppositional (understands but reads it in a contrary frame). Most 'misunderstandings' come from negotiated decodings."
+  ],
+  "practical_applications": [
+   "Test with the actual audience: plan the preferred reading, then list likely negotiated and oppositional readings before publishing."
+  ],
+  "limitations": [
+   "Read from an archive.org scan of the Cultural Studies Reader chapter (copyright status of upload unclear)."
+  ],
+  "license": "copyrighted",
+  "access_status": "full_text",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-26",
+  "modules": [
+   "M12"
+  ]
+ },
+ {
+  "key": "Chandler_S4B",
+  "title": "Semiotics for Beginners: D.I.Y. Semiotic Analysis - Advice to My Own Students",
+  "authors": "Chandler, D.",
+  "year": null,
+  "url": "http://visual-memory.co.uk/daniel/Documents/S4B/sem12.html",
+  "doi_isbn": "",
+  "source_type": "course",
+  "tier": "B",
+  "key_findings": [
+   "Step list: identify the text (medium, genre, context, purpose); identify signs and the codes within which they mean (textual codes like camerawork, social codes like body language); modality (reality claims); paradigmatic analysis (which alternatives were not chosen; marked vs unmarked; commutation test = imagine swapping one signifier and judge the change); syntagmatic analysis (sequence and spatial arrangement); rhetorical tropes; intertextuality; anchorage; ideology - what reality the text constructs and how it naturalises it.",
+   "Recommends comparing paired texts rather than analysing one text alone."
+  ],
+  "practical_applications": [
+   "Basis for the studio's step-by-step semiotic audit (section 6)."
+  ],
+  "limitations": [
+   "Online teaching text, undated in page read; expert but not peer-reviewed."
+  ],
+  "license": "copyrighted",
+  "access_status": "full_text",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-26",
+  "modules": [
+   "M12"
+  ]
+ },
+ {
+  "key": "Eco1976",
+  "title": "A Theory of Semiotics (Introduction excerpt)",
+  "authors": "Eco, U.",
+  "year": 1976,
+  "url": "https://compart.uni-bremen.de/content/4-teaching/0-winter-2020-21/1-semiotics-media/3-material/14_eco_theoryofsemioticsparts.pdf",
+  "doi_isbn": "Indiana University Press (Eng. of Trattato di semiotica generale, 1975)",
+  "source_type": "primary_text",
+  "tier": "A",
+  "key_findings": [
+   "Semiotics as a unified theory of signification (theory of codes) and communication (theory of sign production); replaces 'sign' with 'sign-function' - a correlation posited by social convention.",
+   "'Theory of the lie': semiotics studies everything that can be used to lie - if something cannot be used to lie it cannot be used to tell the truth.",
+   "Revisits Peirce's icon/index/symbol typology as a typology of modes of sign production; Hall1973 cites Eco: iconic signs look like objects because they reproduce the codes of perception.",
+   "Aberrant decoding (Eco 1965/1972, via secondary sources): a message encoded in one code is decoded with another."
+  ],
+  "practical_applications": [
+   "Every image can 'lie' - including unintentionally - so meaning must be checked, not assumed from intent."
+  ],
+  "limitations": [
+   "Introduction excerpt only; aberrant decoding from secondary sources."
+  ],
+  "license": "copyrighted",
+  "access_status": "full_text",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-26",
+  "modules": [
+   "M12"
+  ]
+ },
+ {
+  "key": "Barthes1957",
+  "title": "Mythologies (incl. 'Myth Today')",
+  "authors": "Barthes, R.",
+  "year": 1957,
+  "url": "https://en.wikipedia.org/wiki/Mythologies_(book)",
+  "doi_isbn": "Editions du Seuil, Paris; Eng. trans. A. Lavers 1972",
+  "source_type": "primary_text",
+  "tier": "A",
+  "key_findings": [
+   "'Myth Today': myth is a second-order semiological system - a complete sign of the first system becomes a mere signifier in the second (excerpt read).",
+   "Paris Match cover (no. 326, 1955): denoted 'a young Black soldier in French uniform saluting'; mythic signification 'France is a great empire, all her sons serve her' - which naturalises colonialism (via secondary summaries)."
+  ],
+  "practical_applications": [
+   "Ask of every image: what 'obvious, natural' message rides on top of the literal one, and who benefits from it seeming natural?"
+  ],
+  "limitations": [
+   "Only a short excerpt and secondary summaries read; not the full essay."
+  ],
+  "license": "copyrighted",
+  "access_status": "abstract",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-26",
+  "modules": [
+   "M12"
+  ]
+ },
+ {
+  "key": "Puntoni2010",
+  "title": "Meaning Matters: Polysemy in Advertising",
+  "authors": "Puntoni, S.; Schroeder, J. E.; Ritson, M.",
+  "year": 2010,
+  "url": "https://doi.org/10.2753/JOA0091-3367390204",
+  "doi_isbn": "Journal of Advertising 39(2):51-64",
+  "source_type": "review",
+  "tier": "A",
+  "key_findings": [
+   "Advertising polysemy = multiple interpretations of one message; cross-disciplinary review (psychology, semiotics, literary theory); introduces 'purposeful polysemy' (strategic ambiguity) and a framework with research propositions."
+  ],
+  "practical_applications": [
+   "Decide on purpose whether an image should have one reading (anchor it) or several (purposeful polysemy) - and check that none of the extra readings are harmful."
+  ],
+  "limitations": [
+   "Abstract only."
+  ],
+  "license": "copyrighted",
+  "access_status": "abstract",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-26",
+  "modules": [
+   "M12"
+  ]
+ },
+ {
+  "key": "Klink2000",
+  "title": "Creating Brand Names with Meaning: The Use of Sound Symbolism",
+  "authors": "Klink, R. R.",
+  "year": 2000,
+  "url": "https://doi.org/10.1023/A:1008184423824",
+  "doi_isbn": "Marketing Letters 11(1):5-20",
+  "source_type": "empirical",
+  "tier": "A",
+  "key_findings": [
+   "Fictitious brand names varying by one sound: front vowels (i, e) conveyed smaller, lighter, faster, sharper, milder, more feminine; back vowels (o, u) the opposite; voiceless consonants rated smaller, sharper, faster (as reported by citing papers)."
+  ],
+  "practical_applications": [
+   "Name/wordmark sound should fit the product's meaning (light titanium frame vs heavy bold acetate)."
+  ],
+  "limitations": [
+   "English-speaking samples; findings via citing papers; Thai tonal phonology untested."
+  ],
+  "license": "copyrighted",
+  "access_status": "search_summary",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-26",
+  "modules": [
+   "M12"
+  ]
+ },
+ {
+  "key": "Wardle2020",
+  "title": "Rapid and dynamic processing of face pareidolia in the human brain",
+  "authors": "Wardle, S. G.; Taubert, J.; Teichmann, L.; Baker, C. I.",
+  "year": 2020,
+  "url": "https://doi.org/10.1038/s41467-020-18325-8",
+  "doi_isbn": "Nature Communications 11:4518",
+  "source_type": "empirical",
+  "tier": "A",
+  "key_findings": [
+   "fMRI + MEG: illusory faces in objects are represented in face-selective cortex and initially resemble real faces, but within ~250 ms become equivalent to ordinary objects.",
+   "Interpreted as a broadly tuned face-detection mechanism that favours sensitivity over selectivity (many false alarms); pareidolia also shown in macaques."
+  ],
+  "practical_applications": [
+   "Viewers will see faces in any face-like arrangement (two dots + curve) - check props, backgrounds and AI images for accidental faces, especially in 'faceless' character art."
+  ],
+  "limitations": [],
+  "license": "CC BY 4.0",
+  "access_status": "full_text",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-26",
+  "modules": [
+   "M12"
+  ]
+ },
+ {
+  "key": "ThailandFoundation2021_Colours",
+  "title": "This Car is (Technically) Red: Beliefs about Colors in Thailand",
+  "authors": "Mongkolrat, T. (Thailand Foundation)",
+  "year": 2021,
+  "url": "https://thailandfoundation.or.th/?p=2260",
+  "doi_isbn": "",
+  "source_type": "docs",
+  "tier": "C",
+  "key_findings": [
+   "Day colours: Sun red, Mon yellow, Tue pink, Wed green, Thu orange, Fri purple (as listed here; other sources give Fri light blue and Sat purple), Wednesday night (Rahu) black; traced to Hindu planetary myth.",
+   "Brahma's three qualities: purity = white, movement = red, weight = black; Buddha images gilded or white to signify purity.",
+   "Birth-day colour taboos (e.g. Tuesday-born avoid yellow and white); 'This car is red' stickers to neutralise an unlucky colour; beliefs described as personal, not a society-wide standard."
+  ],
+  "practical_applications": [
+   "Use day/birth colours as optional, playful cultural codes; never as claims of luck in ads."
+  ],
+  "limitations": [
+   "Popular article by a state-linked foundation; day list differs from other sources (Friday/Saturday)."
+  ],
+  "license": "unknown",
+  "access_status": "full_text",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-26",
+  "modules": [
+   "M12"
+  ]
+ },
+ {
+  "key": "Doherty2025",
+  "title": "Mapping Metaphor: The 'Heart' and 'Face' of Thai Nirat",
+  "authors": "Doherty, T. E.",
+  "year": 2025,
+  "url": "https://blogs.ncl.ac.uk/elldr/files/2026/08/Doherty_2025.pdf",
+  "doi_isbn": "Excellent Language & Linguistics Dissertation Repository (ELLDR), Newcastle University, Vol. 4",
+  "source_type": "empirical",
+  "tier": "C",
+  "key_findings": [
+   "Analyses heart (jai) and face (naa) metaphors in two Thai nirat (travel poems) using Gricean pragmatics, CMT and Matisoff's psycho-collocations.",
+   "'Heart' dominated as a source domain; most compounds were adjectives; both conventional and novel metaphors present; N+N compounds not predicted by prior literature.",
+   "Calls for native-speaker judgement tasks."
+  ],
+  "practical_applications": [
+   "Thai jai-compounds are mostly conventional (dead) metaphors - fresh Thai metaphors must go beyond them."
+  ],
+  "limitations": [
+   "Undergraduate dissertation; two poems only."
+  ],
+  "license": "unknown",
+  "access_status": "full_text",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-26",
+  "modules": [
+   "M12"
+  ]
+ },
+ {
+  "key": "Oswald2012",
+  "title": "Marketing Semiotics: Signs, Strategies, and Brand Value",
+  "authors": "Oswald, L. R.",
+  "year": 2012,
+  "url": "https://academic.oup.com/book/9313",
+  "doi_isbn": "Oxford University Press, ISBN 9780199566495",
+  "source_type": "textbook",
+  "tier": "B",
+  "key_findings": [
+   "Argues brand equity depends on managing brand meanings; applies structural semiotics to verbal, visual and spatial brand sign systems; case-based chapters (World of Goods, Consumer Brandscape, Brand Discourse, Consumer Space)."
+  ],
+  "practical_applications": [
+   "Map a brand's codes (what category conventions it follows or breaks) before redesigning assets."
+  ],
+  "limitations": [
+   "Publisher/catalogue description only; practitioner-academic author with a consultancy."
+  ],
+  "license": "copyrighted",
+  "access_status": "publisher_page",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-26",
+  "modules": [
+   "M12"
+  ]
+ },
+ {
+  "key": "Leader_FedEx",
+  "title": "The Man Behind the FedEx Logo (interview with Lindon Leader)",
+  "authors": "The Sneeze (interview)",
+  "year": 2004,
+  "url": "https://thesneeze.com/the-man-behind-the-fedex-logo/",
+  "doi_isbn": "",
+  "source_type": "practitioner",
+  "tier": "D",
+  "key_findings": [
+   "Leader (Landor, 1994) noticed 'a hint of an arrow' between E and x and redrew the letterforms so it looked natural; the arrow was meant to stand for speed and precision.",
+   "He calls it 'a hidden bonus' - the logo works whether or not you see it; Landor rejected the PR agency's idea of highlighting the arrow."
+  ],
+  "practical_applications": [
+   "Hidden secondary signs should be a bonus layer, never required for the main message."
+  ],
+  "limitations": [
+   "Designer's own account; no audience data."
+  ],
+  "license": "copyrighted",
+  "access_status": "full_text",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-26",
+  "modules": [
+   "M12"
+  ]
+ },
+ {
+  "key": "Heinz_DrawKetchup",
+  "title": "Draw Ketchup / Heinz Draw Ketchup (D&AD awards archive)",
+  "authors": "Rethink (Canada) for Kraft Heinz",
+  "year": 2021,
+  "url": "https://www.dandad.org/work/d-ad-awards-archive/draw-ketchup",
+  "doi_isbn": "",
+  "source_type": "docs",
+  "tier": "C",
+  "key_findings": [
+   "Anonymous social experiment asking people to 'draw ketchup': D&AD reports 97% drew Heinz; drawings used as OOH, print, social and TV; agency entries claim a sales lift (self-reported, not verified)."
+  ],
+  "practical_applications": [
+   "Evidence that a brand's shape (bottle, label keystone) can become the category icon - a distinctive asset owned at the level of the sign."
+  ],
+  "limitations": [
+   "Award-entry data, agency self-report; sample method not disclosed."
+  ],
+  "license": "copyrighted",
+  "access_status": "publisher_page",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-26",
+  "modules": [
+   "M12"
+  ]
+ },
+ {
+  "key": "THPF_SmokingKid2013",
+  "title": "Smoking Kid - A Personal Message to the Smokers (Jay Chiat Awards 2013 case)",
+  "authors": "Thai Health Promotion Foundation; Ogilvy & Mather Thailand",
+  "year": 2013,
+  "url": "https://aef.com/wp-content/uploads/2017/02/award-2013chiat-thpf-smoking-kid-case.pdf",
+  "doi_isbn": "",
+  "source_type": "docs",
+  "tier": "C",
+  "key_findings": [
+   "Child actors asked adult smokers for a light; smokers lectured them; kids handed a note: 'You worry about me, but why not about yourself?' + 1600 Quitline.",
+   "Built on a Thai cultural code: hierarchical respect - elders must set an example and teach children.",
+   "Reported: completed calls rose from avg 7,057/month (Jan-May) to 11,461 in June (+62%); Jul-Nov avg 9,321 (+32%); cost ~$5,000 with no media spend; >5 million views in 10 days; earned media valued at USD 3.2 million (self-reported)."
+  ],
+  "practical_applications": [
+   "A role reversal inside a known cultural code (child teaches adult) creates the 'incongruity' that makes a message land."
+  ],
+  "limitations": [
+   "Award case written by the agency/client; earned-media values self-reported."
+  ],
+  "license": "copyrighted",
+  "access_status": "full_text",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-26",
+  "modules": [
+   "M12"
+  ]
+ },
+ {
+  "key": "Burberry2019_Noose",
+  "title": "Burberry apologizes for noose hoodie after model complains at London Fashion Week",
+  "authors": "CBS News",
+  "year": 2019,
+  "url": "https://www.cbsnews.com/news/burberry-apologizes-for-noose-hoodie-after-model-complains-at-london-fashion-week/",
+  "doi_isbn": "",
+  "source_type": "docs",
+  "tier": "C",
+  "key_findings": [
+   "17 Feb 2019: hoodie with a knotted rope around the neck resembling a noose; designer said it drew on a nautical theme.",
+   "Model Liz Kennedy: 'Suicide is not fashion'; raised suicide and lynching history; said concerns raised before the show were not acted on.",
+   "CEO apologised 'for the distress'; item and all images removed from the collection."
+  ],
+  "practical_applications": [
+   "Intent (nautical) does not control decoding: a rope loop at the neck/head reads as a noose."
+  ],
+  "limitations": [
+   "News report."
+  ],
+  "license": "copyrighted",
+  "access_status": "full_text",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-26",
+  "modules": [
+   "M12"
+  ]
+ },
+ {
+  "key": "Chula2013_Hitler",
+  "title": "Thai university apologizes for Hitler banner",
+  "authors": "CBS News / AP",
+  "year": 2013,
+  "url": "https://www.cbsnews.com/news/thai-university-apologizes-for-hitler-banner/",
+  "doi_isbn": "",
+  "source_type": "docs",
+  "tier": "C",
+  "key_findings": [
+   "July 2013: freshman art students at Chulalongkorn painted a graduation billboard showing Hitler giving a Nazi salute beside Batman, Captain America, Hulk and Iron Man.",
+   "Students: 'superheroes protecting the world'; dean: good and bad coexist, Hitler in grayscale as a 'conceptual paradox'; formal apology after Simon Wiesenthal Center criticism; banner removed.",
+   "AP notes Thai school history curriculum mentions the Holocaust little or not at all."
+  ],
+  "practical_applications": [
+   "A symbol's meaning in a local code (pop 'villain/strongman') differs from its global meaning (genocide) - global platforms decode globally."
+  ],
+  "limitations": [
+   "News report."
+  ],
+  "license": "copyrighted",
+  "access_status": "full_text",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-26",
+  "modules": [
+   "M12"
+  ]
+ },
+ {
+  "key": "Dunkin2013_Thailand",
+  "title": "Dunkin' Donuts Thailand 'Charcoal Donut' blackface ad (news coverage)",
+  "authors": "Multiple outlets (AP via CBS/Global News/SCMP; Bangkok Post)",
+  "year": 2013,
+  "url": "https://www.cbsnews.com/news/dunkin-donuts-criticized-for-racist-ad-campaign",
+  "doi_isbn": "",
+  "source_type": "docs",
+  "tier": "C",
+  "key_findings": [
+   "Aug 2013: Thai franchise ad showed a woman in blackface with bright pink lips holding a bitten black donut; HRW called it 'bizarre and racist'.",
+   "Thai franchise CEO initially defended it (reported as 'paranoid American thinking') and said sales rose ~50%; US parent apologised and pulled the spot.",
+   "Coverage noted the ad did not ruffle many in Thailand, where ads commonly use racial stereotypes."
+  ],
+  "practical_applications": [
+   "Same sign, two decoding communities: a local 'novelty/colour' joke reads globally as racist caricature."
+  ],
+  "limitations": [
+   "Search-result summaries of several news reports; full articles not read (paywall/403)."
+  ],
+  "license": "copyrighted",
+  "access_status": "search_summary",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-26",
+  "modules": [
+   "M12"
+  ]
+ },
+ {
+  "key": "HM2018_Monkey",
+  "title": "H&M apologises for 'coolest monkey in the jungle' hoodie ad (news coverage)",
+  "authors": "Multiple outlets (Reuters, CBC, Bloomberg)",
+  "year": 2018,
+  "url": "https://www.bloomberg.com/news/articles/2018-01-09/h-m-apologizes-after-using-black-child-in-monkey-hoodie-ad",
+  "doi_isbn": "",
+  "source_type": "docs",
+  "tier": "C",
+  "key_findings": [
+   "Jan 2018: online product image of a Black child wearing a hoodie reading 'coolest monkey in the jungle'; image removed and apology issued; The Weeknd ended his collaboration; second apology 'we have got this wrong'."
+  ],
+  "practical_applications": [
+   "Text + image anchorage can create a meaning neither has alone; check every text-on-person combination."
+  ],
+  "limitations": [
+   "Search-result summaries."
+  ],
+  "license": "copyrighted",
+  "access_status": "search_summary",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-26",
+  "modules": [
+   "M12"
+  ]
+ },
+ {
+  "key": "HendersonCote1998",
+  "title": "Guidelines for Selecting or Modifying Logos",
+  "authors": "Henderson, P. W.; Cote, J. A.",
+  "year": 1998,
+  "url": "https://doi.org/10.2307/1252158",
+  "doi_isbn": "Journal of Marketing 62(2):14-30",
+  "source_type": "empirical",
+  "tier": "A",
+  "key_findings": [
+   "(As summarised by Kim & Lim 2019) Logo design characteristics (active, balance, cohesive, complex, depth, organic, parallel, proportion, repetition, representative, round, symmetric) were related to correct recognition, false recognition, affect and familiar meaning.",
+   "Three underlying design dimensions: elaborateness (complexity, activeness, depth), naturalness (representative, organic) and harmony (symmetry + balance).",
+   "Guidelines by objective: high-recognition logos = very natural, very harmonious, moderately elaborate; low-investment logos = less natural, very harmonious, moderately elaborate; high-image logos = moderately natural, very harmonious, moderately elaborate.",
+   "Figurative logos depicting familiar objects need less learning and are recognised more easily than abstract ones."
+  ],
+  "practical_applications": [
+   "Brief a new mark as 'harmonious + moderately elaborate'; choose figurative/natural when there is little media budget to teach an abstract mark."
+  ],
+  "limitations": [
+   "Full text not read this session; findings come from Kim & Lim (2019) review footnotes.",
+   "US student sample, black-and-white logos, late-1990s stimuli; later cross-national work (Henderson et al. 2003; van der Lans et al. 2009) reportedly supports the three dimensions but colour/motion were not tested."
+  ],
+  "license": "copyrighted",
+  "access_status": "bibliographic",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M12",
+   "M27"
+  ],
+  "id": "HendersonCote1998",
+  "note_reused": "Reused from SOURCE_REGISTRY.json (same key)."
+ },
+ {
+  "key": "Jonauskaite2020",
+  "title": "Universal Patterns in Color-Emotion Associations Are Further Shaped by Linguistic and Geographic Proximity",
+  "authors": "Jonauskaite, et al.",
+  "year": 2020,
+  "url": "https://www.psychologicalscience.org/journals/psychological-science/0956797620948810/",
+  "doi_isbn": "10.1177/0956797620948810",
+  "source_type": "empirical",
+  "tier": "A",
+  "key_findings": [
+   "Psychological Science 31(10):1245-1260. 4,598 participants, 30 nations, 22 languages, 20 emotion concepts × 12 colour terms.",
+   "Strong cross-national similarity (mean r = .88) plus nation-specific differences, larger similarity for linguistically/geographically close nations."
+  ],
+  "practical_applications": [
+   "Colour-emotion associations are largely shared but locally tuned: check Thai associations; colour terms, not rendered colours, were tested."
+  ],
+  "limitations": [
+   "Specific colour-emotion pairs not read; colour words not images; Thailand participation not confirmed."
+  ],
+  "license": "copyrighted",
+  "access_status": "abstract",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-26",
+  "modules": [
+   "M12",
+   "M32"
+  ],
+  "id": "Jonauskaite2020",
+  "note_reused": "Reused from SOURCE_REGISTRY.json (same key)."
+ },
+ {
+  "key": "Bovonwiwat2023",
+  "title": "A Review of Studies in Heart or Jai Metaphor in Thai Language",
+  "authors": "Bovonwiwat, W.",
+  "year": 2023,
+  "url": "https://so06.tci-thaijo.org/index.php/mpjh/article/view/266644",
+  "doi_isbn": "",
+  "source_type": "review",
+  "tier": "B",
+  "key_findings": [
+   "Manutsat Paritat: Journal of Humanities 45(2), 68-85. Jai (heart) metaphors fall into four groups: heart as person, object, space, container; central to everyday Thai emotion talk."
+  ],
+  "practical_applications": [
+   "Visual metaphors for Thai emotion (a 'cool' or 'wide' heart) can be drawn from these mappings."
+  ],
+  "limitations": [
+   "Abstract only; DOI shown on page looked malformed, omitted."
+  ],
+  "license": "unknown",
+  "access_status": "abstract",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-26",
+  "modules": [
+   "M02",
+   "M12"
+  ],
+  "id": "Bovonwiwat2023",
+  "note_reused": "Reused from SOURCE_REGISTRY.json (same key)."
+ },
+ {
+  "key": "SEP_PeirceSemiotics",
+  "title": "Peirce's Theory of Signs",
+  "authors": "(SEP entry; author not captured in the fetched text)",
+  "year": null,
+  "url": "https://plato.stanford.edu/entries/peirce-semiotics/",
+  "doi_isbn": "",
+  "source_type": "encyclopedia",
+  "tier": "B",
+  "key_findings": [
+   "A sign is determined by an Object and produces an effect (interpretant) in a person; it signifies only as it is interpreted.",
+   "Icon = signifies by shared quality (portrait, diagram); index = existential/causal link (smoke-fire, weathercock, pointing finger); symbol = convention/habit/law (words, traffic lights).",
+   "Peirce came to see pure icons and indices as rare; most signs mix iconic, indexical and symbolic features (hypo-icon, sub-index).",
+   "Later typologies (10 and 66 classes) are uncertain even for Peirce and are disputed by scholars."
+  ],
+  "practical_applications": [
+   "Classify every visual element by HOW it carries meaning: icons travel across cultures best, symbols least.",
+   "An index (steam from a cup, footprints, worn edges) shows a cause and needs little caption; a symbol needs shared convention or a caption."
+  ],
+  "limitations": [
+   "Author and revision date not captured.",
+   "Only the sections on the triad and typologies were summarised."
+  ],
+  "license": "copyrighted (SEP)",
+  "access_status": "full_text",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M12"
+  ],
+  "id": "SEP_PeirceSemiotics",
+  "note_reused": "Reused from SOURCE_REGISTRY.json (same key)."
+ },
+ {
+  "key": "Barthes1977",
+  "title": "Rhetoric of the Image (in Image-Music-Text, trans. S. Heath)",
+  "authors": "Barthes, R.",
+  "year": 1977,
+  "url": "https://Monoskop.org/images/8/8a/Barthes_Roland_rhetoric_of_the_image.pdf",
+  "doi_isbn": "",
+  "source_type": "primary_text",
+  "tier": "A",
+  "key_findings": [
+   "Analyses a Panzani pasta ad as three messages: a linguistic message, a coded iconic (symbolic/connoted) message and a non-coded iconic (literal/denoted) message; the literal message supports the symbolic one.",
+   "Connoted signs: the half-open string bag spilling provisions = 'return from the market' with the euphoric values of freshness and domestic preparation; tomato, pepper and the poster's yellow-green-red = 'Italianicity', a specifically French knowledge - 'an Italian would barely perceive' it; the name Panzani itself connotes Italianicity by assonance.",
+   "All images are polysemous ('a floating chain of signifieds'); text relates to image by anchorage (fixes the reading, has a repressive value; most frequent, common in press photographs and advertisements) or relay (text and image complementary, unity at the level of the story; seen particularly in cartoons and comic strips)."
+  ],
+  "practical_applications": [
+   "Captions in our posts are anchorage: write them to close off unwanted readings.",
+   "Mint & Tao speech bubbles are relay: text carries the plot the image cannot."
+  ],
+  "limitations": [
+   "Read in Trachtenberg (ed.) Classic Essays on Photography (1980), Heath translation; essay first published 1964.",
+   "Interpretive/theoretical, not empirical."
+  ],
+  "license": "copyrighted",
+  "access_status": "full_text",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M12"
+  ],
+  "id": "Barthes1977",
+  "note_reused": "Reused from SOURCE_REGISTRY.json (same key)."
+ },
+ {
+  "key": "McQuarrieMick1999",
+  "title": "Visual Rhetoric in Advertising: Text-Interpretive, Experimental, and Reader-Response Analyses",
+  "authors": "McQuarrie, E. F.; Mick, D. G.",
+  "year": 1999,
+  "url": "https://ideas.repec.org/a/oup/jconrs/v26y1999i1p37-54.html",
+  "doi_isbn": "10.1086/209549",
+  "source_type": "empirical",
+  "tier": "A",
+  "key_findings": [
+   "Visual figures tested (rhyme, antithesis, metaphor, pun) produced more elaboration and more favourable ad attitude without lower comprehension.",
+   "Reader-response interviews matched the text-based analysis.",
+   "Effects of visual tropes (metaphor, pun) diminished or disappeared for people lacking the cultural competency to read the (American) ads."
+  ],
+  "practical_applications": [
+   "Visual metaphor helps only when the audience shares the code: for foreign tourists, prefer schemes or very common metaphors."
+  ],
+  "limitations": [
+   "Abstract only; US ads and samples; a 2003 follow-up (JCR 29(4)) examined directed vs incidental exposure (not read)."
+  ],
+  "license": "copyrighted",
+  "access_status": "abstract",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M12"
+  ],
+  "id": "McQuarrieMick1999",
+  "note_reused": "Reused from SOURCE_REGISTRY.json (same key)."
+ },
+ {
+  "key": "PhillipsMcQuarrie2004",
+  "title": "Beyond Visual Metaphor: A New Typology of Visual Rhetoric in Advertising",
+  "authors": "Phillips, B. J.; McQuarrie, E. F.",
+  "year": 2004,
+  "url": "https://informahealthcare.com/doi/full/10.1080/02650487.2018.1447760",
+  "doi_isbn": "Marketing Theory 4:113-136",
+  "source_type": "review",
+  "tier": "A",
+  "key_findings": [
+   "Typology built from properties of pictures: visual structure (juxtaposition, fusion, replacement) x meaning operation (connection, comparison) per Lagerwerf2023's summary.",
+   "Ordered by complexity: juxtaposition < fusion < replacement (as commonly summarised).",
+   "A later student study (search snippet, source not identified) reported juxtaposition prompted more elaboration and fusion was hardest to comprehend."
+  ],
+  "practical_applications": [
+   "Template for product metaphors: side-by-side (juxtaposition) for broad audiences; fused object for engaged followers; replacement only with strong context."
+  ],
+  "limitations": [
+   "Original article not read; typology described via secondary sources (Lagerwerf2023, a 2018 International Journal of Advertising extension at the URL).",
+   "'Connection/comparison' categories confirmed only through Lagerwerf2023's text."
+  ],
+  "license": "copyrighted",
+  "access_status": "bibliographic",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M12"
+  ],
+  "id": "PhillipsMcQuarrie2004",
+  "note_reused": "Reused from SOURCE_REGISTRY.json (same key)."
+ },
+ {
+  "key": "Lagerwerf2023",
+  "title": "Conceptual similarity and visual metaphor: effects on viewing times, appreciation, and recall",
+  "authors": "Lagerwerf, L.; van Mulken, M.; Lagerwerf, J. B.",
+  "year": 2023,
+  "url": "https://frontiersin.org/articles/10.3389/fcomm.2023.1266813/full",
+  "doi_isbn": "10.3389/fcomm.2023.1266813",
+  "source_type": "empirical",
+  "tier": "A",
+  "key_findings": [
+   "Three experiments (N=65, 73, 73) with 27 juxtaposed object pairs: hyponyms (same kind), visual comparisons (metaphors), unrelated.",
+   "Hyponyms identified fastest and liked most; metaphors next; unrelated last.",
+   "Longer exposure did not change preference; recall lowest for unrelated pairs; 5 s exposure improved recall.",
+   "Fluency theory explained appreciation better than the 'pleasure of solving' view; the inverted U was not found."
+  ],
+  "practical_applications": [
+   "In fast-scrolling feeds, easy-to-process pairings win liking; save puzzling metaphors for content people stop to read."
+  ],
+  "limitations": [
+   "About 100k of 121k characters read; lab stimuli, not real ads; Dutch-context samples; no culture comparison."
+  ],
+  "license": "CC BY 4.0 (Frontiers)",
+  "access_status": "full_text",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M12"
+  ],
+  "id": "Lagerwerf2023",
+  "note_reused": "Reused from SOURCE_REGISTRY.json (same key)."
+ },
+ {
+  "key": "AsianArt_Lotus",
+  "title": "The lotus in Buddhism (100 Flowers exhibition)",
+  "authors": "Asian Art Museum of San Francisco",
+  "year": null,
+  "url": "https://100flowers.asianart.org/hotspot_tab/the-lotus-in-buddhism",
+  "doi_isbn": "",
+  "source_type": "docs",
+  "tier": "B",
+  "key_findings": [
+   "Asian Art Museum: the lotus is one of the most important and recognised Buddhist symbols across all Buddhist cultures; it symbolises purity, 'spontaneous' generation, faithfulness and spiritual awakening.",
+   "Thai details (bua luang, merit-making, funeral use) come from earlier search summaries of Thai press, not from this page."
+  ],
+  "practical_applications": [
+   "Lotus is safe and positive for Thai audiences in calm/wellness contexts; avoid on feet, floors, trash, or comic contexts."
+  ],
+  "limitations": [
+   "Short museum page; Thai-specific uses not verified here."
+  ],
+  "license": "copyrighted",
+  "access_status": "full_text",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M12"
+  ],
+  "id": "AsianArt_Lotus",
+  "note_reused": "Reused from SOURCE_REGISTRY.json (same key)."
+ },
+ {
+  "key": "Naresuan2023_Nine",
+  "title": "(Number nine in Thai creative culture) - Journal of Humanities, Naresuan University",
+  "authors": "",
+  "year": 2023,
+  "url": "https://so03.tci-thaijo.org/index.php/jhnu/article/download/244459/177556/1045043",
+  "doi_isbn": "",
+  "source_type": "empirical",
+  "tier": "A",
+  "key_findings": [
+   "Number nine is significantly applied in Thai 'creative' culture, linked to astrology/sacredness and its homophone (kao ~ 'step forward' = progress).",
+   "Popular sources add: nine monks at blessings, nine auspicious desserts, record lucky-licence-plate auctions (Bangkok Post: ~45m baht)."
+  ],
+  "practical_applications": [
+   "9 is a positive number in Thai promos (e.g. 9.9 campaigns, 99 baht) - meaning 'progress'."
+  ],
+  "limitations": [
+   "PDF text garbled; title/authors not captured; methods unverified."
+  ],
+  "license": "unknown (ThaiJO)",
+  "access_status": "search_summary",
+  "verification_status": "unverified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M12",
+   "M30"
+  ],
+  "id": "Naresuan2023_Nine",
+  "note_reused": "Reused from SOURCE_REGISTRY.json (same key)."
+ },
+ {
+  "key": "AlJazeera2016_Mourning",
+  "title": "Thailand: One-year period of mourning declared",
+  "authors": "Al Jazeera (and other news reports in the same search)",
+  "year": 2016,
+  "url": "https://www.aljazeera.com/news/2016/10/14/thailand-one-year-period-of-mourning-declared",
+  "doi_isbn": "",
+  "source_type": "practitioner",
+  "tier": "C",
+  "key_findings": [
+   "After King Bhumibol's death (13 Oct 2016) the government declared one year of mourning; black and white worn nationwide; black clothing shortages; reports say other subdued colours were later accepted."
+  ],
+  "practical_applications": [
+   "Use monochrome/black-white for condolence posts; pause festive palettes during national mourning."
+  ],
+  "limitations": [
+   "News summaries; exact official wording not read."
+  ],
+  "license": "copyrighted",
+  "access_status": "search_summary",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-25",
+  "modules": [
+   "M09",
+   "M12"
+  ],
+  "id": "AlJazeera2016_Mourning",
+  "note_reused": "Reused from SOURCE_REGISTRY.json (same key)."
+ },
+ {
+  "key": "Cwiek2022",
+  "title": "The bouba/kiki effect is robust across cultures and writing systems",
+  "authors": "Aleksandra Ćwiek et al. (incl. Marcus Perlman)",
+  "year": 2022,
+  "url": "https://diposit.ub.edu/items/aea96b18-1e9a-46f9-92ce-bf195101f3be/full",
+  "doi_isbn": "10.1098/rstb.2020.0390",
+  "source_type": "empirical",
+  "tier": "A",
+  "key_findings": [
+   "917 speakers of 25 languages (9 families, 10 writing systems): strong overall evidence for the bouba/kiki effect; bouba more consistent than kiki; largely independent of orthography."
+  ],
+  "practical_applications": [
+   "Round shapes match soft-sounding names and voices; pair round mascots with soft names/voices, spiky ones with sharp."
+  ],
+  "limitations": [
+   "Abstract and press; whether Thai was among the languages not confirmed."
+  ],
+  "license": "CC BY",
+  "access_status": "abstract",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-26",
+  "modules": [
+   "M04",
+   "M05",
+   "M12"
+  ],
+  "id": "Cwiek2022",
+  "note_reused": "Reused from SOURCE_REGISTRY.json (same key)."
+ }
+]
