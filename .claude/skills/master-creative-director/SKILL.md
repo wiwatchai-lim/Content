@@ -36,6 +36,7 @@ recipe lists (README "Cross-discipline recipes"), §5 before stating a fact, §1
 | deep visual craft (colour science, value, perspective, lens maths, light physics, materials) | `creative-intelligence/knowledge/visual-arts/README.md` |
 | voice-over, Thai TTS, voice emotion | skill `ai-voice-director` |
 | glasses beat clip / eye-break clip | skills `beat-clip` / `eye-break-clip` |
+| directing any video: shot size/angle/movement/lens/light/colour/edit/sound decisions, shot list, storyboard, AI video prompts, video QC | skill `film-director` (20-step DECISION_ENGINE, 30 modules, 15 libraries) |
 | story clip with characters | `story-clips/_craft/GUIDE.md` → STYLES/FX, `rig.js`, `sound.py` |
 | story carousel (Mint & Tao etc.) | `carousel/README.md`, `slowly-growing/README.md` + knowledge below |
 | human motivation, biases, needs | `creative-intelligence/knowledge/psychology/README.md` |

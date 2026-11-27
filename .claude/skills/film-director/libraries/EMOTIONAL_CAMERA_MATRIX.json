@@ -1,0 +1,2022 @@
+[
+ {
+  "id": "emo.joy",
+  "name": "Joy / happiness",
+  "category": "emotional-camera",
+  "definition": "Camera/edit settings that support the target emotion 'Joy / happiness' (valence/arousal V+ A+). Values are starting points; the story beat decides.",
+  "valence_arousal": "V+ A+",
+  "shot_size": [
+   "cam.ms",
+   "cam.mws",
+   "cam.two_shot"
+  ],
+  "angle": "cam.eye_level, slight low",
+  "movement": "smooth follow or gentle handheld bounce; rising crane on the peak",
+  "lens": "normal 35-50mm; open space around the subject",
+  "light": "high-key, soft key, bright backlight rim",
+  "colour": "warm saturated (yellow/orange), clean whites",
+  "pace": "medium, cut on beats; ASL ~1.5-3 s in short-form",
+  "acting": "open posture, upward gestures, movement toward others",
+  "how": "Primary framing medium (cam.ms), angle eye-level, slight low; movement: smooth follow or gentle handheld bounce; rising crane on the peak; normal 35-50mm; open space around the subject; light: high-key, soft key, bright backlight rim; colour: warm saturated (yellow/orange), clean whites; pace: medium, cut on beats; ASL ~1.5-3 s in short-form.",
+  "purpose": "Make the audience feel (not just see) joy / happiness.",
+  "emotional_effect": [
+   "Joy / happiness"
+  ],
+  "use_when": [
+   "the beat's target feeling is joy / happiness"
+  ],
+  "avoid_when": [
+   "grief context or a sincere apology",
+   "the character's face/body does not carry the emotion (camera amplifies, it does not create)"
+  ],
+  "examples": [],
+  "ai_image_prompt": "two friends laugh and turn toward the camera on a sunny street, medium shot, eye-level angle, normal 35-50mm, high-key, soft key, bright backlight rim, warm saturated (yellow/orange), clean whites colour palette, cinematic still",
+  "ai_video_prompt": "two friends laugh and turn toward the camera on a sunny street. Camera: smooth follow or gentle handheld bounce; rising crane on the peak. Lens: normal 35-50mm. Light: high-key, soft key, bright backlight rim. Pace: medium, cut on beats; ASL ~1.5-3 s in short-form.",
+  "common_mistakes": [
+   "joy plateau - flat level the whole clip",
+   "all levers at maximum at once (no room to build)"
+  ],
+  "check": "Mute the clip and show 3 frames to someone: do they name this emotion (or its neighbour)? Then check the curve: does this beat contrast with the one before?",
+  "combine_with": [],
+  "related_ids": [
+   "joy.happiness",
+   "cam.ms",
+   "cam.mws",
+   "cam.two_shot"
+  ],
+  "emotion_links": {
+   "emotional_architecture": "creative-intelligence/knowledge/emotional-architecture/EMOTION_DESIGN_MATRIX.md §1",
+   "emotion_visual_library": ".claude/skills/ai-visual-artist/EMOTION_VISUAL_LIBRARY.json#joy.happiness"
+  },
+  "evidence_notes": [
+   "In video ads the rate of increase of joy predicted retention; surprise level concentrated attention [EVIDENCE: Teixeira2012]",
+   "Films darken across complication/development and brighten across the climax; Cutting associates brighter/darker images with positive/negative emotion (interpretation) [EVIDENCE weak: Cutting2016]",
+   "All other levers in this entry: [CRAFT] (practitioner convention, not tested)."
+  ],
+  "source_keys": [
+   "Cutting2016",
+   "Teixeira2012",
+   "Block2021"
+  ],
+  "evidence": "MIXED",
+  "test_status": "untested"
+ },
+ {
+  "id": "emo.contentment",
+  "name": "Contentment / quiet happiness",
+  "category": "emotional-camera",
+  "definition": "Camera/edit settings that support the target emotion 'Contentment / quiet happiness' (valence/arousal V+ A-). Values are starting points; the story beat decides.",
+  "valence_arousal": "V+ A-",
+  "shot_size": [
+   "cam.ms",
+   "cam.ws"
+  ],
+  "angle": "cam.eye_level",
+  "movement": "static or very slow drift",
+  "lens": "35-50mm, moderate depth of field",
+  "light": "soft warm side light, low contrast",
+  "colour": "warm desaturated, analogous palette",
+  "pace": "slow; long takes 3-6 s",
+  "acting": "relaxed shoulders, slow breath, small smile",
+  "how": "Primary framing medium (cam.ms), angle eye-level; movement: static or very slow drift; 35-50mm, moderate depth of field; light: soft warm side light, low contrast; colour: warm desaturated, analogous palette; pace: slow; long takes 3-6 s.",
+  "purpose": "Make the audience feel (not just see) contentment / quiet happiness.",
+  "emotional_effect": [
+   "Contentment / quiet happiness"
+  ],
+  "use_when": [
+   "the beat's target feeling is contentment / quiet happiness"
+  ],
+  "avoid_when": [
+   "promo that needs urgency",
+   "the character's face/body does not carry the emotion (camera amplifies, it does not create)"
+  ],
+  "examples": [],
+  "ai_image_prompt": "a woman sips tea by a window, steam rising, medium shot, eye-level angle, 35-50mm, moderate depth of field, soft warm side light, low contrast, warm desaturated, analogous palette colour palette, cinematic still",
+  "ai_video_prompt": "a woman sips tea by a window, steam rising. Camera: static or very slow drift. Lens: 35-50mm, moderate depth of field. Light: soft warm side light, low contrast. Pace: slow; long takes 3-6 s.",
+  "common_mistakes": [
+   "adding busy B-roll that breaks the calm",
+   "all levers at maximum at once (no room to build)"
+  ],
+  "check": "Mute the clip and show 3 frames to someone: do they name this emotion (or its neighbour)? Then check the curve: does this beat contrast with the one before?",
+  "combine_with": [],
+  "related_ids": [
+   "joy.contentment",
+   "cam.ms",
+   "cam.ws"
+  ],
+  "emotion_links": {
+   "emotional_architecture": "creative-intelligence/knowledge/emotional-architecture/EMOTION_DESIGN_MATRIX.md §19",
+   "emotion_visual_library": ".claude/skills/ai-visual-artist/EMOTION_VISUAL_LIBRARY.json#joy.contentment"
+  },
+  "evidence_notes": [
+   "Films darken across complication/development and brighten across the climax; Cutting associates brighter/darker images with positive/negative emotion (interpretation) [EVIDENCE weak: Cutting2016]",
+   "All other levers in this entry: [CRAFT] (practitioner convention, not tested)."
+  ],
+  "source_keys": [
+   "Cutting2016",
+   "Block2021"
+  ],
+  "evidence": "MIXED",
+  "test_status": "untested"
+ },
+ {
+  "id": "emo.sadness",
+  "name": "Sadness",
+  "category": "emotional-camera",
+  "definition": "Camera/edit settings that support the target emotion 'Sadness' (valence/arousal V- A-). Values are starting points; the story beat decides.",
+  "valence_arousal": "V- A-",
+  "shot_size": [
+   "cam.cu",
+   "cam.ws"
+  ],
+  "angle": "cam.eye_level or slightly high",
+  "movement": "static, or very slow push-in; or slow pull-out to isolate",
+  "lens": "longer lens for CU (85mm+) with shallow DoF; wide with negative space for isolation",
+  "light": "low-key soft, single source, cool fill",
+  "colour": "desaturated cool (blue/grey)",
+  "pace": "slow, hold reactions 2-4 s",
+  "acting": "head down, gaze averted, slow movement, slumped posture",
+  "how": "Primary framing close-up (cam.cu), angle eye-level or slightly high; movement: static, or very slow push-in; or slow pull-out to isolate; longer lens for CU (85mm+) with shallow DoF; wide with negative space for isolation; light: low-key soft, single source, cool fill; colour: desaturated cool (blue/grey); pace: slow, hold reactions 2-4 s.",
+  "purpose": "Make the audience feel (not just see) sadness.",
+  "emotional_effect": [
+   "Sadness"
+  ],
+  "use_when": [
+   "the beat's target feeling is sadness"
+  ],
+  "avoid_when": [
+   "comedy beats",
+   "the character's face/body does not carry the emotion (camera amplifies, it does not create)"
+  ],
+  "examples": [
+   {
+    "work": "Short animated film used by Rooney & Balint",
+    "note": "sad close-up (vs long shot) raised viewers' spontaneous talk about the character's feelings",
+    "source_key": "RooneyBalint2018"
+   }
+  ],
+  "ai_image_prompt": "a man sits alone on a bus bench in the rain, looking down, close-up shot, eye-level or slightly high angle, longer lens for CU (85mm+) with shallow DoF, low-key soft, single source, cool fill, desaturated cool (blue/grey) colour palette, cinematic still",
+  "ai_video_prompt": "a man sits alone on a bus bench in the rain, looking down. Camera: static, or very slow push-in; or slow pull-out to isolate. Lens: longer lens for CU (85mm+) with shallow DoF. Light: low-key soft, single source, cool fill. Pace: slow, hold reactions 2-4 s.",
+  "common_mistakes": [
+   "close-up on an expressionless face expecting the shot to supply sadness",
+   "all levers at maximum at once (no room to build)"
+  ],
+  "check": "Mute the clip and show 3 frames to someone: do they name this emotion (or its neighbour)? Then check the curve: does this beat contrast with the one before?",
+  "combine_with": [],
+  "related_ids": [
+   "sadness.sadness",
+   "cam.cu",
+   "cam.ws"
+  ],
+  "emotion_links": {
+   "emotional_architecture": "creative-intelligence/knowledge/emotional-architecture/EMOTION_DESIGN_MATRIX.md §2",
+   "emotion_visual_library": ".claude/skills/ai-visual-artist/EMOTION_VISUAL_LIBRARY.json#sadness.sadness"
+  },
+  "evidence_notes": [
+   "Close-ups of an expressive (sad) face increased spontaneous mental-state attribution vs long shot; neutral close-up did not [EVIDENCE: RooneyBalint2018; Balint2020]",
+   "Films darken across complication/development and brighten across the climax; Cutting associates brighter/darker images with positive/negative emotion (interpretation) [EVIDENCE weak: Cutting2016]",
+   "All other levers in this entry: [CRAFT] (practitioner convention, not tested)."
+  ],
+  "source_keys": [
+   "Balint2020",
+   "Cutting2016",
+   "RooneyBalint2018",
+   "Block2021"
+  ],
+  "evidence": "MIXED",
+  "test_status": "untested"
+ },
+ {
+  "id": "emo.grief",
+  "name": "Grief",
+  "category": "emotional-camera",
+  "definition": "Camera/edit settings that support the target emotion 'Grief' (valence/arousal V-- A- (waves)). Values are starting points; the story beat decides.",
+  "valence_arousal": "V-- A- (waves)",
+  "shot_size": [
+   "cam.cu",
+   "cam.ews"
+  ],
+  "angle": "cam.eye_level; avoid heroic low angles",
+  "movement": "static; any movement very slow and late",
+  "lens": "85mm+ CU or very wide with tiny figure",
+  "light": "dim, overcast, soft",
+  "colour": "near-monochrome, low saturation",
+  "pace": "very slow; allow silence",
+  "acting": "suppressed tears, hands covering face, stillness",
+  "how": "Primary framing close-up (cam.cu), angle eye-level; avoid heroic low angles; movement: static; any movement very slow and late; 85mm+ CU or very wide with tiny figure; light: dim, overcast, soft; colour: near-monochrome, low saturation; pace: very slow; allow silence.",
+  "purpose": "Make the audience feel (not just see) grief.",
+  "emotional_effect": [
+   "Grief"
+  ],
+  "use_when": [
+   "the beat's target feeling is grief"
+  ],
+  "avoid_when": [
+   "fast cutting, music swells too early",
+   "the character's face/body does not carry the emotion (camera amplifies, it does not create)"
+  ],
+  "examples": [],
+  "ai_image_prompt": "an elderly woman holds a framed photo, motionless, dim window light, close-up shot, eye-level; avoid heroic low angles angle, 85mm+ CU or very wide with tiny figure, dim, overcast, soft, near-monochrome, low saturation colour palette, cinematic still",
+  "ai_video_prompt": "an elderly woman holds a framed photo, motionless, dim window light. Camera: static; any movement very slow and late. Lens: 85mm+ CU or very wide with tiny figure. Light: dim, overcast, soft. Pace: very slow; allow silence.",
+  "common_mistakes": [
+   "cutting away too early from the face",
+   "all levers at maximum at once (no room to build)"
+  ],
+  "check": "Mute the clip and show 3 frames to someone: do they name this emotion (or its neighbour)? Then check the curve: does this beat contrast with the one before?",
+  "combine_with": [],
+  "related_ids": [
+   "sadness.grief",
+   "cam.cu",
+   "cam.ews"
+  ],
+  "emotion_links": {
+   "emotional_architecture": "creative-intelligence/knowledge/emotional-architecture/EMOTION_DESIGN_MATRIX.md §2",
+   "emotion_visual_library": ".claude/skills/ai-visual-artist/EMOTION_VISUAL_LIBRARY.json#sadness.grief"
+  },
+  "evidence_notes": [
+   "Close-ups of an expressive (sad) face increased spontaneous mental-state attribution vs long shot; neutral close-up did not [EVIDENCE: RooneyBalint2018; Balint2020]",
+   "All other levers in this entry: [CRAFT] (practitioner convention, not tested)."
+  ],
+  "source_keys": [
+   "Balint2020",
+   "RooneyBalint2018",
+   "Block2021"
+  ],
+  "evidence": "MIXED",
+  "test_status": "untested"
+ },
+ {
+  "id": "emo.loneliness",
+  "name": "Loneliness / isolation",
+  "category": "emotional-camera",
+  "definition": "Camera/edit settings that support the target emotion 'Loneliness / isolation' (valence/arousal V- A-). Values are starting points; the story beat decides.",
+  "valence_arousal": "V- A-",
+  "shot_size": [
+   "cam.ews",
+   "cam.ws"
+  ],
+  "angle": "cam.high_angle or eye level from afar",
+  "movement": "slow pull-out or static",
+  "lens": "wide lens far away, subject small in frame; or telephoto compressing empty crowd",
+  "light": "cool ambient, single pool of light",
+  "colour": "cool, desaturated, one muted accent",
+  "pace": "long takes",
+  "acting": "solitary, turned away from others",
+  "how": "Primary framing extreme wide (cam.ews), angle high or eye level from afar; movement: slow pull-out or static; wide lens far away, subject small in frame; or telephoto compressing empty crowd; light: cool ambient, single pool of light; colour: cool, desaturated, one muted accent; pace: long takes.",
+  "purpose": "Make the audience feel (not just see) loneliness / isolation.",
+  "emotional_effect": [
+   "Loneliness / isolation"
+  ],
+  "use_when": [
+   "the beat's target feeling is loneliness / isolation"
+  ],
+  "avoid_when": [
+   "promo for social products (unless the story resolves it)",
+   "the character's face/body does not carry the emotion (camera amplifies, it does not create)"
+  ],
+  "examples": [],
+  "ai_image_prompt": "a single figure at a bus stop in an empty night street, extreme wide shot, high or eye level from afar angle, wide lens far away, subject small in frame, cool ambient, single pool of light, cool, desaturated, one muted accent colour palette, cinematic still",
+  "ai_video_prompt": "a single figure at a bus stop in an empty night street. Camera: slow pull-out or static. Lens: wide lens far away, subject small in frame. Light: cool ambient, single pool of light. Pace: long takes.",
+  "common_mistakes": [
+   "too many elements fill the negative space",
+   "all levers at maximum at once (no room to build)"
+  ],
+  "check": "Mute the clip and show 3 frames to someone: do they name this emotion (or its neighbour)? Then check the curve: does this beat contrast with the one before?",
+  "combine_with": [],
+  "related_ids": [
+   "sadness.loneliness",
+   "cam.ews",
+   "cam.ws"
+  ],
+  "emotion_links": {
+   "emotional_architecture": null,
+   "emotion_visual_library": ".claude/skills/ai-visual-artist/EMOTION_VISUAL_LIBRARY.json#sadness.loneliness"
+  },
+  "evidence_notes": [
+   "Camera angle changes judgments of characters (Kraft1987); low/high angle -> power effects are weak and context dependent (see emotional-architecture MeyersLevyPeracchio1992) [EVIDENCE weak]",
+   "All other levers in this entry: [CRAFT] (practitioner convention, not tested)."
+  ],
+  "source_keys": [
+   "Kraft1987",
+   "Block2021"
+  ],
+  "evidence": "MIXED",
+  "test_status": "untested"
+ },
+ {
+  "id": "emo.fear",
+  "name": "Fear",
+  "category": "emotional-camera",
+  "definition": "Camera/edit settings that support the target emotion 'Fear' (valence/arousal V- A+). Values are starting points; the story beat decides.",
+  "valence_arousal": "V- A+",
+  "shot_size": [
+   "cam.cu",
+   "cam.ecu",
+   "cam.ots"
+  ],
+  "angle": "cam.dutch slight, or high angle on the victim",
+  "movement": "handheld tremor, sudden moves; or locked-off with something moving in the background",
+  "lens": "wide lens close to the face (distortion) or long lens with obstruction",
+  "light": "low-key, hard light, deep shadows, under-lighting",
+  "colour": "cold green/cyan, crushed blacks",
+  "pace": "irregular; long tense holds then sudden cuts",
+  "acting": "frozen posture, wide eyes, backing away",
+  "how": "Primary framing close-up (cam.cu), angle Dutch slight, or high angle on the victim; movement: handheld tremor, sudden moves; or locked-off with something moving in the background; wide lens close to the face (distortion) or long lens with obstruction; light: low-key, hard light, deep shadows, under-lighting; colour: cold green/cyan, crushed blacks; pace: irregular; long tense holds then sudden cuts.",
+  "purpose": "Make the audience feel (not just see) fear.",
+  "emotional_effect": [
+   "Fear"
+  ],
+  "use_when": [
+   "the beat's target feeling is fear"
+  ],
+  "avoid_when": [
+   "trust or premium product contexts",
+   "the character's face/body does not carry the emotion (camera amplifies, it does not create)"
+  ],
+  "examples": [
+   {
+    "work": "Kuleshov-style sequences",
+    "note": "fear context reliably made neutral faces read more negative and arousing",
+    "source_key": "Calbi2017"
+   }
+  ],
+  "ai_image_prompt": "a woman in a dark corridor slowly turns toward a sound, close-up shot, Dutch slight angle, wide lens close to the face (distortion) or long lens with obstruction, low-key, hard light, deep shadows, under-lighting, cold green/cyan, crushed blacks colour palette, cinematic still",
+  "ai_video_prompt": "a woman in a dark corridor slowly turns toward a sound. Camera: handheld tremor, sudden moves; or locked-off with something moving in the background. Lens: wide lens close to the face (distortion) or long lens with obstruction. Light: low-key, hard light, deep shadows, under-lighting. Pace: irregular; long tense holds then sudden cuts.",
+  "common_mistakes": [
+   "showing the threat fully too early",
+   "all levers at maximum at once (no room to build)"
+  ],
+  "check": "Mute the clip and show 3 frames to someone: do they name this emotion (or its neighbour)? Then check the curve: does this beat contrast with the one before?",
+  "combine_with": [],
+  "related_ids": [
+   "fear.fear",
+   "cam.cu",
+   "cam.ecu",
+   "cam.ots"
+  ],
+  "emotion_links": {
+   "emotional_architecture": "creative-intelligence/knowledge/emotional-architecture/EMOTION_DESIGN_MATRIX.md §3",
+   "emotion_visual_library": ".claude/skills/ai-visual-artist/EMOTION_VISUAL_LIBRARY.json#fear.fear"
+  },
+  "evidence_notes": [
+   "Fearful context shifted neutral-face ratings most reliably in a Kuleshov replication; happy context did not [EVIDENCE: Calbi2017; Barratt2016]",
+   "Camera angle changes judgments of characters (Kraft1987); low/high angle -> power effects are weak and context dependent (see emotional-architecture MeyersLevyPeracchio1992) [EVIDENCE weak]",
+   "All other levers in this entry: [CRAFT] (practitioner convention, not tested)."
+  ],
+  "source_keys": [
+   "Barratt2016",
+   "Calbi2017",
+   "Kraft1987",
+   "Block2021"
+  ],
+  "evidence": "MIXED",
+  "test_status": "untested"
+ },
+ {
+  "id": "emo.dread",
+  "name": "Dread (anticipatory fear)",
+  "category": "emotional-camera",
+  "definition": "Camera/edit settings that support the target emotion 'Dread (anticipatory fear)' (valence/arousal V- A rising). Values are starting points; the story beat decides.",
+  "valence_arousal": "V- A rising",
+  "shot_size": [
+   "cam.ws",
+   "cam.ms"
+  ],
+  "angle": "cam.eye_level, frame with empty space behind the subject",
+  "movement": "very slow push-in (creep), static long take",
+  "lens": "normal to wide, deep focus so background is readable",
+  "light": "low-key, motivated practicals, darkness at frame edges",
+  "colour": "desaturated, sickly greens",
+  "pace": "slow, long held shots; silence",
+  "acting": "stillness, listening, slow head turns",
+  "how": "Primary framing wide (cam.ws), angle eye-level, frame with empty space behind the subject; movement: very slow push-in (creep), static long take; normal to wide, deep focus so background is readable; light: low-key, motivated practicals, darkness at frame edges; colour: desaturated, sickly greens; pace: slow, long held shots; silence.",
+  "purpose": "Make the audience feel (not just see) dread (anticipatory fear).",
+  "emotional_effect": [
+   "Dread (anticipatory fear)"
+  ],
+  "use_when": [
+   "the beat's target feeling is dread (anticipatory fear)"
+  ],
+  "avoid_when": [
+   "comedy",
+   "the character's face/body does not carry the emotion (camera amplifies, it does not create)"
+  ],
+  "examples": [],
+  "ai_image_prompt": "a long hallway, camera creeping forward toward a half-open door, wide shot, eye-level angle, normal to wide, deep focus so background is readable, low-key, motivated practicals, darkness at frame edges, desaturated, sickly greens colour palette, cinematic still",
+  "ai_video_prompt": "a long hallway, camera creeping forward toward a half-open door. Camera: very slow push-in (creep), static long take. Lens: normal to wide, deep focus so background is readable. Light: low-key, motivated practicals, darkness at frame edges. Pace: slow, long held shots; silence.",
+  "common_mistakes": [
+   "music stings every few seconds (cheapens)",
+   "all levers at maximum at once (no room to build)"
+  ],
+  "check": "Mute the clip and show 3 frames to someone: do they name this emotion (or its neighbour)? Then check the curve: does this beat contrast with the one before?",
+  "combine_with": [],
+  "related_ids": [
+   "fear.dread",
+   "cam.ws",
+   "cam.ms"
+  ],
+  "emotion_links": {
+   "emotional_architecture": "creative-intelligence/knowledge/emotional-architecture/EMOTION_DESIGN_MATRIX.md §17",
+   "emotion_visual_library": ".claude/skills/ai-visual-artist/EMOTION_VISUAL_LIBRARY.json#fear.dread"
+  },
+  "evidence_notes": [
+   "Fearful context shifted neutral-face ratings most reliably in a Kuleshov replication; happy context did not [EVIDENCE: Calbi2017; Barratt2016]",
+   "All other levers in this entry: [CRAFT] (practitioner convention, not tested)."
+  ],
+  "source_keys": [
+   "Barratt2016",
+   "Calbi2017",
+   "Block2021"
+  ],
+  "evidence": "MIXED",
+  "test_status": "untested"
+ },
+ {
+  "id": "emo.panic",
+  "name": "Panic",
+  "category": "emotional-camera",
+  "definition": "Camera/edit settings that support the target emotion 'Panic' (valence/arousal V- A++). Values are starting points; the story beat decides.",
+  "valence_arousal": "V- A++",
+  "shot_size": [
+   "cam.cu",
+   "cam.mcu",
+   "cam.pov"
+  ],
+  "angle": "cam.dutch, unstable",
+  "movement": "fast handheld, whip pans",
+  "lens": "wide lens close",
+  "light": "flickering, strobing practicals (avoid photosensitive flashing)",
+  "colour": "high contrast, red warnings",
+  "pace": "very fast; ASL < 1 s",
+  "acting": "rapid breathing, scanning eyes, flailing",
+  "how": "Primary framing close-up (cam.cu), angle Dutch, unstable; movement: fast handheld, whip pans; wide lens close; light: flickering, strobing practicals (avoid photosensitive flashing); colour: high contrast, red warnings; pace: very fast; ASL < 1 s.",
+  "purpose": "Make the audience feel (not just see) panic.",
+  "emotional_effect": [
+   "Panic"
+  ],
+  "use_when": [
+   "the beat's target feeling is panic"
+  ],
+  "avoid_when": [
+   "explainers",
+   "the character's face/body does not carry the emotion (camera amplifies, it does not create)"
+  ],
+  "examples": [],
+  "ai_image_prompt": "handheld chase through a crowded market, fast whip pans, close-up shot, Dutch angle, wide lens close, flickering, strobing practicals (avoid photosensitive flashing), high contrast, red warnings colour palette, cinematic still",
+  "ai_video_prompt": "handheld chase through a crowded market, fast whip pans. Camera: fast handheld, whip pans. Lens: wide lens close. Light: flickering, strobing practicals (avoid photosensitive flashing). Pace: very fast; ASL < 1 s.",
+  "common_mistakes": [
+   "shaky camera with no readable subject",
+   "all levers at maximum at once (no room to build)"
+  ],
+  "check": "Mute the clip and show 3 frames to someone: do they name this emotion (or its neighbour)? Then check the curve: does this beat contrast with the one before?",
+  "combine_with": [],
+  "related_ids": [
+   "fear.panic",
+   "cam.cu",
+   "cam.mcu",
+   "cam.pov"
+  ],
+  "emotion_links": {
+   "emotional_architecture": "creative-intelligence/knowledge/emotional-architecture/EMOTION_DESIGN_MATRIX.md §3",
+   "emotion_visual_library": ".claude/skills/ai-visual-artist/EMOTION_VISUAL_LIBRARY.json#fear.panic"
+  },
+  "evidence_notes": [
+   "Shorter shots with more motion characterise climaxes in popular films; authors link cuts and motion to attention capture [EVIDENCE, correlational: Cutting2016; Cutting2011]",
+   "All other levers in this entry: [CRAFT] (practitioner convention, not tested)."
+  ],
+  "source_keys": [
+   "Cutting2011",
+   "Cutting2016",
+   "Block2021"
+  ],
+  "evidence": "MIXED",
+  "test_status": "untested"
+ },
+ {
+  "id": "emo.anxiety",
+  "name": "Anxiety / worry",
+  "category": "emotional-camera",
+  "definition": "Camera/edit settings that support the target emotion 'Anxiety / worry' (valence/arousal V- A+ (sustained)). Values are starting points; the story beat decides.",
+  "valence_arousal": "V- A+ (sustained)",
+  "shot_size": [
+   "cam.mcu",
+   "cam.cu"
+  ],
+  "angle": "cam.eye_level, tight headroom",
+  "movement": "subtle handheld drift, slow push",
+  "lens": "longer lens, compressed space, foreground clutter",
+  "light": "flat or mixed colour temperature",
+  "colour": "slightly desaturated, cool",
+  "pace": "uneven rhythm",
+  "acting": "fidgeting hands, glances at phone/clock",
+  "how": "Primary framing medium close-up (cam.mcu), angle eye-level, tight headroom; movement: subtle handheld drift, slow push; longer lens, compressed space, foreground clutter; light: flat or mixed colour temperature; colour: slightly desaturated, cool; pace: uneven rhythm.",
+  "purpose": "Make the audience feel (not just see) anxiety / worry.",
+  "emotional_effect": [
+   "Anxiety / worry"
+  ],
+  "use_when": [
+   "the beat's target feeling is anxiety / worry"
+  ],
+  "avoid_when": [
+   "pure celebration",
+   "the character's face/body does not carry the emotion (camera amplifies, it does not create)"
+  ],
+  "examples": [],
+  "ai_image_prompt": "a man checks his phone repeatedly while waiting, fingers tapping, medium close-up shot, eye-level angle, longer lens, compressed space, foreground clutter, flat or mixed colour temperature, slightly desaturated, cool colour palette, cinematic still",
+  "ai_video_prompt": "a man checks his phone repeatedly while waiting, fingers tapping. Camera: subtle handheld drift, slow push. Lens: longer lens, compressed space, foreground clutter. Light: flat or mixed colour temperature. Pace: uneven rhythm.",
+  "common_mistakes": [
+   "overplaying (sweating, trembling) for a mild worry",
+   "all levers at maximum at once (no room to build)"
+  ],
+  "check": "Mute the clip and show 3 frames to someone: do they name this emotion (or its neighbour)? Then check the curve: does this beat contrast with the one before?",
+  "combine_with": [],
+  "related_ids": [
+   "fear.anxiety",
+   "cam.mcu",
+   "cam.cu"
+  ],
+  "emotion_links": {
+   "emotional_architecture": null,
+   "emotion_visual_library": ".claude/skills/ai-visual-artist/EMOTION_VISUAL_LIBRARY.json#fear.anxiety"
+  },
+  "evidence_notes": [
+   "Close-ups of an expressive (sad) face increased spontaneous mental-state attribution vs long shot; neutral close-up did not [EVIDENCE: RooneyBalint2018; Balint2020]",
+   "All other levers in this entry: [CRAFT] (practitioner convention, not tested)."
+  ],
+  "source_keys": [
+   "Balint2020",
+   "RooneyBalint2018",
+   "Block2021"
+  ],
+  "evidence": "MIXED",
+  "test_status": "untested"
+ },
+ {
+  "id": "emo.anger_hot",
+  "name": "Anger (hot)",
+  "category": "emotional-camera",
+  "definition": "Camera/edit settings that support the target emotion 'Anger (hot)' (valence/arousal V- A+). Values are starting points; the story beat decides.",
+  "valence_arousal": "V- A+",
+  "shot_size": [
+   "cam.cu",
+   "cam.ecu",
+   "cam.mcu"
+  ],
+  "angle": "cam.low_angle on the angry person",
+  "movement": "push-in, handheld energy",
+  "lens": "wide lens close (aggressive distortion)",
+  "light": "hard key, high contrast, warm/red practicals",
+  "colour": "saturated reds/oranges",
+  "pace": "fast cuts on shouted lines",
+  "acting": "forward lean, sharp gestures, invading space",
+  "how": "Primary framing close-up (cam.cu), angle low on the angry person; movement: push-in, handheld energy; wide lens close (aggressive distortion); light: hard key, high contrast, warm/red practicals; colour: saturated reds/oranges; pace: fast cuts on shouted lines.",
+  "purpose": "Make the audience feel (not just see) anger (hot).",
+  "emotional_effect": [
+   "Anger (hot)"
+  ],
+  "use_when": [
+   "the beat's target feeling is anger (hot)"
+  ],
+  "avoid_when": [
+   "the brand must look calm",
+   "the character's face/body does not carry the emotion (camera amplifies, it does not create)"
+  ],
+  "examples": [
+   {
+    "work": "Televised political debates (experiment)",
+    "note": "close-up + incivility lowered perceived legitimacy of the opposing side",
+    "source_key": "Mutz2007"
+   }
+  ],
+  "ai_image_prompt": "two people argue across a kitchen table, one leans forward, close-up shot, low on the angry person angle, wide lens close (aggressive distortion), hard key, high contrast, warm/red practicals, saturated reds/oranges colour palette, cinematic still",
+  "ai_video_prompt": "two people argue across a kitchen table, one leans forward. Camera: push-in, handheld energy. Lens: wide lens close (aggressive distortion). Light: hard key, high contrast, warm/red practicals. Pace: fast cuts on shouted lines.",
+  "common_mistakes": [
+   "using ECU on someone the audience should respect during conflict",
+   "all levers at maximum at once (no room to build)"
+  ],
+  "check": "Mute the clip and show 3 frames to someone: do they name this emotion (or its neighbour)? Then check the curve: does this beat contrast with the one before?",
+  "combine_with": [],
+  "related_ids": [
+   "anger.hot",
+   "cam.cu",
+   "cam.ecu",
+   "cam.mcu"
+  ],
+  "emotion_links": {
+   "emotional_architecture": "creative-intelligence/knowledge/emotional-architecture/EMOTION_DESIGN_MATRIX.md §4",
+   "emotion_visual_library": ".claude/skills/ai-visual-artist/EMOTION_VISUAL_LIBRARY.json#anger.hot"
+  },
+  "evidence_notes": [
+   "Close-up camera on uncivil conflict made viewers rate the shown side as less legitimate [EVIDENCE: Mutz2007]",
+   "Shorter shots with more motion characterise climaxes in popular films; authors link cuts and motion to attention capture [EVIDENCE, correlational: Cutting2016; Cutting2011]",
+   "All other levers in this entry: [CRAFT] (practitioner convention, not tested)."
+  ],
+  "source_keys": [
+   "Cutting2011",
+   "Cutting2016",
+   "Mutz2007",
+   "Block2021"
+  ],
+  "evidence": "MIXED",
+  "test_status": "untested"
+ },
+ {
+  "id": "emo.anger_cold",
+  "name": "Anger (cold)",
+  "category": "emotional-camera",
+  "definition": "Camera/edit settings that support the target emotion 'Anger (cold)' (valence/arousal V- A0). Values are starting points; the story beat decides.",
+  "valence_arousal": "V- A0",
+  "shot_size": [
+   "cam.mcu",
+   "cam.ms"
+  ],
+  "angle": "cam.eye_level or slight low",
+  "movement": "static, locked-off",
+  "lens": "longer lens, symmetrical framing",
+  "light": "hard side light, half the face in shadow",
+  "colour": "cool desaturated with steel blues",
+  "pace": "slow, long silences",
+  "acting": "stillness, fixed stare, controlled voice",
+  "how": "Primary framing medium close-up (cam.mcu), angle eye-level or slight low; movement: static, locked-off; longer lens, symmetrical framing; light: hard side light, half the face in shadow; colour: cool desaturated with steel blues; pace: slow, long silences.",
+  "purpose": "Make the audience feel (not just see) anger (cold).",
+  "emotional_effect": [
+   "Anger (cold)"
+  ],
+  "use_when": [
+   "the beat's target feeling is anger (cold)"
+  ],
+  "avoid_when": [
+   "the character's face/body does not carry the emotion (camera amplifies, it does not create)"
+  ],
+  "examples": [],
+  "ai_image_prompt": "a manager stares silently across a desk, hands folded, medium close-up shot, eye-level or slight low angle, longer lens, symmetrical framing, hard side light, half the face in shadow, cool desaturated with steel blues colour palette, cinematic still",
+  "ai_video_prompt": "a manager stares silently across a desk, hands folded. Camera: static, locked-off. Lens: longer lens, symmetrical framing. Light: hard side light, half the face in shadow. Pace: slow, long silences.",
+  "common_mistakes": [
+   "letting the actor move a lot (kills the control)",
+   "all levers at maximum at once (no room to build)"
+  ],
+  "check": "Mute the clip and show 3 frames to someone: do they name this emotion (or its neighbour)? Then check the curve: does this beat contrast with the one before?",
+  "combine_with": [],
+  "related_ids": [
+   "anger.cold",
+   "cam.mcu",
+   "cam.ms"
+  ],
+  "emotion_links": {
+   "emotional_architecture": "creative-intelligence/knowledge/emotional-architecture/EMOTION_DESIGN_MATRIX.md §4",
+   "emotion_visual_library": ".claude/skills/ai-visual-artist/EMOTION_VISUAL_LIBRARY.json#anger.cold"
+  },
+  "evidence_notes": [
+   "Close-up camera on uncivil conflict made viewers rate the shown side as less legitimate [EVIDENCE: Mutz2007]",
+   "All other levers in this entry: [CRAFT] (practitioner convention, not tested)."
+  ],
+  "source_keys": [
+   "Mutz2007",
+   "Block2021"
+  ],
+  "evidence": "MIXED",
+  "test_status": "untested"
+ },
+ {
+  "id": "emo.contempt",
+  "name": "Contempt",
+  "category": "emotional-camera",
+  "definition": "Camera/edit settings that support the target emotion 'Contempt' (valence/arousal V- A0). Values are starting points; the story beat decides.",
+  "valence_arousal": "V- A0",
+  "shot_size": [
+   "cam.mcu",
+   "cam.ms"
+  ],
+  "angle": "cam.low_angle on the contemptuous one; high angle on the target",
+  "movement": "static",
+  "lens": "normal",
+  "light": "hard side light",
+  "colour": "cool",
+  "pace": "slow",
+  "acting": "one-sided lip raise, head tilt back, looking down the nose",
+  "how": "Primary framing medium close-up (cam.mcu), angle low on the contemptuous one; high angle on the target; movement: static; normal; light: hard side light; colour: cool; pace: slow.",
+  "purpose": "Make the audience feel (not just see) contempt.",
+  "emotional_effect": [
+   "Contempt"
+  ],
+  "use_when": [
+   "the beat's target feeling is contempt"
+  ],
+  "avoid_when": [
+   "for brand voice",
+   "the character's face/body does not carry the emotion (camera amplifies, it does not create)"
+  ],
+  "examples": [],
+  "ai_image_prompt": "a well-dressed man looks down at someone off-screen with a slight smirk, medium close-up shot, low on the contemptuous one; high angle on the target angle, normal, hard side light, cool colour palette, cinematic still",
+  "ai_video_prompt": "a well-dressed man looks down at someone off-screen with a slight smirk. Camera: static. Lens: normal. Light: hard side light. Pace: slow.",
+  "common_mistakes": [
+   "all levers at maximum at once (no room to build)"
+  ],
+  "check": "Mute the clip and show 3 frames to someone: do they name this emotion (or its neighbour)? Then check the curve: does this beat contrast with the one before?",
+  "combine_with": [],
+  "related_ids": [
+   "disgust.contempt",
+   "cam.mcu",
+   "cam.ms"
+  ],
+  "emotion_links": {
+   "emotional_architecture": null,
+   "emotion_visual_library": ".claude/skills/ai-visual-artist/EMOTION_VISUAL_LIBRARY.json#disgust.contempt"
+  },
+  "evidence_notes": [
+   "Camera angle changes judgments of characters (Kraft1987); low/high angle -> power effects are weak and context dependent (see emotional-architecture MeyersLevyPeracchio1992) [EVIDENCE weak]",
+   "All other levers in this entry: [CRAFT] (practitioner convention, not tested)."
+  ],
+  "source_keys": [
+   "Kraft1987",
+   "Block2021"
+  ],
+  "evidence": "MIXED",
+  "test_status": "untested"
+ },
+ {
+  "id": "emo.disgust",
+  "name": "Disgust",
+  "category": "emotional-camera",
+  "definition": "Camera/edit settings that support the target emotion 'Disgust' (valence/arousal V- A+). Values are starting points; the story beat decides.",
+  "valence_arousal": "V- A+",
+  "shot_size": [
+   "cam.cu",
+   "cam.insert"
+  ],
+  "angle": "cam.eye_level",
+  "movement": "quick pull-back (recoil)",
+  "lens": "macro on the object; wide on the reaction",
+  "light": "sickly mixed light",
+  "colour": "yellow-green",
+  "pace": "short",
+  "acting": "nose wrinkle, turning away, recoil",
+  "how": "Primary framing close-up (cam.cu), angle eye-level; movement: quick pull-back (recoil); macro on the object; wide on the reaction; light: sickly mixed light; colour: yellow-green; pace: short.",
+  "purpose": "Make the audience feel (not just see) disgust.",
+  "emotional_effect": [
+   "Disgust"
+  ],
+  "use_when": [
+   "the beat's target feeling is disgust"
+  ],
+  "avoid_when": [
+   "food promos",
+   "the character's face/body does not carry the emotion (camera amplifies, it does not create)"
+  ],
+  "examples": [],
+  "ai_image_prompt": "a person sniffs milk from a carton and recoils, close-up shot, eye-level angle, macro on the object, sickly mixed light, yellow-green colour palette, cinematic still",
+  "ai_video_prompt": "a person sniffs milk from a carton and recoils. Camera: quick pull-back (recoil). Lens: macro on the object. Light: sickly mixed light. Pace: short.",
+  "common_mistakes": [
+   "lingering on gross imagery longer than needed",
+   "all levers at maximum at once (no room to build)"
+  ],
+  "check": "Mute the clip and show 3 frames to someone: do they name this emotion (or its neighbour)? Then check the curve: does this beat contrast with the one before?",
+  "combine_with": [],
+  "related_ids": [
+   "disgust.disgust",
+   "cam.cu",
+   "cam.insert"
+  ],
+  "emotion_links": {
+   "emotional_architecture": null,
+   "emotion_visual_library": ".claude/skills/ai-visual-artist/EMOTION_VISUAL_LIBRARY.json#disgust.disgust"
+  },
+  "evidence_notes": [
+   "All other levers in this entry: [CRAFT] (practitioner convention, not tested)."
+  ],
+  "source_keys": [
+   "Block2021"
+  ],
+  "evidence": "CRAFT",
+  "test_status": "untested"
+ },
+ {
+  "id": "emo.surprise",
+  "name": "Surprise",
+  "category": "emotional-camera",
+  "definition": "Camera/edit settings that support the target emotion 'Surprise' (valence/arousal V+/- A+ (brief)). Values are starting points; the story beat decides.",
+  "valence_arousal": "V+/- A+ (brief)",
+  "shot_size": [
+   "cam.mcu",
+   "cam.cu"
+  ],
+  "angle": "cam.eye_level",
+  "movement": "snap zoom or quick push; or static then reveal",
+  "lens": "any",
+  "light": "change of light on the reveal",
+  "colour": "contrast change at the reveal",
+  "pace": "a held beat then a smash cut",
+  "acting": "raised brows, mouth open, stepping back",
+  "how": "Primary framing medium close-up (cam.mcu), angle eye-level; movement: snap zoom or quick push; or static then reveal; any; light: change of light on the reveal; colour: contrast change at the reveal; pace: a held beat then a smash cut.",
+  "purpose": "Make the audience feel (not just see) surprise.",
+  "emotional_effect": [
+   "Surprise"
+  ],
+  "use_when": [
+   "the beat's target feeling is surprise"
+  ],
+  "avoid_when": [
+   "the character's face/body does not carry the emotion (camera amplifies, it does not create)"
+  ],
+  "examples": [],
+  "ai_image_prompt": "a woman opens a box and her eyes widen, light spills on her face, medium close-up shot, eye-level angle, any, change of light on the reveal, contrast change at the reveal colour palette, cinematic still",
+  "ai_video_prompt": "a woman opens a box and her eyes widen, light spills on her face. Camera: snap zoom or quick push; or static then reveal. Lens: any. Light: change of light on the reveal. Pace: a held beat then a smash cut.",
+  "common_mistakes": [
+   "telegraphing the surprise",
+   "all levers at maximum at once (no room to build)"
+  ],
+  "check": "Mute the clip and show 3 frames to someone: do they name this emotion (or its neighbour)? Then check the curve: does this beat contrast with the one before?",
+  "combine_with": [],
+  "related_ids": [
+   "surprise.pleasant",
+   "cam.mcu",
+   "cam.cu"
+  ],
+  "emotion_links": {
+   "emotional_architecture": "creative-intelligence/knowledge/emotional-architecture/EMOTION_DESIGN_MATRIX.md §5",
+   "emotion_visual_library": ".claude/skills/ai-visual-artist/EMOTION_VISUAL_LIBRARY.json#surprise.pleasant"
+  },
+  "evidence_notes": [
+   "In video ads the rate of increase of joy predicted retention; surprise level concentrated attention [EVIDENCE: Teixeira2012]",
+   "All other levers in this entry: [CRAFT] (practitioner convention, not tested)."
+  ],
+  "source_keys": [
+   "Teixeira2012",
+   "Block2021"
+  ],
+  "evidence": "MIXED",
+  "test_status": "untested"
+ },
+ {
+  "id": "emo.curiosity",
+  "name": "Curiosity",
+  "category": "emotional-camera",
+  "definition": "Camera/edit settings that support the target emotion 'Curiosity' (valence/arousal V+ A+ (moderate)). Values are starting points; the story beat decides.",
+  "valence_arousal": "V+ A+ (moderate)",
+  "shot_size": [
+   "cam.ms",
+   "cam.ots",
+   "cam.insert"
+  ],
+  "angle": "cam.eye_level; partial views",
+  "movement": "slow push-in; reveal by lateral move",
+  "lens": "shallow DoF hiding part of the object",
+  "light": "pool of light on the unknown, rest darker",
+  "colour": "one accent colour on the mystery object",
+  "pace": "medium, withholding the payoff",
+  "acting": "leaning in, head tilt, reaching",
+  "how": "Primary framing medium (cam.ms), angle eye-level; partial views; movement: slow push-in; reveal by lateral move; shallow DoF hiding part of the object; light: pool of light on the unknown, rest darker; colour: one accent colour on the mystery object; pace: medium, withholding the payoff.",
+  "purpose": "Make the audience feel (not just see) curiosity.",
+  "emotional_effect": [
+   "Curiosity"
+  ],
+  "use_when": [
+   "the beat's target feeling is curiosity"
+  ],
+  "avoid_when": [
+   "the character's face/body does not carry the emotion (camera amplifies, it does not create)"
+  ],
+  "examples": [],
+  "ai_image_prompt": "a child leans toward a glowing box on a shelf, medium shot, eye-level; partial views angle, shallow DoF hiding part of the object, pool of light on the unknown, rest darker, one accent colour on the mystery object colour palette, cinematic still",
+  "ai_video_prompt": "a child leans toward a glowing box on a shelf. Camera: slow push-in; reveal by lateral move. Lens: shallow DoF hiding part of the object. Light: pool of light on the unknown, rest darker. Pace: medium, withholding the payoff.",
+  "common_mistakes": [
+   "revealing the answer in the same shot as the question",
+   "all levers at maximum at once (no room to build)"
+  ],
+  "check": "Mute the clip and show 3 frames to someone: do they name this emotion (or its neighbour)? Then check the curve: does this beat contrast with the one before?",
+  "combine_with": [],
+  "related_ids": [
+   "cognitive.curiosity",
+   "cam.ms",
+   "cam.ots",
+   "cam.insert"
+  ],
+  "emotion_links": {
+   "emotional_architecture": "creative-intelligence/knowledge/emotional-architecture/EMOTION_DESIGN_MATRIX.md §6",
+   "emotion_visual_library": ".claude/skills/ai-visual-artist/EMOTION_VISUAL_LIBRARY.json#cognitive.curiosity"
+  },
+  "evidence_notes": [
+   "A physical camera approach (Steadicam) was rated more involving than zoom or fixed, with stronger motor-cortex mu desynchronisation [EVIDENCE: Heimann2014]",
+   "All other levers in this entry: [CRAFT] (practitioner convention, not tested)."
+  ],
+  "source_keys": [
+   "Heimann2014",
+   "Block2021"
+  ],
+  "evidence": "MIXED",
+  "test_status": "untested"
+ },
+ {
+  "id": "emo.excitement",
+  "name": "Excitement",
+  "category": "emotional-camera",
+  "definition": "Camera/edit settings that support the target emotion 'Excitement' (valence/arousal V+ A++). Values are starting points; the story beat decides.",
+  "valence_arousal": "V+ A++",
+  "shot_size": [
+   "cam.mcu",
+   "cam.ms",
+   "cam.ws"
+  ],
+  "angle": "cam.low_angle dynamic",
+  "movement": "fast tracking, orbit, crane up",
+  "lens": "wide lens, moving foreground",
+  "light": "bright, high-key, flares",
+  "colour": "saturated complementary",
+  "pace": "fast, accelerating cuts on beat (ASL < 1.5 s)",
+  "acting": "jumping, fast gestures",
+  "how": "Primary framing medium close-up (cam.mcu), angle low dynamic; movement: fast tracking, orbit, crane up; wide lens, moving foreground; light: bright, high-key, flares; colour: saturated complementary; pace: fast, accelerating cuts on beat (ASL < 1.5 s).",
+  "purpose": "Make the audience feel (not just see) excitement.",
+  "emotional_effect": [
+   "Excitement"
+  ],
+  "use_when": [
+   "the beat's target feeling is excitement"
+  ],
+  "avoid_when": [
+   "calm/eye-break content",
+   "the character's face/body does not carry the emotion (camera amplifies, it does not create)"
+  ],
+  "examples": [],
+  "ai_image_prompt": "a crowd jumps as confetti falls, camera orbiting, medium close-up shot, low dynamic angle, wide lens, moving foreground, bright, high-key, flares, saturated complementary colour palette, cinematic still",
+  "ai_video_prompt": "a crowd jumps as confetti falls, camera orbiting. Camera: fast tracking, orbit, crane up. Lens: wide lens, moving foreground. Light: bright, high-key, flares. Pace: fast, accelerating cuts on beat (ASL < 1.5 s).",
+  "common_mistakes": [
+   "fast cuts without a readable subject",
+   "all levers at maximum at once (no room to build)"
+  ],
+  "check": "Mute the clip and show 3 frames to someone: do they name this emotion (or its neighbour)? Then check the curve: does this beat contrast with the one before?",
+  "combine_with": [],
+  "related_ids": [
+   "hope.excitement",
+   "cam.mcu",
+   "cam.ms",
+   "cam.ws"
+  ],
+  "emotion_links": {
+   "emotional_architecture": "creative-intelligence/knowledge/emotional-architecture/EMOTION_DESIGN_MATRIX.md §7",
+   "emotion_visual_library": ".claude/skills/ai-visual-artist/EMOTION_VISUAL_LIBRARY.json#hope.excitement"
+  },
+  "evidence_notes": [
+   "Shorter shots with more motion characterise climaxes in popular films; authors link cuts and motion to attention capture [EVIDENCE, correlational: Cutting2016; Cutting2011]",
+   "In video ads the rate of increase of joy predicted retention; surprise level concentrated attention [EVIDENCE: Teixeira2012]",
+   "All other levers in this entry: [CRAFT] (practitioner convention, not tested)."
+  ],
+  "source_keys": [
+   "Cutting2011",
+   "Cutting2016",
+   "Teixeira2012",
+   "Block2021"
+  ],
+  "evidence": "MIXED",
+  "test_status": "untested"
+ },
+ {
+  "id": "emo.calm",
+  "name": "Calm / serenity",
+  "category": "emotional-camera",
+  "definition": "Camera/edit settings that support the target emotion 'Calm / serenity' (valence/arousal V+ A-). Values are starting points; the story beat decides.",
+  "valence_arousal": "V+ A-",
+  "shot_size": [
+   "cam.ws",
+   "cam.ews"
+  ],
+  "angle": "cam.eye_level",
+  "movement": "static or slow lateral slide",
+  "lens": "normal to wide, deep focus",
+  "light": "soft natural light, golden or overcast",
+  "colour": "analogous cool-green or warm-neutral",
+  "pace": "slow; 4-8 s shots; dissolves",
+  "acting": "slow breathing, stillness",
+  "how": "Primary framing wide (cam.ws), angle eye-level; movement: static or slow lateral slide; normal to wide, deep focus; light: soft natural light, golden or overcast; colour: analogous cool-green or warm-neutral; pace: slow; 4-8 s shots; dissolves.",
+  "purpose": "Make the audience feel (not just see) calm / serenity.",
+  "emotional_effect": [
+   "Calm / serenity"
+  ],
+  "use_when": [
+   "the beat's target feeling is calm / serenity"
+  ],
+  "avoid_when": [
+   "promo urgency",
+   "the character's face/body does not carry the emotion (camera amplifies, it does not create)"
+  ],
+  "examples": [],
+  "ai_image_prompt": "a still lake at dawn, mist moving slowly, wide shot, eye-level angle, normal to wide, deep focus, soft natural light, golden or overcast, analogous cool-green or warm-neutral colour palette, cinematic still",
+  "ai_video_prompt": "a still lake at dawn, mist moving slowly. Camera: static or slow lateral slide. Lens: normal to wide, deep focus. Light: soft natural light, golden or overcast. Pace: slow; 4-8 s shots; dissolves.",
+  "common_mistakes": [
+   "music with a fast pulse",
+   "all levers at maximum at once (no room to build)"
+  ],
+  "check": "Mute the clip and show 3 frames to someone: do they name this emotion (or its neighbour)? Then check the curve: does this beat contrast with the one before?",
+  "combine_with": [],
+  "related_ids": [
+   "calm.serenity",
+   "cam.ws",
+   "cam.ews"
+  ],
+  "emotion_links": {
+   "emotional_architecture": "creative-intelligence/knowledge/emotional-architecture/EMOTION_DESIGN_MATRIX.md §8",
+   "emotion_visual_library": ".claude/skills/ai-visual-artist/EMOTION_VISUAL_LIBRARY.json#calm.serenity"
+  },
+  "evidence_notes": [
+   "Films darken across complication/development and brighten across the climax; Cutting associates brighter/darker images with positive/negative emotion (interpretation) [EVIDENCE weak: Cutting2016]",
+   "All other levers in this entry: [CRAFT] (practitioner convention, not tested)."
+  ],
+  "source_keys": [
+   "Cutting2016",
+   "Block2021"
+  ],
+  "evidence": "MIXED",
+  "test_status": "untested"
+ },
+ {
+  "id": "emo.tenderness",
+  "name": "Tenderness / love",
+  "category": "emotional-camera",
+  "definition": "Camera/edit settings that support the target emotion 'Tenderness / love' (valence/arousal V+ A-). Values are starting points; the story beat decides.",
+  "valence_arousal": "V+ A-",
+  "shot_size": [
+   "cam.two_shot",
+   "cam.cu"
+  ],
+  "angle": "cam.eye_level",
+  "movement": "slow push-in, or gentle handheld",
+  "lens": "85mm+, shallow DoF",
+  "light": "soft warm backlight, low contrast",
+  "colour": "warm pastel",
+  "pace": "slow",
+  "acting": "touch, closeness, mutual gaze",
+  "how": "Primary framing two-shot (cam.two_shot), angle eye-level; movement: slow push-in, or gentle handheld; 85mm+, shallow DoF; light: soft warm backlight, low contrast; colour: warm pastel; pace: slow.",
+  "purpose": "Make the audience feel (not just see) tenderness / love.",
+  "emotional_effect": [
+   "Tenderness / love"
+  ],
+  "use_when": [
+   "the beat's target feeling is tenderness / love"
+  ],
+  "avoid_when": [
+   "the character's face/body does not carry the emotion (camera amplifies, it does not create)"
+  ],
+  "examples": [],
+  "ai_image_prompt": "a mother adjusts her child's glasses gently, close two-shot, two-shot shot, eye-level angle, 85mm+, shallow DoF, soft warm backlight, low contrast, warm pastel colour palette, cinematic still",
+  "ai_video_prompt": "a mother adjusts her child's glasses gently, close two-shot. Camera: slow push-in, or gentle handheld. Lens: 85mm+, shallow DoF. Light: soft warm backlight, low contrast. Pace: slow.",
+  "common_mistakes": [
+   "too far: distance breaks intimacy",
+   "all levers at maximum at once (no room to build)"
+  ],
+  "check": "Mute the clip and show 3 frames to someone: do they name this emotion (or its neighbour)? Then check the curve: does this beat contrast with the one before?",
+  "combine_with": [],
+  "related_ids": [
+   "love.tenderness",
+   "cam.two_shot",
+   "cam.cu"
+  ],
+  "emotion_links": {
+   "emotional_architecture": null,
+   "emotion_visual_library": ".claude/skills/ai-visual-artist/EMOTION_VISUAL_LIBRARY.json#love.tenderness"
+  },
+  "evidence_notes": [
+   "A physical camera approach (Steadicam) was rated more involving than zoom or fixed, with stronger motor-cortex mu desynchronisation [EVIDENCE: Heimann2014]",
+   "Close-ups of an expressive (sad) face increased spontaneous mental-state attribution vs long shot; neutral close-up did not [EVIDENCE: RooneyBalint2018; Balint2020]",
+   "All other levers in this entry: [CRAFT] (practitioner convention, not tested)."
+  ],
+  "source_keys": [
+   "Balint2020",
+   "Heimann2014",
+   "RooneyBalint2018",
+   "Block2021"
+  ],
+  "evidence": "MIXED",
+  "test_status": "untested"
+ },
+ {
+  "id": "emo.empathy",
+  "name": "Empathy / compassion",
+  "category": "emotional-camera",
+  "definition": "Camera/edit settings that support the target emotion 'Empathy / compassion' (valence/arousal V0/- A-). Values are starting points; the story beat decides.",
+  "valence_arousal": "V0/- A-",
+  "shot_size": [
+   "cam.cu",
+   "cam.mcu"
+  ],
+  "angle": "cam.eye_level at the character's eye height",
+  "movement": "slow physical push-in (not zoom)",
+  "lens": "normal to short tele",
+  "light": "soft frontal key",
+  "colour": "natural, slightly warm",
+  "pace": "hold reactions; L-cuts to the listener",
+  "acting": "listening posture, open hands",
+  "how": "Primary framing close-up (cam.cu), angle eye-level at the character's eye height; movement: slow physical push-in (not zoom); normal to short tele; light: soft frontal key; colour: natural, slightly warm; pace: hold reactions; L-cuts to the listener.",
+  "purpose": "Make the audience feel (not just see) empathy / compassion.",
+  "emotional_effect": [
+   "Empathy / compassion"
+  ],
+  "use_when": [
+   "the beat's target feeling is empathy / compassion"
+  ],
+  "avoid_when": [
+   "the character's face/body does not carry the emotion (camera amplifies, it does not create)"
+  ],
+  "examples": [
+   {
+    "work": "Same study",
+    "note": "effect did not transfer to the character shown only in long shots",
+    "source_key": "RooneyBalint2018"
+   }
+  ],
+  "ai_image_prompt": "an optometrist listens to an elderly patient, nodding, close-up shot, eye-level at the character's eye height angle, normal to short tele, soft frontal key, natural, slightly warm colour palette, cinematic still",
+  "ai_video_prompt": "an optometrist listens to an elderly patient, nodding. Camera: slow physical push-in (not zoom). Lens: normal to short tele. Light: soft frontal key. Pace: hold reactions; L-cuts to the listener.",
+  "common_mistakes": [
+   "cutting away before the listener reacts",
+   "all levers at maximum at once (no room to build)"
+  ],
+  "check": "Mute the clip and show 3 frames to someone: do they name this emotion (or its neighbour)? Then check the curve: does this beat contrast with the one before?",
+  "combine_with": [],
+  "related_ids": [
+   "care.empathy",
+   "cam.cu",
+   "cam.mcu"
+  ],
+  "emotion_links": {
+   "emotional_architecture": "creative-intelligence/knowledge/emotional-architecture/EMOTION_DESIGN_MATRIX.md §9",
+   "emotion_visual_library": ".claude/skills/ai-visual-artist/EMOTION_VISUAL_LIBRARY.json#care.empathy"
+  },
+  "evidence_notes": [
+   "Close-ups of an expressive (sad) face increased spontaneous mental-state attribution vs long shot; neutral close-up did not [EVIDENCE: RooneyBalint2018; Balint2020]",
+   "A physical camera approach (Steadicam) was rated more involving than zoom or fixed, with stronger motor-cortex mu desynchronisation [EVIDENCE: Heimann2014]",
+   "All other levers in this entry: [CRAFT] (practitioner convention, not tested)."
+  ],
+  "source_keys": [
+   "Balint2020",
+   "Heimann2014",
+   "RooneyBalint2018",
+   "Block2021"
+  ],
+  "evidence": "MIXED",
+  "test_status": "untested"
+ },
+ {
+  "id": "emo.trust",
+  "name": "Trust",
+  "category": "emotional-camera",
+  "definition": "Camera/edit settings that support the target emotion 'Trust' (valence/arousal V+ A-). Values are starting points; the story beat decides.",
+  "valence_arousal": "V+ A-",
+  "shot_size": [
+   "cam.ms",
+   "cam.mcu"
+  ],
+  "angle": "cam.eye_level, subject looks to lens or near-lens",
+  "movement": "static or slow push",
+  "lens": "normal 50mm, no distortion",
+  "light": "soft, even key with gentle fill (low ratio)",
+  "colour": "neutral true colours, clean whites",
+  "pace": "steady, unhurried",
+  "acting": "open palms, steady eye contact, calm voice",
+  "how": "Primary framing medium (cam.ms), angle eye-level, subject looks to lens or near-lens; movement: static or slow push; normal 50mm, no distortion; light: soft, even key with gentle fill (low ratio); colour: neutral true colours, clean whites; pace: steady, unhurried.",
+  "purpose": "Make the audience feel (not just see) trust.",
+  "emotional_effect": [
+   "Trust"
+  ],
+  "use_when": [
+   "the beat's target feeling is trust"
+  ],
+  "avoid_when": [
+   "the character's face/body does not carry the emotion (camera amplifies, it does not create)"
+  ],
+  "examples": [],
+  "ai_image_prompt": "a pharmacist explains to camera in a clean, bright shop, medium shot, eye-level angle, normal 50mm, no distortion, soft, even key with gentle fill (low ratio), neutral true colours, clean whites colour palette, cinematic still",
+  "ai_video_prompt": "a pharmacist explains to camera in a clean, bright shop. Camera: static or slow push. Lens: normal 50mm, no distortion. Light: soft, even key with gentle fill (low ratio). Pace: steady, unhurried.",
+  "common_mistakes": [
+   "aggressive ECU or wide-angle distortion on the expert",
+   "all levers at maximum at once (no room to build)"
+  ],
+  "check": "Mute the clip and show 3 frames to someone: do they name this emotion (or its neighbour)? Then check the curve: does this beat contrast with the one before?",
+  "combine_with": [],
+  "related_ids": [
+   "performance.trusted_expert",
+   "cam.ms",
+   "cam.mcu"
+  ],
+  "emotion_links": {
+   "emotional_architecture": "creative-intelligence/knowledge/emotional-architecture/EMOTION_DESIGN_MATRIX.md §10",
+   "emotion_visual_library": ".claude/skills/ai-visual-artist/EMOTION_VISUAL_LIBRARY.json#performance.trusted_expert"
+  },
+  "evidence_notes": [
+   "Close-up camera on uncivil conflict made viewers rate the shown side as less legitimate [EVIDENCE: Mutz2007]",
+   "All other levers in this entry: [CRAFT] (practitioner convention, not tested)."
+  ],
+  "source_keys": [
+   "Mutz2007",
+   "Block2021"
+  ],
+  "evidence": "MIXED",
+  "test_status": "untested"
+ },
+ {
+  "id": "emo.nostalgia",
+  "name": "Nostalgia",
+  "category": "emotional-camera",
+  "definition": "Camera/edit settings that support the target emotion 'Nostalgia' (valence/arousal V+/- A-). Values are starting points; the story beat decides.",
+  "valence_arousal": "V+/- A-",
+  "shot_size": [
+   "cam.ms",
+   "cam.insert"
+  ],
+  "angle": "cam.eye_level, child-height for memories",
+  "movement": "slow drift, handheld home-video feel",
+  "lens": "soft lenses, halation",
+  "light": "golden hour, haze",
+  "colour": "faded warm, lifted blacks, grain",
+  "pace": "slow; dissolves, dip to white into memories",
+  "acting": "looking at objects, small smile",
+  "how": "Primary framing medium (cam.ms), angle eye-level, child-height for memories; movement: slow drift, handheld home-video feel; soft lenses, halation; light: golden hour, haze; colour: faded warm, lifted blacks, grain; pace: slow; dissolves, dip to white into memories.",
+  "purpose": "Make the audience feel (not just see) nostalgia.",
+  "emotional_effect": [
+   "Nostalgia"
+  ],
+  "use_when": [
+   "the beat's target feeling is nostalgia"
+  ],
+  "avoid_when": [
+   "the character's face/body does not carry the emotion (camera amplifies, it does not create)"
+  ],
+  "examples": [],
+  "ai_image_prompt": "an old photo album on a table, afternoon sun through curtains, medium shot, eye-level angle, soft lenses, halation, golden hour, haze, faded warm, lifted blacks, grain colour palette, cinematic still",
+  "ai_video_prompt": "an old photo album on a table, afternoon sun through curtains. Camera: slow drift, handheld home-video feel. Lens: soft lenses, halation. Light: golden hour, haze. Pace: slow; dissolves, dip to white into memories.",
+  "common_mistakes": [
+   "sepia on everything (cliche)",
+   "all levers at maximum at once (no room to build)"
+  ],
+  "check": "Mute the clip and show 3 frames to someone: do they name this emotion (or its neighbour)? Then check the curve: does this beat contrast with the one before?",
+  "combine_with": [],
+  "related_ids": [
+   "nostalgia.nostalgia",
+   "cam.ms",
+   "cam.insert"
+  ],
+  "emotion_links": {
+   "emotional_architecture": "creative-intelligence/knowledge/emotional-architecture/EMOTION_DESIGN_MATRIX.md §11",
+   "emotion_visual_library": ".claude/skills/ai-visual-artist/EMOTION_VISUAL_LIBRARY.json#nostalgia.nostalgia"
+  },
+  "evidence_notes": [
+   "All other levers in this entry: [CRAFT] (practitioner convention, not tested)."
+  ],
+  "source_keys": [
+   "Block2021"
+  ],
+  "evidence": "CRAFT",
+  "test_status": "untested"
+ },
+ {
+  "id": "emo.hope",
+  "name": "Hope",
+  "category": "emotional-camera",
+  "definition": "Camera/edit settings that support the target emotion 'Hope' (valence/arousal V+ A0->+). Values are starting points; the story beat decides.",
+  "valence_arousal": "V+ A0->+",
+  "shot_size": [
+   "cam.ws",
+   "cam.ms"
+  ],
+  "angle": "cam.eye_level moving to slight low",
+  "movement": "slow crane up or push toward light",
+  "lens": "normal",
+  "light": "dark to bright; light entering frame",
+  "colour": "cool to warm shift",
+  "pace": "slow then building",
+  "acting": "head lifting, looking up/out",
+  "how": "Primary framing wide (cam.ws), angle eye-level moving to slight low; movement: slow crane up or push toward light; normal; light: dark to bright; light entering frame; colour: cool to warm shift; pace: slow then building.",
+  "purpose": "Make the audience feel (not just see) hope.",
+  "emotional_effect": [
+   "Hope"
+  ],
+  "use_when": [
+   "the beat's target feeling is hope"
+  ],
+  "avoid_when": [
+   "the character's face/body does not carry the emotion (camera amplifies, it does not create)"
+  ],
+  "examples": [],
+  "ai_image_prompt": "a girl looks up as morning light breaks through clouds, wide shot, eye-level moving to slight low angle, normal, dark to bright; light entering frame, cool to warm shift colour palette, cinematic still",
+  "ai_video_prompt": "a girl looks up as morning light breaks through clouds. Camera: slow crane up or push toward light. Lens: normal. Light: dark to bright; light entering frame. Pace: slow then building.",
+  "common_mistakes": [
+   "jumping to bright without a dark start (no contrast)",
+   "all levers at maximum at once (no room to build)"
+  ],
+  "check": "Mute the clip and show 3 frames to someone: do they name this emotion (or its neighbour)? Then check the curve: does this beat contrast with the one before?",
+  "combine_with": [],
+  "related_ids": [
+   "hope.hope",
+   "cam.ws",
+   "cam.ms"
+  ],
+  "emotion_links": {
+   "emotional_architecture": "creative-intelligence/knowledge/emotional-architecture/EMOTION_DESIGN_MATRIX.md §12",
+   "emotion_visual_library": ".claude/skills/ai-visual-artist/EMOTION_VISUAL_LIBRARY.json#hope.hope"
+  },
+  "evidence_notes": [
+   "Films darken across complication/development and brighten across the climax; Cutting associates brighter/darker images with positive/negative emotion (interpretation) [EVIDENCE weak: Cutting2016]",
+   "All other levers in this entry: [CRAFT] (practitioner convention, not tested)."
+  ],
+  "source_keys": [
+   "Cutting2016",
+   "Block2021"
+  ],
+  "evidence": "MIXED",
+  "test_status": "untested"
+ },
+ {
+  "id": "emo.inspiration",
+  "name": "Inspiration / elevation",
+  "category": "emotional-camera",
+  "definition": "Camera/edit settings that support the target emotion 'Inspiration / elevation' (valence/arousal V+ A+). Values are starting points; the story beat decides.",
+  "valence_arousal": "V+ A+",
+  "shot_size": [
+   "cam.ws",
+   "cam.ms"
+  ],
+  "angle": "cam.low_angle",
+  "movement": "crane up, slow push",
+  "lens": "wide",
+  "light": "backlight, rim light, flares",
+  "colour": "warm golds",
+  "pace": "building",
+  "acting": "upright posture, chest open",
+  "how": "Primary framing wide (cam.ws), angle low; movement: crane up, slow push; wide; light: backlight, rim light, flares; colour: warm golds; pace: building.",
+  "purpose": "Make the audience feel (not just see) inspiration / elevation.",
+  "emotional_effect": [
+   "Inspiration / elevation"
+  ],
+  "use_when": [
+   "the beat's target feeling is inspiration / elevation"
+  ],
+  "avoid_when": [
+   "the character's face/body does not carry the emotion (camera amplifies, it does not create)"
+  ],
+  "examples": [],
+  "ai_image_prompt": "a runner reaches the top of a hill at sunrise, camera rising, wide shot, low angle, wide, backlight, rim light, flares, warm golds colour palette, cinematic still",
+  "ai_video_prompt": "a runner reaches the top of a hill at sunrise, camera rising. Camera: crane up, slow push. Lens: wide. Light: backlight, rim light, flares. Pace: building.",
+  "common_mistakes": [
+   "heroic low angle on a product (reads as parody)",
+   "all levers at maximum at once (no room to build)"
+  ],
+  "check": "Mute the clip and show 3 frames to someone: do they name this emotion (or its neighbour)? Then check the curve: does this beat contrast with the one before?",
+  "combine_with": [],
+  "related_ids": [
+   "awe.admiration",
+   "cam.ws",
+   "cam.ms"
+  ],
+  "emotion_links": {
+   "emotional_architecture": "creative-intelligence/knowledge/emotional-architecture/EMOTION_DESIGN_MATRIX.md §13",
+   "emotion_visual_library": ".claude/skills/ai-visual-artist/EMOTION_VISUAL_LIBRARY.json#awe.admiration"
+  },
+  "evidence_notes": [
+   "Camera angle changes judgments of characters (Kraft1987); low/high angle -> power effects are weak and context dependent (see emotional-architecture MeyersLevyPeracchio1992) [EVIDENCE weak]",
+   "All other levers in this entry: [CRAFT] (practitioner convention, not tested)."
+  ],
+  "source_keys": [
+   "Kraft1987",
+   "Block2021"
+  ],
+  "evidence": "MIXED",
+  "test_status": "untested"
+ },
+ {
+  "id": "emo.anticipation",
+  "name": "Anticipation",
+  "category": "emotional-camera",
+  "definition": "Camera/edit settings that support the target emotion 'Anticipation' (valence/arousal V+ A up). Values are starting points; the story beat decides.",
+  "valence_arousal": "V+ A up",
+  "shot_size": [
+   "cam.insert",
+   "cam.mcu"
+  ],
+  "angle": "cam.eye_level",
+  "movement": "slow push toward the object/door",
+  "lens": "shallow DoF",
+  "light": "light hinting at the reveal",
+  "colour": "accent colour on the target",
+  "pace": "slowing down before the reveal",
+  "acting": "held breath, hands hovering",
+  "how": "Primary framing insert detail (cam.insert), angle eye-level; movement: slow push toward the object/door; shallow DoF; light: light hinting at the reveal; colour: accent colour on the target; pace: slowing down before the reveal.",
+  "purpose": "Make the audience feel (not just see) anticipation.",
+  "emotional_effect": [
+   "Anticipation"
+  ],
+  "use_when": [
+   "the beat's target feeling is anticipation"
+  ],
+  "avoid_when": [
+   "the character's face/body does not carry the emotion (camera amplifies, it does not create)"
+  ],
+  "examples": [],
+  "ai_image_prompt": "fingers hover over a gift ribbon, about to pull, insert detail shot, eye-level angle, shallow DoF, light hinting at the reveal, accent colour on the target colour palette, cinematic still",
+  "ai_video_prompt": "fingers hover over a gift ribbon, about to pull. Camera: slow push toward the object/door. Lens: shallow DoF. Light: light hinting at the reveal. Pace: slowing down before the reveal.",
+  "common_mistakes": [
+   "no payoff",
+   "all levers at maximum at once (no room to build)"
+  ],
+  "check": "Mute the clip and show 3 frames to someone: do they name this emotion (or its neighbour)? Then check the curve: does this beat contrast with the one before?",
+  "combine_with": [],
+  "related_ids": [
+   "cam.insert",
+   "cam.mcu"
+  ],
+  "emotion_links": {
+   "emotional_architecture": "creative-intelligence/knowledge/emotional-architecture/EMOTION_DESIGN_MATRIX.md §14",
+   "emotion_visual_library": null
+  },
+  "evidence_notes": [
+   "A physical camera approach (Steadicam) was rated more involving than zoom or fixed, with stronger motor-cortex mu desynchronisation [EVIDENCE: Heimann2014]",
+   "All other levers in this entry: [CRAFT] (practitioner convention, not tested)."
+  ],
+  "source_keys": [
+   "Heimann2014",
+   "Block2021"
+  ],
+  "evidence": "MIXED",
+  "test_status": "untested"
+ },
+ {
+  "id": "emo.relief",
+  "name": "Relief",
+  "category": "emotional-camera",
+  "definition": "Camera/edit settings that support the target emotion 'Relief' (valence/arousal V+ A down). Values are starting points; the story beat decides.",
+  "valence_arousal": "V+ A down",
+  "shot_size": [
+   "cam.ms",
+   "cam.ws"
+  ],
+  "angle": "cam.eye_level",
+  "movement": "pull-back release after tight framing",
+  "lens": "normal to wide",
+  "light": "light opens up, contrast falls",
+  "colour": "warming",
+  "pace": "long shot after fast run",
+  "acting": "exhale, shoulders drop",
+  "how": "Primary framing medium (cam.ms), angle eye-level; movement: pull-back release after tight framing; normal to wide; light: light opens up, contrast falls; colour: warming; pace: long shot after fast run.",
+  "purpose": "Make the audience feel (not just see) relief.",
+  "emotional_effect": [
+   "Relief"
+  ],
+  "use_when": [
+   "the beat's target feeling is relief"
+  ],
+  "avoid_when": [
+   "the character's face/body does not carry the emotion (camera amplifies, it does not create)"
+  ],
+  "examples": [],
+  "ai_image_prompt": "a man exhales and sits down as the doctor smiles, medium shot, eye-level angle, normal to wide, light opens up, contrast falls, warming colour palette, cinematic still",
+  "ai_video_prompt": "a man exhales and sits down as the doctor smiles. Camera: pull-back release after tight framing. Lens: normal to wide. Light: light opens up, contrast falls. Pace: long shot after fast run.",
+  "common_mistakes": [
+   "cutting fast after the release",
+   "all levers at maximum at once (no room to build)"
+  ],
+  "check": "Mute the clip and show 3 frames to someone: do they name this emotion (or its neighbour)? Then check the curve: does this beat contrast with the one before?",
+  "combine_with": [],
+  "related_ids": [
+   "relief.relief",
+   "cam.ms",
+   "cam.ws"
+  ],
+  "emotion_links": {
+   "emotional_architecture": "creative-intelligence/knowledge/emotional-architecture/EMOTION_DESIGN_MATRIX.md §15",
+   "emotion_visual_library": ".claude/skills/ai-visual-artist/EMOTION_VISUAL_LIBRARY.json#relief.relief"
+  },
+  "evidence_notes": [
+   "Shorter shots with more motion characterise climaxes in popular films; authors link cuts and motion to attention capture [EVIDENCE, correlational: Cutting2016; Cutting2011]",
+   "All other levers in this entry: [CRAFT] (practitioner convention, not tested)."
+  ],
+  "source_keys": [
+   "Cutting2011",
+   "Cutting2016",
+   "Block2021"
+  ],
+  "evidence": "MIXED",
+  "test_status": "untested"
+ },
+ {
+  "id": "emo.confusion",
+  "name": "Confusion",
+  "category": "emotional-camera",
+  "definition": "Camera/edit settings that support the target emotion 'Confusion' (valence/arousal V- A0). Values are starting points; the story beat decides.",
+  "valence_arousal": "V- A0",
+  "shot_size": [
+   "cam.mcu",
+   "cam.ms"
+  ],
+  "angle": "cam.dutch mild",
+  "movement": "unmotivated small moves",
+  "lens": "wide lens close",
+  "light": "mixed colour temperatures",
+  "colour": "clashing",
+  "pace": "irregular; jump cuts",
+  "acting": "head tilt, looking around",
+  "how": "Primary framing medium close-up (cam.mcu), angle Dutch mild; movement: unmotivated small moves; wide lens close; light: mixed colour temperatures; colour: clashing; pace: irregular; jump cuts.",
+  "purpose": "Make the audience feel (not just see) confusion.",
+  "emotional_effect": [
+   "Confusion"
+  ],
+  "use_when": [
+   "the beat's target feeling is confusion"
+  ],
+  "avoid_when": [
+   "explainers - never confuse the actual message",
+   "the character's face/body does not carry the emotion (camera amplifies, it does not create)"
+  ],
+  "examples": [],
+  "ai_image_prompt": "a tourist turns a map upside down in a busy street, medium close-up shot, Dutch mild angle, wide lens close, mixed colour temperatures, clashing colour palette, cinematic still",
+  "ai_video_prompt": "a tourist turns a map upside down in a busy street. Camera: unmotivated small moves. Lens: wide lens close. Light: mixed colour temperatures. Pace: irregular; jump cuts.",
+  "common_mistakes": [
+   "confusing the audience instead of showing a confused character",
+   "all levers at maximum at once (no room to build)"
+  ],
+  "check": "Mute the clip and show 3 frames to someone: do they name this emotion (or its neighbour)? Then check the curve: does this beat contrast with the one before?",
+  "combine_with": [],
+  "related_ids": [
+   "cognitive.confusion",
+   "cam.mcu",
+   "cam.ms"
+  ],
+  "emotion_links": {
+   "emotional_architecture": "creative-intelligence/knowledge/emotional-architecture/EMOTION_DESIGN_MATRIX.md §16",
+   "emotion_visual_library": ".claude/skills/ai-visual-artist/EMOTION_VISUAL_LIBRARY.json#cognitive.confusion"
+  },
+  "evidence_notes": [
+   "All other levers in this entry: [CRAFT] (practitioner convention, not tested)."
+  ],
+  "source_keys": [
+   "Block2021"
+  ],
+  "evidence": "CRAFT",
+  "test_status": "untested"
+ },
+ {
+  "id": "emo.tension",
+  "name": "Tension / suspense",
+  "category": "emotional-camera",
+  "definition": "Camera/edit settings that support the target emotion 'Tension / suspense' (valence/arousal V- A+). Values are starting points; the story beat decides.",
+  "valence_arousal": "V- A+",
+  "shot_size": [
+   "cam.cu",
+   "cam.insert",
+   "cam.ws"
+  ],
+  "angle": "cam.eye_level; cross-cut views",
+  "movement": "slow push; static long holds",
+  "lens": "longer lens compression",
+  "light": "low-key",
+  "colour": "cool with one warm danger accent",
+  "pace": "cross-cutting with shrinking intervals",
+  "acting": "stillness, micro-movements",
+  "how": "Primary framing close-up (cam.cu), angle eye-level; cross-cut views; movement: slow push; static long holds; longer lens compression; light: low-key; colour: cool with one warm danger accent; pace: cross-cutting with shrinking intervals.",
+  "purpose": "Make the audience feel (not just see) tension / suspense.",
+  "emotional_effect": [
+   "Tension / suspense"
+  ],
+  "use_when": [
+   "the beat's target feeling is tension / suspense"
+  ],
+  "avoid_when": [
+   "the character's face/body does not carry the emotion (camera amplifies, it does not create)"
+  ],
+  "examples": [
+   {
+    "work": "Alfred Hitchcock Presents: 'Bang! You're Dead' (1961)",
+    "note": "highest inter-subject brain correlation (>65% of cortex) of four clips; ISC rose near the climax",
+    "source_key": "Hasson2008"
+   }
+  ],
+  "ai_image_prompt": "a ticking clock insert cross-cut with a woman searching a drawer, close-up shot, eye-level; cross-cut views angle, longer lens compression, low-key, cool with one warm danger accent colour palette, cinematic still",
+  "ai_video_prompt": "a ticking clock insert cross-cut with a woman searching a drawer. Camera: slow push; static long holds. Lens: longer lens compression. Light: low-key. Pace: cross-cutting with shrinking intervals.",
+  "common_mistakes": [
+   "audience doesn't know the stakes (no suspense)",
+   "all levers at maximum at once (no room to build)"
+  ],
+  "check": "Mute the clip and show 3 frames to someone: do they name this emotion (or its neighbour)? Then check the curve: does this beat contrast with the one before?",
+  "combine_with": [],
+  "related_ids": [
+   "cam.cu",
+   "cam.insert",
+   "cam.ws"
+  ],
+  "emotion_links": {
+   "emotional_architecture": "creative-intelligence/knowledge/emotional-architecture/EMOTION_DESIGN_MATRIX.md §17",
+   "emotion_visual_library": null
+  },
+  "evidence_notes": [
+   "Shorter shots with more motion characterise climaxes in popular films; authors link cuts and motion to attention capture [EVIDENCE, correlational: Cutting2016; Cutting2011]",
+   "All other levers in this entry: [CRAFT] (practitioner convention, not tested)."
+  ],
+  "source_keys": [
+   "Cutting2011",
+   "Cutting2016",
+   "Block2021",
+   "Hasson2008"
+  ],
+  "evidence": "MIXED",
+  "test_status": "untested"
+ },
+ {
+  "id": "emo.amusement",
+  "name": "Amusement / humour",
+  "category": "emotional-camera",
+  "definition": "Camera/edit settings that support the target emotion 'Amusement / humour' (valence/arousal V+ A+). Values are starting points; the story beat decides.",
+  "valence_arousal": "V+ A+",
+  "shot_size": [
+   "cam.ws",
+   "cam.fs",
+   "cam.reaction"
+  ],
+  "angle": "cam.eye_level, frontal flat staging",
+  "movement": "static (lets the gag read); quick punch-in for the reaction",
+  "lens": "wide for physical comedy (see the body)",
+  "light": "high-key, even",
+  "colour": "bright",
+  "pace": "timing: hold 0.5-1 s before the reaction cut",
+  "acting": "deadpan reactions, clear silhouettes",
+  "how": "Primary framing wide (cam.ws), angle eye-level, frontal flat staging; movement: static (lets the gag read); quick punch-in for the reaction; wide for physical comedy (see the body); light: high-key, even; colour: bright; pace: timing: hold 0.5-1 s before the reaction cut.",
+  "purpose": "Make the audience feel (not just see) amusement / humour.",
+  "emotional_effect": [
+   "Amusement / humour"
+  ],
+  "use_when": [
+   "the beat's target feeling is amusement / humour"
+  ],
+  "avoid_when": [
+   "grief",
+   "the character's face/body does not carry the emotion (camera amplifies, it does not create)"
+  ],
+  "examples": [],
+  "ai_image_prompt": "a man slips on a banana peel, wide static shot, then cut to the cat watching, wide shot, eye-level angle, wide for physical comedy (see the body), high-key, even, bright colour palette, cinematic still",
+  "ai_video_prompt": "a man slips on a banana peel, wide static shot, then cut to the cat watching. Camera: static (lets the gag read); quick punch-in for the reaction. Lens: wide for physical comedy (see the body). Light: high-key, even. Pace: timing: hold 0.5-1 s before the reaction cut.",
+  "common_mistakes": [
+   "cutting during the physical gag (hides it)",
+   "all levers at maximum at once (no room to build)"
+  ],
+  "check": "Mute the clip and show 3 frames to someone: do they name this emotion (or its neighbour)? Then check the curve: does this beat contrast with the one before?",
+  "combine_with": [],
+  "related_ids": [
+   "joy.amusement",
+   "cam.ws",
+   "cam.fs",
+   "cam.reaction"
+  ],
+  "emotion_links": {
+   "emotional_architecture": "creative-intelligence/knowledge/emotional-architecture/EMOTION_DESIGN_MATRIX.md §18",
+   "emotion_visual_library": ".claude/skills/ai-visual-artist/EMOTION_VISUAL_LIBRARY.json#joy.amusement"
+  },
+  "evidence_notes": [
+   "In video ads the rate of increase of joy predicted retention; surprise level concentrated attention [EVIDENCE: Teixeira2012]",
+   "All other levers in this entry: [CRAFT] (practitioner convention, not tested)."
+  ],
+  "source_keys": [
+   "Teixeira2012",
+   "Block2021"
+  ],
+  "evidence": "MIXED",
+  "test_status": "untested"
+ },
+ {
+  "id": "emo.awe",
+  "name": "Awe",
+  "category": "emotional-camera",
+  "definition": "Camera/edit settings that support the target emotion 'Awe' (valence/arousal V+ A+). Values are starting points; the story beat decides.",
+  "valence_arousal": "V+ A+",
+  "shot_size": [
+   "cam.ews",
+   "cam.ws"
+  ],
+  "angle": "cam.low_angle or cam.birds_eye",
+  "movement": "slow crane/aerial reveal, slow pull-back",
+  "lens": "wide angle, deep focus; small human for scale",
+  "light": "dramatic natural light, god rays",
+  "colour": "deep blues and golds",
+  "pace": "slow, long holds",
+  "acting": "stillness, looking up",
+  "how": "Primary framing extreme wide (cam.ews), angle low or bird's-eye; movement: slow crane/aerial reveal, slow pull-back; wide angle, deep focus; small human for scale; light: dramatic natural light, god rays; colour: deep blues and golds; pace: slow, long holds.",
+  "purpose": "Make the audience feel (not just see) awe.",
+  "emotional_effect": [
+   "Awe"
+  ],
+  "use_when": [
+   "the beat's target feeling is awe"
+  ],
+  "avoid_when": [
+   "the character's face/body does not carry the emotion (camera amplifies, it does not create)"
+  ],
+  "examples": [],
+  "ai_image_prompt": "a tiny hiker at the foot of a massive waterfall, slow aerial pull-back, extreme wide shot, low or bird's-eye angle, wide angle, deep focus, dramatic natural light, god rays, deep blues and golds colour palette, cinematic still",
+  "ai_video_prompt": "a tiny hiker at the foot of a massive waterfall, slow aerial pull-back. Camera: slow crane/aerial reveal, slow pull-back. Lens: wide angle, deep focus. Light: dramatic natural light, god rays. Pace: slow, long holds.",
+  "common_mistakes": [
+   "no scale reference",
+   "all levers at maximum at once (no room to build)"
+  ],
+  "check": "Mute the clip and show 3 frames to someone: do they name this emotion (or its neighbour)? Then check the curve: does this beat contrast with the one before?",
+  "combine_with": [],
+  "related_ids": [
+   "awe.awe",
+   "cam.ews",
+   "cam.ws"
+  ],
+  "emotion_links": {
+   "emotional_architecture": "creative-intelligence/knowledge/emotional-architecture/EMOTION_DESIGN_MATRIX.md §20",
+   "emotion_visual_library": ".claude/skills/ai-visual-artist/EMOTION_VISUAL_LIBRARY.json#awe.awe"
+  },
+  "evidence_notes": [
+   "Camera angle changes judgments of characters (Kraft1987); low/high angle -> power effects are weak and context dependent (see emotional-architecture MeyersLevyPeracchio1992) [EVIDENCE weak]",
+   "All other levers in this entry: [CRAFT] (practitioner convention, not tested)."
+  ],
+  "source_keys": [
+   "Kraft1987",
+   "Block2021"
+  ],
+  "evidence": "MIXED",
+  "test_status": "untested"
+ },
+ {
+  "id": "emo.shame",
+  "name": "Shame / embarrassment",
+  "category": "emotional-camera",
+  "definition": "Camera/edit settings that support the target emotion 'Shame / embarrassment' (valence/arousal V- A+/-). Values are starting points; the story beat decides.",
+  "valence_arousal": "V- A+/-",
+  "shot_size": [
+   "cam.ms",
+   "cam.ws"
+  ],
+  "angle": "cam.high_angle",
+  "movement": "static; slow pull away",
+  "lens": "normal",
+  "light": "flat, exposing",
+  "colour": "desaturated",
+  "pace": "hold uncomfortable beats",
+  "acting": "gaze down, hiding face, shrinking",
+  "how": "Primary framing medium (cam.ms), angle high; movement: static; slow pull away; normal; light: flat, exposing; colour: desaturated; pace: hold uncomfortable beats.",
+  "purpose": "Make the audience feel (not just see) shame / embarrassment.",
+  "emotional_effect": [
+   "Shame / embarrassment"
+  ],
+  "use_when": [
+   "the beat's target feeling is shame / embarrassment"
+  ],
+  "avoid_when": [
+   "the character's face/body does not carry the emotion (camera amplifies, it does not create)"
+  ],
+  "examples": [],
+  "ai_image_prompt": "a student stands alone at the front of a classroom, head lowered, medium shot, high angle, normal, flat, exposing, desaturated colour palette, cinematic still",
+  "ai_video_prompt": "a student stands alone at the front of a classroom, head lowered. Camera: static; slow pull away. Lens: normal. Light: flat, exposing. Pace: hold uncomfortable beats.",
+  "common_mistakes": [
+   "comic music undercutting sincere shame",
+   "all levers at maximum at once (no room to build)"
+  ],
+  "check": "Mute the clip and show 3 frames to someone: do they name this emotion (or its neighbour)? Then check the curve: does this beat contrast with the one before?",
+  "combine_with": [],
+  "related_ids": [
+   "selfconscious.shame",
+   "cam.ms",
+   "cam.ws"
+  ],
+  "emotion_links": {
+   "emotional_architecture": null,
+   "emotion_visual_library": ".claude/skills/ai-visual-artist/EMOTION_VISUAL_LIBRARY.json#selfconscious.shame"
+  },
+  "evidence_notes": [
+   "Camera angle changes judgments of characters (Kraft1987); low/high angle -> power effects are weak and context dependent (see emotional-architecture MeyersLevyPeracchio1992) [EVIDENCE weak]",
+   "All other levers in this entry: [CRAFT] (practitioner convention, not tested)."
+  ],
+  "source_keys": [
+   "Kraft1987",
+   "Block2021"
+  ],
+  "evidence": "MIXED",
+  "test_status": "untested"
+ },
+ {
+  "id": "emo.triumph",
+  "name": "Pride / triumph",
+  "category": "emotional-camera",
+  "definition": "Camera/edit settings that support the target emotion 'Pride / triumph' (valence/arousal V+ A+). Values are starting points; the story beat decides.",
+  "valence_arousal": "V+ A+",
+  "shot_size": [
+   "cam.ms",
+   "cam.fs"
+  ],
+  "angle": "cam.low_angle",
+  "movement": "push-in or orbit around the subject",
+  "lens": "wide to normal",
+  "light": "backlight, rim",
+  "colour": "warm saturated, gold",
+  "pace": "build to a held hero shot",
+  "acting": "chest out, arms up, chin up",
+  "how": "Primary framing medium (cam.ms), angle low; movement: push-in or orbit around the subject; wide to normal; light: backlight, rim; colour: warm saturated, gold; pace: build to a held hero shot.",
+  "purpose": "Make the audience feel (not just see) pride / triumph.",
+  "emotional_effect": [
+   "Pride / triumph"
+  ],
+  "use_when": [
+   "the beat's target feeling is pride / triumph"
+  ],
+  "avoid_when": [
+   "the character's face/body does not carry the emotion (camera amplifies, it does not create)"
+  ],
+  "examples": [],
+  "ai_image_prompt": "a shop owner lifts the key to a new store, camera rising, medium shot, low angle, wide to normal, backlight, rim, warm saturated, gold colour palette, cinematic still",
+  "ai_video_prompt": "a shop owner lifts the key to a new store, camera rising. Camera: push-in or orbit around the subject. Lens: wide to normal. Light: backlight, rim. Pace: build to a held hero shot.",
+  "common_mistakes": [
+   "every shot heroic (no build)",
+   "all levers at maximum at once (no room to build)"
+  ],
+  "check": "Mute the clip and show 3 frames to someone: do they name this emotion (or its neighbour)? Then check the curve: does this beat contrast with the one before?",
+  "combine_with": [],
+  "related_ids": [
+   "will.triumph",
+   "cam.ms",
+   "cam.fs"
+  ],
+  "emotion_links": {
+   "emotional_architecture": null,
+   "emotion_visual_library": ".claude/skills/ai-visual-artist/EMOTION_VISUAL_LIBRARY.json#will.triumph"
+  },
+  "evidence_notes": [
+   "Camera angle changes judgments of characters (Kraft1987); low/high angle -> power effects are weak and context dependent (see emotional-architecture MeyersLevyPeracchio1992) [EVIDENCE weak]",
+   "Shorter shots with more motion characterise climaxes in popular films; authors link cuts and motion to attention capture [EVIDENCE, correlational: Cutting2016; Cutting2011]",
+   "All other levers in this entry: [CRAFT] (practitioner convention, not tested)."
+  ],
+  "source_keys": [
+   "Cutting2011",
+   "Cutting2016",
+   "Kraft1987",
+   "Block2021"
+  ],
+  "evidence": "MIXED",
+  "test_status": "untested"
+ },
+ {
+  "id": "emo.determination",
+  "name": "Determination",
+  "category": "emotional-camera",
+  "definition": "Camera/edit settings that support the target emotion 'Determination' (valence/arousal V0/+ A+). Values are starting points; the story beat decides.",
+  "valence_arousal": "V0/+ A+",
+  "shot_size": [
+   "cam.cu",
+   "cam.mcu"
+  ],
+  "angle": "cam.eye_level to slight low",
+  "movement": "steady push-in",
+  "lens": "normal to tele",
+  "light": "hard side light",
+  "colour": "cool to neutral",
+  "pace": "steady, purposeful rhythm",
+  "acting": "fixed gaze, set jaw, steady breath",
+  "how": "Primary framing close-up (cam.cu), angle eye-level to slight low; movement: steady push-in; normal to tele; light: hard side light; colour: cool to neutral; pace: steady, purposeful rhythm.",
+  "purpose": "Make the audience feel (not just see) determination.",
+  "emotional_effect": [
+   "Determination"
+  ],
+  "use_when": [
+   "the beat's target feeling is determination"
+  ],
+  "avoid_when": [
+   "the character's face/body does not carry the emotion (camera amplifies, it does not create)"
+  ],
+  "examples": [],
+  "ai_image_prompt": "a woman ties her shoes, looks up with a fixed gaze, close-up shot, eye-level to slight low angle, normal to tele, hard side light, cool to neutral colour palette, cinematic still",
+  "ai_video_prompt": "a woman ties her shoes, looks up with a fixed gaze. Camera: steady push-in. Lens: normal to tele. Light: hard side light. Pace: steady, purposeful rhythm.",
+  "common_mistakes": [
+   "all levers at maximum at once (no room to build)"
+  ],
+  "check": "Mute the clip and show 3 frames to someone: do they name this emotion (or its neighbour)? Then check the curve: does this beat contrast with the one before?",
+  "combine_with": [],
+  "related_ids": [
+   "will.determination",
+   "cam.cu",
+   "cam.mcu"
+  ],
+  "emotion_links": {
+   "emotional_architecture": null,
+   "emotion_visual_library": ".claude/skills/ai-visual-artist/EMOTION_VISUAL_LIBRARY.json#will.determination"
+  },
+  "evidence_notes": [
+   "A physical camera approach (Steadicam) was rated more involving than zoom or fixed, with stronger motor-cortex mu desynchronisation [EVIDENCE: Heimann2014]",
+   "All other levers in this entry: [CRAFT] (practitioner convention, not tested)."
+  ],
+  "source_keys": [
+   "Heimann2014",
+   "Block2021"
+  ],
+  "evidence": "MIXED",
+  "test_status": "untested"
+ },
+ {
+  "id": "emo.vulnerability",
+  "name": "Vulnerability",
+  "category": "emotional-camera",
+  "definition": "Camera/edit settings that support the target emotion 'Vulnerability' (valence/arousal V- A-). Values are starting points; the story beat decides.",
+  "valence_arousal": "V- A-",
+  "shot_size": [
+   "cam.cu",
+   "cam.ws"
+  ],
+  "angle": "cam.high_angle",
+  "movement": "static or slow push",
+  "lens": "long lens CU; or wide with lots of space",
+  "light": "soft, low",
+  "colour": "pale, desaturated",
+  "pace": "slow",
+  "acting": "self-touch, protective posture",
+  "how": "Primary framing close-up (cam.cu), angle high; movement: static or slow push; long lens CU; or wide with lots of space; light: soft, low; colour: pale, desaturated; pace: slow.",
+  "purpose": "Make the audience feel (not just see) vulnerability.",
+  "emotional_effect": [
+   "Vulnerability"
+  ],
+  "use_when": [
+   "the beat's target feeling is vulnerability"
+  ],
+  "avoid_when": [
+   "the character's face/body does not carry the emotion (camera amplifies, it does not create)"
+  ],
+  "examples": [],
+  "ai_image_prompt": "a child hugs her knees on a large empty bed, close-up shot, high angle, long lens CU, soft, low, pale, desaturated colour palette, cinematic still",
+  "ai_video_prompt": "a child hugs her knees on a large empty bed. Camera: static or slow push. Lens: long lens CU. Light: soft, low. Pace: slow.",
+  "common_mistakes": [
+   "all levers at maximum at once (no room to build)"
+  ],
+  "check": "Mute the clip and show 3 frames to someone: do they name this emotion (or its neighbour)? Then check the curve: does this beat contrast with the one before?",
+  "combine_with": [],
+  "related_ids": [
+   "vulnerable.vulnerability",
+   "cam.cu",
+   "cam.ws"
+  ],
+  "emotion_links": {
+   "emotional_architecture": null,
+   "emotion_visual_library": ".claude/skills/ai-visual-artist/EMOTION_VISUAL_LIBRARY.json#vulnerable.vulnerability"
+  },
+  "evidence_notes": [
+   "Close-ups of an expressive (sad) face increased spontaneous mental-state attribution vs long shot; neutral close-up did not [EVIDENCE: RooneyBalint2018; Balint2020]",
+   "Camera angle changes judgments of characters (Kraft1987); low/high angle -> power effects are weak and context dependent (see emotional-architecture MeyersLevyPeracchio1992) [EVIDENCE weak]",
+   "All other levers in this entry: [CRAFT] (practitioner convention, not tested)."
+  ],
+  "source_keys": [
+   "Balint2020",
+   "Kraft1987",
+   "RooneyBalint2018",
+   "Block2021"
+  ],
+  "evidence": "MIXED",
+  "test_status": "untested"
+ },
+ {
+  "id": "emo.mystery",
+  "name": "Mystery",
+  "category": "emotional-camera",
+  "definition": "Camera/edit settings that support the target emotion 'Mystery' (valence/arousal V0 A+). Values are starting points; the story beat decides.",
+  "valence_arousal": "V0 A+",
+  "shot_size": [
+   "cam.ws",
+   "cam.ots"
+  ],
+  "angle": "cam.eye_level, obstructed views",
+  "movement": "slow lateral reveal",
+  "lens": "shallow DoF or silhouettes",
+  "light": "low-key, backlight, fog",
+  "colour": "cool with one warm accent",
+  "pace": "slow; withholding",
+  "acting": "faces partly hidden",
+  "how": "Primary framing wide (cam.ws), angle eye-level, obstructed views; movement: slow lateral reveal; shallow DoF or silhouettes; light: low-key, backlight, fog; colour: cool with one warm accent; pace: slow; withholding.",
+  "purpose": "Make the audience feel (not just see) mystery.",
+  "emotional_effect": [
+   "Mystery"
+  ],
+  "use_when": [
+   "the beat's target feeling is mystery"
+  ],
+  "avoid_when": [
+   "the character's face/body does not carry the emotion (camera amplifies, it does not create)"
+  ],
+  "examples": [],
+  "ai_image_prompt": "a silhouette at the end of a foggy pier under one lamp, wide shot, eye-level angle, shallow DoF or silhouettes, low-key, backlight, fog, cool with one warm accent colour palette, cinematic still",
+  "ai_video_prompt": "a silhouette at the end of a foggy pier under one lamp. Camera: slow lateral reveal. Lens: shallow DoF or silhouettes. Light: low-key, backlight, fog. Pace: slow; withholding.",
+  "common_mistakes": [
+   "explaining the mystery in text",
+   "all levers at maximum at once (no room to build)"
+  ],
+  "check": "Mute the clip and show 3 frames to someone: do they name this emotion (or its neighbour)? Then check the curve: does this beat contrast with the one before?",
+  "combine_with": [],
+  "related_ids": [
+   "visual.mystery",
+   "cam.ws",
+   "cam.ots"
+  ],
+  "emotion_links": {
+   "emotional_architecture": null,
+   "emotion_visual_library": ".claude/skills/ai-visual-artist/EMOTION_VISUAL_LIBRARY.json#visual.mystery"
+  },
+  "evidence_notes": [
+   "All other levers in this entry: [CRAFT] (practitioner convention, not tested)."
+  ],
+  "source_keys": [
+   "Block2021"
+  ],
+  "evidence": "CRAFT",
+  "test_status": "untested"
+ }
+]

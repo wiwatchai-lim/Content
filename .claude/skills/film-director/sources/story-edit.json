@@ -1,0 +1,1175 @@
+[
+ {
+  "key": "Murch2001",
+  "title": "In the Blink of an Eye: A Perspective on Film Editing (2nd ed.)",
+  "authors": "Walter Murch",
+  "year": 2001,
+  "url": "https://www.silmanjamespress.com/in-the-blink-of-an-eye2nd-edition",
+  "doi_isbn": "9781879505629",
+  "source_type": "practitioner",
+  "tier": "D",
+  "key_findings": [
+   "Rule of Six for choosing a cut, ranked with weights: emotion 51%, story 23%, rhythm 10%, eye-trace 7%, 2D plane of screen 5%, 3D space of action 4% (weights as reported by several secondary summaries: StudioBinder, NoFilmSchool, PremiumBeat).",
+   "Ranking rule: if something must be given up, give up from the bottom (3D space) before the top (emotion).",
+   "The blink as punctuation of thought is a separate idea in the book, not one of the six criteria (secondary summaries)."
+  ],
+  "practical_applications": [
+   "Ask 'is this cut true to the emotion of the moment' before checking continuity details.",
+   "When an AI shot has a continuity flaw but the right emotion, keep it."
+  ],
+  "limitations": [
+   "Practitioner judgement, not an experiment; the percentages are rhetorical, not measured.",
+   "Book itself not read this session; content from publisher page and secondary summaries."
+  ],
+  "license": "copyrighted",
+  "access_status": "search_summary",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-27",
+  "modules": [
+   "FD10",
+   "FD12"
+  ]
+ },
+ {
+  "key": "BordwellThompsonFilmArt",
+  "title": "Film Art: An Introduction (many editions since 1979; 12th ed. translated into Russian 2024)",
+  "authors": "David Bordwell, Kristin Thompson, Jeff Smith",
+  "year": 1979,
+  "url": "https://doi.org/10.22455/2541-7894-2025-18-346-361",
+  "doi_isbn": "",
+  "source_type": "textbook",
+  "tier": "A",
+  "key_findings": [
+   "Standard university textbook for film form and style (mise-en-scene, cinematography, editing, sound, genre); described as 'the gold standard for humanistic introductory film analysis pedagogy' by Ignashev & Rybina (2025), the article used here to confirm the edition history."
+  ],
+  "practical_applications": [
+   "Terminology base for continuity editing, 180-degree system, eyeline match, shot/reverse shot used in FD10/FD11."
+  ],
+  "limitations": [
+   "Textbook content not read this session; existence and status confirmed via a 2025 article abstract (OpenAlex)."
+  ],
+  "license": "copyrighted",
+  "access_status": "bibliographic",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-27",
+  "modules": [
+   "FD10",
+   "FD11",
+   "FD20"
+  ]
+ },
+ {
+  "key": "Bordwell2002",
+  "title": "Intensified Continuity: Visual Style in Contemporary American Film",
+  "authors": "David Bordwell",
+  "year": 2002,
+  "url": "https://iluminace.cz/en/artkey/ilu-200301-0001_intensified-continuity-visual-style-in-contemporary-american-film.php",
+  "doi_isbn": "10.1525/fq.2002.55.3.16",
+  "source_type": "empirical",
+  "tier": "A",
+  "key_findings": [
+   "Film Quarterly 55(3):16-28. Contemporary Hollywood style intensifies rather than abandons classical continuity.",
+   "Between 1930 and 1960 most Hollywood features had 300-700 shots, ASL about 8-11 s; later many films measured at 3-6 s (search snippets).",
+   "Names four tactics of camerawork/editing as central (rapid editing, bipolar lens lengths, close framings in dialogue, free-ranging camera are the commonly cited four; exact wording not confirmed in snippets)."
+  ],
+  "practical_applications": [
+   "Short-form vertical video inherits intensified continuity: fast cutting but still continuity logic."
+  ],
+  "limitations": [
+   "Full text not read; only search snippets and bibliographic records."
+  ],
+  "license": "copyrighted",
+  "access_status": "search_summary",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-27",
+  "modules": [
+   "FD10",
+   "FD11",
+   "FD20"
+  ]
+ },
+ {
+  "key": "Bordwell2007_Revisited",
+  "title": "Intensified continuity revisited (blog essay)",
+  "authors": "David Bordwell",
+  "year": 2007,
+  "url": "https://www.davidbordwell.net/blog/2007/05/27/intensified-continuity-revisited/",
+  "doi_isbn": "",
+  "source_type": "practitioner",
+  "tier": "B",
+  "key_findings": [
+   "Compares The Shop Around the Corner (Lubitsch, 1940) with its remake You've Got Mail: outdoor section 2 shots (~82 s each) vs 41 shots (~4.1 s); cafe section 14 shots (~21 s) vs 84 shots (~4.3 s); running times nearly equal.",
+   "Intensified continuity: rapid cutting, dialogue broken into OTS and singles, tight shot/reverse shot, reaction and POV shots replacing sustained staging, redundant coverage, more demonstrative acting, more non-diegetic music, long takes kept for virtuoso travelling shots.",
+   "It is an intensification of, not a break from, continuity principles; praises Zodiac (Fincher) as intelligent use."
+  ],
+  "practical_applications": [
+   "Use the comparison as a test: same scene staged in 2 long takes vs cut into many singles; compare what the audience feels."
+  ],
+  "limitations": [
+   "Expert blog by a film scholar, not peer reviewed; ASL from his own counts."
+  ],
+  "license": "copyrighted",
+  "access_status": "full_text",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-27",
+  "modules": [
+   "FD10",
+   "FD11",
+   "FD20"
+  ]
+ },
+ {
+  "key": "Smith2012",
+  "title": "The Attentional Theory of Cinematic Continuity",
+  "authors": "Tim J. Smith",
+  "year": 2012,
+  "url": "https://ualresearchonline.arts.ac.uk/id/eprint/21187/",
+  "doi_isbn": "10.3167/proj.2012.060102",
+  "source_type": "review",
+  "tier": "A",
+  "key_findings": [
+   "AToCC: continuity is perceived when attention is cued across the cut by natural cues (off-screen sounds, conversational turns, motion onsets, gaze cues, pointing, exits from frame, rhythmic patterns); viewers need not build a coherent 3D model of the space.",
+   "If expectations (screen location, orientation, direction of action) are met within a few frames after the cut, continuity is 'a priori'; if not, the viewer enters effortful 'a posteriori' reconstruction and becomes aware of the construction.",
+   "Match-action: Blade Runner (1982) cut puts Rachael's face where Deckard's was; whip pan in Dancer in the Dark (2000) causes uncoordinated gaze/OKR eye movements that may feel like seasickness.",
+   "Shot/reverse shot: viewers keep 'attentional pointers' to where each character is on screen; about 200 ms after an off-screen speaker starts, attention shifts to their previous screen location. Requiem for a Dream (2000) example crosses the line and mismatches eyelines.",
+   "Last Year in Marienbad (1961) and Melies show match-action can hide impossible changes.",
+   "Credits Block's The Visual Story (2001) for tracking centres of interest across cuts."
+  ],
+  "practical_applications": [
+   "Before each cut, name the cue that moves the eye (look, sound, motion) and place the target where the eye will land.",
+   "For AI shots that do not match, cut on motion and keep screen position of the face."
+  ],
+  "limitations": [
+   "Theory with illustrative eye-tracking demos, not a single controlled test of every rule."
+  ],
+  "license": "CC BY-NC-ND 2.0 UK",
+  "access_status": "full_text",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-27",
+  "modules": [
+   "FD10",
+   "FD11",
+   "FD12"
+  ]
+ },
+ {
+  "key": "SmithHenderson2008",
+  "title": "Edit Blindness: The relationship between attention and global change blindness in dynamic scenes",
+  "authors": "Tim J. Smith, John M. Henderson",
+  "year": 2008,
+  "url": "https://doi.org/10.16910/jemr.2.2.6",
+  "doi_isbn": "10.16910/jemr.2.2.6",
+  "source_type": "empirical",
+  "tier": "A",
+  "key_findings": [
+   "Participants told to detect edits in feature-film excerpts still missed many; edits following continuity rules produced more edit blindness.",
+   "About a quarter of edits joining two viewpoints of the same scene were undetected; about a third when the edit coincided with sudden motion onset.",
+   "A few misses are due to blinks/saccades, but most are due to inattention."
+  ],
+  "practical_applications": [
+   "Cut on motion onset to hide joins between generated shots."
+  ],
+  "limitations": [
+   "Detection task differs from normal viewing; feature-film clips, not vertical short video."
+  ],
+  "license": "CC BY 4.0 (JEMR open access)",
+  "access_status": "abstract",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-27",
+  "modules": [
+   "FD10",
+   "FD12"
+  ]
+ },
+ {
+  "key": "SmithMital2013",
+  "title": "Attentional synchrony and the influence of viewing task on gaze behavior in static and dynamic scenes",
+  "authors": "Tim J. Smith, Parag K. Mital",
+  "year": 2013,
+  "url": "https://doi.org/10.1167/13.8.16",
+  "doi_isbn": "10.1167/13.8.16",
+  "source_type": "empirical",
+  "tier": "A",
+  "key_findings": [
+   "Free viewing of dynamic scenes produced more attentional synchrony, longer fixations and more gaze to people and high-flicker areas than static scenes.",
+   "A task (spot-the-location) reduced synchrony and moved gaze away from people and flicker, but endogenous control is slow to start: first saccades default to screen centre and motion."
+  ],
+  "practical_applications": [
+   "In the first second, put the subject near centre and give it the motion; viewers' task (scrolling to decide) still starts from centre/motion."
+  ],
+  "limitations": [
+   "Unedited real-world videos, not narrative films."
+  ],
+  "license": "CC BY-NC-ND (JOV)",
+  "access_status": "abstract",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-27",
+  "modules": [
+   "FD12",
+   "FD28"
+  ]
+ },
+ {
+  "key": "Mital2011",
+  "title": "Clustering of Gaze During Dynamic Scene Viewing is Predicted by Motion",
+  "authors": "Parag K. Mital, Tim J. Smith, Robin L. Hill, John M. Henderson",
+  "year": 2011,
+  "url": "https://doi.org/10.1007/s12559-010-9074-z",
+  "doi_isbn": "10.1007/s12559-010-9074-z",
+  "source_type": "empirical",
+  "tier": "A",
+  "key_findings": [
+   "Temporal features (flicker, motion and their contrasts) were the most predictive of where viewers look in dynamic scenes; mid-level static features less so (Semantic Scholar TLDR)."
+  ],
+  "practical_applications": [
+   "The moving thing wins attention; keep background motion lower than subject motion."
+  ],
+  "limitations": [
+   "Only TLDR read."
+  ],
+  "license": "copyrighted",
+  "access_status": "search_summary",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-27",
+  "modules": [
+   "FD12"
+  ]
+ },
+ {
+  "key": "Loschky2015",
+  "title": "What Would Jaws Do? The Tyranny of Film and the Relationship between Gaze and Higher-Level Narrative Film Comprehension",
+  "authors": "Lester C. Loschky, Adam M. Larson, Joseph P. Magliano, Tim J. Smith",
+  "year": 2015,
+  "url": "https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0142474",
+  "doi_isbn": "10.1371/journal.pone.0142474",
+  "source_type": "empirical",
+  "tier": "A",
+  "key_findings": [
+   "12-s Moonraker clip; Context group (saw prior 2.5 min) drew the critical inference more (91% vs 71%).",
+   "Both groups showed strong attentional synchrony vs shuffled baseline (d > 2.98); comprehension differences in gaze were small (d about 0.42, p = .054). The film-driven effect was estimated 1.5-6x larger than the mental-model effect ('tyranny of film')."
+  ],
+  "practical_applications": [
+   "Editing can steer where people look regardless of what they understand; understanding must come from story information, not from gaze control alone."
+  ],
+  "limitations": [
+   "Single clip (follow-up with another film similar), few fixations per participant."
+  ],
+  "license": "CC BY 4.0",
+  "access_status": "full_text",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-27",
+  "modules": [
+   "FD12",
+   "FD14"
+  ]
+ },
+ {
+  "key": "Loschky2019",
+  "title": "The Scene Perception & Event Comprehension Theory (SPECT) Applied to Visual Narratives",
+  "authors": "Lester C. Loschky, Adam M. Larson, Tim J. Smith, Joseph P. Magliano",
+  "year": 2019,
+  "url": "https://doi.org/10.1111/tops.12455",
+  "doi_isbn": "10.1111/tops.12455",
+  "source_type": "review",
+  "tier": "A",
+  "key_findings": [
+   "Front-end processes (within a fixation: attentional selection, information extraction) vs back-end processes (across fixations: building event models in working memory and episodic memory).",
+   "Applies to picture stories, comics and film; medium-specific differences in front-end processing."
+  ],
+  "practical_applications": [
+   "Shot design serves front-end (where to look, what to extract); sequence design serves back-end (what is happening, what will happen)."
+  ],
+  "limitations": [
+   "Theory paper; abstract only read."
+  ],
+  "license": "CC BY (Wiley OA)",
+  "access_status": "abstract",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-27",
+  "modules": [
+   "FD12",
+   "FD14"
+  ]
+ },
+ {
+  "key": "Hasson2008",
+  "title": "Neurocinematics: The Neuroscience of Film",
+  "authors": "Uri Hasson, Ohad Landesman, Barbara Knappmeyer, Ignacio Vallines, Nava Rubin, David J. Heeger",
+  "year": 2008,
+  "url": "https://labocinemedias.ca/wp-content/uploads/2024/10/Hasson-etal_NeuroCinematics2008.pdf",
+  "doi_isbn": "10.3167/proj.2008.020102",
+  "source_type": "empirical",
+  "tier": "A",
+  "key_findings": [
+   "Inter-subject correlation (ISC) of fMRI: Alfred Hitchcock Presents 'Bang! You're Dead' (1961) >65% of cortex; The Good, the Bad and the Ugly (1966) 45%; Curb Your Enthusiasm (2000) 18%; unedited one-shot Washington Square Park video <5%.",
+   "Eye-position also more consistent for the structured film than the one-shot reality video.",
+   "ISC over time rose near the Hitchcock climax; auditory cortex ISC high throughout (0.67).",
+   "Authors note Curb is often shot without a script; sample was college students."
+  ],
+  "practical_applications": [
+   "Directed structure (framing, cutting, sound) makes audiences respond alike; an unedited static shot lets attention scatter."
+  ],
+  "limitations": [
+   "Small samples; 'control' is not the same as quality or enjoyment (critiqued by Poulaki 2014)."
+  ],
+  "license": "copyrighted",
+  "access_status": "full_text",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-27",
+  "modules": [
+   "FD12",
+   "FD28"
+  ]
+ },
+ {
+  "key": "Nakano2009",
+  "title": "Synchronization of spontaneous eyeblinks while viewing video stories",
+  "authors": "Tamami Nakano, Yoshiharu Yamamoto, Keiichi Kitajo, Toshimitsu Takahashi, Shigeru Kitazawa",
+  "year": 2009,
+  "url": "https://doi.org/10.1098/rspb.2009.0828",
+  "doi_isbn": "10.1098/rspb.2009.0828",
+  "source_type": "empirical",
+  "tier": "A",
+  "key_findings": [
+   "Blinks were synchronised within and between viewers of the same video stories, but not tied to scene breaks.",
+   "Synchronised blinks occurred at moments needing less attention: end of an action, absence of the main character, long shots, repeated similar scenes.",
+   "No synchronisation for background video or audio-only story."
+  ],
+  "practical_applications": [
+   "Murch's intuition that cuts land at 'blink points' fits: people blink at the end of an action - a natural cut point."
+  ],
+  "limitations": [
+   "Short Mr Bean-style videos; does not test edits directly."
+  ],
+  "license": "CC BY (Proc R Soc B open access)",
+  "access_status": "abstract",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-27",
+  "modules": [
+   "FD10",
+   "FD12"
+  ]
+ },
+ {
+  "key": "Cutting2010",
+  "title": "Attention and the Evolution of Hollywood Film",
+  "authors": "James E. Cutting, Jordan E. DeLong, Christine E. Nothelfer",
+  "year": 2010,
+  "url": "https://doi.org/10.1177/0956797610361679",
+  "doi_isbn": "10.1177/0956797610361679",
+  "source_type": "empirical",
+  "tier": "A",
+  "key_findings": [
+   "150 films 1935-2005: shot lengths became more correlated with neighbours and power spectra approached 1/f.",
+   "Authors suggest 1/f shot structure may help harness attention."
+  ],
+  "practical_applications": [
+   "Group shots of similar length into runs (calm run, fast run) rather than random alternation."
+  ],
+  "limitations": [
+   "Correlational; the attention claim is the authors' suggestion."
+  ],
+  "license": "copyrighted",
+  "access_status": "abstract",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-27",
+  "modules": [
+   "FD10",
+   "FD28"
+  ]
+ },
+ {
+  "key": "Cutting2011",
+  "title": "Quicker, Faster, Darker: Changes in Hollywood Film over 75 Years",
+  "authors": "James E. Cutting, Kaitlin L. Brunick, Jordan E. DeLong, Catalina Iricinschi, Ayse Candan",
+  "year": 2011,
+  "url": "https://doi.org/10.1068/i0441aap",
+  "doi_isbn": "10.1068/i0441aap",
+  "source_type": "empirical",
+  "tier": "A",
+  "key_findings": [
+   "160 films 1935-2010: shorter shots, more motion, shorter shots carry proportionately more motion in recent films, and films got darker.",
+   "Authors suggest all four trends reflect filmmakers trying to control attention more."
+  ],
+  "practical_applications": [
+   "Pair short shots with more motion; long shots with stillness."
+  ],
+  "limitations": [
+   "English-language popular films only; correlational."
+  ],
+  "license": "CC BY (i-Perception)",
+  "access_status": "abstract",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-27",
+  "modules": [
+   "FD10",
+   "FD13"
+  ]
+ },
+ {
+  "key": "CuttingCandan2015",
+  "title": "Shot Durations, Shot Classes, and the Increased Pace of Popular Movies",
+  "authors": "James E. Cutting, Ayse Candan",
+  "year": 2015,
+  "url": "https://doi.org/10.3167/proj.2015.090204",
+  "doi_isbn": "10.3167/proj.2015.090204",
+  "source_type": "empirical",
+  "tier": "A",
+  "key_findings": [
+   "9,400 English and 1,550 non-English movies 1912-2013: mean shot duration declines roughly linearly on a log scale in the sound era.",
+   "In 24 films 1940-2010 the decline is uniform across 15 shot classes; 25% of decline from shift toward shot classes that are shorter; 8% from larger (closer) shot scales.",
+   "Explores proportions of shot classes across genres."
+  ],
+  "practical_applications": [
+   "Closer shots tend to be shorter; cutting pace and shot scale move together."
+  ],
+  "limitations": [
+   "Abstract only; genre-specific numbers not read."
+  ],
+  "license": "copyrighted",
+  "access_status": "abstract",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-27",
+  "modules": [
+   "FD10",
+   "FD20"
+  ]
+ },
+ {
+  "key": "Cutting2016",
+  "title": "The evolution of pace in popular movies",
+  "authors": "James E. Cutting",
+  "year": 2016,
+  "url": "https://doi.org/10.1186/s41235-016-0029-0",
+  "doi_isbn": "10.1186/s41235-016-0029-0",
+  "source_type": "empirical",
+  "tier": "A",
+  "key_findings": [
+   "Across four roughly equal acts (setup, complication, development, climax): shot durations increase and motion decreases in the setup; images darken across complication/development and brighten across the climax; shots shorten and motion rises in the first part of the climax, then lengthen with less motion at the end.",
+   "Brighter/darker images are associated with positive/negative emotion (author's interpretation)."
+  ],
+  "practical_applications": [
+   "Shape a clip's pace curve: calm open, darken in the middle, fastest cutting at the climax start, slow out at the end."
+  ],
+  "limitations": [
+   "Feature-length English-language films; mapping to 15-60 s clips is an inference."
+  ],
+  "license": "CC BY 4.0",
+  "access_status": "abstract",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-27",
+  "modules": [
+   "FD10",
+   "FD13",
+   "FD28"
+  ]
+ },
+ {
+  "key": "PrinceHensley1992",
+  "title": "The Kuleshov Effect: Recreating the Classic Experiment",
+  "authors": "Stephen Prince, Wayne E. Hensley",
+  "year": 1992,
+  "url": "https://www.jstor.org/stable/1225144",
+  "doi_isbn": "10.2307/1225144",
+  "source_type": "empirical",
+  "tier": "A",
+  "key_findings": [
+   "Cinema Journal 31(2):59-75. Recreated Kuleshov's design (neutral face - emotional image - neutral face, checklist rating); most participants chose 'no emotion' - no Kuleshov effect found (as summarised by Calbi et al. 2017 and Wikipedia)."
+  ],
+  "practical_applications": [
+   "Do not rely on context alone to put emotion on a blank face."
+  ],
+  "limitations": [
+   "Single trial per condition, low statistical power (critique by later authors). Paper itself not read."
+  ],
+  "license": "copyrighted",
+  "access_status": "search_summary",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-27",
+  "modules": [
+   "FD12"
+  ]
+ },
+ {
+  "key": "Mobbs2006",
+  "title": "The Kuleshov Effect: the influence of contextual framing on emotional attributions",
+  "authors": "Dean Mobbs, Nikolaus Weiskopf, Hakwan C. Lau, Eric Featherstone, Ray J. Dolan, Chris D. Frith",
+  "year": 2006,
+  "url": "https://academic.oup.com/scan/article/1/2/95/2362797",
+  "doi_isbn": "10.1093/scan/nsl014",
+  "source_type": "empirical",
+  "tier": "A",
+  "key_findings": [
+   "n = 14 in fMRI; identical faces paired with neutral vs emotional movies changed ratings of expression and mental state.",
+   "Emotional context enhanced responses in temporal pole, ACC, amygdala, STS; amygdala interaction for subtle happy/fear faces with congruent context."
+  ],
+  "practical_applications": [
+   "Subtle faces + strong context = the context-driven reading works best when the face is ambiguous, not blank."
+  ],
+  "limitations": [
+   "Small n; departs from the classic paradigm (faces were subtle, not strictly neutral, per Calbi 2017)."
+  ],
+  "license": "CC BY-NC (OUP open)",
+  "access_status": "abstract",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-27",
+  "modules": [
+   "FD12",
+   "FD13"
+  ]
+ },
+ {
+  "key": "Barratt2016",
+  "title": "Does the Kuleshov Effect Really Exist? Revisiting a Classic Film Experiment on Facial Expressions and Emotional Contexts",
+  "authors": "Daniel Barratt, Anna Cabak Redei, Ase Innes-Ker, Joost van de Weijer",
+  "year": 2016,
+  "url": "https://doi.org/10.1177/0301006616638595",
+  "doi_isbn": "10.1177/0301006616638595",
+  "source_type": "empirical",
+  "tier": "A",
+  "key_findings": [
+   "Published in Perception. 36 participants, 24 film sequences of neutral faces, six emotional conditions, eye tracking.",
+   "'Some sort of Kuleshov effect does in fact exist': participants chose the congruent category more often than alternatives; valence and arousal in expected directions (sad context = most negative/least arousing; desire context = most positive/most arousing, per Calbi 2017)."
+  ],
+  "practical_applications": [
+   "Context cuts shift emotion reading; the effect is a nudge, not a rewrite."
+  ],
+  "limitations": [
+   "Moderate sample; effect sizes modest; abstract only read."
+  ],
+  "license": "copyrighted",
+  "access_status": "abstract",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-27",
+  "modules": [
+   "FD12",
+   "FD13"
+  ]
+ },
+ {
+  "key": "Calbi2017",
+  "title": "How Context Influences Our Perception of Emotional Faces: A Behavioral Study on the Kuleshov Effect",
+  "authors": "Marta Calbi, Katrin Heimann, Daniel Barratt, Francesca Siri, Maria A. Umilta, Vittorio Gallese",
+  "year": 2017,
+  "url": "https://www.frontiersin.org/articles/10.3389/fpsyg.2017.01684/full",
+  "doi_isbn": "10.3389/fpsyg.2017.01684",
+  "source_type": "empirical",
+  "tier": "A",
+  "key_findings": [
+   "28 adults; face (1.5 s) - dynamic context (3 s) - face (1.5 s).",
+   "Fearful context made neutral faces more negative and more arousing; happy context had no significant effect on valence/arousal; categorisation followed context.",
+   "Reviews earlier replications: Prince & Hensley null (low power), Mobbs positive, Barratt positive."
+  ],
+  "practical_applications": [
+   "Fear/threat context is the most reliable Kuleshov lever; happy context is weaker."
+  ],
+  "limitations": [
+   "Small n, two emotions, grayscale, no sound; text/table inconsistency in neutral condition."
+  ],
+  "license": "CC BY 4.0",
+  "access_status": "full_text",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-27",
+  "modules": [
+   "FD12",
+   "FD13"
+  ]
+ },
+ {
+  "key": "HuffSchwan2012",
+  "title": "Do not cross the line: Heuristic spatial updating in dynamic scenes",
+  "authors": "Markus Huff, Stephan Schwan",
+  "year": 2012,
+  "url": "https://doi.org/10.3758/s13423-012-0293-z",
+  "doi_isbn": "10.3758/s13423-012-0293-z",
+  "source_type": "empirical",
+  "tier": "A",
+  "key_findings": [
+   "Two-shot clips of cars: when ambiguous, viewers judged 'same direction' if cars shared screen direction (left-right heuristic).",
+   "When environmental cues conflicted with screen direction, reaction times were longer: viewers use a screen-direction heuristic, switching to effortful alignment when cues are incongruent."
+  ],
+  "practical_applications": [
+   "Keep screen direction constant for the same journey; if you must flip it, give a clear environmental cue and accept a comprehension cost."
+  ],
+  "limitations": [
+   "Simple car stimuli; abstract only."
+  ],
+  "license": "copyrighted",
+  "access_status": "abstract",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-27",
+  "modules": [
+   "FD11"
+  ]
+ },
+ {
+  "key": "Kraft1987",
+  "title": "The influence of camera angle on comprehension and retention of pictorial events",
+  "authors": "Robert N. Kraft",
+  "year": 1987,
+  "url": "https://doi.org/10.3758/bf03197032",
+  "doi_isbn": "10.3758/bf03197032",
+  "source_type": "empirical",
+  "tier": "A",
+  "key_findings": [
+   "Camera angle had significant, predictable effects on judgments of characters' physical and personal characteristics and on recall of story gist (Semantic Scholar TLDR)."
+  ],
+  "practical_applications": [
+   "Angle changes how a character is judged; use it deliberately."
+  ],
+  "limitations": [
+   "Still-picture sequences; only TLDR read; direction and size of effects not checked here."
+  ],
+  "license": "copyrighted",
+  "access_status": "search_summary",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-27",
+  "modules": [
+   "FD11",
+   "FD13"
+  ]
+ },
+ {
+  "key": "FrithRobson1975",
+  "title": "Perceiving the Language of Films",
+  "authors": "Uta Frith, Jocelyn E. Robson",
+  "year": 1975,
+  "url": "https://doi.org/10.1068/p040097",
+  "doi_isbn": "10.1068/p040097",
+  "source_type": "empirical",
+  "tier": "A",
+  "key_findings": [
+   "Children aged 7, 9 and 13 watched a four-shot action sequence edited two ways and reconstructed the action from pictures of the shots (TLDR); cited by Smith 2012 as evidence viewers can comprehend spatial layout of edited sequences."
+  ],
+  "practical_applications": [
+   "Film grammar is learned; very young or inexperienced viewers need clearer establishing information."
+  ],
+  "limitations": [
+   "TLDR only; results detail not read."
+  ],
+  "license": "copyrighted",
+  "access_status": "search_summary",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-27",
+  "modules": [
+   "FD11"
+  ]
+ },
+ {
+  "key": "Heimann2016",
+  "title": "'Cuts in Action': A High-Density EEG Study Investigating the Neural Correlates of Different Editing Techniques in Film",
+  "authors": "Katrin S. Heimann, Sebo Uithol, Marta Calbi, Maria A. Umilta, Michele Guerra, Vittorio Gallese",
+  "year": 2016,
+  "url": "https://doi.org/10.1111/cogs.12439",
+  "doi_isbn": "10.1111/cogs.12439",
+  "source_type": "empirical",
+  "tier": "A",
+  "key_findings": [
+   "Cuts in general elicit early ERP components resembling syntactic-violation responses (as in language/music).",
+   "Continuity edits and cuts across the 180-degree line differ in later components (spatial remapping, awareness); occipital alpha did not support a pure attention account; central mu-rhythm (sensorimotor) differences found."
+  ],
+  "practical_applications": [
+   "Crossing the line is processed differently even when not consciously noticed - use it on purpose (disorientation), not by accident."
+  ],
+  "limitations": [
+   "Lab EEG with short action clips; abstract only."
+  ],
+  "license": "CC BY (Wiley OA)",
+  "access_status": "abstract",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-27",
+  "modules": [
+   "FD10",
+   "FD11"
+  ]
+ },
+ {
+  "key": "Heimann2014",
+  "title": "Moving Mirrors: A High-density EEG Study Investigating the Effect of Camera Movements on Motor Cortex Activation during Action Observation",
+  "authors": "Katrin Heimann, Maria A. Umilta, Michele Guerra, Vittorio Gallese",
+  "year": 2014,
+  "url": "https://doi.org/10.1162/jocn_a_00602",
+  "doi_isbn": "10.1162/jocn_a_00602",
+  "source_type": "empirical",
+  "tier": "A",
+  "key_findings": [
+   "Same hand action filmed fixed, zoom-in, dolly-in, Steadicam-in: Steadicam approach produced the strongest mu-rhythm desynchronisation.",
+   "Ratings: approaching camera felt more involving; Steadicam felt closest to a human approaching."
+  ],
+  "practical_applications": [
+   "For involvement/intimacy, a gentle physical push-in (with slight human float) beats an optical zoom."
+  ],
+  "limitations": [
+   "Hand actions only; lab setting."
+  ],
+  "license": "copyrighted",
+  "access_status": "abstract",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-27",
+  "modules": [
+   "FD13"
+  ]
+ },
+ {
+  "key": "RooneyBalint2018",
+  "title": "Watching More Closely: Shot Scale Affects Film Viewers' Theory of Mind Tendency But Not Ability",
+  "authors": "Brendan Rooney, Katalin E. Balint",
+  "year": 2018,
+  "url": "https://www.frontiersin.org/articles/10.3389/fpsyg.2017.02349/full",
+  "doi_isbn": "10.3389/fpsyg.2017.02349",
+  "source_type": "empirical",
+  "tier": "A",
+  "key_findings": [
+   "N = 136; sad close-up of a character led to more spontaneous mental-state references to her than long shot (b = 0.104, p = .05) or neutral close-up (b = 0.128, p = .013), mainly affective references.",
+   "No transfer to the other character; no change in prompted ToM ability."
+  ],
+  "practical_applications": [
+   "Close-up works with an expressive face: the close-up amplifies what the face carries, it does not create it."
+  ],
+  "limitations": [
+   "One 2-min animated film, young convenience sample, single coder."
+  ],
+  "license": "CC BY 4.0",
+  "access_status": "full_text",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-27",
+  "modules": [
+   "FD13",
+   "FD15"
+  ]
+ },
+ {
+  "key": "Balint2020",
+  "title": "Shot scale matters: The effect of close-up frequency on mental state attribution in film viewers",
+  "authors": "Katalin E. Balint, Janine N. Blessing, Brendan Rooney",
+  "year": 2020,
+  "url": "https://doi.org/10.1016/j.poetic.2020.101480",
+  "doi_isbn": "10.1016/j.poetic.2020.101480",
+  "source_type": "empirical",
+  "tier": "A",
+  "key_findings": [
+   "Online N = 495; 13 versions of an animated film varying number of facial close-ups (0 to several) x 2 facial expressions; measured spontaneous and prompted mental-state attribution in story retellings."
+  ],
+  "practical_applications": [
+   "Close-up frequency is a dial for how much viewers think about a character's mind."
+  ],
+  "limitations": [
+   "Abstract read only; detailed dose-response result not read here."
+  ],
+  "license": "CC BY (Elsevier OA)",
+  "access_status": "abstract",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-27",
+  "modules": [
+   "FD13",
+   "FD15"
+  ]
+ },
+ {
+  "key": "Wagemans2012",
+  "title": "A century of Gestalt psychology in visual perception: I. Perceptual grouping and figure-ground organization",
+  "authors": "Johan Wagemans, James H. Elder, Michael Kubovy, Stephen E. Palmer, Mary A. Peterson, Manish Singh, Rudiger von der Heydt",
+  "year": 2012,
+  "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC3482144/",
+  "doi_isbn": "10.1037/a0029333",
+  "source_type": "review",
+  "tier": "S",
+  "key_findings": [
+   "Gestalt psychology started with Wertheimer's 1912 paper on phi (apparent) motion.",
+   "Grouping principles: proximity, similarity, common fate, good continuation, closure, symmetry, parallelism; newer: synchrony, common region, element and uniform connectedness.",
+   "Figure-ground is influenced by past experience and attention."
+  ],
+  "practical_applications": [
+   "Common fate and synchrony in motion: things moving together read as one group; use for crowds, product + hand, kinetic type."
+  ],
+  "limitations": [
+   "Review of static and dynamic grouping; film-specific tests not covered."
+  ],
+  "license": "author manuscript (PMC)",
+  "access_status": "abstract",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-27",
+  "modules": [
+   "FD12"
+  ]
+ },
+ {
+  "key": "Block2021",
+  "title": "The Visual Story: Creating the Visual Structure of Film, TV, and Digital Media (3rd ed.)",
+  "authors": "Bruce Block",
+  "year": 2021,
+  "url": "https://www.routledge.com/The-Visual-Story-Creating-the-Visual-Structure-of-Film-TV-and-Digital/Block/p/book/9781138014152",
+  "doi_isbn": "9781138014152",
+  "source_type": "practitioner",
+  "tier": "D",
+  "key_findings": [
+   "Seven basic visual components: space, line, shape, tone, colour, movement, rhythm.",
+   "Principle of Contrast & Affinity applies to all components: more contrast = more visual intensity; affinity = less.",
+   "Links visual structure to story structure (intensity curve). 1st ed. Focal Press 2001."
+  ],
+  "practical_applications": [
+   "Plot a visual-intensity graph next to the story-intensity graph and make them rise together."
+  ],
+  "limitations": [
+   "Practitioner craft; book not read beyond publisher/TOC pages."
+  ],
+  "license": "copyrighted",
+  "access_status": "publisher_page",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-27",
+  "modules": [
+   "FD14",
+   "FD13"
+  ]
+ },
+ {
+  "key": "Cohn2013",
+  "title": "Visual Narrative Structure",
+  "authors": "Neil Cohn",
+  "year": 2013,
+  "url": "https://doi.org/10.1111/cogs.12016",
+  "doi_isbn": "10.1111/cogs.12016",
+  "source_type": "review",
+  "tier": "A",
+  "key_findings": [
+   "Narrative Grammar for sequential images: narrative categories (e.g. establisher, initial, peak, release) in a canonical arc that can embed recursively; pacing reflects embedding patterns.",
+   "Theory proposed to extend to film."
+  ],
+  "practical_applications": [
+   "Carousels and storyboards: give each panel a role (establish, initiate, peak, release)."
+  ],
+  "limitations": [
+   "Comics-based theory; film application is proposed, abstract only."
+  ],
+  "license": "Wiley OA",
+  "access_status": "abstract",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-27",
+  "modules": [
+   "FD14"
+  ]
+ },
+ {
+  "key": "Altman1984",
+  "title": "A Semantic/Syntactic Approach to Film Genre",
+  "authors": "Rick Altman",
+  "year": 1984,
+  "url": "https://genreacrossborders.uwaterloo.ca/biblio/semanticsyntactic-approach-film-genre",
+  "doi_isbn": "10.2307/1225093",
+  "source_type": "primary_text",
+  "tier": "A",
+  "key_findings": [
+   "Cinema Journal 23(3):6-18. Genre can be defined semantically (a list of elements: settings, props, character types) or syntactically (the structural relations between them); the two are complementary."
+  ],
+  "practical_applications": [
+   "A genre look is not only props and lighting (semantics) but the relationship pattern (syntax): who threatens whom, what is withheld."
+  ],
+  "limitations": [
+   "Read via summaries and bibliographic database, not full text."
+  ],
+  "license": "copyrighted",
+  "access_status": "search_summary",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-27",
+  "modules": [
+   "FD20"
+  ]
+ },
+ {
+  "key": "VanLeeuwenBoeriis2016",
+  "title": "Towards a Semiotics of Film Lighting",
+  "authors": "Theo van Leeuwen, Morten Boeriis",
+  "year": 2016,
+  "url": "https://doi.org/10.4324/9781315692746-8",
+  "doi_isbn": "10.4324/9781315692746-8",
+  "source_type": "review",
+  "tier": "A",
+  "key_findings": [
+   "Summarises Place & Peterson's 'Some Visual Motifs of Film Noir' (1976): uses Hollywood technical terms - key/fill/back light, low key (high contrast) vs high key (low contrast), spotted vs flooded light, high vs low light direction, highlight and shadow modelling - to describe noir style."
+  ],
+  "practical_applications": [
+   "Describe a genre's light with technical terms (key/fill ratio, direction, spot vs flood) when prompting AI."
+  ],
+  "limitations": [
+   "Only the opening excerpt (OpenAlex abstract) read."
+  ],
+  "license": "copyrighted",
+  "access_status": "abstract",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-27",
+  "modules": [
+   "FD20",
+   "FD13"
+  ]
+ },
+ {
+  "key": "Allen2003",
+  "title": "Hitchcock and Narrative Suspense: Theory and Practice",
+  "authors": "Richard Allen",
+  "year": 2003,
+  "url": "https://doi.org/10.1017/9789048505067.010",
+  "doi_isbn": "10.1017/9789048505067.010",
+  "source_type": "review",
+  "tier": "A",
+  "key_findings": [
+   "Discusses Noel Carroll's theory: suspense arises when a desirable (moral) outcome is unlikely and an undesirable outcome is likely; example D.W. Griffith's The Lonely Villa (1909) with cross-cutting between the threatened heroine and the distant hero."
+  ],
+  "practical_applications": [
+   "Cross-cutting creates suspense only if the audience knows the stakes and the odds."
+  ],
+  "limitations": [
+   "Abstract/excerpt only."
+  ],
+  "license": "copyrighted",
+  "access_status": "abstract",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-27",
+  "modules": [
+   "FD10",
+   "FD20"
+  ]
+ },
+ {
+  "key": "Naremore1988",
+  "title": "Acting in the Cinema",
+  "authors": "James Naremore",
+  "year": 1988,
+  "url": "https://ci.nii.ac.jp/ncid/BA19692945?l=en",
+  "doi_isbn": "0520062280",
+  "source_type": "textbook",
+  "tier": "A",
+  "key_findings": [
+   "University of California Press; chapters on protocols, rhetoric and expressive technique, 'Expressive Coherence and Performance within Performance', star case studies, Rear Window and The King of Comedy as performance texts (TOC only)."
+  ],
+  "practical_applications": [
+   "Vocabulary for screen performance analysis."
+  ],
+  "limitations": [
+   "Only catalogue/TOC confirmed; argument not read."
+  ],
+  "license": "copyrighted",
+  "access_status": "bibliographic",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-27",
+  "modules": [
+   "FD15"
+  ]
+ },
+ {
+  "key": "Mutz2007",
+  "title": "Effects of 'In-Your-Face' Television Discourse on Perceptions of a Legitimate Opposition",
+  "authors": "Diana C. Mutz",
+  "year": 2007,
+  "url": "https://repository.upenn.edu/bitstreams/5820b18b-896e-4b5b-a2ac-7df3dfd4c356/download",
+  "doi_isbn": "10.1017/S000305540707044X",
+  "source_type": "empirical",
+  "tier": "A",
+  "key_findings": [
+   "Experiments: televised discourse raises awareness of opposing views, but incivility and close-up camera perspectives made audiences see opposing views as less legitimate."
+  ],
+  "practical_applications": [
+   "Close-ups on conflict intensify negative reactions to the person shown - a proxemic 'too close' effect; for a trusted expert, avoid aggressive ECU during disagreement."
+  ],
+  "limitations": [
+   "Political TV debates, US sample; abstract only."
+  ],
+  "license": "author repository",
+  "access_status": "abstract",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-27",
+  "modules": [
+   "FD13",
+   "FD15"
+  ]
+ },
+ {
+  "key": "Teixeira2010",
+  "title": "Moment-to-Moment Optimal Branding in TV Commercials: Preventing Avoidance by Pulsing",
+  "authors": "Thales S. Teixeira, Michel Wedel, Rik Pieters",
+  "year": 2010,
+  "url": "https://doi.org/10.1287/mksc.1100.0567",
+  "doi_isbn": "10.1287/mksc.1100.0567",
+  "source_type": "empirical",
+  "tier": "A",
+  "key_findings": [
+   "Eye tracking on 31 commercials, nearly 2,000 participants, zapping data: attention dispersion strongly predicts avoidance.",
+   "Central on-screen brand positions (not brand size) promote avoidance; brand 'pulsing' (short repeated appearances, same total exposure) reduces avoidance - confirmed with edited commercials."
+  ],
+  "practical_applications": [
+   "Do not park a big logo centre-frame at the start; pulse the brand in short touches."
+  ],
+  "limitations": [
+   "TV ads with zapping, pre-feed era; transfer to swipe feeds is an inference."
+  ],
+  "license": "copyrighted",
+  "access_status": "abstract",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-27",
+  "modules": [
+   "FD28"
+  ]
+ },
+ {
+  "key": "Teixeira2012",
+  "title": "Emotion-Induced Engagement in Internet Video Advertisements",
+  "authors": "Thales S. Teixeira, Michel Wedel, Rik Pieters",
+  "year": 2012,
+  "url": "https://doi.org/10.1509/jmr.10.0207",
+  "doi_isbn": "10.1509/jmr.10.0207",
+  "source_type": "empirical",
+  "tier": "A",
+  "key_findings": [
+   "Facial-expression detection (joy, surprise), eye tracking and zapping: surprise and joy concentrate attention and retain viewers.",
+   "The level of surprise matters most for attention concentration; the velocity (rate of increase) of joy matters most for retention; joy effect asymmetric (gains for increases larger than losses for decreases)."
+  ],
+  "practical_applications": [
+   "Build joy upward in steps; place surprise early to concentrate gaze."
+  ],
+  "limitations": [
+   "Internet ads circa 2010; lab setting."
+  ],
+  "license": "copyrighted",
+  "access_status": "abstract",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-27",
+  "modules": [
+   "FD28",
+   "FD13"
+  ]
+ },
+ {
+  "key": "YouTubeRetention",
+  "title": "Measure key moments for audience retention (YouTube Help)",
+  "authors": "YouTube / Google",
+  "year": 2026,
+  "url": "https://support.google.com/youtube/answer/9314415",
+  "doi_isbn": "",
+  "source_type": "docs",
+  "tier": "C",
+  "key_findings": [
+   "Intro = % of audience still watching after the first 30 seconds; flat line = watched start to finish; gradual decline typical; spikes = rewatching/sharing (or confusion); dips = abandoning/skipping.",
+   "Advice: align title/thumbnail with content, experiment with the first 30 s, move compelling content earlier."
+  ],
+  "practical_applications": [
+   "Read retention graphs after posting; mark dips against the edit timeline."
+  ],
+  "limitations": [
+   "Long-form videos; platform docs change over time."
+  ],
+  "license": "proprietary docs",
+  "access_status": "full_text",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-27",
+  "modules": [
+   "FD28"
+  ]
+ },
+ {
+  "key": "YouTubeShortsMetrics",
+  "title": "Understand your YouTube content performance (YouTube Help)",
+  "authors": "YouTube / Google",
+  "year": 2026,
+  "url": "https://support.google.com/youtube/answer/12220281",
+  "doi_isbn": "",
+  "source_type": "docs",
+  "tier": "C",
+  "key_findings": [
+   "'Stayed to watch' = percentage of times viewers stayed to watch past the initial seconds of a Short; engaged views exclude loops; average view duration computed from engaged views.",
+   "No Shorts-specific retention advice or benchmarks on this page."
+  ],
+  "practical_applications": [
+   "For Shorts, the first seconds decide 'stayed to watch'; measure that before anything else."
+  ],
+  "limitations": [
+   "Page does not state how many seconds 'initial seconds' is."
+  ],
+  "license": "proprietary docs",
+  "access_status": "full_text",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-27",
+  "modules": [
+   "FD28"
+  ]
+ },
+ {
+  "key": "TikTokCreative",
+  "title": "Creative best practices for performance ads (TikTok Ads Help)",
+  "authors": "TikTok",
+  "year": 2026,
+  "url": "https://ads.tiktok.com/help/article/creative-best-practices?lang=en",
+  "doi_isbn": "",
+  "source_type": "docs",
+  "tier": "C",
+  "key_findings": [
+   "Prioritise the hook in the first 6 seconds; introduce the content proposition in the first 3 seconds.",
+   "Use sound/music; captions/text 5-10 words per second; 9:16, at least 720p; keep content in the UI safe zone.",
+   "Structure hook -> USPs -> CTA; use transitions, stickers, graphics to retain view time; 3-5 creatives per ad group."
+  ],
+  "practical_applications": [
+   "Vertical promo template: 0-3 s proposition, by 6 s the hook landed, then proof, then CTA."
+  ],
+  "limitations": [
+   "Ad-performance guidance from the platform; no published evidence base."
+  ],
+  "license": "proprietary docs",
+  "access_status": "full_text",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-27",
+  "modules": [
+   "FD28"
+  ]
+ },
+ {
+  "key": "Tsivian2009",
+  "title": "Cinemetrics, Part of the Humanities' Cyberinfrastructure",
+  "authors": "Yuri Tsivian",
+  "year": 2009,
+  "url": "https://doi.org/10.1515/9783839410233-007",
+  "doi_isbn": "10.1515/9783839410233-007",
+  "source_type": "docs",
+  "tier": "B",
+  "key_findings": [
+   "Cinemetrics (cinemetrics.lv) is an open-access site that collects and processes scholarly data on film editing, primarily cutting rates (shot lengths)."
+  ],
+  "practical_applications": [
+   "Measure ASL of a reference film/clip before imitating its pace."
+  ],
+  "limitations": [
+   "Crowd-submitted measurements vary in accuracy."
+  ],
+  "license": "open access chapter",
+  "access_status": "abstract",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-27",
+  "modules": [
+   "FD10",
+   "FD20"
+  ]
+ },
+ {
+  "key": "Poulaki2014",
+  "title": "Neurocinematics and the discourse of control: Towards a critical neurofilmology",
+  "authors": "Maria Poulaki",
+  "year": 2014,
+  "url": "https://riviste.unimi.it/index.php/cinemaetcie/article/view/16337",
+  "doi_isbn": "",
+  "source_type": "review",
+  "tier": "A",
+  "key_findings": [
+   "Critiques Hasson et al.'s use of 'control' (predictable activation by film stimuli) as resting on a unidirectional model of communication that brackets out 'noisy' divergent viewers; argues those cases matter for a complex view of film-mind interaction."
+  ],
+  "practical_applications": [
+   "Do not equate high inter-subject correlation with quality or liking."
+  ],
+  "limitations": [
+   "Theoretical critique; abstract only."
+  ],
+  "license": "open access journal",
+  "access_status": "abstract",
+  "verification_status": "verified",
+  "date_accessed": "2026-11-27",
+  "modules": [
+   "FD12"
+  ]
+ }
+]

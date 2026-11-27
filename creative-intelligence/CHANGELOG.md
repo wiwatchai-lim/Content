@@ -1,5 +1,13 @@
 # Changelog — Creative Intelligence
 
+## 2026-11-27 — skill `film-director` (Cinematography, Film Direction & AI Video directive)
+- New skill `.claude/skills/film-director/`: 30 modules FD01–FD30 (`modules/`), 15 JSON libraries + 3 protocols (`libraries/`),
+  20-step `DECISION_ENGINE.md` + `templates/SCENE_DECISION.json` + `tools/check_scene.py`, `tools/video_qc.py` (ffprobe/ffmpeg QC),
+  206 sources in `sources/*.json` (S12 A94 B29 C52 D13 E6; full_text 74). Links to curriculum/visual-arts libraries instead of copying.
+- Found while researching: our exported clips peak at ≥0 dBTP (need limiter, target ≤ −1 dBTP); PNG→H.264 export defaults to BT.601
+  matrix without BT.709 tags (fix in TECH_SPEC_PRESETS `spec.master_h264_bt709`); Wan outputs 24 fps vs IG Reels 30 fps minimum.
+- First practical test EXP-001 (FLUX, 3 angles): low angle obeyed, high angle ignored, "50mm" ignored → `training/EXPERIMENTS.md`.
+
 ## 2026-11-26 — v2: 15 domain guides, Creative Memory, independent critic, before/after benchmark
 - Audit first (`SKILL_AUDIT.md`), plan (`CHANGE_PLAN.md`), backup (git tag `backup/pre-creative-upgrade-2026-11-26` +
   `C:/timeoptic-backups\skills-ci-2026-11-26.tgz`), step log (`UPGRADE_LOG.md`).

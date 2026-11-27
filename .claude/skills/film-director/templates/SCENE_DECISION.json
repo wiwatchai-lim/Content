@@ -1,0 +1,30 @@
+{
+  "scene_id": "S01",
+  "project": "",
+  "format": "reels_9x16",
+  "shots": [
+    {
+      "shot_id": "S01-01",
+      "scene_objective":      {"value": "", "why": ""},
+      "narrative_context":    {"value": "", "why": ""},
+      "character_motivation": {"value": "", "why": ""},
+      "target_emotion":       {"value": "", "intensity": 3, "why": ""},
+      "audience_perspective": {"value": "knows-more|knows-same|knows-less; POV of ...", "why": ""},
+      "visual_focus":         {"value": "", "why": ""},
+      "camera_position":      {"value": "", "why": ""},
+      "shot_size":            {"id": "", "why": ""},
+      "camera_angle":         {"id": "", "why": ""},
+      "camera_movement":      {"id": "", "why": ""},
+      "lens":                 {"id": "", "why": ""},
+      "composition":          {"id": "", "why": ""},
+      "lighting":             {"id": "", "why": ""},
+      "color_palette":        {"id": "", "why": ""},
+      "duration_s":           {"value": 0, "why": ""},
+      "sound":                {"value": "", "why": ""},
+      "transition_in":        {"id": "", "why": ""},
+      "continuity":           {"value": "", "why": ""},
+      "generation":           {"tool": "html|rig|2.5d|flux|wan|codex|kling", "prompt": "", "quota": false, "why": ""},
+      "quality_criteria":     {"value": [""], "why": ""}
+    }
+  ]
+}

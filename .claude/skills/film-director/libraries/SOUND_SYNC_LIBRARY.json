@@ -1,0 +1,857 @@
+[
+ {
+  "id": "sync.hit_contact",
+  "name": "Hit on the contact frame",
+  "category": "hit point",
+  "definition": "The transient of an impact sound sits on the frame where contact is visible (synchresis fuses them).",
+  "how": "Place the SFX so its transient = contact_frame / fps. If it must move, move late (≤ +1 F), not early.",
+  "purpose": "Weight, physical reality, comedy timing.",
+  "emotional_effect": [
+   "impact",
+   "solidity"
+  ],
+  "use_when": [
+   "any contact: object lands, door shuts, punch, glasses placed"
+  ],
+  "avoid_when": [
+   "off-screen events (use off-screen treatment)"
+  ],
+  "examples": [
+   {
+    "work": "Chion's dubbed punch",
+    "note": "standard synchresis example",
+    "source_key": "Chion2019_AudioVision"
+   }
+  ],
+  "ai_image_prompt": "",
+  "ai_video_prompt": "",
+  "common_mistakes": [
+   "placing the file start (with silence/lead-in) instead of the transient",
+   "sound 2+ F early"
+  ],
+  "check": "Frame-step: waveform transient on the same frame as the visual contact.",
+  "combine_with": [
+   "anim.bounce",
+   "cam.impact_shake"
+  ],
+  "related_ids": [
+   "sync.layered_sfx"
+  ],
+  "source_keys": [
+   "Chion2019_AudioVision",
+   "ITU_BT1359"
+  ],
+  "evidence": "MIXED",
+  "test_status": "untested",
+  "sync_offset": {
+   "frames_24": [
+    0,
+    1
+   ],
+   "frames_30": [
+    0,
+    1
+   ],
+   "ms_tolerance": "detectable if sound leads > ~45 ms or lags > ~125 ms (broadcast speech)"
+  },
+  "tool_hint": "sound.py: b.hit('name', t_contact, gain_db, pan=x) · soundtrack.py cue {t, file, gain}"
+ },
+ {
+  "id": "sync.footstep_contact",
+  "name": "Footsteps on contact frames",
+  "category": "foley",
+  "definition": "One footstep per contact frame of the walk/run; pan follows screen position.",
+  "how": "Take contact times from R.walk / walkSide step starts; vary 3–4 samples, pitch ±3%, heel-toe for slow walks.",
+  "purpose": "Grounds characters in space; sells weight and surface.",
+  "emotional_effect": [
+   "presence",
+   "weight"
+  ],
+  "use_when": [
+   "any visible walking"
+  ],
+  "avoid_when": [
+   "very wide shots where feet are not visible and ambience covers"
+  ],
+  "examples": [],
+  "ai_image_prompt": "",
+  "ai_video_prompt": "",
+  "common_mistakes": [
+   "same sample every step",
+   "steps drifting off contacts after a speed change"
+  ],
+  "check": "Mute music, watch feet: every contact has a step.",
+  "combine_with": [
+   "anim.walk_front",
+   "anim.walk_side"
+  ],
+  "related_ids": [],
+  "source_keys": [],
+  "evidence": "CRAFT",
+  "test_status": "untested",
+  "sync_offset": {
+   "frames_24": [
+    0,
+    0
+   ],
+   "frames_30": [
+    0,
+    0
+   ]
+  },
+  "tool_hint": "b.steps('footsteps-wooden-floor', [t1,t2,...], -14, pan_from=-.6, pan_to=.1)"
+ },
+ {
+  "id": "sync.whoosh_peak",
+  "name": "Whoosh peaks at the fastest point",
+  "category": "design",
+  "definition": "A whoosh's loudest moment aligns with the fastest frame of the move (or the smear), not with its start.",
+  "how": "Find the peak in the waveform; place t = t_fastest − peak_offset.",
+  "purpose": "Speed and energy.",
+  "emotional_effect": [
+   "speed",
+   "energy"
+  ],
+  "use_when": [
+   "whip pans, fast moves, transitions, smears"
+  ],
+  "avoid_when": [
+   "every small move (fatigue)"
+  ],
+  "examples": [],
+  "ai_image_prompt": "",
+  "ai_video_prompt": "",
+  "common_mistakes": [
+   "aligning file start to motion start"
+  ],
+  "check": "Peak of the whoosh on the fastest/smear frame.",
+  "combine_with": [
+   "anim.smear"
+  ],
+  "related_ids": [
+   "sync.riser_to_cut"
+  ],
+  "source_keys": [],
+  "evidence": "CRAFT",
+  "test_status": "untested",
+  "sync_offset": {
+   "frames_24": [
+    0,
+    0
+   ],
+   "frames_30": [
+    0,
+    0
+   ],
+   "anchor": "peak"
+  },
+  "tool_hint": "b.hit('whoosh', t_fast - peak_s, -16)"
+ },
+ {
+  "id": "sync.riser_to_cut",
+  "name": "Riser ends on the cut",
+  "category": "design",
+  "definition": "A rising sound builds tension and ends exactly on the cut/reveal, followed by a hit or silence.",
+  "how": "Start at cut − riser_duration; end on the cut frame; then hit or drop to silence.",
+  "purpose": "Anticipation, transitions.",
+  "emotional_effect": [
+   "tension",
+   "anticipation"
+  ],
+  "use_when": [
+   "before reveals, scene changes in promos"
+  ],
+  "avoid_when": [
+   "calm stories"
+  ],
+  "examples": [],
+  "ai_image_prompt": "",
+  "ai_video_prompt": "",
+  "common_mistakes": [
+   "riser ends early/late"
+  ],
+  "check": "Last loud frame of the riser = cut frame.",
+  "combine_with": [
+   "sync.stinger_reveal",
+   "sync.silence_before_reveal"
+  ],
+  "related_ids": [
+   "sync.whoosh_peak"
+  ],
+  "source_keys": [],
+  "evidence": "CRAFT",
+  "test_status": "untested",
+  "sync_offset": {
+   "frames_24": [
+    0,
+    0
+   ],
+   "frames_30": [
+    0,
+    0
+   ],
+   "anchor": "end"
+  },
+  "tool_hint": "b.hit('riser', t_cut - dur, -14)"
+ },
+ {
+  "id": "sync.j_cut",
+  "name": "J-cut (audio leads picture)",
+  "category": "split edit",
+  "definition": "The next shot's sound starts before its picture.",
+  "how": "Lead ambience 0.3–0.6 s (repo convention); lead dialogue a few frames to ~1 s.",
+  "purpose": "Pull the viewer into the next scene; smooth, invisible transitions.",
+  "emotional_effect": [
+   "anticipation",
+   "flow"
+  ],
+  "use_when": [
+   "location changes, someone about to speak, door bell before door"
+  ],
+  "avoid_when": [
+   "smash cuts meant to shock"
+  ],
+  "examples": [
+   {
+    "work": "Split edits",
+    "note": "J = next audio before picture",
+    "source_key": "Adobe_JLCut"
+   }
+  ],
+  "ai_image_prompt": "",
+  "ai_video_prompt": "",
+  "common_mistakes": [
+   "lead too long (sound doesn't match picture any more)"
+  ],
+  "check": "Does the sound make you want to see its source?",
+  "combine_with": [
+   "sync.room_tone_bed"
+  ],
+  "related_ids": [
+   "sync.l_cut"
+  ],
+  "source_keys": [
+   "Adobe_JLCut",
+   "SmithSantacreu2017_MatchAction"
+  ],
+  "evidence": "MIXED",
+  "test_status": "untested",
+  "sync_offset": {
+   "lead_s": [
+    0.3,
+    0.6
+   ]
+  },
+  "tool_hint": "b.amb('next-place', t_cut - .4, t_end, -22)"
+ },
+ {
+  "id": "sync.l_cut",
+  "name": "L-cut (audio trails over the next picture)",
+  "category": "split edit",
+  "definition": "The previous shot's sound continues over the new picture (e.g., a line continues over the listener).",
+  "how": "Hold dialogue/ambience 0.3–2 s into the next shot; cut picture to the reaction.",
+  "purpose": "Reactions, emotional continuity.",
+  "emotional_effect": [
+   "empathy",
+   "continuity"
+  ],
+  "use_when": [
+   "dialogue → reaction shot, ending a scene on a sound"
+  ],
+  "avoid_when": [],
+  "examples": [
+   {
+    "work": "Split edits",
+    "note": "L = previous audio over new picture",
+    "source_key": "Adobe_JLCut"
+   }
+  ],
+  "ai_image_prompt": "",
+  "ai_video_prompt": "",
+  "common_mistakes": [
+   "L-cut that hides an important line under new information"
+  ],
+  "check": "Picture changes while the line is still being heard.",
+  "combine_with": [
+   "sync.j_cut"
+  ],
+  "related_ids": [],
+  "source_keys": [
+   "Adobe_JLCut"
+  ],
+  "evidence": "CRAFT",
+  "test_status": "untested",
+  "sync_offset": {
+   "trail_s": [
+    0.3,
+    2.0
+   ]
+  },
+  "tool_hint": "cut picture earlier than the audio cue end"
+ },
+ {
+  "id": "sync.room_tone_bed",
+  "name": "Room tone bed",
+  "category": "ambience",
+  "definition": "Continuous location 'silence' under dialogue; never digital zero inside a scene.",
+  "how": "Loop room tone/ambience across all cuts in a location (−22 to −26 dB vs VO); crossfade 2–4 F at edits.",
+  "purpose": "Makes edits and TTS gaps seamless; hides cuts.",
+  "emotional_effect": [
+   "realism",
+   "continuity"
+  ],
+  "use_when": [
+   "every interior/exterior scene with dialogue/VO"
+  ],
+  "avoid_when": [
+   "deliberate silence moments (then duck, not delete)"
+  ],
+  "examples": [
+   {
+    "work": "Edit blindness",
+    "note": "edit blindness mostly disappeared without audio",
+    "source_key": "SmithSantacreu2017_MatchAction"
+   }
+  ],
+  "ai_image_prompt": "",
+  "ai_video_prompt": "",
+  "common_mistakes": [
+   "gaps of digital silence",
+   "ambience changing on every cut within one location"
+  ],
+  "check": "Listen at every cut: no holes.",
+  "combine_with": [
+   "sync.j_cut"
+  ],
+  "related_ids": [],
+  "source_keys": [
+   "RoomTone_Presence",
+   "SmithSantacreu2017_MatchAction"
+  ],
+  "evidence": "MIXED",
+  "test_status": "untested",
+  "sync_offset": {},
+  "tool_hint": "b.amb('room-tone', 0, T, -24); b.room('small')"
+ },
+ {
+  "id": "sync.beat_cut_downbeat",
+  "name": "Cut on the downbeat / phrase",
+  "category": "music sync",
+  "definition": "Major cuts land on bar downbeats or phrase starts (every 2–4 bars); minor cuts may land on beats.",
+  "how": "frames_per_beat = fps*60/BPM; use real beat times (librosa beat_track) and round each to the nearest frame; never accumulate rounded beats.",
+  "purpose": "Energy and structure in montage/promo.",
+  "emotional_effect": [
+   "energy",
+   "drive"
+  ],
+  "use_when": [
+   "beat clips, promos, montages"
+  ],
+  "avoid_when": [
+   "dialogue scenes (emotion > rhythm)"
+  ],
+  "examples": [
+   {
+    "work": "On-beat vs off-beat music videos",
+    "note": "viewing differs between conditions; direction not read",
+    "source_key": "SwenbergCarlgren2021_OnBeat"
+   }
+  ],
+  "ai_image_prompt": "",
+  "ai_video_prompt": "",
+  "common_mistakes": [
+   "every single cut on the beat for > 10 s (mechanical)",
+   "drift from rounding"
+  ],
+  "check": "Overlay beat grid: big cuts within ±1 F.",
+  "combine_with": [
+   "sync.kinetic_type_on_beat"
+  ],
+  "related_ids": [
+   "sync.offbeat_emotion_cut"
+  ],
+  "source_keys": [
+   "SwenbergCarlgren2021_OnBeat",
+   "Lipscomb1995_AccentAlignment",
+   "Murch2001_Blink"
+  ],
+  "evidence": "MIXED",
+  "test_status": "untested",
+  "sync_offset": {
+   "frames_24": [
+    -1,
+    1
+   ],
+   "frames_30": [
+    -1,
+    1
+   ],
+   "frames_per_beat_120bpm": {
+    "24": 12,
+    "30": 15
+   }
+  },
+  "tool_hint": "librosa.beat.beat_track → times → round(t*fps)"
+ },
+ {
+  "id": "sync.offbeat_emotion_cut",
+  "name": "Off-beat cut for emotion",
+  "category": "music sync",
+  "definition": "Deliberately cut off the beat to let a reaction finish (emotion outranks rhythm).",
+  "how": "Hold the shot until the reaction completes, then cut; keep music playing through.",
+  "purpose": "Prevent the music grid from cutting emotions short.",
+  "emotional_effect": [
+   "sincerity",
+   "breath"
+  ],
+  "use_when": [
+   "reactions, emotional peaks inside musical montages"
+  ],
+  "avoid_when": [],
+  "examples": [
+   {
+    "work": "Rule of Six",
+    "note": "emotion ranked above rhythm",
+    "source_key": "Murch2001_Blink"
+   }
+  ],
+  "ai_image_prompt": "",
+  "ai_video_prompt": "",
+  "common_mistakes": [
+   "cutting a reaction in half to hit a beat"
+  ],
+  "check": "Does the reaction finish before the cut?",
+  "combine_with": [
+   "sync.play_through"
+  ],
+  "related_ids": [
+   "sync.beat_cut_downbeat"
+  ],
+  "source_keys": [
+   "Murch2001_Blink"
+  ],
+  "evidence": "CRAFT",
+  "test_status": "untested",
+  "sync_offset": {},
+  "tool_hint": ""
+ },
+ {
+  "id": "sync.kinetic_type_on_beat",
+  "name": "Kinetic type on the beat",
+  "category": "music sync",
+  "definition": "Words appear on beats (one word/phrase per beat), entrance finished by the beat.",
+  "how": "Start the entrance 2–4 F before the beat so the word is fully in on the beat; hold readable.",
+  "purpose": "Drive and memorability for beat clips.",
+  "emotional_effect": [
+   "energy"
+  ],
+  "use_when": [
+   "beat-clip, promo slogans"
+  ],
+  "avoid_when": [
+   "long sentences (reading time)"
+  ],
+  "examples": [],
+  "ai_image_prompt": "",
+  "ai_video_prompt": "",
+  "common_mistakes": [
+   "entrance starting on the beat (lands late)"
+  ],
+  "check": "Word fully visible on the beat frame.",
+  "combine_with": [
+   "motion.text_stagger_in"
+  ],
+  "related_ids": [
+   "sync.beat_cut_downbeat"
+  ],
+  "source_keys": [
+   "Kim2016_YoKineticType"
+  ],
+  "evidence": "CRAFT",
+  "test_status": "untested",
+  "sync_offset": {
+   "frames_24": [
+    -4,
+    0
+   ],
+   "frames_30": [
+    -5,
+    0
+   ],
+   "anchor": "entrance end on beat"
+  },
+  "tool_hint": "skill beat-clip"
+ },
+ {
+  "id": "sync.stinger_reveal",
+  "name": "Stinger on the reveal",
+  "category": "music sync",
+  "definition": "A short musical/sound accent caught exactly on a reveal or punchline (a 'catch').",
+  "how": "Transient on the reveal frame; often after a duck/silence.",
+  "purpose": "Emphasis.",
+  "emotional_effect": [
+   "surprise",
+   "satisfaction"
+  ],
+  "use_when": [
+   "product reveals, logo, punchlines"
+  ],
+  "avoid_when": [
+   "every shot"
+  ],
+  "examples": [],
+  "ai_image_prompt": "",
+  "ai_video_prompt": "",
+  "common_mistakes": [
+   "stinger + loud music at the same time (masking)"
+  ],
+  "check": "Duck music 3–6 dB under the stinger.",
+  "combine_with": [
+   "sync.silence_before_reveal",
+   "anim.take"
+  ],
+  "related_ids": [
+   "sync.hit_contact"
+  ],
+  "source_keys": [
+   "KarlinWright2004_OnTheTrack"
+  ],
+  "evidence": "CRAFT",
+  "test_status": "untested",
+  "sync_offset": {
+   "frames_24": [
+    0,
+    1
+   ],
+   "frames_30": [
+    0,
+    1
+   ]
+  },
+  "tool_hint": "b.hit('stinger', t_reveal, -10)"
+ },
+ {
+  "id": "sync.silence_before_reveal",
+  "name": "Silence before the reveal",
+  "category": "dynamics",
+  "definition": "Pull everything down 0.5–1.5 s before a reveal or scare, then hit.",
+  "how": "Duck all beds −12 to −20 dB (keep room tone faintly), then the hit/reveal.",
+  "purpose": "Contrast makes the moment land.",
+  "emotional_effect": [
+   "tension",
+   "anticipation"
+  ],
+  "use_when": [
+   "scares, emotional reveals, price reveals"
+  ],
+  "avoid_when": [
+   "constant use (loses effect)"
+  ],
+  "examples": [],
+  "ai_image_prompt": "",
+  "ai_video_prompt": "",
+  "common_mistakes": [
+   "true digital zero (sounds broken)"
+  ],
+  "check": "Bed level drops before the reveal and returns with it.",
+  "combine_with": [
+   "sync.stinger_reveal"
+  ],
+  "related_ids": [],
+  "source_keys": [],
+  "evidence": "CRAFT",
+  "test_status": "untested",
+  "sync_offset": {
+   "duck_s": [
+    0.5,
+    1.5
+   ]
+  },
+  "tool_hint": "b.duck(t-1.0, t, -18)"
+ },
+ {
+  "id": "sync.duck_under_vo",
+  "name": "Duck music under voice",
+  "category": "mix",
+  "definition": "Music/ambience drop when the voice speaks.",
+  "how": "Music −16 to −20 dB under VO (FX.md table); LD ≥ 10 LU music vs VO (MIX_PLAYBOOK); 150 ms ramps.",
+  "purpose": "Intelligibility.",
+  "emotional_effect": [
+   "clarity"
+  ],
+  "use_when": [
+   "any VO/dialogue with music"
+  ],
+  "avoid_when": [],
+  "examples": [],
+  "ai_image_prompt": "",
+  "ai_video_prompt": "",
+  "common_mistakes": [
+   "pumping (fast duck)",
+   "lyrics under same-language VO"
+  ],
+  "check": "VO intelligible on a phone speaker.",
+  "combine_with": [
+   "sync.room_tone_bed"
+  ],
+  "related_ids": [],
+  "source_keys": [],
+  "evidence": "CRAFT",
+  "test_status": "untested",
+  "sync_offset": {
+   "ramp_s": 0.15
+  },
+  "tool_hint": "MIX_PLAYBOOK §3; sound.py duck()"
+ },
+ {
+  "id": "sync.mickey_mousing",
+  "name": "Mickey-mousing",
+  "category": "music sync",
+  "definition": "Music imitates every movement (steps, falls, climbs).",
+  "how": "Musical accents on every action beat; easiest with a fixed tempo click.",
+  "purpose": "Cartoon comedy.",
+  "emotional_effect": [
+   "playful",
+   "comic"
+  ],
+  "use_when": [
+   "cartoons, comedy gags"
+  ],
+  "avoid_when": [
+   "drama, serious brand content (reads as parody)"
+  ],
+  "examples": [],
+  "ai_image_prompt": "",
+  "ai_video_prompt": "",
+  "common_mistakes": [
+   "accidental mickey-mousing in serious scenes"
+  ],
+  "check": "Is the imitation intended to be funny?",
+  "combine_with": [
+   "sync.hit_contact"
+  ],
+  "related_ids": [
+   "sync.play_through"
+  ],
+  "source_keys": [],
+  "evidence": "CRAFT",
+  "test_status": "untested",
+  "sync_offset": {},
+  "tool_hint": ""
+ },
+ {
+  "id": "sync.play_through",
+  "name": "Play through (no catch)",
+  "category": "music sync",
+  "definition": "Music flows over events without hitting them, carrying a continuous mood.",
+  "how": "Ignore minor hit points; align only phrase starts with scene starts.",
+  "purpose": "Emotional continuity.",
+  "emotional_effect": [
+   "flow",
+   "calm",
+   "melancholy"
+  ],
+  "use_when": [
+   "montages of feeling, story clips under VO"
+  ],
+  "avoid_when": [
+   "comedy needing timing"
+  ],
+  "examples": [
+   {
+    "work": "Music changes meaning",
+    "note": "soundtrack alters interpretation of the same scene",
+    "source_key": "LipscombKendall1994"
+   }
+  ],
+  "ai_image_prompt": "",
+  "ai_video_prompt": "",
+  "common_mistakes": [
+   "random accidental hits that feel like mistakes"
+  ],
+  "check": "",
+  "combine_with": [
+   "sync.offbeat_emotion_cut"
+  ],
+  "related_ids": [
+   "sync.mickey_mousing"
+  ],
+  "source_keys": [
+   "LipscombKendall1994",
+   "Boltz2001",
+   "Cohen2015_CAM"
+  ],
+  "evidence": "MIXED",
+  "test_status": "untested",
+  "sync_offset": {},
+  "tool_hint": ""
+ },
+ {
+  "id": "sync.lip_sync_lead",
+  "name": "Mouth leads audio by 1 frame",
+  "category": "dialogue",
+  "definition": "On-screen mouth shapes lead the audio slightly; never shift the voice to fit the picture.",
+  "how": "Mouth keys 1 F early; vowels ≥ 2 F; closures before /m b p/.",
+  "purpose": "Believable speech.",
+  "emotional_effect": [
+   "presence"
+  ],
+  "use_when": [
+   "any on-screen dialogue"
+  ],
+  "avoid_when": [],
+  "examples": [
+   {
+    "work": "AV speech window",
+    "note": "asymmetric ~200 ms, visual lead tolerated",
+    "source_key": "vanWassenhove2007"
+   }
+  ],
+  "ai_image_prompt": "",
+  "ai_video_prompt": "",
+  "common_mistakes": [
+   "moving the audio"
+  ],
+  "check": "Scrub: closures visible on bilabials.",
+  "combine_with": [
+   "anim.lip_sync"
+  ],
+  "related_ids": [],
+  "source_keys": [
+   "vanWassenhove2007",
+   "ITU_BT1359"
+  ],
+  "evidence": "EVIDENCE",
+  "test_status": "untested",
+  "sync_offset": {
+   "frames_24": [
+    -1,
+    -1
+   ],
+   "frames_30": [
+    -1,
+    -1
+   ],
+   "anchor": "picture leads"
+  },
+  "tool_hint": "R.talk()"
+ },
+ {
+  "id": "sync.offscreen_tease",
+  "name": "Off-screen sound tease",
+  "category": "space",
+  "definition": "A sound whose source is not yet visible, then revealed (often with a J-cut).",
+  "how": "Quieter, darker (low-pass 2–4 kHz), wetter than on-screen; pan toward the source side; reveal on cut.",
+  "purpose": "Curiosity, space beyond the frame.",
+  "emotional_effect": [
+   "curiosity",
+   "suspense"
+  ],
+  "use_when": [
+   "mystery, horror, comedy setups"
+  ],
+  "avoid_when": [],
+  "examples": [],
+  "ai_image_prompt": "",
+  "ai_video_prompt": "",
+  "common_mistakes": [
+   "off-screen sound mixed like on-screen"
+  ],
+  "check": "Character looks toward the sound before we see it.",
+  "combine_with": [
+   "sync.j_cut",
+   "anim.look_eyes_lead"
+  ],
+  "related_ids": [],
+  "source_keys": [
+   "Chion2019_AudioVision"
+  ],
+  "evidence": "CRAFT",
+  "test_status": "untested",
+  "sync_offset": {},
+  "tool_hint": "b.hit(name, t, -18, pan=.8); b.muffle(t, t+1)"
+ },
+ {
+  "id": "sync.layered_sfx",
+  "name": "Layered SFX (transient + body + tail)",
+  "category": "design",
+  "definition": "Build one event from 3–4 layers so it reads on phones and has material and space.",
+  "how": "Transient on frame; body 0–1 F later; tail/reverb to room size; sub only for hero moments on good speakers.",
+  "purpose": "Clarity and richness.",
+  "emotional_effect": [
+   "quality",
+   "material"
+  ],
+  "use_when": [
+   "hero moments"
+  ],
+  "avoid_when": [
+   "background events"
+  ],
+  "examples": [],
+  "ai_image_prompt": "",
+  "ai_video_prompt": "",
+  "common_mistakes": [
+   "all layers same frequency range (mud)"
+  ],
+  "check": "Each layer audible solo and together.",
+  "combine_with": [
+   "sync.hit_contact"
+  ],
+  "related_ids": [],
+  "source_keys": [
+   "Sonnenschein2001_SoundDesign"
+  ],
+  "evidence": "CRAFT",
+  "test_status": "untested",
+  "sync_offset": {
+   "frames_24": [
+    0,
+    1
+   ]
+  },
+  "tool_hint": "multiple b.hit at t, t+1/24"
+ },
+ {
+  "id": "sync.music_meaning_choice",
+  "name": "Choose music for meaning, not only energy",
+  "category": "music sync",
+  "definition": "Music changes how viewers interpret ambiguous action; pick by intended meaning.",
+  "how": "Test 2 music options on the key scene; ask viewers what will happen next.",
+  "purpose": "Control interpretation.",
+  "emotional_effect": [
+   "varies"
+  ],
+  "use_when": [
+   "ambiguous scenes, character intentions"
+  ],
+  "avoid_when": [],
+  "examples": [
+   {
+    "work": "Ambiguous clips with positive/negative music",
+    "note": "interpretation followed music valence",
+    "source_key": "Boltz2001"
+   }
+  ],
+  "ai_image_prompt": "",
+  "ai_video_prompt": "",
+  "common_mistakes": [
+   "choosing music by tempo alone"
+  ],
+  "check": "Viewer interpretation matches intended meaning.",
+  "combine_with": [
+   "sync.play_through"
+  ],
+  "related_ids": [],
+  "source_keys": [
+   "Boltz2001",
+   "LipscombKendall1994",
+   "Cohen2015_CAM",
+   "HammerschmidtWollner2018"
+  ],
+  "evidence": "EVIDENCE",
+  "test_status": "untested",
+  "sync_offset": {},
+  "tool_hint": "MUSIC_DIRECTION.md brief"
+ }
+]

@@ -1,0 +1,1483 @@
+[
+ {
+  "id": "anim.anticipation_strike",
+  "name": "Anticipation → strike → follow-through → settle",
+  "category": "core action",
+  "definition": "A small move opposite to the main action, then a fast action, overshoot and settle.",
+  "how": "Wind-up opposite direction 4–8 F; action 2–6 F (can be as short as 3–4 F if the anticipation was readable); overshoot 2–4 F; settle 6–10 F.",
+  "purpose": "Make fast actions readable and give them force.",
+  "emotional_effect": [
+   "energy",
+   "intent",
+   "comedy when exaggerated"
+  ],
+  "use_when": [
+   "any punch, throw, jump, dash, hand thrusting a product to camera"
+  ],
+  "avoid_when": [
+   "slow, gentle actions (anticipation minimal — meaning is in the action itself)"
+  ],
+  "examples": [
+   {
+    "work": "The Adventures of André and Wally B. (1984)",
+    "note": "zip-off is 3–4 frames but anticipated long enough to read",
+    "source_key": "Lasseter1987"
+   }
+  ],
+  "ai_image_prompt": "character in a deep wind-up pose before throwing, body coiled away from the throw direction, strong line of action, clear silhouette",
+  "ai_video_prompt": "the character winds up, pulling back, then throws quickly forward, arm follows through and the body settles",
+  "common_mistakes": [
+   "anticipation in the same direction as the action",
+   "action so fast with no anticipation that it is missed",
+   "no settle — hard stop"
+  ],
+  "check": "Pause on the anticipation frame: can a viewer guess what comes next? Is the action ≥2 F and the settle ≥6 F?",
+  "combine_with": [
+   "anim.smear",
+   "anim.settle",
+   "sync.hit_contact"
+  ],
+  "related_ids": [
+   "anim.take",
+   "anim.jolt"
+  ],
+  "source_keys": [
+   "Lasseter1987",
+   "ThomasJohnston1981_IllusionOfLife"
+  ],
+  "evidence": "CRAFT",
+  "test_status": "untested",
+  "phases": [
+   {
+    "phase": "anticipation",
+    "frames_24": 6,
+    "frames_30": 8,
+    "ease": "power2.in"
+   },
+   {
+    "phase": "action",
+    "frames_24": 3,
+    "frames_30": 4,
+    "ease": "power3.out"
+   },
+   {
+    "phase": "overshoot",
+    "frames_24": 3,
+    "frames_30": 4,
+    "ease": "power2.out"
+   },
+   {
+    "phase": "settle",
+    "frames_24": 8,
+    "frames_30": 10,
+    "ease": "sine.out"
+   }
+  ],
+  "total_frames_24": 20,
+  "total_frames_30": 25,
+  "duration_s": 0.833,
+  "rig_js": "R.arm(P,'R',t,6*F,-20,30,'power2.in'); R.arm(P,'R',t+6*F,3*F,95,0,'power3.out'); R.smear(P,t+6*F,1); R.pose(P,t+12*F,'idle',8*F,'back.out(1.6)')",
+  "gsap_hint": "tl.to(el,{x:-20,duration:6/24,ease:'power2.in'}).to(el,{x:200,duration:3/24,ease:'power3.out'}).to(el,{x:190,duration:8/24,ease:'back.out(1.6)'})"
+ },
+ {
+  "id": "anim.take",
+  "name": "Take (shock reaction)",
+  "category": "acting",
+  "definition": "Cartoon reaction to a surprise: tiny squash, stretch up with wide eyes, hold, then settle.",
+  "how": "Eyes/brows switch first (0 F), squash 3 F, shoot up with stretch 4 F, land small squash 5 F, settle 6 F, then hold 12+ F so the joke/shock reads.",
+  "purpose": "Sell surprise or a reveal; comedy beat.",
+  "emotional_effect": [
+   "surprise",
+   "shock",
+   "comedy"
+  ],
+  "use_when": [
+   "reveals, jump scares, punchlines, 'the price is…' promo beat"
+  ],
+  "avoid_when": [
+   "serious medical/health content",
+   "every line of a dialogue (loses power)"
+  ],
+  "examples": [
+   {
+    "work": "rig.js emote('shock') / jolt()",
+    "note": "in-house implementation of the take",
+    "source_key": ""
+   }
+  ],
+  "ai_image_prompt": "cartoon character mid-take: eyes huge, body stretched upward, hair standing up, hands open, plain background",
+  "ai_video_prompt": "the character jumps back in surprise, eyes widening, then freezes in a shocked pose",
+  "common_mistakes": [
+   "no hold after the take",
+   "body moves before the eyes",
+   "take too long (> 1 s) before the hold"
+  ],
+  "check": "Eyes change on the first frame; the hold after the take is ≥ 12 F.",
+  "combine_with": [
+   "sync.stinger_reveal",
+   "sync.hit_contact",
+   "anim.moving_hold"
+  ],
+  "related_ids": [
+   "anim.jolt",
+   "anim.anticipation_strike"
+  ],
+  "source_keys": [
+   "Lasseter1987"
+  ],
+  "evidence": "CRAFT",
+  "test_status": "untested",
+  "phases": [
+   {
+    "phase": "squash",
+    "frames_24": 3,
+    "frames_30": 4,
+    "ease": "power2.in"
+   },
+   {
+    "phase": "stretch_up",
+    "frames_24": 4,
+    "frames_30": 5,
+    "ease": "power3.out"
+   },
+   {
+    "phase": "land",
+    "frames_24": 5,
+    "frames_30": 6,
+    "ease": "power2.in"
+   },
+   {
+    "phase": "settle",
+    "frames_24": 6,
+    "frames_30": 8,
+    "ease": "sine.out"
+   },
+   {
+    "phase": "hold",
+    "frames_24": 12,
+    "frames_30": 15,
+    "ease": "none"
+   }
+  ],
+  "total_frames_24": 30,
+  "total_frames_30": 38,
+  "duration_s": 1.25,
+  "rig_js": "R.emote(P, t, 'shock')  // eyes wide + brows up + mouth O + jolt(30) + pose open + tuft overshoot",
+  "gsap_hint": "tl.to(body,{scaleY:.88,scaleX:1.06,duration:3/24,ease:'power2.in'}).to(body,{y:-30,scaleY:1.1,scaleX:.95,duration:4/24,ease:'power3.out'}).to(body,{y:0,scaleY:.95,scaleX:1.03,duration:5/24,ease:'power2.in'}).to(body,{scaleY:1,scaleX:1,duration:6/24,ease:'sine.out'})"
+ },
+ {
+  "id": "anim.jolt",
+  "name": "Jolt / startle (small take)",
+  "category": "acting",
+  "definition": "A smaller startle without the cartoon hold; used inside dialogue.",
+  "how": "Squash 3 F → up 4 F (h ≈ 18–30 px at s=1) → land 5 F → settle 6 F = 18 F.",
+  "purpose": "Quick physical reaction to a sound or line.",
+  "emotional_effect": [
+   "startle",
+   "alertness"
+  ],
+  "use_when": [
+   "door bell, phone ring, sudden line"
+  ],
+  "avoid_when": [
+   "calm scenes"
+  ],
+  "examples": [],
+  "ai_image_prompt": "",
+  "ai_video_prompt": "the man flinches slightly at a sudden sound and looks up",
+  "common_mistakes": [
+   "jolt with no sound cue (unmotivated)"
+  ],
+  "check": "Is there a visible or audible cause on the same frame (±1 F)?",
+  "combine_with": [
+   "sync.hit_contact"
+  ],
+  "related_ids": [
+   "anim.take"
+  ],
+  "source_keys": [
+   "Lasseter1987"
+  ],
+  "evidence": "CRAFT",
+  "test_status": "untested",
+  "phases": [
+   {
+    "phase": "squash",
+    "frames_24": 3,
+    "frames_30": 4,
+    "ease": "power2.in"
+   },
+   {
+    "phase": "up",
+    "frames_24": 4,
+    "frames_30": 5,
+    "ease": "power3.out"
+   },
+   {
+    "phase": "land",
+    "frames_24": 5,
+    "frames_30": 6,
+    "ease": "power2.in"
+   },
+   {
+    "phase": "settle",
+    "frames_24": 6,
+    "frames_30": 8,
+    "ease": "sine.out"
+   }
+  ],
+  "total_frames_24": 18,
+  "total_frames_30": 22,
+  "duration_s": 0.75,
+  "rig_js": "R.jolt(P, t, 26)",
+  "gsap_hint": "see anim.take without the hold"
+ },
+ {
+  "id": "anim.head_turn",
+  "name": "Head turn (timing = meaning)",
+  "category": "acting",
+  "definition": "Turning the head between two poses; the number of inbetweens changes the meaning (Thomas & Johnston table).",
+  "how": "Eyes move first (3 F), head starts 2 F later, body 6 F later. Pick duration by meaning: 2 F = hit by force; 4 F = hit/flinch; 6 F = nervous twitch; 8 F = dodging; 10 F = crisp order; 12 F = friendly 'over here'; 14 F = sees something desirable; 16 F = tries to look closer; 18 F = searching; 20 F = appraising; 22 F = stretching (24 fps, drawings on 2s — our approximation).",
+  "purpose": "Control emotional meaning of a look with one number.",
+  "emotional_effect": [
+   "fast = shock/urgency",
+   "medium = engagement",
+   "slow = thought, appraisal"
+  ],
+  "use_when": [
+   "every look/turn in dialogue",
+   "turning to camera in promos"
+  ],
+  "avoid_when": [
+   "turning on 2s while the camera pans (judder)"
+  ],
+  "examples": [
+   {
+    "work": "Thomas & Johnston head-turn table",
+    "note": "0–10 inbetweens each given a meaning; quoted in Lasseter 1987",
+    "source_key": "Lasseter1987"
+   }
+  ],
+  "ai_image_prompt": "",
+  "ai_video_prompt": "the woman slowly turns her head to look at the shelf, thoughtful, eyes leading the head",
+  "common_mistakes": [
+   "head and eyes move together (dead)",
+   "same duration for every look",
+   "big turn with no blink"
+  ],
+  "check": "Compare the chosen duration with the meaning table; eyes must start before the head.",
+  "combine_with": [
+   "anim.blink",
+   "anim.moving_hold"
+  ],
+  "related_ids": [
+   "anim.look_eyes_lead"
+  ],
+  "source_keys": [
+   "Lasseter1987",
+   "ThomasJohnston1981_IllusionOfLife"
+  ],
+  "evidence": "MIXED",
+  "test_status": "untested",
+  "phases": [
+   {
+    "phase": "eyes",
+    "frames_24": 3,
+    "frames_30": 4,
+    "ease": "power2.out"
+   },
+   {
+    "phase": "head",
+    "frames_24": 12,
+    "frames_30": 15,
+    "ease": "power2.inOut"
+   }
+  ],
+  "total_frames_24": 15,
+  "total_frames_30": 19,
+  "duration_s": 0.625,
+  "rig_js": "R.look(P, t, dx, dy)  // default: pupils 3F, face/head +2F over 8–9F, hair +3F, body +6F over 12F; big turns blink",
+  "gsap_hint": "tl.to(pupils,{x:7,duration:3/24,ease:'power2.out'},t).to(head,{rotation:4,duration:12/24,ease:'power2.inOut'},t+2/24)",
+  "timing_table_inbetweens": {
+   "0": "tremendous force",
+   "1": "hit by a brick",
+   "2": "nervous tic",
+   "3": "dodging",
+   "4": "crisp order",
+   "5": "friendly 'over here'",
+   "6": "sees a desirable thing",
+   "7": "tries to get a better look",
+   "8": "searching the shelf",
+   "9": "appraising thoughtfully",
+   "10": "stretching a sore muscle"
+  }
+ },
+ {
+  "id": "anim.look_eyes_lead",
+  "name": "Eyes lead, head follows, body last",
+  "category": "acting",
+  "definition": "Successive breaking of joints for a look: eyes → head → torso.",
+  "how": "Pupils 3 F; head +2 F over 9 F; torso +6 F over 12 F; hair lags +3 F.",
+  "purpose": "Makes looks feel alive and motivated.",
+  "emotional_effect": [
+   "attention",
+   "curiosity"
+  ],
+  "use_when": [
+   "any change of attention"
+  ],
+  "avoid_when": [
+   "robots/mechanical characters (move all at once on purpose)"
+  ],
+  "examples": [],
+  "ai_image_prompt": "",
+  "ai_video_prompt": "her eyes flick to the door first, then her head turns, then her shoulders follow",
+  "common_mistakes": [
+   "all parts start on the same frame"
+  ],
+  "check": "Frame-step: eyes move before anything else.",
+  "combine_with": [
+   "anim.blink"
+  ],
+  "related_ids": [
+   "anim.head_turn"
+  ],
+  "source_keys": [
+   "Lasseter1987"
+  ],
+  "evidence": "CRAFT",
+  "test_status": "untested",
+  "phases": [
+   {
+    "phase": "eyes",
+    "frames_24": 3,
+    "frames_30": 4,
+    "ease": "power2.out"
+   },
+   {
+    "phase": "head",
+    "frames_24": 9,
+    "frames_30": 11,
+    "ease": "power2.inOut"
+   },
+   {
+    "phase": "torso",
+    "frames_24": 12,
+    "frames_30": 15,
+    "ease": "sine.inOut"
+   }
+  ],
+  "total_frames_24": 24,
+  "total_frames_30": 30,
+  "duration_s": 1.0,
+  "rig_js": "R.look(P, t, dx, dy, { body: true })",
+  "gsap_hint": "stagger: eyes t, head t+2/24, torso t+6/24"
+ },
+ {
+  "id": "anim.blink",
+  "name": "Blink",
+  "category": "secondary",
+  "definition": "Lids close and open; a natural blink is very short.",
+  "how": "Close 2 F, closed 1 F, open 3 F (≈ 0.25 s). Natural rate: every 2–5 s, ~15% doubles; blink to hide eye travel on big turns; no blinks during shocked stares.",
+  "purpose": "Keeps a held character alive; punctuates thoughts.",
+  "emotional_effect": [
+   "life",
+   "thought shift"
+  ],
+  "use_when": [
+   "every hold > 2 s",
+   "on big eye/head turns"
+  ],
+  "avoid_when": [
+   "mid-stare in shock/fear scenes",
+   "on every word (nervous look)"
+  ],
+  "examples": [],
+  "ai_image_prompt": "",
+  "ai_video_prompt": "the character blinks naturally while listening",
+  "common_mistakes": [
+   "blinks perfectly periodic",
+   "slow 8–10 F blink unless sleepy/tender"
+  ],
+  "check": "Count blinks in a 10 s hold: about 2–4, irregular.",
+  "combine_with": [
+   "anim.moving_hold",
+   "anim.head_turn"
+  ],
+  "related_ids": [],
+  "source_keys": [],
+  "evidence": "CRAFT",
+  "test_status": "untested",
+  "phases": [
+   {
+    "phase": "close",
+    "frames_24": 2,
+    "frames_30": 2,
+    "ease": "power2.in"
+   },
+   {
+    "phase": "closed",
+    "frames_24": 1,
+    "frames_30": 1,
+    "ease": "none"
+   },
+   {
+    "phase": "open",
+    "frames_24": 3,
+    "frames_30": 4,
+    "ease": "power2.out"
+   }
+  ],
+  "total_frames_24": 6,
+  "total_frames_30": 8,
+  "duration_s": 0.25,
+  "rig_js": "R.blink(P,t); R.blinks(P, t0, t1, avoid=[[a,b]])",
+  "gsap_hint": "tl.to(lids,{scaleY:.08,duration:2/24,ease:'power2.in'},t).to(lids,{scaleY:1,duration:3/24,ease:'power2.out'},t+3/24)"
+ },
+ {
+  "id": "anim.moving_hold",
+  "name": "Moving hold (breathing idle)",
+  "category": "hold",
+  "definition": "A held pose that keeps tiny motion: breathing, blinks, hair drift, camera drift.",
+  "how": "Chest scaleY +1–2% over ~3.2 s cycle, shoulders 2 F later; blinks every 2–5 s; camera drift 3–6 px. In anime/limited style: only mouth + blinks.",
+  "purpose": "Prevent the 'dead freeze' of rigs/CG during dialogue and VO.",
+  "emotional_effect": [
+   "calm",
+   "presence",
+   "listening"
+  ],
+  "use_when": [
+   "any shot where a character holds > 1 s",
+   "listener during the other's line"
+  ],
+  "avoid_when": [
+   "a deliberate freeze-frame for comedy/drama (make it obviously a freeze)"
+  ],
+  "examples": [],
+  "ai_image_prompt": "",
+  "ai_video_prompt": "the boy stands still listening, breathing softly, blinking now and then",
+  "common_mistakes": [
+   "breath too big (looks like panting)",
+   "everything perfectly frozen"
+  ],
+  "check": "Pause on a hold for 3 s: something must move subtly.",
+  "combine_with": [
+   "anim.blink",
+   "sync.room_tone_bed"
+  ],
+  "related_ids": [
+   "anim.settle"
+  ],
+  "source_keys": [
+   "Lasseter1987"
+  ],
+  "evidence": "CRAFT",
+  "test_status": "untested",
+  "phases": [
+   {
+    "phase": "inhale",
+    "frames_24": 38,
+    "frames_30": 48,
+    "ease": "sine.inOut"
+   },
+   {
+    "phase": "exhale",
+    "frames_24": 39,
+    "frames_30": 49,
+    "ease": "sine.inOut"
+   }
+  ],
+  "total_frames_24": 77,
+  "total_frames_30": 96,
+  "duration_s": 3.208,
+  "rig_js": "R.breathe(P, t0, t1, .014, 3.2); R.blinks(P, t0, t1); R.listen(P, t0, t1); cam.drift(t0, t1, 4)",
+  "gsap_hint": "tl.fromTo(torso,{scaleY:1},{scaleY:1.014,duration:1.6,yoyo:true,repeat:n,ease:'sine.inOut'},t0)"
+ },
+ {
+  "id": "anim.settle",
+  "name": "Overshoot & settle",
+  "category": "core action",
+  "definition": "After arriving, a part goes slightly past the target and returns — follow-through on stop.",
+  "how": "Overshoot 2–4 F (3–8% of the move), settle 6–10 F. GSAP back.out(1.4–2). Never on opacity/colour.",
+  "purpose": "Give arrivals weight and life.",
+  "emotional_effect": [
+   "alive",
+   "friendly",
+   "confident"
+  ],
+  "use_when": [
+   "poses, product landing, UI cards, titles"
+  ],
+  "avoid_when": [
+   "sad/slow scenes",
+   "opacity, colour"
+  ],
+  "examples": [
+   {
+    "work": "Material 3 spring tokens",
+    "note": "spatial springs damping 0.9 (slight overshoot); effects damping 1 (none)",
+    "source_key": "Material3_MotionTokens"
+   }
+  ],
+  "ai_image_prompt": "",
+  "ai_video_prompt": "the eyeglasses slide into place and settle with a tiny bounce",
+  "common_mistakes": [
+   "elastic wobble 3+ times on a premium product",
+   "overshoot on fade"
+  ],
+  "check": "Overshoot visible on at most 1–2 frames, then still.",
+  "combine_with": [
+   "anim.anticipation_strike",
+   "motion.product_reveal"
+  ],
+  "related_ids": [],
+  "source_keys": [
+   "Material3_MotionTokens",
+   "Lasseter1987",
+   "GSAP_Eases"
+  ],
+  "evidence": "MIXED",
+  "test_status": "untested",
+  "phases": [
+   {
+    "phase": "arrive",
+    "frames_24": 8,
+    "frames_30": 10,
+    "ease": "power3.out"
+   },
+   {
+    "phase": "overshoot",
+    "frames_24": 3,
+    "frames_30": 4,
+    "ease": "power2.out"
+   },
+   {
+    "phase": "settle",
+    "frames_24": 7,
+    "frames_30": 9,
+    "ease": "sine.inOut"
+   }
+  ],
+  "total_frames_24": 18,
+  "total_frames_30": 22,
+  "duration_s": 0.75,
+  "rig_js": "R.pose(P, t, 'point', 10*F, 'back.out(1.6)')",
+  "gsap_hint": "gsap.to(el,{x:0,duration:.5,ease:'back.out(1.6)'})"
+ },
+ {
+  "id": "anim.bounce",
+  "name": "Bounce (ball / product drop)",
+  "category": "physics",
+  "definition": "Object falls (accelerating), contacts with squash, rises (decelerating) lower each time.",
+  "how": "Fall power2.in; contact frame squash (volume kept: sx=1/√sy); rise power2.out; each bounce ~60% height and shorter in time. Rubber: big squash; product/glass: ≤3% squash or none.",
+  "purpose": "Show material and weight through timing/spacing.",
+  "emotional_effect": [
+   "playful (rubber)",
+   "heavy (short low bounces)"
+  ],
+  "use_when": [
+   "logo drops, toy-like products, cartoon objects"
+  ],
+  "avoid_when": [
+   "premium rigid products with big squash",
+   "medical content"
+  ],
+  "examples": [
+   {
+    "work": "Bouncing-ball plausibility experiments",
+    "note": "small squash judged as plausible as physics; larger tolerated if material unknown",
+    "source_key": "Schmidt2024_ExaggeratedMotion"
+   },
+   {
+    "work": "Cartoon physics trajectory task",
+    "note": "squash & stretch improved trajectory prediction",
+    "source_key": "Garcia2008_CartoonPhysics"
+   }
+  ],
+  "ai_image_prompt": "",
+  "ai_video_prompt": "the eyeglasses case drops onto the table, bounces once slightly and settles",
+  "common_mistakes": [
+   "linear fall",
+   "no volume preservation",
+   "same height every bounce"
+  ],
+  "check": "Frame spacing widens while falling and narrows while rising; squash only on the contact frame(s).",
+  "combine_with": [
+   "sync.hit_contact"
+  ],
+  "related_ids": [
+   "anim.settle"
+  ],
+  "source_keys": [
+   "Schmidt2024_ExaggeratedMotion",
+   "Garcia2008_CartoonPhysics",
+   "Lasseter1987"
+  ],
+  "evidence": "MIXED",
+  "test_status": "untested",
+  "phases": [
+   {
+    "phase": "fall",
+    "frames_24": 10,
+    "frames_30": 12,
+    "ease": "power2.in"
+   },
+   {
+    "phase": "contact_squash",
+    "frames_24": 2,
+    "frames_30": 2,
+    "ease": "none"
+   },
+   {
+    "phase": "rise",
+    "frames_24": 6,
+    "frames_30": 8,
+    "ease": "power2.out"
+   },
+   {
+    "phase": "fall2",
+    "frames_24": 6,
+    "frames_30": 8,
+    "ease": "power2.in"
+   },
+   {
+    "phase": "settle",
+    "frames_24": 6,
+    "frames_30": 8,
+    "ease": "sine.out"
+   }
+  ],
+  "total_frames_24": 30,
+  "total_frames_30": 38,
+  "duration_s": 1.25,
+  "rig_js": "R.squash(P, tContact, .9, 2*F)",
+  "gsap_hint": "tl.to(o,{y:0,duration:10/24,ease:'power2.in'}).to(o,{scaleY:.9,scaleX:1.054,duration:1/24}).to(o,{y:-60,scaleY:1,scaleX:1,duration:6/24,ease:'power2.out'}).to(o,{y:0,duration:6/24,ease:'power2.in'})"
+ },
+ {
+  "id": "anim.walk_front",
+  "name": "Walk (front-facing storybook)",
+  "category": "locomotion",
+  "definition": "Alternate leg lifts with body bob (down on contact, up on passing) and counter-swinging arms.",
+  "how": "Step 12 F normal (0.5 s), 10 F brisk, 15–16 F elderly/tired; bob down 20% of step, up 30%; head counter-rotates; hair lags 3 F; 4 F lean-in anticipation and a settle at the end.",
+  "purpose": "Move a frontal puppet across frame.",
+  "emotional_effect": [
+   "normal",
+   "brisk = purpose",
+   "slow = tired/old"
+  ],
+  "use_when": [
+   "frontal rig characters"
+  ],
+  "avoid_when": [
+   "profile shots (use anim.walk_side)"
+  ],
+  "examples": [
+   {
+    "work": "Contact-method walk (Richard Williams)",
+    "note": "summarised in curriculum 06 §1.2(ข)",
+    "source_key": "Williams2009_SurvivalKit"
+   }
+  ],
+  "ai_image_prompt": "",
+  "ai_video_prompt": "the boy walks toward camera at a relaxed pace",
+  "common_mistakes": [
+   "no bob",
+   "arms swing with the same-side leg",
+   "sliding without steps"
+  ],
+  "check": "Footstep SFX lands on each step start (contact).",
+  "combine_with": [
+   "sync.footstep_contact"
+  ],
+  "related_ids": [
+   "anim.walk_side",
+   "anim.run"
+  ],
+  "source_keys": [
+   "Williams2009_SurvivalKit"
+  ],
+  "evidence": "CRAFT",
+  "test_status": "untested",
+  "phases": [
+   {
+    "phase": "step_normal",
+    "frames_24": 12,
+    "frames_30": 15,
+    "ease": "sine.inOut"
+   }
+  ],
+  "total_frames_24": 12,
+  "total_frames_30": 15,
+  "duration_s": 0.5,
+  "rig_js": "R.walk(P, t0, t1, { x }, { step: .5 })",
+  "gsap_hint": "per step: leg y -14 over st/2 sine.out, back sine.in; bob +3.5 then -7"
+ },
+ {
+  "id": "anim.walk_side",
+  "name": "Walk (profile, contact/down/passing/up)",
+  "category": "locomotion",
+  "definition": "Four key poses per step; stance foot planted while the body passes over it (no foot slide).",
+  "how": "Step 12 F; contact → down (lowest, 20% of step) → passing (foot lifted) → up (highest) → next contact; stride = 2·leg·sin(A), stance leg rotation linear so the foot doesn't slide.",
+  "purpose": "Believable travel in profile.",
+  "emotional_effect": [
+   "purpose",
+   "weight"
+  ],
+  "use_when": [
+   "side-on travel, crossing frame"
+  ],
+  "avoid_when": [
+   "frontal puppets"
+  ],
+  "examples": [
+   {
+    "work": "Contact method",
+    "note": "Williams; see curriculum 06",
+    "source_key": "Williams2009_SurvivalKit"
+   }
+  ],
+  "ai_image_prompt": "",
+  "ai_video_prompt": "side view, the woman walks from left to right across the shop",
+  "common_mistakes": [
+   "foot slide (stride not matched to travel speed)",
+   "same-side arm and leg forward"
+  ],
+  "check": "Freeze on each contact frame: front heel down, legs spread; planted foot x-position constant over the step.",
+  "combine_with": [
+   "sync.footstep_contact"
+  ],
+  "related_ids": [
+   "anim.walk_front"
+  ],
+  "source_keys": [
+   "Williams2009_SurvivalKit"
+  ],
+  "evidence": "CRAFT",
+  "test_status": "untested",
+  "phases": [
+   {
+    "phase": "contact_to_down",
+    "frames_24": 2,
+    "frames_30": 2,
+    "ease": "sine.out"
+   },
+   {
+    "phase": "down_to_passing_up",
+    "frames_24": 6,
+    "frames_30": 8,
+    "ease": "sine.inOut"
+   },
+   {
+    "phase": "up_to_contact",
+    "frames_24": 4,
+    "frames_30": 5,
+    "ease": "sine.in"
+   }
+  ],
+  "total_frames_24": 12,
+  "total_frames_30": 15,
+  "duration_s": 0.5,
+  "rig_js": "R.walkSide(P, t0, t1, { x }, { step: .5 })",
+  "gsap_hint": "stance leg rotation ease:'none' to avoid slide"
+ },
+ {
+  "id": "anim.run",
+  "name": "Run cycle",
+  "category": "locomotion",
+  "definition": "Like a walk but with a flight phase (no foot on the ground).",
+  "how": "4–8 F per step (fast run 4–6 F, jog 8 F) at 24 fps; strong forward lean; bigger arm pump; contact squash; usually on 1s for speed.",
+  "purpose": "Urgency, chase, comedy dash.",
+  "emotional_effect": [
+   "urgency",
+   "panic",
+   "excitement"
+  ],
+  "use_when": [
+   "chase, late, hurry"
+  ],
+  "avoid_when": [
+   "calm content"
+  ],
+  "examples": [
+   {
+    "work": "Run timing range",
+    "note": "4–8 F per step listed as industry practice in curriculum 06 notes",
+    "source_key": "Williams2009_SurvivalKit"
+   }
+  ],
+  "ai_image_prompt": "",
+  "ai_video_prompt": "the boy runs across the street, leaning forward, arms pumping",
+  "common_mistakes": [
+   "walk cycle sped up (no flight phase)",
+   "on 2s at high speed (strobes)"
+  ],
+  "check": "There must be frames with both feet off the ground.",
+  "combine_with": [
+   "sync.footstep_contact",
+   "anim.smear"
+  ],
+  "related_ids": [
+   "anim.walk_side"
+  ],
+  "source_keys": [
+   "Williams2009_SurvivalKit"
+  ],
+  "evidence": "CRAFT",
+  "test_status": "untested",
+  "phases": [
+   {
+    "phase": "step_fast",
+    "frames_24": 6,
+    "frames_30": 8,
+    "ease": "none"
+   }
+  ],
+  "total_frames_24": 6,
+  "total_frames_30": 8,
+  "duration_s": 0.25,
+  "rig_js": "(not in rig.js yet — build from walkSide with step .25 and a flight pose)",
+  "gsap_hint": "step duration 6/24 s"
+ },
+ {
+  "id": "anim.wave",
+  "name": "Hand wave",
+  "category": "gesture",
+  "definition": "Raise arm to a wave pose, forearm oscillates at the elbow, lags behind the upper arm.",
+  "how": "Raise 8 F; each swing 5 F (sine.inOut); 2–3 cycles; forearm starts 2 F after upper arm (overlap); end with settle.",
+  "purpose": "Greeting, goodbye, attention.",
+  "emotional_effect": [
+   "friendly",
+   "welcome"
+  ],
+  "use_when": [
+   "openings, endings, greeting customers"
+  ],
+  "avoid_when": [
+   "formal/serious tone"
+  ],
+  "examples": [
+   {
+    "work": "Williams 'wave and whip'",
+    "note": "chapter title 'Timing, staggers, wave and whip'",
+    "source_key": "Williams2009_SurvivalKit"
+   }
+  ],
+  "ai_image_prompt": "",
+  "ai_video_prompt": "she waves hello warmly, wrist loose",
+  "common_mistakes": [
+   "stiff whole-arm wave from the shoulder",
+   "perfectly mechanical rhythm"
+  ],
+  "check": "The hand trails the forearm by 1–2 F on direction changes.",
+  "combine_with": [
+   "sync.play_through"
+  ],
+  "related_ids": [
+   "anim.settle"
+  ],
+  "source_keys": [
+   "Williams2009_SurvivalKit"
+  ],
+  "evidence": "CRAFT",
+  "test_status": "untested",
+  "phases": [
+   {
+    "phase": "raise",
+    "frames_24": 8,
+    "frames_30": 10,
+    "ease": "back.out(1.6)"
+   },
+   {
+    "phase": "swing",
+    "frames_24": 5,
+    "frames_30": 6,
+    "ease": "sine.inOut"
+   },
+   {
+    "phase": "swing",
+    "frames_24": 5,
+    "frames_30": 6,
+    "ease": "sine.inOut"
+   },
+   {
+    "phase": "swing",
+    "frames_24": 5,
+    "frames_30": 6,
+    "ease": "sine.inOut"
+   },
+   {
+    "phase": "swing",
+    "frames_24": 5,
+    "frames_30": 6,
+    "ease": "sine.inOut"
+   },
+   {
+    "phase": "lower",
+    "frames_24": 10,
+    "frames_30": 12,
+    "ease": "sine.out"
+   }
+  ],
+  "total_frames_24": 38,
+  "total_frames_30": 48,
+  "duration_s": 1.583,
+  "rig_js": "R.wave(P, t, 3)",
+  "gsap_hint": "tl.to(fore,{rotation:28,duration:5/24,ease:'sine.inOut',yoyo:true,repeat:5})"
+ },
+ {
+  "id": "anim.nod",
+  "name": "Nod (yes)",
+  "category": "gesture",
+  "definition": "Head dips and returns; small and quick for agreement, slow for understanding.",
+  "how": "Each nod 9 F (down 4 F, up 5 F); 1–3 nods; listener nods every 1.6–3 s.",
+  "purpose": "Agreement, listening.",
+  "emotional_effect": [
+   "agreement",
+   "warmth"
+  ],
+  "use_when": [
+   "listener reactions"
+  ],
+  "avoid_when": [
+   "while the same character speaks every word"
+  ],
+  "examples": [],
+  "ai_image_prompt": "",
+  "ai_video_prompt": "the old woman nods gently while listening",
+  "common_mistakes": [
+   "nod amplitude too big (pecking)"
+  ],
+  "check": "Nod ≤ 6 px at s=1 for normal agreement.",
+  "combine_with": [
+   "anim.moving_hold"
+  ],
+  "related_ids": [
+   "anim.head_shake"
+  ],
+  "source_keys": [],
+  "evidence": "CRAFT",
+  "test_status": "untested",
+  "phases": [
+   {
+    "phase": "down",
+    "frames_24": 4,
+    "frames_30": 5,
+    "ease": "sine.inOut"
+   },
+   {
+    "phase": "up",
+    "frames_24": 5,
+    "frames_30": 6,
+    "ease": "sine.inOut"
+   }
+  ],
+  "total_frames_24": 9,
+  "total_frames_30": 11,
+  "duration_s": 0.375,
+  "rig_js": "R.nod(P, t, 2); R.listen(P, t0, t1)",
+  "gsap_hint": "tl.to(head,{y:6,duration:4/24,ease:'sine.inOut'}).to(head,{y:0,duration:5/24,ease:'sine.inOut'})"
+ },
+ {
+  "id": "anim.head_shake",
+  "name": "Head shake (no)",
+  "category": "gesture",
+  "definition": "Head rotates side to side and returns to centre.",
+  "how": "Each swing 6 F, ±7°, 3 swings + 6 F return; slower (8–10 F) for sadness/disbelief.",
+  "purpose": "Refusal, disbelief.",
+  "emotional_effect": [
+   "refusal",
+   "disbelief"
+  ],
+  "use_when": [
+   "negative answers"
+  ],
+  "avoid_when": [],
+  "examples": [],
+  "ai_image_prompt": "",
+  "ai_video_prompt": "he shakes his head slowly in disbelief",
+  "common_mistakes": [
+   "symmetrical robotic swings"
+  ],
+  "check": "Last swing smaller than the first (decay).",
+  "combine_with": [],
+  "related_ids": [
+   "anim.nod"
+  ],
+  "source_keys": [],
+  "evidence": "CRAFT",
+  "test_status": "untested",
+  "phases": [
+   {
+    "phase": "swing",
+    "frames_24": 6,
+    "frames_30": 8,
+    "ease": "sine.inOut"
+   },
+   {
+    "phase": "swing",
+    "frames_24": 6,
+    "frames_30": 8,
+    "ease": "sine.inOut"
+   },
+   {
+    "phase": "swing",
+    "frames_24": 6,
+    "frames_30": 8,
+    "ease": "sine.inOut"
+   },
+   {
+    "phase": "return",
+    "frames_24": 6,
+    "frames_30": 8,
+    "ease": "sine.out"
+   }
+  ],
+  "total_frames_24": 24,
+  "total_frames_30": 30,
+  "duration_s": 1.0,
+  "rig_js": "R.shake(P, t, 3)",
+  "gsap_hint": "tl.to(head,{rotation:7,duration:.25,yoyo:true,repeat:3,ease:'sine.inOut'})"
+ },
+ {
+  "id": "anim.smear",
+  "name": "Smear frame",
+  "category": "fx",
+  "definition": "1–2 frames of stretched/blurred drawing on a very fast move.",
+  "how": "Max 2 F; stretch along the motion (scale 1.35 + directional blur); place between two distant keys.",
+  "purpose": "Keep very fast motion readable.",
+  "emotional_effect": [
+   "snappy",
+   "cartoon energy"
+  ],
+  "use_when": [
+   "whips, dashes, fast turns, punches"
+  ],
+  "avoid_when": [
+   "slow moves",
+   "realistic product shots",
+   "content likely to be paused/scrubbed"
+  ],
+  "examples": [
+   {
+    "work": "Self UI",
+    "note": "cartoon motion blur keeps fast objects comprehensible",
+    "source_key": "ChangUngar1993"
+   }
+  ],
+  "ai_image_prompt": "smear frame of a cartoon character dashing right, elongated body, speed lines",
+  "ai_video_prompt": "",
+  "common_mistakes": [
+   "smear > 2 F (reads as a glitch)",
+   "smear in the wrong direction"
+  ],
+  "check": "Step through: smear appears on 1–2 frames only, aligned with the motion.",
+  "combine_with": [
+   "anim.anticipation_strike",
+   "sync.whoosh_peak"
+  ],
+  "related_ids": [],
+  "source_keys": [
+   "ChangUngar1993"
+  ],
+  "evidence": "MIXED",
+  "test_status": "untested",
+  "phases": [
+   {
+    "phase": "smear",
+    "frames_24": 2,
+    "frames_30": 2,
+    "ease": "none"
+   }
+  ],
+  "total_frames_24": 2,
+  "total_frames_30": 2,
+  "duration_s": 0.083,
+  "rig_js": "R.smear(P, t, 1)",
+  "gsap_hint": "tl.set(el,{scaleX:1.35,filter:'blur(8px)'},t).set(el,{scaleX:1,filter:'none'},t+2/24)"
+ },
+ {
+  "id": "anim.turn_view",
+  "name": "View swap turn (front ↔ profile)",
+  "category": "acting",
+  "definition": "Turn a 2D puppet by swapping drawings on a small squash and a blink.",
+  "how": "Squash 3 F before; swap on 1 F; settle 5 F with back.out; blink 1 F before the swap.",
+  "purpose": "Fake rotation in 2D without a 3D model.",
+  "emotional_effect": [
+   "natural turn"
+  ],
+  "use_when": [
+   "any change of facing in rig clips"
+  ],
+  "avoid_when": [
+   "slow 'beauty' turns (needs inbetween views)"
+  ],
+  "examples": [],
+  "ai_image_prompt": "",
+  "ai_video_prompt": "",
+  "common_mistakes": [
+   "swap without squash/blink (pops)"
+  ],
+  "check": "No visible pop at normal speed.",
+  "combine_with": [
+   "anim.blink"
+  ],
+  "related_ids": [
+   "anim.head_turn"
+  ],
+  "source_keys": [],
+  "evidence": "CRAFT",
+  "test_status": "untested",
+  "phases": [
+   {
+    "phase": "pre_squash",
+    "frames_24": 3,
+    "frames_30": 4,
+    "ease": "power2.in"
+   },
+   {
+    "phase": "swap",
+    "frames_24": 1,
+    "frames_30": 1,
+    "ease": "none"
+   },
+   {
+    "phase": "settle",
+    "frames_24": 5,
+    "frames_30": 6,
+    "ease": "back.out(2)"
+   }
+  ],
+  "total_frames_24": 9,
+  "total_frames_30": 11,
+  "duration_s": 0.375,
+  "rig_js": "R.turn(t, fromPuppet, toPuppet)",
+  "gsap_hint": "tl.set(a,{opacity:0},t).set(b,{opacity:1},t)"
+ },
+ {
+  "id": "anim.on_twos",
+  "name": "Animate on twos (limited look)",
+  "category": "style",
+  "definition": "Character poses update every 2nd frame (12 drawings/s at 24 fps); camera stays on 1s.",
+  "how": "Snap tween start/end to the 2-frame grid and step the ease; keep lip-sync and camera on 1s; switch to 1s for a key action ('sakuga').",
+  "purpose": "Hand-drawn/anime feel, deliberate stylisation.",
+  "emotional_effect": [
+   "hand-made",
+   "anime",
+   "storybook"
+  ],
+  "use_when": [
+   "2D story clips, anime look"
+  ],
+  "avoid_when": [
+   "camera pans (judder)",
+   "lip-sync",
+   "product shots"
+  ],
+  "examples": [
+   {
+    "work": "CSS steps()",
+    "note": "stepped timing function = on-n-s in CSS",
+    "source_key": "W3C_CSSEasing1"
+   }
+  ],
+  "ai_image_prompt": "",
+  "ai_video_prompt": "cel-animated look, animated on twos",
+  "common_mistakes": [
+   "camera also on 2s",
+   "mixing 1s/2s randomly"
+  ],
+  "check": "Count unique poses per second: 12 for the character, 24 for camera.",
+  "combine_with": [
+   "anim.smear"
+  ],
+  "related_ids": [],
+  "source_keys": [
+   "W3C_CSSEasing1"
+  ],
+  "evidence": "CRAFT",
+  "test_status": "untested",
+  "phases": [
+   {
+    "phase": "hold_per_drawing",
+    "frames_24": 2,
+    "frames_30": 2,
+    "ease": "steps"
+   }
+  ],
+  "total_frames_24": 2,
+  "total_frames_30": 2,
+  "duration_s": 0.083,
+  "rig_js": "R.twos(P, true) … R.twos(P, false)",
+  "gsap_hint": "ease: 'steps(12)' per 1 s tween, or CSS animation-timing-function: steps(n, jump-end)"
+ },
+ {
+  "id": "anim.lip_sync",
+  "name": "Lip-sync",
+  "category": "acting",
+  "definition": "Mouth shapes follow the audio; consonant closures shown; mouth slightly leads sound.",
+  "how": "Mouth leads audio by 1 F; vowels hold ≥ 2 F; closures (ม บ ป พ) 2 F before vowel; return to rest; head accents on loud peaks only.",
+  "purpose": "Believable speech.",
+  "emotional_effect": [
+   "presence"
+  ],
+  "use_when": [
+   "any on-screen speech"
+  ],
+  "avoid_when": [
+   "voice-over narration (no on-screen mouth)"
+  ],
+  "examples": [
+   {
+    "work": "Audiovisual speech integration window",
+    "note": "~200 ms asymmetric window; visual lead tolerated more",
+    "source_key": "vanWassenhove2007"
+   }
+  ],
+  "ai_image_prompt": "",
+  "ai_video_prompt": "",
+  "common_mistakes": [
+   "mouth flaps every frame",
+   "mouth lags audio"
+  ],
+  "check": "Scrub at 24 fps: closed mouth on every /m/ /b/ /p/.",
+  "combine_with": [
+   "sync.lip_sync_lead"
+  ],
+  "related_ids": [],
+  "source_keys": [
+   "vanWassenhove2007",
+   "ITU_BT1359"
+  ],
+  "evidence": "MIXED",
+  "test_status": "untested",
+  "phases": [
+   {
+    "phase": "lead",
+    "frames_24": 1,
+    "frames_30": 1,
+    "ease": "none"
+   },
+   {
+    "phase": "vowel_min",
+    "frames_24": 2,
+    "frames_30": 2,
+    "ease": "none"
+   }
+  ],
+  "total_frames_24": 3,
+  "total_frames_30": 4,
+  "duration_s": 0.125,
+  "rig_js": "R.talk(P, t0, ENV[n], TEXT[n])  // envelope from _craft/visemes.py",
+  "gsap_hint": "opacity swaps on 1s (never on twos)"
+ },
+ {
+  "id": "motion.text_stagger_in",
+  "name": "Kinetic text: staggered entrance",
+  "category": "motion design",
+  "definition": "Letters/words/lines enter one after another with deceleration.",
+  "how": "Per word 2–4 F offset, each word 6–9 F with power2.out or M3 emphasized decelerate (0.05,0.7,0.1,1); total stagger ≤ ~0.6 s; then hold readable ≥ 1.5 s.",
+  "purpose": "Show reading order and hierarchy; avoid grouping everything as one.",
+  "emotional_effect": [
+   "energetic (fast)",
+   "calm (slow, no overshoot)"
+  ],
+  "use_when": [
+   "titles, captions, beat-clip words, promo lines"
+  ],
+  "avoid_when": [
+   "long paragraphs per-letter",
+   "medical/serious with bounce"
+  ],
+  "examples": [
+   {
+    "work": "Kinetic type emotion study",
+    "note": "animation TYPE matters most; speed/dynamics amplify",
+    "source_key": "Kim2016_YoKineticType"
+   }
+  ],
+  "ai_image_prompt": "",
+  "ai_video_prompt": "",
+  "common_mistakes": [
+   "all words at once",
+   "stagger too long",
+   "text still moving when it must be read"
+  ],
+  "check": "Read-at-rest ≥ 1.5 s; entrance uses decelerate.",
+  "combine_with": [
+   "sync.kinetic_type_on_beat"
+  ],
+  "related_ids": [
+   "motion.product_reveal"
+  ],
+  "source_keys": [
+   "Kim2016_YoKineticType",
+   "Material3_MotionTokens",
+   "Willenskomer2017_UXinMotion"
+  ],
+  "evidence": "MIXED",
+  "test_status": "untested",
+  "phases": [
+   {
+    "phase": "word_in",
+    "frames_24": 8,
+    "frames_30": 10,
+    "ease": "power2.out"
+   },
+   {
+    "phase": "stagger_step",
+    "frames_24": 3,
+    "frames_30": 4,
+    "ease": "none"
+   },
+   {
+    "phase": "hold_read",
+    "frames_24": 36,
+    "frames_30": 45,
+    "ease": "none"
+   }
+  ],
+  "total_frames_24": 47,
+  "total_frames_30": 59,
+  "duration_s": 1.958,
+  "rig_js": "(HyperFrames text effects: skill hyperframes-animation)",
+  "gsap_hint": "gsap.from(words,{y:24,opacity:0,duration:8/24,ease:'power2.out',stagger:3/24})",
+  "emotion_by_motion_type": {
+   "vertical/jumping": "happiness, surprise",
+   "horizontal/expansion": "anger, fear, surprise",
+   "vibration/flopping/shimmy": "sadness, fear, disappointment",
+   "pendulum": "neutral"
+  }
+ },
+ {
+  "id": "motion.product_reveal",
+  "name": "Product hero reveal",
+  "category": "motion design",
+  "definition": "Hero object enters fast and glides to rest, then supporting info staggers in.",
+  "how": "Product 15 F M3 emphasized decelerate; callouts stagger 4 F; price back.out(1.4) 9 F then hold ≥ 1.5 s; exit emphasized accelerate (0.3,0,0.8,0.15) 9 F.",
+  "purpose": "Premium, confident arrival; clear hierarchy.",
+  "emotional_effect": [
+   "confident",
+   "premium"
+  ],
+  "use_when": [
+   "promo clips, product cards"
+  ],
+  "avoid_when": [
+   "documentary/serious content (use plain power2.out)"
+  ],
+  "examples": [
+   {
+    "work": "Material 3 emphasized easing",
+    "note": "emphasized decelerate for hero entrances",
+    "source_key": "Material3_MotionTokens"
+   }
+  ],
+  "ai_image_prompt": "eyeglasses hero shot on clean background, empty negative space for title, no text",
+  "ai_video_prompt": "eyeglasses rotate slowly on a turntable, studio light, static camera",
+  "common_mistakes": [
+   "product and text arrive together",
+   "price moving while it should be read"
+  ],
+  "check": "Eye goes to product first, price readable at rest.",
+  "combine_with": [
+   "anim.settle",
+   "sync.stinger_reveal"
+  ],
+  "related_ids": [
+   "motion.text_stagger_in"
+  ],
+  "source_keys": [
+   "Material3_MotionTokens",
+   "GSAP_CustomEase",
+   "Apple_HIG_Motion"
+  ],
+  "evidence": "MIXED",
+  "test_status": "untested",
+  "phases": [
+   {
+    "phase": "product_in",
+    "frames_24": 15,
+    "frames_30": 19,
+    "ease": "cubic-bezier(0.05,0.7,0.1,1)"
+   },
+   {
+    "phase": "callouts",
+    "frames_24": 12,
+    "frames_30": 15,
+    "ease": "power2.out"
+   },
+   {
+    "phase": "price_in",
+    "frames_24": 9,
+    "frames_30": 11,
+    "ease": "back.out(1.4)"
+   },
+   {
+    "phase": "hold",
+    "frames_24": 36,
+    "frames_30": 45,
+    "ease": "none"
+   },
+   {
+    "phase": "exit",
+    "frames_24": 9,
+    "frames_30": 11,
+    "ease": "cubic-bezier(0.3,0,0.8,0.15)"
+   }
+  ],
+  "total_frames_24": 81,
+  "total_frames_30": 101,
+  "duration_s": 3.375,
+  "rig_js": "",
+  "gsap_hint": "CustomEase.create('m3Decel','0.05,0.7,0.1,1'); gsap.from(product,{y:'40%',duration:15/24,ease:'m3Decel'})"
+ },
+ {
+  "id": "cam.impact_shake",
+  "name": "Impact camera shake",
+  "category": "camera",
+  "definition": "Short decaying camera shake on an impact.",
+  "how": "0.3–0.6 s, 8–20 px, ~18 Hz, decays to 0; starts on the impact frame with the SFX.",
+  "purpose": "Sell force of impact without animating more.",
+  "emotional_effect": [
+   "force",
+   "shock"
+  ],
+  "use_when": [
+   "explosions, falls, slams, 'mic drop' moments"
+  ],
+  "avoid_when": [
+   "subtle drama",
+   "text-heavy frames (unreadable)"
+  ],
+  "examples": [],
+  "ai_image_prompt": "",
+  "ai_video_prompt": "camera shakes briefly as the door slams",
+  "common_mistakes": [
+   "shake without a sound",
+   "constant shake"
+  ],
+  "check": "Shake and hit SFX start on the same frame.",
+  "combine_with": [
+   "sync.hit_contact"
+  ],
+  "related_ids": [
+   "anim.take"
+  ],
+  "source_keys": [],
+  "evidence": "CRAFT",
+  "test_status": "untested",
+  "phases": [
+   {
+    "phase": "shake",
+    "frames_24": 10,
+    "frames_30": 12,
+    "ease": "none"
+   }
+  ],
+  "total_frames_24": 10,
+  "total_frames_30": 12,
+  "duration_s": 0.417,
+  "rig_js": "cam.shake(t, .4, 14, 18)",
+  "gsap_hint": "random offsets decaying per 1/18 s step"
+ }
+]
